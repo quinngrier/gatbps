@@ -19,6 +19,14 @@
 #
 
 set -e
+for arg
+do
+  case "$arg" in
+    --)
+      break
+      ;;
+  esac
+done
 trap 'rm -f DATE.tmp' EXIT
 if git ls-files --error-unmatch DATE.sh >/dev/null 2>&1; then
   TZ=UTC git log -1 --date=local --pretty=%ad >DATE.tmp
