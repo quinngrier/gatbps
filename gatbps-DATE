@@ -1,3 +1,4 @@
+#!/bin/sh
 #
 # This script (DATE.sh) helps to create an (AC_)PACKAGE_DATE variable
 # for Autotools by using git log to get the UTC author date of HEAD in
