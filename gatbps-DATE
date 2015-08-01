@@ -25,7 +25,7 @@ do
     --)
       break
       ;;
-    --help|--hel|--he|--h|-h*)
+    --help|--hel|--he|--h)
       printf "Usage: gatbps-DATE [TARGET]...
 "
       exit "$?"
