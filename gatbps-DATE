@@ -25,6 +25,12 @@ do
     --)
       break
       ;;
+    --=*)
+      printf "gatbps-DATE: option '%s' is ambiguous; possibilities: '--help' '--version'
+Try 'gatbps-DATE --help' for more information.
+" "$arg" >&2
+      x="$?"; if test "$x" != 0; then exit "$x"; else exit 1; fi
+      ;;
     --*)
       printf "gatbps-DATE: unrecognized option '%s'
 Try 'gatbps-DATE --help' for more information.
