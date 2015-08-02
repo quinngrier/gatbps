@@ -3,6 +3,11 @@ AC_INIT([GATBPS],
         [quinn.grier@gmail.com],
         [gatbps],
         [https://github.com/quinngrier/gatbps])
+
+AC_COPYRIGHT([Some parts of this script belong to GATBPS.
+All copyright and related or neighboring rights waived.
+See <https://creativecommons.org/publicdomain/zero/1.0/>.])
+
 AM_INIT_AUTOMAKE([-Wall -Werror info-in-builddir])
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
