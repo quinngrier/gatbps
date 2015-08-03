@@ -4,9 +4,15 @@ AC_INIT([GATBPS],
         [gatbps],
         [https://github.com/quinngrier/gatbps])
 
-AC_COPYRIGHT([Some parts of this script belong to GATBPS.
-All copyright and related or neighboring rights waived.
-See <https://creativecommons.org/publicdomain/zero/1.0/>.])
+AC_COPYRIGHT(
+[Some parts of this configure script belong to GATBPS.
+The authors of these parts have waived all copyright and
+related or neighboring rights to the extent permitted by
+law as described by the CC0 1.0 Universal Public Domain
+Dedication. You should have received a copy of the full
+dedication along with this script, typically as a file
+named <CC0-1.0.txt>. If not, it may be available at
+<https://creativecommons.org/publicdomain/zero/1.0/>.])
 
 AC_SYS_INTERPRETER
 AS_IF([test "$interpval" = yes], [],
