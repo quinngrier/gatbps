@@ -8,6 +8,10 @@ AC_COPYRIGHT([Some parts of this script belong to GATBPS.
 All copyright and related or neighboring rights waived.
 See <https://creativecommons.org/publicdomain/zero/1.0/>.])
 
+AC_SYS_INTERPRETER
+AS_IF([test "$interpval" = yes], [],
+      [AC_MSG_WARN([installed shell scripts may not work properly])])
+
 AM_INIT_AUTOMAKE([-Wall -Werror info-in-builddir])
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
