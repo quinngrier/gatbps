@@ -49,13 +49,14 @@ EOF
       exit 1
       ;;
     --version|--versio|--versi|--vers|--ver|--ve|--v)
-      printf "gatbps-DATE (GATBPS) X.Y.Z (YYYY-MM-DD)
+      cat <<EOF || exit 1
+gatbps (GATBPS) X.Y.Z (YYYY-MM-DD)
 All copyright and related or neighboring rights waived.
 See <https://creativecommons.org/publicdomain/zero/1.0/>.
 This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
-"
-      exit "$?"
+EOF
+      exit 0
       ;;
     --version=*|--versio=*|--versi=*|--vers=*|--ver=*|--ve=*|--v=*)
       cat <<EOF >&2
