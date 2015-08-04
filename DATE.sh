@@ -6,8 +6,7 @@
 #
 #   m4_define([AC_PACKAGE_DATE],
 #             m4_esyscmd_s([sh DATE.sh])m4_assert(!m4_sysval))
-#   PACKAGE_DATE='AC_PACKAGE_DATE'
-#   AC_SUBST([PACKAGE_DATE])
+#   AC_SUBST([PACKAGE_DATE], 'AC_PACKAGE_DATE')
 #   AC_DEFINE([PACKAGE_DATE], "AC_PACKAGE_DATE")
 #
 #   EXTRA_DIST += DATE.sh DATE
