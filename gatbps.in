@@ -35,13 +35,6 @@ Usage: gatbps (--help | --version) [<ignored>...]
 EOF
     exit 0
     ;;
-  --help=*|--hel=*|--he=*|--h=*)
-    cat <<EOF >&2
-gatbps: option '--help' doesn't allow an argument
-Try 'gatbps --help' for more information.
-EOF
-    exit 1
-    ;;
   --version|--versio|--versi|--vers|--ver|--ve|--v)
     cat <<EOF || exit 1
 gatbps (GATBPS) X.Y.Z (YYYY-MM-DD)
@@ -54,6 +47,13 @@ EOF
     ;;
   --)
     shift
+    ;;
+  --help=*|--hel=*|--he=*|--h=*)
+    cat <<EOF >&2
+gatbps: option '--help' doesn't allow an argument
+Try 'gatbps --help' for more information.
+EOF
+    exit 1
     ;;
   --version=*|--versio=*|--versi=*|--vers=*|--ver=*|--ve=*|--v=*)
     cat <<EOF >&2
