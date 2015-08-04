@@ -9,7 +9,8 @@
 #   AC_SUBST([PACKAGE_DATE], 'AC_PACKAGE_DATE')
 #   AC_DEFINE([PACKAGE_DATE], "AC_PACKAGE_DATE")
 #
-#   EXTRA_DIST += DATE.sh DATE
+#   EXTRA_DIST += $(srcdir)/DATE
+#   EXTRA_DIST += $(srcdir)/DATE.sh
 #
 # When running in your repository, the script uses git log and also
 # writes the result to the DATE file. Elsewhere, the script reads the
