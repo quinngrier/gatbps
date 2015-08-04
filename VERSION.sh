@@ -7,7 +7,8 @@
 #
 #   AC_INIT([foo], m4_esyscmd_s([sh VERSION.sh])m4_assert(!m4_sysval))
 #
-#   EXTRA_DIST += VERSION.sh VERSION
+#   EXTRA_DIST += $(srcdir)/VERSION
+#   EXTRA_DIST += $(srcdir)/VERSION.sh
 #
 # When running in your repository, the script uses git describe and also
 # writes the result to the VERSION file. Elsewhere, the script reads the
