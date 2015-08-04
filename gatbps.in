@@ -83,6 +83,7 @@ EOF
     exit 1
     ;;
 esac
+exit 0
 
 #
 # The authors of this file have waived all copyright and
