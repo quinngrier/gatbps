@@ -18,7 +18,6 @@
 # DATE file.
 #
 
-set -e
 for arg
 do
   case "$arg" in
