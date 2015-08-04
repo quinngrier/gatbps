@@ -27,67 +27,63 @@ EOF
     exit 1
     ;;
 esac
-
-for arg
-do
-  case "$1" in
-    --)
-      break
-      ;;
-    --help|--hel|--he|--h)
-      cat <<EOF || exit 1
+case "$1" in
+  --)
+    break
+    ;;
+  --help|--hel|--he|--h)
+    cat <<EOF || exit 1
 Usage: gatbps (--help | --version) [<ignored>...]
        gatbps [--] <command> [<argument>...]
 EOF
-      exit 0
-      ;;
-    --help=*|--hel=*|--he=*|--h=*)
-      cat <<EOF >&2
+    exit 0
+    ;;
+  --help=*|--hel=*|--he=*|--h=*)
+    cat <<EOF >&2
 gatbps: option '--help' doesn't allow an argument
 Try 'gatbps --help' for more information.
 EOF
-      exit 1
-      ;;
-    --version|--versio|--versi|--vers|--ver|--ve|--v)
-      cat <<EOF || exit 1
+    exit 1
+    ;;
+  --version|--versio|--versi|--vers|--ver|--ve|--v)
+    cat <<EOF || exit 1
 gatbps (GATBPS) X.Y.Z (YYYY-MM-DD)
 All copyright and related or neighboring rights waived.
 See <https://creativecommons.org/publicdomain/zero/1.0/>.
 This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
 EOF
-      exit 0
-      ;;
-    --version=*|--versio=*|--versi=*|--vers=*|--ver=*|--ve=*|--v=*)
-      cat <<EOF >&2
+    exit 0
+    ;;
+  --version=*|--versio=*|--versi=*|--vers=*|--ver=*|--ve=*|--v=*)
+    cat <<EOF >&2
 gatbps: option '--version' doesn't allow an argument
 Try 'gatbps --help' for more information.
 EOF
-      exit 1
-      ;;
-    --=*)
-      cat <<EOF >&2
+    exit 1
+    ;;
+  --=*)
+    cat <<EOF >&2
 gatbps: option '$1' is ambiguous; possibilities: '--help' '--version'
 Try 'gatbps --help' for more information.
 EOF
-      exit 1
-      ;;
-    --*)
-      cat <<EOF >&2
+    exit 1
+    ;;
+  --*)
+    cat <<EOF >&2
 gatbps: unrecognized option '$1'
 Try 'gatbps --help' for more information.
 EOF
-      exit 1
-      ;;
-    -?*)
-      cat <<EOF >&2
+    exit 1
+    ;;
+  -?*)
+    cat <<EOF >&2
 gatbps: unrecognized option(s) '$1'
 Try 'gatbps --help' for more information.
 EOF
-      exit 1
-      ;;
-  esac
-done
+    exit 1
+    ;;
+esac
 trap 'rm -f DATE.tmp' EXIT
 if git ls-files --error-unmatch DATE.sh >/dev/null 2>&1; then
   TZ=UTC git log -1 --date=local --pretty=%ad >DATE.tmp
