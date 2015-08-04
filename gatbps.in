@@ -18,6 +18,16 @@
 # DATE file.
 #
 
+case "$#" in
+  0)
+    cat <<EOF >&2
+gatbps: no command given
+Try 'gatbps --help' for more information.
+EOF
+    exit 1
+    ;;
+esac
+
 for arg
 do
   case "$arg" in
