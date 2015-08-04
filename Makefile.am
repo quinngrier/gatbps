@@ -1,6 +1,6 @@
 EXTRA_DIST =
 EXTRA_DIST += $(srcdir)/VERSION
-EXTRA_DIST += $(srcdir)/gatbps-VERSION
+EXTRA_DIST += $(srcdir)/VERSION.sh
 
 ##
 ## The authors of this file have waived all copyright and

@@ -1,5 +1,5 @@
 AC_INIT([GATBPS],
-        m4_esyscmd_s([sh gatbps-VERSION])m4_assert(!m4_sysval),
+        m4_esyscmd_s([sh VERSION.sh])m4_assert(!m4_sysval),
         [quinn.grier@gmail.com],
         [gatbps],
         [https://github.com/quinngrier/gatbps])
