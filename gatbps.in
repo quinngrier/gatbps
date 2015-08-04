@@ -35,9 +35,11 @@ do
       break
       ;;
     --help|--hel|--he|--h)
-      printf "Usage: gatbps-DATE [TARGET]...
-"
-      exit "$?"
+      cat <<EOF || exit 1
+Usage: gatbps (--help | --version) [<ignored>...]
+       gatbps [--] <command> [<argument>...]
+EOF
+      exit 0
       ;;
     --help=*|--hel=*|--he=*|--h=*)
       cat <<EOF >&2
