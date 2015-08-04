@@ -4,6 +4,12 @@ AC_INIT([GATBPS],
         [gatbps],
         [https://github.com/quinngrier/gatbps])
 
+m4_define([AC_PACKAGE_DATE],
+          m4_esyscmd_s([sh DATE.sh])m4_assert(!m4_sysval))
+PACKAGE_DATE=AC_PACKAGE_DATE
+AC_SUBST([PACKAGE_DATE])
+AC_DEFINE([PACKAGE_DATE], "AC_PACKAGE_DATE")
+
 AC_COPYRIGHT(
 [Some parts of this configure script belong to GATBPS.
 The authors of these parts have waived all copyright and

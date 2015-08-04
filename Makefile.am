@@ -1,4 +1,6 @@
 EXTRA_DIST =
+EXTRA_DIST += $(srcdir)/DATE
+EXTRA_DIST += $(srcdir)/DATE.sh
 EXTRA_DIST += $(srcdir)/VERSION
 EXTRA_DIST += $(srcdir)/VERSION.sh
 
