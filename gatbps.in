@@ -30,7 +30,7 @@ esac
 
 for arg
 do
-  case "$arg" in
+  case "$1" in
     --)
       break
       ;;
@@ -67,21 +67,21 @@ EOF
       ;;
     --=*)
       cat <<EOF >&2
-gatbps: option '$arg' is ambiguous; possibilities: '--help' '--version'
+gatbps: option '$1' is ambiguous; possibilities: '--help' '--version'
 Try 'gatbps --help' for more information.
 EOF
       exit 1
       ;;
     --*)
       cat <<EOF >&2
-gatbps: unrecognized option '$arg'
+gatbps: unrecognized option '$1'
 Try 'gatbps --help' for more information.
 EOF
       exit 1
       ;;
     -?*)
       cat <<EOF >&2
-gatbps: unrecognized option(s) '$arg'
+gatbps: unrecognized option(s) '$1'
 Try 'gatbps --help' for more information.
 EOF
       exit 1
