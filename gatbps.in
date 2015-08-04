@@ -37,7 +37,7 @@ EOF
     ;;
   --version|--versio|--versi|--vers|--ver|--ve|--v)
     cat <<EOF || exit 1
-gatbps (GATBPS) X.Y.Z (YYYY-MM-DD)
+gatbps (GATBPS) @PACKAGE_VERSION@ (YYYY-MM-DD)
 All copyright and related or neighboring rights waived.
 See <https://creativecommons.org/publicdomain/zero/1.0/>.
 This is free software: you are free to change and redistribute it.
