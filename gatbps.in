@@ -65,6 +65,15 @@ EOF
     exit 1
     ;;
 esac
+case "$#" in
+  0)
+    cat <<EOF >&2
+gatbps: no command given
+Try 'gatbps --help' for more information.
+EOF
+    exit 1
+    ;;
+esac
 trap 'rm -f DATE.tmp' EXIT
 if git ls-files --error-unmatch DATE.sh >/dev/null 2>&1; then
   TZ=UTC git log -1 --date=local --pretty=%ad >DATE.tmp
