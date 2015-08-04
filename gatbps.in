@@ -28,9 +28,6 @@ EOF
     ;;
 esac
 case "$1" in
-  --)
-    shift
-    ;;
   --help|--hel|--he|--h)
     cat <<EOF || exit 1
 Usage: gatbps (--help | --version) [<ignored>...]
@@ -54,6 +51,9 @@ This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
 EOF
     exit 0
+    ;;
+  --)
+    shift
     ;;
   --version=*|--versio=*|--versi=*|--vers=*|--ver=*|--ve=*|--v=*)
     cat <<EOF >&2
