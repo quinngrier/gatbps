@@ -1,3 +1,6 @@
+CLEANFILES =
+CLEANFILES += gatbps
+
 EXTRA_DIST =
 EXTRA_DIST += $(srcdir)/DATE
 EXTRA_DIST += $(srcdir)/DATE.sh
