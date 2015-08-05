@@ -19,6 +19,8 @@ dedication along with this script, typically as a file
 named <CC0-1.0.txt>. If not, it may be available at
 <https://creativecommons.org/publicdomain/zero/1.0/>.])
 
+AC_CONFIG_SRCDIR([gatbps.in])
+
 AC_SYS_INTERPRETER
 AS_IF([test "$interpval" = yes], [],
       [AC_MSG_WARN([installed shell scripts may not work properly])])
