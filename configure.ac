@@ -22,8 +22,8 @@ named <CC0-1.0.txt>. If not, it may be available at
 AC_CONFIG_SRCDIR([gatbps.in])
 
 AC_SYS_INTERPRETER
-AS_IF([test "$interpval" = yes], [],
-      [AC_MSG_WARN([installed shell scripts may not work properly])])
+AS_CASE(["$interpval"], [no],
+        [AC_MSG_WARN([installed shell scripts may not work properly])])
 
 AM_INIT_AUTOMAKE([-Wall -Werror info-in-builddir])
 AC_CONFIG_FILES([Makefile])
