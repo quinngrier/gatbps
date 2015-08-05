@@ -3,6 +3,7 @@ EXTRA_DIST += $(srcdir)/DATE
 EXTRA_DIST += $(srcdir)/DATE.sh
 EXTRA_DIST += $(srcdir)/VERSION
 EXTRA_DIST += $(srcdir)/VERSION.sh
+EXTRA_DIST += $(srcdir)/gatbps.in
 
 ##
 ## The authors of this file have waived all copyright and
