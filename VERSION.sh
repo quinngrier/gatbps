@@ -5,7 +5,8 @@
 # your repository and adjust the following code for your configure.ac
 # and Makefile.am files:
 #
-#   AC_INIT([foo], m4_esyscmd_s([sh VERSION.sh])m4_assert(m4_sysval == 0))
+#   AC_INIT([Example],
+#           m4_esyscmd_s([sh VERSION.sh])m4_assert(m4_sysval == 0))
 #
 #   EXTRA_DIST += $(srcdir)/VERSION
 #   EXTRA_DIST += $(srcdir)/VERSION.sh
