@@ -5,6 +5,12 @@ EXTRA_DIST += $(srcdir)/VERSION
 EXTRA_DIST += $(srcdir)/VERSION.sh
 EXTRA_DIST += $(srcdir)/gatbps.in
 
+gatbps: Makefile $(srcdir)/gatbps.in
+	sed -e 's|@PACKAGE_DATE[@]|$(PACKAGE_DATE)|g'       \
+	    -e 's|@PACKAGE_VERSION[@]|$(PACKAGE_VERSION)|g' \
+	    $(srcdir)/gatbps.in >gatbps
+	chmod +x gatbps
+
 ##
 ## The authors of this file have waived all copyright and
 ## related or neighboring rights to the extent permitted by
