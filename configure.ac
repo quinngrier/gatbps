@@ -23,7 +23,7 @@ AC_CONFIG_SRCDIR([gatbps.in])
 
 AC_SYS_INTERPRETER
 AS_CASE(["$interpval"], [no],
-        [AC_MSG_WARN([installed shell scripts may not work properly])])
+        [AC_MSG_WARN([the gatbps script may not run properly])])
 
 AM_INIT_AUTOMAKE([-Wall -Werror info-in-builddir])
 AC_CONFIG_FILES([Makefile])
