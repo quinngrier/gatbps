@@ -5,7 +5,7 @@
 # following code for your configure.ac and Makefile.am files:
 #
 #   m4_define([AC_PACKAGE_DATE],
-#             m4_esyscmd_s([sh DATE.sh])m4_assert(!m4_sysval))
+#             m4_esyscmd_s([sh DATE.sh])m4_assert(m4_sysval == 0))
 #   AC_SUBST([PACKAGE_DATE], 'AC_PACKAGE_DATE')
 #   AC_DEFINE([PACKAGE_DATE], "AC_PACKAGE_DATE")
 #

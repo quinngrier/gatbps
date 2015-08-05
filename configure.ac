@@ -1,11 +1,11 @@
 AC_INIT([GATBPS],
-        m4_esyscmd_s([sh VERSION.sh])m4_assert(!m4_sysval),
+        m4_esyscmd_s([sh VERSION.sh])m4_assert(m4_sysval == 0),
         [quinn.grier@gmail.com],
         [gatbps],
         [https://github.com/quinngrier/gatbps])
 
 m4_define([AC_PACKAGE_DATE],
-          m4_esyscmd_s([sh DATE.sh])m4_assert(!m4_sysval))
+          m4_esyscmd_s([sh DATE.sh])m4_assert(m4_sysval == 0))
 AC_SUBST([PACKAGE_DATE], 'AC_PACKAGE_DATE')
 AC_DEFINE([PACKAGE_DATE], "AC_PACKAGE_DATE")
 
