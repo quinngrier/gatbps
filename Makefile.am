@@ -8,6 +8,9 @@ EXTRA_DIST += $(srcdir)/VERSION
 EXTRA_DIST += $(srcdir)/VERSION.sh
 EXTRA_DIST += $(srcdir)/gatbps.in
 
+bin_SCRIPTS =
+bin_SCRIPTS += gatbps
+
 gatbps: Makefile $(srcdir)/gatbps.in
 	sed -e 's|@PACKAGE_DATE[@]|$(PACKAGE_DATE)|g'       \
 	    -e 's|@PACKAGE_VERSION[@]|$(PACKAGE_VERSION)|g' \
