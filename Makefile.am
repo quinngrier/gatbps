@@ -7,6 +7,7 @@ EXTRA_DIST += $(srcdir)/DATE
 EXTRA_DIST += $(srcdir)/DATE.sh
 EXTRA_DIST += $(srcdir)/VERSION
 EXTRA_DIST += $(srcdir)/VERSION.sh
+EXTRA_DIST += $(srcdir)/gatbps.1.in
 EXTRA_DIST += $(srcdir)/gatbps.in
 
 bin_SCRIPTS =
