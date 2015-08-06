@@ -1,13 +1,4 @@
 #!/bin/sh
-case "$#" in
-  0)
-    cat <<EOF >&2
-gatbps: no command given
-Try 'gatbps --help' for more information.
-EOF
-    exit 1
-    ;;
-esac
 case "$1" in
   --help|--hel|--he|--h)
     cat <<EOF || exit 1
