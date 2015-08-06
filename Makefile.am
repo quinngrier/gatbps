@@ -1,5 +1,6 @@
 CLEANFILES =
 CLEANFILES += gatbps
+CLEANFILES += gatbps.1
 
 EXTRA_DIST =
 EXTRA_DIST += $(srcdir)/DATE
