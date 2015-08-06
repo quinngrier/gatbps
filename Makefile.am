@@ -11,10 +11,13 @@ EXTRA_DIST += $(srcdir)/gatbps.in
 bin_SCRIPTS =
 bin_SCRIPTS += gatbps
 
+do_subst = ( sed \
+  -e 's|@PACKAGE_DATE[@]|$(PACKAGE_DATE)|g' \
+  -e 's|@PACKAGE_VERSION[@]|$(PACKAGE_VERSION)|g' \
+  )
+
 gatbps: Makefile $(srcdir)/gatbps.in
-	sed -e 's|@PACKAGE_DATE[@]|$(PACKAGE_DATE)|g'       \
-	    -e 's|@PACKAGE_VERSION[@]|$(PACKAGE_VERSION)|g' \
-	    $(srcdir)/gatbps.in >gatbps
+	$(do_subst) <$(srcdir)/gatbps.in >gatbps
 	chmod +x gatbps
 
 ##
