@@ -20,6 +20,9 @@ gatbps: Makefile $(srcdir)/gatbps.in
 	$(do_subst) <$(srcdir)/gatbps.in >gatbps
 	chmod +x gatbps
 
+gatbps.1: Makefile $(srcdir)/gatbps.1.in
+	$(do_subst) <$(srcdir)/gatbps.1.in >gatbps.1
+
 ##
 ## The authors of this file have waived all copyright and
 ## related or neighboring rights to the extent permitted by
