@@ -13,6 +13,7 @@ case "$1" in
     cat <<EOF || exit 1
 Usage: gatbps (--help | --version) [<ignored>...]
        gatbps [--] <command> [<argument>...]
+Create various files for use with Autotools.
 EOF
     exit 0
     ;;
