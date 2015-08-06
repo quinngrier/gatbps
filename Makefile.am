@@ -10,6 +10,9 @@ EXTRA_DIST += $(srcdir)/VERSION.sh
 EXTRA_DIST += $(srcdir)/gatbps.1.in
 EXTRA_DIST += $(srcdir)/gatbps.in
 
+man_MANS =
+man_MANS += gatbps.1
+
 bin_SCRIPTS =
 bin_SCRIPTS += gatbps
 
