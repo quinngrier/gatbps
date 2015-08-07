@@ -2,8 +2,7 @@
 case "$1" in
   --help|--hel|--he|--h)
     cat <<EOF || exit 1
-Usage: gatbps (--help | --version) [<ignored>...]
-       gatbps [--] <command> [<argument>...]
+Usage: gatbps [FILE]...
 Create various files for use with Autotools.
 EOF
     exit 0
