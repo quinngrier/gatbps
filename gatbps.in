@@ -4,6 +4,22 @@ case "$1" in
     cat <<EOF || exit 1
 Usage: gatbps [FILE]...
 Create various files for use with Autotools.
+
+Each FILE is classified by its name as either regular or special. There
+is a fixed list of special FILE names, which is printed if no arguments
+are given. Any other FILE is regular.
+
+Each regular FILE is created by adding startup and shutdown code to
+FILE.texi and calling makeinfo --plaintext. If FILE.top exists, it is
+prepended to FILE. Otherwise, if FILE.top.texi exists, it is processed
+in the same way as FILE.texi and prepended to FILE. The same action is
+taken for FILE.bot(.texi), but appending to FILE instead of prepending.
+
+Each special FILE is filled with either preset code or information
+collected from version control. Among other things, this allows for the
+creation of a version string, release date, authors list, and changelog.
+
+Try 'man gatbps' or 'info gatbps' for more information.
 EOF
     exit 0
     ;;
