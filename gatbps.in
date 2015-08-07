@@ -3,7 +3,7 @@ case "$1" in
   --help|--hel|--he|--h)
     cat <<EOF || exit 1
 Usage: gatbps [FILE]...
-Create various files for use with Autotools.
+Create project management files.
 
 Each FILE is classified by its name as either regular or special. There
 is a fixed list of special FILE names, which is printed if no arguments
