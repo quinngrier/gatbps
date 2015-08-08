@@ -114,6 +114,11 @@ for file do
       continue
       ;;
   esac
+  case "$name" in
+    *)
+      :
+      ;;
+  esac
 done
 exit "$error"
 
