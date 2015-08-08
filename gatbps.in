@@ -84,6 +84,17 @@ EOF
     exit 0
     ;;
 esac
+for file do
+  name=`expr "X/$file" : 'X.*/\(.*\)' '|' X`
+  case "$?" in
+    0)
+      :
+      ;;
+    *)
+      continue
+      ;;
+  esac
+done
 exit 0
 
 #
