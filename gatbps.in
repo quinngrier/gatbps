@@ -61,7 +61,7 @@ Try 'gatbps --help' for more information.
 EOF
     exit 1
     ;;
-  --*)
+  --*|-?)
     cat <<EOF >&2
 gatbps: unrecognized option '$1'
 Try 'gatbps --help' for more information.
