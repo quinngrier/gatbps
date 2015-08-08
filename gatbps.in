@@ -78,11 +78,10 @@ EOF
 esac
 case "$#" in
   0)
-    cat <<EOF >&2
-gatbps: no command given
-Try 'gatbps --help' for more information.
+    cat <<EOF || exit 1
+CC0-1.0.txt
 EOF
-    exit 1
+    exit 0
     ;;
 esac
 case "$1" in
