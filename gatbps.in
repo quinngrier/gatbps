@@ -84,15 +84,6 @@ EOF
     exit 0
     ;;
 esac
-case "$1" in
-  *)
-    cat <<EOF >&2
-gatbps: unrecognized command '$1'
-Try 'gatbps --help' for more information.
-EOF
-    exit 1
-    ;;
-esac
 exit 0
 
 #
