@@ -84,6 +84,7 @@ EOF
     exit 0
     ;;
 esac
+error=0
 for file do
   name=`expr "X/$file" : 'X.*/\(.*\)' '|' X`
   case "$?" in
@@ -91,11 +92,12 @@ for file do
       :
       ;;
     *)
+      error=1
       continue
       ;;
   esac
 done
-exit 0
+exit "$error"
 
 #
 # The authors of this file have waived all copyright and
