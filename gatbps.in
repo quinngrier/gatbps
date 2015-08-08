@@ -72,24 +72,23 @@ EOF
     x=`expr "X$1" : 'X\(-.\)' 2>/dev/null`
     case "$?" in
       0)
+        s=''
         case "$x" in
           -)
             x='-
 '
             ;;
         esac
-        cat <<EOF >&2
-gatbps: unrecognized option '$x'
-Try 'gatbps --help' for more information.
-EOF
         ;;
       *)
-        cat <<EOF >&2
-gatbps: unrecognized options '$1'
-Try 'gatbps --help' for more information.
-EOF
+        s='s'
+        x="$1"
         ;;
     esac
+    cat <<EOF >&2
+gatbps: unrecognized option$s '$x'
+Try 'gatbps --help' for more information.
+EOF
     exit 1
     ;;
 esac
