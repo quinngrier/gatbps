@@ -1,7 +1,7 @@
 #!/bin/sh
 LC_ALL=C
 export LC_ALL
-case "$1" in
+case "${1}" in
   --help|--hel|--he|--h)
     cat <<'EOF' || exit 1
 Usage: gatbps [FILE]...
@@ -58,24 +58,24 @@ EOF
     ;;
   --=*)
     cat <<EOF >&2
-gatbps: option '$1' is ambiguous; possibilities: '--help' '--version'
+gatbps: option '${1}' is ambiguous; possibilities: '--help' '--version'
 Try 'gatbps --help' for more information.
 EOF
     exit 1
     ;;
   --*|-?)
     cat <<EOF >&2
-gatbps: unrecognized option '$1'
+gatbps: unrecognized option '${1}'
 Try 'gatbps --help' for more information.
 EOF
     exit 1
     ;;
   -?*)
-    x=`expr "X$1" : 'X\(-.\)' 2>/dev/null`
-    case "$?" in
+    x=`expr "X${1}" : 'X\(-.\)' 2>/dev/null`
+    case "${?}" in
       0)
         s=''
-        case "$x" in
+        case "${x}" in
           -)
             x='-
 '
@@ -84,17 +84,17 @@ EOF
         ;;
       *)
         s='s'
-        x="$1"
+        x="${1}"
         ;;
     esac
     cat <<EOF >&2
-gatbps: unrecognized option$s '$x'
+gatbps: unrecognized option${s} '${x}'
 Try 'gatbps --help' for more information.
 EOF
     exit 1
     ;;
 esac
-case "$#" in
+case "${#}" in
   0)
     cat <<'EOF' || exit 1
 CC0-1.0.txt
@@ -104,16 +104,16 @@ EOF
 esac
 error=0
 for arg do
-  case "$arg" in
+  case "${arg}" in
     /*)
-      file="$arg"
+      file="${arg}"
       ;;
     *)
-      file="./$arg"
+      file="./${arg}"
       ;;
   esac
-  name=`expr "X$file" : 'X.*/\(.*\)' '|' X`
-  case "$?" in
+  name=`expr "X${file}" : 'X.*/\(.*\)' '|' X`
+  case "${?}" in
     0)
       :
       ;;
@@ -122,13 +122,13 @@ for arg do
       continue
       ;;
   esac
-  case "$name" in
+  case "${name}" in
     *)
       :
       ;;
   esac
 done
-exit "$error"
+exit "${error}"
 
 #
 # The authors of this file have waived all copyright and
