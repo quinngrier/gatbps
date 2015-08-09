@@ -175,7 +175,7 @@ gatbps_do_bot_texi_helper() {
 
 gatbps_do_bot_texi() {
   gatbps_do_bot_texi_helper "${1}" "${2}" && return 0
-  rm -f "${2}.gatbps1" "${2}.gatbps2" "${2}.gatbps3"
+  rm -f "${2}" "${2}.gatbps1" "${2}.gatbps2"
   return 1
 }
 
