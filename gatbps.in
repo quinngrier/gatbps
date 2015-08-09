@@ -149,7 +149,7 @@ gatbps_do_top_texi_helper() {
 
 gatbps_do_top_texi() {
   gatbps_do_top_texi_helper "${1}" "${2}" && return 0
-  rm -f "${2}.gatbps1"
+  rm -f "${2}" "${2}.gatbps1"
   return 1
 }
 
