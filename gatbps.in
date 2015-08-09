@@ -112,7 +112,7 @@ for arg do
       file="./$arg"
       ;;
   esac
-  name=`expr "X/$file" : 'X.*/\(.*\)' '|' X`
+  name=`expr "X$file" : 'X.*/\(.*\)' '|' X`
   case "$?" in
     0)
       :
