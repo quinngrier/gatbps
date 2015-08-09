@@ -161,7 +161,7 @@ gatbps_do_bot_helper() {
 
 gatbps_do_bot() {
   gatbps_do_bot_helper "${1}" "${2}" && return 0
-  rm -f "${2}.gatbps1"
+  rm -f "${2}"
   return 1
 }
 
