@@ -123,7 +123,7 @@ EOF
 
 gatbps_do_texi() {
   gatbps_do_texi_helper "${1}" "${2}" && return 0
-  rm -f "${2}.gatbps1" "${2}.gatbps2"
+  rm -f "${2}" "${2}.gatbps1"
   return 1
 }
 
