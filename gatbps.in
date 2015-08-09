@@ -103,7 +103,15 @@ EOF
     ;;
 esac
 error=0
-for file do
+for arg do
+  case "$arg" in
+    /*)
+      file="$arg"
+      ;;
+    *)
+      file="./$arg"
+      ;;
+  esac
   name=`expr "X/$file" : 'X.*/\(.*\)' '|' X`
   case "$?" in
     0)
