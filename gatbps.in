@@ -142,7 +142,8 @@ gatbps_do_top() {
 gatbps_do_top_texi_helper() {
   gatbps_do_texi "${1}" "${2}.gatbps1" || return 1
   echo '' >>"${2}.gatbps1" || return 1
-  mv -f "${2}.gatbps1" "${2}" || return 1
+  cat "${2}.gatbps1" >"${2}" || return 1
+  rm -f "${2}.gatbps1"
   return 0
 }
 
