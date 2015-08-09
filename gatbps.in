@@ -135,6 +135,12 @@ gatbps_do_top_helper() {
   return 0
 }
 
+gatbps_do_top() {
+  gatbps_do_top_helper "${1}" "${2}" && return 0
+  rm -f "${2}.gatbps1"
+  return 1
+}
+
 error=0
 for arg do
   case "${arg}" in
