@@ -176,6 +176,12 @@ gatbps_do_bot_texi_helper() {
   return 0
 }
 
+gatbps_do_bot_texi() {
+  gatbps_do_bot_texi_helper "${1}" "${2}" && return 0
+  rm -f "${2}.gatbps1" "${2}.gatbps2" "${2}.gatbps3"
+  return 1
+}
+
 error=0
 for arg do
   case "${arg}" in
