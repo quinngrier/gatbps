@@ -116,8 +116,7 @@ EOF
   cat <<'EOF' >>"${2}.gatbps1" || return 1
 @bye
 EOF
-  makeinfo --plaintext "${2}.gatbps1" >"${2}.gatbps2" || return 1
-  mv -f "${2}.gatbps2" "${2}" || return 1
+  makeinfo --plaintext "${2}.gatbps1" >"${2}" || return 1
   rm -f "${2}.gatbps1"
   return 0
 }
