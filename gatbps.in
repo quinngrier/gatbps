@@ -187,6 +187,13 @@ gatbps_do_bot_texi() {
 }
 
 error=0
+gatbps_give_up_on() {
+  cat <<EOF >&2
+gatbps: giving up on '${1}'
+EOF
+  error=1
+}
+
 for arg do
   case "${arg}" in
     /*)
