@@ -187,7 +187,7 @@ gatbps_do_bot_texi() {
 }
 
 gave_up_at_least_once=0
-gatbps_give_up_on() {
+gatbps_gave_up_on() {
   cat <<EOF >&2
 gatbps: giving up on '${1}'
 EOF
@@ -209,7 +209,7 @@ for arg do
       :
       ;;
     *)
-      gatbps_give_up_on "${arg}"
+      gatbps_gave_up_on "${arg}"
       continue
       ;;
   esac
