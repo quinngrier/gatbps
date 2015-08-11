@@ -219,6 +219,7 @@ for arg do
       ;;
   esac
 done
+
 exit "${gave_up_at_least_once}"
 
 #
