@@ -117,12 +117,15 @@ EOF
   cat <<'EOF' >>"${2}.gatbps1" || return 1
 @bye
 EOF
+
   #
   # Using texi2any --plaintext --output foo bar where foo is a directory
   # outputs to foo/stdin.txt with texi2any (GNU texinfo) 6.0. We want it
   # to fail, so we use redirection instead.
   #
+
   texi2any --plaintext "${2}.gatbps1" >"${2}" || return 1
+
   rm -f "${2}.gatbps1"
   return 0
 }
