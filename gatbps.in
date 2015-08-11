@@ -209,10 +209,7 @@ for arg do
       :
       ;;
     *)
-      cat <<EOF >&2
-gatbps: giving up on '${arg}'
-EOF
-      error=1
+      gatbps_give_up_on "${arg}"
       continue
       ;;
   esac
