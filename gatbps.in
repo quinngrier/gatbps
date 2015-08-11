@@ -120,7 +120,7 @@ EOF
 
   #
   # Using texi2any --plaintext --output foo bar where foo is a directory
-  # outputs to foo/bar.txt with texi2any (GNU texinfo) 6.0. We want it
+  # outputs to foo/bar.txt with texi2any (GNU texinfo) 6.0. We want this
   # to fail, so we use redirection instead.
   #
 
