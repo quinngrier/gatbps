@@ -186,12 +186,12 @@ gatbps_do_bot_texi() {
   return 1
 }
 
-error=0
+gave_up_at_least_once=0
 gatbps_give_up_on() {
   cat <<EOF >&2
 gatbps: giving up on '${1}'
 EOF
-  error=1
+  gave_up_at_least_once=1
 }
 
 for arg do
@@ -219,7 +219,7 @@ for arg do
       ;;
   esac
 done
-exit "${error}"
+exit "${gave_up_at_least_once}"
 
 #
 # The authors of this file have waived all copyright and
