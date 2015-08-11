@@ -14,7 +14,7 @@ is a fixed list of special FILE names, which is printed if no arguments
 are given. Any other FILE is regular.
 
 Each regular FILE is created by adding startup and shutdown code to
-FILE.texi and calling makeinfo --plaintext. If FILE.top exists, it is
+FILE.texi and calling texi2any --plaintext. If FILE.top exists, it is
 prepended to FILE. Otherwise, if FILE.top.texi exists, it is processed
 in the same way as FILE.texi and prepended to FILE. The same action is
 taken for FILE.bot(.texi), but appending to FILE instead of prepending.
@@ -117,7 +117,7 @@ EOF
   cat <<'EOF' >>"${2}.gatbps1" || return 1
 @bye
 EOF
-  makeinfo --plaintext "${2}.gatbps1" >"${2}" || return 1
+  texi2any --plaintext "${2}.gatbps1" >"${2}" || return 1
   rm -f "${2}.gatbps1"
   return 0
 }
