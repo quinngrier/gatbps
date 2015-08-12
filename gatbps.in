@@ -206,7 +206,7 @@ for file do
       ;;
     *)
       cat <<'EOF' >&2
-gatbps: empty file argument
+gatbps: empty argument
 EOF
       gatbps_gave_up_on "${file}"
       continue
