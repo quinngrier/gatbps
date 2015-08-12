@@ -212,6 +212,21 @@ for file do
       ;;
   esac
 
+  #
+  # Give up on any ${path} that ends in a slash. This effectively gives
+  # up on any ${file} that is empty or ends in a slash.
+  #
+
+  case "${path}" in
+    */)
+      cat <<'EOF' >&2
+gatbps: invalid file path
+EOF
+      gatbps_gave_up_on "${file}"
+      continue
+      ;;
+  esac
+
   name=`expr "X${path}" : 'X.*/\(.*\)' '|' X`
   case "${?}" in
     0)
