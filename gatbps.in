@@ -197,14 +197,14 @@ EOF
 for arg do
   case "${arg}" in
     /*)
-      file="${arg}"
+      path="${arg}"
       ;;
     *)
-      file="./${arg}"
+      path="./${arg}"
       ;;
   esac
 
-  name=`expr "X${file}" : 'X.*/\(.*\)' '|' X`
+  name=`expr "X${path}" : 'X.*/\(.*\)' '|' X`
   case "${?}" in
     0)
       :
