@@ -214,6 +214,20 @@ EOF
   esac
 
   #
+  # Give up on any ${file} that ends in a slash.
+  #
+
+  case "${file}" in
+    */)
+      cat <<EOF >&2
+gatbps: '${file}' ends in a slash
+EOF
+      gatbps_gave_up_on "${file}"
+      continue
+      ;;
+  esac
+
+  #
   # Set ${path} to ${file} but adjust it so that it cannot be confused
   # with program options. Note that ${path} always contains a slash and
   # that any string with ${path} as an initial substring also cannot be
