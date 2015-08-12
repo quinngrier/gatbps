@@ -197,6 +197,23 @@ EOF
 for file do
 
   #
+  # Give up on any ${file} that is the empty string.
+  #
+
+  case "${file}" in
+    ?*)
+      :
+      ;;
+    *)
+      cat <<'EOF' >&2
+gatbps: empty file argument
+EOF
+      gatbps_gave_up_on "${file}"
+      continue
+      ;;
+  esac
+
+  #
   # Set ${path} to ${file} but adjust it so that it cannot be confused
   # with program options. Note that ${path} always contains a slash and
   # that any string with ${path} as an initial substring also cannot be
