@@ -195,6 +195,14 @@ EOF
 }
 
 for file do
+
+  #
+  # Set ${path} to ${file} but adjust it so that it cannot be confused
+  # with program options. Note that ${path} always contains a slash and
+  # that any string with ${path} as an initial substring also cannot be
+  # confused with program options.
+  #
+
   case "${file}" in
     /*)
       path="${file}"
