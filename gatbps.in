@@ -194,13 +194,13 @@ EOF
   gave_up_at_least_once=1
 }
 
-for arg do
-  case "${arg}" in
+for file do
+  case "${file}" in
     /*)
-      path="${arg}"
+      path="${file}"
       ;;
     *)
-      path="./${arg}"
+      path="./${file}"
       ;;
   esac
 
@@ -210,7 +210,7 @@ for arg do
       :
       ;;
     *)
-      gatbps_gave_up_on "${arg}"
+      gatbps_gave_up_on "${file}"
       continue
       ;;
   esac
