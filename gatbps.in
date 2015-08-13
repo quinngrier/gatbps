@@ -188,10 +188,10 @@ gatbps_do_bot_texi() {
 
 gave_up_at_least_once=0
 gave_up_on() {
+  gave_up_at_least_once=1
   cat <<EOF >&2
 gatbps: gave up on '${1}'
 EOF
-  gave_up_at_least_once=1
 }
 
 for file do
