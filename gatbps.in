@@ -97,6 +97,11 @@ EOF
     ;;
 esac
 
+#
+# Handle the no arguments case. This includes the 'gatbps --' case, as
+# the above code shifts away the '--'.
+#
+
 case "${#}" in
   0)
     cat <<'EOF' || exit 1
