@@ -259,6 +259,13 @@ EOF
     continue
   fi
 
+  #
+  # Set ${name} to the characters after the last slash of ${path}. The
+  # leading 'X' is commonly recommended to prevent expr from confusing
+  # operands with operators. Note that ${path} always contains a slash
+  # and cannot end in a slash, so there are no tricky cases.
+  #
+
   name=`expr "X${path}" : 'X.*/\(.*\)'`
   case "${?}" in
     0)
