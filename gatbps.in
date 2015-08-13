@@ -277,6 +277,10 @@ EOF
       ;;
   esac
 
+  #
+  # Do the main processing based on ${name}.
+  #
+
   case "${name}" in
 
     *)
