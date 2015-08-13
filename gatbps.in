@@ -187,7 +187,7 @@ gatbps_do_bot_texi() {
 }
 
 gave_up_at_least_once=0
-gatbps_gave_up_on() {
+gave_up_on() {
   cat <<EOF >&2
 gatbps: gave up on '${1}'
 EOF
@@ -208,7 +208,7 @@ for file do
       cat <<'EOF' >&2
 gatbps: empty argument
 EOF
-      gatbps_gave_up_on "${file}"
+      gave_up_on "${file}"
       continue
       ;;
   esac
@@ -222,7 +222,7 @@ EOF
       cat <<EOF >&2
 gatbps: '${file}' ends in a slash
 EOF
-      gatbps_gave_up_on "${file}"
+      gave_up_on "${file}"
       continue
       ;;
   esac
@@ -255,7 +255,7 @@ EOF
     cat <<EOF >&2
 gatbps: '${file}' is a directory
 EOF
-    gatbps_gave_up_on "${file}"
+    gave_up_on "${file}"
     continue
   fi
 
@@ -272,7 +272,7 @@ EOF
       :
       ;;
     *)
-      gatbps_gave_up_on "${file}"
+      gave_up_on "${file}"
       continue
       ;;
   esac
