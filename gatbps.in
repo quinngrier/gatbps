@@ -35,7 +35,7 @@ EOF
     ;;
 
   --version|--versio|--versi|--vers|--ver|--ve|--v)
-    cat <<'EOF' || exit 1
+    cat <<'EOF'
 gatbps (GATBPS) @PACKAGE_VERSION@
 This version was released on @PACKAGE_DATE@.
 The authors of this script have waived all copyright and
@@ -46,7 +46,12 @@ dedication along with this script, typically as a file
 named <CC0-1.0.txt>. If not, it may be available at
 <https://creativecommons.org/publicdomain/zero/1.0/>.
 EOF
-    exit 0
+    case "${?}" in
+      0)
+        exit 0
+        ;;
+    esac
+    exit 1
     ;;
 
   --)
