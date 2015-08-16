@@ -6,7 +6,7 @@ export LC_ALL
 case "${1}" in
 
   --help|--hel|--he|--h)
-    cat <<'EOF' || exit 1
+    cat <<'EOF'
 Usage: gatbps [FILE]...
 Create project management files.
 
@@ -26,7 +26,12 @@ creation of a version string, release date, authors list, and changelog.
 
 Try 'man gatbps' or 'info gatbps' for more information.
 EOF
-    exit 0
+    case "${?}" in
+      0)
+        exit 0
+        ;;
+    esac
+    exit 1
     ;;
 
   --version|--versio|--versi|--vers|--ver|--ve|--v)
