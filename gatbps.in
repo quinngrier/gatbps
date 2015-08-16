@@ -3,6 +3,20 @@
 LC_ALL=C
 export LC_ALL
 
+#
+# This case statement does all of our options parsing. We only support
+# '--help', '--version', and '--', and we don't allow mixing arguments
+# with options (e.g. in 'gatbps splat --help', '--help' is taken as an
+# argument, not as an option). These simple rules let us implement the
+# parsing with what is essentially just a single if-else chain on ${1}.
+#
+# Both '--help' and '--version' are handled immediately, and cause any
+# later arguments to be ignored (e.g. in 'gatbps --help foo', 'foo' is
+# ignored because '--help' exits the script). '--' is handled by being
+# shifted away. If we get past the case statement, then the remaining
+# arguments are the files to be created.
+#
+
 case "${1}" in
 
   --help|--hel|--he|--h)
