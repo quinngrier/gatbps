@@ -123,10 +123,15 @@ esac
 
 case "${#}" in
   0)
-    cat <<'EOF' || exit 1
+    cat <<'EOF'
 CC0-1.0.txt
 EOF
-    exit 0
+    case "${?}" in
+      0)
+        exit 0
+        ;;
+    esac
+    exit 1
     ;;
 esac
 
