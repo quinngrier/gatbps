@@ -4,6 +4,7 @@ LC_ALL=C
 export LC_ALL
 
 case "${1}" in
+
   --help|--hel|--he|--h)
     cat <<'EOF' || exit 1
 Usage: gatbps [FILE]...
@@ -27,6 +28,7 @@ Try 'man gatbps' or 'info gatbps' for more information.
 EOF
     exit 0
     ;;
+
   --version|--versio|--versi|--vers|--ver|--ve|--v)
     cat <<'EOF' || exit 1
 gatbps (GATBPS) @PACKAGE_VERSION@
@@ -41,9 +43,11 @@ named <CC0-1.0.txt>. If not, it may be available at
 EOF
     exit 0
     ;;
+
   --)
     shift
     ;;
+
   --help=*|--hel=*|--he=*|--h=*)
     cat <<'EOF' >&2
 gatbps: option '--help' doesn't allow an argument
@@ -51,6 +55,7 @@ Try 'gatbps --help' for more information.
 EOF
     exit 1
     ;;
+
   --version=*|--versio=*|--versi=*|--vers=*|--ver=*|--ve=*|--v=*)
     cat <<'EOF' >&2
 gatbps: option '--version' doesn't allow an argument
@@ -58,6 +63,7 @@ Try 'gatbps --help' for more information.
 EOF
     exit 1
     ;;
+
   --=*)
     cat <<EOF >&2
 gatbps: option '${1}' is ambiguous; possibilities: '--help' '--version'
@@ -65,6 +71,7 @@ Try 'gatbps --help' for more information.
 EOF
     exit 1
     ;;
+
   --*|-?)
     cat <<EOF >&2
 gatbps: unrecognized option '${1}'
@@ -72,6 +79,7 @@ Try 'gatbps --help' for more information.
 EOF
     exit 1
     ;;
+
   -?*)
     x=`expr "X${1}" : 'X\(-.\)' 2>/dev/null`
     case "${?}" in
@@ -95,6 +103,7 @@ Try 'gatbps --help' for more information.
 EOF
     exit 1
     ;;
+
 esac
 
 #
