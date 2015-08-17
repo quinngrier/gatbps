@@ -9,15 +9,7 @@ m4_define([AC_PACKAGE_DATE],
 AC_SUBST([PACKAGE_DATE], 'AC_PACKAGE_DATE')
 AC_DEFINE([PACKAGE_DATE], "AC_PACKAGE_DATE")
 
-AC_COPYRIGHT(
-[Some parts of this configure script belong to GATBPS.
-The authors of these parts have waived all copyright and
-related or neighboring rights to the extent permitted by
-law as described by the CC0 1.0 Universal Public Domain
-Dedication. You should have received a copy of the full
-dedication along with this script, typically as a file
-named <CC0-1.0.txt>. If not, it may be available at
-<https://creativecommons.org/publicdomain/zero/1.0/>.])
+m4_include([CC0-1.0.AC_COPYRIGHT.ac])
 
 AC_CONFIG_SRCDIR([gatbps.in])
 
