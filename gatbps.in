@@ -20,6 +20,10 @@ export LC_ALL
 # shifted away. If we get past the case statement, then the remaining
 # arguments are the files to be created.
 #
+# Having no arguments does not need special treatment. ${1} will expand
+# to nothing, which is equivalent to having a single empty argument. It
+# will still need special treatment after the options parsing, though.
+#
 
 case "${1}" in
 
