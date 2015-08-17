@@ -81,7 +81,7 @@ EOF
     ;;
 
   --help=*|--hel=*|--he=*|--h=*)
-    cat <<'EOF' >&2
+    cat >&2 <<'EOF'
 gatbps: option '--help' doesn't allow an argument
 Try 'gatbps --help' for more information.
 EOF
@@ -89,7 +89,7 @@ EOF
     ;;
 
   --version=*|--versio=*|--versi=*|--vers=*|--ver=*|--ve=*|--v=*)
-    cat <<'EOF' >&2
+    cat >&2 <<'EOF'
 gatbps: option '--version' doesn't allow an argument
 Try 'gatbps --help' for more information.
 EOF
@@ -97,7 +97,7 @@ EOF
     ;;
 
   --=*)
-    cat <<EOF >&2
+    cat >&2 <<EOF
 gatbps: option '${1}' is ambiguous; possibilities: '--help' '--version'
 Try 'gatbps --help' for more information.
 EOF
@@ -105,7 +105,7 @@ EOF
     ;;
 
   --*|-?)
-    cat <<EOF >&2
+    cat >&2 <<EOF
 gatbps: unrecognized option '${1}'
 Try 'gatbps --help' for more information.
 EOF
@@ -129,7 +129,7 @@ EOF
         x="${1}"
         ;;
     esac
-    cat <<EOF >&2
+    cat >&2 <<EOF
 gatbps: unrecognized option${s} '${x}'
 Try 'gatbps --help' for more information.
 EOF
