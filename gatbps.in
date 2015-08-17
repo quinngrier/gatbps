@@ -10,6 +10,10 @@ export LC_ALL
 # argument, not as an option). These simple rules let us implement the
 # parsing with what is essentially just a single if-else chain on ${1}.
 #
+# Most of the work is in mimicking glibc's getopt_long behavior, which
+# serves as our reference point. There are a variety of error messages
+# that are a bit tedious to implement.
+#
 # Both '--help' and '--version' are handled immediately, and cause any
 # later arguments to be ignored (e.g. in 'gatbps --help foo', 'foo' is
 # ignored because '--help' exits the script). '--' is handled by being
