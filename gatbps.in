@@ -152,8 +152,9 @@ EOF
 esac
 
 #
-# Handle the no arguments case. This includes the 'gatbps --' case, as
-# the above code shifts away the '--'.
+# If we have no arguments, then we just print out the list of special
+# files. This includes the case where we were run as 'gatbps --', for
+# which the '--' will have been shifted away by the above code.
 #
 
 case "${#}" in
