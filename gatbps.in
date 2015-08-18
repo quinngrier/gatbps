@@ -323,10 +323,11 @@ EOF
   #
 
   if test -d "${path}"; then
-    cat <<EOF >&2
+    cat >&2 <<EOF
 gatbps: '${file}' is a directory
+gatbps: gave up on '${file}'
 EOF
-    gave_up_on "${file}"
+    gave_up_at_least_once=1
     continue
   fi
 
