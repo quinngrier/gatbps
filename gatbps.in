@@ -357,7 +357,7 @@ EOF
       cat >"${path}" <<'EOF'
 dnl
 dnl This file was created by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
-dnl Before changing it, make sure that you're doing the right thing.
+dnl Before changing it, make sure that's what you really want to do.
 dnl Depending on how GATBPS is being used, your changes may be lost.
 dnl
 
