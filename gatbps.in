@@ -273,10 +273,11 @@ for file do
       :
       ;;
     *)
-      cat <<'EOF' >&2
+      cat >&2 <<EOF
 gatbps: empty argument
+gatbps: gave up on '${file}'
 EOF
-      gave_up_on "${file}"
+      gave_up_at_least_once=1
       continue
       ;;
   esac
