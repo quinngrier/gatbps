@@ -1,5 +1,13 @@
 #!/bin/sh
 
+#
+# Using anything other than LC_ALL=C is a bad idea. Without it, things
+# become a guessing game of which locale environment variables need to
+# be set to which values for which programs to get reasonable behavior.
+# With it, things are simple: bytes are just bytes, and all formatting
+# behaves in the default way.
+#
+
 LC_ALL=C
 export LC_ALL
 
