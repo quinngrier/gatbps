@@ -147,7 +147,7 @@ esac
 case "${#}" in
   0)
     cat <<'EOF'
-CC0-1.0.AC_COPYRIGHT.ac
+CC0-1.0-AC-COPYRIGHT.ac
 CC0-1.0.txt
 EOF
     case "${?}" in
@@ -336,7 +336,7 @@ EOF
 
   case "${name}" in
 
-    CC0-1.0.AC_COPYRIGHT.ac)
+    CC0-1.0-AC-COPYRIGHT.ac)
       cat >"${path}" <<'EOF'
 AC_COPYRIGHT(
 [Some parts of this configure script belong to AC_PACKAGE_NAME.
