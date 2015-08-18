@@ -344,7 +344,10 @@ EOF
       :
       ;;
     *)
-      gave_up_on "${file}"
+      cat >&2 <<EOF
+gatbps: gave up on '${file}'
+EOF
+      gave_up_at_least_once=1
       continue
       ;;
   esac
