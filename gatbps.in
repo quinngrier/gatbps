@@ -338,6 +338,12 @@ EOF
 
     CC0-1.0-AC-COPYRIGHT.ac)
       cat >"${path}" <<'EOF'
+dnl
+dnl This file was created by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
+dnl Before changing it, make sure that you're doing the right thing.
+dnl Depending on how GATBPS is being used, your changes may be lost.
+dnl
+
 AC_COPYRIGHT(
 [Some parts of this configure script belong to AC_PACKAGE_NAME.
 The authors of these parts have waived all copyright and
