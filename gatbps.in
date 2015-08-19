@@ -309,16 +309,32 @@ EOF
   esac
 
   #
-  # Give up on any ${path} that is a directory. Note that getting past
-  # this test does not guarantee that ${path} is not a directory since
-  # the test program could fail for some other reason. POSIX says that
-  # test returns 1 for false and >1 for error, but it seems like a bad
-  # idea to rely on that.
+  # Give up on any ${path} that exists as a non-regular file. The logic
+  # here is carefully written to continue only if it is guaranteed that
+  # ${path} does not exist or is a regular file. The trickiness is that
+  # the test program may fail with an error, so we need to test for the
+  # desired condition to decide to continue, not test for the undesired
+  # condition to decide to give up. This way, there cannot be any false
+  # positives but only false negatives, which is acceptable. POSIX says
+  # that the exit code of the test program distinguishes between errors
+  # and false, but it seems like a bad idea to rely on that, so we just
+  # accept false negatives.
   #
 
-  if test -d "${path}"; then
+  if test ! -e "${path}"; then
+    :
+  elif test -f "${path}"; then
+    :
+  elif test -d "${path}"; then
     cat >&2 <<EOF
 gatbps: '${file}' is a directory
+gatbps: gave up on '${file}'
+EOF
+    gave_up_at_least_once=1
+    continue
+  else
+    cat >&2 <<EOF
+gatbps: '${file}' is not a regular file
 gatbps: gave up on '${file}'
 EOF
     gave_up_at_least_once=1
