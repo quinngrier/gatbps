@@ -57,12 +57,12 @@ EOF
     case "${?}" in
       0)
         exit 0
-        ;;
+      ;;
       *)
         exit 1
-        ;;
+      ;;
     esac
-    ;;
+  ;;
 
   --version|--versio|--versi|--vers|--ver|--ve|--v)
     cat <<'EOF'
@@ -79,16 +79,16 @@ EOF
     case "${?}" in
       0)
         exit 0
-        ;;
+      ;;
       *)
         exit 1
-        ;;
+      ;;
     esac
-    ;;
+  ;;
 
   --)
     shift
-    ;;
+  ;;
 
   --help=*|--hel=*|--he=*|--h=*)
     cat >&2 <<'EOF'
@@ -96,7 +96,7 @@ gatbps: option '--help' doesn't allow an argument
 Try 'gatbps --help' for more information.
 EOF
     exit 1
-    ;;
+  ;;
 
   --version=*|--versio=*|--versi=*|--vers=*|--ver=*|--ve=*|--v=*)
     cat >&2 <<'EOF'
@@ -104,7 +104,7 @@ gatbps: option '--version' doesn't allow an argument
 Try 'gatbps --help' for more information.
 EOF
     exit 1
-    ;;
+  ;;
 
   --=*)
     cat >&2 <<EOF
@@ -112,7 +112,7 @@ gatbps: option '${1}' is ambiguous; possibilities: '--help' '--version'
 Try 'gatbps --help' for more information.
 EOF
     exit 1
-    ;;
+  ;;
 
   --*|-?)
     cat >&2 <<EOF
@@ -120,7 +120,7 @@ gatbps: unrecognized option '${1}'
 Try 'gatbps --help' for more information.
 EOF
     exit 1
-    ;;
+  ;;
 
   -?*)
     option=`expr "X${1}" : 'X\(-.\)' 2>/dev/null`
@@ -130,22 +130,22 @@ EOF
           -)
             option='-
 '
-            ;;
+          ;;
         esac
         cat >&2 <<EOF
 gatbps: unrecognized option '${option}'
 Try 'gatbps --help' for more information.
 EOF
-        ;;
+      ;;
       *)
         cat >&2 <<EOF
 gatbps: unrecognized options '${1}'
 Try 'gatbps --help' for more information.
 EOF
-        ;;
+      ;;
     esac
     exit 1
-    ;;
+  ;;
 
 esac
 
@@ -167,12 +167,12 @@ EOF
     case "${?}" in
       0)
         exit 0
-        ;;
+      ;;
       *)
         exit 1
-        ;;
+      ;;
     esac
-    ;;
+  ;;
 esac
 
 gatbps_do_texi_helper() {
@@ -266,7 +266,7 @@ for file do
   case "${file}" in
     ?*)
       :
-      ;;
+    ;;
     *)
       cat >&2 <<EOF
 gatbps: empty argument
@@ -274,7 +274,7 @@ gatbps: gave up on '${file}'
 EOF
       gave_up_at_least_once=1
       continue
-      ;;
+    ;;
   esac
 
   #
@@ -289,7 +289,7 @@ gatbps: gave up on '${file}'
 EOF
       gave_up_at_least_once=1
       continue
-      ;;
+    ;;
   esac
 
   #
@@ -303,10 +303,10 @@ EOF
   case "${file}" in
     /*)
       path="${file}"
-      ;;
+    ;;
     *)
       path="./${file}"
-      ;;
+    ;;
   esac
 
   #
@@ -353,14 +353,14 @@ EOF
   case "${?}" in
     0)
       :
-      ;;
+    ;;
     *)
       cat >&2 <<EOF
 gatbps: gave up on '${file}'
 EOF
       gave_up_at_least_once=1
       continue
-      ;;
+    ;;
   esac
 
   #
@@ -400,16 +400,16 @@ EOF
       case "${?}" in
         0)
           :
-          ;;
+        ;;
         *)
           cat >&2 <<EOF
 gatbps: gave up on '${file}'
 EOF
           gave_up_at_least_once=1
           continue
-          ;;
+        ;;
       esac
-      ;;
+    ;;
 
     CC0-1.0-appendix.texi)
       cat >"${path}" <<'EOF'
@@ -583,16 +583,16 @@ EOF
       case "${?}" in
         0)
           :
-          ;;
+        ;;
         *)
           cat >&2 <<EOF
 gatbps: gave up on '${file}'
 EOF
           gave_up_at_least_once=1
           continue
-          ;;
+        ;;
       esac
-      ;;
+    ;;
 
     CC0-1.0-copying.texi)
       cat >"${path}" <<'EOF'
@@ -622,16 +622,16 @@ EOF
       case "${?}" in
         0)
           :
-          ;;
+        ;;
         *)
           cat >&2 <<EOF
 gatbps: gave up on '${file}'
 EOF
           gave_up_at_least_once=1
           continue
-          ;;
+        ;;
       esac
-      ;;
+    ;;
 
     CC0-1.0.txt)
       cat >"${path}" <<'EOF'
@@ -760,16 +760,16 @@ EOF
       case "${?}" in
         0)
           :
-          ;;
+        ;;
         *)
           cat >&2 <<EOF
 gatbps: gave up on '${file}'
 EOF
           gave_up_at_least_once=1
           continue
-          ;;
+        ;;
       esac
-      ;;
+    ;;
 
     DATE.ac)
       cat >"${path}" <<'EOF'
@@ -797,20 +797,20 @@ EOF
       case "${?}" in
         0)
           :
-          ;;
+        ;;
         *)
           cat >&2 <<EOF
 gatbps: gave up on '${file}'
 EOF
           gave_up_at_least_once=1
           continue
-          ;;
+        ;;
       esac
-      ;;
+    ;;
 
     *)
       :
-      ;;
+    ;;
 
   esac
 
