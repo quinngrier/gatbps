@@ -1,11 +1,9 @@
 #!/bin/sh
 
 #
-# Using anything other than LC_ALL=C is a bad idea. Without it, things
-# become a guessing game of which locale environment variables need to
-# be set to which values for which programs to get reasonable behavior.
-# With it, things are simple: bytes are just bytes, and all formatting
-# behaves in the default way.
+# Not using LC_ALL=C is a bad idea. Without it, we have to guess which
+# programs need which locale variables set to which values in order to
+# play nicely. With it, everything plays nicely by default.
 #
 
 LC_ALL=C
