@@ -4,12 +4,8 @@ AC_INIT([GATBPS],
         [gatbps],
         [https://github.com/quinngrier/gatbps])
 
-m4_define([AC_PACKAGE_DATE],
-          m4_esyscmd_s([sh DATE.sh])m4_assert(m4_sysval == 0))
-AC_SUBST([PACKAGE_DATE], 'AC_PACKAGE_DATE')
-AC_DEFINE([PACKAGE_DATE], "AC_PACKAGE_DATE")
-
 m4_include([CC0-1.0-AC-COPYRIGHT.ac])
+m4_include([DATE.ac])
 
 AC_CONFIG_SRCDIR([gatbps.in])
 
