@@ -7,6 +7,13 @@ AC_INIT([GATBPS],
 m4_include([CC0-1.0-AC-COPYRIGHT.ac])
 m4_include([DATE.ac])
 
+dnl
+dnl Disable the default behavior of looking for auxiliary files in
+dnl parent directories. It's insane to do that without good reason.
+dnl
+
+AC_CONFIG_AUX_DIR([.])
+
 AC_CONFIG_SRCDIR([gatbps.in])
 
 AC_SYS_INTERPRETER
