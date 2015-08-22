@@ -1,11 +1,11 @@
 #!/bin/sh
 
 #
-# With LC_ALL=C, locale-aware programs should have sane behavior: bytes
+# With LC_ALL=C, locale-aware programs should have nice behavior: bytes
 # are just bytes, formatting is natural, string comparisons are natural,
 # character ranges are natural, etc. Without it, we would need to figure
 # out which calls to which programs need which locale variables set to C
-# in order to get sane behavior. In particular, this applies to programs
+# in order to get nice behavior. In particular, this applies to programs
 # like awk, grep, sed, etc.
 #
 
