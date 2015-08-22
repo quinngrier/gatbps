@@ -110,8 +110,8 @@ EOF
   ;;
 
   --=*)
-    cat >&2 <<EOF
-gatbps: option '${1}' is ambiguous; possibilities: '--help' '--version'
+    cat >&2 <<'EOF'
+gatbps: option '--' doesn't allow an argument
 Try 'gatbps --help' for more information.
 EOF
     exit 1
