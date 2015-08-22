@@ -373,7 +373,7 @@ EOF
       cat >"${path}" <<'EOF'
 dnl
 dnl This file was created by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
-dnl Before changing it, make sure that's what you really want to do.
+dnl Before changing it, make sure that you're doing the right thing.
 dnl Depending on how GATBPS is being used, your changes may be lost.
 dnl
 
@@ -415,7 +415,7 @@ EOF
       cat >"${path}" <<'EOF'
 @c
 @c This file was created by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
-@c Before changing it, make sure that's what you really want to do.
+@c Before changing it, make sure that you're doing the right thing.
 @c Depending on how GATBPS is being used, your changes may be lost.
 @c
 @node CC0
@@ -598,7 +598,7 @@ EOF
       cat >"${path}" <<'EOF'
 @c
 @c This file was created by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
-@c Before changing it, make sure that's what you really want to do.
+@c Before changing it, make sure that you're doing the right thing.
 @c Depending on how GATBPS is being used, your changes may be lost.
 @c
 @copying
@@ -775,7 +775,7 @@ EOF
       cat >"${path}" <<'EOF'
 dnl
 dnl This file was created by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
-dnl Before changing it, make sure that's what you really want to do.
+dnl Before changing it, make sure that you're doing the right thing.
 dnl Depending on how GATBPS is being used, your changes may be lost.
 dnl
 
