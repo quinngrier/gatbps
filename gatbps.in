@@ -36,7 +36,7 @@ export LC_ALL
 
 case "${1}" in
 
-  --help|--hel|--he|--h)
+  --help)
     cat <<'EOF'
 Usage: gatbps [FILE]...
 Create project management files.
@@ -93,7 +93,7 @@ EOF
     shift
   ;;
 
-  --help=*|--hel=*|--he=*|--h=*)
+  --help=*)
     cat >&2 <<'EOF'
 gatbps: option '--help' doesn't allow an argument
 Try 'gatbps --help' for more information.
