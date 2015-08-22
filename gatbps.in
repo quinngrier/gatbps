@@ -67,7 +67,7 @@ EOF
     esac
   ;;
 
-  --version|--versio|--versi|--vers|--ver|--ve|--v)
+  --version)
     cat <<'EOF'
 gatbps (GATBPS) @PACKAGE_VERSION@
 This version was released on @PACKAGE_DATE@.
@@ -101,7 +101,7 @@ EOF
     exit 1
   ;;
 
-  --version=*|--versio=*|--versi=*|--vers=*|--ver=*|--ve=*|--v=*)
+  --version=*)
     cat >&2 <<'EOF'
 gatbps: option '--version' doesn't allow an argument
 Try 'gatbps --help' for more information.
