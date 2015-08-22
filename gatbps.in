@@ -85,6 +85,18 @@ EOF
   ;;
 
   --help=*)
+    case "${#}" in
+      1)
+        :
+      ;;
+      *)
+        cat >&2 <<'EOF'
+gatbps: option '--help' must be used alone
+Try 'gatbps --help' for more information.
+EOF
+        exit 1
+      ;;
+    esac
     cat >&2 <<'EOF'
 gatbps: option '--help' doesn't allow an argument
 Try 'gatbps --help' for more information.
