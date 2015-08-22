@@ -41,7 +41,7 @@ Usage: gatbps [--] [<file>...]
        gatbps --help[=<file>]
        gatbps --version
 
-Create project management files.
+Create project helper files.
 
 Each file is classified by its name as either plain or special. In the
 first form, the list of recognized special file names is printed if no
