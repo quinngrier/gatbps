@@ -84,6 +84,14 @@ EOF
     exit 0
   ;;
 
+  --help=*)
+    cat >&2 <<'EOF'
+gatbps: option '--help' doesn't allow an argument
+Try 'gatbps --help' for more information.
+EOF
+    exit 1
+  ;;
+
   --version)
     cat <<'EOF'
 gatbps (GATBPS) @PACKAGE_VERSION@
@@ -109,14 +117,6 @@ EOF
 
   --)
     shift
-  ;;
-
-  --help=*)
-    cat >&2 <<'EOF'
-gatbps: option '--help' doesn't allow an argument
-Try 'gatbps --help' for more information.
-EOF
-    exit 1
   ;;
 
   --version=*)
