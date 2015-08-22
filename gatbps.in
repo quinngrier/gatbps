@@ -75,12 +75,13 @@ Try 'man gatbps' or 'info gatbps' for more information.
 EOF
     case "${?}" in
       0)
-        exit 0
+        :
       ;;
       *)
         exit 1
       ;;
     esac
+    exit 0
   ;;
 
   --version)
@@ -97,12 +98,13 @@ named <CC0-1.0.txt>. If not, it may be available at
 EOF
     case "${?}" in
       0)
-        exit 0
+        :
       ;;
       *)
         exit 1
       ;;
     esac
+    exit 0
   ;;
 
   --)
@@ -185,12 +187,13 @@ DATE.ac
 EOF
     case "${?}" in
       0)
-        exit 0
+        :
       ;;
       *)
         exit 1
       ;;
     esac
+    exit 0
   ;;
 esac
 
