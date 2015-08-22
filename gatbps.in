@@ -36,6 +36,18 @@ export LC_ALL
 case "${1}" in
 
   --help)
+    case "${#}" in
+      1)
+        :
+      ;;
+      *)
+        cat >&2 <<'EOF'
+gatbps: option '--help' must be used alone
+Try 'gatbps --help' for more information.
+EOF
+        exit 1
+      ;;
+    esac
     cat <<'EOF'
 Usage: gatbps [--] [<file>...]
        gatbps --help[=<file>]
