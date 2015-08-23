@@ -116,14 +116,14 @@ EOF
 
     case "${file}" in
       /*)
-        safe="${file}"
+        file_path="${file}"
       ;;
       *)
-        safe="./${file}"
+        file_path="./${file}"
       ;;
     esac
 
-    name=`expr "X${safe}" : 'X.*/\(.*\)'`
+    name=`expr "X${file_path}" : 'X.*/\(.*\)'`
     case "${?}" in
       0)
         :
