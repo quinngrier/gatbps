@@ -191,6 +191,18 @@ EOF
 
   --version)
 
+    case "${#}" in
+      1)
+        :
+      ;;
+      *)
+        cat >&2 <<'EOF'
+gatbps: --version must be used alone
+EOF
+        exit 1
+      ;;
+    esac
+
     cat <<'EOF'
 gatbps (GATBPS) @PACKAGE_VERSION@
 This version was released on @PACKAGE_DATE@.
