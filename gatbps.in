@@ -218,18 +218,18 @@ EOF
 
   ;;
 
-  --)
-
-    shift
-
-  ;;
-
   --version=*)
     cat >&2 <<'EOF'
 gatbps: option '--version' doesn't allow an argument
 gatbps: try --help for more details
 EOF
     exit 1
+  ;;
+
+  --)
+
+    shift
+
   ;;
 
   --=*)
