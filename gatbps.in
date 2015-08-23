@@ -135,6 +135,19 @@ EOF
       ;;
     esac
 
+    file=`expr "X${1}" : 'X--help=\(.*\)'`
+    case "${?}" in
+      0)
+        :
+      ;;
+      *)
+        cat >&2 <<'EOF'
+gatbps: 'expr' failed to extract the '--help' argument
+EOF
+        exit 1
+      ;;
+    esac
+
     cat >&2 <<'EOF'
 gatbps: option '--help' doesn't allow an argument
 Try 'gatbps --help' for more information.
