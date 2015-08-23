@@ -110,8 +110,7 @@ EOF
     case "${1}" in
       --help=)
         cat >&2 <<'EOF'
-gatbps: option '--help' doesn't allow an empty argument
-Try 'gatbps --help' for more information.
+gatbps: file paths must not be empty
 EOF
         exit 1
       ;;
