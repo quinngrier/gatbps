@@ -75,7 +75,6 @@ creation of a version string, release date, authors list, and changelog.
 
 Try 'man gatbps' or 'info gatbps' for more information.
 EOF
-
     case "${?}" in
       0)
         :
