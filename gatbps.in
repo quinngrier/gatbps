@@ -172,7 +172,26 @@ EOF
     case "${name}" in
 
       *)
-        :
+        cat <<'EOF'
+Plain File
+
+A plain file F is created by adding startup and shutdown code to F.texi
+and calling texi2any --plaintext. If F.top exists, it is prepended to F.
+Otherwise, if F.top.texi exists, it is handled like F.texi and prepended
+to F. The same actions are taken for F.bot(.texi), but appending instead
+of prepending to F.
+EOF
+        case "${?}" in
+          0)
+            :
+          ;;
+          *)
+            cat >&2 <<'EOF'
+gatbps: 'cat' failed to write to standard output
+EOF
+            exit 1
+          ;;
+        esac
       ;;
 
     esac
