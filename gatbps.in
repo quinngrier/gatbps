@@ -36,6 +36,7 @@ export LC_ALL
 case "${1}" in
 
   --help)
+
     case "${#}" in
       1)
         :
@@ -48,6 +49,7 @@ EOF
         exit 1
       ;;
     esac
+
     cat <<'EOF'
 Usage: gatbps [--] [<file>...]
        gatbps --help[=<file>]
@@ -73,6 +75,7 @@ creation of a version string, release date, authors list, and changelog.
 
 Try 'man gatbps' or 'info gatbps' for more information.
 EOF
+
     case "${?}" in
       0)
         :
@@ -84,7 +87,9 @@ EOF
         exit 1
       ;;
     esac
+
     exit 0
+
   ;;
 
   --help=*)
