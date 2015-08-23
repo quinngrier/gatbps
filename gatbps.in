@@ -314,7 +314,7 @@ EOF
           ;;
         esac
         cat >&2 <<EOF
-gatbps: unrecognized option '${option}'
+gatbps: unrecognized option: ${option}
 gatbps: try --help for more details
 EOF
       ;;
