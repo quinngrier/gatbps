@@ -63,16 +63,6 @@ file arguments are given. Any other file is plain. All plain files are
 created in the same way, but each special file is unique. More details
 about any file can be viewed with the second form.
 
-Each regular FILE is created by adding startup and shutdown code to
-FILE.texi and calling texi2any --plaintext. If FILE.top exists, it is
-prepended to FILE. Otherwise, if FILE.top.texi exists, it is processed
-in the same way as FILE.texi and prepended to FILE. The same action is
-taken for FILE.bot(.texi), but appending to FILE instead of prepending.
-
-Each special FILE is filled with either preset code or information
-collected from version control. Among other things, this allows for the
-creation of a version string, release date, authors list, and changelog.
-
 Try 'man gatbps' or 'info gatbps' for more information.
 EOF
     case "${?}" in
