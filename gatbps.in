@@ -117,6 +117,16 @@ EOF
       ;;
     esac
 
+    case "${1}" in
+      *'
+')
+        cat >&2 <<'EOF'
+gatbps: file paths must not end with newlines
+EOF
+        exit 1
+      ;;
+    esac
+
     cat >&2 <<'EOF'
 gatbps: option '--help' doesn't allow an argument
 Try 'gatbps --help' for more information.
