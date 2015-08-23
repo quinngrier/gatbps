@@ -256,6 +256,43 @@ EOF
 
   ;;
 
+  --*=*)
+
+    option=`expr "X${1}" : 'X\([^=]*\)' 2>/dev/null`
+    case "${?}" in
+      0)
+        :
+      ;;
+      *)
+        cat >&2 <<EOF
+gatbps: unrecognized option: ${1}
+gatbps: try --help for more details
+EOF
+        exit 1
+      ;;
+    esac
+
+    case "${1}" in
+      "${option}"=*)
+        :
+      ;;
+      *)
+        cat >&2 <<EOF
+gatbps: unrecognized option: ${1}
+gatbps: try --help for more details
+EOF
+        exit 1
+      ;;
+    esac
+
+    cat >&2 <<EOF
+gatbps: unrecognized option: ${option}
+gatbps: try --help for more details
+EOF
+    exit 1
+
+  ;;
+
   --*|-?)
     cat >&2 <<EOF
 gatbps: unrecognized option '${1}'
