@@ -147,6 +147,15 @@ EOF
       ;;
     esac
 
+    case "${file}" in
+      /*)
+        safe="${file}"
+      ;;
+      *)
+        safe="./${file}"
+      ;;
+    esac
+
     cat >&2 <<'EOF'
 gatbps: option '--help' doesn't allow an argument
 Try 'gatbps --help' for more information.
