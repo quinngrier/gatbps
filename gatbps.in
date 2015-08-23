@@ -169,11 +169,16 @@ EOF
       ;;
     esac
 
-    cat >&2 <<'EOF'
-gatbps: option '--help' doesn't allow an argument
-Try 'gatbps --help' for more information.
-EOF
-    exit 1
+    case "${name}" in
+
+      *)
+        :
+      ;;
+
+    esac
+
+    exit 0
+
   ;;
 
   --version)
