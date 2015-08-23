@@ -123,7 +123,7 @@ EOF
       ;;
     esac
 
-    name=`expr "X${file_path}" : 'X.*/\(.*\)'`
+    file_name=`expr "X${file_path}" : 'X.*/\(.*\)'`
     case "${?}" in
       0)
         :
@@ -136,7 +136,7 @@ EOF
       ;;
     esac
 
-    case "${name}" in
+    case "${file_name}" in
 
       *)
         cat <<'EOF'
