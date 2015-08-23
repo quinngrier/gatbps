@@ -190,6 +190,7 @@ EOF
   ;;
 
   --version)
+
     cat <<'EOF'
 gatbps (GATBPS) @PACKAGE_VERSION@
 This version was released on @PACKAGE_DATE@.
@@ -212,7 +213,9 @@ EOF
         exit 1
       ;;
     esac
+
     exit 0
+
   ;;
 
   --)
