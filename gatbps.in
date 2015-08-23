@@ -219,7 +219,9 @@ EOF
   ;;
 
   --)
+
     shift
+
   ;;
 
   --version=*)
