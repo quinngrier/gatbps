@@ -45,7 +45,6 @@ case "${1}" in
       *)
         cat >&2 <<'EOF'
 gatbps: --help must be used alone
-gatbps: try --help for more details
 EOF
         exit 1
       ;;
@@ -91,7 +90,6 @@ EOF
       *)
         cat >&2 <<'EOF'
 gatbps: --help must be used alone
-gatbps: try --help for more details
 EOF
         exit 1
       ;;
