@@ -79,7 +79,7 @@ EOF
       ;;
       *)
         cat >&2 <<'EOF'
-gatbps: failed to 'cat' to standard output
+gatbps: 'cat' failed to write to standard output
 EOF
         exit 1
       ;;
@@ -125,7 +125,7 @@ EOF
       ;;
       *)
         cat >&2 <<'EOF'
-gatbps: failed to 'cat' to standard output
+gatbps: 'cat' failed to write to standard output
 EOF
         exit 1
       ;;
@@ -209,7 +209,7 @@ EOF
       ;;
       *)
         cat >&2 <<'EOF'
-gatbps: failed to 'cat' to standard output
+gatbps: 'cat' failed to write to standard output
 EOF
         exit 1
       ;;
