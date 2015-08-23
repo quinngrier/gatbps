@@ -304,6 +304,7 @@ EOF
   ;;
 
   -?*)
+
     option=`expr "X${1}" : 'X\(-.\)' 2>/dev/null`
     case "${?}" in
       0)
@@ -325,7 +326,9 @@ gatbps: try --help for more details
 EOF
       ;;
     esac
+
     exit 1
+
   ;;
 
 esac
