@@ -219,11 +219,13 @@ EOF
   ;;
 
   --version=*)
+
     cat >&2 <<'EOF'
 gatbps: --version does not accept an argument
 gatbps: try --help for more details
 EOF
     exit 1
+
   ;;
 
   --)
