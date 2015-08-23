@@ -63,7 +63,7 @@ file arguments are given. Any other file is plain. All plain files are
 created in the same way, but each special file is unique. More details
 about any file can be viewed with the second form.
 
-Try 'man gatbps' or 'info gatbps' for more information.
+Also try "man gatbps" or "info gatbps" for more details.
 EOF
     case "${?}" in
       0)
