@@ -320,7 +320,7 @@ EOF
       ;;
       *)
         cat >&2 <<EOF
-gatbps: unrecognized options '${1}'
+gatbps: unrecognized options: ${1}
 gatbps: try --help for more details
 EOF
       ;;
