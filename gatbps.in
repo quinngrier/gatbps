@@ -464,10 +464,6 @@ EOF
     ;;
   esac
 
-  #
-  # Give up on any ${file} that ends in a slash.
-  #
-
   case "${file}" in
     */)
       cat >&2 <<EOF
