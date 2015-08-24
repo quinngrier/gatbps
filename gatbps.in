@@ -76,7 +76,7 @@ EOF
     case "${1}" in
       --help=)
         cat >&2 <<'EOF'
-gatbps: file paths must not be empty
+gatbps: the --help argument must not be empty
 EOF
         exit 1
       ;;
