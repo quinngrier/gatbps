@@ -92,53 +92,8 @@ EOF
     esac
 
     case "${1}" in
-      *'
-')
-        cat >&2 <<'EOF'
-gatbps: the --help argument must not end with a newline
-EOF
-        exit 1
-      ;;
-    esac
 
-    file=`expr "X${1}" : 'X--help=\(.*\)'`
-    case "${?}" in
-      0)
-        :
-      ;;
-      *)
-        cat >&2 <<'EOF'
-gatbps: expr failed to extract the --help argument
-EOF
-        exit 1
-      ;;
-    esac
-
-    case "${file}" in
-      /*)
-        file_path="${file}"
-      ;;
-      *)
-        file_path="./${file}"
-      ;;
-    esac
-
-    file_name=`expr "X${file_path}" : 'X.*/\(.*\)'`
-    case "${?}" in
-      0)
-        :
-      ;;
-      *)
-        cat >&2 <<'EOF'
-gatbps: expr failed to extract the --help argument file name
-EOF
-        exit 1
-      ;;
-    esac
-
-    case "${file_name}" in
-
-      CC0-1.0.txt)
+      --help=CC0-1.0.txt|--help=*/CC0-1.0.txt)
         cat <<'EOF'
 CC0-1.0.txt
 
