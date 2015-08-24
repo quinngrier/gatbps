@@ -83,19 +83,19 @@ EOF
     esac
 
     case "${1}" in
-      *'
-')
+      */)
         cat >&2 <<'EOF'
-gatbps: the --help argument must not end with a newline
+gatbps: the --help argument must not end with a slash
 EOF
         exit 1
       ;;
     esac
 
     case "${1}" in
-      */)
+      *'
+')
         cat >&2 <<'EOF'
-gatbps: the --help argument must not end with a slash
+gatbps: the --help argument must not end with a newline
 EOF
         exit 1
       ;;
