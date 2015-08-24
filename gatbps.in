@@ -138,6 +138,25 @@ EOF
 
     case "${file_name}" in
 
+      CC0-1.0.txt)
+        cat <<'EOF'
+CC0-1.0.txt
+
+The plaintext version of the CC0 1.0 Universal Public Domain Dedication.
+EOF
+        case "${?}" in
+          0)
+            :
+          ;;
+          *)
+            cat >&2 <<'EOF'
+gatbps: cat failed to write to standard output
+EOF
+            exit 1
+          ;;
+        esac
+      ;;
+
       *)
         cat <<'EOF'
 Plain File
