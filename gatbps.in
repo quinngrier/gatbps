@@ -95,7 +95,7 @@ EOF
     case "${1}" in
       */)
         cat >&2 <<'EOF'
-gatbps: file paths must not end with slashes
+gatbps: the --help argument must not end with a slash
 EOF
         exit 1
       ;;
