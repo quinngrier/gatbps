@@ -321,6 +321,7 @@ EOF
 gatbps: unrecognized options: ${1}
 gatbps: try "gatbps --help" for more help
 EOF
+        exit 1
       ;;
     esac
 
