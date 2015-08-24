@@ -450,10 +450,6 @@ gave_up_at_least_once=0
 
 for file do
 
-  #
-  # Give up on any ${file} that is the empty string.
-  #
-
   case "${file}" in
     ?*)
       :
