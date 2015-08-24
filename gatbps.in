@@ -264,7 +264,7 @@ EOF
 
   --*=*)
 
-    option=`expr "X${1}" : 'X\([^=]*\)' 2>/dev/null`
+    option=`expr "X${1}" : 'X\([^=]*\)'`
     case "${?}" in
       0)
         :
@@ -311,7 +311,7 @@ EOF
 
   -?*)
 
-    option=`expr "X${1}" : 'X\(-.\)' 2>/dev/null`
+    option=`expr "X${1}" : 'X\(-.\)'`
     case "${?}" in
       0)
         :
