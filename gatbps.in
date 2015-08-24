@@ -78,7 +78,7 @@ EOF
     case "${1}" in
       --help=)
         cat >&2 <<'EOF'
-gatbps: the --help argument must not be empty
+gatbps: the --help file name must not be empty
 gatbps: try "gatbps --help" for more help
 EOF
         exit 1
@@ -88,7 +88,7 @@ EOF
     case "${1}" in
       */)
         cat >&2 <<'EOF'
-gatbps: the --help argument must not end with a slash
+gatbps: the --help file name must not end with a slash
 gatbps: try "gatbps --help" for more help
 EOF
         exit 1
