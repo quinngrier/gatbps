@@ -33,7 +33,7 @@ Usage: gatbps [--] [<file>...]
        gatbps --help[=<file>]
        gatbps --version
 
-Create project helper files.
+Create standard project files.
 
 Each file is classified by its name as either plain or special. In the
 first form, the list of recognized special file names is printed if no
