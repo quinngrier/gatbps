@@ -130,7 +130,7 @@ EOF
       ;;
       *)
         cat >&2 <<'EOF'
-gatbps: expr failed to extract a file name
+gatbps: expr failed to extract the --help argument file name
 EOF
         exit 1
       ;;
