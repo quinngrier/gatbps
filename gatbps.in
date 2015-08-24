@@ -99,7 +99,7 @@ EOF
 
       --help=CC0-1.0.txt|--help=*/CC0-1.0.txt)
         cat <<'EOF'
-CC0-1.0.txt
+Special file: CC0-1.0.txt
 
 The plaintext version of the CC0 1.0 Universal Public Domain Dedication.
 EOF
