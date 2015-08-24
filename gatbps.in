@@ -117,8 +117,56 @@ EOF
       ;;
 
       *)
-        cat <<'EOF'
-Plain File
+
+        case "${1}" in
+
+          *'
+')
+            cat >&2 <<'EOF'
+gatbps: the --help file name ends with a newline
+EOF
+            delimiter='::'
+            file_name="${1}"
+          ;;
+
+          */*)
+            delimiter=':'
+            file_name=`expr "X${1}" : 'X.*/\(.*\)'`
+            case "${?}" in
+              0)
+                :
+              ;;
+              *)
+                cat >&2 <<'EOF'
+gatbps: expr failed to extract the --help file name
+EOF
+                delimiter='::'
+                file_name="${1}"
+              ;;
+            esac
+          ;;
+
+          *)
+            delimiter=':'
+            file_name=`expr "X${1}" : 'X--help=\(.*\)'`
+            case "${?}" in
+              0)
+                :
+              ;;
+              *)
+                cat >&2 <<'EOF'
+gatbps: expr failed to extract the --help file name
+EOF
+                delimiter='::'
+                file_name="${1}"
+              ;;
+            esac
+          ;;
+
+        esac
+
+        cat <<EOF
+Plain file${delimiter} ${file_name}
 
 A plain file F is created by adding startup and shutdown code to F.texi
 and calling texi2any --plaintext. If F.top exists, it is prepended to F.
@@ -137,6 +185,7 @@ EOF
             exit 1
           ;;
         esac
+
       ;;
 
     esac
