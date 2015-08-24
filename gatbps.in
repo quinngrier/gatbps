@@ -169,10 +169,10 @@ EOF
 Plain file${delimiter} ${file_name}
 
 A plain file F is created by adding startup and shutdown code to F.texi
-and calling texi2any --plaintext. If F.top exists, it is prepended to F.
-Otherwise, if F.top.texi exists, it is handled like F.texi and prepended
-to F. The same actions are taken for F.bot(.texi), but appending instead
-of prepending to F.
+and calling texi2any --plaintext. If F.top exists, it is prepended to F
+with a trailing newline. Otherwise, if F.top.texi exists, it is handled
+like F.texi and prepended to F with a trailing newline. The same action
+is taken for F.bot(.texi), but appending to F with a leading newline.
 EOF
         case "${?}" in
           0)
