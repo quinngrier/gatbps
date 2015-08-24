@@ -86,7 +86,7 @@ EOF
       *'
 ')
         cat >&2 <<'EOF'
-gatbps: file paths must not end with newlines
+gatbps: the --help argument must not end with a newline
 EOF
         exit 1
       ;;
