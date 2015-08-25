@@ -522,7 +522,7 @@ EOF
     :
   elif test -d "${path}"; then
     cat >&2 <<EOF
-gatbps: '${file}' is a directory
+gatbps: file is a directory: ${file}
 gatbps: file skipped: ${file}
 EOF
     one_or_more_skips=1
