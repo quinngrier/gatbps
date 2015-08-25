@@ -529,7 +529,7 @@ EOF
     continue
   else
     cat >&2 <<EOF
-gatbps: '${file}' is not a regular file
+gatbps: file is not regular: ${file}
 gatbps: file skipped: ${file}
 EOF
     one_or_more_skips=1
