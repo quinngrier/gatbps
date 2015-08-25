@@ -467,7 +467,7 @@ for file do
     *)
       cat >&2 <<EOF
 gatbps: file names must not be empty
-gatbps: gave up on '${file}'
+gatbps: file skipped: ${file}
 EOF
       gave_up_at_least_once=1
       continue
@@ -478,7 +478,7 @@ EOF
     */)
       cat >&2 <<EOF
 gatbps: file names must not end with a slash
-gatbps: gave up on '${file}'
+gatbps: file skipped: ${file}
 EOF
       gave_up_at_least_once=1
       continue
@@ -522,14 +522,14 @@ EOF
   elif test -d "${path}"; then
     cat >&2 <<EOF
 gatbps: '${file}' is a directory
-gatbps: gave up on '${file}'
+gatbps: file skipped: ${file}
 EOF
     gave_up_at_least_once=1
     continue
   else
     cat >&2 <<EOF
 gatbps: '${file}' is not a regular file
-gatbps: gave up on '${file}'
+gatbps: file skipped: ${file}
 EOF
     gave_up_at_least_once=1
     continue
@@ -549,7 +549,7 @@ EOF
     ;;
     *)
       cat >&2 <<EOF
-gatbps: gave up on '${file}'
+gatbps: file skipped: ${file}
 EOF
       gave_up_at_least_once=1
       continue
@@ -596,7 +596,7 @@ EOF
         ;;
         *)
           cat >&2 <<EOF
-gatbps: gave up on '${file}'
+gatbps: file skipped: ${file}
 EOF
           gave_up_at_least_once=1
           continue
@@ -779,7 +779,7 @@ EOF
         ;;
         *)
           cat >&2 <<EOF
-gatbps: gave up on '${file}'
+gatbps: file skipped: ${file}
 EOF
           gave_up_at_least_once=1
           continue
@@ -818,7 +818,7 @@ EOF
         ;;
         *)
           cat >&2 <<EOF
-gatbps: gave up on '${file}'
+gatbps: file skipped: ${file}
 EOF
           gave_up_at_least_once=1
           continue
@@ -956,7 +956,7 @@ EOF
         ;;
         *)
           cat >&2 <<EOF
-gatbps: gave up on '${file}'
+gatbps: file skipped: ${file}
 EOF
           gave_up_at_least_once=1
           continue
@@ -994,7 +994,7 @@ EOF
         ;;
         *)
           cat >&2 <<EOF
-gatbps: gave up on '${file}'
+gatbps: file skipped: ${file}
 EOF
           gave_up_at_least_once=1
           continue
