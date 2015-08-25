@@ -12,6 +12,7 @@
 LC_ALL=C
 export LC_ALL
 
+while :; do
   case "${1}" in
 
     --help)
@@ -249,6 +250,7 @@ EOF
     --)
 
       shift
+      break
 
     ;;
 
@@ -340,7 +342,14 @@ EOF
 
     ;;
 
+    *)
+
+      break
+
+    ;;
+
   esac
+done
 
 case "${#}" in
   0)
