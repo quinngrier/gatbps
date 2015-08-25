@@ -125,8 +125,7 @@ EOF
 
           case "${1}" in
 
-            *'
-')
+            *"${nl}")
               cat >&2 <<'EOF'
 gatbps: the --help file name ends with a newline
 EOF
