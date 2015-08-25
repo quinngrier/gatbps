@@ -12,24 +12,24 @@
 LC_ALL=C
 export LC_ALL
 
-case "${1}" in
+  case "${1}" in
 
-  --help)
+    --help)
 
-    case "${#}" in
-      1)
-        :
-      ;;
-      *)
-        cat >&2 <<'EOF'
+      case "${#}" in
+        1)
+          :
+        ;;
+        *)
+          cat >&2 <<'EOF'
 gatbps: --help must be used alone
 gatbps: try "gatbps --help" for more help
 EOF
-        exit 1
-      ;;
-    esac
+          exit 1
+        ;;
+      esac
 
-    cat <<'EOF'
+      cat <<'EOF'
 Usage: gatbps [--] [<file>...]
        gatbps --help[=<file>]
        gatbps --version
@@ -44,128 +44,128 @@ any file can be viewed with the second form.
 
 Try "man gatbps" or "info gatbps" for more help.
 EOF
-    case "${?}" in
-      0)
-        :
-      ;;
-      *)
-        cat >&2 <<'EOF'
+      case "${?}" in
+        0)
+          :
+        ;;
+        *)
+          cat >&2 <<'EOF'
 gatbps: cat failed to write to standard output
 EOF
-        exit 1
-      ;;
-    esac
+          exit 1
+        ;;
+      esac
 
-    exit 0
+      exit 0
 
-  ;;
+    ;;
 
-  --help=*)
+    --help=*)
 
-    case "${#}" in
-      1)
-        :
-      ;;
-      *)
-        cat >&2 <<'EOF'
+      case "${#}" in
+        1)
+          :
+        ;;
+        *)
+          cat >&2 <<'EOF'
 gatbps: --help must be used alone
 gatbps: try "gatbps --help" for more help
 EOF
-        exit 1
-      ;;
-    esac
+          exit 1
+        ;;
+      esac
 
-    case "${1}" in
-      --help=)
-        cat >&2 <<'EOF'
+      case "${1}" in
+        --help=)
+          cat >&2 <<'EOF'
 gatbps: the --help file name must not be empty
 gatbps: try "gatbps --help" for more help
 EOF
-        exit 1
-      ;;
-    esac
+          exit 1
+        ;;
+      esac
 
-    case "${1}" in
-      */)
-        cat >&2 <<'EOF'
+      case "${1}" in
+        */)
+          cat >&2 <<'EOF'
 gatbps: the --help file name must not end with a slash
 gatbps: try "gatbps --help" for more help
 EOF
-        exit 1
-      ;;
-    esac
+          exit 1
+        ;;
+      esac
 
-    case "${1}" in
+      case "${1}" in
 
-      --help=CC0-1.0.txt|--help=*/CC0-1.0.txt)
-        cat <<'EOF'
+        --help=CC0-1.0.txt|--help=*/CC0-1.0.txt)
+          cat <<'EOF'
 Special file: CC0-1.0.txt
 
 The plaintext version of the CC0 1.0 Universal Public Domain Dedication.
 EOF
-        case "${?}" in
-          0)
-            :
-          ;;
-          *)
-            cat >&2 <<'EOF'
+          case "${?}" in
+            0)
+              :
+            ;;
+            *)
+              cat >&2 <<'EOF'
 gatbps: cat failed to write to standard output
 EOF
-            exit 1
-          ;;
-        esac
-      ;;
+              exit 1
+            ;;
+          esac
+        ;;
 
-      *)
+        *)
 
-        case "${1}" in
+          case "${1}" in
 
-          *'
+            *'
 ')
-            cat >&2 <<'EOF'
+              cat >&2 <<'EOF'
 gatbps: the --help file name ends with a newline
 EOF
-            delimiter='::'
-            file_name="${1}"
-          ;;
+              delimiter='::'
+              file_name="${1}"
+            ;;
 
-          */*)
-            delimiter=':'
-            file_name=`expr "X${1}" : 'X.*/\(.*\)'`
-            case "${?}" in
-              0)
-                :
-              ;;
-              *)
-                cat >&2 <<'EOF'
+            */*)
+              delimiter=':'
+              file_name=`expr "X${1}" : 'X.*/\(.*\)'`
+              case "${?}" in
+                0)
+                  :
+                ;;
+                *)
+                  cat >&2 <<'EOF'
 gatbps: expr failed to extract the --help file name
 EOF
-                delimiter='::'
-                file_name="${1}"
-              ;;
-            esac
-          ;;
+                  delimiter='::'
+                  file_name="${1}"
+                ;;
+              esac
+            ;;
 
-          *)
-            delimiter=':'
-            file_name=`expr "X${1}" : 'X--help=\(.*\)'`
-            case "${?}" in
-              0)
-                :
-              ;;
-              *)
-                cat >&2 <<'EOF'
+            *)
+              delimiter=':'
+              file_name=`expr "X${1}" : 'X--help=\(.*\)'`
+              case "${?}" in
+                0)
+                  :
+                ;;
+                *)
+                  cat >&2 <<'EOF'
 gatbps: expr failed to extract the --help file name
 EOF
-                delimiter='::'
-                file_name="${1}"
-              ;;
-            esac
-          ;;
+                  delimiter='::'
+                  file_name="${1}"
+                ;;
+              esac
+            ;;
 
-        esac
+          esac
 
-        cat <<EOF
+          cat <<EOF
 Plain file${delimiter} ${file_name}
 
 A plain file F is created by adding startup and shutdown code to F.texi
@@ -174,42 +174,42 @@ with a trailing newline. Otherwise, if F.top.texi exists, it is handled
 like F.texi and prepended to F with a trailing newline. The same action
 is taken for F.bot(.texi), but appending to F with a leading newline.
 EOF
-        case "${?}" in
-          0)
-            :
-          ;;
-          *)
-            cat >&2 <<'EOF'
+          case "${?}" in
+            0)
+              :
+            ;;
+            *)
+              cat >&2 <<'EOF'
 gatbps: cat failed to write to standard output
 EOF
-            exit 1
-          ;;
-        esac
+              exit 1
+            ;;
+          esac
 
-      ;;
+        ;;
 
-    esac
+      esac
 
-    exit 0
+      exit 0
 
-  ;;
+    ;;
 
-  --version)
+    --version)
 
-    case "${#}" in
-      1)
-        :
-      ;;
-      *)
-        cat >&2 <<'EOF'
+      case "${#}" in
+        1)
+          :
+        ;;
+        *)
+          cat >&2 <<'EOF'
 gatbps: --version must be used alone
 gatbps: try "gatbps --help" for more help
 EOF
-        exit 1
-      ;;
-    esac
+          exit 1
+        ;;
+      esac
 
-    cat <<'EOF'
+      cat <<'EOF'
 gatbps (GATBPS) @PACKAGE_VERSION@
 This version was released on @PACKAGE_DATE@.
 The authors of this script have waived all copyright and
@@ -220,127 +220,127 @@ dedication along with this script, typically as a file
 named <CC0-1.0.txt>. If not, it may be available at
 <https://creativecommons.org/publicdomain/zero/1.0/>.
 EOF
-    case "${?}" in
-      0)
-        :
-      ;;
-      *)
-        cat >&2 <<'EOF'
+      case "${?}" in
+        0)
+          :
+        ;;
+        *)
+          cat >&2 <<'EOF'
 gatbps: cat failed to write to standard output
 EOF
-        exit 1
-      ;;
-    esac
+          exit 1
+        ;;
+      esac
 
-    exit 0
+      exit 0
 
-  ;;
+    ;;
 
-  --version=*)
+    --version=*)
 
-    cat >&2 <<'EOF'
+      cat >&2 <<'EOF'
 gatbps: --version does not accept an argument
 gatbps: try "gatbps --help" for more help
 EOF
-    exit 1
+      exit 1
 
-  ;;
+    ;;
 
-  --)
+    --)
 
-    shift
+      shift
 
-  ;;
+    ;;
 
-  --=*)
+    --=*)
 
-    cat >&2 <<'EOF'
+      cat >&2 <<'EOF'
 gatbps: -- does not accept an argument
 gatbps: try "gatbps --help" for more help
 EOF
-    exit 1
+      exit 1
 
-  ;;
+    ;;
 
-  --*=*)
+    --*=*)
 
-    option=`expr "X${1}" : 'X\([^=]*\)'`
-    case "${?}" in
-      0)
-        :
-      ;;
-      *)
-        cat >&2 <<EOF
+      option=`expr "X${1}" : 'X\([^=]*\)'`
+      case "${?}" in
+        0)
+          :
+        ;;
+        *)
+          cat >&2 <<EOF
 gatbps: unrecognized option: ${1}
 gatbps: try "gatbps --help" for more help
 EOF
-        exit 1
-      ;;
-    esac
+          exit 1
+        ;;
+      esac
 
-    case "${1}" in
-      "${option}"=*)
-        :
-      ;;
-      *)
-        cat >&2 <<EOF
+      case "${1}" in
+        "${option}"=*)
+          :
+        ;;
+        *)
+          cat >&2 <<EOF
 gatbps: unrecognized option: ${1}
 gatbps: try "gatbps --help" for more help
 EOF
-        exit 1
-      ;;
-    esac
+          exit 1
+        ;;
+      esac
 
-    cat >&2 <<EOF
+      cat >&2 <<EOF
 gatbps: unrecognized option: ${option}
 gatbps: try "gatbps --help" for more help
 EOF
-    exit 1
+      exit 1
 
-  ;;
+    ;;
 
-  --*|-?)
+    --*|-?)
 
-    cat >&2 <<EOF
+      cat >&2 <<EOF
 gatbps: unrecognized option: ${1}
 gatbps: try "gatbps --help" for more help
 EOF
-    exit 1
+      exit 1
 
-  ;;
+    ;;
 
-  -?*)
+    -?*)
 
-    option=`expr "X${1}" : 'X\(-.\)'`
-    case "${?}" in
-      0)
-        :
-      ;;
-      *)
-        cat >&2 <<EOF
+      option=`expr "X${1}" : 'X\(-.\)'`
+      case "${?}" in
+        0)
+          :
+        ;;
+        *)
+          cat >&2 <<EOF
 gatbps: unrecognized options: ${1}
 gatbps: try "gatbps --help" for more help
 EOF
-        exit 1
-      ;;
-    esac
+          exit 1
+        ;;
+      esac
 
-    case "${option}" in
-      -)
-        option='-
+      case "${option}" in
+        -)
+          option='-
 '
-      ;;
-    esac
+        ;;
+      esac
 
-    cat >&2 <<EOF
+      cat >&2 <<EOF
 gatbps: unrecognized option: ${option}
 gatbps: try "gatbps --help" for more help
 EOF
-    exit 1
+      exit 1
 
-  ;;
+    ;;
 
-esac
+  esac
 
 case "${#}" in
   0)
