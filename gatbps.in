@@ -457,7 +457,7 @@ gatbps_do_bot_texi() {
   return 1
 }
 
-one_or_more_files_skipped=0
+one_or_more_skips=0
 
 for file do
 
@@ -470,7 +470,7 @@ for file do
 gatbps: file argument is empty
 gatbps: file skipped: ${file}
 EOF
-      one_or_more_files_skipped=1
+      one_or_more_skips=1
       continue
     ;;
   esac
@@ -481,7 +481,7 @@ EOF
 gatbps: file arguments must not end with a slash
 gatbps: file skipped: ${file}
 EOF
-      one_or_more_files_skipped=1
+      one_or_more_skips=1
       continue
     ;;
   esac
@@ -525,14 +525,14 @@ EOF
 gatbps: '${file}' is a directory
 gatbps: file skipped: ${file}
 EOF
-    one_or_more_files_skipped=1
+    one_or_more_skips=1
     continue
   else
     cat >&2 <<EOF
 gatbps: '${file}' is not a regular file
 gatbps: file skipped: ${file}
 EOF
-    one_or_more_files_skipped=1
+    one_or_more_skips=1
     continue
   fi
 
@@ -552,7 +552,7 @@ EOF
       cat >&2 <<EOF
 gatbps: file skipped: ${file}
 EOF
-      one_or_more_files_skipped=1
+      one_or_more_skips=1
       continue
     ;;
   esac
@@ -599,7 +599,7 @@ EOF
           cat >&2 <<EOF
 gatbps: file skipped: ${file}
 EOF
-          one_or_more_files_skipped=1
+          one_or_more_skips=1
           continue
         ;;
       esac
@@ -782,7 +782,7 @@ EOF
           cat >&2 <<EOF
 gatbps: file skipped: ${file}
 EOF
-          one_or_more_files_skipped=1
+          one_or_more_skips=1
           continue
         ;;
       esac
@@ -821,7 +821,7 @@ EOF
           cat >&2 <<EOF
 gatbps: file skipped: ${file}
 EOF
-          one_or_more_files_skipped=1
+          one_or_more_skips=1
           continue
         ;;
       esac
@@ -959,7 +959,7 @@ EOF
           cat >&2 <<EOF
 gatbps: file skipped: ${file}
 EOF
-          one_or_more_files_skipped=1
+          one_or_more_skips=1
           continue
         ;;
       esac
@@ -997,7 +997,7 @@ EOF
           cat >&2 <<EOF
 gatbps: file skipped: ${file}
 EOF
-          one_or_more_files_skipped=1
+          one_or_more_skips=1
           continue
         ;;
       esac
@@ -1011,7 +1011,7 @@ EOF
 
 done
 
-exit "${one_or_more_files_skipped}"
+exit "${one_or_more_skips}"
 
 #
 # The authors of this file have waived all copyright and
