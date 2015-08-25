@@ -6,7 +6,8 @@
 # character ranges are natural, etc. This allows us to operate on ASCII
 # bytes and pass through any higher bytes, like those used by UTF-8. In
 # particular, this applies to the shell itself and to programs like awk,
-# grep, sed, etc.
+# grep, sed, etc. This isn't perfect, but it's the best choice when the
+# main concerns are portability and consistency.
 #
 
 LC_ALL=C
