@@ -127,7 +127,7 @@ EOF
 
             *"${nl}")
               cat >&2 <<'EOF'
-gatbps: the --help argument ends with a newline
+gatbps: the --help file name ends with a newline
 EOF
               delimiter='::'
               file_name="${1}"
