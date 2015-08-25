@@ -522,7 +522,7 @@ EOF
     :
   elif test -d "${path}"; then
     cat >&2 <<EOF
-gatbps: file is a directory: ${file}
+gatbps: file arguments must not name directories
 gatbps: file argument canceled: ${file}
 EOF
     one_or_more_cancellations=1
