@@ -260,7 +260,7 @@ EOF
     --=*)
 
       cat >&2 <<'EOF'
-gatbps: -- does not accept an argument
+gatbps: -- must not be given an argument
 gatbps: try "gatbps --help" for more help
 EOF
       exit 1
