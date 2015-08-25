@@ -467,7 +467,7 @@ for file do
     ;;
     *)
       cat >&2 <<EOF
-gatbps: file name is empty
+gatbps: file argument is empty
 gatbps: file skipped: ${file}
 EOF
       one_or_more_files_skipped=1
@@ -478,7 +478,7 @@ EOF
   case "${file}" in
     */)
       cat >&2 <<EOF
-gatbps: file names must not end with a slash
+gatbps: file arguments must not end with a slash
 gatbps: file skipped: ${file}
 EOF
       one_or_more_files_skipped=1
