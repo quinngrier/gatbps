@@ -243,7 +243,7 @@ EOF
     --version=*)
 
       cat >&2 <<'EOF'
-gatbps: --version does not accept an argument
+gatbps: --version must not be given an argument
 gatbps: try "gatbps --help" for more help
 EOF
       exit 1
