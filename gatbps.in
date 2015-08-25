@@ -477,7 +477,7 @@ EOF
   case "${file}" in
     */)
       cat >&2 <<EOF
-gatbps: '${file}' ends in a slash
+gatbps: file names must not end with a slash
 gatbps: gave up on '${file}'
 EOF
       gave_up_at_least_once=1
