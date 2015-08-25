@@ -93,7 +93,7 @@ EOF
       case "${1}" in
         */)
           cat >&2 <<'EOF'
-gatbps: the --help argument ends with a slash
+gatbps: the --help argument must not end with a slash
 gatbps: try "gatbps --help" for more help
 EOF
           exit 1
@@ -478,7 +478,7 @@ EOF
   case "${file}" in
     */)
       cat >&2 <<EOF
-gatbps: file argument ends with a slash: ${file}
+gatbps: file arguments must not end with a slash
 gatbps: file skipped: ${file}
 EOF
       one_or_more_skips=1
