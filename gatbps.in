@@ -495,20 +495,11 @@ EOF
     ;;
   esac
 
-  if test ! -e "${path}"; then
+  if test ! -d "${path}"; then
     :
-  elif test -f "${path}"; then
-    :
-  elif test -d "${path}"; then
-    cat >&2 <<EOF
-gatbps: file arguments must not name directories
-gatbps: file argument canceled: ${file}
-EOF
-    one_or_more_cancellations=1
-    continue
   else
     cat >&2 <<EOF
-gatbps: file arguments must not name non-regular files
+gatbps: file arguments must not name directories
 gatbps: file argument canceled: ${file}
 EOF
     one_or_more_cancellations=1
