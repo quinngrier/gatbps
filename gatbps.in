@@ -520,10 +520,6 @@ EOF
     ;;
   esac
 
-  #
-  # Do the main processing based on ${name}.
-  #
-
   case "${name}" in
 
     CC0-1.0-AC-COPYRIGHT.ac)
