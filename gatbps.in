@@ -499,7 +499,7 @@ EOF
     :
   else
     cat >&2 <<EOF
-gatbps: file arguments must not name directories
+gatbps: file arguments must not be directories
 gatbps: file argument canceled: ${file}
 EOF
     one_or_more_cancellations=1
