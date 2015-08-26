@@ -324,6 +324,7 @@ EOF
         ;;
         *)
           cat >&2 <<EOF
+gatbps: expr failed to extract an option name
 gatbps: unrecognized options: ${1}
 gatbps: try "gatbps --help" for more help
 EOF
