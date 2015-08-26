@@ -291,7 +291,7 @@ EOF
         ;;
         *)
           cat >&2 <<EOF
-gatbps: an option name ends with a newline
+gatbps: the unrecognized option name ends with a newline
 gatbps: unrecognized option:: ${1}
 gatbps: try "gatbps --help" for more help
 EOF
