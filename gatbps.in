@@ -486,14 +486,6 @@ EOF
     ;;
   esac
 
-  #
-  # Set ${path} to ${file} but adjust it so that it cannot be confused
-  # with program options. Note that ${path} always contains a slash and
-  # that any string with ${path} as an initial substring also cannot be
-  # confused with program options. After this point, we will always use
-  # ${path} for file operations and only use ${file} for error messages.
-  #
-
   case "${file}" in
     /*)
       path="${file}"
