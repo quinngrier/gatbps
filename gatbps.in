@@ -132,62 +132,27 @@ EOF
         ;;
 
         *)
-
-          case "${1}" in
-
-            *"${nl}")
-              cat >&2 <<'EOF'
-gatbps: the --help file name ends with a newline
-gatbps: the --help file name will not be extracted
-EOF
-              delimiter='::'
-              file_name="${1}"
-            ;;
-
-            */*)
-              delimiter=':'
-              file_name=`expr "X${1}" : 'X.*/\(.*\)'`
-              case "${?}" in
-                0)
-                  :
-                ;;
-                *)
-                  cat >&2 <<'EOF'
-gatbps: expr failed to extract the --help file name
-EOF
-                  delimiter='::'
-                  file_name="${1}"
-                ;;
-              esac
-            ;;
-
-            *)
-              delimiter=':'
-              file_name=`expr "X${1}" : 'X--help=\(.*\)'`
-              case "${?}" in
-                0)
-                  :
-                ;;
-                *)
-                  cat >&2 <<'EOF'
-gatbps: expr failed to extract the --help file name
-EOF
-                  delimiter='::'
-                  file_name="${1}"
-                ;;
-              esac
-            ;;
-
-          esac
-
-          cat <<EOF
-Plain file${delimiter} ${file_name}
-
-A plain file F is created by adding startup and shutdown code to F.texi
-and calling texi2any --plaintext. If F.top exists, it is prepended to F
-with a trailing newline. Otherwise, if F.top.texi exists, it is handled
-like F.texi and prepended to F with a trailing newline. The same action
-is taken for F.bot(.texi), but appending to F with a leading newline.
+          awk '
+{
+  if (sub(/.*\//, "")) {
+    name = $0
+  } else if (NR == 1) {
+    sub(/--help=/, "")
+    name = $0
+  } else {
+    name = name "\n" $0
+  }
+}
+END {
+  print "Plain file:", name
+  print ""
+  print "A plain file F is created by adding startup and shutdown code to F.texi"
+  print "and calling texi2any --plaintext. If F.top exists, it is prepended to F"
+  print "with a trailing newline. Otherwise, if F.top.texi exists, it is handled"
+  print "like F.texi and prepended to F with a trailing newline. The same action"
+  print "is taken for F.bot(.texi), but appending to F with a leading newline."
+}' <<EOF
+${1}
 EOF
           case "${?}" in
             0)
@@ -195,14 +160,13 @@ EOF
             ;;
             *)
               cat >&2 <<'EOF'
-gatbps: cat failed to read from:
+gatbps: awk failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: standard output
 EOF
               exit 1
             ;;
           esac
-
         ;;
 
       esac
