@@ -281,30 +281,13 @@ EOF
 
     -?*)
 
-      option=`expr "X${1}" : 'X\(-.\)'`
-      case "${?}" in
-        0)
-          :
-        ;;
-        *)
-          cat >&2 <<EOF
-gatbps: expr failed to extract the unrecognized option name
-gatbps: unrecognized option:: ${1}
-gatbps: try gatbps --help for more information
-EOF
-          exit 1
-        ;;
-      esac
-
-      case "${option}" in
-        -)
-          option="-${nl}"
-        ;;
-      esac
-
-      cat >&2 <<EOF
-gatbps: unrecognized option: ${option}
-gatbps: try gatbps --help for more information
+      awk '
+{
+  print "gatbps: unrecognized option:", substr($0 "\n", 1, 2)
+  print "gatbps: try gatbps --help for more information"
+  exit
+}' >&2 <<EOF
+${1}
 EOF
       exit 1
 
