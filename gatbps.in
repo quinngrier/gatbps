@@ -28,7 +28,7 @@ while :; do
         2)
           cat >&2 <<'EOF'
 gatbps: --help must be used alone
-gatbps: try "gatbps --help" for more help
+gatbps: try gatbps --help for more information
 gatbps: did you mean --help=foo instead of --help foo?
 EOF
           exit 1
@@ -36,7 +36,7 @@ EOF
         *)
           cat >&2 <<'EOF'
 gatbps: --help must be used alone
-gatbps: try "gatbps --help" for more help
+gatbps: try gatbps --help for more information
 EOF
           exit 1
         ;;
@@ -82,7 +82,7 @@ EOF
         *)
           cat >&2 <<'EOF'
 gatbps: --help must be used alone
-gatbps: try "gatbps --help" for more help
+gatbps: try gatbps --help for more information
 EOF
           exit 1
         ;;
@@ -214,7 +214,7 @@ EOF
         *)
           cat >&2 <<'EOF'
 gatbps: --version must be used alone
-gatbps: try "gatbps --help" for more help
+gatbps: try gatbps --help for more information
 EOF
           exit 1
         ;;
@@ -251,7 +251,7 @@ EOF
 
       cat >&2 <<'EOF'
 gatbps: --version must not be given an argument
-gatbps: try "gatbps --help" for more help
+gatbps: try gatbps --help for more information
 EOF
       exit 1
 
@@ -268,7 +268,7 @@ EOF
 
       cat >&2 <<'EOF'
 gatbps: -- must not be given an argument
-gatbps: try "gatbps --help" for more help
+gatbps: try gatbps --help for more information
 EOF
       exit 1
 
@@ -285,7 +285,7 @@ EOF
           cat >&2 <<EOF
 gatbps: expr failed to extract the unrecognized option name
 gatbps: unrecognized option:: ${1}
-gatbps: try "gatbps --help" for more help
+gatbps: try gatbps --help for more information
 EOF
           exit 1
         ;;
@@ -300,7 +300,7 @@ EOF
 gatbps: the unrecognized option name ends with a newline
 gatbps: the unrecognized option name will not be extracted
 gatbps: unrecognized option:: ${1}
-gatbps: try "gatbps --help" for more help
+gatbps: try gatbps --help for more information
 EOF
           exit 1
         ;;
@@ -308,7 +308,7 @@ EOF
 
       cat >&2 <<EOF
 gatbps: unrecognized option: ${option}
-gatbps: try "gatbps --help" for more help
+gatbps: try gatbps --help for more information
 EOF
       exit 1
 
@@ -318,7 +318,7 @@ EOF
 
       cat >&2 <<EOF
 gatbps: unrecognized option: ${1}
-gatbps: try "gatbps --help" for more help
+gatbps: try gatbps --help for more information
 EOF
       exit 1
 
@@ -335,7 +335,7 @@ EOF
           cat >&2 <<EOF
 gatbps: expr failed to extract the unrecognized option name
 gatbps: unrecognized option:: ${1}
-gatbps: try "gatbps --help" for more help
+gatbps: try gatbps --help for more information
 EOF
           exit 1
         ;;
@@ -349,7 +349,7 @@ EOF
 
       cat >&2 <<EOF
 gatbps: unrecognized option: ${option}
-gatbps: try "gatbps --help" for more help
+gatbps: try gatbps --help for more information
 EOF
       exit 1
 
