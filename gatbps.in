@@ -25,6 +25,14 @@ while :; do
         1)
           :
         ;;
+        2)
+          cat >&2 <<'EOF'
+gatbps: --help must be used alone
+gatbps: try "gatbps --help" for more help
+gatbps: did you mean --help=foo instead of --help foo?
+EOF
+          exit 1
+        ;;
         *)
           cat >&2 <<'EOF'
 gatbps: --help must be used alone
