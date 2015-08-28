@@ -29,7 +29,7 @@ while :; do
           cat >&2 <<'EOF'
 gatbps: --help must be used alone
 gatbps: try gatbps --help for more information
-gatbps: did you mean to use an equals sign for --help?
+gatbps: did you mean to use an equals sign with --help?
 EOF
           exit 1
         ;;
