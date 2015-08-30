@@ -265,6 +265,18 @@ END {
 }' >&2 <<EOF
 ${1}
 EOF
+      case "${?}" in
+        0)
+          :
+        ;;
+        *)
+          cat >&2 <<'EOF'
+gatbps: awk failed to read from:
+gatbps:   1. a here-document
+gatbps: and write to: standard error
+EOF
+        ;;
+      esac
       exit 1
 
     ;;
@@ -289,6 +301,18 @@ EOF
 }' >&2 <<EOF
 ${1}
 EOF
+      case "${?}" in
+        0)
+          :
+        ;;
+        *)
+          cat >&2 <<'EOF'
+gatbps: awk failed to read from:
+gatbps:   1. a here-document
+gatbps: and write to: standard error
+EOF
+        ;;
+      esac
       exit 1
 
     ;;
