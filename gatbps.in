@@ -503,6 +503,8 @@ EOF
     fi
   done
 
+  while :; do
+
     case "${path}" in
 
       */CC0-1.0-AC-COPYRIGHT.ac)
@@ -545,7 +547,7 @@ gatbps: and write to: ${path}
 gatbps: file argument canceled: ${file}
 EOF
             one_or_more_cancellations=1
-            continue
+            break
           ;;
         esac
       ;;
@@ -731,7 +733,7 @@ gatbps: and write to: ${path}
 gatbps: file argument canceled: ${file}
 EOF
             one_or_more_cancellations=1
-            continue
+            break
           ;;
         esac
       ;;
@@ -773,7 +775,7 @@ gatbps: and write to: ${path}
 gatbps: file argument canceled: ${file}
 EOF
             one_or_more_cancellations=1
-            continue
+            break
           ;;
         esac
       ;;
@@ -914,7 +916,7 @@ gatbps: and write to: ${path}
 gatbps: file argument canceled: ${file}
 EOF
             one_or_more_cancellations=1
-            continue
+            break
           ;;
         esac
       ;;
@@ -955,7 +957,7 @@ gatbps: and write to: ${path}
 gatbps: file argument canceled: ${file}
 EOF
             one_or_more_cancellations=1
-            continue
+            break
           ;;
         esac
       ;;
@@ -965,6 +967,10 @@ EOF
       ;;
 
     esac
+
+    break
+
+  done
 
 done
 
