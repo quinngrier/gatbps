@@ -972,6 +972,10 @@ EOF
 
   done
 
+  for i in 0 1 2 3 4 5 6 7 8 9; do
+    rm -f "${path}.gatbps${i}"
+  done
+
 done
 
 exit "${one_or_more_cancellations}"
