@@ -481,24 +481,9 @@ EOF
     continue
   fi
 
-  name=`expr "X${path}" : 'X.*/\(.*\)'`
-  case "${?}" in
-    0)
-      :
-    ;;
-    *)
-      cat >&2 <<EOF
-gatbps: expr failed to extract a file name
-gatbps: file argument canceled: ${file}
-EOF
-      one_or_more_cancellations=1
-      continue
-    ;;
-  esac
+  case "${path}" in
 
-  case "${name}" in
-
-    CC0-1.0-AC-COPYRIGHT.ac)
+    */CC0-1.0-AC-COPYRIGHT.ac)
       cat >"${path}" <<'EOF'
 dnl
 dnl This file was created by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
@@ -540,7 +525,7 @@ EOF
       esac
     ;;
 
-    CC0-1.0-appendix.texi)
+    */CC0-1.0-appendix.texi)
       cat >"${path}" <<'EOF'
 @c
 @c This file was created by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
@@ -723,7 +708,7 @@ EOF
       esac
     ;;
 
-    CC0-1.0-copying.texi)
+    */CC0-1.0-copying.texi)
       cat >"${path}" <<'EOF'
 @c
 @c This file was created by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
@@ -762,7 +747,7 @@ EOF
       esac
     ;;
 
-    CC0-1.0.txt)
+    */CC0-1.0.txt)
       cat >"${path}" <<'EOF'
 Creative Commons Legal Code
 
@@ -900,7 +885,7 @@ EOF
       esac
     ;;
 
-    DATE.ac)
+    */DATE.ac)
       cat >"${path}" <<'EOF'
 dnl
 dnl This file was created by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
