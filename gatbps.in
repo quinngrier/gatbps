@@ -503,10 +503,10 @@ EOF
     fi
   done
 
-  case "${path}" in
+    case "${path}" in
 
-    */CC0-1.0-AC-COPYRIGHT.ac)
-      cat >"${path}" <<'EOF'
+      */CC0-1.0-AC-COPYRIGHT.ac)
+        cat >"${path}" <<'EOF'
 dnl
 dnl This file was created by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
 dnl Before changing it, make sure that you're doing the right thing.
@@ -533,25 +533,25 @@ dnl named <CC0-1.0.txt>. If not, it may be available at
 dnl <https://creativecommons.org/publicdomain/zero/1.0/>.
 dnl
 EOF
-      case "${?}" in
-        0)
-          :
-        ;;
-        *)
-          cat >&2 <<EOF
+        case "${?}" in
+          0)
+            :
+          ;;
+          *)
+            cat >&2 <<EOF
 gatbps: cat failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: ${path}
 gatbps: file argument canceled: ${file}
 EOF
-          one_or_more_cancellations=1
-          continue
-        ;;
-      esac
-    ;;
+            one_or_more_cancellations=1
+            continue
+          ;;
+        esac
+      ;;
 
-    */CC0-1.0-appendix.texi)
-      cat >"${path}" <<'EOF'
+      */CC0-1.0-appendix.texi)
+        cat >"${path}" <<'EOF'
 @c
 @c This file was created by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
 @c Before changing it, make sure that you're doing the right thing.
@@ -719,25 +719,25 @@ express Statement of Purpose.
 @c <https://creativecommons.org/publicdomain/zero/1.0/>.
 @c
 EOF
-      case "${?}" in
-        0)
-          :
-        ;;
-        *)
-          cat >&2 <<EOF
+        case "${?}" in
+          0)
+            :
+          ;;
+          *)
+            cat >&2 <<EOF
 gatbps: cat failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: ${path}
 gatbps: file argument canceled: ${file}
 EOF
-          one_or_more_cancellations=1
-          continue
-        ;;
-      esac
-    ;;
+            one_or_more_cancellations=1
+            continue
+          ;;
+        esac
+      ;;
 
-    */CC0-1.0-copying.texi)
-      cat >"${path}" <<'EOF'
+      */CC0-1.0-copying.texi)
+        cat >"${path}" <<'EOF'
 @c
 @c This file was created by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
 @c Before changing it, make sure that you're doing the right thing.
@@ -761,25 +761,25 @@ It may also be available at
 @c <https://creativecommons.org/publicdomain/zero/1.0/>.
 @c
 EOF
-      case "${?}" in
-        0)
-          :
-        ;;
-        *)
-          cat >&2 <<EOF
+        case "${?}" in
+          0)
+            :
+          ;;
+          *)
+            cat >&2 <<EOF
 gatbps: cat failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: ${path}
 gatbps: file argument canceled: ${file}
 EOF
-          one_or_more_cancellations=1
-          continue
-        ;;
-      esac
-    ;;
+            one_or_more_cancellations=1
+            continue
+          ;;
+        esac
+      ;;
 
-    */CC0-1.0.txt)
-      cat >"${path}" <<'EOF'
+      */CC0-1.0.txt)
+        cat >"${path}" <<'EOF'
 Creative Commons Legal Code
 
 CC0 1.0 Universal
@@ -902,25 +902,25 @@ express Statement of Purpose.
     party to this document and has no duty or obligation with respect to
     this CC0 or use of the Work.
 EOF
-      case "${?}" in
-        0)
-          :
-        ;;
-        *)
-          cat >&2 <<EOF
+        case "${?}" in
+          0)
+            :
+          ;;
+          *)
+            cat >&2 <<EOF
 gatbps: cat failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: ${path}
 gatbps: file argument canceled: ${file}
 EOF
-          one_or_more_cancellations=1
-          continue
-        ;;
-      esac
-    ;;
+            one_or_more_cancellations=1
+            continue
+          ;;
+        esac
+      ;;
 
-    */DATE.ac)
-      cat >"${path}" <<'EOF'
+      */DATE.ac)
+        cat >"${path}" <<'EOF'
 dnl
 dnl This file was created by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
 dnl Before changing it, make sure that you're doing the right thing.
@@ -943,28 +943,28 @@ dnl named <CC0-1.0.txt>. If not, it may be available at
 dnl <https://creativecommons.org/publicdomain/zero/1.0/>.
 dnl
 EOF
-      case "${?}" in
-        0)
-          :
-        ;;
-        *)
-          cat >&2 <<EOF
+        case "${?}" in
+          0)
+            :
+          ;;
+          *)
+            cat >&2 <<EOF
 gatbps: cat failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: ${path}
 gatbps: file argument canceled: ${file}
 EOF
-          one_or_more_cancellations=1
-          continue
-        ;;
-      esac
-    ;;
+            one_or_more_cancellations=1
+            continue
+          ;;
+        esac
+      ;;
 
-    *)
-      :
-    ;;
+      *)
+        :
+      ;;
 
-  esac
+    esac
 
 done
 
