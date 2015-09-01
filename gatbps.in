@@ -51,9 +51,9 @@ Create standard project files.
 
 Each file is classified by its name as either plain or special. In the
 first form, the list of special files is shown if no file arguments are
-given. Any other file is plain. Plain files are created in the same way,
-but special files are created in unique ways. More information on how a
-particular file will be created can be shown with the second form.
+given. Any other file is plain. All plain files are created in the same
+way, but each special file is created in a unique way. More information
+on how a certain file will be created can be shown with the second form.
 
 Try man gatbps or info gatbps for more information.
 EOF
