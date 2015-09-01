@@ -503,6 +503,17 @@ EOF
     fi
   done
 
+  tmp0="${path}.gatbps0"
+  tmp1="${path}.gatbps1"
+  tmp2="${path}.gatbps2"
+  tmp3="${path}.gatbps3"
+  tmp4="${path}.gatbps4"
+  tmp5="${path}.gatbps5"
+  tmp6="${path}.gatbps6"
+  tmp7="${path}.gatbps7"
+  tmp8="${path}.gatbps8"
+  tmp9="${path}.gatbps9"
+
   while :; do
 
     case "${path}" in
