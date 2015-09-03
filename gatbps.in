@@ -482,7 +482,7 @@ for file do
     *)
       cat >&2 <<'EOF'
 gatbps: file operands must not be empty
-gatbps: file operand canceled
+gatbps: file operand failed
 EOF
       exit_status=1
       continue
@@ -493,7 +493,7 @@ EOF
     */)
       cat >&2 <<EOF
 gatbps: file operands must not end with slashes
-gatbps: file operand canceled: ${file}
+gatbps: file operand failed: ${file}
 EOF
       exit_status=1
       continue
@@ -514,7 +514,7 @@ EOF
   else
     cat >&2 <<EOF
 gatbps: file operands must not be directories
-gatbps: file operand canceled: ${file}
+gatbps: file operand failed: ${file}
 EOF
     exit_status=1
     continue
@@ -528,14 +528,14 @@ EOF
     elif test -d "${path}.gatbps${i}"; then
       cat >&2 <<EOF
 gatbps: temporary files must not be directories
-gatbps: file operand canceled: ${file}
+gatbps: file operand failed: ${file}
 EOF
       exit_status=1
       continue 2
     else
       cat >&2 <<EOF
 gatbps: temporary files must not be non-regular
-gatbps: file operand canceled: ${file}
+gatbps: file operand failed: ${file}
 EOF
       exit_status=1
       continue 2
@@ -594,7 +594,7 @@ EOF
 gatbps: cat failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: ${path}
-gatbps: file operand canceled: ${file}
+gatbps: file operand failed: ${file}
 EOF
             exit_status=1
             break
@@ -780,7 +780,7 @@ EOF
 gatbps: cat failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: ${path}
-gatbps: file operand canceled: ${file}
+gatbps: file operand failed: ${file}
 EOF
             exit_status=1
             break
@@ -822,7 +822,7 @@ EOF
 gatbps: cat failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: ${path}
-gatbps: file operand canceled: ${file}
+gatbps: file operand failed: ${file}
 EOF
             exit_status=1
             break
@@ -963,7 +963,7 @@ EOF
 gatbps: cat failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: ${path}
-gatbps: file operand canceled: ${file}
+gatbps: file operand failed: ${file}
 EOF
             exit_status=1
             break
@@ -1004,7 +1004,7 @@ EOF
 gatbps: cat failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: ${path}
-gatbps: file operand canceled: ${file}
+gatbps: file operand failed: ${file}
 EOF
             exit_status=1
             break
