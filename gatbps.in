@@ -57,7 +57,7 @@ Usage: gatbps [--] [<file>...]
 Create standard project files.
 
 Each file is classified by its name as either plain or special. In the
-first form, the list of special files is shown if no file arguments are
+first form, the list of special files is shown if no file operands are
 given. Any other file is plain. All plain files are created in the same
 way, but each special file is created in a unique way. More information
 on how a certain file will be created can be shown with the second form.
@@ -481,8 +481,8 @@ for file do
     ;;
     *)
       cat >&2 <<'EOF'
-gatbps: file arguments must not be empty
-gatbps: file argument canceled
+gatbps: file operands must not be empty
+gatbps: file operand canceled
 EOF
       one_or_more_cancellations=1
       continue
@@ -492,8 +492,8 @@ EOF
   case "${file}" in
     */)
       cat >&2 <<EOF
-gatbps: file arguments must not end with slashes
-gatbps: file argument canceled: ${file}
+gatbps: file operands must not end with slashes
+gatbps: file operand canceled: ${file}
 EOF
       one_or_more_cancellations=1
       continue
@@ -513,8 +513,8 @@ EOF
     :
   else
     cat >&2 <<EOF
-gatbps: file arguments must not be directories
-gatbps: file argument canceled: ${file}
+gatbps: file operands must not be directories
+gatbps: file operand canceled: ${file}
 EOF
     one_or_more_cancellations=1
     continue
@@ -528,14 +528,14 @@ EOF
     elif test -d "${path}.gatbps${i}"; then
       cat >&2 <<EOF
 gatbps: temporary files must not be directories
-gatbps: file argument canceled: ${file}
+gatbps: file operand canceled: ${file}
 EOF
       one_or_more_cancellations=1
       continue 2
     else
       cat >&2 <<EOF
 gatbps: temporary files must not be non-regular
-gatbps: file argument canceled: ${file}
+gatbps: file operand canceled: ${file}
 EOF
       one_or_more_cancellations=1
       continue 2
@@ -594,7 +594,7 @@ EOF
 gatbps: cat failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: ${path}
-gatbps: file argument canceled: ${file}
+gatbps: file operand canceled: ${file}
 EOF
             one_or_more_cancellations=1
             break
@@ -780,7 +780,7 @@ EOF
 gatbps: cat failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: ${path}
-gatbps: file argument canceled: ${file}
+gatbps: file operand canceled: ${file}
 EOF
             one_or_more_cancellations=1
             break
@@ -822,7 +822,7 @@ EOF
 gatbps: cat failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: ${path}
-gatbps: file argument canceled: ${file}
+gatbps: file operand canceled: ${file}
 EOF
             one_or_more_cancellations=1
             break
@@ -963,7 +963,7 @@ EOF
 gatbps: cat failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: ${path}
-gatbps: file argument canceled: ${file}
+gatbps: file operand canceled: ${file}
 EOF
             one_or_more_cancellations=1
             break
@@ -1004,7 +1004,7 @@ EOF
 gatbps: cat failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: ${path}
-gatbps: file argument canceled: ${file}
+gatbps: file operand canceled: ${file}
 EOF
             one_or_more_cancellations=1
             break
