@@ -88,6 +88,20 @@ EOF
         1)
           :
         ;;
+        2)
+          case "${2}" in
+            --)
+              :
+            ;;
+            *)
+              cat >&2 <<'EOF'
+gatbps: --help must be used alone
+gatbps: try gatbps --help for more information
+EOF
+              exit 1
+            ;;
+          esac
+        ;;
         *)
           cat >&2 <<'EOF'
 gatbps: --help must be used alone
