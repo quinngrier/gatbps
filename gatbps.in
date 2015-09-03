@@ -471,7 +471,7 @@ gatbps_do_bot_texi() {
   return 1
 }
 
-one_or_more_cancellations=0
+exit_status=0
 
 for file do
 
@@ -484,7 +484,7 @@ for file do
 gatbps: file operands must not be empty
 gatbps: file operand canceled
 EOF
-      one_or_more_cancellations=1
+      exit_status=1
       continue
     ;;
   esac
@@ -495,7 +495,7 @@ EOF
 gatbps: file operands must not end with slashes
 gatbps: file operand canceled: ${file}
 EOF
-      one_or_more_cancellations=1
+      exit_status=1
       continue
     ;;
   esac
@@ -516,7 +516,7 @@ EOF
 gatbps: file operands must not be directories
 gatbps: file operand canceled: ${file}
 EOF
-    one_or_more_cancellations=1
+    exit_status=1
     continue
   fi
 
@@ -530,14 +530,14 @@ EOF
 gatbps: temporary files must not be directories
 gatbps: file operand canceled: ${file}
 EOF
-      one_or_more_cancellations=1
+      exit_status=1
       continue 2
     else
       cat >&2 <<EOF
 gatbps: temporary files must not be non-regular
 gatbps: file operand canceled: ${file}
 EOF
-      one_or_more_cancellations=1
+      exit_status=1
       continue 2
     fi
   done
@@ -596,7 +596,7 @@ gatbps:   1. a here-document
 gatbps: and write to: ${path}
 gatbps: file operand canceled: ${file}
 EOF
-            one_or_more_cancellations=1
+            exit_status=1
             break
           ;;
         esac
@@ -782,7 +782,7 @@ gatbps:   1. a here-document
 gatbps: and write to: ${path}
 gatbps: file operand canceled: ${file}
 EOF
-            one_or_more_cancellations=1
+            exit_status=1
             break
           ;;
         esac
@@ -824,7 +824,7 @@ gatbps:   1. a here-document
 gatbps: and write to: ${path}
 gatbps: file operand canceled: ${file}
 EOF
-            one_or_more_cancellations=1
+            exit_status=1
             break
           ;;
         esac
@@ -965,7 +965,7 @@ gatbps:   1. a here-document
 gatbps: and write to: ${path}
 gatbps: file operand canceled: ${file}
 EOF
-            one_or_more_cancellations=1
+            exit_status=1
             break
           ;;
         esac
@@ -1006,7 +1006,7 @@ gatbps:   1. a here-document
 gatbps: and write to: ${path}
 gatbps: file operand canceled: ${file}
 EOF
-            one_or_more_cancellations=1
+            exit_status=1
             break
           ;;
         esac
@@ -1030,7 +1030,7 @@ EOF
 
 done
 
-exit "${one_or_more_cancellations}"
+exit "${exit_status}"
 
 #
 # The authors of this file have waived all copyright and
