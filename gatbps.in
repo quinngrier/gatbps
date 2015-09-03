@@ -136,6 +136,8 @@ EOF
 Special file: CC0-1.0.txt
 
 The plaintext version of the CC0 1.0 Universal Public Domain Dedication.
+
+Try man gatbps or info gatbps for more information.
 EOF
           case "${?}" in
             0)
