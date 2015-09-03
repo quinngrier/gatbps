@@ -151,6 +151,8 @@ END {
   print "with a trailing newline. Otherwise, if F.top.texi exists, it is handled"
   print "like F.texi and prepended to F with a trailing newline. The same action"
   print "is taken for F.bot(.texi), but appending to F with a leading newline."
+  print ""
+  print "Try man gatbps or info gatbps for more information."
 }' <<EOF
 ${1}
 EOF
