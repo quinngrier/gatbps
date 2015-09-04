@@ -1152,6 +1152,26 @@ EOF
 
         fi
 
+        if test -e "${path}.texi"; then
+          if test ! -d "${path}.texi"; then
+            :
+          else
+            cat >&2 <<EOF
+gatbps: file must not be a directory: ${path}.texi
+gatbps: file operand failed: ${file}
+EOF
+            exit_status=1
+            break
+          fi
+        else
+          cat >&2 <<EOF
+gatbps: file must exist: ${path}.texi
+gatbps: file operand failed: ${file}
+EOF
+          exit_status=1
+          break
+        fi
+
       ;;
 
     esac
