@@ -1100,6 +1100,22 @@ EOF
             ;;
           esac
 
+          texi2any --plaintext "${tmp1}" >"${tmp0}"
+          case "${?}" in
+            0)
+              :
+            ;;
+            *)
+              cat >&2 <<EOF
+gatbps: texi2any failed to read from: ${tmp1}
+gatbps: and write to: ${tmp0}
+gatbps: file operand failed: ${file}
+EOF
+              exit_status=1
+              break
+            ;;
+          esac
+
         else
 
           :
