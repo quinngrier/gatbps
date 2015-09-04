@@ -1015,6 +1015,7 @@ EOF
       *)
 
         if test -e "${path}.top"; then
+
           if test ! -d "${path}.top"; then
             :
           else
@@ -1025,7 +1026,9 @@ EOF
             exit_status=1
             break
           fi
+
         elif test -e "${path}.top.texi"; then
+
           if test ! -d "${path}.top.texi"; then
             :
           else
@@ -1036,8 +1039,11 @@ EOF
             exit_status=1
             break
           fi
+
         else
+
           :
+
         fi
 
       ;;
