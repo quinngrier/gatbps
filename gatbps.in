@@ -1027,6 +1027,32 @@ EOF
             break
           fi
 
+          awk '
+/^#/ {
+  next
+}
+{
+  print
+}
+END {
+  print ""
+}
+' <"${path}.top" >"${tmp0}"
+          case "${?}" in
+            0)
+              :
+            ;;
+            *)
+              cat >&2 <<EOF
+gatbps: awk failed to read from:
+gatbps:   1. ${path}.top
+gatbps: and write to: ${tmp0}
+EOF
+              exit_status=1
+              break
+            ;;
+          esac
+
         elif test -e "${path}.top.texi"; then
 
           if test ! -d "${path}.top.texi"; then
