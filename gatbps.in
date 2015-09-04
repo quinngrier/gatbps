@@ -1050,6 +1050,7 @@ END {
 gatbps: awk failed to read from:
 gatbps:   1. ${path}.top
 gatbps: and write to: ${tmp0}
+gatbps: file operand failed: ${file}
 EOF
               exit_status=1
               break
