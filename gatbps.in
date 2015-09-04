@@ -1014,7 +1014,13 @@ EOF
 
       *)
 
-        :
+        if test -e "${path}.top"; then
+          :
+        elif test -e "${path}.top.texi"; then
+          :
+        else
+          :
+        fi
 
       ;;
 
