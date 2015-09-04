@@ -1172,6 +1172,36 @@ EOF
           break
         fi
 
+        awk '
+BEGIN {
+  print "\\input texinfo"
+  print "@setfilename foo"
+  print "@documentencoding UTF-8"
+  print "@settitle foo"
+}
+{
+  print
+}
+END {
+  print "@bye"
+}
+' <"${path}.texi" >"${tmp2}"
+        case "${?}" in
+          0)
+            :
+          ;;
+          *)
+            cat >&2 <<EOF
+gatbps: awk failed to read from:
+gatbps:   1. ${path}.texi
+gatbps: and write to: ${tmp2}
+gatbps: file operand failed: ${file}
+EOF
+            exit_status=1
+            break
+          ;;
+        esac
+
       ;;
 
     esac
