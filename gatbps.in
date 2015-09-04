@@ -1026,7 +1026,16 @@ EOF
             break
           fi
         elif test -e "${path}.top.texi"; then
-          :
+          if test ! -d "${path}.top.texi"; then
+            :
+          else
+            cat >&2 <<EOF
+gatbps: file must not be a directory: ${path}.top.texi
+gatbps: file operand failed: ${file}
+EOF
+            exit_status=1
+            break
+          fi
         else
           :
         fi
