@@ -176,7 +176,8 @@ END {
   print "is taken for F.bot(.texi), but appending to F with a leading newline."
   print ""
   print "Try man gatbps or info gatbps for more information."
-}' <<EOF
+}
+' <<EOF
 ${1}
 EOF
           case "${?}" in
@@ -301,7 +302,8 @@ EOF
 END {
   print "gatbps: unrecognized option:", name
   print "gatbps: try gatbps --help for more information"
-}' >&2 <<EOF
+}
+' >&2 <<EOF
 ${1}
 EOF
       case "${?}" in
@@ -337,7 +339,8 @@ EOF
   print "gatbps: unrecognized option:", substr($0 "\n", 1, 2)
   print "gatbps: try gatbps --help for more information"
   exit
-}' >&2 <<EOF
+}
+' >&2 <<EOF
 ${1}
 EOF
       case "${?}" in
