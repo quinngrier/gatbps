@@ -450,7 +450,7 @@ EOF
       :
     elif test -d "${path}.gatbps${i}"; then
       cat >&2 <<EOF
-gatbps: temporary files must not be directories
+gatbps: file must not be a directory: ${path}.gatbps${i}
 gatbps: file operand failed: ${file}
 EOF
       exit_status=1
