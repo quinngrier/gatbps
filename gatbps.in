@@ -171,9 +171,10 @@ END {
   print ""
   print "A plain file F is created by adding startup and shutdown code to F.texi"
   print "and calling texi2any --plaintext. If F.top exists, it is prepended to F"
-  print "with a trailing newline. Otherwise, if F.top.texi exists, it is handled"
-  print "like F.texi and prepended to F with a trailing newline. The same action"
-  print "is taken for F.bot(.texi), but appending to F with a leading newline."
+  print "with a trailing newline and lines beginning with '\''#'\'' removed. Otherwise,"
+  print "if F.top.texi exists, it is handled like F.texi and prepended to F with"
+  print "a trailing newline. The same is done for F.bot(.texi), but appending to"
+  print "F with a leading newline."
   print ""
   print "Try man gatbps or info gatbps for more information."
 }
