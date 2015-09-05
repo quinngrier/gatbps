@@ -1353,6 +1353,25 @@ EOF
 
         fi
 
+        cat "${tmp0}" "${tmp1}" "${tmp2}" >"${path}"
+        case "${?}" in
+          0)
+            :
+          ;;
+          *)
+            cat >&2 <<EOF
+gatbps: cat failed to read from:
+gatbps:   1. ${tmp0}
+gatbps:   2. ${tmp1}
+gatbps:   3. ${tmp2}
+gatbps: and write to: ${path}
+gatbps: file operand failed: ${file}
+EOF
+            exit_status=1
+            break
+          ;;
+        esac
+
       ;;
 
     esac
