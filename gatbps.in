@@ -1218,6 +1218,141 @@ EOF
           ;;
         esac
 
+        if test -e "${path}.bot"; then
+
+          if test ! -d "${path}.bot"; then
+            :
+          else
+            cat >&2 <<EOF
+gatbps: file must not be a directory: ${path}.bot
+gatbps: file operand failed: ${file}
+EOF
+            exit_status=1
+            break
+          fi
+
+          awk '
+BEGIN {
+  print ""
+}
+/^#/ {
+  next
+}
+{
+  print
+}
+' <"${path}.bot" >"${tmp2}"
+          case "${?}" in
+            0)
+              :
+            ;;
+            *)
+              cat >&2 <<EOF
+gatbps: awk failed to read from:
+gatbps:   1. ${path}.bot
+gatbps: and write to: ${tmp2}
+gatbps: file operand failed: ${file}
+EOF
+              exit_status=1
+              break
+            ;;
+          esac
+
+        elif test -e "${path}.bot.texi"; then
+
+          if test ! -d "${path}.bot.texi"; then
+            :
+          else
+            cat >&2 <<EOF
+gatbps: file must not be a directory: ${path}.bot.texi
+gatbps: file operand failed: ${file}
+EOF
+            exit_status=1
+            break
+          fi
+
+          echo >"${tmp2}"
+          case "${?}" in
+            0)
+              :
+            ;;
+            *)
+              cat >&2 <<EOF
+gatbps: echo failed to write to: ${tmp2}
+gatbps: file operand failed: ${file}
+EOF
+              exit_status=1
+              break
+            ;;
+          esac
+
+          awk '
+BEGIN {
+  print "\\input texinfo"
+  print "@setfilename foo"
+  print "@documentencoding UTF-8"
+  print "@settitle foo"
+}
+{
+  print
+}
+END {
+  print "@bye"
+}
+' <"${path}.bot.texi" >"${tmp3}"
+          case "${?}" in
+            0)
+              :
+            ;;
+            *)
+              cat >&2 <<EOF
+gatbps: awk failed to read from:
+gatbps:   1. ${path}.bot.texi
+gatbps: and write to: ${tmp3}
+gatbps: file operand failed: ${file}
+EOF
+              exit_status=1
+              break
+            ;;
+          esac
+
+          texi2any --plaintext "${tmp3}" >>"${tmp2}"
+          case "${?}" in
+            0)
+              :
+            ;;
+            *)
+              cat >&2 <<EOF
+gatbps: texi2any failed to read from: ${tmp3}
+gatbps: and write to: ${tmp2}
+gatbps: file operand failed: ${file}
+EOF
+              exit_status=1
+              break
+            ;;
+          esac
+
+        else
+
+          cat /dev/null >${tmp2}
+          case "${?}" in
+            0)
+              :
+            ;;
+            *)
+              cat >&2 <<EOF
+gatbps: cat failed to read from:
+gatbps:   1. /dev/null
+gatbps: and write to: ${tmp2}
+gatbps: file operand failed: ${file}
+EOF
+              exit_status=1
+              break
+            ;;
+          esac
+
+        fi
+
       ;;
 
     esac
