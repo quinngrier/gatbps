@@ -457,7 +457,7 @@ EOF
       continue 2
     else
       cat >&2 <<EOF
-gatbps: temporary files must not be non-regular
+gatbps: file must not be non-regular: ${path}.gatbps${i}
 gatbps: file operand failed: ${file}
 EOF
       exit_status=1
