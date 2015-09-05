@@ -575,7 +575,7 @@ Work and the meaning and intended legal effect of CC0 on those rights.
 
 @enumerate
 @item
-@strong{Copyright and Related Rights.} A Work made available under CC0 may be
+@b{Copyright and Related Rights.} A Work made available under CC0 may be
 protected by copyright and related or neighboring rights (``Copyright and
 Related Rights''). Copyright and Related Rights include, but are not
 limited to, the following:
@@ -614,7 +614,7 @@ limited to, the following:
 @end enumerate
 
 @item
-@strong{Waiver.} To the greatest extent permitted by, but not in contravention
+@b{Waiver.} To the greatest extent permitted by, but not in contravention
 of, applicable law, Affirmer hereby overtly, fully, permanently,
 irrevocably and unconditionally waives, abandons, and surrenders all of
 Affirmer's Copyright and Related Rights and associated claims and causes
@@ -632,7 +632,7 @@ equitable action to disrupt the quiet enjoyment of the Work by the public
 as contemplated by Affirmer's express Statement of Purpose.
 
 @item
-@strong{Public License Fallback.} Should any part of the Waiver for any reason
+@b{Public License Fallback.} Should any part of the Waiver for any reason
 be judged legally invalid or ineffective under applicable law, then the
 Waiver shall be preserved to the maximum extent permitted taking into
 account Affirmer's express Statement of Purpose. In addition, to the
@@ -655,7 +655,7 @@ action with respect to the Work, in either case contrary to Affirmer's
 express Statement of Purpose.
 
 @item
-@strong{Limitations and Disclaimers.}
+@b{Limitations and Disclaimers.}
 
 @enumerate a
 @item
