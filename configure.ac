@@ -17,7 +17,7 @@ AC_CONFIG_AUX_DIR([.])
 AC_CONFIG_SRCDIR([gatbps.in])
 
 AC_SYS_INTERPRETER
-AS_CASE(["$interpval"], [no],
+AS_CASE(["${interpval}"], [no],
         [AC_MSG_WARN([the gatbps script may not run properly])])
 
 AM_INIT_AUTOMAKE([-Wall -Werror info-in-builddir])
