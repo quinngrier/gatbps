@@ -131,6 +131,30 @@ EOF
 
       case "${1}" in
 
+        --help=CC0-1.0-appendix.texi|--help=*/CC0-1.0-appendix.texi)
+          cat <<'EOF'
+Special file: CC0-1.0-appendix.texi
+
+The CC0-1.0.txt special file, but formatted as a Texinfo @appendix to
+@include in a main Texinfo file. The @appendix is tagged as @node CC0.
+
+Try man gatbps or info gatbps for more information.
+EOF
+          case "${?}" in
+            0)
+              :
+            ;;
+            *)
+              cat >&2 <<'EOF'
+gatbps: cat failed to read from:
+gatbps:   1. a here-document
+gatbps: and write to: standard output
+EOF
+              exit 1
+            ;;
+          esac
+        ;;
+
         --help=CC0-1.0.txt|--help=*/CC0-1.0.txt)
           cat <<'EOF'
 Special file: CC0-1.0.txt
