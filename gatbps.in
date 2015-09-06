@@ -1054,7 +1054,7 @@ EOF
 
         else
 
-          cat /dev/null >${tmp0}
+          cat /dev/null >"${tmp0}"
           case "${?}" in
             0)
               :
