@@ -162,10 +162,12 @@ EOF
           cat <<'EOF'
 Special file: CC0-1.0-copying.texi
 
-A Texinfo @copying block to @include in a main Texinfo file. The text
-states that the authors of the manual have waived their rights to the
-manual as described by CC0 and cross references @node CC0, which is
-defined by the CC0-1.0-appendix.texi special file.
+The CC0-1.0-copying.texi special file defines a Texinfo @copying block
+that states that the authors of the manual have waived their rights to
+the manual via CC0 and cross references @node CC0, which is defined by
+the CC0-1.0-appendix.texi special file. It can be included in another
+Texinfo file with the @include command where the @copying block would
+normally appear.
 
 Try man gatbps or info gatbps for more information.
 EOF
