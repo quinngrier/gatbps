@@ -190,9 +190,10 @@ EOF
           cat <<'EOF'
 Special file: CC0-1.0.txt
 
-The plaintext version of the CC0 1.0 Universal Public Domain Dedication,
-which is a legal instrument from Creative Commons for waiving copyright
-and related or neighboring rights. This was originally downloaded from
+The CC0-1.0.txt special file is the plaintext version of the CC0 1.0
+Universal Public Domain Dedication, which is a legal instrument from
+Creative Commons that allows an author to waive their copyright and
+related or neighboring rights. This was originally downloaded from
 <https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt>.
 
 Try man gatbps or info gatbps for more information.
