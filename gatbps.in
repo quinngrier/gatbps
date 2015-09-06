@@ -155,6 +155,32 @@ EOF
           esac
         ;;
 
+        --help=CC0-1.0-copying.texi|--help=*/CC0-1.0-copying.texi)
+          cat <<'EOF'
+Special file: CC0-1.0-copying.texi
+
+A Texinfo @copying block to @include in a main Texinfo file. The text
+states that the authors of the manual have waived their rights to the
+manual as described by CC0 and cross references @node CC0, which is
+defined by the CC0-1.0-appendix.texi special file.
+
+Try man gatbps or info gatbps for more information.
+EOF
+          case "${?}" in
+            0)
+              :
+            ;;
+            *)
+              cat >&2 <<'EOF'
+gatbps: cat failed to read from:
+gatbps:   1. a here-document
+gatbps: and write to: standard output
+EOF
+              exit 1
+            ;;
+          esac
+        ;;
+
         --help=CC0-1.0.txt|--help=*/CC0-1.0.txt)
           cat <<'EOF'
 Special file: CC0-1.0.txt
