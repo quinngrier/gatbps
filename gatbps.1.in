@@ -1,3 +1,9 @@
 .TH gatbps 1 @PACKAGE_DATE@ "@PACKAGE_STRING@"
 .SH NAME
 gatbps \- create standard project files
+.SH SYNOPSIS
+.nf
+\fBgatbps\fR [\fB--\fR] [<\fIfile\fR>...]
+\fBgatbps\fR \fB--help\fR[=<\fIfile\fR>...]
+\fBgatbps\fR \fB--version\fR
+.fi
