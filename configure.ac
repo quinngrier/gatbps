@@ -16,6 +16,12 @@ AC_CONFIG_AUX_DIR([.])
 
 AC_CONFIG_SRCDIR([gatbps.in])
 
+dnl
+dnl It's questionable whether shebangs not working would really be a
+dnl problem since gatbps is a portable shell script, but we might as
+dnl well complain about it.
+dnl
+
 AC_SYS_INTERPRETER
 AS_CASE(["${interpval}"], [no],
         [AC_MSG_WARN([the gatbps script may not work properly])])
