@@ -131,6 +131,33 @@ EOF
 
       case "${1}" in
 
+        --help=CC0-1.0-AC-COPYRIGHT.ac|--help=*/CC0-1.0-AC-COPYRIGHT.ac)
+          cat <<'EOF'
+Special file: CC0-1.0-AC-COPYRIGHT.ac
+
+The CC0-1.0-AC-COPYRIGHT.ac special file calls Autoconf's AC_COPYRIGHT
+macro with text stating that some parts of the configure script belong
+to the package and that the authors of those parts have waived their
+rights to them via CC0. It can be included in configure.ac with the
+m4_include macro where the AC_COPYRIGHT call would normally appear.
+
+Try man gatbps or info gatbps for more information.
+EOF
+          case "${?}" in
+            0)
+              :
+            ;;
+            *)
+              cat >&2 <<'EOF'
+gatbps: cat failed to read from:
+gatbps:   1. a here-document
+gatbps: and write to: standard output
+EOF
+              exit 1
+            ;;
+          esac
+        ;;
+
         --help=CC0-1.0-appendix.texi|--help=*/CC0-1.0-appendix.texi)
           cat <<'EOF'
 Special file: CC0-1.0-appendix.texi
