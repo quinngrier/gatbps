@@ -1241,10 +1241,7 @@ EOF
 BEGIN {
   print ""
 }
-/^#/ {
-  next
-}
-{
+$0 !~ /^#/ {
   print $0
 }
 ' <"${path}.bot" >"${tmp2}"
