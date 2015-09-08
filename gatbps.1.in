@@ -10,6 +10,7 @@ gatbps \- create standard project files
 .SH DESCRIPTION
 .SH PLAIN FILES
 .SH SPECIAL FILES
+.SH TEMPORARY FILES
 .SH EXIT STATUS
 \fBgatbps\fR uses exit status zero to indicate success
 and any other exit status to indicate failure.
