@@ -246,7 +246,7 @@ EOF
   if (sub(/.*\//, "", $0)) {
     name = $0
   } else if (NR == 1) {
-    sub(/--help=/, "")
+    sub(/--help=/, "", $0)
     name = $0
   } else {
     name = name "\n" $0
