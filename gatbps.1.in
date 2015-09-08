@@ -23,11 +23,9 @@ and deleted after the operand succeeds or fails.
 \fBgatbps\fR indicates success with exit status zero
 and failure with any other exit status.
 In the first form,
-success means that
-no \fIfile\fR operands were given
-or that all \fIfile\fR operands succeeded,
-and failure means that
-one or more \fIfile\fR operands failed.
+success means that all \fIfile\fR operands succeeded
+or that none were given,
+and failure means that one or more failed.
 The second and third forms always succeed.
 General failures are always possible
 (like failing to write to standard output)
