@@ -24,7 +24,6 @@ and deleted after the operand succeeds or fails.
 and failure with any nonzero exit status.
 In the first form,
 success means that all \fIfile\fR operands succeeded
-or that none were given,
-and failure means that one or more failed.
+or that none were given.
 In the second and third forms,
 success means that writing to standard output was successful.
