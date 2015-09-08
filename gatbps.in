@@ -243,7 +243,7 @@ EOF
         *)
           awk '
 {
-  if (sub(/.*\//, "")) {
+  if (sub(/.*\//, "", $0)) {
     name = $0
   } else if (NR == 1) {
     sub(/--help=/, "")
