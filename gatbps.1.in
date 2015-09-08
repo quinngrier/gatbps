@@ -21,7 +21,7 @@ the files are used in an unspecified way
 and deleted after the operand succeeds or fails.
 .SH EXIT STATUS
 \fBgatbps\fR indicates success with exit status zero
-and failure with any other exit status.
+and failure with any nonzero exit status.
 In the first form,
 success means that all \fIfile\fR operands succeeded
 or that none were given,
