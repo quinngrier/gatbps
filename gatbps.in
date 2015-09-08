@@ -1087,7 +1087,7 @@ BEGIN {
   print "@settitle foo"
 }
 {
-  print
+  print $0
 }
 END {
   print "@bye"
