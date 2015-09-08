@@ -1040,10 +1040,7 @@ EOF
           fi
 
           awk '
-/^#/ {
-  next
-}
-{
+$0 !~ /^#/ {
   print $0
 }
 END {
