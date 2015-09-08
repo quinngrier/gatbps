@@ -19,7 +19,7 @@ AC_CONFIG_SRCDIR([gatbps.in])
 dnl
 dnl It's questionable whether shebangs not working would really be a
 dnl problem since gatbps is a portable shell script, but we might as
-dnl well check. Such a system would probably be pretty precarious.
+dnl well print a warning. Such a system would be pretty precarious.
 dnl
 
 AC_SYS_INTERPRETER
