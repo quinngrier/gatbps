@@ -11,6 +11,14 @@ gatbps \- create standard project files
 .SH PLAIN FILES
 .SH SPECIAL FILES
 .SH TEMPORARY FILES
+\fBgatbps\fR reserves the ten temporary files
+\f(BIfile\fB.gatbps0\fR through \f(BIfile\fB.gatbps9\fR
+for each \fIfile\fR operand.
+If any of these is a directory or nonregular,
+the operand fails.
+Otherwise,
+the files are used in an unspecified way
+and deleted after the operand succeeds or fails.
 .SH EXIT STATUS
 \fBgatbps\fR uses exit status zero to indicate success
 and any other exit status to indicate failure.
