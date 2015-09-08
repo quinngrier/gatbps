@@ -20,8 +20,8 @@ Otherwise,
 the files are used in an unspecified way
 and deleted after the operand succeeds or fails.
 .SH EXIT STATUS
-\fBgatbps\fR uses exit status zero to indicate success
-and any other exit status to indicate failure.
+\fBgatbps\fR indicates success with exit status zero
+and failure with any other exit status.
 In the first form,
 success means that
 no \fIfile\fR operands were given
