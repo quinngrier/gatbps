@@ -11,9 +11,9 @@ gatbps \- create standard project files
 .SH PLAIN FILES
 .SH SPECIAL FILES
 .SH TEMPORARY FILES
+For each \fIfile\fR operand in the first form,
 \fBgatbps\fR reserves the ten temporary files
-\f(BIfile\fB.gatbps0\fR through \f(BIfile\fB.gatbps9\fR
-for each \fIfile\fR operand.
+\f(BIfile\fB.gatbps0\fR through \f(BIfile\fB.gatbps9\fR.
 If any of these is a directory or nonregular,
 the operand fails.
 Otherwise,
