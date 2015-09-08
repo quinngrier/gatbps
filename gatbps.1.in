@@ -11,3 +11,16 @@ gatbps \- create standard project files
 .SH PLAIN FILES
 .SH SPECIAL FILES
 .SH EXIT STATUS
+\fBgatbps\fR uses exit status zero to indicate success
+and any other exit status to indicate failure.
+In the first form,
+success means that
+no \fIfile\fR operands were given
+or that all \fIfile\fR operands succeeded,
+and failure means that
+one or more \fIfile\fR operands failed
+(all \fIfile\fR operands are always attempted).
+The second and third forms always succeed.
+General failures are always possible
+(like failing to write to standard output)
+and may cause \fBgatbps\fR to immediately exit.
