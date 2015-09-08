@@ -1044,7 +1044,7 @@ EOF
   next
 }
 {
-  print
+  print $0
 }
 END {
   print ""
