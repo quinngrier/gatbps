@@ -26,4 +26,4 @@ In the first form,
 success means that all \fIfile\fR operands succeeded
 or that none were given.
 In the second and third forms,
-success means that writing to standard output was successful.
+success means that writing to standard output succeeded.
