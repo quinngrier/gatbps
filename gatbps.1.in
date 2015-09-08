@@ -26,7 +26,5 @@ In the first form,
 success means that all \fIfile\fR operands succeeded
 or that none were given,
 and failure means that one or more failed.
-The second and third forms always succeed.
-General failures are always possible
-(like failing to write to standard output)
-and may cause \fBgatbps\fR to immediately exit.
+In the second and third forms,
+success means that writing to standard output was successful.
