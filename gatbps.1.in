@@ -8,5 +8,6 @@ gatbps \- create standard project files
 \fBgatbps\fR \fB--version\fR
 .fi
 .SH DESCRIPTION
+.SH PLAIN FILES
 .SH SPECIAL FILES
 .SH EXIT STATUS
