@@ -7,3 +7,4 @@ gatbps \- create standard project files
 \fBgatbps\fR \fB--help\fR[=<\fIfile\fR>...]
 \fBgatbps\fR \fB--version\fR
 .fi
+.SH SPECIAL FILES
