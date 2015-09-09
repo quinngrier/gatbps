@@ -18,7 +18,7 @@ for temporary use.
 If any of these files is a directory or nonregular,
 the files are left alone and the operand fails.
 Otherwise,
-the files are used in an unspecified way
+the files are used in some way
 and deleted after the operand succeeds or fails.
 .SH EXIT STATUS
 \fBgatbps\fR indicates success with exit status zero
