@@ -15,7 +15,7 @@ For each \fIfile\fR operand in the first form,
 \fBgatbps\fR reserves the ten files
 \f(BIfile\fB.gatbps0\fR through \f(BIfile\fB.gatbps9\fR
 for temporary use.
-If any of these files is a directory or nonregular,
+If any of these files is nonregular or a directory,
 the files are left alone and the operand fails.
 Otherwise,
 the files are used in some way
