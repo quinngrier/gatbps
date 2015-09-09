@@ -1,5 +1,4 @@
 CLEANFILES =
-CLEANFILES += gatbps
 CLEANFILES += gatbps.1
 
 EXTRA_DIST =
@@ -8,7 +7,6 @@ EXTRA_DIST += $(srcdir)/DATE.sh
 EXTRA_DIST += $(srcdir)/VERSION
 EXTRA_DIST += $(srcdir)/VERSION.sh
 EXTRA_DIST += $(srcdir)/gatbps.1.in
-EXTRA_DIST += $(srcdir)/gatbps.in
 
 man_MANS =
 man_MANS += gatbps.1
@@ -21,10 +19,6 @@ do_subst = ( sed \
   -e 's|[@]PACKAGE_STRING@|$(PACKAGE_STRING)|g' \
   -e 's|[@]PACKAGE_VERSION@|$(PACKAGE_VERSION)|g' \
   )
-
-gatbps: Makefile $(srcdir)/gatbps.in
-	$(do_subst) <$(srcdir)/gatbps.in >gatbps
-	chmod +x gatbps
 
 gatbps.1: Makefile $(srcdir)/gatbps.1.in
 	$(do_subst) <$(srcdir)/gatbps.1.in >gatbps.1
