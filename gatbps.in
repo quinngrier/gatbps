@@ -13,6 +13,8 @@
 LC_ALL=C
 export LC_ALL
 
+AWK=awk
+
 nl='
 '
 
@@ -241,7 +243,7 @@ EOF
         ;;
 
         *)
-          awk '
+          "${AWK}" '
 {
   if (sub(/.*\//, "", $0)) {
     name = $0
@@ -272,8 +274,8 @@ EOF
               :
             ;;
             *)
-              cat >&2 <<'EOF'
-gatbps: awk failed to read from:
+              cat >&2 <<EOF
+gatbps: ${AWK} failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: standard output
 EOF
@@ -375,7 +377,7 @@ EOF
 
     --*=*)
 
-      awk '
+      "${AWK}" '
 {
   if (NR != 1) {
     name = name "\n"
@@ -398,8 +400,8 @@ EOF
           :
         ;;
         *)
-          cat >&2 <<'EOF'
-gatbps: awk failed to read from:
+          cat >&2 <<EOF
+gatbps: ${AWK} failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: standard error
 EOF
@@ -421,7 +423,7 @@ EOF
 
     -?*)
 
-      awk '
+      "${AWK}" '
 {
   print "gatbps: unrecognized option:", substr($0 "\n", 1, 2)
   print "gatbps: try gatbps --help for more information"
@@ -435,8 +437,8 @@ EOF
           :
         ;;
         *)
-          cat >&2 <<'EOF'
-gatbps: awk failed to read from:
+          cat >&2 <<EOF
+gatbps: ${AWK} failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: standard error
 EOF
@@ -1039,7 +1041,7 @@ EOF
             break
           fi
 
-          awk '
+          "${AWK}" '
 $0 !~ /^#/ {
   print $0
 }
@@ -1053,7 +1055,7 @@ END {
             ;;
             *)
               cat >&2 <<EOF
-gatbps: awk failed to read from:
+gatbps: ${AWK} failed to read from:
 gatbps:   1. ${path}.top
 gatbps: and write to: ${tmp0}
 gatbps: file operand failed: ${file}
@@ -1076,7 +1078,7 @@ EOF
             break
           fi
 
-          awk '
+          "${AWK}" '
 BEGIN {
   print "\\input texinfo"
   print "@setfilename foo"
@@ -1096,7 +1098,7 @@ END {
             ;;
             *)
               cat >&2 <<EOF
-gatbps: awk failed to read from:
+gatbps: ${AWK} failed to read from:
 gatbps:   1. ${path}.top.texi
 gatbps: and write to: ${tmp1}
 gatbps: file operand failed: ${file}
@@ -1178,7 +1180,7 @@ EOF
           break
         fi
 
-        awk '
+        "${AWK}" '
 BEGIN {
   print "\\input texinfo"
   print "@setfilename foo"
@@ -1198,7 +1200,7 @@ END {
           ;;
           *)
             cat >&2 <<EOF
-gatbps: awk failed to read from:
+gatbps: ${AWK} failed to read from:
 gatbps:   1. ${path}.texi
 gatbps: and write to: ${tmp2}
 gatbps: file operand failed: ${file}
@@ -1237,7 +1239,7 @@ EOF
             break
           fi
 
-          awk '
+          "${AWK}" '
 BEGIN {
   print ""
 }
@@ -1251,7 +1253,7 @@ $0 !~ /^#/ {
             ;;
             *)
               cat >&2 <<EOF
-gatbps: awk failed to read from:
+gatbps: ${AWK} failed to read from:
 gatbps:   1. ${path}.bot
 gatbps: and write to: ${tmp2}
 gatbps: file operand failed: ${file}
@@ -1289,7 +1291,7 @@ EOF
             ;;
           esac
 
-          awk '
+          "${AWK}" '
 BEGIN {
   print "\\input texinfo"
   print "@setfilename foo"
@@ -1309,7 +1311,7 @@ END {
             ;;
             *)
               cat >&2 <<EOF
-gatbps: awk failed to read from:
+gatbps: ${AWK} failed to read from:
 gatbps:   1. ${path}.bot.texi
 gatbps: and write to: ${tmp3}
 gatbps: file operand failed: ${file}
