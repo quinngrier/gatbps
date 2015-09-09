@@ -13,7 +13,14 @@
 LC_ALL=C
 export LC_ALL
 
-AWK=awk
+case "${AWK}" in
+  ?*)
+    :
+  ;;
+  *)
+    AWK='@AWK@'
+  ;;
+esac
 
 nl='
 '
