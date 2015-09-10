@@ -30,9 +30,11 @@ AC_ARG_VAR([AWK], [the best awk implementation])
 AC_PROG_AWK
 
 AM_INIT_AUTOMAKE([-Wall -Werror info-in-builddir])
+
 AC_CONFIG_FILES([Makefile])
 AC_CONFIG_FILES([gatbps.1])
 AC_CONFIG_FILES([gatbps], [chmod +x gatbps])
+
 AC_OUTPUT
 
 dnl
