@@ -22,6 +22,10 @@ the files are used in some way
 and deleted after the operand succeeds or fails.
 .SH ENVIRONMENT VARIABLES
 The following environment variables affect \fBgatbps\fR:
+.TP
+\fBAWK\fR
+The preferred implementation of \fBawk\fR.
+If unset or empty, the default is \fB@AWK@\fR.
 .SH EXIT STATUS
 \fBgatbps\fR indicates success with exit status zero
 and failure with any nonzero exit status.
