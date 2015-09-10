@@ -20,6 +20,7 @@ the files are left alone and the operand fails.
 Otherwise,
 the files are used in some way
 and deleted after the operand succeeds or fails.
+.SH ENVIRONMENT VARIABLES
 .SH EXIT STATUS
 \fBgatbps\fR indicates success with exit status zero
 and failure with any nonzero exit status.
