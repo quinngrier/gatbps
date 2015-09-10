@@ -17,7 +17,7 @@ for each \fIfile\fR operand.
 If any of these is nonregular or a directory,
 the operand fails.
 Otherwise,
-the files are used in some way
+they are used
 and deleted after the operand succeeds or fails.
 .SH ENVIRONMENT VARIABLES
 The following environment variables affect \fBgatbps\fR:
