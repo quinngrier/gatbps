@@ -121,6 +121,37 @@ case "${STYLE_STDOUT}" in
   ;;
 esac
 
+case "${STYLE_STDERR}" in
+  always)
+    fR2='[22;24m'
+    fB2='[24;1m'
+    fI2='[22;4m'
+    fBI2='[1;4m'
+  ;;
+  auto)
+    case "${isatty2}" in
+      1)
+        fR2='[22;24m'
+        fB2='[24;1m'
+        fI2='[22;4m'
+        fBI2='[1;4m'
+      ;;
+      *)
+        fR2=''
+        fB2=''
+        fI2=''
+        fBI2=''
+      ;;
+    esac
+  ;;
+  ?*)
+    fR2=''
+    fB2=''
+    fI2=''
+    fBI2=''
+  ;;
+esac
+
 nl='
 '
 
