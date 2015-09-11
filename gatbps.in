@@ -22,6 +22,9 @@ case "${AWK}" in
   ;;
 esac
 
+test ! -t 1 2>/dev/null
+isatty1="${?}"
+
 case "${COLOR}" in
   always)
     :
