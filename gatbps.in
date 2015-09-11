@@ -88,9 +88,6 @@ case "${STYLE}" in
     fI2=''
     fBI2=''
   ;;
-  *)
-    :
-  ;;
 esac
 
 nl='
