@@ -98,27 +98,6 @@ while :; do
 
     --color|--color=always)
 
-      case "${ESC}" in
-        ?*)
-          :
-        ;;
-        *)
-          ESC=`"${AWK}" 'BEGIN { print "\\033" }' </dev/null`
-          case "${?}" in
-            0)
-              :
-            ;;
-            *)
-              ESC=error
-              cat >&2 <<'EOF'
-gatbps: error constructing the escape character
-gatbps: --color and friends will not be honored
-EOF
-            ;;
-          esac
-        ;;
-      esac
-
       shift
 
     ;;
