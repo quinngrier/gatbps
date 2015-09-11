@@ -49,7 +49,34 @@ case "${STYLE}" in
     fBI2='[1;4m'
   ;;
   auto)
-    :
+    case "${isatty1}" in
+      1)
+        fR1='[0m'
+        fB1='[0;1m'
+        fI1='[0;4m'
+        fBI1='[1;4m'
+      ;;
+      0)
+        fR1=''
+        fB1=''
+        fI1=''
+        fBI1=''
+      ;;
+    esac
+    case "${isatty2}" in
+      1)
+        fR2='[0m'
+        fB2='[0;1m'
+        fI2='[0;4m'
+        fBI2='[1;4m'
+      ;;
+      0)
+        fR2=''
+        fB2=''
+        fI2=''
+        fBI2=''
+      ;;
+    esac
   ;;
   ?*)
     :
