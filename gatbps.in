@@ -39,7 +39,14 @@ fBI2=''
 
 case "${STYLE}" in
   always)
-    :
+    fR1='[0m'
+    fB1='[0;1m'
+    fI1='[0;4m'
+    fBI1='[1;4m'
+    fR2='[0m'
+    fB2='[0;1m'
+    fI2='[0;4m'
+    fBI2='[1;4m'
   ;;
   auto)
     :
