@@ -28,6 +28,15 @@ isatty1="${?}"
 test ! -t 2 2>/dev/null
 isatty2="${?}"
 
+fR1=''
+fB1=''
+fI1=''
+fBI1=''
+fR2=''
+fB2=''
+fI2=''
+fBI2=''
+
 case "${STYLE}" in
   always)
     :
