@@ -96,12 +96,6 @@ nl='
 while :; do
   case "${1}" in
 
-    --style|--style=always)
-
-      shift
-
-    ;;
-
     --help)
 
       case "${#}" in
@@ -426,6 +420,12 @@ EOF
       esac
 
       exit 0
+
+    ;;
+
+    --style|--style=always)
+
+      shift
 
     ;;
 
