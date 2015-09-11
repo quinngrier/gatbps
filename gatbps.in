@@ -153,10 +153,10 @@ EOF
         ;;
       esac
 
-      cat <<'EOF'
-Usage: gatbps [--] [<file>...]
-       gatbps --help[=<file>]
-       gatbps --version
+      cat <<EOF
+Usage: ${fB1}gatbps${fR1} [${fB1}--${fR1}] [<${fI1}file${fR1}>...]
+       ${fB1}gatbps${fR1} ${fB1}--help${fR1}[=<${fI1}file${fR1}>]
+       ${fB1}gatbps${fR1} ${fB1}--version${fR1}
 
 Create standard project files.
 
