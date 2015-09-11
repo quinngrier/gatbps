@@ -96,7 +96,7 @@ nl='
 while :; do
   case "${1}" in
 
-    --color|--color=always)
+    --style|--style=always)
 
       shift
 
