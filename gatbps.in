@@ -22,6 +22,21 @@ case "${AWK}" in
   ;;
 esac
 
+case "${COLOR}" in
+  always)
+    :
+  ;;
+  auto)
+    :
+  ;;
+  ?*)
+    :
+  ;;
+  *)
+    :
+  ;;
+esac
+
 nl='
 '
 
