@@ -425,6 +425,15 @@ EOF
 
     --style|--style=always)
 
+      fR1='[22;24m'
+      fB1='[24;1m'
+      fI1='[22;4m'
+      fBI1='[1;4m'
+      fR2='[22;24m'
+      fB2='[24;1m'
+      fI2='[22;4m'
+      fBI2='[1;4m'
+
       shift
 
     ;;
