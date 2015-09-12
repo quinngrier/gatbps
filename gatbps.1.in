@@ -26,6 +26,17 @@ The following environment variables affect \fBgatbps\fR:
 The preferred implementation of \fBawk\fR.
 If unset or empty, the default is \fB@AWK@\fR.
 This does not affect special files.
+.TP
+\fBSTYLE\fR
+Setting the \fBSTYLE\fR environment variable
+to a nonempty string \fIS\fR
+is equivalent to providing
+the program argument \fB--style=\f(BIS\fR
+before the actual program arguments
+and before those introduced by
+the \fBSTYLE_STDERR\fR
+and \fBSTYLE_STDOUT\fR
+environment variables.
 .SH EXIT STATUS
 \fBgatbps\fR indicates success with exit status zero
 and failure with any nonzero exit status.
