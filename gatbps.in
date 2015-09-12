@@ -2,9 +2,8 @@
 
 #
 # With LC_ALL=C, locale-aware programs use the opaque extended ASCII
-# encoding. This gives the most portable and predictable behavior. In
-# particular, this affects this very shell instance and programs like
-# awk, grep, and sed.
+# encoding. This gives portable, predictable behavior. In particular,
+# this affects the shell and programs like awk, grep, and sed.
 #
 
 LC_ALL=C
