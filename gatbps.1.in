@@ -37,6 +37,19 @@ and before those introduced by
 the \fBSTYLE_STDERR\fR
 and \fBSTYLE_STDOUT\fR
 environment variables.
+.TP
+\fBSTYLE_STDERR\fR
+Setting the \fBSTYLE_STDERR\fR
+environment variable
+to a nonempty string \fIS\fR
+is equivalent to providing
+the program argument
+\fB--style-stderr=\f(BIS\fR
+before the actual program arguments
+and after the program argument
+provided by the
+\fBSTYLE\fR
+environment variable.
 .SH EXIT STATUS
 \fBgatbps\fR indicates success with exit status zero
 and failure with any nonzero exit status.
