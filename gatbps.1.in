@@ -28,14 +28,16 @@ If unset or empty, the default is \fB@AWK@\fR.
 This does not affect special files.
 .TP
 \fBSTYLE\fR
-Setting the \fBSTYLE\fR environment variable
+Setting the \fBSTYLE\fR
+environment variable
 to a nonempty string \fIS\fR
 is equivalent to providing
-the program argument \fB--style=\f(BIS\fR
+the program argument
+\fB--style=\f(BIS\fR
 before the actual program arguments
-and before those introduced by
-the \fBSTYLE_STDERR\fR
-and \fBSTYLE_STDOUT\fR
+and before the program arguments
+provided by the
+\fBSTYLE_STDERR\fR and \fBSTYLE_STDOUT\fR
 environment variables.
 .TP
 \fBSTYLE_STDERR\fR
