@@ -32,8 +32,15 @@ case "${?}" in
   ;;
 esac
 
-test ! -t 2 2>/dev/null
-isatty2="${?}"
+test -t 2 2>/dev/null
+case "${?}" in
+  0)
+    isatty2=1
+  ;;
+  *)
+    isatty2=0
+  ;;
+esac
 
 fR1=''
 fB1=''
