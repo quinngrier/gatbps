@@ -28,6 +28,7 @@ is equivalent to providing the program argument
 \fB\-\-style\fR=\fBalways\fR
 .hy
 in its place.
+.IP
 Providing the program argument
 .nh
 \fB\-\-style\fR=\fIS\fR
