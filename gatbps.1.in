@@ -9,23 +9,37 @@ gatbps \- create standard project files
 .fi
 .SH DESCRIPTION
 .TP
+.nh
 \fB\-\-style\fR
+.hy
 .PD 0
 .TP
+.nh
 \fB\-\-style\fR=\fIS\fR
+.hy
 .IP
 .PD
 Providing the program argument
+.nh
 \fB\-\-style\fR
+.hy
 is equivalent to providing the program argument
+.nh
 \fB\-\-style\fR=\fBalways\fR
+.hy
 in its place.
 Providing the program argument
+.nh
 \fB\-\-style\fR=\fIS\fR
+.hy
 is equivalent to providing the program arguments
+.nh
 \fB\-\-style\-stderr\fR=\fIS\fR
+.hy
 and
+.nh
 \fB\-\-style\-stdout\fR=\fIS\fR
+.hy
 in its place.
 .SH PLAIN FILES
 .SH SPECIAL FILES
