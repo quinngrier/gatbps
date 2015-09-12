@@ -8,6 +8,20 @@ gatbps \- create standard project files
 \fBgatbps\fR \fB--version\fR
 .fi
 .SH DESCRIPTION
+.TP
+\fB\-\-style\fR, \fB\-\-style\fR=\fIS\fR
+Providing the program argument
+\fB\-\-style\fR
+is equivalent to providing the program argument
+\fB\-\-style\fR=\fBalways\fR
+in its place.
+Providing the program argument
+\fB\-\-style\fR=\fIS\fR
+is equivalent to providing the program arguments
+\fB\-\-style\-stderr\fR=\fIS\fR
+and
+\fB\-\-style\-stdout\fR=\fIS\fR
+in its place.
 .SH PLAIN FILES
 .SH SPECIAL FILES
 .SH TEMPORARY FILES
