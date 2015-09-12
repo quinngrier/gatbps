@@ -160,13 +160,18 @@ case "${STYLE_STDERR}" in
 esac
 
 case "${STYLE_STDOUT}" in
+
   always)
+
     fR1='[22;24m'
     fB1='[24;1m'
     fI1='[22;4m'
     fBI1='[1;4m'
+
   ;;
+
   auto)
+
     case "${isatty1}" in
       1)
         fR1='[22;24m'
@@ -181,13 +186,18 @@ case "${STYLE_STDOUT}" in
         fBI1=''
       ;;
     esac
+
   ;;
+
   ?*)
+
     fR1=''
     fB1=''
     fI1=''
     fBI1=''
+
   ;;
+
 esac
 
 nl='
