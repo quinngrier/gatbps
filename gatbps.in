@@ -535,36 +535,21 @@ EOF
 
     --style|--style=always)
 
-      fR1='[22;24m'
-      fB1='[24;1m'
-      fI1='[22;4m'
-      fBI1='[1;4m'
-
       fR2='[22;24m'
       fB2='[24;1m'
       fI2='[22;4m'
       fBI2='[1;4m'
+
+      fR1='[22;24m'
+      fB1='[24;1m'
+      fI1='[22;4m'
+      fBI1='[1;4m'
 
       shift
 
     ;;
 
     --style=auto)
-
-      case "${isatty1}" in
-        1)
-          fR1='[22;24m'
-          fB1='[24;1m'
-          fI1='[22;4m'
-          fBI1='[1;4m'
-        ;;
-        *)
-          fR1=''
-          fB1=''
-          fI1=''
-          fBI1=''
-        ;;
-      esac
 
       case "${isatty2}" in
         1)
@@ -581,21 +566,36 @@ EOF
         ;;
       esac
 
+      case "${isatty1}" in
+        1)
+          fR1='[22;24m'
+          fB1='[24;1m'
+          fI1='[22;4m'
+          fBI1='[1;4m'
+        ;;
+        *)
+          fR1=''
+          fB1=''
+          fI1=''
+          fBI1=''
+        ;;
+      esac
+
       shift
 
     ;;
 
     --style=*)
 
-      fR1=''
-      fB1=''
-      fI1=''
-      fBI1=''
-
       fR2=''
       fB2=''
       fI2=''
       fBI2=''
+
+      fR1=''
+      fB1=''
+      fI1=''
+      fBI1=''
 
       shift
 
