@@ -9,7 +9,12 @@ gatbps \- create standard project files
 .fi
 .SH DESCRIPTION
 .TP
-\fB\-\-style\fR, \fB\-\-style\fR=\fIS\fR
+\fB\-\-style\fR
+.PD 0
+.TP
+\fB\-\-style\fR=\fIS\fR
+.IP
+.PD
 Providing the program argument
 \fB\-\-style\fR
 is equivalent to providing the program argument
