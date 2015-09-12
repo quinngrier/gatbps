@@ -1,13 +1,10 @@
 #!/bin/sh
 
 #
-# With LC_ALL=C, locale-aware programs should have nice behavior: bytes
-# are just bytes, formatting is natural, string comparisons are natural,
-# character ranges are natural, etc. This allows us to operate on ASCII
-# bytes and pass through any higher bytes, like those used by UTF-8. In
-# particular, this applies to the shell itself and to programs like awk,
-# grep, sed, etc. This isn't perfect, but it's the best choice when the
-# main concerns are portability and consistency.
+# With LC_ALL=C, locale-aware programs use the opaque extended ASCII
+# encoding. This gives the most portable and predictable behavior. In
+# particular, this affects this very shell instance and programs like
+# awk, grep, and sed.
 #
 
 LC_ALL=C
