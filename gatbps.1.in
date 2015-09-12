@@ -33,7 +33,7 @@ environment variable
 to a nonempty string \fIS\fR
 is equivalent to providing
 the program argument
-\fB--style=\f(BIS\fR
+\fB--style\fR=\fIS\fR
 before the actual program arguments
 and before the program arguments
 provided by the
@@ -46,7 +46,7 @@ environment variable
 to a nonempty string \fIS\fR
 is equivalent to providing
 the program argument
-\fB--style-stderr=\f(BIS\fR
+\fB--style-stderr\fR=\fIS\fR
 before the actual program arguments
 and after the program argument
 provided by the
@@ -59,7 +59,7 @@ environment variable
 to a nonempty string \fIS\fR
 is equivalent to providing
 the program argument
-\fB--style-stdout=\f(BIS\fR
+\fB--style-stdout\fR=\fIS\fR
 before the actual program arguments
 and after the program argument
 provided by the
