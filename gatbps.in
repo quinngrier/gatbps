@@ -22,16 +22,6 @@ case "${AWK}" in
   ;;
 esac
 
-test -t 1 2>/dev/null
-case "${?}" in
-  0)
-    isatty1=1
-  ;;
-  *)
-    isatty1=0
-  ;;
-esac
-
 test -t 2 2>/dev/null
 case "${?}" in
   0)
@@ -39,6 +29,16 @@ case "${?}" in
   ;;
   *)
     isatty2=0
+  ;;
+esac
+
+test -t 1 2>/dev/null
+case "${?}" in
+  0)
+    isatty1=1
+  ;;
+  *)
+    isatty1=0
   ;;
 esac
 
