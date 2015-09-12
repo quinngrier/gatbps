@@ -42,15 +42,15 @@ case "${?}" in
   ;;
 esac
 
-fR1=''
-fB1=''
-fI1=''
-fBI1=''
-
 fR2=''
 fB2=''
 fI2=''
 fBI2=''
+
+fR1=''
+fB1=''
+fI1=''
+fBI1=''
 
 case "${STYLE}" in
   always)
