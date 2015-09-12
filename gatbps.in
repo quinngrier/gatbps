@@ -53,17 +53,23 @@ fI1=''
 fBI1=''
 
 case "${STYLE}" in
+
   always)
+
     fR1='[22;24m'
     fB1='[24;1m'
     fI1='[22;4m'
     fBI1='[1;4m'
+
     fR2='[22;24m'
     fB2='[24;1m'
     fI2='[22;4m'
     fBI2='[1;4m'
+
   ;;
+
   auto)
+
     case "${isatty1}" in
       1)
         fR1='[22;24m'
@@ -78,6 +84,7 @@ case "${STYLE}" in
         fBI1=''
       ;;
     esac
+
     case "${isatty2}" in
       1)
         fR2='[22;24m'
@@ -92,17 +99,23 @@ case "${STYLE}" in
         fBI2=''
       ;;
     esac
+
   ;;
+
   ?*)
+
     fR1=''
     fB1=''
     fI1=''
     fBI1=''
+
     fR2=''
     fB2=''
     fI2=''
     fBI2=''
+
   ;;
+
 esac
 
 case "${STYLE_STDOUT}" in
