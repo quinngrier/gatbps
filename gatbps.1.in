@@ -50,6 +50,19 @@ and after the program argument
 provided by the
 \fBSTYLE\fR
 environment variable.
+.TP
+\fBSTYLE_STDOUT\fR
+Setting the \fBSTYLE_STDOUT\fR
+environment variable
+to a nonempty string \fIS\fR
+is equivalent to providing
+the program argument
+\fB--style-stdout=\f(BIS\fR
+before the actual program arguments
+and after the program argument
+provided by the
+\fBSTYLE\fR
+environment variable.
 .SH EXIT STATUS
 \fBgatbps\fR indicates success with exit status zero
 and failure with any nonzero exit status.
