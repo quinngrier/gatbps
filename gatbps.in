@@ -20,15 +20,7 @@ esac
 
 isatty2=''
 
-test -t 1 2>/dev/null
-case "${?}" in
-  0)
-    isatty1=1
-  ;;
-  *)
-    isatty1=0
-  ;;
-esac
+isatty1=''
 
 fR2=''
 fB2=''
@@ -77,6 +69,19 @@ case "${STYLE}" in
         fR2=''
         fB2=''
         fI2=''
+      ;;
+    esac
+
+    case "${isatty1}" in
+      ?*)
+        :
+      ;;
+      *)
+        if test -t 1; then
+          isatty1='1'
+        else
+          isatty1='0'
+        fi
       ;;
     esac
 
@@ -170,6 +175,19 @@ case "${STYLE_STDOUT}" in
   ;;
 
   auto)
+
+    case "${isatty1}" in
+      ?*)
+        :
+      ;;
+      *)
+        if test -t 1; then
+          isatty1='1'
+        else
+          isatty1='0'
+        fi
+      ;;
+    esac
 
     case "${isatty1}" in
       1)
@@ -572,6 +590,19 @@ EOF
       esac
 
       case "${isatty1}" in
+        ?*)
+          :
+        ;;
+        *)
+          if test -t 1; then
+            isatty1='1'
+          else
+            isatty1='0'
+          fi
+        ;;
+      esac
+
+      case "${isatty1}" in
         1)
           fR1='[22;24m'
           fB1='[24;1m'
@@ -665,6 +696,19 @@ EOF
     ;;
 
     --style-stdout=auto)
+
+      case "${isatty1}" in
+        ?*)
+          :
+        ;;
+        *)
+          if test -t 1; then
+            isatty1='1'
+          else
+            isatty1='0'
+          fi
+        ;;
+      esac
 
       case "${isatty1}" in
         1)
