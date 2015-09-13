@@ -49,7 +49,7 @@ case "${STYLE}" in
   always)
 
     fR2='[22m[24m'
-    fB2='[24;1m'
+    fB2='[24m[1m'
     fI2='[22;4m'
     fd2='[39m'
     fr2='[31m'
@@ -60,7 +60,7 @@ case "${STYLE}" in
     fc2='[36m'
 
     fR1='[22m[24m'
-    fB1='[24;1m'
+    fB1='[24m[1m'
     fI1='[22;4m'
     fd1='[39m'
     fr1='[31m'
@@ -90,7 +90,7 @@ case "${STYLE}" in
     case "${isatty2}" in
       1)
         fR2='[22m[24m'
-        fB2='[24;1m'
+        fB2='[24m[1m'
         fI2='[22;4m'
         fd2='[39m'
         fr2='[31m'
@@ -130,7 +130,7 @@ case "${STYLE}" in
     case "${isatty1}" in
       1)
         fR1='[22m[24m'
-        fB1='[24;1m'
+        fB1='[24m[1m'
         fI1='[22;4m'
         fd1='[39m'
         fr1='[31m'
@@ -189,7 +189,7 @@ case "${STYLE_STDERR}" in
   always)
 
     fR2='[22m[24m'
-    fB2='[24;1m'
+    fB2='[24m[1m'
     fI2='[22;4m'
     fd2='[39m'
     fr2='[31m'
@@ -219,7 +219,7 @@ case "${STYLE_STDERR}" in
     case "${isatty2}" in
       1)
         fR2='[22m[24m'
-        fB2='[24;1m'
+        fB2='[24m[1m'
         fI2='[22;4m'
         fd2='[39m'
         fr2='[31m'
@@ -267,7 +267,7 @@ case "${STYLE_STDOUT}" in
   always)
 
     fR1='[22m[24m'
-    fB1='[24;1m'
+    fB1='[24m[1m'
     fI1='[22;4m'
     fd1='[39m'
     fr1='[31m'
@@ -297,7 +297,7 @@ case "${STYLE_STDOUT}" in
     case "${isatty1}" in
       1)
         fR1='[22m[24m'
-        fB1='[24;1m'
+        fB1='[24m[1m'
         fI1='[22;4m'
         fd1='[39m'
         fr1='[31m'
@@ -594,7 +594,7 @@ EOF
     --style|--style=always)
 
       fR2='[22m[24m'
-      fB2='[24;1m'
+      fB2='[24m[1m'
       fI2='[22;4m'
       fd2='[39m'
       fr2='[31m'
@@ -605,7 +605,7 @@ EOF
       fc2='[36m'
 
       fR1='[22m[24m'
-      fB1='[24;1m'
+      fB1='[24m[1m'
       fI1='[22;4m'
       fd1='[39m'
       fr1='[31m'
@@ -637,7 +637,7 @@ EOF
       case "${isatty2}" in
         1)
           fR2='[22m[24m'
-          fB2='[24;1m'
+          fB2='[24m[1m'
           fI2='[22;4m'
           fd2='[39m'
           fr2='[31m'
@@ -677,7 +677,7 @@ EOF
       case "${isatty1}" in
         1)
           fR1='[22m[24m'
-          fB1='[24;1m'
+          fB1='[24m[1m'
           fI1='[22;4m'
           fd1='[39m'
           fr1='[31m'
@@ -736,7 +736,7 @@ EOF
     --style-stderr|--style-stderr=always)
 
       fR2='[22m[24m'
-      fB2='[24;1m'
+      fB2='[24m[1m'
       fI2='[22;4m'
       fd2='[39m'
       fr2='[31m'
@@ -768,7 +768,7 @@ EOF
       case "${isatty2}" in
         1)
           fR2='[22m[24m'
-          fB2='[24;1m'
+          fB2='[24m[1m'
           fI2='[22;4m'
           fd2='[39m'
           fr2='[31m'
@@ -816,7 +816,7 @@ EOF
     --style-stdout|--style-stdout=always)
 
       fR1='[22m[24m'
-      fB1='[24;1m'
+      fB1='[24m[1m'
       fI1='[22;4m'
       fd1='[39m'
       fr1='[31m'
@@ -848,7 +848,7 @@ EOF
       case "${isatty1}" in
         1)
           fR1='[22m[24m'
-          fB1='[24;1m'
+          fB1='[24m[1m'
           fI1='[22;4m'
           fd1='[39m'
           fr1='[31m'
