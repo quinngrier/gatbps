@@ -348,34 +348,6 @@ while :; do
 
     --help)
 
-      case "${#}" in
-        1)
-          :
-        ;;
-        2)
-          case "${2}" in
-            --)
-              :
-            ;;
-            *)
-              cat >&2 <<'EOF'
-gatbps: --help must be used alone
-gatbps: try gatbps --help for more information
-gatbps: did you mean to use an equals sign with --help?
-EOF
-              exit 1
-            ;;
-          esac
-        ;;
-        *)
-          cat >&2 <<'EOF'
-gatbps: --help must be used alone
-gatbps: try gatbps --help for more information
-EOF
-          exit 1
-        ;;
-      esac
-
       cat <<EOF
 Usage: ${fB1}gatbps${fR1} [${fB1}--${fR1}] [<${fI1}file${fR1}>...]
        ${fB1}gatbps${fR1} ${fB1}--help${fR1}[=<${fI1}file${fR1}>]
