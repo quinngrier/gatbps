@@ -18,15 +18,7 @@ case "${AWK}" in
   ;;
 esac
 
-test -t 2 2>/dev/null
-case "${?}" in
-  0)
-    isatty2=1
-  ;;
-  *)
-    isatty2=0
-  ;;
-esac
+isatty2=''
 
 test -t 1 2>/dev/null
 case "${?}" in
@@ -61,6 +53,19 @@ case "${STYLE}" in
   ;;
 
   auto)
+
+    case "${isatty2}" in
+      ?*)
+        :
+      ;;
+      *)
+        if test -t 2; then
+          isatty2='1'
+        else
+          isatty2='0'
+        fi
+      ;;
+    esac
 
     case "${isatty2}" in
       1)
@@ -115,6 +120,19 @@ case "${STYLE_STDERR}" in
   ;;
 
   auto)
+
+    case "${isatty2}" in
+      ?*)
+        :
+      ;;
+      *)
+        if test -t 2; then
+          isatty2='1'
+        else
+          isatty2='0'
+        fi
+      ;;
+    esac
 
     case "${isatty2}" in
       1)
@@ -528,6 +546,19 @@ EOF
     --style=auto)
 
       case "${isatty2}" in
+        ?*)
+          :
+        ;;
+        *)
+          if test -t 2; then
+            isatty2='1'
+          else
+            isatty2='0'
+          fi
+        ;;
+      esac
+
+      case "${isatty2}" in
         1)
           fR2='[22;24m'
           fB2='[24;1m'
@@ -582,6 +613,19 @@ EOF
     ;;
 
     --style-stderr=auto)
+
+      case "${isatty2}" in
+        ?*)
+          :
+        ;;
+        *)
+          if test -t 2; then
+            isatty2='1'
+          else
+            isatty2='0'
+          fi
+        ;;
+      esac
 
       case "${isatty2}" in
         1)
