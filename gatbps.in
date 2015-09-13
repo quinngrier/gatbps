@@ -476,9 +476,9 @@ EOF
             ;;
             *)
               cat >&2 <<EOF
-gatbps: ${fB2}cat${fR2} failed to read from:
-gatbps:   1. a here-document
-gatbps: and write to: standard output
+${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps:${fd2}   1. a here-document
+${fr2}gatbps:${fd2} and write to: standard output
 EOF
               exit 1
             ;;
