@@ -386,7 +386,7 @@ EOF
       case "${1}" in
         --help=)
           cat >&2 <<EOF
-gatbps: the --help argument must not be empty
+${fr2}gatbps:${fd2} the ${fB2}--help${fR2} argument must not be empty
 EOF
           exit 1
         ;;
