@@ -562,33 +562,6 @@ EOF
 
     --version)
 
-      case "${#}" in
-        1)
-          :
-        ;;
-        2)
-          case "${2}" in
-            --)
-              :
-            ;;
-            *)
-              cat >&2 <<'EOF'
-gatbps: --version must be used alone
-gatbps: try gatbps --help for more information
-EOF
-              exit 1
-            ;;
-          esac
-        ;;
-        *)
-          cat >&2 <<'EOF'
-gatbps: --version must be used alone
-gatbps: try gatbps --help for more information
-EOF
-          exit 1
-        ;;
-      esac
-
       cat <<'EOF'
 gatbps (GATBPS) @PACKAGE_VERSION@
 This version was released on @PACKAGE_DATE@.
