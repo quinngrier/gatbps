@@ -369,7 +369,7 @@ EOF
         ;;
         *)
           cat >&2 <<EOF
-gatbps: cat failed to read from:
+gatbps: ${fB2}cat${fR2} failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: standard output
 EOF
@@ -421,7 +421,7 @@ EOF
             ;;
             *)
               cat >&2 <<EOF
-gatbps: cat failed to read from:
+gatbps: ${fB2}cat${fR2} failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: standard output
 EOF
@@ -448,7 +448,7 @@ EOF
             ;;
             *)
               cat >&2 <<EOF
-gatbps: cat failed to read from:
+gatbps: ${fB2}cat${fR2} failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: standard output
 EOF
@@ -476,7 +476,7 @@ EOF
             ;;
             *)
               cat >&2 <<EOF
-gatbps: cat failed to read from:
+gatbps: ${fB2}cat${fR2} failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: standard output
 EOF
@@ -503,7 +503,7 @@ EOF
             ;;
             *)
               cat >&2 <<EOF
-gatbps: cat failed to read from:
+gatbps: ${fB2}cat${fR2} failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: standard output
 EOF
@@ -579,7 +579,7 @@ EOF
         ;;
         *)
           cat >&2 <<EOF
-gatbps: cat failed to read from:
+gatbps: ${fB2}cat${fR2} failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: standard output
 EOF
@@ -1017,7 +1017,7 @@ EOF
       ;;
       *)
         cat >&2 <<EOF
-gatbps: cat failed to read from:
+gatbps: ${fB2}cat${fR2} failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: standard output
 EOF
@@ -1150,7 +1150,7 @@ EOF
           ;;
           *)
             cat >&2 <<EOF
-gatbps: cat failed to read from:
+gatbps: ${fB2}cat${fR2} failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: ${path}
 gatbps: file operand failed: ${file}
@@ -1336,7 +1336,7 @@ EOF
           ;;
           *)
             cat >&2 <<EOF
-gatbps: cat failed to read from:
+gatbps: ${fB2}cat${fR2} failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: ${path}
 gatbps: file operand failed: ${file}
@@ -1378,7 +1378,7 @@ EOF
           ;;
           *)
             cat >&2 <<EOF
-gatbps: cat failed to read from:
+gatbps: ${fB2}cat${fR2} failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: ${path}
 gatbps: file operand failed: ${file}
@@ -1519,7 +1519,7 @@ EOF
           ;;
           *)
             cat >&2 <<EOF
-gatbps: cat failed to read from:
+gatbps: ${fB2}cat${fR2} failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: ${path}
 gatbps: file operand failed: ${file}
@@ -1560,7 +1560,7 @@ EOF
           ;;
           *)
             cat >&2 <<EOF
-gatbps: cat failed to read from:
+gatbps: ${fB2}cat${fR2} failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: ${path}
 gatbps: file operand failed: ${file}
@@ -1693,7 +1693,7 @@ EOF
             ;;
             *)
               cat >&2 <<EOF
-gatbps: cat failed to read from:
+gatbps: ${fB2}cat${fR2} failed to read from:
 gatbps:   1. /dev/null
 gatbps: and write to: ${tmp0}
 gatbps: file operand failed: ${file}
@@ -1891,7 +1891,7 @@ EOF
             ;;
             *)
               cat >&2 <<EOF
-gatbps: cat failed to read from:
+gatbps: ${fB2}cat${fR2} failed to read from:
 gatbps:   1. /dev/null
 gatbps: and write to: ${tmp2}
 gatbps: file operand failed: ${file}
@@ -1910,7 +1910,7 @@ EOF
           ;;
           *)
             cat >&2 <<EOF
-gatbps: cat failed to read from:
+gatbps: ${fB2}cat${fR2} failed to read from:
 gatbps:   1. ${tmp0}
 gatbps:   2. ${tmp1}
 gatbps:   3. ${tmp2}
