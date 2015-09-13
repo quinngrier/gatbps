@@ -368,7 +368,7 @@ EOF
           :
         ;;
         *)
-          cat >&2 <<'EOF'
+          cat >&2 <<EOF
 gatbps: cat failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: standard output
@@ -385,7 +385,7 @@ EOF
 
       case "${1}" in
         --help=)
-          cat >&2 <<'EOF'
+          cat >&2 <<EOF
 gatbps: the --help argument must not be empty
 EOF
           exit 1
@@ -394,7 +394,7 @@ EOF
 
       case "${1}" in
         */)
-          cat >&2 <<'EOF'
+          cat >&2 <<EOF
 gatbps: the --help argument must not end with a slash
 EOF
           exit 1
@@ -420,7 +420,7 @@ EOF
               :
             ;;
             *)
-              cat >&2 <<'EOF'
+              cat >&2 <<EOF
 gatbps: cat failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: standard output
@@ -447,7 +447,7 @@ EOF
               :
             ;;
             *)
-              cat >&2 <<'EOF'
+              cat >&2 <<EOF
 gatbps: cat failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: standard output
@@ -475,7 +475,7 @@ EOF
               :
             ;;
             *)
-              cat >&2 <<'EOF'
+              cat >&2 <<EOF
 gatbps: cat failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: standard output
@@ -502,7 +502,7 @@ EOF
               :
             ;;
             *)
-              cat >&2 <<'EOF'
+              cat >&2 <<EOF
 gatbps: cat failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: standard output
@@ -578,7 +578,7 @@ EOF
           :
         ;;
         *)
-          cat >&2 <<'EOF'
+          cat >&2 <<EOF
 gatbps: cat failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: standard output
@@ -895,7 +895,7 @@ EOF
 
     --version=*)
 
-      cat >&2 <<'EOF'
+      cat >&2 <<EOF
 gatbps: --version must not be given an argument
 gatbps: try gatbps --help for more information
 EOF
@@ -912,7 +912,7 @@ EOF
 
     --=*)
 
-      cat >&2 <<'EOF'
+      cat >&2 <<EOF
 gatbps: -- must not be given an argument
 gatbps: try gatbps --help for more information
 EOF
@@ -1016,7 +1016,7 @@ EOF
         :
       ;;
       *)
-        cat >&2 <<'EOF'
+        cat >&2 <<EOF
 gatbps: cat failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: standard output
@@ -1037,7 +1037,7 @@ for file do
       :
     ;;
     *)
-      cat >&2 <<'EOF'
+      cat >&2 <<EOF
 gatbps: file operands must not be empty
 gatbps: file operand failed
 EOF
