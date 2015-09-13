@@ -41,12 +41,10 @@ esac
 fR2=''
 fB2=''
 fI2=''
-fBI2=''
 
 fR1=''
 fB1=''
 fI1=''
-fBI1=''
 
 case "${STYLE}" in
 
@@ -55,12 +53,10 @@ case "${STYLE}" in
     fR2='[22;24m'
     fB2='[24;1m'
     fI2='[22;4m'
-    fBI2='[1;4m'
 
     fR1='[22;24m'
     fB1='[24;1m'
     fI1='[22;4m'
-    fBI1='[1;4m'
 
   ;;
 
@@ -71,13 +67,11 @@ case "${STYLE}" in
         fR2='[22;24m'
         fB2='[24;1m'
         fI2='[22;4m'
-        fBI2='[1;4m'
       ;;
       *)
         fR2=''
         fB2=''
         fI2=''
-        fBI2=''
       ;;
     esac
 
@@ -86,13 +80,11 @@ case "${STYLE}" in
         fR1='[22;24m'
         fB1='[24;1m'
         fI1='[22;4m'
-        fBI1='[1;4m'
       ;;
       *)
         fR1=''
         fB1=''
         fI1=''
-        fBI1=''
       ;;
     esac
 
@@ -103,12 +95,10 @@ case "${STYLE}" in
     fR2=''
     fB2=''
     fI2=''
-    fBI2=''
 
     fR1=''
     fB1=''
     fI1=''
-    fBI1=''
 
   ;;
 
@@ -121,7 +111,6 @@ case "${STYLE_STDERR}" in
     fR2='[22;24m'
     fB2='[24;1m'
     fI2='[22;4m'
-    fBI2='[1;4m'
 
   ;;
 
@@ -132,13 +121,11 @@ case "${STYLE_STDERR}" in
         fR2='[22;24m'
         fB2='[24;1m'
         fI2='[22;4m'
-        fBI2='[1;4m'
       ;;
       *)
         fR2=''
         fB2=''
         fI2=''
-        fBI2=''
       ;;
     esac
 
@@ -149,7 +136,6 @@ case "${STYLE_STDERR}" in
     fR2=''
     fB2=''
     fI2=''
-    fBI2=''
 
   ;;
 
@@ -162,7 +148,6 @@ case "${STYLE_STDOUT}" in
     fR1='[22;24m'
     fB1='[24;1m'
     fI1='[22;4m'
-    fBI1='[1;4m'
 
   ;;
 
@@ -173,13 +158,11 @@ case "${STYLE_STDOUT}" in
         fR1='[22;24m'
         fB1='[24;1m'
         fI1='[22;4m'
-        fBI1='[1;4m'
       ;;
       *)
         fR1=''
         fB1=''
         fI1=''
-        fBI1=''
       ;;
     esac
 
@@ -190,7 +173,6 @@ case "${STYLE_STDOUT}" in
     fR1=''
     fB1=''
     fI1=''
-    fBI1=''
 
   ;;
 
@@ -534,12 +516,10 @@ EOF
       fR2='[22;24m'
       fB2='[24;1m'
       fI2='[22;4m'
-      fBI2='[1;4m'
 
       fR1='[22;24m'
       fB1='[24;1m'
       fI1='[22;4m'
-      fBI1='[1;4m'
 
       shift
 
@@ -552,13 +532,11 @@ EOF
           fR2='[22;24m'
           fB2='[24;1m'
           fI2='[22;4m'
-          fBI2='[1;4m'
         ;;
         *)
           fR2=''
           fB2=''
           fI2=''
-          fBI2=''
         ;;
       esac
 
@@ -567,13 +545,11 @@ EOF
           fR1='[22;24m'
           fB1='[24;1m'
           fI1='[22;4m'
-          fBI1='[1;4m'
         ;;
         *)
           fR1=''
           fB1=''
           fI1=''
-          fBI1=''
         ;;
       esac
 
@@ -586,12 +562,10 @@ EOF
       fR2=''
       fB2=''
       fI2=''
-      fBI2=''
 
       fR1=''
       fB1=''
       fI1=''
-      fBI1=''
 
       shift
 
@@ -602,7 +576,6 @@ EOF
       fR2='[22;24m'
       fB2='[24;1m'
       fI2='[22;4m'
-      fBI2='[1;4m'
 
       shift
 
@@ -615,13 +588,11 @@ EOF
           fR2='[22;24m'
           fB2='[24;1m'
           fI2='[22;4m'
-          fBI2='[1;4m'
         ;;
         *)
           fR2=''
           fB2=''
           fI2=''
-          fBI2=''
         ;;
       esac
 
@@ -634,7 +605,6 @@ EOF
       fR2=''
       fB2=''
       fI2=''
-      fBI2=''
 
       shift
 
@@ -645,7 +615,6 @@ EOF
       fR1='[22;24m'
       fB1='[24;1m'
       fI1='[22;4m'
-      fBI1='[1;4m'
 
       shift
 
@@ -658,13 +627,11 @@ EOF
           fR1='[22;24m'
           fB1='[24;1m'
           fI1='[22;4m'
-          fBI1='[1;4m'
         ;;
         *)
           fR1=''
           fB1=''
           fI1=''
-          fBI1=''
         ;;
       esac
 
@@ -677,7 +644,6 @@ EOF
       fR1=''
       fB1=''
       fI1=''
-      fBI1=''
 
       shift
 
