@@ -383,33 +383,6 @@ EOF
 
     --help=*)
 
-      case "${#}" in
-        1)
-          :
-        ;;
-        2)
-          case "${2}" in
-            --)
-              :
-            ;;
-            *)
-              cat >&2 <<'EOF'
-gatbps: --help must be used alone
-gatbps: try gatbps --help for more information
-EOF
-              exit 1
-            ;;
-          esac
-        ;;
-        *)
-          cat >&2 <<'EOF'
-gatbps: --help must be used alone
-gatbps: try gatbps --help for more information
-EOF
-          exit 1
-        ;;
-      esac
-
       case "${1}" in
         --help=)
           cat >&2 <<'EOF'
