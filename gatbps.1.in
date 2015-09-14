@@ -63,7 +63,8 @@ This does not affect special files.
 .TP
 .nohy "\fBSTYLE\fR"
 .IP0
-Setting the \fBSTYLE\fR
+Setting the
+.nohy "\fBSTYLE\fR"
 environment variable
 to a nonempty string \fIS\fR
 is equivalent to providing
