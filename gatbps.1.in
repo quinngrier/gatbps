@@ -62,6 +62,7 @@ If unset or empty, the default is \fB@AWK@\fR.
 This does not affect special files.
 .TP
 .nohy "\fBSTYLE\fR"
+.IP0
 Setting the \fBSTYLE\fR
 environment variable
 to a nonempty string \fIS\fR
