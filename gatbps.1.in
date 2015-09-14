@@ -15,15 +15,15 @@
 ..
 .hy
 .TH "gatbps" "1" "@PACKAGE_DATE@" "@PACKAGE_STRING@"
-.SH NAME
+.SH "NAME"
 gatbps \- create standard project files
-.SH SYNOPSIS
+.SH "SYNOPSIS"
 .nf
 \fBgatbps\fR [\fB--\fR] [<\fIfile\fR>...]
 \fBgatbps\fR \fB--help\fR[=<\fIfile\fR>...]
 \fBgatbps\fR \fB--version\fR
 .fi
-.SH DESCRIPTION
+.SH "DESCRIPTION"
 .TP
 .nohy "\fB\-\-style\fR"
 .TP0
@@ -42,9 +42,9 @@ is equivalent to providing the program arguments
 and
 .nohy "\fB\-\-style\-stdout\fR=\fIS\fR"
 in its place.
-.SH PLAIN FILES
-.SH SPECIAL FILES
-.SH TEMPORARY FILES
+.SH "PLAIN FILES"
+.SH "SPECIAL FILES"
+.SH "TEMPORARY FILES"
 \fBgatbps\fR reserves the temporary files
 \f(BIfile\fB.gatbps0\fR through \f(BIfile\fB.gatbps9\fR
 for each \fIfile\fR operand.
@@ -53,7 +53,7 @@ the operand fails.
 Otherwise,
 they are used
 and deleted after the operand succeeds or fails.
-.SH ENVIRONMENT VARIABLES
+.SH "ENVIRONMENT VARIABLES"
 The following environment variables affect \fBgatbps\fR:
 .TP
 \fBAWK\fR
@@ -99,7 +99,7 @@ and after the program argument
 provided by the
 \fBSTYLE\fR
 environment variable.
-.SH EXIT STATUS
+.SH "EXIT STATUS"
 \fBgatbps\fR indicates success with exit status zero
 and failure with any nonzero exit status.
 In the first form,
