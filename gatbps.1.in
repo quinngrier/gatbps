@@ -1,3 +1,8 @@
+.de nohy
+.nh
+\\$1
+.hy
+..
 .de TP0
 .PD 0
 .TP
