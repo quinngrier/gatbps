@@ -1,3 +1,8 @@
+.de TP0
+.PD 0
+.TP
+.PD
+..
 .hy
 .TH "gatbps" "1" "@PACKAGE_DATE@" "@PACKAGE_STRING@"
 .SH NAME
