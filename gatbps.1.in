@@ -66,7 +66,8 @@ This does not affect special files.
 Setting the
 .nohy "\fBSTYLE\fR"
 environment variable
-to a nonempty string \fIS\fR
+to a nonempty string
+.nohy "\fIS\fR"
 is equivalent to providing
 the program argument
 \fB--style\fR=\fIS\fR
