@@ -1,5 +1,5 @@
 .hy
-.TH gatbps 1 @PACKAGE_DATE@ "@PACKAGE_STRING@"
+.TH "gatbps" "1" "@PACKAGE_DATE@" "@PACKAGE_STRING@"
 .SH NAME
 gatbps \- create standard project files
 .SH SYNOPSIS
