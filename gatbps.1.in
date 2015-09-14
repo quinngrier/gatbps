@@ -23,8 +23,7 @@ gatbps \- create standard project files
 .nh
 \fB\-\-style\fR
 .hy
-.PD 0
-.TP
+.TP0
 .nh
 \fB\-\-style\fR=\fIS\fR
 .hy
