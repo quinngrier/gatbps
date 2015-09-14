@@ -27,8 +27,7 @@ gatbps \- create standard project files
 .nh
 \fB\-\-style\fR=\fIS\fR
 .hy
-.IP
-.PD
+.IP0
 Providing the program argument
 .nh
 \fB\-\-style\fR
