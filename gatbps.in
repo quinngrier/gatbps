@@ -1931,7 +1931,13 @@ EOF
   done
 
   for i in 0 1 2 3 4 5 6 7 8 9; do
-    rm -f "${path}.gatbps${i}"
+    if rm -f "${path}.gatbps${i}"; then
+      :
+    else
+      cat >&2 <<EOF
+${fc2}gatbps:${fd2} ${fB2}rm${fR2} failed to delete: ${fB2}${path}.gatbps${i}${fR2}
+EOF
+    fi
   done
 
 done
