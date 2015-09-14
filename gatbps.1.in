@@ -61,7 +61,7 @@ The preferred implementation of \fBawk\fR.
 If unset or empty, the default is \fB@AWK@\fR.
 This does not affect special files.
 .TP
-\fBSTYLE\fR
+.nohy "\fBSTYLE\fR"
 Setting the \fBSTYLE\fR
 environment variable
 to a nonempty string \fIS\fR
