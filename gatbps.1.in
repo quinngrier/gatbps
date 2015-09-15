@@ -43,12 +43,11 @@ option.
 .TP
 .nohy "\fB\-\-style\-stderr\fR[\fB=\fIS\fR]"
 .IP0
-Providing a
+A
 .nohy "\fB\-\-style\-stderr\fR"
-option without an argument
-is equivalent to providing a
+option is replaced by a
 .nohy "\fB\-\-style\-stderr=always\fR"
-option in its place.
+option.
 .SH "PLAIN FILES"
 .SH "SPECIAL FILES"
 .SH "TEMPORARY FILES"
