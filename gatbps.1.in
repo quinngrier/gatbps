@@ -26,9 +26,7 @@ gatbps \- create standard project files
 .SH "DESCRIPTION"
 .SH "OPTIONS"
 .TP
-.nohy "\fB\-\-style\fR"
-.TP0
-.nohy "\fB\-\-style\fR=\fIS\fR"
+.nohy "\fB\-\-style\fR[\fB=\fIS\fR]"
 .IP0
 Providing the program argument
 .nohy "\fB\-\-style\fR"
