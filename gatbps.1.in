@@ -28,19 +28,19 @@ gatbps \- create standard project files
 .TP
 .nohy "\fB\-\-style\fR[\fB=\fIS\fR]"
 .IP0
-Providing the program argument
+Providing a
 .nohy "\fB\-\-style\fR"
-is equivalent to providing the program argument
+option without an argument
+is equivalent to providing a
 .nohy "\fB\-\-style=always\fR"
-in its place.
-.IP
-Providing the program argument
+option in its place.
+Providing a
 .nohy "\fB\-\-style=\fIS\fR"
-is equivalent to providing the program arguments
+option is equivalent to providing
 .nohy "\fB\-\-style\-stderr=\fIS\fR"
 and
 .nohy "\fB\-\-style\-stdout=\fIS\fR"
-in its place.
+options in its place.
 .SH "PLAIN FILES"
 .SH "SPECIAL FILES"
 .SH "TEMPORARY FILES"
