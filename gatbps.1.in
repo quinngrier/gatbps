@@ -77,17 +77,19 @@ and
 .nohy "\fBSTYLE_STDOUT\fR"
 environment variables.
 .TP
-\fBSTYLE_STDERR\fR
-Setting the \fBSTYLE_STDERR\fR
+.nohy "\fBSTYLE_STDERR\fR"
+Setting the
+.nohy "\fBSTYLE_STDERR\fR"
 environment variable
-to a nonempty string \fIS\fR
+to a nonempty string
+.nohy "\fIS\fR"
 is equivalent to providing
 the program argument
-\fB\-\-style\-stderr\fR=\fIS\fR
+.nohy "\fB\-\-style\-stderr\fR=\fIS\fR"
 before the actual program arguments
 and after the program argument
 provided by the
-\fBSTYLE\fR
+.nohy "\fBSTYLE\fR"
 environment variable.
 .TP
 \fBSTYLE_STDOUT\fR
