@@ -65,6 +65,20 @@ disables styling.
 Styling is initially disabled and each
 .nohy "\fB\-\-style\-stderr=\fIS\fR"
 option updates it.
+.TP
+.nohy "\fB\-\-style\-stdout\fR[\fB=\fIS\fR]"
+.IP0
+A
+.nohy "\fB\-\-style\-stdout\fR"
+option is replaced by a
+.nohy "\fB\-\-style\-stdout=always\fR"
+option.
+A
+.nohy "\fB\-\-style\-stdout=\fIS\fR"
+option is the same as a
+.nohy "\fB\-\-style\-stderr=\fIS\fR"
+option but affects standard output
+instead of standard error.
 .SH "PLAIN FILES"
 .SH "SPECIAL FILES"
 .SH "TEMPORARY FILES"
