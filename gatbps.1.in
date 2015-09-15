@@ -74,18 +74,16 @@ If the
 environment variable
 is set to a nonempty string
 .nohy "\fIS\fR,"
-then the behavior is as if a
+then a
 .nohy "\fB\-\-style=\fIS\fR"
-option were inserted at a location
+option is inserted at a location
 that lies before any program arguments
 and before any options inserted by the
 .nohy "\fBSTYLE_STDERR\fR"
 and
 .nohy "\fBSTYLE_STDOUT\fR"
 environment variables.
-Otherwise, the
-.nohy "\fBSTYLE\fR"
-environment variable has no effect.
+Otherwise, there is no effect.
 .TP
 .nohy "\fBSTYLE_STDERR\fR"
 .IP0
