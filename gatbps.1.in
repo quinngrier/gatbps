@@ -48,6 +48,23 @@ A
 option is replaced by a
 .nohy "\fB\-\-style\-stderr=always\fR"
 option.
+A
+.nohy "\fB\-\-style\-stderr=always\fR"
+option enables bold, underline, and color
+styling of text written to standard error.
+A
+.nohy "\fB\-\-style\-stderr=auto\fR"
+option enables styling if standard error
+is associated with a terminal
+or disables styling if not.
+A
+.nohy "\fB\-\-style\-stderr=\fIS\fR"
+option with any other
+.nohy "\fIS\fR"
+disables styling.
+Styling is initially disabled and each
+.nohy "\fB\-\-style\-stderr=\fIS\fR"
+option updates it.
 .SH "PLAIN FILES"
 .SH "SPECIAL FILES"
 .SH "TEMPORARY FILES"
