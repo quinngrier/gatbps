@@ -41,6 +41,15 @@ option is equivalent to providing
 and
 .nohy "\fB\-\-style\-stdout=\fIS\fR"
 options in its place.
+.TP
+.nohy "\fB\-\-style\-stderr\fR[\fB=\fIS\fR]"
+.IP0
+Providing a
+.nohy "\fB\-\-style\-stderr\fR"
+option without an argument
+is equivalent to providing a
+.nohy "\fB\-\-style\-stderr=always\fR"
+option in its place.
 .SH "PLAIN FILES"
 .SH "SPECIAL FILES"
 .SH "TEMPORARY FILES"
