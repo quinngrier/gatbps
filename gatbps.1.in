@@ -91,17 +91,21 @@ environment variable has no effect.
 .TP
 .nohy "\fBSTYLE_STDERR\fR"
 .IP0
-Setting the
+If the
 .nohy "\fBSTYLE_STDERR\fR"
 environment variable
-to a nonempty string
-.nohy "\fIS\fR"
-is equivalent to inserting a
+is set to a nonempty string
+.nohy "\fIS\fR,"
+then the behavior is as if a
 .nohy "\fB\-\-style\-stderr=\fIS\fR"
-option before any program arguments
+option were inserted at a location
+that lies before any program arguments
 and after any option inserted by the
 .nohy "\fBSTYLE\fR"
 environment variable.
+Otherwise, the
+.nohy "\fBSTYLE_STDERR\fR"
+environment variable has no effect.
 .TP
 .nohy "\fBSTYLE_STDOUT\fR"
 .IP0
