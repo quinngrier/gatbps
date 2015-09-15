@@ -24,6 +24,7 @@ gatbps \- create standard project files
 \fBgatbps\fR \fB--version\fR
 .fi
 .SH "DESCRIPTION"
+.SH "OPTIONS"
 .TP
 .nohy "\fB\-\-style\fR"
 .TP0
