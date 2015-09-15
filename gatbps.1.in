@@ -86,7 +86,7 @@ to a nonempty string
 .nohy "\fIS\fR"
 is equivalent to providing
 the program argument
-.nohy "\fB\-\-style\-stderr\fR=\fIS\fR"
+.nohy "\fB\-\-style\-stderr=\fIS\fR"
 before the actual program arguments
 and after the program argument
 provided by the
