@@ -70,7 +70,7 @@ to a nonempty string
 .nohy "\fIS\fR"
 is equivalent to providing
 the program argument
-.nohy "\fB\-\-style\fR=\fIS\fR"
+.nohy "\fB\-\-style=\fIS\fR"
 before the actual program arguments
 and before the program arguments
 provided by the
