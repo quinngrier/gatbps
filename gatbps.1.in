@@ -36,11 +36,11 @@ is equivalent to providing a
 option in its place.
 Providing a
 .nohy "\fB\-\-style=\fIS\fR"
-option is equivalent to providing
+option is equivalent to providing a
 .nohy "\fB\-\-style\-stderr=\fIS\fR"
-and
+option and a
 .nohy "\fB\-\-style\-stdout=\fIS\fR"
-options in its place.
+option in its place.
 .TP
 .nohy "\fB\-\-style\-stderr\fR[\fB=\fIS\fR]"
 .IP0
