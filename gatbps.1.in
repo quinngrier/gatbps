@@ -28,19 +28,18 @@ gatbps \- create standard project files
 .TP
 .nohy "\fB\-\-style\fR[\fB=\fIS\fR]"
 .IP0
-Providing a
+A
 .nohy "\fB\-\-style\fR"
-option without an argument
-is equivalent to providing a
+option is replaced by a
 .nohy "\fB\-\-style=always\fR"
-option in its place.
-Providing a
+option.
+A
 .nohy "\fB\-\-style=\fIS\fR"
-option is equivalent to providing a
+option is replaced by a
 .nohy "\fB\-\-style\-stderr=\fIS\fR"
 option and a
 .nohy "\fB\-\-style\-stdout=\fIS\fR"
-option in its place.
+option.
 .TP
 .nohy "\fB\-\-style\-stderr\fR[\fB=\fIS\fR]"
 .IP0
