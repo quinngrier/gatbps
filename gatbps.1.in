@@ -70,11 +70,13 @@ to a nonempty string
 .nohy "\fIS\fR"
 is equivalent to providing
 the program argument
-\fB--style\fR=\fIS\fR
+.nohy "\fB--style\fR=\fIS\fR"
 before the actual program arguments
 and before the program arguments
 provided by the
-\fBSTYLE_STDERR\fR and \fBSTYLE_STDOUT\fR
+.nohy "\fBSTYLE_STDERR\fR"
+and
+.nohy "\fBSTYLE_STDOUT\fR"
 environment variables.
 .TP
 \fBSTYLE_STDERR\fR
