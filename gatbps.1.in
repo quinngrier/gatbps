@@ -108,16 +108,14 @@ If the
 environment variable
 is set to a nonempty string
 .nohy "\fIS\fR,"
-then the behavior is as if a
+then a
 .nohy "\fB\-\-style\-stdout=\fIS\fR"
-option were inserted at a location
+option is inserted at a location
 that lies before any program arguments
 and after any option inserted by the
 .nohy "\fBSTYLE\fR"
 environment variable.
-Otherwise, the
-.nohy "\fBSTYLE_STDOUT\fR"
-environment variable has no effect.
+Otherwise, there is no effect.
 .SH "EXIT STATUS"
 \fBgatbps\fR indicates success with exit status zero
 and failure with any nonzero exit status.
