@@ -31,15 +31,15 @@ gatbps \- create standard project files
 Providing the program argument
 .nohy "\fB\-\-style\fR"
 is equivalent to providing the program argument
-.nohy "\fB\-\-style\fR=\fBalways\fR"
+.nohy "\fB\-\-style=always\fR"
 in its place.
 .IP
 Providing the program argument
-.nohy "\fB\-\-style\fR=\fIS\fR"
+.nohy "\fB\-\-style=\fIS\fR"
 is equivalent to providing the program arguments
-.nohy "\fB\-\-style\-stderr\fR=\fIS\fR"
+.nohy "\fB\-\-style\-stderr=\fIS\fR"
 and
-.nohy "\fB\-\-style\-stdout\fR=\fIS\fR"
+.nohy "\fB\-\-style\-stdout=\fIS\fR"
 in its place.
 .SH "PLAIN FILES"
 .SH "SPECIAL FILES"
