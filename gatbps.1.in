@@ -84,12 +84,10 @@ Setting the
 environment variable
 to a nonempty string
 .nohy "\fIS\fR"
-is equivalent to providing
-the program argument
+is equivalent to inserting a
 .nohy "\fB\-\-style\-stderr=\fIS\fR"
-before the actual program arguments
-and after the program argument
-provided by the
+option before any program arguments
+and after any option inserted by the
 .nohy "\fBSTYLE\fR"
 environment variable.
 .TP
