@@ -78,6 +78,7 @@ and
 environment variables.
 .TP
 .nohy "\fBSTYLE_STDERR\fR"
+.IP0
 Setting the
 .nohy "\fBSTYLE_STDERR\fR"
 environment variable
