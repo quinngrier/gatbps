@@ -11,13 +11,6 @@ export LC_ALL
 
 awk='@AWK@'
 
-case "${AWK}" in
-  ?*)
-    set x "--awk=${AWK}" "${@}"
-    shift
-  ;;
-esac
-
 isatty2=''
 fR2=''
 fB2=''
@@ -59,6 +52,13 @@ esac
 case "${STYLE}" in
   ?*)
     set x "--style=${STYLE}" "${@}"
+    shift
+  ;;
+esac
+
+case "${AWK}" in
+  ?*)
+    set x "--awk=${AWK}" "${@}"
     shift
   ;;
 esac
