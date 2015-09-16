@@ -91,7 +91,11 @@ EOF
 
     --awk=*)
 
-      awk="s/'/'\\\\''/g;1s/--awk=/awk='/;\$s/\$/'/"
+      awk="
+s/'/'\\\\''/g
+1s/--awk=/awk='/
+\$s/\$/'/
+"
       awk=`sed "${awk}" <<EOF
 ${1}
 EOF
