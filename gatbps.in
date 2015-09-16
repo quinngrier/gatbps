@@ -44,6 +44,84 @@ fb1=''
 fm1=''
 fc1=''
 
+case "${STYLE_STDOUT}" in
+
+  always)
+
+    fR1='[22m[24m'
+    fB1='[24m[1m'
+    fI1='[22m[4m'
+    fd1='[39m'
+    fr1='[31m'
+    fg1='[32m'
+    fy1='[33m'
+    fb1='[34m'
+    fm1='[35m'
+    fc1='[36m'
+
+  ;;
+
+  auto)
+
+    case "${isatty1}" in
+      ?*)
+        :
+      ;;
+      *)
+        if test -t 1; then
+          isatty1='1'
+        else
+          isatty1='0'
+        fi
+      ;;
+    esac
+
+    case "${isatty1}" in
+      1)
+        fR1='[22m[24m'
+        fB1='[24m[1m'
+        fI1='[22m[4m'
+        fd1='[39m'
+        fr1='[31m'
+        fg1='[32m'
+        fy1='[33m'
+        fb1='[34m'
+        fm1='[35m'
+        fc1='[36m'
+      ;;
+      *)
+        fR1=''
+        fB1=''
+        fI1=''
+        fd1=''
+        fr1=''
+        fg1=''
+        fy1=''
+        fb1=''
+        fm1=''
+        fc1=''
+      ;;
+    esac
+
+  ;;
+
+  ?*)
+
+    fR1=''
+    fB1=''
+    fI1=''
+    fd1=''
+    fr1=''
+    fg1=''
+    fy1=''
+    fb1=''
+    fm1=''
+    fc1=''
+
+  ;;
+
+esac
+
 case "${STYLE}" in
 
   always)
@@ -257,84 +335,6 @@ case "${STYLE_STDERR}" in
     fb2=''
     fm2=''
     fc2=''
-
-  ;;
-
-esac
-
-case "${STYLE_STDOUT}" in
-
-  always)
-
-    fR1='[22m[24m'
-    fB1='[24m[1m'
-    fI1='[22m[4m'
-    fd1='[39m'
-    fr1='[31m'
-    fg1='[32m'
-    fy1='[33m'
-    fb1='[34m'
-    fm1='[35m'
-    fc1='[36m'
-
-  ;;
-
-  auto)
-
-    case "${isatty1}" in
-      ?*)
-        :
-      ;;
-      *)
-        if test -t 1; then
-          isatty1='1'
-        else
-          isatty1='0'
-        fi
-      ;;
-    esac
-
-    case "${isatty1}" in
-      1)
-        fR1='[22m[24m'
-        fB1='[24m[1m'
-        fI1='[22m[4m'
-        fd1='[39m'
-        fr1='[31m'
-        fg1='[32m'
-        fy1='[33m'
-        fb1='[34m'
-        fm1='[35m'
-        fc1='[36m'
-      ;;
-      *)
-        fR1=''
-        fB1=''
-        fI1=''
-        fd1=''
-        fr1=''
-        fg1=''
-        fy1=''
-        fb1=''
-        fm1=''
-        fc1=''
-      ;;
-    esac
-
-  ;;
-
-  ?*)
-
-    fR1=''
-    fB1=''
-    fI1=''
-    fd1=''
-    fr1=''
-    fg1=''
-    fy1=''
-    fb1=''
-    fm1=''
-    fc1=''
 
   ;;
 
