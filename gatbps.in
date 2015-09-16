@@ -593,142 +593,24 @@ EOF
 
     --style|--style=always)
 
-      fR2='[22m[24m'
-      fB2='[24m[1m'
-      fI2='[22m[4m'
-      fd2='[39m'
-      fr2='[31m'
-      fg2='[32m'
-      fy2='[33m'
-      fb2='[34m'
-      fm2='[35m'
-      fc2='[36m'
-
-      fR1='[22m[24m'
-      fB1='[24m[1m'
-      fI1='[22m[4m'
-      fd1='[39m'
-      fr1='[31m'
-      fg1='[32m'
-      fy1='[33m'
-      fb1='[34m'
-      fm1='[35m'
-      fc1='[36m'
-
+      shift
+      set x --style-stderr=always --style-stdout=always "${@}"
       shift
 
     ;;
 
     --style=auto)
 
-      case "${isatty2}" in
-        ?*)
-          :
-        ;;
-        *)
-          if test -t 2; then
-            isatty2='1'
-          else
-            isatty2='0'
-          fi
-        ;;
-      esac
-
-      case "${isatty2}" in
-        1)
-          fR2='[22m[24m'
-          fB2='[24m[1m'
-          fI2='[22m[4m'
-          fd2='[39m'
-          fr2='[31m'
-          fg2='[32m'
-          fy2='[33m'
-          fb2='[34m'
-          fm2='[35m'
-          fc2='[36m'
-        ;;
-        *)
-          fR2=''
-          fB2=''
-          fI2=''
-          fd2=''
-          fr2=''
-          fg2=''
-          fy2=''
-          fb2=''
-          fm2=''
-          fc2=''
-        ;;
-      esac
-
-      case "${isatty1}" in
-        ?*)
-          :
-        ;;
-        *)
-          if test -t 1; then
-            isatty1='1'
-          else
-            isatty1='0'
-          fi
-        ;;
-      esac
-
-      case "${isatty1}" in
-        1)
-          fR1='[22m[24m'
-          fB1='[24m[1m'
-          fI1='[22m[4m'
-          fd1='[39m'
-          fr1='[31m'
-          fg1='[32m'
-          fy1='[33m'
-          fb1='[34m'
-          fm1='[35m'
-          fc1='[36m'
-        ;;
-        *)
-          fR1=''
-          fB1=''
-          fI1=''
-          fd1=''
-          fr1=''
-          fg1=''
-          fy1=''
-          fb1=''
-          fm1=''
-          fc1=''
-        ;;
-      esac
-
+      shift
+      set x --style-stderr=auto --style-stdout=auto "${@}"
       shift
 
     ;;
 
     --style=*)
 
-      fR2=''
-      fB2=''
-      fI2=''
-      fd2=''
-      fr2=''
-      fg2=''
-      fy2=''
-      fb2=''
-      fm2=''
-      fc2=''
-
-      fR1=''
-      fB1=''
-      fI1=''
-      fd1=''
-      fr1=''
-      fg1=''
-      fy1=''
-      fb1=''
-      fm1=''
-      fc1=''
-
+      shift
+      set x --style-stderr=never --style-stdout=never "${@}"
       shift
 
     ;;
