@@ -89,6 +89,31 @@ EOF
 
     ;;
 
+    --awk=*)
+
+      awk="s/'/'\\\\''/g;1s/--awk=/awk='/;\$s/\$/'/"
+      awk=`sed "${awk}" <<EOF
+${1}
+EOF
+`
+      case "${?}" in
+        0)
+          :
+        ;;
+        *)
+          cat >&2 <<EOF
+${fr2}gatbps:${fd2} ${fB2}sed${fR2} failed to read from:
+${fr2}gatbps:${fd2}   1. a here-document
+${fr2}gatbps:${fd2} and write to: a shell variable
+EOF
+          exit 1
+        ;;
+      esac
+      eval "${awk}"
+      shift
+
+    ;;
+
     --help)
 
       cat <<EOF
