@@ -13,10 +13,8 @@ awk='@AWK@'
 
 case "${AWK}" in
   ?*)
-    awk="${AWK}"
-  ;;
-  *)
-    awk='@AWK@'
+    set x "--awk=${AWK}" "${@}"
+    shift
   ;;
 esac
 
