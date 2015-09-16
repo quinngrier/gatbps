@@ -19,7 +19,6 @@ case "${AWK}" in
 esac
 
 isatty2=''
-
 fR2=''
 fB2=''
 fI2=''
