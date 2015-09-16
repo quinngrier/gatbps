@@ -69,6 +69,26 @@ nl='
 while :; do
   case "${1}" in
 
+    --awk)
+
+      case "${#}" in
+        1)
+          cat >&2 <<EOF
+${fr2}gatbps:${fd2} each ${fB2}--awk${fR2} option must have an argument
+${fr2}gatbps:${fd2} try ${fB2}gatbps --help${fR2} for more information
+EOF
+          exit 1
+        ;;
+      esac
+
+      x="${2}"
+      shift
+      shift
+      set x "--awk=${x}" "${@}"
+      shift
+
+    ;;
+
     --help)
 
       cat <<EOF
