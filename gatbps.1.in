@@ -43,21 +43,21 @@ option.
 .TP
 .nohy "\fB\-\-style\-stderr\fR[\fB=\fIS\fR]"
 .IP0
-A
+Each
 .nohy "\fB\-\-style\-stderr\fR"
 option is replaced by a
 .nohy "\fB\-\-style\-stderr=always\fR"
 option.
-A
+Each
 .nohy "\fB\-\-style\-stderr=always\fR"
 option enables bold, underline, and color
 styling of text written to standard error.
-A
+Each
 .nohy "\fB\-\-style\-stderr=auto\fR"
 option enables styling if standard error
 is associated with a terminal
 or disables styling if not.
-A
+Each
 .nohy "\fB\-\-style\-stderr=\fIS\fR"
 option with any other
 .nohy "\fIS\fR"
