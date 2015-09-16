@@ -28,12 +28,12 @@ gatbps \- create standard project files
 .TP
 .nohy "\fB\-\-style\fR[\fB=\fIS\fR]"
 .IP0
-A
+Each
 .nohy "\fB\-\-style\fR"
 option is replaced by a
 .nohy "\fB\-\-style=always\fR"
 option.
-A
+Each
 .nohy "\fB\-\-style=\fIS\fR"
 option is replaced by a
 .nohy "\fB\-\-style\-stderr=\fIS\fR"
