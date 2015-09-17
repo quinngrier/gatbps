@@ -26,6 +26,18 @@ gatbps \- create standard project files
 .SH "DESCRIPTION"
 .SH "OPTIONS"
 .TP
+.nohy "\fB\-\-awk=\fIS\fR"
+.IP0
+The preferred
+.nohy "\fBawk\fR"
+implementation is
+.nohy "\fB@AWK@\fR"
+by default.
+Each
+.nohy "\fB\-\-awk=\fIS\fR"
+option changes it to
+.nohy "\fIS\fR."
+.TP
 .nohy "\fB\-\-style\fR[\fB=\fIS\fR]"
 .IP0
 Each
