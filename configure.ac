@@ -29,6 +29,49 @@ AC_ARG_VAR([AWK], [the preferred awk implementation])
 AC_PROG_AWK
 
 #
+# Make a version of @AWK@ that's safer to use as a troff macro argument.
+#
+
+AWK_TROFF=`sed '
+s/"/""/g
+s/\\\\/\\\\\\\\/g
+s/-/\\\\-/g
+1s/^/"\\\\fB/
+$s/$/\\\\fR"/
+' <<EOF
+${AWK}
+EOF
+`
+case "${?}" in
+#(
+  0)
+    :
+  ;;
+#(
+  *)
+    AC_MSG_ERROR([sed failed], [1])
+  ;;
+esac
+
+AWK_TROFF=`tr '
+' ' ' <<EOF
+${AWK_TROFF}
+EOF
+`
+case "${?}" in
+#(
+  0)
+    :
+  ;;
+#(
+  *)
+    AC_MSG_ERROR([tr failed], [1])
+  ;;
+esac
+
+AC_SUBST([AWK_TROFF])
+
+#
 # Make a version of @AWK@ that can safely be used as the right side of a
 # shell variable assignment.
 #
