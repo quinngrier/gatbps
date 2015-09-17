@@ -43,9 +43,11 @@ ${AWK}
 EOF
 `
 case "${?}" in
+#(
   0)
     :
   ;;
+#(
   *)
     AC_MSG_ERROR([sed failed], [1])
   ;;
