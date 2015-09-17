@@ -29,10 +29,10 @@ AS_CASE(["${interpval}"], [no],
 AC_ARG_VAR([AWK], [the preferred awk implementation])
 AC_PROG_AWK
 
-dnl
-dnl Make a version of @AWK@ that can safely be used as the right side of
-dnl a variable assignment in an LC_ALL=C shell.
-dnl
+#
+# Make a version of @AWK@ that can safely be used as the right side of a
+# variable assignment in an LC_ALL=C shell.
+#
 
 AWK_SHELL=`LC_ALL=C sed "
 s/'/'\\\\\\\\''/g
