@@ -91,7 +91,7 @@ EOF
 
     --awk=*)
 
-      awk=`sed "
+      x=`sed "
 s/'/'\\\\\\\\''/g
 1s/--awk=/awk='/
 \\$s/\\$/'/
@@ -112,7 +112,7 @@ EOF
           exit 1
         ;;
       esac
-      eval "${awk}"
+      eval "${x}"
       shift
 
     ;;
