@@ -8,8 +8,7 @@ m4_include([CC0-1.0-AC-COPYRIGHT.ac])
 m4_include([DATE.ac])
 
 #
-# Disable the default behavior of looking for auxiliary files in
-# parent directories. It's insane to do that without good reason.
+# Only use the current directory and srcdir for auxiliary files.
 #
 
 AC_CONFIG_AUX_DIR([.])
