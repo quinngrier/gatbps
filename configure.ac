@@ -30,7 +30,7 @@ AC_PROG_AWK
 
 #
 # Make a version of @AWK@ that can safely be used as the right side of a
-# variable assignment in an LC_ALL=C shell.
+# shell variable assignment.
 #
 
 AWK_SHELL=`sed "
