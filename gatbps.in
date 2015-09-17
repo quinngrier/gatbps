@@ -36,6 +36,7 @@ fm1=''
 fc1=''
 
 case "${STYLE_STDOUT}" in
+#(
   ?*)
     set x "--style-stdout=${STYLE_STDOUT}" "${@}"
     shift
@@ -43,6 +44,7 @@ case "${STYLE_STDOUT}" in
 esac
 
 case "${STYLE_STDERR}" in
+#(
   ?*)
     set x "--style-stderr=${STYLE_STDERR}" "${@}"
     shift
@@ -50,6 +52,7 @@ case "${STYLE_STDERR}" in
 esac
 
 case "${STYLE}" in
+#(
   ?*)
     set x "--style=${STYLE}" "${@}"
     shift
@@ -57,6 +60,7 @@ case "${STYLE}" in
 esac
 
 case "${AWK}" in
+#(
   ?*)
     set x "--awk=${AWK}" "${@}"
     shift
@@ -69,9 +73,11 @@ nl='
 while :; do
   case "${1}" in
 
+#(
     --awk)
 
       case "${#}" in
+#(
         1)
           cat >&2 <<EOF
 ${fr2}gatbps:${fd2} each ${fB2}--awk${fR2} option must have an argument
@@ -89,6 +95,7 @@ EOF
 
     ;;
 
+#(
     --awk=*)
 
       x=`sed "
@@ -100,9 +107,11 @@ ${1}
 EOF
 `
       case "${?}" in
+#(
         0)
           :
         ;;
+#(
         *)
           cat >&2 <<EOF
 ${fr2}gatbps:${fd2} ${fB2}sed${fR2} failed to read from:
@@ -117,6 +126,7 @@ EOF
 
     ;;
 
+#(
     --help)
 
       cat <<EOF
@@ -135,9 +145,11 @@ on how a given file will be created can be shown with the second form.
 Try man gatbps or info gatbps for more information.
 EOF
       case "${?}" in
+#(
         0)
           :
         ;;
+#(
         *)
           cat >&2 <<EOF
 ${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
@@ -152,9 +164,11 @@ EOF
 
     ;;
 
+#(
     --help=*)
 
       case "${1}" in
+#(
         --help=)
           cat >&2 <<EOF
 ${fr2}gatbps:${fd2} the ${fB2}--help${fR2} argument must not be empty
@@ -164,6 +178,7 @@ EOF
       esac
 
       case "${1}" in
+#(
         */)
           cat >&2 <<EOF
 ${fr2}gatbps:${fd2} the ${fB2}--help${fR2} argument must not end with a slash
@@ -174,6 +189,7 @@ EOF
 
       case "${1}" in
 
+#(
         --help=CC0-1.0-AC-COPYRIGHT.ac|--help=*/CC0-1.0-AC-COPYRIGHT.ac)
           cat <<'EOF'
 Special file: CC0-1.0-AC-COPYRIGHT.ac
@@ -187,9 +203,11 @@ m4_include macro where the AC_COPYRIGHT call would normally appear.
 Try man gatbps or info gatbps for more information.
 EOF
           case "${?}" in
+#(
             0)
               :
             ;;
+#(
             *)
               cat >&2 <<EOF
 ${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
@@ -201,6 +219,7 @@ EOF
           esac
         ;;
 
+#(
         --help=CC0-1.0-appendix.texi|--help=*/CC0-1.0-appendix.texi)
           cat <<'EOF'
 Special file: CC0-1.0-appendix.texi
@@ -214,9 +233,11 @@ follows the usual node style and can be cross referenced.
 Try man gatbps or info gatbps for more information.
 EOF
           case "${?}" in
+#(
             0)
               :
             ;;
+#(
             *)
               cat >&2 <<EOF
 ${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
@@ -228,6 +249,7 @@ EOF
           esac
         ;;
 
+#(
         --help=CC0-1.0-copying.texi|--help=*/CC0-1.0-copying.texi)
           cat <<'EOF'
 Special file: CC0-1.0-copying.texi
@@ -242,9 +264,11 @@ normally appear.
 Try man gatbps or info gatbps for more information.
 EOF
           case "${?}" in
+#(
             0)
               :
             ;;
+#(
             *)
               cat >&2 <<EOF
 ${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
@@ -256,6 +280,7 @@ EOF
           esac
         ;;
 
+#(
         --help=CC0-1.0.txt|--help=*/CC0-1.0.txt)
           cat <<'EOF'
 Special file: CC0-1.0.txt
@@ -269,9 +294,11 @@ related or neighboring rights. This was originally downloaded from
 Try man gatbps or info gatbps for more information.
 EOF
           case "${?}" in
+#(
             0)
               :
             ;;
+#(
             *)
               cat >&2 <<EOF
 gatbps: ${fB2}cat${fR2} failed to read from:
@@ -283,6 +310,7 @@ EOF
           esac
         ;;
 
+#(
         *)
           "${awk}" '
 {
@@ -311,9 +339,11 @@ END {
 ${1}
 EOF
           case "${?}" in
+#(
             0)
               :
             ;;
+#(
             *)
               cat >&2 <<EOF
 gatbps: ${awk} failed to read from:
@@ -331,6 +361,7 @@ EOF
 
     ;;
 
+#(
     --version)
 
       cat <<'EOF'
@@ -345,9 +376,11 @@ named <CC0-1.0.txt>. If not, it may be available at
 <https://creativecommons.org/publicdomain/zero/1.0/>.
 EOF
       case "${?}" in
+#(
         0)
           :
         ;;
+#(
         *)
           cat >&2 <<EOF
 gatbps: ${fB2}cat${fR2} failed to read from:
@@ -362,6 +395,7 @@ EOF
 
     ;;
 
+#(
     --style|--style=always)
 
       shift
@@ -370,6 +404,7 @@ EOF
 
     ;;
 
+#(
     --style=auto)
 
       shift
@@ -378,6 +413,7 @@ EOF
 
     ;;
 
+#(
     --style=*)
 
       shift
@@ -386,6 +422,7 @@ EOF
 
     ;;
 
+#(
     --style-stderr|--style-stderr=always)
 
       fR2='[22m[24m'
@@ -403,12 +440,15 @@ EOF
 
     ;;
 
+#(
     --style-stderr=auto)
 
       case "${isatty2}" in
+#(
         ?*)
           :
         ;;
+#(
         *)
           if test -t 2; then
             isatty2='1'
@@ -419,6 +459,7 @@ EOF
       esac
 
       case "${isatty2}" in
+#(
         1)
           fR2='[22m[24m'
           fB2='[24m[1m'
@@ -431,6 +472,7 @@ EOF
           fm2='[35m'
           fc2='[36m'
         ;;
+#(
         *)
           fR2=''
           fB2=''
@@ -449,6 +491,7 @@ EOF
 
     ;;
 
+#(
     --style-stderr=*)
 
       fR2=''
@@ -466,6 +509,7 @@ EOF
 
     ;;
 
+#(
     --style-stdout|--style-stdout=always)
 
       fR1='[22m[24m'
@@ -483,12 +527,15 @@ EOF
 
     ;;
 
+#(
     --style-stdout=auto)
 
       case "${isatty1}" in
+#(
         ?*)
           :
         ;;
+#(
         *)
           if test -t 1; then
             isatty1='1'
@@ -499,6 +546,7 @@ EOF
       esac
 
       case "${isatty1}" in
+#(
         1)
           fR1='[22m[24m'
           fB1='[24m[1m'
@@ -511,6 +559,7 @@ EOF
           fm1='[35m'
           fc1='[36m'
         ;;
+#(
         *)
           fR1=''
           fB1=''
@@ -529,6 +578,7 @@ EOF
 
     ;;
 
+#(
     --style-stdout=*)
 
       fR1=''
@@ -546,6 +596,7 @@ EOF
 
     ;;
 
+#(
     --version=*)
 
       cat >&2 <<EOF
@@ -556,6 +607,7 @@ EOF
 
     ;;
 
+#(
     --)
 
       shift
@@ -563,6 +615,7 @@ EOF
 
     ;;
 
+#(
     --=*)
 
       cat >&2 <<EOF
@@ -573,6 +626,7 @@ EOF
 
     ;;
 
+#(
     --*=*)
 
       "${awk}" '
@@ -594,9 +648,11 @@ END {
 ${1}
 EOF
       case "${?}" in
+#(
         0)
           :
         ;;
+#(
         *)
           cat >&2 <<EOF
 gatbps: ${awk} failed to read from:
@@ -609,6 +665,7 @@ EOF
 
     ;;
 
+#(
     --*|-?)
 
       cat >&2 <<EOF
@@ -619,6 +676,7 @@ EOF
 
     ;;
 
+#(
     -?*)
 
       "${awk}" '
@@ -631,9 +689,11 @@ EOF
 ${1}
 EOF
       case "${?}" in
+#(
         0)
           :
         ;;
+#(
         *)
           cat >&2 <<EOF
 gatbps: ${awk} failed to read from:
@@ -646,6 +706,7 @@ EOF
 
     ;;
 
+#(
     *)
 
       break
@@ -656,6 +717,7 @@ EOF
 done
 
 case "${#}" in
+#(
   0)
     cat <<'EOF'
 CC0-1.0-AC-COPYRIGHT.ac
@@ -665,9 +727,11 @@ CC0-1.0.txt
 DATE.ac
 EOF
     case "${?}" in
+#(
       0)
         :
       ;;
+#(
       *)
         cat >&2 <<EOF
 gatbps: ${fB2}cat${fR2} failed to read from:
@@ -686,9 +750,11 @@ exit_status=0
 for file do
 
   case "${file}" in
+#(
     ?*)
       :
     ;;
+#(
     *)
       cat >&2 <<EOF
 gatbps: file operands must not be empty
@@ -700,6 +766,7 @@ EOF
   esac
 
   case "${file}" in
+#(
     */)
       cat >&2 <<EOF
 gatbps: file operands must not end with slashes
@@ -711,9 +778,11 @@ EOF
   esac
 
   case "${file}" in
+#(
     /*)
       path="${file}"
     ;;
+#(
     *)
       path="./${file}"
     ;;
@@ -767,6 +836,7 @@ EOF
 
     case "${path}" in
 
+#(
       */CC0-1.0-AC-COPYRIGHT.ac)
         cat >"${path}" <<'EOF'
 dnl
@@ -798,9 +868,11 @@ dnl <https://creativecommons.org/publicdomain/zero/1.0/>.
 dnl
 EOF
         case "${?}" in
+#(
           0)
             :
           ;;
+#(
           *)
             cat >&2 <<EOF
 gatbps: ${fB2}cat${fR2} failed to read from:
@@ -814,6 +886,7 @@ EOF
         esac
       ;;
 
+#(
       */CC0-1.0-appendix.texi)
         cat >"${path}" <<'EOF'
 @c
@@ -984,9 +1057,11 @@ express Statement of Purpose.
 @c
 EOF
         case "${?}" in
+#(
           0)
             :
           ;;
+#(
           *)
             cat >&2 <<EOF
 gatbps: ${fB2}cat${fR2} failed to read from:
@@ -1000,6 +1075,7 @@ EOF
         esac
       ;;
 
+#(
       */CC0-1.0-copying.texi)
         cat >"${path}" <<'EOF'
 @c
@@ -1026,9 +1102,11 @@ It may also be available at
 @c
 EOF
         case "${?}" in
+#(
           0)
             :
           ;;
+#(
           *)
             cat >&2 <<EOF
 gatbps: ${fB2}cat${fR2} failed to read from:
@@ -1042,6 +1120,7 @@ EOF
         esac
       ;;
 
+#(
       */CC0-1.0.txt)
         cat >"${path}" <<'EOF'
 Creative Commons Legal Code
@@ -1167,9 +1246,11 @@ express Statement of Purpose.
     this CC0 or use of the Work.
 EOF
         case "${?}" in
+#(
           0)
             :
           ;;
+#(
           *)
             cat >&2 <<EOF
 gatbps: ${fB2}cat${fR2} failed to read from:
@@ -1183,6 +1264,7 @@ EOF
         esac
       ;;
 
+#(
       */DATE.ac)
         cat >"${path}" <<'EOF'
 dnl
@@ -1208,9 +1290,11 @@ dnl <https://creativecommons.org/publicdomain/zero/1.0/>.
 dnl
 EOF
         case "${?}" in
+#(
           0)
             :
           ;;
+#(
           *)
             cat >&2 <<EOF
 gatbps: ${fB2}cat${fR2} failed to read from:
@@ -1224,6 +1308,7 @@ EOF
         esac
       ;;
 
+#(
       *)
 
         if test -e "${path}.top"; then
@@ -1248,9 +1333,11 @@ END {
 }
 ' <"${path}.top" >"${tmp0}"
           case "${?}" in
+#(
             0)
               :
             ;;
+#(
             *)
               cat >&2 <<EOF
 gatbps: ${awk} failed to read from:
@@ -1291,9 +1378,11 @@ END {
 }
 ' <"${path}.top.texi" >"${tmp1}"
           case "${?}" in
+#(
             0)
               :
             ;;
+#(
             *)
               cat >&2 <<EOF
 gatbps: ${awk} failed to read from:
@@ -1308,9 +1397,11 @@ EOF
 
           texi2any --plaintext "${tmp1}" >"${tmp0}"
           case "${?}" in
+#(
             0)
               :
             ;;
+#(
             *)
               cat >&2 <<EOF
 gatbps: texi2any failed to read from: ${tmp1}
@@ -1324,9 +1415,11 @@ EOF
 
           echo >>"${tmp0}"
           case "${?}" in
+#(
             0)
               :
             ;;
+#(
             *)
               cat >&2 <<EOF
 gatbps: echo failed to write to: ${tmp0}
@@ -1341,9 +1434,11 @@ EOF
 
           cat /dev/null >"${tmp0}"
           case "${?}" in
+#(
             0)
               :
             ;;
+#(
             *)
               cat >&2 <<EOF
 gatbps: ${fB2}cat${fR2} failed to read from:
@@ -1393,9 +1488,11 @@ END {
 }
 ' <"${path}.texi" >"${tmp2}"
         case "${?}" in
+#(
           0)
             :
           ;;
+#(
           *)
             cat >&2 <<EOF
 gatbps: ${awk} failed to read from:
@@ -1410,9 +1507,11 @@ EOF
 
         texi2any --plaintext "${tmp2}" >"${tmp1}"
         case "${?}" in
+#(
           0)
             :
           ;;
+#(
           *)
             cat >&2 <<EOF
 gatbps: texi2any failed to read from: ${tmp2}
@@ -1446,9 +1545,11 @@ $0 !~ /^#/ {
 }
 ' <"${path}.bot" >"${tmp2}"
           case "${?}" in
+#(
             0)
               :
             ;;
+#(
             *)
               cat >&2 <<EOF
 gatbps: ${awk} failed to read from:
@@ -1476,9 +1577,11 @@ EOF
 
           echo >"${tmp2}"
           case "${?}" in
+#(
             0)
               :
             ;;
+#(
             *)
               cat >&2 <<EOF
 gatbps: echo failed to write to: ${tmp2}
@@ -1504,9 +1607,11 @@ END {
 }
 ' <"${path}.bot.texi" >"${tmp3}"
           case "${?}" in
+#(
             0)
               :
             ;;
+#(
             *)
               cat >&2 <<EOF
 gatbps: ${awk} failed to read from:
@@ -1521,9 +1626,11 @@ EOF
 
           texi2any --plaintext "${tmp3}" >>"${tmp2}"
           case "${?}" in
+#(
             0)
               :
             ;;
+#(
             *)
               cat >&2 <<EOF
 gatbps: texi2any failed to read from: ${tmp3}
@@ -1539,9 +1646,11 @@ EOF
 
           cat /dev/null >"${tmp2}"
           case "${?}" in
+#(
             0)
               :
             ;;
+#(
             *)
               cat >&2 <<EOF
 gatbps: ${fB2}cat${fR2} failed to read from:
@@ -1558,9 +1667,11 @@ EOF
 
         cat "${tmp0}" "${tmp1}" "${tmp2}" >"${path}"
         case "${?}" in
+#(
           0)
             :
           ;;
+#(
           *)
             cat >&2 <<EOF
 gatbps: ${fB2}cat${fR2} failed to read from:
