@@ -29,6 +29,25 @@ AS_CASE(["${interpval}"], [no],
 AC_ARG_VAR([AWK], [the preferred awk implementation])
 AC_PROG_AWK
 
+AWK_SHELL=`LC_ALL=C sed "
+s/'/'\\\\\\\\''/g
+1s/^/'/
+\\$s/\\$/'/
+" <<EOF
+${AWK}
+EOF
+`
+case "${?}" in
+  0)
+    :
+  ;;
+  *)
+    AC_MSG_ERROR([sed failed], [1])
+  ;;
+esac
+
+AC_SUBST([AWK_SHELL])
+
 AM_INIT_AUTOMAKE([-Wall -Werror info-in-builddir])
 
 AC_CONFIG_FILES([Makefile])
