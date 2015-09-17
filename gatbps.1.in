@@ -106,10 +106,18 @@ and deleted after the operand succeeds or fails.
 .SH "ENVIRONMENT VARIABLES"
 The following environment variables affect \fBgatbps\fR:
 .TP
-\fBAWK\fR
-The preferred implementation of \fBawk\fR.
-If unset or empty, the default is \fB@AWK@\fR.
-This does not affect special files.
+.nohy "\fBAWK\fR"
+.IP0
+If the
+.nohy "\fBAWK\fR"
+environment variable
+is set to a nonempty string
+.nohy "\fIS\fR,"
+then an
+.nohy "\fB\-\-awk=\fIS\fR"
+option is inserted at a location
+that lies before any program arguments.
+Otherwise, there is no effect.
 .TP
 .nohy "\fBSTYLE\fR"
 .IP0
