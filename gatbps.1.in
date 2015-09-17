@@ -31,7 +31,7 @@ gatbps \- create standard project files
 The preferred
 .nohy "\fBawk\fR"
 implementation is
-.nohy "\fB@AWK@\fR"
+.nohy @AWK_TROFF@
 by default.
 Each
 .nohy "\fB\-\-awk=\fIS\fR"
