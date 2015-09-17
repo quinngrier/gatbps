@@ -34,7 +34,7 @@ AC_PROG_AWK
 # variable assignment in an LC_ALL=C shell.
 #
 
-AWK_SHELL=`LC_ALL=C sed "
+AWK_SHELL=`sed "
 s/'/'\\\\\\\\''/g
 1s/^/'/
 \\$s/\\$/'/
