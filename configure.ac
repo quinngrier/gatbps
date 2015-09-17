@@ -72,7 +72,7 @@ esac
 AC_SUBST([AWK_TROFF])
 
 #
-# Make a version of @AWK@ that can safely be used as the right side of a
+# Make a version of @AWK@ that's safer to use as the right side of a
 # shell variable assignment.
 #
 
