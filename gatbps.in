@@ -196,7 +196,7 @@ EOF
 #(
         --help=CC0-1.0-AC-COPYRIGHT.ac|--help=*/CC0-1.0-AC-COPYRIGHT.ac)
           cat <<EOF
-Special file: CC0-1.0-AC-COPYRIGHT.ac
+Special file: ${fB1}CC0-1.0-AC-COPYRIGHT.ac${fR1}
 
 The CC0-1.0-AC-COPYRIGHT.ac special file calls Autoconf's AC_COPYRIGHT
 macro with text stating that some parts of the configure script belong
@@ -226,7 +226,7 @@ EOF
 #(
         --help=CC0-1.0-appendix.texi|--help=*/CC0-1.0-appendix.texi)
           cat <<EOF
-Special file: CC0-1.0-appendix.texi
+Special file: ${fB1}CC0-1.0-appendix.texi${fR1}
 
 The CC0-1.0-appendix.texi special file is the same as the CC0-1.0.txt
 special file but is formatted as a Texinfo appendix. It can be included
@@ -278,7 +278,7 @@ EOF
 #(
         --help=CC0-1.0-copying.texi|--help=*/CC0-1.0-copying.texi)
           cat <<EOF
-Special file: CC0-1.0-copying.texi
+Special file: ${fB1}CC0-1.0-copying.texi${fR1}
 
 The CC0-1.0-copying.texi special file defines a Texinfo @copying block
 that states that the authors of the manual have waived their rights to
@@ -309,7 +309,7 @@ EOF
 #(
         --help=CC0-1.0.txt|--help=*/CC0-1.0.txt)
           cat <<EOF
-Special file: CC0-1.0.txt
+Special file: ${fB1}CC0-1.0.txt${fR1}
 
 The CC0-1.0.txt special file is the plaintext version of the CC0 1.0
 Universal Public Domain Dedication, which is a legal instrument from
