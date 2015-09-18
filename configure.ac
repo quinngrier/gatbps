@@ -7,10 +7,6 @@ AC_INIT([GATBPS],
 m4_include([CC0-1.0-AC-COPYRIGHT.ac])
 m4_include([DATE.ac])
 
-#
-# Only use the current directory and srcdir for auxiliary files.
-#
-
 AC_CONFIG_AUX_DIR([.])
 
 AC_CONFIG_SRCDIR([gatbps.in])
