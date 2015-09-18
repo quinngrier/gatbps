@@ -254,6 +254,28 @@ EOF
         ;;
 
 #(
+        --help=CC0-1.0-commit.txt|--help=*/CC0-1.0-commit.txt)
+          cat <<EOF
+Special file: ${fB1}CC0-1.0-commit.txt${fR1}
+EOF
+          case "${?}" in
+#(
+            0)
+              :
+            ;;
+#(
+            *)
+              cat >&2 <<EOF
+${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps:${fd2}   1. a here-document
+${fr2}gatbps:${fd2} and write to: standard output
+EOF
+              exit 1
+            ;;
+          esac
+        ;;
+
+#(
         --help=CC0-1.0-copying.texi|--help=*/CC0-1.0-copying.texi)
           cat <<'EOF'
 Special file: CC0-1.0-copying.texi
@@ -726,6 +748,7 @@ case "${#}" in
     cat <<'EOF'
 CC0-1.0-AC-COPYRIGHT.ac
 CC0-1.0-appendix.texi
+CC0-1.0-commit.txt
 CC0-1.0-copying.texi
 CC0-1.0.txt
 DATE.ac
@@ -1072,6 +1095,38 @@ gatbps: ${fB2}cat${fR2} failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: ${path}
 gatbps: file operand failed: ${file}
+EOF
+            exit_status=1
+            break
+          ;;
+        esac
+      ;;
+
+#(
+      */CC0-1.0-commit.txt)
+        cat >"${path}" <<'EOF'
+
+
+The author of this commit has waived all copyright and
+related or neighboring rights to the extent permitted by
+law as described by the CC0 1.0 Universal Public Domain
+Dedication. You should have received a copy of the full
+dedication along with this commit, typically as a file
+named <CC0-1.0.txt>. If not, it may be available at
+<https://creativecommons.org/publicdomain/zero/1.0/>.
+EOF
+        case "${?}" in
+#(
+          0)
+            :
+          ;;
+#(
+          *)
+            cat >&2 <<EOF
+${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
+${fy2}gatbps:${fd2}   1. a here-document
+${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
+${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status=1
             break
