@@ -88,7 +88,7 @@ option is replaced by a
 option.
 Each
 .nohy "\fB\-\-style\-stdout=\fIS\fR"
-option behaves like a
+option is like a
 .nohy "\fB\-\-style\-stderr=\fIS\fR"
 option but affects standard output
 instead of standard error.
