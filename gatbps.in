@@ -146,7 +146,7 @@ given. Any other file is plain. All plain files are created in the same
 way, but each special file is created in a unique way. More information
 on how a given file will be created can be shown with the second form.
 
-Try man gatbps or info gatbps for more information.
+Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
       case "${?}" in
 #(
@@ -204,7 +204,7 @@ to the package and that the authors of those parts have waived their
 rights to them via CC0. It can be included in configure.ac with the
 m4_include macro where the AC_COPYRIGHT call would normally appear.
 
-Try man gatbps or info gatbps for more information.
+Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
           case "${?}" in
 #(
@@ -234,7 +234,7 @@ in another Texinfo file with the @include command where the appendix is
 desired to appear. The appendix is also labeled as @node CC0 so that it
 follows the usual node style and can be cross referenced.
 
-Try man gatbps or info gatbps for more information.
+Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
           case "${?}" in
 #(
@@ -258,7 +258,7 @@ EOF
           cat <<EOF
 Special file: ${fB1}CC0-1.0-commit.txt${fR1}
 
-Try man gatbps or info gatbps for more information.
+Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
           case "${?}" in
 #(
@@ -289,7 +289,7 @@ the CC0-1.0-appendix.texi special file. It can be included in another
 Texinfo file with the @include command where the @copying block would
 normally appear.
 
-Try man gatbps or info gatbps for more information.
+Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
           case "${?}" in
 #(
@@ -319,7 +319,7 @@ Creative Commons that allows an author to waive their copyright and
 related or neighboring rights. This was originally downloaded from
 <https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt>.
 
-Try man gatbps or info gatbps for more information.
+Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
           case "${?}" in
 #(
@@ -343,7 +343,7 @@ EOF
           cat <<EOF
 Special file: ${fB1}DATE.ac${fR1}
 
-Try man gatbps or info gatbps for more information.
+Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
           case "${?}" in
 #(
@@ -385,7 +385,7 @@ END {
   print "a trailing newline. The same is done for F.bot(.texi), but appending to"
   print "F with a leading newline."
   print ""
-  print "Try man gatbps or info gatbps for more information."
+  print "Try '"${fB1}"'man gatbps'"${fR1}"' or '"${fB1}"'info gatbps'"${fR1}"' for more information."
 }
 ' <<EOF
 ${1}
