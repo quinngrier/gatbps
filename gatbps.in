@@ -5,9 +5,9 @@
 # current locale. This is generally the best approach for code that is
 # not deliberately designed to work in other locales. The C locale has
 # predictable behavior and is compatible with UTF-8. Other locales may
-# have surprising behavior. This affects many important programs, such
-# as awk, sed, and this very shell instance. For more information, see
-# the C standard, the POSIX standard, and the GNU C Library manual.
+# have surprising behavior. This affects many important programs, like
+# awk, grep, sed, and this shell instance itself. For more information,
+# see the C standard, the POSIX standard, and the GNU C Library manual.
 #
 
 LC_ALL=C
