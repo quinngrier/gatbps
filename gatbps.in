@@ -195,7 +195,7 @@ EOF
 
 #(
         --help=CC0-1.0-AC-COPYRIGHT.ac|--help=*/CC0-1.0-AC-COPYRIGHT.ac)
-          cat <<'EOF'
+          cat <<EOF
 Special file: CC0-1.0-AC-COPYRIGHT.ac
 
 The CC0-1.0-AC-COPYRIGHT.ac special file calls Autoconf's AC_COPYRIGHT
@@ -225,7 +225,7 @@ EOF
 
 #(
         --help=CC0-1.0-appendix.texi|--help=*/CC0-1.0-appendix.texi)
-          cat <<'EOF'
+          cat <<EOF
 Special file: CC0-1.0-appendix.texi
 
 The CC0-1.0-appendix.texi special file is the same as the CC0-1.0.txt
@@ -277,7 +277,7 @@ EOF
 
 #(
         --help=CC0-1.0-copying.texi|--help=*/CC0-1.0-copying.texi)
-          cat <<'EOF'
+          cat <<EOF
 Special file: CC0-1.0-copying.texi
 
 The CC0-1.0-copying.texi special file defines a Texinfo @copying block
@@ -308,7 +308,7 @@ EOF
 
 #(
         --help=CC0-1.0.txt|--help=*/CC0-1.0.txt)
-          cat <<'EOF'
+          cat <<EOF
 Special file: CC0-1.0.txt
 
 The CC0-1.0.txt special file is the plaintext version of the CC0 1.0
