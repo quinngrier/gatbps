@@ -350,7 +350,7 @@ EOF
   }
 }
 END {
-  print "Plain file:", name
+  printf "Plain file: '"${fB1}"'%s'"${fR1}"'\n", name
   print ""
   print "A plain file F is created by adding startup and shutdown code to F.texi"
   print "and calling texi2any --plaintext. If F.top exists, it is prepended to F"
