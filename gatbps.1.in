@@ -117,7 +117,9 @@ then an
 .nohy "\fB\-\-awk=\fIS\fR"
 option is inserted at a location
 that lies before any program arguments.
-Otherwise, there is no effect.
+Otherwise, the
+.nohy "\fBAWK\fR"
+environment variable has no effect.
 .TP
 .nohy "\fBSTYLE\fR"
 .IP0
@@ -135,7 +137,9 @@ and before any options inserted by the
 and
 .nohy "\fBSTYLE_STDOUT\fR"
 environment variables.
-Otherwise, there is no effect.
+Otherwise, the
+.nohy "\fBSTYLE\fR"
+environment variable has no effect.
 .TP
 .nohy "\fBSTYLE_STDERR\fR"
 .IP0
@@ -151,7 +155,9 @@ that lies before any program arguments
 and after any option inserted by the
 .nohy "\fBSTYLE\fR"
 environment variable.
-Otherwise, there is no effect.
+Otherwise, the
+.nohy "\fBSTYLE_STDERR\fR"
+environment variable has no effect.
 .TP
 .nohy "\fBSTYLE_STDOUT\fR"
 .IP0
@@ -167,7 +173,9 @@ that lies before any program arguments
 and after any option inserted by the
 .nohy "\fBSTYLE\fR"
 environment variable.
-Otherwise, there is no effect.
+Otherwise, the
+.nohy "\fBSTYLE_STDOUT\fR"
+environment variable has no effect.
 .SH "EXIT STATUS"
 \fBgatbps\fR indicates success with exit status zero
 and failure with any nonzero exit status.
