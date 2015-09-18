@@ -811,7 +811,7 @@ for file do
     *)
       cat >&2 <<EOF
 gatbps: file operands must not be empty
-gatbps: file operand failed
+${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed
 EOF
       exit_status=1
       continue
@@ -823,7 +823,7 @@ EOF
     */)
       cat >&2 <<EOF
 gatbps: file operands must not end with slashes
-gatbps: file operand failed: ${file}
+${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
       exit_status=1
       continue
@@ -846,7 +846,7 @@ EOF
   else
     cat >&2 <<EOF
 gatbps: file operands must not be directories
-gatbps: file operand failed: ${file}
+${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
     exit_status=1
     continue
@@ -860,14 +860,14 @@ EOF
     elif test -d "${path}.gatbps${i}"; then
       cat >&2 <<EOF
 gatbps: file must not be a directory: ${path}.gatbps${i}
-gatbps: file operand failed: ${file}
+${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
       exit_status=1
       continue 2
     else
       cat >&2 <<EOF
 gatbps: file must not be non-regular: ${path}.gatbps${i}
-gatbps: file operand failed: ${file}
+${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
       exit_status=1
       continue 2
@@ -1403,7 +1403,7 @@ EOF
           else
             cat >&2 <<EOF
 gatbps: file must not be a directory: ${path}.top
-gatbps: file operand failed: ${file}
+${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status=1
             break
@@ -1428,7 +1428,7 @@ END {
 gatbps: ${awk} failed to read from:
 gatbps:   1. ${path}.top
 gatbps: and write to: ${tmp0}
-gatbps: file operand failed: ${file}
+${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status=1
               break
@@ -1442,7 +1442,7 @@ EOF
           else
             cat >&2 <<EOF
 gatbps: file must not be a directory: ${path}.top.texi
-gatbps: file operand failed: ${file}
+${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status=1
             break
@@ -1473,7 +1473,7 @@ END {
 gatbps: ${awk} failed to read from:
 gatbps:   1. ${path}.top.texi
 gatbps: and write to: ${tmp1}
-gatbps: file operand failed: ${file}
+${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status=1
               break
@@ -1491,7 +1491,7 @@ EOF
               cat >&2 <<EOF
 gatbps: texi2any failed to read from: ${tmp1}
 gatbps: and write to: ${tmp0}
-gatbps: file operand failed: ${file}
+${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status=1
               break
@@ -1508,7 +1508,7 @@ EOF
             *)
               cat >&2 <<EOF
 gatbps: echo failed to write to: ${tmp0}
-gatbps: file operand failed: ${file}
+${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status=1
               break
@@ -1529,7 +1529,7 @@ EOF
 gatbps: ${fB2}cat${fR2} failed to read from:
 gatbps:   1. /dev/null
 gatbps: and write to: ${tmp0}
-gatbps: file operand failed: ${file}
+${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status=1
               break
@@ -1544,7 +1544,7 @@ EOF
           else
             cat >&2 <<EOF
 gatbps: file must not be a directory: ${path}.texi
-gatbps: file operand failed: ${file}
+${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status=1
             break
@@ -1552,7 +1552,7 @@ EOF
         else
           cat >&2 <<EOF
 gatbps: file must exist: ${path}.texi
-gatbps: file operand failed: ${file}
+${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
           exit_status=1
           break
@@ -1583,7 +1583,7 @@ END {
 gatbps: ${awk} failed to read from:
 gatbps:   1. ${path}.texi
 gatbps: and write to: ${tmp2}
-gatbps: file operand failed: ${file}
+${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status=1
             break
@@ -1601,7 +1601,7 @@ EOF
             cat >&2 <<EOF
 gatbps: texi2any failed to read from: ${tmp2}
 gatbps: and write to: ${tmp1}
-gatbps: file operand failed: ${file}
+${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status=1
             break
@@ -1615,7 +1615,7 @@ EOF
           else
             cat >&2 <<EOF
 gatbps: file must not be a directory: ${path}.bot
-gatbps: file operand failed: ${file}
+${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status=1
             break
@@ -1640,7 +1640,7 @@ $0 !~ /^#/ {
 gatbps: ${awk} failed to read from:
 gatbps:   1. ${path}.bot
 gatbps: and write to: ${tmp2}
-gatbps: file operand failed: ${file}
+${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status=1
               break
@@ -1654,7 +1654,7 @@ EOF
           else
             cat >&2 <<EOF
 gatbps: file must not be a directory: ${path}.bot.texi
-gatbps: file operand failed: ${file}
+${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status=1
             break
@@ -1670,7 +1670,7 @@ EOF
             *)
               cat >&2 <<EOF
 gatbps: echo failed to write to: ${tmp2}
-gatbps: file operand failed: ${file}
+${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status=1
               break
@@ -1702,7 +1702,7 @@ END {
 gatbps: ${awk} failed to read from:
 gatbps:   1. ${path}.bot.texi
 gatbps: and write to: ${tmp3}
-gatbps: file operand failed: ${file}
+${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status=1
               break
@@ -1720,7 +1720,7 @@ EOF
               cat >&2 <<EOF
 gatbps: texi2any failed to read from: ${tmp3}
 gatbps: and write to: ${tmp2}
-gatbps: file operand failed: ${file}
+${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status=1
               break
@@ -1741,7 +1741,7 @@ EOF
 gatbps: ${fB2}cat${fR2} failed to read from:
 gatbps:   1. /dev/null
 gatbps: and write to: ${tmp2}
-gatbps: file operand failed: ${file}
+${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status=1
               break
@@ -1764,7 +1764,7 @@ gatbps:   1. ${tmp0}
 gatbps:   2. ${tmp1}
 gatbps:   3. ${tmp2}
 gatbps: and write to: ${path}
-gatbps: file operand failed: ${file}
+${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status=1
             break
