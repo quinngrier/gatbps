@@ -339,6 +339,30 @@ EOF
         ;;
 
 #(
+        --help=DATE.ac|--help=*/DATE.ac)
+          cat <<EOF
+Special file: ${fB1}DATE.ac${fR1}
+
+Try man gatbps or info gatbps for more information.
+EOF
+          case "${?}" in
+#(
+            0)
+              :
+            ;;
+#(
+            *)
+              cat >&2 <<EOF
+${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps:${fd2}   1. a here-document
+${fr2}gatbps:${fd2} and write to: standard output
+EOF
+              exit 1
+            ;;
+          esac
+        ;;
+
+#(
         *)
           "${awk}" '
 {
