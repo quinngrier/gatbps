@@ -257,6 +257,8 @@ EOF
         --help=CC0-1.0-commit.txt|--help=*/CC0-1.0-commit.txt)
           cat <<EOF
 Special file: ${fB1}CC0-1.0-commit.txt${fR1}
+
+Try man gatbps or info gatbps for more information.
 EOF
           case "${?}" in
 #(
