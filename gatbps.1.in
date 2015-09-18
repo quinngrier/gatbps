@@ -115,7 +115,7 @@ is set to a nonempty string
 .nohy "\fIS\fR,"
 then an
 .nohy "\fB\-\-awk=\fIS\fR"
-option is inserted at a location
+option is inserted at a position
 that lies before any program arguments.
 Otherwise, the
 .nohy "\fBAWK\fR"
@@ -130,7 +130,7 @@ is set to a nonempty string
 .nohy "\fIS\fR,"
 then a
 .nohy "\fB\-\-style=\fIS\fR"
-option is inserted at a location
+option is inserted at a position
 that lies before any program arguments
 and before any options inserted by the
 .nohy "\fBSTYLE_STDERR\fR"
@@ -150,7 +150,7 @@ is set to a nonempty string
 .nohy "\fIS\fR,"
 then a
 .nohy "\fB\-\-style\-stderr=\fIS\fR"
-option is inserted at a location
+option is inserted at a position
 that lies before any program arguments
 and after any option inserted by the
 .nohy "\fBSTYLE\fR"
@@ -168,7 +168,7 @@ is set to a nonempty string
 .nohy "\fIS\fR,"
 then a
 .nohy "\fB\-\-style\-stdout=\fIS\fR"
-option is inserted at a location
+option is inserted at a position
 that lies before any program arguments
 and after any option inserted by the
 .nohy "\fBSTYLE\fR"
