@@ -973,7 +973,7 @@ EOF
 
       "${awk}" '
 {
-  print "gatbps: unrecognized option:", substr($0 "\n", 1, 2)
+  printf "'"${fr2}"'gatbps:'"${fd2}"' unrecognized option: '"${fB2}"'%s'"${fR2}"'\n", substr($0 "\n", 1, 2)
   print "'"${fr2}"'gatbps:'"${fd2}"' try '"${fB2}"'gatbps --help'"${fR2}"' for more information"
   exit
 }
