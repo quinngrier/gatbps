@@ -652,7 +652,7 @@ EOF
     --version=*)
 
       cat >&2 <<EOF
-gatbps: --version must not be given an argument
+${fr2}gatbps:${fd2} the ${fB2}--version${fR2} option must not have an argument
 ${fr2}gatbps:${fd2} try ${fB2}gatbps --help${fR2} for more information
 EOF
       exit 1
@@ -671,7 +671,7 @@ EOF
     --=*)
 
       cat >&2 <<EOF
-gatbps: -- must not be given an argument
+${fr2}gatbps:${fd2} the ${fB2}--${fR2} option must not have an argument
 ${fr2}gatbps:${fd2} try ${fB2}gatbps --help${fR2} for more information
 EOF
       exit 1
