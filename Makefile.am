@@ -1,4 +1,5 @@
 CLEANFILES =
+CLEANFILES += gatbps.1
 
 EXTRA_DIST =
 EXTRA_DIST += $(srcdir)/DATE
@@ -17,6 +18,9 @@ do_subst = ( sed \
   -e 's|[@]PACKAGE_STRING@|$(PACKAGE_STRING)|g' \
   -e 's|[@]PACKAGE_VERSION@|$(PACKAGE_VERSION)|g' \
   )
+
+gatbps.1: gatbps
+	./gatbps --man >gatbps.1
 
 ##
 ## The authors of this file have waived all copyright and
