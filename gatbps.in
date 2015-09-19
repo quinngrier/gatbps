@@ -706,12 +706,24 @@ Each
 option is replaced by a
 .nohy "\fB\-\-style\-stdout=always\fR"
 option.
+Bold, underline, and color styling
+of text written to standard output
+is initially disabled, and each
+.nohy "\fB\-\-style\-stdout=\fIS\fR"
+option enables or disables it.
+Each
+.nohy "\fB\-\-style\-stdout=always\fR"
+option enables it.
+Each
+.nohy "\fB\-\-style\-stdout=auto\fR"
+option enables it if standard output
+is associated with a terminal
+or disables it if not.
 Each
 .nohy "\fB\-\-style\-stdout=\fIS\fR"
-option is like a
-.nohy "\fB\-\-style\-stderr=\fIS\fR"
-option but affects standard output
-instead of standard error.
+option with any other
+.nohy "\fIS\fR"
+disables it.
 .SH "PLAIN FILES"
 .SH "SPECIAL FILES"
 .SH "TEMPORARY FILES"
