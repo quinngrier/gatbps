@@ -175,7 +175,7 @@ EOF
 #(
         --help=)
           cat >&2 <<EOF
-${fr2}gatbps:${fd2} the ${fB2}--help${fR2} argument must not be empty
+${fr2}gatbps:${fd2} the ${fB2}--help${fR2} option argument must not be empty
 EOF
           exit 1
         ;;
@@ -185,7 +185,7 @@ EOF
 #(
         */)
           cat >&2 <<EOF
-${fr2}gatbps:${fd2} the ${fB2}--help${fR2} argument must not end with a slash
+${fr2}gatbps:${fd2} the ${fB2}--help${fR2} option argument must not end with a slash
 EOF
           exit 1
         ;;
