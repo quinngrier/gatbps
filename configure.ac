@@ -9,6 +9,7 @@ m4_include([DATE.ac])
 
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([m4])
+AC_CONFIG_MACRO_DIRS([m4])
 AC_CONFIG_SRCDIR([gatbps.in])
 
 dnl
