@@ -1111,14 +1111,14 @@ EOF
       :
     elif test -d "${path}.gatbps${i}"; then
       cat >&2 <<EOF
-${fy2}gatbps:${fd2} file must not be a directory: ${path}.gatbps${i}
+${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${path}.gatbps${i}${fR2}
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
       exit_status=1
       continue 2
     else
       cat >&2 <<EOF
-${fy2}gatbps:${fd2} file must not be non-regular: ${path}.gatbps${i}
+${fy2}gatbps:${fd2} file must not be non-regular: ${fB2}${path}.gatbps${i}${fR2}
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
       exit_status=1
