@@ -933,7 +933,7 @@ EOF
   }
 }
 END {
-  printf "'"${fr2}"'gatbps:'"${fd2}"' unrecognized option: '"${fB2}"'%s'"${fR2}"'\n", name
+  printf "'"${fr2}"'gatbps:'"${fd2}"' unknown option name: '"${fB2}"'%s'"${fR2}"'\n", name
   print "'"${fr2}"'gatbps:'"${fd2}"' try '"${fB2}"'gatbps --help'"${fR2}"' for more information"
 }
 ' >&2 <<EOF
@@ -961,7 +961,7 @@ EOF
     --*|-?)
 
       cat >&2 <<EOF
-${fr2}gatbps:${fd2} unrecognized option: ${fB2}${1}${fR2}
+${fr2}gatbps:${fd2} unknown option name: ${fB2}${1}${fR2}
 ${fr2}gatbps:${fd2} try ${fB2}gatbps --help${fR2} for more information
 EOF
       exit 1
@@ -973,7 +973,7 @@ EOF
 
       "${awk}" '
 {
-  printf "'"${fr2}"'gatbps:'"${fd2}"' unrecognized option: '"${fB2}"'%s'"${fR2}"'\n", substr($0 "\n", 1, 2)
+  printf "'"${fr2}"'gatbps:'"${fd2}"' unknown option name: '"${fB2}"'%s'"${fR2}"'\n", substr($0 "\n", 1, 2)
   print "'"${fr2}"'gatbps:'"${fd2}"' try '"${fB2}"'gatbps --help'"${fR2}"' for more information"
   exit
 }
