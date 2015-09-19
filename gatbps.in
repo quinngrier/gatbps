@@ -398,7 +398,7 @@ EOF
 #(
             *)
               cat >&2 <<EOF
-gatbps: ${awk} failed to read from:
+gatbps: ${fB2}${awk}${fR2} failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: standard output
 EOF
@@ -947,7 +947,7 @@ EOF
 #(
         *)
           cat >&2 <<EOF
-gatbps: ${awk} failed to read from:
+gatbps: ${fB2}${awk}${fR2} failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: standard error
 EOF
@@ -988,7 +988,7 @@ EOF
 #(
         *)
           cat >&2 <<EOF
-gatbps: ${awk} failed to read from:
+gatbps: ${fB2}${awk}${fR2} failed to read from:
 gatbps:   1. a here-document
 gatbps: and write to: standard error
 EOF
@@ -1665,7 +1665,7 @@ END {
 #(
             *)
               cat >&2 <<EOF
-${fy2}gatbps:${fd2} ${awk} failed to read from:
+${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${path}.top
 ${fy2}gatbps:${fd2} and write to: ${tmp0}
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
@@ -1710,7 +1710,7 @@ END {
 #(
             *)
               cat >&2 <<EOF
-${fy2}gatbps:${fd2} ${awk} failed to read from:
+${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${path}.top.texi
 ${fy2}gatbps:${fd2} and write to: ${tmp1}
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
@@ -1820,7 +1820,7 @@ END {
 #(
           *)
             cat >&2 <<EOF
-${fy2}gatbps:${fd2} ${awk} failed to read from:
+${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${path}.texi
 ${fy2}gatbps:${fd2} and write to: ${tmp2}
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
@@ -1877,7 +1877,7 @@ $0 !~ /^#/ {
 #(
             *)
               cat >&2 <<EOF
-${fy2}gatbps:${fd2} ${awk} failed to read from:
+${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${path}.bot
 ${fy2}gatbps:${fd2} and write to: ${tmp2}
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
@@ -1939,7 +1939,7 @@ END {
 #(
             *)
               cat >&2 <<EOF
-${fy2}gatbps:${fd2} ${awk} failed to read from:
+${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${path}.bot.texi
 ${fy2}gatbps:${fd2} and write to: ${tmp3}
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
