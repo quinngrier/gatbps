@@ -933,7 +933,7 @@ EOF
   }
 }
 END {
-  print "gatbps: unrecognized option:", name
+  printf "'"${fr2}"'gatbps:'"${fd2}"' unrecognized option: '"${fB2}"'%s'"${fR2}"'\n", name
   print "'"${fr2}"'gatbps:'"${fd2}"' try '"${fB2}"'gatbps --help'"${fR2}"' for more information"
 }
 ' >&2 <<EOF
