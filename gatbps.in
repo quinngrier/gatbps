@@ -694,7 +694,7 @@ EOF
 }
 END {
   print "gatbps: unrecognized option:", name
-  print "gatbps: try gatbps --help for more information"
+  print "'"${fr2}"'gatbps:'"${fd2}"' try '"${fB2}"'gatbps --help'"${fR2}"' for more information"
 }
 ' >&2 <<EOF
 ${1}
@@ -734,7 +734,7 @@ EOF
       "${awk}" '
 {
   print "gatbps: unrecognized option:", substr($0 "\n", 1, 2)
-  print "gatbps: try gatbps --help for more information"
+  print "'"${fr2}"'gatbps:'"${fd2}"' try '"${fB2}"'gatbps --help'"${fR2}"' for more information"
   exit
 }
 ' >&2 <<EOF
