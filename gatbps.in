@@ -615,6 +615,17 @@ EOF
     ;;
 
 #(
+    --man=*)
+
+      cat >&2 <<EOF
+${fr2}gatbps:${fd2} the ${fB2}--man${fR2} option must not have an argument
+${fr2}gatbps:${fd2} try ${fB2}gatbps --help${fR2} for more information
+EOF
+      exit 1
+
+    ;;
+
+#(
     --version)
 
       cat <<'EOF'
