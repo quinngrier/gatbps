@@ -1062,7 +1062,7 @@ for file do
 #(
     *)
       cat >&2 <<EOF
-${fy2}gatbps:${fd2} file operands must not be empty
+${fy2}gatbps:${fd2} ${fI2}file${fR2} operands must not be empty
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed
 EOF
       exit_status=1
@@ -1074,7 +1074,7 @@ EOF
 #(
     */)
       cat >&2 <<EOF
-${fy2}gatbps:${fd2} file operands must not end with slashes
+${fy2}gatbps:${fd2} ${fI2}file${fR2} operands must not end with slashes
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
       exit_status=1
@@ -1097,7 +1097,7 @@ EOF
     :
   else
     cat >&2 <<EOF
-${fy2}gatbps:${fd2} file operands must not be directories
+${fy2}gatbps:${fd2} ${fI2}file${fR2} operands must not be directories
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
     exit_status=1
