@@ -1050,7 +1050,7 @@ EOF
   ;;
 esac
 
-exit_status=0
+exit_status='0'
 
 for file do
 
@@ -1065,7 +1065,7 @@ for file do
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operands must not be empty
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed
 EOF
-      exit_status=1
+      exit_status='1'
       continue
     ;;
   esac
@@ -1077,7 +1077,7 @@ EOF
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operands must not end with slashes
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-      exit_status=1
+      exit_status='1'
       continue
     ;;
   esac
@@ -1100,7 +1100,7 @@ EOF
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operands must not be directories
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-    exit_status=1
+    exit_status='1'
     continue
   fi
 
@@ -1114,14 +1114,14 @@ EOF
 ${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${path}.gatbps${i}${fR2}
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-      exit_status=1
+      exit_status='1'
       continue 2
     else
       cat >&2 <<EOF
 ${fy2}gatbps:${fd2} file must not be non-regular: ${fB2}${path}.gatbps${i}${fR2}
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-      exit_status=1
+      exit_status='1'
       continue 2
     fi
   done
@@ -1185,7 +1185,7 @@ ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-            exit_status=1
+            exit_status='1'
             break
           ;;
         esac
@@ -1374,7 +1374,7 @@ ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-            exit_status=1
+            exit_status='1'
             break
           ;;
         esac
@@ -1406,7 +1406,7 @@ ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-            exit_status=1
+            exit_status='1'
             break
           ;;
         esac
@@ -1451,7 +1451,7 @@ ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-            exit_status=1
+            exit_status='1'
             break
           ;;
         esac
@@ -1595,7 +1595,7 @@ ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-            exit_status=1
+            exit_status='1'
             break
           ;;
         esac
@@ -1639,7 +1639,7 @@ ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-            exit_status=1
+            exit_status='1'
             break
           ;;
         esac
@@ -1657,7 +1657,7 @@ EOF
 ${fy2}gatbps:${fd2} file must not be a directory: ${path}.top
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-            exit_status=1
+            exit_status='1'
             break
           fi
 
@@ -1682,7 +1682,7 @@ ${fy2}gatbps:${fd2}   1. ${path}.top
 ${fy2}gatbps:${fd2} and write to: ${tmp0}
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-              exit_status=1
+              exit_status='1'
               break
             ;;
           esac
@@ -1696,7 +1696,7 @@ EOF
 ${fy2}gatbps:${fd2} file must not be a directory: ${path}.top.texi
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-            exit_status=1
+            exit_status='1'
             break
           fi
 
@@ -1727,7 +1727,7 @@ ${fy2}gatbps:${fd2}   1. ${path}.top.texi
 ${fy2}gatbps:${fd2} and write to: ${tmp1}
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-              exit_status=1
+              exit_status='1'
               break
             ;;
           esac
@@ -1745,7 +1745,7 @@ ${fy2}gatbps:${fd2} texi2any failed to read from: ${tmp1}
 ${fy2}gatbps:${fd2} and write to: ${tmp0}
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-              exit_status=1
+              exit_status='1'
               break
             ;;
           esac
@@ -1762,7 +1762,7 @@ EOF
 ${fy2}gatbps:${fd2} echo failed to write to: ${tmp0}
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-              exit_status=1
+              exit_status='1'
               break
             ;;
           esac
@@ -1783,7 +1783,7 @@ ${fy2}gatbps:${fd2}   1. /dev/null
 ${fy2}gatbps:${fd2} and write to: ${tmp0}
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-              exit_status=1
+              exit_status='1'
               break
             ;;
           esac
@@ -1798,7 +1798,7 @@ EOF
 ${fy2}gatbps:${fd2} file must not be a directory: ${path}.texi
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-            exit_status=1
+            exit_status='1'
             break
           fi
         else
@@ -1806,7 +1806,7 @@ EOF
 ${fy2}gatbps:${fd2} file must exist: ${path}.texi
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-          exit_status=1
+          exit_status='1'
           break
         fi
 
@@ -1837,7 +1837,7 @@ ${fy2}gatbps:${fd2}   1. ${path}.texi
 ${fy2}gatbps:${fd2} and write to: ${tmp2}
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-            exit_status=1
+            exit_status='1'
             break
           ;;
         esac
@@ -1855,7 +1855,7 @@ ${fy2}gatbps:${fd2} texi2any failed to read from: ${tmp2}
 ${fy2}gatbps:${fd2} and write to: ${tmp1}
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-            exit_status=1
+            exit_status='1'
             break
           ;;
         esac
@@ -1869,7 +1869,7 @@ EOF
 ${fy2}gatbps:${fd2} file must not be a directory: ${path}.bot
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-            exit_status=1
+            exit_status='1'
             break
           fi
 
@@ -1894,7 +1894,7 @@ ${fy2}gatbps:${fd2}   1. ${path}.bot
 ${fy2}gatbps:${fd2} and write to: ${tmp2}
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-              exit_status=1
+              exit_status='1'
               break
             ;;
           esac
@@ -1908,7 +1908,7 @@ EOF
 ${fy2}gatbps:${fd2} file must not be a directory: ${path}.bot.texi
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-            exit_status=1
+            exit_status='1'
             break
           fi
 
@@ -1924,7 +1924,7 @@ EOF
 ${fy2}gatbps:${fd2} echo failed to write to: ${tmp2}
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-              exit_status=1
+              exit_status='1'
               break
             ;;
           esac
@@ -1956,7 +1956,7 @@ ${fy2}gatbps:${fd2}   1. ${path}.bot.texi
 ${fy2}gatbps:${fd2} and write to: ${tmp3}
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-              exit_status=1
+              exit_status='1'
               break
             ;;
           esac
@@ -1974,7 +1974,7 @@ ${fy2}gatbps:${fd2} texi2any failed to read from: ${tmp3}
 ${fy2}gatbps:${fd2} and write to: ${tmp2}
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-              exit_status=1
+              exit_status='1'
               break
             ;;
           esac
@@ -1995,7 +1995,7 @@ ${fy2}gatbps:${fd2}   1. /dev/null
 ${fy2}gatbps:${fd2} and write to: ${tmp2}
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-              exit_status=1
+              exit_status='1'
               break
             ;;
           esac
@@ -2018,7 +2018,7 @@ ${fy2}gatbps:${fd2}   3. ${tmp2}
 ${fy2}gatbps:${fd2} and write to: ${path}
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
-            exit_status=1
+            exit_status='1'
             break
           ;;
         esac
