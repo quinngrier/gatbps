@@ -1722,7 +1722,7 @@ END {
               cat >&2 <<EOF
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}${path}.top${fR2}
-${fy2}gatbps:${fd2} and write to: ${tmp0}
+${fy2}gatbps:${fd2} and write to: ${fB2}${tmp0}${fR2}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status='1'
@@ -1767,7 +1767,7 @@ END {
               cat >&2 <<EOF
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}${path}.top.texi${fR2}
-${fy2}gatbps:${fd2} and write to: ${tmp1}
+${fy2}gatbps:${fd2} and write to: ${fB2}${tmp1}${fR2}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status='1'
@@ -1785,7 +1785,7 @@ EOF
             *)
               cat >&2 <<EOF
 ${fy2}gatbps:${fd2} texi2any failed to read from: ${tmp1}
-${fy2}gatbps:${fd2} and write to: ${tmp0}
+${fy2}gatbps:${fd2} and write to: ${fB2}${tmp0}${fR2}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status='1'
@@ -1802,7 +1802,7 @@ EOF
 #(
             *)
               cat >&2 <<EOF
-${fy2}gatbps:${fd2} echo failed to write to: ${tmp0}
+${fy2}gatbps:${fd2} echo failed to write to: ${fB2}${tmp0}${fR2}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status='1'
@@ -1823,7 +1823,7 @@ EOF
               cat >&2 <<EOF
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}/dev/null${fR2}
-${fy2}gatbps:${fd2} and write to: ${tmp0}
+${fy2}gatbps:${fd2} and write to: ${fB2}${tmp0}${fR2}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status='1'
@@ -1877,7 +1877,7 @@ END {
             cat >&2 <<EOF
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}${path}.texi${fR2}
-${fy2}gatbps:${fd2} and write to: ${tmp2}
+${fy2}gatbps:${fd2} and write to: ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status='1'
@@ -1895,7 +1895,7 @@ EOF
           *)
             cat >&2 <<EOF
 ${fy2}gatbps:${fd2} texi2any failed to read from: ${tmp2}
-${fy2}gatbps:${fd2} and write to: ${tmp1}
+${fy2}gatbps:${fd2} and write to: ${fB2}${tmp1}${fR2}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status='1'
@@ -1934,7 +1934,7 @@ $0 !~ /^#/ {
               cat >&2 <<EOF
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}${path}.bot${fR2}
-${fy2}gatbps:${fd2} and write to: ${tmp2}
+${fy2}gatbps:${fd2} and write to: ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status='1'
@@ -1964,7 +1964,7 @@ EOF
 #(
             *)
               cat >&2 <<EOF
-${fy2}gatbps:${fd2} echo failed to write to: ${tmp2}
+${fy2}gatbps:${fd2} echo failed to write to: ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status='1'
@@ -1996,7 +1996,7 @@ END {
               cat >&2 <<EOF
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}${path}.bot.texi${fR2}
-${fy2}gatbps:${fd2} and write to: ${tmp3}
+${fy2}gatbps:${fd2} and write to: ${fB2}${tmp3}${fR2}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status='1'
@@ -2014,7 +2014,7 @@ EOF
             *)
               cat >&2 <<EOF
 ${fy2}gatbps:${fd2} texi2any failed to read from: ${tmp3}
-${fy2}gatbps:${fd2} and write to: ${tmp2}
+${fy2}gatbps:${fd2} and write to: ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status='1'
@@ -2035,7 +2035,7 @@ EOF
               cat >&2 <<EOF
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}/dev/null${fR2}
-${fy2}gatbps:${fd2} and write to: ${tmp2}
+${fy2}gatbps:${fd2} and write to: ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status='1'
@@ -2058,7 +2058,7 @@ ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}${tmp0}${fR2}
 ${fy2}gatbps:${fd2}   2. ${fB2}${tmp1}${fR2}
 ${fy2}gatbps:${fd2}   3. ${fB2}${tmp2}${fR2}
-${fy2}gatbps:${fd2} and write to: ${path}
+${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status='1'
