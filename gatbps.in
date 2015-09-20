@@ -724,6 +724,17 @@ Each
 option with any other
 .nohy "\fIS\fR"
 disables it.
+.TP
+.nohy "\fB\-\-version\fR"
+.IP0
+The
+.nohy "\fB\-\-version\fR"
+option makes the program
+write its name, original package,
+version number, release date, and
+copyright information to standard output
+instead of performing its normal function.
+All further program arguments are ignored.
 .SH "PLAIN FILES"
 .SH "SPECIAL FILES"
 .SH "TEMPORARY FILES"
