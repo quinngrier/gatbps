@@ -915,11 +915,11 @@ EOF
       cat <<'EOF'
 gatbps (GATBPS) @PACKAGE_VERSION@
 This version was released on @PACKAGE_DATE@.
-The authors of this script have waived all copyright and
+The authors of this program have waived all copyright and
 related or neighboring rights to the extent permitted by
 law as described by the CC0 1.0 Universal Public Domain
 Dedication. You should have received a copy of the full
-dedication along with this script, typically as a file
+dedication along with this program, typically as a file
 named <CC0-1.0.txt>. If not, it may be available at
 <https://creativecommons.org/publicdomain/zero/1.0/>.
 EOF
