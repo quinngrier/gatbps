@@ -1074,7 +1074,7 @@ EOF
 #(
     */)
       cat >&2 <<EOF
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operands must not end with slashes
+${fy2}gatbps:${fd2} each ${fI2}file${fR2} operand must not end with a slash
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
 EOF
       exit_status='1'
