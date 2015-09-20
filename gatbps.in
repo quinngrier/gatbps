@@ -689,7 +689,7 @@ option writes text to standard output
 and causes all further program arguments to be ignored.
 The text is the
 .nohy "\fBtroff\fR"
-code for the man page for the program.
+code for the program's manual page.
 .TP
 .nohy "\fB\-\-style\fR[\fB=\fIS\fR]"
 .IP0
