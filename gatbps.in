@@ -658,6 +658,29 @@ Each
 option changes it to
 .nohy "\fIS\fR."
 .TP
+.nohy "\fB\-\-help\fR[\fB=\fIS\fR]"
+.IP0
+The
+.nohy "\fB\-\-help\fR"
+and
+.nohy "\fB\-\-help=\fIS\fR"
+options write text to standard output
+and cause all further program arguments to be ignored.
+For the
+.nohy "\fB\-\-help\fR"
+option, the text is
+a short description of the program.
+For the
+.nohy "\fB\-\-help=\fIS\fR"
+option, the text is
+a short description of the file
+that would be written to the file operand
+.nohy "\fIS\fR"
+if the
+.nohy "\fB\-\-help=\fIS\fR"
+option were replaced by
+.nohy "\fIS\fR."
+.TP
 .nohy "\fB\-\-style\fR[\fB=\fIS\fR]"
 .IP0
 Each
