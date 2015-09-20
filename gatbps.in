@@ -1721,7 +1721,7 @@ END {
             *)
               cat >&2 <<EOF
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. ${path}.top
+${fy2}gatbps:${fd2}   1. ${fB2}${path}.top${fR2}
 ${fy2}gatbps:${fd2} and write to: ${tmp0}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
@@ -1766,7 +1766,7 @@ END {
             *)
               cat >&2 <<EOF
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. ${path}.top.texi
+${fy2}gatbps:${fd2}   1. ${fB2}${path}.top.texi${fR2}
 ${fy2}gatbps:${fd2} and write to: ${tmp1}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
@@ -1822,7 +1822,7 @@ EOF
             *)
               cat >&2 <<EOF
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. /dev/null
+${fy2}gatbps:${fd2}   1. ${fB2}/dev/null${fR2}
 ${fy2}gatbps:${fd2} and write to: ${tmp0}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
@@ -1876,7 +1876,7 @@ END {
           *)
             cat >&2 <<EOF
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. ${path}.texi
+${fy2}gatbps:${fd2}   1. ${fB2}${path}.texi${fR2}
 ${fy2}gatbps:${fd2} and write to: ${tmp2}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
@@ -1933,7 +1933,7 @@ $0 !~ /^#/ {
             *)
               cat >&2 <<EOF
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. ${path}.bot
+${fy2}gatbps:${fd2}   1. ${fB2}${path}.bot${fR2}
 ${fy2}gatbps:${fd2} and write to: ${tmp2}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
@@ -1995,7 +1995,7 @@ END {
             *)
               cat >&2 <<EOF
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. ${path}.bot.texi
+${fy2}gatbps:${fd2}   1. ${fB2}${path}.bot.texi${fR2}
 ${fy2}gatbps:${fd2} and write to: ${tmp3}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
@@ -2034,7 +2034,7 @@ EOF
             *)
               cat >&2 <<EOF
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. /dev/null
+${fy2}gatbps:${fd2}   1. ${fB2}/dev/null${fR2}
 ${fy2}gatbps:${fd2} and write to: ${tmp2}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
@@ -2055,9 +2055,9 @@ EOF
           *)
             cat >&2 <<EOF
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. ${tmp0}
-${fy2}gatbps:${fd2}   2. ${tmp1}
-${fy2}gatbps:${fd2}   3. ${tmp2}
+${fy2}gatbps:${fd2}   1. ${fB2}${tmp0}${fR2}
+${fy2}gatbps:${fd2}   2. ${fB2}${tmp1}${fR2}
+${fy2}gatbps:${fd2}   3. ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fd2} and write to: ${path}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
