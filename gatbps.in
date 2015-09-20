@@ -1697,7 +1697,7 @@ EOF
             :
           else
             cat >&2 <<EOF
-${fy2}gatbps:${fd2} file must not be a directory: ${path}.top
+${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${path}.top${fR2}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status='1'
@@ -1736,7 +1736,7 @@ EOF
             :
           else
             cat >&2 <<EOF
-${fy2}gatbps:${fd2} file must not be a directory: ${path}.top.texi
+${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${path}.top.texi${fR2}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status='1'
@@ -1838,7 +1838,7 @@ EOF
             :
           else
             cat >&2 <<EOF
-${fy2}gatbps:${fd2} file must not be a directory: ${path}.texi
+${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${path}.texi${fR2}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status='1'
@@ -1909,7 +1909,7 @@ EOF
             :
           else
             cat >&2 <<EOF
-${fy2}gatbps:${fd2} file must not be a directory: ${path}.bot
+${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${path}.bot${fR2}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status='1'
@@ -1948,7 +1948,7 @@ EOF
             :
           else
             cat >&2 <<EOF
-${fy2}gatbps:${fd2} file must not be a directory: ${path}.bot.texi
+${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${path}.bot.texi${fR2}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status='1'
