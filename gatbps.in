@@ -1140,7 +1140,7 @@ EOF
     :
   else
     cat >&2 <<EOF
-${fy2}gatbps:${fd2} file operands must not be directories
+${fy2}gatbps:${fd2} each file operand must not be a directory
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
     exit_status='1'
