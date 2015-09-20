@@ -1105,8 +1105,8 @@ for file do
 #(
     *)
       cat >&2 <<EOF
-${fy2}gatbps:${fd2} each ${fI2}file${fR2} operand must not be empty
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed
+${fy2}gatbps:${fd2} each file operand must not be empty
+${fy2}gatbps:${fd2} file operand failed
 EOF
       exit_status='1'
       continue
@@ -1117,8 +1117,8 @@ EOF
 #(
     */)
       cat >&2 <<EOF
-${fy2}gatbps:${fd2} each ${fI2}file${fR2} operand must not end with a slash
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} each file operand must not end with a slash
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
       exit_status='1'
       continue
@@ -1140,8 +1140,8 @@ EOF
     :
   else
     cat >&2 <<EOF
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operands must not be directories
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} file operands must not be directories
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
     exit_status='1'
     continue
@@ -1155,14 +1155,14 @@ EOF
     elif test -d "${path}.gatbps${i}"; then
       cat >&2 <<EOF
 ${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${path}.gatbps${i}${fR2}
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
       exit_status='1'
       continue 2
     else
       cat >&2 <<EOF
 ${fy2}gatbps:${fd2} file must not be nonregular: ${fB2}${path}.gatbps${i}${fR2}
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
       exit_status='1'
       continue 2
@@ -1226,7 +1226,7 @@ EOF
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status='1'
             break
@@ -1415,7 +1415,7 @@ EOF
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status='1'
             break
@@ -1447,7 +1447,7 @@ EOF
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status='1'
             break
@@ -1492,7 +1492,7 @@ EOF
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status='1'
             break
@@ -1636,7 +1636,7 @@ EOF
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status='1'
             break
@@ -1680,7 +1680,7 @@ EOF
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status='1'
             break
@@ -1698,7 +1698,7 @@ EOF
           else
             cat >&2 <<EOF
 ${fy2}gatbps:${fd2} file must not be a directory: ${path}.top
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status='1'
             break
@@ -1723,7 +1723,7 @@ END {
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${path}.top
 ${fy2}gatbps:${fd2} and write to: ${tmp0}
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status='1'
               break
@@ -1737,7 +1737,7 @@ EOF
           else
             cat >&2 <<EOF
 ${fy2}gatbps:${fd2} file must not be a directory: ${path}.top.texi
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status='1'
             break
@@ -1768,7 +1768,7 @@ END {
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${path}.top.texi
 ${fy2}gatbps:${fd2} and write to: ${tmp1}
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status='1'
               break
@@ -1786,7 +1786,7 @@ EOF
               cat >&2 <<EOF
 ${fy2}gatbps:${fd2} texi2any failed to read from: ${tmp1}
 ${fy2}gatbps:${fd2} and write to: ${tmp0}
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status='1'
               break
@@ -1803,7 +1803,7 @@ EOF
             *)
               cat >&2 <<EOF
 ${fy2}gatbps:${fd2} echo failed to write to: ${tmp0}
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status='1'
               break
@@ -1824,7 +1824,7 @@ EOF
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. /dev/null
 ${fy2}gatbps:${fd2} and write to: ${tmp0}
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status='1'
               break
@@ -1839,7 +1839,7 @@ EOF
           else
             cat >&2 <<EOF
 ${fy2}gatbps:${fd2} file must not be a directory: ${path}.texi
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status='1'
             break
@@ -1847,7 +1847,7 @@ EOF
         else
           cat >&2 <<EOF
 ${fy2}gatbps:${fd2} file must exist: ${path}.texi
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
           exit_status='1'
           break
@@ -1878,7 +1878,7 @@ END {
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${path}.texi
 ${fy2}gatbps:${fd2} and write to: ${tmp2}
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status='1'
             break
@@ -1896,7 +1896,7 @@ EOF
             cat >&2 <<EOF
 ${fy2}gatbps:${fd2} texi2any failed to read from: ${tmp2}
 ${fy2}gatbps:${fd2} and write to: ${tmp1}
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status='1'
             break
@@ -1910,7 +1910,7 @@ EOF
           else
             cat >&2 <<EOF
 ${fy2}gatbps:${fd2} file must not be a directory: ${path}.bot
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status='1'
             break
@@ -1935,7 +1935,7 @@ $0 !~ /^#/ {
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${path}.bot
 ${fy2}gatbps:${fd2} and write to: ${tmp2}
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status='1'
               break
@@ -1949,7 +1949,7 @@ EOF
           else
             cat >&2 <<EOF
 ${fy2}gatbps:${fd2} file must not be a directory: ${path}.bot.texi
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status='1'
             break
@@ -1965,7 +1965,7 @@ EOF
             *)
               cat >&2 <<EOF
 ${fy2}gatbps:${fd2} echo failed to write to: ${tmp2}
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status='1'
               break
@@ -1997,7 +1997,7 @@ END {
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${path}.bot.texi
 ${fy2}gatbps:${fd2} and write to: ${tmp3}
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status='1'
               break
@@ -2015,7 +2015,7 @@ EOF
               cat >&2 <<EOF
 ${fy2}gatbps:${fd2} texi2any failed to read from: ${tmp3}
 ${fy2}gatbps:${fd2} and write to: ${tmp2}
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status='1'
               break
@@ -2036,7 +2036,7 @@ EOF
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. /dev/null
 ${fy2}gatbps:${fd2} and write to: ${tmp2}
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status='1'
               break
@@ -2059,7 +2059,7 @@ ${fy2}gatbps:${fd2}   1. ${tmp0}
 ${fy2}gatbps:${fd2}   2. ${tmp1}
 ${fy2}gatbps:${fd2}   3. ${tmp2}
 ${fy2}gatbps:${fd2} and write to: ${path}
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed: ${fB2}${file}${fR2}
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
             exit_status='1'
             break
