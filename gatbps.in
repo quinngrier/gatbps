@@ -1062,7 +1062,7 @@ for file do
 #(
     *)
       cat >&2 <<EOF
-${fy2}gatbps:${fd2} ${fI2}file${fR2} operands must not be empty
+${fy2}gatbps:${fd2} each ${fI2}file${fR2} operand must not be empty
 ${fy2}gatbps:${fd2} ${fI2}file${fR2} operand failed
 EOF
       exit_status='1'
