@@ -1802,7 +1802,7 @@ EOF
 #(
             *)
               cat >&2 <<EOF
-${fy2}gatbps:${fd2} echo failed to write to: ${fB2}${tmp0}${fR2}
+${fy2}gatbps:${fd2} ${fB2}echo${fR2} failed to write to: ${fB2}${tmp0}${fR2}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status='1'
@@ -1964,7 +1964,7 @@ EOF
 #(
             *)
               cat >&2 <<EOF
-${fy2}gatbps:${fd2} echo failed to write to: ${fB2}${tmp2}${fR2}
+${fy2}gatbps:${fd2} ${fB2}echo${fR2} failed to write to: ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
               exit_status='1'
