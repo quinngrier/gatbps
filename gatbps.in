@@ -1846,7 +1846,7 @@ EOF
           fi
         else
           cat >&2 <<EOF
-${fy2}gatbps:${fd2} file must exist: ${path}.texi
+${fy2}gatbps:${fd2} file must exist: ${fB2}${path}.texi${fR2}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
           exit_status='1'
