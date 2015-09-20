@@ -681,6 +681,16 @@ if the
 option were replaced by
 .nohy "\fIS\fR."
 .TP
+.nohy "\fB\-\-man\fR"
+.IP0
+The
+.nohy "\fB\-\-man\fR"
+option writes text to standard output
+and causes all further program arguments to be ignored.
+The text is the
+.nohy "\fBtroff\fR"
+code for the man page for the program.
+.TP
 .nohy "\fB\-\-style\fR[\fB=\fIS\fR]"
 .IP0
 Each
