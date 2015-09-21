@@ -313,11 +313,11 @@ EOF
           cat <<EOF
 Special file: ${fB1}CC0-1.0.txt${fR1}
 
-The CC0-1.0.txt special file is the plaintext version of the CC0 1.0
+The ${fB1}CC0-1.0.txt${fR1} special file is the plaintext version of the CC0 1.0
 Universal Public Domain Dedication, a legal instrument from Creative
 Commons that allows an author to waive their copyright and related or
 neighboring rights to their work. This file was originally downloaded
-from <https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt>.
+from <${fB1}https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt${fR1}>.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
