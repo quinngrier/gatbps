@@ -765,7 +765,7 @@ The
 option writes text to standard output
 and causes all further program arguments to be ignored.
 The text is the program's name,
-package of origin, version number,
+original package, version number,
 release date, and copyright information.
 .SH "PLAIN FILES"
 .SH "SPECIAL FILES"
