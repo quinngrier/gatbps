@@ -769,6 +769,18 @@ original package, version number,
 release date, and copyright information.
 .SH "PLAIN FILES"
 .SH "SPECIAL FILES"
+.TP
+.nohy "\fBCC0\-1.0.txt\fR"
+.IP0
+The
+.nohy "\fBCC0\-1.0.txt\fR"
+special file is the plaintext version of the CC0 1.0
+Universal Public Domain Dedication, a legal instrument from Creative
+Commons that allows an author to waive their copyright and related or
+neighboring rights to their work.
+This file was originally downloaded
+from
+.nohy "<\fBhttps://creativecommons.org/publicdomain/zero/1.0/legalcode.txt\fR>."
 .SH "TEMPORARY FILES"
 \fBgatbps\fR reserves the temporary files
 \f(BIfile\fB.gatbps0\fR through \f(BIfile\fB.gatbps9\fR
