@@ -791,7 +791,8 @@ Otherwise,
 they are used
 and deleted after the operand succeeds or fails.
 .SH "ENVIRONMENT VARIABLES"
-The following environment variables affect \fBgatbps\fR:
+.nohy "\fBgatbps\fR"
+is affected by the following environment variables:
 .TP
 .nohy "\fBAWK\fR"
 .IP0
