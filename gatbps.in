@@ -912,7 +912,7 @@ EOF
 #(
     --version)
 
-      cat <<'EOF'
+      cat <<EOF
 gatbps (GATBPS) @PACKAGE_VERSION@
 This version was released on @PACKAGE_DATE@.
 The authors of this program have waived all copyright and
