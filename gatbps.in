@@ -872,14 +872,12 @@ Otherwise, the
 .nohy "\fBSTYLE_STDOUT\fR"
 environment variable has no effect.
 .SH "EXIT STATUS"
-\fBgatbps\fR indicates success with exit status zero
+.nohy "\fBgatbps\fR"
+indicates success with exit status zero
 and failure with any nonzero exit status.
-In the first form,
-success means that all \fIfile\fR operands succeeded
-or that none were given
-and writing to standard output succeeded.
-In the second and third forms,
-success means that writing to standard output succeeded.
+Success means that all program arguments
+were successfully processed, and failure
+means that one or more were not.
 .\"
 .\" The authors of this file have waived all copyright and
 .\" related or neighboring rights to the extent permitted by
