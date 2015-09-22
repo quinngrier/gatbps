@@ -633,6 +633,8 @@ EOF
 
       shift
 
+      continue
+
     ;;
 
 #(
