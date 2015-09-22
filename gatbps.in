@@ -97,6 +97,8 @@ EOF
       set x "--awk=${x}" "${@}"
       shift
 
+      continue
+
     ;;
 
 #(
