@@ -75,6 +75,7 @@ nl='
 '
 
 while :; do
+
   case "${1}" in
 
 #(
@@ -1076,6 +1077,7 @@ EOF
     ;;
 
   esac
+
 done
 
 case "${#}" in
