@@ -74,8 +74,13 @@ esac
 nl='
 '
 
+detect_options='1'
+
 while :; do
 
+  case "${detect_options}" in
+#(
+    1)
   case "${1}" in
 
 #(
@@ -1094,6 +1099,8 @@ EOF
 
     ;;
 
+  esac
+    ;;
   esac
 
 done
