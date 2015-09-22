@@ -425,6 +425,8 @@ EOF
       set x --style-stderr=always --style-stdout=always "${@}"
       shift
 
+      continue
+
     ;;
 
 #(
