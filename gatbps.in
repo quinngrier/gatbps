@@ -81,36 +81,36 @@ while :; do
   case "${detect_options}" in
 #(
     1)
-  case "${1}" in
+      case "${1}" in
 
 #(
-    --awk)
+        --awk)
 
-      case "${#}" in
+          case "${#}" in
 #(
-        1)
-          cat >&2 <<EOF
+            1)
+              cat >&2 <<EOF
 ${fr2}gatbps:${fd2} each ${fB2}--awk${fR2} option must have an argument
 ${fr2}gatbps:${fd2} try ${fB2}gatbps --help${fR2} for more information
 EOF
-          exit 1
+              exit 1
+            ;;
+          esac
+
+          x="${2}"
+          shift
+          shift
+          set x "--awk=${x}" "${@}"
+          shift
+
+          continue
+
         ;;
-      esac
-
-      x="${2}"
-      shift
-      shift
-      set x "--awk=${x}" "${@}"
-      shift
-
-      continue
-
-    ;;
 
 #(
-    --awk=*)
+        --awk=*)
 
-      x=`sed "
+          x=`sed "
 s/'/'\\\\\\\\''/g
 1s/^--awk=/awk='/
 \\$s/\\$/'/
@@ -118,32 +118,32 @@ s/'/'\\\\\\\\''/g
 ${1}
 EOF
 `
-      case "${?}" in
+          case "${?}" in
 #(
-        0)
-          :
-        ;;
+            0)
+              :
+            ;;
 #(
-        *)
-          cat >&2 <<EOF
+            *)
+              cat >&2 <<EOF
 ${fr2}gatbps:${fd2} ${fB2}sed${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: a command substitution
 EOF
-          exit 1
+              exit 1
+            ;;
+          esac
+          eval "${x}"
+          shift
+
+          continue
+
         ;;
-      esac
-      eval "${x}"
-      shift
-
-      continue
-
-    ;;
 
 #(
-    --help)
+        --help)
 
-      cat <<EOF
+          cat <<EOF
 Usage: ${fB1}gatbps${fR1} [${fB1}--${fR1}] [<${fI1}file${fR1}>...]
        ${fB1}gatbps${fR1} ${fB1}--help${fR1}[=<${fI1}file${fR1}>]
        ${fB1}gatbps${fR1} ${fB1}--version${fR1}
@@ -158,54 +158,54 @@ on how a given file will be created can be shown with the second form.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
-      case "${?}" in
+          case "${?}" in
 #(
-        0)
-          :
-        ;;
+            0)
+              :
+            ;;
 #(
-        *)
-          cat >&2 <<EOF
+            *)
+              cat >&2 <<EOF
 ${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: standard output
 EOF
-          exit 1
+              exit 1
+            ;;
+          esac
+
+          exit 0
+
         ;;
-      esac
-
-      exit 0
-
-    ;;
 
 #(
-    --help=*)
+        --help=*)
 
-      case "${1}" in
+          case "${1}" in
 #(
-        --help=)
-          cat >&2 <<EOF
+            --help=)
+              cat >&2 <<EOF
 ${fr2}gatbps:${fd2} the ${fB2}--help${fR2} option argument must not be empty
 EOF
-          exit 1
-        ;;
-      esac
+              exit 1
+            ;;
+          esac
 
-      case "${1}" in
+          case "${1}" in
 #(
-        --help=*/)
-          cat >&2 <<EOF
+            --help=*/)
+              cat >&2 <<EOF
 ${fr2}gatbps:${fd2} the ${fB2}--help${fR2} option argument must not end with a slash
 EOF
-          exit 1
-        ;;
-      esac
+              exit 1
+            ;;
+          esac
 
-      case "${1}" in
+          case "${1}" in
 
 #(
-        --help=CC0-1.0-AC-COPYRIGHT.ac|--help=*/CC0-1.0-AC-COPYRIGHT.ac)
-          cat <<EOF
+            --help=CC0-1.0-AC-COPYRIGHT.ac|--help=*/CC0-1.0-AC-COPYRIGHT.ac)
+              cat <<EOF
 Special file: ${fB1}CC0-1.0-AC-COPYRIGHT.ac${fR1}
 
 The CC0-1.0-AC-COPYRIGHT.ac special file calls Autoconf's AC_COPYRIGHT
@@ -216,26 +216,26 @@ m4_include macro where the AC_COPYRIGHT call would normally appear.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
-          case "${?}" in
+              case "${?}" in
 #(
-            0)
-              :
-            ;;
+                0)
+                  :
+                ;;
 #(
-            *)
-              cat >&2 <<EOF
+                *)
+                  cat >&2 <<EOF
 ${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: standard output
 EOF
-              exit 1
+                  exit 1
+                ;;
+              esac
             ;;
-          esac
-        ;;
 
 #(
-        --help=CC0-1.0-appendix.texi|--help=*/CC0-1.0-appendix.texi)
-          cat <<EOF
+            --help=CC0-1.0-appendix.texi|--help=*/CC0-1.0-appendix.texi)
+              cat <<EOF
 Special file: ${fB1}CC0-1.0-appendix.texi${fR1}
 
 The CC0-1.0-appendix.texi special file is the same as the CC0-1.0.txt
@@ -246,50 +246,50 @@ follows the usual node style and can be cross referenced.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
-          case "${?}" in
+              case "${?}" in
 #(
-            0)
-              :
-            ;;
+                0)
+                  :
+                ;;
 #(
-            *)
-              cat >&2 <<EOF
+                *)
+                  cat >&2 <<EOF
 ${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: standard output
 EOF
-              exit 1
+                  exit 1
+                ;;
+              esac
             ;;
-          esac
-        ;;
 
 #(
-        --help=CC0-1.0-commit.txt|--help=*/CC0-1.0-commit.txt)
-          cat <<EOF
+            --help=CC0-1.0-commit.txt|--help=*/CC0-1.0-commit.txt)
+              cat <<EOF
 Special file: ${fB1}CC0-1.0-commit.txt${fR1}
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
-          case "${?}" in
+              case "${?}" in
 #(
-            0)
-              :
-            ;;
+                0)
+                  :
+                ;;
 #(
-            *)
-              cat >&2 <<EOF
+                *)
+                  cat >&2 <<EOF
 ${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: standard output
 EOF
-              exit 1
+                  exit 1
+                ;;
+              esac
             ;;
-          esac
-        ;;
 
 #(
-        --help=CC0-1.0-copying.texi|--help=*/CC0-1.0-copying.texi)
-          cat <<EOF
+            --help=CC0-1.0-copying.texi|--help=*/CC0-1.0-copying.texi)
+              cat <<EOF
 Special file: ${fB1}CC0-1.0-copying.texi${fR1}
 
 The CC0-1.0-copying.texi special file defines a Texinfo @copying block
@@ -301,26 +301,26 @@ normally appear.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
-          case "${?}" in
+              case "${?}" in
 #(
-            0)
-              :
-            ;;
+                0)
+                  :
+                ;;
 #(
-            *)
-              cat >&2 <<EOF
+                *)
+                  cat >&2 <<EOF
 ${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: standard output
 EOF
-              exit 1
+                  exit 1
+                ;;
+              esac
             ;;
-          esac
-        ;;
 
 #(
-        --help=CC0-1.0.txt|--help=*/CC0-1.0.txt)
-          cat <<EOF
+            --help=CC0-1.0.txt|--help=*/CC0-1.0.txt)
+              cat <<EOF
 Special file: ${fB1}CC0-1.0.txt${fR1}
 
 The ${fB1}CC0-1.0.txt${fR1} special file is the plaintext version of the CC0 1.0
@@ -331,50 +331,50 @@ from <${fB1}https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt${fR1
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
-          case "${?}" in
+              case "${?}" in
 #(
-            0)
-              :
-            ;;
+                0)
+                  :
+                ;;
 #(
-            *)
-              cat >&2 <<EOF
+                *)
+                  cat >&2 <<EOF
 ${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: standard output
 EOF
-              exit 1
+                  exit 1
+                ;;
+              esac
             ;;
-          esac
-        ;;
 
 #(
-        --help=DATE.ac|--help=*/DATE.ac)
-          cat <<EOF
+            --help=DATE.ac|--help=*/DATE.ac)
+              cat <<EOF
 Special file: ${fB1}DATE.ac${fR1}
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
-          case "${?}" in
+              case "${?}" in
 #(
-            0)
-              :
-            ;;
+                0)
+                  :
+                ;;
 #(
-            *)
-              cat >&2 <<EOF
+                *)
+                  cat >&2 <<EOF
 ${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: standard output
 EOF
-              exit 1
+                  exit 1
+                ;;
+              esac
             ;;
-          esac
-        ;;
 
 #(
-        *)
-          "${awk}" '
+            *)
+              "${awk}" '
 {
   if (sub(/.*\//, "", $0)) {
     name = $0
@@ -400,103 +400,65 @@ END {
 ' <<EOF
 ${1}
 EOF
-          case "${?}" in
+              case "${?}" in
 #(
-            0)
-              :
-            ;;
+                0)
+                  :
+                ;;
 #(
-            *)
-              cat >&2 <<EOF
+                *)
+                  cat >&2 <<EOF
 ${fr2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: standard output
 EOF
-              exit 1
+                  exit 1
+                ;;
+              esac
             ;;
+
           esac
+
+          exit 0
+
         ;;
 
-      esac
-
-      exit 0
-
-    ;;
-
 #(
-    --style|--style=always)
+        --style|--style=always)
 
-      shift
-      set x --style-stderr=always --style-stdout=always "${@}"
-      shift
+          shift
+          set x --style-stderr=always --style-stdout=always "${@}"
+          shift
 
-      continue
+          continue
 
-    ;;
-
-#(
-    --style=auto)
-
-      shift
-      set x --style-stderr=auto --style-stdout=auto "${@}"
-      shift
-
-      continue
-
-    ;;
-
-#(
-    --style=*)
-
-      shift
-      set x --style-stderr=never --style-stdout=never "${@}"
-      shift
-
-      continue
-
-    ;;
-
-#(
-    --style-stderr|--style-stderr=always)
-
-      fR2='[22m[24m'
-      fB2='[24m[1m'
-      fI2='[22m[4m'
-      fd2='[39m'
-      fr2='[31m'
-      fg2='[32m'
-      fy2='[33m'
-      fb2='[34m'
-      fm2='[35m'
-      fc2='[36m'
-
-      shift
-
-      continue
-
-    ;;
-
-#(
-    --style-stderr=auto)
-
-      case "${isatty2}" in
-#(
-        ?*)
-          :
         ;;
-#(
-        *)
-          if test -t 2; then
-            isatty2='1'
-          else
-            isatty2='0'
-          fi
-        ;;
-      esac
 
-      case "${isatty2}" in
 #(
-        1)
+        --style=auto)
+
+          shift
+          set x --style-stderr=auto --style-stdout=auto "${@}"
+          shift
+
+          continue
+
+        ;;
+
+#(
+        --style=*)
+
+          shift
+          set x --style-stderr=never --style-stdout=never "${@}"
+          shift
+
+          continue
+
+        ;;
+
+#(
+        --style-stderr|--style-stderr=always)
+
           fR2='[22m[24m'
           fB2='[24m[1m'
           fI2='[22m[4m'
@@ -507,9 +469,69 @@ EOF
           fb2='[34m'
           fm2='[35m'
           fc2='[36m'
+
+          shift
+
+          continue
+
         ;;
+
 #(
-        *)
+        --style-stderr=auto)
+
+          case "${isatty2}" in
+#(
+            ?*)
+              :
+            ;;
+#(
+            *)
+              if test -t 2; then
+                isatty2='1'
+              else
+                isatty2='0'
+              fi
+            ;;
+          esac
+
+          case "${isatty2}" in
+#(
+            1)
+              fR2='[22m[24m'
+              fB2='[24m[1m'
+              fI2='[22m[4m'
+              fd2='[39m'
+              fr2='[31m'
+              fg2='[32m'
+              fy2='[33m'
+              fb2='[34m'
+              fm2='[35m'
+              fc2='[36m'
+            ;;
+#(
+            *)
+              fR2=''
+              fB2=''
+              fI2=''
+              fd2=''
+              fr2=''
+              fg2=''
+              fy2=''
+              fb2=''
+              fm2=''
+              fc2=''
+            ;;
+          esac
+
+          shift
+
+          continue
+
+        ;;
+
+#(
+        --style-stderr=*)
+
           fR2=''
           fB2=''
           fI2=''
@@ -520,76 +542,16 @@ EOF
           fb2=''
           fm2=''
           fc2=''
+
+          shift
+
+          continue
+
         ;;
-      esac
-
-      shift
-
-      continue
-
-    ;;
 
 #(
-    --style-stderr=*)
+        --style-stdout|--style-stdout=always)
 
-      fR2=''
-      fB2=''
-      fI2=''
-      fd2=''
-      fr2=''
-      fg2=''
-      fy2=''
-      fb2=''
-      fm2=''
-      fc2=''
-
-      shift
-
-      continue
-
-    ;;
-
-#(
-    --style-stdout|--style-stdout=always)
-
-      fR1='[22m[24m'
-      fB1='[24m[1m'
-      fI1='[22m[4m'
-      fd1='[39m'
-      fr1='[31m'
-      fg1='[32m'
-      fy1='[33m'
-      fb1='[34m'
-      fm1='[35m'
-      fc1='[36m'
-
-      shift
-
-      continue
-
-    ;;
-
-#(
-    --style-stdout=auto)
-
-      case "${isatty1}" in
-#(
-        ?*)
-          :
-        ;;
-#(
-        *)
-          if test -t 1; then
-            isatty1='1'
-          else
-            isatty1='0'
-          fi
-        ;;
-      esac
-
-      case "${isatty1}" in
-#(
-        1)
           fR1='[22m[24m'
           fB1='[24m[1m'
           fI1='[22m[4m'
@@ -600,9 +562,69 @@ EOF
           fb1='[34m'
           fm1='[35m'
           fc1='[36m'
+
+          shift
+
+          continue
+
         ;;
+
 #(
-        *)
+        --style-stdout=auto)
+
+          case "${isatty1}" in
+#(
+            ?*)
+              :
+            ;;
+#(
+            *)
+              if test -t 1; then
+                isatty1='1'
+              else
+                isatty1='0'
+              fi
+            ;;
+          esac
+
+          case "${isatty1}" in
+#(
+            1)
+              fR1='[22m[24m'
+              fB1='[24m[1m'
+              fI1='[22m[4m'
+              fd1='[39m'
+              fr1='[31m'
+              fg1='[32m'
+              fy1='[33m'
+              fb1='[34m'
+              fm1='[35m'
+              fc1='[36m'
+            ;;
+#(
+            *)
+              fR1=''
+              fB1=''
+              fI1=''
+              fd1=''
+              fr1=''
+              fg1=''
+              fy1=''
+              fb1=''
+              fm1=''
+              fc1=''
+            ;;
+          esac
+
+          shift
+
+          continue
+
+        ;;
+
+#(
+        --style-stdout=*)
+
           fR1=''
           fB1=''
           fI1=''
@@ -613,39 +635,17 @@ EOF
           fb1=''
           fm1=''
           fc1=''
+
+          shift
+
+          continue
+
         ;;
-      esac
-
-      shift
-
-      continue
-
-    ;;
 
 #(
-    --style-stdout=*)
+        --man)
 
-      fR1=''
-      fB1=''
-      fI1=''
-      fd1=''
-      fr1=''
-      fg1=''
-      fy1=''
-      fb1=''
-      fm1=''
-      fc1=''
-
-      shift
-
-      continue
-
-    ;;
-
-#(
-    --man)
-
-      cat <<'EOF'
+          cat <<'EOF'
 .de nohy
 .nh
 \\$1
@@ -917,41 +917,41 @@ means that one or more were not.
 .\" <https://creativecommons.org/publicdomain/zero/1.0/>.
 .\"
 EOF
-      case "${?}" in
+          case "${?}" in
 #(
-        0)
-          :
-        ;;
+            0)
+              :
+            ;;
 #(
-        *)
-          cat >&2 <<EOF
+            *)
+              cat >&2 <<EOF
 ${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: standard output
 EOF
-          exit 1
+              exit 1
+            ;;
+          esac
+
+          exit 0
+
         ;;
-      esac
-
-      exit 0
-
-    ;;
 
 #(
-    --man=*)
+        --man=*)
 
-      cat >&2 <<EOF
+          cat >&2 <<EOF
 ${fr2}gatbps:${fd2} the ${fB2}--man${fR2} option must not have an argument
 ${fr2}gatbps:${fd2} try ${fB2}gatbps --help${fR2} for more information
 EOF
-      exit 1
+          exit 1
 
-    ;;
+        ;;
 
 #(
-    --version)
+        --version)
 
-      cat <<EOF
+          cat <<EOF
 ${fB1}gatbps${fR1} (GATBPS) @PACKAGE_VERSION@
 This version was released on @PACKAGE_DATE@.
 The authors of this program have waived all copyright and
@@ -962,60 +962,60 @@ dedication along with this program, typically as a file
 named <${fB1}CC0-1.0.txt${fR1}>. If not, it may be available at
 <${fB1}https://creativecommons.org/publicdomain/zero/1.0/${fR1}>.
 EOF
-      case "${?}" in
+          case "${?}" in
 #(
-        0)
-          :
-        ;;
+            0)
+              :
+            ;;
 #(
-        *)
-          cat >&2 <<EOF
+            *)
+              cat >&2 <<EOF
 ${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: standard output
 EOF
-          exit 1
+              exit 1
+            ;;
+          esac
+
+          exit 0
+
         ;;
-      esac
-
-      exit 0
-
-    ;;
 
 #(
-    --version=*)
+        --version=*)
 
-      cat >&2 <<EOF
+          cat >&2 <<EOF
 ${fr2}gatbps:${fd2} the ${fB2}--version${fR2} option must not have an argument
 ${fr2}gatbps:${fd2} try ${fB2}gatbps --help${fR2} for more information
 EOF
-      exit 1
+          exit 1
 
-    ;;
-
-#(
-    --)
-
-      shift
-      break
-
-    ;;
+        ;;
 
 #(
-    --=*)
+        --)
 
-      cat >&2 <<EOF
+          shift
+          break
+
+        ;;
+
+#(
+        --=*)
+
+          cat >&2 <<EOF
 ${fr2}gatbps:${fd2} the ${fB2}--${fR2} option must not have an argument
 ${fr2}gatbps:${fd2} try ${fB2}gatbps --help${fR2} for more information
 EOF
-      exit 1
+          exit 1
 
-    ;;
+        ;;
 
 #(
-    --*=*)
+        --*=*)
 
-      "${awk}" '
+          "${awk}" '
 {
   if (NR != 1) {
     name = name "\n"
@@ -1033,39 +1033,39 @@ END {
 ' >&2 <<EOF
 ${1}
 EOF
-      case "${?}" in
+          case "${?}" in
 #(
-        0)
-          :
-        ;;
+            0)
+              :
+            ;;
 #(
-        *)
-          cat >&2 <<EOF
+            *)
+              cat >&2 <<EOF
 ${fr2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: standard error
 EOF
-        ;;
-      esac
-      exit 1
+            ;;
+          esac
+          exit 1
 
-    ;;
+        ;;
 
 #(
-    --*|-?)
+        --*|-?)
 
-      cat >&2 <<EOF
+          cat >&2 <<EOF
 ${fr2}gatbps:${fd2} unknown option name: ${fB2}${1}${fR2}
 ${fr2}gatbps:${fd2} try ${fB2}gatbps --help${fR2} for more information
 EOF
-      exit 1
+          exit 1
 
-    ;;
+        ;;
 
 #(
-    -?*)
+        -?*)
 
-      "${awk}" '
+          "${awk}" '
 {
   printf "'"${fr2}"'gatbps:'"${fd2}"' unknown option name: '"${fB2}"'%s'"${fR2}"'\n", substr($0 "\n", 1, 2)
   print "'"${fr2}"'gatbps:'"${fd2}"' try '"${fB2}"'gatbps --help'"${fR2}"' for more information"
@@ -1074,32 +1074,32 @@ EOF
 ' >&2 <<EOF
 ${1}
 EOF
-      case "${?}" in
+          case "${?}" in
 #(
-        0)
-          :
-        ;;
+            0)
+              :
+            ;;
 #(
-        *)
-          cat >&2 <<EOF
+            *)
+              cat >&2 <<EOF
 ${fr2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: standard error
 EOF
-        ;;
-      esac
-      exit 1
+            ;;
+          esac
+          exit 1
 
-    ;;
+        ;;
 
 #(
-    *)
+        *)
 
-      break
+          break
 
-    ;;
+        ;;
 
-  esac
+      esac
     ;;
   esac
 
