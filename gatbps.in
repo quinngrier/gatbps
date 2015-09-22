@@ -447,6 +447,8 @@ EOF
       set x --style-stderr=never --style-stdout=never "${@}"
       shift
 
+      continue
+
     ;;
 
 #(
