@@ -436,6 +436,8 @@ EOF
       set x --style-stderr=auto --style-stdout=auto "${@}"
       shift
 
+      continue
+
     ;;
 
 #(
