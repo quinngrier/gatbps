@@ -11,6 +11,9 @@ MOSTLYCLEANFILES += gatbps.info
 bin_SCRIPTS =
 bin_SCRIPTS += gatbps
 
+gatbps.1: gatbps
+	./gatbps --man >gatbps.1
+
 gatbps_TEXINFOS =
 gatbps_TEXINFOS += CC0-1.0-appendix.texi
 
@@ -25,9 +28,6 @@ do_subst = ( sed \
   -e 's|[@]PACKAGE_STRING@|$(PACKAGE_STRING)|g' \
   -e 's|[@]PACKAGE_VERSION@|$(PACKAGE_VERSION)|g' \
   )
-
-gatbps.1: gatbps
-	./gatbps --man >gatbps.1
 
 ##
 ## The authors of this file have waived all copyright and
