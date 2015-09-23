@@ -4,5 +4,19 @@
 
 @settitle GATBPS
 
+@ifnottex
+@node Top
+@top GATBPS
+
+This manual is for GATBPS@.
+@end ifnottex
+
+@menu
+* Introduction::
+@end menu
+
+@node Introduction
+@chapter Introduction
+
 Hello@.
 @bye
