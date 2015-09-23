@@ -8,6 +8,9 @@ EXTRA_DIST += $(srcdir)/DATE.sh
 EXTRA_DIST += $(srcdir)/VERSION
 EXTRA_DIST += $(srcdir)/VERSION.sh
 
+gatbps_TEXINFOS =
+gatbps_TEXINFOS += CC0-1.0-appendix.texi
+
 info_TEXINFOS =
 info_TEXINFOS += gatbps.texi
 

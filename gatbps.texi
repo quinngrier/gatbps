@@ -13,10 +13,13 @@ This manual is for GATBPS@.
 
 @menu
 * Introduction::
+* CC0::
 @end menu
 
 @node Introduction
 @chapter Introduction
 
 Hello@.
+
+@include CC0-1.0-appendix.texi
 @bye
