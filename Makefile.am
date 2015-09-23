@@ -1,12 +1,12 @@
-CLEANFILES =
-CLEANFILES += gatbps.1
-CLEANFILES += gatbps.info
-
 EXTRA_DIST =
 EXTRA_DIST += $(srcdir)/DATE
 EXTRA_DIST += $(srcdir)/DATE.sh
 EXTRA_DIST += $(srcdir)/VERSION
 EXTRA_DIST += $(srcdir)/VERSION.sh
+
+MOSTLYCLEANFILES =
+MOSTLYCLEANFILES += gatbps.1
+MOSTLYCLEANFILES += gatbps.info
 
 gatbps_TEXINFOS =
 gatbps_TEXINFOS += CC0-1.0-appendix.texi
