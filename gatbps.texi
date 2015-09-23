@@ -1,0 +1,8 @@
+\input texinfo
+@setfilename gatbps.info
+@documentencoding UTF-8
+
+@settitle GATBPS
+
+Hello@.
+@bye

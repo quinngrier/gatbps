@@ -1,11 +1,15 @@
 CLEANFILES =
 CLEANFILES += gatbps.1
+CLEANFILES += gatbps.info
 
 EXTRA_DIST =
 EXTRA_DIST += $(srcdir)/DATE
 EXTRA_DIST += $(srcdir)/DATE.sh
 EXTRA_DIST += $(srcdir)/VERSION
 EXTRA_DIST += $(srcdir)/VERSION.sh
+
+info_TEXINFOS =
+info_TEXINFOS += gatbps.texi
 
 man_MANS =
 man_MANS += gatbps.1
