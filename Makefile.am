@@ -8,6 +8,9 @@ MOSTLYCLEANFILES =
 MOSTLYCLEANFILES += gatbps.1
 MOSTLYCLEANFILES += gatbps.info
 
+bin_SCRIPTS =
+bin_SCRIPTS += gatbps
+
 gatbps_TEXINFOS =
 gatbps_TEXINFOS += CC0-1.0-appendix.texi
 
@@ -16,9 +19,6 @@ info_TEXINFOS += gatbps.texi
 
 man_MANS =
 man_MANS += gatbps.1
-
-bin_SCRIPTS =
-bin_SCRIPTS += gatbps
 
 do_subst = ( sed \
   -e 's|[@]PACKAGE_DATE@|$(PACKAGE_DATE)|g' \
