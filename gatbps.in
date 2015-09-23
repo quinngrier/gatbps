@@ -373,6 +373,36 @@ EOF
             ;;
 
           #(
+            --help=msign.texi|--help=*/msign.texi)
+              cat <<EOF
+Special file: ${fB1}msign.texi${fR1}
+
+The ${fB1}msign.texi${fR1} special file defines a Texinfo macro ${fB1}@msign{}${fR1} that
+generates a minus sign character (${fB1}U+2212${fR1}) or the closest approximation
+of one. Texinfo has a built-in ${fB1}@minus{}${fR1} macro for this purpose, but in
+some versions of Texinfo it generates a hyphen-minus character (${fB1}U+002D${fR1})
+for HTML output instead of an ${fB1}&minus;${fR1} character entity reference.
+
+Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
+EOF
+              case "${?}" in
+              #(
+                0)
+                  :
+                ;;
+              #(
+                *)
+                  cat >&2 <<EOF
+${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps:${fd2}   1. a here-document
+${fr2}gatbps:${fd2} and write to: standard output
+EOF
+                  exit 1
+                ;;
+              esac
+            ;;
+
+          #(
             *)
               "${awk}" '
 {
@@ -809,6 +839,26 @@ neighboring rights to their work.
 This file was originally downloaded
 from
 .nohy "<\fBhttps://\:creativecommons.org/\:publicdomain/\:zero/\:1.0/\:legalcode.txt\fR>."
+.TP
+.nohy "\fBmsign.texi\fR"
+.IP0
+The
+.nohy "\fBmsign.texi\fR"
+special file defines a Texinfo macro
+.nohy "\fB@msign{}\fR"
+that
+generates a minus sign character
+.nohy "(\fBU+2212\fR)"
+or the closest approximation
+of one.
+Texinfo has a built-in
+.nohy "\fB@minus{}\fR"
+macro for this purpose, but in
+some versions of Texinfo it generates a hyphen-minus character
+.nohy "(\fBU+002D\fR)"
+for HTML output instead of an
+.nohy "\fB&minus;\fR"
+character entity reference.
 .SH "TEMPORARY FILES"
 \fBgatbps\fR reserves the temporary files
 \f(BIfile\fB.gatbps0\fR through \f(BIfile\fB.gatbps9\fR
@@ -1115,6 +1165,7 @@ CC0-1.0-commit.txt
 CC0-1.0-copying.texi
 CC0-1.0.txt
 DATE.ac
+msign.texi
 EOF
     case "${?}" in
     #(
@@ -1710,6 +1761,75 @@ dnl dedication along with this file, typically as a file
 dnl named <CC0-1.0.txt>. If not, it may be available at
 dnl <https://creativecommons.org/publicdomain/zero/1.0/>.
 dnl
+EOF
+        case "${?}" in
+        #(
+          0)
+            :
+          ;;
+        #(
+          *)
+            cat >&2 <<EOF
+${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
+${fy2}gatbps:${fd2}   1. a here-document
+${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
+${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
+EOF
+            exit_status='1'
+            break
+          ;;
+        esac
+      ;;
+
+    #(
+      */msign.texi)
+        cat >"${path}" <<'EOF'
+@c
+@c This file was created by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
+@c Before changing it, make sure that you're doing the right thing.
+@c Depending on how GATBPS is being used, your changes may be lost.
+@c
+@ifdocbook
+@macro msign{}
+@minus{}
+@end macro
+@end ifdocbook
+@ifhtml
+@macro msign{}
+@inlineraw{html, &minus;}
+@end macro
+@end ifhtml
+@ifinfo
+@ifnotplaintext
+@macro msign{}
+@minus{}
+@end macro
+@end ifnotplaintext
+@end ifinfo
+@ifplaintext
+@macro msign{}
+@minus{}
+@end macro
+@end ifplaintext
+@iftex
+@macro msign{}
+@minus{}
+@end macro
+@end iftex
+@ifxml
+@macro msign{}
+@minus{}
+@end macro
+@end ifxml
+@c
+@c The authors of this file have waived all copyright and
+@c related or neighboring rights to the extent permitted by
+@c law as described by the CC0 1.0 Universal Public Domain
+@c Dedication. You should have received a copy of the full
+@c dedication along with this file, typically as a file
+@c named <CC0-1.0.txt>. If not, it may be available at
+@c <https://creativecommons.org/publicdomain/zero/1.0/>.
+@c
 EOF
         case "${?}" in
         #(
