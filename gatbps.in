@@ -381,13 +381,13 @@ The ${fB1}msign.texi${fR1} special file defines the ${fB1}@msign{}${fR1} Texinfo
 uses ${fB1}@U{2212}${fR1} to insert a minus sign character. This can be used to make
 mathematical notation look more like TeX in the other output formats:
 
-    @documentencoding UTF-8
-    @tex
-    \$x - y\$
-    @end tex
-    @ifnottex
-    @i{x} @msign{} @i{y}
-    @end ifnottex
+      @documentencoding UTF-8
+      @tex
+      \$x - y\$
+      @end tex
+      @ifnottex
+      @i{x} @msign{} @i{y}
+      @end ifnottex
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
