@@ -144,9 +144,7 @@ EOF
         --help)
 
           cat <<EOF
-Usage: ${fB1}gatbps${fR1} [${fB1}--${fR1}] [<${fI1}file${fR1}>...]
-       ${fB1}gatbps${fR1} ${fB1}--help${fR1}[=<${fI1}file${fR1}>]
-       ${fB1}gatbps${fR1} ${fB1}--version${fR1}
+Usage: ${fB1}gatbps${fR1} [<${fI1}option${fR1}> | <${fI1}file${fR1}>]...
 
 Create standard project files.
 
@@ -739,9 +737,7 @@ EOF
 gatbps \- create standard project files
 .SH "SYNOPSIS"
 .nf
-\fBgatbps\fR [\fB--\fR] [<\fIfile\fR>...]
-\fBgatbps\fR \fB--help\fR[=<\fIfile\fR>...]
-\fBgatbps\fR \fB--version\fR
+\fBgatbps\fR [<\fIoption\fR> | <\fIfile\fR>]...
 .fi
 .SH "DESCRIPTION"
 .SH "OPTIONS"
