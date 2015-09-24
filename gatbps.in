@@ -236,10 +236,10 @@ EOF
               cat <<EOF
 Special file: ${fB1}CC0-1.0-appendix.texi${fR1}
 
-The CC0-1.0-appendix.texi special file is the same as the CC0-1.0.txt
+The ${fB1}CC0-1.0-appendix.texi${fR1} special file is the same as the ${fB1}CC0-1.0.txt${fR1}
 special file but is formatted as a Texinfo appendix. It can be included
-in another Texinfo file with the @include command where the appendix is
-desired to appear. The appendix is also labeled as @node CC0 so that it
+in another Texinfo file with the ${fB1}@include${fR1} command where the appendix is
+desired to appear. The appendix is also labeled as ${fB1}@node CC0${fR1} so that it
 follows the usual node structure and can be cross referenced.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
