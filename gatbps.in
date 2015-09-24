@@ -694,7 +694,7 @@ EOF
 ..
 .de IP0
 .PD 0
-.IP
+.IP ""
 .PD
 ..
 .hy
