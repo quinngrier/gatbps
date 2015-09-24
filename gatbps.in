@@ -860,7 +860,7 @@ mathematical notation like TeX:
 .RS
 .IP
 .nf
-@documentencoding UTF-8
+@documentencoding UTF\-8
 @tex
 $x \- y$
 @end tex
