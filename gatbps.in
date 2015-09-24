@@ -377,9 +377,9 @@ EOF
               cat <<EOF
 Special file: ${fB1}msign.texi${fR1}
 
-The ${fB1}msign.texi${fR1} special file defines the ${fB1}@msign{}${fR1} macro, which inserts
-the minus sign character with ${fB1}@U{2212}${fR1}. This is useful for formatting
-mathematical notation like TeX:
+The ${fB1}msign.texi${fR1} special file defines the ${fB1}@msign{}${fR1} Texinfo macro, which
+uses ${fB1}@U{2212}${fR1} to insert a minus sign character. This can be used to make
+mathematical notation look more like TeX in the other output formats:
 
     @documentencoding UTF-8
     @tex
@@ -852,11 +852,11 @@ The
 .nohy "\fBmsign.texi\fR"
 special file defines the
 .nohy "\fB@msign{}\fR"
-macro, which inserts
-the minus sign character with
-.nohy "\fB@U{2212}\fR."
-This is useful for formatting
-mathematical notation like TeX:
+Texinfo macro, which uses
+.nohy "\fB@U{2212}\fR"
+to insert a minus sign character.
+This can be used to make mathematical notation
+look more like TeX in the other output formats:
 .RS
 .IP
 .nf
