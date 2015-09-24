@@ -377,11 +377,17 @@ EOF
               cat <<EOF
 Special file: ${fB1}msign.texi${fR1}
 
-The ${fB1}msign.texi${fR1} special file defines a Texinfo macro ${fB1}@msign{}${fR1} that
-generates a minus sign character (${fB1}U+2212${fR1}) or the closest approximation
-of one. Texinfo has a built-in ${fB1}@minus{}${fR1} macro for this purpose, but in
-some versions of Texinfo it generates a hyphen-minus character (${fB1}U+002D${fR1})
-for HTML output instead of an ${fB1}&minus;${fR1} character entity reference.
+The ${fB1}msign.texi${fR1} special file defines the ${fB1}@msign{}${fR1} macro, which inserts
+the minus sign character with ${fB1}@U{2212}${fR1}. This is useful for formatting
+mathematical notation like TeX:
+
+    @documentencoding UTF-8
+    @tex
+    \$x - y\$
+    @end tex
+    @ifnottex
+    @i{x} @msign{} @i{y}
+    @end ifnottex
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
@@ -844,21 +850,25 @@ from
 .IP0
 The
 .nohy "\fBmsign.texi\fR"
-special file defines a Texinfo macro
+special file defines the
 .nohy "\fB@msign{}\fR"
-that
-generates a minus sign character
-.nohy "(\fBU+2212\fR)"
-or the closest approximation
-of one.
-Texinfo has a built-in
-.nohy "\fB@minus{}\fR"
-macro for this purpose, but in
-some versions of Texinfo it generates a hyphen-minus character
-.nohy "(\fBU+002D\fR)"
-for HTML output instead of an
-.nohy "\fB&minus;\fR"
-character entity reference.
+macro, which inserts
+the minus sign character with
+.nohy "\fB@U{2212}\fR."
+This is useful for formatting
+mathematical notation like TeX:
+.RS
+.IP
+.nf
+@documentencoding UTF-8
+@tex
+$x \- y$
+@end tex
+@ifnottex
+@i{x} @msign{} @i{y}
+@end ifnottex
+.fi
+.RE
 .SH "TEMPORARY FILES"
 \fBgatbps\fR reserves the temporary files
 \f(BIfile\fB.gatbps0\fR through \f(BIfile\fB.gatbps9\fR
@@ -1789,38 +1799,9 @@ EOF
 @c Before changing it, make sure that you're doing the right thing.
 @c Depending on how GATBPS is being used, your changes may be lost.
 @c
-@ifdocbook
 @macro msign{}
-@minus{}
+@U{2212}
 @end macro
-@end ifdocbook
-@ifhtml
-@macro msign{}
-@inlineraw{html, &minus;}
-@end macro
-@end ifhtml
-@ifinfo
-@ifnotplaintext
-@macro msign{}
-@minus{}
-@end macro
-@end ifnotplaintext
-@end ifinfo
-@ifplaintext
-@macro msign{}
-@minus{}
-@end macro
-@end ifplaintext
-@iftex
-@macro msign{}
-@minus{}
-@end macro
-@end iftex
-@ifxml
-@macro msign{}
-@minus{}
-@end macro
-@end ifxml
 @c
 @c The authors of this file have waived all copyright and
 @c related or neighboring rights to the extent permitted by
