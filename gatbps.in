@@ -889,7 +889,7 @@ If the
 environment variable
 is set to a nonempty string
 .nohy "\fIS\fR,"
-then an
+then a
 .nohy "\fB\-\-awk=\fIS\fR"
 option is added to
 the program arguments
