@@ -546,225 +546,6 @@ EOF
         ;;
 
       #(
-        --style|--style=always)
-
-          shift
-          set x --style-stderr=always --style-stdout=always "${@}"
-          shift
-
-          continue
-
-        ;;
-
-      #(
-        --style=auto)
-
-          shift
-          set x --style-stderr=auto --style-stdout=auto "${@}"
-          shift
-
-          continue
-
-        ;;
-
-      #(
-        --style=*)
-
-          shift
-          set x --style-stderr=never --style-stdout=never "${@}"
-          shift
-
-          continue
-
-        ;;
-
-      #(
-        --style-stderr|--style-stderr=always)
-
-          fR2='[22m[24m'
-          fB2='[24m[1m'
-          fI2='[22m[4m'
-          fd2='[39m'
-          fr2='[31m'
-          fg2='[32m'
-          fy2='[33m'
-          fb2='[34m'
-          fm2='[35m'
-          fc2='[36m'
-
-          shift
-
-          continue
-
-        ;;
-
-      #(
-        --style-stderr=auto)
-
-          case "${isatty2}" in
-          #(
-            ?*)
-              :
-            ;;
-          #(
-            *)
-              if test -t 2; then
-                isatty2='1'
-              else
-                isatty2='0'
-              fi
-            ;;
-          esac
-
-          case "${isatty2}" in
-          #(
-            1)
-              fR2='[22m[24m'
-              fB2='[24m[1m'
-              fI2='[22m[4m'
-              fd2='[39m'
-              fr2='[31m'
-              fg2='[32m'
-              fy2='[33m'
-              fb2='[34m'
-              fm2='[35m'
-              fc2='[36m'
-            ;;
-          #(
-            *)
-              fR2=''
-              fB2=''
-              fI2=''
-              fd2=''
-              fr2=''
-              fg2=''
-              fy2=''
-              fb2=''
-              fm2=''
-              fc2=''
-            ;;
-          esac
-
-          shift
-
-          continue
-
-        ;;
-
-      #(
-        --style-stderr=*)
-
-          fR2=''
-          fB2=''
-          fI2=''
-          fd2=''
-          fr2=''
-          fg2=''
-          fy2=''
-          fb2=''
-          fm2=''
-          fc2=''
-
-          shift
-
-          continue
-
-        ;;
-
-      #(
-        --style-stdout|--style-stdout=always)
-
-          fR1='[22m[24m'
-          fB1='[24m[1m'
-          fI1='[22m[4m'
-          fd1='[39m'
-          fr1='[31m'
-          fg1='[32m'
-          fy1='[33m'
-          fb1='[34m'
-          fm1='[35m'
-          fc1='[36m'
-
-          shift
-
-          continue
-
-        ;;
-
-      #(
-        --style-stdout=auto)
-
-          case "${isatty1}" in
-          #(
-            ?*)
-              :
-            ;;
-          #(
-            *)
-              if test -t 1; then
-                isatty1='1'
-              else
-                isatty1='0'
-              fi
-            ;;
-          esac
-
-          case "${isatty1}" in
-          #(
-            1)
-              fR1='[22m[24m'
-              fB1='[24m[1m'
-              fI1='[22m[4m'
-              fd1='[39m'
-              fr1='[31m'
-              fg1='[32m'
-              fy1='[33m'
-              fb1='[34m'
-              fm1='[35m'
-              fc1='[36m'
-            ;;
-          #(
-            *)
-              fR1=''
-              fB1=''
-              fI1=''
-              fd1=''
-              fr1=''
-              fg1=''
-              fy1=''
-              fb1=''
-              fm1=''
-              fc1=''
-            ;;
-          esac
-
-          shift
-
-          continue
-
-        ;;
-
-      #(
-        --style-stdout=*)
-
-          fR1=''
-          fB1=''
-          fI1=''
-          fd1=''
-          fr1=''
-          fg1=''
-          fy1=''
-          fb1=''
-          fm1=''
-          fc1=''
-
-          shift
-
-          continue
-
-        ;;
-
-      #(
         --man)
 
           cat <<'EOF'
@@ -1147,6 +928,225 @@ ${fr2}gatbps:${fd2} the ${fB2}--man${fR2} option must not have an argument
 ${fr2}gatbps:${fd2} try ${fB2}gatbps --help${fR2} for more information
 EOF
           exit 1
+
+        ;;
+
+      #(
+        --style|--style=always)
+
+          shift
+          set x --style-stderr=always --style-stdout=always "${@}"
+          shift
+
+          continue
+
+        ;;
+
+      #(
+        --style=auto)
+
+          shift
+          set x --style-stderr=auto --style-stdout=auto "${@}"
+          shift
+
+          continue
+
+        ;;
+
+      #(
+        --style=*)
+
+          shift
+          set x --style-stderr=never --style-stdout=never "${@}"
+          shift
+
+          continue
+
+        ;;
+
+      #(
+        --style-stderr|--style-stderr=always)
+
+          fR2='[22m[24m'
+          fB2='[24m[1m'
+          fI2='[22m[4m'
+          fd2='[39m'
+          fr2='[31m'
+          fg2='[32m'
+          fy2='[33m'
+          fb2='[34m'
+          fm2='[35m'
+          fc2='[36m'
+
+          shift
+
+          continue
+
+        ;;
+
+      #(
+        --style-stderr=auto)
+
+          case "${isatty2}" in
+          #(
+            ?*)
+              :
+            ;;
+          #(
+            *)
+              if test -t 2; then
+                isatty2='1'
+              else
+                isatty2='0'
+              fi
+            ;;
+          esac
+
+          case "${isatty2}" in
+          #(
+            1)
+              fR2='[22m[24m'
+              fB2='[24m[1m'
+              fI2='[22m[4m'
+              fd2='[39m'
+              fr2='[31m'
+              fg2='[32m'
+              fy2='[33m'
+              fb2='[34m'
+              fm2='[35m'
+              fc2='[36m'
+            ;;
+          #(
+            *)
+              fR2=''
+              fB2=''
+              fI2=''
+              fd2=''
+              fr2=''
+              fg2=''
+              fy2=''
+              fb2=''
+              fm2=''
+              fc2=''
+            ;;
+          esac
+
+          shift
+
+          continue
+
+        ;;
+
+      #(
+        --style-stderr=*)
+
+          fR2=''
+          fB2=''
+          fI2=''
+          fd2=''
+          fr2=''
+          fg2=''
+          fy2=''
+          fb2=''
+          fm2=''
+          fc2=''
+
+          shift
+
+          continue
+
+        ;;
+
+      #(
+        --style-stdout|--style-stdout=always)
+
+          fR1='[22m[24m'
+          fB1='[24m[1m'
+          fI1='[22m[4m'
+          fd1='[39m'
+          fr1='[31m'
+          fg1='[32m'
+          fy1='[33m'
+          fb1='[34m'
+          fm1='[35m'
+          fc1='[36m'
+
+          shift
+
+          continue
+
+        ;;
+
+      #(
+        --style-stdout=auto)
+
+          case "${isatty1}" in
+          #(
+            ?*)
+              :
+            ;;
+          #(
+            *)
+              if test -t 1; then
+                isatty1='1'
+              else
+                isatty1='0'
+              fi
+            ;;
+          esac
+
+          case "${isatty1}" in
+          #(
+            1)
+              fR1='[22m[24m'
+              fB1='[24m[1m'
+              fI1='[22m[4m'
+              fd1='[39m'
+              fr1='[31m'
+              fg1='[32m'
+              fy1='[33m'
+              fb1='[34m'
+              fm1='[35m'
+              fc1='[36m'
+            ;;
+          #(
+            *)
+              fR1=''
+              fB1=''
+              fI1=''
+              fd1=''
+              fr1=''
+              fg1=''
+              fy1=''
+              fb1=''
+              fm1=''
+              fc1=''
+            ;;
+          esac
+
+          shift
+
+          continue
+
+        ;;
+
+      #(
+        --style-stdout=*)
+
+          fR1=''
+          fB1=''
+          fI1=''
+          fd1=''
+          fr1=''
+          fg1=''
+          fy1=''
+          fb1=''
+          fm1=''
+          fc1=''
+
+          shift
+
+          continue
 
         ;;
 
