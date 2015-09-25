@@ -19,7 +19,15 @@ This manual is for GATBPS@.
 @node Introduction
 @chapter Introduction
 
-Hello@.
+@acronym{GATBPS} (pronunciation: gat-bee-pee-@acronym{ESS})
+is a collection of basic software project files along with
+a program named @t{gatbps} that generates these files@.
+@acronym{GATBPS} was originally created to hold a small number
+of helper scripts for the @acronym{GNU} Autotools build system
+and originally stood for ``@acronym{@b{G}NU} @b{A}uto@b{t}ools
+@b{B}oiler@b{p}late @b{S}cripts'', but it continues to grow in
+scope and is now a backronym for
+``@b{G}ener@b{a}@b{t}e @b{B}asic @b{P}roject @b{S}tuff''@.
 
 @include CC0-1.0-appendix.texi
 @bye
