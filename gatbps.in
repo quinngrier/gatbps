@@ -75,6 +75,7 @@ nl='
 '
 
 detect_options='1'
+exit_status='0'
 
 while :; do
 
@@ -1276,8 +1277,6 @@ EOF
     exit 0
   ;;
 esac
-
-exit_status='0'
 
 for file do
 
