@@ -78,6 +78,13 @@ detect_options='1'
 
 while :; do
 
+  case "${#}" in
+  #(
+    0)
+      break
+    ;;
+  esac
+
   case "${detect_options}" in
   #(
     1)
