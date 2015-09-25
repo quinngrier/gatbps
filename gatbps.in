@@ -843,7 +843,7 @@ then a
 option is added to
 the program arguments
 at a position that lies before
-the original program arguments.
+all original program arguments.
 Otherwise, the
 .nohy "\fBAWK\fR"
 environment variable has no effect.
@@ -860,7 +860,7 @@ then a
 option is added to
 the program arguments
 at a position that lies before
-the original program arguments
+all original program arguments
 and before the options added by the
 .nohy "\fBSTYLE_STDERR\fR"
 and
@@ -882,7 +882,7 @@ then a
 option is added to
 the program arguments
 at a position that lies before
-the original program arguments
+all original program arguments
 and after the option added by the
 .nohy "\fBSTYLE\fR"
 environment variable.
@@ -902,7 +902,7 @@ then a
 option is added to
 the program arguments
 at a position that lies before
-the original program arguments
+all original program arguments
 and after the option added by the
 .nohy "\fBSTYLE\fR"
 environment variable.
