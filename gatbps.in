@@ -838,6 +838,13 @@ and causes all further program arguments to be ignored.
 The text is the list of special files in
 .nohy "\fBLC_ALL=C\fR"
 order with one file per line.
+If there are no file operands, then a
+.nohy "\fB\-\-list\fR"
+option is added to the program arguments
+at a position that lies before all of the
+original program arguments except for the
+.nohy "\fB\-\-\fR"
+option.
 .TP
 .nohy "\fB\-\-man\fR"
 .IP0
