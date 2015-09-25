@@ -746,7 +746,7 @@ gatbps \- generate basic project stuff
 .IP0
 The preferred
 .nohy "\fBawk\fR"
-implementation is
+executable is
 .nohy @AWK_TROFF@
 by default.
 Each
