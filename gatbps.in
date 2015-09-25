@@ -502,6 +502,50 @@ EOF
         ;;
 
       #(
+        --list)
+
+          cat <<'EOF'
+CC0-1.0-AC-COPYRIGHT.ac
+CC0-1.0-appendix.texi
+CC0-1.0-commit.txt
+CC0-1.0-copying.texi
+CC0-1.0.txt
+DATE.ac
+mdot.texi
+msign.texi
+EOF
+          case "${?}" in
+          #(
+            0)
+              :
+            ;;
+          #(
+            *)
+              cat >&2 <<EOF
+${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps:${fd2}   1. a here-document
+${fr2}gatbps:${fd2} and write to: standard output
+EOF
+              exit 1
+            ;;
+          esac
+
+          exit 0
+
+        ;;
+
+      #(
+        --list=*)
+
+          cat >&2 <<EOF
+${fr2}gatbps:${fd2} the ${fB2}--list${fR2} option must not have an argument
+${fr2}gatbps:${fd2} try ${fB2}gatbps --help${fR2} for more information
+EOF
+          exit 1
+
+        ;;
+
+      #(
         --style|--style=always)
 
           shift
@@ -784,6 +828,16 @@ if the
 .nohy "\fB\-\-help=\fIS\fR"
 option were replaced by the file operand
 .nohy "\fIS\fR."
+.TP
+.nohy "\fB\-\-list\fR"
+.IP0
+The
+.nohy "\fB\-\-list\fR"
+option writes text to standard output
+and causes all further program arguments to be ignored.
+The text is the list of special files in
+.nohy "\fBLC_ALL=C\fR"
+order with one file per line.
 .TP
 .nohy "\fB\-\-man\fR"
 .IP0
