@@ -648,7 +648,7 @@ order with one file per line.
 If there are no file operands, then a
 .nohy "\fB\-\-list\fR"
 option is added to the program arguments
-at a position that lies before all of the
+at a position that lies before all
 original program arguments except for the
 .nohy "\fB\-\-\fR"
 option.
