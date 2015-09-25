@@ -819,14 +819,22 @@ $x \- y$
 .fi
 .RE
 .SH "TEMPORARY FILES"
-\fBgatbps\fR reserves the temporary files
-\f(BIfile\fB.gatbps0\fR through \f(BIfile\fB.gatbps9\fR
-for each \fIfile\fR operand.
-If any of these is nonregular or a directory,
-the operand fails.
-Otherwise,
-they are used
-and deleted after the operand succeeds or fails.
+.nohy "\fBgatbps\fR"
+reserves the temporary files
+.nohy "\fIS\fB.gatbps0\fR"
+through
+.nohy "\fIS\fB.gatbps9\fR"
+for each file operand
+.nohy "\fIS\fR."
+If any of these files is nonregular or a directory,
+then all of them are ignored and
+.nohy "\fIS\fR"
+fails.
+Otherwise, some of them are used in the processing of
+.nohy "\fIS\fR"
+and all of them are deleted after
+.nohy "\fIS\fR"
+succeeds or fails.
 .SH "ENVIRONMENT VARIABLES"
 .nohy "\fBgatbps\fR"
 is affected by the following environment variables:
