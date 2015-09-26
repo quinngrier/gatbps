@@ -116,8 +116,10 @@ while :; do
       #(
         --)
 
+          detect_options='0'
           shift
-          break
+
+          continue
 
         ;;
 
@@ -1331,54 +1333,13 @@ EOF
 
         ;;
 
-      #(
-        *)
-
-          break
-
-        ;;
-
       esac
 
     ;;
 
   esac
 
-done
-
-case "${#}" in
-#(
-  0)
-    cat <<'EOF'
-CC0-1.0-AC-COPYRIGHT.ac
-CC0-1.0-appendix.texi
-CC0-1.0-commit.txt
-CC0-1.0-copying.texi
-CC0-1.0.txt
-DATE.ac
-mdot.texi
-msign.texi
-EOF
-    case "${?}" in
-    #(
-      0)
-        :
-      ;;
-    #(
-      *)
-        cat >&2 <<EOF
-${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps:${fd2}   1. a here-document
-${fr2}gatbps:${fd2} and write to: standard output
-EOF
-        exit 1
-      ;;
-    esac
-    exit 0
-  ;;
-esac
-
-for file do
+  file="${1}"
 
   have_operands='1'
 
@@ -1394,6 +1355,7 @@ ${fy2}gatbps:${fd2} each file operand must not be empty
 ${fy2}gatbps:${fd2} file operand failed
 EOF
       exit_status='1'
+      shift
       continue
     ;;
   esac
@@ -1406,6 +1368,7 @@ ${fy2}gatbps:${fd2} each file operand must not end with a slash
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
       exit_status='1'
+      shift
       continue
     ;;
   esac
@@ -1429,6 +1392,7 @@ ${fy2}gatbps:${fd2} each file operand must not be a directory
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
     exit_status='1'
+    shift
     continue
   fi
 
@@ -1443,6 +1407,7 @@ ${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${path}.gatbps${i}${fR2}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
       exit_status='1'
+      shift
       continue 2
     else
       cat >&2 <<EOF
@@ -1450,6 +1415,7 @@ ${fy2}gatbps:${fd2} file must not be nonregular: ${fB2}${path}.gatbps${i}${fR2}
 ${fy2}gatbps:${fd2} file operand failed: ${fB2}${file}${fR2}
 EOF
       exit_status='1'
+      shift
       continue 2
     fi
   done
@@ -2448,6 +2414,8 @@ ${fc2}gatbps:${fd2} ${fB2}rm${fR2} failed to delete: ${fB2}${path}.gatbps${i}${f
 EOF
     fi
   done
+
+  shift
 
 done
 
