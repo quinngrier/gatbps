@@ -24,9 +24,10 @@ provides a program named @t{gatbps}
 that generates basic files for software projects@.
 It was originally created to provide a small number
 of shell scripts to be used with the GNU Autotools build
-system and its name stood for ``@b{G}NU @b{A}uto@b{t}ools
-@b{B}oiler@b{p}late @b{S}cripts'', but it quickly grew in
-scope and its name now stands for
+system, and its name stood for ``@b{G}NU @b{A}uto@b{t}ools
+@b{B}oiler@b{p}late @b{S}cripts''@.
+However, it quickly grew to provide other kinds of basic files,
+and its name now stands for
 ``@b{G}ener@b{a}@b{t}e @b{B}asic @b{P}roject @b{S}tuff''@.
 
 @include CC0-1.0-appendix.texi
