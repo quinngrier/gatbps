@@ -83,7 +83,19 @@ while :; do
   case "${#}" in
   #(
     0)
-      break
+      case "${have_operands}" in
+      #(
+        0)
+          detect_options='1'
+          set x --list
+          shift
+          continue
+        ;;
+      #(
+        *)
+          break
+        ;;
+      esac
     ;;
   esac
 
