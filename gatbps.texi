@@ -21,7 +21,7 @@ This manual is for GATBPS@.
 
 GATBPS (pronunciation: gat-bee-pee-ESS)
 provides a program named @t{gatbps}
-that generates basic software project files@.
+that generates basic files for software projects@.
 It was originally created to provide a small number
 of shell scripts to be used with the GNU Autotools build
 system and its name stood for ``@b{G}NU @b{A}uto@b{t}ools
