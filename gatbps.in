@@ -120,7 +120,6 @@ while :; do
         --)
 
           detect_options='0'
-
           continue
 
         ;;
