@@ -23,8 +23,8 @@ GATBPS (pronunciation: gat-bee-pee-ESS)
 provides a program named @t{gatbps}
 that generates basic software project files@.
 It was originally created to provide a small number
-of helper scripts for the GNU Autotools build system
-and its name stood for ``@b{G}NU @b{A}uto@b{t}ools
+of shell scripts to be used with the GNU Autotools build
+system and its name stood for ``@b{G}NU @b{A}uto@b{t}ools
 @b{B}oiler@b{p}late @b{S}cripts'', but it quickly grew in
 scope and its name now stands for
 ``@b{G}ener@b{a}@b{t}e @b{B}asic @b{P}roject @b{S}tuff''@.
