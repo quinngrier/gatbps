@@ -76,6 +76,7 @@ nl='
 
 detect_options='1'
 exit_status='0'
+have_operands='0'
 
 while :; do
 
@@ -1355,6 +1356,8 @@ EOF
 esac
 
 for file do
+
+  have_operands='1'
 
   case "${file}" in
   #(
