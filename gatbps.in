@@ -100,8 +100,17 @@ while :; do
   esac
 
   case "${detect_options}" in
+
   #(
-    1)
+    0)
+
+      :
+
+    ;;
+
+  #(
+    *)
+
       case "${1}" in
 
       #(
@@ -1330,7 +1339,9 @@ EOF
         ;;
 
       esac
+
     ;;
+
   esac
 
 done
