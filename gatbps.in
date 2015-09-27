@@ -258,7 +258,7 @@ Special file: ${fB1}CC0-1.0-AC-COPYRIGHT.ac${fR1}
 
 The ${fB1}CC0-1.0-AC-COPYRIGHT.ac${fR1} special file calls the ${fB1}AC_COPYRIGHT${fR1} Autoconf
 macro with a message that states that some parts of the ${fB1}configure${fR1} script
-belong to the package and that their authors have waived their rights to
+come from the package and that their authors have waived their rights to
 them by referencing the ${fB1}CC0-1.0.txt${fR1} special file. It can be included in
 another Autoconf file with the ${fB1}m4_include${fR1} macro where the ${fB1}AC_COPYRIGHT${fR1}
 call is desired to appear.
@@ -854,7 +854,7 @@ Autoconf
 macro with a message that states that some parts of the
 .nohy "\fBconfigure\fR"
 script
-belong to the package and that their authors have waived their rights to
+come from the package and that their authors have waived their rights to
 them by referencing the
 .nohy "\fBCC0\-1.0.txt\fR"
 special file.
@@ -1579,7 +1579,7 @@ dnl Depending on how GATBPS is being used, your changes may be lost.
 dnl
 
 AC_COPYRIGHT(
-[Some parts of this configure script belong to AC_PACKAGE_NAME,
+[Some parts of this configure script come from AC_PACKAGE_NAME,
 namely those with significant content from <configure.ac>.
 The authors of these parts have waived all copyright and
 related or neighboring rights to the extent permitted by
