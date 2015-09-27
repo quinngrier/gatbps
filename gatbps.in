@@ -42,7 +42,7 @@ fc1=''
 case "${STYLE_STDOUT}" in
 #(
   ?*)
-    set x "--style-stdout=${STYLE_STDOUT}" "${@}"
+    set 'x' "--style-stdout=${STYLE_STDOUT}" "${@}"
     shift
   ;;
 esac
@@ -50,7 +50,7 @@ esac
 case "${STYLE_STDERR}" in
 #(
   ?*)
-    set x "--style-stderr=${STYLE_STDERR}" "${@}"
+    set 'x' "--style-stderr=${STYLE_STDERR}" "${@}"
     shift
   ;;
 esac
@@ -58,7 +58,7 @@ esac
 case "${STYLE}" in
 #(
   ?*)
-    set x "--style=${STYLE}" "${@}"
+    set 'x' "--style=${STYLE}" "${@}"
     shift
   ;;
 esac
@@ -66,7 +66,7 @@ esac
 case "${AWK}" in
 #(
   ?*)
-    set x "--awk=${AWK}" "${@}"
+    set 'x' "--awk=${AWK}" "${@}"
     shift
   ;;
 esac
@@ -78,7 +78,7 @@ detect_options='1'
 exit_status='0'
 have_operands='0'
 
-set x "${@}"
+set 'x' "${@}"
 
 while :; do
 
@@ -91,7 +91,7 @@ while :; do
       #(
         '0')
           detect_options='1'
-          set x --list
+          set 'x' --list
           continue
         ;;
       #(
@@ -152,7 +152,7 @@ EOF
           x="${2}"
           shift
           shift
-          set x "--awk=${x}" "${@}"
+          set 'x' "--awk=${x}" "${@}"
 
           continue
 
@@ -1130,7 +1130,7 @@ EOF
         --style|--style=always)
 
           shift
-          set x --style-stderr=always --style-stdout=always "${@}"
+          set 'x' --style-stderr=always --style-stdout=always "${@}"
           continue
 
         ;;
@@ -1139,7 +1139,7 @@ EOF
         --style=auto)
 
           shift
-          set x --style-stderr=auto --style-stdout=auto "${@}"
+          set 'x' --style-stderr=auto --style-stdout=auto "${@}"
           continue
 
         ;;
@@ -1148,7 +1148,7 @@ EOF
         --style=*)
 
           shift
-          set x --style-stderr=never --style-stdout=never "${@}"
+          set 'x' --style-stderr=never --style-stdout=never "${@}"
           continue
 
         ;;
