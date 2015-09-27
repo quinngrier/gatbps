@@ -1621,7 +1621,7 @@ dnl Depending on how GATBPS is being used, your changes may be lost.
 dnl
 
 AC_COPYRIGHT(
-[Some parts of this configure script come from AC_PACKAGE_NAME,
+[Some parts of this configure script are from AC_PACKAGE_NAME,
 namely those with significant content from <configure.ac>.
 The authors of these parts have waived all copyright and
 related or neighboring rights to the extent permitted by
