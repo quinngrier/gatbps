@@ -256,11 +256,11 @@ EOF
               cat <<EOF
 Special file: ${fB1}CC0-1.0-AC-COPYRIGHT.ac${fR1}
 
-The CC0-1.0-AC-COPYRIGHT.ac special file calls the AC_COPYRIGHT Autoconf
-macro with a message that states that some parts of the configure script
+The ${fB1}CC0-1.0-AC-COPYRIGHT.ac${fR1} special file calls the ${fB1}AC_COPYRIGHT${fR1} Autoconf
+macro with a message that states that some parts of the ${fB1}configure${fR1} script
 belong to the package and that the authors of these parts have waived
-their rights to them via CC0. It can be included in configure.ac with
-the m4_include macro where the AC_COPYRIGHT call is desired to appear.
+their rights to them via CC0. It can be included in ${fB1}configure.ac${fR1} with
+the ${fB1}m4_include${fR1} macro where the ${fB1}AC_COPYRIGHT${fR1} call is desired to appear.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
