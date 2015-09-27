@@ -19,8 +19,12 @@ dnl Such a system would probably be pretty precarious.
 dnl
 
 AC_SYS_INTERPRETER
-AS_CASE(["${interpval}"], [no],
-        [AC_MSG_WARN([gatbps may not work properly])])
+case "${interpval}" in
+#(
+  'no')
+    AC_MSG_WARN([gatbps may not work properly])
+  ;;
+esac
 
 AC_ARG_VAR([AWK], [the preferred awk executable])
 AC_PROG_AWK
