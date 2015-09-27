@@ -20,7 +20,7 @@ dnl
 
 AC_SYS_INTERPRETER
 AS_CASE(["${interpval}"], [no],
-        [AC_MSG_WARN([the gatbps script may not work properly])])
+        [AC_MSG_WARN([gatbps may not work properly])])
 
 AC_ARG_VAR([AWK], [the preferred awk executable])
 AC_PROG_AWK
