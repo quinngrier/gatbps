@@ -930,6 +930,7 @@ look more like TeX in the other output formats:
 .IP
 .nf
 @documentencoding UTF\-8
+@include mdot.texi
 @tex
 $x \\cdot y$
 @end tex
@@ -954,6 +955,7 @@ look more like TeX in the other output formats:
 .IP
 .nf
 @documentencoding UTF\-8
+@include msign.texi
 @tex
 $x \- y$
 @end tex
@@ -984,6 +986,7 @@ look more like TeX in the other output formats:
 .IP
 .nf
 @documentencoding UTF\-8
+@include sbs.texi
 @tex
 $x_{y + z_w}$
 @end tex
@@ -1014,6 +1017,7 @@ look more like TeX in the other output formats:
 .IP
 .nf
 @documentencoding UTF\-8
+@include sps.texi
 @tex
 $x^{y + z^w}$
 @end tex
