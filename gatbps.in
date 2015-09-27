@@ -843,6 +843,27 @@ release date, and copyright information.
 .SH "PLAIN FILES"
 .SH "SPECIAL FILES"
 .TP
+.nohy "\fBCC0\-1.0\-AC\-COPYRIGHT.ac\fR"
+.IP0
+The
+.nohy "\fBCC0\-1.0\-AC\-COPYRIGHT.ac\fR"
+special file calls the
+.nohy "\fBAC_COPYRIGHT\fR"
+Autoconf
+macro with a message that states that some parts of the
+.nohy "\fBconfigure\fR"
+script
+belong to the package and that the authors of these parts have waived
+their rights to them via CC0.
+It can be included in
+.nohy "\fBconfigure.ac\fR"
+with
+the
+.nohy "\fBm4_include\fR"
+macro where the
+.nohy "\fBAC_COPYRIGHT\fR"
+call is desired to appear.
+.TP
 .nohy "\fBCC0\-1.0\-appendix.texi\fR"
 .IP0
 The
