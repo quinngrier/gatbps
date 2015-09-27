@@ -86,10 +86,10 @@ while :; do
 
   case "${#}" in
   #(
-    0)
+    '0')
       case "${have_operands}" in
       #(
-        0)
+        '0')
           detect_options='1'
           set x --list
           continue
@@ -105,7 +105,7 @@ while :; do
   case "${detect_options}" in
 
   #(
-    0)
+    '0')
 
       :
 
@@ -171,7 +171,7 @@ EOF
 `
           case "${?}" in
           #(
-            0)
+            '0')
               :
             ;;
           #(
@@ -208,7 +208,7 @@ Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
           case "${?}" in
           #(
-            0)
+            '0')
               :
             ;;
           #(
@@ -266,7 +266,7 @@ Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
               case "${?}" in
               #(
-                0)
+                '0')
                   :
                 ;;
               #(
@@ -296,7 +296,7 @@ Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
               case "${?}" in
               #(
-                0)
+                '0')
                   :
                 ;;
               #(
@@ -320,7 +320,7 @@ Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
               case "${?}" in
               #(
-                0)
+                '0')
                   :
                 ;;
               #(
@@ -351,7 +351,7 @@ Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
               case "${?}" in
               #(
-                0)
+                '0')
                   :
                 ;;
               #(
@@ -381,7 +381,7 @@ Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
               case "${?}" in
               #(
-                0)
+                '0')
                   :
                 ;;
               #(
@@ -405,7 +405,7 @@ Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
               case "${?}" in
               #(
-                0)
+                '0')
                   :
                 ;;
               #(
@@ -441,7 +441,7 @@ Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
               case "${?}" in
               #(
-                0)
+                '0')
                   :
                 ;;
               #(
@@ -477,7 +477,7 @@ Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
               case "${?}" in
               #(
-                0)
+                '0')
                   :
                 ;;
               #(
@@ -515,7 +515,7 @@ Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
               case "${?}" in
               #(
-                0)
+                '0')
                   :
                 ;;
               #(
@@ -553,7 +553,7 @@ Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
               case "${?}" in
               #(
-                0)
+                '0')
                   :
                 ;;
               #(
@@ -598,7 +598,7 @@ ${1}
 EOF
               case "${?}" in
               #(
-                0)
+                '0')
                   :
                 ;;
               #(
@@ -636,7 +636,7 @@ sps.texi
 EOF
           case "${?}" in
           #(
-            0)
+            '0')
               :
             ;;
           #(
@@ -1097,7 +1097,7 @@ means that one or more were not.
 EOF
           case "${?}" in
           #(
-            0)
+            '0')
               :
             ;;
           #(
@@ -1191,7 +1191,7 @@ EOF
 
           case "${isatty2}" in
           #(
-            0)
+            '0')
               fR2=''
               fB2=''
               fI2=''
@@ -1278,7 +1278,7 @@ EOF
 
           case "${isatty1}" in
           #(
-            0)
+            '0')
               fR1=''
               fB1=''
               fI1=''
@@ -1343,7 +1343,7 @@ named <${fB1}CC0-1.0.txt${fR1}>. If not, it may be available at
 EOF
           case "${?}" in
           #(
-            0)
+            '0')
               :
             ;;
           #(
@@ -1395,7 +1395,7 @@ ${1}
 EOF
           case "${?}" in
           #(
-            0)
+            '0')
               :
             ;;
           #(
@@ -1436,7 +1436,7 @@ ${1}
 EOF
           case "${?}" in
           #(
-            0)
+            '0')
               :
             ;;
           #(
@@ -1580,7 +1580,7 @@ dnl
 EOF
         case "${?}" in
         #(
-          0)
+          '0')
             :
           ;;
         #(
@@ -1769,7 +1769,7 @@ express Statement of Purpose.
 EOF
         case "${?}" in
         #(
-          0)
+          '0')
             :
           ;;
         #(
@@ -1801,7 +1801,7 @@ named <CC0-1.0.txt>. If not, it may be available at
 EOF
         case "${?}" in
         #(
-          0)
+          '0')
             :
           ;;
         #(
@@ -1846,7 +1846,7 @@ It may also be available at
 EOF
         case "${?}" in
         #(
-          0)
+          '0')
             :
           ;;
         #(
@@ -1990,7 +1990,7 @@ express Statement of Purpose.
 EOF
         case "${?}" in
         #(
-          0)
+          '0')
             :
           ;;
         #(
@@ -2034,7 +2034,7 @@ dnl
 EOF
         case "${?}" in
         #(
-          0)
+          '0')
             :
           ;;
         #(
@@ -2074,7 +2074,7 @@ EOF
 EOF
         case "${?}" in
         #(
-          0)
+          '0')
             :
           ;;
         #(
@@ -2114,7 +2114,7 @@ EOF
 EOF
         case "${?}" in
         #(
-          0)
+          '0')
             :
           ;;
         #(
@@ -2178,7 +2178,7 @@ _\L\\M\\R\
 EOF
         case "${?}" in
         #(
-          0)
+          '0')
             :
           ;;
         #(
@@ -2242,7 +2242,7 @@ EOF
 EOF
         case "${?}" in
         #(
-          0)
+          '0')
             :
           ;;
         #(
@@ -2285,7 +2285,7 @@ END {
 ' <"${path}.top" >"${tmp0}"
           case "${?}" in
           #(
-            0)
+            '0')
               :
             ;;
           #(
@@ -2330,7 +2330,7 @@ END {
 ' <"${path}.top.texi" >"${tmp1}"
           case "${?}" in
           #(
-            0)
+            '0')
               :
             ;;
           #(
@@ -2349,7 +2349,7 @@ EOF
           texi2any --plaintext "${tmp1}" >"${tmp0}"
           case "${?}" in
           #(
-            0)
+            '0')
               :
             ;;
           #(
@@ -2367,7 +2367,7 @@ EOF
           echo >>"${tmp0}"
           case "${?}" in
           #(
-            0)
+            '0')
               :
             ;;
           #(
@@ -2386,7 +2386,7 @@ EOF
           cat /dev/null >"${tmp0}"
           case "${?}" in
           #(
-            0)
+            '0')
               :
             ;;
           #(
@@ -2440,7 +2440,7 @@ END {
 ' <"${path}.texi" >"${tmp2}"
         case "${?}" in
         #(
-          0)
+          '0')
             :
           ;;
         #(
@@ -2459,7 +2459,7 @@ EOF
         texi2any --plaintext "${tmp2}" >"${tmp1}"
         case "${?}" in
         #(
-          0)
+          '0')
             :
           ;;
         #(
@@ -2497,7 +2497,7 @@ $0 !~ /^#/ {
 ' <"${path}.bot" >"${tmp2}"
           case "${?}" in
           #(
-            0)
+            '0')
               :
             ;;
           #(
@@ -2529,7 +2529,7 @@ EOF
           echo >"${tmp2}"
           case "${?}" in
           #(
-            0)
+            '0')
               :
             ;;
           #(
@@ -2559,7 +2559,7 @@ END {
 ' <"${path}.bot.texi" >"${tmp3}"
           case "${?}" in
           #(
-            0)
+            '0')
               :
             ;;
           #(
@@ -2578,7 +2578,7 @@ EOF
           texi2any --plaintext "${tmp3}" >>"${tmp2}"
           case "${?}" in
           #(
-            0)
+            '0')
               :
             ;;
           #(
@@ -2598,7 +2598,7 @@ EOF
           cat /dev/null >"${tmp2}"
           case "${?}" in
           #(
-            0)
+            '0')
               :
             ;;
           #(
@@ -2619,7 +2619,7 @@ EOF
         cat "${tmp0}" "${tmp1}" "${tmp2}" >"${path}"
         case "${?}" in
         #(
-          0)
+          '0')
             :
           ;;
         #(
