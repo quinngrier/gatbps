@@ -377,11 +377,11 @@ EOF
               cat <<EOF
 Special file: ${fB1}CC0-1.0.txt${fR1}
 
-The ${fB1}CC0-1.0.txt${fR1} special file is the plaintext version of the CC0 1.0
-Universal Public Domain Dedication, a legal instrument from Creative
+The ${fB1}CC0-1.0.txt${fR1} special file is the plain text version of the CC0 1.0
+Universal Public Domain Dedication, a legal tool released by Creative
 Commons that allows an author to waive their copyright and related or
-neighboring rights to their work. This file was originally downloaded
-from <${fB1}https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt${fR1}>.
+neighboring rights to their work. This was originally downloaded from
+<${fB1}https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt${fR1}>.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
@@ -925,12 +925,11 @@ desired to appear.
 .IP0
 The
 .nohy "\fBCC0\-1.0.txt\fR"
-special file is the plaintext version of the CC0 1.0
-Universal Public Domain Dedication, a legal instrument from Creative
+special file is the plain text version of the CC0 1.0
+Universal Public Domain Dedication, a legal tool released by Creative
 Commons that allows an author to waive their copyright and related or
 neighboring rights to their work.
-This file was originally downloaded
-from
+This was originally downloaded from
 .nohy "<\fBhttps://\:creativecommons.org/\:publicdomain/\:zero/\:1.0/\:legalcode.txt\fR>."
 .TP
 .nohy "\fBmdot.texi\fR"
