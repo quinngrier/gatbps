@@ -91,7 +91,7 @@ while :; do
       #(
         '0')
           detect_options='1'
-          set 'x' --list
+          set 'x' '--list'
           continue
         ;;
       #(
