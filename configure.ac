@@ -4,13 +4,13 @@ AC_INIT([GATBPS],
         [gatbps],
         [https://github.com/quinngrier/gatbps])
 
-m4_include([CC0-1.0-AC-COPYRIGHT.ac])
-m4_include([DATE.ac])
-
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_MACRO_DIRS([m4])
 AC_CONFIG_SRCDIR([gatbps.texi])
+
+m4_include([CC0-1.0-AC-COPYRIGHT.ac])
+m4_include([DATE.ac])
 
 AC_SYS_INTERPRETER
 case "${interpval}" in
