@@ -131,7 +131,7 @@ while :; do
 ${fr2}gatbps:${fd2} the ${fB2}--${fR2} option must not have an argument
 ${fr2}gatbps:${fd2} try ${fB2}gatbps --help${fR2} for more information
 EOF
-          exit 1
+          exit '1'
 
         ;;
 
@@ -145,7 +145,7 @@ EOF
 ${fr2}gatbps:${fd2} each ${fB2}--awk${fR2} option must have an argument
 ${fr2}gatbps:${fd2} try ${fB2}gatbps --help${fR2} for more information
 EOF
-              exit 1
+              exit '1'
             ;;
           esac
 
@@ -181,7 +181,7 @@ ${fr2}gatbps:${fd2} ${fB2}sed${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: a command substitution
 EOF
-              exit 1
+              exit '1'
             ;;
           esac
           eval "${x}"
@@ -218,7 +218,7 @@ ${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: standard output
 EOF
-              exit 1
+              exit '1'
             ;;
           esac
 
@@ -235,7 +235,7 @@ EOF
               cat >&2 <<EOF
 ${fr2}gatbps:${fd2} the ${fB2}--help${fR2} option argument must not be empty
 EOF
-              exit 1
+              exit '1'
             ;;
           esac
 
@@ -245,7 +245,7 @@ EOF
               cat >&2 <<EOF
 ${fr2}gatbps:${fd2} the ${fB2}--help${fR2} option argument must not end with a slash
 EOF
-              exit 1
+              exit '1'
             ;;
           esac
 
@@ -276,7 +276,7 @@ ${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: standard output
 EOF
-                  exit 1
+                  exit '1'
                 ;;
               esac
             ;;
@@ -306,7 +306,7 @@ ${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: standard output
 EOF
-                  exit 1
+                  exit '1'
                 ;;
               esac
             ;;
@@ -330,7 +330,7 @@ ${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: standard output
 EOF
-                  exit 1
+                  exit '1'
                 ;;
               esac
             ;;
@@ -361,7 +361,7 @@ ${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: standard output
 EOF
-                  exit 1
+                  exit '1'
                 ;;
               esac
             ;;
@@ -391,7 +391,7 @@ ${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: standard output
 EOF
-                  exit 1
+                  exit '1'
                 ;;
               esac
             ;;
@@ -415,7 +415,7 @@ ${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: standard output
 EOF
-                  exit 1
+                  exit '1'
                 ;;
               esac
             ;;
@@ -451,7 +451,7 @@ ${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: standard output
 EOF
-                  exit 1
+                  exit '1'
                 ;;
               esac
             ;;
@@ -487,7 +487,7 @@ ${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: standard output
 EOF
-                  exit 1
+                  exit '1'
                 ;;
               esac
             ;;
@@ -525,7 +525,7 @@ ${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: standard output
 EOF
-                  exit 1
+                  exit '1'
                 ;;
               esac
             ;;
@@ -563,7 +563,7 @@ ${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: standard output
 EOF
-                  exit 1
+                  exit '1'
                 ;;
               esac
             ;;
@@ -608,7 +608,7 @@ ${fr2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: standard output
 EOF
-                  exit 1
+                  exit '1'
                 ;;
               esac
             ;;
@@ -646,7 +646,7 @@ ${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: standard output
 EOF
-              exit 1
+              exit '1'
             ;;
           esac
 
@@ -661,7 +661,7 @@ EOF
 ${fr2}gatbps:${fd2} the ${fB2}--list${fR2} option must not have an argument
 ${fr2}gatbps:${fd2} try ${fB2}gatbps --help${fR2} for more information
 EOF
-          exit 1
+          exit '1'
 
         ;;
 
@@ -1107,7 +1107,7 @@ ${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: standard output
 EOF
-              exit 1
+              exit '1'
             ;;
           esac
 
@@ -1122,7 +1122,7 @@ EOF
 ${fr2}gatbps:${fd2} the ${fB2}--man${fR2} option must not have an argument
 ${fr2}gatbps:${fd2} try ${fB2}gatbps --help${fR2} for more information
 EOF
-          exit 1
+          exit '1'
 
         ;;
 
@@ -1353,7 +1353,7 @@ ${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps:${fd2}   1. a here-document
 ${fr2}gatbps:${fd2} and write to: standard output
 EOF
-              exit 1
+              exit '1'
             ;;
           esac
 
@@ -1368,7 +1368,7 @@ EOF
 ${fr2}gatbps:${fd2} the ${fB2}--version${fR2} option must not have an argument
 ${fr2}gatbps:${fd2} try ${fB2}gatbps --help${fR2} for more information
 EOF
-          exit 1
+          exit '1'
 
         ;;
 
@@ -1407,7 +1407,7 @@ ${fr2}gatbps:${fd2} and write to: standard error
 EOF
             ;;
           esac
-          exit 1
+          exit '1'
 
         ;;
 
@@ -1418,7 +1418,7 @@ EOF
 ${fr2}gatbps:${fd2} unknown option name: ${fB2}${1}${fR2}
 ${fr2}gatbps:${fd2} try ${fB2}gatbps --help${fR2} for more information
 EOF
-          exit 1
+          exit '1'
 
         ;;
 
@@ -1448,7 +1448,7 @@ ${fr2}gatbps:${fd2} and write to: standard error
 EOF
             ;;
           esac
-          exit 1
+          exit '1'
 
         ;;
 
