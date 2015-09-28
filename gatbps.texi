@@ -21,14 +21,14 @@ This manual is for GATBPS@.
 
 GATBPS (pronunciation: gat-bee-pee-ESS)
 provides a program named @t{gatbps}
-that generates basic files for software projects@.
+that generates basic files for software packages@.
 It was originally created to provide a small number
 of shell scripts to be used with the GNU Autotools build
 system, and its name stood for ``@b{G}NU @b{A}uto@b{t}ools
 @b{B}oiler@b{p}late @b{S}cripts''@.
 However, it quickly grew to provide other kinds of basic files,
 and its name now stands for
-``@b{G}ener@b{a}@b{t}e @b{B}asic @b{P}roject @b{S}tuff''@.
+``@b{G}ener@b{a}@b{t}e @b{B}asic @b{P}ackage @b{S}tuff''@.
 
 @include CC0-1.0-appendix.texi
 @bye

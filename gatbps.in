@@ -725,7 +725,7 @@ EOF
 .hy
 .TH "gatbps" "1" "@PACKAGE_DATE@" "@PACKAGE_STRING@"
 .SH "NAME"
-gatbps \- generate basic files for software projects
+gatbps \- generate basic files for software packages
 .SH "SYNOPSIS"
 .nf
 \fBgatbps\fR [<\fIoption\fR> | <\fIfile\fR>]...
