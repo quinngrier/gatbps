@@ -191,7 +191,7 @@ EOF
         ;;
 
       #(
-        --help)
+        '--help')
 
           cat <<EOF
 Usage: ${fB1}gatbps${fR1} [<${fI1}option${fR1}> | <${fI1}file${fR1}>]...
