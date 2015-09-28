@@ -231,7 +231,7 @@ EOF
 
           case "${1}" in
           #(
-            --help=)
+            '--help=')
               cat >&2 <<EOF
 ${fr2}gatbps!${fd2} the ${fB2}--help${fR2} option argument must not be empty
 EOF
