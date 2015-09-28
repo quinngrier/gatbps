@@ -11,7 +11,7 @@
 #
 
 LC_ALL='C'
-export LC_ALL
+export 'LC_ALL'
 
 awk=@AWK_SHELL@
 
