@@ -128,8 +128,8 @@ while :; do
         '--='*)
 
           cat >&2 <<EOF
-${fr2}gatbps:${fd2} the ${fB2}--${fR2} option must not have an argument
-${fr2}gatbps:${fd2} try ${fB2}gatbps --help${fR2} for more information
+${fr2}gatbps!${fd2} the ${fB2}--${fR2} option must not have an argument
+${fr2}gatbps!${fd2} try ${fB2}gatbps --help${fR2} for more information
 EOF
           exit '1'
 
@@ -142,8 +142,8 @@ EOF
           #(
             1)
               cat >&2 <<EOF
-${fr2}gatbps:${fd2} each ${fB2}--awk${fR2} option must have an argument
-${fr2}gatbps:${fd2} try ${fB2}gatbps --help${fR2} for more information
+${fr2}gatbps!${fd2} each ${fB2}--awk${fR2} option must have an argument
+${fr2}gatbps!${fd2} try ${fB2}gatbps --help${fR2} for more information
 EOF
               exit '1'
             ;;
@@ -177,9 +177,9 @@ EOF
           #(
             *)
               cat >&2 <<EOF
-${fr2}gatbps:${fd2} ${fB2}sed${fR2} failed to read from:
-${fr2}gatbps:${fd2}   1. a here-document
-${fr2}gatbps:${fd2} and write to: a command substitution
+${fr2}gatbps!${fd2} ${fB2}sed${fR2} failed to read from:
+${fr2}gatbps!${fd2}   1. a here-document
+${fr2}gatbps!${fd2} and write to: a command substitution
 EOF
               exit '1'
             ;;
@@ -214,9 +214,9 @@ EOF
           #(
             *)
               cat >&2 <<EOF
-${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps:${fd2}   1. a here-document
-${fr2}gatbps:${fd2} and write to: standard output
+${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fd2}   1. a here-document
+${fr2}gatbps!${fd2} and write to: standard output
 EOF
               exit '1'
             ;;
@@ -233,7 +233,7 @@ EOF
           #(
             --help=)
               cat >&2 <<EOF
-${fr2}gatbps:${fd2} the ${fB2}--help${fR2} option argument must not be empty
+${fr2}gatbps!${fd2} the ${fB2}--help${fR2} option argument must not be empty
 EOF
               exit '1'
             ;;
@@ -243,7 +243,7 @@ EOF
           #(
             --help=*/)
               cat >&2 <<EOF
-${fr2}gatbps:${fd2} the ${fB2}--help${fR2} option argument must not end with a slash
+${fr2}gatbps!${fd2} the ${fB2}--help${fR2} option argument must not end with a slash
 EOF
               exit '1'
             ;;
@@ -273,9 +273,9 @@ EOF
               #(
                 *)
                   cat >&2 <<EOF
-${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps:${fd2}   1. a here-document
-${fr2}gatbps:${fd2} and write to: standard output
+${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fd2}   1. a here-document
+${fr2}gatbps!${fd2} and write to: standard output
 EOF
                   exit '1'
                 ;;
@@ -303,9 +303,9 @@ EOF
               #(
                 *)
                   cat >&2 <<EOF
-${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps:${fd2}   1. a here-document
-${fr2}gatbps:${fd2} and write to: standard output
+${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fd2}   1. a here-document
+${fr2}gatbps!${fd2} and write to: standard output
 EOF
                   exit '1'
                 ;;
@@ -332,9 +332,9 @@ EOF
               #(
                 *)
                   cat >&2 <<EOF
-${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps:${fd2}   1. a here-document
-${fr2}gatbps:${fd2} and write to: standard output
+${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fd2}   1. a here-document
+${fr2}gatbps!${fd2} and write to: standard output
 EOF
                   exit '1'
                 ;;
@@ -363,9 +363,9 @@ EOF
               #(
                 *)
                   cat >&2 <<EOF
-${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps:${fd2}   1. a here-document
-${fr2}gatbps:${fd2} and write to: standard output
+${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fd2}   1. a here-document
+${fr2}gatbps!${fd2} and write to: standard output
 EOF
                   exit '1'
                 ;;
@@ -393,9 +393,9 @@ EOF
               #(
                 *)
                   cat >&2 <<EOF
-${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps:${fd2}   1. a here-document
-${fr2}gatbps:${fd2} and write to: standard output
+${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fd2}   1. a here-document
+${fr2}gatbps!${fd2} and write to: standard output
 EOF
                   exit '1'
                 ;;
@@ -417,9 +417,9 @@ EOF
               #(
                 *)
                   cat >&2 <<EOF
-${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps:${fd2}   1. a here-document
-${fr2}gatbps:${fd2} and write to: standard output
+${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fd2}   1. a here-document
+${fr2}gatbps!${fd2} and write to: standard output
 EOF
                   exit '1'
                 ;;
@@ -453,9 +453,9 @@ EOF
               #(
                 *)
                   cat >&2 <<EOF
-${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps:${fd2}   1. a here-document
-${fr2}gatbps:${fd2} and write to: standard output
+${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fd2}   1. a here-document
+${fr2}gatbps!${fd2} and write to: standard output
 EOF
                   exit '1'
                 ;;
@@ -489,9 +489,9 @@ EOF
               #(
                 *)
                   cat >&2 <<EOF
-${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps:${fd2}   1. a here-document
-${fr2}gatbps:${fd2} and write to: standard output
+${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fd2}   1. a here-document
+${fr2}gatbps!${fd2} and write to: standard output
 EOF
                   exit '1'
                 ;;
@@ -527,9 +527,9 @@ EOF
               #(
                 *)
                   cat >&2 <<EOF
-${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps:${fd2}   1. a here-document
-${fr2}gatbps:${fd2} and write to: standard output
+${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fd2}   1. a here-document
+${fr2}gatbps!${fd2} and write to: standard output
 EOF
                   exit '1'
                 ;;
@@ -565,9 +565,9 @@ EOF
               #(
                 *)
                   cat >&2 <<EOF
-${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps:${fd2}   1. a here-document
-${fr2}gatbps:${fd2} and write to: standard output
+${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fd2}   1. a here-document
+${fr2}gatbps!${fd2} and write to: standard output
 EOF
                   exit '1'
                 ;;
@@ -610,9 +610,9 @@ EOF
               #(
                 *)
                   cat >&2 <<EOF
-${fr2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
-${fr2}gatbps:${fd2}   1. a here-document
-${fr2}gatbps:${fd2} and write to: standard output
+${fr2}gatbps!${fd2} ${fB2}${awk}${fR2} failed to read from:
+${fr2}gatbps!${fd2}   1. a here-document
+${fr2}gatbps!${fd2} and write to: standard output
 EOF
                   exit '1'
                 ;;
@@ -648,9 +648,9 @@ EOF
           #(
             *)
               cat >&2 <<EOF
-${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps:${fd2}   1. a here-document
-${fr2}gatbps:${fd2} and write to: standard output
+${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fd2}   1. a here-document
+${fr2}gatbps!${fd2} and write to: standard output
 EOF
               exit '1'
             ;;
@@ -664,8 +664,8 @@ EOF
         --list=*)
 
           cat >&2 <<EOF
-${fr2}gatbps:${fd2} the ${fB2}--list${fR2} option must not have an argument
-${fr2}gatbps:${fd2} try ${fB2}gatbps --help${fR2} for more information
+${fr2}gatbps!${fd2} the ${fB2}--list${fR2} option must not have an argument
+${fr2}gatbps!${fd2} try ${fB2}gatbps --help${fR2} for more information
 EOF
           exit '1'
 
@@ -1168,9 +1168,9 @@ EOF
           #(
             *)
               cat >&2 <<EOF
-${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps:${fd2}   1. a here-document
-${fr2}gatbps:${fd2} and write to: standard output
+${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fd2}   1. a here-document
+${fr2}gatbps!${fd2} and write to: standard output
 EOF
               exit '1'
             ;;
@@ -1184,8 +1184,8 @@ EOF
         --man=*)
 
           cat >&2 <<EOF
-${fr2}gatbps:${fd2} the ${fB2}--man${fR2} option must not have an argument
-${fr2}gatbps:${fd2} try ${fB2}gatbps --help${fR2} for more information
+${fr2}gatbps!${fd2} the ${fB2}--man${fR2} option must not have an argument
+${fr2}gatbps!${fd2} try ${fB2}gatbps --help${fR2} for more information
 EOF
           exit '1'
 
@@ -1414,9 +1414,9 @@ EOF
           #(
             *)
               cat >&2 <<EOF
-${fr2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps:${fd2}   1. a here-document
-${fr2}gatbps:${fd2} and write to: standard output
+${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fd2}   1. a here-document
+${fr2}gatbps!${fd2} and write to: standard output
 EOF
               exit '1'
             ;;
@@ -1430,8 +1430,8 @@ EOF
         --version=*)
 
           cat >&2 <<EOF
-${fr2}gatbps:${fd2} the ${fB2}--version${fR2} option must not have an argument
-${fr2}gatbps:${fd2} try ${fB2}gatbps --help${fR2} for more information
+${fr2}gatbps!${fd2} the ${fB2}--version${fR2} option must not have an argument
+${fr2}gatbps!${fd2} try ${fB2}gatbps --help${fR2} for more information
 EOF
           exit '1'
 
@@ -1466,9 +1466,9 @@ EOF
           #(
             *)
               cat >&2 <<EOF
-${fr2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
-${fr2}gatbps:${fd2}   1. a here-document
-${fr2}gatbps:${fd2} and write to: standard error
+${fr2}gatbps!${fd2} ${fB2}${awk}${fR2} failed to read from:
+${fr2}gatbps!${fd2}   1. a here-document
+${fr2}gatbps!${fd2} and write to: standard error
 EOF
             ;;
           esac
@@ -1480,8 +1480,8 @@ EOF
         --*|-?)
 
           cat >&2 <<EOF
-${fr2}gatbps:${fd2} unknown option name: ${fB2}${1}${fR2}
-${fr2}gatbps:${fd2} try ${fB2}gatbps --help${fR2} for more information
+${fr2}gatbps!${fd2} unknown option name: ${fB2}${1}${fR2}
+${fr2}gatbps!${fd2} try ${fB2}gatbps --help${fR2} for more information
 EOF
           exit '1'
 
@@ -1507,9 +1507,9 @@ EOF
           #(
             *)
               cat >&2 <<EOF
-${fr2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
-${fr2}gatbps:${fd2}   1. a here-document
-${fr2}gatbps:${fd2} and write to: standard error
+${fr2}gatbps!${fd2} ${fB2}${awk}${fR2} failed to read from:
+${fr2}gatbps!${fd2}   1. a here-document
+${fr2}gatbps!${fd2} and write to: standard error
 EOF
             ;;
           esac
