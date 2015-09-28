@@ -140,7 +140,7 @@ EOF
 
           case "${#}" in
           #(
-            1)
+            '1')
               cat >&2 <<EOF
 ${fr2}gatbps!${fd2} each ${fB2}--awk${fR2} option must have an argument
 ${fr2}gatbps!${fd2} try ${fB2}gatbps --help${fR2} for more information
