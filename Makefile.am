@@ -1,3 +1,5 @@
+include $(srcdir)/CC0-1.0-AM-COPYRIGHT.am
+
 EXTRA_DIST =
 EXTRA_DIST += DATE
 EXTRA_DIST += DATE.sh
