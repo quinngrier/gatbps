@@ -42,7 +42,7 @@ fc1=''
 case "${STYLE_STDOUT}" in
 #(
   ?*)
-    set 'x' "--style-stdout=${STYLE_STDOUT}" "${@}"
+    set 'x' "--style-stdout=${STYLE_STDOUT}" "${@AT@}"
     shift
   ;;
 esac
@@ -50,7 +50,7 @@ esac
 case "${STYLE_STDERR}" in
 #(
   ?*)
-    set 'x' "--style-stderr=${STYLE_STDERR}" "${@}"
+    set 'x' "--style-stderr=${STYLE_STDERR}" "${@AT@}"
     shift
   ;;
 esac
@@ -58,7 +58,7 @@ esac
 case "${STYLE}" in
 #(
   ?*)
-    set 'x' "--style=${STYLE}" "${@}"
+    set 'x' "--style=${STYLE}" "${@AT@}"
     shift
   ;;
 esac
@@ -66,7 +66,7 @@ esac
 case "${AWK}" in
 #(
   ?*)
-    set 'x' "--awk=${AWK}" "${@}"
+    set 'x' "--awk=${AWK}" "${@AT@}"
     shift
   ;;
 esac
@@ -78,7 +78,7 @@ detect_options='1'
 exit_status='0'
 have_operands='0'
 
-set 'x' "${@}"
+set 'x' "${@AT@}"
 
 while :; do
 
@@ -152,7 +152,7 @@ EOF
           x="${2}"
           shift
           shift
-          set 'x' "--awk=${x}" "${@}"
+          set 'x' "--awk=${x}" "${@AT@}"
 
           continue
 
@@ -289,8 +289,8 @@ Special file: ${fB1}CC0-1.0-appendix.texi${fR1}
 
 The ${fB1}CC0-1.0-appendix.texi${fR1} special file is the same as the ${fB1}CC0-1.0.txt${fR1}
 special file but formatted as a Texinfo appendix. This can be included
-in another Texinfo file with the ${fB1}@include${fR1} command where the appendix is
-desired to appear. The appendix is also labeled as ${fB1}@node CC0${fR1} so that it
+in another Texinfo file with the ${fB1}@AT@include${fR1} command where the appendix is
+desired to appear. The appendix is also labeled as ${fB1}@AT@node CC0${fR1} so that it
 follows the usual node structure and can be referenced.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
@@ -346,11 +346,11 @@ EOF
               cat <<EOF
 Special file: ${fB1}CC0-1.0-copying.texi${fR1}
 
-The ${fB1}CC0-1.0-copying.texi${fR1} special file calls the ${fB1}@copying${fR1} Texinfo command
+The ${fB1}CC0-1.0-copying.texi${fR1} special file calls the ${fB1}@AT@copying${fR1} Texinfo command
 with a message stating that the authors of the manual have waived their
-rights to it by referencing the ${fB1}@node CC0${fR1} appendix, which is defined by
+rights to it by referencing the ${fB1}@AT@node CC0${fR1} appendix, which is defined by
 the ${fB1}CC0-1.0-appendix.texi${fR1} special file. This can be included in another
-Texinfo file with the ${fB1}@include${fR1} command where the ${fB1}@copying${fR1} call is
+Texinfo file with the ${fB1}@AT@include${fR1} command where the ${fB1}@AT@copying${fR1} call is
 desired to appear.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
@@ -431,17 +431,17 @@ EOF
               cat <<EOF
 Special file: ${fB1}mdot.texi${fR1}
 
-The ${fB1}mdot.texi${fR1} special file defines the ${fB1}@mdot{}${fR1} Texinfo macro, which uses
-${fB1}@U{22C5}${fR1} to insert a dot operator character. This can be used to make
+The ${fB1}mdot.texi${fR1} special file defines the ${fB1}@AT@mdot{}${fR1} Texinfo macro, which uses
+${fB1}@AT@U{22C5}${fR1} to insert a dot operator character. This can be used to make
 mathematical notation look more like TeX in the other output formats:
 
-      @documentencoding UTF-8
-      @tex
+      @AT@documentencoding UTF-8
+      @AT@tex
       \$x \\cdot y\$
-      @end tex
-      @ifnottex
-      @i{x} @mdot{} @i{y}
-      @end ifnottex
+      @AT@end tex
+      @AT@ifnottex
+      @AT@i{x} @AT@mdot{} @AT@i{y}
+      @AT@end ifnottex
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
@@ -467,17 +467,17 @@ EOF
               cat <<EOF
 Special file: ${fB1}msign.texi${fR1}
 
-The ${fB1}msign.texi${fR1} special file defines the ${fB1}@msign{}${fR1} Texinfo macro, which
-uses ${fB1}@U{2212}${fR1} to insert a minus sign character. This can be used to make
+The ${fB1}msign.texi${fR1} special file defines the ${fB1}@AT@msign{}${fR1} Texinfo macro, which
+uses ${fB1}@AT@U{2212}${fR1} to insert a minus sign character. This can be used to make
 mathematical notation look more like TeX in the other output formats:
 
-      @documentencoding UTF-8
-      @tex
+      @AT@documentencoding UTF-8
+      @AT@tex
       \$x - y\$
-      @end tex
-      @ifnottex
-      @i{x} @msign{} @i{y}
-      @end ifnottex
+      @AT@end tex
+      @AT@ifnottex
+      @AT@i{x} @AT@msign{} @AT@i{y}
+      @AT@end ifnottex
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
@@ -503,19 +503,19 @@ EOF
               cat <<EOF
 Special file: ${fB1}sbs.texi${fR1}
 
-The ${fB1}sbs.texi${fR1} special file defines the ${fB1}@sbs{${fI1}L${fB1}, ${fI1}M${fB1}, ${fI1}R${fB1}}${fR1} Texinfo macro, which
+The ${fB1}sbs.texi${fR1} special file defines the ${fB1}@AT@sbs{${fI1}L${fB1}, ${fI1}M${fB1}, ${fI1}R${fB1}}${fR1} Texinfo macro, which
 inserts ${fI1}M${fR1} as a subscript in the output formats other than TeX. ${fI1}L${fR1} and ${fI1}R${fR1}
 are ignored except in the Info and plain text output formats, where they
 are used as left and right delimiters around ${fI1}M${fR1}. This can be used to make
 mathematical notation look more like TeX in the other output formats:
 
-      @documentencoding UTF-8
-      @tex
+      @AT@documentencoding UTF-8
+      @AT@tex
       \$x_{y + z_w}\$
-      @end tex
-      @ifnottex
-      @i{x}@sbs{(, @i{y} + @i{z}@sbs{, @i{w}, }, )}
-      @end ifnottex
+      @AT@end tex
+      @AT@ifnottex
+      @AT@i{x}@AT@sbs{(, @AT@i{y} + @AT@i{z}@AT@sbs{, @AT@i{w}, }, )}
+      @AT@end ifnottex
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
@@ -541,19 +541,19 @@ EOF
               cat <<EOF
 Special file: ${fB1}sps.texi${fR1}
 
-The ${fB1}sps.texi${fR1} special file defines the ${fB1}@sps{${fI1}L${fB1}, ${fI1}M${fB1}, ${fI1}R${fB1}}${fR1} Texinfo macro, which
+The ${fB1}sps.texi${fR1} special file defines the ${fB1}@AT@sps{${fI1}L${fB1}, ${fI1}M${fB1}, ${fI1}R${fB1}}${fR1} Texinfo macro, which
 inserts ${fI1}M${fR1} as a superscript in the output formats other than TeX. ${fI1}L${fR1} and ${fI1}R${fR1}
 are ignored except in the Info and plain text output formats, where they
 are used as left and right delimiters around ${fI1}M${fR1}. This can be used to make
 mathematical notation look more like TeX in the other output formats:
 
-      @documentencoding UTF-8
-      @tex
+      @AT@documentencoding UTF-8
+      @AT@tex
       \$x^{y + z^w}\$
-      @end tex
-      @ifnottex
-      @i{x}@sps{(, @i{y} + @i{z}@sps{, @i{w}, }, )}
-      @end ifnottex
+      @AT@end tex
+      @AT@ifnottex
+      @AT@i{x}@AT@sps{(, @AT@i{y} + @AT@i{z}@AT@sps{, @AT@i{w}, }, )}
+      @AT@end ifnottex
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF
@@ -879,11 +879,11 @@ special file is the same as the
 special file but formatted as a Texinfo appendix.
 This can be included
 in another Texinfo file with the
-.nohy "\fB@include\fR"
+.nohy "\fB@AT@include\fR"
 command where the appendix is
 desired to appear.
 The appendix is also labeled as
-.nohy "\fB@node CC0\fR"
+.nohy "\fB@AT@node CC0\fR"
 so that it
 follows the usual node structure and can be referenced.
 .TP
@@ -905,20 +905,20 @@ configuration variable, for example.
 The
 .nohy "\fBCC0\-1.0\-copying.texi\fR"
 special file calls the
-.nohy "\fB@copying\fR"
+.nohy "\fB@AT@copying\fR"
 Texinfo command
 with a message stating that the authors of the manual have waived their
 rights to it by referencing the
-.nohy "\fB@node CC0\fR"
+.nohy "\fB@AT@node CC0\fR"
 appendix, which is defined by
 the
 .nohy "\fBCC0\-1.0\-appendix.texi\fR"
 special file.
 This can be included in another
 Texinfo file with the
-.nohy "\fB@include\fR"
+.nohy "\fB@AT@include\fR"
 command where the
-.nohy "\fB@copying\fR"
+.nohy "\fB@AT@copying\fR"
 call is
 desired to appear.
 .TP
@@ -938,23 +938,23 @@ This was originally downloaded from
 The
 .nohy "\fBmdot.texi\fR"
 special file defines the
-.nohy "\fB@mdot{}\fR"
+.nohy "\fB@AT@mdot{}\fR"
 Texinfo macro, which uses
-.nohy "\fB@U{22C5}\fR"
+.nohy "\fB@AT@U{22C5}\fR"
 to insert a dot operator character.
 This can be used to make mathematical notation
 look more like TeX in the other output formats:
 .RS
 .IP
 .nf
-@documentencoding UTF\-8
-@include mdot.texi
-@tex
+@AT@documentencoding UTF\-8
+@AT@include mdot.texi
+@AT@tex
 $x \\cdot y$
-@end tex
-@ifnottex
-@i{x} @mdot{} @i{y}
-@end ifnottex
+@AT@end tex
+@AT@ifnottex
+@AT@i{x} @AT@mdot{} @AT@i{y}
+@AT@end ifnottex
 .fi
 .RE
 .TP
@@ -963,23 +963,23 @@ $x \\cdot y$
 The
 .nohy "\fBmsign.texi\fR"
 special file defines the
-.nohy "\fB@msign{}\fR"
+.nohy "\fB@AT@msign{}\fR"
 Texinfo macro, which uses
-.nohy "\fB@U{2212}\fR"
+.nohy "\fB@AT@U{2212}\fR"
 to insert a minus sign character.
 This can be used to make mathematical notation
 look more like TeX in the other output formats:
 .RS
 .IP
 .nf
-@documentencoding UTF\-8
-@include msign.texi
-@tex
+@AT@documentencoding UTF\-8
+@AT@include msign.texi
+@AT@tex
 $x \- y$
-@end tex
-@ifnottex
-@i{x} @msign{} @i{y}
-@end ifnottex
+@AT@end tex
+@AT@ifnottex
+@AT@i{x} @AT@msign{} @AT@i{y}
+@AT@end ifnottex
 .fi
 .RE
 .TP
@@ -988,7 +988,7 @@ $x \- y$
 The
 .nohy "\fBsbs.texi\fR"
 special file defines the
-.nohy "\fB@sbs{\fIL\fB, \fIM\fB, \fIR\fB}\fR"
+.nohy "\fB@AT@sbs{\fIL\fB, \fIM\fB, \fIR\fB}\fR"
 Texinfo macro, which inserts
 .nohy "\fIM\fR"
 as a subscript in the output formats other than TeX.
@@ -1003,14 +1003,14 @@ look more like TeX in the other output formats:
 .RS
 .IP
 .nf
-@documentencoding UTF\-8
-@include sbs.texi
-@tex
+@AT@documentencoding UTF\-8
+@AT@include sbs.texi
+@AT@tex
 $x_{y + z_w}$
-@end tex
-@ifnottex
-@i{x}@sbs{(, @i{y} + @i{z}@sbs{, @i{w}, }, )}
-@end ifnottex
+@AT@end tex
+@AT@ifnottex
+@AT@i{x}@AT@sbs{(, @AT@i{y} + @AT@i{z}@AT@sbs{, @AT@i{w}, }, )}
+@AT@end ifnottex
 .fi
 .RE
 .TP
@@ -1019,7 +1019,7 @@ $x_{y + z_w}$
 The
 .nohy "\fBsps.texi\fR"
 special file defines the
-.nohy "\fB@sps{\fIL\fB, \fIM\fB, \fIR\fB}\fR"
+.nohy "\fB@AT@sps{\fIL\fB, \fIM\fB, \fIR\fB}\fR"
 Texinfo macro, which inserts
 .nohy "\fIM\fR"
 as a superscript in the output formats other than TeX.
@@ -1034,14 +1034,14 @@ look more like TeX in the other output formats:
 .RS
 .IP
 .nf
-@documentencoding UTF\-8
-@include sps.texi
-@tex
+@AT@documentencoding UTF\-8
+@AT@include sps.texi
+@AT@tex
 $x^{y + z^w}$
-@end tex
-@ifnottex
-@i{x}@sps{(, @i{y} + @i{z}@sps{, @i{w}, }, )}
-@end ifnottex
+@AT@end tex
+@AT@ifnottex
+@AT@i{x}@AT@sps{(, @AT@i{y} + @AT@i{z}@AT@sps{, @AT@i{w}, }, )}
+@AT@end ifnottex
 .fi
 .RE
 .SH "TEMPORARY FILES"
@@ -1195,7 +1195,7 @@ EOF
         --style|--style=always)
 
           shift
-          set 'x' --style-stderr=always --style-stdout=always "${@}"
+          set 'x' --style-stderr=always --style-stdout=always "${@AT@}"
           continue
 
         ;;
@@ -1204,7 +1204,7 @@ EOF
         --style=auto)
 
           shift
-          set 'x' --style-stderr=auto --style-stdout=auto "${@}"
+          set 'x' --style-stderr=auto --style-stdout=auto "${@AT@}"
           continue
 
         ;;
@@ -1213,7 +1213,7 @@ EOF
         --style=*)
 
           shift
-          set 'x' --style-stderr=never --style-stdout=never "${@}"
+          set 'x' --style-stderr=never --style-stdout=never "${@AT@}"
           continue
 
         ;;
@@ -1665,26 +1665,26 @@ EOF
     #(
       */CC0-1.0-appendix.texi)
         cat >"${path}" <<'EOF'
-@c
-@c This file was generated by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
-@c Before changing it, make sure that you're doing the right thing.
-@c Depending on how GATBPS is being used, your changes may be lost.
-@c
-@node CC0
-@appendix The CC0 1.0 Universal Public Domain Dedication
+@AT@c
+@AT@c This file was generated by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
+@AT@c Before changing it, make sure that you're doing the right thing.
+@AT@c Depending on how GATBPS is being used, your changes may be lost.
+@AT@c
+@AT@node CC0
+@AT@appendix The CC0 1.0 Universal Public Domain Dedication
 
-@quotation
+@AT@quotation
     CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE
-    LEGAL SERVICES@. DISTRIBUTION OF THIS DOCUMENT DOES NOT CREATE AN
-    ATTORNEY--CLIENT RELATIONSHIP@. CREATIVE COMMONS PROVIDES THIS
-    INFORMATION ON AN ``AS-IS'' BASIS@. CREATIVE COMMONS MAKES NO WARRANTIES
+    LEGAL SERVICES@AT@. DISTRIBUTION OF THIS DOCUMENT DOES NOT CREATE AN
+    ATTORNEY--CLIENT RELATIONSHIP@AT@. CREATIVE COMMONS PROVIDES THIS
+    INFORMATION ON AN ``AS-IS'' BASIS@AT@. CREATIVE COMMONS MAKES NO WARRANTIES
     REGARDING THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS
     PROVIDED HEREUNDER, AND DISCLAIMS LIABILITY FOR DAMAGES RESULTING FROM
     THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS PROVIDED
-    HEREUNDER@.
-@end quotation
+    HEREUNDER@AT@.
+@AT@end quotation
 
-@heading Statement of Purpose
+@AT@heading Statement of Purpose
 
 The laws of most jurisdictions throughout the world automatically confer
 exclusive Copyright and Related Rights (defined below) upon the creator
@@ -1710,48 +1710,48 @@ elects to apply CC0 to the Work and publicly distribute the Work under its
 terms, with knowledge of his or her Copyright and Related Rights in the
 Work and the meaning and intended legal effect of CC0 on those rights.
 
-@enumerate
-@item
-@b{Copyright and Related Rights.} A Work made available under CC0 may be
+@AT@enumerate
+@AT@item
+@AT@b{Copyright and Related Rights.} A Work made available under CC0 may be
 protected by copyright and related or neighboring rights (``Copyright and
 Related Rights''). Copyright and Related Rights include, but are not
 limited to, the following:
 
-@enumerate a
-@item
+@AT@enumerate a
+@AT@item
      the right to reproduce, adapt, distribute, perform, display,
      communicate, and translate a Work;
 
-@item
+@AT@item
      moral rights retained by the original author(s) and/or performer(s);
 
-@item
+@AT@item
      publicity and privacy rights pertaining to a person's image or
      likeness depicted in a Work;
 
-@item
+@AT@item
      rights protecting against unfair competition in regards to a Work,
      subject to the limitations in paragraph 4(a), below;
 
-@item
+@AT@item
      rights protecting the extraction, dissemination, use and reuse of data
      in a Work;
 
-@item
+@AT@item
      database rights (such as those arising under Directive 96/9/EC of the
      European Parliament and of the Council of 11 March 1996 on the legal
      protection of databases, and under any national implementation
      thereof, including any amended or successor version of such
      directive); and
 
-@item
+@AT@item
      other similar, equivalent or corresponding rights throughout the
      world based on applicable law or treaty, and any national
      implementations thereof.
-@end enumerate
+@AT@end enumerate
 
-@item
-@b{Waiver.} To the greatest extent permitted by, but not in contravention
+@AT@item
+@AT@b{Waiver.} To the greatest extent permitted by, but not in contravention
 of, applicable law, Affirmer hereby overtly, fully, permanently,
 irrevocably and unconditionally waives, abandons, and surrenders all of
 Affirmer's Copyright and Related Rights and associated claims and causes
@@ -1768,8 +1768,8 @@ revocation, rescission, cancellation, termination, or any other legal or
 equitable action to disrupt the quiet enjoyment of the Work by the public
 as contemplated by Affirmer's express Statement of Purpose.
 
-@item
-@b{Public License Fallback.} Should any part of the Waiver for any reason
+@AT@item
+@AT@b{Public License Fallback.} Should any part of the Waiver for any reason
 be judged legally invalid or ineffective under applicable law, then the
 Waiver shall be preserved to the maximum extent permitted taking into
 account Affirmer's express Statement of Purpose. In addition, to the
@@ -1791,15 +1791,15 @@ Rights in the Work or (ii) assert any associated claims and causes of
 action with respect to the Work, in either case contrary to Affirmer's
 express Statement of Purpose.
 
-@item
-@b{Limitations and Disclaimers.}
+@AT@item
+@AT@b{Limitations and Disclaimers.}
 
-@enumerate a
-@item
+@AT@enumerate a
+@AT@item
     No trademark or patent rights held by Affirmer are waived, abandoned,
     surrendered, licensed or otherwise affected by this document.
 
-@item
+@AT@item
     Affirmer offers the Work as-is and makes no representations or
     warranties of any kind concerning the Work, express, implied,
     statutory or otherwise, including without limitation warranties of
@@ -1808,7 +1808,7 @@ express Statement of Purpose.
     the present or absence of errors, whether or not discoverable, all to
     the greatest extent permissible under applicable law.
 
-@item
+@AT@item
     Affirmer disclaims responsibility for clearing rights of other persons
     that may apply to the Work or any use thereof, including without
     limitation any person's Copyright and Related Rights in the Work.
@@ -1816,21 +1816,21 @@ express Statement of Purpose.
     consents, permissions or other rights required for any use of the
     Work.
 
-@item
+@AT@item
     Affirmer understands and acknowledges that Creative Commons is not a
     party to this document and has no duty or obligation with respect to
     this CC0 or use of the Work.
-@end enumerate
-@end enumerate
-@c
-@c The authors of this file have waived all copyright and
-@c related or neighboring rights to the extent permitted by
-@c law as described by the CC0 1.0 Universal Public Domain
-@c Dedication. You should have received a copy of the full
-@c dedication along with this file, typically as a file
-@c named <CC0-1.0.txt>. If not, it may be available at
-@c <https://creativecommons.org/publicdomain/zero/1.0/>.
-@c
+@AT@end enumerate
+@AT@end enumerate
+@AT@c
+@AT@c The authors of this file have waived all copyright and
+@AT@c related or neighboring rights to the extent permitted by
+@AT@c law as described by the CC0 1.0 Universal Public Domain
+@AT@c Dedication. You should have received a copy of the full
+@AT@c dedication along with this file, typically as a file
+@AT@c named <CC0-1.0.txt>. If not, it may be available at
+@AT@c <https://creativecommons.org/publicdomain/zero/1.0/>.
+@AT@c
 EOF
         case "${?}" in
         #(
@@ -1886,28 +1886,28 @@ EOF
     #(
       */CC0-1.0-copying.texi)
         cat >"${path}" <<'EOF'
-@c
-@c This file was generated by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
-@c Before changing it, make sure that you're doing the right thing.
-@c Depending on how GATBPS is being used, your changes may be lost.
-@c
-@copying
+@AT@c
+@AT@c This file was generated by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
+@AT@c Before changing it, make sure that you're doing the right thing.
+@AT@c Depending on how GATBPS is being used, your changes may be lost.
+@AT@c
+@AT@copying
 The authors of this manual have waived all copyright and
 related or neighboring rights to the extent permitted by
 law as described by the CC0 1.0 Universal Public Domain
-Dedication. For the full dedication, @pxref{CC0}.
+Dedication. For the full dedication, @AT@pxref{CC0}.
 It may also be available at
-@url{https://creativecommons.org/publicdomain/zero/1.0/}.
-@end copying
-@c
-@c The authors of this file have waived all copyright and
-@c related or neighboring rights to the extent permitted by
-@c law as described by the CC0 1.0 Universal Public Domain
-@c Dedication. You should have received a copy of the full
-@c dedication along with this file, typically as a file
-@c named <CC0-1.0.txt>. If not, it may be available at
-@c <https://creativecommons.org/publicdomain/zero/1.0/>.
-@c
+@AT@url{https://creativecommons.org/publicdomain/zero/1.0/}.
+@AT@end copying
+@AT@c
+@AT@c The authors of this file have waived all copyright and
+@AT@c related or neighboring rights to the extent permitted by
+@AT@c law as described by the CC0 1.0 Universal Public Domain
+@AT@c Dedication. You should have received a copy of the full
+@AT@c dedication along with this file, typically as a file
+@AT@c named <CC0-1.0.txt>. If not, it may be available at
+@AT@c <https://creativecommons.org/publicdomain/zero/1.0/>.
+@AT@c
 EOF
         case "${?}" in
         #(
@@ -2119,23 +2119,23 @@ EOF
     #(
       */mdot.texi)
         cat >"${path}" <<'EOF'
-@c
-@c This file was generated by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
-@c Before changing it, make sure that you're doing the right thing.
-@c Depending on how GATBPS is being used, your changes may be lost.
-@c
-@macro mdot{}
-@U{22C5}
-@end macro
-@c
-@c The authors of this file have waived all copyright and
-@c related or neighboring rights to the extent permitted by
-@c law as described by the CC0 1.0 Universal Public Domain
-@c Dedication. You should have received a copy of the full
-@c dedication along with this file, typically as a file
-@c named <CC0-1.0.txt>. If not, it may be available at
-@c <https://creativecommons.org/publicdomain/zero/1.0/>.
-@c
+@AT@c
+@AT@c This file was generated by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
+@AT@c Before changing it, make sure that you're doing the right thing.
+@AT@c Depending on how GATBPS is being used, your changes may be lost.
+@AT@c
+@AT@macro mdot{}
+@AT@U{22C5}
+@AT@end macro
+@AT@c
+@AT@c The authors of this file have waived all copyright and
+@AT@c related or neighboring rights to the extent permitted by
+@AT@c law as described by the CC0 1.0 Universal Public Domain
+@AT@c Dedication. You should have received a copy of the full
+@AT@c dedication along with this file, typically as a file
+@AT@c named <CC0-1.0.txt>. If not, it may be available at
+@AT@c <https://creativecommons.org/publicdomain/zero/1.0/>.
+@AT@c
 EOF
         case "${?}" in
         #(
@@ -2159,23 +2159,23 @@ EOF
     #(
       */msign.texi)
         cat >"${path}" <<'EOF'
-@c
-@c This file was generated by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
-@c Before changing it, make sure that you're doing the right thing.
-@c Depending on how GATBPS is being used, your changes may be lost.
-@c
-@macro msign{}
-@U{2212}
-@end macro
-@c
-@c The authors of this file have waived all copyright and
-@c related or neighboring rights to the extent permitted by
-@c law as described by the CC0 1.0 Universal Public Domain
-@c Dedication. You should have received a copy of the full
-@c dedication along with this file, typically as a file
-@c named <CC0-1.0.txt>. If not, it may be available at
-@c <https://creativecommons.org/publicdomain/zero/1.0/>.
-@c
+@AT@c
+@AT@c This file was generated by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
+@AT@c Before changing it, make sure that you're doing the right thing.
+@AT@c Depending on how GATBPS is being used, your changes may be lost.
+@AT@c
+@AT@macro msign{}
+@AT@U{2212}
+@AT@end macro
+@AT@c
+@AT@c The authors of this file have waived all copyright and
+@AT@c related or neighboring rights to the extent permitted by
+@AT@c law as described by the CC0 1.0 Universal Public Domain
+@AT@c Dedication. You should have received a copy of the full
+@AT@c dedication along with this file, typically as a file
+@AT@c named <CC0-1.0.txt>. If not, it may be available at
+@AT@c <https://creativecommons.org/publicdomain/zero/1.0/>.
+@AT@c
 EOF
         case "${?}" in
         #(
@@ -2199,47 +2199,47 @@ EOF
     #(
       */sbs.texi)
         cat >"${path}" <<'EOF'
-@c
-@c This file was generated by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
-@c Before changing it, make sure that you're doing the right thing.
-@c Depending on how GATBPS is being used, your changes may be lost.
-@c
-@ifdocbook
-@rmacro sbs{L, M, R}
-@inlineraw{docbook, <subscript>}\M\@inlineraw{docbook, </subscript>}
-@end rmacro
-@end ifdocbook
-@ifhtml
-@rmacro sbs{L, M, R}
-@inlineraw{html, <sub>}\M\@inlineraw{html, </sub>}
-@end rmacro
-@end ifhtml
-@ifinfo
-@ifnotplaintext
-@rmacro sbs{L, M, R}
+@AT@c
+@AT@c This file was generated by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
+@AT@c Before changing it, make sure that you're doing the right thing.
+@AT@c Depending on how GATBPS is being used, your changes may be lost.
+@AT@c
+@AT@ifdocbook
+@AT@rmacro sbs{L, M, R}
+@AT@inlineraw{docbook, <subscript>}\M\@AT@inlineraw{docbook, </subscript>}
+@AT@end rmacro
+@AT@end ifdocbook
+@AT@ifhtml
+@AT@rmacro sbs{L, M, R}
+@AT@inlineraw{html, <sub>}\M\@AT@inlineraw{html, </sub>}
+@AT@end rmacro
+@AT@end ifhtml
+@AT@ifinfo
+@AT@ifnotplaintext
+@AT@rmacro sbs{L, M, R}
 _\L\\M\\R\
-@end rmacro
-@end ifnotplaintext
-@end ifinfo
-@ifplaintext
-@rmacro sbs{L, M, R}
+@AT@end rmacro
+@AT@end ifnotplaintext
+@AT@end ifinfo
+@AT@ifplaintext
+@AT@rmacro sbs{L, M, R}
 _\L\\M\\R\
-@end rmacro
-@end ifplaintext
-@ifxml
-@rmacro sbs{L, M, R}
-@inlineraw{xml, <sub>}\M\@inlineraw{xml, </sub>}
-@end rmacro
-@end ifxml
-@c
-@c The authors of this file have waived all copyright and
-@c related or neighboring rights to the extent permitted by
-@c law as described by the CC0 1.0 Universal Public Domain
-@c Dedication. You should have received a copy of the full
-@c dedication along with this file, typically as a file
-@c named <CC0-1.0.txt>. If not, it may be available at
-@c <https://creativecommons.org/publicdomain/zero/1.0/>.
-@c
+@AT@end rmacro
+@AT@end ifplaintext
+@AT@ifxml
+@AT@rmacro sbs{L, M, R}
+@AT@inlineraw{xml, <sub>}\M\@AT@inlineraw{xml, </sub>}
+@AT@end rmacro
+@AT@end ifxml
+@AT@c
+@AT@c The authors of this file have waived all copyright and
+@AT@c related or neighboring rights to the extent permitted by
+@AT@c law as described by the CC0 1.0 Universal Public Domain
+@AT@c Dedication. You should have received a copy of the full
+@AT@c dedication along with this file, typically as a file
+@AT@c named <CC0-1.0.txt>. If not, it may be available at
+@AT@c <https://creativecommons.org/publicdomain/zero/1.0/>.
+@AT@c
 EOF
         case "${?}" in
         #(
@@ -2263,47 +2263,47 @@ EOF
     #(
       */sps.texi)
         cat >"${path}" <<'EOF'
-@c
-@c This file was generated by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
-@c Before changing it, make sure that you're doing the right thing.
-@c Depending on how GATBPS is being used, your changes may be lost.
-@c
-@ifdocbook
-@rmacro sps{L, M, R}
-@inlineraw{docbook, <superscript>}\M\@inlineraw{docbook, </superscript>}
-@end rmacro
-@end ifdocbook
-@ifhtml
-@rmacro sps{L, M, R}
-@inlineraw{html, <sup>}\M\@inlineraw{html, </sup>}
-@end rmacro
-@end ifhtml
-@ifinfo
-@ifnotplaintext
-@rmacro sps{L, M, R}
+@AT@c
+@AT@c This file was generated by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
+@AT@c Before changing it, make sure that you're doing the right thing.
+@AT@c Depending on how GATBPS is being used, your changes may be lost.
+@AT@c
+@AT@ifdocbook
+@AT@rmacro sps{L, M, R}
+@AT@inlineraw{docbook, <superscript>}\M\@AT@inlineraw{docbook, </superscript>}
+@AT@end rmacro
+@AT@end ifdocbook
+@AT@ifhtml
+@AT@rmacro sps{L, M, R}
+@AT@inlineraw{html, <sup>}\M\@AT@inlineraw{html, </sup>}
+@AT@end rmacro
+@AT@end ifhtml
+@AT@ifinfo
+@AT@ifnotplaintext
+@AT@rmacro sps{L, M, R}
 ^\L\\M\\R\
-@end rmacro
-@end ifnotplaintext
-@end ifinfo
-@ifplaintext
-@rmacro sps{L, M, R}
+@AT@end rmacro
+@AT@end ifnotplaintext
+@AT@end ifinfo
+@AT@ifplaintext
+@AT@rmacro sps{L, M, R}
 ^\L\\M\\R\
-@end rmacro
-@end ifplaintext
-@ifxml
-@rmacro sps{L, M, R}
-@inlineraw{xml, <sup>}\M\@inlineraw{xml, </sup>}
-@end rmacro
-@end ifxml
-@c
-@c The authors of this file have waived all copyright and
-@c related or neighboring rights to the extent permitted by
-@c law as described by the CC0 1.0 Universal Public Domain
-@c Dedication. You should have received a copy of the full
-@c dedication along with this file, typically as a file
-@c named <CC0-1.0.txt>. If not, it may be available at
-@c <https://creativecommons.org/publicdomain/zero/1.0/>.
-@c
+@AT@end rmacro
+@AT@end ifplaintext
+@AT@ifxml
+@AT@rmacro sps{L, M, R}
+@AT@inlineraw{xml, <sup>}\M\@AT@inlineraw{xml, </sup>}
+@AT@end rmacro
+@AT@end ifxml
+@AT@c
+@AT@c The authors of this file have waived all copyright and
+@AT@c related or neighboring rights to the extent permitted by
+@AT@c law as described by the CC0 1.0 Universal Public Domain
+@AT@c Dedication. You should have received a copy of the full
+@AT@c dedication along with this file, typically as a file
+@AT@c named <CC0-1.0.txt>. If not, it may be available at
+@AT@c <https://creativecommons.org/publicdomain/zero/1.0/>.
+@AT@c
 EOF
         case "${?}" in
         #(
@@ -2382,15 +2382,15 @@ EOF
           "${awk}" '
 BEGIN {
   print "\\input texinfo"
-  print "@setfilename foo"
-  print "@documentencoding UTF-8"
-  print "@settitle foo"
+  print "@AT@setfilename foo"
+  print "@AT@documentencoding UTF-8"
+  print "@AT@settitle foo"
 }
 {
   print $0
 }
 END {
-  print "@bye"
+  print "@AT@bye"
 }
 ' <"${path}.top.texi" >"${tmp1}"
           case "${?}" in
@@ -2492,15 +2492,15 @@ EOF
         "${awk}" '
 BEGIN {
   print "\\input texinfo"
-  print "@setfilename foo"
-  print "@documentencoding UTF-8"
-  print "@settitle foo"
+  print "@AT@setfilename foo"
+  print "@AT@documentencoding UTF-8"
+  print "@AT@settitle foo"
 }
 {
   print $0
 }
 END {
-  print "@bye"
+  print "@AT@bye"
 }
 ' <"${path}.texi" >"${tmp2}"
         case "${?}" in
@@ -2611,15 +2611,15 @@ EOF
           "${awk}" '
 BEGIN {
   print "\\input texinfo"
-  print "@setfilename foo"
-  print "@documentencoding UTF-8"
-  print "@settitle foo"
+  print "@AT@setfilename foo"
+  print "@AT@documentencoding UTF-8"
+  print "@AT@settitle foo"
 }
 {
   print $0
 }
 END {
-  print "@bye"
+  print "@AT@bye"
 }
 ' <"${path}.bot.texi" >"${tmp3}"
           case "${?}" in
