@@ -23,6 +23,9 @@ esac
 AC_ARG_VAR([AWK], [the preferred awk executable])
 AC_PROG_AWK
 
+AC_ARG_VAR([SED], [the preferred sed executable])
+AC_PROG_SED
+
 #
 # Make a version of @AWK@ that's safer to use as a troff macro argument.
 #
