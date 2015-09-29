@@ -404,6 +404,35 @@ EOF
             ;;
 
           #(
+            --help=CC0-1.0-file.txt|--help=*/CC0-1.0-file.txt)
+              cat <<EOF
+Special file: ${fB1}CC0-1.0-file.txt${fR1}
+
+The ${fB1}CC0-1.0-file.txt${fR1} special file contains a plain text message that
+states that the authors of the file have waived their rights to it by
+referencing the ${fB1}CC0-1.0.txt${fR1} special file. This can be inserted into a
+plain text file or a source code file as a comment.
+
+Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
+EOF
+              case "${?}" in
+              #(
+                '0')
+                  :
+                ;;
+              #(
+                *)
+                  cat >&2 <<EOF
+${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fd2}   1. a here-document
+${fr2}gatbps!${fd2} and write to: standard output
+EOF
+                  exit '1'
+                ;;
+              esac
+            ;;
+
+          #(
             --help=CC0-1.0.txt|--help=*/CC0-1.0.txt)
               cat <<EOF
 Special file: ${fB1}CC0-1.0.txt${fR1}
@@ -665,6 +694,7 @@ CC0-1.0-AM-COPYRIGHT.am
 CC0-1.0-appendix.texi
 CC0-1.0-commit.txt
 CC0-1.0-copying.texi
+CC0-1.0-file.txt
 CC0-1.0.txt
 DATE.ac
 mdot.texi
@@ -971,6 +1001,18 @@ command where the
 .nohy "\fB@AT@copying\fR"
 call is
 desired to appear.
+.TP
+.nohy "\fBCC0\-1.0\-file.txt\fR"
+.IP0
+The
+.nohy "\fBCC0\-1.0\-file.txt\fR"
+special file contains a plain text message that
+states that the authors of the file have waived their rights to it by
+referencing the
+.nohy "\fBCC0\-1.0.txt\fR"
+special file.
+This can be inserted into a
+plain text file or a source code file as a comment.
 .TP
 .nohy "\fBCC0\-1.0.txt\fR"
 .IP0
@@ -2004,6 +2046,36 @@ It may also be available at
 @AT@c named <CC0-1.0.txt>. If not, it may be available at
 @AT@c <https://creativecommons.org/publicdomain/zero/1.0/>.
 @AT@c
+EOF
+        case "${?}" in
+        #(
+          '0')
+            :
+          ;;
+        #(
+          *)
+            cat >&2 <<EOF
+${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
+${fy2}gatbps:${fd2}   1. a here-document
+${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
+${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+EOF
+            exit_status='1'
+            break
+          ;;
+        esac
+      ;;
+
+    #(
+      */CC0-1.0-file.txt)
+        cat >"${path}" <<'EOF'
+The authors of this file have waived all copyright and
+related or neighboring rights to the extent permitted by
+law as described by the CC0 1.0 Universal Public Domain
+Dedication. You should have received a copy of the full
+dedication along with this file, typically as a file
+named <CC0-1.0.txt>. If not, it may be available at
+<https://creativecommons.org/publicdomain/zero/1.0/>.
 EOF
         case "${?}" in
         #(
