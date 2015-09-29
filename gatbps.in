@@ -252,7 +252,7 @@ EOF
           case "${1}" in
 
           #(
-            '--help=CC0-1.0-AC-COPYRIGHT.ac'|--help=*/CC0-1.0-AC-COPYRIGHT.ac)
+            '--help=CC0-1.0-AC-COPYRIGHT.ac'|'--help='*'/CC0-1.0-AC-COPYRIGHT.ac')
               cat <<EOF
 Special file: ${fB1}CC0-1.0-AC-COPYRIGHT.ac${fR1}
 
@@ -283,7 +283,7 @@ EOF
             ;;
 
           #(
-            '--help=CC0-1.0-AM-COPYRIGHT.am'|--help=*/CC0-1.0-AM-COPYRIGHT.am)
+            '--help=CC0-1.0-AM-COPYRIGHT.am'|'--help='*'/CC0-1.0-AM-COPYRIGHT.am')
               cat <<EOF
 Special file: ${fB1}CC0-1.0-AM-COPYRIGHT.am${fR1}
 
@@ -314,7 +314,7 @@ EOF
             ;;
 
           #(
-            '--help=CC0-1.0-appendix.texi'|--help=*/CC0-1.0-appendix.texi)
+            '--help=CC0-1.0-appendix.texi'|'--help='*'/CC0-1.0-appendix.texi')
               cat <<EOF
 Special file: ${fB1}CC0-1.0-appendix.texi${fR1}
 
@@ -344,7 +344,7 @@ EOF
             ;;
 
           #(
-            '--help=CC0-1.0-commit.txt'|--help=*/CC0-1.0-commit.txt)
+            '--help=CC0-1.0-commit.txt'|'--help='*'/CC0-1.0-commit.txt')
               cat <<EOF
 Special file: ${fB1}CC0-1.0-commit.txt${fR1}
 
@@ -373,7 +373,7 @@ EOF
             ;;
 
           #(
-            '--help=CC0-1.0-copying.texi'|--help=*/CC0-1.0-copying.texi)
+            '--help=CC0-1.0-copying.texi'|'--help='*'/CC0-1.0-copying.texi')
               cat <<EOF
 Special file: ${fB1}CC0-1.0-copying.texi${fR1}
 
@@ -404,7 +404,7 @@ EOF
             ;;
 
           #(
-            '--help=CC0-1.0-file.txt'|--help=*/CC0-1.0-file.txt)
+            '--help=CC0-1.0-file.txt'|'--help='*'/CC0-1.0-file.txt')
               cat <<EOF
 Special file: ${fB1}CC0-1.0-file.txt${fR1}
 
@@ -433,7 +433,7 @@ EOF
             ;;
 
           #(
-            '--help=CC0-1.0.txt'|--help=*/CC0-1.0.txt)
+            '--help=CC0-1.0.txt'|'--help='*'/CC0-1.0.txt')
               cat <<EOF
 Special file: ${fB1}CC0-1.0.txt${fR1}
 
@@ -463,7 +463,7 @@ EOF
             ;;
 
           #(
-            '--help=DATE.ac'|--help=*/DATE.ac)
+            '--help=DATE.ac'|'--help='*'/DATE.ac')
               cat <<EOF
 Special file: ${fB1}DATE.ac${fR1}
 
@@ -487,7 +487,7 @@ EOF
             ;;
 
           #(
-            '--help=mdot.texi'|--help=*/mdot.texi)
+            '--help=mdot.texi'|'--help='*'/mdot.texi')
               cat <<EOF
 Special file: ${fB1}mdot.texi${fR1}
 
@@ -523,7 +523,7 @@ EOF
             ;;
 
           #(
-            '--help=msign.texi'|--help=*/msign.texi)
+            '--help=msign.texi'|'--help='*'/msign.texi')
               cat <<EOF
 Special file: ${fB1}msign.texi${fR1}
 
@@ -559,7 +559,7 @@ EOF
             ;;
 
           #(
-            '--help=sbs.texi'|--help=*/sbs.texi)
+            '--help=sbs.texi'|'--help='*'/sbs.texi')
               cat <<EOF
 Special file: ${fB1}sbs.texi${fR1}
 
@@ -597,7 +597,7 @@ EOF
             ;;
 
           #(
-            '--help=sps.texi'|--help=*/sps.texi)
+            '--help=sps.texi'|'--help='*'/sps.texi')
               cat <<EOF
 Special file: ${fB1}sps.texi${fR1}
 
