@@ -222,7 +222,7 @@ EOF
             ;;
           esac
 
-          exit 0
+          exit '0'
 
         ;;
 
@@ -681,7 +681,7 @@ EOF
 
           esac
 
-          exit 0
+          exit '0'
 
         ;;
 
@@ -718,7 +718,7 @@ EOF
             ;;
           esac
 
-          exit 0
+          exit '0'
 
         ;;
 
@@ -1268,7 +1268,7 @@ EOF
             ;;
           esac
 
-          exit 0
+          exit '0'
 
         ;;
 
@@ -1514,7 +1514,7 @@ EOF
             ;;
           esac
 
-          exit 0
+          exit '0'
 
         ;;
 
