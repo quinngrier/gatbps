@@ -4,6 +4,8 @@
 
 @settitle GATBPS
 
+@include CC0-1.0-copying.texi
+
 @ifnottex
 @node Top
 @top GATBPS
