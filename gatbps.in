@@ -1339,7 +1339,7 @@ EOF
         '--style=auto')
 
           shift
-          set 'x' --style-stderr=auto --style-stdout=auto "${@AT@}"
+          set 'x' '--style-stderr=auto' '--style-stdout=auto' "${@AT@}"
           continue
 
         ;;
