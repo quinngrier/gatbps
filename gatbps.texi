@@ -16,6 +16,8 @@
 
 @shortcontents
 
+@contents
+
 @ifnottex
 @node Top
 @top GATBPS
