@@ -26,6 +26,7 @@ AM_SUBST_NOTMAKE([AWK])
 
 AC_ARG_VAR([SED], [the preferred sed executable])
 AC_PROG_SED
+AM_SUBST_NOTMAKE([SED])
 
 #
 # Make a version of @AWK@ that's safer to use as a troff macro argument.
