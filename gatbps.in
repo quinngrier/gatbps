@@ -1327,7 +1327,7 @@ EOF
         ;;
 
       #(
-        --style|--style=always)
+        '--style'|'--style=always')
 
           shift
           set 'x' --style-stderr=always --style-stdout=always "${@AT@}"
