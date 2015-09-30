@@ -756,7 +756,7 @@ EOF
         ;;
 
       #(
-        --list=*)
+        '--list='*)
 
           cat >&2 <<EOF
 ${fr2}gatbps!${fd2} the ${fB2}--list${fR2} option must not have an argument
