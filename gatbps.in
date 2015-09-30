@@ -1336,7 +1336,7 @@ EOF
         ;;
 
       #(
-        --style=auto)
+        '--style=auto')
 
           shift
           set 'x' --style-stderr=auto --style-stdout=auto "${@AT@}"
