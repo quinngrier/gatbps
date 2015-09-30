@@ -496,6 +496,7 @@ ${fB1}@AT@U{22C5}${fR1} to insert a dot operator character. This can be used to 
 mathematical notation look more like TeX in the other output formats:
 
       @AT@documentencoding UTF-8
+      @AT@include mdot.texi
       @AT@tex
       \$x \\cdot y\$
       @AT@end tex
@@ -532,6 +533,7 @@ uses ${fB1}@AT@U{2212}${fR1} to insert a minus sign character. This can be used 
 mathematical notation look more like TeX in the other output formats:
 
       @AT@documentencoding UTF-8
+      @AT@include msign.texi
       @AT@tex
       \$x - y\$
       @AT@end tex
@@ -570,6 +572,7 @@ are used as left and right delimiters around ${fI1}M${fR1}. This can be used to 
 mathematical notation look more like TeX in the other output formats:
 
       @AT@documentencoding UTF-8
+      @AT@include sbs.texi
       @AT@tex
       \$x_{y + z_w}\$
       @AT@end tex
@@ -636,6 +639,7 @@ are used as left and right delimiters around ${fI1}M${fR1}. This can be used to 
 mathematical notation look more like TeX in the other output formats:
 
       @AT@documentencoding UTF-8
+      @AT@include sps.texi
       @AT@tex
       \$x^{y + z^w}\$
       @AT@end tex
