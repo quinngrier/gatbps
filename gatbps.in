@@ -718,7 +718,7 @@ EOF
         ;;
 
       #(
-        --list)
+        '--list')
 
           cat <<'EOF'
 CC0-1.0-AC-COPYRIGHT.ac
