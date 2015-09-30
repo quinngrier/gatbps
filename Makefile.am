@@ -1,5 +1,3 @@
-include $(srcdir)/CC0-1.0-AM-COPYRIGHT.am
-
 EXTRA_DIST =
 EXTRA_DIST += DATE
 EXTRA_DIST += DATE.sh
@@ -31,6 +29,8 @@ do_subst = ( sed \
   -e 's|[@]PACKAGE_STRING@|$(PACKAGE_STRING)|g' \
   -e 's|[@]PACKAGE_VERSION@|$(PACKAGE_VERSION)|g' \
   )
+
+include $(srcdir)/CC0-1.0-AM-COPYRIGHT.am
 
 ##
 ## The authors of this file have waived all copyright and
