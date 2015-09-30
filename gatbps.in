@@ -767,7 +767,7 @@ EOF
         ;;
 
       #(
-        --man)
+        '--man')
 
           cat <<'EOF'
 .de nohy
