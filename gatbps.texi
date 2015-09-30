@@ -41,7 +41,8 @@ and its name now stands for
 ``@b{G}ener@b{a}@b{t}e @b{B}asic @b{P}ackage @b{S}tuff''@.
 
 @include CC0-1.0-appendix.texi
-
+@iftex
+@ifnottex
 @c
 @c The authors of this file have waived all copyright and
 @c related or neighboring rights to the extent permitted by
@@ -51,4 +52,6 @@ and its name now stands for
 @c named <CC0-1.0.txt>. If not, it may be available at
 @c <https://creativecommons.org/publicdomain/zero/1.0/>.
 @c
+@end ifnottex
+@end iftex
 @bye
