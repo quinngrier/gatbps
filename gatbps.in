@@ -1500,7 +1500,7 @@ EOF
         ;;
 
       #(
-        --style-stderr|--style-stderr=always)
+        '--style-stderr'|'--style-stderr=always')
 
           fR2='[22m[24m'
           fB2='[24m[1m'
