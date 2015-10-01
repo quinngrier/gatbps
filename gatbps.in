@@ -1674,7 +1674,7 @@ EOF
         ;;
 
       #(
-        --version)
+        '--version')
 
           cat <<EOF
 ${fB1}gatbps${fR1} (GATBPS) @PACKAGE_VERSION@
