@@ -1518,7 +1518,7 @@ EOF
         ;;
 
       #(
-        --style-stderr=auto)
+        '--style-stderr=auto')
 
           case "${isatty2}" in
           #(
