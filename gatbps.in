@@ -1569,7 +1569,7 @@ EOF
         ;;
 
       #(
-        --style-stderr=*)
+        '--style-stderr='*)
 
           fR2=''
           fB2=''
