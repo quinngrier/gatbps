@@ -1020,6 +1020,7 @@ The text is the program's name,
 original package, version number,
 release date, and copyright information.
 .SH "PLAIN FILES"
+.SH "MATHEMATICAL NOTATION IN TEXINFO"
 .SH "SPECIAL FILES"
 .TP
 .nohy "\fBCC0\-1.0\-AC\-COPYRIGHT.ac\fR"

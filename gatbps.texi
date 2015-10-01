@@ -27,6 +27,7 @@ This manual is for GATBPS@.
 
 @menu
 * Introduction::
+* Mathematical Notation in Texinfo::
 * CC0::
 @end menu
 
@@ -43,6 +44,9 @@ system, and its name stood for ``@b{G}NU @b{A}uto@b{t}ools
 However, it quickly grew to provide other kinds of basic files,
 and its name now stands for
 ``@b{G}ener@b{a}@b{t}e @b{B}asic @b{P}ackage @b{S}tuff''@.
+
+@node Mathematical Notation in Texinfo
+@chapter Mathematical Notation in Texinfo
 
 @include CC0-1.0-appendix.texi
 @iftex
