@@ -1605,7 +1605,7 @@ EOF
         ;;
 
       #(
-        --style-stdout=auto)
+        '--style-stdout=auto')
 
           case "${isatty1}" in
           #(
