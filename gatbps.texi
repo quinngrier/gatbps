@@ -5,6 +5,7 @@
 @settitle GATBPS
 
 @include CC0-1.0-copying.texi
+@include mdot.texi
 
 @titlepage
 @title GATBPS
