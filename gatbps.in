@@ -1708,7 +1708,7 @@ EOF
         ;;
 
       #(
-        --version=*)
+        '--version='*)
 
           cat >&2 <<EOF
 ${fr2}gatbps!${fd2} the ${fB2}--version${fR2} option must not have an argument
