@@ -6,6 +6,7 @@
 
 @include CC0-1.0-copying.texi
 @include mdot.texi
+@include mdots.texi
 
 @titlepage
 @title GATBPS
