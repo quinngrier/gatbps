@@ -48,6 +48,23 @@ and its name now stands for
 @node Mathematical Notation in Texinfo
 @chapter Mathematical Notation in Texinfo
 
+GATBPS provides a collection of Texinfo
+macros that support an alternative approach
+to writing mathematical notation in Texinfo@.
+The main idea is that @TeX{} is the gold standard
+and the other output formats should strive to imitate it@.
+Accordingly, each mathematical expression can be written
+in both raw @TeX{} syntax and normal Texinfo syntax, like this:
+
+@example
+@@tex
+$x + y$
+@@end tex
+@@ifnottex
+@@i@{x@} + @@i@{y@}
+@@end ifnottex
+@end example
+
 @include CC0-1.0-appendix.texi
 @iftex
 @ifnottex

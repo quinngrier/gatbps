@@ -1021,6 +1021,23 @@ original package, version number,
 release date, and copyright information.
 .SH "PLAIN FILES"
 .SH "MATHEMATICAL NOTATION IN TEXINFO"
+.LP
+GATBPS provides a collection of Texinfo
+macros that support an alternative approach
+to writing mathematical notation in Texinfo.
+The main idea is that TeX is the gold standard
+and the other output formats should strive to imitate it.
+Accordingly, each mathematical expression can be written
+in both raw TeX syntax and normal Texinfo syntax, like this:
+.IP ""
+.nf
+@tex
+$x + y$
+@end tex
+@ifnottex
+@i{x} + @i{y}
+@end ifnottex
+.fi
 .SH "SPECIAL FILES"
 .TP
 .nohy "\fBCC0\-1.0\-AC\-COPYRIGHT.ac\fR"
