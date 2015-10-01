@@ -491,8 +491,8 @@ EOF
               cat <<EOF
 Special file: ${fB1}bdots.texi${fR1}
 
-The ${fB1}bdots.texi${fR1} special file defines the ${fB1}@bdots{}${fR1} Texinfo macro, which
-uses ${fB1}@U{2026}${fR1} to insert a horizontal ellipsis character. This can be
+The ${fB1}bdots.texi${fR1} special file defines the ${fB1}@AT@bdots{}${fR1} Texinfo macro, which
+uses ${fB1}@AT@U{2026}${fR1} to insert a horizontal ellipsis character. This can be
 used to make mathematical notation look more like TeX in the other
 output formats:
 
@@ -566,8 +566,8 @@ EOF
               cat <<EOF
 Special file: ${fB1}mdots.texi${fR1}
 
-The ${fB1}mdots.texi${fR1} special file defines the ${fB1}@mdots{}${fR1} Texinfo macro, which
-uses ${fB1}@U{22EF}${fR1} to insert a midline horizontal ellipsis character. This
+The ${fB1}mdots.texi${fR1} special file defines the ${fB1}@AT@mdots{}${fR1} Texinfo macro, which
+uses ${fB1}@AT@U{22EF}${fR1} to insert a midline horizontal ellipsis character. This
 can be used to make mathematical notation look more like TeX in the
 other output formats:
 
