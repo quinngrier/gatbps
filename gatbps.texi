@@ -67,6 +67,45 @@ $x + y$
 @@end ifnottex
 @end example
 
+@indentedblock
+@multitable @columnfractions 0.20 0.15 0.15 0.20
+@headitem
+Macro
+@tab
+Preview
+@tab
+Unicode
+@tab
+ASCII
+@item
+@t{@@mdot@{@}}
+@tab
+@tex
+$\cdot$
+@end tex
+@ifnottex
+@mdot{}
+@end ifnottex
+@tab
+U+22C5
+@tab
+@t{*}
+@item
+@t{@@mdots@{@}}
+@tab
+@tex
+$\cdots$
+@end tex
+@ifnottex
+@mdots{}
+@end ifnottex
+@tab
+U+22EF
+@tab
+@t{.@:.@:.@:}
+@end multitable
+@end indentedblock
+
 @include CC0-1.0-appendix.texi
 @iftex
 @ifnottex
