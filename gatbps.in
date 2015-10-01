@@ -1527,7 +1527,7 @@ EOF
             ;;
           #(
             *)
-              if test -t 2; then
+              if test '-t' '2'; then
                 isatty2='1'
               else
                 isatty2='0'
@@ -1614,7 +1614,7 @@ EOF
             ;;
           #(
             *)
-              if test -t 1; then
+              if test '-t' '1'; then
                 isatty1='1'
               else
                 isatty1='0'
