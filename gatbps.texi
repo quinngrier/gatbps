@@ -68,6 +68,14 @@ $x + y$
 @end example
 
 @indentedblock
+@ifnottex
+@ifset ASCII
+@set ExcludePreviewColumn
+@end ifset
+@end ifnottex
+@ifset ExcludePreviewColumn
+@end ifset
+@ifclear ExcludePreviewColumn
 @multitable @columnfractions 0.20 0.20 0.15 0.15 0.20
 @headitem @TeX{} @tab Texinfo @tab Unicode @tab ASCII @tab Preview
 @item @t{\cdot} @tab @t{@@mdot@{@}} @tab U+22C5 @tab @t{*}
@@ -87,6 +95,7 @@ $\cdots$
 @mdots{}
 @end ifnottex
 @end multitable
+@end ifclear
 @end indentedblock
 
 @include CC0-1.0-appendix.texi
