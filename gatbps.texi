@@ -65,6 +65,12 @@ $x + y$
 @@end ifnottex
 @end example
 
+@noindent
+The macros can then be used in the
+@t{@@ifnottex} section to imitate @TeX{}@.
+For example, the @t{@@mdot@{@}}
+macro imitates the @t{\cdot} control sequence@.
+
 @ifnottex
 @ifset ASCII
 @set ExcludeResultColumn

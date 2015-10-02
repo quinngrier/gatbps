@@ -1036,6 +1036,15 @@ $x + y$
 @i{x} + @i{y}
 @end ifnottex
 .fi
+.LP
+The macros can then be used in the
+.nohy "\fB@AT@ifnottex\fR"
+section to imitate TeX.
+For example, the
+.nohy "\fB@AT@mdot{}\fR"
+macro imitates the
+.nohy "\fB\ecdot\fR"
+control sequence.
 .SH "SPECIAL FILES"
 .TP
 .nohy "\fBCC0\-1.0\-AC\-COPYRIGHT.ac\fR"
