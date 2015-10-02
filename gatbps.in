@@ -861,7 +861,7 @@ EOF
 .TP
 .PD
 ..
-.de IP0
+.de IPE0
 .PD 0
 .IP ""
 .PD
@@ -878,14 +878,14 @@ gatbps \- generate basic files for software packages
 .SH "OPTIONS"
 .TP
 .nohy "\fB\-\-\fR"
-.IP0
+.IPE0
 The
 .nohy "\fB\-\-\fR"
 option disables option detection, causing all
 further program arguments to be interpreted as operands.
 .TP
 .nohy "\fB\-\-awk=\fIS\fR"
-.IP0
+.IPE0
 The preferred
 .nohy "\fBawk\fR"
 executable is
@@ -897,7 +897,7 @@ option changes it to
 .nohy "\fIS\fR."
 .TP
 .nohy "\fB\-\-help\fR[\fB=\fIS\fR]"
-.IP0
+.IPE0
 The
 .nohy "\fB\-\-help\fR"
 and
@@ -920,7 +920,7 @@ option were replaced by the operand
 .nohy "\fIS\fR."
 .TP
 .nohy "\fB\-\-list\fR"
-.IP0
+.IPE0
 The
 .nohy "\fB\-\-list\fR"
 option writes text to standard output
@@ -937,7 +937,7 @@ original program arguments except for the
 option.
 .TP
 .nohy "\fB\-\-man\fR"
-.IP0
+.IPE0
 The
 .nohy "\fB\-\-man\fR"
 option writes text to standard output
@@ -947,7 +947,7 @@ The text is the
 code for the program's manual page.
 .TP
 .nohy "\fB\-\-style\fR[\fB=\fIS\fR]"
-.IP0
+.IPE0
 Each
 .nohy "\fB\-\-style\fR"
 option is replaced by a
@@ -962,7 +962,7 @@ option and a
 option.
 .TP
 .nohy "\fB\-\-style\-stderr\fR[\fB=\fIS\fR]"
-.IP0
+.IPE0
 Each
 .nohy "\fB\-\-style\-stderr\fR"
 option is replaced by a
@@ -988,7 +988,7 @@ option with any other
 disables it.
 .TP
 .nohy "\fB\-\-style\-stdout\fR[\fB=\fIS\fR]"
-.IP0
+.IPE0
 Each
 .nohy "\fB\-\-style\-stdout\fR"
 option is replaced by a
@@ -1014,7 +1014,7 @@ option with any other
 disables it.
 .TP
 .nohy "\fB\-\-version\fR"
-.IP0
+.IPE0
 The
 .nohy "\fB\-\-version\fR"
 option writes text to standard output
@@ -1051,7 +1051,7 @@ control sequence.
 .SH "SPECIAL FILES"
 .TP
 .nohy "\fBCC0\-1.0\-AC\-COPYRIGHT.ac\fR"
-.IP0
+.IPE0
 The
 .nohy "\fBCC0\-1.0\-AC\-COPYRIGHT.ac\fR"
 special file calls the
@@ -1072,7 +1072,7 @@ macro where the
 call is desired to appear.
 .TP
 .nohy "\fBCC0\-1.0\-AM\-COPYRIGHT.am\fR"
-.IP0
+.IPE0
 The
 .nohy "\fBCC0\-1.0\-AM\-COPYRIGHT.am\fR"
 special file contains an Automake comment
@@ -1090,7 +1090,7 @@ directive where the comment is
 desired to appear.
 .TP
 .nohy "\fBCC0\-1.0\-appendix.texi\fR"
-.IP0
+.IPE0
 The
 .nohy "\fBCC0\-1.0\-appendix.texi\fR"
 special file is the same as the
@@ -1107,7 +1107,7 @@ so that it
 follows the usual node structure and can be referenced.
 .TP
 .nohy "\fBCC0\-1.0\-commit.txt\fR"
-.IP0
+.IPE0
 The
 .nohy "\fBCC0\-1.0\-commit.txt\fR"
 special file is a commit message template that
@@ -1120,7 +1120,7 @@ This can be used with Git's
 configuration variable, for example.
 .TP
 .nohy "\fBCC0\-1.0\-copying.texi\fR"
-.IP0
+.IPE0
 The
 .nohy "\fBCC0\-1.0\-copying.texi\fR"
 special file calls the
@@ -1142,7 +1142,7 @@ call is
 desired to appear.
 .TP
 .nohy "\fBCC0\-1.0\-file.txt\fR"
-.IP0
+.IPE0
 The
 .nohy "\fBCC0\-1.0\-file.txt\fR"
 special file contains a plain text message that
@@ -1154,7 +1154,7 @@ This can be inserted into a
 plain text file or a source code file as a comment.
 .TP
 .nohy "\fBCC0\-1.0.txt\fR"
-.IP0
+.IPE0
 The
 .nohy "\fBCC0\-1.0.txt\fR"
 special file is the plain text version of the CC0 1.0
@@ -1165,7 +1165,7 @@ This was originally downloaded from
 .nohy "<\fBhttps://\:creativecommons.org/\:publicdomain/\:zero/\:1.0/\:legalcode.txt\fR>."
 .TP
 .nohy "\fBbdots.texi\fR"
-.IP0
+.IPE0
 The
 .nohy "\fBbdots.texi\fR"
 special file defines the
@@ -1190,7 +1190,7 @@ $1, \eldots, n$
 .RE
 .TP
 .nohy "\fBmdot.texi\fR"
-.IP0
+.IPE0
 The
 .nohy "\fBmdot.texi\fR"
 special file defines the
@@ -1215,7 +1215,7 @@ $x \ecdot y$
 .RE
 .TP
 .nohy "\fBmdots.texi\fR"
-.IP0
+.IPE0
 The
 .nohy "\fBmdots.texi\fR"
 special file defines the
@@ -1240,7 +1240,7 @@ $1 + \ecdots + n$
 .RE
 .TP
 .nohy "\fBmsign.texi\fR"
-.IP0
+.IPE0
 The
 .nohy "\fBmsign.texi\fR"
 special file defines the
@@ -1265,7 +1265,7 @@ $x \- y$
 .RE
 .TP
 .nohy "\fBsbs.texi\fR"
-.IP0
+.IPE0
 The
 .nohy "\fBsbs.texi\fR"
 special file defines the
@@ -1296,7 +1296,7 @@ $x_{y + z_w}$
 .RE
 .TP
 .nohy "\fBshquote.sh\fR"
-.IP0
+.IPE0
 The
 .nohy "\fBshquote.sh\fR"
 special file is a portable shell script that formats its
@@ -1306,7 +1306,7 @@ Generate the file and try
 for more information.
 .TP
 .nohy "\fBsps.texi\fR"
-.IP0
+.IPE0
 The
 .nohy "\fBsps.texi\fR"
 special file defines the
@@ -1357,7 +1357,7 @@ succeeds or fails.
 is affected by the following environment variables:
 .TP
 .nohy "\fBAWK\fR"
-.IP0
+.IPE0
 If the
 .nohy "\fBAWK\fR"
 environment variable
@@ -1374,7 +1374,7 @@ Otherwise, the
 environment variable has no effect.
 .TP
 .nohy "\fBSTYLE\fR"
-.IP0
+.IPE0
 If the
 .nohy "\fBSTYLE\fR"
 environment variable
@@ -1396,7 +1396,7 @@ Otherwise, the
 environment variable has no effect.
 .TP
 .nohy "\fBSTYLE_STDERR\fR"
-.IP0
+.IPE0
 If the
 .nohy "\fBSTYLE_STDERR\fR"
 environment variable
@@ -1416,7 +1416,7 @@ Otherwise, the
 environment variable has no effect.
 .TP
 .nohy "\fBSTYLE_STDOUT\fR"
-.IP0
+.IPE0
 If the
 .nohy "\fBSTYLE_STDOUT\fR"
 environment variable
