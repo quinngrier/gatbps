@@ -863,7 +863,7 @@ EOF
 ..
 .de IPE0
 .PD 0
-.IP ""
+.IPE
 .PD
 ..
 .hy
