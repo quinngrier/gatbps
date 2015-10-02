@@ -68,9 +68,11 @@ $x + y$
 @end example
 
 @indentedblock
-@multitable @columnfractions 0.20 0.15 0.15 0.20
+@multitable @columnfractions 0.20 0.20 0.15 0.15 0.20
 @headitem
 Macro
+@tab
+@TeX{}
 @tab
 Preview
 @tab
@@ -79,6 +81,8 @@ Unicode
 ASCII
 @item
 @t{@@mdot@{@}}
+@tab
+@t{\cdot}
 @tab
 @tex
 $\cdot$
@@ -92,6 +96,8 @@ U+22C5
 @t{*}
 @item
 @t{@@mdots@{@}}
+@tab
+@t{\cdots}
 @tab
 @tex
 $\cdots$
