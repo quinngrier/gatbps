@@ -2664,6 +2664,7 @@ EOF
 @AT@c
 @AT@end ifnottex
 @AT@end iftex
+@AT@ifclear ASCII
 @AT@ifdocbook
 @AT@macro mdots{}
 @AT@inlineraw{docbook, &#x22EF;}
@@ -2691,6 +2692,36 @@ EOF
 @AT@inlineraw{xml, &#x22EF;}
 @AT@end macro
 @AT@end ifxml
+@AT@end ifclear
+@AT@ifset ASCII
+@AT@ifdocbook
+@AT@macro mdots{}
+@AT@inlineraw{docbook, &#x22EF;}
+@AT@end macro
+@AT@end ifdocbook
+@AT@ifhtml
+@AT@macro mdots{}
+@AT@inlineraw{html, &#x22EF;}
+@AT@end macro
+@AT@end ifhtml
+@AT@ifinfo
+@AT@ifnotplaintext
+@AT@macro mdots{}
+.@:.@:.@:
+@AT@end macro
+@AT@end ifnotplaintext
+@AT@end ifinfo
+@AT@ifplaintext
+@AT@macro mdots{}
+.@:.@:.@:
+@AT@end macro
+@AT@end ifplaintext
+@AT@ifxml
+@AT@macro mdots{}
+@AT@inlineraw{xml, &#x22EF;}
+@AT@end macro
+@AT@end ifxml
+@AT@end ifset
 @AT@iftex
 @AT@ifnottex
 @AT@c
