@@ -2561,9 +2561,33 @@ EOF
 @AT@c
 @AT@end ifnottex
 @AT@end iftex
+@AT@ifdocbook
 @AT@macro mdot{}
-@AT@U{22C5}
+@AT@inlineraw{docbook, &sdot;}
 @AT@end macro
+@AT@end ifdocbook
+@AT@ifhtml
+@AT@macro mdot{}
+@AT@inlineraw{html, &sdot;}
+@AT@end macro
+@AT@end ifhtml
+@AT@ifinfo
+@AT@ifnotplaintext
+@AT@macro mdot{}
+⋅
+@AT@end macro
+@AT@end ifnotplaintext
+@AT@end ifinfo
+@AT@ifplaintext
+@AT@macro mdot{}
+⋅
+@AT@end macro
+@AT@end ifplaintext
+@AT@ifxml
+@AT@macro mdot{}
+@AT@inlineraw{xml, &sdot;}
+@AT@end macro
+@AT@end ifxml
 @AT@iftex
 @AT@ifnottex
 @AT@c
