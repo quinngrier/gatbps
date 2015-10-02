@@ -1029,12 +1029,12 @@ The idea is to write each expression in both
 raw TeX and normal Texinfo syntax, like this:
 .IP ""
 .nf
-@tex
+@AT@tex
 $x + y$
-@end tex
-@ifnottex
-@i{x} + @i{y}
-@end ifnottex
+@AT@end tex
+@AT@ifnottex
+@AT@i{x} + @AT@i{y}
+@AT@end ifnottex
 .fi
 .LP
 The macros can then be used in the
