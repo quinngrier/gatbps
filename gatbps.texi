@@ -70,14 +70,7 @@ $x + y$
 @indentedblock
 @multitable @columnfractions 0.20 0.20 0.15 0.15 0.20
 @headitem @TeX{} @tab Texinfo @tab Unicode @tab ASCII @tab Preview
-@item
-@t{\cdot}
-@tab
-@t{@@mdot@{@}}
-@tab
-U+22C5
-@tab
-@t{*}
+@item @t{\cdot} @tab @t{@@mdot@{@}} @tab U+22C5 @tab @t{*}
 @tab
 @tex
 $\cdot$
@@ -85,14 +78,7 @@ $\cdot$
 @ifnottex
 @mdot{}
 @end ifnottex
-@item
-@t{\cdots}
-@tab
-@t{@@mdots@{@}}
-@tab
-U+22EF
-@tab
-@t{.@:.@:.@:}
+@item @t{\cdots} @tab @t{@@mdots@{@}} @tab U+22EF @tab @t{.@:.@:.@:}
 @tab
 @tex
 $\cdots$
