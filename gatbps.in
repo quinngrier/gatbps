@@ -89,14 +89,14 @@ while :; do
     '0')
       case "${have_operands}" in
       #(
+        'yes')
+          break
+        ;;
+      #(
         'no')
           detect_options='yes'
           set 'x' '--list'
           continue
-        ;;
-      #(
-        'yes')
-          break
         ;;
       esac
     ;;
