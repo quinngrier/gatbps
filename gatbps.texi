@@ -69,7 +69,7 @@ $x + y$
 
 @indentedblock
 @multitable @columnfractions 0.20 0.20 0.15 0.15 0.20
-@headitem @TeX{} @tab Macro @tab Unicode @tab ASCII @tab Preview
+@headitem @TeX{} @tab Texinfo @tab Unicode @tab ASCII @tab Preview
 @item
 @t{\cdot}
 @tab
