@@ -1040,7 +1040,7 @@ $x + y$
 @AT@end ifnottex
 .fi
 .LP
-The macros can then be used in the
+The macros are then used in the
 .nohy "\fB@AT@ifnottex\fR"
 section to imitate TeX.
 For example, the
