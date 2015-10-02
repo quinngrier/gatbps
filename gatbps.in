@@ -1039,6 +1039,14 @@ For example, the
 macro imitates the
 .nohy "\fB\ecdot\fR"
 control sequence.
+.IPE
+.TS
+tab(;);
+l l l l .
+TeX;Texinfo;Unicode;ASCII
+\ecdot;@AT@mdot{};U+22C5;*
+\ecdots;@AT@mdots{};U+22EF;...
+.TE
 .SH "SPECIAL FILES"
 .TP
 .nohy "\fBCC0\-1.0\-AC\-COPYRIGHT.ac\fR"
