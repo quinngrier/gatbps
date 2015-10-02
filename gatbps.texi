@@ -70,9 +70,9 @@ $x + y$
 @indentedblock
 @multitable @columnfractions 0.20 0.20 0.15 0.15 0.20
 @headitem
-Macro
-@tab
 @TeX{}
+@tab
+Macro
 @tab
 Unicode
 @tab
@@ -80,9 +80,9 @@ ASCII
 @tab
 Preview
 @item
-@t{@@mdot@{@}}
-@tab
 @t{\cdot}
+@tab
+@t{@@mdot@{@}}
 @tab
 U+22C5
 @tab
@@ -95,9 +95,9 @@ $\cdot$
 @mdot{}
 @end ifnottex
 @item
-@t{@@mdots@{@}}
-@tab
 @t{\cdots}
+@tab
+@t{@@mdots@{@}}
 @tab
 U+22EF
 @tab
