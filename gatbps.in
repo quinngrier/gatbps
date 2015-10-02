@@ -2593,12 +2593,12 @@ EOF
 @AT@ifset ASCII
 @AT@ifdocbook
 @AT@macro mdot{}
-@AT@inlineraw{docbook, &sdot;}
+*
 @AT@end macro
 @AT@end ifdocbook
 @AT@ifhtml
 @AT@macro mdot{}
-@AT@inlineraw{html, &sdot;}
+*
 @AT@end macro
 @AT@end ifhtml
 @AT@ifinfo
@@ -2615,7 +2615,7 @@ EOF
 @AT@end ifplaintext
 @AT@ifxml
 @AT@macro mdot{}
-@AT@inlineraw{xml, &sdot;}
+*
 @AT@end macro
 @AT@end ifxml
 @AT@end ifset
@@ -2696,12 +2696,12 @@ EOF
 @AT@ifset ASCII
 @AT@ifdocbook
 @AT@macro mdots{}
-@AT@inlineraw{docbook, &#x22EF;}
+.@:.@:.@:
 @AT@end macro
 @AT@end ifdocbook
 @AT@ifhtml
 @AT@macro mdots{}
-@AT@inlineraw{html, &#x22EF;}
+.@:.@:.@:
 @AT@end macro
 @AT@end ifhtml
 @AT@ifinfo
@@ -2718,7 +2718,7 @@ EOF
 @AT@end ifplaintext
 @AT@ifxml
 @AT@macro mdots{}
-@AT@inlineraw{xml, &#x22EF;}
+.@:.@:.@:
 @AT@end macro
 @AT@end ifxml
 @AT@end ifset
