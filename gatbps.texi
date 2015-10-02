@@ -69,19 +69,19 @@ $x + y$
 
 @ifnottex
 @ifset ASCII
-@set ExcludePreviewColumn
+@set ExcludeResultColumn
 @end ifset
 @end ifnottex
-@ifset ExcludePreviewColumn
+@ifset ExcludeResultColumn
 @multitable @columnfractions 0.30 0.20 0.15 0.15
 @headitem @TeX{} @tab Texinfo @tab Unicode @tab ASCII
 @item @t{\cdot} @tab @t{@@mdot@{@}} @tab U+22C5 @tab @t{*}
 @item @t{\cdots} @tab @t{@@mdots@{@}} @tab U+22EF @tab @t{.@:.@:.@:}
 @end multitable
 @end ifset
-@ifclear ExcludePreviewColumn
+@ifclear ExcludeResultColumn
 @multitable @columnfractions 0.30 0.20 0.15 0.15 0.10
-@headitem @TeX{} @tab Texinfo @tab Unicode @tab ASCII @tab Preview
+@headitem @TeX{} @tab Texinfo @tab Unicode @tab ASCII @tab Result
 @item @t{\cdot} @tab @t{@@mdot@{@}} @tab U+22C5 @tab @t{*}
 @tab
 @tex
