@@ -1178,7 +1178,7 @@ look more like TeX in the other output formats:
 @AT@documentencoding UTF\-8
 @AT@include bdots.texi
 @AT@tex
-$1, \\ldots, n$
+$1, \eldots, n$
 @AT@end tex
 @AT@ifnottex
 1, @AT@bdots{}, @AT@i{n}
@@ -1203,7 +1203,7 @@ look more like TeX in the other output formats:
 @AT@documentencoding UTF\-8
 @AT@include mdot.texi
 @AT@tex
-$x \\cdot y$
+$x \ecdot y$
 @AT@end tex
 @AT@ifnottex
 @AT@i{x} @AT@mdot{} @AT@i{y}
@@ -1228,7 +1228,7 @@ look more like TeX in the other output formats:
 @AT@documentencoding UTF\-8
 @AT@include mdots.texi
 @AT@tex
-$1 + \\cdots + n$
+$1 + \ecdots + n$
 @AT@end tex
 @AT@ifnottex
 1 + @AT@mdots{} + @AT@i{n}
