@@ -1768,7 +1768,7 @@ EOF
         ;;
 
       #(
-        --*|-?)
+        '--'*|'-'?)
 
           cat >&2 <<EOF
 ${fr2}gatbps!${fd2} unknown option name: ${fB2}${1}${fR2}
