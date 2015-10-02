@@ -853,6 +853,9 @@ EOF
 \\$1
 .hy
 ..
+.de IPE
+.IP ""
+..
 .de TP0
 .PD 0
 .TP
@@ -1173,7 +1176,7 @@ to insert a horizontal ellipsis character.
 This can be used to make mathematical notation
 look more like TeX in the other output formats:
 .RS
-.IP
+.IPE
 .nf
 @AT@documentencoding UTF\-8
 @AT@include bdots.texi
@@ -1198,7 +1201,7 @@ to insert a dot operator character.
 This can be used to make mathematical notation
 look more like TeX in the other output formats:
 .RS
-.IP
+.IPE
 .nf
 @AT@documentencoding UTF\-8
 @AT@include mdot.texi
@@ -1223,7 +1226,7 @@ to insert a midline horizontal ellipsis character.
 This can be used to make mathematical notation
 look more like TeX in the other output formats:
 .RS
-.IP
+.IPE
 .nf
 @AT@documentencoding UTF\-8
 @AT@include mdots.texi
@@ -1248,7 +1251,7 @@ to insert a minus sign character.
 This can be used to make mathematical notation
 look more like TeX in the other output formats:
 .RS
-.IP
+.IPE
 .nf
 @AT@documentencoding UTF\-8
 @AT@include msign.texi
@@ -1279,7 +1282,7 @@ where they are used as left and right delimiters around
 This can be used to make mathematical notation
 look more like TeX in the other output formats:
 .RS
-.IP
+.IPE
 .nf
 @AT@documentencoding UTF\-8
 @AT@include sbs.texi
@@ -1320,7 +1323,7 @@ where they are used as left and right delimiters around
 This can be used to make mathematical notation
 look more like TeX in the other output formats:
 .RS
-.IP
+.IPE
 .nf
 @AT@documentencoding UTF\-8
 @AT@include sps.texi
