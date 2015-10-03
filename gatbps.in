@@ -1063,12 +1063,11 @@ It can be generated with the
 .nohy "\fB\-\-walk\fR"
 option to generate the entire collection at once.
 .LP
-The macros insert UTF-8 characters in
-the Info and plain text output formats
-and character references in the Docbook,
-HTML, and XML output formats for special
-glyphs by default, but they can be configured
-to insert ASCII approximations by setting the
+The macros insert special glyphs as literal
+UTF-8 characters in Info and plain text and
+as character references in Docbook, HTML, and
+XML by default, but they can be configured to
+insert ASCII approximations by setting the
 .nohy "\fBASCII\fR"
 flag before their inclusion.
 For example, the
