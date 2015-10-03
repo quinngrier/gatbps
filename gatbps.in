@@ -934,7 +934,7 @@ The
 option writes text to standard output
 and causes all further program arguments to be ignored.
 The text is the
-.nohy "\fBtroff \-man\fR"
+.nohy "\fBtbl | troff \-man\fR"
 code for the program's manual page.
 .TP
 .nohy "\fB\-\-style\fR[\fB=\fIS\fR]"
