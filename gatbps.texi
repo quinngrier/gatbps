@@ -71,6 +71,28 @@ The macros are then used in the
 For example, the @t{@@mdot@{@}}
 macro imitates the @t{\cdot} control sequence@.
 
+The macros insert UTF-8 characters in
+the Info and plain text output formats
+and character references in the Docbook,
+HTML, and XML output formats for special
+glyphs by default, but they can be configured
+to insert ASCII approximations by setting the
+@t{ASCII}
+flag with
+@t{@@set ASCII}
+before including their definitions@.
+For example, the
+@t{@@mdot@{@}}
+macro inserts a dot operator character (U+22C5)
+in the Info and plain text output formats and an
+@t{&sdot;}
+character reference in the Docbook, HTML,
+and XML output formats by default, but it
+inserts an asterisk character (U+002A) in
+all output formats if the
+@t{ASCII}
+flag is set@.
+
 @ifnottex
 @ifset ASCII
 @set ExcludeResultColumn
