@@ -74,6 +74,10 @@ For example, the
 macro imitates the
 @t{\cdot}
 control sequence@.
+As recommended by the Texinfo manual, the
+macro names are carefully chosen to avoid
+collisions with Texinfo command names and
+@TeX{} control sequence names@.
 
 Each macro
 @i{M}
