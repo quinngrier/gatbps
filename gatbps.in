@@ -1080,6 +1080,17 @@ inserts an asterisk character (U+002A) in
 all output formats if the
 .nohy "\fBASCII\fR"
 flag is set.
+.LP
+The following table lists the macros that have
+no parameters, which insert individual glyphs.
+Along with each macro is its corresponding TeX
+syntax, the number of the Unicode character that it
+inserts by default (either literally in the Info and
+plain text output formats or as a character reference
+in the Docbook, HTML, and XML output formats), and the
+ASCII approximation that it inserts if the
+.nohy "\fBASCII\fR"
+flag is set.
 .IPE
 .TS
 tab(;);
