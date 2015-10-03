@@ -103,7 +103,7 @@ to insert ASCII approximations by setting the
 @t{ASCII}
 flag with
 @t{@@set ASCII}
-before including their definitions@.
+before inclusion@.
 For example, the
 @t{@@mdot@{@}}
 macro inserts a dot operator character (U+22C5)
