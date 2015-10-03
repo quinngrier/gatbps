@@ -75,6 +75,25 @@ macro imitates the
 @t{\cdot}
 control sequence@.
 
+Each macro
+@i{M}
+is defined by the
+@i{M}@t{.texi}
+special file@.
+For example, the
+@t{@@mdot@{@}}
+macro is defined by the
+@t{mdot.texi}
+special file@.
+The
+@t{math.texi}
+special file is also provided, which uses
+@t{@@include}
+commands to include the entire collection@.
+It can be generated with the
+@t{--walk}
+option to generate the entire collection at once@.
+
 The macros insert UTF-8 characters in
 the Info and plain text output formats
 and character references in the Docbook,

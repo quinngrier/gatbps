@@ -1040,6 +1040,25 @@ macro imitates the
 .nohy "\fB\ecdot\fR"
 control sequence.
 .LP
+Each macro
+.nohy "\fIM\fR"
+is defined by the
+.nohy "\fIM\fB.texi\fR"
+special file.
+For example, the
+.nohy "\fB@AT@mdot{}\fR"
+macro is defined by the
+.nohy "\fBmdot.texi\fR"
+special file.
+The
+.nohy "\fBmath.texi\fR"
+special file is also provided, which uses
+.nohy "\fB@AT@include\fR"
+commands to include the entire collection.
+It can be generated with the
+.nohy "\fB\-\-walk\fR"
+option to generate the entire collection at once.
+.LP
 The macros insert UTF-8 characters in
 the Info and plain text output formats
 and character references in the Docbook,
