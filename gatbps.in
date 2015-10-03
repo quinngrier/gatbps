@@ -1084,7 +1084,7 @@ flag is set.
 .TS
 tab(;);
 l l l l .
-TeX;Texinfo;Unicode;ASCII
+TeX;Macro;Unicode;ASCII
 \ecdot;@AT@mdot{};U+22C5;*
 \ecdots;@AT@mdots{};U+22EF;...
 .TE
