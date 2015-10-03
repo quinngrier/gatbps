@@ -1076,10 +1076,9 @@ macro inserts a literal dot
 operator character (U+22C5)
 in Info and plain text and an
 .nohy "\fB&sdot;\fR"
-character reference in the Docbook, HTML,
-and XML output formats by default, but it
-inserts an asterisk character (U+002A) in
-all output formats if the
+character reference in Docbook, HTML, and
+XML by default, but it inserts an asterisk
+character (U+002A) in all output formats if the
 .nohy "\fBASCII\fR"
 flag is set.
 .LP
