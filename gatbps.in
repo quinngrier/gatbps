@@ -1054,7 +1054,7 @@ The
 .nohy "\fBmath.texi\fR"
 special file is also provided, which uses
 .nohy "\fB@AT@include\fR"
-commands to include the entire collection.
+commands to include the entire collection of macros.
 It can be generated with the
 .nohy "\fB\-\-walk\fR"
 option to generate the entire collection at once.

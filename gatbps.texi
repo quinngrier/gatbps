@@ -89,7 +89,7 @@ The
 @t{math.texi}
 special file is also provided, which uses
 @t{@@include}
-commands to include the entire collection@.
+commands to include the entire collection of macros@.
 It can be generated with the
 @t{--walk}
 option to generate the entire collection at once@.
