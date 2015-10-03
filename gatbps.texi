@@ -133,17 +133,17 @@ flag set, then the glyphs are also shown@.
 
 @ifnottex
 @ifset ASCII
-@set ExcludeGlyphColumn
+@set HideGlyphs
 @end ifset
 @end ifnottex
-@ifset ExcludeGlyphColumn
+@ifset HideGlyphs
 @multitable {@t{\cdots}} {@t{@@mdots@{@}}} {Unicode} {ASCII}
 @headitem @TeX{} @tab Macro @tab Unicode @tab ASCII
 @item @t{\cdot} @tab @t{@@mdot@{@}} @tab U+22C5 @tab @t{*}
 @item @t{\cdots} @tab @t{@@mdots@{@}} @tab U+22EF @tab @t{.@:.@:.@:}
 @end multitable
 @end ifset
-@ifclear ExcludeGlyphColumn
+@ifclear HideGlyphs
 @multitable {@t{\cdots}} {@t{@@mdots@{@}}} {Unicode} {ASCII} {Glyph}
 @headitem @TeX{} @tab Macro @tab Unicode @tab ASCII @tab Glyph
 @item @t{\cdot} @tab @t{@@mdot@{@}} @tab U+22C5 @tab @t{*}
