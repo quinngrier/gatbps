@@ -131,6 +131,7 @@ or any other output format without the
 @t{ASCII}
 flag set, then the glyphs are also shown@.
 
+@indentedblock
 @ifnottex
 @ifset ASCII
 @set HideGlyphs
@@ -164,6 +165,7 @@ $\cdots$
 @end ifnottex
 @end multitable
 @end ifclear
+@end indentedblock
 
 @include CC0-1.0-appendix.texi
 @iftex
