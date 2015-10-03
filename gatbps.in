@@ -1072,8 +1072,9 @@ insert ASCII approximations by setting the
 flag before their inclusion.
 For example, the
 .nohy "\fB@AT@mdot{}\fR"
-macro inserts a dot operator character (U+22C5)
-in the Info and plain text output formats and an
+macro inserts a literal dot
+operator character (U+22C5)
+in Info and plain text and an
 .nohy "\fB&sdot;\fR"
 character reference in the Docbook, HTML,
 and XML output formats by default, but it
