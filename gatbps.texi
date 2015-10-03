@@ -67,9 +67,13 @@ $x + y$
 
 @noindent
 The macros are then used in the
-@t{@@ifnottex} section to imitate @TeX{}@.
-For example, the @t{@@mdot@{@}}
-macro imitates the @t{\cdot} control sequence@.
+@t{@@ifnottex}
+section to imitate @TeX{}@.
+For example, the
+@t{@@mdot@{@}}
+macro imitates the
+@t{\cdot}
+control sequence@.
 
 The macros insert UTF-8 characters in
 the Info and plain text output formats
