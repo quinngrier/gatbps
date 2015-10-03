@@ -77,14 +77,14 @@ macro imitates the @t{\cdot} control sequence@.
 @end ifset
 @end ifnottex
 @ifset ExcludeResultColumn
-@multitable @columnfractions 0.30 0.20 0.15 0.15
+@multitable {@t{\cdots}} {@t{@@mdots@{@}}} {Unicode} {ASCII}
 @headitem @TeX{} @tab Texinfo @tab Unicode @tab ASCII
 @item @t{\cdot} @tab @t{@@mdot@{@}} @tab U+22C5 @tab @t{*}
 @item @t{\cdots} @tab @t{@@mdots@{@}} @tab U+22EF @tab @t{.@:.@:.@:}
 @end multitable
 @end ifset
 @ifclear ExcludeResultColumn
-@multitable @columnfractions 0.30 0.20 0.15 0.15 0.10
+@multitable {@t{\cdots}} {@t{@@mdots@{@}}} {Unicode} {ASCII} {Result}
 @headitem @TeX{} @tab Texinfo @tab Unicode @tab ASCII @tab Result
 @item @t{\cdot} @tab @t{@@mdot@{@}} @tab U+22C5 @tab @t{*}
 @tab
