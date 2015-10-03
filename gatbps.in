@@ -1021,7 +1021,7 @@ macros that support an alternative approach
 to writing mathematical notation in Texinfo.
 The idea is to write each expression in both
 raw TeX and normal Texinfo syntax, like this:
-.IP ""
+.IPE
 .nf
 @AT@tex
 $x + y$
