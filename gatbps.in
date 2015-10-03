@@ -1070,9 +1070,7 @@ HTML, and XML output formats for special
 glyphs by default, but they can be configured
 to insert ASCII approximations by setting the
 .nohy "\fBASCII\fR"
-flag with
-.nohy "\fB@AT@set ASCII\fR"
-before inclusion.
+flag before their inclusion.
 For example, the
 .nohy "\fB@AT@mdot{}\fR"
 macro inserts a dot operator character (U+22C5)

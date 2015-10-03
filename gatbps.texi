@@ -105,9 +105,7 @@ HTML, and XML output formats for special
 glyphs by default, but they can be configured
 to insert ASCII approximations by setting the
 @t{ASCII}
-flag with
-@t{@@set ASCII}
-before inclusion@.
+flag before their inclusion@.
 For example, the
 @t{@@mdot@{@}}
 macro inserts a dot operator character (U+22C5)
