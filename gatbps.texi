@@ -99,19 +99,19 @@ flag is set@.
 
 @ifnottex
 @ifset ASCII
-@set ExcludeResultColumn
+@set ExcludeGlyphColumn
 @end ifset
 @end ifnottex
-@ifset ExcludeResultColumn
+@ifset ExcludeGlyphColumn
 @multitable {@t{\cdots}} {@t{@@mdots@{@}}} {Unicode} {ASCII}
 @headitem @TeX{} @tab Texinfo @tab Unicode @tab ASCII
 @item @t{\cdot} @tab @t{@@mdot@{@}} @tab U+22C5 @tab @t{*}
 @item @t{\cdots} @tab @t{@@mdots@{@}} @tab U+22EF @tab @t{.@:.@:.@:}
 @end multitable
 @end ifset
-@ifclear ExcludeResultColumn
-@multitable {@t{\cdots}} {@t{@@mdots@{@}}} {Unicode} {ASCII} {Result}
-@headitem @TeX{} @tab Texinfo @tab Unicode @tab ASCII @tab Result
+@ifclear ExcludeGlyphColumn
+@multitable {@t{\cdots}} {@t{@@mdots@{@}}} {Unicode} {ASCII} {Glyph}
+@headitem @TeX{} @tab Texinfo @tab Unicode @tab ASCII @tab Glyph
 @item @t{\cdot} @tab @t{@@mdot@{@}} @tab U+22C5 @tab @t{*}
 @tab
 @tex
