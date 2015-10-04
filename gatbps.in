@@ -2626,6 +2626,8 @@ EOF
 @AT@c
 @AT@end ifnottex
 @AT@end iftex
+@AT@ifclear mdottexi
+@AT@set mdottexi
 @AT@ifclear ASCII
 @AT@ifdocbook
 @AT@macro mdot{}
@@ -2684,6 +2686,7 @@ EOF
 @AT@end macro
 @AT@end ifxml
 @AT@end ifset
+@AT@end ifclear
 @AT@iftex
 @AT@ifnottex
 @AT@c
