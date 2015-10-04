@@ -135,7 +135,8 @@ flag is set at its point of inclusion@.
 If this manual is output as @TeX{}
 or any other format without the
 @t{ASCII}
-flag set, then the symbols are also shown@.
+flag set, then the table also
+shows the symbol of each macro@.
 
 @indentedblock
 @ifnottex
