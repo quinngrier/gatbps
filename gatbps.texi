@@ -122,10 +122,8 @@ The following table lists the macros that have
 no parameters, which insert individual glyphs@.
 Along with each macro is its corresponding @TeX{}
 syntax, the Unicode character that it inserts
-by default (as a UTF-8 character in Info and
-plain text and as a character reference in
-Docbook, HTML, and XML), and the ASCII
-approximation that it inserts if the
+by default, and the ASCII approximation that
+it inserts if the
 @t{ASCII}
 flag is set@.
 If this manual is typeset as @TeX{}
