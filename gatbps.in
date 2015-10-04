@@ -1096,7 +1096,7 @@ syntax, the Unicode character that it inserts
 by default, and the ASCII approximation that
 it inserts if the
 .nohy "\fBASCII\fR"
-flag is set.
+flag is set at its point of inclusion.
 .IPE
 .TS
 tab(;);

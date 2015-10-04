@@ -131,7 +131,7 @@ syntax, the Unicode character that it inserts
 by default, and the ASCII approximation that
 it inserts if the
 @t{ASCII}
-flag is set@.
+flag is set at its point of inclusion@.
 If this manual is typeset as @TeX{}
 or any other output format without the
 @t{ASCII}
