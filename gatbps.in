@@ -1072,10 +1072,10 @@ option to generate the entire collection at once.
 The macros insert special symbols as
 UTF-8 characters in Info and plain text and
 as character references in Docbook, HTML, and
-XML by default, but they can be configured to
-insert ASCII approximations by setting the
+XML by default, or as ASCII approximations in
+all output formats if the
 .nohy "\fBASCII\fR"
-flag before their inclusion.
+flag is set at their points of inclusion.
 For example, the
 .nohy "\fB@AT@mdot{}\fR"
 macro inserts a UTF-8 dot
