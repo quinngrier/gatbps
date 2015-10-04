@@ -2579,9 +2579,67 @@ EOF
 @AT@c
 @AT@end ifnottex
 @AT@end iftex
+@AT@ifclear bdotstexi
+@AT@set bdotstexi
+@AT@ifclear ASCII
+@AT@ifdocbook
 @AT@macro bdots{}
-@AT@U{2026}
+@AT@inlineraw{docbook, &hellip;}
 @AT@end macro
+@AT@end ifdocbook
+@AT@ifhtml
+@AT@macro bdots{}
+@AT@inlineraw{html, &hellip;}
+@AT@end macro
+@AT@end ifhtml
+@AT@ifinfo
+@AT@ifnotplaintext
+@AT@macro bdots{}
+…
+@AT@end macro
+@AT@end ifnotplaintext
+@AT@end ifinfo
+@AT@ifplaintext
+@AT@macro bdots{}
+…
+@AT@end macro
+@AT@end ifplaintext
+@AT@ifxml
+@AT@macro bdots{}
+@AT@inlineraw{xml, &hellip;}
+@AT@end macro
+@AT@end ifxml
+@AT@end ifclear
+@AT@ifset ASCII
+@AT@ifdocbook
+@AT@macro bdots{}
+.@:.@:.@:
+@AT@end macro
+@AT@end ifdocbook
+@AT@ifhtml
+@AT@macro bdots{}
+.@:.@:.@:
+@AT@end macro
+@AT@end ifhtml
+@AT@ifinfo
+@AT@ifnotplaintext
+@AT@macro bdots{}
+.@:.@:.@:
+@AT@end macro
+@AT@end ifnotplaintext
+@AT@end ifinfo
+@AT@ifplaintext
+@AT@macro bdots{}
+.@:.@:.@:
+@AT@end macro
+@AT@end ifplaintext
+@AT@ifxml
+@AT@macro bdots{}
+.@:.@:.@:
+@AT@end macro
+@AT@end ifxml
+@AT@end ifset
+@AT@end ifclear
 @AT@iftex
 @AT@ifnottex
 @AT@c
