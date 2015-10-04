@@ -1890,7 +1890,7 @@ EOF
 
   case "${1}" in
   #(
-    */)
+    *'/')
       cat >&2 <<EOF
 ${fy2}gatbps:${fd2} each operand must not end with a slash
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
