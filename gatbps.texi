@@ -133,7 +133,7 @@ it inserts if the
 @t{ASCII}
 flag is set at its point of inclusion@.
 If this manual is output as @TeX{}
-or any other output format without the
+or any other format without the
 @t{ASCII}
 flag set, then the symbols are also shown@.
 
