@@ -132,7 +132,7 @@ by default, and the ASCII approximation that
 it inserts if the
 @t{ASCII}
 flag is set at its point of inclusion@.
-If this manual is typeset as @TeX{}
+If this manual is output as @TeX{}
 or any other output format without the
 @t{ASCII}
 flag set, then the symbols are also shown@.
