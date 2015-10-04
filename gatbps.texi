@@ -98,7 +98,7 @@ It can be generated with the
 @t{--walk}
 option to generate the entire collection at once@.
 
-The macros insert special glyphs as
+The macros insert special symbols as
 UTF-8 characters in Info and plain text and
 as character references in Docbook, HTML, and
 XML by default, but they can be configured to
@@ -119,7 +119,7 @@ inserts an ASCII asterisk character
 flag is set@.
 
 The following table lists the macros that have
-no parameters, which insert individual glyphs@.
+no parameters, which insert individual symbols@.
 Along with each macro is its corresponding @TeX{}
 syntax, the Unicode character that it inserts
 by default, and the ASCII approximation that
@@ -129,24 +129,24 @@ flag is set@.
 If this manual is typeset as @TeX{}
 or any other output format without the
 @t{ASCII}
-flag set, then the glyphs are also shown@.
+flag set, then the symbols are also shown@.
 
 @indentedblock
 @ifnottex
 @ifset ASCII
-@set HideGlyphs
+@set HideSymbols
 @end ifset
 @end ifnottex
-@ifset HideGlyphs
+@ifset HideSymbols
 @multitable {@t{\cdots}} {@t{@@mdots@{@}}} {Unicode} {ASCII}
 @headitem @TeX{} @tab Macro @tab Unicode @tab ASCII
 @item @t{\cdot} @tab @t{@@mdot@{@}} @tab U+22C5 @tab @t{*}
 @item @t{\cdots} @tab @t{@@mdots@{@}} @tab U+22EF @tab @t{.@:.@:.@:}
 @end multitable
 @end ifset
-@ifclear HideGlyphs
-@multitable {@t{\cdots}} {@t{@@mdots@{@}}} {Unicode} {ASCII} {Glyph}
-@headitem @TeX{} @tab Macro @tab Unicode @tab ASCII @tab Glyph
+@ifclear HideSymbols
+@multitable {@t{\cdots}} {@t{@@mdots@{@}}} {Unicode} {ASCII} {Symbol}
+@headitem @TeX{} @tab Macro @tab Unicode @tab ASCII @tab Symbol
 @item @t{\cdot} @tab @t{@@mdot@{@}} @tab U+22C5 @tab @t{*}
 @tab
 @tex

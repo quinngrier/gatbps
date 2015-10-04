@@ -1063,7 +1063,7 @@ It can be generated with the
 .nohy "\fB\-\-walk\fR"
 option to generate the entire collection at once.
 .LP
-The macros insert special glyphs as
+The macros insert special symbols as
 UTF-8 characters in Info and plain text and
 as character references in Docbook, HTML, and
 XML by default, but they can be configured to
@@ -1084,7 +1084,7 @@ inserts an ASCII asterisk character
 flag is set.
 .LP
 The following table lists the macros that have
-no parameters, which insert individual glyphs.
+no parameters, which insert individual symbols.
 Along with each macro is its corresponding TeX
 syntax, the Unicode character that it inserts
 by default, and the ASCII approximation that
