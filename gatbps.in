@@ -1067,7 +1067,7 @@ special file is also provided, which uses
 commands to include the entire collection of macros.
 It can be generated with the
 .nohy "\fB\-\-walk\fR"
-option to generate the entire collection at once.
+option to also generate the entire collection at once.
 .LP
 The macros insert special symbols as
 UTF-8 characters in Info and plain text and
