@@ -1082,10 +1082,9 @@ macro inserts a UTF-8 dot
 operator character (U+22C5)
 in Info and plain text and an
 .nohy "\fB&sdot;\fR"
-character reference in Docbook,
-HTML, and XML by default, or it
-inserts an ASCII asterisk character
-(U+002A) in all output formats if the
+character reference in Docbook, HTML, and
+XML by default, or it inserts an ASCII asterisk
+character (U+002A) in all output formats if the
 .nohy "\fBASCII\fR"
 flag is set at its point of inclusion.
 The character references use entity names
