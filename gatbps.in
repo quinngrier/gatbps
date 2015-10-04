@@ -1057,7 +1057,9 @@ For example, the
 .nohy "\fB@AT@mdot{}\fR"
 macro is defined by the
 .nohy "\fBmdot.texi\fR"
-special file.
+special file, which also uses the
+.nohy "\fBmdottexi\fR"
+flag as an include guard.
 The
 .nohy "\fBmath.texi\fR"
 special file is also provided, which uses

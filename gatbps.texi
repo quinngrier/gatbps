@@ -92,7 +92,9 @@ For example, the
 @t{@@mdot@{@}}
 macro is defined by the
 @t{mdot.texi}
-special file@.
+special file, which also uses the
+@t{mdottexi}
+flag as an include guard@.
 The
 @t{math.texi}
 special file is also provided, which uses
