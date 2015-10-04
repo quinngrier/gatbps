@@ -1063,7 +1063,7 @@ It can be generated with the
 .nohy "\fB\-\-walk\fR"
 option to generate the entire collection at once.
 .LP
-The macros insert special glyphs as literal
+The macros insert special glyphs as
 UTF-8 characters in Info and plain text and
 as character references in Docbook, HTML, and
 XML by default, but they can be configured to
