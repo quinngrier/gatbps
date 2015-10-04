@@ -123,6 +123,8 @@ inserts an ASCII asterisk character
 (U+002A) in all output formats if the
 @t{ASCII}
 flag is set at its point of inclusion@.
+The character references use entity names
+if they exist or hexadecimal numbers if not@.
 
 The following table lists the macros that have
 no parameters, which insert individual symbols@.
