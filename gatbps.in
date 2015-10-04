@@ -1105,6 +1105,7 @@ l l l l .
 TeX;Macro;Unicode;ASCII
 \ecdot;@AT@mdot{};U+22C5;*
 \ecdots;@AT@mdots{};U+22EF;...
+\eldots;@AT@bdots{};U+2026;...
 .TE
 .SH "SPECIAL FILES"
 .TP

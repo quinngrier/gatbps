@@ -151,6 +151,7 @@ shows the symbol of each macro@.
 @headitem @TeX{} @tab Macro @tab Unicode @tab ASCII
 @item @t{\cdot} @tab @t{@@mdot@{@}} @tab U+22C5 @tab @t{*}
 @item @t{\cdots} @tab @t{@@mdots@{@}} @tab U+22EF @tab @t{.@:.@:.@:}
+@item @t{\ldots} @tab @t{@@bdots@{@}} @tab U+2026 @tab @t{.@:.@:.@:}
 @end multitable
 @end ifset
 @ifclear HideSymbols
@@ -171,6 +172,14 @@ $\cdots$
 @end tex
 @ifnottex
 @mdots{}
+@end ifnottex
+@item @t{\ldots} @tab @t{@@bdots@{@}} @tab U+2026 @tab @t{.@:.@:.@:}
+@tab
+@tex
+$\ldots$
+@end tex
+@ifnottex
+@bdots{}
 @end ifnottex
 @end multitable
 @end ifclear
