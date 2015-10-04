@@ -122,7 +122,7 @@ HTML, and XML by default, but it
 inserts an ASCII asterisk character
 (U+002A) in all output formats if the
 @t{ASCII}
-flag is set@.
+flag is set at its point of inclusion@.
 
 The following table lists the macros that have
 no parameters, which insert individual symbols@.
