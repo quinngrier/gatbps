@@ -83,7 +83,11 @@ Each macro
 @i{M}
 is defined by the
 @i{M}@t{.texi}
-special file@.
+special file, which also uses the
+@i{M}@t{texi}
+flag as an include guard so that including the
+file multiple times is equivalent to including
+it only the first time@.
 For example, the
 @t{@@mdot@{@}}
 macro is defined by the

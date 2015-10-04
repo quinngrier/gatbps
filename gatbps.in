@@ -1048,7 +1048,11 @@ Each macro
 .nohy "\fIM\fR"
 is defined by the
 .nohy "\fIM\fB.texi\fR"
-special file.
+special file, which also uses the
+.nohy "\fIM\fBtexi\fR"
+flag as an include guard so that including the
+file multiple times is equivalent to including
+it only the first time.
 For example, the
 .nohy "\fB@AT@mdot{}\fR"
 macro is defined by the
