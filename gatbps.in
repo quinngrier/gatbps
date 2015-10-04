@@ -1072,7 +1072,7 @@ insert ASCII approximations by setting the
 flag before their inclusion.
 For example, the
 .nohy "\fB@AT@mdot{}\fR"
-macro inserts a literal dot
+macro inserts a UTF-8 dot
 operator character (U+22C5)
 in Info and plain text and an
 .nohy "\fB&sdot;\fR"
