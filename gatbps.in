@@ -1100,12 +1100,12 @@ it inserts if the
 flag is set at its point of inclusion.
 .IPE
 .TS
-tab(;);
+tab( );
 l l l l .
-TeX;Macro;Unicode;ASCII
-\ecdot;@AT@mdot{};U+22C5;*
-\ecdots;@AT@mdots{};U+22EF;...
-\eldots;@AT@bdots{};U+2026;...
+TeX Macro Unicode ASCII
+\ecdot @AT@mdot{} U+22C5 *
+\ecdots @AT@mdots{} U+22EF ...
+\eldots @AT@bdots{} U+2026 ...
 .TE
 .SH "SPECIAL FILES"
 .TP
