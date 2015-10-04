@@ -75,7 +75,7 @@ macro imitates the
 @t{\cdot}
 control sequence@.
 As recommended by the Texinfo manual,
-the macro names are carefully chosen
+the macro names are chosen
 to avoid collisions with the names of
 Texinfo commands and @TeX{} control sequences@.
 
