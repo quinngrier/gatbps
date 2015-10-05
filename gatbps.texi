@@ -84,7 +84,7 @@ as recommended by the Texinfo manual@.
 Each macro
 @i{M}
 is defined by the
-@i{M}@t{.texi}
+@i{M}@t{.@:texi}
 special file, which also uses the
 @i{M}@t{texi}
 flag as an include guard so that including the
@@ -93,21 +93,21 @@ it only the first time@.
 For example, the
 @t{@@mdot@{@}}
 macro is defined by the
-@t{mdot.texi}
+@t{mdot.@:texi}
 special file, which also uses the
 @t{mdottexi}
 flag as an include guard@.
 The
-@t{math.texi}
+@t{math.@:texi}
 special file is also provided, which uses
 @t{@@include}
 commands to include all of the
-@i{M}@t{.texi}
+@i{M}@t{.@:texi}
 special files@.
 It can be generated with the
 @t{--walk}
 option to also generate all of the
-@i{M}@t{.texi}
+@i{M}@t{.@:texi}
 special files at once@.
 
 The macros insert special symbols as
