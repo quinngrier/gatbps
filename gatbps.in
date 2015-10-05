@@ -74,7 +74,7 @@ esac
 nl='
 '
 
-detect_options='yes'
+detect_options='1'
 exit_status='0'
 have_operands='no'
 
@@ -94,7 +94,7 @@ while :; do
         ;;
       #(
         'no')
-          detect_options='yes'
+          detect_options='1'
           set 'x' '--list'
           continue
         ;;
@@ -103,14 +103,23 @@ while :; do
   esac
 
   case "${detect_options}" in
+
   #(
-    'yes')
+    '0')
+
+      :
+
+    ;;
+
+  #(
+    *)
+
       case "${1}" in
 
       #(
         '--')
 
-          detect_options='no'
+          detect_options='0'
           continue
 
         ;;
@@ -1869,7 +1878,9 @@ EOF
         ;;
 
       esac
+
     ;;
+
   esac
 
   have_operands='yes'
