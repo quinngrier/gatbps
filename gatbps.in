@@ -1117,7 +1117,7 @@ TeX Macro Unicode ASCII
 \ecdots @AT@mdots{} U+22EF ...
 \eldots @AT@bdots{} U+2026 ...
 .TE
-.SH "SPECIAL FILE SUMMARIES"
+.SH "SPECIAL FILE SUMMARY"
 .LP
 This section provides a
 short description of each
