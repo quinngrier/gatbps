@@ -1118,6 +1118,14 @@ TeX Macro Unicode ASCII
 \eldots @AT@bdots{} U+2026 ...
 .TE
 .SH "SPECIAL FILE SUMMARIES"
+.LP
+This section provides a
+short description of each
+special file along with a reference
+to the location of the full description.
+The short descriptions are the same as those shown by the
+.nohy "\fB\-\-help=\fIS\fR"
+option.
 .TP
 .nohy "\fBCC0\-1.0\-AC\-COPYRIGHT.ac\fR"
 .IPE0

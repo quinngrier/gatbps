@@ -197,6 +197,14 @@ $\ldots$
 @node Special File Summaries
 @chapter Special File Summaries
 
+This section provides a
+short description of each
+special file along with a reference
+to the location of the full description@.
+The short descriptions are the same as those shown by the
+@t{--help=}@i{S}
+option@.
+
 @table @asis
 @item @t{bdots.@:texi}
 @sfindex @t{bdots.@:texi}
