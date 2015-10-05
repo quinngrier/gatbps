@@ -76,7 +76,7 @@ nl='
 
 detect_options='1'
 exit_status='0'
-have_operands='no'
+have_operands='0'
 
 set 'x' "${@AT@}"
 
@@ -89,14 +89,14 @@ while :; do
     '0')
       case "${have_operands}" in
       #(
-        'yes')
-          break
-        ;;
-      #(
-        'no')
+        '0')
           detect_options='1'
           set 'x' '--list'
           continue
+        ;;
+      #(
+        *)
+          break
         ;;
       esac
     ;;
@@ -1883,7 +1883,7 @@ EOF
 
   esac
 
-  have_operands='yes'
+  have_operands='1'
 
   case "${1}" in
   #(
