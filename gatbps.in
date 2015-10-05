@@ -1108,7 +1108,7 @@ TeX Macro Unicode ASCII
 \ecdots @AT@mdots{} U+22EF ...
 \eldots @AT@bdots{} U+2026 ...
 .TE
-.SH "SPECIAL FILES"
+.SH "SPECIAL FILE SUMMARIES"
 .TP
 .nohy "\fBCC0\-1.0\-AC\-COPYRIGHT.ac\fR"
 .IPE0
