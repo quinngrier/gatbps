@@ -1061,10 +1061,14 @@ The
 .nohy "\fBmath.texi\fR"
 special file is also provided, which uses
 .nohy "\fB@AT@include\fR"
-commands to include the entire collection of macros.
+commands to include all of the
+.nohy "\fIM\fB.texi\fR"
+special files.
 It can be generated with the
 .nohy "\fB\-\-walk\fR"
-option to also generate the entire collection at once.
+option to also generate all of the
+.nohy "\fIM\fB.texi\fR"
+special files at once.
 .LP
 The macros insert special symbols as
 UTF-8 characters in Info and plain text and

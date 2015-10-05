@@ -100,10 +100,14 @@ The
 @t{math.texi}
 special file is also provided, which uses
 @t{@@include}
-commands to include the entire collection of macros@.
+commands to include all of the
+@i{M}@t{.texi}
+special files@.
 It can be generated with the
 @t{--walk}
-option to also generate the entire collection at once@.
+option to also generate all of the
+@i{M}@t{.texi}
+special files at once@.
 
 The macros insert special symbols as
 UTF-8 characters in Info and plain text and
