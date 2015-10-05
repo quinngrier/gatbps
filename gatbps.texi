@@ -54,6 +54,7 @@ and its name now stands for
 
 @node Mathematical Notation in Texinfo
 @chapter Mathematical Notation in Texinfo
+@sfindex @t{bdots.@:texi}
 
 GATBPS provides a collection of Texinfo
 macros that support an alternative approach
@@ -198,6 +199,7 @@ $\ldots$
 
 @table @asis
 @item @t{bdots.@:texi}
+@sfindex @t{bdots.@:texi}
 The
 @t{bdots.@:texi}
 special file defines the
