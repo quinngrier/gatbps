@@ -193,6 +193,30 @@ $\ldots$
 @node Special File Summaries
 @chapter Special File Summaries
 
+@table @asis
+@item @t{bdots.@:texi}
+The
+@t{bdots.@:texi}
+special file defines the
+@t{@@bdots@{@}}
+Texinfo macro, which imitates the
+@t{\ldots}
+@TeX{} control sequence@.
+This can be used to imitate the mathematical
+notation of @TeX{} in the other output formats:
+
+@example
+@@tex
+$1, \ldots, n$
+@@end tex
+@@ifnottex
+1, @@bdots@{@}, @@i@{n@}
+@@end ifnottex
+@end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}.
+@end table
+
 @include CC0-1.0-appendix.texi
 @iftex
 @ifnottex
