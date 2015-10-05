@@ -1123,7 +1123,7 @@ This section provides a short
 description of each special file.
 Along with each short description is
 a reference to its corresponding full
-description, which is elsewhere in the
+description, which is elsewhere in this
 manual page.
 The short descriptions are the same as those shown by the
 .nohy "\fB\-\-help=\fIS\fR"
