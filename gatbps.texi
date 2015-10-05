@@ -4,6 +4,8 @@
 
 @settitle GATBPS
 
+@defindex sf
+
 @include CC0-1.0-copying.texi
 @include bdots.texi
 @include mdot.texi
@@ -33,6 +35,7 @@ This manual is for GATBPS@.
 * Mathematical Notation in Texinfo::
 * Special File Summaries::
 * CC0::
+* Special File Index::
 @end menu
 
 @node Introduction
@@ -218,6 +221,11 @@ For more information, @pxref{Mathematical Notation in Texinfo}.
 @end table
 
 @include CC0-1.0-appendix.texi
+
+@node Special File Index
+@unnumbered Special File Index
+
+@printindex sf
 @iftex
 @ifnottex
 @c
