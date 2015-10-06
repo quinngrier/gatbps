@@ -526,12 +526,10 @@ EOF
               cat <<EOF
 Special file: ${fB1}mdot.texi${fR1}
 
-The ${fB1}mdot.texi${fR1} special file defines the ${fB1}@AT@mdot{}${fR1} Texinfo macro, which uses
-${fB1}@AT@U{22C5}${fR1} to insert a dot operator character. This can be used to make
-mathematical notation look more like TeX in the other output formats:
+The ${fB1}mdot.texi${fR1} special file defines the ${fB1}@AT@mdot{}${fR1} Texinfo macro, which
+imitates the ${fB1}\\cdot${fR1} TeX control sequence. This can be used to imitate the
+mathematical notation of TeX in the other output formats:
 
-      @AT@documentencoding UTF-8
-      @AT@include mdot.texi
       @AT@tex
       \$x \\cdot y\$
       @AT@end tex
@@ -1269,16 +1267,14 @@ The
 .nohy "\fBmdot.texi\fR"
 special file defines the
 .nohy "\fB@AT@mdot{}\fR"
-Texinfo macro, which uses
-.nohy "\fB@AT@U{22C5}\fR"
-to insert a dot operator character.
-This can be used to make mathematical notation
-look more like TeX in the other output formats:
+Texinfo macro, which imitates the
+.nohy "\fB\ecdot\fR"
+TeX control sequence.
+This can be used to imitate the mathematical
+notation of TeX in the other output formats:
 .RS
 .IPE
 .nf
-@AT@documentencoding UTF\-8
-@AT@include mdot.texi
 @AT@tex
 $x \ecdot y$
 @AT@end tex
@@ -1287,6 +1283,8 @@ $x \ecdot y$
 @AT@end ifnottex
 .fi
 .RE
+.IPE
+For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 .TP
 .nohy "\fBmdots.texi\fR"
 .IPE0
