@@ -160,6 +160,7 @@ shows the symbol of each macro@.
 @headitem @TeX{} @tab Macro @tab Unicode @tab ASCII
 @item @t{\cdot} @tab @t{@@mdot@{@}} @tab U+22C5 @tab @t{*}
 @item @t{\cdots} @tab @t{@@mdots@{@}} @tab U+22EF @tab @t{.@:.@:.@:}
+@sfindex @t{mdots.@:texi}
 @item @t{\ldots} @tab @t{@@bdots@{@}} @tab U+2026 @tab @t{.@:.@:.@:}
 @end multitable
 @end ifset
@@ -175,6 +176,7 @@ $\cdot$
 @mdot{}
 @end ifnottex
 @item @t{\cdots} @tab @t{@@mdots@{@}} @tab U+22EF @tab @t{.@:.@:.@:}
+@sfindex @t{mdots.@:texi}
 @tab
 @tex
 $\cdots$
@@ -229,6 +231,7 @@ $1, \ldots, n$
 
 For more information, @pxref{Mathematical Notation in Texinfo}.
 
+@sfindex @t{mdots.@:texi}
 @item @t{mdots.@:texi}
 The
 @t{mdots.@:texi}
