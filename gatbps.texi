@@ -199,10 +199,8 @@ $\ldots$
 
 This section provides a short
 description of each special file@.
-Along with each short description is
-a reference to its corresponding full
-description, which is elsewhere in this
-manual@.
+Along with each short description is a reference to
+where the corresponding full description can be found@.
 The short descriptions are the same as those shown by the
 @t{--help=}@i{S}
 option@.
