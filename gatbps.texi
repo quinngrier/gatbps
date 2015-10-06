@@ -211,8 +211,8 @@ The short descriptions are the same as those shown by the
 option@.
 
 @table @asis
-@item @t{bdots.@:texi}
 @sfindex @t{bdots.@:texi}
+@item @t{bdots.@:texi}
 The
 @t{bdots.@:texi}
 special file defines the
