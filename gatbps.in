@@ -564,12 +564,9 @@ EOF
 Special file: ${fB1}mdots.texi${fR1}
 
 The ${fB1}mdots.texi${fR1} special file defines the ${fB1}@AT@mdots{}${fR1} Texinfo macro, which
-uses ${fB1}@AT@U{22EF}${fR1} to insert a midline horizontal ellipsis character. This
-can be used to make mathematical notation look more like TeX in the
-other output formats:
+imitates the ${fB1}\\cdots${fR1} TeX control sequence. This can be used to imitate
+the mathematical notation of TeX in the other output formats:
 
-      @AT@documentencoding UTF-8
-      @AT@include mdots.texi
       @AT@tex
       \$1 + \\cdots + n\$
       @AT@end tex
@@ -1297,16 +1294,14 @@ The
 .nohy "\fBmdots.texi\fR"
 special file defines the
 .nohy "\fB@AT@mdots{}\fR"
-Texinfo macro, which uses
-.nohy "\fB@AT@U{22EF}\fR"
-to insert a midline horizontal ellipsis character.
-This can be used to make mathematical notation
-look more like TeX in the other output formats:
+Texinfo macro, which imitates the
+.nohy "\fB\ecdots\fR"
+TeX control sequence.
+This can be used to imitate the mathematical
+notation of TeX in the other output formats:
 .RS
 .IPE
 .nf
-@AT@documentencoding UTF\-8
-@AT@include mdots.texi
 @AT@tex
 $1 + \ecdots + n$
 @AT@end tex
@@ -1315,6 +1310,8 @@ $1 + \ecdots + n$
 @AT@end ifnottex
 .fi
 .RE
+.IPE
+For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 .TP
 .nohy "\fBmsign.texi\fR"
 .IPE0
