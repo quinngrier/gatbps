@@ -232,6 +232,28 @@ $1, \ldots, n$
 
 For more information, @pxref{Mathematical Notation in Texinfo}.
 
+@item @t{mdot.@:texi}
+The
+@t{mdot.@:texi}
+special file defines the
+@t{@@mdot@{@}}
+Texinfo macro, which imitates the
+@t{\cdot}
+@TeX{} control sequence@.
+This can be used to imitate the mathematical
+notation of @TeX{} in the other output formats:
+
+@example
+@@tex
+$x \cdot y$
+@@end tex
+@@ifnottex
+@@i@{x@} @@mdot@{@} @@i@{y@}
+@@end ifnottex
+@end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}.
+
 @sfindex @t{mdots.@:texi}
 @item @t{mdots.@:texi}
 The
