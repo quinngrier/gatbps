@@ -33,7 +33,7 @@ This manual is for GATBPS@.
 @menu
 * Introduction::
 * Mathematical Notation in Texinfo::
-* Special File Summary::
+* Special File Reference::
 * CC0::
 * Special File Index::
 @end menu
@@ -199,8 +199,8 @@ $\ldots$
 @end ifclear
 @end indentedblock
 
-@node Special File Summary
-@chapter Special File Summary
+@node Special File Reference
+@chapter Special File Reference
 
 This section provides a short
 description of each special file@.
