@@ -492,7 +492,7 @@ EOF
 Special file: ${fB1}bdots.texi${fR1}
 
 The ${fB1}bdots.texi${fR1} special file defines the ${fB1}@AT@bdots{}${fR1} Texinfo macro, which
-imitates the ${fB1}\\ldots${fR1} TeX control sequence. This can be used to imitate
+imitates the ${fB1}\\ldots${fR1} TeX math mode syntax. This can be used to imitate
 the mathematical notation of TeX in the other output formats:
 
       @AT@tex
@@ -527,7 +527,7 @@ EOF
 Special file: ${fB1}mdot.texi${fR1}
 
 The ${fB1}mdot.texi${fR1} special file defines the ${fB1}@AT@mdot{}${fR1} Texinfo macro, which
-imitates the ${fB1}\\cdot${fR1} TeX control sequence. This can be used to imitate the
+imitates the ${fB1}\\cdot${fR1} TeX math mode syntax. This can be used to imitate the
 mathematical notation of TeX in the other output formats:
 
       @AT@tex
@@ -562,7 +562,7 @@ EOF
 Special file: ${fB1}mdots.texi${fR1}
 
 The ${fB1}mdots.texi${fR1} special file defines the ${fB1}@AT@mdots{}${fR1} Texinfo macro, which
-imitates the ${fB1}\\cdots${fR1} TeX control sequence. This can be used to imitate
+imitates the ${fB1}\\cdots${fR1} TeX math mode syntax. This can be used to imitate
 the mathematical notation of TeX in the other output formats:
 
       @AT@tex
@@ -1244,7 +1244,7 @@ special file defines the
 .nohy "\fB@AT@bdots{}\fR"
 Texinfo macro, which imitates the
 .nohy "\fB\eldots\fR"
-TeX control sequence.
+TeX math mode syntax.
 This can be used to imitate the mathematical
 notation of TeX in the other output formats:
 .RS
@@ -1269,7 +1269,7 @@ special file defines the
 .nohy "\fB@AT@mdot{}\fR"
 Texinfo macro, which imitates the
 .nohy "\fB\ecdot\fR"
-TeX control sequence.
+TeX math mode syntax.
 This can be used to imitate the mathematical
 notation of TeX in the other output formats:
 .RS
@@ -1294,7 +1294,7 @@ special file defines the
 .nohy "\fB@AT@mdots{}\fR"
 Texinfo macro, which imitates the
 .nohy "\fB\ecdots\fR"
-TeX control sequence.
+TeX math mode syntax.
 This can be used to imitate the mathematical
 notation of TeX in the other output formats:
 .RS
