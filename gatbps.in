@@ -1065,12 +1065,12 @@ special file is also provided, which uses
 .nohy "\fB@AT@include\fR"
 commands to include every
 .nohy "\fIM\fB.texi\fR"
-file.
+special file.
 It can be generated with the
 .nohy "\fB\-\-walk\fR"
 option to also generate every
 .nohy "\fIM\fB.texi\fR"
-file at once.
+special file at once.
 .LP
 The macros insert special symbols as
 UTF-8 characters in Info and plain text and

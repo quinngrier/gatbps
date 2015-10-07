@@ -107,12 +107,12 @@ special file is also provided, which uses
 @t{@@include}
 commands to include every
 @i{M}@t{.@:texi}
-file@.
+special file@.
 It can be generated with the
 @t{--walk}
 option to also generate every
 @i{M}@t{.@:texi}
-file at once@.
+special file at once@.
 
 The macros insert special symbols as
 UTF-8 characters in Info and plain text and
