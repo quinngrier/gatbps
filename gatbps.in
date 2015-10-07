@@ -1106,6 +1106,7 @@ flag is set at its point of inclusion.
 tab( );
 l l l l .
 TeX Macro Unicode ASCII
+\- @AT@msign{} U+2212 \-
 \ecdot @AT@mdot{} U+22C5 *
 \ecdots @AT@mdots{} U+22EF ...
 \eldots @AT@bdots{} U+2026 ...
