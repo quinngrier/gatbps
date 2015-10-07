@@ -10,6 +10,7 @@
 @include bdots.texi
 @include mdot.texi
 @include mdots.texi
+@include msign.texi
 
 @titlepage
 @title GATBPS

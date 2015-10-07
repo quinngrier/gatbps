@@ -20,6 +20,7 @@ gatbps_TEXINFOS += CC0-1.0-copying.texi
 gatbps_TEXINFOS += bdots.texi
 gatbps_TEXINFOS += mdot.texi
 gatbps_TEXINFOS += mdots.texi
+gatbps_TEXINFOS += msign.texi
 
 info_TEXINFOS =
 info_TEXINFOS += gatbps.texi
