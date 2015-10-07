@@ -279,6 +279,29 @@ $1 + \cdots + n$
 @end example
 
 For more information, @pxref{Mathematical Notation in Texinfo}.
+
+@sfindex @t{msign.@:texi}
+@item @t{msign.@:texi}
+The
+@t{msign.@:texi}
+special file defines the
+@t{@@msign@{@}}
+Texinfo macro, which imitates the
+@t{-}
+@TeX{} math mode syntax@.
+This can be used to imitate the mathematical
+notation of @TeX{} in the other output formats:
+
+@example
+@@tex
+$x - y$
+@@end tex
+@@ifnottex
+@@i@{x@} @@msign@{@} @@i@{y@}
+@@end ifnottex
+@end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}.
 @end table
 
 @include CC0-1.0-appendix.texi
