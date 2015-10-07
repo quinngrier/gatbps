@@ -114,7 +114,7 @@ option to also generate every
 @i{M}@t{.@:texi}
 special file at once@.
 
-The macros insert special symbols as
+The macros insert symbols as
 UTF-8 characters in Info and plain text and
 as character references in Docbook, HTML, and
 XML by default, or as ASCII approximations in

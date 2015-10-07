@@ -1072,7 +1072,7 @@ option to also generate every
 .nohy "\fIM\fB.texi\fR"
 special file at once.
 .LP
-The macros insert special symbols as
+The macros insert symbols as
 UTF-8 characters in Info and plain text and
 as character references in Docbook, HTML, and
 XML by default, or as ASCII approximations in
