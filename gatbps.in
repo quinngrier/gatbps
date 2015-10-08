@@ -1075,7 +1075,7 @@ special file at once.
 The macros insert symbols as
 UTF-8 characters in Info and plain text and
 as character references in Docbook, HTML, and
-XML by default, or as ASCII approximations in
+XML by default, or as ASCII alternatives in
 all output formats if the
 .nohy "\fBASCII\fR"
 flag is set at their points of inclusion.
@@ -1097,7 +1097,7 @@ The following table lists the macros that have
 no parameters, which insert individual symbols.
 Along with each macro is its corresponding TeX
 syntax, the Unicode character that it inserts
-by default, and the ASCII approximation that
+by default, and the ASCII alternative that
 it inserts if the
 .nohy "\fBASCII\fR"
 flag is set at its point of inclusion.
