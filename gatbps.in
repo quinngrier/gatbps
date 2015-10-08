@@ -3193,6 +3193,8 @@ EOF
 @AT@c
 @AT@end ifnottex
 @AT@end iftex
+@AT@ifclear spstexi
+@AT@set spstexi
 @AT@ifdocbook
 @AT@rmacro sps{L, M, R}
 @AT@inlineraw{docbook, <superscript>}\M\@AT@inlineraw{docbook, </superscript>}
@@ -3220,6 +3222,7 @@ EOF
 @AT@inlineraw{xml, <sup>}\M\@AT@inlineraw{xml, </sup>}
 @AT@end rmacro
 @AT@end ifxml
+@AT@end ifclear
 @AT@iftex
 @AT@ifnottex
 @AT@c
