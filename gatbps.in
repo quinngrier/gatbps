@@ -1111,6 +1111,57 @@ TeX Macro Unicode ASCII
 \ecdots @AT@mdots{} U+22EF ...
 \eldots @AT@bdots{} U+2026 ...
 .TE
+.LP
+The
+.nohy "\fB@AT@sps{\fIL\fB, \fIS\fB, \fIR\fB}\fR"
+and
+.nohy "\fB@AT@sbs{\fIL\fB, \fIS\fB, \fIR\fB}\fR"
+macros are provided for inserting
+.nohy "\fIS\fR"
+as a superscript or subscript.
+In Docbook,
+.nohy "\fIL\fR"
+and
+.nohy "\fIR\fR"
+are ignored and
+.nohy "\fIS\fR"
+is inserted inside a
+.nohy "\fB<superscript>\fR"
+or
+.nohy "\fB<subscript>\fR"
+element.
+In HTML and XML,
+.nohy "\fIL\fR"
+and
+.nohy "\fIR\fR"
+are ignored and
+.nohy "\fIS\fR"
+is inserted inside a
+.nohy "\fB<sup>\fR"
+or
+.nohy "\fB<sub>\fR"
+element.
+In Info and plain text, an ASCII
+.nohy "\fB^\fR"
+or
+.nohy "\fB_\fR"
+character is inserted followed by
+.nohy "\fIL\fR,"
+then
+.nohy "\fIS\fR,"
+then
+.nohy "\fIR\fR,"
+so that
+.nohy "\fIL\fR"
+and
+.nohy "\fIR\fR"
+act as parentheses around
+.nohy "\fIS\fR."
+Note that
+.nohy "\fIL\fR"
+and
+.nohy "\fIR\fR"
+can be left blank.
 .SH "SPECIAL FILE REFERENCE"
 .LP
 This section provides a short
