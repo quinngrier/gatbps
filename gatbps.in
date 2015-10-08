@@ -631,14 +631,12 @@ EOF
               cat <<EOF
 Special file: ${fB1}sbs.texi${fR1}
 
-The ${fB1}sbs.texi${fR1} special file defines the ${fB1}@AT@sbs{${fI1}L${fB1}, ${fI1}M${fB1}, ${fI1}R${fB1}}${fR1} Texinfo macro, which
-inserts ${fI1}M${fR1} as a subscript in the output formats other than TeX. ${fI1}L${fR1} and ${fI1}R${fR1}
-are ignored except in the Info and plain text output formats, where they
-are used as left and right delimiters around ${fI1}M${fR1}. This can be used to make
-mathematical notation look more like TeX in the other output formats:
+The ${fB1}sbs.texi${fR1} special file defines the ${fB1}@AT@sbs{${fI1}L${fB1}, ${fI1}S${fB1}, ${fI1}R${fB1}}${fR1} Texinfo macro, which
+inserts ${fI1}S${fR1} as a subscript in the output formats other than TeX. ${fI1}L${fR1} and ${fI1}R${fR1}
+are ignored except in Info and plain text, where they act as parentheses
+around ${fI1}S${fR1}. This can be used to imitate the mathematical notation of TeX
+in the other output formats:
 
-      @AT@documentencoding UTF-8
-      @AT@include sbs.texi
       @AT@tex
       \$x_{y + z_w}\$
       @AT@end tex
@@ -1391,23 +1389,21 @@ For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 The
 .nohy "\fBsbs.texi\fR"
 special file defines the
-.nohy "\fB@AT@sbs{\fIL\fB, \fIM\fB, \fIR\fB}\fR"
+.nohy "\fB@AT@sbs{\fIL\fB, \fIS\fB, \fIR\fB}\fR"
 Texinfo macro, which inserts
-.nohy "\fIM\fR"
+.nohy "\fIS\fR"
 as a subscript in the output formats other than TeX.
 .nohy "\fIL\fR"
 and
 .nohy "\fIR\fR"
-are ignored except in the Info and plain text output formats,
-where they are used as left and right delimiters around
-.nohy "\fIM\fR."
-This can be used to make mathematical notation
-look more like TeX in the other output formats:
+are ignored except in Info and plain text,
+where they act as parentheses around
+.nohy "\fIS\fR."
+This can be used to imitate the mathematical
+notation of TeX in the other output formats:
 .RS
 .IPE
 .nf
-@AT@documentencoding UTF\-8
-@AT@include sbs.texi
 @AT@tex
 $x_{y + z_w}$
 @AT@end tex
@@ -1416,6 +1412,8 @@ $x_{y + z_w}$
 @AT@end ifnottex
 .fi
 .RE
+.IPE
+For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 .TP
 .nohy "\fBshquote.sh\fR"
 .IPE0
