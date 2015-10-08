@@ -3065,6 +3065,8 @@ EOF
 @AT@c
 @AT@end ifnottex
 @AT@end iftex
+@AT@ifclear sbstexi
+@AT@set sbstexi
 @AT@ifdocbook
 @AT@rmacro sbs{L, M, R}
 @AT@inlineraw{docbook, <subscript>}\M\@AT@inlineraw{docbook, </subscript>}
@@ -3092,6 +3094,7 @@ _\L\\M\\R\
 @AT@inlineraw{xml, <sub>}\M\@AT@inlineraw{xml, </sub>}
 @AT@end rmacro
 @AT@end ifxml
+@AT@end ifclear
 @AT@iftex
 @AT@ifnottex
 @AT@c
