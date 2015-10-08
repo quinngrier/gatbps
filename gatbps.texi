@@ -396,6 +396,35 @@ $x_@{y + z_w@}$
 @end example
 
 For more information, @pxref{Mathematical Notation in Texinfo}.
+
+@sfindex @t{sps.@:texi}
+@item @t{sps.@:texi}
+The
+@t{sps.@:texi}
+special file defines the
+@t{@@sps@{}@i{L}@t{@comma{} }@i{S}@t{@comma{} }@i{R}@t{@}}
+Texinfo macro, which inserts
+@i{S}
+as a superscript in the output formats other than @TeX{}@.
+@i{L}
+and
+@i{R}
+are ignored except in Info and plain text,
+where they act as parentheses around
+@i{S}@.
+This can be used to imitate the mathematical
+notation of @TeX{} in the other output formats:
+
+@example
+@@tex
+$x^@{y + z^w@}$
+@@end tex
+@@ifnottex
+@@i@{x@}@@sps@{(, @@i@{y@} + @@i@{z@}@@sps@{, @@i@{w@}, @}, )@}
+@@end ifnottex
+@end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}.
 @end table
 
 @include CC0-1.0-appendix.texi
