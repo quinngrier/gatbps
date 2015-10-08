@@ -246,7 +246,7 @@ In Info and plain text, an ASCII
 @t{^}
 or
 @t{_}
-character is inserted followed by
+character is inserted, followed by
 @i{L},
 then
 @i{S},

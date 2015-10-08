@@ -1141,7 +1141,7 @@ In Info and plain text, an ASCII
 .nohy "\fB^\fR"
 or
 .nohy "\fB_\fR"
-character is inserted followed by
+character is inserted, followed by
 .nohy "\fIL\fR,"
 then
 .nohy "\fIS\fR,"
