@@ -1070,7 +1070,7 @@ special file at once.
 .LP
 The macros insert symbols as
 UTF-8 characters in Info and plain text and
-as character references in Docbook, HTML, and
+as numeric character references in Docbook, HTML, and
 XML by default, or as ASCII alternatives in
 all output formats if the
 .nohy "\fBASCII\fR"
@@ -1080,14 +1080,12 @@ For example, the
 macro inserts a UTF-8 dot
 operator character (U+22C5)
 in Info and plain text and an
-.nohy "\fB&sdot;\fR"
+.nohy "\fB&#x22C5;\fR"
 character reference in Docbook, HTML, and
 XML by default, or an ASCII asterisk
 character (U+002A) in all output formats if the
 .nohy "\fBASCII\fR"
 flag is set at its point of inclusion.
-The character references use entity names
-if they exist or hexadecimal numbers if not.
 .LP
 The following table lists the macros that have
 no parameters, which insert individual symbols.
@@ -2646,12 +2644,12 @@ EOF
 @AT@ifclear ASCII
 @AT@ifdocbook
 @AT@macro bdots{}
-@AT@inlineraw{docbook, &hellip;}
+@AT@inlineraw{docbook, &#x2026;}
 @AT@end macro
 @AT@end ifdocbook
 @AT@ifhtml
 @AT@macro bdots{}
-@AT@inlineraw{html, &hellip;}
+@AT@inlineraw{html, &#x2026;}
 @AT@end macro
 @AT@end ifhtml
 @AT@ifinfo
@@ -2668,7 +2666,7 @@ EOF
 @AT@end ifplaintext
 @AT@ifxml
 @AT@macro bdots{}
-@AT@inlineraw{xml, &hellip;}
+@AT@inlineraw{xml, &#x2026;}
 @AT@end macro
 @AT@end ifxml
 @AT@end ifclear
@@ -2752,12 +2750,12 @@ EOF
 @AT@ifclear ASCII
 @AT@ifdocbook
 @AT@macro mdot{}
-@AT@inlineraw{docbook, &sdot;}
+@AT@inlineraw{docbook, &#x22C5;}
 @AT@end macro
 @AT@end ifdocbook
 @AT@ifhtml
 @AT@macro mdot{}
-@AT@inlineraw{html, &sdot;}
+@AT@inlineraw{html, &#x22C5;}
 @AT@end macro
 @AT@end ifhtml
 @AT@ifinfo
@@ -2774,7 +2772,7 @@ EOF
 @AT@end ifplaintext
 @AT@ifxml
 @AT@macro mdot{}
-@AT@inlineraw{xml, &sdot;}
+@AT@inlineraw{xml, &#x22C5;}
 @AT@end macro
 @AT@end ifxml
 @AT@end ifclear
@@ -2964,12 +2962,12 @@ EOF
 @AT@ifclear ASCII
 @AT@ifdocbook
 @AT@macro msign{}
-@AT@inlineraw{docbook, &minus;}
+@AT@inlineraw{docbook, &#x2212;}
 @AT@end macro
 @AT@end ifdocbook
 @AT@ifhtml
 @AT@macro msign{}
-@AT@inlineraw{html, &minus;}
+@AT@inlineraw{html, &#x2212;}
 @AT@end macro
 @AT@end ifhtml
 @AT@ifinfo
@@ -2986,7 +2984,7 @@ EOF
 @AT@end ifplaintext
 @AT@ifxml
 @AT@macro msign{}
-@AT@inlineraw{xml, &minus;}
+@AT@inlineraw{xml, &#x2212;}
 @AT@end macro
 @AT@end ifxml
 @AT@end ifclear

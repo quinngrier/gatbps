@@ -118,7 +118,7 @@ special file at once@.
 
 The macros insert symbols as
 UTF-8 characters in Info and plain text and
-as character references in Docbook, HTML, and
+as numeric character references in Docbook, HTML, and
 XML by default, or as ASCII alternatives in
 all output formats if the
 @t{ASCII}
@@ -128,14 +128,12 @@ For example, the
 macro inserts a UTF-8 dot
 operator character (U+22C5)
 in Info and plain text and an
-@t{&sdot;}
+@t{&#x22C5;}
 character reference in Docbook, HTML, and
 XML by default, or an ASCII asterisk
 character (U+002A) in all output formats if the
 @t{ASCII}
 flag is set at its point of inclusion@.
-The character references use entity names
-if they exist or hexadecimal numbers if not@.
 
 The following table lists the macros that have
 no parameters, which insert individual symbols@.
