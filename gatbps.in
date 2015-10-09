@@ -1082,8 +1082,9 @@ operator character
 in Info and plain text and an
 .nohy "\fB&#x22C5;\fR"
 character reference in Docbook, HTML, and
-XML by default, or an ASCII asterisk
-character (U+002A) in all output formats if the
+XML by default, or an ASCII
+.nohy "\fB*\fR"
+character in all output formats if the
 .nohy "\fBASCII\fR"
 flag is set at its point of inclusion.
 .LP

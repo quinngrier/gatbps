@@ -130,8 +130,9 @@ operator character
 in Info and plain text and an
 @t{&#x22C5;}
 character reference in Docbook, HTML, and
-XML by default, or an ASCII asterisk
-character (U+002A) in all output formats if the
+XML by default, or an ASCII
+@t{*}
+character in all output formats if the
 @t{ASCII}
 flag is set at its point of inclusion@.
 
