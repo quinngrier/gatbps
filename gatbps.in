@@ -1078,7 +1078,7 @@ flag is set at their points of inclusion.
 For example, the
 .nohy "\fB@AT@mdot{}\fR"
 macro inserts a UTF-8 dot
-operator character (U+22C5)
+operator character
 in Info and plain text and an
 .nohy "\fB&#x22C5;\fR"
 character reference in Docbook, HTML, and
