@@ -265,6 +265,32 @@ Note that
 and
 @i{R}
 can be left blank@.
+For example, the following code produces
+@tex
+$x^{y + z_w}$
+@end tex
+@ifnottex
+@i{x}@sps{(, @i{y} + @i{z}@sbs{, @i{w}, }, )}
+@end ifnottex
+@c Note that @ifinfo really means Info or plain text.
+@ifinfo
+in the current output format:
+@end ifinfo
+@c Note that @ifnotinfo really means not Info and not plain text.
+@ifnotinfo
+in the current output format and
+@t{x^(y + z_w)}
+in Info and plain text:
+@end ifnotinfo
+
+@example
+@@tex
+$x^@{y + z_w@}$
+@@end tex
+@@ifnottex
+@@i@{x@}@@sps@{(, @@i@{y@} + @@i@{z@}@@sbs@{, @@i@{w@}, @}, )@}
+@@end ifnottex
+@end example
 
 @node Special File Reference
 @chapter Special File Reference
