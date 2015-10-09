@@ -11,6 +11,7 @@
 @include mdot.texi
 @include mdots.texi
 @include msign.texi
+@include sbs.texi
 
 @titlepage
 @title GATBPS

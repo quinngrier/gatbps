@@ -21,6 +21,7 @@ gatbps_TEXINFOS += bdots.texi
 gatbps_TEXINFOS += mdot.texi
 gatbps_TEXINFOS += mdots.texi
 gatbps_TEXINFOS += msign.texi
+gatbps_TEXINFOS += sbs.texi
 
 info_TEXINFOS =
 info_TEXINFOS += gatbps.texi
