@@ -1172,7 +1172,7 @@ in Info and plain text:
 .IPE
 .nf
 @AT@tex
-$x^{y + z_w}$
+$x^{y\ +\ z_w}$
 @AT@end tex
 @AT@ifnottex
 @AT@i{x}@AT@sps{(, @AT@i{y} + @AT@i{z}@AT@sbs{, @AT@i{w}, }, )}
