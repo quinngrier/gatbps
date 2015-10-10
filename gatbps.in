@@ -2029,14 +2029,14 @@ ${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${path}.gatbps${i}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF
       exit_status='1'
-      continue 2
+      continue '2'
     else
       cat >&2 <<EOF
 ${fy2}gatbps:${fd2} file must not be nonregular: ${fB2}${path}.gatbps${i}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF
       exit_status='1'
-      continue 2
+      continue '2'
     fi
   done
 
