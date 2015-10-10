@@ -1116,9 +1116,9 @@ TeX Macro Unicode ASCII
 .TE
 .LP
 The
-.nohy "\fB@AT@sps{\fIL\fB, \fIS\fB, \fIR\fB}\fR"
+.nohy "\fB@AT@sps{\fIL\fB,\ \fIS\fB,\ \fIR\fB}\fR"
 and
-.nohy "\fB@AT@sbs{\fIL\fB, \fIS\fB, \fIR\fB}\fR"
+.nohy "\fB@AT@sbs{\fIL\fB,\ \fIS\fB,\ \fIR\fB}\fR"
 macros are provided for inserting
 .nohy "\fIS\fR"
 as a superscript or subscript.
