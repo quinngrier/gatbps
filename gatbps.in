@@ -1165,6 +1165,20 @@ Note that
 and
 .nohy "\fIR\fR"
 can be left blank.
+.LP
+In Docbook, HTML, and XML, the
+.nohy "\fB@AT@sps\fR"
+and
+.nohy "\fB@AT@sbs\fR"
+macros use the
+.nohy "\fB@AT@inlineraw\fR"
+command to insert superscript and subscript elements.
+This command was added to Texinfo in
+version 5.0, which was released on 2013\-02\-16.
+The macros automatically detect older versions of
+Texinfo, in which case they behave
+as if the output format were Info
+or plain text instead.
 .SH "SPECIAL FILE REFERENCE"
 .LP
 This section provides a short
@@ -3243,14 +3257,42 @@ EOF
 @AT@ifclear sbstexi
 @AT@set sbstexi
 @AT@ifdocbook
+@AT@ifset txicommandconditionals
+@AT@ifcommanddefined inlineraw
 @AT@rmacro sbs{L, M, R}
 @AT@inlineraw{docbook, <subscript>}\M\@AT@inlineraw{docbook, </subscript>}
 @AT@end rmacro
+@AT@end ifcommanddefined
+@AT@ifcommandnotdefined inlineraw
+@AT@rmacro sbs{L, M, R}
+_\L\\M\\R\
+@AT@end rmacro
+@AT@end ifcommandnotdefined
+@AT@end ifset
+@AT@ifclear txicommandconditionals
+@AT@rmacro sbs{L, M, R}
+_\L\\M\\R\
+@AT@end rmacro
+@AT@end ifclear
 @AT@end ifdocbook
 @AT@ifhtml
+@AT@ifset txicommandconditionals
+@AT@ifcommanddefined inlineraw
 @AT@rmacro sbs{L, M, R}
 @AT@inlineraw{html, <sub>}\M\@AT@inlineraw{html, </sub>}
 @AT@end rmacro
+@AT@end ifcommanddefined
+@AT@ifcommandnotdefined inlineraw
+@AT@rmacro sbs{L, M, R}
+_\L\\M\\R\
+@AT@end rmacro
+@AT@end ifcommandnotdefined
+@AT@end ifset
+@AT@ifclear txicommandconditionals
+@AT@rmacro sbs{L, M, R}
+_\L\\M\\R\
+@AT@end rmacro
+@AT@end ifclear
 @AT@end ifhtml
 @AT@ifinfo
 @AT@ifnotplaintext
@@ -3265,9 +3307,23 @@ _\L\\M\\R\
 @AT@end rmacro
 @AT@end ifplaintext
 @AT@ifxml
+@AT@ifset txicommandconditionals
+@AT@ifcommanddefined inlineraw
 @AT@rmacro sbs{L, M, R}
 @AT@inlineraw{xml, <sub>}\M\@AT@inlineraw{xml, </sub>}
 @AT@end rmacro
+@AT@end ifcommanddefined
+@AT@ifcommandnotdefined inlineraw
+@AT@rmacro sbs{L, M, R}
+_\L\\M\\R\
+@AT@end rmacro
+@AT@end ifcommandnotdefined
+@AT@end ifset
+@AT@ifclear txicommandconditionals
+@AT@rmacro sbs{L, M, R}
+_\L\\M\\R\
+@AT@end rmacro
+@AT@end ifclear
 @AT@end ifxml
 @AT@end ifclear
 @AT@iftex
@@ -3371,14 +3427,42 @@ EOF
 @AT@ifclear spstexi
 @AT@set spstexi
 @AT@ifdocbook
+@AT@ifset txicommandconditionals
+@AT@ifcommanddefined inlineraw
 @AT@rmacro sps{L, M, R}
 @AT@inlineraw{docbook, <superscript>}\M\@AT@inlineraw{docbook, </superscript>}
 @AT@end rmacro
+@AT@end ifcommanddefined
+@AT@ifcommandnotdefined inlineraw
+@AT@rmacro sps{L, M, R}
+^\L\\M\\R\
+@AT@end rmacro
+@AT@end ifcommandnotdefined
+@AT@end ifset
+@AT@ifclear txicommandconditionals
+@AT@rmacro sps{L, M, R}
+^\L\\M\\R\
+@AT@end rmacro
+@AT@end ifclear
 @AT@end ifdocbook
 @AT@ifhtml
+@AT@ifset txicommandconditionals
+@AT@ifcommanddefined inlineraw
 @AT@rmacro sps{L, M, R}
 @AT@inlineraw{html, <sup>}\M\@AT@inlineraw{html, </sup>}
 @AT@end rmacro
+@AT@end ifcommanddefined
+@AT@ifcommandnotdefined inlineraw
+@AT@rmacro sps{L, M, R}
+^\L\\M\\R\
+@AT@end rmacro
+@AT@end ifcommandnotdefined
+@AT@end ifset
+@AT@ifclear txicommandconditionals
+@AT@rmacro sps{L, M, R}
+^\L\\M\\R\
+@AT@end rmacro
+@AT@end ifclear
 @AT@end ifhtml
 @AT@ifinfo
 @AT@ifnotplaintext
@@ -3393,9 +3477,23 @@ EOF
 @AT@end rmacro
 @AT@end ifplaintext
 @AT@ifxml
+@AT@ifset txicommandconditionals
+@AT@ifcommanddefined inlineraw
 @AT@rmacro sps{L, M, R}
 @AT@inlineraw{xml, <sup>}\M\@AT@inlineraw{xml, </sup>}
 @AT@end rmacro
+@AT@end ifcommanddefined
+@AT@ifcommandnotdefined inlineraw
+@AT@rmacro sps{L, M, R}
+^\L\\M\\R\
+@AT@end rmacro
+@AT@end ifcommandnotdefined
+@AT@end ifset
+@AT@ifclear txicommandconditionals
+@AT@rmacro sps{L, M, R}
+^\L\\M\\R\
+@AT@end rmacro
+@AT@end ifclear
 @AT@end ifxml
 @AT@end ifclear
 @AT@iftex
