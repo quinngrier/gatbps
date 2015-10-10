@@ -1420,7 +1420,7 @@ For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 The
 .nohy "\fBsbs.texi\fR"
 special file defines the
-.nohy "\fB@AT@sbs{\fIL\fB, \fIS\fB, \fIR\fB}\fR"
+.nohy "\fB@AT@sbs{\fIL\fB,\ \fIS\fB,\ \fIR\fB}\fR"
 Texinfo macro, which inserts
 .nohy "\fIS\fR"
 as a subscript in the output formats other than TeX.
@@ -1461,7 +1461,7 @@ for more information.
 The
 .nohy "\fBsps.texi\fR"
 special file defines the
-.nohy "\fB@AT@sps{\fIL\fB, \fIS\fB, \fIR\fB}\fR"
+.nohy "\fB@AT@sps{\fIL\fB,\ \fIS\fB,\ \fIR\fB}\fR"
 Texinfo macro, which inserts
 .nohy "\fIS\fR"
 as a superscript in the output formats other than TeX.
