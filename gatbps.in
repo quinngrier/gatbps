@@ -1167,7 +1167,7 @@ and
 .nohy "\fIR\fR"
 can be left blank.
 For example, the following code produces
-.nohy "\fBx^(y + z_w)\fR"
+.nohy "\fBx^(y\ +\ z_w)\fR"
 in Info and plain text:
 .IPE
 .nf
