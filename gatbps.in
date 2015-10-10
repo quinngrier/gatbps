@@ -1165,6 +1165,18 @@ Note that
 and
 .nohy "\fIR\fR"
 can be left blank.
+For example, the following code produces
+.nohy "\fBx^(y + z_w)\fR"
+in Info and plain text:
+.IPE
+.nf
+@AT@tex
+$x^{y + z_w}$
+@AT@end tex
+@AT@ifnottex
+@AT@i{x}@AT@sps{(, @AT@i{y} + @AT@i{z}@AT@sbs{, @AT@i{w}, }, )}
+@AT@end ifnottex
+.fi
 .LP
 In Docbook, HTML, and XML, the
 .nohy "\fB@AT@sps\fR"
