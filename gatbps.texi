@@ -136,6 +136,14 @@ character in all output formats if the
 @t{ASCII}
 flag is set at its point of inclusion@.
 
+The macros insert numeric character references with the
+@t{@@inlineraw}
+command@.
+This command was added to Texinfo in
+version 5.@:0, which was released on 2013-02-16@.
+The macros automatically detect older versions of
+Texinfo, in which case they insert UTF-8 characters instead@.
+
 The following table lists the macros that have
 no parameters, which insert individual symbols@.
 Along with each macro is its corresponding @TeX{}

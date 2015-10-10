@@ -1088,6 +1088,14 @@ character in all output formats if the
 .nohy "\fBASCII\fR"
 flag is set at its point of inclusion.
 .LP
+The macros insert numeric character references with the
+.nohy "\fB@AT@inlineraw\fR"
+command.
+This command was added to Texinfo in
+version 5.0, which was released on 2013\-02\-16.
+The macros automatically detect older versions of
+Texinfo, in which case they insert UTF-8 characters instead.
+.LP
 The following table lists the macros that have
 no parameters, which insert individual symbols.
 Along with each macro is its corresponding TeX
@@ -2644,14 +2652,42 @@ EOF
 @AT@set bdotstexi
 @AT@ifclear ASCII
 @AT@ifdocbook
+@AT@ifset txicommandconditionals
+@AT@ifcommanddefined inlineraw
 @AT@macro bdots{}
 @AT@inlineraw{docbook, &#x2026;}
 @AT@end macro
+@AT@end ifcommanddefined
+@AT@ifcommandnotdefined inlineraw
+@AT@macro bdots{}
+…
+@AT@end macro
+@AT@end ifcommandnotdefined
+@AT@end ifset
+@AT@ifclear txicommandconditionals
+@AT@macro bdots{}
+…
+@AT@end macro
+@AT@end ifclear
 @AT@end ifdocbook
 @AT@ifhtml
+@AT@ifset txicommandconditionals
+@AT@ifcommanddefined inlineraw
 @AT@macro bdots{}
 @AT@inlineraw{html, &#x2026;}
 @AT@end macro
+@AT@end ifcommanddefined
+@AT@ifcommandnotdefined inlineraw
+@AT@macro bdots{}
+…
+@AT@end macro
+@AT@end ifcommandnotdefined
+@AT@end ifset
+@AT@ifclear txicommandconditionals
+@AT@macro bdots{}
+…
+@AT@end macro
+@AT@end ifclear
 @AT@end ifhtml
 @AT@ifinfo
 @AT@ifnotplaintext
@@ -2666,9 +2702,23 @@ EOF
 @AT@end macro
 @AT@end ifplaintext
 @AT@ifxml
+@AT@ifset txicommandconditionals
+@AT@ifcommanddefined inlineraw
 @AT@macro bdots{}
 @AT@inlineraw{xml, &#x2026;}
 @AT@end macro
+@AT@end ifcommanddefined
+@AT@ifcommandnotdefined inlineraw
+@AT@macro bdots{}
+…
+@AT@end macro
+@AT@end ifcommandnotdefined
+@AT@end ifset
+@AT@ifclear txicommandconditionals
+@AT@macro bdots{}
+…
+@AT@end macro
+@AT@end ifclear
 @AT@end ifxml
 @AT@end ifclear
 @AT@ifset ASCII
@@ -2750,14 +2800,42 @@ EOF
 @AT@set mdottexi
 @AT@ifclear ASCII
 @AT@ifdocbook
+@AT@ifset txicommandconditionals
+@AT@ifcommanddefined inlineraw
 @AT@macro mdot{}
 @AT@inlineraw{docbook, &#x22C5;}
 @AT@end macro
+@AT@end ifcommanddefined
+@AT@ifcommandnotdefined inlineraw
+@AT@macro mdot{}
+⋅
+@AT@end macro
+@AT@end ifcommandnotdefined
+@AT@end ifset
+@AT@ifclear txicommandconditionals
+@AT@macro mdot{}
+⋅
+@AT@end macro
+@AT@end ifclear
 @AT@end ifdocbook
 @AT@ifhtml
+@AT@ifset txicommandconditionals
+@AT@ifcommanddefined inlineraw
 @AT@macro mdot{}
 @AT@inlineraw{html, &#x22C5;}
 @AT@end macro
+@AT@end ifcommanddefined
+@AT@ifcommandnotdefined inlineraw
+@AT@macro mdot{}
+⋅
+@AT@end macro
+@AT@end ifcommandnotdefined
+@AT@end ifset
+@AT@ifclear txicommandconditionals
+@AT@macro mdot{}
+⋅
+@AT@end macro
+@AT@end ifclear
 @AT@end ifhtml
 @AT@ifinfo
 @AT@ifnotplaintext
@@ -2772,9 +2850,23 @@ EOF
 @AT@end macro
 @AT@end ifplaintext
 @AT@ifxml
+@AT@ifset txicommandconditionals
+@AT@ifcommanddefined inlineraw
 @AT@macro mdot{}
 @AT@inlineraw{xml, &#x22C5;}
 @AT@end macro
+@AT@end ifcommanddefined
+@AT@ifcommandnotdefined inlineraw
+@AT@macro mdot{}
+⋅
+@AT@end macro
+@AT@end ifcommandnotdefined
+@AT@end ifset
+@AT@ifclear txicommandconditionals
+@AT@macro mdot{}
+⋅
+@AT@end macro
+@AT@end ifclear
 @AT@end ifxml
 @AT@end ifclear
 @AT@ifset ASCII
@@ -2856,14 +2948,42 @@ EOF
 @AT@set mdotstexi
 @AT@ifclear ASCII
 @AT@ifdocbook
+@AT@ifset txicommandconditionals
+@AT@ifcommanddefined inlineraw
 @AT@macro mdots{}
 @AT@inlineraw{docbook, &#x22EF;}
 @AT@end macro
+@AT@end ifcommanddefined
+@AT@ifcommandnotdefined inlineraw
+@AT@macro mdots{}
+⋯
+@AT@end macro
+@AT@end ifcommandnotdefined
+@AT@end ifset
+@AT@ifclear txicommandconditionals
+@AT@macro mdots{}
+⋯
+@AT@end macro
+@AT@end ifclear
 @AT@end ifdocbook
 @AT@ifhtml
+@AT@ifset txicommandconditionals
+@AT@ifcommanddefined inlineraw
 @AT@macro mdots{}
 @AT@inlineraw{html, &#x22EF;}
 @AT@end macro
+@AT@end ifcommanddefined
+@AT@ifcommandnotdefined inlineraw
+@AT@macro mdots{}
+⋯
+@AT@end macro
+@AT@end ifcommandnotdefined
+@AT@end ifset
+@AT@ifclear txicommandconditionals
+@AT@macro mdots{}
+⋯
+@AT@end macro
+@AT@end ifclear
 @AT@end ifhtml
 @AT@ifinfo
 @AT@ifnotplaintext
@@ -2878,9 +2998,23 @@ EOF
 @AT@end macro
 @AT@end ifplaintext
 @AT@ifxml
+@AT@ifset txicommandconditionals
+@AT@ifcommanddefined inlineraw
 @AT@macro mdots{}
 @AT@inlineraw{xml, &#x22EF;}
 @AT@end macro
+@AT@end ifcommanddefined
+@AT@ifcommandnotdefined inlineraw
+@AT@macro mdots{}
+⋯
+@AT@end macro
+@AT@end ifcommandnotdefined
+@AT@end ifset
+@AT@ifclear txicommandconditionals
+@AT@macro mdots{}
+⋯
+@AT@end macro
+@AT@end ifclear
 @AT@end ifxml
 @AT@end ifclear
 @AT@ifset ASCII
@@ -2962,14 +3096,42 @@ EOF
 @AT@set msigntexi
 @AT@ifclear ASCII
 @AT@ifdocbook
+@AT@ifset txicommandconditionals
+@AT@ifcommanddefined inlineraw
 @AT@macro msign{}
 @AT@inlineraw{docbook, &#x2212;}
 @AT@end macro
+@AT@end ifcommanddefined
+@AT@ifcommandnotdefined inlineraw
+@AT@macro msign{}
+−
+@AT@end macro
+@AT@end ifcommandnotdefined
+@AT@end ifset
+@AT@ifclear txicommandconditionals
+@AT@macro msign{}
+−
+@AT@end macro
+@AT@end ifclear
 @AT@end ifdocbook
 @AT@ifhtml
+@AT@ifset txicommandconditionals
+@AT@ifcommanddefined inlineraw
 @AT@macro msign{}
 @AT@inlineraw{html, &#x2212;}
 @AT@end macro
+@AT@end ifcommanddefined
+@AT@ifcommandnotdefined inlineraw
+@AT@macro msign{}
+−
+@AT@end macro
+@AT@end ifcommandnotdefined
+@AT@end ifset
+@AT@ifclear txicommandconditionals
+@AT@macro msign{}
+−
+@AT@end macro
+@AT@end ifclear
 @AT@end ifhtml
 @AT@ifinfo
 @AT@ifnotplaintext
@@ -2984,9 +3146,23 @@ EOF
 @AT@end macro
 @AT@end ifplaintext
 @AT@ifxml
+@AT@ifset txicommandconditionals
+@AT@ifcommanddefined inlineraw
 @AT@macro msign{}
 @AT@inlineraw{xml, &#x2212;}
 @AT@end macro
+@AT@end ifcommanddefined
+@AT@ifcommandnotdefined inlineraw
+@AT@macro msign{}
+−
+@AT@end macro
+@AT@end ifcommandnotdefined
+@AT@end ifset
+@AT@ifclear txicommandconditionals
+@AT@macro msign{}
+−
+@AT@end macro
+@AT@end ifclear
 @AT@end ifxml
 @AT@end ifclear
 @AT@ifset ASCII
