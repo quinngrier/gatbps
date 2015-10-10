@@ -1175,7 +1175,7 @@ in Info and plain text:
 $x^{y\ +\ z_w}$
 @AT@end tex
 @AT@ifnottex
-@AT@i{x}@AT@sps{(, @AT@i{y} + @AT@i{z}@AT@sbs{, @AT@i{w}, }, )}
+@AT@i{x}@AT@sps{(,\ @AT@i{y}\ +\ @AT@i{z}@AT@sbs{,\ @AT@i{w},\ },\ )}
 @AT@end ifnottex
 .fi
 .LP
