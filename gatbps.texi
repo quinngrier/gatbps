@@ -62,7 +62,8 @@ GATBPS provides a collection of Texinfo
 macros that support an alternative approach
 to writing mathematical notation in Texinfo@.
 The idea is to write each expression in both
-raw @TeX{} and plain Texinfo syntax, like this:
+raw @TeX{} and plain Texinfo syntax@.
+For example:
 
 @example
 @@tex
