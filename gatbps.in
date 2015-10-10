@@ -1030,7 +1030,7 @@ The macros are then used in the
 .nohy "\fB@AT@ifnottex\fR"
 section to imitate TeX.
 For example, the
-.nohy "\fB@AT@mdot{}\fR"
+.nohy "\fB@AT@mdot\fR"
 macro imitates the
 .nohy "\fB\ecdot\fR"
 control sequence.
@@ -1049,7 +1049,7 @@ flag as an include guard so that including the
 file multiple times is equivalent to including
 it only the first time.
 For example, the
-.nohy "\fB@AT@mdot{}\fR"
+.nohy "\fB@AT@mdot\fR"
 macro is defined by the
 .nohy "\fBmdot.texi\fR"
 special file, which also uses the
@@ -1076,7 +1076,7 @@ all output formats if the
 .nohy "\fBASCII\fR"
 flag is set at their points of inclusion.
 For example, the
-.nohy "\fB@AT@mdot{}\fR"
+.nohy "\fB@AT@mdot\fR"
 macro inserts a UTF-8 dot
 operator character
 in Info and plain text and an

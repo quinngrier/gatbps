@@ -78,7 +78,7 @@ The macros are then used in the
 @t{@@ifnottex}
 section to imitate @TeX{}@.
 For example, the
-@t{@@mdot@{@}}
+@t{@@mdot}
 macro imitates the
 @t{\cdot}
 control sequence@.
@@ -97,7 +97,7 @@ flag as an include guard so that including the
 file multiple times is equivalent to including
 it only the first time@.
 For example, the
-@t{@@mdot@{@}}
+@t{@@mdot}
 macro is defined by the
 @t{mdot.@:texi}
 special file, which also uses the
@@ -124,7 +124,7 @@ all output formats if the
 @t{ASCII}
 flag is set at their points of inclusion@.
 For example, the
-@t{@@mdot@{@}}
+@t{@@mdot}
 macro inserts a UTF-8 dot
 operator character
 in Info and plain text and an
