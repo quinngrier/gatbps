@@ -1088,9 +1088,9 @@ character in all output formats if the
 .nohy "\fBASCII\fR"
 flag is set at its point of inclusion.
 .LP
-The macros insert numeric character references with the
+In Docbook, HTML, and XML, the macros use the
 .nohy "\fB@AT@inlineraw\fR"
-command.
+command to insert numeric character references.
 This command was added to Texinfo in
 version 5.0, which was released on 2013\-02\-16.
 The macros automatically detect older versions of

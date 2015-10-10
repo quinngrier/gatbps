@@ -136,9 +136,9 @@ character in all output formats if the
 @t{ASCII}
 flag is set at its point of inclusion@.
 
-The macros insert numeric character references with the
+In Docbook, HTML, and XML, the macros use the
 @t{@@inlineraw}
-command@.
+command to insert numeric character references@.
 This command was added to Texinfo in
 version 5.@:0, which was released on 2013-02-16@.
 The macros automatically detect older versions of
