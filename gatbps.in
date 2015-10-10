@@ -1074,7 +1074,7 @@ UTF-8 characters in Info and plain text and
 as numeric character references in Docbook, HTML, and
 XML by default, or as ASCII alternatives in
 all output formats if the
-.nohy "\fBASCII\fR"
+.nohy "\fBinsertascii\fR"
 flag is set at their points of inclusion.
 For example, the
 .nohy "\fB@AT@mdot\fR"
@@ -1086,7 +1086,7 @@ character reference in Docbook, HTML, and
 XML by default, or an ASCII
 .nohy "\fB*\fR"
 character in all output formats if the
-.nohy "\fBASCII\fR"
+.nohy "\fBinsertascii\fR"
 flag is set at its point of inclusion.
 .LP
 In Docbook, HTML, and XML, the macros use the
@@ -1103,7 +1103,7 @@ Along with each macro is its corresponding TeX
 syntax, the Unicode character that it inserts
 by default, and the ASCII alternative that
 it inserts if the
-.nohy "\fBASCII\fR"
+.nohy "\fBinsertascii\fR"
 flag is set at its point of inclusion.
 .IPE
 .TS
@@ -2677,7 +2677,7 @@ EOF
 @AT@end iftex
 @AT@ifclear bdotstexi
 @AT@set bdotstexi
-@AT@ifclear ASCII
+@AT@ifclear insertascii
 @AT@ifdocbook
 @AT@ifset txicommandconditionals
 @AT@ifcommanddefined inlineraw
@@ -2748,7 +2748,7 @@ EOF
 @AT@end ifclear
 @AT@end ifxml
 @AT@end ifclear
-@AT@ifset ASCII
+@AT@ifset insertascii
 @AT@ifdocbook
 @AT@macro bdots{}
 .@:.@:.@:
@@ -2825,7 +2825,7 @@ EOF
 @AT@end iftex
 @AT@ifclear mdottexi
 @AT@set mdottexi
-@AT@ifclear ASCII
+@AT@ifclear insertascii
 @AT@ifdocbook
 @AT@ifset txicommandconditionals
 @AT@ifcommanddefined inlineraw
@@ -2896,7 +2896,7 @@ EOF
 @AT@end ifclear
 @AT@end ifxml
 @AT@end ifclear
-@AT@ifset ASCII
+@AT@ifset insertascii
 @AT@ifdocbook
 @AT@macro mdot{}
 *
@@ -2973,7 +2973,7 @@ EOF
 @AT@end iftex
 @AT@ifclear mdotstexi
 @AT@set mdotstexi
-@AT@ifclear ASCII
+@AT@ifclear insertascii
 @AT@ifdocbook
 @AT@ifset txicommandconditionals
 @AT@ifcommanddefined inlineraw
@@ -3044,7 +3044,7 @@ EOF
 @AT@end ifclear
 @AT@end ifxml
 @AT@end ifclear
-@AT@ifset ASCII
+@AT@ifset insertascii
 @AT@ifdocbook
 @AT@macro mdots{}
 .@:.@:.@:
@@ -3121,7 +3121,7 @@ EOF
 @AT@end iftex
 @AT@ifclear msigntexi
 @AT@set msigntexi
-@AT@ifclear ASCII
+@AT@ifclear insertascii
 @AT@ifdocbook
 @AT@ifset txicommandconditionals
 @AT@ifcommanddefined inlineraw
@@ -3192,7 +3192,7 @@ EOF
 @AT@end ifclear
 @AT@end ifxml
 @AT@end ifclear
-@AT@ifset ASCII
+@AT@ifset insertascii
 @AT@ifdocbook
 @AT@macro msign{}
 -

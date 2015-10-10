@@ -122,7 +122,7 @@ UTF-8 characters in Info and plain text and
 as numeric character references in Docbook, HTML, and
 XML by default, or as ASCII alternatives in
 all output formats if the
-@t{ASCII}
+@t{insertascii}
 flag is set at their points of inclusion@.
 For example, the
 @t{@@mdot}
@@ -134,7 +134,7 @@ character reference in Docbook, HTML, and
 XML by default, or an ASCII
 @t{*}
 character in all output formats if the
-@t{ASCII}
+@t{insertascii}
 flag is set at its point of inclusion@.
 
 In Docbook, HTML, and XML, the macros use the
@@ -151,11 +151,11 @@ Along with each macro is its corresponding @TeX{}
 syntax, the Unicode character that it inserts
 by default, and the ASCII alternative that
 it inserts if the
-@t{ASCII}
+@t{insertascii}
 flag is set at its point of inclusion@.
 If this manual is translated to @TeX{}
 or any other output format without the
-@t{ASCII}
+@t{insertascii}
 flag set, then the table also
 shows the symbol of each macro@.
 
