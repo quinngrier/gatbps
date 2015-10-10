@@ -88,7 +88,7 @@ Texinfo commands and @TeX{} control sequences,
 as recommended by the Texinfo manual@.
 
 Each macro
-@i{M}
+@t{@@}@i{M}
 is defined by the
 @i{M}@t{.@:texi}
 special file, which also uses the

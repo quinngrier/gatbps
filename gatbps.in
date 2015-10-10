@@ -1040,7 +1040,7 @@ Texinfo commands and TeX control sequences,
 as recommended by the Texinfo manual.
 .LP
 Each macro
-.nohy "\fIM\fR"
+.nohy "\fB@AT@\fIM\fR"
 is defined by the
 .nohy "\fIM\fB.texi\fR"
 special file, which also uses the
