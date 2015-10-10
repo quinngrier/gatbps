@@ -3272,69 +3272,69 @@ EOF
 @AT@ifdocbook
 @AT@ifset txicommandconditionals
 @AT@ifcommanddefined inlineraw
-@AT@rmacro sbs{L, M, R}
-@AT@inlineraw{docbook, <subscript>}\M\@AT@inlineraw{docbook, </subscript>}
+@AT@rmacro sbs{L, S, R}
+@AT@inlineraw{docbook, <subscript>}\S\@AT@inlineraw{docbook, </subscript>}
 @AT@end rmacro
 @AT@end ifcommanddefined
 @AT@ifcommandnotdefined inlineraw
-@AT@rmacro sbs{L, M, R}
-_\L\\M\\R\
+@AT@rmacro sbs{L, S, R}
+_\L\\S\\R\
 @AT@end rmacro
 @AT@end ifcommandnotdefined
 @AT@end ifset
 @AT@ifclear txicommandconditionals
-@AT@rmacro sbs{L, M, R}
-_\L\\M\\R\
+@AT@rmacro sbs{L, S, R}
+_\L\\S\\R\
 @AT@end rmacro
 @AT@end ifclear
 @AT@end ifdocbook
 @AT@ifhtml
 @AT@ifset txicommandconditionals
 @AT@ifcommanddefined inlineraw
-@AT@rmacro sbs{L, M, R}
-@AT@inlineraw{html, <sub>}\M\@AT@inlineraw{html, </sub>}
+@AT@rmacro sbs{L, S, R}
+@AT@inlineraw{html, <sub>}\S\@AT@inlineraw{html, </sub>}
 @AT@end rmacro
 @AT@end ifcommanddefined
 @AT@ifcommandnotdefined inlineraw
-@AT@rmacro sbs{L, M, R}
-_\L\\M\\R\
+@AT@rmacro sbs{L, S, R}
+_\L\\S\\R\
 @AT@end rmacro
 @AT@end ifcommandnotdefined
 @AT@end ifset
 @AT@ifclear txicommandconditionals
-@AT@rmacro sbs{L, M, R}
-_\L\\M\\R\
+@AT@rmacro sbs{L, S, R}
+_\L\\S\\R\
 @AT@end rmacro
 @AT@end ifclear
 @AT@end ifhtml
 @AT@ifinfo
 @AT@ifnotplaintext
-@AT@rmacro sbs{L, M, R}
-_\L\\M\\R\
+@AT@rmacro sbs{L, S, R}
+_\L\\S\\R\
 @AT@end rmacro
 @AT@end ifnotplaintext
 @AT@end ifinfo
 @AT@ifplaintext
-@AT@rmacro sbs{L, M, R}
-_\L\\M\\R\
+@AT@rmacro sbs{L, S, R}
+_\L\\S\\R\
 @AT@end rmacro
 @AT@end ifplaintext
 @AT@ifxml
 @AT@ifset txicommandconditionals
 @AT@ifcommanddefined inlineraw
-@AT@rmacro sbs{L, M, R}
-@AT@inlineraw{xml, <sub>}\M\@AT@inlineraw{xml, </sub>}
+@AT@rmacro sbs{L, S, R}
+@AT@inlineraw{xml, <sub>}\S\@AT@inlineraw{xml, </sub>}
 @AT@end rmacro
 @AT@end ifcommanddefined
 @AT@ifcommandnotdefined inlineraw
-@AT@rmacro sbs{L, M, R}
-_\L\\M\\R\
+@AT@rmacro sbs{L, S, R}
+_\L\\S\\R\
 @AT@end rmacro
 @AT@end ifcommandnotdefined
 @AT@end ifset
 @AT@ifclear txicommandconditionals
-@AT@rmacro sbs{L, M, R}
-_\L\\M\\R\
+@AT@rmacro sbs{L, S, R}
+_\L\\S\\R\
 @AT@end rmacro
 @AT@end ifclear
 @AT@end ifxml
