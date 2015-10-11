@@ -17,6 +17,8 @@ awk=@AWK_SHELL@
 
 sed='sed'
 
+texi2any='texi2any'
+
 isatty2=''
 fR2=''
 fB2=''
@@ -3761,7 +3763,7 @@ EOF1
             ;;
           esac
 
-          texi2any --plaintext "${tmp1}" >"${tmp0}"
+          "${texi2any}" --plaintext "${tmp1}" >"${tmp0}"
           case "${?}" in
           #(
             '0')
@@ -3770,7 +3772,7 @@ EOF1
           #(
             *)
               cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}texi2any${fR2} failed to read from: ${fB2}${tmp1}${fR2}
+${fy2}gatbps:${fd2} ${fB2}${texi2any}${fR2} failed to read from: ${fB2}${tmp1}${fR2}
 ${fy2}gatbps:${fd2} and write to: ${fB2}${tmp0}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
@@ -3871,7 +3873,7 @@ EOF1
           ;;
         esac
 
-        texi2any --plaintext "${tmp2}" >"${tmp1}"
+        "${texi2any}" --plaintext "${tmp2}" >"${tmp1}"
         case "${?}" in
         #(
           '0')
@@ -3880,7 +3882,7 @@ EOF1
         #(
           *)
             cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}texi2any${fR2} failed to read from: ${fB2}${tmp2}${fR2}
+${fy2}gatbps:${fd2} ${fB2}${texi2any}${fR2} failed to read from: ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fd2} and write to: ${fB2}${tmp1}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
@@ -3990,7 +3992,7 @@ EOF1
             ;;
           esac
 
-          texi2any --plaintext "${tmp3}" >>"${tmp2}"
+          "${texi2any}" --plaintext "${tmp3}" >>"${tmp2}"
           case "${?}" in
           #(
             '0')
@@ -3999,7 +4001,7 @@ EOF1
           #(
             *)
               cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}texi2any${fR2} failed to read from: ${fB2}${tmp3}${fR2}
+${fy2}gatbps:${fd2} ${fB2}${texi2any}${fR2} failed to read from: ${fB2}${tmp3}${fR2}
 ${fy2}gatbps:${fd2} and write to: ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
