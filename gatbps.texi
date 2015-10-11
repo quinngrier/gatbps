@@ -118,6 +118,7 @@ to avoid collisions with the names of
 Texinfo commands and @TeX{} control sequences,
 as recommended by the Texinfo manual@.
 
+@sfindex @t{math.@:texi}
 Each macro
 @t{@@}@i{M}
 is defined by the
@@ -377,6 +378,23 @@ $1, \ldots, n$
 1, @@bdots@{@}, @@i@{n@}
 @@end ifnottex
 @end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}.
+
+@sfindex @t{math.@:texi}
+@item @t{math.@:texi}
+@itemx @w{}
+The
+@t{math.@:texi}
+special file uses
+@t{@@include}
+commands to include all special
+files that provide Texinfo macros for mathematical notation@.
+This can be
+generated with the
+@t{--walk}
+option to also generate all such special files
+at once@.
 
 For more information, @pxref{Mathematical Notation in Texinfo}.
 
