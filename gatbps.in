@@ -15,6 +15,8 @@ export 'LC_ALL'
 
 awk=@AWK_SHELL@
 
+sed='sed'
+
 isatty2=''
 fR2=''
 fB2=''
@@ -161,7 +163,7 @@ EOF1
       #(
         '--awk='*)
 
-          x=`sed "
+          x=`"${sed}" "
 s/'/'\\\\\\\\''/g
 1s/^--awk=/awk='/
 \\$s/\\$/'/
@@ -177,7 +179,7 @@ EOF1
           #(
             *)
               cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}sed${fR2} failed to read from:
+${fr2}gatbps!${fd2} ${fB2}${sed}${fR2} failed to read from:
 ${fr2}gatbps!${fd2}   1. a here-document
 ${fr2}gatbps!${fd2} and write to: a command substitution
 EOF1
