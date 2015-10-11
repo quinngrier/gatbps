@@ -519,8 +519,8 @@ For more information, @pxref{Mathematical Notation in Texinfo}.
 @unnumbered Special File Index
 
 @printindex sf
-@iftex
-@ifnottex
+@ifxml
+@ifnotxml
 @c
 @c The authors of this file have waived all copyright and
 @c related or neighboring rights to the extent permitted by
@@ -530,6 +530,6 @@ For more information, @pxref{Mathematical Notation in Texinfo}.
 @c named <CC0-1.0.txt>. If not, it may be available at
 @c <https://creativecommons.org/publicdomain/zero/1.0/>.
 @c
-@end ifnottex
-@end iftex
+@end ifnotxml
+@end ifxml
 @bye
