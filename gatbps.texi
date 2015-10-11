@@ -190,7 +190,7 @@ or any other output format without the
 flag set, then the table also
 shows the symbol of each macro@.
 
-@indentedblock
+@quotation
 @ifnottex
 @ifset insertascii
 @set HideSymbols
@@ -250,7 +250,7 @@ $\ldots$
 @end ifnottex
 @end multitable
 @end ifclear
-@end indentedblock
+@end quotation
 
 @sfindex @t{sps.@:texi}
 @sfindex @t{sbs.@:texi}
