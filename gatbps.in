@@ -127,10 +127,10 @@ while :; do
       #(
         '--='*)
 
-          cat >&2 <<EOF
+          cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} the ${fB2}--${fR2} option must not have an argument
 ${fr2}gatbps!${fd2} try ${fB2}gatbps --help${fR2} for more information
-EOF
+EOF1
           exit '1'
 
         ;;
@@ -141,10 +141,10 @@ EOF
           case "${#}" in
           #(
             '1')
-              cat >&2 <<EOF
+              cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} each ${fB2}--awk${fR2} option must have an argument
 ${fr2}gatbps!${fd2} try ${fB2}gatbps --help${fR2} for more information
-EOF
+EOF1
               exit '1'
             ;;
           esac
@@ -165,9 +165,9 @@ EOF
 s/'/'\\\\\\\\''/g
 1s/^--awk=/awk='/
 \\$s/\\$/'/
-" <<EOF
+" <<EOF1
 ${1}
-EOF
+EOF1
 `
           case "${?}" in
           #(
@@ -176,11 +176,11 @@ EOF
             ;;
           #(
             *)
-              cat >&2 <<EOF
+              cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} ${fB2}sed${fR2} failed to read from:
 ${fr2}gatbps!${fd2}   1. a here-document
 ${fr2}gatbps!${fd2} and write to: a command substitution
-EOF
+EOF1
               exit '1'
             ;;
           esac
@@ -193,7 +193,7 @@ EOF
       #(
         '--help')
 
-          cat <<EOF
+          cat <<EOF1
 Usage: ${fB1}gatbps${fR1} [<${fI1}option${fR1}> | <${fI1}file${fR1}>]...
 
 Create standard project files.
@@ -205,7 +205,7 @@ way, but each special file is created in a unique way. More information
 on how a given file will be created can be shown with the second form.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF
+EOF1
           case "${?}" in
           #(
             '0')
@@ -213,11 +213,11 @@ EOF
             ;;
           #(
             *)
-              cat >&2 <<EOF
+              cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps!${fd2}   1. a here-document
 ${fr2}gatbps!${fd2} and write to: standard output
-EOF
+EOF1
               exit '1'
             ;;
           esac
@@ -232,9 +232,9 @@ EOF
           case "${1}" in
           #(
             '--help=')
-              cat >&2 <<EOF
+              cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} the ${fB2}--help${fR2} option argument must not be empty
-EOF
+EOF1
               exit '1'
             ;;
           esac
@@ -242,9 +242,9 @@ EOF
           case "${1}" in
           #(
             '--help='*'/')
-              cat >&2 <<EOF
+              cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} the ${fB2}--help${fR2} option argument must not end with a slash
-EOF
+EOF1
               exit '1'
             ;;
           esac
@@ -253,7 +253,7 @@ EOF
 
           #(
             '--help=CC0-1.0-AC-COPYRIGHT.ac'|'--help='*'/CC0-1.0-AC-COPYRIGHT.ac')
-              cat <<EOF
+              cat <<EOF1
 Special file: ${fB1}CC0-1.0-AC-COPYRIGHT.ac${fR1}
 
 The ${fB1}CC0-1.0-AC-COPYRIGHT.ac${fR1} special file calls the ${fB1}AC_COPYRIGHT${fR1} Autoconf
@@ -264,7 +264,7 @@ included in another Autoconf file with the ${fB1}m4_include${fR1} macro where th
 ${fB1}AC_COPYRIGHT${fR1} call is desired to appear.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF
+EOF1
               case "${?}" in
               #(
                 '0')
@@ -272,11 +272,11 @@ EOF
                 ;;
               #(
                 *)
-                  cat >&2 <<EOF
+                  cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps!${fd2}   1. a here-document
 ${fr2}gatbps!${fd2} and write to: standard output
-EOF
+EOF1
                   exit '1'
                 ;;
               esac
@@ -284,7 +284,7 @@ EOF
 
           #(
             '--help=CC0-1.0-AM-COPYRIGHT.am'|'--help='*'/CC0-1.0-AM-COPYRIGHT.am')
-              cat <<EOF
+              cat <<EOF1
 Special file: ${fB1}CC0-1.0-AM-COPYRIGHT.am${fR1}
 
 The ${fB1}CC0-1.0-AM-COPYRIGHT.am${fR1} special file contains an Automake comment
@@ -295,7 +295,7 @@ another Automake file with the ${fB1}include${fR1} directive where the comment i
 desired to appear.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF
+EOF1
               case "${?}" in
               #(
                 '0')
@@ -303,11 +303,11 @@ EOF
                 ;;
               #(
                 *)
-                  cat >&2 <<EOF
+                  cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps!${fd2}   1. a here-document
 ${fr2}gatbps!${fd2} and write to: standard output
-EOF
+EOF1
                   exit '1'
                 ;;
               esac
@@ -315,7 +315,7 @@ EOF
 
           #(
             '--help=CC0-1.0-appendix.texi'|'--help='*'/CC0-1.0-appendix.texi')
-              cat <<EOF
+              cat <<EOF1
 Special file: ${fB1}CC0-1.0-appendix.texi${fR1}
 
 The ${fB1}CC0-1.0-appendix.texi${fR1} special file is the same as the ${fB1}CC0-1.0.txt${fR1}
@@ -325,7 +325,7 @@ desired to appear. The appendix is also labeled as ${fB1}@AT@node CC0${fR1} so t
 follows the usual node structure and can be referenced.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF
+EOF1
               case "${?}" in
               #(
                 '0')
@@ -333,11 +333,11 @@ EOF
                 ;;
               #(
                 *)
-                  cat >&2 <<EOF
+                  cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps!${fd2}   1. a here-document
 ${fr2}gatbps!${fd2} and write to: standard output
-EOF
+EOF1
                   exit '1'
                 ;;
               esac
@@ -345,7 +345,7 @@ EOF
 
           #(
             '--help=CC0-1.0-commit.txt'|'--help='*'/CC0-1.0-commit.txt')
-              cat <<EOF
+              cat <<EOF1
 Special file: ${fB1}CC0-1.0-commit.txt${fR1}
 
 The ${fB1}CC0-1.0-commit.txt${fR1} special file is a commit message template that
@@ -354,7 +354,7 @@ referencing the ${fB1}CC0-1.0.txt${fR1} special file. This can be used with Git'
 ${fB1}commit.template${fR1} configuration variable, for example.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF
+EOF1
               case "${?}" in
               #(
                 '0')
@@ -362,11 +362,11 @@ EOF
                 ;;
               #(
                 *)
-                  cat >&2 <<EOF
+                  cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps!${fd2}   1. a here-document
 ${fr2}gatbps!${fd2} and write to: standard output
-EOF
+EOF1
                   exit '1'
                 ;;
               esac
@@ -374,7 +374,7 @@ EOF
 
           #(
             '--help=CC0-1.0-copying.texi'|'--help='*'/CC0-1.0-copying.texi')
-              cat <<EOF
+              cat <<EOF1
 Special file: ${fB1}CC0-1.0-copying.texi${fR1}
 
 The ${fB1}CC0-1.0-copying.texi${fR1} special file calls the ${fB1}@AT@copying${fR1} Texinfo command
@@ -385,7 +385,7 @@ Texinfo file with the ${fB1}@AT@include${fR1} command where the ${fB1}@AT@copyin
 desired to appear.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF
+EOF1
               case "${?}" in
               #(
                 '0')
@@ -393,11 +393,11 @@ EOF
                 ;;
               #(
                 *)
-                  cat >&2 <<EOF
+                  cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps!${fd2}   1. a here-document
 ${fr2}gatbps!${fd2} and write to: standard output
-EOF
+EOF1
                   exit '1'
                 ;;
               esac
@@ -405,7 +405,7 @@ EOF
 
           #(
             '--help=CC0-1.0-file.txt'|'--help='*'/CC0-1.0-file.txt')
-              cat <<EOF
+              cat <<EOF1
 Special file: ${fB1}CC0-1.0-file.txt${fR1}
 
 The ${fB1}CC0-1.0-file.txt${fR1} special file contains a plain text message that
@@ -414,7 +414,7 @@ referencing the ${fB1}CC0-1.0.txt${fR1} special file. This can be inserted into 
 plain text file or a source code file as a comment.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF
+EOF1
               case "${?}" in
               #(
                 '0')
@@ -422,11 +422,11 @@ EOF
                 ;;
               #(
                 *)
-                  cat >&2 <<EOF
+                  cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps!${fd2}   1. a here-document
 ${fr2}gatbps!${fd2} and write to: standard output
-EOF
+EOF1
                   exit '1'
                 ;;
               esac
@@ -434,7 +434,7 @@ EOF
 
           #(
             '--help=CC0-1.0.txt'|'--help='*'/CC0-1.0.txt')
-              cat <<EOF
+              cat <<EOF1
 Special file: ${fB1}CC0-1.0.txt${fR1}
 
 The ${fB1}CC0-1.0.txt${fR1} special file is the plain text version of the CC0 1.0
@@ -444,7 +444,7 @@ neighboring rights to their work. This was originally downloaded from
 <${fB1}https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt${fR1}>.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF
+EOF1
               case "${?}" in
               #(
                 '0')
@@ -452,11 +452,11 @@ EOF
                 ;;
               #(
                 *)
-                  cat >&2 <<EOF
+                  cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps!${fd2}   1. a here-document
 ${fr2}gatbps!${fd2} and write to: standard output
-EOF
+EOF1
                   exit '1'
                 ;;
               esac
@@ -464,11 +464,11 @@ EOF
 
           #(
             '--help=DATE.ac'|'--help='*'/DATE.ac')
-              cat <<EOF
+              cat <<EOF1
 Special file: ${fB1}DATE.ac${fR1}
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF
+EOF1
               case "${?}" in
               #(
                 '0')
@@ -476,11 +476,11 @@ EOF
                 ;;
               #(
                 *)
-                  cat >&2 <<EOF
+                  cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps!${fd2}   1. a here-document
 ${fr2}gatbps!${fd2} and write to: standard output
-EOF
+EOF1
                   exit '1'
                 ;;
               esac
@@ -488,7 +488,7 @@ EOF
 
           #(
             '--help=bdots.texi'|'--help='*'/bdots.texi')
-              cat <<EOF
+              cat <<EOF1
 Special file: ${fB1}bdots.texi${fR1}
 
 The ${fB1}bdots.texi${fR1} special file defines the ${fB1}@AT@bdots{}${fR1} Texinfo macro, which
@@ -503,7 +503,7 @@ the mathematical notation of TeX in the other output formats:
       @AT@end ifnottex
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF
+EOF1
               case "${?}" in
               #(
                 '0')
@@ -511,11 +511,11 @@ EOF
                 ;;
               #(
                 *)
-                  cat >&2 <<EOF
+                  cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps!${fd2}   1. a here-document
 ${fr2}gatbps!${fd2} and write to: standard output
-EOF
+EOF1
                   exit '1'
                 ;;
               esac
@@ -523,7 +523,7 @@ EOF
 
           #(
             '--help=mdot.texi'|'--help='*'/mdot.texi')
-              cat <<EOF
+              cat <<EOF1
 Special file: ${fB1}mdot.texi${fR1}
 
 The ${fB1}mdot.texi${fR1} special file defines the ${fB1}@AT@mdot{}${fR1} Texinfo macro, which
@@ -538,7 +538,7 @@ mathematical notation of TeX in the other output formats:
       @AT@end ifnottex
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF
+EOF1
               case "${?}" in
               #(
                 '0')
@@ -546,11 +546,11 @@ EOF
                 ;;
               #(
                 *)
-                  cat >&2 <<EOF
+                  cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps!${fd2}   1. a here-document
 ${fr2}gatbps!${fd2} and write to: standard output
-EOF
+EOF1
                   exit '1'
                 ;;
               esac
@@ -558,7 +558,7 @@ EOF
 
           #(
             '--help=mdots.texi'|'--help='*'/mdots.texi')
-              cat <<EOF
+              cat <<EOF1
 Special file: ${fB1}mdots.texi${fR1}
 
 The ${fB1}mdots.texi${fR1} special file defines the ${fB1}@AT@mdots{}${fR1} Texinfo macro, which
@@ -573,7 +573,7 @@ the mathematical notation of TeX in the other output formats:
       @AT@end ifnottex
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF
+EOF1
               case "${?}" in
               #(
                 '0')
@@ -581,11 +581,11 @@ EOF
                 ;;
               #(
                 *)
-                  cat >&2 <<EOF
+                  cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps!${fd2}   1. a here-document
 ${fr2}gatbps!${fd2} and write to: standard output
-EOF
+EOF1
                   exit '1'
                 ;;
               esac
@@ -593,7 +593,7 @@ EOF
 
           #(
             '--help=msign.texi'|'--help='*'/msign.texi')
-              cat <<EOF
+              cat <<EOF1
 Special file: ${fB1}msign.texi${fR1}
 
 The ${fB1}msign.texi${fR1} special file defines the ${fB1}@AT@msign{}${fR1} Texinfo macro, which
@@ -608,7 +608,7 @@ mathematical notation of TeX in the other output formats:
       @AT@end ifnottex
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF
+EOF1
               case "${?}" in
               #(
                 '0')
@@ -616,11 +616,11 @@ EOF
                 ;;
               #(
                 *)
-                  cat >&2 <<EOF
+                  cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps!${fd2}   1. a here-document
 ${fr2}gatbps!${fd2} and write to: standard output
-EOF
+EOF1
                   exit '1'
                 ;;
               esac
@@ -628,7 +628,7 @@ EOF
 
           #(
             '--help=sbs.texi'|'--help='*'/sbs.texi')
-              cat <<EOF
+              cat <<EOF1
 Special file: ${fB1}sbs.texi${fR1}
 
 The ${fB1}sbs.texi${fR1} special file defines the ${fB1}@AT@sbs{${fI1}L${fB1}, ${fI1}S${fB1}, ${fI1}R${fB1}}${fR1} Texinfo macro, which
@@ -645,7 +645,7 @@ in the other output formats:
       @AT@end ifnottex
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF
+EOF1
               case "${?}" in
               #(
                 '0')
@@ -653,11 +653,11 @@ EOF
                 ;;
               #(
                 *)
-                  cat >&2 <<EOF
+                  cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps!${fd2}   1. a here-document
 ${fr2}gatbps!${fd2} and write to: standard output
-EOF
+EOF1
                   exit '1'
                 ;;
               esac
@@ -665,7 +665,7 @@ EOF
 
           #(
             '--help=shquote.sh'|'--help='*'/shquote.sh')
-              cat <<EOF
+              cat <<EOF1
 Special file: ${fB1}shquote.sh${fR1}
 
 The ${fB1}shquote.sh${fR1} special file is a portable shell script that formats its
@@ -673,7 +673,7 @@ input as a quoted shell string. Generate the file and try ${fB1}sh shquote.sh${f
 ${fB1}--help${fR1} for more information.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF
+EOF1
               case "${?}" in
               #(
                 '0')
@@ -681,11 +681,11 @@ EOF
                 ;;
               #(
                 *)
-                  cat >&2 <<EOF
+                  cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps!${fd2}   1. a here-document
 ${fr2}gatbps!${fd2} and write to: standard output
-EOF
+EOF1
                   exit '1'
                 ;;
               esac
@@ -693,7 +693,7 @@ EOF
 
           #(
             '--help=sps.texi'|'--help='*'/sps.texi')
-              cat <<EOF
+              cat <<EOF1
 Special file: ${fB1}sps.texi${fR1}
 
 The ${fB1}sps.texi${fR1} special file defines the ${fB1}@AT@sps{${fI1}L${fB1}, ${fI1}S${fB1}, ${fI1}R${fB1}}${fR1} Texinfo macro, which
@@ -710,7 +710,7 @@ in the other output formats:
       @AT@end ifnottex
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF
+EOF1
               case "${?}" in
               #(
                 '0')
@@ -718,11 +718,11 @@ EOF
                 ;;
               #(
                 *)
-                  cat >&2 <<EOF
+                  cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps!${fd2}   1. a here-document
 ${fr2}gatbps!${fd2} and write to: standard output
-EOF
+EOF1
                   exit '1'
                 ;;
               esac
@@ -753,9 +753,9 @@ END {
   print ""
   print "Try '"${fB1}"'man gatbps'"${fR1}"' or '"${fB1}"'info gatbps'"${fR1}"' for more information."
 }
-' <<EOF
+' <<EOF1
 ${1}
-EOF
+EOF1
               case "${?}" in
               #(
                 '0')
@@ -763,11 +763,11 @@ EOF
                 ;;
               #(
                 *)
-                  cat >&2 <<EOF
+                  cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fr2}gatbps!${fd2}   1. a here-document
 ${fr2}gatbps!${fd2} and write to: standard output
-EOF
+EOF1
                   exit '1'
                 ;;
               esac
@@ -782,7 +782,7 @@ EOF
       #(
         '--list')
 
-          cat <<'EOF'
+          cat <<'EOF1'
 CC0-1.0-AC-COPYRIGHT.ac
 CC0-1.0-AM-COPYRIGHT.am
 CC0-1.0-appendix.texi
@@ -798,7 +798,7 @@ msign.texi
 sbs.texi
 shquote.sh
 sps.texi
-EOF
+EOF1
           case "${?}" in
           #(
             '0')
@@ -806,11 +806,11 @@ EOF
             ;;
           #(
             *)
-              cat >&2 <<EOF
+              cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps!${fd2}   1. a here-document
 ${fr2}gatbps!${fd2} and write to: standard output
-EOF
+EOF1
               exit '1'
             ;;
           esac
@@ -822,10 +822,10 @@ EOF
       #(
         '--list='*)
 
-          cat >&2 <<EOF
+          cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} the ${fB2}--list${fR2} option must not have an argument
 ${fr2}gatbps!${fd2} try ${fB2}gatbps --help${fR2} for more information
-EOF
+EOF1
           exit '1'
 
         ;;
@@ -833,7 +833,7 @@ EOF
       #(
         '--man')
 
-          cat <<'EOF'
+          cat <<'EOF1'
 .de nohy
 .nh
 \\$1
@@ -1602,7 +1602,7 @@ means that one or more were not.
 .\" named <CC0-1.0.txt>. If not, it may be available at
 .\" <https://creativecommons.org/publicdomain/zero/1.0/>.
 .\"
-EOF
+EOF1
           case "${?}" in
           #(
             '0')
@@ -1610,11 +1610,11 @@ EOF
             ;;
           #(
             *)
-              cat >&2 <<EOF
+              cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps!${fd2}   1. a here-document
 ${fr2}gatbps!${fd2} and write to: standard output
-EOF
+EOF1
               exit '1'
             ;;
           esac
@@ -1626,10 +1626,10 @@ EOF
       #(
         '--man='*)
 
-          cat >&2 <<EOF
+          cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} the ${fB2}--man${fR2} option must not have an argument
 ${fr2}gatbps!${fd2} try ${fB2}gatbps --help${fR2} for more information
-EOF
+EOF1
           exit '1'
 
         ;;
@@ -1838,7 +1838,7 @@ EOF
       #(
         '--version')
 
-          cat <<EOF
+          cat <<EOF1
 ${fB1}gatbps${fR1} (GATBPS) @PACKAGE_VERSION@
 This version was released on @PACKAGE_DATE@.
 The authors of this program have waived all copyright and
@@ -1848,7 +1848,7 @@ Dedication. You should have received a copy of the full
 dedication along with this program, typically as a file
 named <${fB1}CC0-1.0.txt${fR1}>. If not, it may be available at
 <${fB1}https://creativecommons.org/publicdomain/zero/1.0/${fR1}>.
-EOF
+EOF1
           case "${?}" in
           #(
             '0')
@@ -1856,11 +1856,11 @@ EOF
             ;;
           #(
             *)
-              cat >&2 <<EOF
+              cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
 ${fr2}gatbps!${fd2}   1. a here-document
 ${fr2}gatbps!${fd2} and write to: standard output
-EOF
+EOF1
               exit '1'
             ;;
           esac
@@ -1872,10 +1872,10 @@ EOF
       #(
         '--version='*)
 
-          cat >&2 <<EOF
+          cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} the ${fB2}--version${fR2} option must not have an argument
 ${fr2}gatbps!${fd2} try ${fB2}gatbps --help${fR2} for more information
-EOF
+EOF1
           exit '1'
 
         ;;
@@ -1898,9 +1898,9 @@ END {
   printf "'"${fr2}"'gatbps!'"${fd2}"' unknown option name: '"${fB2}"'%s'"${fR2}"'\n", name
   print "'"${fr2}"'gatbps!'"${fd2}"' try '"${fB2}"'gatbps --help'"${fR2}"' for more information"
 }
-' >&2 <<EOF
+' >&2 <<EOF1
 ${1}
-EOF
+EOF1
           case "${?}" in
           #(
             '0')
@@ -1908,11 +1908,11 @@ EOF
             ;;
           #(
             *)
-              cat >&2 <<EOF
+              cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fr2}gatbps!${fd2}   1. a here-document
 ${fr2}gatbps!${fd2} and write to: standard error
-EOF
+EOF1
             ;;
           esac
           exit '1'
@@ -1922,10 +1922,10 @@ EOF
       #(
         '--'*|'-'?)
 
-          cat >&2 <<EOF
+          cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} unknown option name: ${fB2}${1}${fR2}
 ${fr2}gatbps!${fd2} try ${fB2}gatbps --help${fR2} for more information
-EOF
+EOF1
           exit '1'
 
         ;;
@@ -1939,9 +1939,9 @@ EOF
   print "'"${fr2}"'gatbps!'"${fd2}"' try '"${fB2}"'gatbps --help'"${fR2}"' for more information"
   exit
 }
-' >&2 <<EOF
+' >&2 <<EOF1
 ${1}
-EOF
+EOF1
           case "${?}" in
           #(
             '0')
@@ -1949,11 +1949,11 @@ EOF
             ;;
           #(
             *)
-              cat >&2 <<EOF
+              cat >&2 <<EOF1
 ${fr2}gatbps!${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fr2}gatbps!${fd2}   1. a here-document
 ${fr2}gatbps!${fd2} and write to: standard error
-EOF
+EOF1
             ;;
           esac
           exit '1'
@@ -1975,10 +1975,10 @@ EOF
     ;;
   #(
     *)
-      cat >&2 <<EOF
+      cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} each operand must not be empty
 ${fy2}gatbps:${fd2} operand failed
-EOF
+EOF1
       exit_status='1'
       continue
     ;;
@@ -1987,10 +1987,10 @@ EOF
   case "${1}" in
   #(
     *'/')
-      cat >&2 <<EOF
+      cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} each operand must not end with a slash
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
       exit_status='1'
       continue
     ;;
@@ -2010,10 +2010,10 @@ EOF
   if test '!' '-d' "${path}"; then
     :
   else
-    cat >&2 <<EOF
+    cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} each operand must not be a directory
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
     exit_status='1'
     continue
   fi
@@ -2024,17 +2024,17 @@ EOF
     elif test -f "${path}.gatbps${i}"; then
       :
     elif test -d "${path}.gatbps${i}"; then
-      cat >&2 <<EOF
+      cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${path}.gatbps${i}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
       exit_status='1'
       continue '2'
     else
-      cat >&2 <<EOF
+      cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} file must not be nonregular: ${fB2}${path}.gatbps${i}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
       exit_status='1'
       continue '2'
     fi
@@ -2057,7 +2057,7 @@ EOF
 
     #(
       *'/CC0-1.0-AC-COPYRIGHT.ac')
-        cat >"${path}" <<'EOF'
+        cat >"${path}" <<'EOF1'
 dnl
 dnl This file was generated by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
 dnl Before changing it, make sure that you're doing the right thing.
@@ -2083,7 +2083,7 @@ dnl dedication along with this file, typically as a file
 dnl named <CC0-1.0.txt>. If not, it may be available at
 dnl <https://creativecommons.org/publicdomain/zero/1.0/>.
 dnl
-EOF
+EOF1
         case "${?}" in
         #(
           '0')
@@ -2091,12 +2091,12 @@ EOF
           ;;
         #(
           *)
-            cat >&2 <<EOF
+            cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
             exit_status='1'
             break
           ;;
@@ -2105,7 +2105,7 @@ EOF
 
     #(
       *'/CC0-1.0-AM-COPYRIGHT.am')
-        cat >"${path}" <<'EOF'
+        cat >"${path}" <<'EOF1'
 ##
 ## This file was generated by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
 ## Before changing it, make sure that you're doing the right thing.
@@ -2131,7 +2131,7 @@ EOF
 ## named <CC0-1.0.txt>. If not, it may be available at
 ## <https://creativecommons.org/publicdomain/zero/1.0/>.
 ##
-EOF
+EOF1
         case "${?}" in
         #(
           '0')
@@ -2139,12 +2139,12 @@ EOF
           ;;
         #(
           *)
-            cat >&2 <<EOF
+            cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
             exit_status='1'
             break
           ;;
@@ -2153,7 +2153,7 @@ EOF
 
     #(
       *'/CC0-1.0-appendix.texi')
-        cat >"${path}" <<'EOF'
+        cat >"${path}" <<'EOF1'
 @AT@iftex
 @AT@ifnottex
 @AT@c
@@ -2328,7 +2328,7 @@ express Statement of Purpose.
 @AT@c
 @AT@end ifnottex
 @AT@end iftex
-EOF
+EOF1
         case "${?}" in
         #(
           '0')
@@ -2336,12 +2336,12 @@ EOF
           ;;
         #(
           *)
-            cat >&2 <<EOF
+            cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
             exit_status='1'
             break
           ;;
@@ -2350,7 +2350,7 @@ EOF
 
     #(
       *'/CC0-1.0-commit.txt')
-        cat >"${path}" <<'EOF'
+        cat >"${path}" <<'EOF1'
 
 
 The author of this commit has waived all copyright and
@@ -2360,7 +2360,7 @@ Dedication. You should have received a copy of the full
 dedication along with this commit, typically as a file
 named <CC0-1.0.txt>. If not, it may be available at
 <https://creativecommons.org/publicdomain/zero/1.0/>.
-EOF
+EOF1
         case "${?}" in
         #(
           '0')
@@ -2368,12 +2368,12 @@ EOF
           ;;
         #(
           *)
-            cat >&2 <<EOF
+            cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
             exit_status='1'
             break
           ;;
@@ -2382,7 +2382,7 @@ EOF
 
     #(
       *'/CC0-1.0-copying.texi')
-        cat >"${path}" <<'EOF'
+        cat >"${path}" <<'EOF1'
 @AT@iftex
 @AT@ifnottex
 @AT@c
@@ -2425,7 +2425,7 @@ It may also be available at
 @AT@c
 @AT@end ifnottex
 @AT@end iftex
-EOF
+EOF1
         case "${?}" in
         #(
           '0')
@@ -2433,12 +2433,12 @@ EOF
           ;;
         #(
           *)
-            cat >&2 <<EOF
+            cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
             exit_status='1'
             break
           ;;
@@ -2447,7 +2447,7 @@ EOF
 
     #(
       *'/CC0-1.0-file.txt')
-        cat >"${path}" <<'EOF'
+        cat >"${path}" <<'EOF1'
 The authors of this file have waived all copyright and
 related or neighboring rights to the extent permitted by
 law as described by the CC0 1.0 Universal Public Domain
@@ -2455,7 +2455,7 @@ Dedication. You should have received a copy of the full
 dedication along with this file, typically as a file
 named <CC0-1.0.txt>. If not, it may be available at
 <https://creativecommons.org/publicdomain/zero/1.0/>.
-EOF
+EOF1
         case "${?}" in
         #(
           '0')
@@ -2463,12 +2463,12 @@ EOF
           ;;
         #(
           *)
-            cat >&2 <<EOF
+            cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
             exit_status='1'
             break
           ;;
@@ -2477,7 +2477,7 @@ EOF
 
     #(
       *'/CC0-1.0.txt')
-        cat >"${path}" <<'EOF'
+        cat >"${path}" <<'EOF1'
 Creative Commons Legal Code
 
 CC0 1.0 Universal
@@ -2599,7 +2599,7 @@ express Statement of Purpose.
  d. Affirmer understands and acknowledges that Creative Commons is not a
     party to this document and has no duty or obligation with respect to
     this CC0 or use of the Work.
-EOF
+EOF1
         case "${?}" in
         #(
           '0')
@@ -2607,12 +2607,12 @@ EOF
           ;;
         #(
           *)
-            cat >&2 <<EOF
+            cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
             exit_status='1'
             break
           ;;
@@ -2621,7 +2621,7 @@ EOF
 
     #(
       *'/DATE.ac')
-        cat >"${path}" <<'EOF'
+        cat >"${path}" <<'EOF1'
 dnl
 dnl This file was generated by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
 dnl Before changing it, make sure that you're doing the right thing.
@@ -2643,7 +2643,7 @@ dnl dedication along with this file, typically as a file
 dnl named <CC0-1.0.txt>. If not, it may be available at
 dnl <https://creativecommons.org/publicdomain/zero/1.0/>.
 dnl
-EOF
+EOF1
         case "${?}" in
         #(
           '0')
@@ -2651,12 +2651,12 @@ EOF
           ;;
         #(
           *)
-            cat >&2 <<EOF
+            cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
             exit_status='1'
             break
           ;;
@@ -2665,7 +2665,7 @@ EOF
 
     #(
       *'/bdots.texi')
-        cat >"${path}" <<'EOF'
+        cat >"${path}" <<'EOF1'
 @AT@iftex
 @AT@ifnottex
 @AT@c
@@ -2791,7 +2791,7 @@ EOF
 @AT@c
 @AT@end ifnottex
 @AT@end iftex
-EOF
+EOF1
         case "${?}" in
         #(
           '0')
@@ -2799,12 +2799,12 @@ EOF
           ;;
         #(
           *)
-            cat >&2 <<EOF
+            cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
             exit_status='1'
             break
           ;;
@@ -2813,7 +2813,7 @@ EOF
 
     #(
       *'/mdot.texi')
-        cat >"${path}" <<'EOF'
+        cat >"${path}" <<'EOF1'
 @AT@iftex
 @AT@ifnottex
 @AT@c
@@ -2939,7 +2939,7 @@ EOF
 @AT@c
 @AT@end ifnottex
 @AT@end iftex
-EOF
+EOF1
         case "${?}" in
         #(
           '0')
@@ -2947,12 +2947,12 @@ EOF
           ;;
         #(
           *)
-            cat >&2 <<EOF
+            cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
             exit_status='1'
             break
           ;;
@@ -2961,7 +2961,7 @@ EOF
 
     #(
       *'/mdots.texi')
-        cat >"${path}" <<'EOF'
+        cat >"${path}" <<'EOF1'
 @AT@iftex
 @AT@ifnottex
 @AT@c
@@ -3087,7 +3087,7 @@ EOF
 @AT@c
 @AT@end ifnottex
 @AT@end iftex
-EOF
+EOF1
         case "${?}" in
         #(
           '0')
@@ -3095,12 +3095,12 @@ EOF
           ;;
         #(
           *)
-            cat >&2 <<EOF
+            cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
             exit_status='1'
             break
           ;;
@@ -3109,7 +3109,7 @@ EOF
 
     #(
       *'/msign.texi')
-        cat >"${path}" <<'EOF'
+        cat >"${path}" <<'EOF1'
 @AT@iftex
 @AT@ifnottex
 @AT@c
@@ -3235,7 +3235,7 @@ EOF
 @AT@c
 @AT@end ifnottex
 @AT@end iftex
-EOF
+EOF1
         case "${?}" in
         #(
           '0')
@@ -3243,12 +3243,12 @@ EOF
           ;;
         #(
           *)
-            cat >&2 <<EOF
+            cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
             exit_status='1'
             break
           ;;
@@ -3257,7 +3257,7 @@ EOF
 
     #(
       *'/sbs.texi')
-        cat >"${path}" <<'EOF'
+        cat >"${path}" <<'EOF1'
 @AT@iftex
 @AT@ifnottex
 @AT@c
@@ -3352,7 +3352,7 @@ _\L\\S\\R\
 @AT@c
 @AT@end ifnottex
 @AT@end iftex
-EOF
+EOF1
         case "${?}" in
         #(
           '0')
@@ -3360,12 +3360,12 @@ EOF
           ;;
         #(
           *)
-            cat >&2 <<EOF
+            cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
             exit_status='1'
             break
           ;;
@@ -3374,7 +3374,7 @@ EOF
 
     #(
       *'/shquote.sh')
-        cat >"${path}" <<'EOF'
+        cat >"${path}" <<'EOF1'
 #
 # This file was generated by GATBPS @PACKAGE_VERSION@ (@PACKAGE_DATE@).
 # Before changing it, make sure that you're doing the right thing.
@@ -3413,7 +3413,7 @@ exit '1'
 # named <CC0-1.0.txt>. If not, it may be available at
 # <https://creativecommons.org/publicdomain/zero/1.0/>.
 #
-EOF
+EOF1
         case "${?}" in
         #(
           '0')
@@ -3421,12 +3421,12 @@ EOF
           ;;
         #(
           *)
-            cat >&2 <<EOF
+            cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
             exit_status='1'
             break
           ;;
@@ -3435,7 +3435,7 @@ EOF
 
     #(
       *'/sps.texi')
-        cat >"${path}" <<'EOF'
+        cat >"${path}" <<'EOF1'
 @AT@iftex
 @AT@ifnottex
 @AT@c
@@ -3530,7 +3530,7 @@ EOF
 @AT@c
 @AT@end ifnottex
 @AT@end iftex
-EOF
+EOF1
         case "${?}" in
         #(
           '0')
@@ -3538,12 +3538,12 @@ EOF
           ;;
         #(
           *)
-            cat >&2 <<EOF
+            cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
             exit_status='1'
             break
           ;;
@@ -3558,10 +3558,10 @@ EOF
           if test ! -d "${path}.top"; then
             :
           else
-            cat >&2 <<EOF
+            cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${path}.top${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
             exit_status='1'
             break
           fi
@@ -3581,12 +3581,12 @@ END {
             ;;
           #(
             *)
-              cat >&2 <<EOF
+              cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}${path}.top${fR2}
 ${fy2}gatbps:${fd2} and write to: ${fB2}${tmp0}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
               exit_status='1'
               break
             ;;
@@ -3597,10 +3597,10 @@ EOF
           if test ! -d "${path}.top.texi"; then
             :
           else
-            cat >&2 <<EOF
+            cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${path}.top.texi${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
             exit_status='1'
             break
           fi
@@ -3626,12 +3626,12 @@ END {
             ;;
           #(
             *)
-              cat >&2 <<EOF
+              cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}${path}.top.texi${fR2}
 ${fy2}gatbps:${fd2} and write to: ${fB2}${tmp1}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
               exit_status='1'
               break
             ;;
@@ -3645,11 +3645,11 @@ EOF
             ;;
           #(
             *)
-              cat >&2 <<EOF
+              cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}texi2any${fR2} failed to read from: ${fB2}${tmp1}${fR2}
 ${fy2}gatbps:${fd2} and write to: ${fB2}${tmp0}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
               exit_status='1'
               break
             ;;
@@ -3663,10 +3663,10 @@ EOF
             ;;
           #(
             *)
-              cat >&2 <<EOF
+              cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}echo${fR2} failed to write to: ${fB2}${tmp0}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
               exit_status='1'
               break
             ;;
@@ -3682,12 +3682,12 @@ EOF
             ;;
           #(
             *)
-              cat >&2 <<EOF
+              cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}/dev/null${fR2}
 ${fy2}gatbps:${fd2} and write to: ${fB2}${tmp0}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
               exit_status='1'
               break
             ;;
@@ -3699,18 +3699,18 @@ EOF
           if test ! -d "${path}.texi"; then
             :
           else
-            cat >&2 <<EOF
+            cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${path}.texi${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
             exit_status='1'
             break
           fi
         else
-          cat >&2 <<EOF
+          cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} file must exist: ${fB2}${path}.texi${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
           exit_status='1'
           break
         fi
@@ -3736,12 +3736,12 @@ END {
           ;;
         #(
           *)
-            cat >&2 <<EOF
+            cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}${path}.texi${fR2}
 ${fy2}gatbps:${fd2} and write to: ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
             exit_status='1'
             break
           ;;
@@ -3755,11 +3755,11 @@ EOF
           ;;
         #(
           *)
-            cat >&2 <<EOF
+            cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}texi2any${fR2} failed to read from: ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fd2} and write to: ${fB2}${tmp1}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
             exit_status='1'
             break
           ;;
@@ -3770,10 +3770,10 @@ EOF
           if test ! -d "${path}.bot"; then
             :
           else
-            cat >&2 <<EOF
+            cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${path}.bot${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
             exit_status='1'
             break
           fi
@@ -3793,12 +3793,12 @@ $0 !~ /^#/ {
             ;;
           #(
             *)
-              cat >&2 <<EOF
+              cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}${path}.bot${fR2}
 ${fy2}gatbps:${fd2} and write to: ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
               exit_status='1'
               break
             ;;
@@ -3809,10 +3809,10 @@ EOF
           if test ! -d "${path}.bot.texi"; then
             :
           else
-            cat >&2 <<EOF
+            cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${path}.bot.texi${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
             exit_status='1'
             break
           fi
@@ -3825,10 +3825,10 @@ EOF
             ;;
           #(
             *)
-              cat >&2 <<EOF
+              cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}echo${fR2} failed to write to: ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
               exit_status='1'
               break
             ;;
@@ -3855,12 +3855,12 @@ END {
             ;;
           #(
             *)
-              cat >&2 <<EOF
+              cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}${path}.bot.texi${fR2}
 ${fy2}gatbps:${fd2} and write to: ${fB2}${tmp3}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
               exit_status='1'
               break
             ;;
@@ -3874,11 +3874,11 @@ EOF
             ;;
           #(
             *)
-              cat >&2 <<EOF
+              cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}texi2any${fR2} failed to read from: ${fB2}${tmp3}${fR2}
 ${fy2}gatbps:${fd2} and write to: ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
               exit_status='1'
               break
             ;;
@@ -3894,12 +3894,12 @@ EOF
             ;;
           #(
             *)
-              cat >&2 <<EOF
+              cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}/dev/null${fR2}
 ${fy2}gatbps:${fd2} and write to: ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
               exit_status='1'
               break
             ;;
@@ -3915,14 +3915,14 @@ EOF
           ;;
         #(
           *)
-            cat >&2 <<EOF
+            cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}${tmp0}${fR2}
 ${fy2}gatbps:${fd2}   2. ${fB2}${tmp1}${fR2}
 ${fy2}gatbps:${fd2}   3. ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fd2} and write to: ${fB2}${path}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
-EOF
+EOF1
             exit_status='1'
             break
           ;;
@@ -3940,9 +3940,9 @@ EOF
     if rm -f "${path}.gatbps${i}"; then
       :
     else
-      cat >&2 <<EOF
+      cat >&2 <<EOF1
 ${fc2}gatbps.${fd2} ${fB2}rm${fR2} failed to delete: ${fB2}${path}.gatbps${i}${fR2}
-EOF
+EOF1
     fi
   done
 
