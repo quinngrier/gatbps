@@ -379,7 +379,7 @@ $1, \ldots, n$
 @@end ifnottex
 @end example
 
-For more information, @pxref{Mathematical Notation in Texinfo}.
+For more information, @pxref{Mathematical Notation in Texinfo}@.
 
 @sfindex @t{math.@:texi}
 @item @t{math.@:texi}
@@ -396,7 +396,7 @@ generated with the
 option to also generate all such special files
 at once@.
 
-For more information, @pxref{Mathematical Notation in Texinfo}.
+For more information, @pxref{Mathematical Notation in Texinfo}@.
 
 @sfindex @t{mdot.@:texi}
 @item @t{mdot.@:texi}
@@ -420,7 +420,7 @@ $x \cdot y$
 @@end ifnottex
 @end example
 
-For more information, @pxref{Mathematical Notation in Texinfo}.
+For more information, @pxref{Mathematical Notation in Texinfo}@.
 
 @sfindex @t{mdots.@:texi}
 @item @t{mdots.@:texi}
@@ -444,7 +444,7 @@ $1 + \cdots + n$
 @@end ifnottex
 @end example
 
-For more information, @pxref{Mathematical Notation in Texinfo}.
+For more information, @pxref{Mathematical Notation in Texinfo}@.
 
 @sfindex @t{msign.@:texi}
 @item @t{msign.@:texi}
@@ -468,7 +468,7 @@ $x - y$
 @@end ifnottex
 @end example
 
-For more information, @pxref{Mathematical Notation in Texinfo}.
+For more information, @pxref{Mathematical Notation in Texinfo}@.
 
 @sfindex @t{sbs.@:texi}
 @item @t{sbs.@:texi}
@@ -498,7 +498,7 @@ $x_@{y + z_w@}$
 @@end ifnottex
 @end example
 
-For more information, @pxref{Mathematical Notation in Texinfo}.
+For more information, @pxref{Mathematical Notation in Texinfo}@.
 
 @sfindex @t{sps.@:texi}
 @item @t{sps.@:texi}
@@ -528,7 +528,7 @@ $x^@{y + z^w@}$
 @@end ifnottex
 @end example
 
-For more information, @pxref{Mathematical Notation in Texinfo}.
+For more information, @pxref{Mathematical Notation in Texinfo}@.
 @end table
 
 @include CC0-1.0-appendix.texi
