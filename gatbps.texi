@@ -332,6 +332,7 @@ option@.
 @table @asis
 @sfindex @t{bdots.@:texi}
 @item @t{bdots.@:texi}
+@itemx @w{}
 The
 @t{bdots.@:texi}
 special file defines the
@@ -355,6 +356,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}.
 
 @sfindex @t{mdot.@:texi}
 @item @t{mdot.@:texi}
+@itemx @w{}
 The
 @t{mdot.@:texi}
 special file defines the
@@ -378,6 +380,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}.
 
 @sfindex @t{mdots.@:texi}
 @item @t{mdots.@:texi}
+@itemx @w{}
 The
 @t{mdots.@:texi}
 special file defines the
@@ -401,6 +404,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}.
 
 @sfindex @t{msign.@:texi}
 @item @t{msign.@:texi}
+@itemx @w{}
 The
 @t{msign.@:texi}
 special file defines the
@@ -424,6 +428,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}.
 
 @sfindex @t{sbs.@:texi}
 @item @t{sbs.@:texi}
+@itemx @w{}
 The
 @t{sbs.@:texi}
 special file defines the
@@ -453,6 +458,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}.
 
 @sfindex @t{sps.@:texi}
 @item @t{sps.@:texi}
+@itemx @w{}
 The
 @t{sps.@:texi}
 special file defines the
