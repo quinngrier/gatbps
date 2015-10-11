@@ -3394,6 +3394,14 @@ EOF
 LC_ALL='C'
 export 'LC_ALL'
 
+awk='awk'
+for x in 'gawk' 'mawk' 'nawk'; do
+  if "${x}" '' <'/dev/null' >'/dev/null' 2>'/dev/null'; then
+    awk="${x}"
+    break
+  fi
+done
+
 exit '1'
 
 #
