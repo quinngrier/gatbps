@@ -59,6 +59,13 @@ and its name now stands for
 @node Running @t{gatbps}
 @chapter Running @t{gatbps}
 
+@menu
+* Environment Variables::
+@end menu
+
+@node Environment Variables
+@section Environment Variables
+
 @node Mathematical Notation in Texinfo
 @chapter Mathematical Notation in Texinfo
 
