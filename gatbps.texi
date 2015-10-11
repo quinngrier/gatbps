@@ -35,6 +35,7 @@ This manual is for GATBPS@.
 
 @menu
 * Introduction::
+* Running @t{gatbps}::
 * Mathematical Notation in Texinfo::
 * Special File Reference::
 * CC0::
@@ -54,6 +55,9 @@ system, and its name stood for ``@b{G}NU @b{A}uto@b{t}ools
 However, it quickly grew to provide other kinds of basic files,
 and its name now stands for
 ``@b{G}ener@b{a}@b{t}e @b{B}asic @b{P}ackage @b{S}tuff''@.
+
+@node Running @t{gatbps}
+@chapter Running @t{gatbps}
 
 @node Mathematical Notation in Texinfo
 @chapter Mathematical Notation in Texinfo
