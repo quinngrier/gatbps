@@ -66,6 +66,25 @@ and its name now stands for
 @node Environment Variables
 @section Environment Variables
 
+@table @asis
+@item @t{SED}
+@itemx @w{}
+If the
+@t{SED}
+environment variable
+is set to a nonempty string
+@i{S},
+then a
+@t{--sed=}@i{S}
+option is added to
+the program arguments
+at a position that lies before
+all original program arguments@.
+Otherwise, the
+@t{SED}
+environment variable has no effect@.
+@end table
+
 @node Mathematical Notation in Texinfo
 @chapter Mathematical Notation in Texinfo
 

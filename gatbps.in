@@ -65,6 +65,14 @@ case "${STYLE}" in
   ;;
 esac
 
+case "${SED}" in
+#(
+  ?*)
+    set 'x' "--sed=${SED}" "${@AT@}"
+    shift
+  ;;
+esac
+
 case "${AWK}" in
 #(
   ?*)
@@ -1525,6 +1533,23 @@ at a position that lies before
 all original program arguments.
 Otherwise, the
 .nohy "\fBAWK\fR"
+environment variable has no effect.
+.TP
+.nohy "\fBSED\fR"
+.IPE0
+If the
+.nohy "\fBSED\fR"
+environment variable
+is set to a nonempty string
+.nohy "\fIS\fR,"
+then a
+.nohy "\fB\-\-sed=\fIS\fR"
+option is added to
+the program arguments
+at a position that lies before
+all original program arguments.
+Otherwise, the
+.nohy "\fBSED\fR"
 environment variable has no effect.
 .TP
 .nohy "\fBSTYLE\fR"
