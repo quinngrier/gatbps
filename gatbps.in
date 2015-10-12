@@ -242,6 +242,7 @@ EOF1
         '--help='*)
 
           case "${1}" in
+
           #(
             '--help=')
               cat >&2 <<EOF1
@@ -249,9 +250,7 @@ ${fr2}gatbps!${fd2} the ${fB2}--help${fR2} option argument must not be empty
 EOF1
               exit '1'
             ;;
-          esac
 
-          case "${1}" in
           #(
             '--help='*'/')
               cat >&2 <<EOF1
@@ -259,9 +258,6 @@ ${fr2}gatbps!${fd2} the ${fB2}--help${fR2} option argument must not end with a s
 EOF1
               exit '1'
             ;;
-          esac
-
-          case "${1}" in
 
           #(
             '--help=CC0-1.0-AC-COPYRIGHT.ac'|'--help='*'/CC0-1.0-AC-COPYRIGHT.ac')
