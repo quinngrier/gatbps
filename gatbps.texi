@@ -7,12 +7,7 @@
 @defindex sf
 
 @include CC0-1.0-copying.texi
-@include bdots.texi
-@include mdot.texi
-@include mdots.texi
-@include msign.texi
-@include sbs.texi
-@include sps.texi
+@include math.texi
 
 @titlepage
 @title GATBPS

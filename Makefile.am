@@ -18,6 +18,7 @@ gatbps_TEXINFOS =
 gatbps_TEXINFOS += CC0-1.0-appendix.texi
 gatbps_TEXINFOS += CC0-1.0-copying.texi
 gatbps_TEXINFOS += bdots.texi
+gatbps_TEXINFOS += math.texi
 gatbps_TEXINFOS += mdot.texi
 gatbps_TEXINFOS += mdots.texi
 gatbps_TEXINFOS += msign.texi
