@@ -897,8 +897,10 @@ EOF1
 .hy
 .TH "gatbps" "1" "@PACKAGE_DATE@" "@PACKAGE_STRING@"
 .SH "NAME"
+.LP
 gatbps \- generate basic files for software packages
 .SH "SYNOPSIS"
+.LP
 .nf
 \fBgatbps\fR [<\fIoption\fR> | <\fIfile\fR>]...
 .fi
@@ -1546,6 +1548,7 @@ $x^{y + z^w}$
 .IPE
 For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 .SH "TEMPORARY FILES"
+.LP
 .nohy "\fBgatbps\fR"
 reserves the temporary files
 .nohy "\fIS\fB.gatbps0\fR"
@@ -1563,6 +1566,7 @@ and all of them are deleted after
 .nohy "\fIS\fR"
 succeeds or fails.
 .SH "ENVIRONMENT VARIABLES"
+.LP
 .nohy "\fBgatbps\fR"
 is affected by the following environment variables:
 .TP
@@ -1662,6 +1666,7 @@ Otherwise, the
 .nohy "\fBSTYLE_STDOUT\fR"
 environment variable has no effect.
 .SH "EXIT STATUS"
+.LP
 .nohy "\fBgatbps\fR"
 indicates success with exit status zero
 and failure with any nonzero exit status.
