@@ -1132,8 +1132,8 @@ flag is set at its point of inclusion.
 In Docbook, HTML, and XML, the macros use the
 .nohy "\fB@AT@inlineraw\fR"
 command to insert numeric character references.
-This command was added to Texinfo in
-version 5.0, which was released on 2013\-02\-16.
+This command was added in Texinfo 5.0,
+which was released on 2013\-02\-16.
 The macros automatically detect older versions of
 Texinfo, in which case they insert UTF-8 characters instead.
 .LP
@@ -1226,8 +1226,8 @@ and
 macros use the
 .nohy "\fB@AT@inlineraw\fR"
 command to insert superscript and subscript elements.
-This command was added to Texinfo in
-version 5.0, which was released on 2013\-02\-16.
+This command was added in Texinfo 5.0,
+which was released on 2013\-02\-16.
 The macros automatically detect older versions of
 Texinfo, in which case they behave
 as if the output format were Info
