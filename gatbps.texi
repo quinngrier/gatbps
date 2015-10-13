@@ -62,6 +62,18 @@ and its name now stands for
 @node Options
 @section Options
 
+@table @asis
+@item @t{--version}
+@itemx @w{}
+The
+@t{--version}
+option writes text to standard output
+and causes all further program arguments to be ignored@.
+The text is the program's name,
+original package, version number,
+release date, and copyright information@.
+@end table
+
 @node Environment Variables
 @section Environment Variables
 
