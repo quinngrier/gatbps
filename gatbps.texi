@@ -5,6 +5,7 @@
 @settitle GATBPS
 
 @defindex sf
+@defindex tm
 
 @include CC0-1.0-copying.texi
 @include math.texi
@@ -212,12 +213,16 @@ shows the symbol of each macro@.
 @headitem @TeX{} @tab Macro @tab Unicode @tab ASCII
 @item @t{-} @tab @t{@@msign@{@}} @tab U+2212 @tab @t{-}
 @sfindex @t{msign.@:texi}
+@tmindex @t{@@msign}
 @item @t{\cdot} @tab @t{@@mdot@{@}} @tab U+22C5 @tab @t{*}
 @sfindex @t{mdot.@:texi}
+@tmindex @t{@@mdot}
 @item @t{\cdots} @tab @t{@@mdots@{@}} @tab U+22EF @tab @t{.@:.@:.@:}
 @sfindex @t{mdots.@:texi}
+@tmindex @t{@@mdots}
 @item @t{\ldots} @tab @t{@@bdots@{@}} @tab U+2026 @tab @t{.@:.@:.@:}
 @sfindex @t{bdots.@:texi}
+@tmindex @t{@@bdots}
 @end multitable
 @end ifset
 @ifclear HideSymbols
@@ -225,6 +230,7 @@ shows the symbol of each macro@.
 @headitem @TeX{} @tab Macro @tab Unicode @tab ASCII @tab Symbol
 @item @t{-} @tab @t{@@msign@{@}} @tab U+2212 @tab @t{-}
 @sfindex @t{msign.@:texi}
+@tmindex @t{@@msign}
 @tab
 @tex
 $-$
@@ -234,6 +240,7 @@ $-$
 @end ifnottex
 @item @t{\cdot} @tab @t{@@mdot@{@}} @tab U+22C5 @tab @t{*}
 @sfindex @t{mdot.@:texi}
+@tmindex @t{@@mdot}
 @tab
 @tex
 $\cdot$
@@ -243,6 +250,7 @@ $\cdot$
 @end ifnottex
 @item @t{\cdots} @tab @t{@@mdots@{@}} @tab U+22EF @tab @t{.@:.@:.@:}
 @sfindex @t{mdots.@:texi}
+@tmindex @t{@@mdots}
 @tab
 @tex
 $\cdots$
@@ -252,6 +260,7 @@ $\cdots$
 @end ifnottex
 @item @t{\ldots} @tab @t{@@bdots@{@}} @tab U+2026 @tab @t{.@:.@:.@:}
 @sfindex @t{bdots.@:texi}
+@tmindex @t{@@bdots}
 @tab
 @tex
 $\ldots$
@@ -263,8 +272,10 @@ $\ldots$
 @end ifclear
 @end quotation
 
-@sfindex @t{sps.@:texi}
 @sfindex @t{sbs.@:texi}
+@sfindex @t{sps.@:texi}
+@tmindex @t{@@sbs}
+@tmindex @t{@@sps}
 The
 @t{@@sps@{}@i{L}@t{@comma{} }@i{S}@t{@comma{} }@i{R}@t{@}}
 and
@@ -369,6 +380,7 @@ option@.
 
 @table @asis
 @sfindex @t{bdots.@:texi}
+@tmindex @t{@@bdots}
 @item @t{bdots.@:texi}
 @itemx @w{}
 The
@@ -410,6 +422,7 @@ at once@.
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
 @sfindex @t{mdot.@:texi}
+@tmindex @t{@@mdot}
 @item @t{mdot.@:texi}
 @itemx @w{}
 The
@@ -434,6 +447,7 @@ $x \cdot y$
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
 @sfindex @t{mdots.@:texi}
+@tmindex @t{@@mdots}
 @item @t{mdots.@:texi}
 @itemx @w{}
 The
@@ -458,6 +472,7 @@ $1 + \cdots + n$
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
 @sfindex @t{msign.@:texi}
+@tmindex @t{@@msign}
 @item @t{msign.@:texi}
 @itemx @w{}
 The
@@ -482,6 +497,7 @@ $x - y$
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
 @sfindex @t{sbs.@:texi}
+@tmindex @t{@@sbs}
 @item @t{sbs.@:texi}
 @itemx @w{}
 The
@@ -512,6 +528,7 @@ $x_@{y + z_w@}$
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
 @sfindex @t{sps.@:texi}
+@tmindex @t{@@sps}
 @item @t{sps.@:texi}
 @itemx @w{}
 The
