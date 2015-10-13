@@ -4135,7 +4135,16 @@ EOF1
       case "${x}" in
       #(
         'math.texi'|*'/math.texi')
-          :
+          case "${x}" in
+          #(
+            'math.texi')
+              :
+            ;;
+          #(
+            *'/math.texi')
+              :
+            ;;
+          esac
         ;;
       esac
       set 'x' "${@AT@}"
