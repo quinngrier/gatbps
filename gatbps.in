@@ -1048,6 +1048,26 @@ and causes all further program arguments to be ignored.
 The text is the program's name,
 original package, version number,
 release date, and copyright information.
+.TP
+.nohy "\fB\-\-walk\fR[\fB=\fIS\fR]"
+.IPE0
+Each
+.nohy "\fB\-\-walk\fR"
+option is replaced by a
+.nohy "\fB\-\-walk=yes\fR"
+option.
+Automatic generation of special file
+dependencies is initially disabled, and each
+.nohy "\fB\-\-walk=\fIS\fR"
+option enables or disables it.
+Each
+.nohy "\fB\-\-walk=yes\fR"
+option enables it.
+Each
+.nohy "\fB\-\-walk=\fIS\fR"
+option with any other
+.nohy "\fIS\fR"
+disables it.
 .SH "PLAIN FILES"
 .SH "MATHEMATICAL NOTATION IN TEXINFO"
 .LP

@@ -73,6 +73,26 @@ and causes all further program arguments to be ignored@.
 The text is the program's name,
 original package, version number,
 release date, and copyright information@.
+
+@item @t{--walk}[@t{=}@i{S}]
+@itemx @w{}
+Each
+@t{--walk}
+option is replaced by a
+@t{--walk=yes}
+option@.
+Automatic generation of special file
+dependencies is initially disabled, and each
+@t{--walk=}@i{S}
+option enables or disables it@.
+Each
+@t{--walk=yes}
+option enables it@.
+Each
+@t{--walk=}@i{S}
+option with any other
+@i{S}
+disables it@.
 @end table
 
 @node Environment Variables
