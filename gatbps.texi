@@ -55,8 +55,12 @@ and its name now stands for
 @chapter Running @t{gatbps}
 
 @menu
+* Options::
 * Environment Variables::
 @end menu
+
+@node Options
+@section Options
 
 @node Environment Variables
 @section Environment Variables
