@@ -4130,7 +4130,15 @@ EOF1
     ;;
   #(
     *)
-      :
+      x="${1}"
+      shift
+      case "${x}" in
+      #(
+        'math.texi'|*'/math.texi')
+          :
+        ;;
+      esac
+      set 'x' "${@AT@}"
     ;;
   esac
 
