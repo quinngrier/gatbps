@@ -3730,7 +3730,7 @@ EOF1
     #(
       *)
 
-        if test -e "${path}.top"; then
+        if test '-e' "${path}.top"; then
 
           if test ! -d "${path}.top"; then
             :
@@ -3769,7 +3769,7 @@ EOF1
             ;;
           esac
 
-        elif test -e "${path}.top.texi"; then
+        elif test '-e' "${path}.top.texi"; then
 
           if test ! -d "${path}.top.texi"; then
             :
@@ -3872,7 +3872,7 @@ EOF1
 
         fi
 
-        if test -e "${path}.texi"; then
+        if test '-e' "${path}.texi"; then
           if test ! -d "${path}.texi"; then
             :
           else
@@ -3942,7 +3942,7 @@ EOF1
           ;;
         esac
 
-        if test -e "${path}.bot"; then
+        if test '-e' "${path}.bot"; then
 
           if test ! -d "${path}.bot"; then
             :
@@ -3981,7 +3981,7 @@ EOF1
             ;;
           esac
 
-        elif test -e "${path}.bot.texi"; then
+        elif test '-e' "${path}.bot.texi"; then
 
           if test ! -d "${path}.bot.texi"; then
             :
