@@ -4170,6 +4170,13 @@ EOF1
               ;;
             esac
             shift
+            set "${prefix}CC0-1.0.txt" "${@AT@}"
+            set "${prefix}bdots.texi" "${@AT@}"
+            set "${prefix}mdot.texi" "${@AT@}"
+            set "${prefix}mdots.texi" "${@AT@}"
+            set "${prefix}msign.texi" "${@AT@}"
+            set "${prefix}sbs.texi" "${@AT@}"
+            set "${prefix}sps.texi" "${@AT@}"
             set 'x' "${@AT@}"
           ;;
         esac
