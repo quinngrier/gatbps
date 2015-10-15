@@ -4130,13 +4130,11 @@ EOF1
     ;;
   #(
     *)
-      x="${1}"
-      shift
       while :; do
-        case "${x}" in
+        case "${1}" in
         #(
           'math.texi'|*'/math.texi')
-            case "${x}" in
+            case "${1}" in
             #(
               'math.texi')
                 :
@@ -4146,11 +4144,12 @@ EOF1
                 :
               ;;
             esac
+            shift
+            set 'x' "${@AT@}"
           ;;
         esac
         break
       done
-      set 'x' "${@AT@}"
     ;;
   esac
 
