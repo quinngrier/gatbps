@@ -4132,21 +4132,24 @@ EOF1
     *)
       x="${1}"
       shift
-      case "${x}" in
-      #(
-        'math.texi'|*'/math.texi')
-          case "${x}" in
-          #(
-            'math.texi')
-              :
-            ;;
-          #(
-            *'/math.texi')
-              :
-            ;;
-          esac
-        ;;
-      esac
+      while :; do
+        case "${x}" in
+        #(
+          'math.texi'|*'/math.texi')
+            case "${x}" in
+            #(
+              'math.texi')
+                :
+              ;;
+            #(
+              *'/math.texi')
+                :
+              ;;
+            esac
+          ;;
+        esac
+        break
+      done
       set 'x' "${@AT@}"
     ;;
   esac
