@@ -2136,7 +2136,7 @@ EOF1
       :
     elif test '-f' "${path}.gatbps${i}"; then
       :
-    elif test -d "${path}.gatbps${i}"; then
+    elif test '-d' "${path}.gatbps${i}"; then
       cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${path}.gatbps${i}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
