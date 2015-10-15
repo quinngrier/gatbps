@@ -3732,7 +3732,7 @@ EOF1
 
         if test '-e' "${path}.top"; then
 
-          if test '!' -d "${path}.top"; then
+          if test '!' '-d' "${path}.top"; then
             :
           else
             cat >&2 <<EOF1
@@ -3771,7 +3771,7 @@ EOF1
 
         elif test '-e' "${path}.top.texi"; then
 
-          if test '!' -d "${path}.top.texi"; then
+          if test '!' '-d' "${path}.top.texi"; then
             :
           else
             cat >&2 <<EOF1
@@ -3873,7 +3873,7 @@ EOF1
         fi
 
         if test '-e' "${path}.texi"; then
-          if test '!' -d "${path}.texi"; then
+          if test '!' '-d' "${path}.texi"; then
             :
           else
             cat >&2 <<EOF1
@@ -3944,7 +3944,7 @@ EOF1
 
         if test '-e' "${path}.bot"; then
 
-          if test '!' -d "${path}.bot"; then
+          if test '!' '-d' "${path}.bot"; then
             :
           else
             cat >&2 <<EOF1
@@ -3983,7 +3983,7 @@ EOF1
 
         elif test '-e' "${path}.bot.texi"; then
 
-          if test '!' -d "${path}.bot.texi"; then
+          if test '!' '-d' "${path}.bot.texi"; then
             :
           else
             cat >&2 <<EOF1
