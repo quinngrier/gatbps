@@ -2153,16 +2153,16 @@ EOF1
     fi
   done
 
-  tmp0="${safe_1}.gatbps0"
-  tmp1="${safe_1}.gatbps1"
-  tmp2="${safe_1}.gatbps2"
-  tmp3="${safe_1}.gatbps3"
-  tmp4="${safe_1}.gatbps4"
-  tmp5="${safe_1}.gatbps5"
-  tmp6="${safe_1}.gatbps6"
-  tmp7="${safe_1}.gatbps7"
-  tmp8="${safe_1}.gatbps8"
-  tmp9="${safe_1}.gatbps9"
+  safe_tmp0="${safe_1}.gatbps0"
+  safe_tmp1="${safe_1}.gatbps1"
+  safe_tmp2="${safe_1}.gatbps2"
+  safe_tmp3="${safe_1}.gatbps3"
+  safe_tmp4="${safe_1}.gatbps4"
+  safe_tmp5="${safe_1}.gatbps5"
+  safe_tmp6="${safe_1}.gatbps6"
+  safe_tmp7="${safe_1}.gatbps7"
+  safe_tmp8="${safe_1}.gatbps8"
+  safe_tmp9="${safe_1}.gatbps9"
 
   while :; do
 
@@ -3750,7 +3750,7 @@ $0 !~ /^#/ {
 END {
   print ""
 }
-' <"${safe_1}.top" >"${tmp0}"
+' <"${safe_1}.top" >"${safe_tmp0}"
           case "${?}" in
           #(
             '0')
@@ -3761,7 +3761,7 @@ END {
               cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}${1}.top${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${tmp0}${fR2}
+${fy2}gatbps:${fd2} and write to: ${fB2}${safe_tmp0}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
@@ -3795,7 +3795,7 @@ BEGIN {
 END {
   print "@AT@bye"
 }
-' <"${safe_1}.top.texi" >"${tmp1}"
+' <"${safe_1}.top.texi" >"${safe_tmp1}"
           case "${?}" in
           #(
             '0')
@@ -3806,7 +3806,7 @@ END {
               cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}${1}.top.texi${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${tmp1}${fR2}
+${fy2}gatbps:${fd2} and write to: ${fB2}${safe_tmp1}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
@@ -3814,7 +3814,7 @@ EOF1
             ;;
           esac
 
-          "${texi2any}" --plaintext "${tmp1}" >"${tmp0}"
+          "${texi2any}" --plaintext "${safe_tmp1}" >"${safe_tmp0}"
           case "${?}" in
           #(
             '0')
@@ -3823,8 +3823,8 @@ EOF1
           #(
             *)
               cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}${texi2any}${fR2} failed to read from: ${fB2}${tmp1}${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${tmp0}${fR2}
+${fy2}gatbps:${fd2} ${fB2}${texi2any}${fR2} failed to read from: ${fB2}${safe_tmp1}${fR2}
+${fy2}gatbps:${fd2} and write to: ${fB2}${safe_tmp0}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
@@ -3832,7 +3832,7 @@ EOF1
             ;;
           esac
 
-          echo >>"${tmp0}"
+          echo >>"${safe_tmp0}"
           case "${?}" in
           #(
             '0')
@@ -3841,7 +3841,7 @@ EOF1
           #(
             *)
               cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}echo${fR2} failed to write to: ${fB2}${tmp0}${fR2}
+${fy2}gatbps:${fd2} ${fB2}echo${fR2} failed to write to: ${fB2}${safe_tmp0}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
@@ -3851,7 +3851,7 @@ EOF1
 
         else
 
-          cat /dev/null >"${tmp0}"
+          cat /dev/null >"${safe_tmp0}"
           case "${?}" in
           #(
             '0')
@@ -3862,7 +3862,7 @@ EOF1
               cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}/dev/null${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${tmp0}${fR2}
+${fy2}gatbps:${fd2} and write to: ${fB2}${safe_tmp0}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
@@ -3905,7 +3905,7 @@ BEGIN {
 END {
   print "@AT@bye"
 }
-' <"${safe_1}.texi" >"${tmp2}"
+' <"${safe_1}.texi" >"${safe_tmp2}"
         case "${?}" in
         #(
           '0')
@@ -3916,7 +3916,7 @@ END {
             cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}${1}.texi${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${tmp2}${fR2}
+${fy2}gatbps:${fd2} and write to: ${fB2}${safe_tmp2}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
@@ -3924,7 +3924,7 @@ EOF1
           ;;
         esac
 
-        "${texi2any}" --plaintext "${tmp2}" >"${tmp1}"
+        "${texi2any}" --plaintext "${safe_tmp2}" >"${safe_tmp1}"
         case "${?}" in
         #(
           '0')
@@ -3933,8 +3933,8 @@ EOF1
         #(
           *)
             cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}${texi2any}${fR2} failed to read from: ${fB2}${tmp2}${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${tmp1}${fR2}
+${fy2}gatbps:${fd2} ${fB2}${texi2any}${fR2} failed to read from: ${fB2}${safe_tmp2}${fR2}
+${fy2}gatbps:${fd2} and write to: ${fB2}${safe_tmp1}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
@@ -3962,7 +3962,7 @@ BEGIN {
 $0 !~ /^#/ {
   print $0
 }
-' <"${safe_1}.bot" >"${tmp2}"
+' <"${safe_1}.bot" >"${safe_tmp2}"
           case "${?}" in
           #(
             '0')
@@ -3973,7 +3973,7 @@ $0 !~ /^#/ {
               cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}${1}.bot${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${tmp2}${fR2}
+${fy2}gatbps:${fd2} and write to: ${fB2}${safe_tmp2}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
@@ -3994,7 +3994,7 @@ EOF1
             break
           fi
 
-          echo >"${tmp2}"
+          echo >"${safe_tmp2}"
           case "${?}" in
           #(
             '0')
@@ -4003,7 +4003,7 @@ EOF1
           #(
             *)
               cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}echo${fR2} failed to write to: ${fB2}${tmp2}${fR2}
+${fy2}gatbps:${fd2} ${fB2}echo${fR2} failed to write to: ${fB2}${safe_tmp2}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
@@ -4024,7 +4024,7 @@ BEGIN {
 END {
   print "@AT@bye"
 }
-' <"${safe_1}.bot.texi" >"${tmp3}"
+' <"${safe_1}.bot.texi" >"${safe_tmp3}"
           case "${?}" in
           #(
             '0')
@@ -4035,7 +4035,7 @@ END {
               cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}${1}.bot.texi${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${tmp3}${fR2}
+${fy2}gatbps:${fd2} and write to: ${fB2}${safe_tmp3}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
@@ -4043,7 +4043,7 @@ EOF1
             ;;
           esac
 
-          "${texi2any}" --plaintext "${tmp3}" >>"${tmp2}"
+          "${texi2any}" --plaintext "${safe_tmp3}" >>"${safe_tmp2}"
           case "${?}" in
           #(
             '0')
@@ -4052,8 +4052,8 @@ EOF1
           #(
             *)
               cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}${texi2any}${fR2} failed to read from: ${fB2}${tmp3}${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${tmp2}${fR2}
+${fy2}gatbps:${fd2} ${fB2}${texi2any}${fR2} failed to read from: ${fB2}${safe_tmp3}${fR2}
+${fy2}gatbps:${fd2} and write to: ${fB2}${safe_tmp2}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
@@ -4063,7 +4063,7 @@ EOF1
 
         else
 
-          cat /dev/null >"${tmp2}"
+          cat /dev/null >"${safe_tmp2}"
           case "${?}" in
           #(
             '0')
@@ -4074,7 +4074,7 @@ EOF1
               cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}/dev/null${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${tmp2}${fR2}
+${fy2}gatbps:${fd2} and write to: ${fB2}${safe_tmp2}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
@@ -4084,7 +4084,7 @@ EOF1
 
         fi
 
-        cat "${tmp0}" "${tmp1}" "${tmp2}" >"${safe_1}"
+        cat "${safe_tmp0}" "${safe_tmp1}" "${safe_tmp2}" >"${safe_1}"
         case "${?}" in
         #(
           '0')
@@ -4094,9 +4094,9 @@ EOF1
           *)
             cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. ${fB2}${tmp0}${fR2}
-${fy2}gatbps:${fd2}   2. ${fB2}${tmp1}${fR2}
-${fy2}gatbps:${fd2}   3. ${fB2}${tmp2}${fR2}
+${fy2}gatbps:${fd2}   1. ${fB2}${safe_tmp0}${fR2}
+${fy2}gatbps:${fd2}   2. ${fB2}${safe_tmp1}${fR2}
+${fy2}gatbps:${fd2}   3. ${fB2}${safe_tmp2}${fR2}
 ${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
