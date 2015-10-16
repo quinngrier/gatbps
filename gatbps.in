@@ -1043,8 +1043,8 @@ The
 .nohy "\fB\-\-version\fR"
 option writes text to standard output
 and causes all further arguments to be ignored.
-The text is the program's name,
-original package, version number,
+The text is the program's
+name, package, version number,
 release date, and copyright information.
 .TP
 .nohy "\fB\-\-walk\fR[\fB=\fIS\fR]"
