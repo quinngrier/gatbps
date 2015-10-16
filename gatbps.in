@@ -3772,7 +3772,7 @@ END {
               cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}${1}.top${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${safe_tmp0}${fR2}
+${fy2}gatbps:${fd2} and write to: ${fB2}${tmp0}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
@@ -3817,7 +3817,7 @@ END {
               cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}${1}.top.texi${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${safe_tmp1}${fR2}
+${fy2}gatbps:${fd2} and write to: ${fB2}${tmp1}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
@@ -3834,8 +3834,8 @@ EOF1
           #(
             *)
               cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}${texi2any}${fR2} failed to read from: ${fB2}${safe_tmp1}${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${safe_tmp0}${fR2}
+${fy2}gatbps:${fd2} ${fB2}${texi2any}${fR2} failed to read from: ${fB2}${tmp1}${fR2}
+${fy2}gatbps:${fd2} and write to: ${fB2}${tmp0}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
@@ -3852,7 +3852,7 @@ EOF1
           #(
             *)
               cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}echo${fR2} failed to write to: ${fB2}${safe_tmp0}${fR2}
+${fy2}gatbps:${fd2} ${fB2}echo${fR2} failed to write to: ${fB2}${tmp0}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
@@ -3873,7 +3873,7 @@ EOF1
               cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}/dev/null${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${safe_tmp0}${fR2}
+${fy2}gatbps:${fd2} and write to: ${fB2}${tmp0}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
@@ -3927,7 +3927,7 @@ END {
             cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}${1}.texi${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${safe_tmp2}${fR2}
+${fy2}gatbps:${fd2} and write to: ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
@@ -3944,8 +3944,8 @@ EOF1
         #(
           *)
             cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}${texi2any}${fR2} failed to read from: ${fB2}${safe_tmp2}${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${safe_tmp1}${fR2}
+${fy2}gatbps:${fd2} ${fB2}${texi2any}${fR2} failed to read from: ${fB2}${tmp2}${fR2}
+${fy2}gatbps:${fd2} and write to: ${fB2}${tmp1}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
@@ -3984,7 +3984,7 @@ $0 !~ /^#/ {
               cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}${1}.bot${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${safe_tmp2}${fR2}
+${fy2}gatbps:${fd2} and write to: ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
@@ -4014,7 +4014,7 @@ EOF1
           #(
             *)
               cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}echo${fR2} failed to write to: ${fB2}${safe_tmp2}${fR2}
+${fy2}gatbps:${fd2} ${fB2}echo${fR2} failed to write to: ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
@@ -4046,7 +4046,7 @@ END {
               cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}${1}.bot.texi${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${safe_tmp3}${fR2}
+${fy2}gatbps:${fd2} and write to: ${fB2}${tmp3}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
@@ -4063,8 +4063,8 @@ EOF1
           #(
             *)
               cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}${texi2any}${fR2} failed to read from: ${fB2}${safe_tmp3}${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${safe_tmp2}${fR2}
+${fy2}gatbps:${fd2} ${fB2}${texi2any}${fR2} failed to read from: ${fB2}${tmp3}${fR2}
+${fy2}gatbps:${fd2} and write to: ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
@@ -4085,7 +4085,7 @@ EOF1
               cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}/dev/null${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${safe_tmp2}${fR2}
+${fy2}gatbps:${fd2} and write to: ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
@@ -4105,9 +4105,9 @@ EOF1
           *)
             cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. ${fB2}${safe_tmp0}${fR2}
-${fy2}gatbps:${fd2}   2. ${fB2}${safe_tmp1}${fR2}
-${fy2}gatbps:${fd2}   3. ${fB2}${safe_tmp2}${fR2}
+${fy2}gatbps:${fd2}   1. ${fB2}${tmp0}${fR2}
+${fy2}gatbps:${fd2}   2. ${fB2}${tmp1}${fR2}
+${fy2}gatbps:${fd2}   3. ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
 ${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
 EOF1
