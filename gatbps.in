@@ -3862,7 +3862,7 @@ EOF1
 
         else
 
-          cat /dev/null >"${safe_tmp0}"
+          cat '/dev/null' >"${safe_tmp0}"
           case "${?}" in
           #(
             '0')
@@ -4074,7 +4074,7 @@ EOF1
 
         else
 
-          cat /dev/null >"${safe_tmp2}"
+          cat '/dev/null' >"${safe_tmp2}"
           case "${?}" in
           #(
             '0')
