@@ -1610,10 +1610,9 @@ is set to a nonempty string
 .nohy "\fIS\fR,"
 then a
 .nohy "\fB\-\-sed=\fIS\fR"
-option is added to
-the program arguments
-at a position that lies before
-all original program arguments.
+option is added to the
+arguments at a position that
+lies before all original arguments.
 Otherwise, the
 .nohy "\fBSED\fR"
 environment variable has no effect.

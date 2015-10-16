@@ -135,10 +135,9 @@ is set to a nonempty string
 @i{S},
 then a
 @t{--sed=}@i{S}
-option is added to
-the program arguments
-at a position that lies before
-all original program arguments@.
+option is added to the
+arguments at a position that
+lies before all original arguments@.
 Otherwise, the
 @t{SED}
 environment variable has no effect@.
