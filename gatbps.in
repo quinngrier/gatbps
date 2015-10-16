@@ -930,7 +930,7 @@ The
 and
 .nohy "\fB\-\-help=\fIS\fR"
 options write text to standard output
-and cause all further program arguments to be ignored.
+and cause all further arguments to be ignored.
 For the
 .nohy "\fB\-\-help\fR"
 option, the text is
