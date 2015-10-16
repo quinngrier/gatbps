@@ -126,6 +126,22 @@ disables it@.
 @section Environment Variables
 
 @table @asis
+@item @t{AWK}
+@itemx @w{}
+If the
+@t{AWK}
+environment variable
+is set to a nonempty string
+@i{S},
+then a
+@t{--awk=}@i{S}
+option is added to the
+arguments at a position that
+lies before all original arguments@.
+Otherwise, the
+@t{AWK}
+environment variable has no effect@.
+
 @item @t{SED}
 @itemx @w{}
 If the
