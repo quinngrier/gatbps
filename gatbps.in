@@ -970,25 +970,12 @@ The text is the
 .nohy "\fBtbl | troff \-man\fR"
 code for the program's manual page.
 .TP
-.nohy "\fB\-\-recursive\fR[\fB=\fIS\fR]"
-.IPE0
-Each
 .nohy "\fB\-\-recursive\fR"
-option is replaced by a
-.nohy "\fB\-\-recursive=yes\fR"
-option.
+.IPE0
 Automatic generation of special file
 dependencies is initially disabled, and each
-.nohy "\fB\-\-recursive=\fIS\fR"
-option enables or disables it.
-Each
-.nohy "\fB\-\-recursive=yes\fR"
+.nohy "\fB\-\-recursive\fR"
 option enables it.
-Each
-.nohy "\fB\-\-recursive=\fIS\fR"
-option with any other
-.nohy "\fIS\fR"
-disables it.
 .TP
 .nohy "\fB\-\-style\fR[\fB=\fIS\fR]"
 .IPE0
@@ -1727,7 +1714,7 @@ EOF1
         ;;
 
       #(
-        '--recursive'|'--recursive=yes')
+        '--recursive')
 
           recursive='1'
           continue
@@ -1737,8 +1724,11 @@ EOF1
       #(
         '--recursive='*)
 
-          recursive='0'
-          continue
+          cat >&2 <<EOF1
+${fr2}gatbps!${fd2} the ${fB2}--recursive${fR2} option must not have an argument
+${fr2}gatbps!${fd2} try ${fB2}gatbps --help${fR2} for more information
+EOF1
+          exit '1'
 
         ;;
 
