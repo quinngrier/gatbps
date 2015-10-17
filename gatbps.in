@@ -965,7 +965,7 @@ option.
 The
 .nohy "\fB\-\-man\fR"
 option writes text to standard output
-and causes all further program arguments to be ignored.
+and causes all further arguments to be ignored.
 The text is the
 .nohy "\fBtbl | troff \-man\fR"
 code for the program's manual page.
