@@ -970,6 +970,26 @@ The text is the
 .nohy "\fBtbl | troff \-man\fR"
 code for the program's manual page.
 .TP
+.nohy "\fB\-\-recursive\fR[\fB=\fIS\fR]"
+.IPE0
+Each
+.nohy "\fB\-\-recursive\fR"
+option is replaced by a
+.nohy "\fB\-\-recursive=yes\fR"
+option.
+Automatic generation of special file
+dependencies is initially disabled, and each
+.nohy "\fB\-\-recursive=\fIS\fR"
+option enables or disables it.
+Each
+.nohy "\fB\-\-recursive=yes\fR"
+option enables it.
+Each
+.nohy "\fB\-\-recursive=\fIS\fR"
+option with any other
+.nohy "\fIS\fR"
+disables it.
+.TP
 .nohy "\fB\-\-style\fR[\fB=\fIS\fR]"
 .IPE0
 Each
@@ -1046,26 +1066,6 @@ and causes all further arguments to be ignored.
 The text is the program's
 name, package, version number,
 release date, and copyright information.
-.TP
-.nohy "\fB\-\-recursive\fR[\fB=\fIS\fR]"
-.IPE0
-Each
-.nohy "\fB\-\-recursive\fR"
-option is replaced by a
-.nohy "\fB\-\-recursive=yes\fR"
-option.
-Automatic generation of special file
-dependencies is initially disabled, and each
-.nohy "\fB\-\-recursive=\fIS\fR"
-option enables or disables it.
-Each
-.nohy "\fB\-\-recursive=yes\fR"
-option enables it.
-Each
-.nohy "\fB\-\-recursive=\fIS\fR"
-option with any other
-.nohy "\fIS\fR"
-disables it.
 .SH "PLAIN FILES"
 .SH "MATHEMATICAL NOTATION IN TEXINFO"
 .LP
