@@ -972,7 +972,7 @@ code for the program's manual page.
 .TP
 .nohy "\fB\-\-recursive\fR"
 .IPE0
-Automatic generation of special file
+Recursive generation of special file
 dependencies is initially disabled, and each
 .nohy "\fB\-\-recursive\fR"
 option enables it.

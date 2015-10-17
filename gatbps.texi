@@ -93,7 +93,7 @@ command@.
 
 @item @t{--recursive}
 @itemx @w{}
-Automatic generation of special file
+Recursive generation of special file
 dependencies is initially disabled, and each
 @t{--recursive}
 option enables it@.
