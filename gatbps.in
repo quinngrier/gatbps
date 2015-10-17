@@ -1748,7 +1748,7 @@ EOF1
 
           x=`"${sed}" "
 s/'/'\\\\\\\\''/g
-1s/^-r/rest='-/
+1s/^-./rest='/
 \\$s/\\$/'/
 " <<EOF1
 ${1}
@@ -1772,7 +1772,7 @@ EOF1
           eval "${x}"
 
           shift
-          set 'x' '--recursive' "${rest}" "${@AT@}"
+          set 'x' '--recursive' "-${rest}" "${@AT@}"
           continue
 
         ;;
