@@ -101,22 +101,22 @@ The text is the program's
 name, package, version number,
 release date, and copyright information@.
 
-@item @t{--walk}[@t{=}@i{S}]
+@item @t{--recursive}[@t{=}@i{S}]
 @itemx @w{}
 Each
-@t{--walk}
+@t{--recursive}
 option is replaced by a
-@t{--walk=yes}
+@t{--recursive=yes}
 option@.
 Automatic generation of special file
 dependencies is initially disabled, and each
-@t{--walk=}@i{S}
+@t{--recursive=}@i{S}
 option enables or disables it@.
 Each
-@t{--walk=yes}
+@t{--recursive=yes}
 option enables it@.
 Each
-@t{--walk=}@i{S}
+@t{--recursive=}@i{S}
 option with any other
 @i{S}
 disables it@.
@@ -217,7 +217,7 @@ commands to include every
 @i{M}@t{.@:texi}
 special file@.
 It can be generated with the
-@t{--walk}
+@t{--recursive}
 option to also generate every
 @i{M}@t{.@:texi}
 special file at once@.
@@ -477,7 +477,7 @@ commands to include all special
 files that provide Texinfo macros for mathematical notation@.
 This can be
 generated with the
-@t{--walk}
+@t{--recursive}
 option to also generate all such special files
 at once@.
 

@@ -537,8 +537,8 @@ Special file: ${fB1}math.texi${fR1}
 
 The ${fB1}math.texi${fR1} special file uses ${fB1}@AT@include${fR1} commands to include all special
 files that provide Texinfo macros for mathematical notation. This can be
-generated with the ${fB1}--walk${fR1} option to also generate all such special files
-at once.
+generated with the ${fB1}--recursive${fR1} option to also generate all such special
+files at once.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
@@ -1047,22 +1047,22 @@ The text is the program's
 name, package, version number,
 release date, and copyright information.
 .TP
-.nohy "\fB\-\-walk\fR[\fB=\fIS\fR]"
+.nohy "\fB\-\-recursive\fR[\fB=\fIS\fR]"
 .IPE0
 Each
-.nohy "\fB\-\-walk\fR"
+.nohy "\fB\-\-recursive\fR"
 option is replaced by a
-.nohy "\fB\-\-walk=yes\fR"
+.nohy "\fB\-\-recursive=yes\fR"
 option.
 Automatic generation of special file
 dependencies is initially disabled, and each
-.nohy "\fB\-\-walk=\fIS\fR"
+.nohy "\fB\-\-recursive=\fIS\fR"
 option enables or disables it.
 Each
-.nohy "\fB\-\-walk=yes\fR"
+.nohy "\fB\-\-recursive=yes\fR"
 option enables it.
 Each
-.nohy "\fB\-\-walk=\fIS\fR"
+.nohy "\fB\-\-recursive=\fIS\fR"
 option with any other
 .nohy "\fIS\fR"
 disables it.
@@ -1122,7 +1122,7 @@ commands to include every
 .nohy "\fIM\fB.texi\fR"
 special file.
 It can be generated with the
-.nohy "\fB\-\-walk\fR"
+.nohy "\fB\-\-recursive\fR"
 option to also generate every
 .nohy "\fIM\fB.texi\fR"
 special file at once.
@@ -1409,7 +1409,7 @@ commands to include all special
 files that provide Texinfo macros for mathematical notation.
 This can be
 generated with the
-.nohy "\fB\-\-walk\fR"
+.nohy "\fB\-\-recursive\fR"
 option to also generate all such special files
 at once.
 .IPE
@@ -1973,7 +1973,7 @@ EOF1
         ;;
 
       #(
-        '--walk'|'--walk=yes')
+        '--recursive'|'--recursive=yes')
 
           walk_enabled='1'
           continue
@@ -1981,7 +1981,7 @@ EOF1
         ;;
 
       #(
-        '--walk='*)
+        '--recursive='*)
 
           walk_enabled='0'
           continue
