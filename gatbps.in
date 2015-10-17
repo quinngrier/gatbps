@@ -966,9 +966,11 @@ The
 .nohy "\fB\-\-man\fR"
 option writes text to standard output
 and causes all further arguments to be ignored.
-The text is the
+The text is the source code of the program's
+manual page, which can be processed with any
+command that is analogous to the
 .nohy "\fBtbl | troff \-man\fR"
-code for the program's manual page.
+command.
 .TP
 .nohy "\fB\-\-recursive\fR"
 .TP0
