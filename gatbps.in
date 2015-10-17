@@ -89,7 +89,7 @@ nl='
 detect_options='1'
 exit_status='0'
 have_operands='0'
-walk_enabled='0'
+recursive='0'
 
 set 'x' "${@AT@}"
 
@@ -1729,7 +1729,7 @@ EOF1
       #(
         '--recursive'|'--recursive=yes')
 
-          walk_enabled='1'
+          recursive='1'
           continue
 
         ;;
@@ -1737,7 +1737,7 @@ EOF1
       #(
         '--recursive='*)
 
-          walk_enabled='0'
+          recursive='0'
           continue
 
         ;;
@@ -4129,7 +4129,7 @@ EOF1
     fi
   done
 
-  case "${walk_enabled}" in
+  case "${recursive}" in
   #(
     '0')
       :
