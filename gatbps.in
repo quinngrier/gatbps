@@ -969,7 +969,7 @@ and causes all further arguments to be ignored.
 The text is the source code of the program's
 manual page, which can be processed with any
 command that is analogous to the
-.nohy "\fBtbl | troff \-man\fR"
+.nohy "\fBtbl | nroff \-man\fR"
 command.
 .TP
 .nohy "\fB\-\-recursive\fR"
