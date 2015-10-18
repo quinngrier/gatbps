@@ -106,10 +106,10 @@ command@.
 @item @t{--recursive}
 @itemx @t{-r}
 @itemx @w{}
-Recursive generation of special file
-dependencies is initially disabled, and each
+The
 @t{--recursive}
-option enables it@.
+option enables recursive dependency
+generation, which is initially disabled@.
 
 @item @t{--version}
 @itemx @w{}
