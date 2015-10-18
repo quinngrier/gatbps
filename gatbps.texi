@@ -106,7 +106,7 @@ command@.
 @item @t{--recursive}
 @itemx @t{-r}
 @itemx @w{}
-The
+Each
 @t{--recursive}
 option enables recursive dependency
 generation, which is initially disabled@.

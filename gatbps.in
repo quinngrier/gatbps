@@ -976,7 +976,7 @@ command.
 .TP0
 .nohy "\fB\-r\fR"
 .IPE0
-The
+Each
 .nohy "\fB\-\-recursive\fR"
 option enables recursive dependency
 generation, which is initially disabled.
