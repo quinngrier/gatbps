@@ -201,8 +201,7 @@ Otherwise, the
 @t{STYLE_STDERR}
 environment variable has no effect@.
 
-@item
-@t{STYLE_STDOUT}
+@item @t{STYLE_STDOUT}
 @itemx @w{}
 If the
 @t{STYLE_STDOUT}
