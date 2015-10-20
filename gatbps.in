@@ -4202,7 +4202,7 @@ EOF1
 ${fy2}gatbps:${fd2} ${fB2}${sed}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: a command substitution
-${fy2}gatbps:${fd2} walk failed for: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} recursion failed: ${fB2}${1}${fR2}
 EOF1
                     exit_status='1'
                     break
@@ -4255,7 +4255,7 @@ EOF1
 ${fy2}gatbps:${fd2} ${fB2}${sed}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: a command substitution
-${fy2}gatbps:${fd2} walk failed for: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} recursion failed: ${fB2}${1}${fR2}
 EOF1
                     exit_status='1'
                     break
@@ -4302,7 +4302,7 @@ EOF1
 ${fy2}gatbps:${fd2} ${fB2}${sed}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: a command substitution
-${fy2}gatbps:${fd2} walk failed for: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} recursion failed: ${fB2}${1}${fR2}
 EOF1
                     exit_status='1'
                     break
