@@ -1656,10 +1656,9 @@ is set to a nonempty string
 .nohy "\fIS\fR,"
 then a
 .nohy "\fB\-\-style\-stdout=\fIS\fR"
-option is added to
-the program arguments
-at a position that lies before
-all original program arguments
+option is added to the
+arguments at a position that
+lies before all original arguments
 and after the option added by the
 .nohy "\fBSTYLE\fR"
 environment variable.
