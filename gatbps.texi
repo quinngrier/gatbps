@@ -157,6 +157,27 @@ lies before all original arguments@.
 Otherwise, the
 @t{SED}
 environment variable has no effect@.
+
+@item @t{STYLE}
+@itemx @w{}
+If the
+@t{STYLE}
+environment variable
+is set to a nonempty string
+@i{S},
+then a
+@t{--style=}@i{S}
+option is added to the
+arguments at a position that
+lies before all original arguments
+and before the options added by the
+@t{STYLE_STDERR}
+and
+@t{STYLE_STDOUT}
+environment variables@.
+Otherwise, the
+@t{STYLE}
+environment variable has no effect@.
 @end table
 
 @node Mathematical Notation in Texinfo
