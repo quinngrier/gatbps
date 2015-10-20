@@ -2131,7 +2131,7 @@ EOF1
     *'/')
       cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} each operand must not end with a slash
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
       exit_status='1'
       continue
@@ -2154,7 +2154,7 @@ EOF1
   else
     cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} each operand must not be a directory
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
     exit_status='1'
     continue
@@ -2168,14 +2168,14 @@ EOF1
     elif test '-d' "${safe_1}.gatbps${i}"; then
       cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${1}.gatbps${i}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
       exit_status='1'
       continue '2'
     else
       cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} file must not be nonregular: ${fB2}${1}.gatbps${i}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
       exit_status='1'
       continue '2'
@@ -2249,7 +2249,7 @@ EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
             break
@@ -2298,7 +2298,7 @@ EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
             break
@@ -2496,7 +2496,7 @@ EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
             break
@@ -2528,7 +2528,7 @@ EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
             break
@@ -2594,7 +2594,7 @@ EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
             break
@@ -2624,7 +2624,7 @@ EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
             break
@@ -2768,7 +2768,7 @@ EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
             break
@@ -2813,7 +2813,7 @@ EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
             break
@@ -2962,7 +2962,7 @@ EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
             break
@@ -3014,7 +3014,7 @@ EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
             break
@@ -3163,7 +3163,7 @@ EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
             break
@@ -3312,7 +3312,7 @@ EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
             break
@@ -3461,7 +3461,7 @@ EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
             break
@@ -3579,7 +3579,7 @@ EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
             break
@@ -3641,7 +3641,7 @@ EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
             break
@@ -3759,7 +3759,7 @@ EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. a here-document
 ${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
             break
@@ -3777,7 +3777,7 @@ EOF1
           else
             cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${1}.top${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
             break
@@ -3802,7 +3802,7 @@ END {
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}${1}.top${fR2}
 ${fy2}gatbps:${fd2} and write to: ${fB2}${tmp0}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
               break
@@ -3816,7 +3816,7 @@ EOF1
           else
             cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${1}.top.texi${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
             break
@@ -3847,7 +3847,7 @@ END {
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}${1}.top.texi${fR2}
 ${fy2}gatbps:${fd2} and write to: ${fB2}${tmp1}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
               break
@@ -3865,7 +3865,7 @@ EOF1
               cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}${texi2any}${fR2} failed to read from: ${fB2}${tmp1}${fR2}
 ${fy2}gatbps:${fd2} and write to: ${fB2}${tmp0}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
               break
@@ -3882,7 +3882,7 @@ EOF1
             *)
               cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}echo${fR2} failed to write to: ${fB2}${tmp0}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
               break
@@ -3903,7 +3903,7 @@ EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}/dev/null${fR2}
 ${fy2}gatbps:${fd2} and write to: ${fB2}${tmp0}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
               break
@@ -3918,7 +3918,7 @@ EOF1
           else
             cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${1}.texi${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
             break
@@ -3926,7 +3926,7 @@ EOF1
         else
           cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} file must exist: ${fB2}${1}.texi${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
           exit_status='1'
           break
@@ -3957,7 +3957,7 @@ END {
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}${1}.texi${fR2}
 ${fy2}gatbps:${fd2} and write to: ${fB2}${tmp2}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
             break
@@ -3975,7 +3975,7 @@ EOF1
             cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}${texi2any}${fR2} failed to read from: ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fd2} and write to: ${fB2}${tmp1}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
             break
@@ -3989,7 +3989,7 @@ EOF1
           else
             cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${1}.bot${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
             break
@@ -4014,7 +4014,7 @@ $0 !~ /^#/ {
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}${1}.bot${fR2}
 ${fy2}gatbps:${fd2} and write to: ${fB2}${tmp2}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
               break
@@ -4028,7 +4028,7 @@ EOF1
           else
             cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${1}.bot.texi${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
             break
@@ -4044,7 +4044,7 @@ EOF1
             *)
               cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}echo${fR2} failed to write to: ${fB2}${tmp2}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
               break
@@ -4076,7 +4076,7 @@ END {
 ${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}${1}.bot.texi${fR2}
 ${fy2}gatbps:${fd2} and write to: ${fB2}${tmp3}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
               break
@@ -4094,7 +4094,7 @@ EOF1
               cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} ${fB2}${texi2any}${fR2} failed to read from: ${fB2}${tmp3}${fR2}
 ${fy2}gatbps:${fd2} and write to: ${fB2}${tmp2}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
               break
@@ -4115,7 +4115,7 @@ EOF1
 ${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
 ${fy2}gatbps:${fd2}   1. ${fB2}/dev/null${fR2}
 ${fy2}gatbps:${fd2} and write to: ${fB2}${tmp2}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
               break
@@ -4138,7 +4138,7 @@ ${fy2}gatbps:${fd2}   1. ${fB2}${tmp0}${fR2}
 ${fy2}gatbps:${fd2}   2. ${fB2}${tmp1}${fR2}
 ${fy2}gatbps:${fd2}   3. ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} operand failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
             break
