@@ -178,6 +178,25 @@ environment variables@.
 Otherwise, the
 @t{STYLE}
 environment variable has no effect@.
+
+@item @t{STYLE_STDERR}
+@itemx @w{}
+If the
+@t{STYLE_STDERR}
+environment variable
+is set to a nonempty string
+@i{S},
+then a
+@t{--style-stderr=}@i{S}
+option is added to the
+arguments at a position that
+lies before all original arguments
+and after the option added by the
+@t{STYLE}
+environment variable@.
+Otherwise, the
+@t{STYLE_STDERR}
+environment variable has no effect@.
 @end table
 
 @node Mathematical Notation in Texinfo
