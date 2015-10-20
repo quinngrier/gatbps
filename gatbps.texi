@@ -125,6 +125,9 @@ release date, and copyright information@.
 @node Environment Variables
 @section Environment Variables
 
+@t{gatbps}
+is affected by the following environment variables:
+
 @table @asis
 @item @t{AWK}
 @itemx @w{}
