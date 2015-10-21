@@ -128,6 +128,21 @@ Each
 option enables recursive dependency
 generation, which is initially disabled@.
 
+@item @t{--style}[@t{=}@i{S}]
+@itemx @w{}
+Each
+@t{--style}
+option is replaced by a
+@t{--style=always}
+option@.
+Each
+@t{--style=}@i{S}
+option is replaced by a
+@t{--style-stderr=}@i{S}
+option and a
+@t{--style-stdout=}@i{S}
+option@.
+
 @item @t{--version}
 @itemx @w{}
 The
