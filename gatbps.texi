@@ -10,6 +10,10 @@
 @include CC0-1.0-copying.texi
 @include math.texi
 
+@ifplaintext
+@chapheading GATBPS
+@end ifplaintext
+
 @titlepage
 @title GATBPS
 @vskip 0pt plus 1filll
