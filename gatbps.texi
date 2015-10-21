@@ -22,9 +22,22 @@
 @insertcopying
 @end titlepage
 
+@ifplaintext
+@chapheading Short Table of Contents
+@end ifplaintext
+
 @shortcontents
 
+@ifplaintext
+@*
+@chapheading Table of Contents
+@end ifplaintext
+
 @contents
+
+@ifplaintext
+@*
+@end ifplaintext
 
 @ifnottex
 @node Top
