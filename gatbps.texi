@@ -143,6 +143,33 @@ option and a
 @t{--style-stdout=}@i{S}
 option@.
 
+@item @t{--style-stderr}[@t{=}@i{S}]
+@itemx @w{}
+Each
+@t{--style-stderr}
+option is replaced by a
+@t{--style-stderr=always}
+option@.
+Each
+@t{--style-stderr=}@i{S}
+option enables or disables bold,
+underline, and color styling of
+text written to standard error,
+which is initially disabled@.
+Each
+@t{--style-stderr=always}
+option enables it@.
+Each
+@t{--style-stderr=auto}
+option enables it if standard error
+is associated with a terminal
+or disables it if not@.
+Each
+@t{--style-stderr=}@i{S}
+option with any other
+@i{S}
+disables it@.
+
 @item @t{--version}
 @itemx @w{}
 The
