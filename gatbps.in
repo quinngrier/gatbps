@@ -1030,11 +1030,12 @@ Each
 option is replaced by a
 .nohy "\fB\-\-style\-stdout=always\fR"
 option.
-Bold, underline, and color styling
-of text written to standard output
-is initially disabled, and each
+Each
 .nohy "\fB\-\-style\-stdout=\fIS\fR"
-option enables or disables it.
+option enables or disables bold,
+underline, and color styling of
+text written to standard output,
+which is initially disabled.
 Each
 .nohy "\fB\-\-style\-stdout=always\fR"
 option enables it.
