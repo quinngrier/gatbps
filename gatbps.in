@@ -1003,11 +1003,12 @@ Each
 option is replaced by a
 .nohy "\fB\-\-style\-stderr=always\fR"
 option.
-Bold, underline, and color styling
-of text written to standard error
-is initially disabled, and each
+Each
 .nohy "\fB\-\-style\-stderr=\fIS\fR"
-option enables or disables it.
+option enables or disables bold,
+underline, and color styling of
+text written to standard error,
+which is initially disabled.
 Each
 .nohy "\fB\-\-style\-stderr=always\fR"
 option enables it.
