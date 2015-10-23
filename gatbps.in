@@ -983,18 +983,18 @@ generation, which is initially disabled.
 .TP
 .nohy "\fB\-\-style\fR[\fB=\fIS\fR]"
 .IPE0
-Each
+The
 .nohy "\fB\-\-style\fR"
-option is replaced by a
+option is replaced by the
 .nohy "\fB\-\-style=always\fR"
 option.
-Each
+The
 .nohy "\fB\-\-style=\fIS\fR"
-option is replaced by a
+option is replaced by the
 .nohy "\fB\-\-style\-stderr=\fIS\fR"
-option and a
+and
 .nohy "\fB\-\-style\-stdout=\fIS\fR"
-option.
+options.
 .TP
 .nohy "\fB\-\-style\-stderr\fR[\fB=\fIS\fR]"
 .IPE0

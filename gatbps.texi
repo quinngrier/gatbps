@@ -130,18 +130,18 @@ generation, which is initially disabled@.
 
 @item @t{--style}[@t{=}@i{S}]
 @itemx @w{}
-Each
+The
 @t{--style}
-option is replaced by a
+option is replaced by the
 @t{--style=always}
 option@.
-Each
+The
 @t{--style=}@i{S}
-option is replaced by a
+option is replaced by the
 @t{--style-stderr=}@i{S}
-option and a
+and
 @t{--style-stdout=}@i{S}
-option@.
+options@.
 
 @item @t{--style-stderr}[@t{=}@i{S}]
 @itemx @w{}
