@@ -1637,7 +1637,7 @@ If the
 environment variable
 is set to a nonempty string
 .nohy "\fIS\fR,"
-then a
+then the
 .nohy "\fB\-\-style\-stderr=\fIS\fR"
 option is added to the
 arguments at a position that

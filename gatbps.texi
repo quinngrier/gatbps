@@ -275,7 +275,7 @@ If the
 environment variable
 is set to a nonempty string
 @i{S},
-then a
+then the
 @t{--style-stderr=}@i{S}
 option is added to the
 arguments at a position that
