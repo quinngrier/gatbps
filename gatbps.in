@@ -13,7 +13,32 @@
 LC_ALL='C'
 export 'LC_ALL'
 
+awk_auto=''
+
 awk=@AWK_SHELL@
+
+case "${awk}" in
+#(
+  'auto')
+    case "${awk_auto}" in
+    #(
+      ?*)
+        :
+      ;;
+    #(
+      *)
+        awk_auto='awk'
+        for x in 'gawk' 'mawk' 'nawk'; do
+          if "${x}" '' <'/dev/null' >'/dev/null' 2>'/dev/null'; then
+            awk_auto="${x}"
+            break
+          fi
+        done
+      ;;
+    esac
+    awk="${awk_auto}"
+  ;;
+esac
 
 sed='sed'
 
@@ -198,6 +223,29 @@ EOF1
             ;;
           esac
           eval "${x}"
+
+          case "${awk}" in
+          #(
+            'auto')
+              case "${awk_auto}" in
+              #(
+                ?*)
+                  :
+                ;;
+              #(
+                *)
+                  awk_auto='awk'
+                  for x in 'gawk' 'mawk' 'nawk'; do
+                    if "${x}" '' <'/dev/null' >'/dev/null' 2>'/dev/null'; then
+                      awk_auto="${x}"
+                      break
+                    fi
+                  done
+                ;;
+              esac
+              awk="${awk_auto}"
+            ;;
+          esac
 
           continue
 
