@@ -998,26 +998,26 @@ options.
 .TP
 .nohy "\fB\-\-style\-stderr\fR[\fB=\fIS\fR]"
 .IPE0
-Each
+The
 .nohy "\fB\-\-style\-stderr\fR"
-option is replaced by a
+option is replaced by the
 .nohy "\fB\-\-style\-stderr=always\fR"
 option.
-Each
+The
 .nohy "\fB\-\-style\-stderr=\fIS\fR"
 option enables or disables bold,
 underline, and color styling of
 text written to standard error,
 which is initially disabled.
-Each
+The
 .nohy "\fB\-\-style\-stderr=always\fR"
 option enables it.
-Each
+The
 .nohy "\fB\-\-style\-stderr=auto\fR"
 option enables it if standard error
 is associated with a terminal
 or disables it if not.
-Each
+The
 .nohy "\fB\-\-style\-stderr=\fIS\fR"
 option with any other
 .nohy "\fIS\fR"

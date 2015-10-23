@@ -145,26 +145,26 @@ options@.
 
 @item @t{--style-stderr}[@t{=}@i{S}]
 @itemx @w{}
-Each
+The
 @t{--style-stderr}
-option is replaced by a
+option is replaced by the
 @t{--style-stderr=always}
 option@.
-Each
+The
 @t{--style-stderr=}@i{S}
 option enables or disables bold,
 underline, and color styling of
 text written to standard error,
 which is initially disabled@.
-Each
+The
 @t{--style-stderr=always}
 option enables it@.
-Each
+The
 @t{--style-stderr=auto}
 option enables it if standard error
 is associated with a terminal
 or disables it if not@.
-Each
+The
 @t{--style-stderr=}@i{S}
 option with any other
 @i{S}
