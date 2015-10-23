@@ -24,6 +24,20 @@ AC_ARG_VAR([AWK], [the preferred awk executable])
 AC_PROG_AWK
 AM_SUBST_NOTMAKE([AWK])
 
+awk_default="${AWK}"
+AC_ARG_ENABLE([awk-auto],
+  [AS_HELP_STRING([--enable-awk-auto],
+    [default to --awk=auto (default is no)])],
+  [
+    case "${enableval}" in
+    #(
+      'yes')
+        awk_default='auto'
+      ;;
+    esac
+  ]
+)
+
 AC_ARG_VAR([SED], [the preferred sed executable])
 AC_PROG_SED
 AM_SUBST_NOTMAKE([SED])
@@ -39,7 +53,7 @@ s/-/\\\\-/g
 1s/^/"\\\\fB/
 $s/$/\\\\fR"/
 ' <<EOF
-${AWK}
+${awk_default}
 EOF
 `
 case "${?}" in
@@ -81,7 +95,7 @@ s/'/'\\\\\\\\''/g
 1s/^/'/
 \\$s/\\$/'/
 " <<EOF
-${AWK}
+${awk_default}
 EOF
 `
 case "${?}" in
