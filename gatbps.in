@@ -1025,26 +1025,26 @@ disables it.
 .TP
 .nohy "\fB\-\-style\-stdout\fR[\fB=\fIS\fR]"
 .IPE0
-Each
+The
 .nohy "\fB\-\-style\-stdout\fR"
-option is replaced by a
+option is replaced by the
 .nohy "\fB\-\-style\-stdout=always\fR"
 option.
-Each
+The
 .nohy "\fB\-\-style\-stdout=\fIS\fR"
 option enables or disables bold,
 underline, and color styling of
 text written to standard output,
 which is initially disabled.
-Each
+The
 .nohy "\fB\-\-style\-stdout=always\fR"
 option enables it.
-Each
+The
 .nohy "\fB\-\-style\-stdout=auto\fR"
 option enables it if standard output
 is associated with a terminal
 or disables it if not.
-Each
+The
 .nohy "\fB\-\-style\-stdout=\fIS\fR"
 option with any other
 .nohy "\fIS\fR"

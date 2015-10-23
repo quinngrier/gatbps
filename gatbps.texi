@@ -172,26 +172,26 @@ disables it@.
 
 @item @t{--style-stdout}[@t{=}@i{S}]
 @itemx @w{}
-Each
+The
 @t{--style-stdout}
-option is replaced by a
+option is replaced by the
 @t{--style-stdout=always}
 option@.
-Each
+The
 @t{--style-stdout=}@i{S}
 option enables or disables bold,
 underline, and color styling of
 text written to standard output,
 which is initially disabled@.
-Each
+The
 @t{--style-stdout=always}
 option enables it@.
-Each
+The
 @t{--style-stdout=auto}
 option enables it if standard output
 is associated with a terminal
 or disables it if not@.
-Each
+The
 @t{--style-stdout=}@i{S}
 option with any other
 @i{S}
