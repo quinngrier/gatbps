@@ -3668,6 +3668,30 @@ for x in 'gawk' 'mawk' 'nawk'; do
   fi
 done
 
+isatty2=''
+fR2=''
+fB2=''
+fI2=''
+fd2=''
+fr2=''
+fg2=''
+fy2=''
+fb2=''
+fm2=''
+fc2=''
+
+isatty1=''
+fR1=''
+fB1=''
+fI1=''
+fd1=''
+fr1=''
+fg1=''
+fy1=''
+fb1=''
+fm1=''
+fc1=''
+
 exit '1'
 
 #
