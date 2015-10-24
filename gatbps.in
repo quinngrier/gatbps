@@ -44,7 +44,9 @@ sed='sed'
 
 texi2any='texi2any'
 
+isatty1=''
 isatty2=''
+
 fR2=''
 fB2=''
 fI2=''
@@ -56,7 +58,6 @@ fb2=''
 fm2=''
 fc2=''
 
-isatty1=''
 fR1=''
 fB1=''
 fI1=''
@@ -3668,7 +3669,9 @@ for x in 'gawk' 'mawk' 'nawk'; do
   fi
 done
 
+isatty1=''
 isatty2=''
+
 fR2=''
 fB2=''
 fI2=''
@@ -3680,7 +3683,6 @@ fb2=''
 fm2=''
 fc2=''
 
-isatty1=''
 fR1=''
 fB1=''
 fI1=''
