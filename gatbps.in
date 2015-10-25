@@ -3721,7 +3721,17 @@ while :; do
   #(
     *)
 
-      :
+      case "${1}" in
+
+      #(
+        '--')
+
+          detect_options='0'
+          continue
+
+        ;;
+
+      esac
 
     ;;
 
