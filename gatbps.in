@@ -3694,6 +3694,8 @@ fb1=''
 fm1=''
 fc1=''
 
+detect_options='1'
+
 set 'x' "${@AT@}"
 
 while :; do
@@ -3705,6 +3707,24 @@ while :; do
     '0')
       break
     ;;
+  esac
+
+  case "${detect_options}" in
+
+  #(
+    '0')
+
+      :
+
+    ;;
+
+  #(
+    *)
+
+      :
+
+    ;;
+
   esac
 
 done
