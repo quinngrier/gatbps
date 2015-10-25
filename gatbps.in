@@ -3793,6 +3793,37 @@ EOF2
 
         ;;
 
+      #(
+        '-'?*)
+
+          "${awk}" '
+{
+  name = substr($0 "\n", 1, 2)
+  printf "'"${fr2}"'sh-prep.sh!'"${fd2}"' unknown option name: '"${fB2}"'%s'"${fR2}"'\n", name
+  printf "'"${fr2}"'sh-prep.sh!'"${fd2}"' try '"${fB2}"'sh sh-prep.sh --help'"${fR2}"' for more information\n"
+  exit
+}
+' >&2 <<EOF2
+${1}
+EOF2
+          case "${?}" in
+          #(
+            '0')
+              :
+            ;;
+          #(
+            *)
+              cat >&2 <<EOF2
+${fr2}sh-prep.sh!${fd2} ${fB2}${awk}${fR2} failed to read from:
+${fr2}sh-prep.sh!${fd2}   1. a here-document
+${fr2}sh-prep.sh!${fd2} and write to: standard error
+EOF2
+            ;;
+          esac
+          exit '1'
+
+        ;;
+
       esac
 
     ;;
