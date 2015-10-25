@@ -3731,6 +3731,17 @@ while :; do
 
         ;;
 
+      #(
+        '--='*)
+
+          cat >&2 <<EOF2
+${fr2}sh-prep.sh!${fd2} the ${fB2}--${fR2} option must not have a value
+${fr2}sh-prep.sh!${fd2} try ${fB2}sh sh-prep.sh --help${fR2} for more information
+EOF2
+          exit '1'
+
+        ;;
+
       esac
 
     ;;
