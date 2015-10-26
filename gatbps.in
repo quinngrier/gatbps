@@ -181,7 +181,7 @@ EOF1
           #(
             '1')
               cat >&2 <<EOF1
-${fr2}gatbps!${fd2} each ${fB2}--awk${fR2} option must have a value
+${fr2}gatbps!${fd2} the ${fB2}--awk${fR2} option must have a value
 ${fr2}gatbps!${fd2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
               exit '1'
@@ -1777,7 +1777,7 @@ EOF1
         '--recursive='*)
 
           cat >&2 <<EOF1
-${fr2}gatbps!${fd2} each ${fB2}--recursive${fR2} option must not have a value
+${fr2}gatbps!${fd2} the ${fB2}--recursive${fR2} option must not have a value
 ${fr2}gatbps!${fd2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
           exit '1'
