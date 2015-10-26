@@ -1522,11 +1522,11 @@ notation of TeX in the other output formats:
 .IPE
 .nf
 @AT@tex
-$x \- y$
-@AT@end tex
+$x\ \-\ y$
+@AT@end\ tex
 @AT@ifnottex
-@AT@i{x} @AT@msign{} @AT@i{y}
-@AT@end ifnottex
+@AT@i{x}\ @AT@msign{}\ @AT@i{y}
+@AT@end\ ifnottex
 .fi
 .RE
 .IPE
