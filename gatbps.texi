@@ -543,11 +543,9 @@ $x^{y + z_w}$
 @ifnottex
 @i{x}@sps{(, @i{y} + @i{z}@sbs{, @i{w}, }, )}
 @end ifnottex
-@c Note that @ifinfo really means Info or plain text.
 @ifinfo
 in the current output format:
 @end ifinfo
-@c Note that @ifnotinfo really means not Info and not plain text.
 @ifnotinfo
 in the current output format and
 @t{x^(y + z_w)}
