@@ -1117,7 +1117,7 @@ to writing mathematical notation in Texinfo.
 The idea is to write each expression in both
 raw TeX and plain Texinfo syntax.
 For example:
-.IPE
+.IP
 .nf
 @AT@tex
 $x + y$
@@ -1205,7 +1205,7 @@ by default, and the ASCII alternative that
 it inserts if the
 .nohy "\fBinsertascii\fR"
 flag is set at its point of inclusion.
-.IPE
+.IP
 .TS
 tab( );
 l l l l .
@@ -1269,7 +1269,7 @@ can be left blank.
 For example, the following code produces
 .nohy "\fBx^(y\ +\ z_w)\fR"
 in Info and plain text:
-.IPE
+.IP
 .nf
 @AT@tex
 $x^{y\ +\ z_w}$
@@ -1428,7 +1428,7 @@ TeX math mode syntax.
 This can be used to imitate the mathematical
 notation of TeX in the other output formats:
 .RS
-.IPE
+.IP
 .nf
 @AT@tex
 $1,\ \eldots,\ n$
@@ -1438,7 +1438,7 @@ $1,\ \eldots,\ n$
 @AT@end\ ifnottex
 .fi
 .RE
-.IPE
+.IP
 For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 .TP
 .nohy "\fBmath.texi\fR"
@@ -1454,7 +1454,7 @@ generated with the
 .nohy "\fB\-\-recursive\fR"
 option to also generate all such special files
 at once.
-.IPE
+.IP
 For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 .TP
 .nohy "\fBmdot.texi\fR"
@@ -1469,7 +1469,7 @@ TeX math mode syntax.
 This can be used to imitate the mathematical
 notation of TeX in the other output formats:
 .RS
-.IPE
+.IP
 .nf
 @AT@tex
 $x\ \ecdot\ y$
@@ -1479,7 +1479,7 @@ $x\ \ecdot\ y$
 @AT@end\ ifnottex
 .fi
 .RE
-.IPE
+.IP
 For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 .TP
 .nohy "\fBmdots.texi\fR"
@@ -1494,7 +1494,7 @@ TeX math mode syntax.
 This can be used to imitate the mathematical
 notation of TeX in the other output formats:
 .RS
-.IPE
+.IP
 .nf
 @AT@tex
 $1\ +\ \ecdots\ +\ n$
@@ -1504,7 +1504,7 @@ $1\ +\ \ecdots\ +\ n$
 @AT@end\ ifnottex
 .fi
 .RE
-.IPE
+.IP
 For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 .TP
 .nohy "\fBmsign.texi\fR"
@@ -1519,7 +1519,7 @@ TeX math mode syntax.
 This can be used to imitate the mathematical
 notation of TeX in the other output formats:
 .RS
-.IPE
+.IP
 .nf
 @AT@tex
 $x\ \-\ y$
@@ -1529,7 +1529,7 @@ $x\ \-\ y$
 @AT@end\ ifnottex
 .fi
 .RE
-.IPE
+.IP
 For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 .TP
 .nohy "\fBsbs.texi\fR"
@@ -1550,7 +1550,7 @@ where they act as parentheses around
 This can be used to imitate the mathematical
 notation of TeX in the other output formats:
 .RS
-.IPE
+.IP
 .nf
 @AT@tex
 $x_{y\ +\ z_w}$
@@ -1560,7 +1560,7 @@ $x_{y\ +\ z_w}$
 @AT@end\ ifnottex
 .fi
 .RE
-.IPE
+.IP
 For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 .TP
 .nohy "\fBsh-prep.sh\fR"
@@ -1591,7 +1591,7 @@ where they act as parentheses around
 This can be used to imitate the mathematical
 notation of TeX in the other output formats:
 .RS
-.IPE
+.IP
 .nf
 @AT@tex
 $x^{y\ +\ z^w}$
@@ -1601,7 +1601,7 @@ $x^{y\ +\ z^w}$
 @AT@end\ ifnottex
 .fi
 .RE
-.IPE
+.IP
 For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 .SH "TEMPORARY FILES"
 .LP
