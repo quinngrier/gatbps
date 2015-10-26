@@ -1497,11 +1497,11 @@ notation of TeX in the other output formats:
 .IPE
 .nf
 @AT@tex
-$1 + \ecdots + n$
-@AT@end tex
+$1\ +\ \ecdots\ +\ n$
+@AT@end\ tex
 @AT@ifnottex
-1 + @AT@mdots{} + @AT@i{n}
-@AT@end ifnottex
+1\ +\ @AT@mdots{}\ +\ @AT@i{n}
+@AT@end\ ifnottex
 .fi
 .RE
 .IPE
