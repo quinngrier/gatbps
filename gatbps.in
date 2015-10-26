@@ -1452,8 +1452,8 @@ files that provide Texinfo macros for mathematical notation.
 This can be
 generated with the
 .nohy "\fB\-\-recursive\fR"
-option to also generate all such special files
-at once.
+option to also generate all such special
+files at once.
 .IP
 For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 .TP
