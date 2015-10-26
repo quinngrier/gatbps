@@ -1585,8 +1585,8 @@ as a superscript in the output formats other than TeX.
 .nohy "\fIL\fR"
 and
 .nohy "\fIR\fR"
-are ignored except in Info and plain text,
-where they act as parentheses around
+are ignored except in Info and plain text, where they act as parentheses
+around
 .nohy "\fIS\fR."
 This can be used to imitate the mathematical
 notation of TeX in the other output formats:
