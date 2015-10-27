@@ -670,11 +670,11 @@ notation of @TeX{} in the other output formats:
 
 @example
 @@tex
-$1 + \cdots + n$
-@@end tex
+$1@w{ }+@w{ }\cdots@w{ }+@w{ }n$
+@@end@w{ }tex
 @@ifnottex
-1 + @@mdots@{@} + @@i@{n@}
-@@end ifnottex
+1@w{ }+@w{ }@@mdots@{@}@w{ }+@w{ }@@i@{n@}
+@@end@w{ }ifnottex
 @end example
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
