@@ -695,11 +695,11 @@ notation of @TeX{} in the other output formats:
 
 @example
 @@tex
-$x - y$
-@@end tex
+$x@w{ }-@w{ }y$
+@@end@w{ }tex
 @@ifnottex
-@@i@{x@} @@msign@{@} @@i@{y@}
-@@end ifnottex
+@@i@{x@}@w{ }@@msign@{@}@w{ }@@i@{y@}
+@@end@w{ }ifnottex
 @end example
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
