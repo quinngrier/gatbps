@@ -603,11 +603,11 @@ notation of @TeX{} in the other output formats:
 
 @example
 @@tex
-$1, \ldots, n$
-@@end tex
+$1,@w{ }\ldots,@w{ }n$
+@@end@w{ }tex
 @@ifnottex
-1, @@bdots@{@}, @@i@{n@}
-@@end ifnottex
+1,@w{ }@@bdots@{@},@w{ }@@i@{n@}
+@@end@w{ }ifnottex
 @end example
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
