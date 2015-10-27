@@ -624,8 +624,8 @@ files that provide Texinfo macros for mathematical notation@.
 This can be
 generated with the
 @t{--recursive}
-option to also generate all such special files
-at once@.
+option to also generate all such special
+files at once@.
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
