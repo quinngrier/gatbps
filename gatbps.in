@@ -44,6 +44,39 @@ sed='sed'
 
 texi2any='texi2any'
 
+#
+# The isatty1 and isatty2 variables indicate whether standard output and
+# standard error are associated with terminals. Each starts as 'unknown'
+# and is lazily set to 'yes' or 'no' with the following code just before
+# each place the value is needed.
+#
+# For isatty1:
+#
+#       case "${isatty1}" in
+#       #(
+#         'unknown')
+#           if test '-t' '1'; then
+#             isatty1='yes'
+#           else
+#             isatty1='no'
+#           fi
+#         ;;
+#       esac
+#
+# For isatty2:
+#
+#       case "${isatty2}" in
+#       #(
+#         'unknown')
+#           if test '-t' '2'; then
+#             isatty2='yes'
+#           else
+#             isatty2='no'
+#           fi
+#         ;;
+#       esac
+#
+
 isatty1='unknown'
 isatty2='unknown'
 
@@ -3661,6 +3694,39 @@ for x in 'gawk' 'mawk' 'nawk'; do
     break
   fi
 done
+
+#
+# The isatty1 and isatty2 variables indicate whether standard output and
+# standard error are associated with terminals. Each starts as 'unknown'
+# and is lazily set to 'yes' or 'no' with the following code just before
+# each place the value is needed.
+#
+# For isatty1:
+#
+#       case "${isatty1}" in
+#       #(
+#         'unknown')
+#           if test '-t' '1'; then
+#             isatty1='yes'
+#           else
+#             isatty1='no'
+#           fi
+#         ;;
+#       esac
+#
+# For isatty2:
+#
+#       case "${isatty2}" in
+#       #(
+#         'unknown')
+#           if test '-t' '2'; then
+#             isatty2='yes'
+#           else
+#             isatty2='no'
+#           fi
+#         ;;
+#       esac
+#
 
 isatty1='unknown'
 isatty2='unknown'
