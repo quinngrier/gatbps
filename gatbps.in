@@ -44,8 +44,8 @@ sed='sed'
 
 texi2any='texi2any'
 
-isatty1=''
-isatty2=''
+isatty1='unknown'
+isatty2='unknown'
 
 fR2=''
 fB2=''
@@ -1877,22 +1877,18 @@ EOF1
 
           case "${isatty2}" in
           #(
-            ?*)
-              :
-            ;;
-          #(
-            *)
+            'unknown')
               if test '-t' '2'; then
-                isatty2='1'
+                isatty2='yes'
               else
-                isatty2='0'
+                isatty2='no'
               fi
             ;;
           esac
 
           case "${isatty2}" in
           #(
-            '0')
+            'no')
               fR2=''
               fB2=''
               fI2=''
@@ -1964,22 +1960,18 @@ EOF1
 
           case "${isatty1}" in
           #(
-            ?*)
-              :
-            ;;
-          #(
-            *)
+            'unknown')
               if test '-t' '1'; then
-                isatty1='1'
+                isatty1='yes'
               else
-                isatty1='0'
+                isatty1='no'
               fi
             ;;
           esac
 
           case "${isatty1}" in
           #(
-            '0')
+            'no')
               fR1=''
               fB1=''
               fI1=''
@@ -3670,8 +3662,8 @@ for x in 'gawk' 'mawk' 'nawk'; do
   fi
 done
 
-isatty1=''
-isatty2=''
+isatty1='unknown'
+isatty2='unknown'
 
 fR2=''
 fB2=''
