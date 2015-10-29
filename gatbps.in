@@ -3057,6 +3057,16 @@ EOF1
 @AT@c released on @PACKAGE_DATE@. Before changing it, make sure
 @AT@c you're doing the right thing. Depending on how GATBPS
 @AT@c is being used, your changes may be automatically lost.
+@AT@c A short description of this file follows.
+@AT@c
+@AT@c Special file: math.texi
+@AT@c
+@AT@c The math.texi special file uses @include commands to include all
+@AT@c special files that provide Texinfo macros for mathematical notation.
+@AT@c This can be generated under the --recursive option to also generate
+@AT@c all such special files at once.
+@AT@c
+@AT@c For more information, see the GATBPS manual.
 @AT@c
 @AT@end ifnotxml
 @AT@end ifxml
