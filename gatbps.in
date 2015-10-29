@@ -619,7 +619,7 @@ Special file: ${fB1}math.texi${fR1}
 
 The ${fB1}math.texi${fR1} special file uses ${fB1}@AT@include${fR1} commands to include all special
 files that provide Texinfo macros for mathematical notation. This can be
-generated with the ${fB1}--recursive${fR1} option to also generate all such special
+generated under the ${fB1}--recursive${fR1} option to also generate all such special
 files at once.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
@@ -1483,7 +1483,7 @@ special file uses
 commands to include all special
 files that provide Texinfo macros for mathematical notation.
 This can be
-generated with the
+generated under the
 .nohy "\fB\-\-recursive\fR"
 option to also generate all such special
 files at once.

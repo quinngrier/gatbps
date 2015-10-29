@@ -622,7 +622,7 @@ special file uses
 commands to include all special
 files that provide Texinfo macros for mathematical notation@.
 This can be
-generated with the
+generated under the
 @t{--recursive}
 option to also generate all such special
 files at once@.
