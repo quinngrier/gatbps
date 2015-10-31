@@ -960,9 +960,6 @@ EOF1
 \\$1
 .hy
 ..
-.de IPE
-.IP ""
-..
 .de TP0
 .PD 0
 .TP
@@ -970,7 +967,7 @@ EOF1
 ..
 .de IPE0
 .PD 0
-.IPE
+.IP ""
 .PD
 ..
 .hy
