@@ -31,12 +31,6 @@ info_TEXINFOS += gatbps.texi
 man_MANS =
 man_MANS += gatbps.1
 
-do_subst = ( sed \
-  -e 's|[@]PACKAGE_DATE@|$(PACKAGE_DATE)|g' \
-  -e 's|[@]PACKAGE_STRING@|$(PACKAGE_STRING)|g' \
-  -e 's|[@]PACKAGE_VERSION@|$(PACKAGE_VERSION)|g' \
-  )
-
 include $(srcdir)/CC0-1.0-AM-COPYRIGHT.am
 
 ##
