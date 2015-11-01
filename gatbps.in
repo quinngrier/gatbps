@@ -3778,6 +3778,8 @@ fb1=''
 fm1=''
 fc1=''
 
+verbatim='no'
+
 detect_options='1'
 
 set 'x' "${@AT@}"
