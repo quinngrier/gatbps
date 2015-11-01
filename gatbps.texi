@@ -581,8 +581,11 @@ or plain text instead@.
 This section provides a short
 description of each special file@.
 Along with each short description is a reference to
-where the corresponding full description can be found@.
-The short descriptions are the same as those shown by the
+where the full description of the special file can be found@.
+If a special file supports comments,
+then the short description is also included
+in a comment near the top of the special file@.
+The short descriptions can also be shown by using the
 @t{--help=}@i{S}
 option@.
 
