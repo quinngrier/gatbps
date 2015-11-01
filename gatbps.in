@@ -3966,6 +3966,48 @@ case "${?}" in
   ;;
 esac
 
+case "${verbatim}" in
+#(
+  'no')
+    case "${s}" in
+    #(
+      *"${nl}'")
+        s=`"${awk}" '
+{
+  if (NR == 1) {
+    x = $0
+  } else {
+    printf "%s", x
+    x = "\\n" $0
+  }
+}
+END {
+  printf "'\\''"
+}
+' <<EOF2
+${s}
+EOF2
+`
+        case "${?}" in
+        #(
+          '0')
+            :
+          ;;
+        #(
+          *)
+            cat >&2 <<EOF2
+${fr2}sh-form.sh!${fd2} ${fB2}${awk}${fR2} failed to read from:
+${fr2}sh-form.sh!${fd2}   1. a here-document
+${fr2}sh-form.sh!${fd2} and write to: a command substitution
+EOF2
+            exit '1'
+          ;;
+        esac
+      ;;
+    esac
+  ;;
+esac
+
 "${sed}" "
 s/'/'\\\\''/g
 1s/^/'/
