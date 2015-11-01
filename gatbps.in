@@ -3718,6 +3718,8 @@ for x in 'gawk' 'mawk' 'nawk'; do
   fi
 done
 
+sed='sed'
+
 #
 # The isatty1 and isatty2 variables indicate whether standard output and
 # standard error are associated with terminals. Each starts off with the
