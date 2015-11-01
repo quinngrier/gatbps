@@ -13,6 +13,11 @@
 LC_ALL='C'
 export 'LC_ALL'
 
+#
+# The nl variable holds a newline character. This can be used to make
+# string literals more readable in some cases.
+#
+
 nl='
 '
 
@@ -3696,6 +3701,11 @@ EOF1
 
 LC_ALL='C'
 export 'LC_ALL'
+
+#
+# The nl variable holds a newline character. This can be used to make
+# string literals more readable in some cases.
+#
 
 nl='
 '
