@@ -13,6 +13,9 @@
 LC_ALL='C'
 export 'LC_ALL'
 
+nl='
+'
+
 awk_auto=''
 
 awk=@AWK_SHELL@
@@ -141,9 +144,6 @@ case "${AWK}" in
     shift
   ;;
 esac
-
-nl='
-'
 
 detect_options='1'
 exit_status='0'
