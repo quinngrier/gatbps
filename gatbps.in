@@ -3964,6 +3964,29 @@ case "${?}" in
   ;;
 esac
 
+"${sed}" "
+s/'/'\\\\''/g
+1s/^/'/
+\$s/'\\\\''\$/'/
+" <<EOF2
+${s}
+EOF2
+case "${?}" in
+#(
+  '0')
+    :
+  ;;
+#(
+  *)
+    cat >&2 <<EOF2
+${fr2}sh-form.sh!${fd2} ${fB2}${sed}${fR2} failed to read from:
+${fr2}sh-form.sh!${fd2}   1. a here-document
+${fr2}sh-form.sh!${fd2} and write to: standard output
+EOF2
+    exit '1'
+  ;;
+esac
+
 exit '1'
 
 #
