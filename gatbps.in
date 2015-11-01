@@ -46,9 +46,9 @@ texi2any='texi2any'
 
 #
 # The isatty1 and isatty2 variables indicate whether standard output and
-# standard error are associated with terminals. Each starts as 'unknown'
-# and is lazily set to 'yes' or 'no' with the following code just before
-# each place the value is needed.
+# standard error are associated with terminals. Each starts off with the
+# value 'unknown' and is lazily set to 'yes' or 'no' using the following
+# code just before each point where the value is needed.
 #
 # For isatty1:
 #
@@ -3704,9 +3704,9 @@ done
 
 #
 # The isatty1 and isatty2 variables indicate whether standard output and
-# standard error are associated with terminals. Each starts as 'unknown'
-# and is lazily set to 'yes' or 'no' with the following code just before
-# each place the value is needed.
+# standard error are associated with terminals. Each starts off with the
+# value 'unknown' and is lazily set to 'yes' or 'no' using the following
+# code just before each point where the value is needed.
 #
 # For isatty1:
 #
