@@ -587,7 +587,8 @@ then the short description is also included
 in a comment near the top of the special file@.
 The short descriptions can also be shown by using the
 @t{--help=}@i{S}
-option@.
+option of
+@t{gatbps}@.
 
 @table @asis
 @sfindex @t{bdots.@:texi}
