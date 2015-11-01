@@ -4032,7 +4032,7 @@ EOF2
   ;;
 esac
 
-exit '1'
+exit '0'
 
 #
 # The authors of this file have waived all copyright and
