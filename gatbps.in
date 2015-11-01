@@ -3919,6 +3919,49 @@ EOF2
 
 done
 
+s=`
+cat
+case "${?}" in
+#(
+  '0')
+    :
+  ;;
+#(
+  *)
+    cat >&2 <<EOF2
+${fr2}sh-form.sh!${fd2} ${fB2}cat${fR2} failed to read from:
+${fr2}sh-form.sh!${fd2}   1. standard input
+${fr2}sh-form.sh!${fd2} and write to: a command substitution
+EOF2
+    exit '1'
+  ;;
+esac
+echo "'"
+case "${?}" in
+#(
+  '0')
+    :
+  ;;
+#(
+  *)
+    cat >&2 <<EOF2
+${fr2}sh-form.sh!${fd2} ${fB2}echo${fR2} failed to write to: a command substitution
+EOF2
+    exit '1'
+  ;;
+esac
+`
+case "${?}" in
+#(
+  '0')
+    :
+  ;;
+#(
+  *)
+    exit '1'
+  ;;
+esac
+
 exit '1'
 
 #
