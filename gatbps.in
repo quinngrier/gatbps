@@ -3898,6 +3898,12 @@ EOF2
 
   esac
 
+  cat >&2 <<EOF2
+${fr2}sh-form.sh!${fd2} there must be no operands
+${fr2}sh-form.sh!${fd2} try ${fB2}sh sh-form.sh --help${fR2} for more information
+EOF2
+  exit '1'
+
 done
 
 exit '1'
