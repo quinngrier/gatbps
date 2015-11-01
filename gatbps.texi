@@ -85,8 +85,9 @@ and its name now stands for
 @itemx @w{}
 The
 @t{--}
-option disables option detection, causing all
-further arguments to be interpreted as operands@.
+option disables option detection,
+forcing all further arguments to
+be detected as operands@.
 
 @item @t{--help}[@t{=}@i{S}]
 @itemx @w{}

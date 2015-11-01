@@ -992,8 +992,9 @@ gatbps \- generate basic files for software packages
 .IPE0
 The
 .nohy "\fB\-\-\fR"
-option disables option detection, causing all
-further arguments to be interpreted as operands.
+option disables option detection,
+forcing all further arguments to
+be detected as operands.
 .TP
 .nohy "\fB\-\-awk=\fIS\fR"
 .IPE0
