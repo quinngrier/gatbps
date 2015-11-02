@@ -90,7 +90,7 @@ AC_SUBST([AWK_TROFF])
 # shell variable assignment.
 #
 
-AWK_SHELL=`sh sh-form.sh <<EOF
+AWK_DEFAULT_SH=`sh sh-form.sh <<EOF
 ${awk_default}
 EOF
 `
@@ -105,7 +105,7 @@ case "${?}" in
   ;;
 esac
 
-AC_SUBST([AWK_SHELL])
+AC_SUBST([AWK_DEFAULT_SH])
 
 AM_INIT_AUTOMAKE([-Wall -Werror info-in-builddir])
 

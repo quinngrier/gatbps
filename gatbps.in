@@ -23,7 +23,7 @@ nl='
 
 awk_auto=''
 
-awk=@AWK_SHELL@
+awk=@AWK_DEFAULT_SH@
 
 case "${awk}" in
 #(
