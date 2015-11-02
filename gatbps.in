@@ -1202,7 +1202,8 @@ commands to include every
 special file.
 It can be generated with the
 .nohy "\fB\-\-recursive\fR"
-option to also generate every
+option in effect to
+also generate every
 .nohy "\fIM\fB.texi\fR"
 special file at once.
 .LP

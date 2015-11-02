@@ -367,7 +367,8 @@ commands to include every
 special file@.
 It can be generated with the
 @t{--recursive}
-option to also generate every
+option in effect to
+also generate every
 @i{M}@t{.@:texi}
 special file at once@.
 
