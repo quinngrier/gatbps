@@ -90,11 +90,7 @@ AC_SUBST([AWK_TROFF])
 # shell variable assignment.
 #
 
-AWK_SHELL=`sed "
-s/'/'\\\\\\\\''/g
-1s/^/'/
-\\$s/\\$/'/
-" <<EOF
+AWK_SHELL=`sh sh-form.sh <<EOF
 ${awk_default}
 EOF
 `
@@ -105,7 +101,7 @@ case "${?}" in
   ;;
 #(
   *)
-    AC_MSG_ERROR([sed failed], [1])
+    AC_MSG_ERROR([sh-form.sh failed], [1])
   ;;
 esac
 
