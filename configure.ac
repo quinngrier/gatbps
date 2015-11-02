@@ -105,6 +105,7 @@ case "${?}" in
   ;;
 esac
 AC_SUBST([AWK_DEFAULT_SH])
+AM_SUBST_NOTMAKE([AWK_DEFAULT_SH])
 
 AM_INIT_AUTOMAKE([-Wall -Werror info-in-builddir])
 
