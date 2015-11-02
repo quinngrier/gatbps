@@ -3779,7 +3779,7 @@ fb1=''
 fm1=''
 fc1=''
 
-verbatim='no'
+keep='no'
 
 detect_options='1'
 
@@ -3967,7 +3967,7 @@ case "${?}" in
   ;;
 esac
 
-case "${verbatim}" in
+case "${keep}" in
 #(
   'no')
     case "${s}" in
