@@ -624,13 +624,16 @@ The
 @t{math.@:texi}
 special file uses
 @t{@@include}
-commands to include all special
-files that provide Texinfo macros for mathematical notation@.
-This can be
-generated under the
+commands to include every
+special file that defines a
+Texinfo macro for imitating
+the mathematical notation of
+@TeX{} in the other output formats@.
+It can be generated with the
 @t{--recursive}
-option to also generate all such special
-files at once@.
+option in effect to
+also generate every
+such special file at once@.
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
