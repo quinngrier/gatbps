@@ -104,7 +104,6 @@ case "${?}" in
     AC_MSG_ERROR([sh-form.sh failed], [1])
   ;;
 esac
-
 AC_SUBST([AWK_DEFAULT_SH])
 
 AM_INIT_AUTOMAKE([-Wall -Werror info-in-builddir])
