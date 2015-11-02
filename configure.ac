@@ -24,6 +24,10 @@ AC_ARG_VAR([AWK], [the preferred awk executable])
 AC_PROG_AWK
 AM_SUBST_NOTMAKE([AWK])
 
+AC_ARG_VAR([SED], [the preferred sed executable])
+AC_PROG_SED
+AM_SUBST_NOTMAKE([SED])
+
 awk_default="${AWK}"
 AC_ARG_ENABLE([awk-auto],
   [AS_HELP_STRING([--enable-awk-auto],
@@ -37,10 +41,6 @@ AC_ARG_ENABLE([awk-auto],
     esac
   ]
 )
-
-AC_ARG_VAR([SED], [the preferred sed executable])
-AC_PROG_SED
-AM_SUBST_NOTMAKE([SED])
 
 #
 # Make a version of @AWK@ that's safer to use as a troff macro argument.
