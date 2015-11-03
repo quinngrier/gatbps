@@ -1151,7 +1151,8 @@ GATBPS provides a collection of Texinfo
 macros that support an alternative approach
 to writing mathematical notation in Texinfo.
 The idea is to write each expression in both
-raw TeX and plain Texinfo syntax.
+raw TeX and plain Texinfo, imitating the
+former in the latter.
 For example:
 .IP
 .nf
