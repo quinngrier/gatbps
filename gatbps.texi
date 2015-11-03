@@ -59,6 +59,7 @@ This manual is for GATBPS@.
 @chapter Introduction
 
 GATBPS (pronunciation: gat-bee-pee-ESS)
+is a software package that
 provides a program named @t{gatbps}
 that generates basic files for software packages@.
 It was originally created to provide a small number
