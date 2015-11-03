@@ -721,9 +721,9 @@ EOF1
               cat <<EOF1
 Special file: ${fB1}msign.texi${fR1}
 
-The ${fB1}msign.texi${fR1} special file defines the ${fB1}@AT@msign{}${fR1} Texinfo macro, which
-imitates the ${fB1}-${fR1} TeX math mode syntax. This can be used to imitate the
-mathematical notation of TeX in the other output formats:
+The ${fB1}msign.texi${fR1} special file defines the ${fB1}@AT@msign{}${fR1} Texinfo macro, which is
+used to imitate the mathematical notation of TeX in the other output
+formats:
 
       @AT@tex
       \$x - y\$
@@ -1543,10 +1543,8 @@ The
 .nohy "\fBmsign.texi\fR"
 special file defines the
 .nohy "\fB@AT@msign{}\fR"
-Texinfo macro, which imitates the
-.nohy "\fB\-\fR"
-TeX math mode syntax.
-This can be used to imitate the mathematical
+Texinfo macro,
+which is used to imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
