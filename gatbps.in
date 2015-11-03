@@ -3463,6 +3463,22 @@ EOF1
 @AT@c released on @PACKAGE_DATE@. Before changing it, make sure
 @AT@c you're doing the right thing. Depending on how GATBPS
 @AT@c is being used, your changes may be automatically lost.
+@AT@c A short description of this file follows.
+@AT@c
+@AT@c Special file: msign.texi
+@AT@c
+@AT@c The msign.texi special file defines the @AT@msign{} Texinfo macro, which
+@AT@c is used to imitate the mathematical notation of TeX in the other
+@AT@c output formats:
+@AT@c
+@AT@c       @AT@tex
+@AT@c       $x - y$
+@AT@c       @AT@end tex
+@AT@c       @AT@ifnottex
+@AT@c       @AT@i{x} @AT@msign{} @AT@i{y}
+@AT@c       @AT@end ifnottex
+@AT@c
+@AT@c For more information, see the GATBPS manual.
 @AT@c
 @AT@end ifnotxml
 @AT@end ifxml
