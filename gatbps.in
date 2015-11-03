@@ -4092,6 +4092,25 @@ EOF1
 @AT@c released on @PACKAGE_DATE@. Before changing it, make sure
 @AT@c you're doing the right thing. Depending on how GATBPS
 @AT@c is being used, your changes may be automatically lost.
+@AT@c A short description of this file follows.
+@AT@c
+@AT@c Special file: sps.texi
+@AT@c
+@AT@c The sps.texi special file defines the @AT@sps{L, S, R} Texinfo macro,
+@AT@c which inserts S as a superscript in the output formats other than
+@AT@c TeX. L and R are ignored except in Info and plain text, in which they
+@AT@c are inserted to the left and right of S, serving as parentheses. This
+@AT@c is used to imitate the mathematical notation of TeX in the other
+@AT@c output formats:
+@AT@c
+@AT@c       @AT@tex
+@AT@c       $x^{y + z^w}$
+@AT@c       @AT@end tex
+@AT@c       @AT@ifnottex
+@AT@c       @AT@i{x}@AT@sps{(, @AT@i{y} + @AT@i{z}@AT@sps{, @AT@i{w}, }, )}
+@AT@c       @AT@end ifnottex
+@AT@c
+@AT@c For more information, see the GATBPS manual.
 @AT@c
 @AT@end ifnotxml
 @AT@end ifxml
