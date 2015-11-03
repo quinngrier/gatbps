@@ -661,10 +661,8 @@ The
 @t{mdots.@:texi}
 special file defines the
 @t{@@mdots@{@}}
-Texinfo macro, which imitates the
-@t{\cdots}
-@TeX{} math mode syntax@.
-This can be used to imitate the mathematical
+Texinfo macro,
+which is used to imitate the mathematical
 notation of @TeX{} in the other output formats:
 
 @example
