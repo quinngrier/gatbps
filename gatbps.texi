@@ -529,7 +529,7 @@ so that
 @i{L}
 and
 @i{R}
-act as parentheses around
+serve as parentheses around
 @i{S}@.
 Note that
 @i{L}

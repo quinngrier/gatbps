@@ -1293,7 +1293,7 @@ so that
 .nohy "\fIL\fR"
 and
 .nohy "\fIR\fR"
-act as parentheses around
+serve as parentheses around
 .nohy "\fIS\fR."
 Note that
 .nohy "\fIL\fR"
