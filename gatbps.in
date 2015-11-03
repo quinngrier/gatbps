@@ -622,11 +622,10 @@ EOF1
               cat <<EOF1
 Special file: ${fB1}math.texi${fR1}
 
-The ${fB1}math.texi${fR1} special file uses ${fB1}@AT@include${fR1} commands to include every
-special file that defines a Texinfo macro for imitating the mathematical
-notation of TeX in the other output formats. It can be generated with
-the ${fB1}--recursive${fR1} option in effect to also generate every such special
-file at once.
+The ${fB1}math.texi${fR1} special file is a Texinfo file that includes every special
+file that defines a macro for imitating the mathematical notation of TeX
+in the other output formats. It can be generated under the effect of the
+${fB1}--recursive${fR1} option to generate all such special files at once.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
@@ -1195,17 +1194,14 @@ special file, which also uses the
 flag as an include guard.
 The
 .nohy "\fBmath.texi\fR"
-special file is also provided, which uses
-.nohy "\fB@AT@include\fR"
-commands to include every
+special file is also provided, which includes every
 .nohy "\fIM\fB.texi\fR"
 special file.
-It can be generated with the
+It can be generated under the effect of the
 .nohy "\fB\-\-recursive\fR"
-option in effect to
-also generate every
+option to generate all
 .nohy "\fIM\fB.texi\fR"
-special file at once.
+special files at once.
 .LP
 The macros insert symbols as
 UTF-8 characters in Info and plain text and
@@ -1486,18 +1482,14 @@ For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 .IPE0
 The
 .nohy "\fBmath.texi\fR"
-special file uses
-.nohy "\fB@AT@include\fR"
-commands to include every
-special file that defines a
-Texinfo macro for imitating
-the mathematical notation of
-TeX in the other output formats.
-It can be generated with the
+special file is a Texinfo file
+that includes every special file
+that defines a macro for imitating
+the mathematical notation of TeX in
+the other output formats.
+It can be generated under the effect of the
 .nohy "\fB\-\-recursive\fR"
-option in effect to
-also generate every
-such special file at once.
+option to generate all such special files at once.
 .IP
 For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 .TP
@@ -3072,11 +3064,11 @@ EOF1
 @AT@c
 @AT@c Special file: math.texi
 @AT@c
-@AT@c The math.texi special file uses @include commands to include every
-@AT@c special file that defines a Texinfo macro for imitating the
-@AT@c mathematical notation of TeX in the other output formats. It can be
-@AT@c generated with the --recursive option in effect to also generate
-@AT@c every such special file at once.
+@AT@c The math.texi special file is a Texinfo file that includes every
+@AT@c special file that defines a macro for imitating the mathematical
+@AT@c notation of TeX in the other output formats. It can be generated
+@AT@c under the effect of the --recursive option to generate all such
+@AT@c special files at once.
 @AT@c
 @AT@c For more information, see the GATBPS manual.
 @AT@c
