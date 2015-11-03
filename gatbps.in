@@ -587,9 +587,9 @@ EOF1
               cat <<EOF1
 Special file: ${fB1}bdots.texi${fR1}
 
-The ${fB1}bdots.texi${fR1} special file defines the ${fB1}@AT@bdots{}${fR1} Texinfo macro, which
-imitates the ${fB1}\\ldots${fR1} TeX math mode syntax. This can be used to imitate
-the mathematical notation of TeX in the other output formats:
+The ${fB1}bdots.texi${fR1} special file defines the ${fB1}@AT@bdots{}${fR1} Texinfo macro, which is
+used to imitate the mathematical notation of TeX in the other output
+formats:
 
       @AT@tex
       \$1, \\ldots, n\$
@@ -1459,10 +1459,8 @@ The
 .nohy "\fBbdots.texi\fR"
 special file defines the
 .nohy "\fB@AT@bdots{}\fR"
-Texinfo macro, which imitates the
-.nohy "\fB\eldots\fR"
-TeX math mode syntax.
-This can be used to imitate the mathematical
+Texinfo macro,
+which is used to imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP

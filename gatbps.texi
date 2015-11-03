@@ -599,10 +599,8 @@ The
 @t{bdots.@:texi}
 special file defines the
 @t{@@bdots@{@}}
-Texinfo macro, which imitates the
-@t{\ldots}
-@TeX{} math mode syntax@.
-This can be used to imitate the mathematical
+Texinfo macro,
+which is used to imitate the mathematical
 notation of @TeX{} in the other output formats:
 
 @example
