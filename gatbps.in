@@ -1147,7 +1147,8 @@ release date, and copyright information.
 .SH "PLAIN FILES"
 .SH "MATHEMATICAL NOTATION IN TEXINFO"
 .LP
-GATBPS provides a collection of Texinfo
+.nohy "\fBgatbps\fR"
+provides a collection of Texinfo
 macros that support an alternative approach
 to writing mathematical notation in Texinfo.
 The idea is to write each expression in both

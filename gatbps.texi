@@ -312,7 +312,8 @@ environment variable has no effect@.
 @node Mathematical Notation in Texinfo
 @chapter Mathematical Notation in Texinfo
 
-GATBPS provides a collection of Texinfo
+@t{gatbps}
+provides a collection of Texinfo
 macros that support an alternative approach
 to writing mathematical notation in Texinfo@.
 The idea is to write each expression in both
