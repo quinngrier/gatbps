@@ -753,10 +753,11 @@ as a superscript in the output formats other than @TeX{}@.
 @i{L}
 and
 @i{R}
-are ignored except in Info and plain text, where they act as parentheses
-around
-@i{S}@.
-This can be used to imitate the mathematical
+are ignored except in Info and plain text,
+in which they are inserted to the left and right of
+@i{S},
+serving as parentheses@.
+This is used to imitate the mathematical
 notation of @TeX{} in the other output formats:
 
 @example

@@ -823,9 +823,9 @@ Special file: ${fB1}sps.texi${fR1}
 
 The ${fB1}sps.texi${fR1} special file defines the ${fB1}@AT@sps{${fI1}L${fB1}, ${fI1}S${fB1}, ${fI1}R${fB1}}${fR1} Texinfo macro, which
 inserts ${fI1}S${fR1} as a superscript in the output formats other than TeX. ${fI1}L${fR1} and ${fI1}R${fR1}
-are ignored except in Info and plain text, where they act as parentheses
-around ${fI1}S${fR1}. This can be used to imitate the mathematical notation of TeX
-in the other output formats:
+are ignored except in Info and plain text, in which they are inserted to
+the left and right of ${fI1}S${fR1}, serving as parentheses. This is used to imitate
+the mathematical notation of TeX in the other output formats:
 
       @AT@tex
       \$x^{y + z^w}\$
@@ -1622,10 +1622,11 @@ as a superscript in the output formats other than TeX.
 .nohy "\fIL\fR"
 and
 .nohy "\fIR\fR"
-are ignored except in Info and plain text, where they act as parentheses
-around
-.nohy "\fIS\fR."
-This can be used to imitate the mathematical
+are ignored except in Info and plain text,
+in which they are inserted to the left and right of
+.nohy "\fIS\fR,"
+serving as parentheses.
+This is used to imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
