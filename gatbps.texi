@@ -323,11 +323,11 @@ For example:
 
 @example
 @@tex
-$x + y$
-@@end tex
+$x@w{ }+@w{ }y$
+@@end@w{ }tex
 @@ifnottex
-@@i@{x@} + @@i@{y@}
-@@end ifnottex
+@@i@{x@}@w{ }+@w{ }@@i@{y@}
+@@end@w{ }ifnottex
 @end example
 
 @noindent

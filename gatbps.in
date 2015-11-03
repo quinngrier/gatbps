@@ -1158,11 +1158,11 @@ For example:
 .IP
 .nf
 @AT@tex
-$x + y$
-@AT@end tex
+$x\ +\ y$
+@AT@end\ tex
 @AT@ifnottex
-@AT@i{x} + @AT@i{y}
-@AT@end ifnottex
+@AT@i{x}\ +\ @AT@i{y}
+@AT@end\ ifnottex
 .fi
 .LP
 The macros are then used in the
