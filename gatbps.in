@@ -993,7 +993,7 @@ gatbps \- generate basic files for software packages
 The
 .nohy "\fB\-\-\fR"
 option disables option detection,
-forcing all further arguments to
+causing all further arguments to
 be detected as operands.
 .TP
 .nohy "\fB\-\-awk=\fIS\fR"

@@ -87,7 +87,7 @@ and its name now stands for
 The
 @t{--}
 option disables option detection,
-forcing all further arguments to
+causing all further arguments to
 be detected as operands@.
 
 @item @t{--help}[@t{=}@i{S}]
