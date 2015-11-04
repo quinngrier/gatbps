@@ -438,6 +438,9 @@ shows the symbol of each macro@.
 @item @t{\ldots} @tab @t{@@bdots@{@}} @tab U+2026 @tab @t{.@:.@:.@:}
 @sfindex @t{bdots.@:texi}
 @tmindex @t{@@bdots}
+@item @t{\rightarrow} @tab @t{@@rarrow@{@}} @tab U+2192 @tab @t{->}
+@sfindex @t{rarrow.@:texi}
+@tmindex @t{@@rarrow}
 @end multitable
 @end ifset
 @ifclear HideSymbols
@@ -492,6 +495,16 @@ $\ldots$
 @end tex
 @ifnottex
 @bdots{}
+@end ifnottex
+@item @t{\rightarrow} @tab @t{@@rarrow@{@}} @tab U+2192 @tab @t{->}
+@sfindex @t{rarrow.@:texi}
+@tmindex @t{@@rarrow}
+@tab
+@tex
+$\rightarrow$
+@end tex
+@ifnottex
+@rarrow{}
 @end ifnottex
 @end multitable
 @end ifclear
