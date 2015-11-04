@@ -3311,6 +3311,7 @@ EOF1
 @AT@end ifnotxml
 @AT@end ifxml
 @AT@include bdots.texi
+@AT@include dslash.texi
 @AT@include mdot.texi
 @AT@include mdots.texi
 @AT@include msign.texi
@@ -5000,6 +5001,7 @@ EOF1
             set "${prefix}msign.texi" "${@AT@}"
             set "${prefix}mdots.texi" "${@AT@}"
             set "${prefix}mdot.texi" "${@AT@}"
+            set "${prefix}dslash.texi" "${@AT@}"
             set "${prefix}bdots.texi" "${@AT@}"
             set "${prefix}CC0-1.0.txt" "${@AT@}"
 
