@@ -1173,7 +1173,7 @@ For example, the
 macro imitates the
 .nohy "\fB\ecdot\fR"
 control sequence.
-The macro names are chosen
+The macro names have been chosen
 to avoid collisions with the names of
 Texinfo commands and TeX control sequences,
 as recommended by the Texinfo manual.
