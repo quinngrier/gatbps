@@ -616,6 +616,29 @@ $1,@w{ }\ldots,@w{ }n$
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
+@sfindex @t{dslash.@:texi}
+@tmindex @t{@@dslash}
+@item @t{dslash.@:texi}
+@itemx @w{}
+The
+@t{dslash.@:texi}
+special file defines the
+@t{@@dslash@{@}}
+Texinfo macro,
+which is used to imitate the mathematical
+notation of @TeX{} in the other output formats:
+
+@example
+@@tex
+$x@w{ }/@w{ }y$
+@@end@w{ }tex
+@@ifnottex
+@@i@{x@}@w{ }@@dslash@{@}@w{ }@@i@{y@}
+@@end@w{ }ifnottex
+@end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}@.
+
 @sfindex @t{math.@:texi}
 @item @t{math.@:texi}
 @itemx @w{}
