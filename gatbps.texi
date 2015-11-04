@@ -426,6 +426,9 @@ shows the symbol of each macro@.
 @item @t{-} @tab @t{@@msign@{@}} @tab U+2212 @tab @t{-}
 @sfindex @t{msign.@:texi}
 @tmindex @t{@@msign}
+@item @t{/} @tab @t{@@dslash@{@}} @tab U+2215 @tab @t{/}
+@sfindex @t{dslash.@:texi}
+@tmindex @t{@@dslash}
 @item @t{\cdot} @tab @t{@@mdot@{@}} @tab U+22C5 @tab @t{*}
 @sfindex @t{mdot.@:texi}
 @tmindex @t{@@mdot}
@@ -449,6 +452,16 @@ $-$
 @end tex
 @ifnottex
 @msign{}
+@end ifnottex
+@item @t{/} @tab @t{@@dslash@{@}} @tab U+2215 @tab @t{/}
+@sfindex @t{dslash.@:texi}
+@tmindex @t{@@dslash}
+@tab
+@tex
+$/$
+@end tex
+@ifnottex
+@dslash{}
 @end ifnottex
 @item @t{\cdot} @tab @t{@@mdot@{@}} @tab U+22C5 @tab @t{*}
 @sfindex @t{mdot.@:texi}
