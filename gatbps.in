@@ -1167,7 +1167,7 @@ $x\ +\ y$
 .LP
 The macros are then used in the
 .nohy "\fB@AT@ifnottex\fR"
-section to imitate TeX.
+block to imitate various features of TeX.
 For example, the
 .nohy "\fB@AT@mdot\fR"
 macro imitates the

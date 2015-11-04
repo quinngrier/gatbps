@@ -333,7 +333,7 @@ $x@w{ }+@w{ }y$
 @noindent
 The macros are then used in the
 @t{@@ifnottex}
-section to imitate @TeX{}@.
+block to imitate various features of @TeX{}@.
 For example, the
 @t{@@mdot}
 macro imitates the
