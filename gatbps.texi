@@ -314,7 +314,7 @@ environment variable has no effect@.
 
 @t{gatbps}
 provides a collection of Texinfo
-macros that support an alternative approach
+macros that support a specific approach
 to writing mathematical notation in Texinfo@.
 The idea is to write each expression in both
 raw @TeX{} and plain Texinfo, imitating the
