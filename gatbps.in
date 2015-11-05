@@ -2397,18 +2397,18 @@ EOF1
 
   delete_tmp='yes'
 
-  if test '!' '-d' "${safe_1}"; then
-    :
-  else
-    cat >&2 <<EOF1
+  while :; do
+
+    if test '!' '-d' "${safe_1}"; then
+      :
+    else
+      cat >&2 <<EOF1
 ${fy2}gatbps:${fd2} each operand must not be a directory
 ${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
 EOF1
-    exit_status='1'
-    continue
-  fi
-
-  while :; do
+      exit_status='1'
+      break
+    fi
 
     case "${1}" in
 
