@@ -150,6 +150,7 @@ case "${AWK}" in
   ;;
 esac
 
+dry_run='no'
 verbose='no'
 
 detect_options='1'
