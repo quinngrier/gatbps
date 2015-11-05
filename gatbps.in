@@ -5123,15 +5123,25 @@ EOF1
 
   done
 
-  for i in '0' '1' '2' '3' '4' '5' '6' '7' '8' '9'; do
-    if rm '-f' "${safe_1}.gatbps${i}"; then
-      :
-    else
-      cat >&2 <<EOF1
+  case "${dry_run}" in
+  #(
+    'no')
+      case "${delete_tmp}" in
+      #(
+        'yes')
+          for i in '0' '1' '2' '3' '4' '5' '6' '7' '8' '9'; do
+            if rm '-f' "${safe_1}.gatbps${i}"; then
+              :
+            else
+              cat >&2 <<EOF1
 ${fc2}gatbps.${fd2} ${fB2}rm${fR2} failed to delete: ${fB2}${1}.gatbps${i}${fR2}
 EOF1
-    fi
-  done
+            fi
+          done
+        ;;
+      esac
+    ;;
+  esac
 
   case "${recursive}" in
   #(
