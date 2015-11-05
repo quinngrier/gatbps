@@ -9,6 +9,8 @@ AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_MACRO_DIRS([m4])
 AC_CONFIG_SRCDIR([gatbps.texi])
 
+AM_INIT_AUTOMAKE([-Wall -Werror info-in-builddir])
+
 m4_include([CC0-1.0-AC-COPYRIGHT.ac])
 m4_include([DATE.ac])
 
@@ -106,8 +108,6 @@ case "${?}" in
 esac
 AC_SUBST([AWK_DEFAULT_SH])
 AM_SUBST_NOTMAKE([AWK_DEFAULT_SH])
-
-AM_INIT_AUTOMAKE([-Wall -Werror info-in-builddir])
 
 AC_SUBST([AT], ['@'])
 AC_CONFIG_FILES([Makefile])
