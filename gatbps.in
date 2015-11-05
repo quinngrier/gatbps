@@ -151,7 +151,7 @@ case "${AWK}" in
 esac
 
 dry_run='no'
-recursive='0'
+recursive='no'
 verbose='no'
 
 detect_options='1'
@@ -1923,7 +1923,7 @@ EOF1
       #(
         '--recursive')
 
-          recursive='1'
+          recursive='yes'
           continue
 
         ;;
@@ -5130,11 +5130,7 @@ EOF1
 
   case "${recursive}" in
   #(
-    '0')
-      :
-    ;;
-  #(
-    *)
+    'yes')
       while :; do
         case "${1}" in
 
