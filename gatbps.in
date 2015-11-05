@@ -2371,17 +2371,6 @@ EOF1
   safe_tmp8="${safe_1}.gatbps8"
   safe_tmp9="${safe_1}.gatbps9"
 
-  if test '!' '-d' "${safe_1}"; then
-    :
-  else
-    cat >&2 <<EOF1
-${fy2}gatbps:${fd2} each operand must not be a directory
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
-EOF1
-    exit_status='1'
-    continue
-  fi
-
   for i in '0' '1' '2' '3' '4' '5' '6' '7' '8' '9'; do
     if test '!' '-e' "${safe_1}.gatbps${i}"; then
       :
@@ -2403,6 +2392,17 @@ EOF1
       continue '2'
     fi
   done
+
+  if test '!' '-d' "${safe_1}"; then
+    :
+  else
+    cat >&2 <<EOF1
+${fy2}gatbps:${fd2} each operand must not be a directory
+${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+EOF1
+    exit_status='1'
+    continue
+  fi
 
   while :; do
 
