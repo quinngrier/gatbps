@@ -150,6 +150,8 @@ case "${AWK}" in
   ;;
 esac
 
+verbose='no'
+
 detect_options='1'
 exit_status='0'
 have_operands='0'
