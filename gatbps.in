@@ -151,6 +151,7 @@ case "${AWK}" in
 esac
 
 dry_run='no'
+print0='no'
 recursive='no'
 verbose='no'
 
