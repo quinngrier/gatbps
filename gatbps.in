@@ -2371,6 +2371,8 @@ EOF1
   safe_tmp8="${safe_1}.gatbps8"
   safe_tmp9="${safe_1}.gatbps9"
 
+  delete_tmp='no'
+
   for i in '0' '1' '2' '3' '4' '5' '6' '7' '8' '9'; do
     if test '!' '-e' "${safe_1}.gatbps${i}"; then
       :
@@ -2392,6 +2394,8 @@ EOF1
       continue '2'
     fi
   done
+
+  delete_tmp='yes'
 
   if test '!' '-d' "${safe_1}"; then
     :
