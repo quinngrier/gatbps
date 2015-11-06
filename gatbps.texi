@@ -678,6 +678,29 @@ $x@w{ }/@w{ }y$
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
+@sfindex @t{gequ.@:texi}
+@tmindex @t{@@gequ}
+@item @t{gequ.@:texi}
+@itemx @w{}
+The
+@t{gequ.@:texi}
+special file defines the
+@t{@@gequ@{@}}
+Texinfo macro,
+which is used to imitate the mathematical
+notation of @TeX{} in the other output formats:
+
+@example
+@@tex
+$x@w{ }\ge@w{ }y$
+@@end@w{ }tex
+@@ifnottex
+@@i@{x@}@w{ }@@gequ@{@}@w{ }@@i@{y@}
+@@end@w{ }ifnottex
+@end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}@.
+
 @sfindex @t{math.@:texi}
 @item @t{math.@:texi}
 @itemx @w{}
