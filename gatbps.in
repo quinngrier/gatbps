@@ -1436,6 +1436,7 @@ TeX Macro Unicode ASCII
 \ecdots @AT@mdots{} U+22EF ...
 \ege @AT@gequ{} U+2265 >=
 \eldots @AT@bdots{} U+2026 ...
+\ele @AT@lequ{} U+2264 <=
 \ene @AT@nequ{} U+2260 !=
 \erightarrow @AT@rarrow{} U+2192 \->
 .TE

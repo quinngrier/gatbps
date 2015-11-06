@@ -441,6 +441,9 @@ shows the symbol of each macro@.
 @item @t{\ldots} @tab @t{@@bdots@{@}} @tab U+2026 @tab @t{.@:.@:.@:}
 @sfindex @t{bdots.@:texi}
 @tmindex @t{@@bdots}
+@item @t{\le} @tab @t{@@lequ@{@}} @tab U+2264 @tab @t{<=}
+@sfindex @t{lequ.@:texi}
+@tmindex @t{@@lequ}
 @item @t{\ne} @tab @t{@@nequ@{@}} @tab U+2260 @tab @t{!=}
 @sfindex @t{nequ.@:texi}
 @tmindex @t{@@nequ}
@@ -511,6 +514,16 @@ $\ldots$
 @end tex
 @ifnottex
 @bdots{}
+@end ifnottex
+@item @t{\le} @tab @t{@@lequ@{@}} @tab U+2264 @tab @t{<=}
+@sfindex @t{lequ.@:texi}
+@tmindex @t{@@lequ}
+@tab
+@tex
+$\le$
+@end tex
+@ifnottex
+@lequ{}
 @end ifnottex
 @item @t{\ne} @tab @t{@@nequ@{@}} @tab U+2260 @tab @t{!=}
 @sfindex @t{nequ.@:texi}
