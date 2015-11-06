@@ -714,6 +714,29 @@ $x@w{ }\ge@w{ }y$
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
+@sfindex @t{lequ.@:texi}
+@tmindex @t{@@lequ}
+@item @t{lequ.@:texi}
+@itemx @w{}
+The
+@t{lequ.@:texi}
+special file defines the
+@t{@@lequ@{@}}
+Texinfo macro,
+which is used to imitate the mathematical
+notation of @TeX{} in the other output formats:
+
+@example
+@@tex
+$x@w{ }\le@w{ }y$
+@@end@w{ }tex
+@@ifnottex
+@@i@{x@}@w{ }@@lequ@{@}@w{ }@@i@{y@}
+@@end@w{ }ifnottex
+@end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}@.
+
 @sfindex @t{math.@:texi}
 @item @t{math.@:texi}
 @itemx @w{}

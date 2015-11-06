@@ -1676,6 +1676,29 @@ $x\ \ege\ y$
 .IP
 For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 .TP
+.nohy "\fBlequ.texi\fR"
+.IPE0
+The
+.nohy "\fBlequ.texi\fR"
+special file defines the
+.nohy "\fB@AT@lequ{}\fR"
+Texinfo macro,
+which is used to imitate the mathematical
+notation of TeX in the other output formats:
+.RS
+.IP
+.nf
+@AT@tex
+$x\ \ele\ y$
+@AT@end\ tex
+@AT@ifnottex
+@AT@i{x}\ @AT@lequ{}\ @AT@i{y}
+@AT@end\ ifnottex
+.fi
+.RE
+.IP
+For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
+.TP
 .nohy "\fBmath.texi\fR"
 .IPE0
 The
