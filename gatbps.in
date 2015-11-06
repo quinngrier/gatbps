@@ -1363,6 +1363,7 @@ TeX Macro Unicode ASCII
 \ecdot @AT@mdot{} U+22C5 *
 \ecdots @AT@mdots{} U+22EF ...
 \eldots @AT@bdots{} U+2026 ...
+\ene @AT@nequ{} U+2260 !=
 \erightarrow @AT@rarrow{} U+2192 \->
 .TE
 .LP
