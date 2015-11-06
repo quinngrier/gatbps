@@ -3450,6 +3450,7 @@ EOF1
 @AT@include mdot.texi
 @AT@include mdots.texi
 @AT@include msign.texi
+@AT@include nequ.texi
 @AT@include rarrow.texi
 @AT@include sbs.texi
 @AT@include sps.texi
@@ -5518,6 +5519,7 @@ EOF1
             set "${prefix}sps.texi" "${@AT@}"
             set "${prefix}sbs.texi" "${@AT@}"
             set "${prefix}rarrow.texi" "${@AT@}"
+            set "${prefix}nequ.texi" "${@AT@}"
             set "${prefix}msign.texi" "${@AT@}"
             set "${prefix}mdots.texi" "${@AT@}"
             set "${prefix}mdot.texi" "${@AT@}"
