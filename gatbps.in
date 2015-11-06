@@ -1398,6 +1398,7 @@ TeX Macro Unicode ASCII
 / @AT@dslash{} U+2215 /
 \ecdot @AT@mdot{} U+22C5 *
 \ecdots @AT@mdots{} U+22EF ...
+\ege @AT@gequ{} U+2265 >=
 \eldots @AT@bdots{} U+2026 ...
 \ene @AT@nequ{} U+2260 !=
 \erightarrow @AT@rarrow{} U+2192 \->
