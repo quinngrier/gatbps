@@ -2558,14 +2558,11 @@ EOF1
   safe_tmp8="${safe_1}.gatbps8"
   safe_tmp9="${safe_1}.gatbps9"
 
-  while :; do
+  case "${dry_run}" in
+  #(
+    'no')
 
-    case "${dry_run}" in
-    #(
-      'yes')
-        break
-      ;;
-    esac
+  while :; do
 
     delete_tmp='no'
 
@@ -5815,9 +5812,6 @@ EOF1
 
   done
 
-  case "${dry_run}" in
-  #(
-    'no')
       case "${delete_tmp}" in
       #(
         'yes')
