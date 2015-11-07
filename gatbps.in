@@ -2518,6 +2518,13 @@ EOF1
     ;;
   esac
 
+  case "${dry_run},${verbose}" in
+  #(
+    'yes,'*|*',yes')
+      :
+    ;;
+  esac
+
   case "${1}" in
   #(
     '-'*)
