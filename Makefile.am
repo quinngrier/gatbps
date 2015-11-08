@@ -29,6 +29,7 @@ gatbps_TEXINFOS += mdots.texi
 gatbps_TEXINFOS += msign.texi
 gatbps_TEXINFOS += nequ.texi
 gatbps_TEXINFOS += rarrow.texi
+gatbps_TEXINFOS += rcei.texi
 gatbps_TEXINFOS += sbs.texi
 gatbps_TEXINFOS += sps.texi
 
