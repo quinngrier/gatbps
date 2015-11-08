@@ -421,7 +421,8 @@ shows the symbol of each macro@.
 @end ifset
 @end ifnottex
 @ifset HideSymbols
-@multitable {@t{\longleftrightarrow}} {@t{@@lldarrow@{@}}} {Unicode} {ASCII}
+@multitable {@t{\longleftrightarrow}} {@t{@@lldarrow@{@}}} {Unicode} {@t{floor(}}
+@c )
 @headitem @TeX{} @tab Macro @tab Unicode @tab ASCII
 @item @t{-} @tab @t{@@msign@{@}} @tab U+2212 @tab @t{-}
 @sfindex @t{msign.@:texi}
@@ -461,7 +462,8 @@ shows the symbol of each macro@.
 @end multitable
 @end ifset
 @ifclear HideSymbols
-@multitable {@t{\longleftrightarrow}} {@t{@@lldarrow@{@}}} {Unicode} {ASCII} {Symbol}
+@multitable {@t{\longleftrightarrow}} {@t{@@lldarrow@{@}}} {Unicode} {@t{floor(}} {Symbol}
+@c )
 @headitem @TeX{} @tab Macro @tab Unicode @tab ASCII @tab Symbol
 @item @t{-} @tab @t{@@msign@{@}} @tab U+2212 @tab @t{-}
 @sfindex @t{msign.@:texi}
