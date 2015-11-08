@@ -97,48 +97,48 @@ isatty2='unknown'
 #
 # For standard output:
 #
-#       fR1='[22m[24m[39m'
-#       fB1='[24m[39m[1m'
-#       fI1='[22m[39m[4m'
-#       fr1='[22m[24m[31m'
-#       fg1='[22m[24m[32m'
-#       fy1='[22m[24m[33m'
-#       fb1='[22m[24m[34m'
-#       fm1='[22m[24m[35m'
-#       fc1='[22m[24m[36m'
+#       fR1='[22m[24m[39m' # stdout style: none
+#       fB1='[24m[39m[1m'  # stdout style: bold
+#       fI1='[22m[39m[4m'  # stdout style: underline
+#       fr1='[22m[24m[31m' # stdout style: red
+#       fg1='[22m[24m[32m' # stdout style: green
+#       fy1='[22m[24m[33m' # stdout style: yellow
+#       fb1='[22m[24m[34m' # stdout style: blue
+#       fm1='[22m[24m[35m' # stdout style: magenta
+#       fc1='[22m[24m[36m' # stdout style: cyan
 #
 # For standard error:
 #
-#       fR2='[22m[24m[39m'
-#       fB2='[24m[39m[1m'
-#       fI2='[22m[39m[4m'
-#       fr2='[22m[24m[31m'
-#       fg2='[22m[24m[32m'
-#       fy2='[22m[24m[33m'
-#       fb2='[22m[24m[34m'
-#       fm2='[22m[24m[35m'
-#       fc2='[22m[24m[36m'
+#       fR2='[22m[24m[39m' # stderr style: none
+#       fB2='[24m[39m[1m'  # stderr style: bold
+#       fI2='[22m[39m[4m'  # stderr style: underline
+#       fr2='[22m[24m[31m' # stderr style: red
+#       fg2='[22m[24m[32m' # stderr style: green
+#       fy2='[22m[24m[33m' # stderr style: yellow
+#       fb2='[22m[24m[34m' # stderr style: blue
+#       fm2='[22m[24m[35m' # stderr style: magenta
+#       fc2='[22m[24m[36m' # stderr style: cyan
 #
 
-fR1=''
-fB1=''
-fI1=''
-fr1=''
-fg1=''
-fy1=''
-fb1=''
-fm1=''
-fc1=''
+fR1='' # stdout style: none
+fB1='' # stdout style: bold
+fI1='' # stdout style: underline
+fr1='' # stdout style: red
+fg1='' # stdout style: green
+fy1='' # stdout style: yellow
+fb1='' # stdout style: blue
+fm1='' # stdout style: magenta
+fc1='' # stdout style: cyan
 
-fR2=''
-fB2=''
-fI2=''
-fr2=''
-fg2=''
-fy2=''
-fb2=''
-fm2=''
-fc2=''
+fR2='' # stderr style: none
+fB2='' # stderr style: bold
+fI2='' # stderr style: underline
+fr2='' # stderr style: red
+fg2='' # stderr style: green
+fy2='' # stderr style: yellow
+fb2='' # stderr style: blue
+fm2='' # stderr style: magenta
+fc2='' # stderr style: cyan
 
 case "${STYLE_STDOUT}" in
 #(
@@ -2223,15 +2223,15 @@ EOF1
       #(
         '--style-stderr'|'--style-stderr=always')
 
-          fR2='[22m[24m[39m'
-          fB2='[24m[39m[1m'
-          fI2='[22m[39m[4m'
-          fr2='[22m[24m[31m'
-          fg2='[22m[24m[32m'
-          fy2='[22m[24m[33m'
-          fb2='[22m[24m[34m'
-          fm2='[22m[24m[35m'
-          fc2='[22m[24m[36m'
+          fR2='[22m[24m[39m' # stderr style: none
+          fB2='[24m[39m[1m'  # stderr style: bold
+          fI2='[22m[39m[4m'  # stderr style: underline
+          fr2='[22m[24m[31m' # stderr style: red
+          fg2='[22m[24m[32m' # stderr style: green
+          fy2='[22m[24m[33m' # stderr style: yellow
+          fb2='[22m[24m[34m' # stderr style: blue
+          fm2='[22m[24m[35m' # stderr style: magenta
+          fc2='[22m[24m[36m' # stderr style: cyan
 
           continue
 
@@ -2254,27 +2254,27 @@ EOF1
           case "${isatty2}" in
           #(
             'yes')
-              fR2='[22m[24m[39m'
-              fB2='[24m[39m[1m'
-              fI2='[22m[39m[4m'
-              fr2='[22m[24m[31m'
-              fg2='[22m[24m[32m'
-              fy2='[22m[24m[33m'
-              fb2='[22m[24m[34m'
-              fm2='[22m[24m[35m'
-              fc2='[22m[24m[36m'
+              fR2='[22m[24m[39m' # stderr style: none
+              fB2='[24m[39m[1m'  # stderr style: bold
+              fI2='[22m[39m[4m'  # stderr style: underline
+              fr2='[22m[24m[31m' # stderr style: red
+              fg2='[22m[24m[32m' # stderr style: green
+              fy2='[22m[24m[33m' # stderr style: yellow
+              fb2='[22m[24m[34m' # stderr style: blue
+              fm2='[22m[24m[35m' # stderr style: magenta
+              fc2='[22m[24m[36m' # stderr style: cyan
             ;;
           #(
             'no')
-              fR2=''
-              fB2=''
-              fI2=''
-              fr2=''
-              fg2=''
-              fy2=''
-              fb2=''
-              fm2=''
-              fc2=''
+              fR2='' # stderr style: none
+              fB2='' # stderr style: bold
+              fI2='' # stderr style: underline
+              fr2='' # stderr style: red
+              fg2='' # stderr style: green
+              fy2='' # stderr style: yellow
+              fb2='' # stderr style: blue
+              fm2='' # stderr style: magenta
+              fc2='' # stderr style: cyan
             ;;
           esac
 
@@ -2285,15 +2285,15 @@ EOF1
       #(
         '--style-stderr='*)
 
-          fR2=''
-          fB2=''
-          fI2=''
-          fr2=''
-          fg2=''
-          fy2=''
-          fb2=''
-          fm2=''
-          fc2=''
+          fR2='' # stderr style: none
+          fB2='' # stderr style: bold
+          fI2='' # stderr style: underline
+          fr2='' # stderr style: red
+          fg2='' # stderr style: green
+          fy2='' # stderr style: yellow
+          fb2='' # stderr style: blue
+          fm2='' # stderr style: magenta
+          fc2='' # stderr style: cyan
 
           continue
 
@@ -2302,15 +2302,15 @@ EOF1
       #(
         '--style-stdout'|'--style-stdout=always')
 
-          fR1='[22m[24m[39m'
-          fB1='[24m[39m[1m'
-          fI1='[22m[39m[4m'
-          fr1='[22m[24m[31m'
-          fg1='[22m[24m[32m'
-          fy1='[22m[24m[33m'
-          fb1='[22m[24m[34m'
-          fm1='[22m[24m[35m'
-          fc1='[22m[24m[36m'
+          fR1='[22m[24m[39m' # stdout style: none
+          fB1='[24m[39m[1m'  # stdout style: bold
+          fI1='[22m[39m[4m'  # stdout style: underline
+          fr1='[22m[24m[31m' # stdout style: red
+          fg1='[22m[24m[32m' # stdout style: green
+          fy1='[22m[24m[33m' # stdout style: yellow
+          fb1='[22m[24m[34m' # stdout style: blue
+          fm1='[22m[24m[35m' # stdout style: magenta
+          fc1='[22m[24m[36m' # stdout style: cyan
 
           continue
 
@@ -2333,27 +2333,27 @@ EOF1
           case "${isatty1}" in
           #(
             'yes')
-              fR1='[22m[24m[39m'
-              fB1='[24m[39m[1m'
-              fI1='[22m[39m[4m'
-              fr1='[22m[24m[31m'
-              fg1='[22m[24m[32m'
-              fy1='[22m[24m[33m'
-              fb1='[22m[24m[34m'
-              fm1='[22m[24m[35m'
-              fc1='[22m[24m[36m'
+              fR1='[22m[24m[39m' # stdout style: none
+              fB1='[24m[39m[1m'  # stdout style: bold
+              fI1='[22m[39m[4m'  # stdout style: underline
+              fr1='[22m[24m[31m' # stdout style: red
+              fg1='[22m[24m[32m' # stdout style: green
+              fy1='[22m[24m[33m' # stdout style: yellow
+              fb1='[22m[24m[34m' # stdout style: blue
+              fm1='[22m[24m[35m' # stdout style: magenta
+              fc1='[22m[24m[36m' # stdout style: cyan
             ;;
           #(
             'no')
-              fR1=''
-              fB1=''
-              fI1=''
-              fr1=''
-              fg1=''
-              fy1=''
-              fb1=''
-              fm1=''
-              fc1=''
+              fR1='' # stdout style: none
+              fB1='' # stdout style: bold
+              fI1='' # stdout style: underline
+              fr1='' # stdout style: red
+              fg1='' # stdout style: green
+              fy1='' # stdout style: yellow
+              fb1='' # stdout style: blue
+              fm1='' # stdout style: magenta
+              fc1='' # stdout style: cyan
             ;;
           esac
 
@@ -2364,15 +2364,15 @@ EOF1
       #(
         '--style-stdout='*)
 
-          fR1=''
-          fB1=''
-          fI1=''
-          fr1=''
-          fg1=''
-          fy1=''
-          fb1=''
-          fm1=''
-          fc1=''
+          fR1='' # stdout style: none
+          fB1='' # stdout style: bold
+          fI1='' # stdout style: underline
+          fr1='' # stdout style: red
+          fg1='' # stdout style: green
+          fy1='' # stdout style: yellow
+          fb1='' # stdout style: blue
+          fm1='' # stdout style: magenta
+          fc1='' # stdout style: cyan
 
           continue
 
@@ -5014,48 +5014,48 @@ isatty2='unknown'
 #
 # For standard output:
 #
-#       fR1='[22m[24m[39m'
-#       fB1='[24m[39m[1m'
-#       fI1='[22m[39m[4m'
-#       fr1='[22m[24m[31m'
-#       fg1='[22m[24m[32m'
-#       fy1='[22m[24m[33m'
-#       fb1='[22m[24m[34m'
-#       fm1='[22m[24m[35m'
-#       fc1='[22m[24m[36m'
+#       fR1='[22m[24m[39m' # stdout style: none
+#       fB1='[24m[39m[1m'  # stdout style: bold
+#       fI1='[22m[39m[4m'  # stdout style: underline
+#       fr1='[22m[24m[31m' # stdout style: red
+#       fg1='[22m[24m[32m' # stdout style: green
+#       fy1='[22m[24m[33m' # stdout style: yellow
+#       fb1='[22m[24m[34m' # stdout style: blue
+#       fm1='[22m[24m[35m' # stdout style: magenta
+#       fc1='[22m[24m[36m' # stdout style: cyan
 #
 # For standard error:
 #
-#       fR2='[22m[24m[39m'
-#       fB2='[24m[39m[1m'
-#       fI2='[22m[39m[4m'
-#       fr2='[22m[24m[31m'
-#       fg2='[22m[24m[32m'
-#       fy2='[22m[24m[33m'
-#       fb2='[22m[24m[34m'
-#       fm2='[22m[24m[35m'
-#       fc2='[22m[24m[36m'
+#       fR2='[22m[24m[39m' # stderr style: none
+#       fB2='[24m[39m[1m'  # stderr style: bold
+#       fI2='[22m[39m[4m'  # stderr style: underline
+#       fr2='[22m[24m[31m' # stderr style: red
+#       fg2='[22m[24m[32m' # stderr style: green
+#       fy2='[22m[24m[33m' # stderr style: yellow
+#       fb2='[22m[24m[34m' # stderr style: blue
+#       fm2='[22m[24m[35m' # stderr style: magenta
+#       fc2='[22m[24m[36m' # stderr style: cyan
 #
 
-fR1=''
-fB1=''
-fI1=''
-fr1=''
-fg1=''
-fy1=''
-fb1=''
-fm1=''
-fc1=''
+fR1='' # stdout style: none
+fB1='' # stdout style: bold
+fI1='' # stdout style: underline
+fr1='' # stdout style: red
+fg1='' # stdout style: green
+fy1='' # stdout style: yellow
+fb1='' # stdout style: blue
+fm1='' # stdout style: magenta
+fc1='' # stdout style: cyan
 
-fR2=''
-fB2=''
-fI2=''
-fr2=''
-fg2=''
-fy2=''
-fb2=''
-fm2=''
-fc2=''
+fR2='' # stderr style: none
+fB2='' # stderr style: bold
+fI2='' # stderr style: underline
+fr2='' # stderr style: red
+fg2='' # stderr style: green
+fy2='' # stderr style: yellow
+fb2='' # stderr style: blue
+fm2='' # stderr style: magenta
+fc2='' # stderr style: cyan
 
 keep='no'
 
