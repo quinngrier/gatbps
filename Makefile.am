@@ -21,6 +21,7 @@ gatbps_TEXINFOS += CC0-1.0-copying.texi
 gatbps_TEXINFOS += bdots.texi
 gatbps_TEXINFOS += dslash.texi
 gatbps_TEXINFOS += gequ.texi
+gatbps_TEXINFOS += lcei.texi
 gatbps_TEXINFOS += lequ.texi
 gatbps_TEXINFOS += math.texi
 gatbps_TEXINFOS += mdot.texi
