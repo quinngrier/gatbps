@@ -88,6 +88,40 @@ texi2any='texi2any'
 isatty1='unknown'
 isatty2='unknown'
 
+#
+# The following two groups of variables hold ANSI escape sequences for
+# bold, underline, and color styling of text written to standard output
+# and standard error. Each variable starts off empty so that styling is
+# disabled by default. Then, when desired, each group can be set to the
+# appropriate values as follows.
+#
+# For standard output:
+#
+#       fR1='[22m[24m'
+#       fB1='[24m[1m'
+#       fI1='[22m[4m'
+#       fd1='[39m'
+#       fr1='[31m'
+#       fg1='[32m'
+#       fy1='[33m'
+#       fb1='[34m'
+#       fm1='[35m'
+#       fc1='[36m'
+#
+# For standard error:
+#
+#       fR2='[22m[24m'
+#       fB2='[24m[1m'
+#       fI2='[22m[4m'
+#       fd2='[39m'
+#       fr2='[31m'
+#       fg2='[32m'
+#       fy2='[33m'
+#       fb2='[34m'
+#       fm2='[35m'
+#       fc2='[36m'
+#
+
 fR1=''
 fB1=''
 fI1=''
@@ -4982,6 +5016,40 @@ sed='sed'
 
 isatty1='unknown'
 isatty2='unknown'
+
+#
+# The following two groups of variables hold ANSI escape sequences for
+# bold, underline, and color styling of text written to standard output
+# and standard error. Each variable starts off empty so that styling is
+# disabled by default. Then, when desired, each group can be set to the
+# appropriate values as follows.
+#
+# For standard output:
+#
+#       fR1='[22m[24m'
+#       fB1='[24m[1m'
+#       fI1='[22m[4m'
+#       fd1='[39m'
+#       fr1='[31m'
+#       fg1='[32m'
+#       fy1='[33m'
+#       fb1='[34m'
+#       fm1='[35m'
+#       fc1='[36m'
+#
+# For standard error:
+#
+#       fR2='[22m[24m'
+#       fB2='[24m[1m'
+#       fI2='[22m[4m'
+#       fd2='[39m'
+#       fr2='[31m'
+#       fg2='[32m'
+#       fy2='[33m'
+#       fb2='[34m'
+#       fm2='[35m'
+#       fc2='[36m'
+#
 
 fR1=''
 fB1=''
