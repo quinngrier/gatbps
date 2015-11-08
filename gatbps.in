@@ -4959,13 +4959,32 @@ export 'LC_ALL'
 nl='
 '
 
-awk='awk'
-for x in 'gawk' 'mawk' 'nawk'; do
-  if "${x}" '' <'/dev/null' >'/dev/null' 2>'/dev/null'; then
-    awk="${x}"
-    break
-  fi
-done
+awk_auto=''
+
+awk='auto'
+
+case "${awk}" in
+#(
+  'auto')
+    case "${awk_auto}" in
+    #(
+      ?*)
+        :
+      ;;
+    #(
+      *)
+        awk_auto='awk'
+        for x in 'gawk' 'mawk' 'nawk'; do
+          if "${x}" '' <'/dev/null' >'/dev/null' 2>'/dev/null'; then
+            awk_auto="${x}"
+            break
+          fi
+        done
+      ;;
+    esac
+    awk="${awk_auto}"
+  ;;
+esac
 
 sed='sed'
 
