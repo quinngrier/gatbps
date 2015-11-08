@@ -1501,6 +1501,8 @@ TeX Macro Unicode ASCII
 \ecdot @AT@mdot{} U+22C5 *
 \ecdots @AT@mdots{} U+22EF ...
 \ege @AT@gequ{} U+2265 >=
+\elcei @AT@lcei{} U+2308 ceil(
+.\" )
 \eldots @AT@bdots{} U+2026 ...
 \ele @AT@lequ{} U+2264 <=
 \ene @AT@nequ{} U+2260 !=
