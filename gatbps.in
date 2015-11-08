@@ -241,8 +241,8 @@ while :; do
         '--='*)
 
           cat >&2 <<EOF1
-${fr2}gatbps!${fd2} the ${fB2}--${fR2} option must not have a value
-${fr2}gatbps!${fd2} try ${fB2}gatbps --help${fR2} for more information
+${fr2}gatbps!${fR2} the ${fB2}--${fR2} option must not have a value
+${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
           exit '1'
 
@@ -255,8 +255,8 @@ EOF1
           #(
             '1')
               cat >&2 <<EOF1
-${fr2}gatbps!${fd2} the ${fB2}--awk${fR2} option must have a value
-${fr2}gatbps!${fd2} try ${fB2}gatbps --help${fR2} for more information
+${fr2}gatbps!${fR2} the ${fB2}--awk${fR2} option must have a value
+${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
               exit '1'
             ;;
@@ -290,9 +290,9 @@ EOF1
           #(
             *)
               cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}${sed}${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: a command substitution
+${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: a command substitution
 EOF1
               exit '1'
             ;;
@@ -350,9 +350,9 @@ EOF1
           #(
             *)
               cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: standard output
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard output
 EOF1
               exit '1'
             ;;
@@ -370,7 +370,7 @@ EOF1
           #(
             '--help=')
               cat >&2 <<EOF1
-${fr2}gatbps!${fd2} the ${fB2}--help${fR2} option value must not be empty
+${fr2}gatbps!${fR2} the ${fB2}--help${fR2} option value must not be empty
 EOF1
               exit '1'
             ;;
@@ -378,7 +378,7 @@ EOF1
           #(
             '--help='*'/')
               cat >&2 <<EOF1
-${fr2}gatbps!${fd2} the ${fB2}--help${fR2} option value must not end with a slash
+${fr2}gatbps!${fR2} the ${fB2}--help${fR2} option value must not end with a slash
 EOF1
               exit '1'
             ;;
@@ -405,9 +405,9 @@ EOF1
               #(
                 *)
                   cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: standard output
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard output
 EOF1
                   exit '1'
                 ;;
@@ -436,9 +436,9 @@ EOF1
               #(
                 *)
                   cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: standard output
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard output
 EOF1
                   exit '1'
                 ;;
@@ -466,9 +466,9 @@ EOF1
               #(
                 *)
                   cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: standard output
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard output
 EOF1
                   exit '1'
                 ;;
@@ -495,9 +495,9 @@ EOF1
               #(
                 *)
                   cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: standard output
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard output
 EOF1
                   exit '1'
                 ;;
@@ -526,9 +526,9 @@ EOF1
               #(
                 *)
                   cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: standard output
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard output
 EOF1
                   exit '1'
                 ;;
@@ -555,9 +555,9 @@ EOF1
               #(
                 *)
                   cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: standard output
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard output
 EOF1
                   exit '1'
                 ;;
@@ -585,9 +585,9 @@ EOF1
               #(
                 *)
                   cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: standard output
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard output
 EOF1
                   exit '1'
                 ;;
@@ -609,9 +609,9 @@ EOF1
               #(
                 *)
                   cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: standard output
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard output
 EOF1
                   exit '1'
                 ;;
@@ -644,9 +644,9 @@ EOF1
               #(
                 *)
                   cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: standard output
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard output
 EOF1
                   exit '1'
                 ;;
@@ -679,9 +679,9 @@ EOF1
               #(
                 *)
                   cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: standard output
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard output
 EOF1
                   exit '1'
                 ;;
@@ -714,9 +714,9 @@ EOF1
               #(
                 *)
                   cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: standard output
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard output
 EOF1
                   exit '1'
                 ;;
@@ -749,9 +749,9 @@ EOF1
               #(
                 *)
                   cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: standard output
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard output
 EOF1
                   exit '1'
                 ;;
@@ -778,9 +778,9 @@ EOF1
               #(
                 *)
                   cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: standard output
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard output
 EOF1
                   exit '1'
                 ;;
@@ -813,9 +813,9 @@ EOF1
               #(
                 *)
                   cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: standard output
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard output
 EOF1
                   exit '1'
                 ;;
@@ -848,9 +848,9 @@ EOF1
               #(
                 *)
                   cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: standard output
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard output
 EOF1
                   exit '1'
                 ;;
@@ -883,9 +883,9 @@ EOF1
               #(
                 *)
                   cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: standard output
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard output
 EOF1
                   exit '1'
                 ;;
@@ -918,9 +918,9 @@ EOF1
               #(
                 *)
                   cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: standard output
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard output
 EOF1
                   exit '1'
                 ;;
@@ -953,9 +953,9 @@ EOF1
               #(
                 *)
                   cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: standard output
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard output
 EOF1
                   exit '1'
                 ;;
@@ -990,9 +990,9 @@ EOF1
               #(
                 *)
                   cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: standard output
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard output
 EOF1
                   exit '1'
                 ;;
@@ -1018,9 +1018,9 @@ EOF1
               #(
                 *)
                   cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: standard output
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard output
 EOF1
                   exit '1'
                 ;;
@@ -1055,9 +1055,9 @@ EOF1
               #(
                 *)
                   cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: standard output
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard output
 EOF1
                   exit '1'
                 ;;
@@ -1100,9 +1100,9 @@ EOF1
               #(
                 *)
                   cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}${awk}${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: standard output
+${fr2}gatbps!${fR2} ${fB2}${awk}${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard output
 EOF1
                   exit '1'
                 ;;
@@ -1149,9 +1149,9 @@ EOF1
           #(
             *)
               cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: standard output
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard output
 EOF1
               exit '1'
             ;;
@@ -1165,8 +1165,8 @@ EOF1
         '--list='*)
 
           cat >&2 <<EOF1
-${fr2}gatbps!${fd2} the ${fB2}--list${fR2} option must not have a value
-${fr2}gatbps!${fd2} try ${fB2}gatbps --help${fR2} for more information
+${fr2}gatbps!${fR2} the ${fB2}--list${fR2} option must not have a value
+${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
           exit '1'
 
@@ -2110,9 +2110,9 @@ EOF1
           #(
             *)
               cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: standard output
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard output
 EOF1
               exit '1'
             ;;
@@ -2126,8 +2126,8 @@ EOF1
         '--man='*)
 
           cat >&2 <<EOF1
-${fr2}gatbps!${fd2} the ${fB2}--man${fR2} option must not have a value
-${fr2}gatbps!${fd2} try ${fB2}gatbps --help${fR2} for more information
+${fr2}gatbps!${fR2} the ${fB2}--man${fR2} option must not have a value
+${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
           exit '1'
 
@@ -2145,8 +2145,8 @@ EOF1
         '--recursive='*)
 
           cat >&2 <<EOF1
-${fr2}gatbps!${fd2} the ${fB2}--recursive${fR2} option must not have a value
-${fr2}gatbps!${fd2} try ${fB2}gatbps --help${fR2} for more information
+${fr2}gatbps!${fR2} the ${fB2}--recursive${fR2} option must not have a value
+${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
           exit '1'
 
@@ -2180,9 +2180,9 @@ EOF1
           #(
             *)
               cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}${sed}${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: a command substitution
+${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: a command substitution
 EOF1
               exit '1'
             ;;
@@ -2406,9 +2406,9 @@ EOF1
           #(
             *)
               cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: standard output
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard output
 EOF1
               exit '1'
             ;;
@@ -2422,8 +2422,8 @@ EOF1
         '--version='*)
 
           cat >&2 <<EOF1
-${fr2}gatbps!${fd2} the ${fB2}--version${fR2} option must not have a value
-${fr2}gatbps!${fd2} try ${fB2}gatbps --help${fR2} for more information
+${fr2}gatbps!${fR2} the ${fB2}--version${fR2} option must not have a value
+${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
           exit '1'
 
@@ -2444,8 +2444,8 @@ EOF1
   }
 }
 END {
-  printf "'"${fr2}"'gatbps!'"${fd2}"' unknown option name: '"${fB2}"'%s'"${fR2}"'\n", name
-  printf "'"${fr2}"'gatbps!'"${fd2}"' try '"${fB2}"'gatbps --help'"${fR2}"' for more information\n"
+  printf "'"${fr2}"'gatbps!'"${fR2}"' unknown option name: '"${fB2}"'%s'"${fR2}"'\n", name
+  printf "'"${fr2}"'gatbps!'"${fR2}"' try '"${fB2}"'gatbps --help'"${fR2}"' for more information\n"
 }
 ' >&2 <<EOF1
 ${1}
@@ -2458,9 +2458,9 @@ EOF1
           #(
             *)
               cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}${awk}${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: standard error
+${fr2}gatbps!${fR2} ${fB2}${awk}${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard error
 EOF1
             ;;
           esac
@@ -2472,8 +2472,8 @@ EOF1
         '--'*|'-'?)
 
           cat >&2 <<EOF1
-${fr2}gatbps!${fd2} unknown option name: ${fB2}${1}${fR2}
-${fr2}gatbps!${fd2} try ${fB2}gatbps --help${fR2} for more information
+${fr2}gatbps!${fR2} unknown option name: ${fB2}${1}${fR2}
+${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
           exit '1'
 
@@ -2485,8 +2485,8 @@ EOF1
           "${awk}" '
 {
   name = substr($0 "\n", 1, 2)
-  printf "'"${fr2}"'gatbps!'"${fd2}"' unknown option name: '"${fB2}"'%s'"${fR2}"'\n", name
-  printf "'"${fr2}"'gatbps!'"${fd2}"' try '"${fB2}"'gatbps --help'"${fR2}"' for more information\n"
+  printf "'"${fr2}"'gatbps!'"${fR2}"' unknown option name: '"${fB2}"'%s'"${fR2}"'\n", name
+  printf "'"${fr2}"'gatbps!'"${fR2}"' try '"${fB2}"'gatbps --help'"${fR2}"' for more information\n"
   exit
 }
 ' >&2 <<EOF1
@@ -2500,9 +2500,9 @@ EOF1
           #(
             *)
               cat >&2 <<EOF1
-${fr2}gatbps!${fd2} ${fB2}${awk}${fR2} failed to read from:
-${fr2}gatbps!${fd2}   1. a here-document
-${fr2}gatbps!${fd2} and write to: standard error
+${fr2}gatbps!${fR2} ${fB2}${awk}${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard error
 EOF1
             ;;
           esac
@@ -2526,8 +2526,8 @@ EOF1
   #(
     *)
       cat >&2 <<EOF1
-${fy2}gatbps:${fd2} each operand must not be empty
-${fy2}gatbps:${fd2} operand failed
+${fy2}gatbps:${fR2} each operand must not be empty
+${fy2}gatbps:${fR2} operand failed
 EOF1
       exit_status='1'
       continue
@@ -2538,8 +2538,8 @@ EOF1
   #(
     *'/')
       cat >&2 <<EOF1
-${fy2}gatbps:${fd2} each operand must not end with a slash
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} each operand must not end with a slash
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
       exit_status='1'
       continue
@@ -2601,15 +2601,15 @@ EOF1
             :
           elif test '-d' "${safe_1}.gatbps${i}"; then
             cat >&2 <<EOF1
-${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${1}.gatbps${i}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} file must not be a directory: ${fB2}${1}.gatbps${i}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
             break '2'
           else
             cat >&2 <<EOF1
-${fy2}gatbps:${fd2} file must not be nonregular: ${fB2}${1}.gatbps${i}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} file must not be nonregular: ${fB2}${1}.gatbps${i}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
             break '2'
@@ -2622,8 +2622,8 @@ EOF1
           :
         else
           cat >&2 <<EOF1
-${fy2}gatbps:${fd2} each operand must not be a directory
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} each operand must not be a directory
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
           exit_status='1'
           break
@@ -2669,10 +2669,10 @@ EOF1
             #(
               *)
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
@@ -2718,10 +2718,10 @@ EOF1
             #(
               *)
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
@@ -2916,10 +2916,10 @@ EOF1
             #(
               *)
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
@@ -2948,10 +2948,10 @@ EOF1
             #(
               *)
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
@@ -3014,10 +3014,10 @@ EOF1
             #(
               *)
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
@@ -3044,10 +3044,10 @@ EOF1
             #(
               *)
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
@@ -3188,10 +3188,10 @@ EOF1
             #(
               *)
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
@@ -3233,10 +3233,10 @@ EOF1
             #(
               *)
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
@@ -3398,10 +3398,10 @@ EOF1
             #(
               *)
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
@@ -3563,10 +3563,10 @@ EOF1
             #(
               *)
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
@@ -3728,10 +3728,10 @@ EOF1
             #(
               *)
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
@@ -3893,10 +3893,10 @@ EOF1
             #(
               *)
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
@@ -3961,10 +3961,10 @@ EOF1
             #(
               *)
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
@@ -4126,10 +4126,10 @@ EOF1
             #(
               *)
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
@@ -4291,10 +4291,10 @@ EOF1
             #(
               *)
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
@@ -4456,10 +4456,10 @@ EOF1
             #(
               *)
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
@@ -4621,10 +4621,10 @@ EOF1
             #(
               *)
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
@@ -4786,10 +4786,10 @@ EOF1
             #(
               *)
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
@@ -4923,10 +4923,10 @@ EOF1
             #(
               *)
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
@@ -5108,8 +5108,8 @@ while :; do
         '--='*)
 
           cat >&2 <<EOF2
-${fr2}sh-form.sh!${fd2} the ${fB2}--${fR2} option must not have a value
-${fr2}sh-form.sh!${fd2} try ${fB2}sh sh-form.sh --help${fR2} for more information
+${fr2}sh-form.sh!${fR2} the ${fB2}--${fR2} option must not have a value
+${fr2}sh-form.sh!${fR2} try ${fB2}sh sh-form.sh --help${fR2} for more information
 EOF2
           exit '1'
 
@@ -5130,8 +5130,8 @@ EOF2
   }
 }
 END {
-  printf "'"${fr2}"'sh-form.sh!'"${fd2}"' unknown option name: '"${fB2}"'%s'"${fR2}"'\n", name
-  printf "'"${fr2}"'sh-form.sh!'"${fd2}"' try '"${fB2}"'sh sh-form.sh --help'"${fR2}"' for more information\n"
+  printf "'"${fr2}"'sh-form.sh!'"${fR2}"' unknown option name: '"${fB2}"'%s'"${fR2}"'\n", name
+  printf "'"${fr2}"'sh-form.sh!'"${fR2}"' try '"${fB2}"'sh sh-form.sh --help'"${fR2}"' for more information\n"
 }
 ' >&2 <<EOF2
 ${1}
@@ -5144,9 +5144,9 @@ EOF2
           #(
             *)
               cat >&2 <<EOF2
-${fr2}sh-form.sh!${fd2} ${fB2}${awk}${fR2} failed to read from:
-${fr2}sh-form.sh!${fd2}   1. a here-document
-${fr2}sh-form.sh!${fd2} and write to: standard error
+${fr2}sh-form.sh!${fR2} ${fB2}${awk}${fR2} failed to read from:
+${fr2}sh-form.sh!${fR2}   1. a here-document
+${fr2}sh-form.sh!${fR2} and write to: standard error
 EOF2
             ;;
           esac
@@ -5158,8 +5158,8 @@ EOF2
         '--'*|'-'?)
 
           cat >&2 <<EOF2
-${fr2}sh-form.sh!${fd2} unknown option name: ${fB2}${1}${fR2}
-${fr2}sh-form.sh!${fd2} try ${fB2}sh sh-form.sh --help${fR2} for more information
+${fr2}sh-form.sh!${fR2} unknown option name: ${fB2}${1}${fR2}
+${fr2}sh-form.sh!${fR2} try ${fB2}sh sh-form.sh --help${fR2} for more information
 EOF2
           exit '1'
 
@@ -5171,8 +5171,8 @@ EOF2
           "${awk}" '
 {
   name = substr($0 "\n", 1, 2)
-  printf "'"${fr2}"'sh-form.sh!'"${fd2}"' unknown option name: '"${fB2}"'%s'"${fR2}"'\n", name
-  printf "'"${fr2}"'sh-form.sh!'"${fd2}"' try '"${fB2}"'sh sh-form.sh --help'"${fR2}"' for more information\n"
+  printf "'"${fr2}"'sh-form.sh!'"${fR2}"' unknown option name: '"${fB2}"'%s'"${fR2}"'\n", name
+  printf "'"${fr2}"'sh-form.sh!'"${fR2}"' try '"${fB2}"'sh sh-form.sh --help'"${fR2}"' for more information\n"
   exit
 }
 ' >&2 <<EOF2
@@ -5186,9 +5186,9 @@ EOF2
           #(
             *)
               cat >&2 <<EOF2
-${fr2}sh-form.sh!${fd2} ${fB2}${awk}${fR2} failed to read from:
-${fr2}sh-form.sh!${fd2}   1. a here-document
-${fr2}sh-form.sh!${fd2} and write to: standard error
+${fr2}sh-form.sh!${fR2} ${fB2}${awk}${fR2} failed to read from:
+${fr2}sh-form.sh!${fR2}   1. a here-document
+${fr2}sh-form.sh!${fR2} and write to: standard error
 EOF2
             ;;
           esac
@@ -5203,8 +5203,8 @@ EOF2
   esac
 
   cat >&2 <<EOF2
-${fr2}sh-form.sh!${fd2} there must be no operands
-${fr2}sh-form.sh!${fd2} try ${fB2}sh sh-form.sh --help${fR2} for more information
+${fr2}sh-form.sh!${fR2} there must be no operands
+${fr2}sh-form.sh!${fR2} try ${fB2}sh sh-form.sh --help${fR2} for more information
 EOF2
   exit '1'
 
@@ -5220,9 +5220,9 @@ case "${?}" in
 #(
   *)
     cat >&2 <<EOF2
-${fr2}sh-form.sh!${fd2} ${fB2}cat${fR2} failed to read from:
-${fr2}sh-form.sh!${fd2}   1. standard input
-${fr2}sh-form.sh!${fd2} and write to: a command substitution
+${fr2}sh-form.sh!${fR2} ${fB2}cat${fR2} failed to read from:
+${fr2}sh-form.sh!${fR2}   1. standard input
+${fr2}sh-form.sh!${fR2} and write to: a command substitution
 EOF2
     exit '1'
   ;;
@@ -5236,7 +5236,7 @@ case "${?}" in
 #(
   *)
     cat >&2 <<EOF2
-${fr2}sh-form.sh!${fd2} ${fB2}echo${fR2} failed to write to: a command substitution
+${fr2}sh-form.sh!${fR2} ${fB2}echo${fR2} failed to write to: a command substitution
 EOF2
     exit '1'
   ;;
@@ -5283,9 +5283,9 @@ EOF2
         #(
           *)
             cat >&2 <<EOF2
-${fr2}sh-form.sh!${fd2} ${fB2}${awk}${fR2} failed to read from:
-${fr2}sh-form.sh!${fd2}   1. a here-document
-${fr2}sh-form.sh!${fd2} and write to: a command substitution
+${fr2}sh-form.sh!${fR2} ${fB2}${awk}${fR2} failed to read from:
+${fr2}sh-form.sh!${fR2}   1. a here-document
+${fr2}sh-form.sh!${fR2} and write to: a command substitution
 EOF2
             exit '1'
           ;;
@@ -5310,9 +5310,9 @@ case "${?}" in
 #(
   *)
     cat >&2 <<EOF2
-${fr2}sh-form.sh!${fd2} ${fB2}${sed}${fR2} failed to read from:
-${fr2}sh-form.sh!${fd2}   1. a here-document
-${fr2}sh-form.sh!${fd2} and write to: standard output
+${fr2}sh-form.sh!${fR2} ${fB2}${sed}${fR2} failed to read from:
+${fr2}sh-form.sh!${fR2}   1. a here-document
+${fr2}sh-form.sh!${fR2} and write to: standard output
 EOF2
     exit '1'
   ;;
@@ -5338,10 +5338,10 @@ EOF1
             #(
               *)
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
@@ -5475,10 +5475,10 @@ EOF1
             #(
               *)
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
@@ -5495,8 +5495,8 @@ EOF1
                 :
               else
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${1}.top${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} file must not be a directory: ${fB2}${1}.top${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
@@ -5518,10 +5518,10 @@ END {
               #(
                 *)
                   cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. ${fB2}${1}.top${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${tmp0}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}${awk}${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. ${fB2}${1}.top${fR2}
+${fy2}gatbps:${fR2} and write to: ${fB2}${tmp0}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                   exit_status='1'
                   break
@@ -5534,8 +5534,8 @@ EOF1
                 :
               else
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${1}.top.texi${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} file must not be a directory: ${fB2}${1}.top.texi${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
@@ -5563,10 +5563,10 @@ END {
               #(
                 *)
                   cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. ${fB2}${1}.top.texi${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${tmp1}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}${awk}${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. ${fB2}${1}.top.texi${fR2}
+${fy2}gatbps:${fR2} and write to: ${fB2}${tmp1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                   exit_status='1'
                   break
@@ -5582,9 +5582,9 @@ EOF1
               #(
                 *)
                   cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}${texi2any}${fR2} failed to read from: ${fB2}${tmp1}${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${tmp0}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}${texi2any}${fR2} failed to read from: ${fB2}${tmp1}${fR2}
+${fy2}gatbps:${fR2} and write to: ${fB2}${tmp0}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                   exit_status='1'
                   break
@@ -5600,8 +5600,8 @@ EOF1
               #(
                 *)
                   cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}echo${fR2} failed to write to: ${fB2}${tmp0}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}echo${fR2} failed to write to: ${fB2}${tmp0}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                   exit_status='1'
                   break
@@ -5619,10 +5619,10 @@ EOF1
               #(
                 *)
                   cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. ${fB2}/dev/null${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${tmp0}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. ${fB2}/dev/null${fR2}
+${fy2}gatbps:${fR2} and write to: ${fB2}${tmp0}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                   exit_status='1'
                   break
@@ -5636,16 +5636,16 @@ EOF1
                 :
               else
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${1}.texi${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} file must not be a directory: ${fB2}${1}.texi${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
               fi
             else
               cat >&2 <<EOF1
-${fy2}gatbps:${fd2} file must exist: ${fB2}${1}.texi${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} file must exist: ${fB2}${1}.texi${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
               break
@@ -5673,10 +5673,10 @@ END {
             #(
               *)
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. ${fB2}${1}.texi${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${tmp2}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}${awk}${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. ${fB2}${1}.texi${fR2}
+${fy2}gatbps:${fR2} and write to: ${fB2}${tmp2}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
@@ -5692,9 +5692,9 @@ EOF1
             #(
               *)
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}${texi2any}${fR2} failed to read from: ${fB2}${tmp2}${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${tmp1}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}${texi2any}${fR2} failed to read from: ${fB2}${tmp2}${fR2}
+${fy2}gatbps:${fR2} and write to: ${fB2}${tmp1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
@@ -5707,8 +5707,8 @@ EOF1
                 :
               else
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${1}.bot${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} file must not be a directory: ${fB2}${1}.bot${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
@@ -5730,10 +5730,10 @@ $0 !~ /^#/ {
               #(
                 *)
                   cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. ${fB2}${1}.bot${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${tmp2}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}${awk}${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. ${fB2}${1}.bot${fR2}
+${fy2}gatbps:${fR2} and write to: ${fB2}${tmp2}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                   exit_status='1'
                   break
@@ -5746,8 +5746,8 @@ EOF1
                 :
               else
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} file must not be a directory: ${fB2}${1}.bot.texi${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} file must not be a directory: ${fB2}${1}.bot.texi${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
@@ -5762,8 +5762,8 @@ EOF1
               #(
                 *)
                   cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}echo${fR2} failed to write to: ${fB2}${tmp2}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}echo${fR2} failed to write to: ${fB2}${tmp2}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                   exit_status='1'
                   break
@@ -5792,10 +5792,10 @@ END {
               #(
                 *)
                   cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}${awk}${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. ${fB2}${1}.bot.texi${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${tmp3}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}${awk}${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. ${fB2}${1}.bot.texi${fR2}
+${fy2}gatbps:${fR2} and write to: ${fB2}${tmp3}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                   exit_status='1'
                   break
@@ -5811,9 +5811,9 @@ EOF1
               #(
                 *)
                   cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}${texi2any}${fR2} failed to read from: ${fB2}${tmp3}${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${tmp2}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}${texi2any}${fR2} failed to read from: ${fB2}${tmp3}${fR2}
+${fy2}gatbps:${fR2} and write to: ${fB2}${tmp2}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                   exit_status='1'
                   break
@@ -5831,10 +5831,10 @@ EOF1
               #(
                 *)
                   cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. ${fB2}/dev/null${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${tmp2}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. ${fB2}/dev/null${fR2}
+${fy2}gatbps:${fR2} and write to: ${fB2}${tmp2}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                   exit_status='1'
                   break
@@ -5852,12 +5852,12 @@ EOF1
             #(
               *)
                 cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}cat${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. ${fB2}${tmp0}${fR2}
-${fy2}gatbps:${fd2}   2. ${fB2}${tmp1}${fR2}
-${fy2}gatbps:${fd2}   3. ${fB2}${tmp2}${fR2}
-${fy2}gatbps:${fd2} and write to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fd2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. ${fB2}${tmp0}${fR2}
+${fy2}gatbps:${fR2}   2. ${fB2}${tmp1}${fR2}
+${fy2}gatbps:${fR2}   3. ${fB2}${tmp2}${fR2}
+${fy2}gatbps:${fR2} and write to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 break
@@ -5880,7 +5880,7 @@ EOF1
               :
             else
               cat >&2 <<EOF1
-${fc2}gatbps.${fd2} ${fB2}rm${fR2} failed to delete: ${fB2}${1}.gatbps${i}${fR2}
+${fc2}gatbps.${fR2} ${fB2}rm${fR2} failed to delete: ${fB2}${1}.gatbps${i}${fR2}
 EOF1
             fi
           done
@@ -5922,10 +5922,10 @@ EOF1
                 #(
                   *)
                     cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}${sed}${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: a command substitution
-${fy2}gatbps:${fd2} recursion failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: a command substitution
+${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
 EOF1
                     exit_status='1'
                     break
@@ -5969,10 +5969,10 @@ EOF1
                 #(
                   *)
                     cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}${sed}${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: a command substitution
-${fy2}gatbps:${fd2} recursion failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: a command substitution
+${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
 EOF1
                     exit_status='1'
                     break
@@ -6016,10 +6016,10 @@ EOF1
                 #(
                   *)
                     cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}${sed}${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: a command substitution
-${fy2}gatbps:${fd2} recursion failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: a command substitution
+${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
 EOF1
                     exit_status='1'
                     break
@@ -6063,10 +6063,10 @@ EOF1
                 #(
                   *)
                     cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}${sed}${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: a command substitution
-${fy2}gatbps:${fd2} recursion failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: a command substitution
+${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
 EOF1
                     exit_status='1'
                     break
@@ -6110,10 +6110,10 @@ EOF1
                 #(
                   *)
                     cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}${sed}${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: a command substitution
-${fy2}gatbps:${fd2} recursion failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: a command substitution
+${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
 EOF1
                     exit_status='1'
                     break
@@ -6168,10 +6168,10 @@ EOF1
                 #(
                   *)
                     cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}${sed}${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: a command substitution
-${fy2}gatbps:${fd2} recursion failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: a command substitution
+${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
 EOF1
                     exit_status='1'
                     break
@@ -6215,10 +6215,10 @@ EOF1
                 #(
                   *)
                     cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}${sed}${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: a command substitution
-${fy2}gatbps:${fd2} recursion failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: a command substitution
+${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
 EOF1
                     exit_status='1'
                     break
@@ -6262,10 +6262,10 @@ EOF1
                 #(
                   *)
                     cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}${sed}${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: a command substitution
-${fy2}gatbps:${fd2} recursion failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: a command substitution
+${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
 EOF1
                     exit_status='1'
                     break
@@ -6309,10 +6309,10 @@ EOF1
                 #(
                   *)
                     cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}${sed}${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: a command substitution
-${fy2}gatbps:${fd2} recursion failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: a command substitution
+${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
 EOF1
                     exit_status='1'
                     break
@@ -6356,10 +6356,10 @@ EOF1
                 #(
                   *)
                     cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}${sed}${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: a command substitution
-${fy2}gatbps:${fd2} recursion failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: a command substitution
+${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
 EOF1
                     exit_status='1'
                     break
@@ -6403,10 +6403,10 @@ EOF1
                 #(
                   *)
                     cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}${sed}${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: a command substitution
-${fy2}gatbps:${fd2} recursion failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: a command substitution
+${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
 EOF1
                     exit_status='1'
                     break
@@ -6450,10 +6450,10 @@ EOF1
                 #(
                   *)
                     cat >&2 <<EOF1
-${fy2}gatbps:${fd2} ${fB2}${sed}${fR2} failed to read from:
-${fy2}gatbps:${fd2}   1. a here-document
-${fy2}gatbps:${fd2} and write to: a command substitution
-${fy2}gatbps:${fd2} recursion failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: a command substitution
+${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
 EOF1
                     exit_status='1'
                     break
