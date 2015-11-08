@@ -98,7 +98,7 @@ isatty2='unknown'
 # For standard output:
 #
 #       fR1='[22m[24m[39m'
-#       fB1='[24m[1m'
+#       fB1='[24m[39m[1m'
 #       fI1='[22m[4m'
 #       fr1='[31m'
 #       fg1='[32m'
@@ -110,7 +110,7 @@ isatty2='unknown'
 # For standard error:
 #
 #       fR2='[22m[24m[39m'
-#       fB2='[24m[1m'
+#       fB2='[24m[39m[1m'
 #       fI2='[22m[4m'
 #       fr2='[31m'
 #       fg2='[32m'
@@ -2224,7 +2224,7 @@ EOF1
         '--style-stderr'|'--style-stderr=always')
 
           fR2='[22m[24m[39m'
-          fB2='[24m[1m'
+          fB2='[24m[39m[1m'
           fI2='[22m[4m'
           fr2='[31m'
           fg2='[32m'
@@ -2255,7 +2255,7 @@ EOF1
           #(
             'yes')
               fR2='[22m[24m[39m'
-              fB2='[24m[1m'
+              fB2='[24m[39m[1m'
               fI2='[22m[4m'
               fr2='[31m'
               fg2='[32m'
@@ -2303,7 +2303,7 @@ EOF1
         '--style-stdout'|'--style-stdout=always')
 
           fR1='[22m[24m[39m'
-          fB1='[24m[1m'
+          fB1='[24m[39m[1m'
           fI1='[22m[4m'
           fr1='[31m'
           fg1='[32m'
@@ -2334,7 +2334,7 @@ EOF1
           #(
             'yes')
               fR1='[22m[24m[39m'
-              fB1='[24m[1m'
+              fB1='[24m[39m[1m'
               fI1='[22m[4m'
               fr1='[31m'
               fg1='[32m'
@@ -5015,7 +5015,7 @@ isatty2='unknown'
 # For standard output:
 #
 #       fR1='[22m[24m[39m'
-#       fB1='[24m[1m'
+#       fB1='[24m[39m[1m'
 #       fI1='[22m[4m'
 #       fr1='[31m'
 #       fg1='[32m'
@@ -5027,7 +5027,7 @@ isatty2='unknown'
 # For standard error:
 #
 #       fR2='[22m[24m[39m'
-#       fB2='[24m[1m'
+#       fB2='[24m[39m[1m'
 #       fI2='[22m[4m'
 #       fr2='[31m'
 #       fg2='[32m'
