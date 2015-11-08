@@ -110,7 +110,7 @@ isatty2='unknown'
 #
 # For standard error:
 #
-#       fR2='[22m[24m'
+#       fR2='[22m[24m[39m'
 #       fB2='[24m[1m'
 #       fI2='[22m[4m'
 #       fd2='[39m'
@@ -2227,7 +2227,7 @@ EOF1
       #(
         '--style-stderr'|'--style-stderr=always')
 
-          fR2='[22m[24m'
+          fR2='[22m[24m[39m'
           fB2='[24m[1m'
           fI2='[22m[4m'
           fd2='[39m'
@@ -2259,7 +2259,7 @@ EOF1
           case "${isatty2}" in
           #(
             'yes')
-              fR2='[22m[24m'
+              fR2='[22m[24m[39m'
               fB2='[24m[1m'
               fI2='[22m[4m'
               fd2='[39m'
@@ -5039,7 +5039,7 @@ isatty2='unknown'
 #
 # For standard error:
 #
-#       fR2='[22m[24m'
+#       fR2='[22m[24m[39m'
 #       fB2='[24m[1m'
 #       fI2='[22m[4m'
 #       fd2='[39m'
