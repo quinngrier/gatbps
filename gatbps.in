@@ -97,7 +97,7 @@ isatty2='unknown'
 #
 # For standard output:
 #
-#       fR1='[22m[24m'
+#       fR1='[22m[24m[39m'
 #       fB1='[24m[1m'
 #       fI1='[22m[4m'
 #       fd1='[39m'
@@ -2310,7 +2310,7 @@ EOF1
       #(
         '--style-stdout'|'--style-stdout=always')
 
-          fR1='[22m[24m'
+          fR1='[22m[24m[39m'
           fB1='[24m[1m'
           fI1='[22m[4m'
           fd1='[39m'
@@ -2342,7 +2342,7 @@ EOF1
           case "${isatty1}" in
           #(
             'yes')
-              fR1='[22m[24m'
+              fR1='[22m[24m[39m'
               fB1='[24m[1m'
               fI1='[22m[4m'
               fd1='[39m'
@@ -5026,7 +5026,7 @@ isatty2='unknown'
 #
 # For standard output:
 #
-#       fR1='[22m[24m'
+#       fR1='[22m[24m[39m'
 #       fB1='[24m[1m'
 #       fI1='[22m[4m'
 #       fd1='[39m'
