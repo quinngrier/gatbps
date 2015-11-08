@@ -4154,6 +4154,7 @@ EOF1
 @AT@include bdots.texi
 @AT@include dslash.texi
 @AT@include gequ.texi
+@AT@include lcei.texi
 @AT@include lequ.texi
 @AT@include mdot.texi
 @AT@include mdots.texi
@@ -6373,6 +6374,7 @@ EOF1
             set "${prefix}mdots.texi" "${@AT@}"
             set "${prefix}mdot.texi" "${@AT@}"
             set "${prefix}lequ.texi" "${@AT@}"
+            set "${prefix}lcei.texi" "${@AT@}"
             set "${prefix}gequ.texi" "${@AT@}"
             set "${prefix}dslash.texi" "${@AT@}"
             set "${prefix}bdots.texi" "${@AT@}"
