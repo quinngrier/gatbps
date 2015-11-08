@@ -451,6 +451,10 @@ shows the symbol of each macro@.
 @item @t{\ne} @tab @t{@@nequ@{@}} @tab U+2260 @tab @t{!=}
 @sfindex @t{nequ.@:texi}
 @tmindex @t{@@nequ}
+@c (
+@item @t{\rceil} @tab @t{@@rcei@{@}} @tab U+2309 @tab @t{)}
+@sfindex @t{rcei.@:texi}
+@tmindex @t{@@rcei}
 @item @t{\rightarrow} @tab @t{@@rarrow@{@}} @tab U+2192 @tab @t{->}
 @sfindex @t{rarrow.@:texi}
 @tmindex @t{@@rarrow}
@@ -549,6 +553,17 @@ $\ne$
 @end tex
 @ifnottex
 @nequ{}
+@end ifnottex
+@c (
+@item @t{\rceil} @tab @t{@@rcei@{@}} @tab U+2309 @tab @t{)}
+@sfindex @t{rcei.@:texi}
+@tmindex @t{@@rcei}
+@tab
+@tex
+$\rceil$
+@end tex
+@ifnottex
+@rcei{}
 @end ifnottex
 @item @t{\rightarrow} @tab @t{@@rarrow@{@}} @tab U+2192 @tab @t{->}
 @sfindex @t{rarrow.@:texi}

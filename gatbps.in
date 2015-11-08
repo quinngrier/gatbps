@@ -1542,6 +1542,8 @@ TeX Macro Unicode ASCII
 \eldots @AT@bdots{} U+2026 ...
 \ele @AT@lequ{} U+2264 <=
 \ene @AT@nequ{} U+2260 !=
+.\" (
+\erceil @AT@rcei{} U+2309 )
 \erightarrow @AT@rarrow{} U+2192 \->
 .TE
 .LP
