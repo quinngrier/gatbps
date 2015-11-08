@@ -727,6 +727,29 @@ $x@w{ }\ge@w{ }y$
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
+@sfindex @t{lcei.@:texi}
+@tmindex @t{@@lcei}
+@item @t{lcei.@:texi}
+@itemx @w{}
+The
+@t{lcei.@:texi}
+special file defines the
+@t{@@lcei@{@}}
+Texinfo macro,
+which is used to imitate the mathematical
+notation of @TeX{} in the other output formats:
+
+@example
+@@tex
+$\lceil@w{ }x@w{ }\rceil$
+@@end@w{ }tex
+@@ifnottex
+@@lcei@{@}@@i@{x@}@@rcei@{@}
+@@end@w{ }ifnottex
+@end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}@.
+
 @sfindex @t{lequ.@:texi}
 @tmindex @t{@@lequ}
 @item @t{lequ.@:texi}
