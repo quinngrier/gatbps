@@ -1957,6 +1957,29 @@ $P\ \erightarrow\ Q$
 .IP
 For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 .TP
+.nohy "\fBrcei.texi\fR"
+.IPE0
+The
+.nohy "\fBrcei.texi\fR"
+special file defines the
+.nohy "\fB@AT@rcei{}\fR"
+Texinfo macro,
+which is used to imitate the mathematical
+notation of TeX in the other output formats:
+.RS
+.IP
+.nf
+@AT@tex
+$\elceil\ x\ \erceil$
+@AT@end\ tex
+@AT@ifnottex
+@AT@lcei{}@AT@i{x}@AT@rcei{}
+@AT@end\ ifnottex
+.fi
+.RE
+.IP
+For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
+.TP
 .nohy "\fBsbs.texi\fR"
 .IPE0
 The

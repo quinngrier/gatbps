@@ -919,6 +919,29 @@ $P@w{ }\rightarrow@w{ }Q$
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
+@sfindex @t{rcei.@:texi}
+@tmindex @t{@@rcei}
+@item @t{rcei.@:texi}
+@itemx @w{}
+The
+@t{rcei.@:texi}
+special file defines the
+@t{@@rcei@{@}}
+Texinfo macro,
+which is used to imitate the mathematical
+notation of @TeX{} in the other output formats:
+
+@example
+@@tex
+$\lceil@w{ }x@w{ }\rceil$
+@@end@w{ }tex
+@@ifnottex
+@@lcei@{@}@@i@{x@}@@rcei@{@}
+@@end@w{ }ifnottex
+@end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}@.
+
 @sfindex @t{sbs.@:texi}
 @tmindex @t{@@sbs}
 @item @t{sbs.@:texi}
