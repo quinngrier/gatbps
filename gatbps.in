@@ -1618,6 +1618,8 @@ TeX Macro Unicode ASCII
 \ene @AT@nequ{} U+2260 !=
 .\" (
 \erceil @AT@rcei{} U+2309 )
+.\" (
+\erfloor @AT@rflo{} U+230B )
 \erightarrow @AT@rarrow{} U+2192 \->
 .TE
 .LP

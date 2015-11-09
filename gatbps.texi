@@ -460,6 +460,10 @@ shows the symbol of each macro@.
 @item @t{\rceil} @tab @t{@@rcei@{@}} @tab U+2309 @tab @t{)}
 @sfindex @t{rcei.@:texi}
 @tmindex @t{@@rcei}
+@c (
+@item @t{\rfloor} @tab @t{@@rflo@{@}} @tab U+230B @tab @t{)}
+@sfindex @t{rflo.@:texi}
+@tmindex @t{@@rflo}
 @item @t{\rightarrow} @tab @t{@@rarrow@{@}} @tab U+2192 @tab @t{->}
 @sfindex @t{rarrow.@:texi}
 @tmindex @t{@@rarrow}
@@ -581,6 +585,17 @@ $\rceil$
 @end tex
 @ifnottex
 @rcei{}
+@end ifnottex
+@c (
+@item @t{\rfloor} @tab @t{@@rflo@{@}} @tab U+230B @tab @t{)}
+@sfindex @t{rflo.@:texi}
+@tmindex @t{@@rflo}
+@tab
+@tex
+$\rfloor$
+@end tex
+@ifnottex
+@rflo{}
 @end ifnottex
 @item @t{\rightarrow} @tab @t{@@rarrow@{@}} @tab U+2192 @tab @t{->}
 @sfindex @t{rarrow.@:texi}
