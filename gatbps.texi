@@ -449,6 +449,10 @@ shows the symbol of each macro@.
 @item @t{\le} @tab @t{@@lequ@{@}} @tab U+2264 @tab @t{<=}
 @sfindex @t{lequ.@:texi}
 @tmindex @t{@@lequ}
+@item @t{\lfloor} @tab @t{@@lflo@{@}} @tab U+230A @tab @t{floor(}
+@c )
+@sfindex @t{lflo.@:texi}
+@tmindex @t{@@lflo}
 @item @t{\ne} @tab @t{@@nequ@{@}} @tab U+2260 @tab @t{!=}
 @sfindex @t{nequ.@:texi}
 @tmindex @t{@@nequ}
@@ -545,6 +549,17 @@ $\le$
 @end tex
 @ifnottex
 @lequ{}
+@end ifnottex
+@item @t{\lfloor} @tab @t{@@lflo@{@}} @tab U+230A @tab @t{floor(}
+@c )
+@sfindex @t{lflo.@:texi}
+@tmindex @t{@@lflo}
+@tab
+@tex
+$\lfloor$
+@end tex
+@ifnottex
+@lflo{}
 @end ifnottex
 @item @t{\ne} @tab @t{@@nequ@{@}} @tab U+2260 @tab @t{!=}
 @sfindex @t{nequ.@:texi}

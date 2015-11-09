@@ -1577,6 +1577,8 @@ TeX Macro Unicode ASCII
 .\" )
 \eldots @AT@bdots{} U+2026 ...
 \ele @AT@lequ{} U+2264 <=
+\elfloor @AT@lflo{} U+230A floor(
+.\" )
 \ene @AT@nequ{} U+2260 !=
 .\" (
 \erceil @AT@rcei{} U+2309 )
