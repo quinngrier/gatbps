@@ -792,6 +792,41 @@ EOF1
             ;;
 
           #(
+            '--help=lflo.texi'|'--help='*'/lflo.texi')
+              cat <<EOF1
+Special file: ${fB1}lflo.texi${fR1}
+
+The ${fB1}lflo.texi${fR1} special file defines the ${fB1}@AT@lflo{}${fR1} Texinfo macro, which is
+used to imitate the mathematical notation of TeX in the other output
+formats:
+
+      @AT@tex
+      \$\\lfloor x \\rfloor\$
+      @AT@end tex
+      @AT@ifnottex
+      @AT@lflo{}@AT@i{x}@AT@rflo{}
+      @AT@end ifnottex
+
+Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
+EOF1
+              case "${?}" in
+              #(
+                '0')
+                  :
+                ;;
+              #(
+                *)
+                  cat >&2 <<EOF1
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: standard output
+EOF1
+                  exit '1'
+                ;;
+              esac
+            ;;
+
+          #(
             '--help=math.texi'|'--help='*'/math.texi')
               cat <<EOF1
 Special file: ${fB1}math.texi${fR1}
