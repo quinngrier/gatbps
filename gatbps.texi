@@ -997,6 +997,29 @@ $\lceil@w{ }x@w{ }\rceil$
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
+@sfindex @t{rflo.@:texi}
+@tmindex @t{@@rflo}
+@item @t{rflo.@:texi}
+@itemx @w{}
+The
+@t{rflo.@:texi}
+special file defines the
+@t{@@rflo@{@}}
+Texinfo macro,
+which is used to imitate the mathematical
+notation of @TeX{} in the other output formats:
+
+@example
+@@tex
+$\lfloor@w{ }x@w{ }\rfloor$
+@@end@w{ }tex
+@@ifnottex
+@@lflo@{@}@@i@{x@}@@rflo@{@}
+@@end@w{ }ifnottex
+@end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}@.
+
 @sfindex @t{sbs.@:texi}
 @tmindex @t{@@sbs}
 @item @t{sbs.@:texi}
