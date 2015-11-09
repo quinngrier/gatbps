@@ -4516,6 +4516,7 @@ EOF1
 @AT@include nequ.texi
 @AT@include rarrow.texi
 @AT@include rcei.texi
+@AT@include rflo.texi
 @AT@include sbs.texi
 @AT@include sps.texi
 @AT@ifxml
@@ -7157,6 +7158,7 @@ EOF1
 
             set "${prefix}sps.texi" "${@AT@}"
             set "${prefix}sbs.texi" "${@AT@}"
+            set "${prefix}rflo.texi" "${@AT@}"
             set "${prefix}rcei.texi" "${@AT@}"
             set "${prefix}rarrow.texi" "${@AT@}"
             set "${prefix}nequ.texi" "${@AT@}"
