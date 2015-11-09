@@ -805,6 +805,29 @@ $x@w{ }\le@w{ }y$
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
+@sfindex @t{lflo.@:texi}
+@tmindex @t{@@lflo}
+@item @t{lflo.@:texi}
+@itemx @w{}
+The
+@t{lflo.@:texi}
+special file defines the
+@t{@@lflo@{@}}
+Texinfo macro,
+which is used to imitate the mathematical
+notation of @TeX{} in the other output formats:
+
+@example
+@@tex
+$\lfloor@w{ }x@w{ }\rfloor$
+@@end@w{ }tex
+@@ifnottex
+@@lflo@{@}@@i@{x@}@@rflo@{@}
+@@end@w{ }ifnottex
+@end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}@.
+
 @sfindex @t{math.@:texi}
 @item @t{math.@:texi}
 @itemx @w{}
