@@ -352,6 +352,49 @@ EOF1
         ;;
 
       #(
+        '-n')
+
+          shift
+          set 'x' '--dry-run' "${@AT@}"
+          continue
+
+        ;;
+
+      #(
+        '-n'*)
+
+          x=`"${sed}" "
+s/'/'\\\\\\\\''/g
+1s/^-./rest='/
+\\$s/\\$/'/
+" <<EOF1
+${1}
+EOF1
+`
+          case "${?}" in
+          #(
+            '0')
+              :
+            ;;
+          #(
+            *)
+              cat >&2 <<EOF1
+${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: a command substitution
+EOF1
+              exit '1'
+            ;;
+          esac
+          eval "${x}"
+
+          shift
+          set 'x' '--dry-run' "-${rest}" "${@AT@}"
+          continue
+
+        ;;
+
+      #(
         '--help')
 
           cat <<EOF1
