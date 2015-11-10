@@ -119,6 +119,12 @@ isatty2='unknown'
 #       fm2='[22m[24m[35m' # stderr style: magenta
 #       fc2='[22m[24m[36m' # stderr style: cyan
 #
+# Note that the above code contains escape characters, i.e. bytes with
+# value 0x1B, which do not normally appear in plain text. Text editors
+# often have special ways of displaying such characters. In particular,
+# some editors may actually interpret the escape sequences or silently
+# discard the escape characters.
+#
 
 fR1='' # stdout style: none
 fB1='' # stdout style: bold
@@ -5982,6 +5988,12 @@ isatty2='unknown'
 #       fb2='[22m[24m[34m' # stderr style: blue
 #       fm2='[22m[24m[35m' # stderr style: magenta
 #       fc2='[22m[24m[36m' # stderr style: cyan
+#
+# Note that the above code contains escape characters, i.e. bytes with
+# value 0x1B, which do not normally appear in plain text. Text editors
+# often have special ways of displaying such characters. In particular,
+# some editors may actually interpret the escape sequences or silently
+# discard the escape characters.
 #
 
 fR1='' # stdout style: none
