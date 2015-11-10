@@ -2795,7 +2795,12 @@ EOF1
   case "${dry_run},${verbose}" in
   #(
     'yes,'*|*',yes')
-      :
+      case "${ferror1}" in
+      #(
+        'no')
+          :
+        ;;
+      esac
     ;;
   esac
 
