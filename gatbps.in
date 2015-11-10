@@ -2944,7 +2944,39 @@ EOF1
           case "${print0}" in
           #(
             'yes')
-              :
+              "${awk}" '
+{
+  if (NR == 1) {
+    x = $0
+  } else {
+    printf "%s", x
+    x = "\n" $0
+  }
+}
+END {
+  printf "%s%c", x, 0
+}
+' <<EOF1
+${1}
+EOF1
+              case "${?}" in
+              #(
+                '0')
+                  :
+                ;;
+              #(
+                *)
+                  cat >&2 <<EOF1
+${fy2}gatbps:${fR2} ${fB2}${awk}${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: standard output
+${fy2}gatbps:${fR2} printing failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} no further operands will be printed
+EOF1
+                  exit_status='1'
+                  ferror1='yes'
+                ;;
+              esac
             ;;
           #(
             'no')
