@@ -2798,7 +2798,16 @@ EOF1
       case "${ferror1}" in
       #(
         'no')
-          :
+          case "${print0}" in
+          #(
+            'yes')
+              :
+            ;;
+          #(
+            'no')
+              :
+            ;;
+          esac
         ;;
       esac
     ;;
