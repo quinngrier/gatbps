@@ -195,6 +195,8 @@ detect_options='1'
 exit_status='0'
 have_operands='0'
 
+ferror1='no'
+
 set 'x' "${@AT@}"
 
 while :; do
