@@ -1694,11 +1694,15 @@ flag is set at its point of inclusion.
 .LP
 In Docbook, HTML, and XML, the macros use the
 .nohy "\fB@AT@inlineraw\fR"
-command to insert numeric character references.
-This command was added in Texinfo 5.0,
+command to insert
+numeric character references.
+This command was
+added in Texinfo 5.0,
 which was released on 2013\-02\-16.
-The macros automatically detect older versions of
-Texinfo, in which case they insert UTF-8 characters instead.
+The macros automatically
+detect older versions of
+Texinfo, in which case they
+insert UTF-8 characters instead.
 .LP
 The following table lists the macros that have
 no parameters, which insert individual symbols.
