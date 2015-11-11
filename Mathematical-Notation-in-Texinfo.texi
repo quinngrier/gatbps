@@ -62,11 +62,12 @@ option to generate all
 @i{M}@t{.@:texi}
 special files at once@.
 
-The macros insert symbols as
-UTF-8 characters in Info and plain text and
-as numeric character references in Docbook, HTML, and
-XML by default, or as ASCII alternatives in
-all output formats if the
+The macros insert symbols
+as UTF-8 characters in Info
+and plain text and as numeric
+character references in Docbook,
+HTML, and XML by default, or as ASCII
+alternatives in all output formats if the
 @t{insertascii}
 flag is set at their points of inclusion@.
 For example, the
