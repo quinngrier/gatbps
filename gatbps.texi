@@ -955,6 +955,29 @@ $x@w{ }\ne@w{ }y$
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
+@sfindex @t{prm.@:texi}
+@tmindex @t{@@prm}
+@item @t{prm.@:texi}
+@itemx @w{}
+The
+@t{prm.@:texi}
+special file defines the
+@t{@@prm@{@}}
+Texinfo macro,
+which is used to imitate the mathematical
+notation of @TeX{} in the other output formats:
+
+@example
+@@tex
+$x'$
+@@end@w{ }tex
+@@ifnottex
+@@i@{x@}@@prm@{@}
+@@end@w{ }ifnottex
+@end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}@.
+
 @sfindex @t{rarrow.@:texi}
 @tmindex @t{@@rarrow}
 @item @t{rarrow.@:texi}

@@ -2141,6 +2141,29 @@ $x\ \ene\ y$
 .IP
 For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 .TP
+.nohy "\fBprm.texi\fR"
+.IPE0
+The
+.nohy "\fBprm.texi\fR"
+special file defines the
+.nohy "\fB@AT@prm{}\fR"
+Texinfo macro,
+which is used to imitate the mathematical
+notation of TeX in the other output formats:
+.RS
+.IP
+.nf
+@AT@tex
+$x'$
+@AT@end\ tex
+@AT@ifnottex
+@AT@i{x}@AT@prm{}
+@AT@end\ ifnottex
+.fi
+.RE
+.IP
+For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
+.TP
 .nohy "\fBrarrow.texi\fR"
 .IPE0
 The
