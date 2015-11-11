@@ -1684,7 +1684,8 @@ macro inserts a UTF-8
 dot operator character in
 Info and plain text and an
 .nohy "\fB&#x22C5;\fR"
-character reference in Docbook, HTML, and
+character reference
+in Docbook, HTML, and
 XML by default, or an ASCII
 .nohy "\fB*\fR"
 character in all output formats if the

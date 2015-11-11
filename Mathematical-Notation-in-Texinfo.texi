@@ -76,7 +76,8 @@ macro inserts a UTF-8
 dot operator character in
 Info and plain text and an
 @t{&#x22C5;}
-character reference in Docbook, HTML, and
+character reference
+in Docbook, HTML, and
 XML by default, or an ASCII
 @t{*}
 character in all output formats if the
