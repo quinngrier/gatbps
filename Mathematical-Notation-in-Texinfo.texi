@@ -328,9 +328,9 @@ $\rightarrow$
 @tmindex @t{@@sbs}
 @tmindex @t{@@sps}
 The
-@t{@@sps@{}@i{L}@t{@comma{} }@i{S}@t{@comma{} }@i{R}@t{@}}
+@t{@@sps@{}@i{L}@t{@comma{}@w{ }}@i{S}@t{@comma{}@w{ }}@i{R}@t{@}}
 and
-@t{@@sbs@{}@i{L}@t{@comma{} }@i{S}@t{@comma{} }@i{R}@t{@}}
+@t{@@sbs@{}@i{L}@t{@comma{}@w{ }}@i{S}@t{@comma{}@w{ }}@i{R}@t{@}}
 macros are provided for inserting
 @i{S}
 as a superscript or subscript@.
