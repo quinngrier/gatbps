@@ -7817,6 +7817,53 @@ EOF1
           ;;
 
         #(
+          'prm.texi'|*'/prm.texi')
+
+            case "${1}" in
+            #(
+              'prm.texi')
+                prefix=''
+              ;;
+            #(
+              *'/prm.texi')
+                x=`"${sed}" "
+s/'/'\\\\\\\\''/g
+1s/^/prefix='/
+\\$s/prm.texi\\$/'/
+" <<EOF1
+${1}
+EOF1
+`
+                case "${?}" in
+                #(
+                  '0')
+                    :
+                  ;;
+                #(
+                  *)
+                    cat >&2 <<EOF1
+${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed to read from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and write to: a command substitution
+${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
+EOF1
+                    exit_status='1'
+                    break
+                  ;;
+                esac
+                eval "${x}"
+              ;;
+            esac
+
+            shift
+
+            set "${prefix}CC0-1.0.txt" "${@AT@}"
+
+            set 'x' "${@AT@}"
+
+          ;;
+
+        #(
           'rarrow.texi'|*'/rarrow.texi')
 
             case "${1}" in
