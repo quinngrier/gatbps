@@ -4792,6 +4792,7 @@ EOF1
 @AT@include mdots.texi
 @AT@include msign.texi
 @AT@include nequ.texi
+@AT@include prm.texi
 @AT@include rarrow.texi
 @AT@include rcei.texi
 @AT@include rflo.texi
@@ -7610,6 +7611,7 @@ EOF1
             set "${prefix}rflo.texi" "${@AT@}"
             set "${prefix}rcei.texi" "${@AT@}"
             set "${prefix}rarrow.texi" "${@AT@}"
+            set "${prefix}prm.texi" "${@AT@}"
             set "${prefix}nequ.texi" "${@AT@}"
             set "${prefix}msign.texi" "${@AT@}"
             set "${prefix}mdots.texi" "${@AT@}"
