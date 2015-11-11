@@ -408,13 +408,16 @@ and
 @t{@@sbs}
 macros use the
 @t{@@inlineraw}
-command to insert superscript and subscript elements@.
-This command was added in Texinfo 5.@:0,
+command to insert
+superscript and subscript elements@.
+This command was
+added in Texinfo 5.@:0,
 which was released on 2013-02-16@.
-The macros automatically detect older versions of
-Texinfo, in which case they behave
-as if the output format were Info
-or plain text instead@.
+The macros automatically
+detect older versions of
+Texinfo, in which case they
+behave as if the output format
+were Info or plain text instead@.
 @ifxml
 @ifnotxml
 @c
