@@ -72,9 +72,9 @@ alternatives in all output formats if the
 flag is set at their points of inclusion@.
 For example, the
 @t{@@mdot}
-macro inserts a UTF-8 dot
-operator character
-in Info and plain text and an
+macro inserts a UTF-8
+dot operator character in
+Info and plain text and an
 @t{&#x22C5;}
 character reference in Docbook, HTML, and
 XML by default, or an ASCII
