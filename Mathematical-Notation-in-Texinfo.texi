@@ -389,7 +389,7 @@ in the current output format:
 @end ifinfo
 @ifnotinfo
 in the current output format and
-@t{x^(y + z_w)}
+@t{x^(y@w{ }+@w{ }z_w)}
 in Info and plain text:
 @end ifnotinfo
 
