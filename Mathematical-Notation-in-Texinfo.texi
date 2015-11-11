@@ -395,11 +395,11 @@ in Info and plain text:
 
 @example
 @@tex
-$x^@{y + z_w@}$
-@@end tex
+$x^@{y@w{ }+@w{ }z_w@}$
+@@end@w{ }tex
 @@ifnottex
-@@i@{x@}@@sps@{(, @@i@{y@} + @@i@{z@}@@sbs@{, @@i@{w@}, @}, )@}
-@@end ifnottex
+@@i@{x@}@@sps@{(,@w{ }@@i@{y@}@w{ }+@w{ }@@i@{z@}@@sbs@{,@w{ }@@i@{w@},@w{ }@},@w{ })@}
+@@end@w{ }ifnottex
 @end example
 
 In Docbook, HTML, and XML, the
