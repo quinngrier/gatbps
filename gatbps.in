@@ -1797,10 +1797,10 @@ in Info and plain text:
 .nf
 @AT@tex
 $x^{y\ +\ z_w}$
-@AT@end tex
+@AT@end\ tex
 @AT@ifnottex
 @AT@i{x}@AT@sps{(,\ @AT@i{y}\ +\ @AT@i{z}@AT@sbs{,\ @AT@i{w},\ },\ )}
-@AT@end ifnottex
+@AT@end\ ifnottex
 .fi
 .LP
 In Docbook, HTML, and XML, the
