@@ -413,6 +413,9 @@ shows the symbol of each macro@.
 @multitable {@t{\longleftrightarrow}} {@t{@@lldarrow@{@}}} {Unicode} {@t{floor(}}
 @c )
 @headitem @TeX{} @tab Macro @tab Unicode @tab ASCII
+@item @t{'} @tab @t{@@prm@{@}} @tab U+2032 @tab @t{'}
+@sfindex @t{prm.@:texi}
+@tmindex @t{@@prm}
 @item @t{-} @tab @t{@@msign@{@}} @tab U+2212 @tab @t{-}
 @sfindex @t{msign.@:texi}
 @tmindex @t{@@msign}
@@ -462,6 +465,16 @@ shows the symbol of each macro@.
 @multitable {@t{\longleftrightarrow}} {@t{@@lldarrow@{@}}} {Unicode} {@t{floor(}} {Symbol}
 @c )
 @headitem @TeX{} @tab Macro @tab Unicode @tab ASCII @tab Symbol
+@item @t{'} @tab @t{@@prm@{@}} @tab U+2032 @tab @t{'}
+@sfindex @t{prm.@:texi}
+@tmindex @t{@@prm}
+@tab
+@tex
+$'$
+@end tex
+@ifnottex
+@prm{}
+@end ifnottex
 @item @t{-} @tab @t{@@msign@{@}} @tab U+2212 @tab @t{-}
 @sfindex @t{msign.@:texi}
 @tmindex @t{@@msign}

@@ -1710,6 +1710,7 @@ flag is set at its point of inclusion.
 tab( );
 l l l l .
 TeX Macro Unicode ASCII
+' @AT@prm{} U+2032 '
 \- @AT@msign{} U+2212 \-
 / @AT@dslash{} U+2215 /
 \ecdot @AT@mdot{} U+22C5 *
