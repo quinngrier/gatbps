@@ -1789,7 +1789,7 @@ Note that
 .nohy "\fIL\fR"
 and
 .nohy "\fIR\fR"
-can be left blank.
+may be left blank.
 For example, the following code produces
 .nohy "\fBx^(y\ +\ z_w)\fR"
 in Info and plain text:

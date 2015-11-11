@@ -376,7 +376,7 @@ Note that
 @i{L}
 and
 @i{R}
-can be left blank@.
+may be left blank@.
 For example, the following code produces
 @tex
 $x^{y + z_w}$
