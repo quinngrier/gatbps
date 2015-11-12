@@ -125,6 +125,12 @@ isatty2='unknown'
 # some editors may actually interpret the escape sequences or silently
 # discard the escape characters.
 #
+# Although escape sequences offer a wide variety of functionality, the
+# variables balance utility and portability. The colors are limited to
+# those that should always be honored and legible, and the styles are
+# mutually exclusive. In particular, mixing bold and color would have
+# inconsistent results across systems.
+#
 
 fR1='' # stdout style: none
 fB1='' # stdout style: bold
@@ -6444,6 +6450,12 @@ isatty2='unknown'
 # often have special ways of displaying such characters. In particular,
 # some editors may actually interpret the escape sequences or silently
 # discard the escape characters.
+#
+# Although escape sequences offer a wide variety of functionality, the
+# variables balance utility and portability. The colors are limited to
+# those that should always be honored and legible, and the styles are
+# mutually exclusive. In particular, mixing bold and color would have
+# inconsistent results across systems.
 #
 
 fR1='' # stdout style: none
