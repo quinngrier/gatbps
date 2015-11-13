@@ -49,6 +49,9 @@ info_TEXINFOS += gatbps.texi
 man_MANS =
 man_MANS += gatbps.1
 
+.PHONY: txt
+txt: gatbps.txt
+
 include $(srcdir)/CC0-1.0-AM-COPYRIGHT.am
 
 ##
