@@ -127,7 +127,7 @@ isatty2='unknown'
 #
 # Although escape sequences offer a wide variety of functionality, the
 # variables balance utility and portability. The colors are limited to
-# those that should always be honored and legible, and the styles are
+# those that should always be legible and accurate, and the styles are
 # mutually exclusive. In particular, mixing bold and color would have
 # inconsistent results across systems.
 #
@@ -6453,7 +6453,7 @@ isatty2='unknown'
 #
 # Although escape sequences offer a wide variety of functionality, the
 # variables balance utility and portability. The colors are limited to
-# those that should always be honored and legible, and the styles are
+# those that should always be legible and accurate, and the styles are
 # mutually exclusive. In particular, mixing bold and color would have
 # inconsistent results across systems.
 #
