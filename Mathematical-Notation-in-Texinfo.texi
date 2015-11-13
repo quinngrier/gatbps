@@ -5,9 +5,10 @@
 provides a collection of Texinfo
 macros that support a specific approach
 to writing mathematical notation in Texinfo@.
-The idea is to write each expression in both
-raw @TeX{} and plain Texinfo, imitating the
-former in the latter@.
+The idea is to write
+each expression in both
+raw @TeX{} and plain Texinfo,
+imitating the former in the latter@.
 For example:
 
 @example
