@@ -15,6 +15,11 @@ bin_SCRIPTS += gatbps
 gatbps.1: gatbps
 	./gatbps --man >gatbps.1
 
+gatbps.txt: gatbps.texi $(gatbps_TEXINFOS)
+	$(AM_V_MAKEINFO)$(MAKEINFO) --plaintext \
+	  $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
+	  $(srcdir)/gatbps.texi >gatbps.txt
+
 gatbps_TEXINFOS =
 gatbps_TEXINFOS += CC0-1.0-appendix.texi
 gatbps_TEXINFOS += CC0-1.0-copying.texi
