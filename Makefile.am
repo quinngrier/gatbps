@@ -8,6 +8,7 @@ EXTRA_DIST += sh-form.sh
 MOSTLYCLEANFILES =
 MOSTLYCLEANFILES += gatbps.1
 MOSTLYCLEANFILES += gatbps.info
+MOSTLYCLEANFILES += gatbps.txt
 
 bin_SCRIPTS =
 bin_SCRIPTS += gatbps
