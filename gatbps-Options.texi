@@ -1,5 +1,5 @@
 @node @t{gatbps} Options
-@section @t{gatbps} Options
+@chapter @t{gatbps} Options
 
 @table @asis
 @item @t{--}

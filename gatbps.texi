@@ -68,7 +68,9 @@ This manual is for GATBPS@.
 * Environment Variables::
 @end menu
 
+@lowersections
 @include gatbps-Options.texi
+@raisesections
 
 @node Environment Variables
 @section Environment Variables
