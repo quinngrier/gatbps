@@ -64,12 +64,12 @@ This manual is for GATBPS@.
 @chapter Running @t{gatbps}
 
 @menu
-* Options::
+* @t{gatbps} Options::
 * Environment Variables::
 @end menu
 
-@node Options
-@section Options
+@node @t{gatbps} Options
+@section @t{gatbps} Options
 
 @table @asis
 @item @t{--}
