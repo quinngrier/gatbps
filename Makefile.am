@@ -20,6 +20,7 @@ gatbps_TEXINFOS += Introduction.texi
 gatbps_TEXINFOS += Mathematical-Notation-in-Texinfo.texi
 gatbps_TEXINFOS += bdots.texi
 gatbps_TEXINFOS += dslash.texi
+gatbps_TEXINFOS += gatbps-Options.texi
 gatbps_TEXINFOS += gequ.texi
 gatbps_TEXINFOS += lcei.texi
 gatbps_TEXINFOS += lequ.texi
