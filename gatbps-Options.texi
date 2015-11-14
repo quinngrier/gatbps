@@ -5,7 +5,7 @@
 @item @t{--}
 @itemx @w{}
 The
-@t{--}
+@w{@t{--}}
 option disables option detection,
 causing all further arguments to
 be detected as operands@.
