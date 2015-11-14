@@ -65,15 +65,15 @@ This manual is for GATBPS@.
 
 @menu
 * @t{gatbps} Options::
-* Environment Variables::
+* @t{gatbps} Environment Variables::
 @end menu
 
 @lowersections
 @include gatbps-Options.texi
 @raisesections
 
-@node Environment Variables
-@section Environment Variables
+@node @t{gatbps} Environment Variables
+@section @t{gatbps} Environment Variables
 
 @t{gatbps}
 is affected by the following environment variables:
