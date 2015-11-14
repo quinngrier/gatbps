@@ -1,5 +1,6 @@
 \input texinfo
 @setfilename gatbps.info
+
 @ifclear insertascii
 @documentencoding UTF-8
 @end ifclear
