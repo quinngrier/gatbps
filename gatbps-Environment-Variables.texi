@@ -1,0 +1,111 @@
+@node @t{gatbps} Environment Variables
+@section @t{gatbps} Environment Variables
+
+@t{gatbps}
+is affected by the following environment variables:
+
+@table @asis
+@item @t{AWK}
+@itemx @w{}
+If the
+@t{AWK}
+environment variable
+is set to a nonempty string
+@i{S},
+then the
+@t{--awk=}@i{S}
+option is added to the
+arguments at a position that
+lies before all original arguments@.
+Otherwise, the
+@t{AWK}
+environment variable has no effect@.
+
+@item @t{SED}
+@itemx @w{}
+If the
+@t{SED}
+environment variable
+is set to a nonempty string
+@i{S},
+then the
+@t{--sed=}@i{S}
+option is added to the
+arguments at a position that
+lies before all original arguments@.
+Otherwise, the
+@t{SED}
+environment variable has no effect@.
+
+@item @t{STYLE}
+@itemx @w{}
+If the
+@t{STYLE}
+environment variable
+is set to a nonempty string
+@i{S},
+then the
+@t{--style=}@i{S}
+option is added to the
+arguments at a position that
+lies before all original arguments
+and before the options added by the
+@t{STYLE_STDERR}
+and
+@t{STYLE_STDOUT}
+environment variables@.
+Otherwise, the
+@t{STYLE}
+environment variable has no effect@.
+
+@item @t{STYLE_STDERR}
+@itemx @w{}
+If the
+@t{STYLE_STDERR}
+environment variable
+is set to a nonempty string
+@i{S},
+then the
+@t{--style-stderr=}@i{S}
+option is added to the
+arguments at a position that
+lies before all original arguments
+and after the option added by the
+@t{STYLE}
+environment variable@.
+Otherwise, the
+@t{STYLE_STDERR}
+environment variable has no effect@.
+
+@item @t{STYLE_STDOUT}
+@itemx @w{}
+If the
+@t{STYLE_STDOUT}
+environment variable
+is set to a nonempty string
+@i{S},
+then the
+@t{--style-stdout=}@i{S}
+option is added to the
+arguments at a position that
+lies before all original arguments
+and after the option added by the
+@t{STYLE}
+environment variable@.
+Otherwise, the
+@t{STYLE_STDOUT}
+environment variable has no effect@.
+@end table
+@ifxml
+@ifnotxml
+@c
+@c The authors of this file have waived all copyright and
+@c related or neighboring rights to the extent permitted by
+@c law as described by the CC0 1.0 Universal Public Domain
+@c Dedication. You should have received a copy of the full
+@c dedication along with this file, typically as a file
+@c named <CC0-1.0.txt>. If not, it may be available at
+@c <https://creativecommons.org/publicdomain/zero/1.0/>.
+@c
+@end ifnotxml
+@end ifxml
