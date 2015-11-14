@@ -70,9 +70,8 @@ This manual is for GATBPS@.
 
 @lowersections
 @include gatbps-Options.texi
-@raisesections
-
 @include gatbps-Environment-Variables.texi
+@raisesections
 
 @include Mathematical-Notation-in-Texinfo.texi
 

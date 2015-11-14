@@ -1,5 +1,5 @@
 @node @t{gatbps} Environment Variables
-@section @t{gatbps} Environment Variables
+@chapter @t{gatbps} Environment Variables
 
 @t{gatbps}
 is affected by the following environment variables:
