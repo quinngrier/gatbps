@@ -13,9 +13,9 @@ be detected as operands@.
 @item @t{--help}[@t{=}@i{S}]
 @itemx @w{}
 The
-@t{--help}
+@w{@t{--help}}
 and
-@t{--help=}@i{S}
+@w{@t{--help=}@i{S}}
 options write text to standard output
 and cause all further arguments to be ignored@.
 For the
