@@ -20,8 +20,8 @@ options write text to standard output and
 cause all further arguments to be ignored@.
 For the
 @w{@t{--help}}
-option, the text is
-a short description of the program@.
+option,
+the text is a short description of the program@.
 For the
 @w{@t{--help=}@i{S}}
 option, the text is
