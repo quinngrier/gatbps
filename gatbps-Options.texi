@@ -16,8 +16,8 @@ The
 @w{@t{--help}}
 and
 @w{@t{--help=}@i{S}}
-options write text to standard output
-and cause all further arguments to be ignored@.
+options write text to standard output and
+cause all further arguments to be ignored@.
 For the
 @w{@t{--help}}
 option, the text is
