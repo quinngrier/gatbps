@@ -55,6 +55,14 @@ AC_ARG_ENABLE(
       'yes')
         awk_default='auto'
       ;;
+    #(
+      'no')
+        awk_default="${AWK}"
+      ;;
+    #(
+      *)
+        AC_MSG_ERROR([invalid --enable-awk-auto value], [1])
+      ;;
     esac
   ]
 )
