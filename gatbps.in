@@ -48,7 +48,7 @@ case "${awk}" in
   ;;
 esac
 
-sed='sed'
+sed=@SED_DEFAULT_SH@
 
 texi2any='texi2any'
 
