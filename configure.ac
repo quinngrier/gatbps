@@ -89,6 +89,28 @@ AC_ARG_ENABLE(
   ]
 )
 
+texi2any_default="${TEXI2ANY}"
+AC_ARG_ENABLE(
+  [texi2any-auto],
+  [AS_HELP_STRING([--enable-texi2any-auto], [use --texi2any=auto])],
+  [
+    case "${enableval}" in
+    #(
+      'yes')
+        texi2any_default='auto'
+      ;;
+    #(
+      'no')
+        texi2any_default="${TEXI2ANY}"
+      ;;
+    #(
+      *)
+        AC_MSG_ERROR([invalid --enable-texi2any-auto value], [1])
+      ;;
+    esac
+  ]
+)
+
 #
 # Make a version of @AWK@ that's safer to use as a troff macro argument.
 #
