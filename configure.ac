@@ -154,11 +154,6 @@ esac
 
 AC_SUBST([AWK_TROFF])
 
-#
-# Make a version of @AWK@ that's safer to use as the right side of a
-# shell variable assignment.
-#
-
 AWK_DEFAULT_SH=`sh "${srcdir}/sh-form.sh" <<EOF
 ${awk_default}
 EOF
