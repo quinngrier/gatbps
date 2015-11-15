@@ -145,6 +145,23 @@ esac
 AC_SUBST([SED_DEFAULT_SH])
 AM_SUBST_NOTMAKE([SED_DEFAULT_SH])
 
+TEXI2ANY_DEFAULT_SH=`sh "${srcdir}/sh-form.sh" <<EOF
+${texi2any_default}
+EOF
+`
+case "${?}" in
+#(
+  '0')
+    :
+  ;;
+#(
+  *)
+    AC_MSG_ERROR([sh-form.sh failed], [1])
+  ;;
+esac
+AC_SUBST([TEXI2ANY_DEFAULT_SH])
+AM_SUBST_NOTMAKE([TEXI2ANY_DEFAULT_SH])
+
 #
 # Make a version of @AWK@ that's safer to use as a troff macro argument.
 #
