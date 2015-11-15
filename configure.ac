@@ -107,7 +107,7 @@ AC_SUBST([AWK_TROFF])
 # shell variable assignment.
 #
 
-AWK_DEFAULT_SH=`sh sh-form.sh <<EOF
+AWK_DEFAULT_SH=`sh "${srcdir}/sh-form.sh" <<EOF
 ${awk_default}
 EOF
 `
