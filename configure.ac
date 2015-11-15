@@ -32,17 +32,6 @@ AM_SUBST_NOTMAKE([SED])
 
 AC_ARG_VAR([TEXI2ANY], [the preferred texi2any executable])
 AC_CHECK_PROGS([TEXI2ANY], [texi2any makeinfo])
-case "${TEXI2ANY}" in
-#(
-  ?*)
-    :
-  ;;
-#(
-  *)
-    AC_MSG_WARN([falling back to TEXI2ANY=auto])
-    TEXI2ANY='auto'
-  ;;
-esac
 AM_SUBST_NOTMAKE([TEXI2ANY])
 
 awk_default="${AWK}"
@@ -110,6 +99,17 @@ AC_ARG_ENABLE(
     esac
   ]
 )
+case "${texi2any_default}" in
+#(
+  ?*)
+    :
+  ;;
+#(
+  *)
+    AC_MSG_WARN([falling back to --enable-texi2any-auto])
+    texi2any_default='auto'
+  ;;
+esac
 
 #
 # Make a version of @AWK@ that's safer to use as a troff macro argument.
