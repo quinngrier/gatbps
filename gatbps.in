@@ -50,7 +50,7 @@ esac
 
 sed=@SED_DEFAULT_SH@
 
-texi2any='texi2any'
+texi2any=@TEXI2ANY_DEFAULT_SH@
 
 #
 # The isatty1 and isatty2 variables indicate whether standard output and
