@@ -47,8 +47,7 @@ AM_SUBST_NOTMAKE([TEXI2ANY])
 
 awk_default="${AWK}"
 AC_ARG_ENABLE([awk-auto],
-  [AS_HELP_STRING([--enable-awk-auto],
-    [default to --awk=auto (default is no)])],
+  [AS_HELP_STRING([--enable-awk-auto], [use --awk=auto])],
   [
     case "${enableval}" in
     #(
