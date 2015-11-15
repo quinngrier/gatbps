@@ -67,6 +67,28 @@ AC_ARG_ENABLE(
   ]
 )
 
+sed_default="${SED}"
+AC_ARG_ENABLE(
+  [sed-auto],
+  [AS_HELP_STRING([--enable-sed-auto], [use --sed=auto])],
+  [
+    case "${enableval}" in
+    #(
+      'yes')
+        sed_default='auto'
+      ;;
+    #(
+      'no')
+        sed_default="${SED}"
+      ;;
+    #(
+      *)
+        AC_MSG_ERROR([invalid --enable-sed-auto value], [1])
+      ;;
+    esac
+  ]
+)
+
 #
 # Make a version of @AWK@ that's safer to use as a troff macro argument.
 #
