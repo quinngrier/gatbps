@@ -111,6 +111,23 @@ case "${texi2any_default}" in
   ;;
 esac
 
+AWK_DEFAULT_SH=`sh "${srcdir}/sh-form.sh" <<EOF
+${awk_default}
+EOF
+`
+case "${?}" in
+#(
+  '0')
+    :
+  ;;
+#(
+  *)
+    AC_MSG_ERROR([sh-form.sh failed], [1])
+  ;;
+esac
+AC_SUBST([AWK_DEFAULT_SH])
+AM_SUBST_NOTMAKE([AWK_DEFAULT_SH])
+
 #
 # Make a version of @AWK@ that's safer to use as a troff macro argument.
 #
@@ -153,23 +170,6 @@ case "${?}" in
 esac
 
 AC_SUBST([AWK_TROFF])
-
-AWK_DEFAULT_SH=`sh "${srcdir}/sh-form.sh" <<EOF
-${awk_default}
-EOF
-`
-case "${?}" in
-#(
-  '0')
-    :
-  ;;
-#(
-  *)
-    AC_MSG_ERROR([sh-form.sh failed], [1])
-  ;;
-esac
-AC_SUBST([AWK_DEFAULT_SH])
-AM_SUBST_NOTMAKE([AWK_DEFAULT_SH])
 
 AC_SUBST([AT], ['@'])
 AC_CONFIG_FILES([Makefile])
