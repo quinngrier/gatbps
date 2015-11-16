@@ -37,7 +37,7 @@ AM_SUBST_NOTMAKE([TEXI2ANY])
 awk_default="${AWK}"
 AC_ARG_ENABLE(
   [awk-auto],
-  [AS_HELP_STRING([--enable-awk-auto], [use --awk=auto])],
+  [AS_HELP_STRING([--enable-awk-auto], [default to --awk=auto])],
   [
     case "${enableval}" in
     #(
@@ -59,7 +59,7 @@ AC_ARG_ENABLE(
 sed_default="${SED}"
 AC_ARG_ENABLE(
   [sed-auto],
-  [AS_HELP_STRING([--enable-sed-auto], [use --sed=auto])],
+  [AS_HELP_STRING([--enable-sed-auto], [default to --sed=auto])],
   [
     case "${enableval}" in
     #(
@@ -81,7 +81,7 @@ AC_ARG_ENABLE(
 texi2any_default="${TEXI2ANY}"
 AC_ARG_ENABLE(
   [texi2any-auto],
-  [AS_HELP_STRING([--enable-texi2any-auto], [use --texi2any=auto])],
+  [AS_HELP_STRING([--enable-texi2any-auto], [default to --texi2any=auto])],
   [
     case "${enableval}" in
     #(
