@@ -50,7 +50,7 @@ This manual is for GATBPS@.
 
 @menu
 * Introduction::
-* Running @t{gatbps}::
+* Using @t{gatbps}::
 * Mathematical Notation in Texinfo::
 * Special File Reference::
 * CC0::
@@ -60,8 +60,8 @@ This manual is for GATBPS@.
 
 @include Introduction.texi
 
-@node Running @t{gatbps}
-@chapter Running @t{gatbps}
+@node Using @t{gatbps}
+@chapter Using @t{gatbps}
 
 @menu
 * @t{gatbps} Options::
