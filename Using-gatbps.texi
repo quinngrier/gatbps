@@ -8,6 +8,7 @@
 
 @lowersections
 @include gatbps-Options.texi
+
 @include gatbps-Environment-Variables.texi
 @raisesections
 @ifxml
