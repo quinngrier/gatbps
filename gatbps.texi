@@ -26,7 +26,7 @@
 @end titlepage
 
 @ifplaintext
-@chapheading Short Table of Contents
+@chapheading Short Contents
 @end ifplaintext
 
 @shortcontents
