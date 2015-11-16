@@ -1226,7 +1226,7 @@ the mathematical notation of TeX in the other output formats:
       \$x_{y + z_w}\$
       @AT@end tex
       @AT@ifnottex
-      @AT@i{x}@AT@sbs{(, @AT@i{y} + @AT@i{z}@AT@sbs{, @AT@i{w}, }, )}
+      @AT@i{x}@AT@sbs{(,@AT@i{y} + @AT@i{z}@AT@sbs{,@AT@i{w},},)}
       @AT@end ifnottex
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
@@ -2315,7 +2315,7 @@ notation of TeX in the other output formats:
 $x_{y\ +\ z_w}$
 @AT@end\ tex
 @AT@ifnottex
-@AT@i{x}@AT@sbs{(,\ @AT@i{y}\ +\ @AT@i{z}@AT@sbs{,\ @AT@i{w},\ },\ )}
+@AT@i{x}@AT@sbs{(,@AT@i{y}\ +\ @AT@i{z}@AT@sbs{,@AT@i{w},},)}
 @AT@end\ ifnottex
 .fi
 .RE
@@ -6207,7 +6207,7 @@ EOF1
 @AT@c       $x_{y + z_w}$
 @AT@c       @AT@end tex
 @AT@c       @AT@ifnottex
-@AT@c       @AT@i{x}@AT@sbs{(, @AT@i{y} + @AT@i{z}@AT@sbs{, @AT@i{w}, }, )}
+@AT@c       @AT@i{x}@AT@sbs{(,@AT@i{y} + @AT@i{z}@AT@sbs{,@AT@i{w},},)}
 @AT@c       @AT@end ifnottex
 @AT@c
 @AT@c For more information, see the GATBPS manual.
