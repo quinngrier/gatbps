@@ -482,7 +482,7 @@ notation of @TeX{} in the other output formats:
 $x^@{y@w{ }+@w{ }z^w@}$
 @@end@w{ }tex
 @@ifnottex
-@@i@{x@}@@sps@{(,@w{ }@@i@{y@}@w{ }+@w{ }@@i@{z@}@@sps@{,@w{ }@@i@{w@},@w{ }@},@w{ })@}
+@@i@{x@}@@sps@{(,@@i@{y@}@w{ }+@w{ }@@i@{z@}@@sps@{,@@i@{w@},@},)@}
 @@end@w{ }ifnottex
 @end example
 
