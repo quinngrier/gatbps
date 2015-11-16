@@ -61,6 +61,9 @@ This manual is for GATBPS@.
 
 @include Introduction.texi
 
+@node Building and Installing GATBPS
+@chapter Building and Installing GATBPS
+
 @include Building-and-Installing-GATBPS.texi
 
 @include Using-gatbps.texi

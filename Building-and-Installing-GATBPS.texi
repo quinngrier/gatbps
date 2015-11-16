@@ -1,6 +1,3 @@
-@node Building and Installing GATBPS
-@chapter Building and Installing GATBPS
-
 GATBPS uses GNU Autotools for building and installation@.
 @ifxml
 @ifnotxml
