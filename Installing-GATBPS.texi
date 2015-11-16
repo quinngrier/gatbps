@@ -1,6 +1,7 @@
 @node Installing GATBPS
 @chapter Installing GATBPS
 
+GATBPS uses GNU Autotools for building and installation@.
 @ifxml
 @ifnotxml
 @c
