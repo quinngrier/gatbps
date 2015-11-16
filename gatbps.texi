@@ -60,8 +60,11 @@ This manual is for GATBPS@.
 @end ifnottex
 
 @include Introduction.texi
+
 @include Installing-GATBPS.texi
+
 @include Using-gatbps.texi
+
 @include Mathematical-Notation-in-Texinfo.texi
 
 @node Special File Reference
