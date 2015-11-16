@@ -106,7 +106,7 @@ case "${texi2any_default}" in
   ;;
 #(
   *)
-    AC_MSG_WARN([falling back to --enable-texi2any-auto])
+    AC_MSG_WARN([forcing --enable-texi2any-auto])
     texi2any_default='auto'
   ;;
 esac
