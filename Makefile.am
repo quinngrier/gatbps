@@ -16,6 +16,7 @@ bin_SCRIPTS += gatbps
 gatbps_TEXINFOS =
 gatbps_TEXINFOS += CC0-1.0-appendix.texi
 gatbps_TEXINFOS += CC0-1.0-copying.texi
+gatbps_TEXINFOS += Installing-GATBPS.texi
 gatbps_TEXINFOS += Introduction.texi
 gatbps_TEXINFOS += Mathematical-Notation-in-Texinfo.texi
 gatbps_TEXINFOS += Using-gatbps.texi

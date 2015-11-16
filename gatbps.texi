@@ -50,6 +50,7 @@ This manual is for GATBPS@.
 
 @menu
 * Introduction::
+* Installing GATBPS::
 * Using @t{gatbps}::
 * Mathematical Notation in Texinfo::
 * Special File Reference::
@@ -59,6 +60,7 @@ This manual is for GATBPS@.
 @end ifnottex
 
 @include Introduction.texi
+@include Installing-GATBPS.texi
 @include Using-gatbps.texi
 @include Mathematical-Notation-in-Texinfo.texi
 
