@@ -1,6 +1,6 @@
-@unnumbered Building and Installing GATBPS
+@unnumbered Building and Installation
 
-@include Building-and-Installing-GATBPS.texi
+@include Building-and-Installation.texi
 @ifxml
 @ifnotxml
 @c

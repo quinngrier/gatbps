@@ -50,7 +50,7 @@ This manual is for GATBPS@.
 
 @menu
 * Introduction::
-* Building and Installing GATBPS::
+* Building and Installation::
 * Using @t{gatbps}::
 * Mathematical Notation in Texinfo::
 * Special File Reference::
@@ -61,10 +61,10 @@ This manual is for GATBPS@.
 
 @include Introduction.texi
 
-@node Building and Installing GATBPS
-@chapter Building and Installing GATBPS
+@node Building and Installation
+@chapter Building and Installation
 
-@include Building-and-Installing-GATBPS.texi
+@include Building-and-Installation.texi
 
 @include Using-gatbps.texi
 
