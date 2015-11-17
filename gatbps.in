@@ -7204,6 +7204,12 @@ EOF1
 @AT@end ifplaintext
 @AT@end ifset
 @AT@shortcontents
+@AT@ifset txicommandconditionals
+@AT@ifplaintext
+
+@AT@*
+@AT@end ifplaintext
+@AT@end ifset
 @AT@ifxml
 @AT@ifnotxml
 @AT@c
