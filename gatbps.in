@@ -197,7 +197,14 @@ print0='no'
 recursive='no'
 verbose='no'
 
+#
+# The detect_options variable is set to 'yes' if the arguments are being
+# scanned for options or 'no' if not. It usually starts off as 'yes' and
+# is set to 'no' upon finding the -- option.
+#
+
 detect_options='yes'
+
 exit_status='0'
 have_operands='0'
 
@@ -6473,6 +6480,12 @@ fm2='' # stderr style: magenta
 fc2='' # stderr style: cyan
 
 keep='no'
+
+#
+# The detect_options variable is set to 'yes' if the arguments are being
+# scanned for options or 'no' if not. It usually starts off as 'yes' and
+# is set to 'no' upon finding the -- option.
+#
 
 detect_options='yes'
 
