@@ -197,7 +197,7 @@ print0='no'
 recursive='no'
 verbose='no'
 
-detect_options='1'
+detect_options='yes'
 exit_status='0'
 have_operands='0'
 
@@ -215,7 +215,7 @@ while :; do
       case "${have_operands}" in
       #(
         '0')
-          detect_options='1'
+          detect_options='yes'
           set 'x' '--list'
           continue
         ;;
@@ -230,21 +230,14 @@ while :; do
   case "${detect_options}" in
 
   #(
-    '0')
-
-      :
-
-    ;;
-
-  #(
-    *)
+    'yes')
 
       case "${1}" in
 
       #(
         '--')
 
-          detect_options='0'
+          detect_options='no'
           continue
 
         ;;
@@ -6481,7 +6474,7 @@ fc2='' # stderr style: cyan
 
 keep='no'
 
-detect_options='1'
+detect_options='yes'
 
 set 'x' "${@AT@}"
 
@@ -6499,21 +6492,14 @@ while :; do
   case "${detect_options}" in
 
   #(
-    '0')
-
-      :
-
-    ;;
-
-  #(
-    *)
+    'yes')
 
       case "${1}" in
 
       #(
         '--')
 
-          detect_options='0'
+          detect_options='no'
           continue
 
         ;;
