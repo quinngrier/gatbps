@@ -52,7 +52,7 @@ gatbps.1: gatbps
 gatbps.txt: gatbps.texi $(gatbps_TEXINFOS)
 	$(AM_V_MAKEINFO)$(MAKEINFO) --plaintext \
 	  $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
-	  $(srcdir)/gatbps.texi >gatbps.txt
+	  -o gatbps.txt $(srcdir)/gatbps.texi
 
 .PHONY: txt
 txt: gatbps.txt
