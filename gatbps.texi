@@ -25,22 +25,7 @@
 @insertcopying
 @end titlepage
 
-@ifplaintext
-@chapheading Short Contents
-@end ifplaintext
-
-@shortcontents
-
-@ifplaintext
-@*
-@chapheading Table of Contents
-@end ifplaintext
-
-@contents
-
-@ifplaintext
-@*
-@end ifplaintext
+@include bothcontents.texi
 
 @ifnottex
 @node Top
