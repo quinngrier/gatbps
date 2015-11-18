@@ -1510,7 +1510,7 @@ EOF1
 \\$1
 .hy
 ..
-.de TP0
+.de TPZ
 .PD 0
 .TP
 .PD
@@ -1603,7 +1603,7 @@ command that is analogous to the
 command.
 .TP
 .nohy "\fB\-\-recursive\fR"
-.TP0
+.TPZ
 .nohy "\fB\-r\fR"
 .IPE0
 The
