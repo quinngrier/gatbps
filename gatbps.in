@@ -235,7 +235,6 @@ while :; do
   esac
 
   case "${detect_options}" in
-
   #(
     'yes')
 
@@ -3373,7 +3372,6 @@ EOF1
       esac
 
     ;;
-
   esac
 
   have_operands='1'
@@ -7085,7 +7083,6 @@ while :; do
   esac
 
   case "${detect_options}" in
-
   #(
     'yes')
 
@@ -7194,7 +7191,6 @@ EOF2
       esac
 
     ;;
-
   esac
 
   cat >&2 <<EOF2
