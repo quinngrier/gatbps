@@ -74,7 +74,7 @@ option of
 @sfindex @t{bdots.@:texi}
 @tmindex @t{@@bdots}
 @item @t{bdots.@:texi}
-@itemx @w{}
+@include ipez.texi
 The
 @t{bdots.@:texi}
 special file defines the
@@ -97,7 +97,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @sfindex @t{dslash.@:texi}
 @tmindex @t{@@dslash}
 @item @t{dslash.@:texi}
-@itemx @w{}
+@include ipez.texi
 The
 @t{dslash.@:texi}
 special file defines the
@@ -120,7 +120,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @sfindex @t{gequ.@:texi}
 @tmindex @t{@@gequ}
 @item @t{gequ.@:texi}
-@itemx @w{}
+@include ipez.texi
 The
 @t{gequ.@:texi}
 special file defines the
@@ -143,7 +143,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @sfindex @t{lcei.@:texi}
 @tmindex @t{@@lcei}
 @item @t{lcei.@:texi}
-@itemx @w{}
+@include ipez.texi
 The
 @t{lcei.@:texi}
 special file defines the
@@ -166,7 +166,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @sfindex @t{lequ.@:texi}
 @tmindex @t{@@lequ}
 @item @t{lequ.@:texi}
-@itemx @w{}
+@include ipez.texi
 The
 @t{lequ.@:texi}
 special file defines the
@@ -189,7 +189,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @sfindex @t{lflo.@:texi}
 @tmindex @t{@@lflo}
 @item @t{lflo.@:texi}
-@itemx @w{}
+@include ipez.texi
 The
 @t{lflo.@:texi}
 special file defines the
@@ -211,7 +211,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 
 @sfindex @t{math.@:texi}
 @item @t{math.@:texi}
-@itemx @w{}
+@include ipez.texi
 The
 @t{math.@:texi}
 special file is a Texinfo file
@@ -228,7 +228,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @sfindex @t{mdot.@:texi}
 @tmindex @t{@@mdot}
 @item @t{mdot.@:texi}
-@itemx @w{}
+@include ipez.texi
 The
 @t{mdot.@:texi}
 special file defines the
@@ -251,7 +251,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @sfindex @t{mdots.@:texi}
 @tmindex @t{@@mdots}
 @item @t{mdots.@:texi}
-@itemx @w{}
+@include ipez.texi
 The
 @t{mdots.@:texi}
 special file defines the
@@ -274,7 +274,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @sfindex @t{msign.@:texi}
 @tmindex @t{@@msign}
 @item @t{msign.@:texi}
-@itemx @w{}
+@include ipez.texi
 The
 @t{msign.@:texi}
 special file defines the
@@ -297,7 +297,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @sfindex @t{nequ.@:texi}
 @tmindex @t{@@nequ}
 @item @t{nequ.@:texi}
-@itemx @w{}
+@include ipez.texi
 The
 @t{nequ.@:texi}
 special file defines the
@@ -320,7 +320,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @sfindex @t{prm.@:texi}
 @tmindex @t{@@prm}
 @item @t{prm.@:texi}
-@itemx @w{}
+@include ipez.texi
 The
 @t{prm.@:texi}
 special file defines the
@@ -343,7 +343,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @sfindex @t{rarrow.@:texi}
 @tmindex @t{@@rarrow}
 @item @t{rarrow.@:texi}
-@itemx @w{}
+@include ipez.texi
 The
 @t{rarrow.@:texi}
 special file defines the
@@ -366,7 +366,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @sfindex @t{rcei.@:texi}
 @tmindex @t{@@rcei}
 @item @t{rcei.@:texi}
-@itemx @w{}
+@include ipez.texi
 The
 @t{rcei.@:texi}
 special file defines the
@@ -389,7 +389,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @sfindex @t{rflo.@:texi}
 @tmindex @t{@@rflo}
 @item @t{rflo.@:texi}
-@itemx @w{}
+@include ipez.texi
 The
 @t{rflo.@:texi}
 special file defines the
@@ -412,7 +412,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @sfindex @t{sbs.@:texi}
 @tmindex @t{@@sbs}
 @item @t{sbs.@:texi}
-@itemx @w{}
+@include ipez.texi
 The
 @t{sbs.@:texi}
 special file defines the
@@ -444,7 +444,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @sfindex @t{sps.@:texi}
 @tmindex @t{@@sps}
 @item @t{sps.@:texi}
-@itemx @w{}
+@include ipez.texi
 The
 @t{sps.@:texi}
 special file defines the

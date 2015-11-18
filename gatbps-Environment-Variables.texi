@@ -6,7 +6,7 @@ is affected by the following environment variables:
 
 @table @asis
 @item @t{AWK}
-@itemx @w{}
+@include ipez.texi
 If the
 @t{AWK}
 environment variable
@@ -22,7 +22,7 @@ Otherwise, the
 environment variable has no effect@.
 
 @item @t{SED}
-@itemx @w{}
+@include ipez.texi
 If the
 @t{SED}
 environment variable
@@ -38,7 +38,7 @@ Otherwise, the
 environment variable has no effect@.
 
 @item @t{STYLE}
-@itemx @w{}
+@include ipez.texi
 If the
 @t{STYLE}
 environment variable
@@ -59,7 +59,7 @@ Otherwise, the
 environment variable has no effect@.
 
 @item @t{STYLE_STDERR}
-@itemx @w{}
+@include ipez.texi
 If the
 @t{STYLE_STDERR}
 environment variable
@@ -78,7 +78,7 @@ Otherwise, the
 environment variable has no effect@.
 
 @item @t{STYLE_STDOUT}
-@itemx @w{}
+@include ipez.texi
 If the
 @t{STYLE_STDOUT}
 environment variable
