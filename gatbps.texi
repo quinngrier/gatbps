@@ -20,7 +20,7 @@
 @end ifplaintext
 
 @titlepage
-@title GATBPS
+@title GATBPS @value{VERSION}
 @subtitle @value{DATE}
 @vskip 0pt plus 1filll
 @page
