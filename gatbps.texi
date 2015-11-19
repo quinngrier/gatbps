@@ -16,7 +16,7 @@
 @include math.texi
 
 @ifplaintext
-@chapheading GATBPS
+@chapheading GATBPS @value{VERSION}
 @end ifplaintext
 
 @titlepage
