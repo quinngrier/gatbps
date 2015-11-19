@@ -11,6 +11,7 @@
 @defindex tm
 
 @include CC0-1.0-copying.texi
+@include DATE.texi
 @include math.texi
 
 @ifplaintext
