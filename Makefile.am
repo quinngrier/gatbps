@@ -51,6 +51,11 @@ info_TEXINFOS += gatbps.texi
 man_MANS =
 man_MANS += gatbps.1
 
+gatbps-no-split.html: gatbps.texi $(gatbps_TEXINFOS)
+	$(AM_V_MAKEINFO)$(MAKEINFO) \
+	  $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
+	  --html --no-split --output=$@ $(srcdir)/gatbps.texi
+
 gatbps.1: gatbps
 	./gatbps --man >gatbps.1
 
