@@ -206,6 +206,7 @@ esac
 AC_SUBST([AWK_TROFF])
 
 AC_SUBST([AT], ['@'])
+AC_CONFIG_FILES([DATE.texi])
 AC_CONFIG_FILES([Makefile])
 AC_CONFIG_FILES([gatbps], [chmod +x gatbps])
 
