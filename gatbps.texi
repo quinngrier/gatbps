@@ -7,7 +7,7 @@
 
 @include VERSION.texi
 
-@settitle GATBPS
+@settitle GATBPS @value{VERSION}
 
 @defindex sf
 @defindex tm
