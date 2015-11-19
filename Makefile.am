@@ -60,9 +60,9 @@ gatbps.1: gatbps
 	./gatbps --man >gatbps.1
 
 gatbps.txt: gatbps.texi $(gatbps_TEXINFOS)
-	$(AM_V_MAKEINFO)$(MAKEINFO) --plaintext \
+	$(AM_V_MAKEINFO)$(MAKEINFO) \
 	  $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
-	  -o gatbps.txt $(srcdir)/gatbps.texi
+	  --plaintext --output=$@ $(srcdir)/gatbps.texi
 
 html-local: gatbps-no-split.html
 
