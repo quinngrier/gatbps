@@ -12,6 +12,7 @@
 
 @include CC0-1.0-copying.texi
 @include DATE.texi
+@include VERSION.texi
 @include math.texi
 
 @ifplaintext
