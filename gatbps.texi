@@ -40,6 +40,7 @@ GATBPS @value{VERSION},
 which was released on @value{DATE}@.
 
 @menu
+* Copyright Information::
 * Introduction::
 * Building and Installation::
 * Using @t{gatbps}::
@@ -49,6 +50,11 @@ which was released on @value{DATE}@.
 * Special File Index::
 @end menu
 @end ifnottex
+
+@node Copyright Information
+@unnumbered Copyright Information
+
+@include Copyright-Information.texi
 
 @include Introduction.texi
 
