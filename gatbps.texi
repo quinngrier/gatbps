@@ -5,6 +5,8 @@
 @documentencoding UTF-8
 @end ifclear
 
+@include VERSION.texi
+
 @settitle GATBPS
 
 @defindex sf
@@ -12,7 +14,6 @@
 
 @include CC0-1.0-copying.texi
 @include DATE.texi
-@include VERSION.texi
 @include math.texi
 
 @ifplaintext
