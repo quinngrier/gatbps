@@ -33,7 +33,7 @@
 
 @ifnottex
 @node Top
-@top GATBPS
+@top GATBPS @value{VERSION}
 
 This manual is for
 GATBPS @value{VERSION},
