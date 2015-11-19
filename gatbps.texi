@@ -9,12 +9,12 @@
 
 @settitle GATBPS @value{VERSION}
 
-@defindex sf
-@defindex tm
-
 @include CC0-1.0-copying.texi
 @include DATE.texi
 @include math.texi
+
+@defindex sf
+@defindex tm
 
 @ifplaintext
 @chapheading GATBPS @value{VERSION}
