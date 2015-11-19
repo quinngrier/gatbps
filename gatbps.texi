@@ -20,6 +20,7 @@
 
 @titlepage
 @title GATBPS
+@subtitle @value{DATE}
 @vskip 0pt plus 1filll
 @page
 @vskip 0pt plus 1filll
