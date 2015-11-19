@@ -64,6 +64,8 @@ gatbps.txt: gatbps.texi $(gatbps_TEXINFOS)
 	  $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
 	  -o gatbps.txt $(srcdir)/gatbps.texi
 
+html-local: gatbps-no-split.html
+
 .PHONY: txt
 txt: gatbps.txt
 
