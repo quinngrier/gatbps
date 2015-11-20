@@ -13,7 +13,7 @@ environment variable
 is set to a nonempty string
 @w{@i{S}@comma{}}
 then an instance of the
-@w{@t{--awk=}@i{S}}
+@w{@t{-@w{-}awk=}@i{S}}
 option is added to the
 arguments at a position that
 lies before all original arguments@.
@@ -29,7 +29,7 @@ environment variable
 is set to a nonempty string
 @w{@i{S}@comma{}}
 then an instance of the
-@w{@t{--sed=}@i{S}}
+@w{@t{-@w{-}sed=}@i{S}}
 option is added to the
 arguments at a position that
 lies before all original arguments@.
@@ -45,7 +45,7 @@ environment variable
 is set to a nonempty string
 @w{@i{S}@comma{}}
 then an instance of the
-@w{@t{--style=}@i{S}}
+@w{@t{-@w{-}style=}@i{S}}
 option is added to the
 arguments at a position that
 lies before all original arguments
@@ -66,7 +66,7 @@ environment variable
 is set to a nonempty string
 @w{@i{S}@comma{}}
 then an instance of the
-@w{@t{--style-stderr=}@i{S}}
+@w{@t{-@w{-}style-stderr=}@i{S}}
 option is added to the
 arguments at a position that
 lies before all original arguments
@@ -85,7 +85,7 @@ environment variable
 is set to a nonempty string
 @w{@i{S}@comma{}}
 then an instance of the
-@w{@t{--style-stdout=}@i{S}}
+@w{@t{-@w{-}style-stdout=}@i{S}}
 option is added to the
 arguments at a position that
 lies before all original arguments
