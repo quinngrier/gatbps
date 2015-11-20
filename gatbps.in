@@ -2718,6 +2718,22 @@ environment variable.
 Otherwise, the
 .nohy "\fBSTYLE_STDOUT\fR"
 environment variable has no effect.
+.TP
+.nohy "\fBTEXI2ANY\fR"
+.IPEZ
+If the
+.nohy "\fBTEXI2ANY\fR"
+environment variable
+is set to a nonempty string
+.nohy "\fIS\fR,"
+then an instance of the
+.nohy "\fB\-\-texi2any=\fIS\fR"
+option is added to the
+arguments at a position that
+lies before all original arguments.
+Otherwise, the
+.nohy "\fBTEXI2ANY\fR"
+environment variable has no effect.
 .SH "EXIT STATUS"
 .LP
 .nohy "\fBgatbps\fR"
