@@ -5,20 +5,20 @@
 is affected by the following environment variables:
 
 @table @asis
-@item @t{AWK}
+@item @w{@t{AWK}}
 @include ipez.texi
 If the
-@t{AWK}
+@w{@t{AWK}}
 environment variable
 is set to a nonempty string
-@i{S},
+@w{@i{S}@comma{}}
 then the
-@t{--awk=}@i{S}
+@w{@t{--awk=}@i{S}}
 option is added to the
 arguments at a position that
 lies before all original arguments@.
 Otherwise, the
-@t{AWK}
+@w{@t{AWK}}
 environment variable has no effect@.
 
 @item @t{SED}
