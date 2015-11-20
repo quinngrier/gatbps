@@ -1,7 +1,7 @@
 @node @t{gatbps} Environment Variables
 @chapter @t{gatbps} Environment Variables
 
-@t{gatbps}
+@w{@t{gatbps}}
 is affected by the following environment variables:
 
 @table @asis
