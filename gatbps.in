@@ -2830,6 +2830,25 @@ EOF1
         ;;
 
       #(
+        '--no-plain')
+
+          plain='no'
+          continue
+
+        ;;
+
+      #(
+        '--no-plain='*)
+
+          cat >&2 <<EOF1
+${fr2}gatbps!${fR2} the ${fB2}--no-plain${fR2} option must not have a value
+${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
+EOF1
+          exit '1'
+
+        ;;
+
+      #(
         '--no-print0')
 
           print0='no'
