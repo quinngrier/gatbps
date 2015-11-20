@@ -2688,12 +2688,12 @@ If the
 environment variable
 is set to a nonempty string
 .nohy "\fIS\fR,"
-then the
+then an instance of the
 .nohy "\fB\-\-style\-stderr=\fIS\fR"
 option is added to the
 arguments at a position that
 lies before all original arguments
-and after the option added by the
+and after any option added by the
 .nohy "\fBSTYLE\fR"
 environment variable.
 Otherwise, the
@@ -2707,12 +2707,12 @@ If the
 environment variable
 is set to a nonempty string
 .nohy "\fIS\fR,"
-then the
+then an instance of the
 .nohy "\fB\-\-style\-stdout=\fIS\fR"
 option is added to the
 arguments at a position that
 lies before all original arguments
-and after the option added by the
+and after any option added by the
 .nohy "\fBSTYLE\fR"
 environment variable.
 Otherwise, the

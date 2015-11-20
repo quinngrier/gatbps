@@ -65,12 +65,12 @@ If the
 environment variable
 is set to a nonempty string
 @w{@i{S}@comma{}}
-then the
+then an instance of the
 @w{@t{--style-stderr=}@i{S}}
 option is added to the
 arguments at a position that
 lies before all original arguments
-and after the option added by the
+and after any option added by the
 @w{@t{STYLE}}
 environment variable@.
 Otherwise, the
@@ -84,12 +84,12 @@ If the
 environment variable
 is set to a nonempty string
 @w{@i{S}@comma{}}
-then the
+then an instance of the
 @w{@t{--style-stdout=}@i{S}}
 option is added to the
 arguments at a position that
 lies before all original arguments
-and after the option added by the
+and after any option added by the
 @w{@t{STYLE}}
 environment variable@.
 Otherwise, the
