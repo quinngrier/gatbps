@@ -377,7 +377,7 @@ EOF1
           eval "${x}"
 
           shift
-          set 'x' '--all=' "-${rest}" "${@AT@}"
+          set 'x' "--all=${rest}" "${@AT@}"
           continue
 
         ;;
