@@ -58,42 +58,42 @@ Otherwise, the
 @w{@t{STYLE}}
 environment variable has no effect@.
 
-@item @t{STYLE_STDERR}
+@item @w{@t{STYLE_STDERR}}
 @include ipez.texi
 If the
-@t{STYLE_STDERR}
+@w{@t{STYLE_STDERR}}
 environment variable
 is set to a nonempty string
-@i{S},
+@w{@i{S}@comma{}}
 then the
-@t{--style-stderr=}@i{S}
+@w{@t{--style-stderr=}@i{S}}
 option is added to the
 arguments at a position that
 lies before all original arguments
 and after the option added by the
-@t{STYLE}
+@w{@t{STYLE}}
 environment variable@.
 Otherwise, the
-@t{STYLE_STDERR}
+@w{@t{STYLE_STDERR}}
 environment variable has no effect@.
 
-@item @t{STYLE_STDOUT}
+@item @w{@t{STYLE_STDOUT}}
 @include ipez.texi
 If the
-@t{STYLE_STDOUT}
+@w{@t{STYLE_STDOUT}}
 environment variable
 is set to a nonempty string
-@i{S},
+@w{@i{S}@comma{}}
 then the
-@t{--style-stdout=}@i{S}
+@w{@t{--style-stdout=}@i{S}}
 option is added to the
 arguments at a position that
 lies before all original arguments
 and after the option added by the
-@t{STYLE}
+@w{@t{STYLE}}
 environment variable@.
 Otherwise, the
-@t{STYLE_STDOUT}
+@w{@t{STYLE_STDOUT}}
 environment variable has no effect@.
 @end table
 @ifxml
