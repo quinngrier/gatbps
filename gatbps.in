@@ -206,7 +206,6 @@ verbose='no'
 detect_options='yes'
 
 exit_status='0'
-have_operands='0'
 
 ferror1='no'
 
@@ -3516,8 +3515,6 @@ EOF1
 
     ;;
   esac
-
-  have_operands='1'
 
   case "${1}" in
   #(
