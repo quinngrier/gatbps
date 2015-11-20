@@ -37,25 +37,25 @@ Otherwise, the
 @w{@t{SED}}
 environment variable has no effect@.
 
-@item @t{STYLE}
+@item @w{@t{STYLE}}
 @include ipez.texi
 If the
-@t{STYLE}
+@w{@t{STYLE}}
 environment variable
 is set to a nonempty string
-@i{S},
+@w{@i{S}@comma{}}
 then the
-@t{--style=}@i{S}
+@w{@t{--style=}@i{S}}
 option is added to the
 arguments at a position that
 lies before all original arguments
 and before the options added by the
-@t{STYLE_STDERR}
+@w{@t{STYLE_STDERR}}
 and
-@t{STYLE_STDOUT}
+@w{@t{STYLE_STDOUT}}
 environment variables@.
 Otherwise, the
-@t{STYLE}
+@w{@t{STYLE}}
 environment variable has no effect@.
 
 @item @t{STYLE_STDERR}
