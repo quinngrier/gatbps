@@ -260,6 +260,97 @@ EOF1
         ;;
 
       #(
+        '--all')
+
+          shift
+          set 'x' '--all=' "${@AT@}"
+          continue
+
+        ;;
+
+      #(
+        '--all='*)
+
+          x=`"${sed}" "
+s/'/'\\\\\\\\''/g
+1s/^--all=/prefix='/
+\\$s/\\$/'/
+" <<EOF1
+${1}
+EOF1
+`
+          case "${?}" in
+          #(
+            '0')
+              :
+            ;;
+          #(
+            *)
+              cat >&2 <<EOF1
+${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: a command substitution
+EOF1
+              exit '1'
+            ;;
+          esac
+          eval "${x}"
+
+          case "${prefix}" in
+          #(
+            *'/')
+              :
+            ;;
+          #(
+            ?*)
+              prefix="${prefix}/"
+            ;;
+          esac
+
+          shift
+
+          set "${prefix}sps.texi" "${@AT@}"
+          set "${prefix}shortcontents.texi" "${@AT@}"
+          set "${prefix}sh-form.sh" "${@AT@}"
+          set "${prefix}sbs.texi" "${@AT@}"
+          set "${prefix}rflo.texi" "${@AT@}"
+          set "${prefix}rcei.texi" "${@AT@}"
+          set "${prefix}rarrow.texi" "${@AT@}"
+          set "${prefix}prm.texi" "${@AT@}"
+          set "${prefix}nequ.texi" "${@AT@}"
+          set "${prefix}msign.texi" "${@AT@}"
+          set "${prefix}mdots.texi" "${@AT@}"
+          set "${prefix}mdot.texi" "${@AT@}"
+          set "${prefix}math.texi" "${@AT@}"
+          set "${prefix}lflo.texi" "${@AT@}"
+          set "${prefix}lequ.texi" "${@AT@}"
+          set "${prefix}lcei.texi" "${@AT@}"
+          set "${prefix}ipez.texi" "${@AT@}"
+          set "${prefix}gequ.texi" "${@AT@}"
+          set "${prefix}dslash.texi" "${@AT@}"
+          set "${prefix}contents.texi" "${@AT@}"
+          set "${prefix}bothcontents.texi" "${@AT@}"
+          set "${prefix}bdots.texi" "${@AT@}"
+          set "${prefix}VERSION.texi.in" "${@AT@}"
+          set "${prefix}VERSION.sh" "${@AT@}"
+          set "${prefix}DATE.texi.in" "${@AT@}"
+          set "${prefix}DATE.sh" "${@AT@}"
+          set "${prefix}DATE.ac" "${@AT@}"
+          set "${prefix}CC0-1.0.txt" "${@AT@}"
+          set "${prefix}CC0-1.0-file.txt" "${@AT@}"
+          set "${prefix}CC0-1.0-copying.texi" "${@AT@}"
+          set "${prefix}CC0-1.0-commit.txt" "${@AT@}"
+          set "${prefix}CC0-1.0-appendix.texi" "${@AT@}"
+          set "${prefix}CC0-1.0-AM-COPYRIGHT.am" "${@AT@}"
+          set "${prefix}CC0-1.0-AC-COPYRIGHT.ac" "${@AT@}"
+
+          set 'x' "${@AT@}"
+
+          continue
+
+        ;;
+
+      #(
         '--awk')
 
           case "${#}" in
