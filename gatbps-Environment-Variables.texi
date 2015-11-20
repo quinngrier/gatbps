@@ -21,20 +21,20 @@ Otherwise, the
 @w{@t{AWK}}
 environment variable has no effect@.
 
-@item @t{SED}
+@item @w{@t{SED}}
 @include ipez.texi
 If the
-@t{SED}
+@w{@t{SED}}
 environment variable
 is set to a nonempty string
-@i{S},
+@w{@i{S}@comma{}}
 then the
-@t{--sed=}@i{S}
+@w{@t{--sed=}@i{S}}
 option is added to the
 arguments at a position that
 lies before all original arguments@.
 Otherwise, the
-@t{SED}
+@w{@t{SED}}
 environment variable has no effect@.
 
 @item @t{STYLE}
