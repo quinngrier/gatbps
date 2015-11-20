@@ -8398,7 +8398,7 @@ EOF1
 
             shift
 
-            set "${prefix}CC0-1.0.txt" "${@AT@}"
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 
             set 'x' "${@AT@}"
 
@@ -8445,7 +8445,7 @@ EOF1
 
             shift
 
-            set "${prefix}CC0-1.0.txt" "${@AT@}"
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 
             set 'x' "${@AT@}"
 
@@ -8492,7 +8492,7 @@ EOF1
 
             shift
 
-            set "${prefix}CC0-1.0.txt" "${@AT@}"
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 
             set 'x' "${@AT@}"
 
@@ -8539,7 +8539,7 @@ EOF1
 
             shift
 
-            set "${prefix}CC0-1.0.txt" "${@AT@}"
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 
             set 'x' "${@AT@}"
 
@@ -8586,7 +8586,7 @@ EOF1
 
             shift
 
-            set "${prefix}CC0-1.0.txt" "${@AT@}"
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 
             set 'x' "${@AT@}"
 
@@ -8633,7 +8633,7 @@ EOF1
 
             shift
 
-            set "${prefix}CC0-1.0.txt" "${@AT@}"
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 
             set 'x' "${@AT@}"
 
@@ -8680,7 +8680,7 @@ EOF1
 
             shift
 
-            set "${prefix}CC0-1.0.txt" "${@AT@}"
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 
             set 'x' "${@AT@}"
 
@@ -8727,7 +8727,7 @@ EOF1
 
             shift
 
-            set "${prefix}CC0-1.0.txt" "${@AT@}"
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 
             set 'x' "${@AT@}"
 
@@ -8774,7 +8774,7 @@ EOF1
 
             shift
 
-            set "${prefix}CC0-1.0.txt" "${@AT@}"
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 
             set 'x' "${@AT@}"
 
@@ -8821,7 +8821,7 @@ EOF1
 
             shift
 
-            set "${prefix}CC0-1.0.txt" "${@AT@}"
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 
             set 'x' "${@AT@}"
 
@@ -8868,7 +8868,7 @@ EOF1
 
             shift
 
-            set "${prefix}CC0-1.0.txt" "${@AT@}"
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 
             set 'x' "${@AT@}"
 
@@ -8915,7 +8915,7 @@ EOF1
 
             shift
 
-            set "${prefix}CC0-1.0.txt" "${@AT@}"
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 
             set 'x' "${@AT@}"
 
@@ -8962,7 +8962,7 @@ EOF1
 
             shift
 
-            set "${prefix}CC0-1.0.txt" "${@AT@}"
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 
             set 'x' "${@AT@}"
 
@@ -9009,23 +9009,23 @@ EOF1
 
             shift
 
-            set "${prefix}sps.texi" "${@AT@}"
-            set "${prefix}sbs.texi" "${@AT@}"
-            set "${prefix}rflo.texi" "${@AT@}"
-            set "${prefix}rcei.texi" "${@AT@}"
-            set "${prefix}rarrow.texi" "${@AT@}"
-            set "${prefix}prm.texi" "${@AT@}"
-            set "${prefix}nequ.texi" "${@AT@}"
-            set "${prefix}msign.texi" "${@AT@}"
-            set "${prefix}mdots.texi" "${@AT@}"
-            set "${prefix}mdot.texi" "${@AT@}"
-            set "${prefix}lflo.texi" "${@AT@}"
-            set "${prefix}lequ.texi" "${@AT@}"
-            set "${prefix}lcei.texi" "${@AT@}"
-            set "${prefix}gequ.texi" "${@AT@}"
-            set "${prefix}dslash.texi" "${@AT@}"
-            set "${prefix}bdots.texi" "${@AT@}"
-            set "${prefix}CC0-1.0.txt" "${@AT@}"
+            set 'x' "${prefix}sps.texi" "${@AT@}"; shift
+            set 'x' "${prefix}sbs.texi" "${@AT@}"; shift
+            set 'x' "${prefix}rflo.texi" "${@AT@}"; shift
+            set 'x' "${prefix}rcei.texi" "${@AT@}"; shift
+            set 'x' "${prefix}rarrow.texi" "${@AT@}"; shift
+            set 'x' "${prefix}prm.texi" "${@AT@}"; shift
+            set 'x' "${prefix}nequ.texi" "${@AT@}"; shift
+            set 'x' "${prefix}msign.texi" "${@AT@}"; shift
+            set 'x' "${prefix}mdots.texi" "${@AT@}"; shift
+            set 'x' "${prefix}mdot.texi" "${@AT@}"; shift
+            set 'x' "${prefix}lflo.texi" "${@AT@}"; shift
+            set 'x' "${prefix}lequ.texi" "${@AT@}"; shift
+            set 'x' "${prefix}lcei.texi" "${@AT@}"; shift
+            set 'x' "${prefix}gequ.texi" "${@AT@}"; shift
+            set 'x' "${prefix}dslash.texi" "${@AT@}"; shift
+            set 'x' "${prefix}bdots.texi" "${@AT@}"; shift
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 
             set 'x' "${@AT@}"
 
@@ -9072,7 +9072,7 @@ EOF1
 
             shift
 
-            set "${prefix}CC0-1.0.txt" "${@AT@}"
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 
             set 'x' "${@AT@}"
 
@@ -9119,7 +9119,7 @@ EOF1
 
             shift
 
-            set "${prefix}CC0-1.0.txt" "${@AT@}"
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 
             set 'x' "${@AT@}"
 
@@ -9166,7 +9166,7 @@ EOF1
 
             shift
 
-            set "${prefix}CC0-1.0.txt" "${@AT@}"
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 
             set 'x' "${@AT@}"
 
@@ -9213,7 +9213,7 @@ EOF1
 
             shift
 
-            set "${prefix}CC0-1.0.txt" "${@AT@}"
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 
             set 'x' "${@AT@}"
 
@@ -9260,7 +9260,7 @@ EOF1
 
             shift
 
-            set "${prefix}CC0-1.0.txt" "${@AT@}"
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 
             set 'x' "${@AT@}"
 
@@ -9307,7 +9307,7 @@ EOF1
 
             shift
 
-            set "${prefix}CC0-1.0.txt" "${@AT@}"
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 
             set 'x' "${@AT@}"
 
@@ -9354,7 +9354,7 @@ EOF1
 
             shift
 
-            set "${prefix}CC0-1.0.txt" "${@AT@}"
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 
             set 'x' "${@AT@}"
 
@@ -9401,7 +9401,7 @@ EOF1
 
             shift
 
-            set "${prefix}CC0-1.0.txt" "${@AT@}"
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 
             set 'x' "${@AT@}"
 
@@ -9448,7 +9448,7 @@ EOF1
 
             shift
 
-            set "${prefix}CC0-1.0.txt" "${@AT@}"
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 
             set 'x' "${@AT@}"
 
@@ -9495,7 +9495,7 @@ EOF1
 
             shift
 
-            set "${prefix}CC0-1.0.txt" "${@AT@}"
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 
             set 'x' "${@AT@}"
 
@@ -9542,7 +9542,7 @@ EOF1
 
             shift
 
-            set "${prefix}CC0-1.0.txt" "${@AT@}"
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 
             set 'x' "${@AT@}"
 
