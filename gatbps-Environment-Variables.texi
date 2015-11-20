@@ -44,12 +44,12 @@ If the
 environment variable
 is set to a nonempty string
 @w{@i{S}@comma{}}
-then the
+then an instance of the
 @w{@t{--style=}@i{S}}
 option is added to the
 arguments at a position that
 lies before all original arguments
-and before the options added by the
+and before any options added by the
 @w{@t{STYLE_STDERR}}
 and
 @w{@t{STYLE_STDOUT}}

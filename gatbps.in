@@ -2667,12 +2667,12 @@ If the
 environment variable
 is set to a nonempty string
 .nohy "\fIS\fR,"
-then the
+then an instance of the
 .nohy "\fB\-\-style=\fIS\fR"
 option is added to the
 arguments at a position that
 lies before all original arguments
-and before the options added by the
+and before any options added by the
 .nohy "\fBSTYLE_STDERR\fR"
 and
 .nohy "\fBSTYLE_STDOUT\fR"
