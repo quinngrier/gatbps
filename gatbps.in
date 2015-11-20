@@ -296,6 +296,13 @@ EOF1
             ;;
           esac
 
+          case "${prefix}" in
+          #(
+            '-'*)
+              prefix="./${prefix}"
+            ;;
+          esac
+
           shift
 
           set "${prefix}sps.texi" "${@AT@}"
