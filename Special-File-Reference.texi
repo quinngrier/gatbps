@@ -3,8 +3,10 @@
 
 This section provides a short
 description of each special file@.
-Along with each short description is a reference to
-where the full description of the special file can be found@.
+Along with each
+short description is a
+reference to where the
+full description can be found@.
 If a special file supports comments,
 then the short description is also included
 in a comment near the top of the special file@.
