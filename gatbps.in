@@ -368,7 +368,7 @@ EOF1
 
           x=`"${sed}" "
 s/'/'\\\\\\\\''/g
-1s/^-./rest='/
+1s/^-./suffix='/
 \\$s/\\$/'/
 " <<EOF1
 ${1}
@@ -392,7 +392,7 @@ EOF1
           eval "${x}"
 
           shift
-          set 'x' "--all=${rest}" "${@AT@}"
+          set 'x' "--all=${suffix}" "${@AT@}"
           continue
 
         ;;
@@ -508,7 +508,7 @@ EOF1
 
           x=`"${sed}" "
 s/'/'\\\\\\\\''/g
-1s/^-./rest='/
+1s/^-./suffix='/
 \\$s/\\$/'/
 " <<EOF1
 ${1}
@@ -532,7 +532,7 @@ EOF1
           eval "${x}"
 
           shift
-          set 'x' '--dry-run' "-${rest}" "${@AT@}"
+          set 'x' '--dry-run' "-${suffix}" "${@AT@}"
           continue
 
         ;;
@@ -2824,7 +2824,7 @@ EOF1
 
           x=`"${sed}" "
 s/'/'\\\\\\\\''/g
-1s/^-./rest='/
+1s/^-./suffix='/
 \\$s/\\$/'/
 " <<EOF1
 ${1}
@@ -2848,7 +2848,7 @@ EOF1
           eval "${x}"
 
           shift
-          set 'x' '--no-dry-run' "-${rest}" "${@AT@}"
+          set 'x' '--no-dry-run' "-${suffix}" "${@AT@}"
           continue
 
         ;;
@@ -2886,7 +2886,7 @@ EOF1
 
           x=`"${sed}" "
 s/'/'\\\\\\\\''/g
-1s/^-./rest='/
+1s/^-./suffix='/
 \\$s/\\$/'/
 " <<EOF1
 ${1}
@@ -2910,7 +2910,7 @@ EOF1
           eval "${x}"
 
           shift
-          set 'x' '--no-plain' "-${rest}" "${@AT@}"
+          set 'x' '--no-plain' "-${suffix}" "${@AT@}"
           continue
 
         ;;
@@ -2948,7 +2948,7 @@ EOF1
 
           x=`"${sed}" "
 s/'/'\\\\\\\\''/g
-1s/^-./rest='/
+1s/^-./suffix='/
 \\$s/\\$/'/
 " <<EOF1
 ${1}
@@ -2972,7 +2972,7 @@ EOF1
           eval "${x}"
 
           shift
-          set 'x' '--no-print0' "-${rest}" "${@AT@}"
+          set 'x' '--no-print0' "-${suffix}" "${@AT@}"
           continue
 
         ;;
@@ -3010,7 +3010,7 @@ EOF1
 
           x=`"${sed}" "
 s/'/'\\\\\\\\''/g
-1s/^-./rest='/
+1s/^-./suffix='/
 \\$s/\\$/'/
 " <<EOF1
 ${1}
@@ -3034,7 +3034,7 @@ EOF1
           eval "${x}"
 
           shift
-          set 'x' '--no-recursive' "-${rest}" "${@AT@}"
+          set 'x' '--no-recursive' "-${suffix}" "${@AT@}"
           continue
 
         ;;
@@ -3072,7 +3072,7 @@ EOF1
 
           x=`"${sed}" "
 s/'/'\\\\\\\\''/g
-1s/^-./rest='/
+1s/^-./suffix='/
 \\$s/\\$/'/
 " <<EOF1
 ${1}
@@ -3096,7 +3096,7 @@ EOF1
           eval "${x}"
 
           shift
-          set 'x' '--no-verbose' "-${rest}" "${@AT@}"
+          set 'x' '--no-verbose' "-${suffix}" "${@AT@}"
           continue
 
         ;;
@@ -3134,7 +3134,7 @@ EOF1
 
           x=`"${sed}" "
 s/'/'\\\\\\\\''/g
-1s/^-./rest='/
+1s/^-./suffix='/
 \\$s/\\$/'/
 " <<EOF1
 ${1}
@@ -3158,7 +3158,7 @@ EOF1
           eval "${x}"
 
           shift
-          set 'x' '--plain' "-${rest}" "${@AT@}"
+          set 'x' '--plain' "-${suffix}" "${@AT@}"
           continue
 
         ;;
@@ -3196,7 +3196,7 @@ EOF1
 
           x=`"${sed}" "
 s/'/'\\\\\\\\''/g
-1s/^-./rest='/
+1s/^-./suffix='/
 \\$s/\\$/'/
 " <<EOF1
 ${1}
@@ -3220,7 +3220,7 @@ EOF1
           eval "${x}"
 
           shift
-          set 'x' '--print0' "-${rest}" "${@AT@}"
+          set 'x' '--print0' "-${suffix}" "${@AT@}"
           continue
 
         ;;
@@ -3258,7 +3258,7 @@ EOF1
 
           x=`"${sed}" "
 s/'/'\\\\\\\\''/g
-1s/^-./rest='/
+1s/^-./suffix='/
 \\$s/\\$/'/
 " <<EOF1
 ${1}
@@ -3282,7 +3282,7 @@ EOF1
           eval "${x}"
 
           shift
-          set 'x' '--recursive' "-${rest}" "${@AT@}"
+          set 'x' '--recursive' "-${suffix}" "${@AT@}"
           continue
 
         ;;
@@ -3505,7 +3505,7 @@ EOF1
 
           x=`"${sed}" "
 s/'/'\\\\\\\\''/g
-1s/^-./rest='/
+1s/^-./suffix='/
 \\$s/\\$/'/
 " <<EOF1
 ${1}
@@ -3529,7 +3529,7 @@ EOF1
           eval "${x}"
 
           shift
-          set 'x' '--verbose' "-${rest}" "${@AT@}"
+          set 'x' '--verbose' "-${suffix}" "${@AT@}"
           continue
 
         ;;
