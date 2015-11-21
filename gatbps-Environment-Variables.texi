@@ -49,7 +49,7 @@ then an instance of the
 option is added to the
 arguments at a position that
 lies before all original arguments
-and before any options added by the
+and before any arguments added by the
 @w{@t{STYLE_STDERR}}
 and
 @w{@t{STYLE_STDOUT}}
@@ -70,7 +70,7 @@ then an instance of the
 option is added to the
 arguments at a position that
 lies before all original arguments
-and after any option added by the
+and after any argument added by the
 @w{@t{STYLE}}
 environment variable@.
 Otherwise, the
@@ -89,7 +89,7 @@ then an instance of the
 option is added to the
 arguments at a position that
 lies before all original arguments
-and after any option added by the
+and after any argument added by the
 @w{@t{STYLE}}
 environment variable@.
 Otherwise, the

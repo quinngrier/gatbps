@@ -2672,7 +2672,7 @@ then an instance of the
 option is added to the
 arguments at a position that
 lies before all original arguments
-and before any options added by the
+and before any arguments added by the
 .nohy "\fBSTYLE_STDERR\fR"
 and
 .nohy "\fBSTYLE_STDOUT\fR"
@@ -2693,7 +2693,7 @@ then an instance of the
 option is added to the
 arguments at a position that
 lies before all original arguments
-and after any option added by the
+and after any argument added by the
 .nohy "\fBSTYLE\fR"
 environment variable.
 Otherwise, the
@@ -2712,7 +2712,7 @@ then an instance of the
 option is added to the
 arguments at a position that
 lies before all original arguments
-and after any option added by the
+and after any argument added by the
 .nohy "\fBSTYLE\fR"
 environment variable.
 Otherwise, the
