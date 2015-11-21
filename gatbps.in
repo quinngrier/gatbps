@@ -152,6 +152,14 @@ fb2='' # stderr style: blue
 fm2='' # stderr style: magenta
 fc2='' # stderr style: cyan
 
+case "${TEXI2ANY}" in
+#(
+  ?*)
+    set 'x' "--texi2any=${TEXI2ANY}" "${@AT@}"
+    shift
+  ;;
+esac
+
 case "${STYLE_STDOUT}" in
 #(
   ?*)
