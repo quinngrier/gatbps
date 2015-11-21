@@ -1,0 +1,431 @@
+@node Special File Reference
+@chapter Special File Reference
+
+This section provides a short
+description of each special file@.
+Along with each short description is a reference to
+where the full description of the special file can be found@.
+If a special file supports comments,
+then the short description is also included
+in a comment near the top of the special file@.
+The short descriptions can also be shown by using the
+@t{--help=}@i{S}
+option of
+@t{gatbps}@.
+
+@table @asis
+@sfindex @t{bdots.@:texi}
+@tmindex @t{@@bdots}
+@item @t{bdots.@:texi}
+@include ipez.texi
+The
+@t{bdots.@:texi}
+special file defines the
+@t{@@bdots@{@}}
+Texinfo macro,
+which is used to imitate the mathematical
+notation of @TeX{} in the other output formats:
+
+@example
+@@tex
+$1,@w{ }\ldots,@w{ }n$
+@@end@w{ }tex
+@@ifnottex
+1,@w{ }@@bdots@{@},@w{ }@@i@{n@}
+@@end@w{ }ifnottex
+@end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}@.
+
+@sfindex @t{dslash.@:texi}
+@tmindex @t{@@dslash}
+@item @t{dslash.@:texi}
+@include ipez.texi
+The
+@t{dslash.@:texi}
+special file defines the
+@t{@@dslash@{@}}
+Texinfo macro,
+which is used to imitate the mathematical
+notation of @TeX{} in the other output formats:
+
+@example
+@@tex
+$x@w{ }/@w{ }y$
+@@end@w{ }tex
+@@ifnottex
+@@i@{x@}@w{ }@@dslash@{@}@w{ }@@i@{y@}
+@@end@w{ }ifnottex
+@end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}@.
+
+@sfindex @t{gequ.@:texi}
+@tmindex @t{@@gequ}
+@item @t{gequ.@:texi}
+@include ipez.texi
+The
+@t{gequ.@:texi}
+special file defines the
+@t{@@gequ@{@}}
+Texinfo macro,
+which is used to imitate the mathematical
+notation of @TeX{} in the other output formats:
+
+@example
+@@tex
+$x@w{ }\ge@w{ }y$
+@@end@w{ }tex
+@@ifnottex
+@@i@{x@}@w{ }@@gequ@{@}@w{ }@@i@{y@}
+@@end@w{ }ifnottex
+@end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}@.
+
+@sfindex @t{lcei.@:texi}
+@tmindex @t{@@lcei}
+@item @t{lcei.@:texi}
+@include ipez.texi
+The
+@t{lcei.@:texi}
+special file defines the
+@t{@@lcei@{@}}
+Texinfo macro,
+which is used to imitate the mathematical
+notation of @TeX{} in the other output formats:
+
+@example
+@@tex
+$\lceil@w{ }x@w{ }\rceil$
+@@end@w{ }tex
+@@ifnottex
+@@lcei@{@}@@i@{x@}@@rcei@{@}
+@@end@w{ }ifnottex
+@end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}@.
+
+@sfindex @t{lequ.@:texi}
+@tmindex @t{@@lequ}
+@item @t{lequ.@:texi}
+@include ipez.texi
+The
+@t{lequ.@:texi}
+special file defines the
+@t{@@lequ@{@}}
+Texinfo macro,
+which is used to imitate the mathematical
+notation of @TeX{} in the other output formats:
+
+@example
+@@tex
+$x@w{ }\le@w{ }y$
+@@end@w{ }tex
+@@ifnottex
+@@i@{x@}@w{ }@@lequ@{@}@w{ }@@i@{y@}
+@@end@w{ }ifnottex
+@end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}@.
+
+@sfindex @t{lflo.@:texi}
+@tmindex @t{@@lflo}
+@item @t{lflo.@:texi}
+@include ipez.texi
+The
+@t{lflo.@:texi}
+special file defines the
+@t{@@lflo@{@}}
+Texinfo macro,
+which is used to imitate the mathematical
+notation of @TeX{} in the other output formats:
+
+@example
+@@tex
+$\lfloor@w{ }x@w{ }\rfloor$
+@@end@w{ }tex
+@@ifnottex
+@@lflo@{@}@@i@{x@}@@rflo@{@}
+@@end@w{ }ifnottex
+@end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}@.
+
+@sfindex @t{math.@:texi}
+@item @t{math.@:texi}
+@include ipez.texi
+The
+@t{math.@:texi}
+special file is a Texinfo file
+that includes every special file
+that defines a macro for imitating
+the mathematical notation of @TeX{} in
+the other output formats@.
+It can be generated under the effect of the
+@t{--recursive}
+option to generate all such special files at once@.
+
+For more information, @pxref{Mathematical Notation in Texinfo}@.
+
+@sfindex @t{mdot.@:texi}
+@tmindex @t{@@mdot}
+@item @t{mdot.@:texi}
+@include ipez.texi
+The
+@t{mdot.@:texi}
+special file defines the
+@t{@@mdot@{@}}
+Texinfo macro,
+which is used to imitate the mathematical
+notation of @TeX{} in the other output formats:
+
+@example
+@@tex
+$x@w{ }\cdot@w{ }y$
+@@end@w{ }tex
+@@ifnottex
+@@i@{x@}@w{ }@@mdot@{@}@w{ }@@i@{y@}
+@@end@w{ }ifnottex
+@end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}@.
+
+@sfindex @t{mdots.@:texi}
+@tmindex @t{@@mdots}
+@item @t{mdots.@:texi}
+@include ipez.texi
+The
+@t{mdots.@:texi}
+special file defines the
+@t{@@mdots@{@}}
+Texinfo macro,
+which is used to imitate the mathematical
+notation of @TeX{} in the other output formats:
+
+@example
+@@tex
+$1@w{ }+@w{ }\cdots@w{ }+@w{ }n$
+@@end@w{ }tex
+@@ifnottex
+1@w{ }+@w{ }@@mdots@{@}@w{ }+@w{ }@@i@{n@}
+@@end@w{ }ifnottex
+@end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}@.
+
+@sfindex @t{msign.@:texi}
+@tmindex @t{@@msign}
+@item @t{msign.@:texi}
+@include ipez.texi
+The
+@t{msign.@:texi}
+special file defines the
+@t{@@msign@{@}}
+Texinfo macro,
+which is used to imitate the mathematical
+notation of @TeX{} in the other output formats:
+
+@example
+@@tex
+$x@w{ }-@w{ }y$
+@@end@w{ }tex
+@@ifnottex
+@@i@{x@}@w{ }@@msign@{@}@w{ }@@i@{y@}
+@@end@w{ }ifnottex
+@end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}@.
+
+@sfindex @t{nequ.@:texi}
+@tmindex @t{@@nequ}
+@item @t{nequ.@:texi}
+@include ipez.texi
+The
+@t{nequ.@:texi}
+special file defines the
+@t{@@nequ@{@}}
+Texinfo macro,
+which is used to imitate the mathematical
+notation of @TeX{} in the other output formats:
+
+@example
+@@tex
+$x@w{ }\ne@w{ }y$
+@@end@w{ }tex
+@@ifnottex
+@@i@{x@}@w{ }@@nequ@{@}@w{ }@@i@{y@}
+@@end@w{ }ifnottex
+@end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}@.
+
+@sfindex @t{prm.@:texi}
+@tmindex @t{@@prm}
+@item @t{prm.@:texi}
+@include ipez.texi
+The
+@t{prm.@:texi}
+special file defines the
+@t{@@prm@{@}}
+Texinfo macro,
+which is used to imitate the mathematical
+notation of @TeX{} in the other output formats:
+
+@example
+@@tex
+$x'$
+@@end@w{ }tex
+@@ifnottex
+@@i@{x@}@@prm@{@}
+@@end@w{ }ifnottex
+@end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}@.
+
+@sfindex @t{rarrow.@:texi}
+@tmindex @t{@@rarrow}
+@item @t{rarrow.@:texi}
+@include ipez.texi
+The
+@t{rarrow.@:texi}
+special file defines the
+@t{@@rarrow@{@}}
+Texinfo macro,
+which is used to imitate the mathematical
+notation of @TeX{} in the other output formats:
+
+@example
+@@tex
+$P@w{ }\rightarrow@w{ }Q$
+@@end@w{ }tex
+@@ifnottex
+@@i@{P@}@w{ }@@rarrow@{@}@w{ }@@i@{Q@}
+@@end@w{ }ifnottex
+@end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}@.
+
+@sfindex @t{rcei.@:texi}
+@tmindex @t{@@rcei}
+@item @t{rcei.@:texi}
+@include ipez.texi
+The
+@t{rcei.@:texi}
+special file defines the
+@t{@@rcei@{@}}
+Texinfo macro,
+which is used to imitate the mathematical
+notation of @TeX{} in the other output formats:
+
+@example
+@@tex
+$\lceil@w{ }x@w{ }\rceil$
+@@end@w{ }tex
+@@ifnottex
+@@lcei@{@}@@i@{x@}@@rcei@{@}
+@@end@w{ }ifnottex
+@end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}@.
+
+@sfindex @t{rflo.@:texi}
+@tmindex @t{@@rflo}
+@item @t{rflo.@:texi}
+@include ipez.texi
+The
+@t{rflo.@:texi}
+special file defines the
+@t{@@rflo@{@}}
+Texinfo macro,
+which is used to imitate the mathematical
+notation of @TeX{} in the other output formats:
+
+@example
+@@tex
+$\lfloor@w{ }x@w{ }\rfloor$
+@@end@w{ }tex
+@@ifnottex
+@@lflo@{@}@@i@{x@}@@rflo@{@}
+@@end@w{ }ifnottex
+@end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}@.
+
+@sfindex @t{sbs.@:texi}
+@tmindex @t{@@sbs}
+@item @t{sbs.@:texi}
+@include ipez.texi
+The
+@t{sbs.@:texi}
+special file defines the
+@t{@@sbs@{}@i{L}@t{@comma{}@w{ }}@i{S}@t{@comma{}@w{ }}@i{R}@t{@}}
+Texinfo macro, which inserts
+@i{S}
+as a subscript in the output formats other than @TeX{}@.
+@i{L}
+and
+@i{R}
+are ignored except in Info and plain text,
+in which they are inserted to the left and right of
+@i{S},
+serving as parentheses@.
+This is used to imitate the mathematical
+notation of @TeX{} in the other output formats:
+
+@example
+@@tex
+$x_@{y@w{ }+@w{ }z_w@}$
+@@end@w{ }tex
+@@ifnottex
+@@i@{x@}@@sbs@{(,@@i@{y@}@w{ }+@w{ }@@i@{z@}@@sbs@{,@@i@{w@},@},)@}
+@@end@w{ }ifnottex
+@end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}@.
+
+@sfindex @t{sps.@:texi}
+@tmindex @t{@@sps}
+@item @t{sps.@:texi}
+@include ipez.texi
+The
+@t{sps.@:texi}
+special file defines the
+@t{@@sps@{}@i{L}@t{@comma{}@w{ }}@i{S}@t{@comma{}@w{ }}@i{R}@t{@}}
+Texinfo macro, which inserts
+@i{S}
+as a superscript in the output formats other than @TeX{}@.
+@i{L}
+and
+@i{R}
+are ignored except in Info and plain text,
+in which they are inserted to the left and right of
+@i{S},
+serving as parentheses@.
+This is used to imitate the mathematical
+notation of @TeX{} in the other output formats:
+
+@example
+@@tex
+$x^@{y@w{ }+@w{ }z^w@}$
+@@end@w{ }tex
+@@ifnottex
+@@i@{x@}@@sps@{(,@@i@{y@}@w{ }+@w{ }@@i@{z@}@@sps@{,@@i@{w@},@},)@}
+@@end@w{ }ifnottex
+@end example
+
+For more information, @pxref{Mathematical Notation in Texinfo}@.
+@end table
+@ifxml
+@ifnotxml
+@c
+@c The authors of this file have waived all copyright and
+@c related or neighboring rights to the extent permitted by
+@c law as described by the CC0 1.0 Universal Public Domain
+@c Dedication. You should have received a copy of the full
+@c dedication along with this file, typically as a file
+@c named <CC0-1.0.txt>. If not, it may be available at
+@c <https://creativecommons.org/publicdomain/zero/1.0/>.
+@c
+@end ifnotxml
+@end ifxml

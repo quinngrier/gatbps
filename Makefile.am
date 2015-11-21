@@ -21,6 +21,7 @@ gatbps_TEXINFOS += Copyright-Information.texi
 gatbps_TEXINFOS += DATE.texi
 gatbps_TEXINFOS += Introduction.texi
 gatbps_TEXINFOS += Mathematical-Notation-in-Texinfo.texi
+gatbps_TEXINFOS += Special-File-Reference.texi
 gatbps_TEXINFOS += Using-gatbps.texi
 gatbps_TEXINFOS += VERSION.texi
 gatbps_TEXINFOS += bdots.texi
