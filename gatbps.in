@@ -4637,6 +4637,19 @@ EOF1
 # VERSION file.
 #
 
+#
+# With LC_ALL=C, locale-aware programs use the C locale instead of the
+# current locale. This is generally the best approach for code that is
+# not deliberately designed to work in other locales. The C locale has
+# predictable behavior and is compatible with UTF-8. Other locales may
+# have surprising behavior. This affects many important programs, like
+# awk, grep, sed, and this shell instance itself. For more information,
+# see the C standard, the POSIX standard, and the GNU C Library manual.
+#
+
+LC_ALL='C'
+export 'LC_ALL'
+
 set -e
 trap 'rm -f VERSION.tmp' EXIT
 if git ls-files --error-unmatch VERSION.sh >/dev/null 2>&1; then
