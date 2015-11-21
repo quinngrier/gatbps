@@ -13,9 +13,9 @@ then its short description is also
 included in a comment at the top of the file@.
 The short descriptions can
 also be shown by using the
-@t{--help=}@i{S}
+@w{@t{--help=}@i{S}}
 option of
-@t{gatbps}@.
+@w{@t{gatbps}@.}
 
 @table @asis
 @sfindex @t{bdots.@:texi}
