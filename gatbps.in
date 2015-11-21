@@ -2084,8 +2084,8 @@ Along with each
 short description is a
 reference to where the
 full description can be found.
-If a
-special file supports comments,
+If a special file
+supports comments,
 then its short description is also
 included in a comment at the top of the file.
 The short descriptions can
