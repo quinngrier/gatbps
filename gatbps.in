@@ -147,6 +147,29 @@ case "${sed}" in
   ;;
 esac
 
+case "${texi2any}" in
+#(
+  'auto')
+    case "${texi2any_auto}" in
+    #(
+      ?*)
+        :
+      ;;
+    #(
+      *)
+        texi2any_auto='makeinfo'
+        for x in 'texi2any'; do
+          if "${x}" '--version' <'/dev/null' >'/dev/null' 2>&1; then
+            texi2any_auto="${x}"
+            break
+          fi
+        done
+      ;;
+    esac
+    texi2any="${texi2any_auto}"
+  ;;
+esac
+
 #
 # The isatty1 and isatty2 variables indicate whether standard output and
 # standard error are associated with terminals. Each starts off with the
