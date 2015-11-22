@@ -53,9 +53,6 @@ which was released on @value{DATE}@.
 @end menu
 @end ifnottex
 
-@node Copyright Information
-@unnumbered Copyright Information
-
 @include Copyright-Information.texi
 
 @include Introduction.texi

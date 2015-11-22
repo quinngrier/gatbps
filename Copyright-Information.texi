@@ -1,3 +1,10 @@
+@ifset fullmanual
+@node Copyright Information
+@unnumbered Copyright Information
+@end ifset
+@ifclear fullmanual
+@unnumbered Copyright Information
+@end ifclear
 @ifxml
 @ifnotxml
 @c
