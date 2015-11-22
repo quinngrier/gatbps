@@ -1,5 +1,3 @@
-@unnumbered Building and Installation
-
 @include Building-and-Installation.texi
 @ifxml
 @ifnotxml

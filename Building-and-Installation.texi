@@ -1,3 +1,11 @@
+@ifset fullmanual
+@node Building and Installation
+@chapter Building and Installation
+@end ifset
+@ifclear fullmanual
+@unnumbered Building and Installation
+@end ifclear
+
 GATBPS uses GNU Autotools for building and installation@.
 @ifxml
 @ifnotxml

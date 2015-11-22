@@ -60,9 +60,6 @@ which was released on @value{DATE}@.
 
 @include Introduction.texi
 
-@node Building and Installation
-@chapter Building and Installation
-
 @include Building-and-Installation.texi
 
 @include Using-gatbps.texi
