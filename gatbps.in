@@ -7641,6 +7641,7 @@ sed_auto=''
 #
 
 awk='auto'
+sed='sed'
 
 case "${awk}" in
 #(
@@ -7664,8 +7665,6 @@ case "${awk}" in
     awk="${awk_auto}"
   ;;
 esac
-
-sed='sed'
 
 #
 # The isatty1 and isatty2 variables indicate whether standard output and
