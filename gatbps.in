@@ -46,8 +46,28 @@ nl='
 #         ;;
 #       esac
 #
+# For sed:
+#
+#       case "${sed_auto}" in
+#       #(
+#         ?*)
+#           :
+#         ;;
+#       #(
+#         *)
+#           sed_auto='sed'
+#           for x in 'gsed'; do
+#             if "${x}" '' <'/dev/null' >'/dev/null' 2>&1; then
+#               sed_auto="${x}"
+#               break
+#             fi
+#           done
+#         ;;
+#       esac
+#
 
 awk_auto=''
+sed_auto=''
 
 awk=@AWK_DEFAULT_SH@
 
@@ -7563,8 +7583,28 @@ nl='
 #         ;;
 #       esac
 #
+# For sed:
+#
+#       case "${sed_auto}" in
+#       #(
+#         ?*)
+#           :
+#         ;;
+#       #(
+#         *)
+#           sed_auto='sed'
+#           for x in 'gsed'; do
+#             if "${x}" '' <'/dev/null' >'/dev/null' 2>&1; then
+#               sed_auto="${x}"
+#               break
+#             fi
+#           done
+#         ;;
+#       esac
+#
 
 awk_auto=''
+sed_auto=''
 
 awk='auto'
 
