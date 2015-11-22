@@ -3796,42 +3796,42 @@ EOF1
     ;;
   esac
 
-  case "${1}" in
-  #(
-    '-'*)
-      safe_1="./${1}"
-    ;;
-  #(
-    *)
-      safe_1="${1}"
-    ;;
-  esac
-
-  tmp0="${1}.gatbps0"
-  tmp1="${1}.gatbps1"
-  tmp2="${1}.gatbps2"
-  tmp3="${1}.gatbps3"
-  tmp4="${1}.gatbps4"
-  tmp5="${1}.gatbps5"
-  tmp6="${1}.gatbps6"
-  tmp7="${1}.gatbps7"
-  tmp8="${1}.gatbps8"
-  tmp9="${1}.gatbps9"
-
-  safe_tmp0="${safe_1}.gatbps0"
-  safe_tmp1="${safe_1}.gatbps1"
-  safe_tmp2="${safe_1}.gatbps2"
-  safe_tmp3="${safe_1}.gatbps3"
-  safe_tmp4="${safe_1}.gatbps4"
-  safe_tmp5="${safe_1}.gatbps5"
-  safe_tmp6="${safe_1}.gatbps6"
-  safe_tmp7="${safe_1}.gatbps7"
-  safe_tmp8="${safe_1}.gatbps8"
-  safe_tmp9="${safe_1}.gatbps9"
-
   case "${dry_run}" in
   #(
     'no')
+
+      case "${1}" in
+      #(
+        '-'*)
+          safe_1="./${1}"
+        ;;
+      #(
+        *)
+          safe_1="${1}"
+        ;;
+      esac
+
+      tmp0="${1}.gatbps0"
+      tmp1="${1}.gatbps1"
+      tmp2="${1}.gatbps2"
+      tmp3="${1}.gatbps3"
+      tmp4="${1}.gatbps4"
+      tmp5="${1}.gatbps5"
+      tmp6="${1}.gatbps6"
+      tmp7="${1}.gatbps7"
+      tmp8="${1}.gatbps8"
+      tmp9="${1}.gatbps9"
+
+      safe_tmp0="${safe_1}.gatbps0"
+      safe_tmp1="${safe_1}.gatbps1"
+      safe_tmp2="${safe_1}.gatbps2"
+      safe_tmp3="${safe_1}.gatbps3"
+      safe_tmp4="${safe_1}.gatbps4"
+      safe_tmp5="${safe_1}.gatbps5"
+      safe_tmp6="${safe_1}.gatbps6"
+      safe_tmp7="${safe_1}.gatbps7"
+      safe_tmp8="${safe_1}.gatbps8"
+      safe_tmp9="${safe_1}.gatbps9"
 
       delete_tmp='no'
 
