@@ -90,6 +90,8 @@ sed_auto=''
 texi2any_auto=''
 
 awk=@AWK_DEFAULT_SH@
+sed=@SED_DEFAULT_SH@
+texi2any=@TEXI2ANY_DEFAULT_SH@
 
 case "${awk}" in
 #(
@@ -113,10 +115,6 @@ case "${awk}" in
     awk="${awk_auto}"
   ;;
 esac
-
-sed=@SED_DEFAULT_SH@
-
-texi2any=@TEXI2ANY_DEFAULT_SH@
 
 #
 # The isatty1 and isatty2 variables indicate whether standard output and
