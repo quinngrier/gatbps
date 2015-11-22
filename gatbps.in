@@ -8262,7 +8262,7 @@ EOF1
                 ;;
               esac
 
-              "${texi2any}" --plaintext "${safe_tmp1}" >"${safe_tmp0}"
+              "${texi2any}" '--plaintext' "${safe_tmp1}" >"${safe_tmp0}"
               case "${?}" in
               #(
                 '0')
@@ -8372,7 +8372,7 @@ EOF1
               ;;
             esac
 
-            "${texi2any}" --plaintext "${safe_tmp2}" >"${safe_tmp1}"
+            "${texi2any}" '--plaintext' "${safe_tmp2}" >"${safe_tmp1}"
             case "${?}" in
             #(
               '0')
@@ -8491,7 +8491,7 @@ EOF1
                 ;;
               esac
 
-              "${texi2any}" --plaintext "${safe_tmp3}" >>"${safe_tmp2}"
+              "${texi2any}" '--plaintext' "${safe_tmp3}" >>"${safe_tmp2}"
               case "${?}" in
               #(
                 '0')
