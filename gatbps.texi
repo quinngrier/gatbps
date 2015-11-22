@@ -13,6 +13,8 @@
 @include DATE.texi
 @include math.texi
 
+@set fullmanual
+
 @defindex sf
 @defindex tm
 
