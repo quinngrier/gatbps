@@ -65,9 +65,29 @@ nl='
 #         ;;
 #       esac
 #
+# For texi2any:
+#
+#       case "${texi2any_auto}" in
+#       #(
+#         ?*)
+#           :
+#         ;;
+#       #(
+#         *)
+#           texi2any_auto='makeinfo'
+#           for x in 'texi2any'; do
+#             if "${x}" '--version' <'/dev/null' >'/dev/null' 2>&1; then
+#               texi2any_auto="${x}"
+#               break
+#             fi
+#           done
+#         ;;
+#       esac
+#
 
 awk_auto=''
 sed_auto=''
+texi2any_auto=''
 
 awk=@AWK_DEFAULT_SH@
 
