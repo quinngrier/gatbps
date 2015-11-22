@@ -124,6 +124,29 @@ case "${awk}" in
   ;;
 esac
 
+case "${sed}" in
+#(
+  'auto')
+    case "${sed_auto}" in
+    #(
+      ?*)
+        :
+      ;;
+    #(
+      *)
+        sed_auto='sed'
+        for x in 'gsed'; do
+          if "${x}" '' <'/dev/null' >'/dev/null' 2>&1; then
+            sed_auto="${x}"
+            break
+          fi
+        done
+      ;;
+    esac
+    sed="${sed_auto}"
+  ;;
+esac
+
 #
 # The isatty1 and isatty2 variables indicate whether standard output and
 # standard error are associated with terminals. Each starts off with the
@@ -7663,6 +7686,29 @@ case "${awk}" in
       ;;
     esac
     awk="${awk_auto}"
+  ;;
+esac
+
+case "${sed}" in
+#(
+  'auto')
+    case "${sed_auto}" in
+    #(
+      ?*)
+        :
+      ;;
+    #(
+      *)
+        sed_auto='sed'
+        for x in 'gsed'; do
+          if "${x}" '' <'/dev/null' >'/dev/null' 2>&1; then
+            sed_auto="${x}"
+            break
+          fi
+        done
+      ;;
+    esac
+    sed="${sed_auto}"
   ;;
 esac
 
