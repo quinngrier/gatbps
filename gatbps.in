@@ -3673,6 +3673,84 @@ EOF1
         ;;
 
       #(
+        '--texi2any')
+
+          case "${#}" in
+          #(
+            '1')
+              cat >&2 <<EOF1
+${fr2}gatbps!${fR2} the ${fB2}--texi2any${fR2} option must have a value
+${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
+EOF1
+              exit '1'
+            ;;
+          esac
+
+          x="${2}"
+          shift
+          shift
+          set 'x' "--texi2any=${x}" "${@AT@}"
+
+          continue
+
+        ;;
+
+      #(
+        '--texi2any='*)
+
+          x=`"${sed}" "
+s/'/'\\\\\\\\''/g
+1s/^--texi2any=/texi2any='/
+\\$s/\\$/'/
+" <<EOF1
+${1}
+EOF1
+`
+          case "${?}" in
+          #(
+            '0')
+              :
+            ;;
+          #(
+            *)
+              cat >&2 <<EOF1
+${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed to read from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and write to: a command substitution
+EOF1
+              exit '1'
+            ;;
+          esac
+          eval "${x}"
+
+          case "${texi2any}" in
+          #(
+            'auto')
+              case "${texi2any_auto}" in
+              #(
+                ?*)
+                  :
+                ;;
+              #(
+                *)
+                  texi2any_auto='makeinfo'
+                  for x in 'texi2any'; do
+                    if "${x}" '--version' <'/dev/null' >'/dev/null' 2>&1; then
+                      texi2any_auto="${x}"
+                      break
+                    fi
+                  done
+                ;;
+              esac
+              texi2any="${texi2any_auto}"
+            ;;
+          esac
+
+          continue
+
+        ;;
+
+      #(
         '--verbose')
 
           verbose='yes'
