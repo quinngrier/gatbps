@@ -1,10 +1,10 @@
 @node Introduction
 @chapter Introduction
 
-GATBPS (pronunciation: gat-bee-pee-ESS)
-is a software package that
-provides a program named @t{gatbps}
-that generates basic files for software packages@.
+GATBPS (pronunciation: gat-bee-pee-ESS) is
+a software package that provides a program named
+@w{@t{gatbps}}
+for generating basic files for software packages@.
 It was originally created to provide a small number
 of shell scripts to be used with the GNU Autotools build
 system, and its name stood for ``@b{G}NU @b{A}uto@b{t}ools
