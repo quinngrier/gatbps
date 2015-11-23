@@ -90,25 +90,31 @@ AS_HELP_STRING(   [--enable-sed=S],   [make gatbps default to --sed=S])],
   ]
 )
 
-texi2any_default="${TEXI2ANY}"
 AC_ARG_ENABLE(
-  [texi2any-auto],
-  [AS_HELP_STRING([--enable-texi2any-auto], [default to --texi2any=auto])],
+  [texi2any],
+  [AS_HELP_STRING([--disable-texi2any],    [equivalent to --enable-texi2any=no])
+AS_HELP_STRING(   [--enable-texi2any],     [equivalent to --enable-texi2any=yes])
+AS_HELP_STRING(   [--enable-texi2any=no],  [make gatbps default to --texi2any=auto])
+AS_HELP_STRING(   [--enable-texi2any=yes], [make gatbps default to --texi2any=S where S is appropriate for this particular system])
+AS_HELP_STRING(   [--enable-texi2any=S],   [make gatbps default to --texi2any=S])],
   [
-    case "${enableval}" in
+    case "${enable_texi2any}" in
     #(
-      'yes')
+      'no')
         texi2any_default='auto'
       ;;
     #(
-      'no')
+      'yes')
         texi2any_default="${TEXI2ANY}"
       ;;
     #(
       *)
-        AC_MSG_ERROR([invalid --enable-texi2any-auto value], [1])
+        texi2any_default="${enable_texi2any}"
       ;;
     esac
+  ],
+  [
+    texi2any_default='auto'
   ]
 )
 case "${texi2any_default}" in
@@ -118,7 +124,6 @@ case "${texi2any_default}" in
   ;;
 #(
   *)
-    AC_MSG_WARN([forcing --enable-texi2any-auto])
     texi2any_default='auto'
   ;;
 esac
