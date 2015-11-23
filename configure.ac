@@ -34,25 +34,31 @@ AC_ARG_VAR([TEXI2ANY], [the preferred texi2any executable])
 AC_CHECK_PROGS([TEXI2ANY], [texi2any makeinfo])
 AM_SUBST_NOTMAKE([TEXI2ANY])
 
-awk_default="${AWK}"
 AC_ARG_ENABLE(
-  [awk-auto],
-  [AS_HELP_STRING([--enable-awk-auto], [default to --awk=auto])],
+  [awk],
+  [AS_HELP_STRING([--disable-awk],    [equivalent to --enable-awk=no])
+AS_HELP_STRING(   [--enable-awk],     [equivalent to --enable-awk=yes])
+AS_HELP_STRING(   [--enable-awk=no],  [make gatbps default to --awk=auto])
+AS_HELP_STRING(   [--enable-awk=yes], [make gatbps default to --awk=S where S is appropriate for this particular system])
+AS_HELP_STRING(   [--enable-awk=S],   [make gatbps default to --awk=S])],
   [
-    case "${enableval}" in
+    case "${enable_awk}" in
     #(
-      'yes')
+      'no')
         awk_default='auto'
       ;;
     #(
-      'no')
+      'yes')
         awk_default="${AWK}"
       ;;
     #(
       *)
-        AC_MSG_ERROR([invalid --enable-awk-auto value], [1])
+        awk_default="${enable_awk}"
       ;;
     esac
+  ],
+  [
+    awk_default='auto'
   ]
 )
 
