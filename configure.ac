@@ -108,7 +108,16 @@ AS_HELP_STRING(   [--enable-texi2any=S],   [make gatbps default to --texi2any=S]
       ;;
     #(
       'yes')
-        texi2any_default="${TEXI2ANY}"
+        case "${TEXI2ANY}" in
+        #(
+          ?*)
+            texi2any_default="${TEXI2ANY}"
+          ;;
+        #(
+          *)
+            texi2any_default='auto'
+          ;;
+        esac
       ;;
     #(
       *)
@@ -120,16 +129,6 @@ AS_HELP_STRING(   [--enable-texi2any=S],   [make gatbps default to --texi2any=S]
     texi2any_default='auto'
   ]
 )
-case "${texi2any_default}" in
-#(
-  ?*)
-    :
-  ;;
-#(
-  *)
-    texi2any_default='auto'
-  ;;
-esac
 
 AWK_DEFAULT_SH=`sh "${srcdir}/sh-form.sh" <<EOF
 ${awk_default}
