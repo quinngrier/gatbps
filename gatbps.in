@@ -7687,7 +7687,7 @@ sed_auto=''
 #
 
 awk='auto'
-sed='sed'
+sed='auto'
 
 case "${awk}" in
 #(
