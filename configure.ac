@@ -62,25 +62,31 @@ AS_HELP_STRING(   [--enable-awk=S],   [make gatbps default to --awk=S])],
   ]
 )
 
-sed_default="${SED}"
 AC_ARG_ENABLE(
-  [sed-auto],
-  [AS_HELP_STRING([--enable-sed-auto], [default to --sed=auto])],
+  [sed],
+  [AS_HELP_STRING([--disable-sed],    [equivalent to --enable-sed=no])
+AS_HELP_STRING(   [--enable-sed],     [equivalent to --enable-sed=yes])
+AS_HELP_STRING(   [--enable-sed=no],  [make gatbps default to --sed=auto])
+AS_HELP_STRING(   [--enable-sed=yes], [make gatbps default to --sed=S where S is appropriate for this particular system])
+AS_HELP_STRING(   [--enable-sed=S],   [make gatbps default to --sed=S])],
   [
-    case "${enableval}" in
+    case "${enable_sed}" in
     #(
-      'yes')
+      'no')
         sed_default='auto'
       ;;
     #(
-      'no')
+      'yes')
         sed_default="${SED}"
       ;;
     #(
       *)
-        AC_MSG_ERROR([invalid --enable-sed-auto value], [1])
+        sed_default="${enable_sed}"
       ;;
     esac
+  ],
+  [
+    sed_default='auto'
   ]
 )
 
