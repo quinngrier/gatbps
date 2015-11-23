@@ -1,8 +1,8 @@
 @node Introduction
 @chapter Introduction
 
-GATBPS (pronunciation: gat-bee-pee-ESS) is
-a software package that provides a program named
+GATBPS (pronunciation: gat-bee-pee-ESS) is a
+software package that provides a program named
 @w{@t{gatbps}}
 for generating basic files for software packages@.
 GATBPS was originally created to provide a
