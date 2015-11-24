@@ -3587,7 +3587,7 @@ EOF1
         ;;
 
       #(
-        '--style-stderr='*)
+        '--style-stderr=never')
 
           fR2='' # stderr style: none
           fB2='' # stderr style: bold
@@ -3600,6 +3600,16 @@ EOF1
           fc2='' # stderr style: cyan
 
           continue
+
+        ;;
+
+      #(
+        '--style-stderr='*)
+
+          cat >&2 <<EOF1
+${fr2}gatbps!${fR2} invalid ${fB2}--style-stderr${fR2} value
+EOF1
+          exit '1'
 
         ;;
 
