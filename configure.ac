@@ -25,6 +25,8 @@ esac
 AC_ARG_VAR([AWK], [the command name for awk])
 AC_PROG_AWK
 
+AC_ARG_VAR([MAKEINFO], [the command name for makeinfo])
+
 AC_ARG_VAR([SED], [the command name for sed])
 AC_PROG_SED
 
