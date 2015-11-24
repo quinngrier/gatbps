@@ -699,7 +699,7 @@ EOF1
           #(
             '--help=')
               cat >&2 <<EOF1
-${fr2}gatbps!${fR2} the ${fB2}--help${fR2} option value must not be empty
+${fr2}gatbps!${fR2} ${fB2}--help${fR2} values must not be empty
 EOF1
               exit '1'
             ;;
