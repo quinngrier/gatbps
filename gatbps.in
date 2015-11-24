@@ -22,6 +22,14 @@ nl='
 '
 
 #
+# The detect_options variable is set to 'yes' if the arguments are being
+# scanned for options or 'no' if not. It starts off with the value 'yes'
+# and is set to 'no' upon finding the -- option.
+#
+
+detect_options='yes'
+
+#
 # For each program P of interest, the P_auto variable holds a command
 # name that resolves to the best available version of P. The variable
 # starts off as empty and is lazily set using the following code just
@@ -323,14 +331,6 @@ plain='no'
 print0='no'
 recursive='no'
 verbose='no'
-
-#
-# The detect_options variable is set to 'yes' if the arguments are being
-# scanned for options or 'no' if not. It starts off with the value 'yes'
-# and is set to 'no' upon finding the -- option.
-#
-
-detect_options='yes'
 
 exit_status='0'
 
@@ -7787,6 +7787,14 @@ nl='
 '
 
 #
+# The detect_options variable is set to 'yes' if the arguments are being
+# scanned for options or 'no' if not. It starts off with the value 'yes'
+# and is set to 'no' upon finding the -- option.
+#
+
+detect_options='yes'
+
+#
 # For each program P of interest, the P_auto variable holds a command
 # name that resolves to the best available version of P. The variable
 # starts off as empty and is lazily set using the following code just
@@ -7992,14 +8000,6 @@ fm2='' # stderr style: magenta
 fc2='' # stderr style: cyan
 
 keep='no'
-
-#
-# The detect_options variable is set to 'yes' if the arguments are being
-# scanned for options or 'no' if not. It starts off with the value 'yes'
-# and is set to 'no' upon finding the -- option.
-#
-
-detect_options='yes'
 
 set 'x' "${@AT@}"
 
