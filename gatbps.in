@@ -3978,7 +3978,7 @@ EOF1
   #(
     *)
       cat >&2 <<EOF1
-${fy2}gatbps:${fR2} each operand must not be empty
+${fy2}gatbps:${fR2} operands must not be empty
 ${fy2}gatbps:${fR2} operand failed
 EOF1
       exit_status='1'
