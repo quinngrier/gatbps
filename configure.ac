@@ -22,13 +22,13 @@ case "${interpval}" in
   ;;
 esac
 
-AC_ARG_VAR([AWK], [the preferred awk executable])
+AC_ARG_VAR([AWK], [the command name for awk])
 AC_PROG_AWK
 
-AC_ARG_VAR([SED], [the preferred sed executable])
+AC_ARG_VAR([SED], [the command name for sed])
 AC_PROG_SED
 
-AC_ARG_VAR([TEXI2ANY], [the preferred texi2any executable])
+AC_ARG_VAR([TEXI2ANY], [the command name for texi2any])
 AC_CHECK_PROGS([TEXI2ANY], [texi2any makeinfo])
 AM_SUBST_NOTMAKE([TEXI2ANY])
 
