@@ -227,7 +227,7 @@ AC_SUBST([AT], ['@'])
 
 AC_CONFIG_FILES([DATE.texi])
 AC_CONFIG_FILES([Makefile])
-AC_CONFIG_FILES([VERSION.texi])
+AC_CONFIG_FILES([VERSION.txi])
 AC_CONFIG_FILES([gatbps], [chmod +x gatbps])
 
 AC_OUTPUT
