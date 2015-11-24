@@ -367,7 +367,7 @@ while :; do
         '--='*)
 
           cat >&2 <<EOF1
-${fr2}gatbps!${fR2} the ${fB2}--${fR2} option must not have a value
+${fr2}gatbps!${fR2} ${fB2}--${fR2} must not have a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
           exit '1'
@@ -605,7 +605,7 @@ EOF1
         '--dry-run='*)
 
           cat >&2 <<EOF1
-${fr2}gatbps!${fR2} the ${fB2}--dry-run${fR2} option must not have a value
+${fr2}gatbps!${fR2} ${fB2}--dry-run${fR2} must not have a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
           exit '1'
@@ -2906,7 +2906,7 @@ EOF1
         '--man='*)
 
           cat >&2 <<EOF1
-${fr2}gatbps!${fR2} the ${fB2}--man${fR2} option must not have a value
+${fr2}gatbps!${fR2} ${fB2}--man${fR2} must not have a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
           exit '1'
@@ -2925,7 +2925,7 @@ EOF1
         '--no-dry-run='*)
 
           cat >&2 <<EOF1
-${fr2}gatbps!${fR2} the ${fB2}--no-dry-run${fR2} option must not have a value
+${fr2}gatbps!${fR2} ${fB2}--no-dry-run${fR2} must not have a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
           exit '1'
@@ -2987,7 +2987,7 @@ EOF1
         '--no-plain='*)
 
           cat >&2 <<EOF1
-${fr2}gatbps!${fR2} the ${fB2}--no-plain${fR2} option must not have a value
+${fr2}gatbps!${fR2} ${fB2}--no-plain${fR2} must not have a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
           exit '1'
@@ -3049,7 +3049,7 @@ EOF1
         '--no-print0='*)
 
           cat >&2 <<EOF1
-${fr2}gatbps!${fR2} the ${fB2}--no-print0${fR2} option must not have a value
+${fr2}gatbps!${fR2} ${fB2}--no-print0${fR2} must not have a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
           exit '1'
@@ -3111,7 +3111,7 @@ EOF1
         '--no-recursive='*)
 
           cat >&2 <<EOF1
-${fr2}gatbps!${fR2} the ${fB2}--no-recursive${fR2} option must not have a value
+${fr2}gatbps!${fR2} ${fB2}--no-recursive${fR2} must not have a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
           exit '1'
@@ -3173,7 +3173,7 @@ EOF1
         '--no-verbose='*)
 
           cat >&2 <<EOF1
-${fr2}gatbps!${fR2} the ${fB2}--no-verbose${fR2} option must not have a value
+${fr2}gatbps!${fR2} ${fB2}--no-verbose${fR2} must not have a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
           exit '1'
@@ -3235,7 +3235,7 @@ EOF1
         '--plain='*)
 
           cat >&2 <<EOF1
-${fr2}gatbps!${fR2} the ${fB2}--plain${fR2} option must not have a value
+${fr2}gatbps!${fR2} ${fB2}--plain${fR2} must not have a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
           exit '1'
@@ -3297,7 +3297,7 @@ EOF1
         '--print0='*)
 
           cat >&2 <<EOF1
-${fr2}gatbps!${fR2} the ${fB2}--print0${fR2} option must not have a value
+${fr2}gatbps!${fR2} ${fB2}--print0${fR2} must not have a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
           exit '1'
@@ -3359,7 +3359,7 @@ EOF1
         '--recursive='*)
 
           cat >&2 <<EOF1
-${fr2}gatbps!${fR2} the ${fB2}--recursive${fR2} option must not have a value
+${fr2}gatbps!${fR2} ${fB2}--recursive${fR2} must not have a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
           exit '1'
@@ -3762,7 +3762,7 @@ EOF1
         '--verbose='*)
 
           cat >&2 <<EOF1
-${fr2}gatbps!${fR2} the ${fB2}--verbose${fR2} option must not have a value
+${fr2}gatbps!${fR2} ${fB2}--verbose${fR2} must not have a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
           exit '1'
@@ -3850,7 +3850,7 @@ EOF1
         '--version='*)
 
           cat >&2 <<EOF1
-${fr2}gatbps!${fR2} the ${fB2}--version${fR2} option must not have a value
+${fr2}gatbps!${fR2} ${fB2}--version${fR2} must not have a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
           exit '1'
@@ -8032,7 +8032,7 @@ while :; do
         '--='*)
 
           cat >&2 <<EOF2
-${fr2}sh-form.sh!${fR2} the ${fB2}--${fR2} option must not have a value
+${fr2}sh-form.sh!${fR2} ${fB2}--${fR2} must not have a value
 ${fr2}sh-form.sh!${fR2} try ${fB2}sh sh-form.sh --help${fR2} for more information
 EOF2
           exit '1'
