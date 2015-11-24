@@ -32,7 +32,6 @@ AC_PROG_SED
 
 AC_ARG_VAR([TEXI2ANY], [the command name for texi2any])
 AC_CHECK_PROGS([TEXI2ANY], [texi2any makeinfo])
-AM_SUBST_NOTMAKE([TEXI2ANY])
 
 AC_ARG_ENABLE(
   [awk],
