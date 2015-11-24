@@ -24,7 +24,6 @@ esac
 
 AC_ARG_VAR([AWK], [the preferred awk executable])
 AC_PROG_AWK
-AM_SUBST_NOTMAKE([AWK])
 
 AC_ARG_VAR([SED], [the preferred sed executable])
 AC_PROG_SED
