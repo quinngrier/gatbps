@@ -707,7 +707,7 @@ EOF1
           #(
             '--help='*'/')
               cat >&2 <<EOF1
-${fr2}gatbps!${fR2} the ${fB2}--help${fR2} option value must not end with a slash
+${fr2}gatbps!${fR2} ${fB2}--help${fR2} values must not end with slashes
 EOF1
               exit '1'
             ;;
