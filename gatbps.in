@@ -3990,7 +3990,7 @@ EOF1
   #(
     *'/')
       cat >&2 <<EOF1
-${fy2}gatbps:${fR2} each operand must not end with a slash
+${fy2}gatbps:${fR2} operands must not end with slashes
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
       exit_status='1'
