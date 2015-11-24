@@ -27,7 +27,6 @@ AC_PROG_AWK
 
 AC_ARG_VAR([SED], [the preferred sed executable])
 AC_PROG_SED
-AM_SUBST_NOTMAKE([SED])
 
 AC_ARG_VAR([TEXI2ANY], [the preferred texi2any executable])
 AC_CHECK_PROGS([TEXI2ANY], [texi2any makeinfo])
