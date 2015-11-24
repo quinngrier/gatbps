@@ -453,7 +453,7 @@ EOF1
           set "${prefix}contents.texi" "${@AT@}"
           set "${prefix}bothcontents.texi" "${@AT@}"
           set "${prefix}bdots.texi" "${@AT@}"
-          set "${prefix}VERSION.texi.in" "${@AT@}"
+          set "${prefix}VERSION.txi.in" "${@AT@}"
           set "${prefix}VERSION.sh" "${@AT@}"
           set "${prefix}DATE.texi.in" "${@AT@}"
           set "${prefix}DATE.sh" "${@AT@}"
@@ -1020,9 +1020,9 @@ EOF1
             ;;
 
           #(
-            '--help=VERSION.texi.in'|'--help='*'/VERSION.texi.in')
+            '--help=VERSION.txi.in'|'--help='*'/VERSION.txi.in')
               cat <<EOF1
-Special file: ${fB1}VERSION.texi.in${fR1}
+Special file: ${fB1}VERSION.txi.in${fR1}
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
@@ -4973,7 +4973,7 @@ EOF1
           ;;
 
         #(
-          'no,VERSION.texi.in'|'no,'*'/VERSION.texi.in')
+          'no,VERSION.txi.in'|'no,'*'/VERSION.txi.in')
             cat >"${safe_1}" <<'EOF1'
 @AT@ifxml
 @AT@ifnotxml
@@ -4984,7 +4984,7 @@ EOF1
 @AT@c is being used, your changes may be automatically lost.
 @AT@c A short description of this file follows.
 @AT@c
-@AT@c Special file: VERSION.texi.in
+@AT@c Special file: VERSION.txi.in
 @AT@c
 @AT@c For more information, see the GATBPS manual.
 @AT@c
@@ -9025,19 +9025,19 @@ EOF1
           ;;
 
         #(
-          'VERSION.texi.in'|*'/VERSION.texi.in')
+          'VERSION.txi.in'|*'/VERSION.txi.in')
 
             case "${1}" in
             #(
-              'VERSION.texi.in')
+              'VERSION.txi.in')
                 prefix=''
               ;;
             #(
-              *'/VERSION.texi.in')
+              *'/VERSION.txi.in')
                 x=`"${sed}" "
 s/'/'\\\\\\\\''/g
 1s/^/prefix='/
-\\$s/VERSION.texi.in\\$/'/
+\\$s/VERSION.txi.in\\$/'/
 " <<EOF1
 ${1}
 EOF1
