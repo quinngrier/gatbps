@@ -3676,7 +3676,7 @@ EOF1
         ;;
 
       #(
-        '--style-stdout='*)
+        '--style-stdout=never')
 
           fR1='' # stdout style: none
           fB1='' # stdout style: bold
@@ -3689,6 +3689,16 @@ EOF1
           fc1='' # stdout style: cyan
 
           continue
+
+        ;;
+
+      #(
+        '--style-stdout='*)
+
+          cat >&2 <<EOF1
+${fr2}gatbps!${fR2} invalid ${fB2}--style-stdout${fR2} value
+EOF1
+          exit '1'
 
         ;;
 
