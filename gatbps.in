@@ -3506,11 +3506,21 @@ EOF1
         ;;
 
       #(
-        '--style='*)
+        '--style=never')
 
           shift
           set 'x' '--style-stderr=never' '--style-stdout=never' "${@AT@}"
           continue
+
+        ;;
+
+      #(
+        '--style='*)
+
+          cat >&2 <<EOF1
+${fr2}gatbps!${fR2} invalid ${fB2}--style${fR2} value
+EOF1
+          exit '1'
 
         ;;
 
