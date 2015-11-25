@@ -4729,7 +4729,8 @@ dnl
 
 m4_define([AC_PACKAGE_DATE],
           m4_esyscmd_s([sh DATE.sh])m4_assert(m4_sysval == 0))
-AC_DEFINE([PACKAGE_DATE], ["AC_PACKAGE_DATE"],
+AC_DEFINE([PACKAGE_DATE],
+          ["AC_PACKAGE_DATE"],
           [Define to the date of this package.])
 PACKAGE_DATE='AC_PACKAGE_DATE'
 AC_SUBST([PACKAGE_DATE])
