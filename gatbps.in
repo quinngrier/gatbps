@@ -4735,6 +4735,14 @@ AC_DEFINE([PACKAGE_DATE],
 PACKAGE_DATE='AC_PACKAGE_DATE'
 AC_SUBST([PACKAGE_DATE])
 
+m4_define([AC_PACKAGE_YEAR],
+          m4_substr(AC_PACKAGE_DATE, [0], [4]))
+AC_DEFINE([PACKAGE_YEAR],
+          [AC_PACKAGE_YEAR],
+          [Define to the year of this package.])
+PACKAGE_YEAR='AC_PACKAGE_YEAR'
+AC_SUBST([PACKAGE_YEAR])
+
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by
