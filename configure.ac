@@ -36,11 +36,16 @@ AC_CHECK_PROGS([TEXI2ANY], [texi2any makeinfo])
 AC_ARG_ENABLE(
   [awk],
   [
-AS_HELP_STRING([--disable-awk],    [equivalent to --enable-awk=no (default)])
-AS_HELP_STRING([--enable-awk],     [equivalent to --enable-awk=yes])
-AS_HELP_STRING([--enable-awk=no],  [make gatbps default to --awk=auto])
-AS_HELP_STRING([--enable-awk=yes], [make gatbps default to --awk=S where S is the best choice for this particular system])
-AS_HELP_STRING([--enable-awk=S],   [make gatbps default to --awk=S])],
+AS_HELP_STRING([--disable-awk],
+               [equivalent to --enable-awk=no (default)])
+AS_HELP_STRING([--enable-awk],
+               [equivalent to --enable-awk=yes])
+AS_HELP_STRING([--enable-awk=no],
+               [make gatbps default to --awk=auto])
+AS_HELP_STRING([--enable-awk=yes],
+               [make gatbps default to --awk=S where S is the best choice for this particular system])
+AS_HELP_STRING([--enable-awk=S],
+               [make gatbps default to --awk=S])],
   [
     case "${enable_awk}" in
     #(
@@ -65,11 +70,16 @@ AS_HELP_STRING([--enable-awk=S],   [make gatbps default to --awk=S])],
 AC_ARG_ENABLE(
   [sed],
   [
-AS_HELP_STRING([--disable-sed],    [equivalent to --enable-sed=no (default)])
-AS_HELP_STRING([--enable-sed],     [equivalent to --enable-sed=yes])
-AS_HELP_STRING([--enable-sed=no],  [make gatbps default to --sed=auto])
-AS_HELP_STRING([--enable-sed=yes], [make gatbps default to --sed=S where S is the best choice for this particular system])
-AS_HELP_STRING([--enable-sed=S],   [make gatbps default to --sed=S])],
+AS_HELP_STRING([--disable-sed],
+               [equivalent to --enable-sed=no (default)])
+AS_HELP_STRING([--enable-sed],
+               [equivalent to --enable-sed=yes])
+AS_HELP_STRING([--enable-sed=no],
+               [make gatbps default to --sed=auto])
+AS_HELP_STRING([--enable-sed=yes],
+               [make gatbps default to --sed=S where S is the best choice for this particular system])
+AS_HELP_STRING([--enable-sed=S],
+               [make gatbps default to --sed=S])],
   [
     case "${enable_sed}" in
     #(
@@ -94,11 +104,16 @@ AS_HELP_STRING([--enable-sed=S],   [make gatbps default to --sed=S])],
 AC_ARG_ENABLE(
   [texi2any],
   [
-AS_HELP_STRING([--disable-texi2any],    [equivalent to --enable-texi2any=no (default)])
-AS_HELP_STRING([--enable-texi2any],     [equivalent to --enable-texi2any=yes])
-AS_HELP_STRING([--enable-texi2any=no],  [make gatbps default to --texi2any=auto])
-AS_HELP_STRING([--enable-texi2any=yes], [make gatbps default to --texi2any=S where S is the best choice for this particular system])
-AS_HELP_STRING([--enable-texi2any=S],   [make gatbps default to --texi2any=S])],
+AS_HELP_STRING([--disable-texi2any],
+               [equivalent to --enable-texi2any=no (default)])
+AS_HELP_STRING([--enable-texi2any],
+               [equivalent to --enable-texi2any=yes])
+AS_HELP_STRING([--enable-texi2any=no],
+               [make gatbps default to --texi2any=auto])
+AS_HELP_STRING([--enable-texi2any=yes],
+               [make gatbps default to --texi2any=S where S is the best choice for this particular system])
+AS_HELP_STRING([--enable-texi2any=S],
+               [make gatbps default to --texi2any=S])],
   [
     case "${enable_texi2any}" in
     #(
