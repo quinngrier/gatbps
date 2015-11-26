@@ -4490,8 +4490,18 @@ EOF1
 @AT@c
 @AT@end ifnotxml
 @AT@end ifxml
+@AT@ifdocbook
 @AT@copying
+The authors of this manual have waived all copyright and
+related or neighboring rights to the extent permitted by
+law as described by the CC0 1.0 Universal Public Domain
+Dedication. For the full dedication, see the appendix
+labeled by the CC0 node. It may also be available at
+@AT@url{https://creativecommons.org/publicdomain/zero/1.0/}.
+@AT@end copying
+@AT@end ifdocbook
 @AT@ifhtml
+@AT@copying
 @AT@*
 The authors of this manual have waived all copyright and
 related or neighboring rights to the extent permitted by
@@ -4500,16 +4510,50 @@ Dedication. For the full dedication, see the appendix
 labeled by the CC0 node. It may also be available at
 <https://creativecommons.org/publicdomain/zero/1.0/>.
 @AT@*
+@AT@end copying
 @AT@end ifhtml
-@AT@ifnothtml
+@AT@ifinfo
+@AT@ifnotplaintext
+@AT@copying
+The authors of this manual have waived all copyright and
+related or neighboring rights to the extent permitted by
+law as described by the CC0 1.0 Universal Public Domain
+Dedication. For the full dedication, see the appendix
+labeled by the CC0 node. It may also be available at
+@AT@url{https://creativecommons.org/publicdomain/zero/1.0/}.
+@AT@end copying
+@AT@end ifnotplaintext
+@AT@end ifinfo
+@AT@ifplaintext
+@AT@copying
 The authors of this manual have waived all copyright and
 related or neighboring rights to the extent permitted by
 law as described by the CC0 1.0 Universal Public Domain
 Dedication. For the full dedication, @AT@pxref{CC0}.
 It may also be available at
 @AT@url{https://creativecommons.org/publicdomain/zero/1.0/}.
-@AT@end ifnothtml
 @AT@end copying
+@AT@end ifplaintext
+@AT@iftex
+@AT@copying
+The authors of this manual have waived all copyright and
+related or neighboring rights to the extent permitted by
+law as described by the CC0 1.0 Universal Public Domain
+Dedication. For the full dedication, @AT@pxref{CC0}.
+It may also be available at
+@AT@url{https://creativecommons.org/publicdomain/zero/1.0/}.
+@AT@end copying
+@AT@end iftex
+@AT@ifxml
+@AT@copying
+The authors of this manual have waived all copyright and
+related or neighboring rights to the extent permitted by
+law as described by the CC0 1.0 Universal Public Domain
+Dedication. For the full dedication, see the appendix
+labeled by the CC0 node. It may also be available at
+@AT@url{https://creativecommons.org/publicdomain/zero/1.0/}.
+@AT@end copying
+@AT@end ifxml
 @AT@ifxml
 @AT@ifnotxml
 @AT@c
