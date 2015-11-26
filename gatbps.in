@@ -4795,6 +4795,14 @@ AC_DEFINE([PACKAGE_MONTH],
 PACKAGE_MONTH='AC_PACKAGE_MONTH'
 AC_SUBST([PACKAGE_MONTH])
 
+m4_define([AC_PACKAGE_DAY],
+          m4_bregexp(AC_PACKAGE_DATE, [[0-9]*-[0-9]*-0?\([0-9]*\)], [\1]))
+AC_DEFINE([PACKAGE_DAY],
+          [AC_PACKAGE_DAY],
+          [Define to the day of this package.])
+PACKAGE_DAY='AC_PACKAGE_DAY'
+AC_SUBST([PACKAGE_DAY])
+
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by
