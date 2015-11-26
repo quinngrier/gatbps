@@ -40,6 +40,10 @@
 This manual is for
 GATBPS @value{VERSION},
 which was released on @value{DATE}@.
+@ifplaintext
+
+@insertcopying
+@end ifplaintext
 
 @menu
 * Copyright Information::
