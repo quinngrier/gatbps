@@ -4780,7 +4780,7 @@ PACKAGE_DATE='AC_PACKAGE_DATE'
 AC_SUBST([PACKAGE_DATE])
 
 m4_define([AC_PACKAGE_YEAR],
-          m4_substr(AC_PACKAGE_DATE, [0], [4]))
+          m4_bregexp(AC_PACKAGE_DATE, [\([0-9]*\)], [\1]))
 AC_DEFINE([PACKAGE_YEAR],
           [AC_PACKAGE_YEAR],
           [Define to the year of this package.])
