@@ -4782,7 +4782,7 @@ AC_SUBST([PACKAGE_DATE])
 m4_define([AC_PACKAGE_YEAR],
           m4_bregexp(AC_PACKAGE_DATE, [\+?0*\([^-]+\)], [\1]))
 AC_DEFINE([PACKAGE_YEAR],
-          [AC_PACKAGE_YEAR],
+          [(AC_PACKAGE_YEAR)],
           [Define to the year of this package.])
 PACKAGE_YEAR='AC_PACKAGE_YEAR'
 AC_SUBST([PACKAGE_YEAR])
@@ -4790,7 +4790,7 @@ AC_SUBST([PACKAGE_YEAR])
 m4_define([AC_PACKAGE_MONTH],
           m4_bregexp(AC_PACKAGE_DATE, [[^-]*-0?\([^-]*\)], [\1]))
 AC_DEFINE([PACKAGE_MONTH],
-          [AC_PACKAGE_MONTH],
+          [(AC_PACKAGE_MONTH)],
           [Define to the month of this package.])
 PACKAGE_MONTH='AC_PACKAGE_MONTH'
 AC_SUBST([PACKAGE_MONTH])
@@ -4798,7 +4798,7 @@ AC_SUBST([PACKAGE_MONTH])
 m4_define([AC_PACKAGE_DAY],
           m4_bregexp(AC_PACKAGE_DATE, [.*-0?\(.*\)], [\1]))
 AC_DEFINE([PACKAGE_DAY],
-          [AC_PACKAGE_DAY],
+          [(AC_PACKAGE_DAY)],
           [Define to the day of this package.])
 PACKAGE_DAY='AC_PACKAGE_DAY'
 AC_SUBST([PACKAGE_DAY])
