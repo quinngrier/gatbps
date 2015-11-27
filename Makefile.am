@@ -53,6 +53,11 @@ info_TEXINFOS += gatbps.texi
 man_MANS =
 man_MANS += gatbps.1
 
+gatbps-ascii.txt: gatbps.texi $(gatbps_TEXINFOS)
+	$(AM_V_MAKEINFO)$(MAKEINFO) --plaintext \
+	  $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) -I $(srcdir) \
+	  -D insertascii -o $@ $(srcdir)/gatbps.texi
+
 gatbps-no-split.html: gatbps.texi $(gatbps_TEXINFOS)
 	$(AM_V_MAKEINFO)$(MAKEINFOHTML) \
 	  $(AM_MAKEINFOHTMLFLAGS) $(MAKEINFOFLAGS) -I $(srcdir) \
