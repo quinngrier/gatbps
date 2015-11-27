@@ -338,7 +338,9 @@ recursive='no'
 utf8='no'
 verbose='no'
 
-utf8_args='-D insertascii'
+utf8_args_yes=''
+utf8_args_no='-D insertascii'
+utf8_args="${utf8_args_no}"
 
 exit_status='0'
 
@@ -3789,7 +3791,7 @@ EOF1
         '--utf8')
 
           utf8='yes'
-          utf8_args=''
+          utf8_args="${utf8_args_yes}"
           continue
 
         ;;
