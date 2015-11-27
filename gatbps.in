@@ -8634,7 +8634,9 @@ EOF1
 BEGIN {
   print "\\input texinfo"
   print "@AT@setfilename foo"
+  print "@AT@ifclear insertascii"
   print "@AT@documentencoding UTF-8"
+  print "@AT@end ifclear"
   print "@AT@settitle foo"
 }
 {
@@ -8744,7 +8746,9 @@ EOF1
 BEGIN {
   print "\\input texinfo"
   print "@AT@setfilename foo"
+  print "@AT@ifclear insertascii"
   print "@AT@documentencoding UTF-8"
+  print "@AT@end ifclear"
   print "@AT@settitle foo"
 }
 {
@@ -8863,7 +8867,9 @@ EOF1
 BEGIN {
   print "\\input texinfo"
   print "@AT@setfilename foo"
+  print "@AT@ifclear insertascii"
   print "@AT@documentencoding UTF-8"
+  print "@AT@end ifclear"
   print "@AT@settitle foo"
 }
 {
