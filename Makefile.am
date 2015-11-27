@@ -11,6 +11,7 @@ MOSTLYCLEANFILES += gatbps-no-split.html
 MOSTLYCLEANFILES += gatbps.1
 MOSTLYCLEANFILES += gatbps.info
 MOSTLYCLEANFILES += gatbps.txt
+MOSTLYCLEANFILES += gatbps.xml
 
 bin_SCRIPTS =
 bin_SCRIPTS += gatbps
@@ -71,6 +72,14 @@ gatbps.txt: gatbps.texi $(gatbps_TEXINFOS)
 	$(AM_V_MAKEINFO)$(MAKEINFO) --plaintext \
 	  $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) -I $(srcdir) \
 	  -o $@ $(srcdir)/gatbps.texi
+
+gatbps.xml: gatbps.texi $(gatbps_TEXINFOS)
+	$(AM_V_MAKEINFO)$(MAKEINFO) --docbook \
+	  $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) -I $(srcdir) \
+	  -o $@ $(srcdir)/gatbps.texi
+
+.PHONY: docbook
+docbook: gatbps.xml
 
 html-local: gatbps-no-split.html
 
