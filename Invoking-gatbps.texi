@@ -1,5 +1,5 @@
-@node Using @t{gatbps}
-@chapter Using @t{gatbps}
+@node Invoking @t{gatbps}
+@chapter Invoking @t{gatbps}
 
 @menu
 * @t{gatbps} Options::

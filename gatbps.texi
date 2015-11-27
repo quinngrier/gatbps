@@ -49,7 +49,7 @@ which was released on @value{DATE}@.
 * Copyright Information::
 * Introduction::
 * Building and Installation::
-* Using @t{gatbps}::
+* Invoking @t{gatbps}::
 * Mathematical Notation in Texinfo::
 * Special File Reference::
 * CC0::
@@ -63,7 +63,7 @@ which was released on @value{DATE}@.
 
 @include Building-and-Installation.texi
 
-@include Using-gatbps.texi
+@include Invoking-gatbps.texi
 
 @include Mathematical-Notation-in-Texinfo.texi
 
