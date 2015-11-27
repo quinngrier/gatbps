@@ -6,6 +6,7 @@ EXTRA_DIST += VERSION.sh
 EXTRA_DIST += sh-form.sh
 
 MOSTLYCLEANFILES =
+MOSTLYCLEANFILES += gatbps-ascii.txt
 MOSTLYCLEANFILES += gatbps-no-split.html
 MOSTLYCLEANFILES += gatbps.1
 MOSTLYCLEANFILES += gatbps.info
