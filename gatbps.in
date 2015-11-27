@@ -278,6 +278,11 @@ fb2='' # stderr style: blue
 fm2='' # stderr style: magenta
 fc2='' # stderr style: cyan
 
+#
+# The following code translates environment variables to arguments, as
+# described by the manual for this program.
+#
+
 case "${TEXI2ANY}" in
 #(
   ?*)
