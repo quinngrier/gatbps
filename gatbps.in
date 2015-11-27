@@ -335,6 +335,7 @@ dry_run='no'
 plain='no'
 print0='no'
 recursive='no'
+utf8='no'
 verbose='no'
 
 utf8_args='-D insertascii'
