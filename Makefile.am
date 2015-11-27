@@ -55,7 +55,7 @@ man_MANS += gatbps.1
 gatbps-no-split.html: gatbps.texi $(gatbps_TEXINFOS)
 	$(AM_V_MAKEINFO)$(MAKEINFOHTML) \
 	  $(AM_MAKEINFOHTMLFLAGS) $(MAKEINFOFLAGS) -I $(srcdir) \
-	  --no-split --output=$@ $(srcdir)/gatbps.texi
+	  --no-split -o $@ $(srcdir)/gatbps.texi
 
 gatbps.1: gatbps
 	./gatbps --man >gatbps.1
@@ -63,7 +63,7 @@ gatbps.1: gatbps
 gatbps.txt: gatbps.texi $(gatbps_TEXINFOS)
 	$(AM_V_MAKEINFO)$(MAKEINFO) --plaintext \
 	  $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) -I $(srcdir) \
-	  --output=$@ $(srcdir)/gatbps.texi
+	  -o $@ $(srcdir)/gatbps.texi
 
 html-local: gatbps-no-split.html
 
