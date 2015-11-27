@@ -74,6 +74,7 @@ gatbps.txt: gatbps.texi $(gatbps_TEXINFOS)
 html-local: gatbps-no-split.html
 
 .PHONY: txt
+txt: gatbps-ascii.txt
 txt: gatbps.txt
 
 include $(srcdir)/CC0-1.0-AM-COPYRIGHT.am
