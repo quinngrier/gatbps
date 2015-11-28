@@ -18,6 +18,11 @@
 @defindex sf
 @defindex tm
 
+@dircategory Software development
+@direntry
+* GATBPS: (gatbps). Generate basic package files.
+@end direntry
+
 @ifplaintext
 @chapheading GATBPS @value{VERSION}
 @end ifplaintext
