@@ -83,6 +83,18 @@ docbook: gatbps.xml
 
 html-local: gatbps-no-split.html
 
+install-data-hook: install-info-dir-entries
+
+.PHONY: install-info-dir-entries
+install-info-dir-entries:
+	install-info \
+	  '--section=Individual utilities' \
+	  '--entry=* gatbps: (gatbps)Invoking gatbps. Generate basic package files.' \
+	  '--align=49' \
+	  '--calign=51' \
+	  '$(DESTDIR)$(infodir)/gatbps.info' \
+	  '$(DESTDIR)$(infodir)/dir'
+
 .PHONY: txt
 txt: gatbps-ascii.txt
 txt: gatbps.txt
