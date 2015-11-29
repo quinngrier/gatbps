@@ -59,10 +59,16 @@ man_MANS += gatbps.1
 .PHONY: install-info-dir-entries
 .PHONY: txt
 
-gatbps-ascii.txt: gatbps.texi $(gatbps_TEXINFOS)
-	$(AM_V_MAKEINFO)$(MAKEINFO) --plaintext \
-	  $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) -I $(srcdir) \
-	  -D insertascii -o $@ $(srcdir)/gatbps.texi
+gatbps-ascii.txt: $(gatbps_TEXINFOS)
+gatbps-ascii.txt: gatbps.texi
+	$(AM_V_MAKEINFO)$(MAKEINFO) \
+  $(AM_MAKEINFOFLAGS) \
+  $(MAKEINFOFLAGS) \
+  '--plaintext' \
+  '-D' 'insertascii' \
+  '-I' '$(srcdir)' \
+  '-o' '$@' \
+  '$(srcdir)/gatbps.texi'
 
 gatbps-no-split.html: gatbps.texi $(gatbps_TEXINFOS)
 	$(AM_V_MAKEINFO)$(MAKEINFOHTML) \
