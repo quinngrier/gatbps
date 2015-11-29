@@ -70,10 +70,15 @@ gatbps-ascii.txt: gatbps.texi
   '-o' '$@' \
   '$(srcdir)/gatbps.texi'
 
-gatbps-no-split.html: gatbps.texi $(gatbps_TEXINFOS)
+gatbps-no-split.html: $(gatbps_TEXINFOS)
+gatbps-no-split.html: gatbps.texi
 	$(AM_V_MAKEINFO)$(MAKEINFOHTML) \
-	  $(AM_MAKEINFOHTMLFLAGS) $(MAKEINFOFLAGS) -I $(srcdir) \
-	  --no-split -o $@ $(srcdir)/gatbps.texi
+  $(AM_MAKEINFOHTMLFLAGS) \
+  $(MAKEINFOFLAGS) \
+  '--no-split' \
+  '-I' '$(srcdir)' \
+  '-o' '$@' \
+  '$(srcdir)/gatbps.texi'
 
 gatbps.1: gatbps
 	./gatbps --man >gatbps.1
