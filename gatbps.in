@@ -4937,6 +4937,25 @@ AC_DEFINE([PACKAGE_DAY],
 PACKAGE_DAY='AC_PACKAGE_DAY'
 AC_SUBST([PACKAGE_DAY])
 
+m4_define([AC_PACKAGE_MONTH_NAME],
+          m4_if(AC_PACKAGE_MONTH, [1], [January],
+                AC_PACKAGE_MONTH, [2], [February],
+                AC_PACKAGE_MONTH, [3], [March],
+                AC_PACKAGE_MONTH, [4], [April],
+                AC_PACKAGE_MONTH, [5], [May],
+                AC_PACKAGE_MONTH, [6], [June],
+                AC_PACKAGE_MONTH, [7], [July],
+                AC_PACKAGE_MONTH, [8], [August],
+                AC_PACKAGE_MONTH, [9], [September],
+                AC_PACKAGE_MONTH, [10], [October],
+                AC_PACKAGE_MONTH, [11], [November],
+                AC_PACKAGE_MONTH, [12], [December]))
+AC_DEFINE([PACKAGE_MONTH_NAME],
+          ["AC_PACKAGE_MONTH_NAME"],
+          [Define to the month name of this package.])
+PACKAGE_MONTH_NAME='AC_PACKAGE_MONTH_NAME'
+AC_SUBST([PACKAGE_MONTH_NAME])
+
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by
