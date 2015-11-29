@@ -72,10 +72,15 @@ gatbps-no-split.html: gatbps.texi $(gatbps_TEXINFOS)
 gatbps.1: gatbps
 	./gatbps --man >gatbps.1
 
-gatbps.txt: gatbps.texi $(gatbps_TEXINFOS)
-	$(AM_V_MAKEINFO)$(MAKEINFO) --plaintext \
-	  $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) -I $(srcdir) \
-	  -o $@ $(srcdir)/gatbps.texi
+gatbps.txt: $(gatbps_TEXINFOS)
+gatbps.txt: gatbps.texi
+	$(AM_V_MAKEINFO)$(MAKEINFO) \
+  $(AM_MAKEINFOFLAGS) \
+  $(MAKEINFOFLAGS) \
+  '--plaintext' \
+  '-I' '$(srcdir)' \
+  '-o' '$@' \
+  '$(srcdir)/gatbps.texi'
 
 gatbps.xml: gatbps.texi $(gatbps_TEXINFOS)
 	$(AM_V_MAKEINFO)$(MAKEINFO) --docbook \
