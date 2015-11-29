@@ -8081,6 +8081,16 @@ nl='
 detect_options='yes'
 
 #
+# The style_stdout and style_stderr variables hold the current settings
+# for the --style-stdout and --style-stderr options. Each starts off as
+# 'never' and is updated (to 'always', 'auto', or 'never') each time an
+# appropriate option is found.
+#
+
+style_stdout='never'
+style_stderr='never'
+
+#
 # The isatty1 and isatty2 variables indicate whether standard output and
 # standard error are associated with terminals. Each starts off with the
 # value 'unknown' and is lazily set to 'yes' or 'no' using the following
