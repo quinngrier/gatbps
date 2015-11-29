@@ -94,8 +94,8 @@ install-info-dir-entries:
 	  '--entry=* gatbps: (gatbps)Invoking gatbps. Generate basic package files.' \
 	  '--align=49' \
 	  '--calign=51' \
-	  '$(DESTDIR)$(infodir)/gatbps.info' \
-	  '$(DESTDIR)$(infodir)/dir'
+	  '--info-file=$(DESTDIR)$(infodir)/gatbps.info' \
+	  '--dir-file=$(DESTDIR)$(infodir)/dir'
 
 txt: gatbps-ascii.txt
 txt: gatbps.txt
