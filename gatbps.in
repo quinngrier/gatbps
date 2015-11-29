@@ -341,12 +341,12 @@ dry_run='no'
 plain='no'
 print0='no'
 recursive='no'
-unicode='no'
+unicode='yes'
 verbose='no'
 
 unicode_args_yes=''
 unicode_args_no='-D insertascii'
-unicode_args="${unicode_args_no}"
+unicode_args="${unicode_args_yes}"
 
 exit_status='0'
 
