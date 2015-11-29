@@ -30,6 +30,7 @@ nl='
 detect_options='yes'
 
 style_stdout='never'
+style_stderr='never'
 
 #
 # For each program P of interest, the P_auto variable holds a command
@@ -3603,6 +3604,8 @@ EOF1
       #(
         '--style-stderr'|'--style-stderr=always')
 
+          style_stderr='always'
+
           fR2='[22m[24m[39m' # stderr style: none
           fB2='[24m[39m[1m'  # stderr style: bold
           fI2='[22m[39m[4m'  # stderr style: underline
@@ -3619,6 +3622,8 @@ EOF1
 
       #(
         '--style-stderr=auto')
+
+          style_stderr='auto'
 
           case "${isatty2}" in
           #(
@@ -3664,6 +3669,8 @@ EOF1
 
       #(
         '--style-stderr=never')
+
+          style_stderr='never'
 
           fR2='' # stderr style: none
           fB2='' # stderr style: bold
