@@ -90,12 +90,12 @@ install-data-hook: install-info-dir-entries
 
 install-info-dir-entries:
 	install-info \
-	  '--align=49' \
-	  '--calign=51' \
-	  '--dir-file=$(DESTDIR)$(infodir)/dir' \
-	  '--entry=* gatbps: (gatbps)Invoking gatbps. Generate basic package files.' \
-	  '--info-file=$(DESTDIR)$(infodir)/gatbps.info' \
-	  '--section=Individual utilities'
+  '--align=49' \
+  '--calign=51' \
+  '--dir-file=$(DESTDIR)$(infodir)/dir' \
+  '--entry=* gatbps: (gatbps)Invoking gatbps. Generate basic package files.' \
+  '--info-file=$(DESTDIR)$(infodir)/gatbps.info' \
+  '--section=Individual utilities'
 
 txt: gatbps-ascii.txt
 txt: gatbps.txt
