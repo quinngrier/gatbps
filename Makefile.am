@@ -88,10 +88,15 @@ gatbps.txt: gatbps.texi
   '-o' '$@' \
   '$(srcdir)/gatbps.texi'
 
-gatbps.xml: gatbps.texi $(gatbps_TEXINFOS)
-	$(AM_V_MAKEINFO)$(MAKEINFO) --docbook \
-	  $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) -I $(srcdir) \
-	  -o $@ $(srcdir)/gatbps.texi
+gatbps.xml: $(gatbps_TEXINFOS)
+gatbps.xml: gatbps.texi
+	$(AM_V_MAKEINFO)$(MAKEINFO) \
+  $(AM_MAKEINFOFLAGS) \
+  $(MAKEINFOFLAGS) \
+  '--docbook' \
+  '-I' '$(srcdir)' \
+  '-o' '$@' \
+  '$(srcdir)/gatbps.texi'
 
 docbook: gatbps.xml
 
