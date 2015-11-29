@@ -76,6 +76,70 @@ isatty1='unknown'
 isatty2='unknown'
 
 #
+# The following two groups of variables hold ANSI escape sequences for
+# bold, underline, and color styling of text written to standard output
+# and standard error. Each variable starts off empty so that styling is
+# disabled by default. Then, when desired, each group can be set to the
+# appropriate values as follows.
+#
+# For standard output:
+#
+#       fR1='[22m[24m[39m' # stdout style: none
+#       fB1='[24m[39m[1m'  # stdout style: bold
+#       fI1='[22m[39m[4m'  # stdout style: underline
+#       fr1='[22m[24m[31m' # stdout style: red
+#       fg1='[22m[24m[32m' # stdout style: green
+#       fy1='[22m[24m[33m' # stdout style: yellow
+#       fb1='[22m[24m[34m' # stdout style: blue
+#       fm1='[22m[24m[35m' # stdout style: magenta
+#       fc1='[22m[24m[36m' # stdout style: cyan
+#
+# For standard error:
+#
+#       fR2='[22m[24m[39m' # stderr style: none
+#       fB2='[24m[39m[1m'  # stderr style: bold
+#       fI2='[22m[39m[4m'  # stderr style: underline
+#       fr2='[22m[24m[31m' # stderr style: red
+#       fg2='[22m[24m[32m' # stderr style: green
+#       fy2='[22m[24m[33m' # stderr style: yellow
+#       fb2='[22m[24m[34m' # stderr style: blue
+#       fm2='[22m[24m[35m' # stderr style: magenta
+#       fc2='[22m[24m[36m' # stderr style: cyan
+#
+# Note that the above code contains escape characters, i.e. bytes with
+# value 0x1B, which do not normally appear in plain text. Text editors
+# often have special ways of displaying such characters. In particular,
+# some editors may actually interpret the escape sequences or silently
+# discard the escape characters.
+#
+# Although escape sequences offer a wide variety of functionality, the
+# variables balance utility and portability. The colors are limited to
+# those that should always be legible and accurate, and the styles are
+# mutually exclusive. In particular, mixing bold and color is tempting
+# but would produce inconsistent results across systems.
+#
+
+fR1='' # stdout style: none
+fB1='' # stdout style: bold
+fI1='' # stdout style: underline
+fr1='' # stdout style: red
+fg1='' # stdout style: green
+fy1='' # stdout style: yellow
+fb1='' # stdout style: blue
+fm1='' # stdout style: magenta
+fc1='' # stdout style: cyan
+
+fR2='' # stderr style: none
+fB2='' # stderr style: bold
+fI2='' # stderr style: underline
+fr2='' # stderr style: red
+fg2='' # stderr style: green
+fy2='' # stderr style: yellow
+fb2='' # stderr style: blue
+fm2='' # stderr style: magenta
+fc2='' # stderr style: cyan
+
+#
 # For each program P of interest, the P_auto variable holds a command
 # name that resolves to the best available version of P. The variable
 # starts off as empty and is lazily set using the following code just
@@ -223,70 +287,6 @@ case "${texi2any}" in
     texi2any="${texi2any_auto}"
   ;;
 esac
-
-#
-# The following two groups of variables hold ANSI escape sequences for
-# bold, underline, and color styling of text written to standard output
-# and standard error. Each variable starts off empty so that styling is
-# disabled by default. Then, when desired, each group can be set to the
-# appropriate values as follows.
-#
-# For standard output:
-#
-#       fR1='[22m[24m[39m' # stdout style: none
-#       fB1='[24m[39m[1m'  # stdout style: bold
-#       fI1='[22m[39m[4m'  # stdout style: underline
-#       fr1='[22m[24m[31m' # stdout style: red
-#       fg1='[22m[24m[32m' # stdout style: green
-#       fy1='[22m[24m[33m' # stdout style: yellow
-#       fb1='[22m[24m[34m' # stdout style: blue
-#       fm1='[22m[24m[35m' # stdout style: magenta
-#       fc1='[22m[24m[36m' # stdout style: cyan
-#
-# For standard error:
-#
-#       fR2='[22m[24m[39m' # stderr style: none
-#       fB2='[24m[39m[1m'  # stderr style: bold
-#       fI2='[22m[39m[4m'  # stderr style: underline
-#       fr2='[22m[24m[31m' # stderr style: red
-#       fg2='[22m[24m[32m' # stderr style: green
-#       fy2='[22m[24m[33m' # stderr style: yellow
-#       fb2='[22m[24m[34m' # stderr style: blue
-#       fm2='[22m[24m[35m' # stderr style: magenta
-#       fc2='[22m[24m[36m' # stderr style: cyan
-#
-# Note that the above code contains escape characters, i.e. bytes with
-# value 0x1B, which do not normally appear in plain text. Text editors
-# often have special ways of displaying such characters. In particular,
-# some editors may actually interpret the escape sequences or silently
-# discard the escape characters.
-#
-# Although escape sequences offer a wide variety of functionality, the
-# variables balance utility and portability. The colors are limited to
-# those that should always be legible and accurate, and the styles are
-# mutually exclusive. In particular, mixing bold and color is tempting
-# but would produce inconsistent results across systems.
-#
-
-fR1='' # stdout style: none
-fB1='' # stdout style: bold
-fI1='' # stdout style: underline
-fr1='' # stdout style: red
-fg1='' # stdout style: green
-fy1='' # stdout style: yellow
-fb1='' # stdout style: blue
-fm1='' # stdout style: magenta
-fc1='' # stdout style: cyan
-
-fR2='' # stderr style: none
-fB2='' # stderr style: bold
-fI2='' # stderr style: underline
-fr2='' # stderr style: red
-fg2='' # stderr style: green
-fy2='' # stderr style: yellow
-fb2='' # stderr style: blue
-fm2='' # stderr style: magenta
-fc2='' # stderr style: cyan
 
 #
 # The following code translates environment variables to arguments, as
