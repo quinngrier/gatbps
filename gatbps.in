@@ -4956,6 +4956,14 @@ AC_DEFINE([PACKAGE_MONTH_NAME],
 PACKAGE_MONTH_NAME='AC_PACKAGE_MONTH_NAME'
 AC_SUBST([PACKAGE_MONTH_NAME])
 
+m4_define([AC_PACKAGE_MONTH_ABBR],
+          m4_substr(AC_PACKAGE_MONTH_NAME, [0], [3]))
+AC_DEFINE([PACKAGE_MONTH_ABBR],
+          ["AC_PACKAGE_MONTH_ABBR"],
+          [Define to the abbreviated month name of this package.])
+PACKAGE_MONTH_ABBR='AC_PACKAGE_MONTH_ABBR'
+AC_SUBST([PACKAGE_MONTH_ABBR])
+
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by
