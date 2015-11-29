@@ -29,6 +29,8 @@ nl='
 
 detect_options='yes'
 
+style_stdout='never'
+
 #
 # For each program P of interest, the P_auto variable holds a command
 # name that resolves to the best available version of P. The variable
@@ -3690,6 +3692,8 @@ EOF1
       #(
         '--style-stdout'|'--style-stdout=always')
 
+          style_stdout='always'
+
           fR1='[22m[24m[39m' # stdout style: none
           fB1='[24m[39m[1m'  # stdout style: bold
           fI1='[22m[39m[4m'  # stdout style: underline
@@ -3706,6 +3710,8 @@ EOF1
 
       #(
         '--style-stdout=auto')
+
+          style_stdout='auto'
 
           case "${isatty1}" in
           #(
@@ -3751,6 +3757,8 @@ EOF1
 
       #(
         '--style-stdout=never')
+
+          style_stdout='never'
 
           fR1='' # stdout style: none
           fB1='' # stdout style: bold
