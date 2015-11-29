@@ -6,7 +6,6 @@ EXTRA_DIST += VERSION.sh
 EXTRA_DIST += sh-form.sh
 
 MOSTLYCLEANFILES =
-MOSTLYCLEANFILES += gatbps-ascii.txt
 MOSTLYCLEANFILES += gatbps-no-split.html
 MOSTLYCLEANFILES += gatbps.1
 MOSTLYCLEANFILES += gatbps.info
@@ -59,17 +58,6 @@ man_MANS += gatbps.1
 .PHONY: install-info-dir-entries
 .PHONY: txt
 
-gatbps-ascii.txt: $(gatbps_TEXINFOS)
-gatbps-ascii.txt: gatbps.texi
-	$(AM_V_MAKEINFO)$(MAKEINFO) \
-  $(AM_MAKEINFOFLAGS) \
-  $(MAKEINFOFLAGS) \
-  '--plaintext' \
-  '-D' 'insertascii' \
-  '-I' '$(srcdir)' \
-  '-o' '$@' \
-  '$(srcdir)/gatbps.texi'
-
 gatbps-no-split.html: $(gatbps_TEXINFOS)
 gatbps-no-split.html: gatbps.texi
 	$(AM_V_MAKEINFO)$(MAKEINFOHTML) \
@@ -118,7 +106,6 @@ install-info-dir-entries:
   '--info-file=$(DESTDIR)$(infodir)/gatbps.info' \
   '--section=Individual utilities'
 
-txt: gatbps-ascii.txt
 txt: gatbps.txt
 
 include $(srcdir)/CC0-1.0-AM-COPYRIGHT.am
