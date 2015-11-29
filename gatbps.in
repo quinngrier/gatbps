@@ -331,6 +331,12 @@ case "${AWK}" in
   ;;
 esac
 
+#
+# The following are the underlying boolean variables that are controlled
+# by various options. Each is always set to 'yes' or 'no' and is updated
+# each time an appropriate option is found.
+#
+
 dry_run='no'
 plain='no'
 print0='no'
@@ -8256,6 +8262,12 @@ fy2='' # stderr style: yellow
 fb2='' # stderr style: blue
 fm2='' # stderr style: magenta
 fc2='' # stderr style: cyan
+
+#
+# The following are the underlying boolean variables that are controlled
+# by various options. Each is always set to 'yes' or 'no' and is updated
+# each time an appropriate option is found.
+#
 
 keep='no'
 
