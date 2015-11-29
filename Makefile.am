@@ -6,7 +6,6 @@ EXTRA_DIST += VERSION.sh
 EXTRA_DIST += sh-form.sh
 
 MOSTLYCLEANFILES =
-MOSTLYCLEANFILES += gatbps-no-split.html
 MOSTLYCLEANFILES += gatbps.1
 MOSTLYCLEANFILES += gatbps.info
 MOSTLYCLEANFILES += gatbps.txt
@@ -58,16 +57,6 @@ man_MANS += gatbps.1
 .PHONY: install-info-dir-entries
 .PHONY: txt
 
-gatbps-no-split.html: $(gatbps_TEXINFOS)
-gatbps-no-split.html: gatbps.texi
-	$(AM_V_MAKEINFO)$(MAKEINFOHTML) \
-  $(AM_MAKEINFOHTMLFLAGS) \
-  $(MAKEINFOFLAGS) \
-  '--no-split' \
-  '-I' '$(srcdir)' \
-  '-o' '$@' \
-  '$(srcdir)/gatbps.texi'
-
 gatbps.1: gatbps
 	./gatbps --man >gatbps.1
 
@@ -92,8 +81,6 @@ gatbps.xml: gatbps.texi
   '$(srcdir)/gatbps.texi'
 
 docbook: gatbps.xml
-
-html-local: gatbps-no-split.html
 
 install-data-hook: install-info-dir-entries
 
