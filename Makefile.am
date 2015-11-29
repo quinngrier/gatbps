@@ -55,6 +55,10 @@ info_TEXINFOS += gatbps.texi
 man_MANS =
 man_MANS += gatbps.1
 
+.PHONY: docbook
+.PHONY: install-info-dir-entries
+.PHONY: txt
+
 gatbps-ascii.txt: gatbps.texi $(gatbps_TEXINFOS)
 	$(AM_V_MAKEINFO)$(MAKEINFO) --plaintext \
 	  $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) -I $(srcdir) \
@@ -78,14 +82,12 @@ gatbps.xml: gatbps.texi $(gatbps_TEXINFOS)
 	  $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) -I $(srcdir) \
 	  -o $@ $(srcdir)/gatbps.texi
 
-.PHONY: docbook
 docbook: gatbps.xml
 
 html-local: gatbps-no-split.html
 
 install-data-hook: install-info-dir-entries
 
-.PHONY: install-info-dir-entries
 install-info-dir-entries:
 	install-info \
 	  '--section=Individual utilities' \
@@ -95,7 +97,6 @@ install-info-dir-entries:
 	  '$(DESTDIR)$(infodir)/gatbps.info' \
 	  '$(DESTDIR)$(infodir)/dir'
 
-.PHONY: txt
 txt: gatbps-ascii.txt
 txt: gatbps.txt
 
