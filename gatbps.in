@@ -8081,6 +8081,42 @@ nl='
 detect_options='yes'
 
 #
+# The isatty1 and isatty2 variables indicate whether standard output and
+# standard error are associated with terminals. Each starts off with the
+# value 'unknown' and is lazily set to 'yes' or 'no' using the following
+# code just before each point where the value is needed.
+#
+# For isatty1:
+#
+#       case "${isatty1}" in
+#       #(
+#         'unknown')
+#           if test '-t' '1'; then
+#             isatty1='yes'
+#           else
+#             isatty1='no'
+#           fi
+#         ;;
+#       esac
+#
+# For isatty2:
+#
+#       case "${isatty2}" in
+#       #(
+#         'unknown')
+#           if test '-t' '2'; then
+#             isatty2='yes'
+#           else
+#             isatty2='no'
+#           fi
+#         ;;
+#       esac
+#
+
+isatty1='unknown'
+isatty2='unknown'
+
+#
 # For each program P of interest, the P_auto variable holds a command
 # name that resolves to the best available version of P. The variable
 # starts off as empty and is lazily set using the following code just
@@ -8184,42 +8220,6 @@ case "${sed}" in
     sed="${sed_auto}"
   ;;
 esac
-
-#
-# The isatty1 and isatty2 variables indicate whether standard output and
-# standard error are associated with terminals. Each starts off with the
-# value 'unknown' and is lazily set to 'yes' or 'no' using the following
-# code just before each point where the value is needed.
-#
-# For isatty1:
-#
-#       case "${isatty1}" in
-#       #(
-#         'unknown')
-#           if test '-t' '1'; then
-#             isatty1='yes'
-#           else
-#             isatty1='no'
-#           fi
-#         ;;
-#       esac
-#
-# For isatty2:
-#
-#       case "${isatty2}" in
-#       #(
-#         'unknown')
-#           if test '-t' '2'; then
-#             isatty2='yes'
-#           else
-#             isatty2='no'
-#           fi
-#         ;;
-#       esac
-#
-
-isatty1='unknown'
-isatty2='unknown'
 
 #
 # The following two groups of variables hold ANSI escape sequences for
