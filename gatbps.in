@@ -8296,6 +8296,51 @@ case "${sed}" in
 esac
 
 #
+# The following code translates environment variables to arguments, as
+# described by the manual for this program.
+#
+
+case "${STYLE_STDOUT}" in
+#(
+  ?*)
+    set 'x' "--style-stdout=${STYLE_STDOUT}" "${@AT@}"
+    shift
+  ;;
+esac
+
+case "${STYLE_STDERR}" in
+#(
+  ?*)
+    set 'x' "--style-stderr=${STYLE_STDERR}" "${@AT@}"
+    shift
+  ;;
+esac
+
+case "${STYLE}" in
+#(
+  ?*)
+    set 'x' "--style=${STYLE}" "${@AT@}"
+    shift
+  ;;
+esac
+
+case "${SED}" in
+#(
+  ?*)
+    set 'x' "--sed=${SED}" "${@AT@}"
+    shift
+  ;;
+esac
+
+case "${AWK}" in
+#(
+  ?*)
+    set 'x' "--awk=${AWK}" "${@AT@}"
+    shift
+  ;;
+esac
+
+#
 # The following are the underlying boolean variables that are controlled
 # by various options. Each is always set to 'yes' or 'no' and is updated
 # each time an appropriate option is found.
