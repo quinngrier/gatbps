@@ -16,18 +16,20 @@ cat <<EOF
  install-info \\
    "--align=51" \\
    "--calign=49" \\
+   "--description=Generate basic package files." \\
    "--dir-file=${DESTDIR}${infodir}/dir" \\
-   "--entry=* gatbps: (gatbps)Invoking gatbps. Generate basic package files." \\
    "--info-file=${DESTDIR}${infodir}/gatbps.info" \\
+   "--name=* gatbps: (gatbps)Invoking gatbps." \\
    "--section=Individual utilities"
 EOF
 
  install-info \
    "--align=51" \
    "--calign=49" \
+   "--description=Generate basic package files." \
    "--dir-file=${DESTDIR}${infodir}/dir" \
-   "--entry=* gatbps: (gatbps)Invoking gatbps. Generate basic package files." \
    "--info-file=${DESTDIR}${infodir}/gatbps.info" \
+   "--name=* gatbps: (gatbps)Invoking gatbps." \
    "--section=Individual utilities"
 
 exit '0'
