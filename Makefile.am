@@ -58,6 +58,8 @@ man_MANS += gatbps.1
 .PHONY: install-info-dir-entries
 .PHONY: txt
 
+docbook: gatbps.xml
+
 gatbps.1: gatbps
 	./gatbps --man >gatbps.1
 
@@ -80,8 +82,6 @@ gatbps.xml: gatbps.texi
   '-I' '$(srcdir)' \
   '-o' '$@' \
   '$(srcdir)/gatbps.texi'
-
-docbook: gatbps.xml
 
 install-data-hook: install-info-dir-entries
 
