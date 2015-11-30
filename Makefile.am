@@ -86,6 +86,7 @@ gatbps.xml: gatbps.texi
 install-data-hook: install-info-dir-entries
 
 install-info-dir-entries:
+	@$(POST_INSTALL)
 	@if $(am__can_run_installinfo); then \
 	  $(SHELL) \
 	    '$(srcdir)/install-info-dir-entries.sh' \
