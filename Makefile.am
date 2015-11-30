@@ -3,6 +3,7 @@ EXTRA_DIST += DATE
 EXTRA_DIST += DATE.sh
 EXTRA_DIST += VERSION
 EXTRA_DIST += VERSION.sh
+EXTRA_DIST += install-info-dir-entries.sh
 EXTRA_DIST += sh-form.sh
 
 MOSTLYCLEANFILES =
@@ -85,13 +86,14 @@ docbook: gatbps.xml
 install-data-hook: install-info-dir-entries
 
 install-info-dir-entries:
-	install-info \
-  '--align=49' \
-  '--calign=51' \
-  '--dir-file=$(DESTDIR)$(infodir)/dir' \
-  '--entry=* gatbps: (gatbps)Invoking gatbps. Generate basic package files.' \
-  '--info-file=$(DESTDIR)$(infodir)/gatbps.info' \
-  '--section=Individual utilities'
+	@if $(am__can_run_installinfo); then \
+	  $(SHELL) \
+	    '$(srcdir)/install-info-dir-entries.sh' \
+	    '$(DESTDIR)' \
+	    '$(infodir)' \
+	  ; \
+	fi; \
+	exit '0'
 
 txt: gatbps.txt
 
