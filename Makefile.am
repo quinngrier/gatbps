@@ -54,6 +54,8 @@ info_TEXINFOS += gatbps.texi
 man_MANS =
 man_MANS += gatbps.1
 
+txtdir = $(docdir)
+
 .PHONY: docbook
 .PHONY: install-info-dir-entries
 .PHONY: txt
