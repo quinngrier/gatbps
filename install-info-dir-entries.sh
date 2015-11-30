@@ -14,8 +14,8 @@ esac
 
 cat <<EOF
  install-info \\
-   "--align=49" \\
-   "--calign=51" \\
+   "--align=51" \\
+   "--calign=49" \\
    "--dir-file=${DESTDIR}${infodir}/dir" \\
    "--entry=* gatbps: (gatbps)Invoking gatbps. Generate basic package files." \\
    "--info-file=${DESTDIR}${infodir}/gatbps.info" \\
@@ -23,8 +23,8 @@ cat <<EOF
 EOF
 
  install-info \
-   "--align=49" \
-   "--calign=51" \
+   "--align=51" \
+   "--calign=49" \
    "--dir-file=${DESTDIR}${infodir}/dir" \
    "--entry=* gatbps: (gatbps)Invoking gatbps. Generate basic package files." \
    "--info-file=${DESTDIR}${infodir}/gatbps.info" \
