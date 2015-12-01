@@ -23,9 +23,9 @@ option of
 @item @w{@t{bdots.@:texi}}
 @include ipez.texi
 The
-@t{bdots.@:texi}
+@w{@t{bdots.@:texi}}
 special file defines the
-@t{@@bdots@{@}}
+@w{@t{@@bdots@{@}}}
 Texinfo macro,
 which is used to imitate the mathematical
 notation of @TeX{} in the other output formats:
@@ -46,9 +46,9 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @item @w{@t{dslash.@:texi}}
 @include ipez.texi
 The
-@t{dslash.@:texi}
+@w{@t{dslash.@:texi}}
 special file defines the
-@t{@@dslash@{@}}
+@w{@t{@@dslash@{@}}}
 Texinfo macro,
 which is used to imitate the mathematical
 notation of @TeX{} in the other output formats:
@@ -69,9 +69,9 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @item @w{@t{gequ.@:texi}}
 @include ipez.texi
 The
-@t{gequ.@:texi}
+@w{@t{gequ.@:texi}}
 special file defines the
-@t{@@gequ@{@}}
+@w{@t{@@gequ@{@}}}
 Texinfo macro,
 which is used to imitate the mathematical
 notation of @TeX{} in the other output formats:
@@ -92,9 +92,9 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @item @w{@t{lcei.@:texi}}
 @include ipez.texi
 The
-@t{lcei.@:texi}
+@w{@t{lcei.@:texi}}
 special file defines the
-@t{@@lcei@{@}}
+@w{@t{@@lcei@{@}}}
 Texinfo macro,
 which is used to imitate the mathematical
 notation of @TeX{} in the other output formats:
@@ -115,9 +115,9 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @item @w{@t{lequ.@:texi}}
 @include ipez.texi
 The
-@t{lequ.@:texi}
+@w{@t{lequ.@:texi}}
 special file defines the
-@t{@@lequ@{@}}
+@w{@t{@@lequ@{@}}}
 Texinfo macro,
 which is used to imitate the mathematical
 notation of @TeX{} in the other output formats:
@@ -138,9 +138,9 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @item @w{@t{lflo.@:texi}}
 @include ipez.texi
 The
-@t{lflo.@:texi}
+@w{@t{lflo.@:texi}}
 special file defines the
-@t{@@lflo@{@}}
+@w{@t{@@lflo@{@}}}
 Texinfo macro,
 which is used to imitate the mathematical
 notation of @TeX{} in the other output formats:
@@ -160,14 +160,14 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @item @w{@t{math.@:texi}}
 @include ipez.texi
 The
-@t{math.@:texi}
+@w{@t{math.@:texi}}
 special file is a Texinfo file
 that includes every special file
 that defines a macro for imitating
 the mathematical notation of @TeX{} in
 the other output formats@.
 It can be generated under the effect of the
-@t{-@w{-}recursive}
+@w{@t{-@w{-}recursive}}
 option to generate all such special files at once@.
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
@@ -177,9 +177,9 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @item @w{@t{mdot.@:texi}}
 @include ipez.texi
 The
-@t{mdot.@:texi}
+@w{@t{mdot.@:texi}}
 special file defines the
-@t{@@mdot@{@}}
+@w{@t{@@mdot@{@}}}
 Texinfo macro,
 which is used to imitate the mathematical
 notation of @TeX{} in the other output formats:
@@ -200,9 +200,9 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @item @w{@t{mdots.@:texi}}
 @include ipez.texi
 The
-@t{mdots.@:texi}
+@w{@t{mdots.@:texi}}
 special file defines the
-@t{@@mdots@{@}}
+@w{@t{@@mdots@{@}}}
 Texinfo macro,
 which is used to imitate the mathematical
 notation of @TeX{} in the other output formats:
@@ -223,9 +223,9 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @item @w{@t{msign.@:texi}}
 @include ipez.texi
 The
-@t{msign.@:texi}
+@w{@t{msign.@:texi}}
 special file defines the
-@t{@@msign@{@}}
+@w{@t{@@msign@{@}}}
 Texinfo macro,
 which is used to imitate the mathematical
 notation of @TeX{} in the other output formats:
@@ -246,9 +246,9 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @item @w{@t{nequ.@:texi}}
 @include ipez.texi
 The
-@t{nequ.@:texi}
+@w{@t{nequ.@:texi}}
 special file defines the
-@t{@@nequ@{@}}
+@w{@t{@@nequ@{@}}}
 Texinfo macro,
 which is used to imitate the mathematical
 notation of @TeX{} in the other output formats:
@@ -269,9 +269,9 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @item @w{@t{prm.@:texi}}
 @include ipez.texi
 The
-@t{prm.@:texi}
+@w{@t{prm.@:texi}}
 special file defines the
-@t{@@prm@{@}}
+@w{@t{@@prm@{@}}}
 Texinfo macro,
 which is used to imitate the mathematical
 notation of @TeX{} in the other output formats:
@@ -292,9 +292,9 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @item @w{@t{rarrow.@:texi}}
 @include ipez.texi
 The
-@t{rarrow.@:texi}
+@w{@t{rarrow.@:texi}}
 special file defines the
-@t{@@rarrow@{@}}
+@w{@t{@@rarrow@{@}}}
 Texinfo macro,
 which is used to imitate the mathematical
 notation of @TeX{} in the other output formats:
@@ -315,9 +315,9 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @item @w{@t{rcei.@:texi}}
 @include ipez.texi
 The
-@t{rcei.@:texi}
+@w{@t{rcei.@:texi}}
 special file defines the
-@t{@@rcei@{@}}
+@w{@t{@@rcei@{@}}}
 Texinfo macro,
 which is used to imitate the mathematical
 notation of @TeX{} in the other output formats:
@@ -338,9 +338,9 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @item @w{@t{rflo.@:texi}}
 @include ipez.texi
 The
-@t{rflo.@:texi}
+@w{@t{rflo.@:texi}}
 special file defines the
-@t{@@rflo@{@}}
+@w{@t{@@rflo@{@}}}
 Texinfo macro,
 which is used to imitate the mathematical
 notation of @TeX{} in the other output formats:
@@ -361,18 +361,18 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @item @w{@t{sbs.@:texi}}
 @include ipez.texi
 The
-@t{sbs.@:texi}
+@w{@t{sbs.@:texi}}
 special file defines the
-@t{@@sbs@{}@i{L}@t{@comma{}@w{ }}@i{S}@t{@comma{}@w{ }}@i{R}@t{@}}
+@w{@t{@@sbs@{}@i{L}@t{@comma{}@w{ }}@i{S}@t{@comma{}@w{ }}@i{R}@t{@}}}
 Texinfo macro, which inserts
-@i{S}
+@w{@i{S}}
 as a subscript in the output formats other than @TeX{}@.
-@i{L}
+@w{@i{L}}
 and
-@i{R}
+@w{@i{R}}
 are ignored except in Info and plain text,
 in which they are inserted to the left and right of
-@i{S},
+@w{@i{S}@comma{}}
 serving as parentheses@.
 This is used to imitate the mathematical
 notation of @TeX{} in the other output formats:
@@ -393,18 +393,18 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @item @w{@t{sps.@:texi}}
 @include ipez.texi
 The
-@t{sps.@:texi}
+@w{@t{sps.@:texi}}
 special file defines the
-@t{@@sps@{}@i{L}@t{@comma{}@w{ }}@i{S}@t{@comma{}@w{ }}@i{R}@t{@}}
+@w{@t{@@sps@{}@i{L}@t{@comma{}@w{ }}@i{S}@t{@comma{}@w{ }}@i{R}@t{@}}}
 Texinfo macro, which inserts
-@i{S}
+@w{@i{S}}
 as a superscript in the output formats other than @TeX{}@.
-@i{L}
+@w{@i{L}}
 and
-@i{R}
+@w{@i{R}}
 are ignored except in Info and plain text,
 in which they are inserted to the left and right of
-@i{S},
+@w{@i{S}@comma{}}
 serving as parentheses@.
 This is used to imitate the mathematical
 notation of @TeX{} in the other output formats:
