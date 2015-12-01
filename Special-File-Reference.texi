@@ -20,7 +20,7 @@ option of
 @table @asis
 @sfindex @t{bdots.@:texi}
 @tmindex @t{@@bdots}
-@item @t{bdots.@:texi}
+@item @w{@t{bdots.@:texi}}
 @include ipez.texi
 The
 @t{bdots.@:texi}
@@ -43,7 +43,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 
 @sfindex @t{dslash.@:texi}
 @tmindex @t{@@dslash}
-@item @t{dslash.@:texi}
+@item @w{@t{dslash.@:texi}}
 @include ipez.texi
 The
 @t{dslash.@:texi}
@@ -66,7 +66,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 
 @sfindex @t{gequ.@:texi}
 @tmindex @t{@@gequ}
-@item @t{gequ.@:texi}
+@item @w{@t{gequ.@:texi}}
 @include ipez.texi
 The
 @t{gequ.@:texi}
@@ -89,7 +89,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 
 @sfindex @t{lcei.@:texi}
 @tmindex @t{@@lcei}
-@item @t{lcei.@:texi}
+@item @w{@t{lcei.@:texi}}
 @include ipez.texi
 The
 @t{lcei.@:texi}
@@ -112,7 +112,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 
 @sfindex @t{lequ.@:texi}
 @tmindex @t{@@lequ}
-@item @t{lequ.@:texi}
+@item @w{@t{lequ.@:texi}}
 @include ipez.texi
 The
 @t{lequ.@:texi}
@@ -135,7 +135,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 
 @sfindex @t{lflo.@:texi}
 @tmindex @t{@@lflo}
-@item @t{lflo.@:texi}
+@item @w{@t{lflo.@:texi}}
 @include ipez.texi
 The
 @t{lflo.@:texi}
@@ -157,7 +157,7 @@ $\lfloor@w{ }x@w{ }\rfloor$
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
 @sfindex @t{math.@:texi}
-@item @t{math.@:texi}
+@item @w{@t{math.@:texi}}
 @include ipez.texi
 The
 @t{math.@:texi}
@@ -174,7 +174,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 
 @sfindex @t{mdot.@:texi}
 @tmindex @t{@@mdot}
-@item @t{mdot.@:texi}
+@item @w{@t{mdot.@:texi}}
 @include ipez.texi
 The
 @t{mdot.@:texi}
@@ -197,7 +197,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 
 @sfindex @t{mdots.@:texi}
 @tmindex @t{@@mdots}
-@item @t{mdots.@:texi}
+@item @w{@t{mdots.@:texi}}
 @include ipez.texi
 The
 @t{mdots.@:texi}
@@ -220,7 +220,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 
 @sfindex @t{msign.@:texi}
 @tmindex @t{@@msign}
-@item @t{msign.@:texi}
+@item @w{@t{msign.@:texi}}
 @include ipez.texi
 The
 @t{msign.@:texi}
@@ -243,7 +243,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 
 @sfindex @t{nequ.@:texi}
 @tmindex @t{@@nequ}
-@item @t{nequ.@:texi}
+@item @w{@t{nequ.@:texi}}
 @include ipez.texi
 The
 @t{nequ.@:texi}
@@ -266,7 +266,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 
 @sfindex @t{prm.@:texi}
 @tmindex @t{@@prm}
-@item @t{prm.@:texi}
+@item @w{@t{prm.@:texi}}
 @include ipez.texi
 The
 @t{prm.@:texi}
@@ -289,7 +289,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 
 @sfindex @t{rarrow.@:texi}
 @tmindex @t{@@rarrow}
-@item @t{rarrow.@:texi}
+@item @w{@t{rarrow.@:texi}}
 @include ipez.texi
 The
 @t{rarrow.@:texi}
@@ -312,7 +312,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 
 @sfindex @t{rcei.@:texi}
 @tmindex @t{@@rcei}
-@item @t{rcei.@:texi}
+@item @w{@t{rcei.@:texi}}
 @include ipez.texi
 The
 @t{rcei.@:texi}
@@ -335,7 +335,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 
 @sfindex @t{rflo.@:texi}
 @tmindex @t{@@rflo}
-@item @t{rflo.@:texi}
+@item @w{@t{rflo.@:texi}}
 @include ipez.texi
 The
 @t{rflo.@:texi}
@@ -358,7 +358,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 
 @sfindex @t{sbs.@:texi}
 @tmindex @t{@@sbs}
-@item @t{sbs.@:texi}
+@item @w{@t{sbs.@:texi}}
 @include ipez.texi
 The
 @t{sbs.@:texi}
@@ -390,7 +390,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 
 @sfindex @t{sps.@:texi}
 @tmindex @t{@@sps}
-@item @t{sps.@:texi}
+@item @w{@t{sps.@:texi}}
 @include ipez.texi
 The
 @t{sps.@:texi}
