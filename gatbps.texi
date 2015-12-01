@@ -55,6 +55,7 @@ which was released on @value{DATE}@.
 * Introduction::
 * Building and Installation::
 * Invoking @t{gatbps}::
+* Invoking @t{sh-form-sh}::
 * Mathematical Notation in Texinfo::
 * Special File Reference::
 * CC0::
@@ -69,6 +70,8 @@ which was released on @value{DATE}@.
 @include Building-and-Installation.texi
 
 @include Invoking-gatbps.texi
+
+@include Invoking-sh-form-sh.texi
 
 @include Mathematical-Notation-in-Texinfo.texi
 
