@@ -1703,8 +1703,7 @@ EOF1
 Special file: ${fB1}sh-form.sh${fR1}
 
 The ${fB1}sh-form.sh${fR1} special file is a portable shell script that formats its
-input as a quoted shell string. Generate the file and try ${fB1}sh sh-form.sh${fR1}
-${fB1}--help${fR1} for more information.
+input as a shell string literal.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
@@ -2715,14 +2714,16 @@ $x_{y\ +\ z_w}$
 .IP
 For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 .TP
-.nohy "\fBsh-form.sh\fR"
+.nohy "\fBsh\-form.sh\fR"
 .IPEZ
 The
-.nohy "\fBsh-form.sh\fR"
-special file is a portable shell script that formats its
-input as a quoted shell string.
+.nohy "\fBsh\-form.sh\fR"
+special file is a portable
+shell script that formats its
+input as a shell string literal.
+.IP
 Generate the file and try
-.nohy "\fBsh sh-form.sh \-\-help\fR"
+.nohy "\fBsh\ sh\-form.sh\ \-\-help\fR"
 for more information.
 .TP
 .nohy "\fBsps.texi\fR"
@@ -8049,6 +8050,13 @@ EOF1
 # released on @PACKAGE_DATE@. Before changing it, make sure
 # you're doing the right thing. Depending on how GATBPS
 # is being used, your changes may be automatically lost.
+#
+# Special file: sh-form.sh
+#
+# The sh-form.sh special file is a portable shell script that formats
+# its input as a shell string literal.
+#
+# For more information, see the GATBPS manual.
 #
 
 #

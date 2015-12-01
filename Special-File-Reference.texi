@@ -388,6 +388,17 @@ $x_@{y@w{ }+@w{ }z_w@}$
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
+@sfindex @t{sh-form.@:sh}
+@item @w{@t{sh-form.@:sh}}
+@include ipez.texi
+The
+@w{@t{sh-form.@:sh}}
+special file is a portable
+shell script that formats its
+input as a shell string literal@.
+
+For more information, @pxref{Invoking @t{sh-form-sh}}@.
+
 @sfindex @t{sps.@:texi}
 @tmindex @t{@@sps}
 @item @w{@t{sps.@:texi}}
