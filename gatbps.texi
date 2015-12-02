@@ -20,7 +20,7 @@
 
 @dircategory Software development
 @direntry
-* GATBPS: (gatbps). Generate basic package files.
+* GATBPS: (gatbps).             Generate basic package files.
 @end direntry
 
 @ifplaintext
