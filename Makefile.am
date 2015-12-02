@@ -3,7 +3,6 @@ EXTRA_DIST += DATE
 EXTRA_DIST += DATE.sh
 EXTRA_DIST += VERSION
 EXTRA_DIST += VERSION.sh
-EXTRA_DIST += install-info-dir-entries.sh
 EXTRA_DIST += sh-form.sh
 
 MOSTLYCLEANFILES =
@@ -58,7 +57,6 @@ man_MANS += gatbps.1
 txtdir = $(docdir)
 
 .PHONY: docbook
-.PHONY: install-info-dir-entries
 .PHONY: txt
 
 docbook: gatbps.xml
@@ -85,19 +83,6 @@ gatbps.xml: gatbps.texi
   '-I' '$(srcdir)' \
   '-o' '$@' \
   '$(srcdir)/gatbps.texi'
-
-install-data-hook: install-info-dir-entries
-
-install-info-dir-entries:
-	@$(POST_INSTALL)
-	@if $(am__can_run_installinfo); then \
-	  $(SHELL) \
-	    '$(srcdir)/install-info-dir-entries.sh' \
-	    '$(DESTDIR)' \
-	    '$(infodir)' \
-	  ; \
-	fi; \
-	exit '0'
 
 txt: gatbps.txt
 
