@@ -18,6 +18,11 @@
 @defindex sf
 @defindex tm
 
+@dircategory Individual utilities
+@direntry
+* gatbps: (gatbps)Invoking gatbps.              Generate basic package files.
+@end direntry
+
 @dircategory Software development
 @direntry
 * GATBPS: (gatbps).             Generate basic package files.
