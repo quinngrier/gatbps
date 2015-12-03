@@ -1863,7 +1863,7 @@ gatbps \- generate basic files for software packages
 .SH "SYNOPSIS"
 .LP
 .nf
-\fBgatbps\fR [<\fIoption\fR> | <\fIfile\fR>]...
+\fBgatbps\fR\ [<\fIoption\fR>\ |\ <\fIfile\fR>]...
 .fi
 .SH "DESCRIPTION"
 .SH "OPTIONS"
