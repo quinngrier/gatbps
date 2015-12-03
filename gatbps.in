@@ -2764,21 +2764,21 @@ For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 .SH "TEMPORARY FILES"
 .LP
 .nohy "\fBgatbps\fR"
-reserves the temporary files
+reserves the ten temporary files
 .nohy "\fIS\fB.gatbps0\fR"
 through
 .nohy "\fIS\fB.gatbps9\fR"
-for each operand
+during the generation of an operand
 .nohy "\fIS\fR."
-If any of these files is nonregular or a directory,
-then all of them are ignored and
-.nohy "\fIS\fR"
-fails.
-Otherwise, some of them are used in the processing of
-.nohy "\fIS\fR"
-and all of them are deleted after
-.nohy "\fIS\fR"
-succeeds or fails.
+If any of these
+files is nonregular
+or a directory, then
+all of them are ignored
+and the generation fails.
+Otherwise,
+some of them may be utilized
+during the generation, and all of them
+are deleted after it succeeds or fails.
 .SH "ENVIRONMENT VARIABLES"
 .LP
 .nohy "\fBgatbps\fR"
