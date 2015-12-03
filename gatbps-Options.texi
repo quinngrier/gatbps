@@ -8,7 +8,7 @@ The
 @w{@t{-@w{-}}}
 option disables option detection,
 causing all further arguments to
-be detected as operands@.
+be interpreted as operands@.
 
 @item @w{@t{-@w{-}help}[@t{=}@i{S}]}
 @include ipez.texi

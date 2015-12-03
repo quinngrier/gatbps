@@ -1874,7 +1874,7 @@ The
 .nohy "\fB\-\-\fR"
 option disables option detection,
 causing all further arguments to
-be detected as operands.
+be interpreted as operands.
 .TP
 .nohy "\fB\-\-awk=\fIS\fR"
 .IPEZ
