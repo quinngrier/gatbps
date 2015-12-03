@@ -2,11 +2,12 @@
 @chapter @t{gatbps} Temporary Files
 
 @w{@t{gatbps}}
-reserves the ten temporary files
+reserves the ten files
 @w{@i{S}@t{.@:gatbps0}}
 through
 @w{@i{S}@t{.@:gatbps9}}
-during the generation of an operand
+for temporary use during
+the generation of an operand
 @w{@i{S}@.}
 If any of these
 files is nonregular
