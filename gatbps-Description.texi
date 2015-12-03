@@ -1,5 +1,9 @@
 @node @t{gatbps} Description
 @chapter @t{gatbps} Description
+
+@w{@t{gatbps}}
+generates basic files
+for software packages@.
 @ifxml
 @ifnotxml
 @c

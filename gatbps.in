@@ -1866,6 +1866,10 @@ gatbps \- generate basic files for software packages
 \fBgatbps\fR\ [<\fIoption\fR>\ |\ <\fIfile\fR>]...
 .fi
 .SH "DESCRIPTION"
+.LP
+.nohy "\fBgatbps\fR"
+generates basic files
+for software packages.
 .SH "OPTIONS"
 .TP
 .nohy "\fB\-\-\fR"
