@@ -31,6 +31,7 @@ gatbps_TEXINFOS += bothcontents.texi
 gatbps_TEXINFOS += dslash.texi
 gatbps_TEXINFOS += gatbps-Environment-Variables.texi
 gatbps_TEXINFOS += gatbps-Options.texi
+gatbps_TEXINFOS += gatbps-Synopsis.texi
 gatbps_TEXINFOS += gequ.texi
 gatbps_TEXINFOS += ipez.texi
 gatbps_TEXINFOS += lcei.texi

@@ -1,24 +1,5 @@
-@node Invoking @t{gatbps}
-@chapter Invoking @t{gatbps}
-
-This section describes
-@w{@t{gatbps}}
-similarly to how it is
-described by its manual page@.
-
-@menu
-* @t{gatbps} Synopsis::
-* @t{gatbps} Options::
-* @t{gatbps} Environment Variables::
-@end menu
-
-@lowersections
-@include gatbps-Synopsis.texi
-
-@include gatbps-Options.texi
-
-@include gatbps-Environment-Variables.texi
-@raisesections
+@node @t{gatbps} Synopsis
+@chapter @t{gatbps} Synopsis
 @ifxml
 @ifnotxml
 @c
