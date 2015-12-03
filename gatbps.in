@@ -2893,11 +2893,12 @@ environment variable has no effect.
 .SH "EXIT STATUS"
 .LP
 .nohy "\fBgatbps\fR"
-indicates success with exit status zero
-and failure with any nonzero exit status.
-Success means that all program arguments
-were successfully processed, and failure
-means that one or more were not.
+indicates success
+with exit status zero
+and failure with any other exit status.
+Success means that
+all arguments were successfully processed,
+and failure means that one or more were not.
 .\"
 .\" The authors of this file have waived all copyright and
 .\" related or neighboring rights to the extent permitted by
