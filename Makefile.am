@@ -71,7 +71,7 @@ gatbps.txt: gatbps.texi
   $(MAKEINFOFLAGS) \
   '--plaintext' \
   '-I' '$(srcdir)' \
-  '-o' '$@' \
+  '-o' '$@AT@' \
   '$(srcdir)/gatbps.texi'
 
 gatbps.xml: $(gatbps_TEXINFOS)
@@ -81,7 +81,7 @@ gatbps.xml: gatbps.texi
   $(MAKEINFOFLAGS) \
   '--docbook' \
   '-I' '$(srcdir)' \
-  '-o' '$@' \
+  '-o' '$@AT@' \
   '$(srcdir)/gatbps.texi'
 
 txt: gatbps.txt
