@@ -1,5 +1,12 @@
 @node @t{gatbps} Synopsis
 @chapter @t{gatbps} Synopsis
+
+@w{@t{gatbps}}
+is invoked as follows:
+
+@example
+gatbps@w{ }[<@r{@i{option}}>@w{ }|@w{ }<@r{@i{file}}>]...
+@end example
 @ifxml
 @ifnotxml
 @c
