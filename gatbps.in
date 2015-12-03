@@ -1859,7 +1859,7 @@ EOF1
 .TH "gatbps" "1" "@PACKAGE_DATE@" "@PACKAGE_STRING@"
 .SH "NAME"
 .LP
-gatbps \- generate basic files for software packages
+\fBgatbps\fR \- generate basic files for software packages
 .SH "SYNOPSIS"
 .LP
 .nf
