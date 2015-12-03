@@ -34,6 +34,7 @@ gatbps_TEXINFOS += gatbps-Environment-Variables.texi
 gatbps_TEXINFOS += gatbps-Exit-Status.texi
 gatbps_TEXINFOS += gatbps-Options.texi
 gatbps_TEXINFOS += gatbps-Synopsis.texi
+gatbps_TEXINFOS += gatbps-Temporary-Files.texi
 gatbps_TEXINFOS += gequ.texi
 gatbps_TEXINFOS += ipez.texi
 gatbps_TEXINFOS += lcei.texi

@@ -10,6 +10,7 @@ described by its manual page@.
 * @t{gatbps} Synopsis::
 * @t{gatbps} Description::
 * @t{gatbps} Options::
+* @t{gatbps} Temporary Files::
 * @t{gatbps} Environment Variables::
 * @t{gatbps} Exit Status::
 @end menu
@@ -20,6 +21,8 @@ described by its manual page@.
 @include gatbps-Description.texi
 
 @include gatbps-Options.texi
+
+@include gatbps-Temporary-Files.texi
 
 @include gatbps-Environment-Variables.texi
 
