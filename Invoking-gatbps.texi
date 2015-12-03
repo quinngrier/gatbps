@@ -1,6 +1,11 @@
 @node Invoking @t{gatbps}
 @chapter Invoking @t{gatbps}
 
+This section describes
+@w{@t{gatbps}}
+similarly to how it is
+described by its manual page@.
+
 @menu
 * @t{gatbps} Options::
 * @t{gatbps} Environment Variables::
