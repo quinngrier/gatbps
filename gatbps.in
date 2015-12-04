@@ -685,7 +685,7 @@ EOF1
         '--help')
 
           cat <<EOF1
-Usage: ${fB1}gatbps${fR1} [<${fI1}option${fR1}> | <${fI1}file${fR1}>]...
+Usage: ${fB1}gatbps${fR1} [<${fI1}operand${fR1}> | <${fI1}option${fR1}>]...
 
 ${fB1}gatbps${fR1} generates basic files for software packages. The arguments are
 processed one at a time from left to right. Each argument is classified
@@ -1866,7 +1866,7 @@ EOF1
 .SH "SYNOPSIS"
 .LP
 .nf
-\fBgatbps\fR\ [<\fIoption\fR>\ |\ <\fIfile\fR>]...
+\fBgatbps\fR\ [<\fIoperand\fR>\ |\ <\fIoption\fR>]...
 .fi
 .SH "DESCRIPTION"
 .LP
