@@ -687,13 +687,16 @@ EOF1
           cat <<EOF1
 Usage: ${fB1}gatbps${fR1} [<${fI1}option${fR1}> | <${fI1}file${fR1}>]...
 
-Create standard project files.
-
-Each file is classified by its name as either plain or special. In the
-first form, the list of special files is shown if no file operands are
-given. Any other file is plain. All plain files are created in the same
-way, but each special file is created in a unique way. More information
-on how a given file will be created can be shown with the second form.
+${fB1}gatbps${fR1} generates basic files for software packages. The arguments are
+processed one at a time from left to right. Each argument is classified
+as either an operand or as (part of) an option. Each operand generates a
+file, and each option modifies the overall behavior of the program. Each
+operand is classified by its file name as either special or plain. There
+is a fixed list of special files, and any other file is plain. A special
+file has fixed content, with examples including copyright text and shell
+scripts to help the build system. A plain file is generated as the plain
+text output of a corresponding Texinfo file, which is useful for writing
+files like ${fB1}README${fR1} and ${fB1}INSTALL${fR1} in Texinfo.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
