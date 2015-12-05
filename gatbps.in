@@ -1919,6 +1919,66 @@ or disable each phase,
 but printing and generation
 cannot be simultaneously disabled.
 By default, only generation is enabled.
+.LP
+Options are written
+in the usual GNU style.
+Each option has
+one or more names, and each
+name is either long or short.
+A long name consists of
+two hyphen-minus characters
+followed by zero or more printable
+characters except for the space character,
+and a short name consists of one hyphen-minus
+character followed by one printable character
+except for the hyphen-minus and space characters.
+An option either requires a value,
+permits a value, or forbids a value.
+Let
+.nohy "\fB\-\-\fIL\fR"
+and
+.nohy "\fB\-\fIS\fR"
+be long and short names for an option and
+.nohy "\fIV\fR"
+be a value.
+If the option
+requires a value,
+then it may be written as
+.nohy "\fB\-\-\fIL\fB=\fIV\fR,"
+.nohy "\fB\-\-\fIL\ V\fR,"
+.nohy "\fB\-\fISV\fR,"
+or
+.nohy "\fB\-\fIS\ V\fR."
+If the option
+permits a value,
+then it may be written as
+.nohy "\fB\-\-\fIL\fB=\fIV\fR,"
+.nohy "\fB\-\-\fIL\fR,"
+.nohy "\fB\-\fISV\fR,"
+or
+.nohy "\fB\-\fIS\fR."
+If the option
+forbids a value,
+then it may be written as
+.nohy "\fB\-\-\fIL\fR"
+or
+.nohy "\fB\-\fIS\fR."
+Furthermore, a short name argument
+.nohy "\fB\-\fIT\fR"
+for an option
+that forbids a value
+may be (repeatedly) combined
+with any immediately following
+.nohy "\fB\-\fIS\fR"
+form by deleting the
+.nohy "\fB\-\fIT\fR"
+argument and inserting
+.nohy "\fIT\fR"
+between the
+.nohy "\fB\-\fR"
+and
+.nohy "\fIS\fR"
+characters.
 .SH "OPTIONS"
 .LP
 .nohy "\fBgatbps\fR"

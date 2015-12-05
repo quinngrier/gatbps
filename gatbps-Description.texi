@@ -50,6 +50,66 @@ or disable each phase,
 but printing and generation
 cannot be simultaneously disabled@.
 By default, only generation is enabled@.
+
+Options are written
+in the usual GNU style@.
+Each option has
+one or more names, and each
+name is either long or short@.
+A long name consists of
+two hyphen-minus characters
+followed by zero or more printable
+characters except for the space character,
+and a short name consists of one hyphen-minus
+character followed by one printable character
+except for the hyphen-minus and space characters@.
+An option either requires a value,
+permits a value, or forbids a value@.
+Let
+@w{@t{-@w{-}}@i{L}}
+and
+@w{@t{-}@i{S}}
+be long and short names for an option and
+@w{@i{V}}
+be a value@.
+If the option
+requires a value,
+then it may be written as
+@w{@t{-@w{-}}@i{L}@t{=}@i{V}@comma{}}
+@w{@t{-@w{-}}@i{L@w{ }V}@comma{}}
+@w{@t{-}@i{SV}@comma{}}
+or
+@w{@t{-}@i{S@w{ }V}@.}
+If the option
+permits a value,
+then it may be written as
+@w{@t{-@w{-}}@i{L}@t{=}@i{V}@comma{}}
+@w{@t{-@w{-}}@i{L}@comma{}}
+@w{@t{-}@i{SV}@comma{}}
+or
+@w{@t{-}@i{S}@.}
+If the option
+forbids a value,
+then it may be written as
+@w{@t{-@w{-}}@i{L}}
+or
+@w{@t{-}@i{S}@.}
+Furthermore, a short name argument
+@w{@t{-}@i{T}}
+for an option
+that forbids a value
+may be (repeatedly) combined
+with any immediately following
+@w{@t{-}@i{S}}
+form by deleting the
+@w{@t{-}@i{T}}
+argument and inserting
+@w{@i{T}}
+between the
+@w{@t{-}}
+and
+@w{@i{S}}
+characters@.
 @ifxml
 @ifnotxml
 @c
