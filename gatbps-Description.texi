@@ -34,6 +34,22 @@ which is useful for writing files like
 and
 @w{@t{INSTALL}}
 in Texinfo@.
+
+Each operand is
+processed in three phases:
+printing, generation, and recursion@.
+Printing writes the
+operand to standard output,
+generation actually creates the file,
+and recursion, which only applies to
+special files, prepends any prerequisite
+special files to the remaining arguments@.
+Various options
+can be used to enable
+or disable each phase,
+but printing and generation
+cannot be simultaneously disabled@.
+By default, only generation is enabled@.
 @ifxml
 @ifnotxml
 @c
