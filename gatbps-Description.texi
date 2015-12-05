@@ -4,15 +4,16 @@
 @w{@t{gatbps}}
 generates basic files
 for software packages@.
-The arguments are processed
-one at a time from left to right@.
+The arguments
+are processed one
+at a time, in order@.
 Each argument
 is classified as
 either an operand or
 as (part of) an option@.
 Each operand
 generates a file,
-and each option modifies the
+and each option changes the
 overall behavior of the program@.
 Each operand is
 classified by its file
@@ -20,12 +21,12 @@ name as either special or plain@.
 There is a fixed
 list of special files,
 and any other file is plain@.
-A special file
-has fixed content,
+Each special file
+is fixed in content,
 with examples including
-copyright text and shell
-scripts to help the build system@.
-A plain file is
+copyright texts and scripts
+to be used with the build system@.
+Each plain file is
 generated as the plain text
 output of a corresponding Texinfo file,
 which is useful for writing files like
