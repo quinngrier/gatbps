@@ -1964,16 +1964,16 @@ then it may be written as
 or
 .nohy "\fB\-\fIS\fR."
 Furthermore, a short name argument
-.nohy "\fB\-\fIT\fR"
+.nohy "\fB\-\fIR\fR"
 for an option
 that forbids a value
 may be (repeatedly) combined
 with any immediately following
 .nohy "\fB\-\fIS\fR"
 form by deleting the
-.nohy "\fB\-\fIT\fR"
+.nohy "\fB\-\fIR\fR"
 argument and inserting
-.nohy "\fIT\fR"
+.nohy "\fIR\fR"
 between the
 .nohy "\fB\-\fR"
 and
