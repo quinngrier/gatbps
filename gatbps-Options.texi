@@ -1,6 +1,9 @@
 @node @t{gatbps} Options
 @chapter @t{gatbps} Options
 
+@w{@t{gatbps}}
+accepts the following options:
+
 @table @asis
 @item @w{@t{-@w{-}}}
 @include ipez.texi

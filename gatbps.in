@@ -1904,6 +1904,9 @@ and
 .nohy "\fBINSTALL\fR"
 in Texinfo.
 .SH "OPTIONS"
+.LP
+.nohy "\fBgatbps\fR"
+accepts the following options:
 .TP
 .nohy "\fB\-\-\fR"
 .IPEZ
