@@ -32,8 +32,7 @@ output of a corresponding Texinfo file,
 which is useful for writing files like
 @w{@t{README}}
 and
-@w{@t{INSTALL}}
-in Texinfo@.
+@w{@t{INSTALL}@.}
 
 Each operand is
 processed in three phases:

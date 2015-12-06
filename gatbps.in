@@ -696,7 +696,7 @@ list of special files, and any other file is plain. Each special file is
 fixed in content, with examples including copyright texts and scripts to
 be used with the build system. Each plain file is generated as the plain
 text output of a corresponding Texinfo file, which is useful for writing
-files like ${fB1}README${fR1} and ${fB1}INSTALL${fR1} in Texinfo.
+files like ${fB1}README${fR1} and ${fB1}INSTALL${fR1}.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
@@ -1901,8 +1901,7 @@ output of a corresponding Texinfo file,
 which is useful for writing files like
 .nohy "\fBREADME\fR"
 and
-.nohy "\fBINSTALL\fR"
-in Texinfo.
+.nohy "\fBINSTALL\fR."
 .LP
 Each operand is
 processed in three phases:
