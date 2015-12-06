@@ -1931,7 +1931,7 @@ followed by zero or more printable
 characters except for the space character,
 and a short name consists of one hyphen-minus
 character followed by one printable character
-except for the hyphen-minus and space characters.
+except for the space and hyphen-minus characters.
 An option either requires a value,
 permits a value, or forbids a value.
 Let
