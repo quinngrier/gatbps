@@ -94,22 +94,19 @@ then it may be written as
 @w{@t{-@w{-}}@i{L}}
 or
 @w{@t{-}@i{S}@.}
-Furthermore, a short name argument
-@w{@t{-}@i{R}}
-for an option
-that forbids a value
-may be (repeatedly) combined
-with any immediately following
+If the option forbids a
+value and is written as
+@w{@t{-}@i{S}@comma{}}
+then it may be combined with an
+immediately following argument with
+(combined) short form by deleting the
 @w{@t{-}@i{S}}
-form by deleting the
-@w{@t{-}@i{R}}
-argument and inserting
-@w{@i{R}}
-between the
-@w{@t{-}}
-and
+argument and inserting the
 @w{@i{S}}
-characters@.
+character into the following
+argument just after the leading
+@w{@t{-}}
+character@.
 @ifxml
 @ifnotxml
 @c
