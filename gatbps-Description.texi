@@ -10,7 +10,7 @@ at a time, in order@.
 Each argument
 is classified as
 either an operand or
-as (part of) an option@.
+as an option component@.
 Each operand
 generates a file,
 and each option changes the

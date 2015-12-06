@@ -689,7 +689,7 @@ Usage: ${fB1}gatbps${fR1} [<${fI1}operand${fR1}> | <${fI1}option${fR1}>]...
 
 ${fB1}gatbps${fR1} generates basic files for software packages. The arguments are
 processed one at a time, in order. Each argument is classified as either
-an operand or as (part of) an option. Each operand generates a file, and
+an operand or as an option component. Each operand generates a file, and
 each option changes the overall behavior of the program. Each operand is
 classified by its file name as either special or plain. There is a fixed
 list of special files, and any other file is plain. Each special file is
@@ -1879,7 +1879,7 @@ at a time, in order.
 Each argument
 is classified as
 either an operand or
-as (part of) an option.
+as an option component.
 Each operand
 generates a file,
 and each option changes the
