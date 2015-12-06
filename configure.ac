@@ -238,7 +238,8 @@ esac
 
 AC_SUBST([AWK_TROFF])
 
-AC_SUBST([AT], ['@'])
+AT='@'
+AC_SUBST([AT])
 
 AC_CONFIG_FILES([DATE.texi])
 AC_CONFIG_FILES([Makefile])
