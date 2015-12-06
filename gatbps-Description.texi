@@ -51,7 +51,7 @@ cannot be simultaneously disabled@.
 By default, only generation is enabled@.
 
 Options are written
-in a familiar style@.
+in a standard style@.
 Each option has
 one or more names, and each
 name is either long or short@.
