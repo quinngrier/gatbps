@@ -11,9 +11,9 @@ If the
 @w{@t{AWK}}
 environment variable
 is set to a nonempty string
-@w{@i{S}@comma{}}
+@w{@i{V}@comma{}}
 then an instance of the
-@w{@t{-@w{-}awk=}@i{S}}
+@w{@t{-@w{-}awk=}@i{V}}
 option is added to the
 arguments at a position that
 lies before all original arguments@.
@@ -27,9 +27,9 @@ If the
 @w{@t{SED}}
 environment variable
 is set to a nonempty string
-@w{@i{S}@comma{}}
+@w{@i{V}@comma{}}
 then an instance of the
-@w{@t{-@w{-}sed=}@i{S}}
+@w{@t{-@w{-}sed=}@i{V}}
 option is added to the
 arguments at a position that
 lies before all original arguments@.
@@ -43,9 +43,9 @@ If the
 @w{@t{STYLE}}
 environment variable
 is set to a nonempty string
-@w{@i{S}@comma{}}
+@w{@i{V}@comma{}}
 then an instance of the
-@w{@t{-@w{-}style=}@i{S}}
+@w{@t{-@w{-}style=}@i{V}}
 option is added to the
 arguments at a position that
 lies before all original arguments
@@ -64,9 +64,9 @@ If the
 @w{@t{STYLE_STDERR}}
 environment variable
 is set to a nonempty string
-@w{@i{S}@comma{}}
+@w{@i{V}@comma{}}
 then an instance of the
-@w{@t{-@w{-}style-stderr=}@i{S}}
+@w{@t{-@w{-}style-stderr=}@i{V}}
 option is added to the
 arguments at a position that
 lies before all original arguments
@@ -83,9 +83,9 @@ If the
 @w{@t{STYLE_STDOUT}}
 environment variable
 is set to a nonempty string
-@w{@i{S}@comma{}}
+@w{@i{V}@comma{}}
 then an instance of the
-@w{@t{-@w{-}style-stdout=}@i{S}}
+@w{@t{-@w{-}style-stdout=}@i{V}}
 option is added to the
 arguments at a position that
 lies before all original arguments
@@ -102,9 +102,9 @@ If the
 @w{@t{TEXI2ANY}}
 environment variable
 is set to a nonempty string
-@w{@i{S}@comma{}}
+@w{@i{V}@comma{}}
 then an instance of the
-@w{@t{-@w{-}texi2any=}@i{S}}
+@w{@t{-@w{-}texi2any=}@i{V}}
 option is added to the
 arguments at a position that
 lies before all original arguments@.

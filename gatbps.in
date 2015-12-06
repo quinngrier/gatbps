@@ -2897,9 +2897,9 @@ If the
 .nohy "\fBAWK\fR"
 environment variable
 is set to a nonempty string
-.nohy "\fIS\fR,"
+.nohy "\fIV\fR,"
 then an instance of the
-.nohy "\fB\-\-awk=\fIS\fR"
+.nohy "\fB\-\-awk=\fIV\fR"
 option is added to the
 arguments at a position that
 lies before all original arguments.
@@ -2913,9 +2913,9 @@ If the
 .nohy "\fBSED\fR"
 environment variable
 is set to a nonempty string
-.nohy "\fIS\fR,"
+.nohy "\fIV\fR,"
 then an instance of the
-.nohy "\fB\-\-sed=\fIS\fR"
+.nohy "\fB\-\-sed=\fIV\fR"
 option is added to the
 arguments at a position that
 lies before all original arguments.
@@ -2929,9 +2929,9 @@ If the
 .nohy "\fBSTYLE\fR"
 environment variable
 is set to a nonempty string
-.nohy "\fIS\fR,"
+.nohy "\fIV\fR,"
 then an instance of the
-.nohy "\fB\-\-style=\fIS\fR"
+.nohy "\fB\-\-style=\fIV\fR"
 option is added to the
 arguments at a position that
 lies before all original arguments
@@ -2950,9 +2950,9 @@ If the
 .nohy "\fBSTYLE_STDERR\fR"
 environment variable
 is set to a nonempty string
-.nohy "\fIS\fR,"
+.nohy "\fIV\fR,"
 then an instance of the
-.nohy "\fB\-\-style\-stderr=\fIS\fR"
+.nohy "\fB\-\-style\-stderr=\fIV\fR"
 option is added to the
 arguments at a position that
 lies before all original arguments
@@ -2969,9 +2969,9 @@ If the
 .nohy "\fBSTYLE_STDOUT\fR"
 environment variable
 is set to a nonempty string
-.nohy "\fIS\fR,"
+.nohy "\fIV\fR,"
 then an instance of the
-.nohy "\fB\-\-style\-stdout=\fIS\fR"
+.nohy "\fB\-\-style\-stdout=\fIV\fR"
 option is added to the
 arguments at a position that
 lies before all original arguments
@@ -2988,9 +2988,9 @@ If the
 .nohy "\fBTEXI2ANY\fR"
 environment variable
 is set to a nonempty string
-.nohy "\fIS\fR,"
+.nohy "\fIV\fR,"
 then an instance of the
-.nohy "\fB\-\-texi2any=\fIS\fR"
+.nohy "\fB\-\-texi2any=\fIV\fR"
 option is added to the
 arguments at a position that
 lies before all original arguments.
