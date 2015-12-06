@@ -98,7 +98,7 @@ If the option forbids a
 value and is written as
 @w{@t{-}@i{S}@comma{}}
 then it may be combined with an
-immediately following argument with
+immediately following argument in
 (combined) short form by deleting the
 @w{@t{-}@i{S}}
 argument and inserting the

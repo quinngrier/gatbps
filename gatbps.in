@@ -1967,7 +1967,7 @@ If the option forbids a
 value and is written as
 .nohy "\fB\-\fIS\fR,"
 then it may be combined with an
-immediately following argument with
+immediately following argument in
 (combined) short form by deleting the
 .nohy "\fB\-\fIS\fR"
 argument and inserting the
