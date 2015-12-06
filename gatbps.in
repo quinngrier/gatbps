@@ -1925,10 +1925,10 @@ in the usual GNU style.
 Each option has
 one or more names, and each
 name is either long or short.
-A long name consists of
-two hyphen-minus characters
-followed by zero or more printable
-characters except for the space character,
+A long name consists of two
+hyphen-minus characters followed by
+zero or more printable characters except
+for the space and equals sign characters,
 and a short name consists of one hyphen-minus
 character followed by one printable character
 except for the space and hyphen-minus characters.
