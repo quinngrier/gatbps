@@ -1918,6 +1918,7 @@ or disable each phase,
 but printing and generation
 cannot be simultaneously disabled.
 By default, only generation is enabled.
+.SH "OPTIONS"
 .LP
 Options are written
 in a standard style.
@@ -1973,7 +1974,6 @@ character into the following
 argument just after the leading
 .nohy "\fB\-\fR"
 character.
-.SH "OPTIONS"
 .LP
 .nohy "\fBgatbps\fR"
 accepts the following options:
