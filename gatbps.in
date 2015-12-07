@@ -2114,6 +2114,7 @@ release date, and copyright information.
 .SH "STDIN"
 .LP
 Not used.
+.SH "INPUT FILES"
 .SH "ENVIRONMENT VARIABLES"
 .LP
 .nohy "\fBgatbps\fR"
