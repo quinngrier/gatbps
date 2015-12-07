@@ -2226,6 +2226,9 @@ lies before all original arguments.
 Otherwise, the
 .nohy "\fBTEXI2ANY\fR"
 environment variable has no effect.
+.SH "ASYNCHRONOUS EVENTS"
+.LP
+Default.
 .SH "STDERR"
 .LP
 Each error causes a message

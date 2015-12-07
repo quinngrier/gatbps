@@ -14,6 +14,7 @@ described by its manual page@.
 * @t{gatbps} Standard Input::
 * @t{gatbps} Input Files::
 * @t{gatbps} Environment Variables::
+* @t{gatbps} Asynchronous Events::
 * @t{gatbps} Standard Error::
 * @t{gatbps} Output Files::
 * @t{gatbps} Exit Status::
@@ -34,6 +35,8 @@ described by its manual page@.
 @include gatbps-Input-Files.texi
 
 @include gatbps-Environment-Variables.texi
+
+@include gatbps-Asynchronous-Events.texi
 
 @include gatbps-Standard-Error.texi
 
