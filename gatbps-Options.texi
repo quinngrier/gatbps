@@ -23,7 +23,7 @@ be long and short names for an option and
 be a value@.
 If the option
 requires a value,
-then it may be written as
+then it may be written as either
 @w{@t{-@w{-}}@i{L}@t{=}@i{V}@comma{}}
 @w{@t{-@w{-}}@i{L@w{ }V}@comma{}}
 @w{@t{-}@i{SV}@comma{}}
@@ -31,7 +31,7 @@ or
 @w{@t{-}@i{S@w{ }V}@.}
 If the option
 permits a value,
-then it may be written as
+then it may be written as either
 @w{@t{-@w{-}}@i{L}@t{=}@i{V}@comma{}}
 @w{@t{-@w{-}}@i{L}@comma{}}
 @w{@t{-}@i{SV}@comma{}}
@@ -39,7 +39,7 @@ or
 @w{@t{-}@i{S}@.}
 If the option
 forbids a value,
-then it may be written as
+then it may be written as either
 @w{@t{-@w{-}}@i{L}}
 or
 @w{@t{-}@i{S}@comma{}}
