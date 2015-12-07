@@ -2110,6 +2110,117 @@ and causes all further arguments to be ignored.
 The text is the program's
 name, package, version number,
 release date, and copyright information.
+.SH "ENVIRONMENT VARIABLES"
+.LP
+.nohy "\fBgatbps\fR"
+is affected by the following environment variables:
+.TP
+.nohy "\fBAWK\fR"
+.IPEZ
+If the
+.nohy "\fBAWK\fR"
+environment variable
+is set to a nonempty value
+.nohy "\fIV\fR,"
+then an instance of the
+.nohy "\fB\-\-awk=\fIV\fR"
+option is added to the
+arguments at a position that
+lies before all original arguments.
+Otherwise, the
+.nohy "\fBAWK\fR"
+environment variable has no effect.
+.TP
+.nohy "\fBSED\fR"
+.IPEZ
+If the
+.nohy "\fBSED\fR"
+environment variable
+is set to a nonempty value
+.nohy "\fIV\fR,"
+then an instance of the
+.nohy "\fB\-\-sed=\fIV\fR"
+option is added to the
+arguments at a position that
+lies before all original arguments.
+Otherwise, the
+.nohy "\fBSED\fR"
+environment variable has no effect.
+.TP
+.nohy "\fBSTYLE\fR"
+.IPEZ
+If the
+.nohy "\fBSTYLE\fR"
+environment variable
+is set to a nonempty value
+.nohy "\fIV\fR,"
+then an instance of the
+.nohy "\fB\-\-style=\fIV\fR"
+option is added to the
+arguments at a position that
+lies before all original arguments
+and before any arguments added by the
+.nohy "\fBSTYLE_STDERR\fR"
+and
+.nohy "\fBSTYLE_STDOUT\fR"
+environment variables.
+Otherwise, the
+.nohy "\fBSTYLE\fR"
+environment variable has no effect.
+.TP
+.nohy "\fBSTYLE_STDERR\fR"
+.IPEZ
+If the
+.nohy "\fBSTYLE_STDERR\fR"
+environment variable
+is set to a nonempty value
+.nohy "\fIV\fR,"
+then an instance of the
+.nohy "\fB\-\-style\-stderr=\fIV\fR"
+option is added to the
+arguments at a position that
+lies before all original arguments
+and after any argument added by the
+.nohy "\fBSTYLE\fR"
+environment variable.
+Otherwise, the
+.nohy "\fBSTYLE_STDERR\fR"
+environment variable has no effect.
+.TP
+.nohy "\fBSTYLE_STDOUT\fR"
+.IPEZ
+If the
+.nohy "\fBSTYLE_STDOUT\fR"
+environment variable
+is set to a nonempty value
+.nohy "\fIV\fR,"
+then an instance of the
+.nohy "\fB\-\-style\-stdout=\fIV\fR"
+option is added to the
+arguments at a position that
+lies before all original arguments
+and after any argument added by the
+.nohy "\fBSTYLE\fR"
+environment variable.
+Otherwise, the
+.nohy "\fBSTYLE_STDOUT\fR"
+environment variable has no effect.
+.TP
+.nohy "\fBTEXI2ANY\fR"
+.IPEZ
+If the
+.nohy "\fBTEXI2ANY\fR"
+environment variable
+is set to a nonempty value
+.nohy "\fIV\fR,"
+then an instance of the
+.nohy "\fB\-\-texi2any=\fIV\fR"
+option is added to the
+arguments at a position that
+lies before all original arguments.
+Otherwise, the
+.nohy "\fBTEXI2ANY\fR"
+environment variable has no effect.
 .SH "PLAIN FILES"
 .SH "MATHEMATICAL NOTATION IN TEXINFO"
 .LP
@@ -2865,117 +2976,6 @@ $x^{y\ +\ z^w}$
 .RE
 .IP
 For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
-.SH "ENVIRONMENT VARIABLES"
-.LP
-.nohy "\fBgatbps\fR"
-is affected by the following environment variables:
-.TP
-.nohy "\fBAWK\fR"
-.IPEZ
-If the
-.nohy "\fBAWK\fR"
-environment variable
-is set to a nonempty value
-.nohy "\fIV\fR,"
-then an instance of the
-.nohy "\fB\-\-awk=\fIV\fR"
-option is added to the
-arguments at a position that
-lies before all original arguments.
-Otherwise, the
-.nohy "\fBAWK\fR"
-environment variable has no effect.
-.TP
-.nohy "\fBSED\fR"
-.IPEZ
-If the
-.nohy "\fBSED\fR"
-environment variable
-is set to a nonempty value
-.nohy "\fIV\fR,"
-then an instance of the
-.nohy "\fB\-\-sed=\fIV\fR"
-option is added to the
-arguments at a position that
-lies before all original arguments.
-Otherwise, the
-.nohy "\fBSED\fR"
-environment variable has no effect.
-.TP
-.nohy "\fBSTYLE\fR"
-.IPEZ
-If the
-.nohy "\fBSTYLE\fR"
-environment variable
-is set to a nonempty value
-.nohy "\fIV\fR,"
-then an instance of the
-.nohy "\fB\-\-style=\fIV\fR"
-option is added to the
-arguments at a position that
-lies before all original arguments
-and before any arguments added by the
-.nohy "\fBSTYLE_STDERR\fR"
-and
-.nohy "\fBSTYLE_STDOUT\fR"
-environment variables.
-Otherwise, the
-.nohy "\fBSTYLE\fR"
-environment variable has no effect.
-.TP
-.nohy "\fBSTYLE_STDERR\fR"
-.IPEZ
-If the
-.nohy "\fBSTYLE_STDERR\fR"
-environment variable
-is set to a nonempty value
-.nohy "\fIV\fR,"
-then an instance of the
-.nohy "\fB\-\-style\-stderr=\fIV\fR"
-option is added to the
-arguments at a position that
-lies before all original arguments
-and after any argument added by the
-.nohy "\fBSTYLE\fR"
-environment variable.
-Otherwise, the
-.nohy "\fBSTYLE_STDERR\fR"
-environment variable has no effect.
-.TP
-.nohy "\fBSTYLE_STDOUT\fR"
-.IPEZ
-If the
-.nohy "\fBSTYLE_STDOUT\fR"
-environment variable
-is set to a nonempty value
-.nohy "\fIV\fR,"
-then an instance of the
-.nohy "\fB\-\-style\-stdout=\fIV\fR"
-option is added to the
-arguments at a position that
-lies before all original arguments
-and after any argument added by the
-.nohy "\fBSTYLE\fR"
-environment variable.
-Otherwise, the
-.nohy "\fBSTYLE_STDOUT\fR"
-environment variable has no effect.
-.TP
-.nohy "\fBTEXI2ANY\fR"
-.IPEZ
-If the
-.nohy "\fBTEXI2ANY\fR"
-environment variable
-is set to a nonempty value
-.nohy "\fIV\fR,"
-then an instance of the
-.nohy "\fB\-\-texi2any=\fIV\fR"
-option is added to the
-arguments at a position that
-lies before all original arguments.
-Otherwise, the
-.nohy "\fBTEXI2ANY\fR"
-environment variable has no effect.
 .SH "STDERR"
 .LP
 Each error causes a message
