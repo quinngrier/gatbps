@@ -2229,6 +2229,7 @@ environment variable has no effect.
 .SH "ASYNCHRONOUS EVENTS"
 .LP
 Default.
+.SH "STDOUT"
 .SH "STDERR"
 .LP
 Each error causes a message
