@@ -2117,8 +2117,7 @@ Not used.
 .SH "INPUT FILES"
 .SH "ENVIRONMENT VARIABLES"
 .LP
-.nohy "\fBgatbps\fR"
-is affected by the following environment variables:
+The following environment variables are supported:
 .TP
 .nohy "\fBAWK\fR"
 .IPEZ

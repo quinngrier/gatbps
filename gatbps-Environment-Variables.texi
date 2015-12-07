@@ -1,8 +1,7 @@
 @node @t{gatbps} Environment Variables
 @chapter @t{gatbps} Environment Variables
 
-@w{@t{gatbps}}
-is affected by the following environment variables:
+The following environment variables are supported:
 
 @table @asis
 @item @w{@t{AWK}}
