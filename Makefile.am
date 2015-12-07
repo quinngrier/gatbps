@@ -29,6 +29,7 @@ gatbps_TEXINFOS += VERSION.txi
 gatbps_TEXINFOS += bdots.texi
 gatbps_TEXINFOS += bothcontents.texi
 gatbps_TEXINFOS += dslash.texi
+gatbps_TEXINFOS += gatbps-Consequences-of-Errors.texi
 gatbps_TEXINFOS += gatbps-Description.texi
 gatbps_TEXINFOS += gatbps-Environment-Variables.texi
 gatbps_TEXINFOS += gatbps-Exit-Status.texi

@@ -14,6 +14,7 @@ described by its manual page@.
 * @t{gatbps} Environment Variables::
 * @t{gatbps} Standard Error::
 * @t{gatbps} Exit Status::
+* @t{gatbps} Consequences of Errors::
 @end menu
 
 @lowersections
@@ -30,6 +31,8 @@ described by its manual page@.
 @include gatbps-Standard-Error.texi
 
 @include gatbps-Exit-Status.texi
+
+@include gatbps-Consequences-of-Errors.texi
 @raisesections
 @ifxml
 @ifnotxml
