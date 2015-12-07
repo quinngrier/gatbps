@@ -1920,8 +1920,6 @@ cannot be simultaneously disabled.
 By default, only generation is enabled.
 .SH "OPTIONS"
 .LP
-Options are written
-in a standard style.
 Each option has
 one or more names, and each
 name is either long or short.

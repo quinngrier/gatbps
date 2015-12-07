@@ -1,8 +1,6 @@
 @node @t{gatbps} Options
 @chapter @t{gatbps} Options
 
-Options are written
-in a standard style@.
 Each option has
 one or more names, and each
 name is either long or short@.
