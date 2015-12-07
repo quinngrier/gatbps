@@ -37,6 +37,7 @@ gatbps_TEXINFOS += gatbps-Operands.texi
 gatbps_TEXINFOS += gatbps-Options.texi
 gatbps_TEXINFOS += gatbps-Output-Files.texi
 gatbps_TEXINFOS += gatbps-Standard-Error.texi
+gatbps_TEXINFOS += gatbps-Standard-Input.texi
 gatbps_TEXINFOS += gatbps-Synopsis.texi
 gatbps_TEXINFOS += gequ.texi
 gatbps_TEXINFOS += ipez.texi

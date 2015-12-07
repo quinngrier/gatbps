@@ -2111,6 +2111,9 @@ The text is the program's
 name, package, version number,
 release date, and copyright information.
 .SH "OPERANDS"
+.SH "STDIN"
+.LP
+Not used.
 .SH "ENVIRONMENT VARIABLES"
 .LP
 .nohy "\fBgatbps\fR"

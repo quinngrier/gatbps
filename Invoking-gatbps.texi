@@ -11,6 +11,7 @@ described by its manual page@.
 * @t{gatbps} Description::
 * @t{gatbps} Options::
 * @t{gatbps} Operands::
+* @t{gatbps} Standard Input::
 * @t{gatbps} Environment Variables::
 * @t{gatbps} Standard Error::
 * @t{gatbps} Output Files::
@@ -26,6 +27,8 @@ described by its manual page@.
 @include gatbps-Options.texi
 
 @include gatbps-Operands.texi
+
+@include gatbps-Standard-Input.texi
 
 @include gatbps-Environment-Variables.texi
 
