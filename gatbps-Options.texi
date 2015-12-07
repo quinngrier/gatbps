@@ -55,8 +55,7 @@ argument just after the leading
 @w{@t{-}}
 character@.
 
-@w{@t{gatbps}}
-accepts the following options:
+The following options are accepted:
 
 @table @asis
 @item @w{@t{-@w{-}}}
