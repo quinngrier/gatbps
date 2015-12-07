@@ -10,7 +10,7 @@ described by its manual page@.
 * @t{gatbps} Synopsis::
 * @t{gatbps} Description::
 * @t{gatbps} Options::
-* @t{gatbps} Temporary Files::
+* @t{gatbps} Output Files::
 * @t{gatbps} Environment Variables::
 * @t{gatbps} Standard Error::
 * @t{gatbps} Exit Status::
@@ -24,7 +24,7 @@ described by its manual page@.
 
 @include gatbps-Options.texi
 
-@include gatbps-Temporary-Files.texi
+@include gatbps-Output-Files.texi
 
 @include gatbps-Environment-Variables.texi
 

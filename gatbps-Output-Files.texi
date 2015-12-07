@@ -1,5 +1,5 @@
-@node @t{gatbps} Temporary Files
-@chapter @t{gatbps} Temporary Files
+@node @t{gatbps} Output Files
+@chapter @t{gatbps} Output Files
 
 @w{@t{gatbps}}
 reserves the ten files

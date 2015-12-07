@@ -2865,7 +2865,7 @@ $x^{y\ +\ z^w}$
 .RE
 .IP
 For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
-.SH "TEMPORARY FILES"
+.SH "OUTPUT FILES"
 .LP
 .nohy "\fBgatbps\fR"
 reserves the ten files
