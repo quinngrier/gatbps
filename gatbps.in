@@ -2865,25 +2865,6 @@ $x^{y\ +\ z^w}$
 .RE
 .IP
 For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
-.SH "OUTPUT FILES"
-.LP
-.nohy "\fBgatbps\fR"
-reserves the ten files
-.nohy "\fIS\fB.gatbps0\fR"
-through
-.nohy "\fIS\fB.gatbps9\fR"
-for temporary use during
-the generation of an operand
-.nohy "\fIS\fR."
-If any of these
-files is nonregular
-or a directory, then
-all of them are ignored
-and the generation fails.
-Otherwise,
-some of them may be utilized
-during the generation, and all of them
-are deleted after it succeeds or fails.
 .SH "ENVIRONMENT VARIABLES"
 .LP
 .nohy "\fBgatbps\fR"
@@ -3013,6 +2994,25 @@ option.
 Underlying programs
 may also write messages to
 standard error of their own volition.
+.SH "OUTPUT FILES"
+.LP
+.nohy "\fBgatbps\fR"
+reserves the ten files
+.nohy "\fIS\fB.gatbps0\fR"
+through
+.nohy "\fIS\fB.gatbps9\fR"
+for temporary use during
+the generation of an operand
+.nohy "\fIS\fR."
+If any of these
+files is nonregular
+or a directory, then
+all of them are ignored
+and the generation fails.
+Otherwise,
+some of them may be utilized
+during the generation, and all of them
+are deleted after it succeeds or fails.
 .SH "EXIT STATUS"
 .LP
 .nohy "\fBgatbps\fR"

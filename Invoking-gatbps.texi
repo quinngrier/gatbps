@@ -10,9 +10,9 @@ described by its manual page@.
 * @t{gatbps} Synopsis::
 * @t{gatbps} Description::
 * @t{gatbps} Options::
-* @t{gatbps} Output Files::
 * @t{gatbps} Environment Variables::
 * @t{gatbps} Standard Error::
+* @t{gatbps} Output Files::
 * @t{gatbps} Exit Status::
 * @t{gatbps} Consequences of Errors::
 @end menu
@@ -24,11 +24,11 @@ described by its manual page@.
 
 @include gatbps-Options.texi
 
-@include gatbps-Output-Files.texi
-
 @include gatbps-Environment-Variables.texi
 
 @include gatbps-Standard-Error.texi
+
+@include gatbps-Output-Files.texi
 
 @include gatbps-Exit-Status.texi
 
