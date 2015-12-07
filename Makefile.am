@@ -33,6 +33,7 @@ gatbps_TEXINFOS += gatbps-Consequences-of-Errors.texi
 gatbps_TEXINFOS += gatbps-Description.texi
 gatbps_TEXINFOS += gatbps-Environment-Variables.texi
 gatbps_TEXINFOS += gatbps-Exit-Status.texi
+gatbps_TEXINFOS += gatbps-Operands.texi
 gatbps_TEXINFOS += gatbps-Options.texi
 gatbps_TEXINFOS += gatbps-Output-Files.texi
 gatbps_TEXINFOS += gatbps-Standard-Error.texi

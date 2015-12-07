@@ -2110,6 +2110,7 @@ and causes all further arguments to be ignored.
 The text is the program's
 name, package, version number,
 release date, and copyright information.
+.SH "OPERANDS"
 .SH "ENVIRONMENT VARIABLES"
 .LP
 .nohy "\fBgatbps\fR"
