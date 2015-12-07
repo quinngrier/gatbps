@@ -55,7 +55,7 @@ argument just after the leading
 @w{@t{-}}
 character@.
 
-The following options are accepted:
+The following options are supported:
 
 @table @asis
 @item @w{@t{-@w{-}}}

@@ -1958,7 +1958,7 @@ argument just after the leading
 .nohy "\fB\-\fR"
 character.
 .LP
-The following options are accepted:
+The following options are supported:
 .TP
 .nohy "\fB\-\-\fR"
 .IPEZ
