@@ -2998,6 +2998,23 @@ Otherwise, the
 .nohy "\fBTEXI2ANY\fR"
 environment variable has no effect.
 .SH "STDERR"
+.LP
+Each error causes a message
+to be written to standard error.
+Each message line is
+punctuated by either an
+exclamation point, colon,
+or period character, which
+indicate fatal, cautionary,
+and harmless errors, respectively.
+The messages may
+use escape sequences if
+styling is in effect via the
+.nohy "\fB\-\-style\-stderr\fR"
+option.
+Underlying programs
+may also write messages to
+standard error of their own volition.
 .SH "EXIT STATUS"
 .LP
 .nohy "\fBgatbps\fR"
