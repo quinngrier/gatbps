@@ -211,7 +211,7 @@ texi2any_auto=''
 # For each program P of interest, the P variable holds the command name
 # to be used to run P. The variable starts off with a value selected by
 # the configure script and is updated by the P environment variable and
-# instances of the --P=S option. If the variable is set to 'auto', then
+# instances of the --P=V option. If the variable is set to 'auto', then
 # it is adjusted to the value of the P_auto variable.
 #
 
@@ -8386,7 +8386,7 @@ sed_auto=''
 # For each program P of interest, the P variable holds the command name
 # to be used to run P. The variable starts off with a value selected by
 # the configure script and is updated by the P environment variable and
-# instances of the --P=S option. If the variable is set to 'auto', then
+# instances of the --P=V option. If the variable is set to 'auto', then
 # it is adjusted to the value of the P_auto variable.
 #
 
