@@ -1932,6 +1932,7 @@ character followed by one printable character
 except for the space and hyphen-minus characters.
 An option either requires a value,
 permits a value, or forbids a value.
+.LP
 Let
 .nohy "\fB\-\-\fIL\fR"
 and
