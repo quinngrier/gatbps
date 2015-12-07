@@ -12,6 +12,7 @@ described by its manual page@.
 * @t{gatbps} Options::
 * @t{gatbps} Temporary Files::
 * @t{gatbps} Environment Variables::
+* @t{gatbps} Standard Error::
 * @t{gatbps} Exit Status::
 @end menu
 
@@ -25,6 +26,8 @@ described by its manual page@.
 @include gatbps-Temporary-Files.texi
 
 @include gatbps-Environment-Variables.texi
+
+@include gatbps-Standard-Error.texi
 
 @include gatbps-Exit-Status.texi
 @raisesections

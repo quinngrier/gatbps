@@ -2997,6 +2997,7 @@ lies before all original arguments.
 Otherwise, the
 .nohy "\fBTEXI2ANY\fR"
 environment variable has no effect.
+.SH "STDERR"
 .SH "EXIT STATUS"
 .LP
 .nohy "\fBgatbps\fR"
