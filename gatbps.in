@@ -3025,6 +3025,13 @@ Success means that
 all arguments were successfully processed,
 and failure means that one or more were not.
 .SH "CONSEQUENCES OF ERRORS"
+.LP
+.nohy "\fBgatbps\fR"
+exits immediately upon
+encountering any error except
+perhaps when processing an operand,
+in which case some errors only cause the
+current phase to be canceled for the operand.
 .\"
 .\" The authors of this file have waived all copyright and
 .\" related or neighboring rights to the extent permitted by

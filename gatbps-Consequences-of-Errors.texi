@@ -1,5 +1,12 @@
 @node @t{gatbps} Consequences of Errors
 @chapter @t{gatbps} Consequences of Errors
+
+@w{@t{gatbps}}
+exits immediately upon
+encountering any error except
+perhaps when processing an operand,
+in which case some errors only cause the
+current phase to be canceled for the operand@.
 @ifxml
 @ifnotxml
 @c
