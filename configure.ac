@@ -144,7 +144,9 @@ AS_HELP_STRING([--enable-texi2any=S],
   ]
 )
 
-AWK_DEFAULT_SH=`sh "${srcdir}/sh-form.sh" <<EOF
+AWK_DEFAULT_SH=`sh "${srcdir}/sh-form.sh" \
+  "--awk=${AWK}" \
+<<EOF
 ${awk_default}
 EOF
 `
@@ -161,7 +163,9 @@ esac
 AC_SUBST([AWK_DEFAULT_SH])
 AM_SUBST_NOTMAKE([AWK_DEFAULT_SH])
 
-SED_DEFAULT_SH=`sh "${srcdir}/sh-form.sh" <<EOF
+SED_DEFAULT_SH=`sh "${srcdir}/sh-form.sh" \
+  "--awk=${AWK}" \
+<<EOF
 ${sed_default}
 EOF
 `
@@ -178,7 +182,9 @@ esac
 AC_SUBST([SED_DEFAULT_SH])
 AM_SUBST_NOTMAKE([SED_DEFAULT_SH])
 
-TEXI2ANY_DEFAULT_SH=`sh "${srcdir}/sh-form.sh" <<EOF
+TEXI2ANY_DEFAULT_SH=`sh "${srcdir}/sh-form.sh" \
+  "--awk=${AWK}" \
+<<EOF
 ${texi2any_default}
 EOF
 `
