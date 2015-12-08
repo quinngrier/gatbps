@@ -5,7 +5,7 @@
 is invoked as follows:
 
 @example
-gatbps@w{ }[<@r{@i{operand}}>@w{ }|@w{ }<@r{@i{option}}>]...
+gatbps@w{ }[<@i{operand}>@w{ }|@w{ }<@i{option}>]...
 @end example
 @ifxml
 @ifnotxml
