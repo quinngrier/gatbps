@@ -8611,6 +8611,25 @@ EOF2
         ;;
 
       #(
+        '--keep')
+
+          keep='yes'
+          continue
+
+        ;;
+
+      #(
+        '--keep='*)
+
+          cat >&2 <<EOF2
+${fr2}sh-form.sh!${fR2} ${fB2}--keep${fR2} forbids a value
+${fr2}sh-form.sh!${fR2} try ${fB2}sh sh-form.sh --help${fR2} for more information
+EOF2
+          exit '1'
+
+        ;;
+
+      #(
         '--sed')
 
           case "${#}" in
