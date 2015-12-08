@@ -1,9 +1,6 @@
 @node @t{gatbps} Synopsis
 @chapter @t{gatbps} Synopsis
 
-@w{@t{gatbps}}
-is invoked as follows:
-
 @example
 gatbps@w{ }[<@i{operand}>@w{ }|@w{ }<@i{option}>]...
 @end example
