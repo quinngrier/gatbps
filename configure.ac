@@ -43,9 +43,9 @@ AS_HELP_STRING([--enable-awk],
 AS_HELP_STRING([--enable-awk=no],
                [make gatbps default to --awk=auto])
 AS_HELP_STRING([--enable-awk=yes],
-               [make gatbps default to --awk=S where S is the best choice for this particular system])
-AS_HELP_STRING([--enable-awk=S],
-               [make gatbps default to --awk=S])],
+               [make gatbps default to --awk=V where V is the best choice for this particular system])
+AS_HELP_STRING([--enable-awk=V],
+               [make gatbps default to --awk=V])],
   [
     case "${enable_awk}" in
     #(
@@ -77,9 +77,9 @@ AS_HELP_STRING([--enable-sed],
 AS_HELP_STRING([--enable-sed=no],
                [make gatbps default to --sed=auto])
 AS_HELP_STRING([--enable-sed=yes],
-               [make gatbps default to --sed=S where S is the best choice for this particular system])
-AS_HELP_STRING([--enable-sed=S],
-               [make gatbps default to --sed=S])],
+               [make gatbps default to --sed=V where V is the best choice for this particular system])
+AS_HELP_STRING([--enable-sed=V],
+               [make gatbps default to --sed=V])],
   [
     case "${enable_sed}" in
     #(
@@ -111,9 +111,9 @@ AS_HELP_STRING([--enable-texi2any],
 AS_HELP_STRING([--enable-texi2any=no],
                [make gatbps default to --texi2any=auto])
 AS_HELP_STRING([--enable-texi2any=yes],
-               [make gatbps default to --texi2any=S where S is the best choice for this particular system])
-AS_HELP_STRING([--enable-texi2any=S],
-               [make gatbps default to --texi2any=S])],
+               [make gatbps default to --texi2any=V where V is the best choice for this particular system])
+AS_HELP_STRING([--enable-texi2any=V],
+               [make gatbps default to --texi2any=V])],
   [
     case "${enable_texi2any}" in
     #(
