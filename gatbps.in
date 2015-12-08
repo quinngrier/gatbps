@@ -8689,6 +8689,233 @@ EOF2
         ;;
 
       #(
+        '--style'|'--style=always')
+
+          shift
+          set 'x' '--style-stderr=always' '--style-stdout=always' "${@AT@}"
+          continue
+
+        ;;
+
+      #(
+        '--style=auto')
+
+          shift
+          set 'x' '--style-stderr=auto' '--style-stdout=auto' "${@AT@}"
+          continue
+
+        ;;
+
+      #(
+        '--style=never')
+
+          shift
+          set 'x' '--style-stderr=never' '--style-stdout=never' "${@AT@}"
+          continue
+
+        ;;
+
+      #(
+        '--style='*)
+
+          cat >&2 <<EOF2
+${fr2}sh-form.sh!${fR2} invalid ${fB2}--style${fR2} value
+EOF2
+          exit '1'
+
+        ;;
+
+      #(
+        '--style-stderr'|'--style-stderr=always')
+
+          style_stderr='always'
+
+          fR2='[22m[24m[39m' # stderr style: none
+          fB2='[24m[39m[1m'  # stderr style: bold
+          fI2='[22m[39m[4m'  # stderr style: underline
+          fr2='[22m[24m[31m' # stderr style: red
+          fg2='[22m[24m[32m' # stderr style: green
+          fy2='[22m[24m[33m' # stderr style: yellow
+          fb2='[22m[24m[34m' # stderr style: blue
+          fm2='[22m[24m[35m' # stderr style: magenta
+          fc2='[22m[24m[36m' # stderr style: cyan
+
+          continue
+
+        ;;
+
+      #(
+        '--style-stderr=auto')
+
+          style_stderr='auto'
+
+          case "${isatty2}" in
+          #(
+            'unknown')
+              if test '-t' '2'; then
+                isatty2='yes'
+              else
+                isatty2='no'
+              fi
+            ;;
+          esac
+
+          case "${isatty2}" in
+          #(
+            'yes')
+              fR2='[22m[24m[39m' # stderr style: none
+              fB2='[24m[39m[1m'  # stderr style: bold
+              fI2='[22m[39m[4m'  # stderr style: underline
+              fr2='[22m[24m[31m' # stderr style: red
+              fg2='[22m[24m[32m' # stderr style: green
+              fy2='[22m[24m[33m' # stderr style: yellow
+              fb2='[22m[24m[34m' # stderr style: blue
+              fm2='[22m[24m[35m' # stderr style: magenta
+              fc2='[22m[24m[36m' # stderr style: cyan
+            ;;
+          #(
+            'no')
+              fR2='' # stderr style: none
+              fB2='' # stderr style: bold
+              fI2='' # stderr style: underline
+              fr2='' # stderr style: red
+              fg2='' # stderr style: green
+              fy2='' # stderr style: yellow
+              fb2='' # stderr style: blue
+              fm2='' # stderr style: magenta
+              fc2='' # stderr style: cyan
+            ;;
+          esac
+
+          continue
+
+        ;;
+
+      #(
+        '--style-stderr=never')
+
+          style_stderr='never'
+
+          fR2='' # stderr style: none
+          fB2='' # stderr style: bold
+          fI2='' # stderr style: underline
+          fr2='' # stderr style: red
+          fg2='' # stderr style: green
+          fy2='' # stderr style: yellow
+          fb2='' # stderr style: blue
+          fm2='' # stderr style: magenta
+          fc2='' # stderr style: cyan
+
+          continue
+
+        ;;
+
+      #(
+        '--style-stderr='*)
+
+          cat >&2 <<EOF2
+${fr2}sh-form.sh!${fR2} invalid ${fB2}--style-stderr${fR2} value
+EOF2
+          exit '1'
+
+        ;;
+
+      #(
+        '--style-stdout'|'--style-stdout=always')
+
+          style_stdout='always'
+
+          fR1='[22m[24m[39m' # stdout style: none
+          fB1='[24m[39m[1m'  # stdout style: bold
+          fI1='[22m[39m[4m'  # stdout style: underline
+          fr1='[22m[24m[31m' # stdout style: red
+          fg1='[22m[24m[32m' # stdout style: green
+          fy1='[22m[24m[33m' # stdout style: yellow
+          fb1='[22m[24m[34m' # stdout style: blue
+          fm1='[22m[24m[35m' # stdout style: magenta
+          fc1='[22m[24m[36m' # stdout style: cyan
+
+          continue
+
+        ;;
+
+      #(
+        '--style-stdout=auto')
+
+          style_stdout='auto'
+
+          case "${isatty1}" in
+          #(
+            'unknown')
+              if test '-t' '1'; then
+                isatty1='yes'
+              else
+                isatty1='no'
+              fi
+            ;;
+          esac
+
+          case "${isatty1}" in
+          #(
+            'yes')
+              fR1='[22m[24m[39m' # stdout style: none
+              fB1='[24m[39m[1m'  # stdout style: bold
+              fI1='[22m[39m[4m'  # stdout style: underline
+              fr1='[22m[24m[31m' # stdout style: red
+              fg1='[22m[24m[32m' # stdout style: green
+              fy1='[22m[24m[33m' # stdout style: yellow
+              fb1='[22m[24m[34m' # stdout style: blue
+              fm1='[22m[24m[35m' # stdout style: magenta
+              fc1='[22m[24m[36m' # stdout style: cyan
+            ;;
+          #(
+            'no')
+              fR1='' # stdout style: none
+              fB1='' # stdout style: bold
+              fI1='' # stdout style: underline
+              fr1='' # stdout style: red
+              fg1='' # stdout style: green
+              fy1='' # stdout style: yellow
+              fb1='' # stdout style: blue
+              fm1='' # stdout style: magenta
+              fc1='' # stdout style: cyan
+            ;;
+          esac
+
+          continue
+
+        ;;
+
+      #(
+        '--style-stdout=never')
+
+          style_stdout='never'
+
+          fR1='' # stdout style: none
+          fB1='' # stdout style: bold
+          fI1='' # stdout style: underline
+          fr1='' # stdout style: red
+          fg1='' # stdout style: green
+          fy1='' # stdout style: yellow
+          fb1='' # stdout style: blue
+          fm1='' # stdout style: magenta
+          fc1='' # stdout style: cyan
+
+          continue
+
+        ;;
+
+      #(
+        '--style-stdout='*)
+
+          cat >&2 <<EOF2
+${fr2}sh-form.sh!${fR2} invalid ${fB2}--style-stdout${fR2} value
+EOF2
+          exit '1'
+
+        ;;
+
+      #(
         '--'*'='*)
 
           "${awk}" '
