@@ -8630,6 +8630,49 @@ EOF2
         ;;
 
       #(
+        '-k')
+
+          shift
+          set 'x' '--keep' "${@AT@}"
+          continue
+
+        ;;
+
+      #(
+        '-k'*)
+
+          x=`"${sed}" "
+s/'/'\\\\\\\\''/g
+1s/^-./x='/
+\\$s/\\$/'/
+" <<EOF2
+${1}
+EOF2
+`
+          case "${?}" in
+          #(
+            '0')
+              :
+            ;;
+          #(
+            *)
+              cat >&2 <<EOF2
+${fr2}sh-form.sh!${fR2} ${fB2}${sed}${fR2} failed to read from:
+${fr2}sh-form.sh!${fR2}   1. a here-document
+${fr2}sh-form.sh!${fR2} and write to: a command substitution
+EOF2
+              exit '1'
+            ;;
+          esac
+          eval "${x}"
+
+          shift
+          set 'x' '--keep' "-${x}" "${@AT@}"
+          continue
+
+        ;;
+
+      #(
         '--sed')
 
           case "${#}" in
