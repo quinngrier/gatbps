@@ -1361,8 +1361,7 @@ Special file: ${fB1}math.texi${fR1}
 
 The ${fB1}math.texi${fR1} special file is a Texinfo file that includes every special
 file that defines a macro for imitating the mathematical notation of TeX
-in the other output formats. It can be generated under the effect of the
-${fB1}--recursive${fR1} option to generate all such special files at once.
+in the other output formats.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
@@ -2756,9 +2755,6 @@ that includes every special file
 that defines a macro for imitating
 the mathematical notation of TeX in
 the other output formats.
-It can be generated under the effect of the
-.nohy "\fB\-\-recursive\fR"
-option to generate all such special files at once.
 .IP
 For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 .TP
@@ -6662,9 +6658,7 @@ EOF1
 @AT@c
 @AT@c The math.texi special file is a Texinfo file that includes every
 @AT@c special file that defines a macro for imitating the mathematical
-@AT@c notation of TeX in the other output formats. It can be generated
-@AT@c under the effect of the --recursive option to generate all such
-@AT@c special files at once.
+@AT@c notation of TeX in the other output formats.
 @AT@c
 @AT@c For more information, see the GATBPS manual.
 @AT@c

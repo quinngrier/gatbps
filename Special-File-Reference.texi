@@ -166,9 +166,6 @@ that includes every special file
 that defines a macro for imitating
 the mathematical notation of @TeX{} in
 the other output formats@.
-It can be generated under the effect of the
-@w{@t{-@w{-}recursive}}
-option to generate all such special files at once@.
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
