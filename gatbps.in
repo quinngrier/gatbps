@@ -5084,6 +5084,9 @@ AC_SUBST([PACKAGE_DATE])
 
 m4_define([AC_PACKAGE_DATE_TROFF],
           m4_bpatsubst(AC_PACKAGE_DATE, [-], [\\-]))
+AC_DEFINE([PACKAGE_DATE_TROFF],
+          ["m4_bpatsubst(AC_PACKAGE_DATE, [-], [\\\\-])"],
+          [Define to the date of this package with - replaced by \-.])
 PACKAGE_DATE_TROFF='AC_PACKAGE_DATE_TROFF'
 AC_SUBST([PACKAGE_DATE_TROFF])
 
