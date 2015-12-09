@@ -5146,13 +5146,13 @@ AC_DEFINE([PACKAGE_DAY],
 PACKAGE_DAY='AC_PACKAGE_DAY'
 AC_SUBST([PACKAGE_DAY])
 
-m4_define([AC_PACKAGE_DAY_ZP],
+m4_define([AC_PACKAGE_DAY_ZPAD],
           m4_bregexp(AC_PACKAGE_DATE, [.*-\(.*\)], [\1]))
-AC_DEFINE([PACKAGE_DAY_ZP],
-          ["AC_PACKAGE_DAY_ZP"],
+AC_DEFINE([PACKAGE_DAY_ZPAD],
+          ["AC_PACKAGE_DAY_ZPAD"],
           [Define to the zero-padded day of this package.])
-PACKAGE_DAY_ZP='AC_PACKAGE_DAY_ZP'
-AC_SUBST([PACKAGE_DAY_ZP])
+PACKAGE_DAY_ZPAD='AC_PACKAGE_DAY_ZPAD'
+AC_SUBST([PACKAGE_DAY_ZPAD])
 
 dnl
 dnl The authors of this file have waived all copyright and
