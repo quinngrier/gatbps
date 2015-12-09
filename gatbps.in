@@ -5111,14 +5111,6 @@ AC_DEFINE([PACKAGE_MONTH_ZP],
 PACKAGE_MONTH_ZP='AC_PACKAGE_MONTH_ZP'
 AC_SUBST([PACKAGE_MONTH_ZP])
 
-m4_define([AC_PACKAGE_DAY],
-          m4_bregexp(AC_PACKAGE_DATE, [.*-0?\(.*\)], [\1]))
-AC_DEFINE([PACKAGE_DAY],
-          [(AC_PACKAGE_DAY)],
-          [Define to the day of this package.])
-PACKAGE_DAY='AC_PACKAGE_DAY'
-AC_SUBST([PACKAGE_DAY])
-
 m4_define([AC_PACKAGE_MONTH_NAME],
           m4_if(AC_PACKAGE_MONTH, [1], [January],
                 AC_PACKAGE_MONTH, [2], [February],
@@ -5145,6 +5137,14 @@ AC_DEFINE([PACKAGE_MONTH_ABBR],
           [Define to the abbreviated month name of this package.])
 PACKAGE_MONTH_ABBR='AC_PACKAGE_MONTH_ABBR'
 AC_SUBST([PACKAGE_MONTH_ABBR])
+
+m4_define([AC_PACKAGE_DAY],
+          m4_bregexp(AC_PACKAGE_DATE, [.*-0?\(.*\)], [\1]))
+AC_DEFINE([PACKAGE_DAY],
+          [(AC_PACKAGE_DAY)],
+          [Define to the day of this package.])
+PACKAGE_DAY='AC_PACKAGE_DAY'
+AC_SUBST([PACKAGE_DAY])
 
 dnl
 dnl The authors of this file have waived all copyright and
