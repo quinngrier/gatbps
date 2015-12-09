@@ -1972,7 +1972,7 @@ be interpreted as operands.
 The preferred
 .nohy "\fBawk\fR"
 executable is
-.nohy @AWK_TROFF@
+.nohy @AWK_DEFAULT_TROFF@
 by default.
 Each
 .nohy "\fB\-\-awk=\fIS\fR"
