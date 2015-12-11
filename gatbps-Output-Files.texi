@@ -1,23 +1,24 @@
 @node @t{gatbps} Output Files
 @chapter @t{gatbps} Output Files
 
-@w{@t{gatbps}}
-reserves the ten files
-@w{@i{S}@t{.@:gatbps0}}
+For each operand
+@w{@i{R}}
+for which generation
+is enabled, the file
+@w{@i{R}}
+is generated and the ten files
+@w{@i{R}@t{.@:gatbps0}}
 through
-@w{@i{S}@t{.@:gatbps9}}
-for temporary use during
-the generation of an operand
-@w{@i{S}@.}
-If any of these
-files is nonregular
-or a directory, then
-all of them are ignored
-and the generation fails@.
-Otherwise,
-some of them may be utilized
-during the generation, and all of them
-are deleted after it succeeds or fails@.
+@w{@i{R}@t{.@:gatbps9}}
+are reserved for temporary use@.
+If any temporary file
+is nonregular or a directory,
+then all of them are ignored
+and generation fails@.
+Otherwise, some of them may
+be used during generation and
+all of them are deleted after
+generation succeeds or fails@.
 @ifxml
 @ifnotxml
 @c

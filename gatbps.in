@@ -2248,23 +2248,24 @@ may also write messages to
 standard error of their own volition.
 .SH "OUTPUT FILES"
 .LP
-.nohy "\fBgatbps\fR"
-reserves the ten files
-.nohy "\fIS\fB.gatbps0\fR"
+For each operand
+.nohy "\fIR\fR"
+for which generation
+is enabled, the file
+.nohy "\fIR\fR"
+is generated and the ten files
+.nohy "\fIR\fB.gatbps0\fR"
 through
-.nohy "\fIS\fB.gatbps9\fR"
-for temporary use during
-the generation of an operand
-.nohy "\fIS\fR."
-If any of these
-files is nonregular
-or a directory, then
-all of them are ignored
-and the generation fails.
-Otherwise,
-some of them may be utilized
-during the generation, and all of them
-are deleted after it succeeds or fails.
+.nohy "\fIR\fB.gatbps9\fR"
+are reserved for temporary use.
+If any temporary file
+is nonregular or a directory,
+then all of them are ignored
+and generation fails.
+Otherwise, some of them may
+be used during generation and
+all of them are deleted after
+generation succeeds or fails.
 .SH "PLAIN FILES"
 .SH "MATHEMATICAL NOTATION IN TEXINFO"
 .LP
