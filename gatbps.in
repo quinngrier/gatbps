@@ -2114,6 +2114,18 @@ By default, only generation is enabled.
 .LP
 Not used.
 .SH "INPUT FILES"
+.LP
+For each plain file
+.nohy "\fIR\fR"
+that is generated, the file
+.nohy "\fIR\fB.texi\fR"
+is a required input file and the files
+.nohy "\fIR\fB.top\fR,"
+.nohy "\fIR\fB.top.texi\fR,"
+.nohy "\fIR\fB.bot\fR,"
+and
+.nohy "\fIR\fB.bot.texi\fR"
+are optional input files.
 .SH "ENVIRONMENT VARIABLES"
 .LP
 The following environment variables are supported:
