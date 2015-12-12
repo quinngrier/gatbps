@@ -3044,9 +3044,8 @@ all arguments were successfully processed
 and failure means that one or more were not.
 .SH "CONSEQUENCES OF ERRORS"
 .LP
-.nohy "\fBgatbps\fR"
-exits immediately upon
-encountering any error except
+All errors cause the
+program to terminate except
 perhaps when processing an operand,
 in which case some errors only cause the
 current phase to be canceled for the operand.
