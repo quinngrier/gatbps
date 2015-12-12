@@ -2243,12 +2243,13 @@ Default.
 .LP
 Each error causes a message
 to be written to standard error.
-Each message line is
-punctuated by either an
-exclamation point, colon,
-or period character, which
-indicate fatal, cautionary,
-and harmless errors, respectively.
+Each line
+of the message
+is punctuated by either
+an exclamation point, colon,
+or full stop character, which
+indicate fatal, cautionary, and
+informational errors, respectively.
 The messages may
 use escape sequences if
 styling is in effect via the
