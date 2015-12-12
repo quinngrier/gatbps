@@ -1,12 +1,10 @@
 @node @t{gatbps} Exit Status
 @chapter @t{gatbps} Exit Status
 
-@w{@t{gatbps}}
-indicates success
-with exit status zero
-and failure with any other exit status@.
+Exit status zero indicates success
+and any other exit status indicates failure@.
 Success means that
-all arguments were successfully processed,
+all arguments were successfully processed
 and failure means that one or more were not@.
 @ifxml
 @ifnotxml
