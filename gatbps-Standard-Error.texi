@@ -6,7 +6,7 @@ to be written to standard error@.
 Each line
 of the message
 is punctuated by either
-an exclamation point, colon,
+an exclamation mark, colon,
 or full stop character, which
 indicate fatal, cautionary, and
 informational errors, respectively@.
