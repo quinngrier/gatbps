@@ -2117,15 +2117,15 @@ Not used.
 .LP
 For each plain file
 .nohy "\fIR\fR"
-that is generated, the file
+that is generated, the input file
 .nohy "\fIR\fB.texi\fR"
-is a required input file and the files
+is required and the input files
 .nohy "\fIR\fB.top\fR,"
 .nohy "\fIR\fB.top.texi\fR,"
 .nohy "\fIR\fB.bot\fR,"
 and
 .nohy "\fIR\fB.bot.texi\fR"
-are optional input files.
+are optional.
 .SH "ENVIRONMENT VARIABLES"
 .LP
 The following environment variables are supported:

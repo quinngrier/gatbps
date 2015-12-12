@@ -3,15 +3,15 @@
 
 For each plain file
 @w{@i{R}}
-that is generated, the file
+that is generated, the input file
 @w{@i{R}@t{.@:texi}}
-is a required input file and the files
+is required and the input files
 @w{@i{R}@t{.@:top}@comma{}}
 @w{@i{R}@t{.@:top.@:texi}@comma{}}
 @w{@i{R}@t{.@:bot}@comma{}}
 and
 @w{@i{R}@t{.@:bot.@:texi}}
-are optional input files@.
+are optional@.
 @ifxml
 @ifnotxml
 @c
