@@ -19,6 +19,9 @@ Otherwise, some of them may
 be used during generation and
 all of them are deleted after
 generation succeeds or fails@.
+If generation fails, then
+@w{@i{R}}
+is not necessarily deleted@.
 If the program is
 terminated by a signal,
 then no files are deleted@.
