@@ -2250,14 +2250,13 @@ an exclamation point, colon,
 or full stop character, which
 indicate fatal, cautionary, and
 informational errors, respectively.
-The message uses
-escape sequences if
-styling is enabled via the
+If styling is enabled with the
 .nohy "\fB\-\-style\-stderr\fR"
-option, in which case each
-line begins with red, yellow,
-or cyan text if the error is fatal,
-cautionary, or informational, respectively.
+option, then
+each line begins with
+red, yellow, or cyan text if
+the error is fatal, cautionary,
+or informational, respectively.
 Underlying programs
 may also write their own
 messages to standard error.
