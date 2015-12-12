@@ -19,8 +19,8 @@ line begins with red, yellow,
 or cyan text if the error is fatal,
 cautionary, or informational, respectively@.
 Underlying programs
-may also write messages to
-standard error of their own volition@.
+may also write their own
+messages to standard error@.
 @ifxml
 @ifnotxml
 @c
