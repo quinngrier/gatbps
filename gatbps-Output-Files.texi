@@ -23,8 +23,8 @@ If generation fails, then
 @w{@i{R}}
 is not necessarily deleted@.
 If the program is
-terminated by a signal,
-then no files are deleted@.
+terminated by a signal, then
+no files are necessarily deleted@.
 @ifxml
 @ifnotxml
 @c
