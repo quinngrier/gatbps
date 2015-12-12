@@ -7,7 +7,7 @@ Each line
 of the message
 is punctuated by either
 an exclamation mark, colon,
-or full stop character, which
+or period character, which
 indicate fatal, cautionary, and
 informational errors, respectively@.
 If styling is enabled with the
