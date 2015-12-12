@@ -1,5 +1,19 @@
 @node @t{gatbps} Standard Output
 @chapter @t{gatbps} Standard Output
+
+For each operand
+@w{@i{R}}
+for which printing is enabled,
+@w{@i{R}}
+followed by either a
+newline or null character
+is written to standard output@.
+The
+@w{@t{-@w{-}help}@comma{}}
+@w{@t{-@w{-}man}@comma{}}
+and
+@w{@t{-@w{-}version}}
+options also write to standard output@.
 @ifxml
 @ifnotxml
 @c

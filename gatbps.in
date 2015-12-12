@@ -2239,6 +2239,20 @@ environment variable has no effect.
 .LP
 Default.
 .SH "STDOUT"
+.LP
+For each operand
+.nohy "\fIR\fR"
+for which printing is enabled,
+.nohy "\fIR\fR"
+followed by either a
+newline or null character
+is written to standard output.
+The
+.nohy "\fB\-\-help\fR,"
+.nohy "\fB\-\-man\fR,"
+and
+.nohy "\fB\-\-version\fR"
+options also write to standard output.
 .SH "STDERR"
 .LP
 Each error causes a message
