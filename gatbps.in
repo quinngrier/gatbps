@@ -2102,7 +2102,8 @@ Printing writes the
 operand to standard output,
 generation creates the file,
 and recursion prepends prerequisite
-special files to the remaining arguments.
+files to the remaining arguments.
+Recursion only applies to special files.
 Various options
 can be used to enable
 or disable each phase,
