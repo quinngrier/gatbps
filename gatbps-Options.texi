@@ -63,8 +63,8 @@ The following options are supported:
 The
 @w{@t{-@w{-}}}
 option disables option detection,
-causing all further arguments to
-be interpreted as operands@.
+causing all remaining arguments
+to be interpreted as operands@.
 
 @item @w{@t{-@w{-}all}[@t{=}@i{V}]}
 @itemx @w{@t{-a}[@i{V}]}

@@ -2027,8 +2027,8 @@ The following options are supported:
 The
 .nohy "\fB\-\-\fR"
 option disables option detection,
-causing all further arguments to
-be interpreted as operands.
+causing all remaining arguments
+to be interpreted as operands.
 .TP
 .nohy "\fB\-\-all\fR[\fB=\fIV\fR]"
 .TPZ
