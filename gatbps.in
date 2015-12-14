@@ -347,6 +347,7 @@ esac
 # each time an appropriate option is found.
 #
 
+boundary='no'
 dry_run='no'
 plain='no'
 print0='no'
