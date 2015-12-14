@@ -2030,6 +2030,29 @@ option disables option detection,
 causing all further arguments to
 be interpreted as operands.
 .TP
+.nohy "\fB\-\-all\fR[\fB=\fIV\fR]"
+.TPZ
+.nohy "\fB\-a\fR[\fIV\fR]"
+.IPEZ
+The
+.nohy "\fB\-\-all\fR"
+option prepends
+all special files to
+the remaining arguments.
+Each is prefixed with
+.nohy "\fIV\fR."
+If
+.nohy "\fIV\fR"
+is not empty and does not
+end with a slash character, then
+a slash character is appended to
+.nohy "\fIV\fR."
+If
+.nohy "\fIV\fR"
+is omitted, then
+.nohy "\fIV\fR"
+is taken to be empty.
+.TP
 .nohy "\fB\-\-awk=\fIS\fR"
 .IPEZ
 The preferred

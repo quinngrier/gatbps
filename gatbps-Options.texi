@@ -66,6 +66,28 @@ option disables option detection,
 causing all further arguments to
 be interpreted as operands@.
 
+@item @w{@t{-@w{-}all}[@t{=}@i{V}]}
+@itemx @w{@t{-a}[@i{V}]}
+@include ipez.texi
+The
+@w{@t{-@w{-}all}}
+option prepends
+all special files to
+the remaining arguments@.
+Each is prefixed with
+@w{@i{V}@.}
+If
+@w{@i{V}}
+is not empty and does not
+end with a slash character, then
+a slash character is appended to
+@w{@i{V}@.}
+If
+@w{@i{V}}
+is omitted, then
+@w{@i{V}}
+is taken to be empty@.
+
 @item @w{@t{-@w{-}help}[@t{=}@i{S}]}
 @include ipez.texi
 The
