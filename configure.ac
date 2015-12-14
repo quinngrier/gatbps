@@ -9,7 +9,7 @@ AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_MACRO_DIRS([m4])
 AC_CONFIG_SRCDIR([gatbps.texi])
 
-AM_INIT_AUTOMAKE([-Wall -Werror foreign info-in-builddir])
+AM_INIT_AUTOMAKE([-Wall -Werror foreign info-in-builddir subdir-objects])
 
 m4_include([CC0-1.0-AC-COPYRIGHT.ac])
 m4_include([DATE.ac])
