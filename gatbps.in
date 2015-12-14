@@ -4397,9 +4397,9 @@ EOF1
     ;;
   esac
 
-  case "${dry_run},${verbose}" in
+  case "${dry_run}${verbose}" in
   #(
-    'yes,'*|*',yes')
+    *'yes'*)
       case "${ferror1}" in
       #(
         'no')
