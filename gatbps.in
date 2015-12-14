@@ -9882,9 +9882,10 @@ EOF1
     ;;
   esac
 
-  case "${recursive}" in
+  case "${boundary}${recursive}" in
   #(
-    'yes')
+    *'yes'*)
+
       while :; do
         case "${1}" in
 
@@ -11082,6 +11083,9 @@ EOF1
         esac
         break
       done
+
+      boundary='no'
+
     ;;
   esac
 
