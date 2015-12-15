@@ -21,6 +21,8 @@ MOSTLYCLEANFILES += gatbps.info
 MOSTLYCLEANFILES += gatbps.txt
 MOSTLYCLEANFILES += gatbps.xml
 
+TEXI2DVI = texi2dvi $(AM_TEXI2DVIFLAGS) $(TEXI2DVIFLAGS)
+
 bin_SCRIPTS =
 bin_SCRIPTS += gatbps
 
