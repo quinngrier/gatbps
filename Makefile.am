@@ -20,62 +20,62 @@ EXTRA_DIST += sh-form.sh
 
 MOSTLYCLEANFILES =
 MOSTLYCLEANFILES += gatbps.1
-MOSTLYCLEANFILES += gatbps.info
-MOSTLYCLEANFILES += gatbps.txt
-MOSTLYCLEANFILES += gatbps.xml
+MOSTLYCLEANFILES += doc/gatbps.info
+MOSTLYCLEANFILES += doc/gatbps.txt
+MOSTLYCLEANFILES += doc/gatbps.xml
 
 TEXI2DVI = texi2dvi $(AM_TEXI2DVIFLAGS) $(TEXI2DVIFLAGS)
 
 bin_SCRIPTS =
 bin_SCRIPTS += gatbps
 
-gatbps_TEXINFOS =
-gatbps_TEXINFOS += Building-and-Installation.texi
-gatbps_TEXINFOS += CC0-1.0-appendix.texi
-gatbps_TEXINFOS += CC0-1.0-copying.texi
-gatbps_TEXINFOS += Copyright-Information.texi
-gatbps_TEXINFOS += DATE.texi
-gatbps_TEXINFOS += Introduction.texi
-gatbps_TEXINFOS += Invoking-gatbps.texi
-gatbps_TEXINFOS += Invoking-sh-form-sh.texi
-gatbps_TEXINFOS += Mathematical-Notation-in-Texinfo.texi
-gatbps_TEXINFOS += Special-File-Reference.texi
-gatbps_TEXINFOS += VERSION.txi
-gatbps_TEXINFOS += bdots.texi
-gatbps_TEXINFOS += bothcontents.texi
-gatbps_TEXINFOS += dslash.texi
-gatbps_TEXINFOS += gatbps-Asynchronous-Events.texi
-gatbps_TEXINFOS += gatbps-Consequences-of-Errors.texi
-gatbps_TEXINFOS += gatbps-Description.texi
-gatbps_TEXINFOS += gatbps-Environment-Variables.texi
-gatbps_TEXINFOS += gatbps-Exit-Status.texi
-gatbps_TEXINFOS += gatbps-Input-Files.texi
-gatbps_TEXINFOS += gatbps-Operands.texi
-gatbps_TEXINFOS += gatbps-Options.texi
-gatbps_TEXINFOS += gatbps-Output-Files.texi
-gatbps_TEXINFOS += gatbps-Standard-Error.texi
-gatbps_TEXINFOS += gatbps-Standard-Input.texi
-gatbps_TEXINFOS += gatbps-Standard-Output.texi
-gatbps_TEXINFOS += gatbps-Synopsis.texi
-gatbps_TEXINFOS += gequ.texi
-gatbps_TEXINFOS += ipez.texi
-gatbps_TEXINFOS += lcei.texi
-gatbps_TEXINFOS += lequ.texi
-gatbps_TEXINFOS += lflo.texi
-gatbps_TEXINFOS += math.texi
-gatbps_TEXINFOS += mdot.texi
-gatbps_TEXINFOS += mdots.texi
-gatbps_TEXINFOS += msign.texi
-gatbps_TEXINFOS += nequ.texi
-gatbps_TEXINFOS += prm.texi
-gatbps_TEXINFOS += rarrow.texi
-gatbps_TEXINFOS += rcei.texi
-gatbps_TEXINFOS += rflo.texi
-gatbps_TEXINFOS += sbs.texi
-gatbps_TEXINFOS += sps.texi
+doc_gatbps_TEXINFOS =
+doc_gatbps_TEXINFOS += Building-and-Installation.texi
+doc_gatbps_TEXINFOS += CC0-1.0-appendix.texi
+doc_gatbps_TEXINFOS += CC0-1.0-copying.texi
+doc_gatbps_TEXINFOS += Copyright-Information.texi
+doc_gatbps_TEXINFOS += DATE.texi
+doc_gatbps_TEXINFOS += Introduction.texi
+doc_gatbps_TEXINFOS += Invoking-gatbps.texi
+doc_gatbps_TEXINFOS += Invoking-sh-form-sh.texi
+doc_gatbps_TEXINFOS += Mathematical-Notation-in-Texinfo.texi
+doc_gatbps_TEXINFOS += Special-File-Reference.texi
+doc_gatbps_TEXINFOS += VERSION.txi
+doc_gatbps_TEXINFOS += bdots.texi
+doc_gatbps_TEXINFOS += bothcontents.texi
+doc_gatbps_TEXINFOS += dslash.texi
+doc_gatbps_TEXINFOS += gatbps-Asynchronous-Events.texi
+doc_gatbps_TEXINFOS += gatbps-Consequences-of-Errors.texi
+doc_gatbps_TEXINFOS += gatbps-Description.texi
+doc_gatbps_TEXINFOS += gatbps-Environment-Variables.texi
+doc_gatbps_TEXINFOS += gatbps-Exit-Status.texi
+doc_gatbps_TEXINFOS += gatbps-Input-Files.texi
+doc_gatbps_TEXINFOS += gatbps-Operands.texi
+doc_gatbps_TEXINFOS += gatbps-Options.texi
+doc_gatbps_TEXINFOS += gatbps-Output-Files.texi
+doc_gatbps_TEXINFOS += gatbps-Standard-Error.texi
+doc_gatbps_TEXINFOS += gatbps-Standard-Input.texi
+doc_gatbps_TEXINFOS += gatbps-Standard-Output.texi
+doc_gatbps_TEXINFOS += gatbps-Synopsis.texi
+doc_gatbps_TEXINFOS += gequ.texi
+doc_gatbps_TEXINFOS += ipez.texi
+doc_gatbps_TEXINFOS += lcei.texi
+doc_gatbps_TEXINFOS += lequ.texi
+doc_gatbps_TEXINFOS += lflo.texi
+doc_gatbps_TEXINFOS += math.texi
+doc_gatbps_TEXINFOS += mdot.texi
+doc_gatbps_TEXINFOS += mdots.texi
+doc_gatbps_TEXINFOS += msign.texi
+doc_gatbps_TEXINFOS += nequ.texi
+doc_gatbps_TEXINFOS += prm.texi
+doc_gatbps_TEXINFOS += rarrow.texi
+doc_gatbps_TEXINFOS += rcei.texi
+doc_gatbps_TEXINFOS += rflo.texi
+doc_gatbps_TEXINFOS += sbs.texi
+doc_gatbps_TEXINFOS += sps.texi
 
 info_TEXINFOS =
-info_TEXINFOS += gatbps.texi
+info_TEXINFOS += doc/gatbps.texi
 
 man_MANS =
 man_MANS += gatbps.1
@@ -85,32 +85,32 @@ txtdir = $(docdir)
 .PHONY: docbook
 .PHONY: txt
 
-docbook: gatbps.xml
+docbook: doc/gatbps.xml
 
 gatbps.1: gatbps
 	./gatbps --man >gatbps.1
 
-gatbps.txt: $(gatbps_TEXINFOS)
-gatbps.txt: gatbps.texi
+doc/gatbps.txt: $(doc_gatbps_TEXINFOS)
+doc/gatbps.txt: doc/gatbps.texi
 	$(AM_V_MAKEINFO)$(MAKEINFO) \
   $(AM_MAKEINFOFLAGS) \
   $(MAKEINFOFLAGS) \
   '--plaintext' \
   '-I' '$(srcdir)' \
   '-o' '$@AT@' \
-  '$(srcdir)/gatbps.texi'
+  '$(srcdir)/doc/gatbps.texi'
 
-gatbps.xml: $(gatbps_TEXINFOS)
-gatbps.xml: gatbps.texi
+doc/gatbps.xml: $(doc_gatbps_TEXINFOS)
+doc/gatbps.xml: doc/gatbps.texi
 	$(AM_V_MAKEINFO)$(MAKEINFO) \
   $(AM_MAKEINFOFLAGS) \
   $(MAKEINFOFLAGS) \
   '--docbook' \
   '-I' '$(srcdir)' \
   '-o' '$@AT@' \
-  '$(srcdir)/gatbps.texi'
+  '$(srcdir)/doc/gatbps.texi'
 
-txt: gatbps.txt
+txt: doc/gatbps.txt
 
 include $(srcdir)/CC0-1.0-AM-COPYRIGHT.am
 
