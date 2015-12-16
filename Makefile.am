@@ -80,7 +80,7 @@ info_TEXINFOS += doc/gatbps.texi
 man_MANS =
 man_MANS += gatbps.1
 
-txtdir = $(docdir)
+plaintextdir = $(docdir)
 
 .PHONY: docbook
 .PHONY: plaintext
