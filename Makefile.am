@@ -92,23 +92,23 @@ gatbps.1: gatbps
 
 doc/gatbps.txt: $(doc_gatbps_TEXINFOS)
 doc/gatbps.txt: doc/gatbps.texi
-	$(AM_V_MAKEINFO)$(MKDIR_P) 'doc'
+	$(AM_V_MAKEINFO)$(MKDIR_P) doc
 	$(AM_V_at)$(MAKEINFO) \
   $(AM_MAKEINFOFLAGS) \
   $(MAKEINFOFLAGS) \
-  '--plaintext' \
-  '-o' 'doc/gatbps.txt' \
-  '$(srcdir)/doc/gatbps.texi'
+  --plaintext \
+  -o doc/gatbps.txt \
+  $(srcdir)/doc/gatbps.texi
 
 doc/gatbps.xml: $(doc_gatbps_TEXINFOS)
 doc/gatbps.xml: doc/gatbps.texi
-	$(AM_V_MAKEINFO)$(MKDIR_P) 'doc'
+	$(AM_V_MAKEINFO)$(MKDIR_P) doc
 	$(AM_V_at)$(MAKEINFO) \
   $(AM_MAKEINFOFLAGS) \
   $(MAKEINFOFLAGS) \
-  '--docbook' \
-  '-o' 'doc/gatbps.xml' \
-  '$(srcdir)/doc/gatbps.texi'
+  --docbook \
+  -o doc/gatbps.xml \
+  $(srcdir)/doc/gatbps.texi
 
 txt: doc/gatbps.txt
 
