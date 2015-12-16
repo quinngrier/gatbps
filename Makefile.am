@@ -83,7 +83,7 @@ man_MANS += gatbps.1
 txtdir = $(docdir)
 
 .PHONY: docbook
-.PHONY: txt
+.PHONY: plaintext
 
 docbook: doc/gatbps.xml
 
@@ -104,7 +104,7 @@ doc/gatbps.xml: doc/gatbps.texi
   $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
   --docbook -o doc/gatbps.xml $(srcdir)/doc/gatbps.texi
 
-txt: doc/gatbps.txt
+plaintext: doc/gatbps.txt
 
 include $(srcdir)/CC0-1.0-AM-COPYRIGHT.am
 
