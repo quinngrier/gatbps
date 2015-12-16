@@ -1,5 +1,5 @@
 AM_MAKEINFOFLAGS =
-AM_MAKEINFOFLAGS += -I $(srcdir)/doc/texi
+AM_MAKEINFOFLAGS += -I doc/texi -I $(srcdir)/doc/texi
 
 AM_TEXI2DVIFLAGS =
 AM_TEXI2DVIFLAGS += -I $(srcdir)/doc/texi
