@@ -103,7 +103,8 @@ doc/gatbps.txt: doc/gatbps.texi
 
 doc/gatbps.xml: $(doc_gatbps_TEXINFOS)
 doc/gatbps.xml: doc/gatbps.texi
-	$(AM_V_MAKEINFO)$(MAKEINFO) \
+	$(AM_V_MAKEINFO)$(MKDIR_P) 'doc'
+	$(AM_V_at)$(MAKEINFO) \
   $(AM_MAKEINFOFLAGS) \
   $(MAKEINFOFLAGS) \
   '--docbook' \
