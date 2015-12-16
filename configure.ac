@@ -250,9 +250,9 @@ AC_SUBST([AWK_DEFAULT_TROFF])
 AT='@'
 AC_SUBST([AT])
 
-AC_CONFIG_FILES([DATE.texi])
 AC_CONFIG_FILES([Makefile])
-AC_CONFIG_FILES([VERSION.txi])
+AC_CONFIG_FILES([doc/texi/DATE.texi])
+AC_CONFIG_FILES([doc/texi/VERSION.txi])
 AC_CONFIG_FILES([gatbps], [chmod +x gatbps])
 
 AC_OUTPUT
