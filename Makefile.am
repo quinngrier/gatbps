@@ -101,11 +101,8 @@ doc/gatbps.xml: $(doc_gatbps_TEXINFOS)
 doc/gatbps.xml: doc/gatbps.texi
 	$(AM_V_MAKEINFO)$(MKDIR_P) doc
 	$(AM_V_at)$(MAKEINFO) \
-  $(AM_MAKEINFOFLAGS) \
-  $(MAKEINFOFLAGS) \
-  --docbook \
-  -o doc/gatbps.xml \
-  $(srcdir)/doc/gatbps.texi
+  $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
+  --docbook -o doc/gatbps.xml $(srcdir)/doc/gatbps.texi
 
 txt: doc/gatbps.txt
 
