@@ -109,7 +109,7 @@ doc/gatbps.xml: doc/gatbps.texi
   $(MAKEINFOFLAGS) \
   '--docbook' \
   '-I' '$(srcdir)' \
-  '-o' '$@AT@' \
+  '-o' 'doc/gatbps.xml' \
   '$(srcdir)/doc/gatbps.texi'
 
 txt: doc/gatbps.txt
