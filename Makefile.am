@@ -74,6 +74,8 @@ doc_gatbps_TEXINFOS += doc/texi/rflo.texi
 doc_gatbps_TEXINFOS += doc/texi/sbs.texi
 doc_gatbps_TEXINFOS += doc/texi/sps.texi
 
+docbookdir = $(docdir)
+
 info_TEXINFOS =
 info_TEXINFOS += doc/gatbps.texi
 
