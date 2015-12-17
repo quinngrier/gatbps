@@ -113,7 +113,7 @@ docbook: doc/gatbps.xml
 
 plaintext: doc/gatbps.txt
 
-include $(srcdir)/CC0-1.0-AM-COPYRIGHT.am
+include $(srcdir)/build-aux/CC0-1.0-AM-COPYRIGHT.am
 
 ##
 ## The authors of this file have waived all copyright and
