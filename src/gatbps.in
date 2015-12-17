@@ -5194,7 +5194,10 @@ dnl is being used, your changes may be automatically lost.
 dnl
 
 m4_define([AC_PACKAGE_DATE],
-          m4_esyscmd_s([sh DATE.sh])m4_assert(m4_sysval == 0))
+          m4_esyscmd_s(sh m4_join([],
+            m4_ifdef([AC_PACKAGE_DATE_PREFIX],
+                     [AC_PACKAGE_DATE_PREFIX]),
+          [DATE.sh]))m4_assert(m4_sysval == 0))
 AC_DEFINE([PACKAGE_DATE],
           ["AC_PACKAGE_DATE"],
           [Define to the date of this package.])
