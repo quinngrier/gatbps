@@ -18,6 +18,8 @@ m4_define([AC_PACKAGE_DATE_PREFIX], [build-aux/])
 m4_include([build-aux/CC0-1.0-AC-COPYRIGHT.ac])
 m4_include([build-aux/DATE.ac])
 
+AC_PROG_MKDIR_P
+
 AC_SYS_INTERPRETER
 case "${interpval}" in
 #(
