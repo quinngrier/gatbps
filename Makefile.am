@@ -23,10 +23,10 @@ EXTRA_DIST += VERSION.sh
 EXTRA_DIST += build-aux/sh-form.sh
 
 MOSTLYCLEANFILES =
-MOSTLYCLEANFILES += doc/man/gatbps.1
 MOSTLYCLEANFILES += doc/gatbps.info
 MOSTLYCLEANFILES += doc/gatbps.txt
 MOSTLYCLEANFILES += doc/gatbps.xml
+MOSTLYCLEANFILES += doc/man/gatbps.1
 
 TEXI2DVI = texi2dvi $(AM_TEXI2DVIFLAGS) $(TEXI2DVIFLAGS)
 
@@ -91,12 +91,6 @@ plaintextdir = $(docdir)
 .PHONY: docbook
 .PHONY: plaintext
 
-docbook: doc/gatbps.xml
-
-doc/man/gatbps.1: gatbps
-	$(MKDIR_P) doc/man
-	./gatbps --man >doc/man/gatbps.1
-
 doc/gatbps.txt: $(doc_gatbps_TEXINFOS)
 doc/gatbps.txt: doc/gatbps.texi
 	$(AM_V_MAKEINFO)$(MKDIR_P) doc
@@ -110,6 +104,12 @@ doc/gatbps.xml: doc/gatbps.texi
 	$(AM_V_at)$(MAKEINFO) \
   $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
   --docbook -o doc/gatbps.xml $(srcdir)/doc/gatbps.texi
+
+doc/man/gatbps.1: gatbps
+	$(MKDIR_P) doc/man
+	./gatbps --man >doc/man/gatbps.1
+
+docbook: doc/gatbps.xml
 
 plaintext: doc/gatbps.txt
 
