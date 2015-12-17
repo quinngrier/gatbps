@@ -7,7 +7,7 @@
 
 @include VERSION.txi
 
-@settitle GATBPS @value{VERSION}
+@settitle GATBPS @w{@value{VERSION}}
 
 @include CC0-1.0-copying.texi
 @include DATE.texi
@@ -29,11 +29,11 @@
 @end direntry
 
 @ifplaintext
-@chapheading GATBPS @value{VERSION}
+@chapheading GATBPS @w{@value{VERSION}}
 @end ifplaintext
 
 @titlepage
-@title GATBPS @value{VERSION}
+@title GATBPS @w{@value{VERSION}}
 @subtitle @value{DATE}
 @vskip 0pt plus 1filll
 @page
@@ -45,10 +45,10 @@
 
 @ifnottex
 @node Top
-@top GATBPS @value{VERSION}
+@top GATBPS @w{@value{VERSION}}
 
 This manual is for
-GATBPS @value{VERSION},
+GATBPS @w{@value{VERSION}},
 which was released on @value{DATE}@.
 @ifplaintext
 
