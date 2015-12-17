@@ -34,7 +34,7 @@
 
 @titlepage
 @title GATBPS @w{@value{VERSION}}
-@subtitle @value{DATE}
+@subtitle @w{@value{DATE}}
 @vskip 0pt plus 1filll
 @page
 @vskip 0pt plus 1filll
@@ -49,7 +49,7 @@
 
 This manual is for
 GATBPS @w{@value{VERSION}},
-which was released on @value{DATE}@.
+which was released on @w{@value{DATE}}@.
 @ifplaintext
 
 @insertcopying
