@@ -11,8 +11,8 @@ AC_CONFIG_SRCDIR([doc/gatbps.texi])
 
 AM_INIT_AUTOMAKE([-Wall foreign info-in-builddir subdir-objects])
 
-m4_include([CC0-1.0-AC-COPYRIGHT.ac])
 m4_include([DATE.ac])
+m4_include([build-aux/CC0-1.0-AC-COPYRIGHT.ac])
 
 AC_SYS_INTERPRETER
 case "${interpval}" in
