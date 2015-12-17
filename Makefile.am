@@ -19,7 +19,7 @@ EXTRA_DIST += VERSION.sh
 EXTRA_DIST += build-aux/sh-form.sh
 
 MOSTLYCLEANFILES =
-MOSTLYCLEANFILES += gatbps.1
+MOSTLYCLEANFILES += doc/man/gatbps.1
 MOSTLYCLEANFILES += doc/gatbps.info
 MOSTLYCLEANFILES += doc/gatbps.txt
 MOSTLYCLEANFILES += doc/gatbps.xml
@@ -80,7 +80,7 @@ info_TEXINFOS =
 info_TEXINFOS += doc/gatbps.texi
 
 man_MANS =
-man_MANS += gatbps.1
+man_MANS += doc/man/gatbps.1
 
 plaintextdir = $(docdir)
 
@@ -89,8 +89,9 @@ plaintextdir = $(docdir)
 
 docbook: doc/gatbps.xml
 
-gatbps.1: gatbps
-	./gatbps --man >gatbps.1
+doc/man/gatbps.1: gatbps
+	$(MKDIR_P) doc/man
+	./gatbps --man >doc/man/gatbps.1
 
 doc/gatbps.txt: $(doc_gatbps_TEXINFOS)
 doc/gatbps.txt: doc/gatbps.texi
