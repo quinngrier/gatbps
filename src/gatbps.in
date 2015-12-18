@@ -5492,6 +5492,13 @@ dnl you're doing the right thing. Depending on how GATBPS
 dnl is being used, your changes may be automatically lost.
 dnl
 
+m4_define([AC_PACKAGE_VERSION_MAJOR],
+          m4_bregexp(AC_PACKAGE_VERSION, [0*\([0-9]+\)], [\1]))
+AC_DEFINE([PACKAGE_VERSION_MAJOR],
+          [AC_PACKAGE_VERSION_MAJOR],
+          [Define to the major version of this package.])
+PACKAGE_VERSION_MAJOR='AC_PACKAGE_VERSION_MAJOR'
+AC_SUBST([PACKAGE_VERSION_MAJOR])
 
 dnl
 dnl The authors of this file have waived all copyright and
