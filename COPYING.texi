@@ -1,4 +1,4 @@
-@include Copyright-Information.texi
+@include doc/texi/Copyright-Information.texi
 @ifxml
 @ifnotxml
 @c
