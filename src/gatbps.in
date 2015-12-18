@@ -5508,6 +5508,14 @@ AC_DEFINE([PACKAGE_VERSION_MINOR],
 PACKAGE_VERSION_MINOR='AC_PACKAGE_VERSION_MINOR'
 AC_SUBST([PACKAGE_VERSION_MINOR])
 
+m4_define([AC_PACKAGE_VERSION_PATCH],
+          m4_bregexp(AC_PACKAGE_VERSION, [[^.]*\.[^.]*\.0*\([0-9]+\)], [\1]))
+AC_DEFINE([PACKAGE_VERSION_PATCH],
+          [AC_PACKAGE_VERSION_PATCH],
+          [Define to the patch version of this package.])
+PACKAGE_VERSION_PATCH='AC_PACKAGE_VERSION_PATCH'
+AC_SUBST([PACKAGE_VERSION_PATCH])
+
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by
