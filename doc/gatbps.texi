@@ -7,7 +7,7 @@
 
 @include VERSION.txi
 
-@settitle GATBPS @w{@value{VERSION}}
+@settitle GATBPS @value{VERSION}
 
 @include CC0-1.0-copying.texi
 @include DATE.texi
