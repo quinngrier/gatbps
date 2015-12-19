@@ -5889,7 +5889,22 @@ if "${git}" 'ls-files' '--error-unmatch' \
 
 elif test '-f' 'VERSION_LTCUR'; then
 
-  :
+  cat 'VERSION_LTCUR'
+  case "${?}" in
+  #(
+    '0')
+      :
+    ;;
+  #(
+    *)
+      cat >&2 <<EOF2
+${fr2}VERSION_LTCUR.sh!${fR2} ${fB2}cat${fR2} failed to read from:
+${fr2}VERSION_LTCUR.sh!${fR2}   1. ${fB2}VERSION_LTCUR${fR2}
+${fr2}VERSION_LTCUR.sh!${fR2} and write to: standard output
+EOF2
+      exit '1'
+    ;;
+  esac
 
 else
 
