@@ -5880,6 +5880,7 @@ fb2='' # stderr style: blue
 fm2='' # stderr style: magenta
 fc2='' # stderr style: cyan
 
+awk='awk'
 git='git'
 
 if "${git}" 'ls-files' '--error-unmatch' \
@@ -5895,6 +5896,43 @@ if "${git}" 'ls-files' '--error-unmatch' \
     *)
       cat >&2 <<EOF2
 ${fr2}VERSION_LTCUR.sh!${fR2} ${fB2}${git}${fR2} failed to write to: ${fB2}${0}.tmp${fR2}
+EOF2
+      exit '1'
+    ;;
+  esac
+
+  c=`"${awk}" '
+BEGIN {
+  c = -1
+}
+{
+  if ($0 ~ /^v[0-9][0-9]*[^0-9][^0-9]*[0-9][0-9]*/) {
+    split($0, a, /[^0-9][^0-9]*/)
+    xy = int(a[2]) "." int(a[3])
+    if (!seen[xy]) {
+      ++c
+      seen[xy] = 1
+    }
+  }
+}
+END {
+  if (c != -1) {
+    print c
+  }
+}
+' <"${0}.tmp"
+`
+  case "${?}" in
+  #(
+    '0')
+      :
+    ;;
+  #(
+    *)
+      cat >&2 <<EOF2
+${fr2}VERSION_LTCUR.sh!${fR2} ${fB2}${awk}${fR2} failed to read from:
+${fr2}VERSION_LTCUR.sh!${fR2}   1. ${fB2}${0}.tmp${fR2}
+${fr2}VERSION_LTCUR.sh!${fR2} and write to: a command substitution
 EOF2
       exit '1'
     ;;
