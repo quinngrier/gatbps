@@ -31,7 +31,7 @@ MOSTLYCLEANFILES += doc/man/gatbps.1
 TEXI2DVI = texi2dvi $(AM_TEXI2DVIFLAGS) $(TEXI2DVIFLAGS)
 
 bin_SCRIPTS =
-bin_SCRIPTS += src/gatbps
+bin_SCRIPTS += bin/gatbps
 
 doc_gatbps_TEXINFOS =
 doc_gatbps_TEXINFOS += doc/texi/Building-and-Installation.texi
@@ -108,9 +108,9 @@ doc/gatbps.xml: doc/gatbps.texi
   --docbook -o doc/gatbps.xml $(srcdir)/doc/gatbps.texi
 
 doc/man/gatbps.1: Makefile
-doc/man/gatbps.1: src/gatbps
+doc/man/gatbps.1: bin/gatbps
 	$(MKDIR_P) doc/man
-	src/gatbps --man >doc/man/gatbps.1
+	bin/gatbps --man >doc/man/gatbps.1
 
 docbook: doc/gatbps.xml
 

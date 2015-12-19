@@ -258,9 +258,9 @@ AT='@'
 AC_SUBST([AT])
 
 AC_CONFIG_FILES([Makefile])
+AC_CONFIG_FILES([bin/gatbps:src/gatbps.in], [chmod +x bin/gatbps])
 AC_CONFIG_FILES([doc/texi/DATE.texi])
 AC_CONFIG_FILES([doc/texi/VERSION.txi])
-AC_CONFIG_FILES([src/gatbps], [chmod +x src/gatbps])
 
 AC_OUTPUT
 
