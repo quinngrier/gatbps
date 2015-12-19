@@ -5893,7 +5893,10 @@ elif test '-f' 'VERSION_LTCUR'; then
 
 else
 
-  :
+  cat >&2 <<EOF2
+${fr2}VERSION_LTCUR.sh!${fR2} not in repository and ${fB2}VERSION_LTCUR${fR2} not found
+EOF2
+  exit '1'
 
 fi
 
