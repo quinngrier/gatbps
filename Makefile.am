@@ -107,6 +107,7 @@ doc/gatbps.xml: doc/gatbps.texi
   $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
   --docbook -o doc/gatbps.xml $(srcdir)/doc/gatbps.texi
 
+doc/man/gatbps.1: Makefile
 doc/man/gatbps.1: src/gatbps
 	$(MKDIR_P) doc/man
 	src/gatbps --man >doc/man/gatbps.1
