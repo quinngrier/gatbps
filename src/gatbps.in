@@ -5885,7 +5885,20 @@ git='git'
 if "${git}" 'ls-files' '--error-unmatch' \
             '--' "${0}" >'/dev/null' 2>&1; then
 
-  :
+  "${git}" 'tag' >"${0}.tmp"
+  case "${?}" in
+  #(
+    '0')
+      :
+    ;;
+  #(
+    *)
+      cat >&2 <<EOF2
+${fr2}VERSION_LTCUR.sh!${fR2} ${fB2}${git}${fR2} failed to write to: ${fB2}${0}.tmp${fR2}
+EOF2
+      exit '1'
+    ;;
+  esac
 
 elif test '-f' 'VERSION_LTCUR'; then
 
