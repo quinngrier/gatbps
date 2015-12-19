@@ -5523,6 +5523,13 @@ AC_DEFINE([PACKAGE_VERSION_LTREV],
 PACKAGE_VERSION_LTREV='AC_PACKAGE_VERSION_LTREV'
 AC_SUBST([PACKAGE_VERSION_LTREV])
 
+m4_define([AC_PACKAGE_VERSION_LTAGE], AC_PACKAGE_VERSION_MINOR)
+AC_DEFINE([PACKAGE_VERSION_LTAGE],
+          [AC_PACKAGE_VERSION_LTAGE],
+          [Define to the libtool age number of this package.])
+PACKAGE_VERSION_LTAGE='AC_PACKAGE_VERSION_LTAGE'
+AC_SUBST([PACKAGE_VERSION_LTAGE])
+
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by
