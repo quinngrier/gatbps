@@ -5501,7 +5501,7 @@ PACKAGE_VERSION_MAJOR='AC_PACKAGE_VERSION_MAJOR'
 AC_SUBST([PACKAGE_VERSION_MAJOR])
 
 m4_define([AC_PACKAGE_VERSION_MINOR],
-          m4_bregexp(AC_PACKAGE_VERSION, [^[^.]*\.0*\([0-9]+\)], [\1]))
+          m4_bregexp(AC_PACKAGE_VERSION, [^[0-9]+[^0-9]+0*\([0-9]+\)], [\1]))
 AC_DEFINE([PACKAGE_VERSION_MINOR],
           [AC_PACKAGE_VERSION_MINOR],
           [Define to the minor version of this package.])
