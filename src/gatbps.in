@@ -5880,6 +5880,23 @@ fb2='' # stderr style: blue
 fm2='' # stderr style: magenta
 fc2='' # stderr style: cyan
 
+git='git'
+
+if "${git}" 'ls-files' '--error-unmatch' \
+            '--' "${0}" >'/dev/null' 2>&1; then
+
+  :
+
+elif test '-f' 'VERSION_LTCUR'; then
+
+  :
+
+else
+
+  :
+
+fi
+
 exit '1'
 
 #
