@@ -91,6 +91,7 @@ plaintextdir = $(docdir)
 .PHONY: docbook
 .PHONY: install-plaintext
 .PHONY: plaintext
+.PHONY: uninstall-plaintext
 
 doc/gatbps.txt: $(doc_gatbps_TEXINFOS)
 doc/gatbps.txt: Makefile
@@ -148,6 +149,23 @@ for x in $$list; do \
 done
 
 plaintext: doc/gatbps.txt
+
+uninstall-plaintext:
+	@$(NORMAL_UNINSTALL)
+	@case $(plaintextdir)'' in \
+  ?*) \
+    :; \
+  ;; \
+  *) \
+    exit 0; \
+  ;; \
+esac; \
+list=; \
+list="$$list gatbps.txt"; \
+for x in $$list; do \
+  echo " rm -f '$(DESTDIR)$(plaintextdir)/$$x'"; \
+  rm -f $(DESTDIR)$(plaintextdir)/$$x; \
+done
 
 include $(srcdir)/build-aux/CC0-1.0-AM-COPYRIGHT.am
 
