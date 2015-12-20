@@ -134,7 +134,15 @@ docbook: doc/gatbps.xml
 
 install-plaintext: doc/gatbps.txt
 	@$(NORMAL_INSTALL)
-	@echo " $(MKDIR_P) '$(DESTDIR)$(plaintextdir)'"; \
+	@case $(plaintextdir)'' in \
+  ?*) \
+    :; \
+  ;; \
+  *) \
+    exit 0; \
+  ;; \
+esac; \
+echo " $(MKDIR_P) '$(DESTDIR)$(plaintextdir)'"; \
 $(MKDIR_P) $(DESTDIR)$(plaintextdir) || exit $$?; \
 list=; \
 list="$$list doc/gatbps.txt"; \
