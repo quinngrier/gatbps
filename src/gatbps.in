@@ -2089,7 +2089,7 @@ The
 option prepends
 all special files to
 the remaining arguments.
-Each is prefixed with
+Each special file is prefixed with
 .nohy "\fIV\fR."
 If
 .nohy "\fIV\fR"

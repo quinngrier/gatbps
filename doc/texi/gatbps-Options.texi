@@ -74,7 +74,7 @@ The
 option prepends
 all special files to
 the remaining arguments@.
-Each is prefixed with
+Each special file is prefixed with
 @w{@i{V}@.}
 If
 @w{@i{V}}
