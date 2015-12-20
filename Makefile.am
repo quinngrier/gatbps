@@ -89,6 +89,7 @@ man_MANS += doc/man/gatbps.1
 plaintextdir = $(docdir)
 
 .PHONY: docbook
+.PHONY: install-plaintext
 .PHONY: plaintext
 
 doc/gatbps.txt: $(doc_gatbps_TEXINFOS)
@@ -129,6 +130,22 @@ doc/man/gatbps.1: bin/gatbps
 	bin/gatbps --man >doc/man/gatbps.1
 
 docbook: doc/gatbps.xml
+
+install-plaintext: doc/gatbps.txt
+	@$(NORMAL_INSTALL)
+	@echo " $(MKDIR_P) '$(DESTDIR)$(plaintextdir)'"; \
+$(MKDIR_P) $(DESTDIR)$(plaintextdir) || exit $$?; \
+list=; \
+list="$$list doc/gatbps.txt"; \
+for x in $$list; do \
+  if test -f $$x; then \
+    y=$$x; \
+  else \
+    y=$(srcdir)/$$x; \
+  fi; \
+  echo " $(INSTALL_DATA) $$y '$(DESTDIR)$(plaintextdir)'"; \
+  $(INSTALL_DATA) $$y $(DESTDIR)$(plaintextdir) || exit $$?; \
+done
 
 plaintext: doc/gatbps.txt
 
