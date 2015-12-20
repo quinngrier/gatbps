@@ -94,7 +94,6 @@ plaintextdir = $(docdir)
 .PHONY: uninstall-plaintext
 
 doc/gatbps.txt: $(doc_gatbps_TEXINFOS)
-doc/gatbps.txt: Makefile
 doc/gatbps.txt: doc/gatbps.texi
 	$(AM_V_MAKEINFO)$(MKDIR_P) doc
 	$(AM_V_at)if test -f doc/gatbps.texi; then \
@@ -110,7 +109,6 @@ else \
 fi
 
 doc/gatbps.xml: $(doc_gatbps_TEXINFOS)
-doc/gatbps.xml: Makefile
 doc/gatbps.xml: doc/gatbps.texi
 	$(AM_V_MAKEINFO)$(MKDIR_P) doc
 	$(AM_V_at)if test -f doc/gatbps.texi; then \
@@ -125,7 +123,6 @@ else \
   ; \
 fi
 
-doc/man/gatbps.1: Makefile
 doc/man/gatbps.1: bin/gatbps
 	$(MKDIR_P) doc/man
 	bin/gatbps --man >doc/man/gatbps.1
