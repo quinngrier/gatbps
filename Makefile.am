@@ -92,6 +92,7 @@ plaintextdir = $(docdir)
 .PHONY: install-docbook
 .PHONY: install-plaintext
 .PHONY: plaintext
+.PHONY: uninstall-docbook
 .PHONY: uninstall-plaintext
 
 doc/gatbps.txt: $(doc_gatbps_TEXINFOS)
@@ -179,6 +180,23 @@ for x in $$list; do \
 done
 
 plaintext: doc/gatbps.txt
+
+uninstall-docbook:
+	@$(NORMAL_UNINSTALL)
+	@case $(docbookdir)'' in \
+  ?*) \
+    :; \
+  ;; \
+  *) \
+    exit 0; \
+  ;; \
+esac; \
+list=; \
+list="$$list gatbps.xml"; \
+for x in $$list; do \
+  echo " rm -f '$(DESTDIR)$(docbookdir)/$$x'"; \
+  rm -f $(DESTDIR)$(docbookdir)/$$x; \
+done
 
 uninstall-plaintext:
 	@$(NORMAL_UNINSTALL)
