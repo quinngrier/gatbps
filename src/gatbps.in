@@ -992,11 +992,8 @@ EOF1
               cat <<EOF1
 Special file: ${fB1}CC0-1.0.txt${fR1}
 
-The ${fB1}CC0-1.0.txt${fR1} special file is the plain text version of the CC0 1.0
-Universal Public Domain Dedication, a legal tool released by Creative
-Commons that allows an author to waive their copyright and related or
-neighboring rights to their work. This was originally downloaded from
-<${fB1}https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt${fR1}>.
+The ${fB1}CC0-1.0.txt${fR1} special file is the plain text version of the Creative
+Commons Zero (CC0) 1.0 Universal Public Domain Dedication.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
@@ -2773,12 +2770,10 @@ plain text file or a source code file as a comment.
 .IPEZ
 The
 .nohy "\fBCC0\-1.0.txt\fR"
-special file is the plain text version of the CC0 1.0
-Universal Public Domain Dedication, a legal tool released by Creative
-Commons that allows an author to waive their copyright and related or
-neighboring rights to their work.
-This was originally downloaded from
-.nohy "<\fBhttps://\:creativecommons.org/\:publicdomain/\:zero/\:1.0/\:legalcode.txt\fR>."
+special file is the
+plain text version of the
+Creative Commons Zero (CC0) 1.0
+Universal Public Domain Dedication.
 .TP
 .nohy "\fBbdots.texi\fR"
 .IPEZ

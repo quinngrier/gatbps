@@ -18,6 +18,16 @@ option of
 @w{@t{gatbps}@.}
 
 @table @asis
+@sfindex @t{CC0-1.@:0.@:txt}
+@item @w{@t{CC0-1.@:0.@:txt}}
+@include ipez.texi
+The
+@w{@t{CC0-1.@:0.@:txt}}
+special file is the
+plain text version of the
+Creative Commons Zero (CC0) 1.@:0
+Universal Public Domain Dedication@.
+
 @sfindex @t{bdots.@:texi}
 @tmindex @t{@@bdots}
 @item @w{@t{bdots.@:texi}}
