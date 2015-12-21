@@ -190,18 +190,14 @@ uninstall-plaintext:
 	@$(NORMAL_UNINSTALL)
 	@case $(plaintextdir)'' in \
   ?*) \
-    :; \
+    list=; \
+    list="$$list gatbps.txt"; \
+    for x in $$list; do \
+      echo " rm -f '$(DESTDIR)$(plaintextdir)/$$x'"; \
+      rm -f $(DESTDIR)$(plaintextdir)/$$x; \
+    done; \
   ;; \
-  *) \
-    exit 0; \
-  ;; \
-esac; \
-list=; \
-list="$$list gatbps.txt"; \
-for x in $$list; do \
-  echo " rm -f '$(DESTDIR)$(plaintextdir)/$$x'"; \
-  rm -f $(DESTDIR)$(plaintextdir)/$$x; \
-done
+esac
 
 include $(srcdir)/build-aux/CC0-1.0-AM-COPYRIGHT.am
 
