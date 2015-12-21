@@ -177,18 +177,14 @@ uninstall-docbook:
 	@$(NORMAL_UNINSTALL)
 	@case $(docbookdir)'' in \
   ?*) \
-    :; \
+    list=; \
+    list="$$list gatbps.xml"; \
+    for x in $$list; do \
+      echo " rm -f '$(DESTDIR)$(docbookdir)/$$x'"; \
+      rm -f $(DESTDIR)$(docbookdir)/$$x; \
+    done; \
   ;; \
-  *) \
-    exit 0; \
-  ;; \
-esac; \
-list=; \
-list="$$list gatbps.xml"; \
-for x in $$list; do \
-  echo " rm -f '$(DESTDIR)$(docbookdir)/$$x'"; \
-  rm -f $(DESTDIR)$(docbookdir)/$$x; \
-done
+esac
 
 uninstall-plaintext:
 	@$(NORMAL_UNINSTALL)
