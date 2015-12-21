@@ -135,25 +135,21 @@ install-docbook: doc/gatbps.xml
 	@$(NORMAL_INSTALL)
 	@case $(docbookdir)'' in \
   ?*) \
-    :; \
+    echo " $(MKDIR_P) '$(DESTDIR)$(docbookdir)'"; \
+    $(MKDIR_P) $(DESTDIR)$(docbookdir) || exit $$?; \
+    list=; \
+    list="$$list doc/gatbps.xml"; \
+    for x in $$list; do \
+      if test -f $$x; then \
+        y=$$x; \
+      else \
+        y=$(srcdir)/$$x; \
+      fi; \
+      echo " $(INSTALL_DATA) $$y '$(DESTDIR)$(docbookdir)'"; \
+      $(INSTALL_DATA) $$y $(DESTDIR)$(docbookdir) || exit $$?; \
+    done; \
   ;; \
-  *) \
-    exit 0; \
-  ;; \
-esac; \
-echo " $(MKDIR_P) '$(DESTDIR)$(docbookdir)'"; \
-$(MKDIR_P) $(DESTDIR)$(docbookdir) || exit $$?; \
-list=; \
-list="$$list doc/gatbps.xml"; \
-for x in $$list; do \
-  if test -f $$x; then \
-    y=$$x; \
-  else \
-    y=$(srcdir)/$$x; \
-  fi; \
-  echo " $(INSTALL_DATA) $$y '$(DESTDIR)$(docbookdir)'"; \
-  $(INSTALL_DATA) $$y $(DESTDIR)$(docbookdir) || exit $$?; \
-done
+esac
 
 install-plaintext: doc/gatbps.txt
 	@$(NORMAL_INSTALL)
