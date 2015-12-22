@@ -5247,7 +5247,10 @@ m4_define([AC_PACKAGE_DATE],
           )m4_assert(m4_sysval == 0))
 AC_DEFINE([PACKAGE_DATE],
           ["AC_PACKAGE_DATE"],
-          [Define to the date of this package.])
+          [Define to a character string literal containing
+           the date of this package in YYYY-MM-DD form. The
+           year may optionally be preceded by a + character and
+           may have any number of digits, including leading zeros.])
 PACKAGE_DATE='AC_PACKAGE_DATE'
 AC_SUBST([PACKAGE_DATE])
 
