@@ -106,14 +106,19 @@ command@.
 @item @w{@t{-@w{-}man}}
 @include ipez.texi
 The
-@t{-@w{-}man}
-option writes text to standard output
-and causes all further arguments to be ignored@.
-The text is the source code of the program's
-manual page, which can be processed with any
+@w{@t{-@w{-}man}}
+option writes text to standard output and
+causes all remaining arguments to be ignored@.
+The text is the source code
+of the program's manual page,
+which can be viewed with any
 command that is analogous to the
-@t{tbl@w{ }|@w{ }nroff@w{ }-man}
+@w{@t{tbl@w{ }|@w{ }nroff@w{ }-man}}
 command@.
+In particular, the
+@w{@t{man@w{ }-l@w{ }-}}
+command can be used on
+most GNU/Linux systems@.
 
 @item @w{@t{-@w{-}recursive}}
 @itemx @t{-r}

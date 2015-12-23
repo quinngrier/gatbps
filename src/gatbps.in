@@ -2131,13 +2131,18 @@ command.
 .IPEZ
 The
 .nohy "\fB\-\-man\fR"
-option writes text to standard output
-and causes all further arguments to be ignored.
-The text is the source code of the program's
-manual page, which can be processed with any
+option writes text to standard output and
+causes all remaining arguments to be ignored.
+The text is the source code
+of the program's manual page,
+which can be viewed with any
 command that is analogous to the
 .nohy "\fBtbl\ |\ nroff\ \-man\fR"
 command.
+In particular, the
+.nohy "\fBman\ \-l\ \-\fR"
+command can be used on
+most GNU/Linux systems.
 .TP
 .nohy "\fB\-\-recursive\fR"
 .TPZ
