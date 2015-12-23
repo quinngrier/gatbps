@@ -74,13 +74,13 @@ The
 option prepends
 all special files to
 the remaining arguments@.
-Each special file is prefixed with
+Each is prefixed with
 @w{@i{V}@.}
 If
 @w{@i{V}}
 is not empty and does not
-end with a slash character, then
-a slash character is appended to
+end with a slash character,
+then one is appended to
 @w{@i{V}@.}
 If
 @w{@i{V}}
