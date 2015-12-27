@@ -124,77 +124,77 @@ most GNU/Linux systems@.
 @itemx @t{-r}
 @include ipez.texi
 The
-@t{-@w{-}recursive}
+@w{@t{-@w{-}recursive}}
 option enables recursive dependency
 generation, which is initially disabled@.
 
 @item @w{@t{-@w{-}style}[@t{=}@i{S}]}
 @include ipez.texi
 The
-@t{-@w{-}style}
+@w{@t{-@w{-}style}}
 option is replaced by the
-@t{-@w{-}style=always}
+@w{@t{-@w{-}style=always}}
 option@.
 The
-@t{-@w{-}style=}@i{S}
+@w{@t{-@w{-}style=}@i{S}}
 option is replaced by the
-@t{-@w{-}style-stderr=}@i{S}
+@w{@t{-@w{-}style-stderr=}@i{S}}
 and
-@t{-@w{-}style-stdout=}@i{S}
+@w{@t{-@w{-}style-stdout=}@i{S}}
 options@.
 
 @item @w{@t{-@w{-}style-stderr}[@t{=}@i{S}]}
 @include ipez.texi
 The
-@t{-@w{-}style-stderr}
+@w{@t{-@w{-}style-stderr}}
 option is replaced by the
-@t{-@w{-}style-stderr=always}
+@w{@t{-@w{-}style-stderr=always}}
 option@.
 The
-@t{-@w{-}style-stderr=}@i{S}
+@w{@t{-@w{-}style-stderr=}@i{S}}
 option enables or disables bold,
 underline, and color styling of
 text written to standard error,
 which is initially disabled@.
 The
-@t{-@w{-}style-stderr=always}
+@w{@t{-@w{-}style-stderr=always}}
 option enables it@.
 The
-@t{-@w{-}style-stderr=auto}
+@w{@t{-@w{-}style-stderr=auto}}
 option enables it if standard error
 is associated with a terminal
 or disables it if not@.
 The
-@t{-@w{-}style-stderr=}@i{S}
+@w{@t{-@w{-}style-stderr=}@i{S}}
 option with any other
-@i{S}
+@w{@i{S}}
 disables it@.
 
 @item @w{@t{-@w{-}style-stdout}[@t{=}@i{S}]}
 @include ipez.texi
 The
-@t{-@w{-}style-stdout}
+@w{@t{-@w{-}style-stdout}}
 option is replaced by the
-@t{-@w{-}style-stdout=always}
+@w{@t{-@w{-}style-stdout=always}}
 option@.
 The
-@t{-@w{-}style-stdout=}@i{S}
+@w{@t{-@w{-}style-stdout=}@i{S}}
 option enables or disables bold,
 underline, and color styling of
 text written to standard output,
 which is initially disabled@.
 The
-@t{-@w{-}style-stdout=always}
+@w{@t{-@w{-}style-stdout=always}}
 option enables it@.
 The
-@t{-@w{-}style-stdout=auto}
+@w{@t{-@w{-}style-stdout=auto}}
 option enables it if standard output
 is associated with a terminal
 or disables it if not@.
 The
-@t{-@w{-}style-stdout=}@i{S}
+@w{@t{-@w{-}style-stdout=}@i{S}}
 option with any other
-@i{S}
+@w{@i{S}}
 disables it@.
 
 @item @w{@t{-@w{-}version}}
