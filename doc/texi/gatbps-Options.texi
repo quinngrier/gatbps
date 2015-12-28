@@ -83,8 +83,7 @@ end with a slash character,
 then one is appended@.
 If
 @w{@i{V}}
-is omitted, then
-@w{@i{V}}
+is omitted, then it
 is taken to be empty@.
 
 @item @w{@t{-@w{-}help}[@t{=}@i{V}]}

@@ -2095,8 +2095,7 @@ end with a slash character,
 then one is appended.
 If
 .nohy "\fIV\fR"
-is omitted, then
-.nohy "\fIV\fR"
+is omitted, then it
 is taken to be empty.
 .TP
 .nohy "\fB\-\-awk=\fIS\fR"
