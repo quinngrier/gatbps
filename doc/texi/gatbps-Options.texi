@@ -131,20 +131,21 @@ of operand processing@.
 For more information,
 @pxref{@t{gatbps} Operands}@.
 
-@item @w{@t{-@w{-}style}[@t{=}@i{S}]}
+@item @w{@t{-@w{-}style}[@t{=}@i{V}]}
 @include ipez.texi
 The
 @w{@t{-@w{-}style}}
-option is replaced by the
-@w{@t{-@w{-}style=always}}
-option@.
-The
-@w{@t{-@w{-}style=}@i{S}}
-option is replaced by the
-@w{@t{-@w{-}style-stderr=}@i{S}}
-and
-@w{@t{-@w{-}style-stdout=}@i{S}}
-options@.
+option prepends an instance of the
+@w{@t{-@w{-}style-stderr}}
+option and an instance of the
+@w{@t{-@w{-}style-stdout}}
+option to the remaining arguments@.
+If
+@w{@i{V}}
+is omitted, then neither
+instance is given a value@.
+Otherwise, both are given the value
+@w{@i{V}@.}
 
 @item @w{@t{-@w{-}style-stderr}[@t{=}@i{S}]}
 @include ipez.texi

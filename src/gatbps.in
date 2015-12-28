@@ -2156,20 +2156,21 @@ of operand processing.
 For more information,
 see the OPERANDS section.
 .TP
-.nohy "\fB\-\-style\fR[\fB=\fIS\fR]"
+.nohy "\fB\-\-style\fR[\fB=\fIV\fR]"
 .IPEZ
 The
 .nohy "\fB\-\-style\fR"
-option is replaced by the
-.nohy "\fB\-\-style=always\fR"
-option.
-The
-.nohy "\fB\-\-style=\fIS\fR"
-option is replaced by the
-.nohy "\fB\-\-style\-stderr=\fIS\fR"
-and
-.nohy "\fB\-\-style\-stdout=\fIS\fR"
-options.
+option prepends an instance of the
+.nohy "\fB\-\-style\-stderr\fR"
+option and an instance of the
+.nohy "\fB\-\-style\-stdout\fR"
+option to the remaining arguments.
+If
+.nohy "\fIV\fR"
+is omitted, then neither
+instance is given a value.
+Otherwise, both are given the value
+.nohy "\fIV\fR."
 .TP
 .nohy "\fB\-\-style\-stderr\fR[\fB=\fIS\fR]"
 .IPEZ
