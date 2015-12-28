@@ -177,32 +177,37 @@ is omitted,
 then it is taken to be
 @w{@t{always}@.}
 
-@item @w{@t{-@w{-}style-stdout}[@t{=}@i{S}]}
+@item @w{@t{-@w{-}style-stdout}[@t{=}@i{V}]}
 @include ipez.texi
 The
 @w{@t{-@w{-}style-stdout}}
-option is replaced by the
-@w{@t{-@w{-}style-stdout=always}}
-option@.
-The
-@w{@t{-@w{-}style-stdout=}@i{S}}
 option enables or disables bold,
 underline, and color styling of
 text written to standard output,
 which is initially disabled@.
-The
-@w{@t{-@w{-}style-stdout=always}}
-option enables it@.
-The
-@w{@t{-@w{-}style-stdout=auto}}
-option enables it if standard output
-is associated with a terminal
-or disables it if not@.
-The
-@w{@t{-@w{-}style-stdout=}@i{S}}
-option with any other
-@w{@i{S}}
-disables it@.
+If
+@w{@i{V}}
+is
+@w{@t{always}@comma{}}
+then styling is enabled@.
+If
+@w{@i{V}}
+is
+@w{@t{never}@comma{}}
+then styling is disabled@.
+If
+@w{@i{V}}
+is
+@w{@t{auto}@comma{}}
+then styling is enabled
+if standard output is associated
+with a terminal or disabled if not@.
+Any other value causes an error@.
+If
+@w{@i{V}}
+is omitted,
+then it is taken to be
+@w{@t{always}@.}
 
 @item @w{@t{-@w{-}version}}
 @include ipez.texi

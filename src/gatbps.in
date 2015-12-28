@@ -2202,32 +2202,37 @@ is omitted,
 then it is taken to be
 .nohy "\fBalways\fR."
 .TP
-.nohy "\fB\-\-style\-stdout\fR[\fB=\fIS\fR]"
+.nohy "\fB\-\-style\-stdout\fR[\fB=\fIV\fR]"
 .IPEZ
 The
 .nohy "\fB\-\-style\-stdout\fR"
-option is replaced by the
-.nohy "\fB\-\-style\-stdout=always\fR"
-option.
-The
-.nohy "\fB\-\-style\-stdout=\fIS\fR"
 option enables or disables bold,
 underline, and color styling of
 text written to standard output,
 which is initially disabled.
-The
-.nohy "\fB\-\-style\-stdout=always\fR"
-option enables it.
-The
-.nohy "\fB\-\-style\-stdout=auto\fR"
-option enables it if standard output
-is associated with a terminal
-or disables it if not.
-The
-.nohy "\fB\-\-style\-stdout=\fIS\fR"
-option with any other
-.nohy "\fIS\fR"
-disables it.
+If
+.nohy "\fIV\fR"
+is
+.nohy "\fBalways\fR,"
+then styling is enabled.
+If
+.nohy "\fIV\fR"
+is
+.nohy "\fBnever\fR,"
+then styling is disabled.
+If
+.nohy "\fIV\fR"
+is
+.nohy "\fBauto\fR,"
+then styling is enabled
+if standard output is associated
+with a terminal or disabled if not.
+Any other value causes an error.
+If
+.nohy "\fIV\fR"
+is omitted,
+then it is taken to be
+.nohy "\fBalways\fR."
 .TP
 .nohy "\fB\-\-version\fR"
 .IPEZ
