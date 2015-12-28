@@ -2092,8 +2092,7 @@ If
 .nohy "\fIV\fR"
 is not empty and does not
 end with a slash character,
-then one is appended to
-.nohy "\fIV\fR."
+then one is appended.
 If
 .nohy "\fIV\fR"
 is omitted, then

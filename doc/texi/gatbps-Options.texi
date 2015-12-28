@@ -80,8 +80,7 @@ If
 @w{@i{V}}
 is not empty and does not
 end with a slash character,
-then one is appended to
-@w{@i{V}@.}
+then one is appended@.
 If
 @w{@i{V}}
 is omitted, then
