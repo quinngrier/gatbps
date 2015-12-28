@@ -2150,8 +2150,11 @@ most GNU/Linux systems.
 .IPEZ
 The
 .nohy "\fB\-\-recursive\fR"
-option enables recursive dependency
-generation, which is initially disabled.
+option enables
+the recursion phase
+of operand processing.
+For more information,
+see the OPERANDS section.
 .TP
 .nohy "\fB\-\-style\fR[\fB=\fIS\fR]"
 .IPEZ

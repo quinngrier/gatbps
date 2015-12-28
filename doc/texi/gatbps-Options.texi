@@ -121,12 +121,15 @@ command can be used on
 most GNU/Linux systems@.
 
 @item @w{@t{-@w{-}recursive}}
-@itemx @t{-r}
+@itemx @w{@t{-r}}
 @include ipez.texi
 The
 @w{@t{-@w{-}recursive}}
-option enables recursive dependency
-generation, which is initially disabled@.
+option enables
+the recursion phase
+of operand processing@.
+For more information,
+@pxref{@t{gatbps} Operands}@.
 
 @item @w{@t{-@w{-}style}[@t{=}@i{S}]}
 @include ipez.texi
