@@ -2172,32 +2172,37 @@ instance is given a value.
 Otherwise, both are given the value
 .nohy "\fIV\fR."
 .TP
-.nohy "\fB\-\-style\-stderr\fR[\fB=\fIS\fR]"
+.nohy "\fB\-\-style\-stderr\fR[\fB=\fIV\fR]"
 .IPEZ
 The
 .nohy "\fB\-\-style\-stderr\fR"
-option is replaced by the
-.nohy "\fB\-\-style\-stderr=always\fR"
-option.
-The
-.nohy "\fB\-\-style\-stderr=\fIS\fR"
 option enables or disables bold,
 underline, and color styling of
 text written to standard error,
 which is initially disabled.
-The
-.nohy "\fB\-\-style\-stderr=always\fR"
-option enables it.
-The
-.nohy "\fB\-\-style\-stderr=auto\fR"
-option enables it if standard error
-is associated with a terminal
-or disables it if not.
-The
-.nohy "\fB\-\-style\-stderr=\fIS\fR"
-option with any other
-.nohy "\fIS\fR"
-disables it.
+If
+.nohy "\fIV\fR"
+is
+.nohy "\fBalways\fR,"
+then styling is enabled.
+If
+.nohy "\fIV\fR"
+is
+.nohy "\fBnever\fR,"
+then styling is disabled.
+If
+.nohy "\fIV\fR"
+is
+.nohy "\fBauto\fR,"
+then styling is enabled
+if standard error is associated
+with a terminal or disabled if not.
+Any other value causes an error.
+If
+.nohy "\fIV\fR"
+is omitted,
+then it is taken to be
+.nohy "\fBalways\fR."
 .TP
 .nohy "\fB\-\-style\-stdout\fR[\fB=\fIS\fR]"
 .IPEZ

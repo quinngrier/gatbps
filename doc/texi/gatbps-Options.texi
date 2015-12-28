@@ -147,32 +147,37 @@ instance is given a value@.
 Otherwise, both are given the value
 @w{@i{V}@.}
 
-@item @w{@t{-@w{-}style-stderr}[@t{=}@i{S}]}
+@item @w{@t{-@w{-}style-stderr}[@t{=}@i{V}]}
 @include ipez.texi
 The
 @w{@t{-@w{-}style-stderr}}
-option is replaced by the
-@w{@t{-@w{-}style-stderr=always}}
-option@.
-The
-@w{@t{-@w{-}style-stderr=}@i{S}}
 option enables or disables bold,
 underline, and color styling of
 text written to standard error,
 which is initially disabled@.
-The
-@w{@t{-@w{-}style-stderr=always}}
-option enables it@.
-The
-@w{@t{-@w{-}style-stderr=auto}}
-option enables it if standard error
-is associated with a terminal
-or disables it if not@.
-The
-@w{@t{-@w{-}style-stderr=}@i{S}}
-option with any other
-@w{@i{S}}
-disables it@.
+If
+@w{@i{V}}
+is
+@w{@t{always}@comma{}}
+then styling is enabled@.
+If
+@w{@i{V}}
+is
+@w{@t{never}@comma{}}
+then styling is disabled@.
+If
+@w{@i{V}}
+is
+@w{@t{auto}@comma{}}
+then styling is enabled
+if standard error is associated
+with a terminal or disabled if not@.
+Any other value causes an error@.
+If
+@w{@i{V}}
+is omitted,
+then it is taken to be
+@w{@t{always}@.}
 
 @item @w{@t{-@w{-}style-stdout}[@t{=}@i{S}]}
 @include ipez.texi
