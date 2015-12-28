@@ -173,8 +173,7 @@ with a terminal or disabled if not@.
 Any other value causes an error@.
 If
 @w{@i{V}}
-is omitted,
-then it is taken to be
+is omitted, then it is taken to be
 @w{@t{always}@.}
 
 @item @w{@t{-@w{-}style-stdout}[@t{=}@i{V}]}
@@ -205,8 +204,7 @@ with a terminal or disabled if not@.
 Any other value causes an error@.
 If
 @w{@i{V}}
-is omitted,
-then it is taken to be
+is omitted, then it is taken to be
 @w{@t{always}@.}
 
 @item @w{@t{-@w{-}version}}
