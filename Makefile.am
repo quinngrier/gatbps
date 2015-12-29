@@ -1,3 +1,5 @@
+## begin_variables
+
 AM_MAKEINFOFLAGS =
 AM_MAKEINFOFLAGS += -I doc/texi -I $(srcdir)/doc/texi
 
@@ -87,6 +89,8 @@ man_MANS =
 man_MANS += doc/man/gatbps.1
 
 plaintextdir = $(docdir)
+
+## end_variables
 
 .PHONY: docbook
 .PHONY: install-docbook
