@@ -104,17 +104,19 @@ plaintextdir = $(docdir)
 doc/gatbps.txt: $(doc_gatbps_TEXINFOS)
 doc/gatbps.txt: doc/gatbps.texi
 	$(AM_V_MAKEINFO)$(MKDIR_P) doc
-	$(AM_V_at)if test -f doc/gatbps.texi; then \
-  $(MAKEINFO) \
-    $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
-    --plaintext -o doc/gatbps.txt doc/gatbps.texi \
-  ; \
-else \
-  $(MAKEINFO) \
-    $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
-    --plaintext -o doc/gatbps.txt $(srcdir)/doc/gatbps.texi \
-  ; \
-fi
+	$(AM_V_at)( \
+  if test -f doc/gatbps.texi; then \
+    $(MAKEINFO) \
+      $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
+      --plaintext -o doc/gatbps.txt doc/gatbps.texi \
+    ; \
+  else \
+    $(MAKEINFO) \
+      $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
+      --plaintext -o doc/gatbps.txt $(srcdir)/doc/gatbps.texi \
+    ; \
+  fi; \
+)
 
 doc/gatbps.xml: $(doc_gatbps_TEXINFOS)
 doc/gatbps.xml: doc/gatbps.texi
