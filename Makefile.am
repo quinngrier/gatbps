@@ -144,7 +144,7 @@ docbook: doc/gatbps.xml
 install-docbook: doc/gatbps.xml
 	@$(NORMAL_INSTALL)
 	@( \
-  case $(docbookdir)'' in \
+  case ''$(docbookdir) in \
     ?*) \
       echo " $(MKDIR_P) '$(DESTDIR)$(docbookdir)'"; \
       $(MKDIR_P) $(DESTDIR)$(docbookdir) || exit $$?; \
@@ -166,7 +166,7 @@ install-docbook: doc/gatbps.xml
 install-plaintext: doc/gatbps.txt
 	@$(NORMAL_INSTALL)
 	@( \
-  case $(plaintextdir)'' in \
+  case ''$(plaintextdir) in \
     ?*) \
       echo " $(MKDIR_P) '$(DESTDIR)$(plaintextdir)'"; \
       $(MKDIR_P) $(DESTDIR)$(plaintextdir) || exit $$?; \
@@ -190,7 +190,7 @@ plaintext: doc/gatbps.txt
 uninstall-docbook:
 	@$(NORMAL_UNINSTALL)
 	@( \
-  case $(docbookdir)'' in \
+  case ''$(docbookdir) in \
     ?*) \
       list=; \
       list="$$list gatbps.xml"; \
@@ -205,7 +205,7 @@ uninstall-docbook:
 uninstall-plaintext:
 	@$(NORMAL_UNINSTALL)
 	@( \
-  case $(plaintextdir)'' in \
+  case ''$(plaintextdir) in \
     ?*) \
       list=; \
       list="$$list gatbps.txt"; \
