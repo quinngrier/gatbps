@@ -204,16 +204,18 @@ uninstall-docbook:
 
 uninstall-plaintext:
 	@$(NORMAL_UNINSTALL)
-	@case $(plaintextdir)'' in \
-  ?*) \
-    list=; \
-    list="$$list gatbps.txt"; \
-    for x in $$list; do \
-      echo " rm -f '$(DESTDIR)$(plaintextdir)/$$x'"; \
-      rm -f $(DESTDIR)$(plaintextdir)/$$x; \
-    done; \
-  ;; \
-esac
+	@( \
+  case $(plaintextdir)'' in \
+    ?*) \
+      list=; \
+      list="$$list gatbps.txt"; \
+      for x in $$list; do \
+        echo " rm -f '$(DESTDIR)$(plaintextdir)/$$x'"; \
+        rm -f $(DESTDIR)$(plaintextdir)/$$x; \
+      done; \
+    ;; \
+  esac; \
+)
 
 ## end_rules
 
