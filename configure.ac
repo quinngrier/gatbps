@@ -81,6 +81,7 @@ AS_HELP_STRING([--enable-awk=V],
 )
 AC_MSG_RESULT([${awk_default}])
 
+AC_MSG_CHECKING([which --sed=V to make gatbps default to])
 AC_ARG_ENABLE(
   [sed],
   [
@@ -114,6 +115,7 @@ AS_HELP_STRING([--enable-sed=V],
     sed_default='auto'
   ]
 )
+AC_MSG_RESULT([${sed_default}])
 
 AC_ARG_ENABLE(
   [texi2any],
