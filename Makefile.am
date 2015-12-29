@@ -92,6 +92,8 @@ plaintextdir = $(docdir)
 
 ## end_variables
 
+## begin_rules
+
 .PHONY: docbook
 .PHONY: install-docbook
 .PHONY: install-plaintext
@@ -202,6 +204,8 @@ uninstall-plaintext:
     done; \
   ;; \
 esac
+
+## end_rules
 
 include $(srcdir)/build-aux/CC0-1.0-AM-COPYRIGHT.am
 
