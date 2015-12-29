@@ -2176,8 +2176,6 @@ The
 option enables
 the recursion phase
 of operand processing.
-For more information,
-see the OPERANDS section.
 .TP
 .nohy "\fB\-\-style\fR[\fB=\fIV\fR]"
 .IPEZ

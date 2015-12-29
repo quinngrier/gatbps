@@ -126,8 +126,6 @@ The
 option enables
 the recursion phase
 of operand processing@.
-For more information,
-@pxref{@t{gatbps} Operands}@.
 
 @item @w{@t{-@w{-}style}[@t{=}@i{V}]}
 @include ipez.texi
