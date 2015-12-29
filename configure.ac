@@ -117,6 +117,7 @@ AS_HELP_STRING([--enable-sed=V],
 )
 AC_MSG_RESULT([${sed_default}])
 
+AC_MSG_CHECKING([which --texi2any=V to make gatbps default to])
 AC_ARG_ENABLE(
   [texi2any],
   [
@@ -159,6 +160,7 @@ AS_HELP_STRING([--enable-texi2any=V],
     texi2any_default='auto'
   ]
 )
+AC_MSG_RESULT([${texi2any_default}])
 
 AWK_DEFAULT_SH=`sh "${srcdir}/build-aux/sh-form.sh" \
   "--awk=${AWK}" \
