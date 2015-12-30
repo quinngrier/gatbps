@@ -45,7 +45,7 @@ AC_PROG_SED
 AC_ARG_VAR([TEXI2ANY], [the command name for texi2any])
 AC_CHECK_PROGS([TEXI2ANY], [texi2any makeinfo])
 
-AC_MSG_CHECKING([which --awk=V to make gatbps default to])
+AC_MSG_CHECKING([which --awk=V to use by default])
 AC_ARG_ENABLE(
   [awk],
   [
@@ -81,7 +81,7 @@ AS_HELP_STRING([--enable-awk=V],
 )
 AC_MSG_RESULT([--awk=${awk_default}])
 
-AC_MSG_CHECKING([which --sed=V to make gatbps default to])
+AC_MSG_CHECKING([which --sed=V to use by default])
 AC_ARG_ENABLE(
   [sed],
   [
@@ -117,7 +117,7 @@ AS_HELP_STRING([--enable-sed=V],
 )
 AC_MSG_RESULT([--sed=${sed_default}])
 
-AC_MSG_CHECKING([which --texi2any=V to make gatbps default to])
+AC_MSG_CHECKING([which --texi2any=V to use by default])
 AC_ARG_ENABLE(
   [texi2any],
   [
