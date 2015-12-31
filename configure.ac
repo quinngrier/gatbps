@@ -54,11 +54,11 @@ AS_HELP_STRING([--disable-awk],
 AS_HELP_STRING([--enable-awk],
                [equivalent to --enable-awk=yes])
 AS_HELP_STRING([--enable-awk=no],
-               [make gatbps default to --awk=auto])
+               [use --awk=auto by default])
 AS_HELP_STRING([--enable-awk=yes],
-               [make gatbps default to --awk=V where V is the best choice for this particular system])
+               [use --awk=V by default where V is the best choice for this particular system])
 AS_HELP_STRING([--enable-awk=V],
-               [make gatbps default to --awk=V])],
+               [use --awk=V by default])],
   [
     case "${enable_awk}" in
     #(
@@ -90,11 +90,11 @@ AS_HELP_STRING([--disable-sed],
 AS_HELP_STRING([--enable-sed],
                [equivalent to --enable-sed=yes])
 AS_HELP_STRING([--enable-sed=no],
-               [make gatbps default to --sed=auto])
+               [use --sed=auto by default])
 AS_HELP_STRING([--enable-sed=yes],
-               [make gatbps default to --sed=V where V is the best choice for this particular system])
+               [use --sed=V by default where V is the best choice for this particular system])
 AS_HELP_STRING([--enable-sed=V],
-               [make gatbps default to --sed=V])],
+               [use --sed=V by default])],
   [
     case "${enable_sed}" in
     #(
@@ -126,11 +126,11 @@ AS_HELP_STRING([--disable-texi2any],
 AS_HELP_STRING([--enable-texi2any],
                [equivalent to --enable-texi2any=yes])
 AS_HELP_STRING([--enable-texi2any=no],
-               [make gatbps default to --texi2any=auto])
+               [use --texi2any=auto by default])
 AS_HELP_STRING([--enable-texi2any=yes],
-               [make gatbps default to --texi2any=V where V is the best choice for this particular system])
+               [use --texi2any=V by default where V is the best choice for this particular system])
 AS_HELP_STRING([--enable-texi2any=V],
-               [make gatbps default to --texi2any=V])],
+               [use --texi2any=V by default])],
   [
     case "${enable_texi2any}" in
     #(
