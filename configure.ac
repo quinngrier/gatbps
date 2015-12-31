@@ -45,7 +45,7 @@ AC_PROG_SED
 AC_ARG_VAR([TEXI2ANY], [the command name for texi2any])
 AC_CHECK_PROGS([TEXI2ANY], [texi2any makeinfo])
 
-AC_MSG_CHECKING([which --awk=V to use by default])
+AC_MSG_CHECKING([which --awk value to use by default])
 AC_ARG_ENABLE(
   [awk],
   [
@@ -79,9 +79,9 @@ AS_HELP_STRING([--enable-awk=V],
     awk_default='auto'
   ]
 )
-AC_MSG_RESULT([--awk=${awk_default}])
+AC_MSG_RESULT([${awk_default}])
 
-AC_MSG_CHECKING([which --sed=V to use by default])
+AC_MSG_CHECKING([which --sed value to use by default])
 AC_ARG_ENABLE(
   [sed],
   [
@@ -115,9 +115,9 @@ AS_HELP_STRING([--enable-sed=V],
     sed_default='auto'
   ]
 )
-AC_MSG_RESULT([--sed=${sed_default}])
+AC_MSG_RESULT([${sed_default}])
 
-AC_MSG_CHECKING([which --texi2any=V to use by default])
+AC_MSG_CHECKING([which --texi2any value to use by default])
 AC_ARG_ENABLE(
   [texi2any],
   [
@@ -160,7 +160,7 @@ AS_HELP_STRING([--enable-texi2any=V],
     texi2any_default='auto'
   ]
 )
-AC_MSG_RESULT([--texi2any=${texi2any_default}])
+AC_MSG_RESULT([${texi2any_default}])
 
 AWK_DEFAULT_SH=`sh "${srcdir}/build-aux/sh-form.sh" \
   "--awk=${AWK}" \
