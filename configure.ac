@@ -222,48 +222,9 @@ esac
 AC_SUBST([TEXI2ANY_DEFAULT_SH])
 AM_SUBST_NOTMAKE([TEXI2ANY_DEFAULT_SH])
 
-#
-# Make a version of @AWK@ that's safer to use as a troff macro argument.
-#
-
-AWK_DEFAULT_TROFF=`sed '
-s/"/""/g
-s/\\\\/\\\\\\\\/g
-s/-/\\\\-/g
-1s/^/"\\\\fB/
-$s/$/\\\\fR"/
-' <<EOF
-${awk_default}
-EOF
-`
-case "${?}" in
-#(
-  0)
-    :
-  ;;
-#(
-  *)
-    AC_MSG_ERROR([sed failed], [1])
-  ;;
-esac
-
-AWK_DEFAULT_TROFF=`tr '
-' ' ' <<EOF
-${AWK_DEFAULT_TROFF}
-EOF
-`
-case "${?}" in
-#(
-  0)
-    :
-  ;;
-#(
-  *)
-    AC_MSG_ERROR([tr failed], [1])
-  ;;
-esac
-
+AWK_DEFAULT_TROFF="${awk_default}"
 AC_SUBST([AWK_DEFAULT_TROFF])
+AM_SUBST_NOTMAKE([AWK_DEFAULT_TROFF])
 
 AT='@'
 AC_SUBST([AT])
