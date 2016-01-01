@@ -86,6 +86,30 @@ If
 is omitted, then it
 is taken to be empty@.
 
+@item @w{@t{-@w{-}awk=}@i{V}}
+@include ipez.texi
+The
+@w{@t{-@w{-}awk}}
+option sets the command name for the
+@w{@t{awk}}
+program to
+@w{@i{V}@.}
+If
+@w{@i{V}}
+is
+@w{@t{auto}@comma{}}
+then the command name will be inferred@.
+This particular copy of
+the program behaves as
+if an instance of the
+@w{@t{-@w{-}awk=TODO}}
+option were added to the
+arguments at a position that
+lies before all original arguments
+and before any argument added by the
+@w{@t{AWK}}
+environment variable@.
+
 @item @w{@t{-@w{-}help}[@t{=}@i{V}]}
 @include ipez.texi
 The

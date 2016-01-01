@@ -2123,17 +2123,29 @@ If
 is omitted, then it
 is taken to be empty.
 .TP
-.nohy "\fB\-\-awk=\fIS\fR"
+.nohy "\fB\-\-awk=\fIV\fR"
 .IPEZ
-The preferred
+The
+.nohy "\fB\-\-awk\fR"
+option sets the command name for the
 .nohy "\fBawk\fR"
-executable is
-.nohy @AWK_DEFAULT_TROFF@
-by default.
-Each
-.nohy "\fB\-\-awk=\fIS\fR"
-option changes it to
-.nohy "\fIS\fR."
+program to
+.nohy "\fIV\fR."
+If
+.nohy "\fIV\fR"
+is
+.nohy "\fBauto\fR,"
+then the command name will be inferred.
+This particular copy of
+the program behaves as
+if an instance of the
+.nohy "\fB\-\-awk=TODO\fR"
+option were added to the
+arguments at a position that
+lies before all original arguments
+and before any argument added by the
+.nohy "\fBAWK\fR"
+environment variable.
 .TP
 .nohy "\fB\-\-help\fR[\fB=\fIV\fR]"
 .IPEZ
