@@ -2398,7 +2398,8 @@ then an instance of the
 .nohy "\fB\-\-sed=\fIV\fR"
 option is added to the
 arguments at a position that
-lies before all original arguments.
+lies before all original arguments
+and after the implicit initial instance.
 Otherwise, the
 .nohy "\fBSED\fR"
 environment variable has no effect.
