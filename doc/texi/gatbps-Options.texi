@@ -144,6 +144,15 @@ In particular, the
 @w{@t{man@w{ }-l@w{ }-}}
 command can be used on most systems@.
 
+@item @w{@t{-@w{-}no-recursive}}
+@itemx @w{@t{-R}}
+@include ipez.texi
+The
+@w{@t{-@w{-}no-recursive}}
+option disables
+the recursion phase
+of operand processing@.
+
 @item @w{@t{-@w{-}recursive}}
 @itemx @w{@t{-r}}
 @include ipez.texi

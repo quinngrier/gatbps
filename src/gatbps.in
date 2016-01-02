@@ -2181,6 +2181,16 @@ In particular, the
 .nohy "\fBman\ \-l\ \-\fR"
 command can be used on most systems.
 .TP
+.nohy "\fB\-\-no\-recursive\fR"
+.TPZ
+.nohy "\fB\-R\fR"
+.IPEZ
+The
+.nohy "\fB\-\-no\-recursive\fR"
+option disables
+the recursion phase
+of operand processing.
+.TP
 .nohy "\fB\-\-recursive\fR"
 .TPZ
 .nohy "\fB\-r\fR"
