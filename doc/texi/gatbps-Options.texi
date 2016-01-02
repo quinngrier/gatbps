@@ -166,6 +166,13 @@ The
 @w{@t{-@w{-}no-recursive}}
 option disables recursion@.
 
+@item @w{@t{-@w{-}no-verbose}}
+@itemx @w{@t{-V}}
+@include ipez.texi
+The
+@w{@t{-@w{-}no-verbose}}
+option disables printing@.
+
 @item @w{@t{-@w{-}recursive}}
 @itemx @w{@t{-r}}
 @include ipez.texi

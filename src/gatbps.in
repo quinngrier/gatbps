@@ -2205,6 +2205,14 @@ The
 .nohy "\fB\-\-no\-recursive\fR"
 option disables recursion.
 .TP
+.nohy "\fB\-\-no\-verbose\fR"
+.TPZ
+.nohy "\fB\-V\fR"
+.IPEZ
+The
+.nohy "\fB\-\-no\-verbose\fR"
+option disables printing.
+.TP
 .nohy "\fB\-\-recursive\fR"
 .TPZ
 .nohy "\fB\-r\fR"
