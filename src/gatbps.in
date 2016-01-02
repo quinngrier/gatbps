@@ -2150,6 +2150,22 @@ and before any argument added by the
 environment variable.
 Other copies may use other initial values.
 .TP
+.nohy "\fB\-\-boundary\fR"
+.TPZ
+.nohy "\fB\-b\fR"
+.IPEZ
+The
+.nohy "\fB\-\-boundary\fR"
+option enables recursion
+for the next operand.
+If recursion is
+already enabled when
+the operand is reached,
+then there is no effect.
+Otherwise, recursion
+is enabled for the operand
+but not for its prerequisites.
+.TP
 .nohy "\fB\-\-help\fR[\fB=\fIV\fR]"
 .IPEZ
 The

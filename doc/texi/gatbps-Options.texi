@@ -113,6 +113,21 @@ and before any argument added by the
 environment variable@.
 Other copies may use other initial values@.
 
+@item @w{@t{-@w{-}boundary}}
+@itemx @w{@t{-b}}
+@include ipez.texi
+The
+@w{@t{-@w{-}boundary}}
+option enables recursion
+for the next operand@.
+If recursion is
+already enabled when
+the operand is reached,
+then there is no effect@.
+Otherwise, recursion
+is enabled for the operand
+but not for its prerequisites@.
+
 @item @w{@t{-@w{-}help}[@t{=}@i{V}]}
 @include ipez.texi
 The
