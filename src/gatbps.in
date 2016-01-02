@@ -2179,8 +2179,7 @@ command that is analogous to the
 command.
 In particular, the
 .nohy "\fBman\ \-l\ \-\fR"
-command can be used on
-most GNU/Linux systems.
+command can be used on most systems.
 .TP
 .nohy "\fB\-\-recursive\fR"
 .TPZ

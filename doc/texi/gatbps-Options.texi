@@ -142,8 +142,7 @@ command that is analogous to the
 command@.
 In particular, the
 @w{@t{man@w{ }-l@w{ }-}}
-command can be used on
-most GNU/Linux systems@.
+command can be used on most systems@.
 
 @item @w{@t{-@w{-}recursive}}
 @itemx @w{@t{-r}}
