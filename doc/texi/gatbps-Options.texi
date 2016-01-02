@@ -99,9 +99,10 @@ If
 is
 @w{@t{auto}@comma{}}
 then the command name will be inferred@.
-This particular copy of
-the program behaves as
-if an instance of the
+The copy of the
+program that corresponds
+to this copy of the manual
+behaves as if an instance of the
 @w{@t{-@w{-}awk=@value{AWKDEFAULTTEXI}}}
 option were added to the
 arguments at a position that
