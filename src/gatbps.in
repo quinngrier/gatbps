@@ -2139,7 +2139,7 @@ then the command name will be inferred.
 This particular copy of
 the program behaves as
 if an instance of the
-.nohy "\fB\-\-awk=TODO\fR"
+.nohy "\fB\-\-awk=@AWK_DEFAULT_TROFF@\fR"
 option were added to the
 arguments at a position that
 lies before all original arguments
