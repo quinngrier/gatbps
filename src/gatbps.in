@@ -2136,7 +2136,7 @@ If
 .nohy "\fIV\fR"
 is
 .nohy "\fBauto\fR,"
-then the command name will be inferred.
+then the command name is inferred.
 The copy of the
 program that corresponds
 to this copy of the manual page

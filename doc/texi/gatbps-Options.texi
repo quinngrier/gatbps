@@ -99,7 +99,7 @@ If
 @w{@i{V}}
 is
 @w{@t{auto}@comma{}}
-then the command name will be inferred@.
+then the command name is inferred@.
 The copy of the
 program that corresponds
 to this copy of the manual
