@@ -2367,14 +2367,16 @@ Printing writes the
 operand to standard output,
 generation creates the file,
 and recursion prepends prerequisite
-files to the remaining arguments.
-Recursion only applies to special files.
+special files to the remaining arguments.
 Various options
 can be used to enable
 or disable each phase,
 but printing and generation
 cannot be simultaneously disabled.
 By default, only generation is enabled.
+Recursion only applies to
+special files and maintains the
+directory part of each file name.
 .SH "STDIN"
 .LP
 Not used.
