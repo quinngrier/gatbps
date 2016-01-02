@@ -13,6 +13,7 @@
 @include CC0-1.0-copying.texi
 @include DATE.texi
 @include SEDDEFAULTTEXI.texi
+@include TEXIANYDEFAULTTEXI.texi
 @include math.texi
 
 @set fullmanual

@@ -48,6 +48,7 @@ doc_gatbps_TEXINFOS += doc/texi/Invoking-sh-form-sh.texi
 doc_gatbps_TEXINFOS += doc/texi/Mathematical-Notation-in-Texinfo.texi
 doc_gatbps_TEXINFOS += doc/texi/SEDDEFAULTTEXI.texi
 doc_gatbps_TEXINFOS += doc/texi/Special-File-Reference.texi
+doc_gatbps_TEXINFOS += doc/texi/TEXIANYDEFAULTTEXI.texi
 doc_gatbps_TEXINFOS += doc/texi/VERSION.txi
 doc_gatbps_TEXINFOS += doc/texi/bdots.texi
 doc_gatbps_TEXINFOS += doc/texi/bothcontents.texi
