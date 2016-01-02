@@ -36,6 +36,7 @@ bin_SCRIPTS =
 bin_SCRIPTS += bin/gatbps
 
 doc_gatbps_TEXINFOS =
+doc_gatbps_TEXINFOS += doc/texi/AWKDEFAULTTEXI.texi
 doc_gatbps_TEXINFOS += doc/texi/Building-and-Installation.texi
 doc_gatbps_TEXINFOS += doc/texi/CC0-1.0-appendix.texi
 doc_gatbps_TEXINFOS += doc/texi/CC0-1.0-copying.texi
