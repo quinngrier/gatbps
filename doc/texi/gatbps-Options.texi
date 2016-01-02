@@ -305,6 +305,13 @@ and before any argument added by the
 environment variable@.
 Other copies may use other initial values@.
 
+@item @w{@t{-@w{-}verbose}}
+@itemx @w{@t{-v}}
+@include ipez.texi
+The
+@w{@t{-@w{-}verbose}}
+option enables printing@.
+
 @item @w{@t{-@w{-}version}}
 @include ipez.texi
 The

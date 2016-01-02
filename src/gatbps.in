@@ -2345,6 +2345,14 @@ and before any argument added by the
 environment variable.
 Other copies may use other initial values.
 .TP
+.nohy "\fB\-\-verbose\fR"
+.TPZ
+.nohy "\fB\-v\fR"
+.IPEZ
+The
+.nohy "\fB\-\-verbose\fR"
+option enables printing.
+.TP
 .nohy "\fB\-\-version\fR"
 .IPEZ
 The
