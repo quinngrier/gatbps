@@ -2297,6 +2297,33 @@ If
 is omitted, then it is taken to be
 .nohy "\fBalways\fR."
 .TP
+.nohy "\fB\-\-texi2any=\fIV\fR"
+.IPEZ
+The
+.nohy "\fB\-\-texi2any\fR"
+option sets the command name
+that will be used to invoke the
+.nohy "\fBtexi2any\fR"
+program to
+.nohy "\fIV\fR."
+If
+.nohy "\fIV\fR"
+is
+.nohy "\fBauto\fR,"
+then the command name is inferred.
+The copy of the
+program that corresponds
+to this copy of the manual page
+behaves as if an instance of the
+.nohy "\fB\-\-texi2any=@TEXI2ANY_DEFAULT_TROFF@\fR"
+option were added to the
+arguments at a position that
+lies before all original arguments
+and before any argument added by the
+.nohy "\fBTEXI2ANY\fR"
+environment variable.
+Other copies may use other initial values.
+.TP
 .nohy "\fB\-\-version\fR"
 .IPEZ
 The

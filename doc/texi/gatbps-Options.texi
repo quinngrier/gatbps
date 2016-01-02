@@ -259,6 +259,33 @@ If
 is omitted, then it is taken to be
 @w{@t{always}@.}
 
+@item @w{@t{-@w{-}texi2any=}@i{V}}
+@include ipez.texi
+The
+@w{@t{-@w{-}texi2any}}
+option sets the command name
+that will be used to invoke the
+@w{@t{texi2any}}
+program to
+@w{@i{V}@.}
+If
+@w{@i{V}}
+is
+@w{@t{auto}@comma{}}
+then the command name is inferred@.
+The copy of the
+program that corresponds
+to this copy of the manual
+behaves as if an instance of the
+@w{@t{-@w{-}texi2any=@value{TEXIANYDEFAULTTEXI}}}
+option were added to the
+arguments at a position that
+lies before all original arguments
+and before any argument added by the
+@w{@t{TEXI2ANY}}
+environment variable@.
+Other copies may use other initial values@.
+
 @item @w{@t{-@w{-}version}}
 @include ipez.texi
 The
