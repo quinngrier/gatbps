@@ -2127,7 +2127,8 @@ is taken to be empty.
 .IPEZ
 The
 .nohy "\fB\-\-awk\fR"
-option sets the command name for the
+option sets the command name
+that will be used to invoke the
 .nohy "\fBawk\fR"
 program to
 .nohy "\fIV\fR."

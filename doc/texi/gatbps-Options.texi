@@ -90,7 +90,8 @@ is taken to be empty@.
 @include ipez.texi
 The
 @w{@t{-@w{-}awk}}
-option sets the command name for the
+option sets the command name
+that will be used to invoke the
 @w{@t{awk}}
 program to
 @w{@i{V}@.}
