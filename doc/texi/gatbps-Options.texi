@@ -110,6 +110,7 @@ lies before all original arguments
 and before any argument added by the
 @w{@t{AWK}}
 environment variable@.
+Other copies may differ@.
 
 @item @w{@t{-@w{-}help}[@t{=}@i{V}]}
 @include ipez.texi

@@ -2147,6 +2147,7 @@ lies before all original arguments
 and before any argument added by the
 .nohy "\fBAWK\fR"
 environment variable.
+Other copies may differ.
 .TP
 .nohy "\fB\-\-help\fR[\fB=\fIV\fR]"
 .IPEZ
