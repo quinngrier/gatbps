@@ -154,6 +154,33 @@ option enables
 the recursion phase
 of operand processing@.
 
+@item @w{@t{-@w{-}sed=}@i{V}}
+@include ipez.texi
+The
+@w{@t{-@w{-}sed}}
+option sets the command name
+that will be used to invoke the
+@w{@t{sed}}
+program to
+@w{@i{V}@.}
+If
+@w{@i{V}}
+is
+@w{@t{auto}@comma{}}
+then the command name is inferred@.
+The copy of the
+program that corresponds
+to this copy of the manual
+behaves as if an instance of the
+@w{@t{-@w{-}sed=@value{SEDDEFAULTTEXI}}}
+option were added to the
+arguments at a position that
+lies before all original arguments
+and before any argument added by the
+@w{@t{SED}}
+environment variable@.
+Other copies may use other initial values@.
+
 @item @w{@t{-@w{-}style}[@t{=}@i{V}]}
 @include ipez.texi
 The
