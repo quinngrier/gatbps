@@ -2203,9 +2203,7 @@ command can be used on most systems.
 .IPEZ
 The
 .nohy "\fB\-\-no\-recursive\fR"
-option disables
-the recursion phase
-of operand processing.
+option disables recursion.
 .TP
 .nohy "\fB\-\-recursive\fR"
 .TPZ
@@ -2213,9 +2211,7 @@ of operand processing.
 .IPEZ
 The
 .nohy "\fB\-\-recursive\fR"
-option enables
-the recursion phase
-of operand processing.
+option enables recursion.
 .TP
 .nohy "\fB\-\-sed=\fIV\fR"
 .IPEZ

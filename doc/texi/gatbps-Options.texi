@@ -164,18 +164,14 @@ command can be used on most systems@.
 @include ipez.texi
 The
 @w{@t{-@w{-}no-recursive}}
-option disables
-the recursion phase
-of operand processing@.
+option disables recursion@.
 
 @item @w{@t{-@w{-}recursive}}
 @itemx @w{@t{-r}}
 @include ipez.texi
 The
 @w{@t{-@w{-}recursive}}
-option enables
-the recursion phase
-of operand processing@.
+option enables recursion@.
 
 @item @w{@t{-@w{-}sed=}@i{V}}
 @include ipez.texi
