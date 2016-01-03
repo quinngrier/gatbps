@@ -46,6 +46,7 @@ doc_gatbps_TEXINFOS += doc/texi/Introduction.texi
 doc_gatbps_TEXINFOS += doc/texi/Invoking-gatbps.texi
 doc_gatbps_TEXINFOS += doc/texi/Invoking-sh-form-sh.texi
 doc_gatbps_TEXINFOS += doc/texi/Invoking-texi-form-sh.texi
+doc_gatbps_TEXINFOS += doc/texi/Invoking-troff-form-sh.texi
 doc_gatbps_TEXINFOS += doc/texi/Mathematical-Notation-in-Texinfo.texi
 doc_gatbps_TEXINFOS += doc/texi/SEDDEFAULTTEXI.texi
 doc_gatbps_TEXINFOS += doc/texi/Special-File-Reference.texi

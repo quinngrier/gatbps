@@ -65,6 +65,7 @@ which was released on @w{@value{DATE}}@.
 * Invoking @t{gatbps}::
 * Invoking @t{sh-form-sh}::
 * Invoking @t{texi-form-sh}::
+* Invoking @t{troff-form-sh}::
 * Mathematical Notation in Texinfo::
 * Special File Reference::
 * CC0::
@@ -83,6 +84,8 @@ which was released on @w{@value{DATE}}@.
 @include Invoking-sh-form-sh.texi
 
 @include Invoking-texi-form-sh.texi
+
+@include Invoking-troff-form-sh.texi
 
 @include Mathematical-Notation-in-Texinfo.texi
 
