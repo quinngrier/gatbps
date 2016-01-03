@@ -9085,6 +9085,7 @@ EOF1
 # released on @PACKAGE_DATE@. Before changing it, make sure
 # you're doing the right thing. Depending on how GATBPS
 # is being used, your changes may be automatically lost.
+# A short description of this file follows.
 #
 # Special file: sh-form.sh
 #
@@ -10316,6 +10317,7 @@ EOF1
 # released on @PACKAGE_DATE@. Before changing it, make sure
 # you're doing the right thing. Depending on how GATBPS
 # is being used, your changes may be automatically lost.
+# A short description of this file follows.
 #
 # Special file: texi-form.sh
 #
@@ -10364,6 +10366,7 @@ EOF1
 # released on @PACKAGE_DATE@. Before changing it, make sure
 # you're doing the right thing. Depending on how GATBPS
 # is being used, your changes may be automatically lost.
+# A short description of this file follows.
 #
 # Special file: troff-form.sh
 #
