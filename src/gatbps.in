@@ -10843,19 +10843,19 @@ EOF1
           ;;
 
         #(
-          'Makefile.am.vim'|*'/Makefile.am.vim')
+          'GATBPS_CHECK_LINK.m4'|*'/GATBPS_CHECK_LINK.m4')
 
             case "${1}" in
             #(
-              'Makefile.am.vim')
+              'GATBPS_CHECK_LINK.m4')
                 prefix=''
               ;;
             #(
-              *'/Makefile.am.vim')
+              *'/GATBPS_CHECK_LINK.m4')
                 x=`"${sed}" "
 s/'/'\\\\\\\\''/g
 1s/^/prefix='/
-\\$s/Makefile.am.vim\\$/'/
+\\$s/GATBPS_CHECK_LINK.m4\\$/'/
 " <<EOF1
 ${1}
 EOF1
@@ -10890,19 +10890,19 @@ EOF1
           ;;
 
         #(
-          'GATBPS_CHECK_LINK.m4'|*'/GATBPS_CHECK_LINK.m4')
+          'Makefile.am.vim'|*'/Makefile.am.vim')
 
             case "${1}" in
             #(
-              'GATBPS_CHECK_LINK.m4')
+              'Makefile.am.vim')
                 prefix=''
               ;;
             #(
-              *'/GATBPS_CHECK_LINK.m4')
+              *'/Makefile.am.vim')
                 x=`"${sed}" "
 s/'/'\\\\\\\\''/g
 1s/^/prefix='/
-\\$s/GATBPS_CHECK_LINK.m4\\$/'/
+\\$s/Makefile.am.vim\\$/'/
 " <<EOF1
 ${1}
 EOF1
