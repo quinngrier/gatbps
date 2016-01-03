@@ -12034,19 +12034,19 @@ EOF1
           ;;
 
         #(
-          'sps.texi'|*'/sps.texi')
+          'shortcontents.texi'|*'/shortcontents.texi')
 
             case "${1}" in
             #(
-              'sps.texi')
+              'shortcontents.texi')
                 prefix=''
               ;;
             #(
-              *'/sps.texi')
+              *'/shortcontents.texi')
                 x=`"${sed}" "
 s/'/'\\\\\\\\''/g
 1s/^/prefix='/
-\\$s/sps.texi\\$/'/
+\\$s/shortcontents.texi\\$/'/
 " <<EOF1
 ${1}
 EOF1
@@ -12081,19 +12081,19 @@ EOF1
           ;;
 
         #(
-          'shortcontents.texi'|*'/shortcontents.texi')
+          'sps.texi'|*'/sps.texi')
 
             case "${1}" in
             #(
-              'shortcontents.texi')
+              'sps.texi')
                 prefix=''
               ;;
             #(
-              *'/shortcontents.texi')
+              *'/sps.texi')
                 x=`"${sed}" "
 s/'/'\\\\\\\\''/g
 1s/^/prefix='/
-\\$s/shortcontents.texi\\$/'/
+\\$s/sps.texi\\$/'/
 " <<EOF1
 ${1}
 EOF1
