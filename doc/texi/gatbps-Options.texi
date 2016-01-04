@@ -189,6 +189,9 @@ option disables recursion@.
 The
 @w{@t{-@w{-}no-verbose}}
 option disables printing@.
+However, printing remains enabled if the
+@w{@t{-@w{-}dry-run}}
+option is in effect@.
 
 @item @w{@t{-@w{-}recursive}}
 @itemx @w{@t{-r}}

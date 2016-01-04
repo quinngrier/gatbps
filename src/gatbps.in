@@ -2312,6 +2312,9 @@ option disables recursion.
 The
 .nohy "\fB\-\-no\-verbose\fR"
 option disables printing.
+However, printing remains enabled if the
+.nohy "\fB\-\-dry\-run\fR"
+option is in effect.
 .TP
 .nohy "\fB\-\-recursive\fR"
 .TPZ
