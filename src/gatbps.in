@@ -2247,6 +2247,15 @@ Otherwise, recursion
 is enabled for the operand
 but not for its prerequisites.
 .TP
+.nohy "\fB\-\-dry\-run\fR"
+.TPZ
+.nohy "\fB\-n\fR"
+.IPEZ
+The
+.nohy "\fB\-\-dry\-run\fR"
+option enables printing
+and disables generation.
+.TP
 .nohy "\fB\-\-help\fR[\fB=\fIV\fR]"
 .IPEZ
 The
