@@ -2287,6 +2287,17 @@ In particular, the
 .nohy "\fBman\ \-l\ \-\fR"
 command can be used on most systems.
 .TP
+.nohy "\fB\-\-no\-dry\-run\fR"
+.TPZ
+.nohy "\fB\-N\fR"
+.IPEZ
+The
+.nohy "\fB\-\-no\-dry\-run\fR"
+option enables generation and disables printing.
+However, printing remains enabled if the
+.nohy "\fB\-\-verbose\fR"
+option is in effect.
+.TP
 .nohy "\fB\-\-no\-recursive\fR"
 .TPZ
 .nohy "\fB\-R\fR"

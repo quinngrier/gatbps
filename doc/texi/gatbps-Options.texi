@@ -167,6 +167,16 @@ In particular, the
 @w{@t{man@w{ }-l@w{ }-}}
 command can be used on most systems@.
 
+@item @w{@t{-@w{-}no-dry-run}}
+@itemx @w{@t{-N}}
+@include ipez.texi
+The
+@w{@t{-@w{-}no-dry-run}}
+option enables generation and disables printing@.
+However, printing remains enabled if the
+@w{@t{-@w{-}verbose}}
+option is in effect@.
+
 @item @w{@t{-@w{-}no-recursive}}
 @itemx @w{@t{-R}}
 @include ipez.texi
