@@ -10,15 +10,14 @@ generation creates the file,
 and recursion prepends the
 names of prerequisite special
 files to the remaining arguments@.
+Recursion maintains the
+directory part of the operand@.
 Various options
 can be used to enable
 or disable each phase,
 but printing and generation
 cannot be simultaneously disabled@.
 By default, only generation is enabled@.
-Recursion only applies to
-special files and maintains the
-directory part of each file name@.
 @ifxml
 @ifnotxml
 @c
