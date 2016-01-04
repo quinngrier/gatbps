@@ -78,13 +78,13 @@ Each is prefixed with
 @w{@i{V}@.}
 If
 @w{@i{V}}
+is omitted, then it
+is taken to be empty@.
+If
+@w{@i{V}}
 is not empty and does not
 end with a slash character,
 then one is appended@.
-If
-@w{@i{V}}
-is omitted, then it
-is taken to be empty@.
 
 @item @w{@t{-@w{-}awk=}@i{V}}
 @include ipez.texi
