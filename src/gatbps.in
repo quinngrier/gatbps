@@ -2481,8 +2481,9 @@ printing, generation, and recursion.
 Printing writes the
 operand to standard output,
 generation creates the file,
-and recursion prepends prerequisite
-special files to the remaining arguments.
+and recursion prepends the
+names of prerequisite special
+files to the remaining arguments.
 Various options
 can be used to enable
 or disable each phase,
