@@ -71,10 +71,10 @@ to be interpreted as operands@.
 @include ipez.texi
 The
 @w{@t{-@w{-}all}[@t{=}@i{V}]}
-option prepends
-all special files to
-the remaining arguments@.
-Each special file is prefixed with
+option prepends the
+names of all special files
+to the remaining arguments@.
+Each name is prefixed with
 @w{@i{V}@.}
 If
 @w{@i{V}}
