@@ -133,8 +133,7 @@ but not for its prerequisites@.
 @include ipez.texi
 The
 @w{@t{-@w{-}dry-run}}
-option enables printing
-and disables generation@.
+option disables generation and enables printing@.
 
 @item @w{@t{-@w{-}help}[@t{=}@i{V}]}
 @include ipez.texi
