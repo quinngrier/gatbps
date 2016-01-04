@@ -70,7 +70,7 @@ to be interpreted as operands@.
 @itemx @w{@t{-a}[@i{V}]}
 @include ipez.texi
 The
-@w{@t{-@w{-}all}}
+@w{@t{-@w{-}all}[@t{=}@i{V}]}
 option prepends
 all special files to
 the remaining arguments@.

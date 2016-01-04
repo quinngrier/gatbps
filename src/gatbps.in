@@ -2188,7 +2188,7 @@ to be interpreted as operands.
 .nohy "\fB\-a\fR[\fIV\fR]"
 .IPEZ
 The
-.nohy "\fB\-\-all\fR"
+.nohy "\fB\-\-all\fR[\fB=\fIV\fR]"
 option prepends
 all special files to
 the remaining arguments.
