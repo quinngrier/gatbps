@@ -56,7 +56,8 @@ AS_HELP_STRING([--enable-awk],
 AS_HELP_STRING([--enable-awk=no],
                [use --awk=auto by default])
 AS_HELP_STRING([--enable-awk=yes],
-               [use --awk=V by default where V is the best choice for this particular system])
+               [use --awk=V by default where V is
+                the best choice for this particular system])
 AS_HELP_STRING([--enable-awk=V],
                [use --awk=V by default])],
   [
@@ -92,7 +93,8 @@ AS_HELP_STRING([--enable-sed],
 AS_HELP_STRING([--enable-sed=no],
                [use --sed=auto by default])
 AS_HELP_STRING([--enable-sed=yes],
-               [use --sed=V by default where V is the best choice for this particular system])
+               [use --sed=V by default where V is
+                the best choice for this particular system])
 AS_HELP_STRING([--enable-sed=V],
                [use --sed=V by default])],
   [
@@ -128,7 +130,8 @@ AS_HELP_STRING([--enable-texi2any],
 AS_HELP_STRING([--enable-texi2any=no],
                [use --texi2any=auto by default])
 AS_HELP_STRING([--enable-texi2any=yes],
-               [use --texi2any=V by default where V is the best choice for this particular system])
+               [use --texi2any=V by default where V is
+                the best choice for this particular system])
 AS_HELP_STRING([--enable-texi2any=V],
                [use --texi2any=V by default])],
   [
