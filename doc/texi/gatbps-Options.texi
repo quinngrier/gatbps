@@ -171,7 +171,7 @@ command can be used on most systems@.
 @include ipez.texi
 The
 @w{@t{-@w{-}no-dry-run}}
-option enables generation and disables printing@.
+option disables printing and enables generation@.
 However, printing remains enabled if the
 @w{@t{-@w{-}verbose}}
 option is in effect@.

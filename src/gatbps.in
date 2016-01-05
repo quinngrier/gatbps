@@ -2292,7 +2292,7 @@ command can be used on most systems.
 .IPEZ
 The
 .nohy "\fB\-\-no\-dry\-run\fR"
-option enables generation and disables printing.
+option disables printing and enables generation.
 However, printing remains enabled if the
 .nohy "\fB\-\-verbose\fR"
 option is in effect.
