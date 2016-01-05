@@ -2484,7 +2484,7 @@ generation creates the file,
 and recursion prepends the
 names of prerequisite special
 files to the remaining arguments.
-Recursion maintains the
+Recursion also maintains the
 directory part of the operand.
 Various options
 can be used to enable
