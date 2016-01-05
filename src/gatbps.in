@@ -2253,7 +2253,7 @@ but not for its prerequisites.
 .IPEZ
 The
 .nohy "\fB\-\-dry\-run\fR"
-option disables generation and enables printing.
+option enables printing and disables generation.
 .TP
 .nohy "\fB\-\-help\fR[\fB=\fIV\fR]"
 .IPEZ
