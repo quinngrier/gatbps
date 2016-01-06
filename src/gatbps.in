@@ -2400,6 +2400,10 @@ text written to standard error,
 which is initially disabled.
 If
 .nohy "\fIV\fR"
+is omitted, then it is taken to be
+.nohy "\fBalways\fR."
+If
+.nohy "\fIV\fR"
 is
 .nohy "\fBalways\fR,"
 then styling is enabled.
@@ -2416,10 +2420,6 @@ then styling is enabled
 if standard error is associated
 with a terminal or disabled if not.
 Any other value causes an error.
-If
-.nohy "\fIV\fR"
-is omitted, then it is taken to be
-.nohy "\fBalways\fR."
 .TP
 .nohy "\fB\-\-style\-stdout\fR[\fB=\fIV\fR]"
 .IPEZ
