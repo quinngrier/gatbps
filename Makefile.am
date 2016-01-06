@@ -171,6 +171,7 @@ install-docbook: doc/gatbps.xml
 
 install-plaintext: doc/gatbps.txt
 	@$(NORMAL_INSTALL)
+	@: #(
 	@( \
   case ''$(plaintextdir) in \
     ?*) \
