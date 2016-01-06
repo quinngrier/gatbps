@@ -2380,7 +2380,7 @@ Other copies may use other initial values.
 .nohy "\fB\-\-style\fR[\fB=\fIV\fR]"
 .IPEZ
 The
-.nohy "\fB\-\-style\fR"
+.nohy "\fB\-\-style\fR[\fB=\fIV\fR]"
 option prepends an instance of the
 .nohy "\fB\-\-style\-stderr\fR"
 option and an instance of the

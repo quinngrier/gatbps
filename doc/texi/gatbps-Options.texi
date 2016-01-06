@@ -231,7 +231,7 @@ Other copies may use other initial values@.
 @item @w{@t{-@w{-}style}[@t{=}@i{V}]}
 @include ipez.texi
 The
-@w{@t{-@w{-}style}}
+@w{@t{-@w{-}style}[@t{=}@i{V}]}
 option prepends an instance of the
 @w{@t{-@w{-}style-stderr}}
 option and an instance of the
