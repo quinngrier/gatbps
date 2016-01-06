@@ -204,7 +204,7 @@ option enables recursion@.
 @item @w{@t{-@w{-}sed=}@i{V}}
 @include ipez.texi
 The
-@w{@t{-@w{-}sed}}
+@w{@t{-@w{-}sed=}@i{V}}
 option sets the command name
 that will be used to invoke the
 @w{@t{sed}}
