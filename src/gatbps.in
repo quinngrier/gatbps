@@ -2427,7 +2427,7 @@ is omitted, then it is taken to be
 .nohy "\fB\-\-style\-stdout\fR[\fB=\fIV\fR]"
 .IPEZ
 The
-.nohy "\fB\-\-style\-stdout\fR"
+.nohy "\fB\-\-style\-stdout\fR[\fB=\fIV\fR]"
 option enables or disables bold,
 underline, and color styling of
 text written to standard output,

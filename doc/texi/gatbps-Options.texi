@@ -278,7 +278,7 @@ is omitted, then it is taken to be
 @item @w{@t{-@w{-}style-stdout}[@t{=}@i{V}]}
 @include ipez.texi
 The
-@w{@t{-@w{-}style-stdout}}
+@w{@t{-@w{-}style-stdout}[@t{=}@i{V}]}
 option enables or disables bold,
 underline, and color styling of
 text written to standard output,
