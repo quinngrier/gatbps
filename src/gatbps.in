@@ -2284,7 +2284,7 @@ option enables printing and disables generation.
 .nohy "\fB\-\-help\fR[\fB=\fIV\fR]"
 .IPEZ
 The
-.nohy "\fB\-\-help\fR"
+.nohy "\fB\-\-help\fR[\fB=\fIV\fR]"
 option writes text to standard output and
 causes all remaining arguments to be ignored.
 If

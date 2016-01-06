@@ -139,7 +139,7 @@ option enables printing and disables generation@.
 @item @w{@t{-@w{-}help}[@t{=}@i{V}]}
 @include ipez.texi
 The
-@w{@t{-@w{-}help}}
+@w{@t{-@w{-}help}[@t{=}@i{V}]}
 option writes text to standard output and
 causes all remaining arguments to be ignored@.
 If
