@@ -2324,6 +2324,9 @@ option is in effect.
 The
 .nohy "\fB\-\-no\-recursive\fR"
 option disables recursion.
+However, this does not affect the
+.nohy "\fB\-\-boundary\fR"
+option.
 .TP
 .nohy "\fB\-\-no\-verbose\fR"
 .TPZ

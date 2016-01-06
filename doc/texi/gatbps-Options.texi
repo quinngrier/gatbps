@@ -177,6 +177,9 @@ option is in effect@.
 The
 @w{@t{-@w{-}no-recursive}}
 option disables recursion@.
+However, this does not affect the
+@w{@t{-@w{-}boundary}}
+option@.
 
 @item @w{@t{-@w{-}no-verbose}}
 @itemx @w{@t{-V}}
