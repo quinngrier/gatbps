@@ -247,7 +247,7 @@ Otherwise, both are given the value
 @item @w{@t{-@w{-}style-stderr}[@t{=}@i{V}]}
 @include ipez.texi
 The
-@w{@t{-@w{-}style-stderr}}
+@w{@t{-@w{-}style-stderr}[@t{=}@i{V}]}
 option enables or disables bold,
 underline, and color styling of
 text written to standard error,
