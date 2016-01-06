@@ -148,6 +148,7 @@ docbook: doc/gatbps.xml
 
 install-docbook: doc/gatbps.xml
 	@$(NORMAL_INSTALL)
+	@: #(
 	@( \
   case ''$(docbookdir) in \
     ?*) \
