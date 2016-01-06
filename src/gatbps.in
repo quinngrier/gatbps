@@ -2233,7 +2233,7 @@ then a slash character is appended to
 .nohy "\fB\-\-awk=\fIV\fR"
 .IPEZ
 The
-.nohy "\fB\-\-awk\fR"
+.nohy "\fB\-\-awk=\fIV\fR"
 option sets the command name
 that will be used to invoke the
 .nohy "\fBawk\fR"

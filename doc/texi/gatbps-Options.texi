@@ -90,7 +90,7 @@ then a slash character is appended to
 @item @w{@t{-@w{-}awk=}@i{V}}
 @include ipez.texi
 The
-@w{@t{-@w{-}awk}}
+@w{@t{-@w{-}awk=}@i{V}}
 option sets the command name
 that will be used to invoke the
 @w{@t{awk}}
