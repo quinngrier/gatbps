@@ -1,5 +1,9 @@
 @node Invoking @t{sh-form-sh}
 @chapter Invoking @t{sh-form.sh}
+
+This section describes
+@w{@t{sh-form.sh}}
+in the same way as its manual page@.
 @ifxml
 @ifnotxml
 @c
