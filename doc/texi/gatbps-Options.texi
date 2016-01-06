@@ -84,7 +84,8 @@ If
 @w{@i{V}}
 is not empty and does not
 end with a slash character,
-then one is appended@.
+then a slash character is appended to
+@w{@i{V}@.}
 
 @item @w{@t{-@w{-}awk=}@i{V}}
 @include ipez.texi

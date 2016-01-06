@@ -2227,7 +2227,8 @@ If
 .nohy "\fIV\fR"
 is not empty and does not
 end with a slash character,
-then one is appended.
+then a slash character is appended to
+.nohy "\fIV\fR."
 .TP
 .nohy "\fB\-\-awk=\fIV\fR"
 .IPEZ
