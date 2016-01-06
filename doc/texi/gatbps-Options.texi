@@ -282,6 +282,10 @@ text written to standard output,
 which is initially disabled@.
 If
 @w{@i{V}}
+is omitted, then it is taken to be
+@w{@t{always}@.}
+If
+@w{@i{V}}
 is
 @w{@t{always}@comma{}}
 then styling is enabled@.
@@ -298,10 +302,6 @@ then styling is enabled
 if standard output is associated
 with a terminal or disabled if not@.
 Any other value causes an error@.
-If
-@w{@i{V}}
-is omitted, then it is taken to be
-@w{@t{always}@.}
 
 @item @w{@t{-@w{-}texi2any=}@i{V}}
 @include ipez.texi

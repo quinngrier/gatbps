@@ -2431,6 +2431,10 @@ text written to standard output,
 which is initially disabled.
 If
 .nohy "\fIV\fR"
+is omitted, then it is taken to be
+.nohy "\fBalways\fR."
+If
+.nohy "\fIV\fR"
 is
 .nohy "\fBalways\fR,"
 then styling is enabled.
@@ -2447,10 +2451,6 @@ then styling is enabled
 if standard output is associated
 with a terminal or disabled if not.
 Any other value causes an error.
-If
-.nohy "\fIV\fR"
-is omitted, then it is taken to be
-.nohy "\fBalways\fR."
 .TP
 .nohy "\fB\-\-texi2any=\fIV\fR"
 .IPEZ
