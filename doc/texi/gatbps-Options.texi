@@ -120,14 +120,8 @@ Other copies may use other initial values@.
 The
 @w{@t{-@w{-}boundary}}
 option enables recursion
-for the next operand@.
-If recursion is
-already enabled when
-the operand is reached,
-then there is no effect@.
-Otherwise, recursion
-is enabled for the operand
-but not for its prerequisites@.
+for the next operand but
+not for its prerequisites@.
 
 @item @w{@t{-@w{-}dry-run}}
 @itemx @w{@t{-n}}

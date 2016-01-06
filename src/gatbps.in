@@ -2264,14 +2264,8 @@ Other copies may use other initial values.
 The
 .nohy "\fB\-\-boundary\fR"
 option enables recursion
-for the next operand.
-If recursion is
-already enabled when
-the operand is reached,
-then there is no effect.
-Otherwise, recursion
-is enabled for the operand
-but not for its prerequisites.
+for the next operand but
+not for its prerequisites.
 .TP
 .nohy "\fB\-\-dry\-run\fR"
 .TPZ
