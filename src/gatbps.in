@@ -2458,7 +2458,7 @@ is omitted, then it is taken to be
 .nohy "\fB\-\-texi2any=\fIV\fR"
 .IPEZ
 The
-.nohy "\fB\-\-texi2any\fR"
+.nohy "\fB\-\-texi2any=\fIV\fR"
 option sets the command name
 that will be used to invoke the
 .nohy "\fBtexi2any\fR"

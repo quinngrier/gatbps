@@ -309,7 +309,7 @@ is omitted, then it is taken to be
 @item @w{@t{-@w{-}texi2any=}@i{V}}
 @include ipez.texi
 The
-@w{@t{-@w{-}texi2any}}
+@w{@t{-@w{-}texi2any=}@i{V}}
 option sets the command name
 that will be used to invoke the
 @w{@t{texi2any}}
