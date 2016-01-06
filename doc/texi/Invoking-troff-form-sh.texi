@@ -1,5 +1,9 @@
 @node Invoking @t{troff-form-sh}
 @chapter Invoking @t{troff-form.sh}
+
+This section describes
+@w{@t{troff-form.sh}}
+in the same way as its manual page@.
 @ifxml
 @ifnotxml
 @c
