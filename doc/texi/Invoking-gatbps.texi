@@ -3,8 +3,7 @@
 
 This section describes
 @w{@t{gatbps}}
-similarly to how it is
-described by its manual page@.
+in the same way as its manual page@.
 
 @menu
 * @t{gatbps} Synopsis::
