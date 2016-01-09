@@ -9755,6 +9755,71 @@ EOF2
         ;;
 
       #(
+        '--man')
+
+          cat <<'EOF2'
+.de nohy
+.nh
+\\$1
+.hy
+..
+.de TPZ
+.PD 0
+.TP
+.PD
+..
+.de IPEZ
+.PD 0
+.IP ""
+.PD
+..
+.hy
+.TH "sh\-form.sh" "1" "@PACKAGE_DATE_TROFF@" "@PACKAGE_STRING@"
+.SH "NAME"
+.LP
+\fBsh\-form.sh\fR \- format input as a shell string literal
+.\"
+.\" The authors of this file have waived all copyright and
+.\" related or neighboring rights to the extent permitted by
+.\" law as described by the CC0 1.0 Universal Public Domain
+.\" Dedication. You should have received a copy of the full
+.\" dedication along with this file, typically as a file
+.\" named <CC0-1.0.txt>. If not, it may be available at
+.\" <https://creativecommons.org/publicdomain/zero/1.0/>.
+.\"
+EOF2
+          case "${?}" in
+          #(
+            '0')
+              :
+            ;;
+          #(
+            *)
+              cat >&2 <<EOF2
+${fr2}sh-form.sh!${fR2} ${fB2}cat${fR2} failed while reading from:
+${fr2}sh-form.sh!${fR2}   1. a here-document
+${fr2}sh-form.sh!${fR2} and writing to: standard output
+EOF2
+              exit '1'
+            ;;
+          esac
+
+          exit '0'
+
+        ;;
+
+      #(
+        '--man='*)
+
+          cat >&2 <<EOF2
+${fr2}sh-form.sh!${fR2} ${fB2}--man${fR2} forbids a value
+${fr2}sh-form.sh!${fR2} try ${fB2}sh sh-form.sh --help${fR2} for more information
+EOF2
+          exit '1'
+
+        ;;
+
+      #(
         '--sed')
 
           case "${#}" in
