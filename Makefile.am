@@ -172,7 +172,7 @@ install-docbook: doc/gatbps.xml
 install-plaintext: doc/gatbps.txt
 	@$(NORMAL_INSTALL)
 	@: #(
-	@( \
+	@{ \
   case ''$(plaintextdir) in \
     ?*) \
       echo " $(MKDIR_P) '$(DESTDIR)$(plaintextdir)'"; \
@@ -190,7 +190,7 @@ install-plaintext: doc/gatbps.txt
       done; \
     ;; \
   esac; \
-)
+}
 
 plaintext: doc/gatbps.txt
 
