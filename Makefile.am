@@ -149,7 +149,7 @@ docbook: doc/gatbps.xml
 install-docbook: doc/gatbps.xml
 	@$(NORMAL_INSTALL)
 	@: #(
-	@( \
+	@{ \
   case ''$(docbookdir) in \
     ?*) \
       echo " $(MKDIR_P) '$(DESTDIR)$(docbookdir)'"; \
@@ -167,7 +167,7 @@ install-docbook: doc/gatbps.xml
       done; \
     ;; \
   esac; \
-)
+}
 
 install-plaintext: doc/gatbps.txt
 	@$(NORMAL_INSTALL)
