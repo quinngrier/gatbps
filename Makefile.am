@@ -211,7 +211,7 @@ uninstall-docbook:
 
 uninstall-plaintext:
 	@$(NORMAL_UNINSTALL)
-	@( \
+	@{ \
   case ''$(plaintextdir) in \
     ?*) \
       list=; \
@@ -222,7 +222,7 @@ uninstall-plaintext:
       done; \
     ;; \
   esac; \
-)
+}
 
 ## end_rules
 
