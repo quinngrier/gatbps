@@ -5999,11 +5999,38 @@ AC_DEFUN([GATBPS_CHECK_COMPILE], [
     [for $1],
     [gatbps_cv_$2],
     [
-      AC_COMPILE_IFELSE(
-        [AC_LANG_PROGRAM([$3], [$4])],
-        [gatbps_cv_$2='yes'],
-        [gatbps_cv_$2='no']
+      gatbps_x='yes'
+      m4_foreach_w(
+        [var],
+        [$5],
+        [
+          case "$[]{var}" in
+          #(
+            'yes'|'no'|'1'|'0')
+              :
+            ;;
+          #(
+            *)
+              AC_MSG_FAILURE([unexpected var value], [1])
+            ;;
+          esac
+          gatbps_x="$[]{gatbps_x}$[]{var}"
+        ]
       )
+      case "$[]{gatbps_x}" in
+      #(
+        *'no'*|*'0'*)
+          gatbps_cv_$2='no'
+        ;;
+      #(
+        *)
+          AC_COMPILE_IFELSE(
+            [AC_LANG_PROGRAM([$3], [$4])],
+            [gatbps_cv_$2='yes'],
+            [gatbps_cv_$2='no']
+          )
+        ;;
+      esac
     ]
   )
   case "$[]{gatbps_cv_$2}" in
