@@ -196,7 +196,7 @@ plaintext: doc/gatbps.txt
 
 uninstall-docbook:
 	@$(NORMAL_UNINSTALL)
-	@( \
+	@{ \
   case ''$(docbookdir) in \
     ?*) \
       list=; \
@@ -207,7 +207,7 @@ uninstall-docbook:
       done; \
     ;; \
   esac; \
-)
+}
 
 uninstall-plaintext:
 	@$(NORMAL_UNINSTALL)
