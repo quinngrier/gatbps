@@ -5977,6 +5977,12 @@ AC_DEFUN([GATBPS_CHECK_CFLAG], [{
       esac
     ]
   )
+  case "$[]{gatbps_cv_$2}" in
+  #(
+    'yes')
+      AC_DEFINE([$2], [1], [Define to 1 if you have $1.])
+    ;;
+  esac
 }])dnl
 dnl
 dnl The authors of this file have waived all copyright and
