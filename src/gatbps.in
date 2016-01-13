@@ -5938,16 +5938,43 @@ AC_DEFUN([GATBPS_CHECK_CFLAG], [{
     [for $1],
     [gatbps_cv_$2],
     [
-      gatbps_save_CFLAGS="$[]{CFLAGS}"
-      CFLAGS="$[]{CFLAGS} "'$3'
-      AC_LANG_PUSH([C])
-      AC_COMPILE_IFELSE(
-        [AC_LANG_PROGRAM([], [])],
-        [gatbps_cv_$2='yes'],
-        [gatbps_cv_$2='no']
+      gatbps_x='yes'
+      m4_foreach_w(
+        [var],
+        [$4],
+        [
+          case "$[]{var}" in
+          #(
+            'yes'|'no'|'1'|'0')
+              :
+            ;;
+          #(
+            *)
+              AC_MSG_FAILURE([unexpected var value], [1])
+            ;;
+          esac
+          gatbps_x="$[]{gatbps_x}$[]{var}"
+        ]
       )
-      AC_LANG_POP([C])
-      CFLAGS="$[]{gatbps_save_CFLAGS}"
+      case "$[]{gatbps_x}" in
+      #(
+        *'no'*|*'0'*)
+          gatbps_cv_$2='no'
+        ;;
+      #(
+        *)
+          gatbps_save_CFLAGS="$[]{CFLAGS}"
+          CFLAGS="$[]{CFLAGS} "'$3'
+          AC_LANG_PUSH([C])
+          AC_COMPILE_IFELSE(
+            [AC_LANG_PROGRAM([], [])],
+            [gatbps_cv_$2='yes'],
+            [gatbps_cv_$2='no']
+          )
+          AC_LANG_POP([C])
+          CFLAGS="$[]{gatbps_save_CFLAGS}"
+        ;;
+      esac
     ]
   )
 }])dnl
