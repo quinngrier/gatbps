@@ -109,7 +109,7 @@ plaintextdir = $(docdir)
 doc/gatbps.txt: $(doc_gatbps_TEXINFOS)
 doc/gatbps.txt: doc/gatbps.texi
 	$(AM_V_MAKEINFO)$(MKDIR_P) doc
-	$(AM_V_at)( \
+	$(AM_V_at){ \
   if test -f doc/gatbps.texi; then \
     $(MAKEINFO) \
       $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
@@ -121,7 +121,7 @@ doc/gatbps.txt: doc/gatbps.texi
       --plaintext -o doc/gatbps.txt $(srcdir)/doc/gatbps.texi \
     ; \
   fi; \
-)
+}
 
 doc/gatbps.xml: $(doc_gatbps_TEXINFOS)
 doc/gatbps.xml: doc/gatbps.texi
