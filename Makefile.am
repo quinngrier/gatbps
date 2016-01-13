@@ -212,6 +212,7 @@ uninstall-docbook:
 
 uninstall-plaintext:
 	@$(NORMAL_UNINSTALL)
+	@: #(
 	@{ \
   case ''$(plaintextdir) in \
     ?*) \
