@@ -1,9 +1,8 @@
 @node Mathematical Notation in Texinfo
 @chapter Mathematical Notation in Texinfo
 
-@t{gatbps}
-provides a collection of Texinfo
-macros that support a specific approach
+A collection of Texinfo macros
+is provided to support a specific approach
 to writing mathematical notation in Texinfo@.
 The idea is to write
 each expression in both
