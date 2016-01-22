@@ -43,6 +43,7 @@ doc_gatbps_TEXINFOS += doc/texi/CC0-1.0-copying.texi
 doc_gatbps_TEXINFOS += doc/texi/Copyright-Information.texi
 doc_gatbps_TEXINFOS += doc/texi/DATE.texi
 doc_gatbps_TEXINFOS += doc/texi/Introduction.texi
+doc_gatbps_TEXINFOS += doc/texi/Invoking-awk-form-sh.texi
 doc_gatbps_TEXINFOS += doc/texi/Invoking-gatbps.texi
 doc_gatbps_TEXINFOS += doc/texi/Invoking-sh-form-sh.texi
 doc_gatbps_TEXINFOS += doc/texi/Invoking-texi-form-sh.texi

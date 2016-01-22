@@ -63,6 +63,7 @@ which was released on @w{@value{DATE}}@.
 * Introduction::
 * Building and Installation::
 * Invoking @t{gatbps}::
+* Invoking @t{awk-form-sh}::
 * Invoking @t{sh-form-sh}::
 * Invoking @t{texi-form-sh}::
 * Invoking @t{troff-form-sh}::
@@ -80,6 +81,8 @@ which was released on @w{@value{DATE}}@.
 @include Building-and-Installation.texi
 
 @include Invoking-gatbps.texi
+
+@include Invoking-awk-form-sh.texi
 
 @include Invoking-sh-form-sh.texi
 
