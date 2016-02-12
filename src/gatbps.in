@@ -6129,11 +6129,11 @@ AC_DEFUN([GATBPS_CHECK_CFLAG], [{
   case "$[]{gatbps_cv_$2}" in
   #(
     'yes')
-      AC_DEFINE([$2], [1], [Define to 1 if you have $1.])
+      AC_DEFINE([$2], [1], [Define to 1 if you have $1 or 0 if not.])
     ;;
   #(
     'no')
-      AC_DEFINE([$2], [0], [Define to 1 if you have $1.])
+      AC_DEFINE([$2], [0], [Define to 1 if you have $1 or 0 if not.])
     ;;
   esac
 }])dnl
@@ -6222,11 +6222,11 @@ AC_DEFUN([GATBPS_CHECK_COMPILE], [{
   case "$[]{gatbps_cv_$2}" in
   #(
     'yes')
-      AC_DEFINE([$2], [1], [Define to 1 if you have $1.])
+      AC_DEFINE([$2], [1], [Define to 1 if you have $1 or 0 if not.])
     ;;
   #(
     'no')
-      AC_DEFINE([$2], [0], [Define to 1 if you have $1.])
+      AC_DEFINE([$2], [0], [Define to 1 if you have $1 or 0 if not.])
     ;;
   esac
 }])dnl
@@ -6315,11 +6315,11 @@ AC_DEFUN([GATBPS_CHECK_HEADER], [{
   case "$[]{gatbps_cv_$2}" in
   #(
     'yes')
-      AC_DEFINE([$2], [1], [Define to 1 if you have $1.])
+      AC_DEFINE([$2], [1], [Define to 1 if you have $1 or 0 if not.])
     ;;
   #(
     'no')
-      AC_DEFINE([$2], [0], [Define to 1 if you have $1.])
+      AC_DEFINE([$2], [0], [Define to 1 if you have $1 or 0 if not.])
     ;;
   esac
 }])dnl
@@ -6413,11 +6413,11 @@ AC_DEFUN([GATBPS_CHECK_LIB], [{
   case "$[]{gatbps_cv_$2}" in
   #(
     'yes')
-      AC_DEFINE([$2], [1], [Define to 1 if you have $1.])
+      AC_DEFINE([$2], [1], [Define to 1 if you have $1 or 0 if not.])
     ;;
   #(
     'no')
-      AC_DEFINE([$2], [0], [Define to 1 if you have $1.])
+      AC_DEFINE([$2], [0], [Define to 1 if you have $1 or 0 if not.])
     ;;
   esac
 }])dnl
@@ -6506,11 +6506,11 @@ AC_DEFUN([GATBPS_CHECK_LINK], [{
   case "$[]{gatbps_cv_$2}" in
   #(
     'yes')
-      AC_DEFINE([$2], [1], [Define to 1 if you have $1.])
+      AC_DEFINE([$2], [1], [Define to 1 if you have $1 or 0 if not.])
     ;;
   #(
     'no')
-      AC_DEFINE([$2], [0], [Define to 1 if you have $1.])
+      AC_DEFINE([$2], [0], [Define to 1 if you have $1 or 0 if not.])
     ;;
   esac
 }])dnl
@@ -6600,11 +6600,11 @@ AC_DEFUN([GATBPS_CHECK_RUN], [{
   case "$[]{gatbps_cv_$2}" in
   #(
     'yes')
-      AC_DEFINE([$2], [1], [Define to 1 if you have $1.])
+      AC_DEFINE([$2], [1], [Define to 1 if you have $1 or 0 if not.])
     ;;
   #(
     'no')
-      AC_DEFINE([$2], [0], [Define to 1 if you have $1.])
+      AC_DEFINE([$2], [0], [Define to 1 if you have $1 or 0 if not.])
     ;;
   esac
 }])dnl
@@ -6689,11 +6689,11 @@ AC_DEFUN([GATBPS_CHECK_VARS], [{
   case "$[]{gatbps_cv_$2}" in
   #(
     'yes')
-      AC_DEFINE([$2], [1], [Define to 1 if you have $1.])
+      AC_DEFINE([$2], [1], [Define to 1 if you have $1 or 0 if not.])
     ;;
   #(
     'no')
-      AC_DEFINE([$2], [0], [Define to 1 if you have $1.])
+      AC_DEFINE([$2], [0], [Define to 1 if you have $1 or 0 if not.])
     ;;
   esac
 }])dnl
