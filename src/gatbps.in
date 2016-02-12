@@ -6130,12 +6130,15 @@ AC_DEFUN([GATBPS_CHECK_CFLAG], [{
   #(
     'yes')
       AC_DEFINE([$2], [1], [Define to 1 if you have $1 or 0 if not.])
+      $2='1'
     ;;
   #(
     'no')
       AC_DEFINE([$2], [0], [Define to 1 if you have $1 or 0 if not.])
+      $2='0'
     ;;
   esac
+  AC_SUBST([$2])
 }])dnl
 dnl
 dnl The authors of this file have waived all copyright and
@@ -6223,12 +6226,15 @@ AC_DEFUN([GATBPS_CHECK_COMPILE], [{
   #(
     'yes')
       AC_DEFINE([$2], [1], [Define to 1 if you have $1 or 0 if not.])
+      $2='1'
     ;;
   #(
     'no')
       AC_DEFINE([$2], [0], [Define to 1 if you have $1 or 0 if not.])
+      $2='0'
     ;;
   esac
+  AC_SUBST([$2])
 }])dnl
 dnl
 dnl The authors of this file have waived all copyright and
@@ -6316,12 +6322,15 @@ AC_DEFUN([GATBPS_CHECK_HEADER], [{
   #(
     'yes')
       AC_DEFINE([$2], [1], [Define to 1 if you have $1 or 0 if not.])
+      $2='1'
     ;;
   #(
     'no')
       AC_DEFINE([$2], [0], [Define to 1 if you have $1 or 0 if not.])
+      $2='0'
     ;;
   esac
+  AC_SUBST([$2])
 }])dnl
 dnl
 dnl The authors of this file have waived all copyright and
@@ -6414,12 +6423,15 @@ AC_DEFUN([GATBPS_CHECK_LIB], [{
   #(
     'yes')
       AC_DEFINE([$2], [1], [Define to 1 if you have $1 or 0 if not.])
+      $2='1'
     ;;
   #(
     'no')
       AC_DEFINE([$2], [0], [Define to 1 if you have $1 or 0 if not.])
+      $2='0'
     ;;
   esac
+  AC_SUBST([$2])
 }])dnl
 dnl
 dnl The authors of this file have waived all copyright and
@@ -6507,12 +6519,15 @@ AC_DEFUN([GATBPS_CHECK_LINK], [{
   #(
     'yes')
       AC_DEFINE([$2], [1], [Define to 1 if you have $1 or 0 if not.])
+      $2='1'
     ;;
   #(
     'no')
       AC_DEFINE([$2], [0], [Define to 1 if you have $1 or 0 if not.])
+      $2='0'
     ;;
   esac
+  AC_SUBST([$2])
 }])dnl
 dnl
 dnl The authors of this file have waived all copyright and
@@ -6601,12 +6616,15 @@ AC_DEFUN([GATBPS_CHECK_RUN], [{
   #(
     'yes')
       AC_DEFINE([$2], [1], [Define to 1 if you have $1 or 0 if not.])
+      $2='1'
     ;;
   #(
     'no')
       AC_DEFINE([$2], [0], [Define to 1 if you have $1 or 0 if not.])
+      $2='0'
     ;;
   esac
+  AC_SUBST([$2])
 }])dnl
 dnl
 dnl The authors of this file have waived all copyright and
@@ -6690,12 +6708,15 @@ AC_DEFUN([GATBPS_CHECK_VARS], [{
   #(
     'yes')
       AC_DEFINE([$2], [1], [Define to 1 if you have $1 or 0 if not.])
+      $2='1'
     ;;
   #(
     'no')
       AC_DEFINE([$2], [0], [Define to 1 if you have $1 or 0 if not.])
+      $2='0'
     ;;
   esac
+  AC_SUBST([$2])
 }])dnl
 dnl
 dnl The authors of this file have waived all copyright and
