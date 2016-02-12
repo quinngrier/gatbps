@@ -6139,6 +6139,18 @@ AC_DEFUN([GATBPS_CHECK_CFLAG], [{
     ;;
   esac
   AC_SUBST([$2])
+  AM_CONDITIONAL([$2], [(
+    case "$[]{gatbps_cv_$2}" in
+    #(
+      'yes')
+        exit 0
+      ;;
+    #(
+      'no')
+        exit 1
+      ;;
+    esac
+  )])
 }])dnl
 dnl
 dnl The authors of this file have waived all copyright and
@@ -6235,6 +6247,18 @@ AC_DEFUN([GATBPS_CHECK_COMPILE], [{
     ;;
   esac
   AC_SUBST([$2])
+  AM_CONDITIONAL([$2], [(
+    case "$[]{gatbps_cv_$2}" in
+    #(
+      'yes')
+        exit 0
+      ;;
+    #(
+      'no')
+        exit 1
+      ;;
+    esac
+  )])
 }])dnl
 dnl
 dnl The authors of this file have waived all copyright and
@@ -6331,6 +6355,18 @@ AC_DEFUN([GATBPS_CHECK_HEADER], [{
     ;;
   esac
   AC_SUBST([$2])
+  AM_CONDITIONAL([$2], [(
+    case "$[]{gatbps_cv_$2}" in
+    #(
+      'yes')
+        exit 0
+      ;;
+    #(
+      'no')
+        exit 1
+      ;;
+    esac
+  )])
 }])dnl
 dnl
 dnl The authors of this file have waived all copyright and
@@ -6432,6 +6468,18 @@ AC_DEFUN([GATBPS_CHECK_LIB], [{
     ;;
   esac
   AC_SUBST([$2])
+  AM_CONDITIONAL([$2], [(
+    case "$[]{gatbps_cv_$2}" in
+    #(
+      'yes')
+        exit 0
+      ;;
+    #(
+      'no')
+        exit 1
+      ;;
+    esac
+  )])
 }])dnl
 dnl
 dnl The authors of this file have waived all copyright and
@@ -6528,6 +6576,18 @@ AC_DEFUN([GATBPS_CHECK_LINK], [{
     ;;
   esac
   AC_SUBST([$2])
+  AM_CONDITIONAL([$2], [(
+    case "$[]{gatbps_cv_$2}" in
+    #(
+      'yes')
+        exit 0
+      ;;
+    #(
+      'no')
+        exit 1
+      ;;
+    esac
+  )])
 }])dnl
 dnl
 dnl The authors of this file have waived all copyright and
@@ -6625,6 +6685,18 @@ AC_DEFUN([GATBPS_CHECK_RUN], [{
     ;;
   esac
   AC_SUBST([$2])
+  AM_CONDITIONAL([$2], [(
+    case "$[]{gatbps_cv_$2}" in
+    #(
+      'yes')
+        exit 0
+      ;;
+    #(
+      'no')
+        exit 1
+      ;;
+    esac
+  )])
 }])dnl
 dnl
 dnl The authors of this file have waived all copyright and
@@ -6717,6 +6789,18 @@ AC_DEFUN([GATBPS_CHECK_VARS], [{
     ;;
   esac
   AC_SUBST([$2])
+  AM_CONDITIONAL([$2], [(
+    case "$[]{gatbps_cv_$2}" in
+    #(
+      'yes')
+        exit 0
+      ;;
+    #(
+      'no')
+        exit 1
+      ;;
+    esac
+  )])
 }])dnl
 dnl
 dnl The authors of this file have waived all copyright and
