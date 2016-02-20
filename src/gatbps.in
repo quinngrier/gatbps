@@ -6069,7 +6069,7 @@ AC_DEFUN([GATBPS_CHECK_CFLAG], [{
         [
           case "$[]{var}" in
           #(
-            'yes'|'no')
+            'yes'|'no'|'1'|'0')
               :
             ;;
           #(
@@ -6082,7 +6082,7 @@ AC_DEFUN([GATBPS_CHECK_CFLAG], [{
       )
       case "$[]{gatbps_x}" in
       #(
-        *'no'*)
+        *'no'*|*'0'*)
           gatbps_cv_$2='no'
         ;;
       #(
@@ -6182,7 +6182,7 @@ AC_DEFUN([GATBPS_CHECK_COMPILE], [{
         [
           case "$[]{var}" in
           #(
-            'yes'|'no')
+            'yes'|'no'|'1'|'0')
               :
             ;;
           #(
@@ -6195,7 +6195,7 @@ AC_DEFUN([GATBPS_CHECK_COMPILE], [{
       )
       case "$[]{gatbps_x}" in
       #(
-        *'no'*)
+        *'no'*|*'0'*)
           gatbps_cv_$2='no'
         ;;
       #(
@@ -6290,7 +6290,7 @@ AC_DEFUN([GATBPS_CHECK_HEADER], [{
         [
           case "$[]{var}" in
           #(
-            'yes'|'no')
+            'yes'|'no'|'1'|'0')
               :
             ;;
           #(
@@ -6303,7 +6303,7 @@ AC_DEFUN([GATBPS_CHECK_HEADER], [{
       )
       case "$[]{gatbps_x}" in
       #(
-        *'no'*)
+        *'no'*|*'0'*)
           gatbps_cv_$2='no'
         ;;
       #(
@@ -6398,7 +6398,7 @@ AC_DEFUN([GATBPS_CHECK_LIB], [{
         [
           case "$[]{var}" in
           #(
-            'yes'|'no')
+            'yes'|'no'|'1'|'0')
               :
             ;;
           #(
@@ -6411,7 +6411,7 @@ AC_DEFUN([GATBPS_CHECK_LIB], [{
       )
       case "$[]{gatbps_x}" in
       #(
-        *'no'*)
+        *'no'*|*'0'*)
           gatbps_cv_$2='no'
         ;;
       #(
@@ -6511,7 +6511,7 @@ AC_DEFUN([GATBPS_CHECK_LINK], [{
         [
           case "$[]{var}" in
           #(
-            'yes'|'no')
+            'yes'|'no'|'1'|'0')
               :
             ;;
           #(
@@ -6524,7 +6524,7 @@ AC_DEFUN([GATBPS_CHECK_LINK], [{
       )
       case "$[]{gatbps_x}" in
       #(
-        *'no'*)
+        *'no'*|*'0'*)
           gatbps_cv_$2='no'
         ;;
       #(
@@ -6619,7 +6619,7 @@ AC_DEFUN([GATBPS_CHECK_RUN], [{
         [
           case "$[]{var}" in
           #(
-            'yes'|'no')
+            'yes'|'no'|'1'|'0')
               :
             ;;
           #(
@@ -6632,7 +6632,7 @@ AC_DEFUN([GATBPS_CHECK_RUN], [{
       )
       case "$[]{gatbps_x}" in
       #(
-        *'no'*)
+        *'no'*|*'0'*)
           gatbps_cv_$2='no'
         ;;
       #(
@@ -6728,7 +6728,7 @@ AC_DEFUN([GATBPS_CHECK_VARS], [{
         [
           case "$[]{var}" in
           #(
-            'yes'|'no')
+            'yes'|'no'|'1'|'0')
               :
             ;;
           #(
@@ -6741,7 +6741,7 @@ AC_DEFUN([GATBPS_CHECK_VARS], [{
       )
       case "$[]{gatbps_x}" in
       #(
-        *'no'*)
+        *'no'*|*'0'*)
           gatbps_cv_$2='no'
         ;;
       #(
