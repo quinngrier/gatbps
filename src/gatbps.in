@@ -5864,8 +5864,8 @@ EOF1
 #   EXTRA_DIST += $(srcdir)/DATE
 #   EXTRA_DIST += $(srcdir)/DATE.sh
 #
-# When running in your repository, the script uses git log and also
-# writes the result to the DATE file. Elsewhere, the script reads the
+# When running in your repository, the script uses git log.
+# Elsewhere, the script reads the
 # DATE file.
 #
 
@@ -5891,8 +5891,6 @@ if git ls-files --error-unmatch "${0}" >/dev/null 2>&1; then
            s/May/05/; s/Jun/06/; s/Jul/07/; s/Aug/08/
            s/Sep/09/; s/Oct/10/; s/Nov/11/; s/Dec/12/
            s/-\(.\)$/-0\1/' DATE.tmp)
-  echo "$x" >DATE.tmp
-  mv DATE.tmp DATE
   echo "$x"
 elif test -f DATE; then
   cat DATE
