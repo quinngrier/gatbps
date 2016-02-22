@@ -6,6 +6,12 @@ AC_INIT([GATBPS],
         [gatbps],
         [https://github.com/quinngrier/gatbps])
 
+GATBPS_DEFINE_DATE([GATBPS_],
+                   [PACKAGE_DATE],
+                   m4_esyscmd_s(
+                     [sh build-aux/DATE.sh]
+                   )m4_assert(m4_sysval == 0))
+
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_MACRO_DIRS([m4])
@@ -18,10 +24,7 @@ AM_INIT_AUTOMAKE([
   subdir-objects
 ])
 
-m4_define([AC_PACKAGE_DATE_PREFIX], [build-aux/])
-
 m4_include([build-aux/CC0-1.0-AC-COPYRIGHT.ac])
-m4_include([build-aux/DATE.ac])
 m4_include([build-aux/VERSION.ac])
 
 AC_PROG_MKDIR_P
