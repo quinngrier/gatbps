@@ -1,16 +1,16 @@
 AC_INIT([GATBPS],
-        m4_esyscmd_s(
-          [sh build-aux/VERSION.sh]
-        )m4_assert(m4_sysval == 0),
+        m4_esyscmd_s([
+          sh build-aux/VERSION.sh
+        ])m4_assert(m4_sysval == 0),
         [quinn.grier@gmail.com],
         [gatbps],
         [https://github.com/quinngrier/gatbps])
 
 GATBPS_DEFINE_DATE([GATBPS_],
                    [PACKAGE_DATE],
-                   m4_esyscmd_s(
-                     [sh build-aux/DATE.sh]
-                   )m4_assert(m4_sysval == 0))
+                   m4_esyscmd_s([
+                     sh build-aux/DATE.sh
+                   ])m4_assert(m4_sysval == 0))
 
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([m4])
