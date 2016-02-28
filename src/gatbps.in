@@ -6694,6 +6694,12 @@ dnl
 dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([GATBPS_CONFIG_FILE], [{
+  m4_case(
+    $#,
+    [2], [],
+    [3], [],
+    [4], [],
+    [m4_fatal([GATBPS_CONFIG_FILE requires exactly 2, 3, or 4 arguments])])
   m4_pushdef([output], m4_bpatsubst([$1], [:.*]))
   m4_pushdef([inputs], m4_bpatsubst([$1], [^[^:]*]))
   m4_pushdef([inputs], m4_ifval(inputs, [inputs], [:output.in]))
