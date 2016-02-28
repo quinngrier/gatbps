@@ -1,10 +1,11 @@
-AC_INIT([GATBPS],
-        m4_esyscmd_s([{
-          sh build-aux/VERSION.sh
-        }])m4_assert(m4_sysval == 0),
-        [quinn.grier@gmail.com],
-        [gatbps],
-        [https://github.com/quinngrier/gatbps])
+AC_INIT(
+  [GATBPS],
+  m4_esyscmd_s([{
+    sh build-aux/VERSION.sh
+  }])m4_assert(m4_sysval == 0),
+  [quinn.grier@gmail.com],
+  [gatbps],
+  [https://github.com/quinngrier/gatbps])
 
 GATBPS_DEFINE_DATE([GATBPS_],
                    [PACKAGE_DATE],
