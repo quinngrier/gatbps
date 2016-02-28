@@ -7,11 +7,12 @@ AC_INIT(
   [gatbps],
   [https://github.com/quinngrier/gatbps])
 
-GATBPS_DEFINE_DATE([GATBPS_],
-                   [PACKAGE_DATE],
-                   m4_esyscmd_s([{
-                     sh build-aux/DATE.sh
-                   }])m4_assert(m4_sysval == 0))
+GATBPS_DEFINE_DATE(
+  [GATBPS_],
+  [PACKAGE_DATE],
+  m4_esyscmd_s([{
+    sh build-aux/DATE.sh
+  }])m4_assert(m4_sysval == 0))
 
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([m4])
