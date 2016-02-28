@@ -6700,22 +6700,25 @@ AC_DEFUN([GATBPS_CONFIG_FILE], [{
   AC_CONFIG_FILES(
     output[$2]inputs,
     [{
-      case ']output[' in
+      gatbps_dst=']output['
+      case "$[]{gatbps_dst}" in
       #(
         '-'*)
-          gatbps_x='./]output['
+          gatbps_safe_dst="./$[]{gatbps_dst}"
         ;;
       #(
         *)
-          gatbps_x=']output['
+          gatbps_safe_dst="$[]{gatbps_dst}"
         ;;
       esac
-      if cmp "$[]{gatbps_x}"'$2' "$[]{gatbps_x}" >'/dev/null' 2>&1; then
-        AC_MSG_NOTICE([skipping $[]{gatbps_x}])
-        rm '-f' "$[]{gatbps_x}"'$2' >'/dev/null' 2>&1
+      gatbps_safe_src="$[]{gatbps_safe_dst}"'$2'
+      if cmp "$[]{gatbps_safe_src}" \
+             "$[]{gatbps_safe_dst}" >'/dev/null' 2>&1; then
+        AC_MSG_NOTICE([skipping $[]{gatbps_dst}])
+        rm '-f' "$[]{gatbps_safe_src}" >'/dev/null' 2>&1
       else
-        AC_MSG_NOTICE([updating $[]{gatbps_x}])
-        mv '-f' "$[]{gatbps_x}"'$2' "$[]{gatbps_x}"
+        AC_MSG_NOTICE([updating $[]{gatbps_dst}])
+        mv '-f' "$[]{gatbps_safe_src}" "$[]{gatbps_safe_dst}"
         case "${?}" in
         #(
           '0')
@@ -6723,7 +6726,7 @@ AC_DEFUN([GATBPS_CONFIG_FILE], [{
           ;;
         #(
           *)
-            rm '-f' "$[]{gatbps_x}"'$2' >'/dev/null' 2>&1
+            rm '-f' "$[]{gatbps_safe_src}" >'/dev/null' 2>&1
             exit 1
           ;;
         esac
