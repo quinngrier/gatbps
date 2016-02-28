@@ -5929,7 +5929,7 @@ AC_DEFUN([GATBPS_CHECK_CFLAG], [{
   AC_CACHE_CHECK(
     [for $1],
     [gatbps_cv_$2],
-    [
+    [{
       gatbps_x='yes'
       m4_foreach_w(
         [var],
@@ -5967,7 +5967,7 @@ AC_DEFUN([GATBPS_CHECK_CFLAG], [{
           CFLAGS="$[]{gatbps_save_CFLAGS}"
         ;;
       esac
-    ]
+    }]
   )
   case "$[]{gatbps_cv_$2}" in
   #(
@@ -6042,7 +6042,7 @@ AC_DEFUN([GATBPS_CHECK_COMPILE], [{
   AC_CACHE_CHECK(
     [for $1],
     [gatbps_cv_$2],
-    [
+    [{
       gatbps_x='yes'
       m4_foreach_w(
         [var],
@@ -6075,7 +6075,7 @@ AC_DEFUN([GATBPS_CHECK_COMPILE], [{
           )
         ;;
       esac
-    ]
+    }]
   )
   case "$[]{gatbps_cv_$2}" in
   #(
@@ -6150,7 +6150,7 @@ AC_DEFUN([GATBPS_CHECK_HEADER], [{
   AC_CACHE_CHECK(
     [for $1],
     [gatbps_cv_$2],
-    [
+    [{
       gatbps_x='yes'
       m4_foreach_w(
         [var],
@@ -6183,7 +6183,7 @@ AC_DEFUN([GATBPS_CHECK_HEADER], [{
           )
         ;;
       esac
-    ]
+    }]
   )
   case "$[]{gatbps_cv_$2}" in
   #(
@@ -6258,7 +6258,7 @@ AC_DEFUN([GATBPS_CHECK_LIB], [{
   AC_CACHE_CHECK(
     [for $1],
     [gatbps_cv_$2],
-    [
+    [{
       gatbps_x='yes'
       m4_foreach_w(
         [var],
@@ -6296,7 +6296,7 @@ AC_DEFUN([GATBPS_CHECK_LIB], [{
           LIBS="$[]{gatbps_save_LIBS}"
         ;;
       esac
-    ]
+    }]
   )
   case "$[]{gatbps_cv_$2}" in
   #(
@@ -6371,7 +6371,7 @@ AC_DEFUN([GATBPS_CHECK_LINK], [{
   AC_CACHE_CHECK(
     [for $1],
     [gatbps_cv_$2],
-    [
+    [{
       gatbps_x='yes'
       m4_foreach_w(
         [var],
@@ -6404,7 +6404,7 @@ AC_DEFUN([GATBPS_CHECK_LINK], [{
           )
         ;;
       esac
-    ]
+    }]
   )
   case "$[]{gatbps_cv_$2}" in
   #(
@@ -6479,7 +6479,7 @@ AC_DEFUN([GATBPS_CHECK_RUN], [{
   AC_CACHE_CHECK(
     [for $1],
     [gatbps_cv_$2],
-    [
+    [{
       gatbps_x='yes'
       m4_foreach_w(
         [var],
@@ -6513,7 +6513,7 @@ AC_DEFUN([GATBPS_CHECK_RUN], [{
           )
         ;;
       esac
-    ]
+    }]
   )
   case "$[]{gatbps_cv_$2}" in
   #(
@@ -6588,7 +6588,7 @@ AC_DEFUN([GATBPS_CHECK_VARS], [{
   AC_CACHE_CHECK(
     [for $1],
     [gatbps_cv_$2],
-    [
+    [{
       gatbps_x='yes'
       m4_foreach_w(
         [var],
@@ -6617,7 +6617,7 @@ AC_DEFUN([GATBPS_CHECK_VARS], [{
           gatbps_cv_$2='yes'
         ;;
       esac
-    ]
+    }]
   )
   case "$[]{gatbps_cv_$2}" in
   #(
