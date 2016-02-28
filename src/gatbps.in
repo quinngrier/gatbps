@@ -5946,8 +5946,7 @@ AC_DEFUN([GATBPS_CHECK_CFLAG], [{
             ;;
           esac
           gatbps_x="$[]{gatbps_x}$[]{var}"
-        }]
-      )
+        }])
       case "$[]{gatbps_x}" in
       #(
         *'no'*|*'0'*)
@@ -5961,14 +5960,12 @@ AC_DEFUN([GATBPS_CHECK_CFLAG], [{
           AC_COMPILE_IFELSE(
             [AC_LANG_PROGRAM([], [])],
             [gatbps_cv_$2='yes'],
-            [gatbps_cv_$2='no']
-          )
+            [gatbps_cv_$2='no'])
           AC_LANG_POP([C])
           CFLAGS="$[]{gatbps_save_CFLAGS}"
         ;;
       esac
-    }]
-  )
+    }])
   case "$[]{gatbps_cv_$2}" in
   #(
     'yes')
@@ -6059,8 +6056,7 @@ AC_DEFUN([GATBPS_CHECK_COMPILE], [{
             ;;
           esac
           gatbps_x="$[]{gatbps_x}$[]{var}"
-        }]
-      )
+        }])
       case "$[]{gatbps_x}" in
       #(
         *'no'*|*'0'*)
@@ -6071,12 +6067,10 @@ AC_DEFUN([GATBPS_CHECK_COMPILE], [{
           AC_COMPILE_IFELSE(
             [AC_LANG_PROGRAM([$3], [$4])],
             [gatbps_cv_$2='yes'],
-            [gatbps_cv_$2='no']
-          )
+            [gatbps_cv_$2='no'])
         ;;
       esac
-    }]
-  )
+    }])
   case "$[]{gatbps_cv_$2}" in
   #(
     'yes')
@@ -6167,8 +6161,7 @@ AC_DEFUN([GATBPS_CHECK_HEADER], [{
             ;;
           esac
           gatbps_x="$[]{gatbps_x}$[]{var}"
-        }]
-      )
+        }])
       case "$[]{gatbps_x}" in
       #(
         *'no'*|*'0'*)
@@ -6179,12 +6172,10 @@ AC_DEFUN([GATBPS_CHECK_HEADER], [{
           AC_COMPILE_IFELSE(
             [AC_LANG_PROGRAM([$3], [])],
             [gatbps_cv_$2='yes'],
-            [gatbps_cv_$2='no']
-          )
+            [gatbps_cv_$2='no'])
         ;;
       esac
-    }]
-  )
+    }])
   case "$[]{gatbps_cv_$2}" in
   #(
     'yes')
@@ -6275,8 +6266,7 @@ AC_DEFUN([GATBPS_CHECK_LIB], [{
             ;;
           esac
           gatbps_x="$[]{gatbps_x}$[]{var}"
-        }]
-      )
+        }])
       case "$[]{gatbps_x}" in
       #(
         *'no'*|*'0'*)
@@ -6290,14 +6280,12 @@ AC_DEFUN([GATBPS_CHECK_LIB], [{
           AC_LINK_IFELSE(
             [AC_LANG_PROGRAM([], [])],
             [gatbps_cv_$2='yes'],
-            [gatbps_cv_$2='no']
-          )
+            [gatbps_cv_$2='no'])
           AC_LANG_POP([C])
           LIBS="$[]{gatbps_save_LIBS}"
         ;;
       esac
-    }]
-  )
+    }])
   case "$[]{gatbps_cv_$2}" in
   #(
     'yes')
@@ -6388,8 +6376,7 @@ AC_DEFUN([GATBPS_CHECK_LINK], [{
             ;;
           esac
           gatbps_x="$[]{gatbps_x}$[]{var}"
-        }]
-      )
+        }])
       case "$[]{gatbps_x}" in
       #(
         *'no'*|*'0'*)
@@ -6400,12 +6387,10 @@ AC_DEFUN([GATBPS_CHECK_LINK], [{
           AC_LINK_IFELSE(
             [AC_LANG_PROGRAM([$3], [$4])],
             [gatbps_cv_$2='yes'],
-            [gatbps_cv_$2='no']
-          )
+            [gatbps_cv_$2='no'])
         ;;
       esac
-    }]
-  )
+    }])
   case "$[]{gatbps_cv_$2}" in
   #(
     'yes')
@@ -6496,8 +6481,7 @@ AC_DEFUN([GATBPS_CHECK_RUN], [{
             ;;
           esac
           gatbps_x="$[]{gatbps_x}$[]{var}"
-        }]
-      )
+        }])
       case "$[]{gatbps_x}" in
       #(
         *'no'*|*'0'*)
@@ -6509,12 +6493,10 @@ AC_DEFUN([GATBPS_CHECK_RUN], [{
             [AC_LANG_PROGRAM([$3], [$4])],
             [gatbps_cv_$2='yes'],
             [gatbps_cv_$2='no'],
-            [gatbps_cv_$2="$[]{$5}"]
-          )
+            [gatbps_cv_$2="$[]{$5}"])
         ;;
       esac
-    }]
-  )
+    }])
   case "$[]{gatbps_cv_$2}" in
   #(
     'yes')
@@ -6605,8 +6587,7 @@ AC_DEFUN([GATBPS_CHECK_VARS], [{
             ;;
           esac
           gatbps_x="$[]{gatbps_x}$[]{var}"
-        }]
-      )
+        }])
       case "$[]{gatbps_x}" in
       #(
         *'no'*|*'0'*)
@@ -6617,8 +6598,7 @@ AC_DEFUN([GATBPS_CHECK_VARS], [{
           gatbps_cv_$2='yes'
         ;;
       esac
-    }]
-  )
+    }])
   case "$[]{gatbps_cv_$2}" in
   #(
     'yes')
