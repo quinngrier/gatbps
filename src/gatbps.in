@@ -5967,7 +5967,7 @@ AC_DEFUN([GATBPS_CHECK_CFLAG], [{
             ;;
           #(
             *)
-              AC_MSG_FAILURE([unexpected var value], [1])
+              AC_MSG_FAILURE([invalid var value], [1])
             ;;
           esac
           gatbps_x="$[]{gatbps_x}$[]{var}"
@@ -6077,7 +6077,7 @@ AC_DEFUN([GATBPS_CHECK_COMPILE], [{
             ;;
           #(
             *)
-              AC_MSG_FAILURE([unexpected var value], [1])
+              AC_MSG_FAILURE([invalid var value], [1])
             ;;
           esac
           gatbps_x="$[]{gatbps_x}$[]{var}"
@@ -6182,7 +6182,7 @@ AC_DEFUN([GATBPS_CHECK_HEADER], [{
             ;;
           #(
             *)
-              AC_MSG_FAILURE([unexpected var value], [1])
+              AC_MSG_FAILURE([invalid var value], [1])
             ;;
           esac
           gatbps_x="$[]{gatbps_x}$[]{var}"
@@ -6287,7 +6287,7 @@ AC_DEFUN([GATBPS_CHECK_LIB], [{
             ;;
           #(
             *)
-              AC_MSG_FAILURE([unexpected var value], [1])
+              AC_MSG_FAILURE([invalid var value], [1])
             ;;
           esac
           gatbps_x="$[]{gatbps_x}$[]{var}"
@@ -6397,7 +6397,7 @@ AC_DEFUN([GATBPS_CHECK_LINK], [{
             ;;
           #(
             *)
-              AC_MSG_FAILURE([unexpected var value], [1])
+              AC_MSG_FAILURE([invalid var value], [1])
             ;;
           esac
           gatbps_x="$[]{gatbps_x}$[]{var}"
@@ -6502,7 +6502,7 @@ AC_DEFUN([GATBPS_CHECK_RUN], [{
             ;;
           #(
             *)
-              AC_MSG_FAILURE([unexpected var value], [1])
+              AC_MSG_FAILURE([invalid var value], [1])
             ;;
           esac
           gatbps_x="$[]{gatbps_x}$[]{var}"
@@ -6608,7 +6608,7 @@ AC_DEFUN([GATBPS_CHECK_VARS], [{
             ;;
           #(
             *)
-              AC_MSG_FAILURE([unexpected var value], [1])
+              AC_MSG_FAILURE([invalid var value], [1])
             ;;
           esac
           gatbps_x="$[]{gatbps_x}$[]{var}"
