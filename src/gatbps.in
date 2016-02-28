@@ -6698,7 +6698,7 @@ AC_DEFUN([GATBPS_CONFIG_FILE], [{
   m4_pushdef([inputs], m4_bpatsubst([$1], [^[^:]*]))
   m4_pushdef([inputs], m4_ifval(inputs, [inputs], [:output.in]))
   AC_CONFIG_FILES(
-    []output[$2]inputs[],
+    output[$2]inputs,
     [{
       case ']output[' in
       #(
