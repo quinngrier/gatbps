@@ -54,17 +54,22 @@ AC_MSG_CHECKING([which --awk value to use by default])
 AC_ARG_ENABLE(
   [awk],
   [
-AS_HELP_STRING([--disable-awk],
-               [same as --enable-awk=no (default)])
-AS_HELP_STRING([--enable-awk],
-               [same as --enable-awk=yes])
-AS_HELP_STRING([--enable-awk=no],
-               [use --awk=auto by default])
-AS_HELP_STRING([--enable-awk=yes],
-               [use --awk=V by default where V is
-                the best choice for this particular system])
-AS_HELP_STRING([--enable-awk=V],
-               [use --awk=V by default])],
+AS_HELP_STRING(
+  [--disable-awk],
+  [same as --enable-awk=no (default)])
+AS_HELP_STRING(
+  [--enable-awk],
+  [same as --enable-awk=yes])
+AS_HELP_STRING(
+  [--enable-awk=no],
+  [use --awk=auto by default])
+AS_HELP_STRING(
+  [--enable-awk=yes],
+  [use --awk=V by default where V is
+   the best choice for this particular system])
+AS_HELP_STRING(
+  [--enable-awk=V],
+  [use --awk=V by default])],
   [
     case "${enable_awk}" in
     #(
@@ -91,17 +96,22 @@ AC_MSG_CHECKING([which --sed value to use by default])
 AC_ARG_ENABLE(
   [sed],
   [
-AS_HELP_STRING([--disable-sed],
-               [same as --enable-sed=no (default)])
-AS_HELP_STRING([--enable-sed],
-               [same as --enable-sed=yes])
-AS_HELP_STRING([--enable-sed=no],
-               [use --sed=auto by default])
-AS_HELP_STRING([--enable-sed=yes],
-               [use --sed=V by default where V is
-                the best choice for this particular system])
-AS_HELP_STRING([--enable-sed=V],
-               [use --sed=V by default])],
+AS_HELP_STRING(
+  [--disable-sed],
+  [same as --enable-sed=no (default)])
+AS_HELP_STRING(
+  [--enable-sed],
+  [same as --enable-sed=yes])
+AS_HELP_STRING(
+  [--enable-sed=no],
+  [use --sed=auto by default])
+AS_HELP_STRING(
+  [--enable-sed=yes],
+  [use --sed=V by default where V is
+   the best choice for this particular system])
+AS_HELP_STRING(
+  [--enable-sed=V],
+  [use --sed=V by default])],
   [
     case "${enable_sed}" in
     #(
@@ -128,17 +138,22 @@ AC_MSG_CHECKING([which --texi2any value to use by default])
 AC_ARG_ENABLE(
   [texi2any],
   [
-AS_HELP_STRING([--disable-texi2any],
-               [same as --enable-texi2any=no (default)])
-AS_HELP_STRING([--enable-texi2any],
-               [same as --enable-texi2any=yes])
-AS_HELP_STRING([--enable-texi2any=no],
-               [use --texi2any=auto by default])
-AS_HELP_STRING([--enable-texi2any=yes],
-               [use --texi2any=V by default where V is
-                the best choice for this particular system])
-AS_HELP_STRING([--enable-texi2any=V],
-               [use --texi2any=V by default])],
+AS_HELP_STRING(
+  [--disable-texi2any],
+  [same as --enable-texi2any=no (default)])
+AS_HELP_STRING(
+  [--enable-texi2any],
+  [same as --enable-texi2any=yes])
+AS_HELP_STRING(
+  [--enable-texi2any=no],
+  [use --texi2any=auto by default])
+AS_HELP_STRING(
+  [--enable-texi2any=yes],
+  [use --texi2any=V by default where V is
+   the best choice for this particular system])
+AS_HELP_STRING(
+  [--enable-texi2any=V],
+  [use --texi2any=V by default])],
   [
     case "${enable_texi2any}" in
     #(
