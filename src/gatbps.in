@@ -6721,10 +6721,9 @@ AC_DEFUN([GATBPS_CONFIG_FILE], [{
       if cmp "$[]{gatbps_safe_src}" \
              "$[]{gatbps_safe_dst}" >'/dev/null' 2>&1; then
         AC_MSG_NOTICE([skipping $[]{gatbps_dst}])
-        rm '-f' "$[]{gatbps_safe_src}" >'/dev/null' 2>&1
       else
         AC_MSG_NOTICE([updating $[]{gatbps_dst}])
-        mv '-f' "$[]{gatbps_safe_src}" "$[]{gatbps_safe_dst}"
+        cp "$[]{gatbps_safe_src}" "$[]{gatbps_safe_dst}"
         case "${?}" in
         #(
           '0')
@@ -6732,7 +6731,6 @@ AC_DEFUN([GATBPS_CONFIG_FILE], [{
           ;;
         #(
           *)
-            rm '-f' "$[]{gatbps_safe_src}" >'/dev/null' 2>&1
             exit 1
           ;;
         esac
