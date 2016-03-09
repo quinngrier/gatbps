@@ -8,7 +8,7 @@ AC_INIT(
   [https://github.com/quinngrier/gatbps])
 
 GATBPS_DEFINE_DATE(
-  [GATBPS_],
+  [AC_],
   [PACKAGE_DATE],
   m4_esyscmd_s([{
     sh build-aux/DATE.sh
