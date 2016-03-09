@@ -33,7 +33,6 @@ EXTRA_DIST += build-aux/VERSION.sh
 EXTRA_DIST += build-aux/sh-form.sh
 
 MOSTLYCLEANFILES =
-MOSTLYCLEANFILES += doc/gatbps.info
 MOSTLYCLEANFILES += doc/gatbps.txt
 MOSTLYCLEANFILES += doc/gatbps.xml
 MOSTLYCLEANFILES += doc/man/gatbps.1
