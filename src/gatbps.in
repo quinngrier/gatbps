@@ -5952,7 +5952,7 @@ dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([GATBPS_CHECK_CFLAG], [{
   AC_CACHE_CHECK(
-    [for $1],
+    [for (C) $1],
     [gatbps_cv_$2],
     [{
       gatbps_x='yes'
@@ -6062,7 +6062,7 @@ dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([GATBPS_CHECK_COMPILE], [{
   AC_CACHE_CHECK(
-    [for $1],
+    [for (C) $1],
     [gatbps_cv_$2],
     [{
       gatbps_x='yes'
@@ -6167,7 +6167,7 @@ dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([GATBPS_CHECK_HEADER], [{
   AC_CACHE_CHECK(
-    [for $1],
+    [for (C) $1],
     [gatbps_cv_$2],
     [{
       gatbps_x='yes'
@@ -6272,7 +6272,7 @@ dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([GATBPS_CHECK_LIB], [{
   AC_CACHE_CHECK(
-    [for $1],
+    [for (L) $1],
     [gatbps_cv_$2],
     [{
       gatbps_x='yes'
@@ -6382,7 +6382,7 @@ dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([GATBPS_CHECK_LINK], [{
   AC_CACHE_CHECK(
-    [for $1],
+    [for (L) $1],
     [gatbps_cv_$2],
     [{
       gatbps_x='yes'
@@ -6487,7 +6487,7 @@ dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([GATBPS_CHECK_RUN], [{
   AC_CACHE_CHECK(
-    [for $1],
+    [for (R) $1],
     [gatbps_cv_$2],
     [{
       gatbps_x='yes'
@@ -6593,7 +6593,7 @@ dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([GATBPS_CHECK_VARS], [{
   AC_CACHE_CHECK(
-    [for $1],
+    [for (V) $1],
     [gatbps_cv_$2],
     [{
       gatbps_x='yes'
