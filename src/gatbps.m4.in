@@ -1,4 +1,6 @@
-#!/bin/sh
+changecom()dnl
+changequote(`{%|', `|%}')dnl
+{%|#!/bin/sh
 
 #
 # With LC_ALL=C, locale-aware programs use the C locale instead of the
@@ -14097,4 +14099,4 @@ exit "${exit_status}"
 # dedication along with this file, typically as a file
 # named <CC0-1.0.txt>. If not, it may be available at
 # <https://creativecommons.org/publicdomain/zero/1.0/>.
-#
+#|%}

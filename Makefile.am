@@ -11,12 +11,12 @@ AM_TEXI2DVIFLAGS =
 AM_TEXI2DVIFLAGS += -I doc/texi -I $(srcdir)/doc/texi
 
 DISTCLEANFILES =
-DISTCLEANFILES += bin/gatbps
 DISTCLEANFILES += doc/texi/AWKDEFAULTTEXI.texi
 DISTCLEANFILES += doc/texi/DATE.texi
 DISTCLEANFILES += doc/texi/SEDDEFAULTTEXI.texi
 DISTCLEANFILES += doc/texi/TEXIANYDEFAULTTEXI.texi
 DISTCLEANFILES += doc/texi/VERSION.txi
+DISTCLEANFILES += src/gatbps.m4
 
 EXTRA_DIST =
 EXTRA_DIST += AUTHORS
@@ -33,6 +33,7 @@ EXTRA_DIST += build-aux/VERSION.sh
 EXTRA_DIST += build-aux/sh-form.sh
 
 MOSTLYCLEANFILES =
+MOSTLYCLEANFILES += bin/gatbps
 MOSTLYCLEANFILES += doc/gatbps.txt
 MOSTLYCLEANFILES += doc/gatbps.xml
 MOSTLYCLEANFILES += doc/man/gatbps.1
@@ -113,6 +114,10 @@ plaintextdir = $(docdir)
 .PHONY: plaintext
 .PHONY: uninstall-docbook
 .PHONY: uninstall-plaintext
+
+bin/gatbps: src/gatbps.m4
+	$(M4) src/gatbps.m4 >bin/gatbps
+	chmod +x bin/gatbps
 
 doc/gatbps.txt: $(doc_gatbps_TEXINFOS)
 doc/gatbps.txt: doc/gatbps.texi

@@ -285,12 +285,12 @@ AT='@'
 AC_SUBST([AT])
 
 AC_CONFIG_FILES([Makefile])
-GATBPS_CONFIG_FILE([bin/gatbps:src/gatbps.in], [.new], [chmod +x bin/gatbps])
 GATBPS_CONFIG_FILE([doc/texi/AWKDEFAULTTEXI.texi], [.new])
 GATBPS_CONFIG_FILE([doc/texi/DATE.texi], [.new])
 GATBPS_CONFIG_FILE([doc/texi/SEDDEFAULTTEXI.texi], [.new])
 GATBPS_CONFIG_FILE([doc/texi/TEXIANYDEFAULTTEXI.texi], [.new])
 GATBPS_CONFIG_FILE([doc/texi/VERSION.txi], [.new])
+GATBPS_CONFIG_FILE([src/gatbps.m4], [.new])
 
 AC_OUTPUT
 
