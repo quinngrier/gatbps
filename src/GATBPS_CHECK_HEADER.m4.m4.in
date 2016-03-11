@@ -18,7 +18,8 @@ AC_DEFUN([GATBPS_CHECK_HEADER], [{
       m4_foreach_w(
         [var],
         [$4],
-        [{
+        [
+        {
           case "$[]{var}" in
           #(
             'yes'|'no'|'1'|'0')

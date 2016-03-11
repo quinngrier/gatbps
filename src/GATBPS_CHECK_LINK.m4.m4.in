@@ -18,7 +18,8 @@ AC_DEFUN([GATBPS_CHECK_LINK], [{
       m4_foreach_w(
         [var],
         [$5],
-        [{
+        [
+        {
           case "$[]{var}" in
           #(
             'yes'|'no'|'1'|'0')
