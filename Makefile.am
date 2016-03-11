@@ -18,6 +18,7 @@ DISTCLEANFILES += doc/texi/TEXIANYDEFAULTTEXI.texi
 DISTCLEANFILES += doc/texi/VERSION.txi
 DISTCLEANFILES += src/GATBPS_CHECK_CFLAG.m4.m4
 DISTCLEANFILES += src/GATBPS_CHECK_COMPILE.m4.m4
+DISTCLEANFILES += src/GATBPS_CHECK_HEADER.m4.m4
 DISTCLEANFILES += src/gatbps.m4
 
 EXTRA_DIST =
@@ -119,6 +120,7 @@ plaintextdir = $(docdir)
 
 bin/gatbps: src/GATBPS_CHECK_CFLAG.m4.m4
 bin/gatbps: src/GATBPS_CHECK_COMPILE.m4.m4
+bin/gatbps: src/GATBPS_CHECK_HEADER.m4.m4
 bin/gatbps: src/gatbps.m4
 	$(M4) src/gatbps.m4 >bin/gatbps
 	chmod +x bin/gatbps
