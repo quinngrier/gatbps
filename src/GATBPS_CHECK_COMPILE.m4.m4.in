@@ -27,7 +27,7 @@ AC_DEFUN([GATBPS_CHECK_COMPILE], [{
             ;;
           #(
             *)
-              AC_MSG_ERROR([invalid var value], [1])
+              AC_MSG_ERROR([invalid \$[]{var} value: $[]{var}], [1])
             ;;
           esac
           gatbps_x="$[]{gatbps_x}$[]{var}"
