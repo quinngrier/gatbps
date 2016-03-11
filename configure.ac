@@ -291,6 +291,7 @@ GATBPS_CONFIG_FILE([doc/texi/SEDDEFAULTTEXI.texi], [.new])
 GATBPS_CONFIG_FILE([doc/texi/TEXIANYDEFAULTTEXI.texi], [.new])
 GATBPS_CONFIG_FILE([doc/texi/VERSION.txi], [.new])
 GATBPS_CONFIG_FILE([src/GATBPS@&t@_CHECK_CFLAG.m4.m4], [.new])
+GATBPS_CONFIG_FILE([src/GATBPS@&t@_CHECK_COMPILE.m4.m4], [.new])
 GATBPS_CONFIG_FILE([src/gatbps.m4], [.new])
 
 AC_OUTPUT
