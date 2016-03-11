@@ -15,7 +15,7 @@ AC_DEFUN([GATBPS_CHECK_LIB], [{
     [gatbps_cv_$2],
     [{
       gatbps_x='yes'
-      m4_foreach_w(
+      {m4_foreach_w(
         [var],
         [$4],
         [
@@ -32,6 +32,8 @@ AC_DEFUN([GATBPS_CHECK_LIB], [{
           esac
           gatbps_x="$[]{gatbps_x}$[]{var}"
         }])
+        :
+      }
       case "$[]{gatbps_x}" in
       #(
         *'no'*|*'0'*)
