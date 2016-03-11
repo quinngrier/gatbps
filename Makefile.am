@@ -22,6 +22,7 @@ DISTCLEANFILES += src/GATBPS_CHECK_HEADER.m4.m4
 DISTCLEANFILES += src/GATBPS_CHECK_LIB.m4.m4
 DISTCLEANFILES += src/GATBPS_CHECK_LINK.m4.m4
 DISTCLEANFILES += src/GATBPS_CHECK_RUN.m4.m4
+DISTCLEANFILES += src/GATBPS_CHECK_VARS.m4.m4
 DISTCLEANFILES += src/gatbps.m4
 
 EXTRA_DIST =
@@ -127,6 +128,7 @@ bin/gatbps: src/GATBPS_CHECK_HEADER.m4.m4
 bin/gatbps: src/GATBPS_CHECK_LIB.m4.m4
 bin/gatbps: src/GATBPS_CHECK_LINK.m4.m4
 bin/gatbps: src/GATBPS_CHECK_RUN.m4.m4
+bin/gatbps: src/GATBPS_CHECK_VARS.m4.m4
 bin/gatbps: src/gatbps.m4
 	$(M4) src/gatbps.m4 >bin/gatbps
 	chmod +x bin/gatbps
