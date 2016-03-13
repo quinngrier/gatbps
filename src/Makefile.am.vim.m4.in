@@ -9,6 +9,7 @@
 "
 " For more information, see the GATBPS manual.
 "
+
 :%sm/^## begin_variables$/&\r/
 :%sm/^## end_variables$/\r&/
 :/^## begin_variables$/+1,/^## end_variables$/-1g/./s/$/\b/
@@ -18,6 +19,7 @@
 :/^## begin_variables$/+1,/^## end_variables$/-1s/\b/\r/g
 :%sm/^## begin_variables$/&\r/
 :/^## begin_variables$/+1,/^## end_variables$/-1g/+=/.,/^$/-1sort u
+
 :%sm/^## begin_rules$/&\r/
 :%sm/^## end_rules$/\r&/
 :/^## begin_rules$/+1,/^## end_rules$/-1g/./s/$/\b/
@@ -27,6 +29,7 @@
 :/^## begin_rules$/+1,/^## end_rules$/-1s/\b/\r/g
 :%sm/^## begin_rules$/&\r/
 :/^## begin_rules$/+1,/^## end_rules$/-2g/^$/.+1,/^\($\|\t\)/-1sort u
+
 "
 " The authors of this file have waived all copyright and
 " related or neighboring rights to the extent permitted by
