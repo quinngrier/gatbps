@@ -56,6 +56,40 @@ if s:n1 != 0 && s:n2 != 0
 
 endif
 
+let s:s1 = '^## begin_rules$'
+let s:s2 = '^## end_rules$'
+
+call cursor(1, 1)
+let s:n1 = search(s:s1, 'cW')
+if s:n1 != 0 && search(s:s1, 'W') != 0
+  echoerr '''' . s:s1 . ''' appears twice'
+  finish
+endif
+
+call cursor(1, 1)
+let s:n2 = search(s:s2, 'cW')
+if s:n2 != 0 && search(s:s2, 'W') != 0
+  echoerr '''' . s:s2 . ''' appears twice'
+  finish
+endif
+
+if s:n1 != 0 && s:n2 == 0
+  echoerr '''' . s:s1 . ''' appears without ''' . s:s2 . ''''
+  finish
+endif
+
+if s:n1 == 0 && s:n2 != 0
+  echoerr '''' . s:s2 . ''' appears without ''' . s:s1 . ''''
+  finish
+endif
+
+if s:n1 != 0 && s:n2 != 0
+
+  if s:n1 > s:n2
+    echoerr '''' . s:s1 . ''' appears after ''' . s:s2 . ''''
+    finish
+  endif
+
 :%sm/^## begin_rules$/&\r/
 :%sm/^## end_rules$/\r&/
 :/^## begin_rules$/+1,/^## end_rules$/-1g/./s/$/\b/
@@ -65,6 +99,8 @@ endif
 :/^## begin_rules$/+1,/^## end_rules$/-1s/\b/\r/g
 :%sm/^## begin_rules$/&\r/
 :/^## begin_rules$/+1,/^## end_rules$/-2g/^$/.+1,/^\($\|\t\)/-1sort u
+
+endif
 
 "
 " The authors of this file have waived all copyright and
