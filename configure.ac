@@ -298,6 +298,7 @@ GATBPS_CONFIG_FILE([src/GATBPS@&t@_CHECK_LINK.m4.m4], [.new])
 GATBPS_CONFIG_FILE([src/GATBPS@&t@_CHECK_RUN.m4.m4], [.new])
 GATBPS_CONFIG_FILE([src/GATBPS@&t@_CHECK_VARS.m4.m4], [.new])
 GATBPS_CONFIG_FILE([src/GATBPS@&t@_CONFIG_FILE.m4.m4], [.new])
+GATBPS_CONFIG_FILE([src/Makefile.am.vim.m4], [.new])
 GATBPS_CONFIG_FILE([src/gatbps.m4], [.new])
 
 AC_OUTPUT
