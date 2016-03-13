@@ -95,10 +95,10 @@ if s:n1 != 0 && s:n2 != 0
 :/^## begin_rules$/+1,/^## end_rules$/-1g/./s/$/\b/
 :/^## begin_rules$/+1,/^## end_rules$/-2g/^\n./.+1,/^$/-1j!
 :/^## begin_rules$/+1,/^## end_rules$/-1g/^$/d
-:/^## begin_rules$/+1,/^## end_rules$/-1sort
-:/^## begin_rules$/+1,/^## end_rules$/-1s/\b/\r/g
 :%sm/^## begin_rules$/&\r/
-:/^## begin_rules$/+1,/^## end_rules$/-2g/^$/.+1,/^\($\|\t\)/-1sort u
+:/^## begin_rules$/+1,/^## end_rules$/-1sort
+:/^## begin_rules$/+1,/^## end_rules$/-1s/\b/\r/eg
+:/^## begin_rules$/,/^## end_rules$/-2g/^$/.+1,/^\($\|\t\)/-1sort u
 
 endif
 
