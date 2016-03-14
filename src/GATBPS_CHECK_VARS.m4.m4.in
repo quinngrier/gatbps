@@ -11,7 +11,7 @@ dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([GATBPS_CHECK_VARS], [{
   AC_CACHE_CHECK(
-    [for (V) $1],
+    [for $1],
     [gatbps_cv_$2],
     [{
       gatbps_x='yes'
