@@ -10,10 +10,22 @@ dnl
 dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([GATBPS_CHECK_HEADER], [{
+
+  #
+  # We initialize this variable to 'yes' here and set it to 'no' in the
+  # corresponding AC_CACHE_CHECK code below, which only executes if the
+  # corresponding variable is not cached.
+  #
+
+  $2_was_cached='yes'
+
   AC_CACHE_CHECK(
     [for $1],
     [gatbps_cv_$2],
     [{
+
+      $2_was_cached='no'
+
       gatbps_x='yes'
       {m4_foreach_w(
         [var],
