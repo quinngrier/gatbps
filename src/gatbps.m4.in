@@ -5881,7 +5881,8 @@ EOF1
           'no,Makefile.am.vim'|'no,'*'/Makefile.am.vim')
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
-include({%|src/Makefile.am.vim.m4|%})dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`src/Makefile.am.vim.m4')dnl
 {%|EOF1
             case "${?}" in
             #(
@@ -5906,7 +5907,8 @@ EOF1
           'no,GATBPS_CHECK_CFLAG.m4'|'no,'*'/GATBPS_CHECK_CFLAG.m4')
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
-include({%|src/GATBPS_CHECK_CFLAG.m4.m4|%})dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`src/GATBPS_CHECK_CFLAG.m4.m4')dnl
 {%|EOF1
             case "${?}" in
             #(
@@ -5931,7 +5933,8 @@ EOF1
           'no,GATBPS_CHECK_COMPILE.m4'|'no,'*'/GATBPS_CHECK_COMPILE.m4')
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
-include({%|src/GATBPS_CHECK_COMPILE.m4.m4|%})dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`src/GATBPS_CHECK_COMPILE.m4.m4')dnl
 {%|EOF1
             case "${?}" in
             #(
@@ -5956,7 +5959,8 @@ EOF1
           'no,GATBPS_CHECK_HEADER.m4'|'no,'*'/GATBPS_CHECK_HEADER.m4')
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
-include({%|src/GATBPS_CHECK_HEADER.m4.m4|%})dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`src/GATBPS_CHECK_HEADER.m4.m4')dnl
 {%|EOF1
             case "${?}" in
             #(
@@ -5981,7 +5985,8 @@ EOF1
           'no,GATBPS_CHECK_LIB.m4'|'no,'*'/GATBPS_CHECK_LIB.m4')
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
-include({%|src/GATBPS_CHECK_LIB.m4.m4|%})dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`src/GATBPS_CHECK_LIB.m4.m4')dnl
 {%|EOF1
             case "${?}" in
             #(
@@ -6006,7 +6011,8 @@ EOF1
           'no,GATBPS_CHECK_LINK.m4'|'no,'*'/GATBPS_CHECK_LINK.m4')
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
-include({%|src/GATBPS_CHECK_LINK.m4.m4|%})dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`src/GATBPS_CHECK_LINK.m4.m4')dnl
 {%|EOF1
             case "${?}" in
             #(
@@ -6031,7 +6037,8 @@ EOF1
           'no,GATBPS_CHECK_RUN.m4'|'no,'*'/GATBPS_CHECK_RUN.m4')
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
-include({%|src/GATBPS_CHECK_RUN.m4.m4|%})dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`src/GATBPS_CHECK_RUN.m4.m4')dnl
 {%|EOF1
             case "${?}" in
             #(
@@ -6056,7 +6063,8 @@ EOF1
           'no,GATBPS_CHECK_VARS.m4'|'no,'*'/GATBPS_CHECK_VARS.m4')
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
-include({%|src/GATBPS_CHECK_VARS.m4.m4|%})dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`src/GATBPS_CHECK_VARS.m4.m4')dnl
 {%|EOF1
             case "${?}" in
             #(
@@ -6081,7 +6089,8 @@ EOF1
           'no,GATBPS_CONFIG_FILE.m4'|'no,'*'/GATBPS_CONFIG_FILE.m4')
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
-include({%|src/GATBPS_CONFIG_FILE.m4.m4|%})dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`src/GATBPS_CONFIG_FILE.m4.m4')dnl
 {%|EOF1
             case "${?}" in
             #(
