@@ -1,4 +1,4 @@
-changecom()dnl
+changecom`'dnl
 changequote(`{%|', `|%}')dnl
 {%|#!/bin/sh
 
