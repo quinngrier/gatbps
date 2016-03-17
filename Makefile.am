@@ -16,6 +16,7 @@ DISTCLEANFILES += doc/texi/DATE.texi
 DISTCLEANFILES += doc/texi/SEDDEFAULTTEXI.texi
 DISTCLEANFILES += doc/texi/TEXIANYDEFAULTTEXI.texi
 DISTCLEANFILES += doc/texi/VERSION.txi
+DISTCLEANFILES += src/GATBPS_ARG_ENABLE_BOOL.m4.m4
 DISTCLEANFILES += src/GATBPS_CHECK_CFLAG.m4.m4
 DISTCLEANFILES += src/GATBPS_CHECK_COMPILE.m4.m4
 DISTCLEANFILES += src/GATBPS_CHECK_HEADER.m4.m4
@@ -124,6 +125,7 @@ plaintextdir = $(docdir)
 .PHONY: uninstall-docbook
 .PHONY: uninstall-plaintext
 
+bin/gatbps: src/GATBPS_ARG_ENABLE_BOOL.m4.m4
 bin/gatbps: src/GATBPS_CHECK_CFLAG.m4.m4
 bin/gatbps: src/GATBPS_CHECK_COMPILE.m4.m4
 bin/gatbps: src/GATBPS_CHECK_HEADER.m4.m4
