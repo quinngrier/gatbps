@@ -59,6 +59,10 @@ AC_DEFUN([GATBPS_CONFIG_FILE], [{
 
   GATBPS_CONFIG_FILE_FILES="$[]{GATBPS_CONFIG_FILE_FILES}"' output'
 
+  GATBPS_CONFIG_FILE_RULES="$[]{GATBPS_CONFIG_FILE_RULES}"'
+output: output$2
+	@AT@:'
+
   m4_popdef([inputs])
   m4_popdef([inputs])
   m4_popdef([output])
