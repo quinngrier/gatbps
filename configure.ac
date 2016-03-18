@@ -304,6 +304,8 @@ GATBPS_CONFIG_FILE([src/GATBPS@&t@_CONFIG_FILE_SUBST.m4.m4], [.new])
 GATBPS_CONFIG_FILE([src/Makefile.am.vim.m4], [.new])
 GATBPS_CONFIG_FILE([src/gatbps.m4], [.new])
 
+GATBPS_CONFIG_FILE_SUBST
+
 AC_OUTPUT
 
 dnl
