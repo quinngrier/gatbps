@@ -29,7 +29,7 @@ AC_DEFUN([GATBPS_CHECK_CFLAG], [{ :
       $2_was_cached='no'
 
       gatbps_x='yes'
-      {m4_foreach_w(
+      { :m4_foreach_w(
         [var],
         [$4],
         [
