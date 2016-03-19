@@ -129,7 +129,7 @@ bin/gatbps: src/gatbps.m4
 doc/gatbps.txt: $(doc_gatbps_TEXINFOS)
 doc/gatbps.txt: doc/gatbps.texi
 	$(AM_V_MAKEINFO)$(MKDIR_P) doc
-	$(AM_V_at){ \
+	$(AM_V_at){ :; \
   if test -f doc/gatbps.texi; then \
     $(MAKEINFO) \
       $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
@@ -146,7 +146,7 @@ doc/gatbps.txt: doc/gatbps.texi
 doc/gatbps.xml: $(doc_gatbps_TEXINFOS)
 doc/gatbps.xml: doc/gatbps.texi
 	$(AM_V_MAKEINFO)$(MKDIR_P) doc
-	$(AM_V_at){ \
+	$(AM_V_at){ :; \
   if test -f doc/gatbps.texi; then \
     $(MAKEINFO) \
       $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
@@ -169,7 +169,7 @@ docbook: doc/gatbps.xml
 install-docbook: doc/gatbps.xml
 	@$(NORMAL_INSTALL)
 	@: #(
-	@{ \
+	@{ :; \
   case ''$(docbookdir) in \
     ?*) \
       echo " $(MKDIR_P) '$(DESTDIR)$(docbookdir)'"; \
@@ -192,7 +192,7 @@ install-docbook: doc/gatbps.xml
 install-plaintext: doc/gatbps.txt
 	@$(NORMAL_INSTALL)
 	@: #(
-	@{ \
+	@{ :; \
   case ''$(plaintextdir) in \
     ?*) \
       echo " $(MKDIR_P) '$(DESTDIR)$(plaintextdir)'"; \
@@ -217,7 +217,7 @@ plaintext: doc/gatbps.txt
 uninstall-docbook:
 	@$(NORMAL_UNINSTALL)
 	@: #(
-	@{ \
+	@{ :; \
   case ''$(docbookdir) in \
     ?*) \
       list=; \
@@ -233,7 +233,7 @@ uninstall-docbook:
 uninstall-plaintext:
 	@$(NORMAL_UNINSTALL)
 	@: #(
-	@{ \
+	@{ :; \
   case ''$(plaintextdir) in \
     ?*) \
       list=; \
