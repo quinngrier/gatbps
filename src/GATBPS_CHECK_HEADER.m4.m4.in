@@ -15,8 +15,8 @@ AC_DEFUN([GATBPS_CHECK_HEADER], [{ :
 
   #
   # We initialize this variable to 'yes' here and set it to 'no' in the
-  # corresponding AC_CACHE_CHECK code below, which only executes if the
-  # corresponding variable is not cached.
+  # AC_CACHE_CHECK code below, which only runs if the cache variable is
+  # not in the cache.
   #
 
   $2_was_cached='yes'
