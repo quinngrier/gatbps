@@ -57,7 +57,18 @@ AC_DEFUN([GATBPS_CONFIG_FILE], [{ :
     }],
     [$4])
 
-  GATBPS_CONFIG_FILE_FILES="$[]{GATBPS_CONFIG_FILE_FILES}"' gatbps_output'
+  case "$[]{GATBPS_CONFIG_FILE_FILES}" in
+  #(
+    ?*)
+      GATBPS_CONFIG_FILE_FILES="$[]{GATBPS_CONFIG_FILE_FILES}"' \
+  gatbps_output'
+    ;;
+  #(
+    *)
+      GATBPS_CONFIG_FILE_FILES='\
+  gatbps_output'
+    ;;
+  esac
 
   GATBPS_CONFIG_FILE_RULES="$[]{GATBPS_CONFIG_FILE_RULES}"'
 gatbps_output: gatbps_output$2
