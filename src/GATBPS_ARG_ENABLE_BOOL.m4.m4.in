@@ -58,10 +58,7 @@ AS_HELP_STRING(
     ;;
   esac
 
-  GATBPS_CHECK_VARS(
-    [$1],
-    [$2],
-    gatbps_enable_var)
+  GATBPS_CHECK_VARS([$1], [$2], gatbps_enable_var)
 
   case "$[]{$2_was_cached}" in
   #(
