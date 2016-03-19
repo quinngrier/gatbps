@@ -33,7 +33,7 @@ AC_DEFUN([GATBPS_CHECK_LINK], [{ :
         [var],
         [$5],
         [
-        {
+        { :
           case "$[]{var}" in
           #(
             'yes'|'no'|'1'|'0')
