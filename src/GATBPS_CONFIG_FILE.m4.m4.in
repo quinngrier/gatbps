@@ -12,15 +12,18 @@ dnl
 dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([GATBPS_CONFIG_FILE], [{ :
+
   m4_case(
     [$#],
     [2], [],
     [3], [],
     [4], [],
     [m4_fatal([GATBPS_CONFIG_FILE requires exactly 2, 3, or 4 arguments])])
+
   m4_pushdef([gatbps_output], m4_bpatsubst([$1], [:.*]))
   m4_pushdef([gatbps_inputs], m4_bpatsubst([$1], [^[^:]*]))
   m4_pushdef([gatbps_inputs], m4_ifval(gatbps_inputs, [gatbps_inputs], [:gatbps_output.in]))
+
   AC_CONFIG_FILES(
     gatbps_output[$2]gatbps_inputs,
     [{ :
@@ -88,6 +91,7 @@ gatbps_output: gatbps_output$2
   m4_popdef([gatbps_inputs])
   m4_popdef([gatbps_inputs])
   m4_popdef([gatbps_output])
+
 }])dnl
 dnl
 dnl The authors of this file have waived all copyright and
