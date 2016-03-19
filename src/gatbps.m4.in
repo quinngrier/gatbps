@@ -6278,7 +6278,7 @@ dnl Special file: GATBPS_DEFINE_DATE.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_DEFINE_DATE], [{
+AC_DEFUN([GATBPS_DEFINE_DATE], [{ :
 
   m4_case($#,
           [3], [],

@@ -11,7 +11,7 @@ dnl Special file: GATBPS_CHECK_LINK.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_CHECK_LINK], [{
+AC_DEFUN([GATBPS_CHECK_LINK], [{ :
 
   #
   # We initialize this variable to 'yes' here and set it to 'no' in the
@@ -24,7 +24,7 @@ AC_DEFUN([GATBPS_CHECK_LINK], [{
   AC_CACHE_CHECK(
     [for $1],
     [gatbps_cv_$2],
-    [{
+    [{ :
 
       $2_was_cached='no'
 

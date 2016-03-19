@@ -11,7 +11,7 @@ dnl Special file: GATBPS_CONFIG_FILE.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_CONFIG_FILE], [{
+AC_DEFUN([GATBPS_CONFIG_FILE], [{ :
   m4_case(
     [$#],
     [2], [],
@@ -23,7 +23,7 @@ AC_DEFUN([GATBPS_CONFIG_FILE], [{
   m4_pushdef([inputs], m4_ifval(inputs, [inputs], [:output.in]))
   AC_CONFIG_FILES(
     output[$2]inputs,
-    [{
+    [{ :
       gatbps_dst=']output['
       case "$[]{gatbps_dst}" in
       #(

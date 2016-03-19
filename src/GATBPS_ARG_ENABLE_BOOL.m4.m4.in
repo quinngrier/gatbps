@@ -11,7 +11,7 @@ dnl Special file: GATBPS_ARG_ENABLE_BOOL.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_ARG_ENABLE_BOOL], [{
+AC_DEFUN([GATBPS_ARG_ENABLE_BOOL], [{ :
 
   m4_pushdef([myvar], enable_[]m4_bpatsubst([$3], [[^0-9A-Z_a-z]], [_]))
 
@@ -33,10 +33,10 @@ AS_HELP_STRING(
 AS_HELP_STRING(
   [--enable-$3=no],
   [$6])],
-    [{
+    [{ :
       ]myvar[_was_given='yes'
     }],
-    [{
+    [{ :
       ]myvar[_was_given='no'
       ]myvar[='$4'
     }])
