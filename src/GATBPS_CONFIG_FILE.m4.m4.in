@@ -70,9 +70,20 @@ AC_DEFUN([GATBPS_CONFIG_FILE], [{ :
     ;;
   esac
 
-  GATBPS_CONFIG_FILE_RULES="$[]{GATBPS_CONFIG_FILE_RULES}"'
+  case "$[]{GATBPS_CONFIG_FILE_RULES}" in
+  #(
+    ?*)
+      GATBPS_CONFIG_FILE_RULES="$[]{GATBPS_CONFIG_FILE_RULES}"'
+
 gatbps_output: gatbps_output$2
 	@AT@:'
+    ;;
+  #(
+    *)
+      GATBPS_CONFIG_FILE_RULES='gatbps_output: gatbps_output$2
+	@AT@:'
+    ;;
+  esac
 
   m4_popdef([gatbps_inputs])
   m4_popdef([gatbps_inputs])
