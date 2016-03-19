@@ -47,7 +47,6 @@ AC_DEFUN([GATBPS_CHECK_CFLAG], [{ :
           esac
           gatbps_x="$[]{gatbps_x}$[]{var}"
         }])
-        :
       }
       case "$[]{gatbps_x}" in
       #(
