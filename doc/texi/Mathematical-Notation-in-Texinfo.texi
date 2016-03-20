@@ -171,6 +171,7 @@ shows the symbol of each macro@.
 @sfindex @t{rarrow.@:texi}
 @tmindex @t{@@rarrow}
 @end multitable
+@include mtvskipbot.texi
 @end ifset
 @ifclear HideSymbols
 @include mtvskiptop.texi
@@ -322,6 +323,7 @@ $\rightarrow$
 @rarrow{}
 @end ifnottex
 @end multitable
+@include mtvskipbot.texi
 @end ifclear
 @end quotation
 
