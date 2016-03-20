@@ -15,17 +15,20 @@ AC_DEFUN([GATBPS_CONFIG_FILE], [{ :
 
   m4_case(
     [$#],
+    [1], [],
     [2], [],
     [3], [],
     [4], [],
-    [m4_fatal([GATBPS_CONFIG_FILE requires exactly 2, 3, or 4 arguments])])
+    [m4_fatal([GATBPS_CONFIG_FILE requires 1 to 4 arguments])])
 
   m4_pushdef([gatbps_output], m4_bpatsubst([$1], [:.*]))
   m4_pushdef([gatbps_inputs], m4_bpatsubst([$1], [^[^:]*]))
   m4_pushdef([gatbps_inputs], m4_ifval(gatbps_inputs, [gatbps_inputs], [:gatbps_output.in]))
 
+  m4_pushdef([gatbps_suffix], m4_if([$#], [1], [.out], [$2]))
+
   AC_CONFIG_FILES(
-    gatbps_output[$2]gatbps_inputs,
+    gatbps_output[]gatbps_suffix[]gatbps_inputs,
     [{ :
       gatbps_dst=']gatbps_output['
       case "$[]{gatbps_dst}" in
@@ -38,7 +41,7 @@ AC_DEFUN([GATBPS_CONFIG_FILE], [{ :
           gatbps_safe_dst="$[]{gatbps_dst}"
         ;;
       esac
-      gatbps_safe_src="$[]{gatbps_safe_dst}"'$2'
+      gatbps_safe_src="$[]{gatbps_safe_dst}"']gatbps_suffix['
       if cmp "$[]{gatbps_safe_src}" \
              "$[]{gatbps_safe_dst}" >'/dev/null' 2>&1; then
         AC_MSG_NOTICE([skipping $[]{gatbps_dst}])
@@ -78,16 +81,17 @@ AC_DEFUN([GATBPS_CONFIG_FILE], [{ :
     ?*)
       GATBPS_CONFIG_FILE_RULES="$[]{GATBPS_CONFIG_FILE_RULES}"'
 
-gatbps_output: gatbps_output$2
+gatbps_output: gatbps_output[]gatbps_suffix
 	@AT@:'
     ;;
   #(
     *)
-      GATBPS_CONFIG_FILE_RULES='gatbps_output: gatbps_output$2
+      GATBPS_CONFIG_FILE_RULES='gatbps_output: gatbps_output[]gatbps_suffix
 	@AT@:'
     ;;
   esac
 
+  m4_popdef([gatbps_suffix])
   m4_popdef([gatbps_inputs])
   m4_popdef([gatbps_inputs])
   m4_popdef([gatbps_output])
