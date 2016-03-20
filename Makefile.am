@@ -123,6 +123,7 @@ bin/gatbps: src/GATBPS_CONFIG_FILE.m4.m4
 bin/gatbps: src/GATBPS_CONFIG_FILE_SUBST.m4.m4
 bin/gatbps: src/Makefile.am.vim.m4
 bin/gatbps: src/gatbps.m4
+bin/gatbps: src/mtvskipbot.texi.m4
 bin/gatbps: src/mtvskiptop.texi.m4
 	$(M4) src/gatbps.m4 >bin/gatbps
 	chmod +x bin/gatbps

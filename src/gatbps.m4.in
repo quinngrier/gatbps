@@ -472,6 +472,7 @@ EOF1
           set "${prefix}prm.texi" "${@AT@}"
           set "${prefix}nequ.texi" "${@AT@}"
           set "${prefix}mtvskiptop.texi" "${@AT@}"
+          set "${prefix}mtvskipbot.texi" "${@AT@}"
           set "${prefix}msign.texi" "${@AT@}"
           set "${prefix}mdots.texi" "${@AT@}"
           set "${prefix}mdot.texi" "${@AT@}"
@@ -1960,6 +1961,30 @@ formats:
       @AT@ifnottex
       @AT@i{x} @AT@msign{} @AT@i{y}
       @AT@end ifnottex
+
+Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
+EOF1
+              case "${?}" in
+              #(
+                '0')
+                  :
+                ;;
+              #(
+                *)
+                  cat >&2 <<EOF1
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and writing to: standard output
+EOF1
+                  exit '1'
+                ;;
+              esac
+            ;;
+
+          #(
+            '--help=mtvskipbot.texi'|'--help='*'/mtvskipbot.texi')
+              cat <<EOF1
+Special file: ${fB1}mtvskipbot.texi${fR1}
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
@@ -8818,6 +8843,32 @@ EOF1
           ;;
 
         #(
+          'no,mtvskipbot.texi'|'no,'*'/mtvskipbot.texi')
+            cat >"${safe_1}" <<'EOF1'
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`src/mtvskipbot.texi.m4')dnl
+{%|EOF1
+            case "${?}" in
+            #(
+              '0')
+                :
+              ;;
+            #(
+              *)
+                cat >&2 <<EOF1
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
+EOF1
+                exit_status='1'
+                break
+              ;;
+            esac
+          ;;
+
+        #(
           'no,mtvskiptop.texi'|'no,'*'/mtvskiptop.texi')
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
@@ -13260,6 +13311,53 @@ EOF1
 s/'/'\\\\\\\\''/g
 1s/^/prefix='/
 \\$s/msign.texi\\$/'/
+" <<EOF1
+${1}
+EOF1
+`
+                case "${?}" in
+                #(
+                  '0')
+                    :
+                  ;;
+                #(
+                  *)
+                    cat >&2 <<EOF1
+${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and writing to: a command substitution
+${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
+EOF1
+                    exit_status='1'
+                    break
+                  ;;
+                esac
+                eval "${x}"
+              ;;
+            esac
+
+            shift
+
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
+
+            set 'x' "${@AT@}"
+
+          ;;
+
+        #(
+          'mtvskipbot.texi'|*'/mtvskipbot.texi')
+
+            case "${1}" in
+            #(
+              'mtvskipbot.texi')
+                prefix=''
+              ;;
+            #(
+              *'/mtvskipbot.texi')
+                x=`"${sed}" "
+s/'/'\\\\\\\\''/g
+1s/^/prefix='/
+\\$s/mtvskipbot.texi\\$/'/
 " <<EOF1
 ${1}
 EOF1
