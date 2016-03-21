@@ -138,11 +138,13 @@ doc/gatbps.txt: doc/gatbps.texi
       $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
       --plaintext -o doc/gatbps.txt doc/gatbps.texi \
     ; \
+    exit $$?; \
   else \
     $(MAKEINFO) \
       $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
       --plaintext -o doc/gatbps.txt $(srcdir)/doc/gatbps.texi \
     ; \
+    exit $$?; \
   fi; \
 }
 
@@ -155,11 +157,13 @@ doc/gatbps.xml: doc/gatbps.texi
       $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
       --docbook -o doc/gatbps.xml doc/gatbps.texi \
     ; \
+    exit $$?; \
   else \
     $(MAKEINFO) \
       $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
       --docbook -o doc/gatbps.xml $(srcdir)/doc/gatbps.texi \
     ; \
+    exit $$?; \
   fi; \
 }
 
@@ -190,6 +194,7 @@ install-docbook: doc/gatbps.xml
       done; \
     ;; \
   esac; \
+  exit 0; \
 }
 
 install-plaintext: doc/gatbps.txt
@@ -213,6 +218,7 @@ install-plaintext: doc/gatbps.txt
       done; \
     ;; \
   esac; \
+  exit 0; \
 }
 
 plaintext: doc/gatbps.txt
@@ -231,6 +237,7 @@ uninstall-docbook:
       done; \
     ;; \
   esac; \
+  exit 0; \
 }
 
 uninstall-plaintext:
@@ -247,6 +254,7 @@ uninstall-plaintext:
       done; \
     ;; \
   esac; \
+  exit 0; \
 }
 
 ## end_rules
