@@ -3067,7 +3067,7 @@ no files are necessarily deleted.
 .SH "PLAIN FILES"
 .SH "MATHEMATICAL NOTATION IN TEXINFO"
 .LP
-A collection of Texinfo macros
+A set of Texinfo macros
 is provided to support a specific approach
 to writing mathematical notation in Texinfo.
 The idea is to write

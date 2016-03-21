@@ -1,7 +1,7 @@
 @node Mathematical Notation in Texinfo
 @chapter Mathematical Notation in Texinfo
 
-A collection of Texinfo macros
+A set of Texinfo macros
 is provided to support a specific approach
 to writing mathematical notation in Texinfo@.
 The idea is to write
