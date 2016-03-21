@@ -110,6 +110,7 @@ plaintextdir = $(docdir)
 .PHONY: uninstall-docbook
 .PHONY: uninstall-plaintext
 
+bin/gatbps: doc/man/gatbps.1.m4
 bin/gatbps: src/GATBPS_ARG_ENABLE_BOOL.m4.m4
 bin/gatbps: src/GATBPS_ARG_WITH_BOOL.m4.m4
 bin/gatbps: src/GATBPS_CHECK_CFLAG.m4.m4

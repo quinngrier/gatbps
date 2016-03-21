@@ -285,6 +285,7 @@ AT='@'
 AC_SUBST([AT])
 
 AC_CONFIG_FILES([Makefile])
+GATBPS_CONFIG_FILE([doc/man/gatbps.1.m4])
 GATBPS_CONFIG_FILE([doc/texi/AWKDEFAULTTEXI.texi])
 GATBPS_CONFIG_FILE([doc/texi/DATE.texi])
 GATBPS_CONFIG_FILE([doc/texi/SEDDEFAULTTEXI.texi])
