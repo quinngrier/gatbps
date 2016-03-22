@@ -69,7 +69,7 @@ which was released on @w{@value{DATE}}@.
 * Invoking @t{troff-form-sh}::
 * Mathematical Notation in Texinfo::
 * Special File Reference::
-* CC0::
+* Creative Commons Zero::
 * Special File Index::
 @end menu
 @end ifnottex
