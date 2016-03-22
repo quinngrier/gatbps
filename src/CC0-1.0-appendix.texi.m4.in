@@ -10,8 +10,8 @@ changequote(`{%|', `|%}')dnl
 @AT@c
 @AT@end ifnotxml
 @AT@end ifxml
-@AT@node CC0
-@AT@appendix The CC0 1.0 Universal Public Domain Dedication
+@AT@node Creative Commons Zero
+@AT@appendix Creative Commons Zero
 
 @AT@quotation
     CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE
