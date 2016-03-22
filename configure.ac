@@ -286,6 +286,7 @@ AC_SUBST([AT])
 
 AC_CONFIG_FILES([Makefile])
 GATBPS_CONFIG_FILE([doc/help/CC0-1.0-appendix.texi.hd.m4])
+GATBPS_CONFIG_FILE([doc/help/CC0-1.0-copying.texi.hd.m4])
 GATBPS_CONFIG_FILE([doc/help/CC0-1.0.txt.hd.m4])
 GATBPS_CONFIG_FILE([doc/man/gatbps.1.m4])
 GATBPS_CONFIG_FILE([doc/texi/AWKDEFAULTTEXI.texi])
