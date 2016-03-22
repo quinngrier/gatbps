@@ -633,9 +633,20 @@ A set of Texinfo macros
 is provided to support a specific approach
 to writing mathematical notation in Texinfo.
 The idea is to write
-each expression in both
-raw TeX and plain Texinfo,
-imitating the former in the latter.
+two versions of each
+mathematical expression:
+one with the
+.nohy "\fB@AT@tex\fR"
+environment and one with the
+.nohy "\fB@AT@ifnottex\fR"
+environment.
+The
+.nohy "\fB@AT@tex\fR"
+version defines the standard
+appearance of the expression,
+and the
+.nohy "\fB@AT@ifnottex\fR"
+version should try to imitate it.
 For example:
 .IP
 .nf

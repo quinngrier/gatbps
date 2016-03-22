@@ -5,9 +5,20 @@ A set of Texinfo macros
 is provided to support a specific approach
 to writing mathematical notation in Texinfo@.
 The idea is to write
-each expression in both
-raw @TeX{} and plain Texinfo,
-imitating the former in the latter@.
+two versions of each
+mathematical expression:
+one with the
+@w{@t{@@tex}}
+environment and one with the
+@w{@t{@@ifnottex}}
+environment@.
+The
+@w{@t{@@tex}}
+version defines the standard
+appearance of the expression,
+and the
+@w{@t{@@ifnottex}}
+version should try to imitate it@.
 For example:
 
 @example
