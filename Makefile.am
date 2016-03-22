@@ -110,6 +110,7 @@ plaintextdir = $(docdir)
 .PHONY: uninstall-docbook
 .PHONY: uninstall-plaintext
 
+bin/gatbps: doc/help/CC0-1.0.txt.hd.m4
 bin/gatbps: doc/man/gatbps.1.m4
 bin/gatbps: src/CC0-1.0-appendix.texi.m4
 bin/gatbps: src/CC0-1.0-copying.texi.m4
