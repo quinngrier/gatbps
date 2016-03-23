@@ -10,6 +10,10 @@ AM_MAKEINFOHTMLFLAGS += --no-split
 AM_TEXI2DVIFLAGS =
 AM_TEXI2DVIFLAGS += -I doc/texi -I $(srcdir)/doc/texi
 
+CLEANFILES =
+CLEANFILES += doc/gatbps.txt
+CLEANFILES += doc/gatbps.xml
+
 DISTCLEANFILES =
 DISTCLEANFILES += $(GATBPS_CONFIG_FILE_FILES)
 
@@ -29,8 +33,6 @@ EXTRA_DIST += build-aux/sh-form.sh
 
 MOSTLYCLEANFILES =
 MOSTLYCLEANFILES += bin/gatbps
-MOSTLYCLEANFILES += doc/gatbps.txt
-MOSTLYCLEANFILES += doc/gatbps.xml
 MOSTLYCLEANFILES += doc/man/gatbps.1
 
 TEXI2DVI = texi2dvi $(AM_TEXI2DVIFLAGS) $(TEXI2DVIFLAGS)
