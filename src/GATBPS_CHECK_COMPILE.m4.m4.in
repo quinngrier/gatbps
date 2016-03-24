@@ -26,6 +26,11 @@ AC_DEFUN([GATBPS_CHECK_COMPILE], [{ :
     [gatbps_cv_$2],
     [{ :
 
+      #
+      # This is the AC_CACHE_CHECK code that only runs if the cache
+      # variable is not cached.
+      #
+
       $2_was_cached='no'
 
       gatbps_x='yes'
