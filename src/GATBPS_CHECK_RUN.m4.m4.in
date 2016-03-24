@@ -14,9 +14,9 @@ dnl
 AC_DEFUN([GATBPS_CHECK_RUN], [{ :
 
   #
-  # We initialize this variable to 'yes' here and set it to 'no' in the
-  # AC_CACHE_CHECK code below, which only runs if the cache variable is
-  # not in the cache.
+  # The following variable starts off as 'yes' and is updated to 'no' in
+  # the AC_CACHE_CHECK code below, which only runs if the cache variable
+  # is not cached.
   #
 
   $2_was_cached='yes'
