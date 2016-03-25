@@ -308,6 +308,7 @@ GATBPS_CONFIG_FILE([src/Makefile.am.vim.m4])
 GATBPS_CONFIG_FILE([src/gatbps.m4])
 GATBPS_CONFIG_FILE([src/mtvskipbot.texi.m4])
 GATBPS_CONFIG_FILE([src/mtvskiptop.texi.m4])
+GATBPS_CONFIG_FILE([src/tools/PACKAGE_DATE.m4])
 
 GATBPS_CONFIG_FILE_SUBST
 
