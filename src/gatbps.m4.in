@@ -3937,7 +3937,7 @@ EOF1
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
 changequote({%|`|%}, {%|'|%})dnl
-include(`src/CC0-1.0-appendix.texi.m4')dnl
+include(`src/files/CC0-1.0-appendix.texi.m4')dnl
 {%|EOF1
             case "${?}" in
             #(
@@ -3995,7 +3995,7 @@ EOF1
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
 changequote({%|`|%}, {%|'|%})dnl
-include(`src/CC0-1.0-copying.texi.m4')dnl
+include(`src/files/CC0-1.0-copying.texi.m4')dnl
 {%|EOF1
             case "${?}" in
             #(
@@ -4340,7 +4340,7 @@ EOF1
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
 changequote({%|`|%}, {%|'|%})dnl
-include(`src/Makefile.am.vim.m4')dnl
+include(`src/files/Makefile.am.vim.m4')dnl
 {%|EOF1
             case "${?}" in
             #(
@@ -4366,7 +4366,7 @@ EOF1
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
 changequote({%|`|%}, {%|'|%})dnl
-include(`src/GATBPS_ARG_ENABLE_BOOL.m4.m4')dnl
+include(`src/files/GATBPS_ARG_ENABLE_BOOL.m4.m4')dnl
 {%|EOF1
             case "${?}" in
             #(
@@ -4392,7 +4392,7 @@ EOF1
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
 changequote({%|`|%}, {%|'|%})dnl
-include(`src/GATBPS_ARG_WITH_BOOL.m4.m4')dnl
+include(`src/files/GATBPS_ARG_WITH_BOOL.m4.m4')dnl
 {%|EOF1
             case "${?}" in
             #(
@@ -4418,7 +4418,7 @@ EOF1
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
 changequote({%|`|%}, {%|'|%})dnl
-include(`src/GATBPS_CHECK_CFLAG.m4.m4')dnl
+include(`src/files/GATBPS_CHECK_CFLAG.m4.m4')dnl
 {%|EOF1
             case "${?}" in
             #(
@@ -4444,7 +4444,7 @@ EOF1
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
 changequote({%|`|%}, {%|'|%})dnl
-include(`src/GATBPS_CHECK_COMPILE.m4.m4')dnl
+include(`src/files/GATBPS_CHECK_COMPILE.m4.m4')dnl
 {%|EOF1
             case "${?}" in
             #(
@@ -4470,7 +4470,7 @@ EOF1
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
 changequote({%|`|%}, {%|'|%})dnl
-include(`src/GATBPS_CHECK_HEADER.m4.m4')dnl
+include(`src/files/GATBPS_CHECK_HEADER.m4.m4')dnl
 {%|EOF1
             case "${?}" in
             #(
@@ -4496,7 +4496,7 @@ EOF1
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
 changequote({%|`|%}, {%|'|%})dnl
-include(`src/GATBPS_CHECK_LIB.m4.m4')dnl
+include(`src/files/GATBPS_CHECK_LIB.m4.m4')dnl
 {%|EOF1
             case "${?}" in
             #(
@@ -4522,7 +4522,7 @@ EOF1
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
 changequote({%|`|%}, {%|'|%})dnl
-include(`src/GATBPS_CHECK_LINK.m4.m4')dnl
+include(`src/files/GATBPS_CHECK_LINK.m4.m4')dnl
 {%|EOF1
             case "${?}" in
             #(
@@ -4548,7 +4548,7 @@ EOF1
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
 changequote({%|`|%}, {%|'|%})dnl
-include(`src/GATBPS_CHECK_RUN.m4.m4')dnl
+include(`src/files/GATBPS_CHECK_RUN.m4.m4')dnl
 {%|EOF1
             case "${?}" in
             #(
@@ -4574,7 +4574,7 @@ EOF1
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
 changequote({%|`|%}, {%|'|%})dnl
-include(`src/GATBPS_CHECK_VARS.m4.m4')dnl
+include(`src/files/GATBPS_CHECK_VARS.m4.m4')dnl
 {%|EOF1
             case "${?}" in
             #(
@@ -4600,7 +4600,7 @@ EOF1
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
 changequote({%|`|%}, {%|'|%})dnl
-include(`src/GATBPS_CONFIG_FILE.m4.m4')dnl
+include(`src/files/GATBPS_CONFIG_FILE.m4.m4')dnl
 {%|EOF1
             case "${?}" in
             #(
@@ -4626,7 +4626,7 @@ EOF1
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
 changequote({%|`|%}, {%|'|%})dnl
-include(`src/GATBPS_CONFIG_FILE_SUBST.m4.m4')dnl
+include(`src/files/GATBPS_CONFIG_FILE_SUBST.m4.m4')dnl
 {%|EOF1
             case "${?}" in
             #(
@@ -7180,7 +7180,7 @@ EOF1
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
 changequote({%|`|%}, {%|'|%})dnl
-include(`src/mtvskipbot.texi.m4')dnl
+include(`src/files/mtvskipbot.texi.m4')dnl
 {%|EOF1
             case "${?}" in
             #(
@@ -7206,7 +7206,7 @@ EOF1
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
 changequote({%|`|%}, {%|'|%})dnl
-include(`src/mtvskiptop.texi.m4')dnl
+include(`src/files/mtvskiptop.texi.m4')dnl
 {%|EOF1
             case "${?}" in
             #(

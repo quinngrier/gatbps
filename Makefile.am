@@ -116,23 +116,23 @@ bin/gatbps: doc/help/CC0-1.0-appendix.texi.hd.m4
 bin/gatbps: doc/help/CC0-1.0-copying.texi.hd.m4
 bin/gatbps: doc/help/CC0-1.0.txt.hd.m4
 bin/gatbps: doc/man/gatbps.1.m4
-bin/gatbps: src/CC0-1.0-appendix.texi.m4
-bin/gatbps: src/CC0-1.0-copying.texi.m4
-bin/gatbps: src/GATBPS_ARG_ENABLE_BOOL.m4.m4
-bin/gatbps: src/GATBPS_ARG_WITH_BOOL.m4.m4
-bin/gatbps: src/GATBPS_CHECK_CFLAG.m4.m4
-bin/gatbps: src/GATBPS_CHECK_COMPILE.m4.m4
-bin/gatbps: src/GATBPS_CHECK_HEADER.m4.m4
-bin/gatbps: src/GATBPS_CHECK_LIB.m4.m4
-bin/gatbps: src/GATBPS_CHECK_LINK.m4.m4
-bin/gatbps: src/GATBPS_CHECK_RUN.m4.m4
-bin/gatbps: src/GATBPS_CHECK_VARS.m4.m4
-bin/gatbps: src/GATBPS_CONFIG_FILE.m4.m4
-bin/gatbps: src/GATBPS_CONFIG_FILE_SUBST.m4.m4
-bin/gatbps: src/Makefile.am.vim.m4
+bin/gatbps: src/files/CC0-1.0-appendix.texi.m4
+bin/gatbps: src/files/CC0-1.0-copying.texi.m4
+bin/gatbps: src/files/GATBPS_ARG_ENABLE_BOOL.m4.m4
+bin/gatbps: src/files/GATBPS_ARG_WITH_BOOL.m4.m4
+bin/gatbps: src/files/GATBPS_CHECK_CFLAG.m4.m4
+bin/gatbps: src/files/GATBPS_CHECK_COMPILE.m4.m4
+bin/gatbps: src/files/GATBPS_CHECK_HEADER.m4.m4
+bin/gatbps: src/files/GATBPS_CHECK_LIB.m4.m4
+bin/gatbps: src/files/GATBPS_CHECK_LINK.m4.m4
+bin/gatbps: src/files/GATBPS_CHECK_RUN.m4.m4
+bin/gatbps: src/files/GATBPS_CHECK_VARS.m4.m4
+bin/gatbps: src/files/GATBPS_CONFIG_FILE.m4.m4
+bin/gatbps: src/files/GATBPS_CONFIG_FILE_SUBST.m4.m4
+bin/gatbps: src/files/Makefile.am.vim.m4
 bin/gatbps: src/gatbps.m4
-bin/gatbps: src/mtvskipbot.texi.m4
-bin/gatbps: src/mtvskiptop.texi.m4
+bin/gatbps: src/files/mtvskipbot.texi.m4
+bin/gatbps: src/files/mtvskiptop.texi.m4
 	$(M4) src/gatbps.m4 >bin/gatbps
 	chmod +x bin/gatbps
 
