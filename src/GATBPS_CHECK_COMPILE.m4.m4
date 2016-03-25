@@ -1,7 +1,7 @@
 changecom`'dnl
 changequote(`{%|', `|%}')dnl
-include({%|src/tools/header.m4|%})dnl
-header({%|dnl|%}, {%|dnl|%}){%|
+include({%|src/tools/header_comment.m4|%})dnl
+header_comment({%|dnl|%}, {%|dnl|%}){%|
 dnl
 dnl Special file: GATBPS_CHECK_COMPILE.m4
 dnl
