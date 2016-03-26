@@ -182,7 +182,7 @@ docbook: doc/gatbps.xml
 
 install-docbook: doc/gatbps.xml
 	@$(NORMAL_INSTALL)
-	@: #(
+	@-: #(
 	@{ :; \
   case ''$(docbookdir) in \
     ?*) \
@@ -206,7 +206,7 @@ install-docbook: doc/gatbps.xml
 
 install-plaintext: doc/gatbps.txt
 	@$(NORMAL_INSTALL)
-	@: #(
+	@-: #(
 	@{ :; \
   case ''$(plaintextdir) in \
     ?*) \
@@ -232,7 +232,7 @@ plaintext: doc/gatbps.txt
 
 uninstall-docbook:
 	@$(NORMAL_UNINSTALL)
-	@: #(
+	@-: #(
 	@{ :; \
   case ''$(docbookdir) in \
     ?*) \
@@ -249,7 +249,7 @@ uninstall-docbook:
 
 uninstall-plaintext:
 	@$(NORMAL_UNINSTALL)
-	@: #(
+	@-: #(
 	@{ :; \
   case ''$(plaintextdir) in \
     ?*) \
