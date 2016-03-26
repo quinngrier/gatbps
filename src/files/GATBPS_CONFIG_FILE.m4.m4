@@ -78,12 +78,12 @@ AC_DEFUN([GATBPS_CONFIG_FILE], [{ :
       GATBPS_CONFIG_FILE_RULES="$[]{GATBPS_CONFIG_FILE_RULES}"'
 
 gatbps_output: gatbps_output[]gatbps_suffix
-	@:'
+	@-:'
     ;;
   #(
     *)
       GATBPS_CONFIG_FILE_RULES='gatbps_output: gatbps_output[]gatbps_suffix
-	@:'
+	@-:'
     ;;
   esac
 
