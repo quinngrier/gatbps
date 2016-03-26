@@ -16,21 +16,11 @@ AC_DEFUN([GATBPS_ARG_WITH_BOOL], [{ :
   AC_ARG_WITH(
     [$3],
     [
-AS_HELP_STRING(
-  [--with-$3 omitted],
-  [same as --with-$3=$4])
-AS_HELP_STRING(
-  [--with-$3],
-  [same as --with-$3=yes])
-AS_HELP_STRING(
-  [--without-$3],
-  [same as --with-$3=no])
-AS_HELP_STRING(
-  [--with-$3=yes],
-  [$5])
-AS_HELP_STRING(
-  [--with-$3=no],
-  [$6])],
+AS_HELP_STRING([--with-$3 omitted], [same as --with-$3=$4])
+AS_HELP_STRING([--with-$3], [same as --with-$3=yes])
+AS_HELP_STRING([--without-$3], [same as --with-$3=no])
+AS_HELP_STRING([--with-$3=yes], [$5])
+AS_HELP_STRING([--with-$3=no], [$6])],
     [{ :
     }],
     [{ :

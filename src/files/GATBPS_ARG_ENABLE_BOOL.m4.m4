@@ -16,21 +16,11 @@ AC_DEFUN([GATBPS_ARG_ENABLE_BOOL], [{ :
   AC_ARG_ENABLE(
     [$3],
     [
-AS_HELP_STRING(
-  [--enable-$3 omitted],
-  [same as --enable-$3=$4])
-AS_HELP_STRING(
-  [--enable-$3],
-  [same as --enable-$3=yes])
-AS_HELP_STRING(
-  [--disable-$3],
-  [same as --enable-$3=no])
-AS_HELP_STRING(
-  [--enable-$3=yes],
-  [$5])
-AS_HELP_STRING(
-  [--enable-$3=no],
-  [$6])],
+AS_HELP_STRING([--enable-$3 omitted], [same as --enable-$3=$4])
+AS_HELP_STRING([--enable-$3], [same as --enable-$3=yes])
+AS_HELP_STRING([--disable-$3], [same as --enable-$3=no])
+AS_HELP_STRING([--enable-$3=yes], [$5])
+AS_HELP_STRING([--enable-$3=no], [$6])],
     [{ :
     }],
     [{ :
