@@ -32,10 +32,8 @@ AS_HELP_STRING(
   [--with-$3=no],
   [$6])],
     [{ :
-      ]gatbps_with_var[_was_given='yes'
     }],
     [{ :
-      ]gatbps_with_var[_was_given='no'
       ]gatbps_with_var[='$4'
     }])
 
@@ -63,16 +61,7 @@ AS_HELP_STRING(
     ;;
   #(
     'no')
-      case "$[]{gatbps_with_var[]_was_given}" in
-      #(
-        'yes')
-          AC_MSG_NOTICE([note: --with-$3=$[]{]gatbps_with_var[} was given])
-        ;;
-      #(
-        'no')
-          AC_MSG_NOTICE([note: --with-$3 was omitted])
-        ;;
-      esac
+      AC_MSG_NOTICE([note: --with-$3=$[]{]gatbps_with_var[} was given])
     ;;
   esac
 
