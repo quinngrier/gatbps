@@ -188,9 +188,9 @@ install-docbook: doc/gatbps.xml
     ?*) \
       echo " $(MKDIR_P) '$(DESTDIR)$(docbookdir)'"; \
       $(MKDIR_P) $(DESTDIR)$(docbookdir) || exit $$?; \
-      list=; \
-      list="$$list doc/gatbps.xml"; \
-      for x in $$list; do \
+      for x in \
+        doc/gatbps.xml \
+      ; do \
         if test -f $$x; then \
           y=$$x; \
         else \
@@ -212,9 +212,9 @@ install-plaintext: doc/gatbps.txt
     ?*) \
       echo " $(MKDIR_P) '$(DESTDIR)$(plaintextdir)'"; \
       $(MKDIR_P) $(DESTDIR)$(plaintextdir) || exit $$?; \
-      list=; \
-      list="$$list doc/gatbps.txt"; \
-      for x in $$list; do \
+      for x in \
+        doc/gatbps.txt \
+      ; do \
         if test -f $$x; then \
           y=$$x; \
         else \
@@ -236,9 +236,9 @@ uninstall-docbook:
 	@{ :; \
   case ''$(docbookdir) in \
     ?*) \
-      list=; \
-      list="$$list gatbps.xml"; \
-      for x in $$list; do \
+      for x in \
+        gatbps.xml \
+      ; do \
         echo " rm -f '$(DESTDIR)$(docbookdir)/$$x'"; \
         rm -f $(DESTDIR)$(docbookdir)/$$x; \
       done; \
@@ -253,9 +253,9 @@ uninstall-plaintext:
 	@{ :; \
   case ''$(plaintextdir) in \
     ?*) \
-      list=; \
-      list="$$list gatbps.txt"; \
-      for x in $$list; do \
+      for x in \
+        gatbps.txt \
+      ; do \
         echo " rm -f '$(DESTDIR)$(plaintextdir)/$$x'"; \
         rm -f $(DESTDIR)$(plaintextdir)/$$x; \
       done; \
