@@ -141,13 +141,13 @@ doc/gatbps.txt: doc/gatbps.texi
 	$(AM_V_MAKEINFO)$(MKDIR_P) doc
 	$(AM_V_at){ :; \
   if test -f doc/gatbps.texi; then \
-    x=; \
+    x=doc/gatbps.texi; \
   else \
-    x=$(srcdir)/; \
+    x=$(srcdir)/doc/gatbps.texi; \
   fi; \
   $(MAKEINFO) \
     $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
-    --plaintext -o doc/gatbps.txt $${x}doc/gatbps.texi \
+    --plaintext -o doc/gatbps.txt $$x \
   ; \
   exit $$?; \
 }
@@ -157,13 +157,13 @@ doc/gatbps.xml: doc/gatbps.texi
 	$(AM_V_MAKEINFO)$(MKDIR_P) doc
 	$(AM_V_at){ :; \
   if test -f doc/gatbps.texi; then \
-    x=; \
+    x=doc/gatbps.texi; \
   else \
-    x=$(srcdir)/; \
+    x=$(srcdir)/doc/gatbps.texi; \
   fi; \
   $(MAKEINFO) \
     $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
-    --docbook -o doc/gatbps.xml $${x}doc/gatbps.texi \
+    --docbook -o doc/gatbps.xml $$x \
   ; \
   exit $$?; \
 }
