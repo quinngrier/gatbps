@@ -182,17 +182,13 @@ install-docbook: doc/gatbps.xml
     ?*) \
       echo " $(MKDIR_P) '$(DESTDIR)$(docbookdir)'"; \
       $(MKDIR_P) $(DESTDIR)$(docbookdir) || exit $$?; \
-      for x in \
-        doc/gatbps.xml \
-      ; do \
-        if test -f $$x; then \
-          y=$$x; \
-        else \
-          y=$(srcdir)/$$x; \
-        fi; \
-        echo " $(INSTALL_DATA) $$y '$(DESTDIR)$(docbookdir)'"; \
-        $(INSTALL_DATA) $$y $(DESTDIR)$(docbookdir) || exit $$?; \
-      done; \
+      if test -f doc/gatbps.xml; then \
+        x=doc/gatbps.xml; \
+      else \
+        x=$(srcdir)/doc/gatbps.xml; \
+      fi; \
+      echo " $(INSTALL_DATA) $$x '$(DESTDIR)$(docbookdir)'"; \
+      $(INSTALL_DATA) $$x $(DESTDIR)$(docbookdir) || exit $$?; \
     ;; \
   esac; \
   exit 0; \
@@ -206,17 +202,13 @@ install-plaintext: doc/gatbps.txt
     ?*) \
       echo " $(MKDIR_P) '$(DESTDIR)$(plaintextdir)'"; \
       $(MKDIR_P) $(DESTDIR)$(plaintextdir) || exit $$?; \
-      for x in \
-        doc/gatbps.txt \
-      ; do \
-        if test -f $$x; then \
-          y=$$x; \
-        else \
-          y=$(srcdir)/$$x; \
-        fi; \
-        echo " $(INSTALL_DATA) $$y '$(DESTDIR)$(plaintextdir)'"; \
-        $(INSTALL_DATA) $$y $(DESTDIR)$(plaintextdir) || exit $$?; \
-      done; \
+      if test -f doc/gatbps.txt; then \
+        x=doc/gatbps.txt; \
+      else \
+        x=$(srcdir)/doc/gatbps.txt; \
+      fi; \
+      echo " $(INSTALL_DATA) $$x '$(DESTDIR)$(plaintextdir)'"; \
+      $(INSTALL_DATA) $$x $(DESTDIR)$(plaintextdir) || exit $$?; \
     ;; \
   esac; \
   exit 0; \
@@ -230,12 +222,8 @@ uninstall-docbook:
 	@{ :; \
   case ''$(docbookdir) in \
     ?*) \
-      for x in \
-        gatbps.xml \
-      ; do \
-        echo " rm -f '$(DESTDIR)$(docbookdir)/$$x'"; \
-        rm -f $(DESTDIR)$(docbookdir)/$$x; \
-      done; \
+      echo " rm -f '$(DESTDIR)$(docbookdir)/gatbps.xml'"; \
+      rm -f $(DESTDIR)$(docbookdir)/gatbps.xml; \
     ;; \
   esac; \
   exit 0; \
@@ -247,12 +235,8 @@ uninstall-plaintext:
 	@{ :; \
   case ''$(plaintextdir) in \
     ?*) \
-      for x in \
-        gatbps.txt \
-      ; do \
-        echo " rm -f '$(DESTDIR)$(plaintextdir)/$$x'"; \
-        rm -f $(DESTDIR)$(plaintextdir)/$$x; \
-      done; \
+      echo " rm -f '$(DESTDIR)$(plaintextdir)/gatbps.txt'"; \
+      rm -f $(DESTDIR)$(plaintextdir)/gatbps.txt; \
     ;; \
   esac; \
   exit 0; \
