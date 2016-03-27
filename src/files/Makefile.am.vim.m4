@@ -8,6 +8,8 @@ header_comment({%|"|%}, {%|"|%}){%|
 " For more information, see the GATBPS manual.
 "
 
+let s:view = winsaveview()
+
 let s:s1 = '\m^## begin_variables$'
 let s:s2 = '\m^## end_variables$'
 
@@ -15,6 +17,7 @@ call cursor(1, 1)
 let s:n1 = search(s:s1, 'cW')
 if s:n1 != 0 && search(s:s1, 'W') != 0
   echoerr '''' . s:s1 . ''' appears twice'
+  call winrestview(s:view)
   finish
 endif
 
@@ -22,21 +25,25 @@ call cursor(1, 1)
 let s:n2 = search(s:s2, 'cW')
 if s:n2 != 0 && search(s:s2, 'W') != 0
   echoerr '''' . s:s2 . ''' appears twice'
+  call winrestview(s:view)
   finish
 endif
 
 if s:n1 != 0 && s:n2 == 0
   echoerr '''' . s:s1 . ''' appears without ''' . s:s2 . ''''
+  call winrestview(s:view)
   finish
 endif
 
 if s:n1 == 0 && s:n2 != 0
   echoerr '''' . s:s2 . ''' appears without ''' . s:s1 . ''''
+  call winrestview(s:view)
   finish
 endif
 
 if s:n1 != 0 && s:n2 != 0 && s:n1 > s:n2
   echoerr '''' . s:s1 . ''' appears after ''' . s:s2 . ''''
+  call winrestview(s:view)
   finish
 endif
 
@@ -59,6 +66,7 @@ call cursor(1, 1)
 let s:n1 = search(s:s1, 'cW')
 if s:n1 != 0 && search(s:s1, 'W') != 0
   echoerr '''' . s:s1 . ''' appears twice'
+  call winrestview(s:view)
   finish
 endif
 
@@ -66,21 +74,25 @@ call cursor(1, 1)
 let s:n2 = search(s:s2, 'cW')
 if s:n2 != 0 && search(s:s2, 'W') != 0
   echoerr '''' . s:s2 . ''' appears twice'
+  call winrestview(s:view)
   finish
 endif
 
 if s:n1 != 0 && s:n2 == 0
   echoerr '''' . s:s1 . ''' appears without ''' . s:s2 . ''''
+  call winrestview(s:view)
   finish
 endif
 
 if s:n1 == 0 && s:n2 != 0
   echoerr '''' . s:s2 . ''' appears without ''' . s:s1 . ''''
+  call winrestview(s:view)
   finish
 endif
 
 if s:n1 != 0 && s:n2 != 0 && s:n1 > s:n2
   echoerr '''' . s:s1 . ''' appears after ''' . s:s2 . ''''
+  call winrestview(s:view)
   finish
 endif
 
@@ -95,6 +107,8 @@ if s:n1 != 0 && s:n2 != 0
   /\m^## begin_rules$/+1,/\m^## end_rules$/-1s/\m\b/\r/eg
   /\m^## begin_rules$/,/\m^## end_rules$/-2g/\m^$/.+1,/\m^\($\|\t\)/-1sort u
 endif
+
+call winrestview(s:view)
 
 "
 " The authors of this file have waived all copyright and
