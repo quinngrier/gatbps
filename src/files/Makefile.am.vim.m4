@@ -8,8 +8,8 @@ header_comment({%|"|%}, {%|"|%}){%|
 " For more information, see the GATBPS manual.
 "
 
-let s:s1 = '^## begin_variables$'
-let s:s2 = '^## end_variables$'
+let s:s1 = '\m^## begin_variables$'
+let s:s2 = '\m^## end_variables$'
 
 call cursor(1, 1)
 let s:n1 = search(s:s1, 'cW')
@@ -42,20 +42,20 @@ if s:n1 != 0 && s:n2 != 0
     finish
   endif
 
-:%sm/^## begin_variables$/&\r/
-:%sm/^## end_variables$/\r&/
-:/^## begin_variables$/+1,/^## end_variables$/-1g/./s/$/\b/
-:/^## begin_variables$/+1,/^## end_variables$/-2g/^\n./.+1,/^$/-1j!
-:/^## begin_variables$/+1,/^## end_variables$/-1g/^$/d
-:%sm/^## begin_variables$/&\r/
-:/^## begin_variables$/+1,/^## end_variables$/-1sort
-:/^## begin_variables$/+1,/^## end_variables$/-1s/\b/\r/eg
-:/^## begin_variables$/+1,/^## end_variables$/-1g/+=/.,/^$/-1sort u
+:%sm/\m^## begin_variables$/&\r/
+:%sm/\m^## end_variables$/\r&/
+:/\m^## begin_variables$/+1,/\m^## end_variables$/-1g/\m./s/\m$/\b/
+:/\m^## begin_variables$/+1,/\m^## end_variables$/-2g/\m^\n./.+1,/\m^$/-1j!
+:/\m^## begin_variables$/+1,/\m^## end_variables$/-1g/\m^$/d
+:%sm/\m^## begin_variables$/&\r/
+:/\m^## begin_variables$/+1,/\m^## end_variables$/-1sort
+:/\m^## begin_variables$/+1,/\m^## end_variables$/-1s/\m\b/\r/eg
+:/\m^## begin_variables$/+1,/\m^## end_variables$/-1g/\m+=/.,/\m^$/-1sort u
 
 endif
 
-let s:s1 = '^## begin_rules$'
-let s:s2 = '^## end_rules$'
+let s:s1 = '\m^## begin_rules$'
+let s:s2 = '\m^## end_rules$'
 
 call cursor(1, 1)
 let s:n1 = search(s:s1, 'cW')
@@ -88,15 +88,15 @@ if s:n1 != 0 && s:n2 != 0
     finish
   endif
 
-:%sm/^## begin_rules$/&\r/
-:%sm/^## end_rules$/\r&/
-:/^## begin_rules$/+1,/^## end_rules$/-1g/./s/$/\b/
-:/^## begin_rules$/+1,/^## end_rules$/-2g/^\n./.+1,/^$/-1j!
-:/^## begin_rules$/+1,/^## end_rules$/-1g/^$/d
-:%sm/^## begin_rules$/&\r/
-:/^## begin_rules$/+1,/^## end_rules$/-1sort
-:/^## begin_rules$/+1,/^## end_rules$/-1s/\b/\r/eg
-:/^## begin_rules$/,/^## end_rules$/-2g/^$/.+1,/^\($\|\t\)/-1sort u
+:%sm/\m^## begin_rules$/&\r/
+:%sm/\m^## end_rules$/\r&/
+:/\m^## begin_rules$/+1,/\m^## end_rules$/-1g/\m./s/\m$/\b/
+:/\m^## begin_rules$/+1,/\m^## end_rules$/-2g/\m^\n./.+1,/\m^$/-1j!
+:/\m^## begin_rules$/+1,/\m^## end_rules$/-1g/\m^$/d
+:%sm/\m^## begin_rules$/&\r/
+:/\m^## begin_rules$/+1,/\m^## end_rules$/-1sort
+:/\m^## begin_rules$/+1,/\m^## end_rules$/-1s/\m\b/\r/eg
+:/\m^## begin_rules$/,/\m^## end_rules$/-2g/\m^$/.+1,/\m^\($\|\t\)/-1sort u
 
 endif
 
