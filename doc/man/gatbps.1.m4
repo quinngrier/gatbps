@@ -1,5 +1,10 @@
 changecom`'dnl
 changequote(`{%|', `|%}')dnl
+include({%|src/tools/AWK_DEFAULT_TROFF.m4|%})dnl
+include({%|src/tools/PACKAGE_DATE_TROFF.m4|%})dnl
+include({%|src/tools/PACKAGE_VERSION.m4|%})dnl
+include({%|src/tools/SED_DEFAULT_TROFF.m4|%})dnl
+include({%|src/tools/TEXI2ANY_DEFAULT_TROFF.m4|%})dnl
 {%|.de nohy
 .nh
 \\$1
@@ -16,7 +21,7 @@ changequote(`{%|', `|%}')dnl
 .PD
 ..
 .hy
-.TH "gatbps" "1" "@PACKAGE_DATE_TROFF@" "GATBPS @PACKAGE_VERSION@"
+.TH "gatbps" "1" "|%}PACKAGE_DATE_TROFF{%|" "GATBPS |%}PACKAGE_VERSION{%|"
 .SH "NAME"
 .LP
 \fBgatbps\fR \- generate basic files for software packages
@@ -165,7 +170,7 @@ The copy of the
 program that corresponds
 to this copy of the manual page
 behaves as if an instance of the
-.nohy "\fB\-\-awk=@AWK_DEFAULT_TROFF@\fR"
+.nohy "\fB\-\-awk=|%}AWK_DEFAULT_TROFF{%|\fR"
 option were added to the
 arguments at a position that
 lies before all original arguments
@@ -282,7 +287,7 @@ The copy of the
 program that corresponds
 to this copy of the manual page
 behaves as if an instance of the
-.nohy "\fB\-\-sed=@SED_DEFAULT_TROFF@\fR"
+.nohy "\fB\-\-sed=|%}SED_DEFAULT_TROFF{%|\fR"
 option were added to the
 arguments at a position that
 lies before all original arguments
@@ -387,7 +392,7 @@ The copy of the
 program that corresponds
 to this copy of the manual page
 behaves as if an instance of the
-.nohy "\fB\-\-texi2any=@TEXI2ANY_DEFAULT_TROFF@\fR"
+.nohy "\fB\-\-texi2any=|%}TEXI2ANY_DEFAULT_TROFF{%|\fR"
 option were added to the
 arguments at a position that
 lies before all original arguments
@@ -636,33 +641,33 @@ The idea is to write
 two versions of each
 mathematical expression:
 one with the
-.nohy "\fB@AT@tex\fR"
+.nohy "\fB@tex\fR"
 environment and one with the
-.nohy "\fB@AT@ifnottex\fR"
+.nohy "\fB@ifnottex\fR"
 environment.
 The
-.nohy "\fB@AT@tex\fR"
+.nohy "\fB@tex\fR"
 version defines the standard
 appearance of the expression,
 and the
-.nohy "\fB@AT@ifnottex\fR"
+.nohy "\fB@ifnottex\fR"
 version should try to imitate it.
 For example:
 .IP
 .nf
-@AT@tex
+@tex
 $x\ +\ y$
-@AT@end\ tex
-@AT@ifnottex
-@AT@i{x}\ +\ @AT@i{y}
-@AT@end\ ifnottex
+@end\ tex
+@ifnottex
+@i{x}\ +\ @i{y}
+@end\ ifnottex
 .fi
 .LP
 The macros are then used in the
-.nohy "\fB@AT@ifnottex\fR"
+.nohy "\fB@ifnottex\fR"
 block to imitate various features of TeX.
 For example, the
-.nohy "\fB@AT@mdot\fR"
+.nohy "\fB@mdot\fR"
 macro imitates the
 .nohy "\fB\ecdot\fR"
 control sequence.
@@ -672,7 +677,7 @@ Texinfo commands and TeX control sequences,
 as recommended by the Texinfo manual.
 .LP
 Each macro
-.nohy "\fB@AT@\fIM\fR"
+.nohy "\fB@\fIM\fR"
 is defined by the
 .nohy "\fIM\fB.texi\fR"
 special file, which also uses the
@@ -682,7 +687,7 @@ that including the special file
 multiple times is equivalent to
 including it only the first time.
 For example, the
-.nohy "\fB@AT@mdot\fR"
+.nohy "\fB@mdot\fR"
 macro is defined by the
 .nohy "\fBmdot.texi\fR"
 special file, which also uses the
@@ -708,7 +713,7 @@ alternatives in all output formats if the
 .nohy "\fBinsertascii\fR"
 flag is set at their points of inclusion.
 For example, the
-.nohy "\fB@AT@mdot\fR"
+.nohy "\fB@mdot\fR"
 macro inserts a UTF-8
 dot operator character in
 Info and plain text and an
@@ -722,7 +727,7 @@ character in all output formats if the
 flag is set at its point of inclusion.
 .LP
 In Docbook, HTML, and XML, the macros use the
-.nohy "\fB@AT@inlineraw\fR"
+.nohy "\fB@inlineraw\fR"
 command to insert
 numeric character references.
 This command was
@@ -749,30 +754,30 @@ flag is set at its point of inclusion.
 tab( );
 l l l l .
 TeX Macro Unicode ASCII
-' @AT@prm{} U+2032 '
-\- @AT@msign{} U+2212 \-
-/ @AT@dslash{} U+2215 /
-\ecdot @AT@mdot{} U+22C5 *
-\ecdots @AT@mdots{} U+22EF ...
-\ege @AT@gequ{} U+2265 >=
-\elceil @AT@lcei{} U+2308 ceil(
+' @prm{} U+2032 '
+\- @msign{} U+2212 \-
+/ @dslash{} U+2215 /
+\ecdot @mdot{} U+22C5 *
+\ecdots @mdots{} U+22EF ...
+\ege @gequ{} U+2265 >=
+\elceil @lcei{} U+2308 ceil(
 .\" )
-\eldots @AT@bdots{} U+2026 ...
-\ele @AT@lequ{} U+2264 <=
-\elfloor @AT@lflo{} U+230A floor(
+\eldots @bdots{} U+2026 ...
+\ele @lequ{} U+2264 <=
+\elfloor @lflo{} U+230A floor(
 .\" )
-\ene @AT@nequ{} U+2260 !=
+\ene @nequ{} U+2260 !=
 .\" (
-\erceil @AT@rcei{} U+2309 )
+\erceil @rcei{} U+2309 )
 .\" (
-\erfloor @AT@rflo{} U+230B )
-\erightarrow @AT@rarrow{} U+2192 \->
+\erfloor @rflo{} U+230B )
+\erightarrow @rarrow{} U+2192 \->
 .TE
 .LP
 The
-.nohy "\fB@AT@sps{\fIL\fB,\ \fIS\fB,\ \fIR\fB}\fR"
+.nohy "\fB@sps{\fIL\fB,\ \fIS\fB,\ \fIR\fB}\fR"
 and
-.nohy "\fB@AT@sbs{\fIL\fB,\ \fIS\fB,\ \fIR\fB}\fR"
+.nohy "\fB@sbs{\fIL\fB,\ \fIS\fB,\ \fIR\fB}\fR"
 macros are provided for inserting
 .nohy "\fIS\fR"
 as a superscript or subscript.
@@ -824,20 +829,20 @@ For example, the following code produces
 in Info and plain text:
 .IP
 .nf
-@AT@tex
+@tex
 $x^{y\ +\ z_w}$
-@AT@end\ tex
-@AT@ifnottex
-@AT@i{x}@AT@sps{(,\ @AT@i{y}\ +\ @AT@i{z}@AT@sbs{,\ @AT@i{w},\ },\ )}
-@AT@end\ ifnottex
+@end\ tex
+@ifnottex
+@i{x}@sps{(,\ @i{y}\ +\ @i{z}@sbs{,\ @i{w},\ },\ )}
+@end\ ifnottex
 .fi
 .LP
 In Docbook, HTML, and XML, the
-.nohy "\fB@AT@sps\fR"
+.nohy "\fB@sps\fR"
 and
-.nohy "\fB@AT@sbs\fR"
+.nohy "\fB@sbs\fR"
 macros use the
-.nohy "\fB@AT@inlineraw\fR"
+.nohy "\fB@inlineraw\fR"
 command to insert
 superscript and subscript elements.
 This command was
@@ -913,11 +918,11 @@ special file is the same as the
 special file but formatted as a Texinfo appendix.
 This can be included
 in another Texinfo file with the
-.nohy "\fB@AT@include\fR"
+.nohy "\fB@include\fR"
 command where the appendix is
 desired to appear.
 The appendix is also labeled as
-.nohy "\fB@AT@node CC0\fR"
+.nohy "\fB@node CC0\fR"
 so that it
 follows the usual node structure and can be referenced.
 .TP
@@ -939,20 +944,20 @@ configuration variable, for example.
 The
 .nohy "\fBCC0\-1.0\-copying.texi\fR"
 special file calls the
-.nohy "\fB@AT@copying\fR"
+.nohy "\fB@copying\fR"
 Texinfo command
 with a message stating that the authors of the manual have waived their
 rights to it by referencing the
-.nohy "\fB@AT@node CC0\fR"
+.nohy "\fB@node CC0\fR"
 appendix, which is defined by
 the
 .nohy "\fBCC0\-1.0\-appendix.texi\fR"
 special file.
 This can be included in another
 Texinfo file with the
-.nohy "\fB@AT@include\fR"
+.nohy "\fB@include\fR"
 command where the
-.nohy "\fB@AT@copying\fR"
+.nohy "\fB@copying\fR"
 call is
 desired to appear.
 .TP
@@ -982,19 +987,19 @@ Universal Public Domain Dedication.
 The
 .nohy "\fBbdots.texi\fR"
 special file defines the
-.nohy "\fB@AT@bdots{}\fR"
+.nohy "\fB@bdots{}\fR"
 Texinfo macro,
 which is used to imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
 .nf
-@AT@tex
+@tex
 $1,\ \eldots,\ n$
-@AT@end\ tex
-@AT@ifnottex
-1,\ @AT@bdots{},\ @AT@i{n}
-@AT@end\ ifnottex
+@end\ tex
+@ifnottex
+1,\ @bdots{},\ @i{n}
+@end\ ifnottex
 .fi
 .RE
 .IP
@@ -1005,19 +1010,19 @@ For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 The
 .nohy "\fBdslash.texi\fR"
 special file defines the
-.nohy "\fB@AT@dslash{}\fR"
+.nohy "\fB@dslash{}\fR"
 Texinfo macro,
 which is used to imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
 .nf
-@AT@tex
+@tex
 $x\ /\ y$
-@AT@end\ tex
-@AT@ifnottex
-@AT@i{x}\ @AT@dslash{}\ @AT@i{y}
-@AT@end\ ifnottex
+@end\ tex
+@ifnottex
+@i{x}\ @dslash{}\ @i{y}
+@end\ ifnottex
 .fi
 .RE
 .IP
@@ -1028,19 +1033,19 @@ For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 The
 .nohy "\fBgequ.texi\fR"
 special file defines the
-.nohy "\fB@AT@gequ{}\fR"
+.nohy "\fB@gequ{}\fR"
 Texinfo macro,
 which is used to imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
 .nf
-@AT@tex
+@tex
 $x\ \ege\ y$
-@AT@end\ tex
-@AT@ifnottex
-@AT@i{x}\ @AT@gequ{}\ @AT@i{y}
-@AT@end\ ifnottex
+@end\ tex
+@ifnottex
+@i{x}\ @gequ{}\ @i{y}
+@end\ ifnottex
 .fi
 .RE
 .IP
@@ -1051,19 +1056,19 @@ For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 The
 .nohy "\fBlcei.texi\fR"
 special file defines the
-.nohy "\fB@AT@lcei{}\fR"
+.nohy "\fB@lcei{}\fR"
 Texinfo macro,
 which is used to imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
 .nf
-@AT@tex
+@tex
 $\elceil\ x\ \erceil$
-@AT@end\ tex
-@AT@ifnottex
-@AT@lcei{}@AT@i{x}@AT@rcei{}
-@AT@end\ ifnottex
+@end\ tex
+@ifnottex
+@lcei{}@i{x}@rcei{}
+@end\ ifnottex
 .fi
 .RE
 .IP
@@ -1074,19 +1079,19 @@ For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 The
 .nohy "\fBlequ.texi\fR"
 special file defines the
-.nohy "\fB@AT@lequ{}\fR"
+.nohy "\fB@lequ{}\fR"
 Texinfo macro,
 which is used to imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
 .nf
-@AT@tex
+@tex
 $x\ \ele\ y$
-@AT@end\ tex
-@AT@ifnottex
-@AT@i{x}\ @AT@lequ{}\ @AT@i{y}
-@AT@end\ ifnottex
+@end\ tex
+@ifnottex
+@i{x}\ @lequ{}\ @i{y}
+@end\ ifnottex
 .fi
 .RE
 .IP
@@ -1097,19 +1102,19 @@ For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 The
 .nohy "\fBlflo.texi\fR"
 special file defines the
-.nohy "\fB@AT@lflo{}\fR"
+.nohy "\fB@lflo{}\fR"
 Texinfo macro,
 which is used to imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
 .nf
-@AT@tex
+@tex
 $\elfloor\ x\ \erfloor$
-@AT@end\ tex
-@AT@ifnottex
-@AT@lflo{}@AT@i{x}@AT@rflo{}
-@AT@end\ ifnottex
+@end\ tex
+@ifnottex
+@lflo{}@i{x}@rflo{}
+@end\ ifnottex
 .fi
 .RE
 .IP
@@ -1132,19 +1137,19 @@ For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 The
 .nohy "\fBmdot.texi\fR"
 special file defines the
-.nohy "\fB@AT@mdot{}\fR"
+.nohy "\fB@mdot{}\fR"
 Texinfo macro,
 which is used to imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
 .nf
-@AT@tex
+@tex
 $x\ \ecdot\ y$
-@AT@end\ tex
-@AT@ifnottex
-@AT@i{x}\ @AT@mdot{}\ @AT@i{y}
-@AT@end\ ifnottex
+@end\ tex
+@ifnottex
+@i{x}\ @mdot{}\ @i{y}
+@end\ ifnottex
 .fi
 .RE
 .IP
@@ -1155,19 +1160,19 @@ For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 The
 .nohy "\fBmdots.texi\fR"
 special file defines the
-.nohy "\fB@AT@mdots{}\fR"
+.nohy "\fB@mdots{}\fR"
 Texinfo macro,
 which is used to imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
 .nf
-@AT@tex
+@tex
 $1\ +\ \ecdots\ +\ n$
-@AT@end\ tex
-@AT@ifnottex
-1\ +\ @AT@mdots{}\ +\ @AT@i{n}
-@AT@end\ ifnottex
+@end\ tex
+@ifnottex
+1\ +\ @mdots{}\ +\ @i{n}
+@end\ ifnottex
 .fi
 .RE
 .IP
@@ -1178,19 +1183,19 @@ For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 The
 .nohy "\fBmsign.texi\fR"
 special file defines the
-.nohy "\fB@AT@msign{}\fR"
+.nohy "\fB@msign{}\fR"
 Texinfo macro,
 which is used to imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
 .nf
-@AT@tex
+@tex
 $x\ \-\ y$
-@AT@end\ tex
-@AT@ifnottex
-@AT@i{x}\ @AT@msign{}\ @AT@i{y}
-@AT@end\ ifnottex
+@end\ tex
+@ifnottex
+@i{x}\ @msign{}\ @i{y}
+@end\ ifnottex
 .fi
 .RE
 .IP
@@ -1201,19 +1206,19 @@ For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 The
 .nohy "\fBnequ.texi\fR"
 special file defines the
-.nohy "\fB@AT@nequ{}\fR"
+.nohy "\fB@nequ{}\fR"
 Texinfo macro,
 which is used to imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
 .nf
-@AT@tex
+@tex
 $x\ \ene\ y$
-@AT@end\ tex
-@AT@ifnottex
-@AT@i{x}\ @AT@nequ{}\ @AT@i{y}
-@AT@end\ ifnottex
+@end\ tex
+@ifnottex
+@i{x}\ @nequ{}\ @i{y}
+@end\ ifnottex
 .fi
 .RE
 .IP
@@ -1224,19 +1229,19 @@ For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 The
 .nohy "\fBprm.texi\fR"
 special file defines the
-.nohy "\fB@AT@prm{}\fR"
+.nohy "\fB@prm{}\fR"
 Texinfo macro,
 which is used to imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
 .nf
-@AT@tex
+@tex
 $x'$
-@AT@end\ tex
-@AT@ifnottex
-@AT@i{x}@AT@prm{}
-@AT@end\ ifnottex
+@end\ tex
+@ifnottex
+@i{x}@prm{}
+@end\ ifnottex
 .fi
 .RE
 .IP
@@ -1247,19 +1252,19 @@ For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 The
 .nohy "\fBrarrow.texi\fR"
 special file defines the
-.nohy "\fB@AT@rarrow{}\fR"
+.nohy "\fB@rarrow{}\fR"
 Texinfo macro,
 which is used to imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
 .nf
-@AT@tex
+@tex
 $P\ \erightarrow\ Q$
-@AT@end\ tex
-@AT@ifnottex
-@AT@i{P}\ @AT@rarrow{}\ @AT@i{Q}
-@AT@end\ ifnottex
+@end\ tex
+@ifnottex
+@i{P}\ @rarrow{}\ @i{Q}
+@end\ ifnottex
 .fi
 .RE
 .IP
@@ -1270,19 +1275,19 @@ For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 The
 .nohy "\fBrcei.texi\fR"
 special file defines the
-.nohy "\fB@AT@rcei{}\fR"
+.nohy "\fB@rcei{}\fR"
 Texinfo macro,
 which is used to imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
 .nf
-@AT@tex
+@tex
 $\elceil\ x\ \erceil$
-@AT@end\ tex
-@AT@ifnottex
-@AT@lcei{}@AT@i{x}@AT@rcei{}
-@AT@end\ ifnottex
+@end\ tex
+@ifnottex
+@lcei{}@i{x}@rcei{}
+@end\ ifnottex
 .fi
 .RE
 .IP
@@ -1293,19 +1298,19 @@ For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 The
 .nohy "\fBrflo.texi\fR"
 special file defines the
-.nohy "\fB@AT@rflo{}\fR"
+.nohy "\fB@rflo{}\fR"
 Texinfo macro,
 which is used to imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
 .nf
-@AT@tex
+@tex
 $\elfloor\ x\ \erfloor$
-@AT@end\ tex
-@AT@ifnottex
-@AT@lflo{}@AT@i{x}@AT@rflo{}
-@AT@end\ ifnottex
+@end\ tex
+@ifnottex
+@lflo{}@i{x}@rflo{}
+@end\ ifnottex
 .fi
 .RE
 .IP
@@ -1316,7 +1321,7 @@ For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 The
 .nohy "\fBsbs.texi\fR"
 special file defines the
-.nohy "\fB@AT@sbs{\fIL\fB,\ \fIS\fB,\ \fIR\fB}\fR"
+.nohy "\fB@sbs{\fIL\fB,\ \fIS\fB,\ \fIR\fB}\fR"
 Texinfo macro, which inserts
 .nohy "\fIS\fR"
 as a subscript in the output formats other than TeX.
@@ -1332,12 +1337,12 @@ notation of TeX in the other output formats:
 .RS
 .IP
 .nf
-@AT@tex
+@tex
 $x_{y\ +\ z_w}$
-@AT@end\ tex
-@AT@ifnottex
-@AT@i{x}@AT@sbs{(,@AT@i{y}\ +\ @AT@i{z}@AT@sbs{,@AT@i{w},},)}
-@AT@end\ ifnottex
+@end\ tex
+@ifnottex
+@i{x}@sbs{(,@i{y}\ +\ @i{z}@sbs{,@i{w},},)}
+@end\ ifnottex
 .fi
 .RE
 .IP
@@ -1360,7 +1365,7 @@ for more information.
 The
 .nohy "\fBsps.texi\fR"
 special file defines the
-.nohy "\fB@AT@sps{\fIL\fB,\ \fIS\fB,\ \fIR\fB}\fR"
+.nohy "\fB@sps{\fIL\fB,\ \fIS\fB,\ \fIR\fB}\fR"
 Texinfo macro, which inserts
 .nohy "\fIS\fR"
 as a superscript in the output formats other than TeX.
@@ -1376,12 +1381,12 @@ notation of TeX in the other output formats:
 .RS
 .IP
 .nf
-@AT@tex
+@tex
 $x^{y\ +\ z^w}$
-@AT@end\ tex
-@AT@ifnottex
-@AT@i{x}@AT@sps{(,@AT@i{y}\ +\ @AT@i{z}@AT@sps{,@AT@i{w},},)}
-@AT@end\ ifnottex
+@end\ tex
+@ifnottex
+@i{x}@sps{(,@i{y}\ +\ @i{z}@sps{,@i{w},},)}
+@end\ ifnottex
 .fi
 .RE
 .IP
