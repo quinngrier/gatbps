@@ -5,6 +5,15 @@ include({%|src/tools/header_comment.m4|%})dnl
 @ifnotxml|%}
 header_comment({%|@c|%}, {%|@c|%}){%|
 @c
+@c Special file: CC0-1.0-appendix.texi
+@c
+@c The CC0-1.0-appendix.texi special file is a Texinfo appendix that
+@c contains the complete text of the Creative Commons Zero (CC0) 1.0
+@c Universal Public Domain Dedication. It can be included in another
+@c Texinfo file where the appendix is desired to appear. The appendix is
+@c labeled with @node Creative Commons Zero so that it follows the usual
+@c node structure and can be cross-referenced.
+@c
 @end ifnotxml
 @end ifxml
 @node Creative Commons Zero

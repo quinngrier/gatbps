@@ -18,6 +18,26 @@ option of
 @w{@t{gatbps}@.}
 
 @table @asis
+@sfindex @t{CC0-1.@:0-appendix.@:texi}
+@item @w{@t{CC0-1.@:0-appendix.@:texi}}
+@include ipez.texi
+The
+@w{@t{CC0-1.@:0-appendix.@:texi}}
+special file
+is a Texinfo
+appendix that contains
+the complete text of the
+Creative Commons Zero (CC0) 1.@:0
+Universal Public Domain Dedication@.
+It can be included
+in another Texinfo file where
+the appendix is desired to appear@.
+The appendix is labeled with
+@w{@t{@@node@w{ }Creative@w{ }Commons@w{ }Zero}}
+so that it follows
+the usual node structure
+and can be cross-referenced@.
+
 @sfindex @t{CC0-1.@:0.@:txt}
 @item @w{@t{CC0-1.@:0.@:txt}}
 @include ipez.texi

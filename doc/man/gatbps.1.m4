@@ -913,18 +913,20 @@ desired to appear.
 .IPEZ
 The
 .nohy "\fBCC0\-1.0\-appendix.texi\fR"
-special file is the same as the
-.nohy "\fBCC0\-1.0.txt\fR"
-special file but formatted as a Texinfo appendix.
-This can be included
-in another Texinfo file with the
-.nohy "\fB@include\fR"
-command where the appendix is
-desired to appear.
-The appendix is also labeled as
-.nohy "\fB@node CC0\fR"
-so that it
-follows the usual node structure and can be referenced.
+special file
+is a Texinfo
+appendix that contains
+the complete text of the
+Creative Commons Zero (CC0) 1.0
+Universal Public Domain Dedication.
+It can be included
+in another Texinfo file where
+the appendix is desired to appear.
+The appendix is labeled with
+.nohy "\fB@node\ Creative\ Commons\ Zero\fR"
+so that it follows
+the usual node structure
+and can be cross-referenced.
 .TP
 .nohy "\fBCC0\-1.0\-commit.txt\fR"
 .IPEZ
