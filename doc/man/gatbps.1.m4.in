@@ -16,7 +16,7 @@ changequote(`{%|', `|%}')dnl
 .PD
 ..
 .hy
-.TH "gatbps" "1" "@PACKAGE_DATE_TROFF@" "@PACKAGE_STRING@"
+.TH "gatbps" "1" "@PACKAGE_DATE_TROFF@" "GATBPS @PACKAGE_VERSION@"
 .SH "NAME"
 .LP
 \fBgatbps\fR \- generate basic files for software packages
