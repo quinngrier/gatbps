@@ -42,15 +42,15 @@ if s:n1 != 0 && s:n2 != 0
     finish
   endif
 
-%sm/\m^## begin_variables$/&\r/
-%sm/\m^## end_variables$/\r&/
-/\m^## begin_variables$/+1,/\m^## end_variables$/-1g/\m./s/\m$/\b/
-/\m^## begin_variables$/+1,/\m^## end_variables$/-2g/\m^\n./.+1,/\m^$/-1j!
-/\m^## begin_variables$/+1,/\m^## end_variables$/-1g/\m^$/d
-%sm/\m^## begin_variables$/&\r/
-/\m^## begin_variables$/+1,/\m^## end_variables$/-1sort
-/\m^## begin_variables$/+1,/\m^## end_variables$/-1s/\m\b/\r/eg
-/\m^## begin_variables$/+1,/\m^## end_variables$/-1g/\m+=/.,/\m^$/-1sort u
+  %sm/\m^## begin_variables$/&\r/
+  %sm/\m^## end_variables$/\r&/
+  /\m^## begin_variables$/+1,/\m^## end_variables$/-1g/\m./s/\m$/\b/
+  /\m^## begin_variables$/+1,/\m^## end_variables$/-2g/\m^\n./.+1,/\m^$/-1j!
+  /\m^## begin_variables$/+1,/\m^## end_variables$/-1g/\m^$/d
+  %sm/\m^## begin_variables$/&\r/
+  /\m^## begin_variables$/+1,/\m^## end_variables$/-1sort
+  /\m^## begin_variables$/+1,/\m^## end_variables$/-1s/\m\b/\r/eg
+  /\m^## begin_variables$/+1,/\m^## end_variables$/-1g/\m+=/.,/\m^$/-1sort u
 
 endif
 
@@ -88,15 +88,15 @@ if s:n1 != 0 && s:n2 != 0
     finish
   endif
 
-%sm/\m^## begin_rules$/&\r/
-%sm/\m^## end_rules$/\r&/
-/\m^## begin_rules$/+1,/\m^## end_rules$/-1g/\m./s/\m$/\b/
-/\m^## begin_rules$/+1,/\m^## end_rules$/-2g/\m^\n./.+1,/\m^$/-1j!
-/\m^## begin_rules$/+1,/\m^## end_rules$/-1g/\m^$/d
-%sm/\m^## begin_rules$/&\r/
-/\m^## begin_rules$/+1,/\m^## end_rules$/-1sort
-/\m^## begin_rules$/+1,/\m^## end_rules$/-1s/\m\b/\r/eg
-/\m^## begin_rules$/,/\m^## end_rules$/-2g/\m^$/.+1,/\m^\($\|\t\)/-1sort u
+  %sm/\m^## begin_rules$/&\r/
+  %sm/\m^## end_rules$/\r&/
+  /\m^## begin_rules$/+1,/\m^## end_rules$/-1g/\m./s/\m$/\b/
+  /\m^## begin_rules$/+1,/\m^## end_rules$/-2g/\m^\n./.+1,/\m^$/-1j!
+  /\m^## begin_rules$/+1,/\m^## end_rules$/-1g/\m^$/d
+  %sm/\m^## begin_rules$/&\r/
+  /\m^## begin_rules$/+1,/\m^## end_rules$/-1sort
+  /\m^## begin_rules$/+1,/\m^## end_rules$/-1s/\m\b/\r/eg
+  /\m^## begin_rules$/,/\m^## end_rules$/-2g/\m^$/.+1,/\m^\($\|\t\)/-1sort u
 
 endif
 
