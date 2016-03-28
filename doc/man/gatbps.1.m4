@@ -945,23 +945,19 @@ configuration variable, for example.
 .IPEZ
 The
 .nohy "\fBCC0\-1.0\-copying.texi\fR"
-special file calls the
+special file invokes the
 .nohy "\fB@copying\fR"
-Texinfo command
-with a message stating that the authors of the manual have waived their
-rights to it by referencing the
-.nohy "\fB@node CC0\fR"
-appendix, which is defined by
-the
+Texinfo command with a
+message stating that the
+authors of the manual have
+waived their rights to it by
+cross-referencing the appendix of the
 .nohy "\fBCC0\-1.0\-appendix.texi\fR"
 special file.
-This can be included in another
-Texinfo file with the
-.nohy "\fB@include\fR"
-command where the
+It can be included in
+another Texinfo file where the
 .nohy "\fB@copying\fR"
-call is
-desired to appear.
+command is desired to appear.
 .TP
 .nohy "\fBCC0\-1.0\-file.txt\fR"
 .IPEZ

@@ -38,6 +38,25 @@ so that it follows
 the usual node structure
 and can be cross-referenced@.
 
+@sfindex @t{CC0-1.@:0-copying.@:texi}
+@item @w{@t{CC0-1.@:0-copying.@:texi}}
+@include ipez.texi
+The
+@w{@t{CC0-1.@:0-copying.@:texi}}
+special file invokes the
+@w{@t{@@copying}}
+Texinfo command with a
+message stating that the
+authors of the manual have
+waived their rights to it by
+cross-referencing the appendix of the
+@w{@t{CC0-1.@:0-appendix.@:texi}}
+special file@.
+It can be included in
+another Texinfo file where the
+@w{@t{@@copying}}
+command is desired to appear@.
+
 @sfindex @t{CC0-1.@:0.@:txt}
 @item @w{@t{CC0-1.@:0.@:txt}}
 @include ipez.texi
