@@ -9,16 +9,12 @@ dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([GATBPS_CHECK_HEADER], [{ :
 
-  GATBPS_CHECK_BASIC(
+  GATBPS_CHECK_COMPILE(
     [$1],
     [$2],
-    [{ :
-      AC_COMPILE_IFELSE(
-        [AC_LANG_PROGRAM([$3], [])],
-        [gatbps_cv_$2='yes'],
-        [gatbps_cv_$2='no'])
-    }],
-    [$4])
+    [$3],
+    [$4],
+    [$5])
 
 }])dnl
 dnl
