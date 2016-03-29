@@ -60,6 +60,25 @@ AC_DEFUN([GATBPS_CHECK_BASIC], [{ :
         ;;
       esac
     }])
+
+  #
+  # The cache variable is appropriately set to 'yes' or 'no' by the
+  # above AC_CACHE_CHECK code when it is not cached, but the user can
+  # still mistakenly set it to an invalid value when editing the cache.
+  # The following case statement catches this mistake.
+  #
+
+  case "$[]{gatbps_cv_$2}" in
+  #(
+    'yes'|'no')
+      :
+    ;;
+  #(
+    *)
+      AC_MSG_ERROR([invalid \$[]{gatbps_cv_$2} value: $[]{gatbps_cv_$2}], [1])
+    ;;
+  esac
+
   case "$[]{gatbps_cv_$2}" in
   #(
     'yes')
@@ -71,19 +90,6 @@ AC_DEFUN([GATBPS_CHECK_BASIC], [{ :
       AC_DEFINE([$2], [0], [Define to 1 if you have $1 or 0 if not.])
       $2='0'
     ;;
-
-    #
-    # Although the cache variable is appropriately set to 'yes' or 'no'
-    # by the above AC_CACHE_CHECK code when it is not cached, the user
-    # can still mistakenly set it to an invalid value when editing the
-    # cache. The following case catches this mistake.
-    #
-
-  #(
-    *)
-      AC_MSG_ERROR([invalid \$[]{gatbps_cv_$2} value: $[]{gatbps_cv_$2}], [1])
-    ;;
-
   esac
   AC_SUBST([$2])
   AM_CONDITIONAL([$2], [(
