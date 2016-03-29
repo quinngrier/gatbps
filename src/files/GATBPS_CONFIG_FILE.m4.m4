@@ -61,7 +61,7 @@ AC_DEFUN([GATBPS_CONFIG_FILE], [{ :
       else
         AC_MSG_NOTICE([updating $[]{gatbps_dst}])
         cp "$[]{gatbps_safe_src}" "$[]{gatbps_safe_dst}"
-        case "${?}" in
+        case "$[]{?}" in
         #(
           '0')
             :
@@ -90,9 +90,9 @@ AC_DEFUN([GATBPS_CONFIG_FILE], [{ :
   esac
 
   gatbps_rule='gatbps_output: gatbps_prereq
-	$(MKDIR_P) $(@D)
-	echo @PACKAGE_NAME@ >$@
-	cd $(top_builddir) && $(SHELL) ./config.status $@gatbps_suffix'
+	$[](MKDIR_P) $[](@D)
+	echo @PACKAGE_NAME@ >$[]@
+	cd $[](top_builddir) && $[](SHELL) ./config.status $[]@gatbps_suffix'
 
   case "$[]{GATBPS_CONFIG_FILE_RULES}" in
   #(
