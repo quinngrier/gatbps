@@ -161,7 +161,7 @@ bin/gatbps: src/files/mtvskipbot.texi.m4
 bin/gatbps: src/files/mtvskiptop.texi.m4
 bin/gatbps: src/gatbps.m4
 	$(MKDIR_P) bin
-	$(M4) $(AM_M4FLAGS) src/gatbps.m4 >bin/gatbps
+	$(M4) $(AM_M4FLAGS) $(M4FLAGS) src/gatbps.m4 >bin/gatbps
 	chmod +x bin/gatbps
 
 doc/gatbps.txt: $(doc_gatbps_TEXINFOS)
