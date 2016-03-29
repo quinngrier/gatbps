@@ -443,7 +443,7 @@ special file is a portable
 shell script that formats its
 input as a shell string literal@.
 
-For more information, @pxref{Invoking @t{sh-form-sh}}@.
+For more information, @pxref{Invoking @w{@t{sh-form-sh}}}@.
 
 @sfindex @w{@t{sps.@:texi}}
 @tmindex @w{@t{@@sps}}

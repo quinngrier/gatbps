@@ -1,5 +1,5 @@
-@node Invoking @t{awk-form-sh}
-@chapter Invoking @t{awk-form.sh}
+@node Invoking @w{@t{awk-form-sh}}
+@chapter Invoking @w{@t{awk-form.sh}}
 
 This section describes
 @w{@t{awk-form.sh}}

@@ -1,5 +1,5 @@
-@node @t{gatbps} Exit Status
-@chapter @t{gatbps} Exit Status
+@node @w{@t{gatbps}} Exit Status
+@chapter @w{@t{gatbps}} Exit Status
 
 Exit status zero indicates success
 and any other exit status indicates failure@.

@@ -1,5 +1,5 @@
-@node @t{gatbps} Standard Input
-@chapter @t{gatbps} Standard Input
+@node @w{@t{gatbps}} Standard Input
+@chapter @w{@t{gatbps}} Standard Input
 
 Not used@.
 @ifxml

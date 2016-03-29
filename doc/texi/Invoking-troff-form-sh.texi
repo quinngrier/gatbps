@@ -1,5 +1,5 @@
-@node Invoking @t{troff-form-sh}
-@chapter Invoking @t{troff-form.sh}
+@node Invoking @w{@t{troff-form-sh}}
+@chapter Invoking @w{@t{troff-form.sh}}
 
 This section describes
 @w{@t{troff-form.sh}}

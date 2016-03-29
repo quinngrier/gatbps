@@ -1,5 +1,5 @@
-@node @t{gatbps} Standard Output
-@chapter @t{gatbps} Standard Output
+@node @w{@t{gatbps}} Standard Output
+@chapter @w{@t{gatbps}} Standard Output
 
 For each operand
 @w{@i{R}}

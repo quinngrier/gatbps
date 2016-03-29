@@ -1,5 +1,5 @@
-@node @t{gatbps} Environment Variables
-@chapter @t{gatbps} Environment Variables
+@node @w{@t{gatbps}} Environment Variables
+@chapter @w{@t{gatbps}} Environment Variables
 
 The following environment variables are supported:
 

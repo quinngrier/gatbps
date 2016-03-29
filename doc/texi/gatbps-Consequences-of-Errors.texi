@@ -1,5 +1,5 @@
-@node @t{gatbps} Consequences of Errors
-@chapter @t{gatbps} Consequences of Errors
+@node @w{@t{gatbps}} Consequences of Errors
+@chapter @w{@t{gatbps}} Consequences of Errors
 
 All errors cause the
 program to terminate except

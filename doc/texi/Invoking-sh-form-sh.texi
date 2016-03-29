@@ -1,5 +1,5 @@
-@node Invoking @t{sh-form-sh}
-@chapter Invoking @t{sh-form.sh}
+@node Invoking @w{@t{sh-form-sh}}
+@chapter Invoking @w{@t{sh-form.sh}}
 
 This section describes
 @w{@t{sh-form.sh}}

@@ -1,5 +1,5 @@
-@node @t{gatbps} Description
-@chapter @t{gatbps} Description
+@node @w{@t{gatbps}} Description
+@chapter @w{@t{gatbps}} Description
 
 @w{@t{gatbps}}
 generates basic files

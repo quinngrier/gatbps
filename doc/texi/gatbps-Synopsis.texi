@@ -1,5 +1,5 @@
-@node @t{gatbps} Synopsis
-@chapter @t{gatbps} Synopsis
+@node @w{@t{gatbps}} Synopsis
+@chapter @w{@t{gatbps}} Synopsis
 
 @example
 gatbps@w{ }[<@i{operand}>@w{ }|@w{ }<@i{option}>]...

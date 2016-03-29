@@ -1,5 +1,5 @@
-@node @t{gatbps} Standard Error
-@chapter @t{gatbps} Standard Error
+@node @w{@t{gatbps}} Standard Error
+@chapter @w{@t{gatbps}} Standard Error
 
 Each error causes a message
 to be written to standard error@.

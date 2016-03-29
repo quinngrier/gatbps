@@ -1,5 +1,5 @@
-@node @t{gatbps} Operands
-@chapter @t{gatbps} Operands
+@node @w{@t{gatbps}} Operands
+@chapter @w{@t{gatbps}} Operands
 
 Each operand is
 processed in three phases:

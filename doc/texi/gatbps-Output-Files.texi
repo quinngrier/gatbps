@@ -1,5 +1,5 @@
-@node @t{gatbps} Output Files
-@chapter @t{gatbps} Output Files
+@node @w{@t{gatbps}} Output Files
+@chapter @w{@t{gatbps}} Output Files
 
 For each operand
 @w{@i{R}}

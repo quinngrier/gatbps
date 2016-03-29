@@ -1,5 +1,5 @@
-@node Invoking @t{texi-form-sh}
-@chapter Invoking @t{texi-form.sh}
+@node Invoking @w{@t{texi-form-sh}}
+@chapter Invoking @w{@t{texi-form.sh}}
 
 This section describes
 @w{@t{texi-form.sh}}

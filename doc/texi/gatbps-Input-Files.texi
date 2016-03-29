@@ -1,5 +1,5 @@
-@node @t{gatbps} Input Files
-@chapter @t{gatbps} Input Files
+@node @w{@t{gatbps}} Input Files
+@chapter @w{@t{gatbps}} Input Files
 
 For each plain file
 @w{@i{R}}

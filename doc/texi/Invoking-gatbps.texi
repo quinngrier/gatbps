@@ -1,24 +1,24 @@
-@node Invoking @t{gatbps}
-@chapter Invoking @t{gatbps}
+@node Invoking @w{@t{gatbps}}
+@chapter Invoking @w{@t{gatbps}}
 
 This section describes
 @w{@t{gatbps}}
 in the same way as its manual page@.
 
 @menu
-* @t{gatbps} Synopsis::
-* @t{gatbps} Description::
-* @t{gatbps} Options::
-* @t{gatbps} Operands::
-* @t{gatbps} Standard Input::
-* @t{gatbps} Input Files::
-* @t{gatbps} Environment Variables::
-* @t{gatbps} Asynchronous Events::
-* @t{gatbps} Standard Output::
-* @t{gatbps} Standard Error::
-* @t{gatbps} Output Files::
-* @t{gatbps} Exit Status::
-* @t{gatbps} Consequences of Errors::
+* @w{@t{gatbps}} Synopsis::
+* @w{@t{gatbps}} Description::
+* @w{@t{gatbps}} Options::
+* @w{@t{gatbps}} Operands::
+* @w{@t{gatbps}} Standard Input::
+* @w{@t{gatbps}} Input Files::
+* @w{@t{gatbps}} Environment Variables::
+* @w{@t{gatbps}} Asynchronous Events::
+* @w{@t{gatbps}} Standard Output::
+* @w{@t{gatbps}} Standard Error::
+* @w{@t{gatbps}} Output Files::
+* @w{@t{gatbps}} Exit Status::
+* @w{@t{gatbps}} Consequences of Errors::
 @end menu
 
 @lowersections

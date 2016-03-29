@@ -1,5 +1,5 @@
-@node @t{gatbps} Asynchronous Events
-@chapter @t{gatbps} Asynchronous Events
+@node @w{@t{gatbps}} Asynchronous Events
+@chapter @w{@t{gatbps}} Asynchronous Events
 
 Default@.
 @ifxml

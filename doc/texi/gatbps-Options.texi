@@ -1,5 +1,5 @@
-@node @t{gatbps} Options
-@chapter @t{gatbps} Options
+@node @w{@t{gatbps}} Options
+@chapter @w{@t{gatbps}} Options
 
 Each option has
 one or more names, and each
