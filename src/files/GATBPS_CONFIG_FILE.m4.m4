@@ -22,11 +22,13 @@ AC_DEFUN([GATBPS_CONFIG_FILE], [{ :
   m4_pushdef([gatbps_inputs], m4_ifval(gatbps_inputs, [gatbps_inputs], [:gatbps_output.in]))
 
   m4_pushdef([gatbps_suffix], m4_if([$#], [1], [.out], [$2]))
+  m4_pushdef([gatbps_prereq], m4_bpatsubst(gatbps_inputs, [:], [ ]))
 
   AC_CONFIG_FILES(
     gatbps_output[]gatbps_suffix[]gatbps_inputs,
     [{ :
       gatbps_dst=']gatbps_output['
+      gatbps_aux="$[]{srcdir}/$[]{gatbps_dst}"
       case "$[]{gatbps_dst}" in
       #(
         '-'*)
@@ -37,9 +39,24 @@ AC_DEFUN([GATBPS_CONFIG_FILE], [{ :
           gatbps_safe_dst="$[]{gatbps_dst}"
         ;;
       esac
+      case "$[]{gatbps_aux}" in
+      #(
+        '-'*)
+          gatbps_safe_aux="./$[]{gatbps_aux}"
+        ;;
+      #(
+        *)
+          gatbps_safe_aux="$[]{gatbps_aux}"
+        ;;
+      esac
       gatbps_safe_src="$[]{gatbps_safe_dst}"']gatbps_suffix['
-      if cmp "$[]{gatbps_safe_src}" \
-             "$[]{gatbps_safe_dst}" >'/dev/null' 2>&1; then
+      if test '-f' "$[]{gatbps_safe_dst}" &&
+         cmp "$[]{gatbps_safe_dst}" \
+             "$[]{gatbps_safe_src}" >'/dev/null' ||
+         test '!' '-f' "$[]{gatbps_safe_dst}" &&
+         test '-f' "$[]{gatbps_safe_aux}" &&
+         cmp "$[]{gatbps_safe_aux}" \
+             "$[]{gatbps_safe_src}" >'/dev/null'; then
         AC_MSG_NOTICE([skipping $[]{gatbps_dst}])
       else
         AC_MSG_NOTICE([updating $[]{gatbps_dst}])
@@ -72,21 +89,25 @@ AC_DEFUN([GATBPS_CONFIG_FILE], [{ :
     ;;
   esac
 
+  gatbps_rule='gatbps_output: gatbps_prereq
+	$(MKDIR_P) $(@D)
+	echo @PACKAGE_NAME@ >$@
+	cd $(top_builddir) && $(SHELL) ./config.status $@gatbps_suffix'
+
   case "$[]{GATBPS_CONFIG_FILE_RULES}" in
   #(
     ?*)
-      GATBPS_CONFIG_FILE_RULES="$[]{GATBPS_CONFIG_FILE_RULES}"'
+      GATBPS_CONFIG_FILE_RULES="$[]{GATBPS_CONFIG_FILE_RULES}
 
-gatbps_output: gatbps_output[]gatbps_suffix
-	@-:'
+$[]{gatbps_rule}"
     ;;
   #(
     *)
-      GATBPS_CONFIG_FILE_RULES='gatbps_output: gatbps_output[]gatbps_suffix
-	@-:'
+      GATBPS_CONFIG_FILE_RULES="$[]{gatbps_rule}"
     ;;
   esac
 
+  m4_popdef([gatbps_prereq])
   m4_popdef([gatbps_suffix])
   m4_popdef([gatbps_inputs])
   m4_popdef([gatbps_inputs])
