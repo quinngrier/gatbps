@@ -18,7 +18,7 @@ option of
 @w{@t{gatbps}@.}
 
 @table @asis
-@sfindex @t{CC0-1.@:0-appendix.@:texi}
+@sfindex @w{@t{CC0-1.@:0-appendix.@:texi}}
 @item @w{@t{CC0-1.@:0-appendix.@:texi}}
 @include ipez.texi
 The
@@ -38,7 +38,7 @@ so that it follows
 the usual node structure
 and can be cross-referenced@.
 
-@sfindex @t{CC0-1.@:0-copying.@:texi}
+@sfindex @w{@t{CC0-1.@:0-copying.@:texi}}
 @item @w{@t{CC0-1.@:0-copying.@:texi}}
 @include ipez.texi
 The
@@ -57,7 +57,7 @@ another Texinfo file where the
 @w{@t{@@copying}}
 command is desired to appear@.
 
-@sfindex @t{CC0-1.@:0.@:txt}
+@sfindex @w{@t{CC0-1.@:0.@:txt}}
 @item @w{@t{CC0-1.@:0.@:txt}}
 @include ipez.texi
 The
@@ -67,8 +67,8 @@ plain text version of the
 Creative Commons Zero (CC0) 1.@:0
 Universal Public Domain Dedication@.
 
-@sfindex @t{bdots.@:texi}
-@tmindex @t{@@bdots}
+@sfindex @w{@t{bdots.@:texi}}
+@tmindex @w{@t{@@bdots}}
 @item @w{@t{bdots.@:texi}}
 @include ipez.texi
 The
@@ -90,8 +90,8 @@ $1,@w{ }\ldots,@w{ }n$
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
-@sfindex @t{dslash.@:texi}
-@tmindex @t{@@dslash}
+@sfindex @w{@t{dslash.@:texi}}
+@tmindex @w{@t{@@dslash}}
 @item @w{@t{dslash.@:texi}}
 @include ipez.texi
 The
@@ -113,8 +113,8 @@ $x@w{ }/@w{ }y$
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
-@sfindex @t{gequ.@:texi}
-@tmindex @t{@@gequ}
+@sfindex @w{@t{gequ.@:texi}}
+@tmindex @w{@t{@@gequ}}
 @item @w{@t{gequ.@:texi}}
 @include ipez.texi
 The
@@ -136,8 +136,8 @@ $x@w{ }\ge@w{ }y$
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
-@sfindex @t{lcei.@:texi}
-@tmindex @t{@@lcei}
+@sfindex @w{@t{lcei.@:texi}}
+@tmindex @w{@t{@@lcei}}
 @item @w{@t{lcei.@:texi}}
 @include ipez.texi
 The
@@ -159,8 +159,8 @@ $\lceil@w{ }x@w{ }\rceil$
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
-@sfindex @t{lequ.@:texi}
-@tmindex @t{@@lequ}
+@sfindex @w{@t{lequ.@:texi}}
+@tmindex @w{@t{@@lequ}}
 @item @w{@t{lequ.@:texi}}
 @include ipez.texi
 The
@@ -182,8 +182,8 @@ $x@w{ }\le@w{ }y$
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
-@sfindex @t{lflo.@:texi}
-@tmindex @t{@@lflo}
+@sfindex @w{@t{lflo.@:texi}}
+@tmindex @w{@t{@@lflo}}
 @item @w{@t{lflo.@:texi}}
 @include ipez.texi
 The
@@ -205,7 +205,7 @@ $\lfloor@w{ }x@w{ }\rfloor$
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
-@sfindex @t{math.@:texi}
+@sfindex @w{@t{math.@:texi}}
 @item @w{@t{math.@:texi}}
 @include ipez.texi
 The
@@ -218,8 +218,8 @@ the other output formats@.
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
-@sfindex @t{mdot.@:texi}
-@tmindex @t{@@mdot}
+@sfindex @w{@t{mdot.@:texi}}
+@tmindex @w{@t{@@mdot}}
 @item @w{@t{mdot.@:texi}}
 @include ipez.texi
 The
@@ -241,8 +241,8 @@ $x@w{ }\cdot@w{ }y$
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
-@sfindex @t{mdots.@:texi}
-@tmindex @t{@@mdots}
+@sfindex @w{@t{mdots.@:texi}}
+@tmindex @w{@t{@@mdots}}
 @item @w{@t{mdots.@:texi}}
 @include ipez.texi
 The
@@ -264,8 +264,8 @@ $1@w{ }+@w{ }\cdots@w{ }+@w{ }n$
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
-@sfindex @t{msign.@:texi}
-@tmindex @t{@@msign}
+@sfindex @w{@t{msign.@:texi}}
+@tmindex @w{@t{@@msign}}
 @item @w{@t{msign.@:texi}}
 @include ipez.texi
 The
@@ -287,8 +287,8 @@ $x@w{ }-@w{ }y$
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
-@sfindex @t{nequ.@:texi}
-@tmindex @t{@@nequ}
+@sfindex @w{@t{nequ.@:texi}}
+@tmindex @w{@t{@@nequ}}
 @item @w{@t{nequ.@:texi}}
 @include ipez.texi
 The
@@ -310,8 +310,8 @@ $x@w{ }\ne@w{ }y$
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
-@sfindex @t{prm.@:texi}
-@tmindex @t{@@prm}
+@sfindex @w{@t{prm.@:texi}}
+@tmindex @w{@t{@@prm}}
 @item @w{@t{prm.@:texi}}
 @include ipez.texi
 The
@@ -333,8 +333,8 @@ $x'$
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
-@sfindex @t{rarrow.@:texi}
-@tmindex @t{@@rarrow}
+@sfindex @w{@t{rarrow.@:texi}}
+@tmindex @w{@t{@@rarrow}}
 @item @w{@t{rarrow.@:texi}}
 @include ipez.texi
 The
@@ -356,8 +356,8 @@ $P@w{ }\rightarrow@w{ }Q$
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
-@sfindex @t{rcei.@:texi}
-@tmindex @t{@@rcei}
+@sfindex @w{@t{rcei.@:texi}}
+@tmindex @w{@t{@@rcei}}
 @item @w{@t{rcei.@:texi}}
 @include ipez.texi
 The
@@ -379,8 +379,8 @@ $\lceil@w{ }x@w{ }\rceil$
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
-@sfindex @t{rflo.@:texi}
-@tmindex @t{@@rflo}
+@sfindex @w{@t{rflo.@:texi}}
+@tmindex @w{@t{@@rflo}}
 @item @w{@t{rflo.@:texi}}
 @include ipez.texi
 The
@@ -402,8 +402,8 @@ $\lfloor@w{ }x@w{ }\rfloor$
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
-@sfindex @t{sbs.@:texi}
-@tmindex @t{@@sbs}
+@sfindex @w{@t{sbs.@:texi}}
+@tmindex @w{@t{@@sbs}}
 @item @w{@t{sbs.@:texi}}
 @include ipez.texi
 The
@@ -434,7 +434,7 @@ $x_@{y@w{ }+@w{ }z_w@}$
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
 
-@sfindex @t{sh-form.@:sh}
+@sfindex @w{@t{sh-form.@:sh}}
 @item @w{@t{sh-form.@:sh}}
 @include ipez.texi
 The
@@ -445,8 +445,8 @@ input as a shell string literal@.
 
 For more information, @pxref{Invoking @t{sh-form-sh}}@.
 
-@sfindex @t{sps.@:texi}
-@tmindex @t{@@sps}
+@sfindex @w{@t{sps.@:texi}}
+@tmindex @w{@t{@@sps}}
 @item @w{@t{sps.@:texi}}
 @include ipez.texi
 The
