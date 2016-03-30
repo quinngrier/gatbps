@@ -1,9 +1,9 @@
 changecom`'dnl
 changequote(`{%|', `|%}')dnl
 include({%|src/tools/header_comment.m4|%})dnl
-{%|@ifxml
-@ifnotxml|%}
-header_comment({%|@c|%}, {%|@c|%}){%|
+header_comment({%|@ifxml
+@ifnotxml
+@c|%}, {%|@c|%}){%|
 @c
 @c Special file: CC0-1.0-appendix.texi
 @c
