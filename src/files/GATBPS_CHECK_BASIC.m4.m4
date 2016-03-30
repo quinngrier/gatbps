@@ -83,15 +83,25 @@ AC_DEFUN([GATBPS_CHECK_BASIC], [{ :
   #(
     'yes')
       AC_DEFINE([$2], [1], [Define to 1 if you have $1 or 0 if not.])
-      $2='1'
     ;;
   #(
     'no')
       AC_DEFINE([$2], [0], [Define to 1 if you have $1 or 0 if not.])
+    ;;
+  esac
+
+  case "$[]{gatbps_cv_$2}" in
+  #(
+    'yes')
+      $2='1'
+    ;;
+  #(
+    'no')
       $2='0'
     ;;
   esac
   AC_SUBST([$2])
+
   AM_CONDITIONAL([$2], [(
     case "$[]{gatbps_cv_$2}" in
     #(
@@ -104,6 +114,7 @@ AC_DEFUN([GATBPS_CHECK_BASIC], [{ :
       ;;
     esac
   )])
+
 }])dnl
 dnl
 dnl The authors of this file have waived all copyright and
