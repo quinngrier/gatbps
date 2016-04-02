@@ -63,6 +63,7 @@ which was released on @w{@value{PACKAGEDATE}}@.
 * Introduction::
 * Building and Installation::
 * Invoking @w{@t{gatbps}}::
+* Plain Files::
 * Copyright Texts::
 * Invoking @w{@t{awk-form-sh}}::
 * Invoking @w{@t{sh-form-sh}}::
@@ -82,6 +83,8 @@ which was released on @w{@value{PACKAGEDATE}}@.
 @include Building-and-Installation.texi
 
 @include Invoking-gatbps.texi
+
+@include Plain-Files.texi
 
 @include Copyright-Texts.texi
 

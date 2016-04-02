@@ -87,6 +87,7 @@ doc_gatbps_TEXINFOS += doc/texi/Invoking-troff-form-sh.texi
 doc_gatbps_TEXINFOS += doc/texi/Mathematical-Notation-in-Texinfo.texi
 doc_gatbps_TEXINFOS += doc/texi/PACKAGEDATE.texi
 doc_gatbps_TEXINFOS += doc/texi/PACKAGEVERSION.texi
+doc_gatbps_TEXINFOS += doc/texi/Plain-Files.texi
 doc_gatbps_TEXINFOS += doc/texi/SEDDEFAULTTEXI.texi
 doc_gatbps_TEXINFOS += doc/texi/Special-File-Reference.texi
 doc_gatbps_TEXINFOS += doc/texi/TEXIANYDEFAULTTEXI.texi
