@@ -71,6 +71,8 @@ plain text version of the
 Creative Commons Zero (CC0) 1.@:0
 Universal Public Domain Dedication@.
 
+For more information, @pxref{Copyright Texts}@.
+
 @sfindex @w{@t{bdots.@:texi}}
 @tmindex @w{@t{@@bdots}}
 @item @w{@t{bdots.@:texi}}

@@ -984,6 +984,8 @@ special file is the
 plain text version of the
 Creative Commons Zero (CC0) 1.0
 Universal Public Domain Dedication.
+.IP
+For more information, see the COPYRIGHT TEXTS section.
 .TP
 .nohy "\fBbdots.texi\fR"
 .IPEZ
