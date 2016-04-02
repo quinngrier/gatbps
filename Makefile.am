@@ -77,6 +77,7 @@ doc_gatbps_TEXINFOS += doc/texi/Building-and-Installation.texi
 doc_gatbps_TEXINFOS += doc/texi/CC0-1.0-appendix.texi
 doc_gatbps_TEXINFOS += doc/texi/CC0-1.0-copying.texi
 doc_gatbps_TEXINFOS += doc/texi/Copyright-Information.texi
+doc_gatbps_TEXINFOS += doc/texi/Copyright-Texts.texi
 doc_gatbps_TEXINFOS += doc/texi/Introduction.texi
 doc_gatbps_TEXINFOS += doc/texi/Invoking-awk-form-sh.texi
 doc_gatbps_TEXINFOS += doc/texi/Invoking-gatbps.texi

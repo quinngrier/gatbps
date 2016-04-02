@@ -632,6 +632,7 @@ If the program is
 terminated by a signal, then
 no files are necessarily deleted.
 .SH "PLAIN FILES"
+.SH "COPYRIGHT TEXTS"
 .SH "MATHEMATICAL NOTATION IN TEXINFO"
 .LP
 A set of Texinfo macros
