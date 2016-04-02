@@ -65,11 +65,11 @@ which was released on @w{@value{PACKAGEDATE}}@.
 * Invoking @w{@t{gatbps}}::
 * Plain Files::
 * Copyright Texts::
+* Mathematical Notation in Texinfo::
 * Invoking @w{@t{awk-form-sh}}::
 * Invoking @w{@t{sh-form-sh}}::
 * Invoking @w{@t{texi-form-sh}}::
 * Invoking @w{@t{troff-form-sh}}::
-* Mathematical Notation in Texinfo::
 * Special File Reference::
 * Creative Commons Zero 1-0::
 * Special File Index::
@@ -89,6 +89,8 @@ which was released on @w{@value{PACKAGEDATE}}@.
 
 @include Copyright-Texts.texi
 
+@include Mathematical-Notation-in-Texinfo.texi
+
 @include Invoking-awk-form-sh.texi
 
 @include Invoking-sh-form-sh.texi
@@ -96,8 +98,6 @@ which was released on @w{@value{PACKAGEDATE}}@.
 @include Invoking-texi-form-sh.texi
 
 @include Invoking-troff-form-sh.texi
-
-@include Mathematical-Notation-in-Texinfo.texi
 
 @include Special-File-Reference.texi
 
