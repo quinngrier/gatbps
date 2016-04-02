@@ -1,6 +1,7 @@
 changecom`'dnl
 changequote(`{%|', `|%}')dnl
 include({%|src/tools/footer_comment.m4|%})dnl
+include({%|src/tools/recursion_code.m4|%})dnl
 {%|#!/bin/sh
 
 #
@@ -10016,1558 +10017,339 @@ EOF1
 
         #(
           'DATE.sh'|*'/DATE.sh')
-
-            case "${1}" in
-            #(
-              'DATE.sh')
-                prefix=''
-              ;;
-            #(
-              *'/DATE.sh')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/DATE.sh\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|DATE.sh|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'GATBPS_ARG_ENABLE_BOOL.m4'|*'/GATBPS_ARG_ENABLE_BOOL.m4')
-
-            case "${1}" in
-            #(
-              'GATBPS_ARG_ENABLE_BOOL.m4')
-                prefix=''
-              ;;
-            #(
-              *'/GATBPS_ARG_ENABLE_BOOL.m4')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/GATBPS_ARG_ENABLE_BOOL.m4\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|GATBPS_ARG_ENABLE_BOOL.m4|%},
+  {%|
             set 'x' "${prefix}GATBPS_CHECK_VARS.m4" "${@AT@}"; shift
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'GATBPS_ARG_WITH_BOOL.m4'|*'/GATBPS_ARG_WITH_BOOL.m4')
-
-            case "${1}" in
-            #(
-              'GATBPS_ARG_WITH_BOOL.m4')
-                prefix=''
-              ;;
-            #(
-              *'/GATBPS_ARG_WITH_BOOL.m4')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/GATBPS_ARG_WITH_BOOL.m4\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|GATBPS_ARG_WITH_BOOL.m4|%},
+  {%|
             set 'x' "${prefix}GATBPS_CHECK_VARS.m4" "${@AT@}"; shift
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'GATBPS_CHECK_BASIC.m4'|*'/GATBPS_CHECK_BASIC.m4')
-
-            case "${1}" in
-            #(
-              'GATBPS_CHECK_BASIC.m4')
-                prefix=''
-              ;;
-            #(
-              *'/GATBPS_CHECK_BASIC.m4')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/GATBPS_CHECK_BASIC.m4\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|GATBPS_CHECK_BASIC.m4|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'GATBPS_CHECK_CFLAG.m4'|*'/GATBPS_CHECK_CFLAG.m4')
-
-            case "${1}" in
-            #(
-              'GATBPS_CHECK_CFLAG.m4')
-                prefix=''
-              ;;
-            #(
-              *'/GATBPS_CHECK_CFLAG.m4')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/GATBPS_CHECK_CFLAG.m4\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|GATBPS_CHECK_CFLAG.m4|%},
+  {%|
             set 'x' "${prefix}GATBPS_CHECK_BASIC.m4" "${@AT@}"; shift
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'GATBPS_CHECK_COMPILE.m4'|*'/GATBPS_CHECK_COMPILE.m4')
-
-            case "${1}" in
-            #(
-              'GATBPS_CHECK_COMPILE.m4')
-                prefix=''
-              ;;
-            #(
-              *'/GATBPS_CHECK_COMPILE.m4')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/GATBPS_CHECK_COMPILE.m4\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|GATBPS_CHECK_COMPILE.m4|%},
+  {%|
             set 'x' "${prefix}GATBPS_CHECK_BASIC.m4" "${@AT@}"; shift
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'GATBPS_CHECK_HEADER.m4'|*'/GATBPS_CHECK_HEADER.m4')
-
-            case "${1}" in
-            #(
-              'GATBPS_CHECK_HEADER.m4')
-                prefix=''
-              ;;
-            #(
-              *'/GATBPS_CHECK_HEADER.m4')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/GATBPS_CHECK_HEADER.m4\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|GATBPS_CHECK_HEADER.m4|%},
+  {%|
             set 'x' "${prefix}GATBPS_CHECK_COMPILE.m4" "${@AT@}"; shift
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'GATBPS_CHECK_LIB.m4'|*'/GATBPS_CHECK_LIB.m4')
-
-            case "${1}" in
-            #(
-              'GATBPS_CHECK_LIB.m4')
-                prefix=''
-              ;;
-            #(
-              *'/GATBPS_CHECK_LIB.m4')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/GATBPS_CHECK_LIB.m4\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|GATBPS_CHECK_LIB.m4|%},
+  {%|
             set 'x' "${prefix}GATBPS_CHECK_BASIC.m4" "${@AT@}"; shift
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'GATBPS_CHECK_LINK.m4'|*'/GATBPS_CHECK_LINK.m4')
-
-            case "${1}" in
-            #(
-              'GATBPS_CHECK_LINK.m4')
-                prefix=''
-              ;;
-            #(
-              *'/GATBPS_CHECK_LINK.m4')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/GATBPS_CHECK_LINK.m4\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|GATBPS_CHECK_LINK.m4|%},
+  {%|
             set 'x' "${prefix}GATBPS_CHECK_BASIC.m4" "${@AT@}"; shift
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'GATBPS_CHECK_RUN.m4'|*'/GATBPS_CHECK_RUN.m4')
-
-            case "${1}" in
-            #(
-              'GATBPS_CHECK_RUN.m4')
-                prefix=''
-              ;;
-            #(
-              *'/GATBPS_CHECK_RUN.m4')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/GATBPS_CHECK_RUN.m4\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|GATBPS_CHECK_RUN.m4|%},
+  {%|
             set 'x' "${prefix}GATBPS_CHECK_BASIC.m4" "${@AT@}"; shift
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'GATBPS_CHECK_VARS.m4'|*'/GATBPS_CHECK_VARS.m4')
-
-            case "${1}" in
-            #(
-              'GATBPS_CHECK_VARS.m4')
-                prefix=''
-              ;;
-            #(
-              *'/GATBPS_CHECK_VARS.m4')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/GATBPS_CHECK_VARS.m4\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|GATBPS_CHECK_VARS.m4|%},
+  {%|
             set 'x' "${prefix}GATBPS_CHECK_BASIC.m4" "${@AT@}"; shift
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'GATBPS_CONFIG_FILE.m4'|*'/GATBPS_CONFIG_FILE.m4')
-
-            case "${1}" in
-            #(
-              'GATBPS_CONFIG_FILE.m4')
-                prefix=''
-              ;;
-            #(
-              *'/GATBPS_CONFIG_FILE.m4')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/GATBPS_CONFIG_FILE.m4\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|GATBPS_CONFIG_FILE.m4|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'GATBPS_CONFIG_FILE_SUBST.m4'|*'/GATBPS_CONFIG_FILE_SUBST.m4')
-
-            case "${1}" in
-            #(
-              'GATBPS_CONFIG_FILE_SUBST.m4')
-                prefix=''
-              ;;
-            #(
-              *'/GATBPS_CONFIG_FILE_SUBST.m4')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/GATBPS_CONFIG_FILE_SUBST.m4\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|GATBPS_CONFIG_FILE_SUBST.m4|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'GATBPS_DEFINE_DATE.m4'|*'/GATBPS_DEFINE_DATE.m4')
-
-            case "${1}" in
-            #(
-              'GATBPS_DEFINE_DATE.m4')
-                prefix=''
-              ;;
-            #(
-              *'/GATBPS_DEFINE_DATE.m4')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/GATBPS_DEFINE_DATE.m4\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|GATBPS_DEFINE_DATE.m4|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'Makefile.am.vim'|*'/Makefile.am.vim')
-
-            case "${1}" in
-            #(
-              'Makefile.am.vim')
-                prefix=''
-              ;;
-            #(
-              *'/Makefile.am.vim')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/Makefile.am.vim\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|Makefile.am.vim|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'PACKAGEDATE.texi.in'|*'/PACKAGEDATE.texi.in')
-
-            case "${1}" in
-            #(
-              'PACKAGEDATE.texi.in')
-                prefix=''
-              ;;
-            #(
-              *'/PACKAGEDATE.texi.in')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/PACKAGEDATE.texi.in\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|PACKAGEDATE.texi.in|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'PACKAGEVERSION.texi.in'|*'/PACKAGEVERSION.texi.in')
-
-            case "${1}" in
-            #(
-              'PACKAGEVERSION.texi.in')
-                prefix=''
-              ;;
-            #(
-              *'/PACKAGEVERSION.texi.in')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/PACKAGEVERSION.texi.in\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|PACKAGEVERSION.texi.in|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'TEST_EXIT.h'|*'/TEST_EXIT.h')
-
-            case "${1}" in
-            #(
-              'TEST_EXIT.h')
-                prefix=''
-              ;;
-            #(
-              *'/TEST_EXIT.h')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/TEST_EXIT.h\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|TEST_EXIT.h|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'VERSION.ac'|*'/VERSION.ac')
-
-            case "${1}" in
-            #(
-              'VERSION.ac')
-                prefix=''
-              ;;
-            #(
-              *'/VERSION.ac')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/VERSION.ac\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|VERSION.ac|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'VERSION.sh'|*'/VERSION.sh')
-
-            case "${1}" in
-            #(
-              'VERSION.sh')
-                prefix=''
-              ;;
-            #(
-              *'/VERSION.sh')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/VERSION.sh\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|VERSION.sh|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'VERSION_LTCUR.sh'|*'/VERSION_LTCUR.sh')
-
-            case "${1}" in
-            #(
-              'VERSION_LTCUR.sh')
-                prefix=''
-              ;;
-            #(
-              *'/VERSION_LTCUR.sh')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/VERSION_LTCUR.sh\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|VERSION_LTCUR.sh|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'awk-form.sh'|*'/awk-form.sh')
-
-            case "${1}" in
-            #(
-              'awk-form.sh')
-                prefix=''
-              ;;
-            #(
-              *'/awk-form.sh')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/awk-form.sh\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|awk-form.sh|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'bdots.texi'|*'/bdots.texi')
-
-            case "${1}" in
-            #(
-              'bdots.texi')
-                prefix=''
-              ;;
-            #(
-              *'/bdots.texi')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/bdots.texi\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|bdots.texi|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'bothcontents.texi'|*'/bothcontents.texi')
-
-            case "${1}" in
-            #(
-              'bothcontents.texi')
-                prefix=''
-              ;;
-            #(
-              *'/bothcontents.texi')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/bothcontents.texi\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|bothcontents.texi|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'configure.ac.vim'|*'/configure.ac.vim')
-
-            case "${1}" in
-            #(
-              'configure.ac.vim')
-                prefix=''
-              ;;
-            #(
-              *'/configure.ac.vim')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/configure.ac.vim\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|configure.ac.vim|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'contents.texi'|*'/contents.texi')
-
-            case "${1}" in
-            #(
-              'contents.texi')
-                prefix=''
-              ;;
-            #(
-              *'/contents.texi')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/contents.texi\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|contents.texi|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'dslash.texi'|*'/dslash.texi')
-
-            case "${1}" in
-            #(
-              'dslash.texi')
-                prefix=''
-              ;;
-            #(
-              *'/dslash.texi')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/dslash.texi\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|dslash.texi|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'gequ.texi'|*'/gequ.texi')
-
-            case "${1}" in
-            #(
-              'gequ.texi')
-                prefix=''
-              ;;
-            #(
-              *'/gequ.texi')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/gequ.texi\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|gequ.texi|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'ipez.texi'|*'/ipez.texi')
-
-            case "${1}" in
-            #(
-              'ipez.texi')
-                prefix=''
-              ;;
-            #(
-              *'/ipez.texi')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/ipez.texi\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|ipez.texi|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'lcei.texi'|*'/lcei.texi')
-
-            case "${1}" in
-            #(
-              'lcei.texi')
-                prefix=''
-              ;;
-            #(
-              *'/lcei.texi')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/lcei.texi\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|lcei.texi|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'lequ.texi'|*'/lequ.texi')
-
-            case "${1}" in
-            #(
-              'lequ.texi')
-                prefix=''
-              ;;
-            #(
-              *'/lequ.texi')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/lequ.texi\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|lequ.texi|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'lflo.texi'|*'/lflo.texi')
-
-            case "${1}" in
-            #(
-              'lflo.texi')
-                prefix=''
-              ;;
-            #(
-              *'/lflo.texi')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/lflo.texi\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|lflo.texi|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'math.texi'|*'/math.texi')
-
-            case "${1}" in
-            #(
-              'math.texi')
-                prefix=''
-              ;;
-            #(
-              *'/math.texi')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/math.texi\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|math.texi|%},
+  {%|
             set 'x' "${prefix}sps.texi" "${@AT@}"; shift
             set 'x' "${prefix}sbs.texi" "${@AT@}"; shift
             set 'x' "${prefix}rflo.texi" "${@AT@}"; shift
@@ -11585,714 +10367,157 @@ EOF1
             set 'x' "${prefix}dslash.texi" "${@AT@}"; shift
             set 'x' "${prefix}bdots.texi" "${@AT@}"; shift
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'mdot.texi'|*'/mdot.texi')
-
-            case "${1}" in
-            #(
-              'mdot.texi')
-                prefix=''
-              ;;
-            #(
-              *'/mdot.texi')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/mdot.texi\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|mdot.texi|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'mdots.texi'|*'/mdots.texi')
-
-            case "${1}" in
-            #(
-              'mdots.texi')
-                prefix=''
-              ;;
-            #(
-              *'/mdots.texi')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/mdots.texi\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|mdots.texi|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'msign.texi'|*'/msign.texi')
-
-            case "${1}" in
-            #(
-              'msign.texi')
-                prefix=''
-              ;;
-            #(
-              *'/msign.texi')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/msign.texi\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|msign.texi|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'mtvskipbot.texi'|*'/mtvskipbot.texi')
-
-            case "${1}" in
-            #(
-              'mtvskipbot.texi')
-                prefix=''
-              ;;
-            #(
-              *'/mtvskipbot.texi')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/mtvskipbot.texi\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|mtvskipbot.texi|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'mtvskiptop.texi'|*'/mtvskiptop.texi')
-
-            case "${1}" in
-            #(
-              'mtvskiptop.texi')
-                prefix=''
-              ;;
-            #(
-              *'/mtvskiptop.texi')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/mtvskiptop.texi\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|mtvskiptop.texi|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'nequ.texi'|*'/nequ.texi')
-
-            case "${1}" in
-            #(
-              'nequ.texi')
-                prefix=''
-              ;;
-            #(
-              *'/nequ.texi')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/nequ.texi\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|nequ.texi|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'prm.texi'|*'/prm.texi')
-
-            case "${1}" in
-            #(
-              'prm.texi')
-                prefix=''
-              ;;
-            #(
-              *'/prm.texi')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/prm.texi\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|prm.texi|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'rarrow.texi'|*'/rarrow.texi')
-
-            case "${1}" in
-            #(
-              'rarrow.texi')
-                prefix=''
-              ;;
-            #(
-              *'/rarrow.texi')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/rarrow.texi\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|rarrow.texi|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'rcei.texi'|*'/rcei.texi')
-
-            case "${1}" in
-            #(
-              'rcei.texi')
-                prefix=''
-              ;;
-            #(
-              *'/rcei.texi')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/rcei.texi\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|rcei.texi|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'rflo.texi'|*'/rflo.texi')
-
-            case "${1}" in
-            #(
-              'rflo.texi')
-                prefix=''
-              ;;
-            #(
-              *'/rflo.texi')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/rflo.texi\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|rflo.texi|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'sbs.texi'|*'/sbs.texi')
-
-            case "${1}" in
-            #(
-              'sbs.texi')
-                prefix=''
-              ;;
-            #(
-              *'/sbs.texi')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/sbs.texi\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|sbs.texi|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'shortcontents.texi'|*'/shortcontents.texi')
-
-            case "${1}" in
-            #(
-              'shortcontents.texi')
-                prefix=''
-              ;;
-            #(
-              *'/shortcontents.texi')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/shortcontents.texi\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|shortcontents.texi|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'sps.texi'|*'/sps.texi')
-
-            case "${1}" in
-            #(
-              'sps.texi')
-                prefix=''
-              ;;
-            #(
-              *'/sps.texi')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/sps.texi\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|sps.texi|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'texi-form.sh'|*'/texi-form.sh')
-
-            case "${1}" in
-            #(
-              'texi-form.sh')
-                prefix=''
-              ;;
-            #(
-              *'/texi-form.sh')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/texi-form.sh\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|texi-form.sh|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         #(
           'troff-form.sh'|*'/troff-form.sh')
-
-            case "${1}" in
-            #(
-              'troff-form.sh')
-                prefix=''
-              ;;
-            #(
-              *'/troff-form.sh')
-                x=`"${sed}" "
-s/'/'\\\\\\\\''/g
-1s/^/prefix='/
-\\$s/troff-form.sh\\$/'/
-" <<EOF1
-${1}
-EOF1
-`
-                case "${?}" in
-                #(
-                  '0')
-                    :
-                  ;;
-                #(
-                  *)
-                    cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: a command substitution
-${fy2}gatbps:${fR2} recursion failed: ${fB2}${1}${fR2}
-EOF1
-                    exit_status='1'
-                    break
-                  ;;
-                esac
-                eval "${x}"
-              ;;
-            esac
-
-            shift
-
+|%}dnl
+recursion_code(
+  {%|troff-form.sh|%},
+  {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
-
-            set 'x' "${@AT@}"
-
+|%}){%|
           ;;
 
         esac
