@@ -33,8 +33,8 @@ It can be included
 in another Texinfo file where
 the appendix is desired to appear@.
 The appendix is labeled with
-@w{@t{@@node@w{ }Creative@w{ }Commons@w{ }Zero}}
-so that it follows
+@w{@t{@@node@w{ }Creative@w{ }Commons@w{ }Zero@w{ }1-0}}
+so that it maintains
 the usual node structure
 and can be cross-referenced@.
 

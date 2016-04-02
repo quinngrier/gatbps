@@ -923,8 +923,8 @@ It can be included
 in another Texinfo file where
 the appendix is desired to appear.
 The appendix is labeled with
-.nohy "\fB@node\ Creative\ Commons\ Zero\fR"
-so that it follows
+.nohy "\fB@node\ Creative\ Commons\ Zero\ 1\-0\fR"
+so that it maintains
 the usual node structure
 and can be cross-referenced.
 .TP

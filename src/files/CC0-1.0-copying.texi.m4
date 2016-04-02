@@ -56,7 +56,7 @@ The authors of this manual have waived all copyright and
 related or neighboring rights to the extent permitted by
 law as described by the CC0 1.0 Universal Public Domain
 Dedication. For the full dedication,
-@pxref{Creative Commons Zero}.
+@pxref{Creative Commons Zero 1-0}.
 It may also be available at
 @url{https://creativecommons.org/publicdomain/zero/1.0/}.
 @end copying
@@ -67,7 +67,7 @@ The authors of this manual have waived all copyright and
 related or neighboring rights to the extent permitted by
 law as described by the CC0 1.0 Universal Public Domain
 Dedication. For the full dedication,
-@pxref{Creative Commons Zero}.
+@pxref{Creative Commons Zero 1-0}.
 It may also be available at
 @url{https://creativecommons.org/publicdomain/zero/1.0/}.
 @end copying
