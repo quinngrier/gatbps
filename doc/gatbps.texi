@@ -73,6 +73,7 @@ which was released on @w{@value{PACKAGEDATE}}@.
 * Special File Reference::
 * Creative Commons Zero 1-0::
 * Special File Index::
+* Texinfo Macro Index::
 @end menu
 @end ifnottex
 
@@ -106,6 +107,11 @@ which was released on @w{@value{PACKAGEDATE}}@.
 @unnumbered Special File Index
 
 @printindex sf
+
+@node Texinfo Macro Index
+@unnumbered Texinfo Macro Index
+
+@printindex tm
 @ifxml
 @c
 @c The authors of this file have waived all copyright and
