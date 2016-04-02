@@ -928,6 +928,8 @@ The appendix is labeled with
 so that it maintains
 the usual node structure
 and can be cross-referenced.
+.IP
+For more information, see the COPYRIGHT TEXTS section.
 .TP
 .nohy "\fBCC0\-1.0\-commit.txt\fR"
 .IPEZ

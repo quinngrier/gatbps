@@ -38,6 +38,8 @@ so that it maintains
 the usual node structure
 and can be cross-referenced@.
 
+For more information, @pxref{Copyright Texts}@.
+
 @sfindex @w{@t{CC0-1.@:0-copying.@:texi}}
 @item @w{@t{CC0-1.@:0-copying.@:texi}}
 @include ipez.texi
