@@ -961,6 +961,8 @@ It can be included in
 another Texinfo file where the
 .nohy "\fB@copying\fR"
 command is desired to appear.
+.IP
+For more information, see the COPYRIGHT TEXTS section.
 .TP
 .nohy "\fBCC0\-1.0\-file.txt\fR"
 .IPEZ

@@ -59,6 +59,8 @@ another Texinfo file where the
 @w{@t{@@copying}}
 command is desired to appear@.
 
+For more information, @pxref{Copyright Texts}@.
+
 @sfindex @w{@t{CC0-1.@:0.@:txt}}
 @item @w{@t{CC0-1.@:0.@:txt}}
 @include ipez.texi
