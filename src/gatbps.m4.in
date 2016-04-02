@@ -10521,8 +10521,8 @@ recursion_code(
           ;;
 
         esac
-        break
-      done
+        break # recursion_done
+      done # recursion_done
 
       boundary='no'
 
