@@ -60,6 +60,7 @@ EXTRA_DIST += src/files/mtvskipbot.texi.m4
 EXTRA_DIST += src/files/mtvskiptop.texi.m4
 EXTRA_DIST += src/tools/footer_comment.m4
 EXTRA_DIST += src/tools/header_comment.m4
+EXTRA_DIST += src/tools/recursion_code.m4
 
 MOSTLYCLEANFILES =
 MOSTLYCLEANFILES += bin/gatbps
@@ -174,6 +175,7 @@ bin/gatbps: src/tools/PACKAGE_DATE.m4
 bin/gatbps: src/tools/PACKAGE_VERSION.m4
 bin/gatbps: src/tools/footer_comment.m4
 bin/gatbps: src/tools/header_comment.m4
+bin/gatbps: src/tools/recursion_code.m4
 	$(MKDIR_P) bin
 	$(M4) $(AM_M4FLAGS) $(M4FLAGS) src/gatbps.m4 >bin/gatbps
 	chmod +x bin/gatbps
