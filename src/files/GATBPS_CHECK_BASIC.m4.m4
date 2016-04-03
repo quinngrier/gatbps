@@ -78,7 +78,9 @@ AC_DEFUN([GATBPS_CHECK_BASIC], [{ :
     ;;
   #(
     *)
-      AC_MSG_ERROR([invalid \$[]{gatbps_cv_$2} value: $[]{gatbps_cv_$2}], [1])
+      AC_MSG_ERROR(
+        [invalid \$[]{gatbps_cv_$2} value: $[]{gatbps_cv_$2}],
+        [1])
     ;;
   esac
 
