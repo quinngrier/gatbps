@@ -44,7 +44,9 @@ AC_DEFUN([GATBPS_CHECK_BASIC], [{ :
           #(
             *)
               AC_MSG_RESULT([])
-              AC_MSG_ERROR([invalid \$[]{gatbps_var} value: $[]{gatbps_var}], [1])
+              AC_MSG_ERROR(
+                [invalid \$[]{gatbps_var} value: $[]{gatbps_var}],
+                [1])
             ;;
           esac
           gatbps_x="$[]{gatbps_x}$[]{gatbps_var}"
