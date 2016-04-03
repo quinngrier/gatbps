@@ -48,10 +48,10 @@ The
 special file is a commit
 message template that states that
 the author of the commit has waived
-their rights to it by referencing the
+their rights to it by cross-referencing the
 @w{@t{CC0-1.@:0.@:txt}}
 special file@.
-It can be used, for example, with Git's
+This can be used, for example, with Git's
 @w{@t{commit.@:template}}
 configuration variable@.
 

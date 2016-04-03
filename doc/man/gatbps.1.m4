@@ -938,10 +938,10 @@ The
 special file is a commit
 message template that states that
 the author of the commit has waived
-their rights to it by referencing the
+their rights to it by cross-referencing the
 .nohy "\fBCC0\-1.0.txt\fR"
 special file.
-It can be used, for example, with Git's
+This can be used, for example, with Git's
 .nohy "\fBcommit.template\fR"
 configuration variable.
 .IP
