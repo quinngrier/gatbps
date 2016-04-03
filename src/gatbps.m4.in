@@ -4030,14 +4030,10 @@ EOF1
         #(
           'no,CC0-1.0-file.txt'|'no,'*'/CC0-1.0-file.txt')
             cat >"${safe_1}" <<'EOF1'
-The authors of this file have waived all copyright and
-related or neighboring rights to the extent permitted by
-law as described by the CC0 1.0 Universal Public Domain
-Dedication. You should have received a copy of the full
-dedication along with this file, typically as a file
-named <CC0-1.0.txt>. If not, it may be available at
-<https://creativecommons.org/publicdomain/zero/1.0/>.
-EOF1
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`src/files/CC0-1.0-file.txt.m4')dnl
+{%|EOF1
             case "${?}" in
             #(
               '0')

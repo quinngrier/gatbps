@@ -44,6 +44,7 @@ EXTRA_DIST += doc/man/gatbps.1.m4
 EXTRA_DIST += src/files/CC0-1.0-appendix.texi.m4
 EXTRA_DIST += src/files/CC0-1.0-commit.txt.m4
 EXTRA_DIST += src/files/CC0-1.0-copying.texi.m4
+EXTRA_DIST += src/files/CC0-1.0-file.txt.m4
 EXTRA_DIST += src/files/GATBPS_ARG_ENABLE_BOOL.m4.m4
 EXTRA_DIST += src/files/GATBPS_ARG_WITH_BOOL.m4.m4
 EXTRA_DIST += src/files/GATBPS_CHECK_BASIC.m4.m4
@@ -161,6 +162,7 @@ bin/gatbps: doc/man/gatbps.1.m4
 bin/gatbps: src/files/CC0-1.0-appendix.texi.m4
 bin/gatbps: src/files/CC0-1.0-commit.txt.m4
 bin/gatbps: src/files/CC0-1.0-copying.texi.m4
+bin/gatbps: src/files/CC0-1.0-file.txt.m4
 bin/gatbps: src/files/GATBPS_ARG_ENABLE_BOOL.m4.m4
 bin/gatbps: src/files/GATBPS_ARG_WITH_BOOL.m4.m4
 bin/gatbps: src/files/GATBPS_CHECK_BASIC.m4.m4
