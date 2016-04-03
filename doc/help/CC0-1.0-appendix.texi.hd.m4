@@ -9,7 +9,8 @@ Texinfo file where the appendix is desired to appear. The appendix is
 labeled with ${fB1}@node Creative Commons Zero 1-0${fR1} so that it maintains the
 usual node structure and can be cross-referenced.
 
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.|%}
+Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
+|%}dnl
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by
