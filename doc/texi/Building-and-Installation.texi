@@ -18,7 +18,7 @@ entries by default, which may move some of
 the program descriptions to the 33rd column@.
 This can be prevented by setting the
 @w{@t{INSTALL_INFO_NO_INDENT}}
-environment variable (to any value) during the
+environment variable to any value during the
 @w{@t{make@w{ }install}}
 command@.
 For example, the following command might be used:
