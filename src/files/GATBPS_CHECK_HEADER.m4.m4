@@ -14,8 +14,8 @@ AC_DEFUN([GATBPS_CHECK_HEADER], [{ :
     [$1],
     [$2],
     [$3],
-    [$4],
-    [$5])
+    [],
+    [$4])
 
 }])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
