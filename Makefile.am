@@ -36,6 +36,7 @@ EXTRA_DIST += build-aux/sh-form.sh
 EXTRA_DIST += doc/help/CC0-1.0-appendix.texi.hd.m4
 EXTRA_DIST += doc/help/CC0-1.0-commit.txt.hd.m4
 EXTRA_DIST += doc/help/CC0-1.0-copying.texi.hd.m4
+EXTRA_DIST += doc/help/CC0-1.0-file.txt.hd.m4
 EXTRA_DIST += doc/help/CC0-1.0.txt.hd.m4
 EXTRA_DIST += doc/help/PACKAGEDATE.texi.in.hd.m4
 EXTRA_DIST += doc/help/PACKAGEVERSION.texi.in.hd.m4
@@ -152,6 +153,7 @@ plaintextdir = $(docdir)
 bin/gatbps: doc/help/CC0-1.0-appendix.texi.hd.m4
 bin/gatbps: doc/help/CC0-1.0-commit.txt.hd.m4
 bin/gatbps: doc/help/CC0-1.0-copying.texi.hd.m4
+bin/gatbps: doc/help/CC0-1.0-file.txt.hd.m4
 bin/gatbps: doc/help/CC0-1.0.txt.hd.m4
 bin/gatbps: doc/help/PACKAGEDATE.texi.in.hd.m4
 bin/gatbps: doc/help/PACKAGEVERSION.texi.in.hd.m4

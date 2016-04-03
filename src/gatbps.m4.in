@@ -967,15 +967,10 @@ EOF1
           #(
             '--help=CC0-1.0-file.txt'|'--help='*'/CC0-1.0-file.txt')
               cat <<EOF1
-Special file: ${fB1}CC0-1.0-file.txt${fR1}
-
-The ${fB1}CC0-1.0-file.txt${fR1} special file contains a plain text message that
-states that the authors of the file have waived their rights to it by
-referencing the ${fB1}CC0-1.0.txt${fR1} special file. This can be inserted into a
-plain text file or a source code file as a comment.
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`doc/help/CC0-1.0-file.txt.hd.m4')dnl
+{%|EOF1
               case "${?}" in
               #(
                 '0')
