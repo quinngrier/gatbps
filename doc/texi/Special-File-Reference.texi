@@ -40,6 +40,23 @@ and can be cross-referenced@.
 
 For more information, @pxref{Copyright Texts}@.
 
+@sfindex @w{@t{CC0-1.@:0-commit.@:txt}}
+@item @w{@t{CC0-1.@:0-commit.@:txt}}
+@include ipez.texi
+The
+@w{@t{CC0-1.@:0-commit.@:txt}}
+special file is a commit
+message template that states that
+the author of the commit has waived
+their rights to it by referencing the
+@w{@t{CC0-1.@:0.@:txt}}
+special file@.
+It can be used, for example, with Git's
+@w{@t{commit.@:template}}
+configuration variable@.
+
+For more information, @pxref{Copyright Texts}@.
+
 @sfindex @w{@t{CC0-1.@:0-copying.@:texi}}
 @item @w{@t{CC0-1.@:0-copying.@:texi}}
 @include ipez.texi

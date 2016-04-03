@@ -935,14 +935,17 @@ For more information, see the COPYRIGHT TEXTS section.
 .IPEZ
 The
 .nohy "\fBCC0\-1.0\-commit.txt\fR"
-special file is a commit message template that
-states that the author of the commit has waived their rights to it by
-referencing the
+special file is a commit
+message template that states that
+the author of the commit has waived
+their rights to it by referencing the
 .nohy "\fBCC0\-1.0.txt\fR"
 special file.
-This can be used with Git's
+It can be used, for example, with Git's
 .nohy "\fBcommit.template\fR"
-configuration variable, for example.
+configuration variable.
+.IP
+For more information, see the COPYRIGHT TEXTS section.
 .TP
 .nohy "\fBCC0\-1.0\-copying.texi\fR"
 .IPEZ
