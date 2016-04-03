@@ -6,7 +6,14 @@
 @unnumbered Copyright Information
 @end ifclear
 
-Most parts of GATBPS are original work.
+Except for all complete copyright texts
+@ifset fullmanual
+and certain copyright notice texts (@pxref{Copyright Texts}),
+@end ifset
+@ifclear fullmanual
+and certain copyright notice texts,
+@end ifclear
+all parts of GATBPS are original work.
 The authors of these parts have waived all copyright and
 related or neighboring rights to the extent permitted by
 law as described by the CC0 1.0 Universal Public Domain
