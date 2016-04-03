@@ -6,7 +6,7 @@
 @unnumbered Copyright Information
 @end ifclear
 
-Except for all complete copyright texts
+Except for the complete copyright texts
 @ifset fullmanual
 and certain copyright notice texts (@pxref{Copyright Texts}),
 @end ifset
