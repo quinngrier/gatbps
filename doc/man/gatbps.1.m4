@@ -971,13 +971,17 @@ For more information, see the COPYRIGHT TEXTS section.
 .IPEZ
 The
 .nohy "\fBCC0\-1.0\-file.txt\fR"
-special file contains a plain text message that
-states that the authors of the file have waived their rights to it by
-referencing the
+special file contains
+a message stating that the
+authors of the file have waived their
+rights to it by cross-referencing the
 .nohy "\fBCC0\-1.0.txt\fR"
 special file.
-This can be inserted into a
-plain text file or a source code file as a comment.
+This can be used
+as a copyright notice
+in a wide variety of files.
+.IP
+For more information, see the COPYRIGHT TEXTS section.
 .TP
 .nohy "\fBCC0\-1.0.txt\fR"
 .IPEZ

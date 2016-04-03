@@ -78,6 +78,23 @@ command is desired to appear@.
 
 For more information, @pxref{Copyright Texts}@.
 
+@sfindex @w{@t{CC0-1.@:0-file.@:txt}}
+@item @w{@t{CC0-1.@:0-file.@:txt}}
+@include ipez.texi
+The
+@w{@t{CC0-1.@:0-file.@:txt}}
+special file contains
+a message stating that the
+authors of the file have waived their
+rights to it by cross-referencing the
+@w{@t{CC0-1.@:0.@:txt}}
+special file@.
+This can be used
+as a copyright notice
+in a wide variety of files@.
+
+For more information, @pxref{Copyright Texts}@.
+
 @sfindex @w{@t{CC0-1.@:0.@:txt}}
 @item @w{@t{CC0-1.@:0.@:txt}}
 @include ipez.texi

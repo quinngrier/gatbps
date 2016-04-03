@@ -2,10 +2,10 @@ changecom`'dnl
 changequote(`{%|', `|%}')dnl
 {%|Special file: ${fB1}CC0-1.0-file.txt${fR1}
 
-The ${fB1}CC0-1.0-file.txt${fR1} special file contains a plain text message that
-states that the authors of the file have waived their rights to it by
-referencing the ${fB1}CC0-1.0.txt${fR1} special file. This can be inserted into a
-plain text file or a source code file as a comment.
+The ${fB1}CC0-1.0-file.txt${fR1} special file contains a message stating that the
+authors of the file have waived their rights to it by cross-referencing
+the ${fB1}CC0-1.0.txt${fR1} special file. This can be used as a copyright notice in
+a wide variety of files.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 |%}dnl
