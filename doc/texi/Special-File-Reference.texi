@@ -5,7 +5,7 @@ This section provides a short
 description of each special file@.
 Along with each
 short description is a
-reference to where the
+cross-reference to where the
 full description can be found@.
 If a special file
 supports comments,
