@@ -259,7 +259,6 @@ doc/man/gatbps.1: bin/gatbps
 	$(MKDIR_P) doc/man
 	bin/gatbps --man >doc/man/gatbps.1
 
-docbook: doc/gatbps-$(PACKAGE_VERSION).xml
 docbook: doc/gatbps.xml
 
 install-docbook: doc/gatbps.xml
