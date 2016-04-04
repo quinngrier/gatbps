@@ -33,6 +33,7 @@ EXTRA_DIST += VERSION
 EXTRA_DIST += build-aux/DATE.sh
 EXTRA_DIST += build-aux/VERSION.sh
 EXTRA_DIST += build-aux/sh-form.sh
+EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).html
 EXTRA_DIST += doc/help/CC0-1.0-appendix.texi.hd.m4
 EXTRA_DIST += doc/help/CC0-1.0-commit.txt.hd.m4
 EXTRA_DIST += doc/help/CC0-1.0-copying.texi.hd.m4
@@ -67,6 +68,7 @@ EXTRA_DIST += src/tools/header_comment.m4
 EXTRA_DIST += src/tools/recursion_code.m4
 
 MAINTAINERCLEANFILES =
+MAINTAINERCLEANFILES += doc/gatbps-$(PACKAGE_VERSION).html
 
 MOSTLYCLEANFILES =
 MOSTLYCLEANFILES += bin/gatbps
@@ -192,6 +194,10 @@ bin/gatbps: src/tools/recursion_code.m4
 	$(M4) $(AM_M4FLAGS) $(M4FLAGS) src/gatbps.m4 >bin/gatbps
 	chmod +x bin/gatbps
 
+doc/gatbps-$(PACKAGE_VERSION).html: doc/gatbps.html
+	rm -f -r doc/gatbps-$(PACKAGE_VERSION).html
+	cp -R doc/gatbps.html doc/gatbps-$(PACKAGE_VERSION).html
+
 doc/gatbps.txt: $(doc_gatbps_TEXINFOS)
 doc/gatbps.txt: doc/gatbps.texi
 	$(AM_V_MAKEINFO)$(MKDIR_P) doc
@@ -229,6 +235,8 @@ doc/man/gatbps.1: bin/gatbps
 	bin/gatbps --man >doc/man/gatbps.1
 
 docbook: doc/gatbps.xml
+
+html-local: doc/gatbps-$(PACKAGE_VERSION).html
 
 install-docbook: doc/gatbps.xml
 	@$(NORMAL_INSTALL)
