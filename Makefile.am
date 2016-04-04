@@ -209,7 +209,9 @@ doc/gatbps-$(PACKAGE_VERSION).dvi: doc/gatbps.texi
 	$(MAKE) $(AM_MAKEFLAGS) doc/gatbps.dvi
 	cp doc/gatbps.dvi doc/gatbps-$(PACKAGE_VERSION).dvi
 
-doc/gatbps-$(PACKAGE_VERSION).html: doc/gatbps.html
+doc/gatbps-$(PACKAGE_VERSION).html: $(doc_gatbps_TEXINFOS)
+doc/gatbps-$(PACKAGE_VERSION).html: doc/gatbps.texi
+	$(MAKE) $(AM_MAKEFLAGS) doc/gatbps.html
 	rm -f -r doc/gatbps-$(PACKAGE_VERSION).html
 	cp -R doc/gatbps.html doc/gatbps-$(PACKAGE_VERSION).html
 
