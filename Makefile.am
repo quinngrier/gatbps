@@ -302,7 +302,6 @@ install-plaintext: doc/gatbps.txt
   exit 0; \
 }
 
-plaintext: doc/gatbps-$(PACKAGE_VERSION).txt
 plaintext: doc/gatbps.txt
 
 uninstall-docbook:
