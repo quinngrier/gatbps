@@ -37,6 +37,7 @@ EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).dvi
 EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).html
 EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).pdf
 EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).ps
+EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).txt
 EXTRA_DIST += doc/help/CC0-1.0-appendix.texi.hd.m4
 EXTRA_DIST += doc/help/CC0-1.0-commit.txt.hd.m4
 EXTRA_DIST += doc/help/CC0-1.0-copying.texi.hd.m4
@@ -75,6 +76,7 @@ MAINTAINERCLEANFILES += doc/gatbps-$(PACKAGE_VERSION).dvi
 MAINTAINERCLEANFILES += doc/gatbps-$(PACKAGE_VERSION).html
 MAINTAINERCLEANFILES += doc/gatbps-$(PACKAGE_VERSION).pdf
 MAINTAINERCLEANFILES += doc/gatbps-$(PACKAGE_VERSION).ps
+MAINTAINERCLEANFILES += doc/gatbps-$(PACKAGE_VERSION).txt
 
 MOSTLYCLEANFILES =
 MOSTLYCLEANFILES += bin/gatbps
@@ -213,6 +215,9 @@ doc/gatbps-$(PACKAGE_VERSION).pdf: doc/gatbps.pdf
 doc/gatbps-$(PACKAGE_VERSION).ps: doc/gatbps.ps
 	cp doc/gatbps.ps doc/gatbps-$(PACKAGE_VERSION).ps
 
+doc/gatbps-$(PACKAGE_VERSION).txt: doc/gatbps.txt
+	cp doc/gatbps.txt doc/gatbps-$(PACKAGE_VERSION).txt
+
 doc/gatbps.txt: $(doc_gatbps_TEXINFOS)
 doc/gatbps.txt: doc/gatbps.texi
 	$(AM_V_MAKEINFO)$(MKDIR_P) doc
@@ -297,6 +302,7 @@ install-plaintext: doc/gatbps.txt
 
 pdf-local: doc/gatbps-$(PACKAGE_VERSION).pdf
 
+plaintext: doc/gatbps-$(PACKAGE_VERSION).txt
 plaintext: doc/gatbps.txt
 
 ps-local: doc/gatbps-$(PACKAGE_VERSION).ps
