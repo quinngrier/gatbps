@@ -35,6 +35,7 @@ EXTRA_DIST += build-aux/VERSION.sh
 EXTRA_DIST += build-aux/sh-form.sh
 EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).html
 EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).pdf
+EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).ps
 EXTRA_DIST += doc/help/CC0-1.0-appendix.texi.hd.m4
 EXTRA_DIST += doc/help/CC0-1.0-commit.txt.hd.m4
 EXTRA_DIST += doc/help/CC0-1.0-copying.texi.hd.m4
@@ -71,6 +72,7 @@ EXTRA_DIST += src/tools/recursion_code.m4
 MAINTAINERCLEANFILES =
 MAINTAINERCLEANFILES += doc/gatbps-$(PACKAGE_VERSION).html
 MAINTAINERCLEANFILES += doc/gatbps-$(PACKAGE_VERSION).pdf
+MAINTAINERCLEANFILES += doc/gatbps-$(PACKAGE_VERSION).ps
 
 MOSTLYCLEANFILES =
 MOSTLYCLEANFILES += bin/gatbps
@@ -203,6 +205,9 @@ doc/gatbps-$(PACKAGE_VERSION).html: doc/gatbps.html
 doc/gatbps-$(PACKAGE_VERSION).pdf: doc/gatbps.pdf
 	cp doc/gatbps.pdf doc/gatbps-$(PACKAGE_VERSION).pdf
 
+doc/gatbps-$(PACKAGE_VERSION).ps: doc/gatbps.ps
+	cp doc/gatbps.ps doc/gatbps-$(PACKAGE_VERSION).ps
+
 doc/gatbps.txt: $(doc_gatbps_TEXINFOS)
 doc/gatbps.txt: doc/gatbps.texi
 	$(AM_V_MAKEINFO)$(MKDIR_P) doc
@@ -286,6 +291,8 @@ install-plaintext: doc/gatbps.txt
 pdf-local: doc/gatbps-$(PACKAGE_VERSION).pdf
 
 plaintext: doc/gatbps.txt
+
+ps-local: doc/gatbps-$(PACKAGE_VERSION).ps
 
 uninstall-docbook:
 	@$(NORMAL_UNINSTALL)
