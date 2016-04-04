@@ -66,6 +66,8 @@ EXTRA_DIST += src/tools/footer_comment.m4
 EXTRA_DIST += src/tools/header_comment.m4
 EXTRA_DIST += src/tools/recursion_code.m4
 
+MAINTAINERCLEANFILES =
+
 MOSTLYCLEANFILES =
 MOSTLYCLEANFILES += bin/gatbps
 MOSTLYCLEANFILES += doc/man/gatbps.1
