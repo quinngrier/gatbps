@@ -262,8 +262,6 @@ doc/man/gatbps.1: bin/gatbps
 docbook: doc/gatbps-$(PACKAGE_VERSION).xml
 docbook: doc/gatbps.xml
 
-html-local: doc/gatbps-$(PACKAGE_VERSION).html
-
 install-docbook: doc/gatbps.xml
 	@$(NORMAL_INSTALL)
 	@-: #(
