@@ -230,7 +230,9 @@ doc/gatbps-$(PACKAGE_VERSION).txt: doc/gatbps.texi
 	$(MAKE) $(AM_MAKEFLAGS) doc/gatbps.txt
 	cp doc/gatbps.txt doc/gatbps-$(PACKAGE_VERSION).txt
 
-doc/gatbps-$(PACKAGE_VERSION).xml: doc/gatbps.xml
+doc/gatbps-$(PACKAGE_VERSION).xml: $(doc_gatbps_TEXINFOS)
+doc/gatbps-$(PACKAGE_VERSION).xml: doc/gatbps.texi
+	$(MAKE) $(AM_MAKEFLAGS) doc/gatbps.xml
 	cp doc/gatbps.xml doc/gatbps-$(PACKAGE_VERSION).xml
 
 doc/gatbps.txt: $(doc_gatbps_TEXINFOS)
