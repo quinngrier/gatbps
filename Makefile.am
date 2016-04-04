@@ -33,6 +33,7 @@ EXTRA_DIST += VERSION
 EXTRA_DIST += build-aux/DATE.sh
 EXTRA_DIST += build-aux/VERSION.sh
 EXTRA_DIST += build-aux/sh-form.sh
+EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).dvi
 EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).html
 EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).pdf
 EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).ps
@@ -70,6 +71,7 @@ EXTRA_DIST += src/tools/header_comment.m4
 EXTRA_DIST += src/tools/recursion_code.m4
 
 MAINTAINERCLEANFILES =
+MAINTAINERCLEANFILES += doc/gatbps-$(PACKAGE_VERSION).dvi
 MAINTAINERCLEANFILES += doc/gatbps-$(PACKAGE_VERSION).html
 MAINTAINERCLEANFILES += doc/gatbps-$(PACKAGE_VERSION).pdf
 MAINTAINERCLEANFILES += doc/gatbps-$(PACKAGE_VERSION).ps
@@ -198,6 +200,9 @@ bin/gatbps: src/tools/recursion_code.m4
 	$(M4) $(AM_M4FLAGS) $(M4FLAGS) src/gatbps.m4 >bin/gatbps
 	chmod +x bin/gatbps
 
+doc/gatbps-$(PACKAGE_VERSION).dvi: doc/gatbps.dvi
+	cp doc/gatbps.dvi doc/gatbps-$(PACKAGE_VERSION).dvi
+
 doc/gatbps-$(PACKAGE_VERSION).html: doc/gatbps.html
 	rm -f -r doc/gatbps-$(PACKAGE_VERSION).html
 	cp -R doc/gatbps.html doc/gatbps-$(PACKAGE_VERSION).html
@@ -245,6 +250,8 @@ doc/man/gatbps.1: bin/gatbps
 	bin/gatbps --man >doc/man/gatbps.1
 
 docbook: doc/gatbps.xml
+
+dvi-local: doc/gatbps-$(PACKAGE_VERSION).dvi
 
 html-local: doc/gatbps-$(PACKAGE_VERSION).html
 
