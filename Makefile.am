@@ -225,7 +225,9 @@ doc/gatbps-$(PACKAGE_VERSION).ps: doc/gatbps.texi
 	$(MAKE) $(AM_MAKEFLAGS) doc/gatbps.ps
 	cp doc/gatbps.ps doc/gatbps-$(PACKAGE_VERSION).ps
 
-doc/gatbps-$(PACKAGE_VERSION).txt: doc/gatbps.txt
+doc/gatbps-$(PACKAGE_VERSION).txt: $(doc_gatbps_TEXINFOS)
+doc/gatbps-$(PACKAGE_VERSION).txt: doc/gatbps.texi
+	$(MAKE) $(AM_MAKEFLAGS) doc/gatbps.txt
 	cp doc/gatbps.txt doc/gatbps-$(PACKAGE_VERSION).txt
 
 doc/gatbps-$(PACKAGE_VERSION).xml: doc/gatbps.xml
