@@ -305,8 +305,6 @@ install-plaintext: doc/gatbps.txt
 plaintext: doc/gatbps-$(PACKAGE_VERSION).txt
 plaintext: doc/gatbps.txt
 
-ps-local: doc/gatbps-$(PACKAGE_VERSION).ps
-
 uninstall-docbook:
 	@$(NORMAL_UNINSTALL)
 	@-: #(
