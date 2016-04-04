@@ -34,6 +34,7 @@ EXTRA_DIST += build-aux/DATE.sh
 EXTRA_DIST += build-aux/VERSION.sh
 EXTRA_DIST += build-aux/sh-form.sh
 EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).html
+EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).pdf
 EXTRA_DIST += doc/help/CC0-1.0-appendix.texi.hd.m4
 EXTRA_DIST += doc/help/CC0-1.0-commit.txt.hd.m4
 EXTRA_DIST += doc/help/CC0-1.0-copying.texi.hd.m4
@@ -69,6 +70,7 @@ EXTRA_DIST += src/tools/recursion_code.m4
 
 MAINTAINERCLEANFILES =
 MAINTAINERCLEANFILES += doc/gatbps-$(PACKAGE_VERSION).html
+MAINTAINERCLEANFILES += doc/gatbps-$(PACKAGE_VERSION).pdf
 
 MOSTLYCLEANFILES =
 MOSTLYCLEANFILES += bin/gatbps
@@ -198,6 +200,9 @@ doc/gatbps-$(PACKAGE_VERSION).html: doc/gatbps.html
 	rm -f -r doc/gatbps-$(PACKAGE_VERSION).html
 	cp -R doc/gatbps.html doc/gatbps-$(PACKAGE_VERSION).html
 
+doc/gatbps-$(PACKAGE_VERSION).pdf: doc/gatbps.pdf
+	cp doc/gatbps.pdf doc/gatbps-$(PACKAGE_VERSION).pdf
+
 doc/gatbps.txt: $(doc_gatbps_TEXINFOS)
 doc/gatbps.txt: doc/gatbps.texi
 	$(AM_V_MAKEINFO)$(MKDIR_P) doc
@@ -277,6 +282,8 @@ install-plaintext: doc/gatbps.txt
   esac; \
   exit 0; \
 }
+
+pdf-local: doc/gatbps-$(PACKAGE_VERSION).pdf
 
 plaintext: doc/gatbps.txt
 
