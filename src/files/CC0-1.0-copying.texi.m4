@@ -21,8 +21,8 @@ header_comment({%|@ifxml
 The authors of this manual have waived all copyright and
 related or neighboring rights to the extent permitted by
 law as described by the CC0 1.0 Universal Public Domain
-Dedication. For the full dedication, see the appendix
-labeled by the CC0 node. It may also be available at
+Dedication. For the full dedication, see the Creative
+Commons Zero 1-0 appendix. It may also be available at
 @url{https://creativecommons.org/publicdomain/zero/1.0/}.
 @end copying
 @end ifdocbook
@@ -32,8 +32,8 @@ labeled by the CC0 node. It may also be available at
 The authors of this manual have waived all copyright and
 related or neighboring rights to the extent permitted by
 law as described by the CC0 1.0 Universal Public Domain
-Dedication. For the full dedication, see the appendix
-labeled by the CC0 node. It may also be available at
+Dedication. For the full dedication, see the Creative
+Commons Zero 1-0 appendix. It may also be available at
 <https://creativecommons.org/publicdomain/zero/1.0/>.
 @*
 @end copying
@@ -44,8 +44,8 @@ labeled by the CC0 node. It may also be available at
 The authors of this manual have waived all copyright and
 related or neighboring rights to the extent permitted by
 law as described by the CC0 1.0 Universal Public Domain
-Dedication. For the full dedication, see the appendix
-labeled by the CC0 node. It may also be available at
+Dedication. For the full dedication, see the Creative
+Commons Zero 1-0 appendix. It may also be available at
 @url{https://creativecommons.org/publicdomain/zero/1.0/}.
 @end copying
 @end ifnotplaintext
@@ -77,8 +77,8 @@ It may also be available at
 The authors of this manual have waived all copyright and
 related or neighboring rights to the extent permitted by
 law as described by the CC0 1.0 Universal Public Domain
-Dedication. For the full dedication, see the appendix
-labeled by the CC0 node. It may also be available at
+Dedication. For the full dedication, see the Creative
+Commons Zero 1-0 appendix. It may also be available at
 @url{https://creativecommons.org/publicdomain/zero/1.0/}.
 @end copying
 @end ifxml
