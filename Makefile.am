@@ -215,7 +215,9 @@ doc/gatbps-$(PACKAGE_VERSION).html: doc/gatbps.texi
 	rm -f -r doc/gatbps-$(PACKAGE_VERSION).html
 	cp -R doc/gatbps.html doc/gatbps-$(PACKAGE_VERSION).html
 
-doc/gatbps-$(PACKAGE_VERSION).pdf: doc/gatbps.pdf
+doc/gatbps-$(PACKAGE_VERSION).pdf: $(doc_gatbps_TEXINFOS)
+doc/gatbps-$(PACKAGE_VERSION).pdf: doc/gatbps.texi
+	$(MAKE) $(AM_MAKEFLAGS) doc/gatbps.pdf
 	cp doc/gatbps.pdf doc/gatbps-$(PACKAGE_VERSION).pdf
 
 doc/gatbps-$(PACKAGE_VERSION).ps: doc/gatbps.ps
