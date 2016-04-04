@@ -38,6 +38,7 @@ EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).html
 EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).pdf
 EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).ps
 EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).txt
+EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).xml
 EXTRA_DIST += doc/help/CC0-1.0-appendix.texi.hd.m4
 EXTRA_DIST += doc/help/CC0-1.0-commit.txt.hd.m4
 EXTRA_DIST += doc/help/CC0-1.0-copying.texi.hd.m4
@@ -77,6 +78,7 @@ MAINTAINERCLEANFILES += doc/gatbps-$(PACKAGE_VERSION).html
 MAINTAINERCLEANFILES += doc/gatbps-$(PACKAGE_VERSION).pdf
 MAINTAINERCLEANFILES += doc/gatbps-$(PACKAGE_VERSION).ps
 MAINTAINERCLEANFILES += doc/gatbps-$(PACKAGE_VERSION).txt
+MAINTAINERCLEANFILES += doc/gatbps-$(PACKAGE_VERSION).xml
 
 MOSTLYCLEANFILES =
 MOSTLYCLEANFILES += bin/gatbps
@@ -218,6 +220,9 @@ doc/gatbps-$(PACKAGE_VERSION).ps: doc/gatbps.ps
 doc/gatbps-$(PACKAGE_VERSION).txt: doc/gatbps.txt
 	cp doc/gatbps.txt doc/gatbps-$(PACKAGE_VERSION).txt
 
+doc/gatbps-$(PACKAGE_VERSION).xml: doc/gatbps.xml
+	cp doc/gatbps.xml doc/gatbps-$(PACKAGE_VERSION).xml
+
 doc/gatbps.txt: $(doc_gatbps_TEXINFOS)
 doc/gatbps.txt: doc/gatbps.texi
 	$(AM_V_MAKEINFO)$(MKDIR_P) doc
@@ -254,6 +259,7 @@ doc/man/gatbps.1: bin/gatbps
 	$(MKDIR_P) doc/man
 	bin/gatbps --man >doc/man/gatbps.1
 
+docbook: doc/gatbps-$(PACKAGE_VERSION).xml
 docbook: doc/gatbps.xml
 
 dvi-local: doc/gatbps-$(PACKAGE_VERSION).dvi
