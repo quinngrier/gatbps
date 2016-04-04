@@ -204,7 +204,9 @@ bin/gatbps: src/tools/recursion_code.m4
 	$(M4) $(AM_M4FLAGS) $(M4FLAGS) src/gatbps.m4 >bin/gatbps
 	chmod +x bin/gatbps
 
-doc/gatbps-$(PACKAGE_VERSION).dvi: doc/gatbps.dvi
+doc/gatbps-$(PACKAGE_VERSION).dvi: $(doc_gatbps_TEXINFOS)
+doc/gatbps-$(PACKAGE_VERSION).dvi: doc/gatbps.texi
+	$(MAKE) $(AM_MAKEFLAGS) doc/gatbps.dvi
 	cp doc/gatbps.dvi doc/gatbps-$(PACKAGE_VERSION).dvi
 
 doc/gatbps-$(PACKAGE_VERSION).html: doc/gatbps.html
