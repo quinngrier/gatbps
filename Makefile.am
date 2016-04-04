@@ -302,8 +302,6 @@ install-plaintext: doc/gatbps.txt
   exit 0; \
 }
 
-pdf-local: doc/gatbps-$(PACKAGE_VERSION).pdf
-
 plaintext: doc/gatbps-$(PACKAGE_VERSION).txt
 plaintext: doc/gatbps.txt
 
