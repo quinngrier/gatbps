@@ -635,7 +635,7 @@ no files are necessarily deleted.
 .SH "COPYRIGHT TEXTS"
 .SH "MATHEMATICAL NOTATION IN TEXINFO"
 .LP
-A set of Texinfo macros
+A set of macros
 is provided to support a specific approach
 to writing mathematical notation in Texinfo.
 The idea is to write
