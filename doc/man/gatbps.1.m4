@@ -636,8 +636,9 @@ no files are necessarily deleted.
 .SH "MATHEMATICAL NOTATION IN TEXINFO"
 .LP
 A set of macros
-is provided to support a specific approach
-to writing mathematical notation in Texinfo.
+is provided to support
+a specific approach to writing
+mathematical notation in Texinfo.
 The idea is to write
 two versions of each
 mathematical expression:
