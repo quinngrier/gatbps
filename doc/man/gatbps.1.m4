@@ -643,7 +643,7 @@ two versions of each
 mathematical expression:
 one with the
 .nohy "\fB@tex\fR"
-environment and one with the
+environment and the other with the
 .nohy "\fB@ifnottex\fR"
 environment.
 The
