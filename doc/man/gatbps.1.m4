@@ -635,10 +635,15 @@ no files are necessarily deleted.
 .SH "COPYRIGHT TEXTS"
 .SH "MATHEMATICAL NOTATION IN TEXINFO"
 .LP
-A set of macros
-is provided to support
-a specific approach to writing
+GATBPS provides a set of
+special files that support an
+alternative approach to writing
 mathematical notation in Texinfo.
+This approach
+produces reasonable
+output in all of Texinfo's output
+formats(emeven in ASCII-encoded plain text.
+.\" )
 The idea is to write
 two versions of each
 mathematical expression:
