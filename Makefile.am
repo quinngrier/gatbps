@@ -34,7 +34,6 @@ EXTRA_DIST += VERSION
 EXTRA_DIST += build-aux/DATE.sh
 EXTRA_DIST += build-aux/VERSION.sh
 EXTRA_DIST += build-aux/sh-form.sh
-EXTRA_DIST += build-aux/texinfo.css
 EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).dvi
 EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).html
 EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).pdf
@@ -94,6 +93,7 @@ bin_SCRIPTS =
 bin_SCRIPTS += bin/gatbps
 
 doc_gatbps_TEXINFOS =
+doc_gatbps_TEXINFOS += build-aux/texinfo.css
 doc_gatbps_TEXINFOS += doc/texi/AWKDEFAULTTEXI.texi
 doc_gatbps_TEXINFOS += doc/texi/Building-and-Installation.texi
 doc_gatbps_TEXINFOS += doc/texi/CC0-1.0-appendix.texi
