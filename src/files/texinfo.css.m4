@@ -2,6 +2,7 @@ changecom`'dnl
 changequote(`{%|', `|%}')dnl
 {%|
 body {
+  margin: auto;
   max-width: 44em;
 }
 |%}dnl
