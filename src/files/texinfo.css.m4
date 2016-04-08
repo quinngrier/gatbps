@@ -1,6 +1,9 @@
 changecom`'dnl
 changequote(`{%|', `|%}')dnl
 {%|
+body {
+  max-width: 44em;
+}
 |%}dnl
 dnl
 dnl The authors of this file have waived all copyright and
