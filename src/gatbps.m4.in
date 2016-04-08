@@ -463,6 +463,7 @@ EOF1
           shift
 
           set "${prefix}troff-form.sh" "${@AT@}"
+          set "${prefix}texinfo.css" "${@AT@}"
           set "${prefix}texi-form.sh" "${@AT@}"
           set "${prefix}sps.texi" "${@AT@}"
           set "${prefix}shortcontents.texi" "${@AT@}"
@@ -2340,6 +2341,30 @@ its input as Texinfo text.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
+              case "${?}" in
+              #(
+                '0')
+                  :
+                ;;
+              #(
+                *)
+                  cat >&2 <<EOF1
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and writing to: standard output
+EOF1
+                  exit '1'
+                ;;
+              esac
+            ;;
+
+          #(
+            '--help=texinfo.css'|'--help='*'/texinfo.css')
+              cat <<EOF1
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`doc/help/texinfo.css.hd.m4')dnl
+{%|EOF1
               case "${?}" in
               #(
                 '0')
@@ -9527,6 +9552,32 @@ EOF1
           ;;
 
         #(
+          'no,texinfo.css'|'no,'*'/texinfo.css')
+            cat >"${safe_1}" <<'EOF1'
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`src/files/texinfo.css.m4')dnl
+{%|EOF1
+            case "${?}" in
+            #(
+              '0')
+                :
+              ;;
+            #(
+              *)
+                cat >&2 <<EOF1
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
+EOF1
+                exit_status='1'
+                break
+              ;;
+            esac
+          ;;
+
+        #(
           'no,troff-form.sh'|'no,'*'/troff-form.sh')
             cat >"${safe_1}" <<'EOF1'
 #
@@ -10485,6 +10536,16 @@ recursion_code(
 |%}dnl
 recursion_code(
   {%|texi-form.sh|%},
+  {%|
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
+|%}){%|
+          ;;
+
+        #(
+          'texinfo.css'|*'/texinfo.css')
+|%}dnl
+recursion_code(
+  {%|texinfo.css|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
