@@ -33,6 +33,7 @@ EXTRA_DIST += VERSION
 EXTRA_DIST += build-aux/DATE.sh
 EXTRA_DIST += build-aux/VERSION.sh
 EXTRA_DIST += build-aux/sh-form.sh
+EXTRA_DIST += build-aux/texinfo.css
 EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).dvi
 EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).html
 EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).pdf
