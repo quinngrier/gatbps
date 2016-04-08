@@ -636,7 +636,7 @@ no files are necessarily deleted.
 .SH "MATHEMATICAL NOTATION IN TEXINFO"
 .LP
 GATBPS provides a set of
-special files that support an
+special files that supports an
 alternative approach to writing
 mathematical notation in Texinfo.
 This approach
