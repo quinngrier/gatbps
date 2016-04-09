@@ -4,6 +4,7 @@ changequote(`{%|', `|%}')dnl
 body {
   margin: auto;
   max-width: 44em;
+  text-align: justify;
 }
 |%}dnl
 dnl
