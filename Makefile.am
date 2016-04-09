@@ -152,6 +152,12 @@ doc_gatbps_TEXINFOS += doc/texi/rflo.texi
 doc_gatbps_TEXINFOS += doc/texi/sbs.texi
 doc_gatbps_TEXINFOS += doc/texi/sps.texi
 
+docbook_dep = $(doc_gatbps_TEXINFOS)
+
+docbook_dst = doc/gatbps.xml
+
+docbook_src = $(info_TEXINFOS)
+
 docbookdir = $(docdir)
 
 info_TEXINFOS =
@@ -171,10 +177,6 @@ plaintextdir = $(docdir)
 ## end_variables
 
 ## begin_rules
-
-.PHONY: docbook
-.PHONY: install-docbook
-.PHONY: uninstall-docbook
 
 bin/gatbps: doc/help/CC0-1.0-appendix.texi.hd.m4
 bin/gatbps: doc/help/CC0-1.0-commit.txt.hd.m4
@@ -252,63 +254,13 @@ doc/gatbps-$(PACKAGE_VERSION).xml: doc/gatbps.texi
 	$(MAKE) $(AM_MAKEFLAGS) doc/gatbps.xml
 	cp doc/gatbps.xml doc/gatbps-$(PACKAGE_VERSION).xml
 
-doc/gatbps.xml: $(doc_gatbps_TEXINFOS)
-doc/gatbps.xml: doc/gatbps.texi
-	$(AM_V_MAKEINFO)$(MKDIR_P) doc
-	$(AM_V_at){ :; \
-  if test -f doc/gatbps.texi; then \
-    x=doc/gatbps.texi; \
-  else \
-    x=$(srcdir)/doc/gatbps.texi; \
-  fi; \
-  $(MAKEINFO) \
-    $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
-    --docbook -o doc/gatbps.xml $$x \
-  ; \
-  exit $$?; \
-}
-
 doc/man/gatbps.1: bin/gatbps
 	$(MKDIR_P) doc/man
 	bin/gatbps --man >doc/man/gatbps.1
 
-docbook: doc/gatbps.xml
-
-install-docbook: doc/gatbps.xml
-	@$(NORMAL_INSTALL)
-	@-: #(
-	@{ :; \
-  case ''$(docbookdir) in \
-    ?*) \
-      echo " $(MKDIR_P) '$(DESTDIR)$(docbookdir)'"; \
-      $(MKDIR_P) $(DESTDIR)$(docbookdir) || exit $$?; \
-      if test -f doc/gatbps.xml; then \
-        x=doc/gatbps.xml; \
-      else \
-        x=$(srcdir)/doc/gatbps.xml; \
-      fi; \
-      echo " $(INSTALL_DATA) $$x '$(DESTDIR)$(docbookdir)'"; \
-      $(INSTALL_DATA) $$x $(DESTDIR)$(docbookdir) || exit $$?; \
-    ;; \
-  esac; \
-  exit 0; \
-}
-
-uninstall-docbook:
-	@$(NORMAL_UNINSTALL)
-	@-: #(
-	@{ :; \
-  case ''$(docbookdir) in \
-    ?*) \
-      echo " rm -f '$(DESTDIR)$(docbookdir)/gatbps.xml'"; \
-      rm -f $(DESTDIR)$(docbookdir)/gatbps.xml; \
-    ;; \
-  esac; \
-  exit 0; \
-}
-
 ## end_rules
 
+include $(srcdir)/build-aux/docbook.am
 include $(srcdir)/build-aux/plaintext.am
 
 @GATBPS_CONFIG_FILE_RULES@
