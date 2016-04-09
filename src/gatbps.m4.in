@@ -487,6 +487,7 @@ EOF1
           set "${prefix}ipez.texi" "${@AT@}"
           set "${prefix}gequ.texi" "${@AT@}"
           set "${prefix}dslash.texi" "${@AT@}"
+          set "${prefix}docbook.am" "${@AT@}"
           set "${prefix}contents.texi" "${@AT@}"
           set "${prefix}configure.ac.vim" "${@AT@}"
           set "${prefix}bothcontents.texi" "${@AT@}"
@@ -1635,6 +1636,30 @@ Special file: ${fB1}contents.texi${fR1}
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
+              case "${?}" in
+              #(
+                '0')
+                  :
+                ;;
+              #(
+                *)
+                  cat >&2 <<EOF1
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and writing to: standard output
+EOF1
+                  exit '1'
+                ;;
+              esac
+            ;;
+
+          #(
+            '--help=docbook.am'|'--help='*'/docbook.am')
+              cat <<EOF1
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`doc/help/docbook.am.hd.m4')dnl
+{%|EOF1
               case "${?}" in
               #(
                 '0')
@@ -5732,6 +5757,32 @@ EOF1
 @AT@end ifnotxml
 @AT@end ifxml
 EOF1
+            case "${?}" in
+            #(
+              '0')
+                :
+              ;;
+            #(
+              *)
+                cat >&2 <<EOF1
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
+EOF1
+                exit_status='1'
+                break
+              ;;
+            esac
+          ;;
+
+        #(
+          'no,docbook.am'|'no,'*'/docbook.am')
+            cat >"${safe_1}" <<'EOF1'
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`src/files/docbook.am.m4')dnl
+{%|EOF1
             case "${?}" in
             #(
               '0')
@@ -10361,6 +10412,16 @@ recursion_code(
 |%}dnl
 recursion_code(
   {%|contents.texi|%},
+  {%|
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
+|%}){%|
+          ;;
+
+        #(
+          'docbook.am'|*'/docbook.am')
+|%}dnl
+recursion_code(
+  {%|docbook.am|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
