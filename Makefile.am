@@ -158,6 +158,12 @@ info_TEXINFOS += doc/gatbps.texi
 man_MANS =
 man_MANS += doc/man/gatbps.1
 
+plaintext_dep = $(doc_gatbps_TEXINFOS)
+
+plaintext_dst = doc/gatbps.txt
+
+plaintext_src = $(info_TEXINFOS)
+
 plaintextdir = $(docdir)
 
 ## end_variables
@@ -166,10 +172,7 @@ plaintextdir = $(docdir)
 
 .PHONY: docbook
 .PHONY: install-docbook
-.PHONY: install-plaintext
-.PHONY: plaintext
 .PHONY: uninstall-docbook
-.PHONY: uninstall-plaintext
 
 bin/gatbps: doc/help/CC0-1.0-appendix.texi.hd.m4
 bin/gatbps: doc/help/CC0-1.0-commit.txt.hd.m4
@@ -245,22 +248,6 @@ doc/gatbps-$(PACKAGE_VERSION).xml: doc/gatbps.texi
 	$(MAKE) $(AM_MAKEFLAGS) doc/gatbps.xml
 	cp doc/gatbps.xml doc/gatbps-$(PACKAGE_VERSION).xml
 
-doc/gatbps.txt: $(doc_gatbps_TEXINFOS)
-doc/gatbps.txt: doc/gatbps.texi
-	$(AM_V_MAKEINFO)$(MKDIR_P) doc
-	$(AM_V_at){ :; \
-  if test -f doc/gatbps.texi; then \
-    x=doc/gatbps.texi; \
-  else \
-    x=$(srcdir)/doc/gatbps.texi; \
-  fi; \
-  $(MAKEINFO) \
-    $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
-    --plaintext -o doc/gatbps.txt $$x \
-  ; \
-  exit $$?; \
-}
-
 doc/gatbps.xml: $(doc_gatbps_TEXINFOS)
 doc/gatbps.xml: doc/gatbps.texi
 	$(AM_V_MAKEINFO)$(MKDIR_P) doc
@@ -303,28 +290,6 @@ install-docbook: doc/gatbps.xml
   exit 0; \
 }
 
-install-plaintext: doc/gatbps.txt
-	@$(NORMAL_INSTALL)
-	@-: #(
-	@{ :; \
-  case ''$(plaintextdir) in \
-    ?*) \
-      echo " $(MKDIR_P) '$(DESTDIR)$(plaintextdir)'"; \
-      $(MKDIR_P) $(DESTDIR)$(plaintextdir) || exit $$?; \
-      if test -f doc/gatbps.txt; then \
-        x=doc/gatbps.txt; \
-      else \
-        x=$(srcdir)/doc/gatbps.txt; \
-      fi; \
-      echo " $(INSTALL_DATA) $$x '$(DESTDIR)$(plaintextdir)'"; \
-      $(INSTALL_DATA) $$x $(DESTDIR)$(plaintextdir) || exit $$?; \
-    ;; \
-  esac; \
-  exit 0; \
-}
-
-plaintext: doc/gatbps.txt
-
 uninstall-docbook:
 	@$(NORMAL_UNINSTALL)
 	@-: #(
@@ -338,20 +303,9 @@ uninstall-docbook:
   exit 0; \
 }
 
-uninstall-plaintext:
-	@$(NORMAL_UNINSTALL)
-	@-: #(
-	@{ :; \
-  case ''$(plaintextdir) in \
-    ?*) \
-      echo " rm -f '$(DESTDIR)$(plaintextdir)/gatbps.txt'"; \
-      rm -f $(DESTDIR)$(plaintextdir)/gatbps.txt; \
-    ;; \
-  esac; \
-  exit 0; \
-}
-
 ## end_rules
+
+include $(srcdir)/build-aux/plaintext.am
 
 @GATBPS_CONFIG_FILE_RULES@
 
