@@ -473,6 +473,7 @@ EOF1
           set "${prefix}rcei.texi" "${@AT@}"
           set "${prefix}rarrow.texi" "${@AT@}"
           set "${prefix}prm.texi" "${@AT@}"
+          set "${prefix}plaintext.am" "${@AT@}"
           set "${prefix}nequ.texi" "${@AT@}"
           set "${prefix}mtvskiptop.texi" "${@AT@}"
           set "${prefix}mtvskipbot.texi" "${@AT@}"
@@ -2049,6 +2050,30 @@ formats:
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
+              case "${?}" in
+              #(
+                '0')
+                  :
+                ;;
+              #(
+                *)
+                  cat >&2 <<EOF1
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and writing to: standard output
+EOF1
+                  exit '1'
+                ;;
+              esac
+            ;;
+
+          #(
+            '--help=plaintext.am'|'--help='*'/plaintext.am')
+              cat <<EOF1
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`doc/help/plaintext.am.hd.m4')dnl
+{%|EOF1
               case "${?}" in
               #(
                 '0')
@@ -7399,6 +7424,32 @@ EOF1
           ;;
 
         #(
+          'no,plaintext.am'|'no,'*'/plaintext.am')
+            cat >"${safe_1}" <<'EOF1'
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`src/files/plaintext.am.m4')dnl
+{%|EOF1
+            case "${?}" in
+            #(
+              '0')
+                :
+              ;;
+            #(
+              *)
+                cat >&2 <<EOF1
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
+EOF1
+                exit_status='1'
+                break
+              ;;
+            esac
+          ;;
+
+        #(
           'no,prm.texi'|'no,'*'/prm.texi')
             cat >"${safe_1}" <<'EOF1'
 @AT@ifxml
@@ -10456,6 +10507,16 @@ recursion_code(
 |%}dnl
 recursion_code(
   {%|nequ.texi|%},
+  {%|
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
+|%}){%|
+          ;;
+
+        #(
+          'plaintext.am'|*'/plaintext.am')
+|%}dnl
+recursion_code(
+  {%|plaintext.am|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|

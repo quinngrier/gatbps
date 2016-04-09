@@ -47,6 +47,7 @@ EXTRA_DIST += doc/help/CC0-1.0-file.txt.hd.m4
 EXTRA_DIST += doc/help/CC0-1.0.txt.hd.m4
 EXTRA_DIST += doc/help/PACKAGEDATE.texi.in.hd.m4
 EXTRA_DIST += doc/help/PACKAGEVERSION.texi.in.hd.m4
+EXTRA_DIST += doc/help/plaintext.am.hd.m4
 EXTRA_DIST += doc/help/texinfo.css.hd.m4
 EXTRA_DIST += doc/man/gatbps.1.m4
 EXTRA_DIST += src/files/CC0-1.0-appendix.texi.m4
@@ -70,6 +71,7 @@ EXTRA_DIST += src/files/PACKAGEDATE.texi.in.m4
 EXTRA_DIST += src/files/PACKAGEVERSION.texi.in.m4
 EXTRA_DIST += src/files/mtvskipbot.texi.m4
 EXTRA_DIST += src/files/mtvskiptop.texi.m4
+EXTRA_DIST += src/files/plaintext.am.m4
 EXTRA_DIST += src/files/texinfo.css.m4
 EXTRA_DIST += src/tools/footer_comment.m4
 EXTRA_DIST += src/tools/header_comment.m4
@@ -176,6 +178,7 @@ bin/gatbps: doc/help/CC0-1.0-file.txt.hd.m4
 bin/gatbps: doc/help/CC0-1.0.txt.hd.m4
 bin/gatbps: doc/help/PACKAGEDATE.texi.in.hd.m4
 bin/gatbps: doc/help/PACKAGEVERSION.texi.in.hd.m4
+bin/gatbps: doc/help/plaintext.am.hd.m4
 bin/gatbps: doc/help/texinfo.css.hd.m4
 bin/gatbps: doc/man/gatbps.1.m4
 bin/gatbps: src/files/CC0-1.0-appendix.texi.m4
@@ -199,6 +202,7 @@ bin/gatbps: src/files/PACKAGEDATE.texi.in.m4
 bin/gatbps: src/files/PACKAGEVERSION.texi.in.m4
 bin/gatbps: src/files/mtvskipbot.texi.m4
 bin/gatbps: src/files/mtvskiptop.texi.m4
+bin/gatbps: src/files/plaintext.am.m4
 bin/gatbps: src/files/texinfo.css.m4
 bin/gatbps: src/gatbps.m4
 bin/gatbps: src/tools/PACKAGE_DATE.m4
