@@ -22,6 +22,7 @@ AC_CONFIG_SRCDIR([doc/gatbps.texi])
 AM_INIT_AUTOMAKE([
   -Wall
   foreign
+  nostdinc
   subdir-objects
 ])
 
