@@ -124,7 +124,7 @@ ASCII alternative that it inserts if the
 @t{insertascii}
 flag is set at its point of inclusion@.
 If this manual is translated to @TeX{}
-or any other output format without the
+or without the
 @t{insertascii}
 flag set, then the table also
 shows the symbol of each macro@.
