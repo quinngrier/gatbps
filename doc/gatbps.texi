@@ -50,9 +50,10 @@
 @node Top
 @top GATBPS @w{@value{PACKAGEVERSION}}
 
-This manual is for
-GATBPS @w{@value{PACKAGEVERSION}},
-which was released on @w{@value{PACKAGEDATE}}@.
+This manual is for GATBPS
+@w{@value{PACKAGEVERSION}@comma{}}
+which was released on
+@w{@value{PACKAGEDATE}@.}
 @ifplaintext
 
 @insertcopying
