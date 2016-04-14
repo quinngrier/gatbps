@@ -745,15 +745,13 @@ detect older versions of
 Texinfo, in which case they
 insert UTF-8 characters instead.
 .LP
-The following table
-lists the macros that
-have no parameters, which
-insert individual symbols.
+The following table lists the
+macros that have no parameters,
+which insert individual symbols.
 Along with each macro
-is its corresponding TeX
-syntax, the Unicode character
-that it inserts by default, and the
-ASCII alternative that it inserts if the
+is its corresponding TeX syntax,
+the Unicode character that it inserts by default,
+and the ASCII alternative that it inserts if the
 .nohy "\fBinsertascii\fR"
 flag is set at its point of inclusion.
 .IP
