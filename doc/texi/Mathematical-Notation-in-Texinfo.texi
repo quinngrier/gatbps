@@ -123,10 +123,12 @@ that it inserts by default, and the
 ASCII alternative that it inserts if the
 @t{insertascii}
 flag is set at its point of inclusion@.
-If this manual is translated to @TeX{}
-or without the
+If this manual
+is translated to
+@TeX{} or without the
 @t{insertascii}
-flag set, then the table also
+flag set,
+then the table also
 shows the symbol of each macro@.
 
 @quotation
