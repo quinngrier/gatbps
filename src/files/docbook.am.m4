@@ -26,10 +26,16 @@ $(docbook_dst): $(docbook_src)
 }
 
 .PHONY: docbook
+.PHONY: docbook-clean
 .PHONY: install-docbook
 .PHONY: uninstall-docbook
 
+clean-local: docbook-clean
+
 docbook: $(docbook_dst)
+
+docbook-clean:
+	rm -f $(docbook_dst)
 
 install-docbook: $(docbook_dst)
 	@$(NORMAL_INSTALL)
