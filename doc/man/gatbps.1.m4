@@ -661,7 +661,9 @@ appearance of the expression,
 and the
 .nohy "\fB@ifnottex\fR"
 version should try to imitate it.
-For example:
+For example,
+.nohy "\fIx\fR\ +\ \fIy\fR"
+could be written as follows:
 .IP
 .nf
 @tex

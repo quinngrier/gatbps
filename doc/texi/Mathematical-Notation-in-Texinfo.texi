@@ -26,7 +26,14 @@ appearance of the expression,
 and the
 @w{@t{@@ifnottex}}
 version should try to imitate it@.
-For example:
+For example,
+@tex
+$x + y$
+@end tex
+@ifnottex
+@w{@i{x}@w{ }+@w{ }@i{y}}
+@end ifnottex
+could be written as follows:
 
 @example
 @@tex
