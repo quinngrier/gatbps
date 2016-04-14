@@ -176,83 +176,83 @@ plaintextdir = $(docdir)
 
 ## begin_rules
 
-bin/gatbps: doc/help/CC0-1.0-appendix.texi.hd.m4
-bin/gatbps: doc/help/CC0-1.0-commit.txt.hd.m4
-bin/gatbps: doc/help/CC0-1.0-copying.texi.hd.m4
-bin/gatbps: doc/help/CC0-1.0-file.txt.hd.m4
-bin/gatbps: doc/help/CC0-1.0.txt.hd.m4
-bin/gatbps: doc/help/PACKAGEDATE.texi.in.hd.m4
-bin/gatbps: doc/help/PACKAGEVERSION.texi.in.hd.m4
-bin/gatbps: doc/help/docbook.am.hd.m4
-bin/gatbps: doc/help/plaintext.am.hd.m4
-bin/gatbps: doc/help/texinfo.css.hd.m4
-bin/gatbps: doc/man/gatbps.1.m4
-bin/gatbps: src/files/CC0-1.0-appendix.texi.m4
-bin/gatbps: src/files/CC0-1.0-commit.txt.m4
-bin/gatbps: src/files/CC0-1.0-copying.texi.m4
-bin/gatbps: src/files/CC0-1.0-file.txt.m4
-bin/gatbps: src/files/GATBPS_ARG_ENABLE_BOOL.m4.m4
-bin/gatbps: src/files/GATBPS_ARG_WITH_BOOL.m4.m4
-bin/gatbps: src/files/GATBPS_CHECK_BASIC.m4.m4
-bin/gatbps: src/files/GATBPS_CHECK_CFLAG.m4.m4
-bin/gatbps: src/files/GATBPS_CHECK_COMPILE.m4.m4
-bin/gatbps: src/files/GATBPS_CHECK_HEADER.m4.m4
-bin/gatbps: src/files/GATBPS_CHECK_LIB.m4.m4
-bin/gatbps: src/files/GATBPS_CHECK_LINK.m4.m4
-bin/gatbps: src/files/GATBPS_CHECK_RUN.m4.m4
-bin/gatbps: src/files/GATBPS_CHECK_VARS.m4.m4
-bin/gatbps: src/files/GATBPS_CONFIG_FILE.m4.m4
-bin/gatbps: src/files/GATBPS_CONFIG_FILE_SUBST.m4.m4
-bin/gatbps: src/files/Makefile.am.vim.m4
-bin/gatbps: src/files/PACKAGEDATE.texi.in.m4
-bin/gatbps: src/files/PACKAGEVERSION.texi.in.m4
-bin/gatbps: src/files/docbook.am.m4
-bin/gatbps: src/files/mtvskipbot.texi.m4
-bin/gatbps: src/files/mtvskiptop.texi.m4
-bin/gatbps: src/files/plaintext.am.m4
-bin/gatbps: src/files/texinfo.css.m4
-bin/gatbps: src/gatbps.m4
-bin/gatbps: src/tools/PACKAGE_DATE.m4
-bin/gatbps: src/tools/PACKAGE_VERSION.m4
-bin/gatbps: src/tools/footer_comment.m4
-bin/gatbps: src/tools/header_comment.m4
-bin/gatbps: src/tools/recursion_code.m4
+bin/gatbps : doc/help/CC0-1.0-appendix.texi.hd.m4
+bin/gatbps : doc/help/CC0-1.0-commit.txt.hd.m4
+bin/gatbps : doc/help/CC0-1.0-copying.texi.hd.m4
+bin/gatbps : doc/help/CC0-1.0-file.txt.hd.m4
+bin/gatbps : doc/help/CC0-1.0.txt.hd.m4
+bin/gatbps : doc/help/PACKAGEDATE.texi.in.hd.m4
+bin/gatbps : doc/help/PACKAGEVERSION.texi.in.hd.m4
+bin/gatbps : doc/help/docbook.am.hd.m4
+bin/gatbps : doc/help/plaintext.am.hd.m4
+bin/gatbps : doc/help/texinfo.css.hd.m4
+bin/gatbps : doc/man/gatbps.1.m4
+bin/gatbps : src/files/CC0-1.0-appendix.texi.m4
+bin/gatbps : src/files/CC0-1.0-commit.txt.m4
+bin/gatbps : src/files/CC0-1.0-copying.texi.m4
+bin/gatbps : src/files/CC0-1.0-file.txt.m4
+bin/gatbps : src/files/GATBPS_ARG_ENABLE_BOOL.m4.m4
+bin/gatbps : src/files/GATBPS_ARG_WITH_BOOL.m4.m4
+bin/gatbps : src/files/GATBPS_CHECK_BASIC.m4.m4
+bin/gatbps : src/files/GATBPS_CHECK_CFLAG.m4.m4
+bin/gatbps : src/files/GATBPS_CHECK_COMPILE.m4.m4
+bin/gatbps : src/files/GATBPS_CHECK_HEADER.m4.m4
+bin/gatbps : src/files/GATBPS_CHECK_LIB.m4.m4
+bin/gatbps : src/files/GATBPS_CHECK_LINK.m4.m4
+bin/gatbps : src/files/GATBPS_CHECK_RUN.m4.m4
+bin/gatbps : src/files/GATBPS_CHECK_VARS.m4.m4
+bin/gatbps : src/files/GATBPS_CONFIG_FILE.m4.m4
+bin/gatbps : src/files/GATBPS_CONFIG_FILE_SUBST.m4.m4
+bin/gatbps : src/files/Makefile.am.vim.m4
+bin/gatbps : src/files/PACKAGEDATE.texi.in.m4
+bin/gatbps : src/files/PACKAGEVERSION.texi.in.m4
+bin/gatbps : src/files/docbook.am.m4
+bin/gatbps : src/files/mtvskipbot.texi.m4
+bin/gatbps : src/files/mtvskiptop.texi.m4
+bin/gatbps : src/files/plaintext.am.m4
+bin/gatbps : src/files/texinfo.css.m4
+bin/gatbps : src/gatbps.m4
+bin/gatbps : src/tools/PACKAGE_DATE.m4
+bin/gatbps : src/tools/PACKAGE_VERSION.m4
+bin/gatbps : src/tools/footer_comment.m4
+bin/gatbps : src/tools/header_comment.m4
+bin/gatbps : src/tools/recursion_code.m4
 	$(MKDIR_P) bin
 	$(M4) $(AM_M4FLAGS) $(M4FLAGS) src/gatbps.m4 >bin/gatbps
 	chmod +x bin/gatbps
 
-doc/gatbps-$(PACKAGE_VERSION).dvi: $(doc_gatbps_TEXINFOS)
-doc/gatbps-$(PACKAGE_VERSION).dvi: doc/gatbps.texi
+doc/gatbps-$(PACKAGE_VERSION).dvi : $(doc_gatbps_TEXINFOS)
+doc/gatbps-$(PACKAGE_VERSION).dvi : doc/gatbps.texi
 	$(MAKE) $(AM_MAKEFLAGS) doc/gatbps.dvi
 	cp doc/gatbps.dvi doc/gatbps-$(PACKAGE_VERSION).dvi
 
-doc/gatbps-$(PACKAGE_VERSION).html: $(doc_gatbps_TEXINFOS)
-doc/gatbps-$(PACKAGE_VERSION).html: doc/gatbps.texi
+doc/gatbps-$(PACKAGE_VERSION).html : $(doc_gatbps_TEXINFOS)
+doc/gatbps-$(PACKAGE_VERSION).html : doc/gatbps.texi
 	$(MAKE) $(AM_MAKEFLAGS) doc/gatbps.html
 	rm -f -r doc/gatbps-$(PACKAGE_VERSION).html
 	cp -R doc/gatbps.html doc/gatbps-$(PACKAGE_VERSION).html
 
-doc/gatbps-$(PACKAGE_VERSION).pdf: $(doc_gatbps_TEXINFOS)
-doc/gatbps-$(PACKAGE_VERSION).pdf: doc/gatbps.texi
+doc/gatbps-$(PACKAGE_VERSION).pdf : $(doc_gatbps_TEXINFOS)
+doc/gatbps-$(PACKAGE_VERSION).pdf : doc/gatbps.texi
 	$(MAKE) $(AM_MAKEFLAGS) doc/gatbps.pdf
 	cp doc/gatbps.pdf doc/gatbps-$(PACKAGE_VERSION).pdf
 
-doc/gatbps-$(PACKAGE_VERSION).ps: $(doc_gatbps_TEXINFOS)
-doc/gatbps-$(PACKAGE_VERSION).ps: doc/gatbps.texi
+doc/gatbps-$(PACKAGE_VERSION).ps : $(doc_gatbps_TEXINFOS)
+doc/gatbps-$(PACKAGE_VERSION).ps : doc/gatbps.texi
 	$(MAKE) $(AM_MAKEFLAGS) doc/gatbps.ps
 	cp doc/gatbps.ps doc/gatbps-$(PACKAGE_VERSION).ps
 
-doc/gatbps-$(PACKAGE_VERSION).txt: $(doc_gatbps_TEXINFOS)
-doc/gatbps-$(PACKAGE_VERSION).txt: doc/gatbps.texi
+doc/gatbps-$(PACKAGE_VERSION).txt : $(doc_gatbps_TEXINFOS)
+doc/gatbps-$(PACKAGE_VERSION).txt : doc/gatbps.texi
 	$(MAKE) $(AM_MAKEFLAGS) doc/gatbps.txt
 	cp doc/gatbps.txt doc/gatbps-$(PACKAGE_VERSION).txt
 
-doc/gatbps-$(PACKAGE_VERSION).xml: $(doc_gatbps_TEXINFOS)
-doc/gatbps-$(PACKAGE_VERSION).xml: doc/gatbps.texi
+doc/gatbps-$(PACKAGE_VERSION).xml : $(doc_gatbps_TEXINFOS)
+doc/gatbps-$(PACKAGE_VERSION).xml : doc/gatbps.texi
 	$(MAKE) $(AM_MAKEFLAGS) doc/gatbps.xml
 	cp doc/gatbps.xml doc/gatbps-$(PACKAGE_VERSION).xml
 
-doc/man/gatbps.1: bin/gatbps
+doc/man/gatbps.1 : bin/gatbps
 	$(MKDIR_P) doc/man
 	bin/gatbps --man >doc/man/gatbps.1
 
