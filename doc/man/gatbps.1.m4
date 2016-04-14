@@ -654,7 +654,8 @@ environment and the other with the
 environment.
 The
 .nohy "\fB@tex\fR"
-version defines the standard
+version is considered
+to define the standard
 appearance of the expression,
 and the
 .nohy "\fB@ifnottex\fR"
