@@ -1,5 +1,6 @@
 changecom`'dnl
 changequote(`{%|', `|%}')dnl
+include({%|src/tools/footer_comment.m4|%})dnl
 include({%|src/tools/header_comment.m4|%})dnl
 {%|/*
  * If you are reading this comment in an HTML file, then the CSS file
@@ -21,7 +22,16 @@ body {
   max-width: 44em;
   text-align: justify;
 }
-|%}dnl
+
+/*
+ * If you are reading this comment in an HTML file, then the CSS file
+ * that originally held this comment has been embedded into this HTML
+ * file by Texinfo. In this case, the "file" spoken of by this comment
+ * is not this HTML file, but rather the original CSS file. Texinfo may
+ * also have mixed the content of the original CSS file with the normal
+ * content that it produces, making it difficult to determine what came
+ * from the original CSS file.
+|%}footer_comment({%| *|%}, {%| *|%}, {%| */|%})
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by
