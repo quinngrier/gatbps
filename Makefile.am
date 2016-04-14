@@ -15,7 +15,6 @@ AM_TEXI2DVIFLAGS =
 AM_TEXI2DVIFLAGS += -I doc/texi -I $(srcdir)/doc/texi
 
 CLEANFILES =
-CLEANFILES += doc/gatbps.txt
 CLEANFILES += doc/gatbps.xml
 
 DISTCLEANFILES =
