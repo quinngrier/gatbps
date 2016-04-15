@@ -24,110 +24,13 @@ header_comment({%|@ifxml
 @c
 @end ifnotxml
 @end ifxml
-@ifclear msigntexi
-@set msigntexi
-@ifclear insertascii
-@ifdocbook
-@ifset txicommandconditionals
-@ifcommanddefined inlineraw
-@macro msign{}
-@inlineraw{docbook, &#x2212;}
-@end macro
-@end ifcommanddefined
-@ifcommandnotdefined inlineraw
-@macro msign{}
-−
-@end macro
-@end ifcommandnotdefined
-@end ifset
-@ifclear txicommandconditionals
-@macro msign{}
-−
-@end macro
-@end ifclear
-@end ifdocbook
-@ifhtml
-@ifset txicommandconditionals
-@ifcommanddefined inlineraw
-@macro msign{}
-@inlineraw{html, &#x2212;}
-@end macro
-@end ifcommanddefined
-@ifcommandnotdefined inlineraw
-@macro msign{}
-−
-@end macro
-@end ifcommandnotdefined
-@end ifset
-@ifclear txicommandconditionals
-@macro msign{}
-−
-@end macro
-@end ifclear
-@end ifhtml
-@ifinfo
-@ifnotplaintext
-@macro msign{}
-−
-@end macro
-@end ifnotplaintext
-@end ifinfo
-@ifplaintext
-@macro msign{}
-−
-@end macro
-@end ifplaintext
-@ifxml
-@ifset txicommandconditionals
-@ifcommanddefined inlineraw
-@macro msign{}
-@inlineraw{xml, &#x2212;}
-@end macro
-@end ifcommanddefined
-@ifcommandnotdefined inlineraw
-@macro msign{}
-−
-@end macro
-@end ifcommandnotdefined
-@end ifset
-@ifclear txicommandconditionals
-@macro msign{}
-−
-@end macro
-@end ifclear
-@end ifxml
-@end ifclear
-@ifset insertascii
-@ifdocbook
-@macro msign{}
--
-@end macro
-@end ifdocbook
-@ifhtml
-@macro msign{}
--
-@end macro
-@end ifhtml
-@ifinfo
-@ifnotplaintext
-@macro msign{}
--
-@end macro
-@end ifnotplaintext
-@end ifinfo
-@ifplaintext
-@macro msign{}
--
-@end macro
-@end ifplaintext
-@ifxml
-@macro msign{}
--
-@end macro
-@end ifxml
-@end ifset
-@end ifclear
-|%}footer_comment({%|@ifxml
+|%}dnl
+math_symbol(
+  {%|msign|%},
+  {%|&#x2212;|%},
+  {%|−|%},
+  {%|-|%})
+footer_comment({%|@ifxml
 @ifnotxml
 @c|%}, {%|@c|%}, {%|@c
 @end ifnotxml
