@@ -69,6 +69,7 @@ EXTRA_DIST += src/files/Makefile.am.vim.m4
 EXTRA_DIST += src/files/PACKAGEDATE.texi.in.m4
 EXTRA_DIST += src/files/PACKAGEVERSION.texi.in.m4
 EXTRA_DIST += src/files/docbook.am.m4
+EXTRA_DIST += src/files/msign.texi.m4
 EXTRA_DIST += src/files/mtvskipbot.texi.m4
 EXTRA_DIST += src/files/mtvskiptop.texi.m4
 EXTRA_DIST += src/files/plaintext.am.m4
@@ -208,6 +209,7 @@ bin/gatbps : src/files/Makefile.am.vim.m4
 bin/gatbps : src/files/PACKAGEDATE.texi.in.m4
 bin/gatbps : src/files/PACKAGEVERSION.texi.in.m4
 bin/gatbps : src/files/docbook.am.m4
+bin/gatbps : src/files/msign.texi.m4
 bin/gatbps : src/files/mtvskipbot.texi.m4
 bin/gatbps : src/files/mtvskiptop.texi.m4
 bin/gatbps : src/files/plaintext.am.m4
