@@ -1009,7 +1009,8 @@ The
 special file defines the
 .nohy "\fB@bdots{}\fR"
 Texinfo macro,
-which can be used to imitate the mathematical
+which can be used to
+imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
@@ -1032,7 +1033,8 @@ The
 special file defines the
 .nohy "\fB@dslash{}\fR"
 Texinfo macro,
-which can be used to imitate the mathematical
+which can be used to
+imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
@@ -1055,7 +1057,8 @@ The
 special file defines the
 .nohy "\fB@gequ{}\fR"
 Texinfo macro,
-which can be used to imitate the mathematical
+which can be used to
+imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
@@ -1078,7 +1081,8 @@ The
 special file defines the
 .nohy "\fB@lcei{}\fR"
 Texinfo macro,
-which can be used to imitate the mathematical
+which can be used to
+imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
@@ -1101,7 +1105,8 @@ The
 special file defines the
 .nohy "\fB@lequ{}\fR"
 Texinfo macro,
-which can be used to imitate the mathematical
+which can be used to
+imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
@@ -1124,7 +1129,8 @@ The
 special file defines the
 .nohy "\fB@lflo{}\fR"
 Texinfo macro,
-which can be used to imitate the mathematical
+which can be used to
+imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
@@ -1159,7 +1165,8 @@ The
 special file defines the
 .nohy "\fB@mdot{}\fR"
 Texinfo macro,
-which can be used to imitate the mathematical
+which can be used to
+imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
@@ -1182,7 +1189,8 @@ The
 special file defines the
 .nohy "\fB@mdots{}\fR"
 Texinfo macro,
-which can be used to imitate the mathematical
+which can be used to
+imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
@@ -1205,7 +1213,8 @@ The
 special file defines the
 .nohy "\fB@msign{}\fR"
 Texinfo macro,
-which can be used to imitate the mathematical
+which can be used to
+imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
@@ -1228,7 +1237,8 @@ The
 special file defines the
 .nohy "\fB@nequ{}\fR"
 Texinfo macro,
-which can be used to imitate the mathematical
+which can be used to
+imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
@@ -1251,7 +1261,8 @@ The
 special file defines the
 .nohy "\fB@prm{}\fR"
 Texinfo macro,
-which can be used to imitate the mathematical
+which can be used to
+imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
@@ -1274,7 +1285,8 @@ The
 special file defines the
 .nohy "\fB@rarrow{}\fR"
 Texinfo macro,
-which can be used to imitate the mathematical
+which can be used to
+imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
@@ -1297,7 +1309,8 @@ The
 special file defines the
 .nohy "\fB@rcei{}\fR"
 Texinfo macro,
-which can be used to imitate the mathematical
+which can be used to
+imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
@@ -1320,7 +1333,8 @@ The
 special file defines the
 .nohy "\fB@rflo{}\fR"
 Texinfo macro,
-which can be used to imitate the mathematical
+which can be used to
+imitate the mathematical
 notation of TeX in the other output formats:
 .RS
 .IP
