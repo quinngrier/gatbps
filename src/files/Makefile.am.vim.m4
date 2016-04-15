@@ -56,7 +56,7 @@ if s:n1 != 0 && s:n2 != 0
   /\m^## begin_variables$/+1,/\m^## end_variables$/-2g/\m^\n./.+1,/\m^$/-1j!
   /\m^## begin_variables$/+1,/\m^## end_variables$/-1g/\m^$/d
   %s/\m^## begin_variables$/&\r/
-  /\m^## begin_variables$/+1,/\m^## end_variables$/-1sort
+  /\m^## begin_variables$/+1,/\m^## end_variables$/-1sort u
   /\m^## begin_variables$/+1,/\m^## end_variables$/-1s/\m\b/\r/eg
 endif
 
@@ -105,7 +105,7 @@ if s:n1 != 0 && s:n2 != 0
   /\m^## begin_rules$/+1,/\m^## end_rules$/-2g/\m^\n./.+1,/\m^$/-1j!
   /\m^## begin_rules$/+1,/\m^## end_rules$/-1g/\m^$/d
   %s/\m^## begin_rules$/&\r/
-  /\m^## begin_rules$/+1,/\m^## end_rules$/-1sort
+  /\m^## begin_rules$/+1,/\m^## end_rules$/-1sort u
   /\m^## begin_rules$/+1,/\m^## end_rules$/-1s/\m\b/\r/eg
 endif
 
