@@ -263,8 +263,12 @@ doc/man/gatbps.1 : bin/gatbps
 
 ## end_rules
 
+## begin_includes
+
 include $(srcdir)/build-aux/docbook.am
 include $(srcdir)/build-aux/plaintext.am
+
+## end_includes
 
 @GATBPS_CONFIG_FILE_RULES@
 
