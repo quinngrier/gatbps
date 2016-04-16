@@ -137,6 +137,7 @@ doc_gatbps_TEXINFOS += doc/texi/gatbps-Standard-Input.texi
 doc_gatbps_TEXINFOS += doc/texi/gatbps-Standard-Output.texi
 doc_gatbps_TEXINFOS += doc/texi/gatbps-Synopsis.texi
 doc_gatbps_TEXINFOS += doc/texi/gequ.texi
+doc_gatbps_TEXINFOS += doc/texi/indent.texi
 doc_gatbps_TEXINFOS += doc/texi/ipez.texi
 doc_gatbps_TEXINFOS += doc/texi/lcei.texi
 doc_gatbps_TEXINFOS += doc/texi/lequ.texi
