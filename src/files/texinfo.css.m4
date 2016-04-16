@@ -30,6 +30,10 @@ hr {
   border-top: 1px solid;
 }
 
+span.indent-immediately-following-paragraph + p {
+  text-indent: 4em;
+}
+
 /*
  * If you are reading this comment in an HTML file, then the CSS file
  * that originally held this comment has been embedded into this HTML
