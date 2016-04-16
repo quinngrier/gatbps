@@ -9,8 +9,8 @@ header_comment({%|##|%}, {%|##|%}){%|
 ## For more information, see the GATBPS manual.
 ##
 
-$(docbook_dst) : $(docbook_dep)
-$(docbook_dst) : $(docbook_src)
+$(docbook_dst): $(docbook_dep)
+$(docbook_dst): $(docbook_src)
 	$(AM_V_MAKEINFO)$(MKDIR_P) $(@D)
 	$(AM_V_at){ :; \
   if test -f $(docbook_src); then \
@@ -25,19 +25,19 @@ $(docbook_dst) : $(docbook_src)
   exit $$?; \
 }
 
-.PHONY : docbook
-.PHONY : docbook-clean
-.PHONY : install-docbook
-.PHONY : uninstall-docbook
+.PHONY: docbook
+.PHONY: docbook-clean
+.PHONY: install-docbook
+.PHONY: uninstall-docbook
 
-clean-local : docbook-clean
+clean-local: docbook-clean
 
-docbook : $(docbook_dst)
+docbook: $(docbook_dst)
 
-docbook-clean :
+docbook-clean:
 	rm -f $(docbook_dst)
 
-install-docbook : $(docbook_dst)
+install-docbook: $(docbook_dst)
 	@$(NORMAL_INSTALL)
 	@-: #(
 	@{ :; \
@@ -57,7 +57,7 @@ install-docbook : $(docbook_dst)
   exit 0; \
 }
 
-uninstall-docbook :
+uninstall-docbook:
 	@$(NORMAL_UNINSTALL)
 	@-: #(
 	@{ :; \
