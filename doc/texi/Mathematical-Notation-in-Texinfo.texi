@@ -59,6 +59,7 @@ Texinfo commands and @TeX{} control sequences,
 as recommended by the Texinfo manual@.
 
 @sfindex @w{@t{math.@:texi}}
+@include indent.texi
 Each macro
 @t{@@}@i{M}
 is defined by the
@@ -87,6 +88,7 @@ option to generate all
 @i{M}@t{.@:texi}
 special files at once@.
 
+@include indent.texi
 The macros insert symbols
 as UTF-8 characters in Info
 and plain text and as numeric
