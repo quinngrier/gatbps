@@ -100,7 +100,7 @@ endif
 if s:n1 != 0 && s:n2 != 0
   %s/\m^## begin_rules$/&\r/
   %s/\m^## end_rules$/\r&/
-  /\m^## begin_rules$/,/\m^## end_rules$/-2g/\m^\n./.+1,/\m^\($\|\t\)/-1sort u
+  /\m^## begin_rules$/+1,/\m^## end_rules$/-2g/\m^\n./.+1,/\m^\($\|\t\)/-1sort u
   /\m^## begin_rules$/+1,/\m^## end_rules$/-1g/\m./s/\m$/\b/
   /\m^## begin_rules$/+1,/\m^## end_rules$/-2g/\m^\n./.+1,/\m^$/-1j!
   /\m^## begin_rules$/+1,/\m^## end_rules$/-1g/\m^$/d
