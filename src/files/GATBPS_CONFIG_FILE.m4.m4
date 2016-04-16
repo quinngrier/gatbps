@@ -90,7 +90,7 @@ AC_DEFUN([GATBPS_CONFIG_FILE], [{ :
     ;;
   esac
 
-  gatbps_rule='gatbps_output : gatbps_prereq
+  gatbps_rule='gatbps_output: gatbps_prereq
 	$[](MKDIR_P) $[](@D)
 	echo @PACKAGE_NAME@ >$[]@
 	cd $[](top_builddir) && $[](SHELL) ./config.status $[]@gatbps_suffix'
