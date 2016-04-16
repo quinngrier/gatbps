@@ -9,8 +9,8 @@ header_comment({%|##|%}, {%|##|%}){%|
 ## For more information, see the GATBPS manual.
 ##
 
-$(plaintext_dst) : $(plaintext_dep)
-$(plaintext_dst) : $(plaintext_src)
+$(plaintext_dst): $(plaintext_dep)
+$(plaintext_dst): $(plaintext_src)
 	$(AM_V_MAKEINFO)$(MKDIR_P) $(@D)
 	$(AM_V_at){ :; \
   if test -f $(plaintext_src); then \
@@ -25,14 +25,14 @@ $(plaintext_dst) : $(plaintext_src)
   exit $$?; \
 }
 
-.PHONY : install-plaintext
-.PHONY : plaintext
-.PHONY : plaintext-clean
-.PHONY : uninstall-plaintext
+.PHONY: install-plaintext
+.PHONY: plaintext
+.PHONY: plaintext-clean
+.PHONY: uninstall-plaintext
 
-clean-local : plaintext-clean
+clean-local: plaintext-clean
 
-install-plaintext : $(plaintext_dst)
+install-plaintext: $(plaintext_dst)
 	@$(NORMAL_INSTALL)
 	@-: #(
 	@{ :; \
@@ -52,12 +52,12 @@ install-plaintext : $(plaintext_dst)
   exit 0; \
 }
 
-plaintext : $(plaintext_dst)
+plaintext: $(plaintext_dst)
 
-plaintext-clean :
+plaintext-clean:
 	rm -f $(plaintext_dst)
 
-uninstall-plaintext :
+uninstall-plaintext:
 	@$(NORMAL_UNINSTALL)
 	@-: #(
 	@{ :; \
