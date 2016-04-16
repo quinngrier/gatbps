@@ -23,6 +23,13 @@ body {
   text-align: justify;
 }
 
+hr {
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid;
+}
+
 /*
  * If you are reading this comment in an HTML file, then the CSS file
  * that originally held this comment has been embedded into this HTML
