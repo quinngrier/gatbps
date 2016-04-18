@@ -2,6 +2,8 @@ all: INSTALL
 
 ## begin_rules
 
+.PHONY: all
+
 INSTALL: INSTALL.bot
 INSTALL: INSTALL.texi
 INSTALL: doc/texi/Building-and-Installation.texi
