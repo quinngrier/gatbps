@@ -52,12 +52,12 @@ AC_DEFUN([GATBPS_CHECK_BASIC], [{ :
           case "$[]{gatbps_list}" in
           #(
             ?*)
-              gatbps_list="$[]{gatbps_list}
-  gatbps_var=$[]{gatbps_var}"
+              gatbps_list="$[]{gatbps_list}"'
+  gatbps_var='"$[]{gatbps_var}"
             ;;
           #(
             *)
-              gatbps_list="  gatbps_var=$[]{gatbps_var}"
+              gatbps_list='  gatbps_var='"$[]{gatbps_var}"
             ;;
           esac
         }])
