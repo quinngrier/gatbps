@@ -62,6 +62,7 @@ gatbps_var=$[]{gatbps_var}"
           esac
         }])
       }
+
       case "$[]{gatbps_list}" in
       #(
         *'=no'*|*'=0'*)
@@ -72,6 +73,7 @@ gatbps_var=$[]{gatbps_var}"
           $3
         ;;
       esac
+
     }])
 
   #
