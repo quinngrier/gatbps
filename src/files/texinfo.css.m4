@@ -19,7 +19,7 @@ include({%|src/tools/header_comment.m4|%})dnl
 
 body {
   margin: auto;
-  max-width: 44em;
+  max-width: 40em;
   text-align: justify;
 }
 
