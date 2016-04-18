@@ -9,6 +9,8 @@ header_comment({%|##|%}, {%|##|%}){%|
 ## For more information, see the GATBPS manual.
 ##
 
+## begin_rules
+
 $(docbook_dst): $(docbook_dep)
 $(docbook_dst): $(docbook_src)
 	$(AM_V_MAKEINFO)$(MKDIR_P) $(@D)
@@ -70,6 +72,8 @@ uninstall-docbook:
   esac; \
   exit 0; \
 }
+
+## end_rules
 
 |%}footer_comment({%|##|%}, {%|##|%}, {%|##|%})
 dnl
