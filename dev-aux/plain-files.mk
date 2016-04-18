@@ -1,4 +1,4 @@
-all: INSTALL
+all:
 
 ## begin_rules
 
@@ -8,6 +8,8 @@ INSTALL: INSTALL.bot
 INSTALL: INSTALL.texi
 INSTALL: doc/texi/Building-and-Installation.texi
 	gatbps INSTALL
+
+all: INSTALL
 
 ## end_rules
 
