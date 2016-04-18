@@ -20,6 +20,7 @@ include({%|src/tools/header_comment.m4|%})dnl
 body {
   margin: auto;
   max-width: 40em;
+  padding: 1.46em;
   text-align: justify;
 }
 
