@@ -31,7 +31,7 @@ hr {
 }
 
 span.indent-immediately-following-paragraph + p {
-  text-indent: 4em;
+  text-indent: 1.46em;
 }
 
 /*
