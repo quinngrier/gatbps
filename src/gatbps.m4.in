@@ -10061,6 +10061,17 @@ EOF1
         case "${1}" in
 
         #(
+          'CC0-1.0-appendix.texi'|*'/CC0-1.0-appendix.texi')
+|%}dnl
+recursion_code(
+  {%|CC0-1.0-appendix.texi|%},
+  {%|
+            set 'x' "${prefix}indent.texi" "${@AT@}"; shift
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
+|%}){%|
+          ;;
+
+        #(
           'DATE.sh'|*'/DATE.sh')
 |%}dnl
 recursion_code(
