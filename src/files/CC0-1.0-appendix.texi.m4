@@ -44,6 +44,7 @@ exclusive Copyright and Related Rights (defined below) upon the creator
 and subsequent owner(s) (each and all, an ``owner'') of an original work of
 authorship and/or a database (each, a ``Work'').
 
+@include indent.texi
 Certain owners wish to permanently relinquish those rights to a Work for
 the purpose of contributing to a commons of creative, cultural and
 scientific works (``Commons'') that the public can reliably and without fear
@@ -55,6 +56,7 @@ culture and the further production of creative, cultural and scientific
 works, or to gain reputation or greater distribution for their Work in
 part through the use and efforts of others.
 
+@include indent.texi
 For these and/or other purposes and motivations, and without any
 expectation of additional consideration or compensation, the person
 associating CC0 with a Work (the ``Affirmer''), to the extent that he or she
