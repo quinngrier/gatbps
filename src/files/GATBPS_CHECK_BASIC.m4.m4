@@ -30,7 +30,7 @@ AC_DEFUN([GATBPS_CHECK_BASIC], [{ :
 
       $2_was_cached='no'
 
-      gatbps_x='yes'
+      gatbps_x=''
       { :m4_foreach_w(
         [gatbps_var],
         [$4],
@@ -49,12 +49,22 @@ AC_DEFUN([GATBPS_CHECK_BASIC], [{ :
                 [1])
             ;;
           esac
-          gatbps_x="$[]{gatbps_x}$[]{gatbps_var}"
+          case "$[]{gatbps_x}" in
+          #(
+            ?*)
+              gatbps_x="$[]{gatbps_x}
+gatbps_var=$[]{gatbps_var}"
+            ;;
+          #(
+            *)
+              gatbps_x="gatbps_var=$[]{gatbps_var}"
+            ;;
+          esac
         }])
       }
       case "$[]{gatbps_x}" in
       #(
-        *'no'*|*'0'*)
+        *'=no'*|*'=0'*)
           gatbps_cv_$2='no'
         ;;
       #(
