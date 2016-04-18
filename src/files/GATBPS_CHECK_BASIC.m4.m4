@@ -76,6 +76,19 @@ gatbps_var=$[]{gatbps_var}"
 
     }])
 
+  case "$[]{GATBPS_CHECK_VERBOSE}" in
+  #(
+    ?*)
+      case "$[]{$2_was_cached}" in
+      #(
+        'no')
+          AC_MSG_NOTICE([the values of the prerequisites for the above check were:
+$[]{gatbps_list}])
+        ;;
+      esac
+    ;;
+  esac
+
   #
   # The cache variable is appropriately set to 'yes' or 'no' by the
   # above AC_CACHE_CHECK code when it is not cached, but the user can
