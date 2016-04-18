@@ -145,11 +145,11 @@ $[]{gatbps_list}])
     case "$[]{gatbps_cv_$2}" in
     #(
       'yes')
-        exit 0
+        exit '0'
       ;;
     #(
       'no')
-        exit 1
+        exit '1'
       ;;
     esac
   )])
