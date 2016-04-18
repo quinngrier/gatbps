@@ -20,6 +20,7 @@ header_comment({%|@ifxml
 @node Creative Commons Zero 1-0
 @appendix Creative Commons Zero 1.@:0
 
+@noindent
 This appendix contains
 the complete text of the
 Creative Commons Zero (CC0) 1.@:0
@@ -39,6 +40,7 @@ The text follows@.
 
 @heading Statement of Purpose
 
+@noindent
 The laws of most jurisdictions throughout the world automatically confer
 exclusive Copyright and Related Rights (defined below) upon the creator
 and subsequent owner(s) (each and all, an ``owner'') of an original work of
