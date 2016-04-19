@@ -1,18 +1,24 @@
 all:
 
+## begin_variables
+
+GATBPS = gatbps
+
+## end_variables
+
 ## begin_rules
 
 .PHONY: all
 
 all:
-	gatbps CC0-1.0.txt
-	gatbps build-aux/docbook.am
-	gatbps build-aux/plaintext.am
-	gatbps build-aux/texinfo.css
-	gatbps dev-aux/CC0-1.0-commit.txt
-	gatbps dev-aux/CC0-1.0-file.txt
-	gatbps dev-aux/Makefile.am.vim
-	gatbps doc/texi/indent.texi
+	$(GATBPS) CC0-1.0.txt
+	$(GATBPS) build-aux/docbook.am
+	$(GATBPS) build-aux/plaintext.am
+	$(GATBPS) build-aux/texinfo.css
+	$(GATBPS) dev-aux/CC0-1.0-commit.txt
+	$(GATBPS) dev-aux/CC0-1.0-file.txt
+	$(GATBPS) dev-aux/Makefile.am.vim
+	$(GATBPS) doc/texi/indent.texi
 
 ## end_rules
 
