@@ -10,11 +10,17 @@ GATBPS = gatbps
 
 .PHONY: all
 
+COPYING: COPYING.bot
+COPYING: COPYING.texi
+COPYING: doc/texi/Copyright-Information.texi
+	$(GATBPS) COPYING
+
 INSTALL: INSTALL.bot
 INSTALL: INSTALL.texi
 INSTALL: doc/texi/Building-and-Installation.texi
 	$(GATBPS) INSTALL
 
+all: COPYING
 all: INSTALL
 
 ## end_rules
