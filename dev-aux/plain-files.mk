@@ -1,5 +1,11 @@
 all:
 
+## begin_variables
+
+GATBPS = gatbps
+
+## end_variables
+
 ## begin_rules
 
 .PHONY: all
@@ -7,7 +13,7 @@ all:
 INSTALL: INSTALL.bot
 INSTALL: INSTALL.texi
 INSTALL: doc/texi/Building-and-Installation.texi
-	gatbps INSTALL
+	$(GATBPS) INSTALL
 
 all: INSTALL
 
