@@ -38,7 +38,7 @@ install-javadoc: install-javadoc-more
     ?*) \
       echo " $(MKDIR_P) '$(DESTDIR)$(javadocdir)'"; \
       $(MKDIR_P) $(DESTDIR)$(javadocdir) || exit $$?; \
-      if test -f $(javadoc_dst); then \
+      if test -d $(javadoc_dst); then \
         x=$(javadoc_dst); \
       else \
         x=$(srcdir)/$(javadoc_dst); \
