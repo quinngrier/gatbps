@@ -27,15 +27,18 @@ $(plaintext_dst): $(plaintext_src)
   exit $$?; \
 }
 
+.PHONY: clean-plaintext
+.PHONY: clean-plaintext-more
 .PHONY: install-plaintext
 .PHONY: install-plaintext-more
 .PHONY: plaintext
-.PHONY: plaintext-clean
-.PHONY: plaintext-clean-more
 .PHONY: uninstall-plaintext
 .PHONY: uninstall-plaintext-more
 
-clean-local: plaintext-clean
+clean-local: clean-plaintext
+
+clean-plaintext: clean-plaintext-more
+	rm -f $(plaintext_dst)
 
 install-plaintext: $(plaintext_dst)
 install-plaintext: install-plaintext-more
@@ -59,9 +62,6 @@ install-plaintext: install-plaintext-more
 }
 
 plaintext: $(plaintext_dst)
-
-plaintext-clean: plaintext-clean-more
-	rm -f $(plaintext_dst)
 
 uninstall-plaintext: uninstall-plaintext-more
 	@$(NORMAL_UNINSTALL)
