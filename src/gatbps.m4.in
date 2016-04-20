@@ -484,6 +484,7 @@ EOF1
           set "${prefix}lflo.texi" "${@AT@}"
           set "${prefix}lequ.texi" "${@AT@}"
           set "${prefix}lcei.texi" "${@AT@}"
+          set "${prefix}java.am" "${@AT@}"
           set "${prefix}ipez.texi" "${@AT@}"
           set "${prefix}indent.texi" "${@AT@}"
           set "${prefix}gequ.texi" "${@AT@}"
@@ -1779,6 +1780,30 @@ Special file: ${fB1}ipez.texi${fR1}
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
+              case "${?}" in
+              #(
+                '0')
+                  :
+                ;;
+              #(
+                *)
+                  cat >&2 <<EOF1
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and writing to: standard output
+EOF1
+                  exit '1'
+                ;;
+              esac
+            ;;
+
+          #(
+            '--help=java.am'|'--help='*'/java.am')
+              cat <<EOF1
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`doc/help/java.am.hd.m4')dnl
+{%|EOF1
               case "${?}" in
               #(
                 '0')
@@ -6238,6 +6263,32 @@ EOF1
           ;;
 
         #(
+          'no,java.am'|'no,'*'/java.am')
+            cat >"${safe_1}" <<'EOF1'
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`src/files/java.am.m4')dnl
+{%|EOF1
+            case "${?}" in
+            #(
+              '0')
+                :
+              ;;
+            #(
+              *)
+                cat >&2 <<EOF1
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
+EOF1
+                exit_status='1'
+                break
+              ;;
+            esac
+          ;;
+
+        #(
           'no,lcei.texi'|'no,'*'/lcei.texi')
             cat >"${safe_1}" <<'EOF1'
 @AT@ifxml
@@ -10385,6 +10436,16 @@ recursion_code(
 |%}dnl
 recursion_code(
   {%|ipez.texi|%},
+  {%|
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
+|%}){%|
+          ;;
+
+        #(
+          'java.am'|*'/java.am')
+|%}dnl
+recursion_code(
+  {%|java.am|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
