@@ -11,9 +11,9 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 ## begin_rules
 
-$(java_dst): $(java_classes)
+$(java_dst): $(java_src)
 	$(MKDIR_P) $(@D)
-	$(JAR) cf $(java_dst) $(java_classes)
+	$(JAR) cf $(java_dst) $(java_src)
 
 .PHONY: clean-java
 .PHONY: clean-java-more
@@ -28,7 +28,7 @@ $(java_dst): $(java_classes)
 
 clean-java: clean-java-more
 	rm -f $(java_dst)
-	rm -f $(java_classes)
+	rm -f $(java_src)
 
 clean-local: clean-java
 
