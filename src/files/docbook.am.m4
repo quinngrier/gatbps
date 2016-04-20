@@ -27,20 +27,20 @@ $(docbook_dst): $(docbook_src)
   exit $$?; \
 }
 
+.PHONY: clean-docbook
+.PHONY: clean-docbook-more
 .PHONY: docbook
-.PHONY: docbook-clean
-.PHONY: docbook-clean-more
 .PHONY: install-docbook
 .PHONY: install-docbook-more
 .PHONY: uninstall-docbook
 .PHONY: uninstall-docbook-more
 
-clean-local: docbook-clean
+clean-docbook: clean-docbook-more
+	rm -f $(docbook_dst)
+
+clean-local: clean-docbook
 
 docbook: $(docbook_dst)
-
-docbook-clean: docbook-clean-more
-	rm -f $(docbook_dst)
 
 install-docbook: $(docbook_dst)
 install-docbook: install-docbook-more
