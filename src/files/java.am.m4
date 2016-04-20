@@ -11,9 +11,9 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 ## begin_rules
 
-$(java_jar): $(java_classes)
+$(java_dst): $(java_classes)
 	$(MKDIR_P) $(@D)
-	$(JAR) cf $(java_jar) $(java_classes)
+	$(JAR) cf $(java_dst) $(java_classes)
 
 .PHONY: clean-java
 .PHONY: clean-java-more
@@ -27,12 +27,12 @@ $(java_jar): $(java_classes)
 	$(JAVAC) $(AM_JAVACFLAGS) $(JAVACFLAGS) $<
 
 clean-java: clean-java-more
-	rm -f $(java_jar)
+	rm -f $(java_dst)
 	rm -f $(java_classes)
 
 clean-local: clean-java
 
-install-java: $(java_jar)
+install-java: $(java_dst)
 install-java: install-java-more
 	@$(NORMAL_INSTALL)
 	@-: #(
@@ -41,10 +41,10 @@ install-java: install-java-more
     ?*) \
       echo " $(MKDIR_P) '$(DESTDIR)$(javadir)'"; \
       $(MKDIR_P) $(DESTDIR)$(javadir) || exit $$?; \
-      if test -f $(java_jar); then \
-        x=$(java_jar); \
+      if test -f $(java_dst); then \
+        x=$(java_dst); \
       else \
-        x=$(srcdir)/$(java_jar); \
+        x=$(srcdir)/$(java_dst); \
       fi; \
       echo " $(INSTALL_DATA) $$x '$(DESTDIR)$(javadir)'"; \
       $(INSTALL_DATA) $$x $(DESTDIR)$(javadir) || exit $$?; \
@@ -53,7 +53,7 @@ install-java: install-java-more
   exit 0; \
 }
 
-java: $(java_jar)
+java: $(java_dst)
 
 uninstall-java: uninstall-java-more
 	@$(NORMAL_UNINSTALL)
@@ -61,7 +61,7 @@ uninstall-java: uninstall-java-more
 	@{ :; \
   case ''$(javadir) in \
     ?*) \
-      x=`expr X/$(java_jar) : 'X.*/\(.*\)'` || exit $$?; \
+      x=`expr X/$(java_dst) : 'X.*/\(.*\)'` || exit $$?; \
       echo " rm -f '$(DESTDIR)$(javadir)/$$x'"; \
       rm -f $(DESTDIR)$(javadir)/$$x; \
     ;; \
