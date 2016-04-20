@@ -48,6 +48,7 @@ EXTRA_DIST += doc/help/PACKAGEVERSION.texi.in.hd.m4
 EXTRA_DIST += doc/help/docbook.am.hd.m4
 EXTRA_DIST += doc/help/indent.texi.hd.m4
 EXTRA_DIST += doc/help/java.am.hd.m4
+EXTRA_DIST += doc/help/javadoc.am.hd.m4
 EXTRA_DIST += doc/help/plaintext.am.hd.m4
 EXTRA_DIST += doc/help/texinfo.css.hd.m4
 EXTRA_DIST += doc/man/gatbps.1.m4
@@ -73,6 +74,7 @@ EXTRA_DIST += src/files/PACKAGEVERSION.texi.in.m4
 EXTRA_DIST += src/files/docbook.am.m4
 EXTRA_DIST += src/files/indent.texi.m4
 EXTRA_DIST += src/files/java.am.m4
+EXTRA_DIST += src/files/javadoc.am.m4
 EXTRA_DIST += src/files/msign.texi.m4
 EXTRA_DIST += src/files/mtvskipbot.texi.m4
 EXTRA_DIST += src/files/mtvskiptop.texi.m4
@@ -192,6 +194,7 @@ bin/gatbps: doc/help/PACKAGEVERSION.texi.in.hd.m4
 bin/gatbps: doc/help/docbook.am.hd.m4
 bin/gatbps: doc/help/indent.texi.hd.m4
 bin/gatbps: doc/help/java.am.hd.m4
+bin/gatbps: doc/help/javadoc.am.hd.m4
 bin/gatbps: doc/help/plaintext.am.hd.m4
 bin/gatbps: doc/help/texinfo.css.hd.m4
 bin/gatbps: doc/man/gatbps.1.m4
@@ -217,6 +220,7 @@ bin/gatbps: src/files/PACKAGEVERSION.texi.in.m4
 bin/gatbps: src/files/docbook.am.m4
 bin/gatbps: src/files/indent.texi.m4
 bin/gatbps: src/files/java.am.m4
+bin/gatbps: src/files/javadoc.am.m4
 bin/gatbps: src/files/msign.texi.m4
 bin/gatbps: src/files/mtvskipbot.texi.m4
 bin/gatbps: src/files/mtvskiptop.texi.m4
