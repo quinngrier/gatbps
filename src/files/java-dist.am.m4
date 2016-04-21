@@ -11,6 +11,18 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 ## begin_rules
 
+$(java_dist_dst): $(java_dist_dep)
+	$(MAKE) $(AM_MAKEFLAGS) $(java_dist_src)
+	$(MKDIR_P) $(@D)
+	cp $(java_dist_src) $(java_dist_dst)
+
+.PHONY: clean-$(java_dist_dst)
+
+clean-$(java_dist_dst):
+	rm -f $(java_dist_dst)
+
+maintainer-clean-local: clean-$(java_dist_dst)
+
 ## end_rules
 
 |%}footer_comment({%|##|%}, {%|##|%}, {%|##|%})

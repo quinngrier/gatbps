@@ -11,6 +11,18 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 ## begin_rules
 
+$(dvi_dist_dst): $(dvi_dist_dep)
+	$(MAKE) $(AM_MAKEFLAGS) $(dvi_dist_src)
+	$(MKDIR_P) $(@D)
+	cp $(dvi_dist_src) $(dvi_dist_dst)
+
+.PHONY: clean-$(dvi_dist_dst)
+
+clean-$(dvi_dist_dst):
+	rm -f $(dvi_dist_dst)
+
+maintainer-clean-local: clean-$(dvi_dist_dst)
+
 ## end_rules
 
 |%}footer_comment({%|##|%}, {%|##|%}, {%|##|%})
