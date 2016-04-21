@@ -5860,6 +5860,32 @@ EOF1
           ;;
 
         #(
+          'no,docbook-dist.am'|'no,'*'/docbook-dist.am')
+            cat >"${safe_1}" <<'EOF1'
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`src/files/docbook-dist.am.m4')dnl
+{%|EOF1
+            case "${?}" in
+            #(
+              '0')
+                :
+              ;;
+            #(
+              *)
+                cat >&2 <<EOF1
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
+EOF1
+                exit_status='1'
+                break
+              ;;
+            esac
+          ;;
+
+        #(
           'no,docbook.am'|'no,'*'/docbook.am')
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
@@ -6051,6 +6077,32 @@ EOF1
           ;;
 
         #(
+          'no,dvi-dist.am'|'no,'*'/dvi-dist.am')
+            cat >"${safe_1}" <<'EOF1'
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`src/files/dvi-dist.am.m4')dnl
+{%|EOF1
+            case "${?}" in
+            #(
+              '0')
+                :
+              ;;
+            #(
+              *)
+                cat >&2 <<EOF1
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
+EOF1
+                exit_status='1'
+                break
+              ;;
+            esac
+          ;;
+
+        #(
           'no,gequ.texi'|'no,'*'/gequ.texi')
             cat >"${safe_1}" <<'EOF1'
 @AT@ifxml
@@ -6216,6 +6268,32 @@ EOF1
           ;;
 
         #(
+          'no,html-dist.am'|'no,'*'/html-dist.am')
+            cat >"${safe_1}" <<'EOF1'
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`src/files/html-dist.am.m4')dnl
+{%|EOF1
+            case "${?}" in
+            #(
+              '0')
+                :
+              ;;
+            #(
+              *)
+                cat >&2 <<EOF1
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
+EOF1
+                exit_status='1'
+                break
+              ;;
+            esac
+          ;;
+
+        #(
           'no,indent.texi'|'no,'*'/indent.texi')
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
@@ -6296,11 +6374,63 @@ EOF1
           ;;
 
         #(
+          'no,java-dist.am'|'no,'*'/java-dist.am')
+            cat >"${safe_1}" <<'EOF1'
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`src/files/java-dist.am.m4')dnl
+{%|EOF1
+            case "${?}" in
+            #(
+              '0')
+                :
+              ;;
+            #(
+              *)
+                cat >&2 <<EOF1
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
+EOF1
+                exit_status='1'
+                break
+              ;;
+            esac
+          ;;
+
+        #(
           'no,java.am'|'no,'*'/java.am')
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
 changequote({%|`|%}, {%|'|%})dnl
 include(`src/files/java.am.m4')dnl
+{%|EOF1
+            case "${?}" in
+            #(
+              '0')
+                :
+              ;;
+            #(
+              *)
+                cat >&2 <<EOF1
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
+EOF1
+                exit_status='1'
+                break
+              ;;
+            esac
+          ;;
+
+        #(
+          'no,javadoc-dist.am'|'no,'*'/javadoc-dist.am')
+            cat >"${safe_1}" <<'EOF1'
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`src/files/javadoc-dist.am.m4')dnl
 {%|EOF1
             case "${?}" in
             #(
@@ -7497,6 +7627,58 @@ EOF1
           ;;
 
         #(
+          'no,pdf-dist.am'|'no,'*'/pdf-dist.am')
+            cat >"${safe_1}" <<'EOF1'
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`src/files/pdf-dist.am.m4')dnl
+{%|EOF1
+            case "${?}" in
+            #(
+              '0')
+                :
+              ;;
+            #(
+              *)
+                cat >&2 <<EOF1
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
+EOF1
+                exit_status='1'
+                break
+              ;;
+            esac
+          ;;
+
+        #(
+          'no,plaintext-dist.am'|'no,'*'/plaintext-dist.am')
+            cat >"${safe_1}" <<'EOF1'
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`src/files/plaintext-dist.am.m4')dnl
+{%|EOF1
+            case "${?}" in
+            #(
+              '0')
+                :
+              ;;
+            #(
+              *)
+                cat >&2 <<EOF1
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
+EOF1
+                exit_status='1'
+                break
+              ;;
+            esac
+          ;;
+
+        #(
           'no,plaintext.am'|'no,'*'/plaintext.am')
             cat >"${safe_1}" <<'EOF1'
 |%}dnl
@@ -7668,6 +7850,32 @@ EOF1
 @AT@end ifnotxml
 @AT@end ifxml
 EOF1
+            case "${?}" in
+            #(
+              '0')
+                :
+              ;;
+            #(
+              *)
+                cat >&2 <<EOF1
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
+EOF1
+                exit_status='1'
+                break
+              ;;
+            esac
+          ;;
+
+        #(
+          'no,ps-dist.am'|'no,'*'/ps-dist.am')
+            cat >"${safe_1}" <<'EOF1'
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`src/files/ps-dist.am.m4')dnl
+{%|EOF1
             case "${?}" in
             #(
               '0')
