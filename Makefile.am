@@ -45,11 +45,19 @@ EXTRA_DIST += doc/help/CC0-1.0-file.txt.hd.m4
 EXTRA_DIST += doc/help/CC0-1.0.txt.hd.m4
 EXTRA_DIST += doc/help/PACKAGEDATE.texi.in.hd.m4
 EXTRA_DIST += doc/help/PACKAGEVERSION.texi.in.hd.m4
+EXTRA_DIST += doc/help/docbook-dist.am.hd.m4
 EXTRA_DIST += doc/help/docbook.am.hd.m4
+EXTRA_DIST += doc/help/dvi-dist.am.hd.m4
+EXTRA_DIST += doc/help/html-dist.am.hd.m4
 EXTRA_DIST += doc/help/indent.texi.hd.m4
+EXTRA_DIST += doc/help/java-dist.am.hd.m4
 EXTRA_DIST += doc/help/java.am.hd.m4
+EXTRA_DIST += doc/help/javadoc-dist.am.hd.m4
 EXTRA_DIST += doc/help/javadoc.am.hd.m4
+EXTRA_DIST += doc/help/pdf-dist.am.hd.m4
+EXTRA_DIST += doc/help/plaintext-dist.am.hd.m4
 EXTRA_DIST += doc/help/plaintext.am.hd.m4
+EXTRA_DIST += doc/help/ps-dist.am.hd.m4
 EXTRA_DIST += doc/help/texinfo.css.hd.m4
 EXTRA_DIST += doc/man/gatbps.1.m4
 EXTRA_DIST += src/files/CC0-1.0-appendix.texi.m4
@@ -192,11 +200,19 @@ bin/gatbps: doc/help/CC0-1.0-file.txt.hd.m4
 bin/gatbps: doc/help/CC0-1.0.txt.hd.m4
 bin/gatbps: doc/help/PACKAGEDATE.texi.in.hd.m4
 bin/gatbps: doc/help/PACKAGEVERSION.texi.in.hd.m4
+bin/gatbps: doc/help/docbook-dist.am.hd.m4
 bin/gatbps: doc/help/docbook.am.hd.m4
+bin/gatbps: doc/help/dvi-dist.am.hd.m4
+bin/gatbps: doc/help/html-dist.am.hd.m4
 bin/gatbps: doc/help/indent.texi.hd.m4
+bin/gatbps: doc/help/java-dist.am.hd.m4
 bin/gatbps: doc/help/java.am.hd.m4
+bin/gatbps: doc/help/javadoc-dist.am.hd.m4
 bin/gatbps: doc/help/javadoc.am.hd.m4
+bin/gatbps: doc/help/pdf-dist.am.hd.m4
+bin/gatbps: doc/help/plaintext-dist.am.hd.m4
 bin/gatbps: doc/help/plaintext.am.hd.m4
+bin/gatbps: doc/help/ps-dist.am.hd.m4
 bin/gatbps: doc/help/texinfo.css.hd.m4
 bin/gatbps: doc/man/gatbps.1.m4
 bin/gatbps: src/files/CC0-1.0-appendix.texi.m4
