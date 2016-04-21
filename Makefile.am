@@ -163,7 +163,7 @@ docbook_dep = $(doc_gatbps_TEXINFOS)
 
 docbook_dst = doc/gatbps.xml
 
-docbook_src = $(info_TEXINFOS)
+docbook_src = doc/gatbps.texi
 
 docbookdir = $(docdir)
 
