@@ -12,8 +12,14 @@ GATBPS = gatbps
 
 all:
 	$(GATBPS) CC0-1.0.txt
+	$(GATBPS) build-aux/docbook-dist.am
 	$(GATBPS) build-aux/docbook.am
+	$(GATBPS) build-aux/dvi-dist.am
+	$(GATBPS) build-aux/html-dist.am
+	$(GATBPS) build-aux/pdf-dist.am
+	$(GATBPS) build-aux/plaintext-dist.am
 	$(GATBPS) build-aux/plaintext.am
+	$(GATBPS) build-aux/ps-dist.am
 	$(GATBPS) build-aux/texinfo.css
 	$(GATBPS) dev-aux/CC0-1.0-commit.txt
 	$(GATBPS) dev-aux/CC0-1.0-file.txt
