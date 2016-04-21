@@ -20,6 +20,12 @@ DISTCLEANFILES =
 DISTCLEANFILES += $(GATBPS_CONFIG_FILE_FILES)
 
 EXTRA_DIST =
+EXTRA_DIST += $(docbook_dist_dst)
+EXTRA_DIST += $(dvi_dist_dst)
+EXTRA_DIST += $(html_dist_dst)
+EXTRA_DIST += $(pdf_dist_dst)
+EXTRA_DIST += $(plaintext_dist_dst)
+EXTRA_DIST += $(ps_dist_dst)
 EXTRA_DIST += AUTHORS
 EXTRA_DIST += CC0-1.0.txt
 EXTRA_DIST += COPYING
@@ -32,12 +38,6 @@ EXTRA_DIST += VERSION
 EXTRA_DIST += build-aux/DATE.sh
 EXTRA_DIST += build-aux/VERSION.sh
 EXTRA_DIST += build-aux/sh-form.sh
-EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).dvi
-EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).html
-EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).pdf
-EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).ps
-EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).txt
-EXTRA_DIST += doc/gatbps-$(PACKAGE_VERSION).xml
 EXTRA_DIST += doc/help/CC0-1.0-appendix.texi.hd.m4
 EXTRA_DIST += doc/help/CC0-1.0-commit.txt.hd.m4
 EXTRA_DIST += doc/help/CC0-1.0-copying.texi.hd.m4
@@ -102,12 +102,6 @@ EXTRA_DIST += src/tools/math_symbol.m4
 EXTRA_DIST += src/tools/recursion_code.m4
 
 MAINTAINERCLEANFILES =
-MAINTAINERCLEANFILES += doc/gatbps-$(PACKAGE_VERSION).dvi
-MAINTAINERCLEANFILES += doc/gatbps-$(PACKAGE_VERSION).html
-MAINTAINERCLEANFILES += doc/gatbps-$(PACKAGE_VERSION).pdf
-MAINTAINERCLEANFILES += doc/gatbps-$(PACKAGE_VERSION).ps
-MAINTAINERCLEANFILES += doc/gatbps-$(PACKAGE_VERSION).txt
-MAINTAINERCLEANFILES += doc/gatbps-$(PACKAGE_VERSION).xml
 
 MOSTLYCLEANFILES =
 MOSTLYCLEANFILES += bin/gatbps
@@ -177,11 +171,29 @@ doc_gatbps_TEXINFOS += doc/texi/sps.texi
 
 docbook_dep = $(doc_gatbps_TEXINFOS)
 
+docbook_dist_dep = doc/gatbps.texi $(doc_gatbps_TEXINFOS)
+
+docbook_dist_dst = doc/gatbps-$(PACKAGE_VERSION).xml
+
+docbook_dist_src = doc/gatbps.xml
+
 docbook_dst = doc/gatbps.xml
 
 docbook_src = doc/gatbps.texi
 
 docbookdir = $(docdir)
+
+dvi_dist_dep = doc/gatbps.texi $(doc_gatbps_TEXINFOS)
+
+dvi_dist_dst = doc/gatbps-$(PACKAGE_VERSION).dvi
+
+dvi_dist_src = doc/gatbps.dvi
+
+html_dist_dep = doc/gatbps.texi $(doc_gatbps_TEXINFOS)
+
+html_dist_dst = doc/gatbps-$(PACKAGE_VERSION).html
+
+html_dist_src = doc/gatbps.html
 
 info_TEXINFOS =
 info_TEXINFOS += doc/gatbps.texi
@@ -189,13 +201,31 @@ info_TEXINFOS += doc/gatbps.texi
 man_MANS =
 man_MANS += doc/man/gatbps.1
 
+pdf_dist_dep = doc/gatbps.texi $(doc_gatbps_TEXINFOS)
+
+pdf_dist_dst = doc/gatbps-$(PACKAGE_VERSION).pdf
+
+pdf_dist_src = doc/gatbps.pdf
+
 plaintext_dep = $(doc_gatbps_TEXINFOS)
+
+plaintext_dist_dep = doc/gatbps.texi $(doc_gatbps_TEXINFOS)
+
+plaintext_dist_dst = doc/gatbps-$(PACKAGE_VERSION).txt
+
+plaintext_dist_src = doc/gatbps.txt
 
 plaintext_dst = doc/gatbps.txt
 
 plaintext_src = doc/gatbps.texi
 
 plaintextdir = $(docdir)
+
+ps_dist_dep = doc/gatbps.texi $(doc_gatbps_TEXINFOS)
+
+ps_dist_dst = doc/gatbps-$(PACKAGE_VERSION).ps
+
+ps_dist_src = doc/gatbps.ps
 
 ## end_variables
 
@@ -270,37 +300,6 @@ bin/gatbps: src/tools/recursion_code.m4
 	$(M4) $(AM_M4FLAGS) $(M4FLAGS) src/gatbps.m4 >bin/gatbps
 	chmod +x bin/gatbps
 
-doc/gatbps-$(PACKAGE_VERSION).dvi: $(doc_gatbps_TEXINFOS)
-doc/gatbps-$(PACKAGE_VERSION).dvi: doc/gatbps.texi
-	$(MAKE) $(AM_MAKEFLAGS) doc/gatbps.dvi
-	cp doc/gatbps.dvi doc/gatbps-$(PACKAGE_VERSION).dvi
-
-doc/gatbps-$(PACKAGE_VERSION).html: $(doc_gatbps_TEXINFOS)
-doc/gatbps-$(PACKAGE_VERSION).html: doc/gatbps.texi
-	$(MAKE) $(AM_MAKEFLAGS) doc/gatbps.html
-	rm -f -r doc/gatbps-$(PACKAGE_VERSION).html
-	cp -R doc/gatbps.html doc/gatbps-$(PACKAGE_VERSION).html
-
-doc/gatbps-$(PACKAGE_VERSION).pdf: $(doc_gatbps_TEXINFOS)
-doc/gatbps-$(PACKAGE_VERSION).pdf: doc/gatbps.texi
-	$(MAKE) $(AM_MAKEFLAGS) doc/gatbps.pdf
-	cp doc/gatbps.pdf doc/gatbps-$(PACKAGE_VERSION).pdf
-
-doc/gatbps-$(PACKAGE_VERSION).ps: $(doc_gatbps_TEXINFOS)
-doc/gatbps-$(PACKAGE_VERSION).ps: doc/gatbps.texi
-	$(MAKE) $(AM_MAKEFLAGS) doc/gatbps.ps
-	cp doc/gatbps.ps doc/gatbps-$(PACKAGE_VERSION).ps
-
-doc/gatbps-$(PACKAGE_VERSION).txt: $(doc_gatbps_TEXINFOS)
-doc/gatbps-$(PACKAGE_VERSION).txt: doc/gatbps.texi
-	$(MAKE) $(AM_MAKEFLAGS) doc/gatbps.txt
-	cp doc/gatbps.txt doc/gatbps-$(PACKAGE_VERSION).txt
-
-doc/gatbps-$(PACKAGE_VERSION).xml: $(doc_gatbps_TEXINFOS)
-doc/gatbps-$(PACKAGE_VERSION).xml: doc/gatbps.texi
-	$(MAKE) $(AM_MAKEFLAGS) doc/gatbps.xml
-	cp doc/gatbps.xml doc/gatbps-$(PACKAGE_VERSION).xml
-
 doc/man/gatbps.1: bin/gatbps
 	$(MKDIR_P) doc/man
 	bin/gatbps --man >doc/man/gatbps.1
@@ -309,8 +308,14 @@ doc/man/gatbps.1: bin/gatbps
 
 ## begin_includes
 
+include $(srcdir)/build-aux/docbook-dist.am
 include $(srcdir)/build-aux/docbook.am
+include $(srcdir)/build-aux/dvi-dist.am
+include $(srcdir)/build-aux/html-dist.am
+include $(srcdir)/build-aux/pdf-dist.am
+include $(srcdir)/build-aux/plaintext-dist.am
 include $(srcdir)/build-aux/plaintext.am
+include $(srcdir)/build-aux/ps-dist.am
 
 ## end_includes
 
