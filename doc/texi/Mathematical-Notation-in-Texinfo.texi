@@ -14,10 +14,8 @@ environment, and the other with the
 environment@.
 The
 @w{@t{@@tex}}
-version is considered
-to define the standard
-appearance of the expression,
-and the
+version is considered to define the standard appearance of the
+expression, and the
 @w{@t{@@ifnottex}}
 version should try to imitate it@.
 For example,

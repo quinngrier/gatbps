@@ -648,10 +648,8 @@ environment, and the other with the
 environment.
 The
 .nohy "\fB@tex\fR"
-version is considered
-to define the standard
-appearance of the expression,
-and the
+version is considered to define the standard appearance of the
+expression, and the
 .nohy "\fB@ifnottex\fR"
 version should try to imitate it.
 For example,
