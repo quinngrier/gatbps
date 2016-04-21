@@ -635,10 +635,8 @@ no files are necessarily deleted.
 .SH "COPYRIGHT TEXTS"
 .SH "MATHEMATICAL NOTATION IN TEXINFO"
 .LP
-GATBPS provides a set of
-special files to support an
-alternative approach to writing
-mathematical notation in Texinfo.
+GATBPS provides a set of special files to support an alternative
+approach to writing mathematical notation in Texinfo.
 This approach
 produces reasonable
 output in all of Texinfo's output

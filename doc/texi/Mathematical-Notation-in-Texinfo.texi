@@ -2,10 +2,8 @@
 @chapter Mathematical Notation in Texinfo
 
 @noindent
-GATBPS provides a set of
-special files to support an
-alternative approach to writing
-mathematical notation in Texinfo@.
+GATBPS provides a set of special files to support an alternative
+approach to writing mathematical notation in Texinfo@.
 This approach
 produces reasonable
 output in all of Texinfo's output
