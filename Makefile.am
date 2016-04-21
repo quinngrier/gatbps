@@ -20,6 +20,7 @@ DISTCLEANFILES =
 DISTCLEANFILES += $(GATBPS_CONFIG_FILE_FILES)
 
 EXTRA_DIST =
+EXTRA_DIST += $(bin_gatbps_src)
 EXTRA_DIST += $(docbook_dist_dst)
 EXTRA_DIST += $(dvi_dist_dst)
 EXTRA_DIST += $(html_dist_dst)
@@ -38,68 +39,6 @@ EXTRA_DIST += VERSION
 EXTRA_DIST += build-aux/DATE.sh
 EXTRA_DIST += build-aux/VERSION.sh
 EXTRA_DIST += build-aux/sh-form.sh
-EXTRA_DIST += doc/help/CC0-1.0-appendix.texi.hd.m4
-EXTRA_DIST += doc/help/CC0-1.0-commit.txt.hd.m4
-EXTRA_DIST += doc/help/CC0-1.0-copying.texi.hd.m4
-EXTRA_DIST += doc/help/CC0-1.0-file.txt.hd.m4
-EXTRA_DIST += doc/help/CC0-1.0.txt.hd.m4
-EXTRA_DIST += doc/help/PACKAGEDATE.texi.in.hd.m4
-EXTRA_DIST += doc/help/PACKAGEVERSION.texi.in.hd.m4
-EXTRA_DIST += doc/help/docbook-dist.am.hd.m4
-EXTRA_DIST += doc/help/docbook.am.hd.m4
-EXTRA_DIST += doc/help/dvi-dist.am.hd.m4
-EXTRA_DIST += doc/help/html-dist.am.hd.m4
-EXTRA_DIST += doc/help/indent.texi.hd.m4
-EXTRA_DIST += doc/help/java-dist.am.hd.m4
-EXTRA_DIST += doc/help/java.am.hd.m4
-EXTRA_DIST += doc/help/javadoc-dist.am.hd.m4
-EXTRA_DIST += doc/help/javadoc.am.hd.m4
-EXTRA_DIST += doc/help/pdf-dist.am.hd.m4
-EXTRA_DIST += doc/help/plaintext-dist.am.hd.m4
-EXTRA_DIST += doc/help/plaintext.am.hd.m4
-EXTRA_DIST += doc/help/ps-dist.am.hd.m4
-EXTRA_DIST += doc/help/texinfo.css.hd.m4
-EXTRA_DIST += doc/man/gatbps.1.m4
-EXTRA_DIST += src/files/CC0-1.0-appendix.texi.m4
-EXTRA_DIST += src/files/CC0-1.0-commit.txt.m4
-EXTRA_DIST += src/files/CC0-1.0-copying.texi.m4
-EXTRA_DIST += src/files/CC0-1.0-file.txt.m4
-EXTRA_DIST += src/files/GATBPS_ARG_ENABLE_BOOL.m4.m4
-EXTRA_DIST += src/files/GATBPS_ARG_WITH_BOOL.m4.m4
-EXTRA_DIST += src/files/GATBPS_CHECK_BASIC.m4.m4
-EXTRA_DIST += src/files/GATBPS_CHECK_CFLAG.m4.m4
-EXTRA_DIST += src/files/GATBPS_CHECK_COMPILE.m4.m4
-EXTRA_DIST += src/files/GATBPS_CHECK_HEADER.m4.m4
-EXTRA_DIST += src/files/GATBPS_CHECK_LIB.m4.m4
-EXTRA_DIST += src/files/GATBPS_CHECK_LINK.m4.m4
-EXTRA_DIST += src/files/GATBPS_CHECK_RUN.m4.m4
-EXTRA_DIST += src/files/GATBPS_CHECK_VARS.m4.m4
-EXTRA_DIST += src/files/GATBPS_CONFIG_FILE.m4.m4
-EXTRA_DIST += src/files/GATBPS_CONFIG_FILE_SUBST.m4.m4
-EXTRA_DIST += src/files/Makefile.am.vim.m4
-EXTRA_DIST += src/files/PACKAGEDATE.texi.in.m4
-EXTRA_DIST += src/files/PACKAGEVERSION.texi.in.m4
-EXTRA_DIST += src/files/docbook-dist.am.m4
-EXTRA_DIST += src/files/docbook.am.m4
-EXTRA_DIST += src/files/dvi-dist.am.m4
-EXTRA_DIST += src/files/html-dist.am.m4
-EXTRA_DIST += src/files/indent.texi.m4
-EXTRA_DIST += src/files/java-dist.am.m4
-EXTRA_DIST += src/files/java.am.m4
-EXTRA_DIST += src/files/javadoc-dist.am.m4
-EXTRA_DIST += src/files/javadoc.am.m4
-EXTRA_DIST += src/files/msign.texi.m4
-EXTRA_DIST += src/files/mtvskipbot.texi.m4
-EXTRA_DIST += src/files/mtvskiptop.texi.m4
-EXTRA_DIST += src/files/pdf-dist.am.m4
-EXTRA_DIST += src/files/plaintext-dist.am.m4
-EXTRA_DIST += src/files/plaintext.am.m4
-EXTRA_DIST += src/files/ps-dist.am.m4
-EXTRA_DIST += src/files/texinfo.css.m4
-EXTRA_DIST += src/tools/footer_comment.m4
-EXTRA_DIST += src/tools/header_comment.m4
-EXTRA_DIST += src/tools/math_symbol.m4
-EXTRA_DIST += src/tools/recursion_code.m4
 
 MAINTAINERCLEANFILES =
 
@@ -111,6 +50,70 @@ TEXI2DVI = texi2dvi $(AM_TEXI2DVIFLAGS) $(TEXI2DVIFLAGS)
 
 bin_SCRIPTS =
 bin_SCRIPTS += bin/gatbps
+
+bin_gatbps_src =
+bin_gatbps_src += doc/help/CC0-1.0-appendix.texi.hd.m4
+bin_gatbps_src += doc/help/CC0-1.0-commit.txt.hd.m4
+bin_gatbps_src += doc/help/CC0-1.0-copying.texi.hd.m4
+bin_gatbps_src += doc/help/CC0-1.0-file.txt.hd.m4
+bin_gatbps_src += doc/help/CC0-1.0.txt.hd.m4
+bin_gatbps_src += doc/help/PACKAGEDATE.texi.in.hd.m4
+bin_gatbps_src += doc/help/PACKAGEVERSION.texi.in.hd.m4
+bin_gatbps_src += doc/help/docbook-dist.am.hd.m4
+bin_gatbps_src += doc/help/docbook.am.hd.m4
+bin_gatbps_src += doc/help/dvi-dist.am.hd.m4
+bin_gatbps_src += doc/help/html-dist.am.hd.m4
+bin_gatbps_src += doc/help/indent.texi.hd.m4
+bin_gatbps_src += doc/help/java-dist.am.hd.m4
+bin_gatbps_src += doc/help/java.am.hd.m4
+bin_gatbps_src += doc/help/javadoc-dist.am.hd.m4
+bin_gatbps_src += doc/help/javadoc.am.hd.m4
+bin_gatbps_src += doc/help/pdf-dist.am.hd.m4
+bin_gatbps_src += doc/help/plaintext-dist.am.hd.m4
+bin_gatbps_src += doc/help/plaintext.am.hd.m4
+bin_gatbps_src += doc/help/ps-dist.am.hd.m4
+bin_gatbps_src += doc/help/texinfo.css.hd.m4
+bin_gatbps_src += doc/man/gatbps.1.m4
+bin_gatbps_src += src/files/CC0-1.0-appendix.texi.m4
+bin_gatbps_src += src/files/CC0-1.0-commit.txt.m4
+bin_gatbps_src += src/files/CC0-1.0-copying.texi.m4
+bin_gatbps_src += src/files/CC0-1.0-file.txt.m4
+bin_gatbps_src += src/files/GATBPS_ARG_ENABLE_BOOL.m4.m4
+bin_gatbps_src += src/files/GATBPS_ARG_WITH_BOOL.m4.m4
+bin_gatbps_src += src/files/GATBPS_CHECK_BASIC.m4.m4
+bin_gatbps_src += src/files/GATBPS_CHECK_CFLAG.m4.m4
+bin_gatbps_src += src/files/GATBPS_CHECK_COMPILE.m4.m4
+bin_gatbps_src += src/files/GATBPS_CHECK_HEADER.m4.m4
+bin_gatbps_src += src/files/GATBPS_CHECK_LIB.m4.m4
+bin_gatbps_src += src/files/GATBPS_CHECK_LINK.m4.m4
+bin_gatbps_src += src/files/GATBPS_CHECK_RUN.m4.m4
+bin_gatbps_src += src/files/GATBPS_CHECK_VARS.m4.m4
+bin_gatbps_src += src/files/GATBPS_CONFIG_FILE.m4.m4
+bin_gatbps_src += src/files/GATBPS_CONFIG_FILE_SUBST.m4.m4
+bin_gatbps_src += src/files/Makefile.am.vim.m4
+bin_gatbps_src += src/files/PACKAGEDATE.texi.in.m4
+bin_gatbps_src += src/files/PACKAGEVERSION.texi.in.m4
+bin_gatbps_src += src/files/docbook-dist.am.m4
+bin_gatbps_src += src/files/docbook.am.m4
+bin_gatbps_src += src/files/dvi-dist.am.m4
+bin_gatbps_src += src/files/html-dist.am.m4
+bin_gatbps_src += src/files/indent.texi.m4
+bin_gatbps_src += src/files/java-dist.am.m4
+bin_gatbps_src += src/files/java.am.m4
+bin_gatbps_src += src/files/javadoc-dist.am.m4
+bin_gatbps_src += src/files/javadoc.am.m4
+bin_gatbps_src += src/files/msign.texi.m4
+bin_gatbps_src += src/files/mtvskipbot.texi.m4
+bin_gatbps_src += src/files/mtvskiptop.texi.m4
+bin_gatbps_src += src/files/pdf-dist.am.m4
+bin_gatbps_src += src/files/plaintext-dist.am.m4
+bin_gatbps_src += src/files/plaintext.am.m4
+bin_gatbps_src += src/files/ps-dist.am.m4
+bin_gatbps_src += src/files/texinfo.css.m4
+bin_gatbps_src += src/tools/footer_comment.m4
+bin_gatbps_src += src/tools/header_comment.m4
+bin_gatbps_src += src/tools/math_symbol.m4
+bin_gatbps_src += src/tools/recursion_code.m4
 
 doc_gatbps_TEXINFOS =
 doc_gatbps_TEXINFOS += build-aux/texinfo.css
@@ -201,6 +204,15 @@ info_TEXINFOS += doc/gatbps.texi
 man_MANS =
 man_MANS += doc/man/gatbps.1
 
+nodist_bin_gatbps_src =
+nodist_bin_gatbps_src += src/gatbps.m4
+nodist_bin_gatbps_src += src/tools/AWK_DEFAULT_TROFF.m4
+nodist_bin_gatbps_src += src/tools/PACKAGE_DATE.m4
+nodist_bin_gatbps_src += src/tools/PACKAGE_DATE_TROFF.m4
+nodist_bin_gatbps_src += src/tools/PACKAGE_VERSION.m4
+nodist_bin_gatbps_src += src/tools/SED_DEFAULT_TROFF.m4
+nodist_bin_gatbps_src += src/tools/TEXI2ANY_DEFAULT_TROFF.m4
+
 pdf_dist_dep = doc/gatbps.texi $(doc_gatbps_TEXINFOS)
 
 pdf_dist_dst = doc/gatbps-$(PACKAGE_VERSION).pdf
@@ -231,71 +243,8 @@ ps_dist_src = doc/gatbps.ps
 
 ## begin_rules
 
-bin/gatbps: doc/help/CC0-1.0-appendix.texi.hd.m4
-bin/gatbps: doc/help/CC0-1.0-commit.txt.hd.m4
-bin/gatbps: doc/help/CC0-1.0-copying.texi.hd.m4
-bin/gatbps: doc/help/CC0-1.0-file.txt.hd.m4
-bin/gatbps: doc/help/CC0-1.0.txt.hd.m4
-bin/gatbps: doc/help/PACKAGEDATE.texi.in.hd.m4
-bin/gatbps: doc/help/PACKAGEVERSION.texi.in.hd.m4
-bin/gatbps: doc/help/docbook-dist.am.hd.m4
-bin/gatbps: doc/help/docbook.am.hd.m4
-bin/gatbps: doc/help/dvi-dist.am.hd.m4
-bin/gatbps: doc/help/html-dist.am.hd.m4
-bin/gatbps: doc/help/indent.texi.hd.m4
-bin/gatbps: doc/help/java-dist.am.hd.m4
-bin/gatbps: doc/help/java.am.hd.m4
-bin/gatbps: doc/help/javadoc-dist.am.hd.m4
-bin/gatbps: doc/help/javadoc.am.hd.m4
-bin/gatbps: doc/help/pdf-dist.am.hd.m4
-bin/gatbps: doc/help/plaintext-dist.am.hd.m4
-bin/gatbps: doc/help/plaintext.am.hd.m4
-bin/gatbps: doc/help/ps-dist.am.hd.m4
-bin/gatbps: doc/help/texinfo.css.hd.m4
-bin/gatbps: doc/man/gatbps.1.m4
-bin/gatbps: src/files/CC0-1.0-appendix.texi.m4
-bin/gatbps: src/files/CC0-1.0-commit.txt.m4
-bin/gatbps: src/files/CC0-1.0-copying.texi.m4
-bin/gatbps: src/files/CC0-1.0-file.txt.m4
-bin/gatbps: src/files/GATBPS_ARG_ENABLE_BOOL.m4.m4
-bin/gatbps: src/files/GATBPS_ARG_WITH_BOOL.m4.m4
-bin/gatbps: src/files/GATBPS_CHECK_BASIC.m4.m4
-bin/gatbps: src/files/GATBPS_CHECK_CFLAG.m4.m4
-bin/gatbps: src/files/GATBPS_CHECK_COMPILE.m4.m4
-bin/gatbps: src/files/GATBPS_CHECK_HEADER.m4.m4
-bin/gatbps: src/files/GATBPS_CHECK_LIB.m4.m4
-bin/gatbps: src/files/GATBPS_CHECK_LINK.m4.m4
-bin/gatbps: src/files/GATBPS_CHECK_RUN.m4.m4
-bin/gatbps: src/files/GATBPS_CHECK_VARS.m4.m4
-bin/gatbps: src/files/GATBPS_CONFIG_FILE.m4.m4
-bin/gatbps: src/files/GATBPS_CONFIG_FILE_SUBST.m4.m4
-bin/gatbps: src/files/Makefile.am.vim.m4
-bin/gatbps: src/files/PACKAGEDATE.texi.in.m4
-bin/gatbps: src/files/PACKAGEVERSION.texi.in.m4
-bin/gatbps: src/files/docbook-dist.am.m4
-bin/gatbps: src/files/docbook.am.m4
-bin/gatbps: src/files/dvi-dist.am.m4
-bin/gatbps: src/files/html-dist.am.m4
-bin/gatbps: src/files/indent.texi.m4
-bin/gatbps: src/files/java-dist.am.m4
-bin/gatbps: src/files/java.am.m4
-bin/gatbps: src/files/javadoc-dist.am.m4
-bin/gatbps: src/files/javadoc.am.m4
-bin/gatbps: src/files/msign.texi.m4
-bin/gatbps: src/files/mtvskipbot.texi.m4
-bin/gatbps: src/files/mtvskiptop.texi.m4
-bin/gatbps: src/files/pdf-dist.am.m4
-bin/gatbps: src/files/plaintext-dist.am.m4
-bin/gatbps: src/files/plaintext.am.m4
-bin/gatbps: src/files/ps-dist.am.m4
-bin/gatbps: src/files/texinfo.css.m4
-bin/gatbps: src/gatbps.m4
-bin/gatbps: src/tools/PACKAGE_DATE.m4
-bin/gatbps: src/tools/PACKAGE_VERSION.m4
-bin/gatbps: src/tools/footer_comment.m4
-bin/gatbps: src/tools/header_comment.m4
-bin/gatbps: src/tools/math_symbol.m4
-bin/gatbps: src/tools/recursion_code.m4
+bin/gatbps: $(bin_gatbps_src)
+bin/gatbps: $(nodist_bin_gatbps_src)
 	$(MKDIR_P) bin
 	$(M4) $(AM_M4FLAGS) $(M4FLAGS) src/gatbps.m4 >bin/gatbps
 	chmod +x bin/gatbps
