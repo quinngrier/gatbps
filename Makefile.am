@@ -176,7 +176,7 @@ plaintext_dep = $(doc_gatbps_TEXINFOS)
 
 plaintext_dst = doc/gatbps.txt
 
-plaintext_src = $(info_TEXINFOS)
+plaintext_src = doc/gatbps.texi
 
 plaintextdir = $(docdir)
 
