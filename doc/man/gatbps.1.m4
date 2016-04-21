@@ -640,10 +640,8 @@ approach to writing mathematical notation in Texinfo.
 This approach produces reasonable output in all of Texinfo's output
 formats(emeven in ASCII-encoded plain text.
 .\" )
-The idea is to write
-two versions of each
-mathematical expression:
-one with the
+The idea is to write two versions of each mathematical expression: one
+with the
 .nohy "\fB@tex\fR"
 environment,
 and the other with the
