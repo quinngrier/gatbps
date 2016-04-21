@@ -654,7 +654,7 @@ expression, and the
 version should try to imitate it.
 For example,
 .nohy "\fIx\fR\ +\ \fIy\fR"
-could be written as follows:
+can be written as follows:
 .IP
 .nf
 @tex

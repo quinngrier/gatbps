@@ -25,7 +25,7 @@ $x + y$
 @ifnottex
 @w{@i{x}@w{ }+@w{ }@i{y}}
 @end ifnottex
-could be written as follows:
+can be written as follows:
 
 @example
 @@tex
