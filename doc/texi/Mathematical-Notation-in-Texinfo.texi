@@ -9,8 +9,7 @@ formats---even in ASCII-encoded plain text@.
 The idea is to write two versions of each mathematical expression: one
 with the
 @w{@t{@@tex}}
-environment,
-and the other with the
+environment, and the other with the
 @w{@t{@@ifnottex}}
 environment@.
 The

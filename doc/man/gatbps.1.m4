@@ -643,8 +643,7 @@ formats(emeven in ASCII-encoded plain text.
 The idea is to write two versions of each mathematical expression: one
 with the
 .nohy "\fB@tex\fR"
-environment,
-and the other with the
+environment, and the other with the
 .nohy "\fB@ifnottex\fR"
 environment.
 The
