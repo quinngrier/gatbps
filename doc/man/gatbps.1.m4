@@ -637,9 +637,7 @@ no files are necessarily deleted.
 .LP
 GATBPS provides a set of special files to support an alternative
 approach to writing mathematical notation in Texinfo.
-This approach
-produces reasonable
-output in all of Texinfo's output
+This approach produces reasonable output in all of Texinfo's output
 formats(emeven in ASCII-encoded plain text.
 .\" )
 The idea is to write
