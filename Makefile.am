@@ -167,7 +167,8 @@ docbook_src = doc/gatbps.texi
 
 docbookdir = $(docdir)
 
-info_TEXINFOS = doc/gatbps.texi
+info_TEXINFOS =
+info_TEXINFOS += doc/gatbps.texi
 
 man_MANS =
 man_MANS += doc/man/gatbps.1
