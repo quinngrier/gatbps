@@ -79,14 +79,22 @@ EXTRA_DIST += src/files/GATBPS_CONFIG_FILE_SUBST.m4.m4
 EXTRA_DIST += src/files/Makefile.am.vim.m4
 EXTRA_DIST += src/files/PACKAGEDATE.texi.in.m4
 EXTRA_DIST += src/files/PACKAGEVERSION.texi.in.m4
+EXTRA_DIST += src/files/docbook-dist.am.m4
 EXTRA_DIST += src/files/docbook.am.m4
+EXTRA_DIST += src/files/dvi-dist.am.m4
+EXTRA_DIST += src/files/html-dist.am.m4
 EXTRA_DIST += src/files/indent.texi.m4
+EXTRA_DIST += src/files/java-dist.am.m4
 EXTRA_DIST += src/files/java.am.m4
+EXTRA_DIST += src/files/javadoc-dist.am.m4
 EXTRA_DIST += src/files/javadoc.am.m4
 EXTRA_DIST += src/files/msign.texi.m4
 EXTRA_DIST += src/files/mtvskipbot.texi.m4
 EXTRA_DIST += src/files/mtvskiptop.texi.m4
+EXTRA_DIST += src/files/pdf-dist.am.m4
+EXTRA_DIST += src/files/plaintext-dist.am.m4
 EXTRA_DIST += src/files/plaintext.am.m4
+EXTRA_DIST += src/files/ps-dist.am.m4
 EXTRA_DIST += src/files/texinfo.css.m4
 EXTRA_DIST += src/tools/footer_comment.m4
 EXTRA_DIST += src/tools/header_comment.m4
@@ -234,14 +242,22 @@ bin/gatbps: src/files/GATBPS_CONFIG_FILE_SUBST.m4.m4
 bin/gatbps: src/files/Makefile.am.vim.m4
 bin/gatbps: src/files/PACKAGEDATE.texi.in.m4
 bin/gatbps: src/files/PACKAGEVERSION.texi.in.m4
+bin/gatbps: src/files/docbook-dist.am.m4
 bin/gatbps: src/files/docbook.am.m4
+bin/gatbps: src/files/dvi-dist.am.m4
+bin/gatbps: src/files/html-dist.am.m4
 bin/gatbps: src/files/indent.texi.m4
+bin/gatbps: src/files/java-dist.am.m4
 bin/gatbps: src/files/java.am.m4
+bin/gatbps: src/files/javadoc-dist.am.m4
 bin/gatbps: src/files/javadoc.am.m4
 bin/gatbps: src/files/msign.texi.m4
 bin/gatbps: src/files/mtvskipbot.texi.m4
 bin/gatbps: src/files/mtvskiptop.texi.m4
+bin/gatbps: src/files/pdf-dist.am.m4
+bin/gatbps: src/files/plaintext-dist.am.m4
 bin/gatbps: src/files/plaintext.am.m4
+bin/gatbps: src/files/ps-dist.am.m4
 bin/gatbps: src/files/texinfo.css.m4
 bin/gatbps: src/gatbps.m4
 bin/gatbps: src/tools/PACKAGE_DATE.m4
