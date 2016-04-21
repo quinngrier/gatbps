@@ -1665,6 +1665,30 @@ EOF1
             ;;
 
           #(
+            '--help=docbook-dist.am'|'--help='*'/docbook-dist.am')
+              cat <<EOF1
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`doc/help/docbook-dist.am.hd.m4')dnl
+{%|EOF1
+              case "${?}" in
+              #(
+                '0')
+                  :
+                ;;
+              #(
+                *)
+                  cat >&2 <<EOF1
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and writing to: standard output
+EOF1
+                  exit '1'
+                ;;
+              esac
+            ;;
+
+          #(
             '--help=docbook.am'|'--help='*'/docbook.am')
               cat <<EOF1
 |%}dnl
@@ -1724,6 +1748,30 @@ EOF1
             ;;
 
           #(
+            '--help=dvi-dist.am'|'--help='*'/dvi-dist.am')
+              cat <<EOF1
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`doc/help/dvi-dist.am.hd.m4')dnl
+{%|EOF1
+              case "${?}" in
+              #(
+                '0')
+                  :
+                ;;
+              #(
+                *)
+                  cat >&2 <<EOF1
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and writing to: standard output
+EOF1
+                  exit '1'
+                ;;
+              esac
+            ;;
+
+          #(
             '--help=gequ.texi'|'--help='*'/gequ.texi')
               cat <<EOF1
 Special file: ${fB1}gequ.texi${fR1}
@@ -1741,6 +1789,30 @@ formats:
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
+              case "${?}" in
+              #(
+                '0')
+                  :
+                ;;
+              #(
+                *)
+                  cat >&2 <<EOF1
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and writing to: standard output
+EOF1
+                  exit '1'
+                ;;
+              esac
+            ;;
+
+          #(
+            '--help=html-dist.am'|'--help='*'/html-dist.am')
+              cat <<EOF1
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`doc/help/html-dist.am.hd.m4')dnl
+{%|EOF1
               case "${?}" in
               #(
                 '0')
@@ -1807,11 +1879,59 @@ EOF1
             ;;
 
           #(
+            '--help=java-dist.am'|'--help='*'/java-dist.am')
+              cat <<EOF1
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`doc/help/java-dist.am.hd.m4')dnl
+{%|EOF1
+              case "${?}" in
+              #(
+                '0')
+                  :
+                ;;
+              #(
+                *)
+                  cat >&2 <<EOF1
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and writing to: standard output
+EOF1
+                  exit '1'
+                ;;
+              esac
+            ;;
+
+          #(
             '--help=java.am'|'--help='*'/java.am')
               cat <<EOF1
 |%}dnl
 changequote({%|`|%}, {%|'|%})dnl
 include(`doc/help/java.am.hd.m4')dnl
+{%|EOF1
+              case "${?}" in
+              #(
+                '0')
+                  :
+                ;;
+              #(
+                *)
+                  cat >&2 <<EOF1
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and writing to: standard output
+EOF1
+                  exit '1'
+                ;;
+              esac
+            ;;
+
+          #(
+            '--help=javadoc-dist.am'|'--help='*'/javadoc-dist.am')
+              cat <<EOF1
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`doc/help/javadoc-dist.am.hd.m4')dnl
 {%|EOF1
               case "${?}" in
               #(
@@ -2176,6 +2296,54 @@ EOF1
             ;;
 
           #(
+            '--help=pdf-dist.am'|'--help='*'/pdf-dist.am')
+              cat <<EOF1
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`doc/help/pdf-dist.am.hd.m4')dnl
+{%|EOF1
+              case "${?}" in
+              #(
+                '0')
+                  :
+                ;;
+              #(
+                *)
+                  cat >&2 <<EOF1
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and writing to: standard output
+EOF1
+                  exit '1'
+                ;;
+              esac
+            ;;
+
+          #(
+            '--help=plaintext-dist.am'|'--help='*'/plaintext-dist.am')
+              cat <<EOF1
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`doc/help/plaintext-dist.am.hd.m4')dnl
+{%|EOF1
+              case "${?}" in
+              #(
+                '0')
+                  :
+                ;;
+              #(
+                *)
+                  cat >&2 <<EOF1
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and writing to: standard output
+EOF1
+                  exit '1'
+                ;;
+              esac
+            ;;
+
+          #(
             '--help=plaintext.am'|'--help='*'/plaintext.am')
               cat <<EOF1
 |%}dnl
@@ -2217,6 +2385,30 @@ formats:
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
+              case "${?}" in
+              #(
+                '0')
+                  :
+                ;;
+              #(
+                *)
+                  cat >&2 <<EOF1
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and writing to: standard output
+EOF1
+                  exit '1'
+                ;;
+              esac
+            ;;
+
+          #(
+            '--help=ps-dist.am'|'--help='*'/ps-dist.am')
+              cat <<EOF1
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`doc/help/ps-dist.am.hd.m4')dnl
+{%|EOF1
               case "${?}" in
               #(
                 '0')
