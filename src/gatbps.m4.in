@@ -10570,8 +10570,6 @@ EOF1
       while :; do
         case "${1}" in
 
-        #(
-          'CC0-1.0-appendix.texi'|*'/CC0-1.0-appendix.texi')
 |%}dnl
 recursion_code(
   {%|CC0-1.0-appendix.texi|%},
@@ -10579,20 +10577,14 @@ recursion_code(
             set 'x' "${prefix}indent.texi" "${@AT@}"; shift
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'DATE.sh'|*'/DATE.sh')
 |%}dnl
 recursion_code(
   {%|DATE.sh|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'GATBPS_ARG_ENABLE_BOOL.m4'|*'/GATBPS_ARG_ENABLE_BOOL.m4')
 |%}dnl
 recursion_code(
   {%|GATBPS_ARG_ENABLE_BOOL.m4|%},
@@ -10600,10 +10592,7 @@ recursion_code(
             set 'x' "${prefix}GATBPS_CHECK_VARS.m4" "${@AT@}"; shift
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'GATBPS_ARG_WITH_BOOL.m4'|*'/GATBPS_ARG_WITH_BOOL.m4')
 |%}dnl
 recursion_code(
   {%|GATBPS_ARG_WITH_BOOL.m4|%},
@@ -10611,20 +10600,14 @@ recursion_code(
             set 'x' "${prefix}GATBPS_CHECK_VARS.m4" "${@AT@}"; shift
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'GATBPS_CHECK_BASIC.m4'|*'/GATBPS_CHECK_BASIC.m4')
 |%}dnl
 recursion_code(
   {%|GATBPS_CHECK_BASIC.m4|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'GATBPS_CHECK_CFLAG.m4'|*'/GATBPS_CHECK_CFLAG.m4')
 |%}dnl
 recursion_code(
   {%|GATBPS_CHECK_CFLAG.m4|%},
@@ -10632,10 +10615,7 @@ recursion_code(
             set 'x' "${prefix}GATBPS_CHECK_BASIC.m4" "${@AT@}"; shift
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'GATBPS_CHECK_COMPILE.m4'|*'/GATBPS_CHECK_COMPILE.m4')
 |%}dnl
 recursion_code(
   {%|GATBPS_CHECK_COMPILE.m4|%},
@@ -10643,10 +10623,7 @@ recursion_code(
             set 'x' "${prefix}GATBPS_CHECK_BASIC.m4" "${@AT@}"; shift
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'GATBPS_CHECK_HEADER.m4'|*'/GATBPS_CHECK_HEADER.m4')
 |%}dnl
 recursion_code(
   {%|GATBPS_CHECK_HEADER.m4|%},
@@ -10654,10 +10631,7 @@ recursion_code(
             set 'x' "${prefix}GATBPS_CHECK_COMPILE.m4" "${@AT@}"; shift
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'GATBPS_CHECK_LIB.m4'|*'/GATBPS_CHECK_LIB.m4')
 |%}dnl
 recursion_code(
   {%|GATBPS_CHECK_LIB.m4|%},
@@ -10665,10 +10639,7 @@ recursion_code(
             set 'x' "${prefix}GATBPS_CHECK_BASIC.m4" "${@AT@}"; shift
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'GATBPS_CHECK_LINK.m4'|*'/GATBPS_CHECK_LINK.m4')
 |%}dnl
 recursion_code(
   {%|GATBPS_CHECK_LINK.m4|%},
@@ -10676,10 +10647,7 @@ recursion_code(
             set 'x' "${prefix}GATBPS_CHECK_BASIC.m4" "${@AT@}"; shift
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'GATBPS_CHECK_RUN.m4'|*'/GATBPS_CHECK_RUN.m4')
 |%}dnl
 recursion_code(
   {%|GATBPS_CHECK_RUN.m4|%},
@@ -10687,10 +10655,7 @@ recursion_code(
             set 'x' "${prefix}GATBPS_CHECK_BASIC.m4" "${@AT@}"; shift
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'GATBPS_CHECK_VARS.m4'|*'/GATBPS_CHECK_VARS.m4')
 |%}dnl
 recursion_code(
   {%|GATBPS_CHECK_VARS.m4|%},
@@ -10698,310 +10663,217 @@ recursion_code(
             set 'x' "${prefix}GATBPS_CHECK_BASIC.m4" "${@AT@}"; shift
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'GATBPS_CONFIG_FILE.m4'|*'/GATBPS_CONFIG_FILE.m4')
 |%}dnl
 recursion_code(
   {%|GATBPS_CONFIG_FILE.m4|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'GATBPS_CONFIG_FILE_SUBST.m4'|*'/GATBPS_CONFIG_FILE_SUBST.m4')
 |%}dnl
 recursion_code(
   {%|GATBPS_CONFIG_FILE_SUBST.m4|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'GATBPS_DEFINE_DATE.m4'|*'/GATBPS_DEFINE_DATE.m4')
 |%}dnl
 recursion_code(
   {%|GATBPS_DEFINE_DATE.m4|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'Makefile.am.vim'|*'/Makefile.am.vim')
 |%}dnl
 recursion_code(
   {%|Makefile.am.vim|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'PACKAGEDATE.texi.in'|*'/PACKAGEDATE.texi.in')
 |%}dnl
 recursion_code(
   {%|PACKAGEDATE.texi.in|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'PACKAGEVERSION.texi.in'|*'/PACKAGEVERSION.texi.in')
 |%}dnl
 recursion_code(
   {%|PACKAGEVERSION.texi.in|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'TEST_EXIT.h'|*'/TEST_EXIT.h')
 |%}dnl
 recursion_code(
   {%|TEST_EXIT.h|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'VERSION.ac'|*'/VERSION.ac')
 |%}dnl
 recursion_code(
   {%|VERSION.ac|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'VERSION.sh'|*'/VERSION.sh')
 |%}dnl
 recursion_code(
   {%|VERSION.sh|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'VERSION_LTCUR.sh'|*'/VERSION_LTCUR.sh')
 |%}dnl
 recursion_code(
   {%|VERSION_LTCUR.sh|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'awk-form.sh'|*'/awk-form.sh')
 |%}dnl
 recursion_code(
   {%|awk-form.sh|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'bdots.texi'|*'/bdots.texi')
 |%}dnl
 recursion_code(
   {%|bdots.texi|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'bothcontents.texi'|*'/bothcontents.texi')
 |%}dnl
 recursion_code(
   {%|bothcontents.texi|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'configure.ac.vim'|*'/configure.ac.vim')
 |%}dnl
 recursion_code(
   {%|configure.ac.vim|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'contents.texi'|*'/contents.texi')
 |%}dnl
 recursion_code(
   {%|contents.texi|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'docbook-dist.am'|*'/docbook-dist.am')
 |%}dnl
 recursion_code(
   {%|docbook-dist.am|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'docbook.am'|*'/docbook.am')
 |%}dnl
 recursion_code(
   {%|docbook.am|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'dslash.texi'|*'/dslash.texi')
 |%}dnl
 recursion_code(
   {%|dslash.texi|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'dvi-dist.am'|*'/dvi-dist.am')
 |%}dnl
 recursion_code(
   {%|dvi-dist.am|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'gequ.texi'|*'/gequ.texi')
 |%}dnl
 recursion_code(
   {%|gequ.texi|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'html-dist.am'|*'/html-dist.am')
 |%}dnl
 recursion_code(
   {%|html-dist.am|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'indent.texi'|*'/indent.texi')
 |%}dnl
 recursion_code(
   {%|indent.texi|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'ipez.texi'|*'/ipez.texi')
 |%}dnl
 recursion_code(
   {%|ipez.texi|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'java-dist.am'|*'/java-dist.am')
 |%}dnl
 recursion_code(
   {%|java-dist.am|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'java.am'|*'/java.am')
 |%}dnl
 recursion_code(
   {%|java.am|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'javadoc-dist.am'|*'/javadoc-dist.am')
 |%}dnl
 recursion_code(
   {%|javadoc-dist.am|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'javadoc.am'|*'/javadoc.am')
 |%}dnl
 recursion_code(
   {%|javadoc.am|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'lcei.texi'|*'/lcei.texi')
 |%}dnl
 recursion_code(
   {%|lcei.texi|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'lequ.texi'|*'/lequ.texi')
 |%}dnl
 recursion_code(
   {%|lequ.texi|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'lflo.texi'|*'/lflo.texi')
 |%}dnl
 recursion_code(
   {%|lflo.texi|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'math.texi'|*'/math.texi')
 |%}dnl
 recursion_code(
   {%|math.texi|%},
@@ -11024,207 +10896,146 @@ recursion_code(
             set 'x' "${prefix}bdots.texi" "${@AT@}"; shift
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'mdot.texi'|*'/mdot.texi')
 |%}dnl
 recursion_code(
   {%|mdot.texi|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'mdots.texi'|*'/mdots.texi')
 |%}dnl
 recursion_code(
   {%|mdots.texi|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'msign.texi'|*'/msign.texi')
 |%}dnl
 recursion_code(
   {%|msign.texi|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'mtvskipbot.texi'|*'/mtvskipbot.texi')
 |%}dnl
 recursion_code(
   {%|mtvskipbot.texi|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'mtvskiptop.texi'|*'/mtvskiptop.texi')
 |%}dnl
 recursion_code(
   {%|mtvskiptop.texi|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'nequ.texi'|*'/nequ.texi')
 |%}dnl
 recursion_code(
   {%|nequ.texi|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'pdf-dist.am'|*'/pdf-dist.am')
 |%}dnl
 recursion_code(
   {%|pdf-dist.am|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'plaintext-dist.am'|*'/plaintext-dist.am')
 |%}dnl
 recursion_code(
   {%|plaintext-dist.am|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'plaintext.am'|*'/plaintext.am')
 |%}dnl
 recursion_code(
   {%|plaintext.am|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'prm.texi'|*'/prm.texi')
 |%}dnl
 recursion_code(
   {%|prm.texi|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'ps-dist.am'|*'/ps-dist.am')
 |%}dnl
 recursion_code(
   {%|ps-dist.am|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'rarrow.texi'|*'/rarrow.texi')
 |%}dnl
 recursion_code(
   {%|rarrow.texi|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'rcei.texi'|*'/rcei.texi')
 |%}dnl
 recursion_code(
   {%|rcei.texi|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'rflo.texi'|*'/rflo.texi')
 |%}dnl
 recursion_code(
   {%|rflo.texi|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'sbs.texi'|*'/sbs.texi')
 |%}dnl
 recursion_code(
   {%|sbs.texi|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'shortcontents.texi'|*'/shortcontents.texi')
 |%}dnl
 recursion_code(
   {%|shortcontents.texi|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'sps.texi'|*'/sps.texi')
 |%}dnl
 recursion_code(
   {%|sps.texi|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'texi-form.sh'|*'/texi-form.sh')
 |%}dnl
 recursion_code(
   {%|texi-form.sh|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'texinfo.css'|*'/texinfo.css')
 |%}dnl
 recursion_code(
   {%|texinfo.css|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
-        #(
-          'troff-form.sh'|*'/troff-form.sh')
 |%}dnl
 recursion_code(
   {%|troff-form.sh|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
-          ;;
 
         esac
         break # recursion_done
