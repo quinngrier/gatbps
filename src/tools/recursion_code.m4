@@ -35,7 +35,7 @@ $|%}{%|{fy2}gatbps:$|%}{%|{fR2} and writing to: a command substitution
 $|%}{%|{fy2}gatbps:$|%}{%|{fR2} recursion failed: $|%}{%|{fB2}$|%}{%|{1}$|%}{%|{fR2}
 EOF1
                     exit_status='1'
-                    break # recursion_done
+                    break # recursion
                   ;;
                 esac
                 eval "$|%}{%|{x}"

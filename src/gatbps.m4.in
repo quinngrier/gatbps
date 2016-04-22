@@ -10975,8 +10975,8 @@ EOF1
 |%}){%|
 
         esac
-        break # recursion_done
-      done # recursion_done
+        break # recursion
+      done # recursion
 
       boundary='no'
 
