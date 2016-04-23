@@ -6,6 +6,7 @@
 @unnumbered Building and Installation
 @end ifclear
 
+@noindent
 GATBPS uses the GNU Autotools for building and installation@.
 
 The Info directory entries
