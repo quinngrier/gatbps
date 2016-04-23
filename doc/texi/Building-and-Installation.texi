@@ -6,9 +6,7 @@
 @unnumbered Building and Installation
 @end ifclear
 
-GATBPS
-uses the GNU Autotools
-for building and installation@.
+GATBPS uses the GNU Autotools for building and installation@.
 
 The Info directory entries
 for the manual follow the standard
