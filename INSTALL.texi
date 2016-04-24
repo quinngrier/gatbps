@@ -1,4 +1,4 @@
-@include doc/texi/Building-and-Installation.texi
+@include Building-and-Installation.texi
 @ifxml
 @ifnotxml
 @c
