@@ -4,6 +4,8 @@ all:
 
 GATBPS = gatbps
 
+GATBPSFLAGS = -Idoc/texi
+
 ## end_variables
 
 ## begin_rules
@@ -13,12 +15,12 @@ GATBPS = gatbps
 COPYING: COPYING.bot
 COPYING: COPYING.texi
 COPYING: doc/texi/Copyright-Information.texi
-	$(GATBPS) COPYING
+	$(GATBPS) $(GATBPSFLAGS) COPYING
 
 INSTALL: INSTALL.bot
 INSTALL: INSTALL.texi
 INSTALL: doc/texi/Building-and-Installation.texi
-	$(GATBPS) INSTALL
+	$(GATBPS) $(GATBPSFLAGS) INSTALL
 
 all: COPYING
 all: INSTALL
