@@ -12,6 +12,7 @@ GATBPS = gatbps
 
 all:
 	$(GATBPS) CC0-1.0.txt
+	$(GATBPS) build-aux/GATBPS_CONFIG_FILE_RULES.am
 	$(GATBPS) build-aux/docbook-dist.am
 	$(GATBPS) build-aux/docbook.am
 	$(GATBPS) build-aux/dvi-dist.am
