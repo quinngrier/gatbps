@@ -24,7 +24,13 @@ $(java_dst): $(java_src)
 .PHONY: uninstall-java-more
 
 .java.class:
-	$(JAVAC) $(AM_JAVACFLAGS) $(JAVACFLAGS) $<
+	$(JAVAC) \
+  -d ./$(java_sourcepath) \
+  -sourcepath $(srcdir)/$(java_sourcepath) \
+  $(AM_JAVACFLAGS) \
+  $(JAVACFLAGS) \
+  $< \
+;
 
 clean-java: clean-java-more
 	rm -f $(java_dst)
