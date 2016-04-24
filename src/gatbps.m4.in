@@ -10325,8 +10325,13 @@ EOF1
                 ;;
               esac
 
-              "${texi2any}" '--plaintext' ${unicode_args} \
-                            "${safe_tmp1}" >"${safe_tmp0}"
+              eval '"${texi2any}" \
+  --plaintext \
+  ${unicode_args} \
+  '"${path_args}"' \
+  "${safe_tmp1}" \
+  >"${safe_tmp0}" \
+;'
               case "${?}" in
               #(
                 '0')
@@ -10438,8 +10443,13 @@ EOF1
               ;;
             esac
 
-            "${texi2any}" '--plaintext' ${unicode_args} \
-                          "${safe_tmp2}" >"${safe_tmp1}"
+            eval '"${texi2any}" \
+--plaintext \
+${unicode_args} \
+'"${path_args}"' \
+"${safe_tmp2}" \
+>"${safe_tmp1}" \
+            ;'
             case "${?}" in
             #(
               '0')
@@ -10560,8 +10570,13 @@ EOF1
                 ;;
               esac
 
-              "${texi2any}" '--plaintext' ${unicode_args} \
-                            "${safe_tmp3}" >>"${safe_tmp2}"
+              eval '"${texi2any}" \
+  --plaintext \
+  ${unicode_args} \
+  '"${path_args}"' \
+  "${safe_tmp3}" \
+  >>"${safe_tmp2}" \
+;'
               case "${?}" in
               #(
                 '0')
