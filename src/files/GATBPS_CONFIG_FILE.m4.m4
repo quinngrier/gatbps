@@ -77,20 +77,14 @@ AC_DEFUN([GATBPS_CONFIG_FILE], [{ :
     }],
     [$4])
 
-  case "$[]{GATBPS_CONFIG_FILE_FILES}" in
-  #(
-    ?*)
-      GATBPS_CONFIG_FILE_FILES="$[]{GATBPS_CONFIG_FILE_FILES}"' \
-  gatbps_output'
-    ;;
-  #(
-    *)
-      GATBPS_CONFIG_FILE_FILES='\
-  gatbps_output'
-    ;;
-  esac
+  gatbps_rule='.PHONY: clean-gatbps_output
 
-  gatbps_rule='gatbps_output: gatbps_prereq
+clean-gatbps_output:
+	-rm -f gatbps_output
+
+distclean-local: clean-gatbps_output
+
+gatbps_output: gatbps_prereq
 	$[](MKDIR_P) $[](@D)
 	echo @PACKAGE_NAME@ >$[]@
 	cd $[](top_builddir) && $[](SHELL) ./config.status $[]@gatbps_suffix'
