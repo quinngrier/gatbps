@@ -367,6 +367,8 @@ exit_status='0'
 
 ferror1='no'
 
+path_args=''
+
 set 'x' "${@AT@}"
 
 while :; do
@@ -578,6 +580,47 @@ EOF1
 
           shift
           set 'x' "--all=${x}" "${@AT@}"
+          continue
+
+        ;;
+
+      #(
+        '--append-path')
+
+          path_args=''
+          continue
+
+        ;;
+
+      #(
+        '--append-path='*)
+
+          x=`"${sed}" "
+s/'/'\\\\\\\\''/g
+1s/^--append-path=/-I '/
+\\$s/\\$/'/
+" <<EOF1
+${1}
+EOF1
+`
+          case "${?}" in
+          #(
+            '0')
+              :
+            ;;
+          #(
+            *)
+              cat >&2 <<EOF1
+${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and writing to: a command substitution
+EOF1
+              exit '1'
+            ;;
+          esac
+
+          path_args="${path_args} ${x}"
+
           continue
 
         ;;
