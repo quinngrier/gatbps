@@ -515,6 +515,7 @@ EOF1
           set "${prefix}Makefile.am.vim" "${@AT@}"
           set "${prefix}GATBPS_DEFINE_DATE.m4" "${@AT@}"
           set "${prefix}GATBPS_CONFIG_FILE_SUBST.m4" "${@AT@}"
+          set "${prefix}GATBPS_CONFIG_FILE_RULES.am" "${@AT@}"
           set "${prefix}GATBPS_CONFIG_FILE.m4" "${@AT@}"
           set "${prefix}GATBPS_CHECK_VARS.m4" "${@AT@}"
           set "${prefix}GATBPS_CHECK_RUN.m4" "${@AT@}"
@@ -1383,6 +1384,30 @@ Special file: ${fB1}GATBPS_CONFIG_FILE.m4${fR1}
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
+              case "${?}" in
+              #(
+                '0')
+                  :
+                ;;
+              #(
+                *)
+                  cat >&2 <<EOF1
+${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
+${fr2}gatbps!${fR2}   1. a here-document
+${fr2}gatbps!${fR2} and writing to: standard output
+EOF1
+                  exit '1'
+                ;;
+              esac
+            ;;
+
+          #(
+            '--help=GATBPS_CONFIG_FILE_RULES.am'|'--help='*'/GATBPS_CONFIG_FILE_RULES.am')
+              cat <<EOF1
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`doc/help/GATBPS_CONFIG_FILE_RULES.am.hd.m4')dnl
+{%|EOF1
               case "${?}" in
               #(
                 '0')
@@ -5018,6 +5043,32 @@ EOF1
 |%}dnl
 changequote({%|`|%}, {%|'|%})dnl
 include(`src/files/GATBPS_CONFIG_FILE.m4.m4')dnl
+{%|EOF1
+            case "${?}" in
+            #(
+              '0')
+                :
+              ;;
+            #(
+              *)
+                cat >&2 <<EOF1
+${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
+${fy2}gatbps:${fR2}   1. a here-document
+${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
+EOF1
+                exit_status='1'
+                break
+              ;;
+            esac
+          ;;
+
+        #(
+          'no,GATBPS_CONFIG_FILE_RULES.am'|'no,'*'/GATBPS_CONFIG_FILE_RULES.am')
+            cat >"${safe_1}" <<'EOF1'
+|%}dnl
+changequote({%|`|%}, {%|'|%})dnl
+include(`src/files/GATBPS_CONFIG_FILE_RULES.am.m4')dnl
 {%|EOF1
             case "${?}" in
             #(
@@ -10755,6 +10806,12 @@ EOF1
 
 |%}recursion_code(
   {%|GATBPS_CONFIG_FILE.m4|%},
+  {%|
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
+|%}){%|
+
+|%}recursion_code(
+  {%|GATBPS_CONFIG_FILE_RULES.am|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
