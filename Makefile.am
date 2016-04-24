@@ -258,6 +258,7 @@ doc/man/gatbps.1: bin/gatbps
 
 ## begin_includes
 
+include $(srcdir)/build-aux/GATBPS_CONFIG_FILE_RULES.am
 include $(srcdir)/build-aux/docbook-dist.am
 include $(srcdir)/build-aux/docbook.am
 include $(srcdir)/build-aux/dvi-dist.am
@@ -268,8 +269,6 @@ include $(srcdir)/build-aux/plaintext.am
 include $(srcdir)/build-aux/ps-dist.am
 
 ## end_includes
-
-@GATBPS_CONFIG_FILE_RULES@
 
 include $(srcdir)/build-aux/CC0-1.0-AM-COPYRIGHT.am
 
