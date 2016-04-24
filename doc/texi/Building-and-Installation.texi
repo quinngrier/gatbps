@@ -9,6 +9,7 @@
 @noindent
 GATBPS uses the GNU Autotools for building and installation@.
 
+@include indent.texi
 The Info directory entries for the manual follow the standard formatting
 conventions, which include starting program descriptions on the 49th
 column and other descriptions on the 33rd column@.
