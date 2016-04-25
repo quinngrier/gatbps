@@ -6,6 +6,7 @@
 @unnumbered Copyright Information
 @end ifclear
 
+@noindent
 All parts of GATBPS are original work except for the complete copyright
 texts
 @ifset fullmanual
