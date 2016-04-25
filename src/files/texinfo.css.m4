@@ -8,8 +8,8 @@ include({%|src/tools/header_comment.m4|%})dnl
  * file by Texinfo. In this case, the "file" spoken of by this comment
  * is not this HTML file, but rather the original CSS file. Texinfo may
  * also have mixed the content of the original CSS file with the normal
- * content that it produces, making it difficult to determine what came
- * from the original CSS file.
+ * HTML content that it produces, making it difficult to determine what
+ * came from the original CSS file.
 |%}header_comment({%| *|%}, {%| *|%}){%|
  *
  * Special file: texinfo.css
@@ -41,8 +41,8 @@ span.indent-immediately-following-paragraph + p {
  * file by Texinfo. In this case, the "file" spoken of by this comment
  * is not this HTML file, but rather the original CSS file. Texinfo may
  * also have mixed the content of the original CSS file with the normal
- * content that it produces, making it difficult to determine what came
- * from the original CSS file.
+ * HTML content that it produces, making it difficult to determine what
+ * came from the original CSS file.
 |%}footer_comment({%| *|%}, {%| *|%}, {%| */|%})
 dnl
 dnl The authors of this file have waived all copyright and
