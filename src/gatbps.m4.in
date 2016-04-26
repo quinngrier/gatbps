@@ -875,7 +875,7 @@ EOF1
         '--help')
 
           cat <<EOF1
-Usage: ${fB1}gatbps${fR1} [<${fI1}operand${fR1}> | <${fI1}option${fR1}>]...
+Usage: ${fB1}gatbps${fR1} [<${fI1}argument${fR1}>]...
 
 ${fB1}gatbps${fR1} generates basic files for software packages. The arguments are
 processed one at a time, in order. Each argument is classified as either

@@ -28,7 +28,7 @@ include({%|src/tools/TEXI2ANY_DEFAULT_TROFF.m4|%})dnl
 .SH "SYNOPSIS"
 .LP
 .nf
-\fBgatbps\fR\ [<\fIoperand\fR>\ |\ <\fIoption\fR>]...
+\fBgatbps\fR\ [<\fIargument\fR>]...
 .fi
 .SH "DESCRIPTION"
 .LP
