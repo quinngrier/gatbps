@@ -1,6 +1,7 @@
 @node Introduction
 @chapter Introduction
 
+@noindent
 GATBPS (pronunciation: gat-bee-pee-ESS)
 is a software package for generating
 basic files for software packages@.
