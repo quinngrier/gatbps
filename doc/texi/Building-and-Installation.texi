@@ -7,7 +7,7 @@
 @end ifclear
 
 @noindent
-GATBPS uses the GNU Autotools for building and installation@.
+GATBPS uses the GNU Build System for building and installation@.
 The details are slightly different depending on whether you are working
 with the Git repository, a tree archive, or a distribution archive@.
 If you are unsure of which one you are working with, then you can
