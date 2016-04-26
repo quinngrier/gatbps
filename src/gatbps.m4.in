@@ -630,7 +630,7 @@ EOF1
         '-I')
 
           shift
-          set 'x' '--append-path=' "${@AT@}"
+          set 'x' '--append-path' "${@AT@}"
           continue
 
         ;;
