@@ -8,7 +8,7 @@
 
 @noindent
 GATBPS uses the GNU Autotools for building and installation@.
-The process is slightly different depending on whether you are working
+The details are slightly different depending on whether you are working
 with the Git repository, a tree archive, or a distribution archive@.
 If you are unsure of which one you are working with, then you can use
 the following method to distinguish them:
