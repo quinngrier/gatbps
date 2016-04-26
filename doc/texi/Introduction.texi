@@ -2,9 +2,8 @@
 @chapter Introduction
 
 @noindent
-GATBPS (pronunciation: gat-bee-pee-ESS)
-is a software package for generating
-basic files for software packages@.
+GATBPS (pronunciation: gat-bee-pee-ESS) is a software package for
+generating basic files for software packages@.
 It was originally created to provide a
 small number of shell scripts to be used with the
 GNU Autotools build system, and its name stood for
