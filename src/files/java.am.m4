@@ -25,6 +25,7 @@ $(java_dst): $(java_src)
 
 .java.class:
 	$(JAVAC) \
+  -classpath ./$(java_sourcepath) \
   -d ./$(java_sourcepath) \
   -sourcepath $(srcdir)/$(java_sourcepath) \
   $(AM_JAVACFLAGS) \
