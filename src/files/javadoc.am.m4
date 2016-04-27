@@ -14,7 +14,17 @@ header_comment({%|##|%}, {%|##|%}){%|
 $(javadoc_dst): $(javadoc_src)
 	rm -f -r $(javadoc_dst)
 	$(MKDIR_P) $(javadoc_dst)
-	$(JAVADOC) -d $(javadoc_dst) $(javadoc_src)
+	{ :; \
+  src=; \
+  for x in $(javadoc_src); do \
+    if test -f "$${x}"; then \
+      src="$${src} $${x}"; \
+    else \
+      src="$${src} $(srcdir)/$${x}"; \
+    fi; \
+  done; \
+  $(JAVADOC) -d $(javadoc_dst) $${src}; \
+}
 
 .PHONY: clean-javadoc
 .PHONY: clean-javadoc-more
