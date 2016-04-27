@@ -21,8 +21,11 @@ $(plaintext_dst): $(plaintext_src)
     x=$(srcdir)/$(plaintext_src); \
   fi; \
   $(MAKEINFO) \
-    $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
-    --plaintext -o $(plaintext_dst) $$x \
+    --plaintext \
+    -o $(plaintext_dst) \
+    $(AM_MAKEINFOFLAGS) \
+    $(MAKEINFOFLAGS) \
+    $$x \
   ; \
   exit $$?; \
 }

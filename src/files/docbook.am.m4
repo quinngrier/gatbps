@@ -21,8 +21,11 @@ $(docbook_dst): $(docbook_src)
     x=$(srcdir)/$(docbook_src); \
   fi; \
   $(MAKEINFO) \
-    $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
-    --docbook -o $(docbook_dst) $$x \
+    --docbook \
+    -o $(docbook_dst) \
+    $(AM_MAKEINFOFLAGS) \
+    $(MAKEINFOFLAGS) \
+    $$x \
   ; \
   exit $$?; \
 }
