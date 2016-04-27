@@ -41,7 +41,7 @@ $(plaintext_dst): $(plaintext_src)
 clean-local: clean-plaintext
 
 clean-plaintext: clean-plaintext-more
-	rm -f $(plaintext_dst)
+	-rm -f $(plaintext_dst)
 
 install-plaintext: $(plaintext_dst)
 install-plaintext: install-plaintext-more
