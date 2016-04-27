@@ -35,7 +35,7 @@ $(javadoc_dst): $(javadoc_src)
 .PHONY: uninstall-javadoc-more
 
 clean-javadoc: clean-javadoc-more
-	rm -f -r $(javadoc_dst)
+	-rm -f -r $(javadoc_dst)
 
 clean-local: clean-javadoc
 

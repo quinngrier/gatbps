@@ -19,7 +19,7 @@ $(java_dist_dst): $(java_dist_dep)
 .PHONY: clean-$(java_dist_dst)
 
 clean-$(java_dist_dst):
-	rm -f $(java_dist_dst)
+	-rm -f $(java_dist_dst)
 
 maintainer-clean-local: clean-$(java_dist_dst)
 

@@ -34,8 +34,8 @@ $(java_dst): $(java_src)
 ;
 
 clean-java: clean-java-more
-	rm -f $(java_dst)
-	rm -f $(java_src)
+	-rm -f $(java_dst)
+	-rm -f $(java_src)
 
 clean-local: clean-java
 

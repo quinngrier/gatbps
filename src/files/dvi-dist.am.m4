@@ -19,7 +19,7 @@ $(dvi_dist_dst): $(dvi_dist_dep)
 .PHONY: clean-$(dvi_dist_dst)
 
 clean-$(dvi_dist_dst):
-	rm -f $(dvi_dist_dst)
+	-rm -f $(dvi_dist_dst)
 
 maintainer-clean-local: clean-$(dvi_dist_dst)
 

@@ -20,7 +20,7 @@ $(html_dist_dst): $(html_dist_dep)
 .PHONY: clean-$(html_dist_dst)
 
 clean-$(html_dist_dst):
-	rm -f -r $(html_dist_dst)
+	-rm -f -r $(html_dist_dst)
 
 maintainer-clean-local: clean-$(html_dist_dst)
 
