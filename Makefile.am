@@ -45,6 +45,9 @@ MOSTLYCLEANFILES =
 MOSTLYCLEANFILES += bin/gatbps
 MOSTLYCLEANFILES += doc/man/gatbps.1
 
+SUFFIXES =
+SUFFIXES += .m4
+
 TEXI2DVI = texi2dvi $(AM_TEXI2DVIFLAGS) $(TEXI2DVIFLAGS)
 
 bin_SCRIPTS =
@@ -243,6 +246,9 @@ ps_dist_src = doc/gatbps.ps
 ## end_variables
 
 ## begin_rules
+
+.m4:
+	$(M4) $(AM_M4FLAGS) $(M4FLAGS) $< >$@
 
 bin/gatbps: $(bin_gatbps_src)
 bin/gatbps: $(nodist_bin_gatbps_src)
