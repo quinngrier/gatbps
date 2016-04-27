@@ -4,10 +4,9 @@
 @noindent
 GATBPS (pronunciation: gat-bee-pee-ESS) is a software package for
 generating basic files for software packages@.
-It was originally created to provide a
-small number of shell scripts to be used with the
-GNU Autotools, and its name was an abbreviation for
-GNU Autotools Boilerplate Scripts@.
+It was originally created to provide a small number of shell scripts to
+be used with the GNU Autotools, and its name was an abbreviation for GNU
+Autotools Boilerplate Scripts@.
 However, it quickly grew to provide other
 kinds of basic files, and its name is now
 considered to be an abbreviation for
