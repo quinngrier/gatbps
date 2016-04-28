@@ -60,6 +60,14 @@ For example, the following command might be used:
 @example
 sudo@w{ }INSTALL_INFO_NO_INDENT=yes@w{ }make@w{ }install
 @end example
+
+@menu
+* Package Formats::
+@end menu
+
+@lowersections
+@include Package-Formats.texi
+@raisesections
 @ifxml
 @ifnotxml
 @c
