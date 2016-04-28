@@ -139,6 +139,7 @@ doc_gatbps_TEXINFOS += doc/texi/PACKAGEDATE.texi
 doc_gatbps_TEXINFOS += doc/texi/PACKAGEVERSION.texi
 doc_gatbps_TEXINFOS += doc/texi/Package-Formats.texi
 doc_gatbps_TEXINFOS += doc/texi/Plain-Files.texi
+doc_gatbps_TEXINFOS += doc/texi/Required-Packages.texi
 doc_gatbps_TEXINFOS += doc/texi/SEDDEFAULTTEXI.texi
 doc_gatbps_TEXINFOS += doc/texi/Special-File-Reference.texi
 doc_gatbps_TEXINFOS += doc/texi/TEXIANYDEFAULTTEXI.texi

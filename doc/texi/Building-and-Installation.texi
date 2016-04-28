@@ -64,12 +64,15 @@ sudo@w{ }INSTALL_INFO_NO_INDENT=yes@w{ }make@w{ }install
 @menu
 * Package Formats::
 * Build System Initialization::
+* Required Packages::
 @end menu
 
 @lowersections
 @include Package-Formats.texi
 
 @include Build-System-Initialization.texi
+
+@include Required-Packages.texi
 @raisesections
 @ifxml
 @ifnotxml
