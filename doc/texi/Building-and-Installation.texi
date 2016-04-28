@@ -65,6 +65,7 @@ sudo@w{ }INSTALL_INFO_NO_INDENT=yes@w{ }make@w{ }install
 * Package Formats::
 * Build System Initialization::
 * Required Packages::
+* Configuration::
 @end menu
 
 @lowersections
@@ -73,6 +74,8 @@ sudo@w{ }INSTALL_INFO_NO_INDENT=yes@w{ }make@w{ }install
 @include Build-System-Initialization.texi
 
 @include Required-Packages.texi
+
+@include Configuration.texi
 @raisesections
 @ifxml
 @ifnotxml
