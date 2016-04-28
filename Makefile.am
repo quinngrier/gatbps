@@ -124,6 +124,7 @@ doc_gatbps_TEXINFOS += build-aux/texinfo.css
 doc_gatbps_TEXINFOS += doc/texi/AWKDEFAULTTEXI.texi
 doc_gatbps_TEXINFOS += doc/texi/Build-System-Initialization.texi
 doc_gatbps_TEXINFOS += doc/texi/Building-and-Installation.texi
+doc_gatbps_TEXINFOS += doc/texi/Building.texi
 doc_gatbps_TEXINFOS += doc/texi/CC0-1.0-appendix.texi
 doc_gatbps_TEXINFOS += doc/texi/CC0-1.0-copying.texi
 doc_gatbps_TEXINFOS += doc/texi/Configuration.texi
