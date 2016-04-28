@@ -1,5 +1,10 @@
+@ifset fullmanual
 @node Introduction
 @chapter Introduction
+@end ifset
+@ifclear fullmanual
+@unnumbered Introduction
+@end ifclear
 
 @noindent
 GATBPS is a software package for generating basic files for software
