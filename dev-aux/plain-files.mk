@@ -22,8 +22,14 @@ INSTALL: INSTALL.texi
 INSTALL: doc/texi/Building-and-Installation.texi
 	$(GATBPS) $(GATBPSFLAGS) INSTALL
 
+README: README.bot
+README: README.texi
+README: doc/texi/Introduction.texi
+	$(GATBPS) $(GATBPSFLAGS) README
+
 all: COPYING
 all: INSTALL
+all: README
 
 ## end_rules
 
