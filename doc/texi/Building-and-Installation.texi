@@ -10,18 +10,6 @@
 GATBPS uses the GNU Build System for building and installation@.
 
 @include indent.texi
-If you are working with the Git repository or a tree archive, then the
-first step is to initialize the build system@.
-If you are working with a distribution archive, then you should skip
-this step, as the build system is already initialized@.
-To initialize the build system, run the following command after making
-sure that you have the GNU Autotools installed:
-
-@example
-autoreconf@w{ }-@w{-}install
-@end example
-
-@include indent.texi
 The Info directory entries for the manual follow the standard formatting
 conventions, which include starting program descriptions on the 49th
 column and other descriptions on the 33rd column@.

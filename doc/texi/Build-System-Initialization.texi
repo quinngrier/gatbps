@@ -1,5 +1,17 @@
 @node Build System Initialization
 @chapter Build System Initialization
+
+@noindent
+If you are working with the Git repository or a tree archive, then the
+first step is to initialize the build system@.
+If you are working with a distribution archive, then you should skip
+this step, as the build system is already initialized@.
+To initialize the build system, run the following command after making
+sure that you have the GNU Autotools installed:
+
+@example
+autoreconf@w{ }-@w{-}install
+@end example
 @ifxml
 @ifnotxml
 @c
