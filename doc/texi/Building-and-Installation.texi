@@ -67,6 +67,7 @@ sudo@w{ }INSTALL_INFO_NO_INDENT=yes@w{ }make@w{ }install
 * Required Packages::
 * Configuration::
 * Building::
+* Installation::
 @end menu
 
 @lowersections
@@ -79,6 +80,8 @@ sudo@w{ }INSTALL_INFO_NO_INDENT=yes@w{ }make@w{ }install
 @include Configuration.texi
 
 @include Building.texi
+
+@include Installation.texi
 @raisesections
 @ifxml
 @ifnotxml
