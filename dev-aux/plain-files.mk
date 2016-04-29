@@ -16,7 +16,7 @@ GATBPSFLAGS = -I'doc/texi'
 .SUFFIXES: .texi
 
 .texi:
-	$(GATBPS) $(GATBPSFLAGS) $@
+	$(GATBPS) $(GATBPSFLAGS) -- $@
 
 COPYING: COPYING.bot
 COPYING: doc/texi/Copyright-Information.texi
