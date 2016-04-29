@@ -20,7 +20,13 @@ COPYING: COPYING.bot
 COPYING: doc/texi/Copyright-Information.texi
 
 INSTALL: INSTALL.bot
+INSTALL: doc/texi/Build-System-Initialization.texi
 INSTALL: doc/texi/Building-and-Installation.texi
+INSTALL: doc/texi/Building.texi
+INSTALL: doc/texi/Configuration.texi
+INSTALL: doc/texi/Installation.texi
+INSTALL: doc/texi/Package-Formats.texi
+INSTALL: doc/texi/Required-Packages.texi
 
 README: README.bot
 README: doc/texi/Introduction.texi
