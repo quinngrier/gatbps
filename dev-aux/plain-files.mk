@@ -2,7 +2,7 @@ all:
 
 ## begin_variables
 
-GATBPS = gatbps
+GATBPS = 'gatbps'
 
 ## end_variables
 
