@@ -14,7 +14,7 @@ GATBPS = gatbps
 .SUFFIXES: .texi
 
 .texi:
-	$(GATBPS) -I'doc/texi' -- $@
+	$(GATBPS) --append-path='doc/texi' -- $@
 
 COPYING: COPYING.bot
 COPYING: doc/texi/Copyright-Information.texi
