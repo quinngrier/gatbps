@@ -12,20 +12,20 @@ GATBPSFLAGS = -I'doc/texi'
 
 .PHONY: all
 
-COPYING: COPYING.bot
-COPYING: COPYING.texi
-COPYING: doc/texi/Copyright-Information.texi
+.SUFFIXES:
+.SUFFIXES: .texi
+
+.texi:
 	$(GATBPS) $(GATBPSFLAGS) $@
+
+COPYING: COPYING.bot
+COPYING: doc/texi/Copyright-Information.texi
 
 INSTALL: INSTALL.bot
-INSTALL: INSTALL.texi
 INSTALL: doc/texi/Building-and-Installation.texi
-	$(GATBPS) $(GATBPSFLAGS) $@
 
 README: README.bot
-README: README.texi
 README: doc/texi/Introduction.texi
-	$(GATBPS) $(GATBPSFLAGS) $@
 
 all: COPYING
 all: INSTALL
