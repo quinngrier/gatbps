@@ -4,7 +4,7 @@ all:
 
 GATBPS = gatbps
 
-GATBPSFLAGS = -Idoc/texi
+GATBPSFLAGS = -I'doc/texi'
 
 ## end_variables
 
