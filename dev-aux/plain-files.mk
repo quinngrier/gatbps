@@ -4,8 +4,6 @@ all:
 
 GATBPS = gatbps
 
-GATBPSFLAGS = -I'doc/texi'
-
 ## end_variables
 
 ## begin_rules
@@ -16,7 +14,7 @@ GATBPSFLAGS = -I'doc/texi'
 .SUFFIXES: .texi
 
 .texi:
-	$(GATBPS) $(GATBPSFLAGS) -- $@
+	$(GATBPS) -I'doc/texi' -- $@
 
 COPYING: COPYING.bot
 COPYING: doc/texi/Copyright-Information.texi
