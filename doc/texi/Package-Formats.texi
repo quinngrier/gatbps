@@ -5,7 +5,8 @@
 GATBPS is available in three different package formats: as a copy of the
 Git repository, as a tree archive, and as a distribution archive@.
 The differences between these formats are documented throughout this
-manual where they are relevant@.
+manual where they are important, and they are particularly important for
+building and installation@.
 
 @include indent.texi
 If you are not sure which package format you are working with, then you
