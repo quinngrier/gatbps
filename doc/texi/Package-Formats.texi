@@ -2,8 +2,8 @@
 @chapter Package Formats
 
 @noindent
-GATBPS is available in three package formats: as a copy of the Git
-repository, as a tree archive, and as a distribution archive@.
+GATBPS is available in three different package formats: as a copy of the
+Git repository, as a tree archive, and as a distribution archive@.
 The differences between these formats are documented throughout this
 manual where they are relevant@.
 If you are not sure which format you are working with, then you can
