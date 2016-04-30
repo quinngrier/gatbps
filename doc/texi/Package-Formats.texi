@@ -8,8 +8,8 @@ The differences between these formats are documented throughout this
 manual where they are relevant@.
 
 @include indent.texi
-If you are not sure which format you are working with, then you can
-distinguish them as follows:
+If you are not sure which package format you are working with, then you
+can distinguish them as follows:
 
 @enumerate
 @item
