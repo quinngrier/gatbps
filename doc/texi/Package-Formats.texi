@@ -18,7 +18,7 @@ If there is a subdirectory named
 @w{@t{.@:git}}
 in the directory that contains the
 @w{@t{configure.@:ac}}
-file, then you are working with the Git repository@.
+file, then you are working with a copy of the Git repository@.
 
 @item
 Otherwise, if there is a subdirectory named
