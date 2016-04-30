@@ -38,8 +38,7 @@ Otherwise, you are working with a distribution archive@.
 @include indent.texi
 If you are only interested in building and installing GATBPS, then you
 probably want to be working with a distribution archive@.
-Distribution archives are easier to build and install because they come
-with the build system already initialized@.
+Distribution archives are streamlined for building and installation@.
 @ifxml
 @ifnotxml
 @c
