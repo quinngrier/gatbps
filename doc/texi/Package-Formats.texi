@@ -8,9 +8,8 @@ The Git repository is the master copy of GATBPS, a tree archive is a
 snapshot of the Git repository at a particular moment of time, and a
 distribution archive is a tree archive that has been streamlined for
 building and installation@.
-The differences between these formats are documented throughout this
-manual where they are important, and they are particularly important for
-building and installation@.
+More detailed differences between these formats are documented
+throughout this manual where relevant@.
 
 @include indent.texi
 If you are not sure which package format you are working with, then you
