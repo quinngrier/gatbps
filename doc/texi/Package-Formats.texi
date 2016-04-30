@@ -46,8 +46,8 @@ or a tree archive@.
 Distribution archives exclude some of the source code@.
 
 @include indent.texi
-If you are interested in modifying the package, then you probably want
-to be working with a copy of the Git repository@.
+If you are interested in modifying the source code of the package, then
+you probably want to be working with a copy of the Git repository@.
 Copies of the Git repository provide version control and include the
 complete development history of the package@.
 @ifxml
