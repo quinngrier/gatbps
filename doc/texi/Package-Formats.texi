@@ -30,6 +30,12 @@ file, then you are working with a tree archive@.
 @item
 Otherwise, you are working with a distribution archive@.
 @end enumerate
+
+@include indent.texi
+If you are only interested in building and installing GATBPS, then you
+probably want to be working with a distribution archive@.
+Distribution archives are easier to build and install because they come
+with the build system already initialized@.
 @ifxml
 @ifnotxml
 @c
