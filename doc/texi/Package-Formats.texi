@@ -38,6 +38,12 @@ Otherwise, you are working with a distribution archive@.
 If you are only interested in building and installing GATBPS, then you
 probably want to be working with a distribution archive@.
 Distribution archives are streamlined for building and installation@.
+
+@include indent.texi
+If you are only interested in browsing the source code of GATBPS, then
+you probably want to be working with a copy of the Git repository or a
+tree archive@.
+Distribution archives exclude some of the source code@.
 @ifxml
 @ifnotxml
 @c
