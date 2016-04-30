@@ -4,8 +4,8 @@
 @noindent
 GATBPS is available in three different package formats: as a copy of the
 Git repository, as a tree archive, and as a distribution archive@.
-The Git repository is the master copy of GATBPS, a tree archive is a
-snapshot of the Git repository at a particular moment of time, and a
+The Git repository is the master copy of the package, a tree archive is
+a snapshot of the Git repository at a particular moment of time, and a
 distribution archive is a tree archive that has been streamlined for
 building and installation@.
 More detailed differences between these formats are documented
@@ -35,19 +35,19 @@ Otherwise, you are working with a distribution archive@.
 @end enumerate
 
 @include indent.texi
-If you are only interested in building and installing GATBPS, then you
-probably want to be working with a distribution archive@.
+If you are only interested in building and installing the package, then
+you probably want to be working with a distribution archive@.
 Distribution archives are streamlined for building and installation@.
 
 @include indent.texi
-If you are only interested in browsing the source code of GATBPS, then
-you probably want to be working with a copy of the Git repository or a
-tree archive@.
+If you are only interested in browsing the source code of the package,
+then you probably want to be working with a copy of the Git repository
+or a tree archive@.
 Distribution archives exclude some of the source code@.
 
 @include indent.texi
-If you are interested in modifying GATBPS, then you probably want to be
-working with a copy of the Git repository@.
+If you are interested in modifying the package, then you probably want
+to be working with a copy of the Git repository@.
 Copies of the Git repository provide version control and include the
 complete development history of the package@.
 @ifxml
