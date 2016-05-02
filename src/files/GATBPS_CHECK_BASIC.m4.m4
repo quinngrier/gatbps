@@ -143,7 +143,7 @@ $[]{gatbps_list}])
   esac
   AC_SUBST([$2])
 
-  AM_CONDITIONAL([$2], [(
+  AM_CONDITIONAL([$2], [( ':'
     case "$[]{gatbps_cv_$2}" in
     #(
       'yes')
