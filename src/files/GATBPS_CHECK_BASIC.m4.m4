@@ -24,7 +24,7 @@ AC_DEFUN([GATBPS_CHECK_BASIC], [{ :
     [{ :
 
       #
-      # This is the AC_CACHE_CHECK code that only runs if the cache
+      # This is the AC_CACHE_CHECK code, which only runs if the cache
       # variable is not cached.
       #
 
