@@ -76,28 +76,6 @@ AC_DEFUN([GATBPS_CHECK_BASIC], [{ ':'
 
     }])
 
-  case "$[]{GATBPS_CHECK_VERBOSE}" in
-  #(
-    ?*)
-      case "$[]{$2_was_cached}" in
-      #(
-        'no')
-          case "$[]{gatbps_list}" in
-          #(
-            ?*)
-              AC_MSG_NOTICE([the values of the prerequisites for the above check were:
-$[]{gatbps_list}])
-            ;;
-          #(
-            *)
-              AC_MSG_NOTICE([the above check has no prerequisites])
-            ;;
-          esac
-        ;;
-      esac
-    ;;
-  esac
-
   #
   # The above AC_CACHE_CHECK code should have set the cache variable to
   # 'yes' or 'no', but there are still opportunities for error. Some of
@@ -117,6 +95,28 @@ $[]{gatbps_list}])
       AC_MSG_ERROR(
         [invalid \$[]{gatbps_cv_$2} value: $[]{gatbps_cv_$2}],
         [1])
+    ;;
+  esac
+
+  case "$[]{GATBPS_CHECK_VERBOSE}" in
+  #(
+    ?*)
+      case "$[]{$2_was_cached}" in
+      #(
+        'no')
+          case "$[]{gatbps_list}" in
+          #(
+            ?*)
+              AC_MSG_NOTICE([the values of the prerequisites for the above check were:
+$[]{gatbps_list}])
+            ;;
+          #(
+            *)
+              AC_MSG_NOTICE([the above check has no prerequisites])
+            ;;
+          esac
+        ;;
+      esac
     ;;
   esac
 
