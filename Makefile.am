@@ -8,9 +8,9 @@ AM_MAKEINFOFLAGS += '-I' 'doc/texi' '-I' $(srcdir)'/doc/texi'
 
 AM_MAKEINFOHTMLFLAGS =
 AM_MAKEINFOHTMLFLAGS += $(AM_MAKEINFOFLAGS)
-AM_MAKEINFOHTMLFLAGS += --css-include=build-aux/texinfo.css
-AM_MAKEINFOHTMLFLAGS += --no-headers
-AM_MAKEINFOHTMLFLAGS += --no-split
+AM_MAKEINFOHTMLFLAGS += '--css-include=build-aux/texinfo.css'
+AM_MAKEINFOHTMLFLAGS += '--no-headers'
+AM_MAKEINFOHTMLFLAGS += '--no-split'
 
 AM_TEXI2DVIFLAGS = $(AM_MAKEINFOFLAGS)
 
