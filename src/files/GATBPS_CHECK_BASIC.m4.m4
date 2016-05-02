@@ -99,10 +99,12 @@ $[]{gatbps_list}])
   esac
 
   #
-  # The cache variable is appropriately set to 'yes' or 'no' by the
-  # above AC_CACHE_CHECK code when it is not cached, but the user can
-  # still mistakenly set it to an invalid value when editing the cache.
-  # The following case statement catches this mistake.
+  # The above AC_CACHE_CHECK code should have set the cache variable to
+  # 'yes' or 'no', but there are still opportunities for error. Some of
+  # the above code is provided by the caller of GATBPS_CHECK_BASIC, and
+  # that code may have mistakes. The user could also mistakenly set the
+  # cache variable to an invalid value when editing the cache file. The
+  # following case statement catches these mistakes.
   #
 
   case "$[]{gatbps_cv_$2}" in
