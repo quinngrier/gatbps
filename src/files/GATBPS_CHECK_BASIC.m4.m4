@@ -8,7 +8,7 @@ dnl Special file: GATBPS_CHECK_BASIC.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_CHECK_BASIC], [{ :
+AC_DEFUN([GATBPS_CHECK_BASIC], [{ ':'
 
   #
   # The following variable starts off as 'yes' and is updated to 'no' in
@@ -21,7 +21,7 @@ AC_DEFUN([GATBPS_CHECK_BASIC], [{ :
   AC_CACHE_CHECK(
     [for $1],
     [gatbps_cv_$2],
-    [{ :
+    [{ ':'
 
       #
       # This is the AC_CACHE_CHECK code, which only runs if the cache
@@ -31,11 +31,11 @@ AC_DEFUN([GATBPS_CHECK_BASIC], [{ :
       $2_was_cached='no'
 
       gatbps_list=''
-      { :m4_foreach_w(
+      { ':'m4_foreach_w(
         [gatbps_var],
         [$4],
         [
-        { :
+        { ':'
           case "$[]{gatbps_var}" in
           #(
             'yes'|'no'|'1'|'0')
