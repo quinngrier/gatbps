@@ -24,6 +24,7 @@ AM_INIT_AUTOMAKE([
   foreign
   nostdinc
   subdir-objects
+  tar-ustar
 ])
 
 m4_include([build-aux/CC0-1.0-AC-COPYRIGHT.ac])
