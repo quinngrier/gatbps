@@ -78,11 +78,11 @@ AC_DEFUN([GATBPS_CHECK_BASIC], [{ ':'
 
   #
   # The above AC_CACHE_CHECK code should have set the cache variable to
-  # 'yes' or 'no', but there are still opportunities for error. Some of
-  # the above code is provided by the caller of GATBPS_CHECK_BASIC, and
-  # that code may have mistakes. The user could also mistakenly set the
-  # cache variable to an invalid value when editing the cache file. The
-  # following case statement catches these mistakes.
+  # 'yes' or 'no', but this may not be the case in reality. Some of the
+  # code is provided by the caller of GATBPS_CHECK_BASIC, and that code
+  # may be wrong. The user may also accidentally set the cache variable
+  # to an invalid value when editing the cache file. The following code
+  # helps to catch these kinds of errors.
   #
 
   case "$[]{gatbps_cv_$2}" in
