@@ -3,8 +3,7 @@
 AM_M4FLAGS =
 AM_M4FLAGS += '-I' $(srcdir)
 
-AM_MAKEINFOFLAGS =
-AM_MAKEINFOFLAGS += '-I' 'doc/texi' '-I' $(srcdir)'/doc/texi'
+AM_MAKEINFOFLAGS = '-I' 'doc/texi' '-I' $(srcdir)'/doc/texi'
 
 AM_MAKEINFOHTMLFLAGS =
 AM_MAKEINFOHTMLFLAGS += $(AM_MAKEINFOFLAGS)
