@@ -33,11 +33,11 @@ AS_HELP_STRING([--enable-$3=no], [$6])],
 case "$[]{gatbps_enable_var}" in
 #(
   'yes')
-    :
+    ':'
   ;;
 #(
   'no')
-    :
+    ':'
   ;;
 #(
   *)
