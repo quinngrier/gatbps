@@ -8,7 +8,7 @@ dnl Special file: GATBPS_ARG_WITH_BOOL.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_ARG_WITH_BOOL], [{ :
+AC_DEFUN([GATBPS_ARG_WITH_BOOL], [{ ':'
 
 m4_pushdef(
   [gatbps_with_var],
@@ -22,10 +22,10 @@ AS_HELP_STRING([--with-$3], [same as --with-$3=yes])
 AS_HELP_STRING([--without-$3], [same as --with-$3=no])
 AS_HELP_STRING([--with-$3=yes], [$5])
 AS_HELP_STRING([--with-$3=no], [$6])],
-  [{ :
+  [{ ':'
     ]gatbps_with_var[_was_given='yes'
   }],
-  [{ :
+  [{ ':'
     ]gatbps_with_var[_was_given='no'
     ]gatbps_with_var[='$4'
   }])
