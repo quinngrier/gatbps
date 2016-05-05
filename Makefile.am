@@ -3,14 +3,17 @@
 AM_M4FLAGS =
 AM_M4FLAGS += '-I' $(srcdir)
 
-AM_MAKEINFOFLAGS = '-I' 'doc/texi' '-I' $(srcdir)'/doc/texi'
+AM_MAKEINFOFLAGS =
+AM_MAKEINFOFLAGS += '-I' 'doc/texi' '-I' $(srcdir)'/doc/texi'
 
-AM_MAKEINFOHTMLFLAGS = $(AM_MAKEINFOFLAGS)
+AM_MAKEINFOHTMLFLAGS =
+AM_MAKEINFOHTMLFLAGS += $(AM_MAKEINFOFLAGS)
 AM_MAKEINFOHTMLFLAGS += '--css-include=build-aux/texinfo.css'
 AM_MAKEINFOHTMLFLAGS += '--no-headers'
 AM_MAKEINFOHTMLFLAGS += '--no-split'
 
-AM_TEXI2DVIFLAGS = $(AM_MAKEINFOFLAGS)
+AM_TEXI2DVIFLAGS =
+AM_TEXI2DVIFLAGS += $(AM_MAKEINFOFLAGS)
 
 CLEANFILES =
 
@@ -46,7 +49,8 @@ MOSTLYCLEANFILES += doc/man/gatbps.1
 SUFFIXES =
 SUFFIXES += .m4
 
-TEXI2DVI = 'texi2dvi' $(AM_TEXI2DVIFLAGS) $(TEXI2DVIFLAGS)
+TEXI2DVI =
+TEXI2DVI += 'texi2dvi' $(AM_TEXI2DVIFLAGS) $(TEXI2DVIFLAGS)
 
 bin_SCRIPTS =
 bin_SCRIPTS += bin/gatbps
@@ -180,31 +184,44 @@ doc_gatbps_TEXINFOS += doc/texi/rflo.texi
 doc_gatbps_TEXINFOS += doc/texi/sbs.texi
 doc_gatbps_TEXINFOS += doc/texi/sps.texi
 
-docbook_dep = $(doc_gatbps_TEXINFOS)
+docbook_dep =
+docbook_dep += $(doc_gatbps_TEXINFOS)
 
-docbook_dist_dep = doc/gatbps.texi $(doc_gatbps_TEXINFOS)
+docbook_dist_dep =
+docbook_dist_dep += doc/gatbps.texi $(doc_gatbps_TEXINFOS)
 
-docbook_dist_dst = doc/gatbps-$(PACKAGE_VERSION).xml
+docbook_dist_dst =
+docbook_dist_dst += doc/gatbps-$(PACKAGE_VERSION).xml
 
-docbook_dist_src = doc/gatbps.xml
+docbook_dist_src =
+docbook_dist_src += doc/gatbps.xml
 
-docbook_dst = doc/gatbps.xml
+docbook_dst =
+docbook_dst += doc/gatbps.xml
 
-docbook_src = doc/gatbps.texi
+docbook_src =
+docbook_src += doc/gatbps.texi
 
-docbookdir = $(docdir)
+docbookdir =
+docbookdir += $(docdir)
 
-dvi_dist_dep = doc/gatbps.texi $(doc_gatbps_TEXINFOS)
+dvi_dist_dep =
+dvi_dist_dep += doc/gatbps.texi $(doc_gatbps_TEXINFOS)
 
-dvi_dist_dst = doc/gatbps-$(PACKAGE_VERSION).dvi
+dvi_dist_dst =
+dvi_dist_dst += doc/gatbps-$(PACKAGE_VERSION).dvi
 
-dvi_dist_src = doc/gatbps.dvi
+dvi_dist_src =
+dvi_dist_src += doc/gatbps.dvi
 
-html_dist_dep = doc/gatbps.texi $(doc_gatbps_TEXINFOS)
+html_dist_dep =
+html_dist_dep += doc/gatbps.texi $(doc_gatbps_TEXINFOS)
 
-html_dist_dst = doc/gatbps-$(PACKAGE_VERSION).html
+html_dist_dst =
+html_dist_dst += doc/gatbps-$(PACKAGE_VERSION).html
 
-html_dist_src = doc/gatbps.html
+html_dist_src =
+html_dist_src += doc/gatbps.html
 
 info_TEXINFOS =
 info_TEXINFOS += doc/gatbps.texi
@@ -221,31 +238,44 @@ nodist_bin_gatbps_src += src/tools/PACKAGE_VERSION.m4
 nodist_bin_gatbps_src += src/tools/SED_DEFAULT_TROFF.m4
 nodist_bin_gatbps_src += src/tools/TEXI2ANY_DEFAULT_TROFF.m4
 
-pdf_dist_dep = doc/gatbps.texi $(doc_gatbps_TEXINFOS)
+pdf_dist_dep =
+pdf_dist_dep += doc/gatbps.texi $(doc_gatbps_TEXINFOS)
 
-pdf_dist_dst = doc/gatbps-$(PACKAGE_VERSION).pdf
+pdf_dist_dst =
+pdf_dist_dst += doc/gatbps-$(PACKAGE_VERSION).pdf
 
-pdf_dist_src = doc/gatbps.pdf
+pdf_dist_src =
+pdf_dist_src += doc/gatbps.pdf
 
-plaintext_dep = $(doc_gatbps_TEXINFOS)
+plaintext_dep =
+plaintext_dep += $(doc_gatbps_TEXINFOS)
 
-plaintext_dist_dep = doc/gatbps.texi $(doc_gatbps_TEXINFOS)
+plaintext_dist_dep =
+plaintext_dist_dep += doc/gatbps.texi $(doc_gatbps_TEXINFOS)
 
-plaintext_dist_dst = doc/gatbps-$(PACKAGE_VERSION).txt
+plaintext_dist_dst =
+plaintext_dist_dst += doc/gatbps-$(PACKAGE_VERSION).txt
 
-plaintext_dist_src = doc/gatbps.txt
+plaintext_dist_src =
+plaintext_dist_src += doc/gatbps.txt
 
-plaintext_dst = doc/gatbps.txt
+plaintext_dst =
+plaintext_dst += doc/gatbps.txt
 
-plaintext_src = doc/gatbps.texi
+plaintext_src =
+plaintext_src += doc/gatbps.texi
 
-plaintextdir = $(docdir)
+plaintextdir =
+plaintextdir += $(docdir)
 
-ps_dist_dep = doc/gatbps.texi $(doc_gatbps_TEXINFOS)
+ps_dist_dep =
+ps_dist_dep += doc/gatbps.texi $(doc_gatbps_TEXINFOS)
 
-ps_dist_dst = doc/gatbps-$(PACKAGE_VERSION).ps
+ps_dist_dst =
+ps_dist_dst += doc/gatbps-$(PACKAGE_VERSION).ps
 
-ps_dist_src = doc/gatbps.ps
+ps_dist_src =
+ps_dist_src += doc/gatbps.ps
 
 ## end_variables
 
