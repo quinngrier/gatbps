@@ -8,7 +8,7 @@ dnl Special file: GATBPS_ARG_ENABLE_BOOL.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_ARG_ENABLE_BOOL], [{ :
+AC_DEFUN([GATBPS_ARG_ENABLE_BOOL], [{ ':'
 
 m4_pushdef(
   [gatbps_enable_var],
@@ -22,10 +22,10 @@ AS_HELP_STRING([--enable-$3], [same as --enable-$3=yes])
 AS_HELP_STRING([--disable-$3], [same as --enable-$3=no])
 AS_HELP_STRING([--enable-$3=yes], [$5])
 AS_HELP_STRING([--enable-$3=no], [$6])],
-  [{ :
+  [{ ':'
     ]gatbps_enable_var[_was_given='yes'
   }],
-  [{ :
+  [{ ':'
     ]gatbps_enable_var[_was_given='no'
     ]gatbps_enable_var[='$4'
   }])
