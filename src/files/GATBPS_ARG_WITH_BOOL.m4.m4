@@ -10,64 +10,64 @@ dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([GATBPS_ARG_WITH_BOOL], [{ :
 
-  m4_pushdef(
-    [gatbps_with_var],
-    with_[]m4_bpatsubst([$3], [[^0-9A-Z_a-z]], [_]))
+m4_pushdef(
+  [gatbps_with_var],
+  with_[]m4_bpatsubst([$3], [[^0-9A-Z_a-z]], [_]))
 
-  AC_ARG_WITH(
-    [$3],
-    [
+AC_ARG_WITH(
+  [$3],
+  [
 AS_HELP_STRING([--with-$3 omitted], [same as --with-$3=$4])
 AS_HELP_STRING([--with-$3], [same as --with-$3=yes])
 AS_HELP_STRING([--without-$3], [same as --with-$3=no])
 AS_HELP_STRING([--with-$3=yes], [$5])
 AS_HELP_STRING([--with-$3=no], [$6])],
-    [{ :
-      ]gatbps_with_var[_was_given='yes'
-    }],
-    [{ :
-      ]gatbps_with_var[_was_given='no'
-      ]gatbps_with_var[='$4'
-    }])
+  [{ :
+    ]gatbps_with_var[_was_given='yes'
+  }],
+  [{ :
+    ]gatbps_with_var[_was_given='no'
+    ]gatbps_with_var[='$4'
+  }])
 
-  case "$[]{gatbps_with_var}" in
-  #(
-    'yes')
-      :
-    ;;
-  #(
-    'no')
-      :
-    ;;
-  #(
-    *)
-      AC_MSG_ERROR([invalid --with-$3 value: $[]{]gatbps_with_var[}], [1])
-    ;;
-  esac
+case "$[]{gatbps_with_var}" in
+#(
+  'yes')
+    :
+  ;;
+#(
+  'no')
+    :
+  ;;
+#(
+  *)
+    AC_MSG_ERROR([invalid --with-$3 value: $[]{]gatbps_with_var[}], [1])
+  ;;
+esac
 
-  GATBPS_CHECK_VARS([$1], [$2], gatbps_with_var)
+GATBPS_CHECK_VARS([$1], [$2], gatbps_with_var)
 
-  case "$[]{$2_was_cached}" in
-  #(
-    'yes')
-      AC_MSG_NOTICE([note: --with-$3=$[]{]gatbps_with_var[} was ignored])
-    ;;
-  #(
-    'no')
-      case "$[]{gatbps_with_var[]_was_given}" in
-      #(
-        'yes')
-          AC_MSG_NOTICE([note: --with-$3=$[]{]gatbps_with_var[} was given])
-        ;;
-      #(
-        'no')
-          AC_MSG_NOTICE([note: --with-$3=$[]{]gatbps_with_var[} was implied])
-        ;;
-      esac
-    ;;
-  esac
+case "$[]{$2_was_cached}" in
+#(
+  'yes')
+    AC_MSG_NOTICE([note: --with-$3=$[]{]gatbps_with_var[} was ignored])
+  ;;
+#(
+  'no')
+    case "$[]{gatbps_with_var[]_was_given}" in
+    #(
+      'yes')
+        AC_MSG_NOTICE([note: --with-$3=$[]{]gatbps_with_var[} was given])
+      ;;
+    #(
+      'no')
+        AC_MSG_NOTICE([note: --with-$3=$[]{]gatbps_with_var[} was implied])
+      ;;
+    esac
+  ;;
+esac
 
-  m4_popdef([gatbps_with_var])
+m4_popdef([gatbps_with_var])
 
 }])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
