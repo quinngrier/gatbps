@@ -28,11 +28,14 @@ INSTALL: doc/texi/Installation.texi
 INSTALL: doc/texi/Package-Formats.texi
 INSTALL: doc/texi/Required-Packages.texi
 
+NEWS: doc/texi/Release-Notes.texi
+
 README: README.bot
 README: doc/texi/Introduction.texi
 
 all: COPYING
 all: INSTALL
+all: NEWS
 all: README
 
 ## end_rules
