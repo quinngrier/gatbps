@@ -72,6 +72,7 @@ which was released on
 * Invoking @w{@t{texi-form-sh}}::
 * Invoking @w{@t{troff-form-sh}}::
 * Special File Reference::
+* Release Notes::
 * Creative Commons Zero 1-0::
 * Special File Index::
 * Texinfo Macro Index::
@@ -101,6 +102,8 @@ which was released on
 @include Invoking-troff-form-sh.texi
 
 @include Special-File-Reference.texi
+
+@include Release-Notes.texi
 
 @include CC0-1.0-appendix.texi
 
