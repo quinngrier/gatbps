@@ -28,6 +28,7 @@ INSTALL: doc/texi/Installation.texi
 INSTALL: doc/texi/Package-Formats.texi
 INSTALL: doc/texi/Required-Packages.texi
 
+NEWS: NEWS.bot
 NEWS: doc/texi/Release-Notes.texi
 
 README: README.bot
