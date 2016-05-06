@@ -1,20 +1,8 @@
 @ifset fullmanual
-@node Release Notes
-@unnumbered Release Notes
+@node YYYY-MM-DD --- GATBPS 0-1-0
 @end ifset
-@ifclear fullmanual
-@unnumbered Release Notes
-@end ifclear
+@unnumbered YYYY-MM-DD --- GATBPS 0.1.0
 
-@ifset fullmanual
-@menu
-* YYYY-MM-DD --- GATBPS 0-1-0::
-@end menu
-@end ifset
-
-@lowersections
-@include YYYY-MM-DD-GATBPS-0-1-0.texi
-@raisesections
 @ifxml
 @ifnotxml
 @c
