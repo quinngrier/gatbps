@@ -9,6 +9,10 @@ header_comment({%|##|%}, {%|##|%}){%|
 ## For more information, see the GATBPS manual.
 ##
 
+## begin_variables
+
+## end_variables
+
 ## begin_rules
 
 $(java_dst): $(java_src)
