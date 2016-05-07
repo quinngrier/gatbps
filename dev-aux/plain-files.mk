@@ -16,6 +16,7 @@ GATBPS = 'gatbps'
 .texi:
 	$(GATBPS) \
   '--append-path=doc/texi' \
+  '--no-unicode' \
   '--' \
   $@ \
 ;
