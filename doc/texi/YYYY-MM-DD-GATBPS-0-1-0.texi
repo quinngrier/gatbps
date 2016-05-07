@@ -1,7 +1,10 @@
 @ifset fullmanual
 @node YYYY-MM-DD --- GATBPS 0-1-0
-@end ifset
 @unnumbered YYYY-MM-DD --- GATBPS 0.1.0
+@end ifset
+@ifclear fullmanual
+@unnumbered YYYY-MM-DD --- GATBPS 0.1.0
+@end ifclear
 
 @ifxml
 @ifnotxml
