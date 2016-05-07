@@ -14,7 +14,7 @@ header_comment({%|##|%}, {%|##|%}){%|
 $(docbook_dst): $(docbook_dep)
 $(docbook_dst): $(docbook_src)
 	$(AM_V_MAKEINFO)$(MKDIR_P) $(@D)
-	$(AM_V_at){ :; \
+	$(AM_V_at){ ':'; \
   if test -f $(docbook_src); then \
     x=$(docbook_src); \
   else \
@@ -49,7 +49,7 @@ install-docbook: $(docbook_dst)
 install-docbook: install-docbook-more
 	@$(NORMAL_INSTALL)
 	@-':' #(
-	@{ :; \
+	@{ ':'; \
   case ''$(docbookdir) in \
     ?*) \
       echo " $(MKDIR_P) '$(DESTDIR)$(docbookdir)'"; \
@@ -69,7 +69,7 @@ install-docbook: install-docbook-more
 uninstall-docbook: uninstall-docbook-more
 	@$(NORMAL_UNINSTALL)
 	@-':' #(
-	@{ :; \
+	@{ ':'; \
   case ''$(docbookdir) in \
     ?*) \
       x=`expr X/$(docbook_dst) : 'X.*/\(.*\)'` || exit $$?; \

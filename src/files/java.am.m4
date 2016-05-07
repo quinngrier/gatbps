@@ -63,7 +63,7 @@ install-java: $(java_dst)
 install-java: install-java-more
 	@$(NORMAL_INSTALL)
 	@-':' #(
-	@{ :; \
+	@{ ':'; \
   case ''$(javadir) in \
     ?*) \
       echo " $(MKDIR_P) '$(DESTDIR)$(javadir)'"; \
@@ -85,7 +85,7 @@ java: $(java_dst)
 uninstall-java: uninstall-java-more
 	@$(NORMAL_UNINSTALL)
 	@-':' #(
-	@{ :; \
+	@{ ':'; \
   case ''$(javadir) in \
     ?*) \
       x=`expr X/$(java_dst) : 'X.*/\(.*\)'` || exit $$?; \

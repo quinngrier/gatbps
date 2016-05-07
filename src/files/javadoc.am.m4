@@ -14,7 +14,7 @@ header_comment({%|##|%}, {%|##|%}){%|
 $(javadoc_dst): $(javadoc_src)
 	rm -f -r $(javadoc_dst)
 	$(MKDIR_P) $(javadoc_dst)
-	{ :; \
+	{ ':'; \
   src=; \
   for x in $(javadoc_src); do \
     if test -f "$${x}"; then \
@@ -43,7 +43,7 @@ install-javadoc: $(javadoc_dst)
 install-javadoc: install-javadoc-more
 	@$(NORMAL_INSTALL)
 	@-':' #(
-	@{ :; \
+	@{ ':'; \
   case ''$(javadocdir) in \
     ?*) \
       echo " $(MKDIR_P) '$(DESTDIR)$(javadocdir)'"; \
@@ -65,7 +65,7 @@ javadoc: $(javadoc_dst)
 uninstall-javadoc: uninstall-javadoc-more
 	@$(NORMAL_UNINSTALL)
 	@-':' #(
-	@{ :; \
+	@{ ':'; \
   case ''$(javadocdir) in \
     ?*) \
       x=`expr X/$(javadoc_dst) : 'X.*/\(.*\)'` || exit $$?; \

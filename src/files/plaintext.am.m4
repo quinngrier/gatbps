@@ -14,7 +14,7 @@ header_comment({%|##|%}, {%|##|%}){%|
 $(plaintext_dst): $(plaintext_dep)
 $(plaintext_dst): $(plaintext_src)
 	$(AM_V_MAKEINFO)$(MKDIR_P) $(@D)
-	$(AM_V_at){ :; \
+	$(AM_V_at){ ':'; \
   if test -f $(plaintext_src); then \
     x=$(plaintext_src); \
   else \
@@ -47,7 +47,7 @@ install-plaintext: $(plaintext_dst)
 install-plaintext: install-plaintext-more
 	@$(NORMAL_INSTALL)
 	@-':' #(
-	@{ :; \
+	@{ ':'; \
   case ''$(plaintextdir) in \
     ?*) \
       echo " $(MKDIR_P) '$(DESTDIR)$(plaintextdir)'"; \
@@ -69,7 +69,7 @@ plaintext: $(plaintext_dst)
 uninstall-plaintext: uninstall-plaintext-more
 	@$(NORMAL_UNINSTALL)
 	@-':' #(
-	@{ :; \
+	@{ ':'; \
   case ''$(plaintextdir) in \
     ?*) \
       x=`expr X/$(plaintext_dst) : 'X.*/\(.*\)'` || exit $$?; \
