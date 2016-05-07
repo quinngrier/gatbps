@@ -24,9 +24,9 @@ GATBPS_V_JAVADOC_1 =
 ## begin_rules
 
 $(javadoc_dst): $(javadoc_src)
-	rm -f -r $(javadoc_dst)
-	$(MKDIR_P) $(javadoc_dst)
-	{ ':'; \
+	$(GATBPS_V_JAVADOC)rm -f -r $(javadoc_dst)
+	$(AM_V_at)$(MKDIR_P) $(javadoc_dst)
+	$(AM_V_at){ ':'; \
   src=; \
   for x in $(javadoc_src); do \
     if test -f "$${x}"; then \
