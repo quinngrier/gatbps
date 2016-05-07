@@ -42,7 +42,7 @@ clean-local: clean-javadoc
 install-javadoc: $(javadoc_dst)
 install-javadoc: install-javadoc-more
 	@$(NORMAL_INSTALL)
-	@-: #(
+	@-':' #(
 	@{ :; \
   case ''$(javadocdir) in \
     ?*) \
@@ -64,7 +64,7 @@ javadoc: $(javadoc_dst)
 
 uninstall-javadoc: uninstall-javadoc-more
 	@$(NORMAL_UNINSTALL)
-	@-: #(
+	@-':' #(
 	@{ :; \
   case ''$(javadocdir) in \
     ?*) \

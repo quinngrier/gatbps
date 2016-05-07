@@ -62,7 +62,7 @@ clean-local: clean-java
 install-java: $(java_dst)
 install-java: install-java-more
 	@$(NORMAL_INSTALL)
-	@-: #(
+	@-':' #(
 	@{ :; \
   case ''$(javadir) in \
     ?*) \
@@ -84,7 +84,7 @@ java: $(java_dst)
 
 uninstall-java: uninstall-java-more
 	@$(NORMAL_UNINSTALL)
-	@-: #(
+	@-':' #(
 	@{ :; \
   case ''$(javadir) in \
     ?*) \

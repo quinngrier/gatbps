@@ -48,7 +48,7 @@ docbook: $(docbook_dst)
 install-docbook: $(docbook_dst)
 install-docbook: install-docbook-more
 	@$(NORMAL_INSTALL)
-	@-: #(
+	@-':' #(
 	@{ :; \
   case ''$(docbookdir) in \
     ?*) \
@@ -68,7 +68,7 @@ install-docbook: install-docbook-more
 
 uninstall-docbook: uninstall-docbook-more
 	@$(NORMAL_UNINSTALL)
-	@-: #(
+	@-':' #(
 	@{ :; \
   case ''$(docbookdir) in \
     ?*) \
