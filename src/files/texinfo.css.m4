@@ -23,6 +23,7 @@ include({%|src/tools/header_comment.m4|%})dnl
  */
 
 body {
+  font-family: serif;
   margin: auto;
   max-width: 40em;
   padding: 1.46em;
