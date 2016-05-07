@@ -530,6 +530,21 @@ $x^@{y@w{ }+@w{ }z^w@}$
 @end example
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
+
+@sfindex @w{@t{texinfo.@:css}}
+@item @w{@t{texinfo.@:css}}
+@include ipez.texi
+The
+@w{@t{texinfo.@:css}}
+special file is a cascading style sheet that makes Texinfo's HTML output
+look more like its
+@TeX{}
+output@.
+It can be used with the
+@w{@t{-@w{-}css-include}}
+option of
+@w{@t{texi2any}}
+to embed it into the style sheet of the HTML output@.
 @end table
 @ifxml
 @ifnotxml

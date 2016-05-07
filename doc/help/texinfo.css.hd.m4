@@ -2,6 +2,11 @@ changecom`'dnl
 changequote(`{%|', `|%}')dnl
 {%|Special file: ${fB1}texinfo.css${fR1}
 
+The ${fB1}texinfo.css${fR1} special file is a cascading style sheet that makes
+Texinfo's HTML output look more like its TeX output. It can be used with
+the ${fB1}--css-include${fR1} option of ${fB1}texi2any${fR1} to embed it into the style sheet of
+the HTML output.
+
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 |%}dnl
 dnl

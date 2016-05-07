@@ -1415,6 +1415,20 @@ $x^{y\ +\ z^w}$
 .RE
 .IP
 For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
+.TP
+.nohy "\fBtexinfo.css\fR"
+.IPEZ
+The
+.nohy "\fBtexinfo.css\fR"
+special file is a cascading style sheet that makes Texinfo's HTML output
+look more like its
+TeX
+output.
+It can be used with the
+.nohy "\fB--css-include\fR"
+option of
+.nohy "\fBtexi2any\fR"
+to embed it into the style sheet of the HTML output.
 .SH "EXIT STATUS"
 .LP
 Exit status zero indicates success
