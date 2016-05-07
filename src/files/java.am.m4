@@ -11,6 +11,14 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 ## begin_variables
 
+GATBPS_V_JAVAC = $(GATBPS_V_JAVAC_@AM_V@)
+
+GATBPS_V_JAVAC_ = $(GATBPS_V_JAVAC_@AM_DEFAULT_V@)
+
+GATBPS_V_JAVAC_0 = @'echo' '  JAVAC' $@;
+
+GATBPS_V_JAVAC_1 =
+
 ## end_variables
 
 ## begin_rules
