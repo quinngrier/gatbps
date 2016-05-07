@@ -32,8 +32,8 @@ GATBPS_V_JAVAC_1 =
 ## begin_rules
 
 $(java_dst): $(java_src)
-	$(MKDIR_P) $(@D)
-	$(JAR) 'cf' $(java_dst) $(java_src)
+	$(GATBPS_V_JAR)$(MKDIR_P) $(@D)
+	$(AM_V_at)$(JAR) 'cf' $(java_dst) $(java_src)
 
 .PHONY: clean-java
 .PHONY: clean-java-more
