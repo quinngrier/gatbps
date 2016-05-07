@@ -25,7 +25,7 @@ GATBPS_V_JAVAC_1 =
 
 $(java_dst): $(java_src)
 	$(MKDIR_P) $(@D)
-	$(JAR) cf $(java_dst) $(java_src)
+	$(JAR) 'cf' $(java_dst) $(java_src)
 
 .PHONY: clean-java
 .PHONY: clean-java-more
