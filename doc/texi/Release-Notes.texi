@@ -10,8 +10,8 @@
 @menu
 * YYYY-MM-DD --- GATBPS 0-1-0::
 @end menu
-@end ifset
 
+@end ifset
 @lowersections
 @include YYYY-MM-DD-GATBPS-0-1-0.texi
 @raisesections
