@@ -36,7 +36,7 @@ $(java_dst): $(java_src)
 .PHONY: uninstall-java-more
 
 .java.class:
-	$(JAVAC) \
+	$(GATBPS_V_JAVAC)$(JAVAC) \
   -classpath ./$(java_sourcepath) \
   -d ./$(java_sourcepath) \
   -sourcepath ./$(java_sourcepath):$(srcdir)/$(java_sourcepath) \
