@@ -31,10 +31,7 @@ body {
 }
 
 hr {
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
-  border-top: 1px solid;
+  visibility: hidden;
 }
 
 span.indent-immediately-following-paragraph + p {
