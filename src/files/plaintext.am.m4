@@ -82,7 +82,7 @@ uninstall-plaintext: uninstall-plaintext-more
 
 ## end_rules
 
-|%}footer_comment({%|##|%}, {%|##|%}, {%|##|%})
+|%}footer_comment({%|##|%}, {%|##|%}, {%|##|%})dnl
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by
