@@ -5,7 +5,7 @@
 GATBPS is available in three different package formats: as a copy of the
 Git repository, as a tree archive, and as a distribution archive@.
 The Git repository is the definitive copy of the package, a tree archive
-is a snapshot of the Git repository at a particular moment of time, and
+is a snapshot of the Git repository at a particular moment in time, and
 a distribution archive is a tree archive that has been streamlined for
 building and installation@.
 More detailed differences between these formats are documented
