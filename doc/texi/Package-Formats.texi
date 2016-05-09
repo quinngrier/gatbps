@@ -8,8 +8,8 @@ The Git repository is the definitive copy of the package, a tree archive
 is a snapshot of the Git repository at a particular moment in time, and
 a distribution archive is a tree archive that has been streamlined for
 building and installation@.
-The formats have subtle differences, which are discussed throughout this
-manual where relevant@.
+The package formats have subtle differences, which are discussed
+throughout this manual where relevant@.
 Building and installation are particularly affected by these
 differences@.
 
