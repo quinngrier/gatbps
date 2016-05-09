@@ -84,7 +84,7 @@ special files at once@.
 The macros insert symbols
 as UTF-8 characters in Info
 and plain text and as numeric
-character references in Docbook,
+character references in DocBook,
 HTML, and XML by default, or as ASCII
 alternatives in all output formats if the
 @t{insertascii}
@@ -96,14 +96,14 @@ dot operator character in
 Info and plain text and an
 @t{&#x22C5;}
 character reference
-in Docbook, HTML, and
+in DocBook, HTML, and
 XML by default, or an ASCII
 @t{*}
 character in all output formats if the
 @t{insertascii}
 flag is set at its point of inclusion@.
 
-In Docbook, HTML, and XML, the macros use the
+In DocBook, HTML, and XML, the macros use the
 @t{@@inlineraw}
 command to insert
 numeric character references@.
@@ -357,7 +357,7 @@ and
 macros are provided for inserting
 @i{S}
 as a superscript or subscript@.
-In Docbook,
+In DocBook,
 @i{L}
 and
 @i{R}
@@ -425,7 +425,7 @@ $x^@{y@w{ }+@w{ }z_w@}$
 @@end@w{ }ifnottex
 @end example
 
-In Docbook, HTML, and XML, the
+In DocBook, HTML, and XML, the
 @t{@@sps}
 and
 @t{@@sbs}

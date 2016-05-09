@@ -708,7 +708,7 @@ special files at once.
 The macros insert symbols
 as UTF-8 characters in Info
 and plain text and as numeric
-character references in Docbook,
+character references in DocBook,
 HTML, and XML by default, or as ASCII
 alternatives in all output formats if the
 .nohy "\fBinsertascii\fR"
@@ -720,14 +720,14 @@ dot operator character in
 Info and plain text and an
 .nohy "\fB&#x22C5;\fR"
 character reference
-in Docbook, HTML, and
+in DocBook, HTML, and
 XML by default, or an ASCII
 .nohy "\fB*\fR"
 character in all output formats if the
 .nohy "\fBinsertascii\fR"
 flag is set at its point of inclusion.
 .LP
-In Docbook, HTML, and XML, the macros use the
+In DocBook, HTML, and XML, the macros use the
 .nohy "\fB@inlineraw\fR"
 command to insert
 numeric character references.
@@ -780,7 +780,7 @@ and
 macros are provided for inserting
 .nohy "\fIS\fR"
 as a superscript or subscript.
-In Docbook,
+In DocBook,
 .nohy "\fIL\fR"
 and
 .nohy "\fIR\fR"
@@ -836,7 +836,7 @@ $x^{y\ +\ z_w}$
 @end\ ifnottex
 .fi
 .LP
-In Docbook, HTML, and XML, the
+In DocBook, HTML, and XML, the
 .nohy "\fB@sps\fR"
 and
 .nohy "\fB@sbs\fR"
