@@ -994,125 +994,15 @@ EOF1
               esac
             ;;
 
-          #(
-            '--help=CC0-1.0-appendix.texi'|'--help='*'/CC0-1.0-appendix.texi')
-              cat <<EOF1
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`doc/help/CC0-1.0-appendix.texi.hd.m4')dnl
-{%|EOF1
-              case "${?}" in
-              #(
-                '0')
-                  :
-                ;;
-              #(
-                *)
-                  cat >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  exit '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|CC0-1.0-appendix.texi|%}){%|
 
-          #(
-            '--help=CC0-1.0-commit.txt'|'--help='*'/CC0-1.0-commit.txt')
-              cat <<EOF1
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`doc/help/CC0-1.0-commit.txt.hd.m4')dnl
-{%|EOF1
-              case "${?}" in
-              #(
-                '0')
-                  :
-                ;;
-              #(
-                *)
-                  cat >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  exit '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|CC0-1.0-commit.txt|%}){%|
 
-          #(
-            '--help=CC0-1.0-copying.texi'|'--help='*'/CC0-1.0-copying.texi')
-              cat <<EOF1
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`doc/help/CC0-1.0-copying.texi.hd.m4')dnl
-{%|EOF1
-              case "${?}" in
-              #(
-                '0')
-                  :
-                ;;
-              #(
-                *)
-                  cat >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  exit '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|CC0-1.0-copying.texi|%}){%|
 
-          #(
-            '--help=CC0-1.0-file.txt'|'--help='*'/CC0-1.0-file.txt')
-              cat <<EOF1
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`doc/help/CC0-1.0-file.txt.hd.m4')dnl
-{%|EOF1
-              case "${?}" in
-              #(
-                '0')
-                  :
-                ;;
-              #(
-                *)
-                  cat >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  exit '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|CC0-1.0-file.txt|%}){%|
 
-          #(
-            '--help=CC0-1.0.txt'|'--help='*'/CC0-1.0.txt')
-              cat <<EOF1
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`doc/help/CC0-1.0.txt.hd.m4')dnl
-{%|EOF1
-              case "${?}" in
-              #(
-                '0')
-                  :
-                ;;
-              #(
-                *)
-                  cat >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  exit '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|CC0-1.0.txt|%}){%|
 
           #(
             '--help=DATE.sh'|'--help='*'/DATE.sh')
@@ -1402,29 +1292,7 @@ EOF1
               esac
             ;;
 
-          #(
-            '--help=GATBPS_CONFIG_FILE_RULES.am'|'--help='*'/GATBPS_CONFIG_FILE_RULES.am')
-              cat <<EOF1
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`doc/help/GATBPS_CONFIG_FILE_RULES.am.hd.m4')dnl
-{%|EOF1
-              case "${?}" in
-              #(
-                '0')
-                  :
-                ;;
-              #(
-                *)
-                  cat >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  exit '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|GATBPS_CONFIG_FILE_RULES.am|%}){%|
 
           #(
             '--help=GATBPS_CONFIG_FILE_SUBST.m4'|'--help='*'/GATBPS_CONFIG_FILE_SUBST.m4')
@@ -1498,53 +1366,9 @@ EOF1
               esac
             ;;
 
-          #(
-            '--help=PACKAGEDATE.texi.in'|'--help='*'/PACKAGEDATE.texi.in')
-              cat <<EOF1
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`doc/help/PACKAGEDATE.texi.in.hd.m4')dnl
-{%|EOF1
-              case "${?}" in
-              #(
-                '0')
-                  :
-                ;;
-              #(
-                *)
-                  cat >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  exit '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|PACKAGEDATE.texi.in|%}){%|
 
-          #(
-            '--help=PACKAGEVERSION.texi.in'|'--help='*'/PACKAGEVERSION.texi.in')
-              cat <<EOF1
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`doc/help/PACKAGEVERSION.texi.in.hd.m4')dnl
-{%|EOF1
-              case "${?}" in
-              #(
-                '0')
-                  :
-                ;;
-              #(
-                *)
-                  cat >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  exit '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|PACKAGEVERSION.texi.in|%}){%|
 
           #(
             '--help=TEST_EXIT.h'|'--help='*'/TEST_EXIT.h')
@@ -1776,53 +1600,9 @@ EOF1
               esac
             ;;
 
-          #(
-            '--help=docbook-dist.am'|'--help='*'/docbook-dist.am')
-              cat <<EOF1
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`doc/help/docbook-dist.am.hd.m4')dnl
-{%|EOF1
-              case "${?}" in
-              #(
-                '0')
-                  :
-                ;;
-              #(
-                *)
-                  cat >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  exit '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|docbook-dist.am|%}){%|
 
-          #(
-            '--help=docbook.am'|'--help='*'/docbook.am')
-              cat <<EOF1
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`doc/help/docbook.am.hd.m4')dnl
-{%|EOF1
-              case "${?}" in
-              #(
-                '0')
-                  :
-                ;;
-              #(
-                *)
-                  cat >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  exit '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|docbook.am|%}){%|
 
           #(
             '--help=dslash.texi'|'--help='*'/dslash.texi')
@@ -1859,29 +1639,7 @@ EOF1
               esac
             ;;
 
-          #(
-            '--help=dvi-dist.am'|'--help='*'/dvi-dist.am')
-              cat <<EOF1
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`doc/help/dvi-dist.am.hd.m4')dnl
-{%|EOF1
-              case "${?}" in
-              #(
-                '0')
-                  :
-                ;;
-              #(
-                *)
-                  cat >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  exit '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|dvi-dist.am|%}){%|
 
           #(
             '--help=gequ.texi'|'--help='*'/gequ.texi')
@@ -1918,53 +1676,9 @@ EOF1
               esac
             ;;
 
-          #(
-            '--help=html-dist.am'|'--help='*'/html-dist.am')
-              cat <<EOF1
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`doc/help/html-dist.am.hd.m4')dnl
-{%|EOF1
-              case "${?}" in
-              #(
-                '0')
-                  :
-                ;;
-              #(
-                *)
-                  cat >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  exit '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|html-dist.am|%}){%|
 
-          #(
-            '--help=indent.texi'|'--help='*'/indent.texi')
-              cat <<EOF1
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`doc/help/indent.texi.hd.m4')dnl
-{%|EOF1
-              case "${?}" in
-              #(
-                '0')
-                  :
-                ;;
-              #(
-                *)
-                  cat >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  exit '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|indent.texi|%}){%|
 
           #(
             '--help=ipez.texi'|'--help='*'/ipez.texi')
@@ -1990,101 +1704,13 @@ EOF1
               esac
             ;;
 
-          #(
-            '--help=java-dist.am'|'--help='*'/java-dist.am')
-              cat <<EOF1
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`doc/help/java-dist.am.hd.m4')dnl
-{%|EOF1
-              case "${?}" in
-              #(
-                '0')
-                  :
-                ;;
-              #(
-                *)
-                  cat >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  exit '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|java-dist.am|%}){%|
 
-          #(
-            '--help=java.am'|'--help='*'/java.am')
-              cat <<EOF1
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`doc/help/java.am.hd.m4')dnl
-{%|EOF1
-              case "${?}" in
-              #(
-                '0')
-                  :
-                ;;
-              #(
-                *)
-                  cat >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  exit '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|java.am|%}){%|
 
-          #(
-            '--help=javadoc-dist.am'|'--help='*'/javadoc-dist.am')
-              cat <<EOF1
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`doc/help/javadoc-dist.am.hd.m4')dnl
-{%|EOF1
-              case "${?}" in
-              #(
-                '0')
-                  :
-                ;;
-              #(
-                *)
-                  cat >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  exit '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|javadoc-dist.am|%}){%|
 
-          #(
-            '--help=javadoc.am'|'--help='*'/javadoc.am')
-              cat <<EOF1
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`doc/help/javadoc.am.hd.m4')dnl
-{%|EOF1
-              case "${?}" in
-              #(
-                '0')
-                  :
-                ;;
-              #(
-                *)
-                  cat >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  exit '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|javadoc.am|%}){%|
 
           #(
             '--help=lcei.texi'|'--help='*'/lcei.texi')
@@ -2407,77 +2033,11 @@ EOF1
               esac
             ;;
 
-          #(
-            '--help=pdf-dist.am'|'--help='*'/pdf-dist.am')
-              cat <<EOF1
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`doc/help/pdf-dist.am.hd.m4')dnl
-{%|EOF1
-              case "${?}" in
-              #(
-                '0')
-                  :
-                ;;
-              #(
-                *)
-                  cat >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  exit '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|pdf-dist.am|%}){%|
 
-          #(
-            '--help=plaintext-dist.am'|'--help='*'/plaintext-dist.am')
-              cat <<EOF1
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`doc/help/plaintext-dist.am.hd.m4')dnl
-{%|EOF1
-              case "${?}" in
-              #(
-                '0')
-                  :
-                ;;
-              #(
-                *)
-                  cat >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  exit '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|plaintext-dist.am|%}){%|
 
-          #(
-            '--help=plaintext.am'|'--help='*'/plaintext.am')
-              cat <<EOF1
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`doc/help/plaintext.am.hd.m4')dnl
-{%|EOF1
-              case "${?}" in
-              #(
-                '0')
-                  :
-                ;;
-              #(
-                *)
-                  cat >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  exit '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|plaintext.am|%}){%|
 
           #(
             '--help=prm.texi'|'--help='*'/prm.texi')
@@ -2514,29 +2074,7 @@ EOF1
               esac
             ;;
 
-          #(
-            '--help=ps-dist.am'|'--help='*'/ps-dist.am')
-              cat <<EOF1
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`doc/help/ps-dist.am.hd.m4')dnl
-{%|EOF1
-              case "${?}" in
-              #(
-                '0')
-                  :
-                ;;
-              #(
-                *)
-                  cat >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  exit '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|ps-dist.am|%}){%|
 
           #(
             '--help=rarrow.texi'|'--help='*'/rarrow.texi')
@@ -2795,29 +2333,7 @@ EOF1
               esac
             ;;
 
-          #(
-            '--help=texinfo.css'|'--help='*'/texinfo.css')
-              cat <<EOF1
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`doc/help/texinfo.css.hd.m4')dnl
-{%|EOF1
-              case "${?}" in
-              #(
-                '0')
-                  :
-                ;;
-              #(
-                *)
-                  cat >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  exit '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|texinfo.css|%}){%|
 
           #(
             '--help=troff-form.sh'|'--help='*'/troff-form.sh')
