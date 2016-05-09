@@ -3928,109 +3928,13 @@ EOF1
             esac
           ;;
 
-        #(
-          'no,CC0-1.0-appendix.texi'|'no,'*'/CC0-1.0-appendix.texi')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/CC0-1.0-appendix.texi.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|CC0-1.0-appendix.texi|%}){%|
 
-        #(
-          'no,CC0-1.0-commit.txt'|'no,'*'/CC0-1.0-commit.txt')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/CC0-1.0-commit.txt.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|CC0-1.0-commit.txt|%}){%|
 
-        #(
-          'no,CC0-1.0-copying.texi'|'no,'*'/CC0-1.0-copying.texi')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/CC0-1.0-copying.texi.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|CC0-1.0-copying.texi|%}){%|
 
-        #(
-          'no,CC0-1.0-file.txt'|'no,'*'/CC0-1.0-file.txt')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/CC0-1.0-file.txt.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|CC0-1.0-file.txt|%}){%|
 
         #(
           'no,CC0-1.0.txt'|'no,'*'/CC0-1.0.txt')
@@ -4269,369 +4173,33 @@ EOF1
             esac
           ;;
 
-        #(
-          'no,Makefile.am.vim'|'no,'*'/Makefile.am.vim')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/Makefile.am.vim.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|Makefile.am.vim|%}){%|
 
-        #(
-          'no,GATBPS_ARG_ENABLE_BOOL.m4'|'no,'*'/GATBPS_ARG_ENABLE_BOOL.m4')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/GATBPS_ARG_ENABLE_BOOL.m4.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|GATBPS_ARG_ENABLE_BOOL.m4|%}){%|
 
-        #(
-          'no,GATBPS_ARG_WITH_BOOL.m4'|'no,'*'/GATBPS_ARG_WITH_BOOL.m4')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/GATBPS_ARG_WITH_BOOL.m4.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|GATBPS_ARG_WITH_BOOL.m4|%}){%|
 
-        #(
-          'no,GATBPS_CHECK_BASIC.m4'|'no,'*'/GATBPS_CHECK_BASIC.m4')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/GATBPS_CHECK_BASIC.m4.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|GATBPS_CHECK_BASIC.m4|%}){%|
 
-        #(
-          'no,GATBPS_CHECK_CFLAG.m4'|'no,'*'/GATBPS_CHECK_CFLAG.m4')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/GATBPS_CHECK_CFLAG.m4.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|GATBPS_CHECK_CFLAG.m4|%}){%|
 
-        #(
-          'no,GATBPS_CHECK_COMPILE.m4'|'no,'*'/GATBPS_CHECK_COMPILE.m4')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/GATBPS_CHECK_COMPILE.m4.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|GATBPS_CHECK_COMPILE.m4|%}){%|
 
-        #(
-          'no,GATBPS_CHECK_HEADER.m4'|'no,'*'/GATBPS_CHECK_HEADER.m4')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/GATBPS_CHECK_HEADER.m4.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|GATBPS_CHECK_HEADER.m4|%}){%|
 
-        #(
-          'no,GATBPS_CHECK_LIB.m4'|'no,'*'/GATBPS_CHECK_LIB.m4')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/GATBPS_CHECK_LIB.m4.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|GATBPS_CHECK_LIB.m4|%}){%|
 
-        #(
-          'no,GATBPS_CHECK_LINK.m4'|'no,'*'/GATBPS_CHECK_LINK.m4')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/GATBPS_CHECK_LINK.m4.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|GATBPS_CHECK_LINK.m4|%}){%|
 
-        #(
-          'no,GATBPS_CHECK_RUN.m4'|'no,'*'/GATBPS_CHECK_RUN.m4')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/GATBPS_CHECK_RUN.m4.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|GATBPS_CHECK_RUN.m4|%}){%|
 
-        #(
-          'no,GATBPS_CHECK_VARS.m4'|'no,'*'/GATBPS_CHECK_VARS.m4')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/GATBPS_CHECK_VARS.m4.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|GATBPS_CHECK_VARS.m4|%}){%|
 
-        #(
-          'no,GATBPS_CONFIG_FILE.m4'|'no,'*'/GATBPS_CONFIG_FILE.m4')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/GATBPS_CONFIG_FILE.m4.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|GATBPS_CONFIG_FILE.m4|%}){%|
 
-        #(
-          'no,GATBPS_CONFIG_FILE_RULES.am'|'no,'*'/GATBPS_CONFIG_FILE_RULES.am')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/GATBPS_CONFIG_FILE_RULES.am.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|GATBPS_CONFIG_FILE_RULES.am|%}){%|
 
-        #(
-          'no,GATBPS_CONFIG_FILE_SUBST.m4'|'no,'*'/GATBPS_CONFIG_FILE_SUBST.m4')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/GATBPS_CONFIG_FILE_SUBST.m4.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|GATBPS_CONFIG_FILE_SUBST.m4|%}){%|
 
         #(
           'no,GATBPS_DEFINE_DATE.m4'|'no,'*'/GATBPS_DEFINE_DATE.m4')
@@ -4769,57 +4337,9 @@ EOF1
             esac
           ;;
 
-        #(
-          'no,PACKAGEDATE.texi.in'|'no,'*'/PACKAGEDATE.texi.in')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/PACKAGEDATE.texi.in.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|PACKAGEDATE.texi.in|%}){%|
 
-        #(
-          'no,PACKAGEVERSION.texi.in'|'no,'*'/PACKAGEVERSION.texi.in')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/PACKAGEVERSION.texi.in.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|PACKAGEVERSION.texi.in|%}){%|
 
         #(
           'no,TEST_EXIT.h'|'no,'*'/TEST_EXIT.h')
@@ -5706,57 +5226,9 @@ EOF1
             esac
           ;;
 
-        #(
-          'no,docbook-dist.am'|'no,'*'/docbook-dist.am')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/docbook-dist.am.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|docbook-dist.am|%}){%|
 
-        #(
-          'no,docbook.am'|'no,'*'/docbook.am')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/docbook.am.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|docbook.am|%}){%|
 
         #(
           'no,dslash.texi'|'no,'*'/dslash.texi')
@@ -5923,31 +5395,7 @@ EOF1
             esac
           ;;
 
-        #(
-          'no,dvi-dist.am'|'no,'*'/dvi-dist.am')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/dvi-dist.am.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|dvi-dist.am|%}){%|
 
         #(
           'no,gequ.texi'|'no,'*'/gequ.texi')
@@ -6114,57 +5562,9 @@ EOF1
             esac
           ;;
 
-        #(
-          'no,html-dist.am'|'no,'*'/html-dist.am')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/html-dist.am.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|html-dist.am|%}){%|
 
-        #(
-          'no,indent.texi'|'no,'*'/indent.texi')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/indent.texi.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|indent.texi|%}){%|
 
         #(
           'no,ipez.texi'|'no,'*'/ipez.texi')
@@ -6220,109 +5620,13 @@ EOF1
             esac
           ;;
 
-        #(
-          'no,java-dist.am'|'no,'*'/java-dist.am')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/java-dist.am.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|java-dist.am|%}){%|
 
-        #(
-          'no,java.am'|'no,'*'/java.am')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/java.am.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|java.am|%}){%|
 
-        #(
-          'no,javadoc-dist.am'|'no,'*'/javadoc-dist.am')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/javadoc-dist.am.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|javadoc-dist.am|%}){%|
 
-        #(
-          'no,javadoc.am'|'no,'*'/javadoc.am')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/javadoc.am.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|javadoc.am|%}){%|
 
         #(
           'no,lcei.texi'|'no,'*'/lcei.texi')
@@ -7230,83 +6534,11 @@ EOF1
             esac
           ;;
 
-        #(
-          'no,msign.texi'|'no,'*'/msign.texi')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/msign.texi.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|msign.texi|%}){%|
 
-        #(
-          'no,mtvskipbot.texi'|'no,'*'/mtvskipbot.texi')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/mtvskipbot.texi.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|mtvskipbot.texi|%}){%|
 
-        #(
-          'no,mtvskiptop.texi'|'no,'*'/mtvskiptop.texi')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/mtvskiptop.texi.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|mtvskiptop.texi|%}){%|
 
         #(
           'no,nequ.texi'|'no,'*'/nequ.texi')
@@ -7473,83 +6705,11 @@ EOF1
             esac
           ;;
 
-        #(
-          'no,pdf-dist.am'|'no,'*'/pdf-dist.am')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/pdf-dist.am.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|pdf-dist.am|%}){%|
 
-        #(
-          'no,plaintext-dist.am'|'no,'*'/plaintext-dist.am')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/plaintext-dist.am.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|plaintext-dist.am|%}){%|
 
-        #(
-          'no,plaintext.am'|'no,'*'/plaintext.am')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/plaintext.am.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|plaintext.am|%}){%|
 
         #(
           'no,prm.texi'|'no,'*'/prm.texi')
@@ -7716,31 +6876,7 @@ EOF1
             esac
           ;;
 
-        #(
-          'no,ps-dist.am'|'no,'*'/ps-dist.am')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/ps-dist.am.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|ps-dist.am|%}){%|
 
         #(
           'no,rarrow.texi'|'no,'*'/rarrow.texi')
@@ -9730,31 +8866,7 @@ EOF1
             esac
           ;;
 
-        #(
-          'no,texinfo.css'|'no,'*'/texinfo.css')
-            cat >"${safe_1}" <<'EOF1'
-|%}dnl
-changequote({%|`|%}, {%|'|%})dnl
-include(`src/files/texinfo.css.m4')dnl
-{%|EOF1
-            case "${?}" in
-            #(
-              '0')
-                :
-              ;;
-            #(
-              *)
-                cat >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
-${fy2}gatbps:${fR2}   1. a here-document
-${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                break
-              ;;
-            esac
-          ;;
+|%}generation_code({%|texinfo.css|%}){%|
 
         #(
           'no,troff-form.sh'|'no,'*'/troff-form.sh')
