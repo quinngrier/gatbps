@@ -7,8 +7,7 @@ Texinfo's HTML output look more like its TeX output. It can be used with
 the ${fB1}--css-include${fR1} option of ${fB1}texi2any${fR1} to embed it into the style sheet of
 the HTML output.
 
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-|%}dnl
+Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.|%}dnl
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by

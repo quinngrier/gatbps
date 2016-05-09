@@ -2,8 +2,7 @@ changecom`'dnl
 changequote(`{%|', `|%}')dnl
 {%|Special file: ${fB1}html-dist.am${fR1}
 
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-|%}dnl
+Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.|%}dnl
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by

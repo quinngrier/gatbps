@@ -7,8 +7,8 @@ ifdef(
             '--help=$1'|'--help='*'/$1')
               cat <<EOF1|%}
 changequote({%|`|%}, {%|'|%})dnl
-include(`doc/help/$1.hd.m4')dnl
-{%|EOF1
+include(`doc/help/$1.hd.m4'){%|
+EOF1
               case "$|%}{%|{?}" in
               #(
                 '0')
