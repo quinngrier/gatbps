@@ -10,6 +10,8 @@ a distribution archive is a tree archive that has been streamlined for
 building and installation@.
 The formats have subtle differences, which are discussed throughout this
 manual where relevant@.
+Building and installation are particularly affected by these
+differences@.
 
 @include indent.texi
 If you are not sure which package format you are working with, then you
