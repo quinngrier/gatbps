@@ -9,9 +9,8 @@ is a snapshot of the Git repository at a particular moment in time, and
 a distribution archive is a tree archive that has been streamlined for
 building and installation@.
 The differences between the package formats are discussed throughout
-this manual where relevant@.
-Building and installation are particularly affected by these
-differences@.
+this manual, but they are particularly relevant to building and
+installation@.
 
 @include indent.texi
 If you are not sure which package format you are working with, then you
