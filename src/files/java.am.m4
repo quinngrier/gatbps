@@ -40,6 +40,7 @@ $(java_dst): $(java_src)
 .PHONY: install-java
 .PHONY: install-java-all
 .PHONY: java
+.PHONY: java-all
 .PHONY: uninstall-java
 .PHONY: uninstall-java-all
 
@@ -84,6 +85,8 @@ install-java: $(java_dst)
 install-java-all: install-java
 
 java: $(java_dst)
+
+java-all: java
 
 uninstall-java:
 	@$(NORMAL_UNINSTALL)
