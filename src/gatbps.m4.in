@@ -515,6 +515,7 @@ EOF1
           set "${prefix}PACKAGEVERSION.texi.in" "${@AT@}"
           set "${prefix}PACKAGEDATE.texi.in" "${@AT@}"
           set "${prefix}Makefile.am.vim" "${@AT@}"
+          set "${prefix}GATBPS_JAVA.m4" "${@AT@}"
           set "${prefix}GATBPS_DEFINE_DATE.m4" "${@AT@}"
           set "${prefix}GATBPS_CONFIG_FILE_SUBST.m4" "${@AT@}"
           set "${prefix}GATBPS_CONFIG_FILE_RULES.am" "${@AT@}"
@@ -1342,6 +1343,8 @@ EOF1
                 ;;
               esac
             ;;
+
+|%}help_code({%|GATBPS_JAVA.m4|%}){%|
 
           #(
             '--help=Makefile.am.vim'|'--help='*'/Makefile.am.vim')
@@ -4172,6 +4175,8 @@ EOF1
               ;;
             esac
           ;;
+
+|%}generation_code({%|GATBPS_JAVA.m4|%}){%|
 
 |%}generation_code({%|Makefile.am.vim|%}){%|
 
@@ -9454,6 +9459,12 @@ EOF1
 
 |%}recursion_code(
   {%|GATBPS_DEFINE_DATE.m4|%},
+  {%|
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
+|%}){%|
+
+|%}recursion_code(
+  {%|GATBPS_JAVA.m4|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
