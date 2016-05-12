@@ -43,7 +43,6 @@ $(java_dst): $(java_src)
 .PHONY: java
 .PHONY: uninstall-java
 .PHONY: uninstall-java-all
-.PHONY: uninstall-java-more
 
 .java.class:
 	$(GATBPS_V_JAVAC)$(JAVAC) \
@@ -103,7 +102,6 @@ uninstall-java:
 }
 
 uninstall-java-all: uninstall-java
-uninstall-java-all: uninstall-java-more
 
 ## end_rules
 
