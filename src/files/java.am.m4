@@ -36,6 +36,7 @@ $(java_dst): $(java_src)
 	$(AM_V_at)$(JAR) 'cf' $(java_dst) $(java_src)
 
 .PHONY: clean-java
+.PHONY: clean-java-all
 .PHONY: clean-java-more
 .PHONY: install-java
 .PHONY: install-java-more
@@ -53,11 +54,14 @@ $(java_dst): $(java_src)
   $< \
 ;
 
-clean-java: clean-java-more
+clean-java:
 	-rm -f $(java_dst)
 	-rm -f $(java_src)
 
-clean-local: clean-java
+clean-java-all: clean-java
+clean-java-all: clean-java-more
+
+clean-local: clean-java-all
 
 install-java: $(java_dst)
 install-java: install-java-more
