@@ -9,6 +9,16 @@ header_comment({%|##|%}, {%|##|%}){%|
 ## For more information, see the GATBPS manual.
 ##
 
+##
+## The GATBPS_CONFIG_FILE_RULES output variable has phony targets that
+## are added as prerequisites for distclean-local, but some versions of
+## Automake only add distclean-local as a prerequisite for distclean if
+## they find distclean-local in Makefile.am. This is the purpose of the
+## following line, which otherwise has no effect. Note that Automake is
+## always run before the output variable is substituted, so it does not
+## see inside the output variable.
+##
+
 distclean-local:
 
 @GATBPS_CONFIG_FILE_RULES@
