@@ -39,6 +39,7 @@ $(java_dst): $(java_src)
 .PHONY: clean-java-all
 .PHONY: clean-java-more
 .PHONY: install-java
+.PHONY: install-java-all
 .PHONY: install-java-more
 .PHONY: java
 .PHONY: uninstall-java
@@ -64,7 +65,6 @@ clean-java-all: clean-java-more
 clean-local: clean-java-all
 
 install-java: $(java_dst)
-install-java: install-java-more
 	@$(NORMAL_INSTALL)
 	@-':' #(
 	@{ ':'; \
@@ -83,6 +83,9 @@ install-java: install-java-more
   esac; \
   exit 0; \
 }
+
+install-java-all: install-java
+install-java-all: install-java-more
 
 java: $(java_dst)
 
