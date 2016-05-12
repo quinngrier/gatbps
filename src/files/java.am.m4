@@ -39,7 +39,6 @@ $(java_dst): $(java_src)
 .PHONY: clean-java-all
 .PHONY: install-java
 .PHONY: install-java-all
-.PHONY: install-java-more
 .PHONY: java
 .PHONY: uninstall-java
 .PHONY: uninstall-java-all
@@ -83,7 +82,6 @@ install-java: $(java_dst)
 }
 
 install-java-all: install-java
-install-java-all: install-java-more
 
 java: $(java_dst)
 
