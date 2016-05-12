@@ -43,6 +43,7 @@ $(java_dst): $(java_src)
 .PHONY: install-java-more
 .PHONY: java
 .PHONY: uninstall-java
+.PHONY: uninstall-java-all
 .PHONY: uninstall-java-more
 
 .java.class:
@@ -89,7 +90,7 @@ install-java-all: install-java-more
 
 java: $(java_dst)
 
-uninstall-java: uninstall-java-more
+uninstall-java:
 	@$(NORMAL_UNINSTALL)
 	@-':' #(
 	@{ ':'; \
@@ -102,6 +103,9 @@ uninstall-java: uninstall-java-more
   esac; \
   exit 0; \
 }
+
+uninstall-java-all: uninstall-java
+uninstall-java-all: uninstall-java-more
 
 ## end_rules
 
