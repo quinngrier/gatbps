@@ -37,7 +37,6 @@ $(java_dst): $(java_src)
 
 .PHONY: clean-java
 .PHONY: clean-java-all
-.PHONY: clean-java-more
 .PHONY: install-java
 .PHONY: install-java-all
 .PHONY: install-java-more
@@ -61,7 +60,6 @@ clean-java:
 	-rm -f $(java_src)
 
 clean-java-all: clean-java
-clean-java-all: clean-java-more
 
 clean-local: clean-java-all
 
