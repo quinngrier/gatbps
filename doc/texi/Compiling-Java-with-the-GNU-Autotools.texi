@@ -1,5 +1,9 @@
 @node Compiling Java with the GNU Autotools
 @chapter Compiling Java with the GNU Autotools
+
+@noindent
+GATBPS provides a set of special files to support an alternative
+approach to compiling Java with the GNU Autotools@.
 @ifxml
 @ifnotxml
 @c
