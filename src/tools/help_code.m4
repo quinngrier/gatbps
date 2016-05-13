@@ -5,23 +5,23 @@ ifdef(
     {%|help_code|%},
     {%|{%|          #(
             '--help=$1'|'--help='*'/$1')
-              cat <<EOF1|%}
+              'cat' <<EOF1|%}
 changequote({%|`|%}, {%|'|%})dnl
 include(`doc/help/$1.hd.m4'){%|
 EOF1
               case "$|%}{%|{?}" in
               #(
                 '0')
-                  :
+                  ':'
                 ;;
               #(
                 *)
-                  cat >&2 <<EOF1
+                  'cat' >&2 <<EOF1
 $|%}{%|{fr2}gatbps!$|%}{%|{fR2} $|%}{%|{fB2}cat$|%}{%|{fR2} failed while reading from:
 $|%}{%|{fr2}gatbps!$|%}{%|{fR2}   1. a here-document
 $|%}{%|{fr2}gatbps!$|%}{%|{fR2} and writing to: standard output
 EOF1
-                  exit '1'
+                  'exit' '1'
                 ;;
               esac
             ;;|%}|%})|%})dnl

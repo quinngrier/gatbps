@@ -24,27 +24,27 @@ EOF1
                 case "$|%}{%|{?}" in
                 #(
                   '0')
-                    :
+                    ':'
                   ;;
                 #(
                   *)
-                    cat >&2 <<EOF1
+                    'cat' >&2 <<EOF1
 $|%}{%|{fy2}gatbps:$|%}{%|{fR2} $|%}{%|{fB2}$|%}{%|{sed}$|%}{%|{fR2} failed while reading from:
 $|%}{%|{fy2}gatbps:$|%}{%|{fR2}   1. a here-document
 $|%}{%|{fy2}gatbps:$|%}{%|{fR2} and writing to: a command substitution
 $|%}{%|{fy2}gatbps:$|%}{%|{fR2} recursion failed: $|%}{%|{fB2}$|%}{%|{1}$|%}{%|{fR2}
 EOF1
                     exit_status='1'
-                    break # recursion
+                    'break' # recursion
                   ;;
                 esac
-                eval "$|%}{%|{x}"
+                'eval' "$|%}{%|{x}"
               ;;
             esac
 
-            shift
+            'shift'
 $2
-            set 'x' "$|%}{%|{@}"
+            'set' 'x' "$|%}{%|{@}"
 
           ;;|%}|%})|%})dnl
 dnl
