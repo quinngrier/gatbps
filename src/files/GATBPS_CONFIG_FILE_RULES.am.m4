@@ -15,8 +15,8 @@ header_comment({%|##|%}, {%|##|%}){%|
 ## Automake only add distclean-local as a prerequisite for distclean if
 ## they find distclean-local in Makefile.am. This is the purpose of the
 ## following line, which otherwise has no effect. Note that Automake is
-## always run before the output variable is substituted, so it does not
-## see inside the output variable.
+## run before the output variable is substituted, so it cannot see into
+## the output variable.
 ##
 
 distclean-local:
