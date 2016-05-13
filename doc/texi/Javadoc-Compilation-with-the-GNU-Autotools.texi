@@ -1,5 +1,5 @@
-@node Compiling Javadoc with the GNU Autotools
-@chapter Compiling Javadoc with the GNU Autotools
+@node Javadoc Compilation with the GNU Autotools
+@chapter Javadoc Compilation with the GNU Autotools
 @ifxml
 @ifnotxml
 @c

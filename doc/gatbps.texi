@@ -70,7 +70,7 @@ which was released on
 * Copyright Texts::
 * Mathematical Notation in Texinfo::
 * Compiling Java with the GNU Autotools::
-* Compiling Javadoc with the GNU Autotools::
+* Javadoc Compilation with the GNU Autotools::
 * Invoking @w{@t{awk-form-sh}}::
 * Invoking @w{@t{sh-form-sh}}::
 * Invoking @w{@t{texi-form-sh}}::
@@ -99,7 +99,7 @@ which was released on
 
 @include Compiling-Java-with-the-GNU-Autotools.texi
 
-@include Compiling-Javadoc-with-the-GNU-Autotools.texi
+@include Javadoc-Compilation-with-the-GNU-Autotools.texi
 
 @include Invoking-awk-form-sh.texi
 
