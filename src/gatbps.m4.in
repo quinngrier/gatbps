@@ -444,7 +444,7 @@ EOF1
               exit '1'
             ;;
           esac
-          eval "${x}"
+          'eval' "${x}"
 
           case "${prefix}" in
           #(
@@ -580,7 +580,7 @@ EOF1
               exit '1'
             ;;
           esac
-          eval "${x}"
+          'eval' "${x}"
 
           shift
           set 'x' "--all=${x}" "${@AT@}"
@@ -664,7 +664,7 @@ EOF1
               exit '1'
             ;;
           esac
-          eval "${x}"
+          'eval' "${x}"
 
           shift
           set 'x' "--append-path=${x}" "${@AT@}"
@@ -721,7 +721,7 @@ EOF1
               exit '1'
             ;;
           esac
-          eval "${x}"
+          'eval' "${x}"
 
           case "${awk}" in
           #(
@@ -804,7 +804,7 @@ EOF1
               exit '1'
             ;;
           esac
-          eval "${x}"
+          'eval' "${x}"
 
           shift
           set 'x' '--boundary' "-${x}" "${@AT@}"
@@ -866,7 +866,7 @@ EOF1
               exit '1'
             ;;
           esac
-          eval "${x}"
+          'eval' "${x}"
 
           shift
           set 'x' '--dry-run' "-${x}" "${@AT@}"
@@ -2510,7 +2510,7 @@ EOF1
               exit '1'
             ;;
           esac
-          eval "${x}"
+          'eval' "${x}"
 
           shift
           set 'x' '--no-dry-run' "-${x}" "${@AT@}"
@@ -2572,7 +2572,7 @@ EOF1
               exit '1'
             ;;
           esac
-          eval "${x}"
+          'eval' "${x}"
 
           shift
           set 'x' '--no-plain' "-${x}" "${@AT@}"
@@ -2634,7 +2634,7 @@ EOF1
               exit '1'
             ;;
           esac
-          eval "${x}"
+          'eval' "${x}"
 
           shift
           set 'x' '--no-print0' "-${x}" "${@AT@}"
@@ -2696,7 +2696,7 @@ EOF1
               exit '1'
             ;;
           esac
-          eval "${x}"
+          'eval' "${x}"
 
           shift
           set 'x' '--no-recursive' "-${x}" "${@AT@}"
@@ -2759,7 +2759,7 @@ EOF1
               exit '1'
             ;;
           esac
-          eval "${x}"
+          'eval' "${x}"
 
           shift
           set 'x' '--no-unicode' "-${x}" "${@AT@}"
@@ -2821,7 +2821,7 @@ EOF1
               exit '1'
             ;;
           esac
-          eval "${x}"
+          'eval' "${x}"
 
           shift
           set 'x' '--no-verbose' "-${x}" "${@AT@}"
@@ -2883,7 +2883,7 @@ EOF1
               exit '1'
             ;;
           esac
-          eval "${x}"
+          'eval' "${x}"
 
           shift
           set 'x' '--plain' "-${x}" "${@AT@}"
@@ -2945,7 +2945,7 @@ EOF1
               exit '1'
             ;;
           esac
-          eval "${x}"
+          'eval' "${x}"
 
           shift
           set 'x' '--print0' "-${x}" "${@AT@}"
@@ -3007,7 +3007,7 @@ EOF1
               exit '1'
             ;;
           esac
-          eval "${x}"
+          'eval' "${x}"
 
           shift
           set 'x' '--recursive' "-${x}" "${@AT@}"
@@ -3064,7 +3064,7 @@ EOF1
               exit '1'
             ;;
           esac
-          eval "${x}"
+          'eval' "${x}"
 
           case "${sed}" in
           #(
@@ -3369,7 +3369,7 @@ EOF1
               exit '1'
             ;;
           esac
-          eval "${x}"
+          'eval' "${x}"
 
           case "${texi2any}" in
           #(
@@ -3453,7 +3453,7 @@ EOF1
               exit '1'
             ;;
           esac
-          eval "${x}"
+          'eval' "${x}"
 
           shift
           set 'x' '--unicode' "-${x}" "${@AT@}"
@@ -3515,7 +3515,7 @@ EOF1
               exit '1'
             ;;
           esac
-          eval "${x}"
+          'eval' "${x}"
 
           shift
           set 'x' '--verbose' "-${x}" "${@AT@}"
@@ -7927,7 +7927,7 @@ EOF2
               exit '1'
             ;;
           esac
-          eval "${x}"
+          'eval' "${x}"
 
           case "${awk}" in
           #(
@@ -8010,7 +8010,7 @@ EOF2
               exit '1'
             ;;
           esac
-          eval "${x}"
+          'eval' "${x}"
 
           shift
           set 'x' '--keep' "-${x}" "${@AT@}"
@@ -8132,7 +8132,7 @@ EOF2
               exit '1'
             ;;
           esac
-          eval "${x}"
+          'eval' "${x}"
 
           case "${sed}" in
           #(
@@ -9011,7 +9011,7 @@ EOF1
                 ;;
               esac
 
-              eval '"${texi2any}" \
+              'eval' '"${texi2any}" \
   --plaintext \
   ${unicode_args} \
   '"${path_args}"' \
@@ -9129,7 +9129,7 @@ EOF1
               ;;
             esac
 
-            eval '"${texi2any}" \
+            'eval' '"${texi2any}" \
 --plaintext \
 ${unicode_args} \
 '"${path_args}"' \
@@ -9256,7 +9256,7 @@ EOF1
                 ;;
               esac
 
-              eval '"${texi2any}" \
+              'eval' '"${texi2any}" \
   --plaintext \
   ${unicode_args} \
   '"${path_args}"' \
