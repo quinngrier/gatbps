@@ -4,6 +4,8 @@ all:
 
 GATBPS = 'gatbps'
 
+GATBPSFLAGS =
+
 ## end_variables
 
 ## begin_rules
@@ -21,6 +23,7 @@ GATBPS = 'gatbps'
 	$(GATBPS) \
   '--append-path=doc/texi' \
   '--no-unicode' \
+  $(GATBPSFLAGS) \
   '--' \
   $@ \
 ;
