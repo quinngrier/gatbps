@@ -69,6 +69,7 @@ which was released on
 * Plain Files::
 * Copyright Texts::
 * Mathematical Notation in Texinfo::
+* Timestamp Preservation during Autoconf Instantiation::
 * Java Compilation with the GNU Autotools::
 * Javadoc Compilation with the GNU Autotools::
 * Invoking @w{@t{awk-form-sh}}::
@@ -96,6 +97,8 @@ which was released on
 @include Copyright-Texts.texi
 
 @include Mathematical-Notation-in-Texinfo.texi
+
+@include Timestamp-Preservation-during-Autoconf-Instantiation.texi
 
 @include Java-Compilation-with-the-GNU-Autotools.texi
 
