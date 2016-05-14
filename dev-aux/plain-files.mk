@@ -9,6 +9,10 @@ GATBPS = 'gatbps'
 ## begin_rules
 
 .PHONY: all
+.PHONY: always-make-COPYING
+.PHONY: always-make-INSTALL
+.PHONY: always-make-NEWS
+.PHONY: always-make-README
 
 .SUFFIXES:
 .SUFFIXES: .texi
@@ -21,23 +25,13 @@ GATBPS = 'gatbps'
   $@ \
 ;
 
-COPYING: COPYING.bot
-COPYING: doc/texi/Copyright-Information.texi
+COPYING: always-make-COPYING
 
-INSTALL: INSTALL.bot
-INSTALL: doc/texi/Build-System-Initialization.texi
-INSTALL: doc/texi/Building-and-Installation.texi
-INSTALL: doc/texi/Building.texi
-INSTALL: doc/texi/Configuration.texi
-INSTALL: doc/texi/Installation.texi
-INSTALL: doc/texi/Package-Formats.texi
-INSTALL: doc/texi/Required-Packages.texi
+INSTALL: always-make-INSTALL
 
-NEWS: NEWS.bot
-NEWS: doc/texi/Release-Notes.texi
+NEWS: always-make-NEWS
 
-README: README.bot
-README: doc/texi/Introduction.texi
+README: always-make-README
 
 all: COPYING
 all: INSTALL
