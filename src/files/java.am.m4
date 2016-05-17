@@ -79,7 +79,7 @@ $(java_dst): $(java_src_extra)
 .PHONY: clean-java
 .PHONY: install-all-java
 .PHONY: install-java
-.PHONY: java
+.PHONY: one-java
 .PHONY: uninstall-all-java
 .PHONY: uninstall-java
 
@@ -93,7 +93,7 @@ $(java_dst): $(java_src_extra)
   $< \
 ;
 
-all-java: java
+all-java: one-java
 
 clean-java:
 	-rm -f $(java_dst)
@@ -130,7 +130,7 @@ install-java:
   gatbps-install-java \
 ;
 
-java:
+one-java:
 	$(MAKE) \
   $(AM_MAKEFLAGS) \
   GATBPS_SOURCEPATH=$(java_sourcepath) \
