@@ -76,7 +76,7 @@ $(java_dst): $(java_src_extra)
 ;
 
 .PHONY: all-java
-.PHONY: clean-java
+.PHONY: clean-one-java
 .PHONY: install-all-java
 .PHONY: install-java
 .PHONY: one-java
@@ -95,11 +95,11 @@ $(java_dst): $(java_src_extra)
 
 all-java: one-java
 
-clean-java:
+clean-one-java:
 	-rm -f $(java_dst)
 	-rm -f $(java_src)
 
-clean-local: clean-java
+clean-local: clean-one-java
 
 gatbps-install-java: $(java_dst)
 	@$(NORMAL_INSTALL)
