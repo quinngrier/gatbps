@@ -10,8 +10,8 @@ dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([GATBPS_CONFIG_FILE_SUBST], [{ :
 
-  AC_SUBST([GATBPS_CONFIG_FILE_RULES])
-  AM_SUBST_NOTMAKE([GATBPS_CONFIG_FILE_RULES])
+AC_SUBST([GATBPS_CONFIG_FILE_RULES])
+AM_SUBST_NOTMAKE([GATBPS_CONFIG_FILE_RULES])
 
 }])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
