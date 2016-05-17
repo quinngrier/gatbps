@@ -46,8 +46,15 @@ $(java_dst): $(java_src_extra)
     $(java_src_extra) \
     $(java_src_inner) \
   ; do \
+    if 'test' '-f' "$${x}"; then \
+      d='.'; \
+    else \
+      d=$(srcdir); \
+    fi; \
     $(JAR) "$${flags}" \
       './'$(java_dst)'.tmp/x.jar' \
+      '-C' \
+      "$${d}" \
       './'"$${x}" \
     || 'exit' "$${?}"; \
     flags='uf'; \

@@ -39,8 +39,15 @@ $[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_src_extra)
     $[](java_[]gatbps_x2[]_src_extra) \
     $[](java_[]gatbps_x2[]_src_inner) \
   ; do \
+    if '\''test'\'' '\''-f'\'' "$[]$[]{x}"; then \
+      d='\''.'\''; \
+    else \
+      d=$[](srcdir); \
+    fi; \
     $[](JAR) "$[]$[]{flags}" \
       '\''./'\''$[](java_[]gatbps_x2[]_dst)'\''.tmp/x.jar'\'' \
+      '\''-C'\'' \
+      "$[]$[]{d}" \
       '\''./'\''"$[]$[]{x}" \
     || '\''exit'\'' "$[]$[]{?}"; \
     flags='\''uf'\''; \
