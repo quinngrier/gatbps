@@ -32,6 +32,7 @@ m4_foreach_w(
 	$[](AM@&t@_V_at)$[](MKDIR_P) \
   '\''./'\''$[](java_[]gatbps_x2[]_dst)'\''.tmp/x'\'' \
 ;
+	@-'\'':'\'' #(
 	$[](AM@&t@_V_at){ '\'':'\''; \
   flags='\''cf'\''; \
   for x in \
@@ -43,6 +44,11 @@ m4_foreach_w(
       d='\''.'\''; \
     else \
       d=$[](srcdir); \
+      case "$[]$[]{d}" in \
+        '\''-'\''*) \
+          d='\''./'\''"$[]$[]{d}"; \
+        ;; \
+      esac; \
     fi; \
     $[](JAR) "$[]$[]{flags}" \
       '\''./'\''$[](java_[]gatbps_x2[]_dst)'\''.tmp/x.jar'\'' \

@@ -39,6 +39,7 @@ GATBPS_V_JAVAC_1 =
 	$(AM_V_at)$(MKDIR_P) \
   './'$(java_dst)'.tmp/x' \
 ;
+	@-':' #(
 	$(AM_V_at){ ':'; \
   flags='cf'; \
   for x in \
@@ -50,6 +51,11 @@ GATBPS_V_JAVAC_1 =
       d='.'; \
     else \
       d=$(srcdir); \
+      case "$${d}" in \
+        '-'*) \
+          d='./'"$${d}"; \
+        ;; \
+      esac; \
     fi; \
     $(JAR) "$${flags}" \
       './'$(java_dst)'.tmp/x.jar' \
