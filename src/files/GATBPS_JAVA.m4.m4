@@ -82,7 +82,7 @@ m4_foreach_w(
 
 clean-java-gatbps_x1:
 	-rm -f $[](java_[]gatbps_x2[]_dst)
-	-rm -f $[](java_[]gatbps_x2[]_src)
+	-rm -f $[](java_[]gatbps_x2[]_src) $[](java_[]gatbps_x2[]_src_inner)
 
 clean-local: clean-java-gatbps_x1
 
