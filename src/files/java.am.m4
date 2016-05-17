@@ -68,7 +68,7 @@ $(java_dst): $(java_src_extra)
 	$(AM_V_at)$(JAR) 'cf' \
   './'$(java_dst) \
   '-C' \
-  './'$(java_dst)'.tmp/x/'$(java_sourcepath) \
+  './'$(java_dst)'.tmp/x/'$(GATBPS_SOURCEPATH) \
   '.' \
 ;
 	$(AM_V_at)-'rm' '-f' '-r' \
@@ -86,9 +86,9 @@ $(java_dst): $(java_src_extra)
 
 .java.class:
 	$(GATBPS_V_JAVAC)$(JAVAC) \
-  '-classpath' './'$(java_sourcepath) \
-  '-d' './'$(java_sourcepath) \
-  '-sourcepath' './'$(java_sourcepath)':'$(srcdir)'/'$(java_sourcepath) \
+  '-classpath' './'$(GATBPS_SOURCEPATH) \
+  '-d' './'$(GATBPS_SOURCEPATH) \
+  '-sourcepath' './'$(GATBPS_SOURCEPATH)':'$(srcdir)'/'$(GATBPS_SOURCEPATH) \
   $(GATBPS_JAVACFLAGS) \
   $(JAVACFLAGS) \
   $< \
@@ -102,7 +102,7 @@ clean-java-all: clean-java
 
 clean-local: clean-java-all
 
-install-java: $(java_dst)
+gatbps-install-java: $(java_dst)
 	@$(NORMAL_INSTALL)
 	@-':' #(
 	@{ ':'; \
@@ -122,9 +122,21 @@ install-java: $(java_dst)
   exit 0; \
 }
 
+install-java:
+	$(MAKE) \
+  $(AM_MAKEFLAGS) \
+  GATBPS_SOURCEPATH=$(java_sourcepath) \
+  gatbps-install-java \
+;
+
 install-java-all: install-java
 
-java: $(java_dst)
+java:
+	$(MAKE) \
+  $(AM_MAKEFLAGS) \
+  GATBPS_SOURCEPATH=$(java_sourcepath) \
+  $(java_dst) \
+;
 
 java-all: java
 

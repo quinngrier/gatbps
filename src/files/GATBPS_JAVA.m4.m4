@@ -61,7 +61,7 @@ $[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_src_extra)
 	$[](AM@&t@_V_at)$[](JAR) '\''cf'\'' \
   '\''./'\''$[](java_[]gatbps_x2[]_dst) \
   '\''-C'\'' \
-  '\''./'\''$[](java_[]gatbps_x2[]_dst)'\''.tmp/x/'\''$[](java_[]gatbps_x2[]_sourcepath) \
+  '\''./'\''$[](java_[]gatbps_x2[]_dst)'\''.tmp/x/'\''$[](GATBPS_SOURCEPATH) \
   '\''.'\'' \
 ;
 	$[](AM@&t@_V_at)-'\''rm'\'' '\''-f'\'' '\''-r'\'' \
@@ -76,7 +76,14 @@ clean-local: clean-java-gatbps_x1
 
 install-java-all: install-java-gatbps_x1
 
-install-java-gatbps_x1: $[](java_[]gatbps_x2[]_dst)
+install-java-gatbps_x1:
+	$[](MAKE) \
+  $[](AM_MAKEFLAGS) \
+  GATBPS_SOURCEPATH=$[](java_[]gatbps_x2[]_sourcepath) \
+  gatbps-install-java-gatbps_x1 \
+;
+
+gatbps-install-java-gatbps_x1: $[](java_[]gatbps_x2[]_dst)
 	@$[](NORMAL_INSTALL)
 	@-'\'':'\'' #(
 	@{ '\'':'\''; \
