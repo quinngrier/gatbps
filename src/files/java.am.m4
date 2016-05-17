@@ -78,7 +78,7 @@ $(java_dst): $(java_src_extra)
 .PHONY: all-java
 .PHONY: clean-one-java
 .PHONY: install-all-java
-.PHONY: install-java
+.PHONY: install-one-java
 .PHONY: one-java
 .PHONY: uninstall-all-java
 .PHONY: uninstall-one-java
@@ -101,7 +101,7 @@ clean-one-java:
 
 clean-local: clean-one-java
 
-gatbps-install-java: $(java_dst)
+gatbps-install-one-java: $(java_dst)
 	@$(NORMAL_INSTALL)
 	@-':' #(
 	@{ ':'; \
@@ -121,13 +121,13 @@ gatbps-install-java: $(java_dst)
   exit 0; \
 }
 
-install-all-java: install-java
+install-all-java: install-one-java
 
-install-java:
+install-one-java:
 	$(MAKE) \
   $(AM_MAKEFLAGS) \
   GATBPS_SOURCEPATH=$(java_sourcepath) \
-  gatbps-install-java \
+  gatbps-install-one-java \
 ;
 
 one-java:
