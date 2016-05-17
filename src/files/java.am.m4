@@ -32,8 +32,41 @@ GATBPS_V_JAVAC_1 =
 ## begin_rules
 
 $(java_dst): $(java_src)
-	$(GATBPS_V_JAR)$(MKDIR_P) $(@D)
-	$(AM_V_at)$(JAR) 'cf' $(java_dst) $(java_src)
+$(java_dst): $(java_src_extra)
+	$(GATBPS_V_JAR)'rm' '-f' '-r' \
+  './'$(java_dst)'.tmp' \
+;
+	$(AM_V_at)$(MKDIR_P) \
+  './'$(java_dst)'.tmp/x' \
+;
+	$(AM_V_at){ ':'; \
+  flags='cf'; \
+  for x in \
+    $(java_src) \
+    $(java_src_extra) \
+    $(java_src_inner) \
+  ; do \
+    $(JAR) "$${flags}" \
+      $(java_dst)'.tmp/x.jar' \
+      './'"$${x}" \
+    || 'exit' "$${?}"; \
+    flags='uf'; \
+  done; \
+  'exit' '0'; \
+}
+	$(AM_V_at)'cd' \
+  './'$(java_dst)'.tmp/x' \
+  && $(JAR) 'xf' '../x.jar' \
+;
+	$(AM_V_at)$(JAR) 'cf' \
+  $(java_dst) \
+  '-C' \
+  $(java_dst)'.tmp/x/'$(java_sourcepath) \
+  '.' \
+;
+	$(AM_V_at)-'rm' '-f' '-r' \
+  './'$(java_dst)'.tmp' \
+;
 
 .PHONY: clean-java
 .PHONY: clean-java-all
