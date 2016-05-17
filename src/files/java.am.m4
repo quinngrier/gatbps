@@ -89,7 +89,7 @@ $(java_dst): $(java_src_extra)
   '-classpath' './'$(java_sourcepath) \
   '-d' './'$(java_sourcepath) \
   '-sourcepath' './'$(java_sourcepath)':'$(srcdir)'/'$(java_sourcepath) \
-  $(AM_JAVACFLAGS) \
+  $(GATBPS_JAVACFLAGS) \
   $(JAVACFLAGS) \
   $< \
 ;
