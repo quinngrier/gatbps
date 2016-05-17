@@ -81,7 +81,7 @@ $(java_dst): $(java_src_extra)
 .PHONY: install-java
 .PHONY: one-java
 .PHONY: uninstall-all-java
-.PHONY: uninstall-java
+.PHONY: uninstall-one-java
 
 .java.class:
 	$(GATBPS_V_JAVAC)$(JAVAC) \
@@ -137,9 +137,9 @@ one-java:
   $(java_dst) \
 ;
 
-uninstall-all-java: uninstall-java
+uninstall-all-java: uninstall-one-java
 
-uninstall-java:
+uninstall-one-java:
 	@$(NORMAL_UNINSTALL)
 	@-':' #(
 	@{ ':'; \
