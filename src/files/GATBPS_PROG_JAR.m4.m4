@@ -10,7 +10,7 @@ dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([GATBPS_PROG_JAR], [{ ':'
 
-AC_ARG_VAR([JAR], [the command for jar])
+AC_ARG_VAR([JAR], [Java archiver command])
 
 AC_CHECK_PROGS([JAR], [jar])
 
