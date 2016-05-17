@@ -76,13 +76,13 @@ $(java_dst): $(java_src_extra)
 ;
 
 .PHONY: clean-java
-.PHONY: clean-java-all
+.PHONY: clean-all-java
 .PHONY: install-java
-.PHONY: install-java-all
+.PHONY: install-all-java
 .PHONY: java
-.PHONY: java-all
+.PHONY: all-java
 .PHONY: uninstall-java
-.PHONY: uninstall-java-all
+.PHONY: uninstall-all-java
 
 .java.class:
 	$(GATBPS_V_JAVAC)$(JAVAC) \
@@ -98,9 +98,9 @@ clean-java:
 	-rm -f $(java_dst)
 	-rm -f $(java_src)
 
-clean-java-all: clean-java
+clean-all-java: clean-java
 
-clean-local: clean-java-all
+clean-local: clean-all-java
 
 gatbps-install-java: $(java_dst)
 	@$(NORMAL_INSTALL)
@@ -129,7 +129,7 @@ install-java:
   gatbps-install-java \
 ;
 
-install-java-all: install-java
+install-all-java: install-java
 
 java:
 	$(MAKE) \
@@ -138,7 +138,7 @@ java:
   $(java_dst) \
 ;
 
-java-all: java
+all-java: java
 
 uninstall-java:
 	@$(NORMAL_UNINSTALL)
@@ -154,7 +154,7 @@ uninstall-java:
   exit 0; \
 }
 
-uninstall-java-all: uninstall-java
+uninstall-all-java: uninstall-java
 
 ## end_rules
 
