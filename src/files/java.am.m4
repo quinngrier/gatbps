@@ -75,14 +75,14 @@ $(java_dst): $(java_src_extra)
   './'$(java_dst)'.tmp' \
 ;
 
-.PHONY: clean-java
-.PHONY: clean-all-java
-.PHONY: install-java
-.PHONY: install-all-java
-.PHONY: java
 .PHONY: all-java
-.PHONY: uninstall-java
+.PHONY: clean-all-java
+.PHONY: clean-java
+.PHONY: install-all-java
+.PHONY: install-java
+.PHONY: java
 .PHONY: uninstall-all-java
+.PHONY: uninstall-java
 
 .java.class:
 	$(GATBPS_V_JAVAC)$(JAVAC) \
@@ -94,11 +94,13 @@ $(java_dst): $(java_src_extra)
   $< \
 ;
 
+all-java: java
+
+clean-all-java: clean-java
+
 clean-java:
 	-rm -f $(java_dst)
 	-rm -f $(java_src)
-
-clean-all-java: clean-java
 
 clean-local: clean-all-java
 
@@ -122,14 +124,14 @@ gatbps-install-java: $(java_dst)
   exit 0; \
 }
 
+install-all-java: install-java
+
 install-java:
 	$(MAKE) \
   $(AM_MAKEFLAGS) \
   GATBPS_SOURCEPATH=$(java_sourcepath) \
   gatbps-install-java \
 ;
-
-install-all-java: install-java
 
 java:
 	$(MAKE) \
@@ -138,7 +140,7 @@ java:
   $(java_dst) \
 ;
 
-all-java: java
+uninstall-all-java: uninstall-java
 
 uninstall-java:
 	@$(NORMAL_UNINSTALL)
@@ -153,8 +155,6 @@ uninstall-java:
   esac; \
   exit 0; \
 }
-
-uninstall-all-java: uninstall-java
 
 ## end_rules
 
