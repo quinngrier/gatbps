@@ -10,9 +10,9 @@ dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([GATBPS_PROG_JAVAC], [{ ':'
 
-AC_ARG_VAR([JAVAC], [Java compiler command])
-
 AC_CHECK_PROGS([JAVAC], [javac])
+
+AC_ARG_VAR([JAVAC], [Java compiler command])
 
 }])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
