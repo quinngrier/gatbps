@@ -75,13 +75,13 @@ $(java_dst): $(java_src_extra)
   './'$(java_dst)'.tmp' \
 ;
 
-.PHONY: java
 .PHONY: clean-first-java
-.PHONY: install-java
-.PHONY: install-first-java
 .PHONY: first-java
-.PHONY: uninstall-java
+.PHONY: install-first-java
+.PHONY: install-java
+.PHONY: java
 .PHONY: uninstall-first-java
+.PHONY: uninstall-java
 
 .java.class:
 	$(GATBPS_V_JAVAC)$(JAVAC) \
@@ -93,13 +93,18 @@ $(java_dst): $(java_src_extra)
   $< \
 ;
 
-java: first-java
-
 clean-first-java:
 	-rm -f $(java_dst)
 	-rm -f $(java_src)
 
 clean-local: clean-first-java
+
+first-java:
+	$(MAKE) \
+  $(AM_MAKEFLAGS) \
+  GATBPS_SOURCEPATH=$(java_sourcepath) \
+  $(java_dst) \
+;
 
 gatbps-install-first-java: $(java_dst)
 	@$(NORMAL_INSTALL)
@@ -121,8 +126,6 @@ gatbps-install-first-java: $(java_dst)
   exit 0; \
 }
 
-install-java: install-first-java
-
 install-first-java:
 	$(MAKE) \
   $(AM_MAKEFLAGS) \
@@ -130,14 +133,9 @@ install-first-java:
   gatbps-install-first-java \
 ;
 
-first-java:
-	$(MAKE) \
-  $(AM_MAKEFLAGS) \
-  GATBPS_SOURCEPATH=$(java_sourcepath) \
-  $(java_dst) \
-;
+install-java: install-first-java
 
-uninstall-java: uninstall-first-java
+java: first-java
 
 uninstall-first-java:
 	@$(NORMAL_UNINSTALL)
@@ -152,6 +150,8 @@ uninstall-first-java:
   esac; \
   exit 0; \
 }
+
+uninstall-java: uninstall-first-java
 
 ## end_rules
 
