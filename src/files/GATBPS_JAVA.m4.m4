@@ -81,8 +81,8 @@ m4_foreach_w(
 .PHONY: uninstall-java-gatbps_x1
 
 clean-java-gatbps_x1:
-	-rm -f $(java_[]gatbps_x2[]_dst)
-	-rm -f $(java_[]gatbps_x2[]_src)
+	-rm -f $[](java_[]gatbps_x2[]_dst)
+	-rm -f $[](java_[]gatbps_x2[]_src)
 
 clean-local: clean-java-gatbps_x1
 
