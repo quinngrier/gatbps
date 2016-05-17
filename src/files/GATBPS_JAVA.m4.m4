@@ -24,8 +24,8 @@ m4_foreach_w(
 
 '"$[]{GATBPS_JAVA_RULES}"'
 
-$[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_src)
-$[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_src_extra)
+./$[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_src)
+./$[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_src_extra)
 	$[](GATBPS_V_JAR)'\''rm'\'' '\''-f'\'' '\''-r'\'' \
   '\''./'\''$[](java_[]gatbps_x2[]_dst)'\''.tmp'\'' \
 ;
@@ -74,7 +74,7 @@ clean-java-gatbps_x1:
 
 clean-local: clean-java-gatbps_x1
 
-gatbps-install-java-gatbps_x1: $[](java_[]gatbps_x2[]_dst)
+gatbps-install-java-gatbps_x1: ./$[](java_[]gatbps_x2[]_dst)
 	@$[](NORMAL_INSTALL)
 	@-'\'':'\'' #(
 	@{ '\'':'\''; \
@@ -109,7 +109,7 @@ java-gatbps_x1:
 	$[](MAKE) \
   $[](AM_MAKEFLAGS) \
   GATBPS_SOURCEPATH=$[](java_[]gatbps_x2[]_sourcepath) \
-  $[](java_[]gatbps_x2[]_dst) \
+  ./$[](java_[]gatbps_x2[]_dst) \
 ;
 
 uninstall-java: uninstall-java-gatbps_x1
