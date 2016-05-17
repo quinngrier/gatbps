@@ -85,7 +85,7 @@ GATBPS_V_JAVAC_1 =
 
 .java.class:
 	$(GATBPS_V_JAVAC)$(JAVAC) \
-  '-classpath' './'$(GATBPS_SOURCEPATH) \
+  '-classpath' './'$(GATBPS_SOURCEPATH)':'$(srcdir)'/'$(GATBPS_SOURCEPATH) \
   '-d' './'$(GATBPS_SOURCEPATH) \
   '-sourcepath' './'$(GATBPS_SOURCEPATH)':'$(srcdir)'/'$(GATBPS_SOURCEPATH) \
   $(GATBPS_JAVACFLAGS) \
