@@ -47,7 +47,7 @@ $(java_dst): $(java_src_extra)
     $(java_src_inner) \
   ; do \
     $(JAR) "$${flags}" \
-      $(java_dst)'.tmp/x.jar' \
+      './'$(java_dst)'.tmp/x.jar' \
       './'"$${x}" \
     || 'exit' "$${?}"; \
     flags='uf'; \
@@ -59,9 +59,9 @@ $(java_dst): $(java_src_extra)
   && $(JAR) 'xf' '../x.jar' \
 ;
 	$(AM_V_at)$(JAR) 'cf' \
-  $(java_dst) \
+  './'$(java_dst) \
   '-C' \
-  $(java_dst)'.tmp/x/'$(java_sourcepath) \
+  './'$(java_dst)'.tmp/x/'$(java_sourcepath) \
   '.' \
 ;
 	$(AM_V_at)-'rm' '-f' '-r' \

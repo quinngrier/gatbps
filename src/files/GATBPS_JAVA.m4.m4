@@ -40,7 +40,7 @@ $[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_src_extra)
     $[](java_[]gatbps_x2[]_src_inner) \
   ; do \
     $[](JAR) "$[]$[]{flags}" \
-      $[](java_[]gatbps_x2[]_dst)'\''.tmp/x.jar'\'' \
+      '\''./'\''$[](java_[]gatbps_x2[]_dst)'\''.tmp/x.jar'\'' \
       '\''./'\''"$[]$[]{x}" \
     || '\''exit'\'' "$[]$[]{?}"; \
     flags='\''uf'\''; \
@@ -52,9 +52,9 @@ $[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_src_extra)
   && $[](JAR) '\''xf'\'' '\''../x.jar'\'' \
 ;
 	$[](AM@&t@_V_at)$[](JAR) '\''cf'\'' \
-  $[](java_[]gatbps_x2[]_dst) \
+  '\''./'\''$[](java_[]gatbps_x2[]_dst) \
   '\''-C'\'' \
-  $[](java_[]gatbps_x2[]_dst)'\''.tmp/x/'\''$[](java_[]gatbps_x2[]_sourcepath) \
+  '\''./'\''$[](java_[]gatbps_x2[]_dst)'\''.tmp/x/'\''$[](java_[]gatbps_x2[]_sourcepath) \
   '\''.'\'' \
 ;
 	$[](AM@&t@_V_at)-'\''rm'\'' '\''-f'\'' '\''-r'\'' \
