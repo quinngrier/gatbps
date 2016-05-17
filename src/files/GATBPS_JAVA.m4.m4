@@ -74,7 +74,7 @@ clean-java-gatbps_x1:
 
 clean-local: clean-java-gatbps_x1
 
-install-all-java: install-java-gatbps_x1
+install-java: install-java-gatbps_x1
 
 install-java-gatbps_x1:
 	$[](MAKE) \
@@ -103,7 +103,7 @@ gatbps-install-java-gatbps_x1: $[](java_[]gatbps_x2[]_dst)
   exit 0; \
 }
 
-uninstall-all-java: uninstall-java-gatbps_x1
+uninstall-java: uninstall-java-gatbps_x1
 
 uninstall-java-gatbps_x1:
 	@$[](NORMAL_UNINSTALL)

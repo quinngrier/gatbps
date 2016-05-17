@@ -75,12 +75,12 @@ $(java_dst): $(java_src_extra)
   './'$(java_dst)'.tmp' \
 ;
 
-.PHONY: all-java
+.PHONY: java
 .PHONY: clean-first-java
-.PHONY: install-all-java
+.PHONY: install-java
 .PHONY: install-first-java
 .PHONY: first-java
-.PHONY: uninstall-all-java
+.PHONY: uninstall-java
 .PHONY: uninstall-first-java
 
 .java.class:
@@ -93,7 +93,7 @@ $(java_dst): $(java_src_extra)
   $< \
 ;
 
-all-java: first-java
+java: first-java
 
 clean-first-java:
 	-rm -f $(java_dst)
@@ -121,7 +121,7 @@ gatbps-install-first-java: $(java_dst)
   exit 0; \
 }
 
-install-all-java: install-first-java
+install-java: install-first-java
 
 install-first-java:
 	$(MAKE) \
@@ -137,7 +137,7 @@ first-java:
   $(java_dst) \
 ;
 
-uninstall-all-java: uninstall-first-java
+uninstall-java: uninstall-first-java
 
 uninstall-first-java:
 	@$(NORMAL_UNINSTALL)
