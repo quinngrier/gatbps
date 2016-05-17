@@ -68,6 +68,12 @@ m4_foreach_w(
   '\''./'\''$[](java_[]gatbps_x2[]_dst)'\''.tmp'\'' \
 ;
 
+.PHONY: clean-java-gatbps_x1
+.PHONY: gatbps-install-java-gatbps_x1
+.PHONY: install-java-gatbps_x1
+.PHONY: java-gatbps_x1
+.PHONY: uninstall-java-gatbps_x1
+
 clean-java-gatbps_x1:
 	-rm -f $(java_[]gatbps_x2[]_dst)
 	-rm -f $(java_[]gatbps_x2[]_src)
