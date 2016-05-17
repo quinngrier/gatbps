@@ -103,6 +103,15 @@ install-java-gatbps_x1:
   gatbps-install-java-gatbps_x1 \
 ;
 
+java: java-gatbps_x1
+
+java-gatbps_x1:
+	$[](MAKE) \
+  $[](AM_MAKEFLAGS) \
+  GATBPS_SOURCEPATH=$[](java_[]gatbps_x2[]_sourcepath) \
+  $[](java_[]gatbps_x2[]_dst) \
+;
+
 uninstall-java: uninstall-java-gatbps_x1
 
 uninstall-java-gatbps_x1:
