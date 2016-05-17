@@ -74,15 +74,6 @@ clean-java-gatbps_x1:
 
 clean-local: clean-java-gatbps_x1
 
-install-java: install-java-gatbps_x1
-
-install-java-gatbps_x1:
-	$[](MAKE) \
-  $[](AM_MAKEFLAGS) \
-  GATBPS_SOURCEPATH=$[](java_[]gatbps_x2[]_sourcepath) \
-  gatbps-install-java-gatbps_x1 \
-;
-
 gatbps-install-java-gatbps_x1: $[](java_[]gatbps_x2[]_dst)
 	@$[](NORMAL_INSTALL)
 	@-'\'':'\'' #(
@@ -102,6 +93,15 @@ gatbps-install-java-gatbps_x1: $[](java_[]gatbps_x2[]_dst)
   esac; \
   exit 0; \
 }
+
+install-java: install-java-gatbps_x1
+
+install-java-gatbps_x1:
+	$[](MAKE) \
+  $[](AM_MAKEFLAGS) \
+  GATBPS_SOURCEPATH=$[](java_[]gatbps_x2[]_sourcepath) \
+  gatbps-install-java-gatbps_x1 \
+;
 
 uninstall-java: uninstall-java-gatbps_x1
 
