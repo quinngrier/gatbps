@@ -77,6 +77,7 @@ GATBPS_V_JAVAC_1 =
 
 .PHONY: clean-first-java
 .PHONY: first-java
+.PHONY: gatbps-install-first-java
 .PHONY: install-first-java
 .PHONY: install-java
 .PHONY: java
