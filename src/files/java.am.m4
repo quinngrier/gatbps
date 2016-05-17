@@ -102,7 +102,7 @@ GATBPS_V_JAVAC_1 =
 
 clean-first-java:
 	-rm -f $(java_dst)
-	-rm -f $(java_src)
+	-rm -f $(java_src) $(java_src_inner)
 
 clean-local: clean-first-java
 
