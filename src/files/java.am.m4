@@ -31,8 +31,8 @@ GATBPS_V_JAVAC_1 =
 
 ## begin_rules
 
-$(java_dst): $(java_src)
-$(java_dst): $(java_src_extra)
+./$(java_dst): $(java_src)
+./$(java_dst): $(java_src_extra)
 	$(GATBPS_V_JAR)'rm' '-f' '-r' \
   './'$(java_dst)'.tmp' \
 ;
@@ -103,10 +103,10 @@ first-java:
 	$(MAKE) \
   $(AM_MAKEFLAGS) \
   GATBPS_SOURCEPATH=$(java_sourcepath) \
-  $(java_dst) \
+  ./$(java_dst) \
 ;
 
-gatbps-install-first-java: $(java_dst)
+gatbps-install-first-java: ./$(java_dst)
 	@$(NORMAL_INSTALL)
 	@-':' #(
 	@{ ':'; \
