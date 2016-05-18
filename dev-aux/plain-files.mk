@@ -23,6 +23,7 @@ GATBPSFLAGS =
 	$(GATBPS) \
   '--append-path=doc/texi' \
   '--no-unicode' \
+  '--plain' \
   $(GATBPSFLAGS) \
   '--' \
   $@ \
