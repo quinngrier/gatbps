@@ -25,7 +25,7 @@ m4_foreach_w(
 '"$[]{GATBPS_JAVA_RULES}"'
 
 ./$[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_src)
-./$[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_src_extra)
+./$[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_extra)
 	$[](GATBPS_V_JAR)'\''rm'\'' \
   '\''-f'\'' \
   '\''-r'\'' \
@@ -39,7 +39,7 @@ m4_foreach_w(
   flags='\''cf'\''; \
   for x in \
     $[](java_[]gatbps_x2[]_src) \
-    $[](java_[]gatbps_x2[]_src_extra) \
+    $[](java_[]gatbps_x2[]_extra) \
     $[](java_[]gatbps_x2[]_nested) \
   ; do \
     if '\''test'\'' '\''-f'\'' "$[]$[]{x}"; then \
