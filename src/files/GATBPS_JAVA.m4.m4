@@ -127,7 +127,7 @@ java-gatbps_x1:
 	$[](MAKE) \
   $[](AM_MAKEFLAGS) \
   '\''GATBPS_SOURCEPATH='\''$[](java_[]gatbps_x2[]_sourcepath) \
-  ./$[](java_[]gatbps_x2[]_dst) \
+  '\''./'\''$[](java_[]gatbps_x2[]_dst) \
 ;
 
 uninstall-java: uninstall-java-gatbps_x1

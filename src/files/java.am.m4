@@ -120,7 +120,7 @@ first-java:
 	$(MAKE) \
   $(AM_MAKEFLAGS) \
   'GATBPS_SOURCEPATH='$(java_sourcepath) \
-  ./$(java_dst) \
+  './'$(java_dst) \
 ;
 
 gatbps-install-first-java: ./$(java_dst)
