@@ -117,7 +117,7 @@ install-java: install-java-gatbps_x1
 install-java-gatbps_x1:
 	$[](MAKE) \
   $[](AM_MAKEFLAGS) \
-  GATBPS_SOURCEPATH=$[](java_[]gatbps_x2[]_sourcepath) \
+  '\''GATBPS_SOURCEPATH='\''$[](java_[]gatbps_x2[]_sourcepath) \
   gatbps-install-java-gatbps_x1 \
 ;
 
@@ -126,7 +126,7 @@ java: java-gatbps_x1
 java-gatbps_x1:
 	$[](MAKE) \
   $[](AM_MAKEFLAGS) \
-  GATBPS_SOURCEPATH=$[](java_[]gatbps_x2[]_sourcepath) \
+  '\''GATBPS_SOURCEPATH='\''$[](java_[]gatbps_x2[]_sourcepath) \
   ./$[](java_[]gatbps_x2[]_dst) \
 ;
 

@@ -119,7 +119,7 @@ clean-local: clean-first-java
 first-java:
 	$(MAKE) \
   $(AM_MAKEFLAGS) \
-  GATBPS_SOURCEPATH=$(java_sourcepath) \
+  'GATBPS_SOURCEPATH='$(java_sourcepath) \
   ./$(java_dst) \
 ;
 
@@ -146,7 +146,7 @@ gatbps-install-first-java: ./$(java_dst)
 install-first-java:
 	$(MAKE) \
   $(AM_MAKEFLAGS) \
-  GATBPS_SOURCEPATH=$(java_sourcepath) \
+  'GATBPS_SOURCEPATH='$(java_sourcepath) \
   gatbps-install-first-java \
 ;
 
