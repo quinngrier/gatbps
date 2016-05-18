@@ -47,7 +47,7 @@ GATBPS_V_JAVAC_1 =
   for x in \
     $(java_src) \
     $(java_src_extra) \
-    $(java_src_inner) \
+    $(java_nested) \
   ; do \
     if 'test' '-f' "$${x}"; then \
       d='.'; \
@@ -112,7 +112,7 @@ GATBPS_V_JAVAC_1 =
 
 clean-first-java:
 	-rm -f $(java_dst)
-	-rm -f $(java_src) $(java_src_inner)
+	-rm -f $(java_src) $(java_nested)
 
 clean-local: clean-first-java
 

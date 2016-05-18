@@ -40,7 +40,7 @@ m4_foreach_w(
   for x in \
     $[](java_[]gatbps_x2[]_src) \
     $[](java_[]gatbps_x2[]_src_extra) \
-    $[](java_[]gatbps_x2[]_src_inner) \
+    $[](java_[]gatbps_x2[]_nested) \
   ; do \
     if '\''test'\'' '\''-f'\'' "$[]$[]{x}"; then \
       d='\''.'\''; \
@@ -88,7 +88,7 @@ m4_foreach_w(
 
 clean-java-gatbps_x1:
 	-rm -f $[](java_[]gatbps_x2[]_dst)
-	-rm -f $[](java_[]gatbps_x2[]_src) $[](java_[]gatbps_x2[]_src_inner)
+	-rm -f $[](java_[]gatbps_x2[]_src) $[](java_[]gatbps_x2[]_nested)
 
 clean-local: clean-java-gatbps_x1
 
