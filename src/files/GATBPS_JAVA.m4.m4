@@ -26,7 +26,9 @@ m4_foreach_w(
 
 ./$[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_src)
 ./$[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_src_extra)
-	$[](GATBPS_V_JAR)'\''rm'\'' '\''-f'\'' '\''-r'\'' \
+	$[](GATBPS_V_JAR)'\''rm'\'' \
+  '\''-f'\'' \
+  '\''-r'\'' \
   '\''./'\''$[](java_[]gatbps_x2[]_dst)'\''.tmp'\'' \
 ;
 	$[](AM@&t@_V_at)$[](MKDIR_P) \
@@ -50,7 +52,8 @@ m4_foreach_w(
         ;; \
       esac; \
     fi; \
-    $[](JAR) "$[]$[]{flags}" \
+    $[](JAR) \
+      "$[]$[]{flags}" \
       '\''./'\''$[](java_[]gatbps_x2[]_dst)'\''.tmp/x.jar'\'' \
       '\''-C'\'' \
       "$[]$[]{d}" \
@@ -64,13 +67,16 @@ m4_foreach_w(
   '\''./'\''$[](java_[]gatbps_x2[]_dst)'\''.tmp/x'\'' \
   && $[](JAR) '\''xf'\'' '\''../x.jar'\'' \
 ;
-	$[](AM@&t@_V_at)$[](JAR) '\''cf'\'' \
+	$[](AM@&t@_V_at)$[](JAR) \
+  '\''cf'\'' \
   '\''./'\''$[](java_[]gatbps_x2[]_dst) \
   '\''-C'\'' \
   '\''./'\''$[](java_[]gatbps_x2[]_dst)'\''.tmp/x/'\''$[](GATBPS_SOURCEPATH) \
   '\''.'\'' \
 ;
-	$[](AM@&t@_V_at)-'\''rm'\'' '\''-f'\'' '\''-r'\'' \
+	$[](AM@&t@_V_at)-'\''rm'\'' \
+  '\''-f'\'' \
+  '\''-r'\'' \
   '\''./'\''$[](java_[]gatbps_x2[]_dst)'\''.tmp'\'' \
 ;
 
