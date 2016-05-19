@@ -100,7 +100,7 @@ GATBPS_V_JAVAC_1 =
 	$(GATBPS_V_JAVAC)$(MKDIR_P) './'$(GATBPS_SOURCEPATH)
 	$(AM_V_at)$(JAVAC) \
   '-classpath' \
-  './'$(GATBPS_SOURCEPATH)':'$(srcdir)'/'$(GATBPS_SOURCEPATH) \
+  './'$(GATBPS_SOURCEPATH)':'$(srcdir)'/'$(GATBPS_SOURCEPATH)':'$(CLASSPATH)':'$(GATBPS_CLASSPATH) \
   '-d' \
   './'$(GATBPS_SOURCEPATH) \
   '-sourcepath' \
@@ -119,6 +119,7 @@ clean-local: clean-first-java
 first-java:
 	$(MAKE) \
   $(AM_MAKEFLAGS) \
+  'GATBPS_CLASSPATH='$(java_CLASSPATH) \
   'GATBPS_SOURCEPATH='$(java_sourcepath) \
   './'$(java_dst) \
 ;
@@ -146,6 +147,7 @@ gatbps-install-first-java: ./$(java_dst)
 install-first-java:
 	$(MAKE) \
   $(AM_MAKEFLAGS) \
+  'GATBPS_CLASSPATH='$(java_CLASSPATH) \
   'GATBPS_SOURCEPATH='$(java_sourcepath) \
   gatbps-install-first-java \
 ;
