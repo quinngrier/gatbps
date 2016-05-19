@@ -10,14 +10,14 @@ header_comment({%|##|%}, {%|##|%}){%|
 ##
 
 ##
-## The GATBPS_CONFIG_FILE_RULES output variable has phony targets that
-## are added as prerequisites for distclean-local, but some versions of
-## Automake only add distclean-local as a prerequisite for distclean if
-## distclean-local appears in Makefile.am. However, Automake cannot see
-## distclean-local inside the GATBPS_CONFIG_FILE_RULES output variable
-## because substitution occurs after Automake runs. The following line
-## solves this problem. It ensures that Automake sees distclean-local
-## and otherwise has no effect.
+## The GATBPS_CONFIG_FILE_RULES output variable adds prerequisites to
+## the distclean-local target, but Automake cannot see this because it
+## runs before output variable substitution. If the distclean-local
+## target does not happen to appear elsewhere, then some versions of
+## Automake will omit it as a prerequisite for the distclean target,
+## incorrectly disconnecting the new prerequisites. The following line
+## solves this problem, ensuring that Automake sees the distclean-local
+## target but otherwise having no effect on the meaning of the makefile.
 ##
 
 distclean-local:
