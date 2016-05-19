@@ -98,17 +98,31 @@ GATBPS_V_JAVAC_1 =
 
 .java.class:
 	$(GATBPS_V_JAVAC)$(MKDIR_P) './'$(GATBPS_SOURCEPATH)
-	$(AM_V_at)$(JAVAC) \
-  '-classpath' \
-  './'$(GATBPS_SOURCEPATH)':'$(srcdir)'/'$(GATBPS_SOURCEPATH)':'$(CLASSPATH)':'$(GATBPS_CLASSPATH) \
-  '-d' \
-  './'$(GATBPS_SOURCEPATH) \
-  '-sourcepath' \
-  './'$(GATBPS_SOURCEPATH)':'$(srcdir)'/'$(GATBPS_SOURCEPATH) \
-  $(GATBPS_JAVACFLAGS) \
-  $(JAVACFLAGS) \
-  $< \
-;
+	$(AM_V_at){ ':'; \
+  x=''; \
+  case ''$(CLASSPATH) in \
+    ?*) \
+      x="$${x}"':'$(CLASSPATH); \
+    ;; \
+  esac; \
+  case ''$(GATBPS_CLASSPATH) in \
+    ?*) \
+      x="$${x}"':'$(GATBPS_CLASSPATH); \
+    ;; \
+  esac; \
+  $(JAVAC) \
+    '-classpath' \
+    './'$(GATBPS_SOURCEPATH)':'$(srcdir)'/'$(GATBPS_SOURCEPATH)"$${x}" \
+    '-d' \
+    './'$(GATBPS_SOURCEPATH) \
+    '-sourcepath' \
+    './'$(GATBPS_SOURCEPATH)':'$(srcdir)'/'$(GATBPS_SOURCEPATH) \
+    $(GATBPS_JAVACFLAGS) \
+    $(JAVACFLAGS) \
+    $< \
+  || 'exit' "$${?}"; \
+  'exit' '0'; \
+}
 
 clean-first-java:
 	-rm -f $(java_dst)
