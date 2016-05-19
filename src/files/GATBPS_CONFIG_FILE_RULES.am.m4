@@ -9,6 +9,8 @@ header_comment({%|##|%}, {%|##|%}){%|
 ## For more information, see the GATBPS manual.
 ##
 
+@GATBPS_CONFIG_FILE_RULES@
+
 ##
 ## The GATBPS_CONFIG_FILE_RULES output variable adds prerequisites to
 ## the distclean-local target, but Automake cannot see this because it
@@ -21,8 +23,6 @@ header_comment({%|##|%}, {%|##|%}){%|
 ##
 
 distclean-local:
-
-@GATBPS_CONFIG_FILE_RULES@
 
 |%}footer_comment({%|##|%}, {%|##|%}, {%|##|%})dnl
 dnl
