@@ -31,8 +31,8 @@ GATBPS_V_JAVAC_1 =
 
 ## begin_rules
 
-./$(java_dst): $(java_src)
 ./$(java_dst): $(java_extra)
+./$(java_dst): $(java_src)
 	$(GATBPS_V_JAR)'rm' \
   '-f' \
   '-r' \
@@ -45,9 +45,9 @@ GATBPS_V_JAVAC_1 =
 	$(AM_V_at){ ':'; \
   f='cf'; \
   for x in \
-    $(java_src) \
     $(java_extra) \
     $(java_nested) \
+    $(java_src) \
   ; do \
     if 'test' '-f' "$${x}"; then \
       d='.'; \
