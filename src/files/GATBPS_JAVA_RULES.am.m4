@@ -9,6 +9,8 @@ header_comment({%|##|%}, {%|##|%}){%|
 ## For more information, see the GATBPS manual.
 ##
 
+@GATBPS_JAVA_RULES@
+
 ##
 ## The GATBPS_JAVA_RULES output variable adds prerequisites to the
 ## clean-local target, but Automake cannot see this because it runs
@@ -21,8 +23,6 @@ header_comment({%|##|%}, {%|##|%}){%|
 ##
 
 clean-local:
-
-@GATBPS_JAVA_RULES@
 
 |%}footer_comment({%|##|%}, {%|##|%}, {%|##|%})dnl
 dnl
