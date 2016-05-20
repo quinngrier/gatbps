@@ -116,12 +116,48 @@ install-java-gatbps_x1: java-gatbps_x1
 java: java-gatbps_x1
 
 java-gatbps_x1:
-	$[](MAKE) \
-  $[](AM_MAKEFLAGS) \
-  '\''GATBPS_CLASSPATH='\''$[](java_[]gatbps_x2[]_CLASSPATH) \
-  '\''GATBPS_SOURCEPATH='\''$[](java_[]gatbps_x2[]_sourcepath) \
-  '\''./'\''$[](java_[]gatbps_x2[]_dst) \
+	$[](MKDIR_P) '\''build-aux'\''
+	'\''cat'\'' \
+  <$[](srcdir)'\''/build-aux/sh-form.sh'\'' \
+  >'\''build-aux/sh-form.sh.copy'\'' \
 ;
+	{ '\'':'\''; \
+  x='\'''\''; \
+  x="$[]$[]{x}"'\''classpath=`'\''\'\'''\''sh'\''\'\'''\'''\''; \
+  x="$[]$[]{x}"'\'' '\''\'\'''\'''\''; \
+  x="$[]$[]{x}"'\''build-aux/sh-form.sh.copy'\''; \
+  x="$[]$[]{x}"'\'''\''\'\'''\'' '\''; \
+  x="$[]$[]{x}"'\''<<'\''\'\'''\''EOF'\''\'\'''\'''\''; \
+  x="$[]$[]{x}"`'\''awk'\'' \
+    '\''BEGIN { print "\\n./" }'\'' \
+    <'\''/dev/null'\'' \
+  ` || '\''exit'\'' "$[]$[]{?}"; \
+  x="$[]$[]{x}"$[](java_[]gatbps_x2[]_sourcepath); \
+  x="$[]$[]{x}"'\'':'\''$[](srcdir)'\''/'\''$[](java_[]gatbps_x2[]_sourcepath); \
+  case '\'''\''$[](CLASSPATH) in \
+    ?*) \
+      x="$[]$[]{x}"'\'':'\''$[](CLASSPATH); \
+    ;; \
+  esac; \
+  case '\'''\''$[](java_[]gatbps_x2[]_CLASSPATH) in \
+    ?*) \
+      x="$[]$[]{x}"'\'':'\''$[](java_[]gatbps_x2[]_CLASSPATH); \
+    ;; \
+  esac; \
+  x="$[]$[]{x}"`'\''awk'\'' \
+    '\''BEGIN { print "\\nEOF\\n " }'\'' \
+    <'\''/dev/null'\'' \
+  ` || '\''exit'\'' "$[]$[]{?}"; \
+  x="$[]$[]{x}"'\''`'\''; \
+  '\''eval'\'' "$[]$[]{x}" || '\''exit'\'' "$[]$[]{?}"; \
+  $[](MAKE) \
+    $[](AM_MAKEFLAGS) \
+    '\''GATBPS_CLASSPATH='\''"$[]$[]{classpath}" \
+    '\''GATBPS_SOURCEPATH='\''$[](java_[]gatbps_x2[]_sourcepath) \
+    '\''./'\''$[](java_[]gatbps_x2[]_dst) \
+  || '\''exit'\'' "$[]$[]{?}"; \
+  '\''exit'\'' '\''0'\''; \
+}
 
 uninstall-java: uninstall-java-gatbps_x1
 

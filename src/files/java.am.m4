@@ -98,20 +98,9 @@ GATBPS_V_JAVAC_1 =
 .java.class:
 	$(GATBPS_V_JAVAC)$(MKDIR_P) './'$(GATBPS_SOURCEPATH)
 	$(AM_V_at){ ':'; \
-  x=''; \
-  case ''$(CLASSPATH) in \
-    ?*) \
-      x="$${x}"':'$(CLASSPATH); \
-    ;; \
-  esac; \
-  case ''$(GATBPS_CLASSPATH) in \
-    ?*) \
-      x="$${x}"':'$(GATBPS_CLASSPATH); \
-    ;; \
-  esac; \
   $(JAVAC) \
     '-classpath' \
-    './'$(GATBPS_SOURCEPATH)':'$(srcdir)'/'$(GATBPS_SOURCEPATH)"$${x}" \
+    $(GATBPS_CLASSPATH) \
     '-d' \
     './'$(GATBPS_SOURCEPATH) \
     '-sourcepath' \
@@ -130,12 +119,48 @@ clean-first-java:
 clean-local: clean-first-java
 
 first-java:
-	$(MAKE) \
-  $(AM_MAKEFLAGS) \
-  'GATBPS_CLASSPATH='$(java_CLASSPATH) \
-  'GATBPS_SOURCEPATH='$(java_sourcepath) \
-  './'$(java_dst) \
+	$(MKDIR_P) 'build-aux'
+	'cat' \
+  <$(srcdir)'/build-aux/sh-form.sh' \
+  >'build-aux/sh-form.sh.copy' \
 ;
+	{ ':'; \
+  x=''; \
+  x="$${x}"'classpath=`'\''sh'\'''; \
+  x="$${x}"' '\'''; \
+  x="$${x}"'build-aux/sh-form.sh.copy'; \
+  x="$${x}"''\'' '; \
+  x="$${x}"'<<'\''EOF'\'''; \
+  x="$${x}"`'awk' \
+    'BEGIN { print "\\n./" }' \
+    <'/dev/null' \
+  ` || 'exit' "$${?}"; \
+  x="$${x}"$(java_sourcepath); \
+  x="$${x}"':'$(srcdir)'/'$(java_sourcepath); \
+  case ''$(CLASSPATH) in \
+    ?*) \
+      x="$${x}"':'$(CLASSPATH); \
+    ;; \
+  esac; \
+  case ''$(java_CLASSPATH) in \
+    ?*) \
+      x="$${x}"':'$(java_CLASSPATH); \
+    ;; \
+  esac; \
+  x="$${x}"`'awk' \
+    'BEGIN { print "\\nEOF\\n " }' \
+    <'/dev/null' \
+  ` || 'exit' "$${?}"; \
+  x="$${x}"'`'; \
+  'eval' "$${x}" || 'exit' "$${?}"; \
+  $(MAKE) \
+    $(AM_MAKEFLAGS) \
+    'GATBPS_CLASSPATH='"$${classpath}" \
+    'GATBPS_SOURCEPATH='$(java_sourcepath) \
+    './'$(java_dst) \
+  || 'exit' "$${?}"; \
+  'exit' '0'; \
+}
 
 install-first-java: first-java
 	@$(NORMAL_INSTALL)
