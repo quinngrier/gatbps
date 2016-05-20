@@ -116,11 +116,6 @@ install-java-gatbps_x1: java-gatbps_x1
 java: java-gatbps_x1
 
 java-gatbps_x1:
-	$[](MKDIR_P) '\''build-aux'\''
-	'\''cat'\'' \
-  <$[](srcdir)'\''/build-aux/sh-form.sh'\'' \
-  >'\''build-aux/sh-form.sh.copy'\'' \
-;
 	{ '\'':'\''; \
   x='\'''\''; \
   x="$[]$[]{x}"'\''./'\''$[](java_[]gatbps_x2[]_sourcepath); \
@@ -142,22 +137,13 @@ java-gatbps_x1:
   || '\''exit'\'' "$[]$[]{?}"; \
   classpath=`'\''cat'\'' '\''tmpfile'\''` || '\''exit'\'' "$[]$[]{?}"; \
   x='\'''\''; \
-  x="$[]$[]{x}"'\''sourcepath=`'\''\'\'''\''sh'\''\'\'''\'''\''; \
-  x="$[]$[]{x}"'\'' '\''\'\'''\'''\''; \
-  x="$[]$[]{x}"'\''build-aux/sh-form.sh.copy'\''; \
-  x="$[]$[]{x}"'\'''\''\'\'''\'' '\''; \
-  x="$[]$[]{x}"'\''<<'\''\'\'''\''EOF'\''\'\'''\'''\''; \
-  x="$[]$[]{x}"`'\''awk'\'' \
-    '\''BEGIN { print "\\n./" }'\'' \
-    <'\''/dev/null'\'' \
-  ` || '\''exit'\'' "$[]$[]{?}"; \
-  x="$[]$[]{x}"$[](java_[]gatbps_x2[]_sourcepath); \
-  x="$[]$[]{x}"`'\''awk'\'' \
-    '\''BEGIN { print "\\nEOF\\n " }'\'' \
-    <'\''/dev/null'\'' \
-  ` || '\''exit'\'' "$[]$[]{?}"; \
-  x="$[]$[]{x}"'\''`'\''; \
-  '\''eval'\'' "$[]$[]{x}" || '\''exit'\'' "$[]$[]{?}"; \
+  x="$[]$[]{x}"'\''./'\''$[](java_[]gatbps_x2[]_sourcepath); \
+  $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
+    '\''--'\'' \
+    "$[]$[]{x}" \
+    >'\''tmpfile'\'' \
+  || '\''exit'\'' "$[]$[]{?}"; \
+  sourcepath=`'\''cat'\'' '\''tmpfile'\''` || '\''exit'\'' "$[]$[]{?}"; \
   $[](MAKE) \
     $[](AM_MAKEFLAGS) \
     '\''GATBPS_CLASSPATH='\''"$[]$[]{classpath}" \
