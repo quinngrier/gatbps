@@ -127,6 +127,7 @@ bin_gatbps_src += src/files/pdf-dist.am.m4
 bin_gatbps_src += src/files/plaintext-dist.am.m4
 bin_gatbps_src += src/files/plaintext.am.m4
 bin_gatbps_src += src/files/ps-dist.am.m4
+bin_gatbps_src += src/files/sh-form.sh.m4
 bin_gatbps_src += src/files/texinfo.css.m4
 bin_gatbps_src += src/tools/footer_comment.m4
 bin_gatbps_src += src/tools/generation_code.m4
