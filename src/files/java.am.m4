@@ -89,7 +89,6 @@ GATBPS_V_JAVAC_1 =
 
 .PHONY: clean-first-java
 .PHONY: first-java
-.PHONY: gatbps-install-first-java
 .PHONY: install-first-java
 .PHONY: install-java
 .PHONY: java
@@ -138,7 +137,7 @@ first-java:
   './'$(java_dst) \
 ;
 
-gatbps-install-first-java: ./$(java_dst)
+install-first-java: first-java
 	@$(NORMAL_INSTALL)
 	@-':' #(
 	@{ ':'; \
@@ -157,14 +156,6 @@ gatbps-install-first-java: ./$(java_dst)
   esac; \
   exit 0; \
 }
-
-install-first-java:
-	$(MAKE) \
-  $(AM_MAKEFLAGS) \
-  'GATBPS_CLASSPATH='$(java_CLASSPATH) \
-  'GATBPS_SOURCEPATH='$(java_sourcepath) \
-  gatbps-install-first-java \
-;
 
 install-java: install-first-java
 
