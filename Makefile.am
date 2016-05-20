@@ -83,6 +83,7 @@ bin_gatbps_src += doc/help/pdf-dist.am.hd.m4
 bin_gatbps_src += doc/help/plaintext-dist.am.hd.m4
 bin_gatbps_src += doc/help/plaintext.am.hd.m4
 bin_gatbps_src += doc/help/ps-dist.am.hd.m4
+bin_gatbps_src += doc/help/sh-form.sh.hd.m4
 bin_gatbps_src += doc/help/texinfo.css.hd.m4
 bin_gatbps_src += doc/man/gatbps.1.m4
 bin_gatbps_src += src/files/CC0-1.0-appendix.texi.m4

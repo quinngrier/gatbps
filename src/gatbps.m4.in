@@ -2234,32 +2234,7 @@ EOF1
               esac
             ;;
 
-          #(
-            '--help=sh-form.sh'|'--help='*'/sh-form.sh')
-              cat <<EOF1
-Special file: ${fB1}sh-form.sh${fR1}
-
-The ${fB1}sh-form.sh${fR1} special file is a portable shell script that formats its
-input as a shell string literal.
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-              #(
-                '0')
-                  :
-                ;;
-              #(
-                *)
-                  cat >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  exit '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|sh-form.sh|%}){%|
 
           #(
             '--help=shortcontents.texi'|'--help='*'/shortcontents.texi')
