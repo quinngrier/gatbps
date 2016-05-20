@@ -8669,6 +8669,12 @@ EOF1
 |%}){%|
 
 |%}recursion_code(
+  {%|sh-form.sh|%},
+  {%|
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
+|%}){%|
+
+|%}recursion_code(
   {%|shortcontents.texi|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
