@@ -139,6 +139,12 @@ first-java:
     >'tmpfile' \
   || 'exit' "$${?}"; \
   classpath=`'cat' 'tmpfile'` || 'exit' "$${?}"; \
+  $(srcdir)'/build-aux/sh-form.sh' \
+    '--' \
+    $(java_JAVACFLAGS) \
+    >'tmpfile' \
+  || 'exit' "$${?}"; \
+  javacflags=`'cat' 'tmpfile'` || 'exit' "$${?}"; \
   x=''; \
   x="$${x}"'./'$(java_sourcepath); \
   $(srcdir)'/build-aux/sh-form.sh' \
@@ -150,6 +156,7 @@ first-java:
   $(MAKE) \
     $(AM_MAKEFLAGS) \
     'GATBPS_CLASSPATH='"$${classpath}" \
+    'GATBPS_JAVACFLAGS='"$${javacflags}" \
     'GATBPS_SOURCEPATH='"$${sourcepath}" \
     './'$(java_dst) \
   || 'exit' "$${?}"; \
