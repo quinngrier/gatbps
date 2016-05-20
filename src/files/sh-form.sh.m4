@@ -1011,6 +1011,8 @@ EOF2
   ;;
 esac
 
+'exit' '0'
+
 s=`
 cat
 case "${?}" in
