@@ -96,15 +96,15 @@ GATBPS_V_JAVAC_1 =
 .PHONY: uninstall-java
 
 .java.class:
-	$(GATBPS_V_JAVAC)$(MKDIR_P) './'$(GATBPS_SOURCEPATH)
+	$(GATBPS_V_JAVAC)$(MKDIR_P) $(GATBPS_SOURCEPATH)
 	$(AM_V_at){ ':'; \
   $(JAVAC) \
     '-classpath' \
     $(GATBPS_CLASSPATH) \
     '-d' \
-    './'$(GATBPS_SOURCEPATH) \
+    $(GATBPS_SOURCEPATH) \
     '-sourcepath' \
-    './'$(GATBPS_SOURCEPATH)':'$(srcdir)'/'$(GATBPS_SOURCEPATH) \
+    $(GATBPS_SOURCEPATH)':'$(srcdir)'/'$(GATBPS_SOURCEPATH) \
     $(GATBPS_JAVACFLAGS) \
     $(JAVACFLAGS) \
     $< \
@@ -153,10 +153,27 @@ first-java:
   ` || 'exit' "$${?}"; \
   x="$${x}"'`'; \
   'eval' "$${x}" || 'exit' "$${?}"; \
+  x=''; \
+  x="$${x}"'sourcepath=`'\''sh'\'''; \
+  x="$${x}"' '\'''; \
+  x="$${x}"'build-aux/sh-form.sh.copy'; \
+  x="$${x}"''\'' '; \
+  x="$${x}"'<<'\''EOF'\'''; \
+  x="$${x}"`'awk' \
+    'BEGIN { print "\\n./" }' \
+    <'/dev/null' \
+  ` || 'exit' "$${?}"; \
+  x="$${x}"$(java_sourcepath); \
+  x="$${x}"`'awk' \
+    'BEGIN { print "\\nEOF\\n " }' \
+    <'/dev/null' \
+  ` || 'exit' "$${?}"; \
+  x="$${x}"'`'; \
+  'eval' "$${x}" || 'exit' "$${?}"; \
   $(MAKE) \
     $(AM_MAKEFLAGS) \
     'GATBPS_CLASSPATH='"$${classpath}" \
-    'GATBPS_SOURCEPATH='$(java_sourcepath) \
+    'GATBPS_SOURCEPATH='"$${sourcepath}" \
     './'$(java_dst) \
   || 'exit' "$${?}"; \
   'exit' '0'; \
