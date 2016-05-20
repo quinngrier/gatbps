@@ -126,16 +126,7 @@ first-java:
 ;
 	{ ':'; \
   x=''; \
-  x="$${x}"'classpath=`'\''sh'\'''; \
-  x="$${x}"' '\'''; \
-  x="$${x}"'build-aux/sh-form.sh.copy'; \
-  x="$${x}"''\'' '; \
-  x="$${x}"'<<'\''EOF'\'''; \
-  x="$${x}"`'awk' \
-    'BEGIN { print "\\n./" }' \
-    <'/dev/null' \
-  ` || 'exit' "$${?}"; \
-  x="$${x}"$(java_sourcepath); \
+  x="$${x}"'./'$(java_sourcepath); \
   x="$${x}"':'$(srcdir)'/'$(java_sourcepath); \
   case ''$(CLASSPATH) in \
     ?*) \
@@ -147,12 +138,12 @@ first-java:
       x="$${x}"':'$(java_CLASSPATH); \
     ;; \
   esac; \
-  x="$${x}"`'awk' \
-    'BEGIN { print "\\nEOF\\n " }' \
-    <'/dev/null' \
-  ` || 'exit' "$${?}"; \
-  x="$${x}"'`'; \
-  'eval' "$${x}" || 'exit' "$${?}"; \
+  $(srcdir)'/build-aux/sh-form.sh' \
+    '--' \
+    "$${x}" \
+    >'tmpfile' \
+  || 'exit' "$${?}"; \
+  classpath=`'cat' 'tmpfile'` || 'exit' "$${?}"; \
   x=''; \
   x="$${x}"'sourcepath=`'\''sh'\'''; \
   x="$${x}"' '\'''; \
