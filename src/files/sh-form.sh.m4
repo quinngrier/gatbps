@@ -311,6 +311,9 @@ esac
 
 keep='no'
 
+first_item='yes'
+the_output=''
+
 set 'x' "${@}"
 
 while :; do
@@ -945,13 +948,68 @@ EOF2
     ;;
   esac
 
-  cat >&2 <<EOF2
-${fr2}sh-form.sh!${fR2} there must be no operands
-${fr2}sh-form.sh!${fR2} try ${fB2}sh sh-form.sh --help${fR2} for more information
+  case "${first_item}" in
+  #(
+    'no')
+      the_output="${the_output}"' '
+    ;;
+  esac
+
+  the_output="${the_output}"`"${sed}" "
+s/'/'\\\\\\\\''/g
+1s/^/'/
+\\$s/\\$/'/
+" <<EOF2
+${1}
 EOF2
-  exit '1'
+`
+  case "${?}" in
+  #(
+    '0')
+      :
+    ;;
+  #(
+    *)
+      cat >&2 <<EOF2
+${fr2}sh-form.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
+${fr2}sh-form.sh!${fR2}   1. a here-document
+${fr2}sh-form.sh!${fR2} and writing to: a command substitution
+EOF2
+      exit '1'
+    ;;
+  esac
+
+  first_item='no'
 
 done
+
+case "${first_item}" in
+#(
+  'no')
+
+    'cat' <<EOF2
+${the_output}
+EOF2
+  case "${?}" in
+  #(
+    '0')
+      :
+    ;;
+  #(
+    *)
+      cat >&2 <<EOF2
+${fr2}sh-form.sh!${fR2} ${fB2}cat${fR2} failed while reading from:
+${fr2}sh-form.sh!${fR2}   1. a here-document
+${fr2}sh-form.sh!${fR2} and writing to: standard output
+EOF2
+      exit '1'
+    ;;
+  esac
+
+    'exit' '0'
+
+  ;;
+esac
 
 s=`
 cat
