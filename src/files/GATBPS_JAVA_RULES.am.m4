@@ -12,14 +12,14 @@ header_comment({%|##|%}, {%|##|%}){%|
 @GATBPS_JAVA_RULES@
 
 ##
-## The GATBPS_JAVA_RULES output variable adds prerequisites to the
-## clean-local target, but Automake cannot see this because it runs
+## The GATBPS_JAVA_RULES output variable adds new prerequisites to the
+## clean-local target, but Automake cannot see them because it runs
 ## before output variable substitution. If the clean-local target does
 ## not happen to appear elsewhere, then some versions of Automake will
-## omit it as a prerequisite for the clean target, incorrectly
-## disconnecting the new prerequisites. The following line solves this
-## problem, ensuring that Automake sees the clean-local target but
-## otherwise having no effect on the meaning of the makefile.
+## not add it as a prerequisite to the clean target, disconnecting the
+## new prerequisites. The following line solves this problem, ensuring
+## that Automake sees the clean-local target but otherwise having no
+## effect on the meaning of the makefile.
 ##
 
 clean-local:
