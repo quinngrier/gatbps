@@ -81,7 +81,6 @@ m4_foreach_w(
 ;
 
 .PHONY: clean-java-gatbps_x1
-.PHONY: gatbps-install-java-gatbps_x1
 .PHONY: install-java-gatbps_x1
 .PHONY: java-gatbps_x1
 .PHONY: uninstall-java-gatbps_x1
@@ -92,7 +91,9 @@ clean-java-gatbps_x1:
 
 clean-local: clean-java-gatbps_x1
 
-gatbps-install-java-gatbps_x1: ./$[](java_[]gatbps_x2[]_dst)
+install-java: install-java-gatbps_x1
+
+install-java-gatbps_x1: java-gatbps_x1
 	@$[](NORMAL_INSTALL)
 	@-'\'':'\'' #(
 	@{ '\'':'\''; \
@@ -111,16 +112,6 @@ gatbps-install-java-gatbps_x1: ./$[](java_[]gatbps_x2[]_dst)
   esac; \
   exit 0; \
 }
-
-install-java: install-java-gatbps_x1
-
-install-java-gatbps_x1:
-	$[](MAKE) \
-  $[](AM_MAKEFLAGS) \
-  '\''GATBPS_CLASSPATH='\''$[](java_[]gatbps_x2[]_CLASSPATH) \
-  '\''GATBPS_SOURCEPATH='\''$[](java_[]gatbps_x2[]_sourcepath) \
-  gatbps-install-java-gatbps_x1 \
-;
 
 java: java-gatbps_x1
 
