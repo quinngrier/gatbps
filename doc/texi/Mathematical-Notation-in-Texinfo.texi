@@ -23,17 +23,17 @@ For example,
 $x + y$
 @end tex
 @ifnottex
-@w{@i{x}@w{ }+@w{ }@i{y}}
+@w{@i{x} + @i{y}}
 @end ifnottex
 can be written as follows:
 
 @example
 @@tex
-$x@w{ }+@w{ }y$
-@@end@w{ }tex
+$x + y$
+@@end tex
 @@ifnottex
-@@i@{x@}@w{ }+@w{ }@@i@{y@}
-@@end@w{ }ifnottex
+@@i@{x@} + @@i@{y@}
+@@end ifnottex
 @end example
 
 @noindent
@@ -351,9 +351,9 @@ $\rightarrow$
 @tmindex @w{@t{@@sbs}}
 @tmindex @w{@t{@@sps}}
 The
-@t{@@sps@{}@i{L}@t{@comma{}@w{ }}@i{S}@t{@comma{}@w{ }}@i{R}@t{@}}
+@t{@@sps@{}@i{L}@t{@comma{} }@i{S}@t{@comma{} }@i{R}@t{@}}
 and
-@t{@@sbs@{}@i{L}@t{@comma{}@w{ }}@i{S}@t{@comma{}@w{ }}@i{R}@t{@}}
+@t{@@sbs@{}@i{L}@t{@comma{} }@i{S}@t{@comma{} }@i{R}@t{@}}
 macros are provided for inserting
 @i{S}
 as a superscript or subscript@.
@@ -412,17 +412,17 @@ in the current output format:
 @end ifinfo
 @ifnotinfo
 in the current output format and
-@t{x^(y@w{ }+@w{ }z_w)}
+@t{x^(y + z_w)}
 in Info and plain text:
 @end ifnotinfo
 
 @example
 @@tex
-$x^@{y@w{ }+@w{ }z_w@}$
-@@end@w{ }tex
+$x^@{y + z_w@}$
+@@end tex
 @@ifnottex
-@@i@{x@}@@sps@{(,@w{ }@@i@{y@}@w{ }+@w{ }@@i@{z@}@@sbs@{,@w{ }@@i@{w@},@w{ }@},@w{ })@}
-@@end@w{ }ifnottex
+@@i@{x@}@@sps@{(, @@i@{y@} + @@i@{z@}@@sbs@{, @@i@{w@}, @}, )@}
+@@end ifnottex
 @end example
 
 In DocBook, HTML, and XML, the
