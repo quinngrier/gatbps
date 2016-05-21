@@ -120,7 +120,8 @@ first-java:
   x=''; \
   x="$${x}"'./'; \
   x="$${x}"$(java_sourcepath); \
-  x="$${x}"':'$(srcdir)'/'$(java_sourcepath); \
+  x="$${x}"':'; \
+  x="$${x}"$(srcdir)'/'$(java_sourcepath); \
   case ''$(CLASSPATH) in \
     ?*) \
       x="$${x}"':'$(CLASSPATH); \
