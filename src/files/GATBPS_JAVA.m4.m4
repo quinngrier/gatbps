@@ -138,13 +138,15 @@ java-gatbps_x1:
     "$[]$[]{x}" \
     >'\''tmpfile'\'' \
   || '\''exit'\'' "$[]$[]{?}"; \
-  classpath=`'\''cat'\'' '\''tmpfile'\''` || '\''exit'\'' "$[]$[]{?}"; \
+  classpath=`'\''cat'\'' '\''tmpfile'\''` \
+  || '\''exit'\'' "$[]$[]{?}"; \
   $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
     '\''--'\'' \
     $[](java_[]gatbps_x2[]_JAVACFLAGS) \
     >'\''tmpfile'\'' \
   || '\''exit'\'' "$[]$[]{?}"; \
-  javacflags=`'\''cat'\'' '\''tmpfile'\''` || '\''exit'\'' "$[]$[]{?}"; \
+  javacflags=`'\''cat'\'' '\''tmpfile'\''` \
+  || '\''exit'\'' "$[]$[]{?}"; \
   x='\'''\''; \
   x="$[]$[]{x}"'\''./'\''$[](java_[]gatbps_x2[]_sourcepath); \
   $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
@@ -152,7 +154,8 @@ java-gatbps_x1:
     "$[]$[]{x}" \
     >'\''tmpfile'\'' \
   || '\''exit'\'' "$[]$[]{?}"; \
-  sourcepath=`'\''cat'\'' '\''tmpfile'\''` || '\''exit'\'' "$[]$[]{?}"; \
+  sourcepath=`'\''cat'\'' '\''tmpfile'\''` \
+  || '\''exit'\'' "$[]$[]{?}"; \
   $[](MAKE) \
     $[](AM_MAKEFLAGS) \
     '\''GATBPS_CLASSPATH='\''"$[]$[]{classpath}" \
