@@ -182,6 +182,9 @@ uninstall-java-gatbps_x1:
 
   }])
 
+AC_SUBST([GATBPS_JAVA_RULES])
+AM_SUBST_NOTMAKE([GATBPS_JAVA_RULES])
+
 }])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
 dnl
