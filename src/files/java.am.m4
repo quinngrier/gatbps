@@ -166,19 +166,26 @@ first-java:
 
 install-first-java: first-java
 	@$(NORMAL_INSTALL)
-	@-':' #(
+	@-':' #(((
 	@{ ':'; \
-  case ''$(javadir) in \
+  case ''$(java_noinst) in \
     ?*) \
-      echo " $(MKDIR_P) '$(DESTDIR)$(javadir)'"; \
-      $(MKDIR_P) $(DESTDIR)$(javadir) || exit $$?; \
-      if test -f $(java_dst); then \
-        x=$(java_dst); \
-      else \
-        x=$(srcdir)/$(java_dst); \
-      fi; \
-      echo " $(INSTALL_DATA) $$x '$(DESTDIR)$(javadir)'"; \
-      $(INSTALL_DATA) $$x $(DESTDIR)$(javadir) || exit $$?; \
+      ':'; \
+    ;; \
+    *) \
+      case ''$(javadir) in \
+        ?*) \
+          echo " $(MKDIR_P) '$(DESTDIR)$(javadir)'"; \
+          $(MKDIR_P) $(DESTDIR)$(javadir) || exit $$?; \
+          if test -f $(java_dst); then \
+            x=$(java_dst); \
+          else \
+            x=$(srcdir)/$(java_dst); \
+          fi; \
+          echo " $(INSTALL_DATA) $$x '$(DESTDIR)$(javadir)'"; \
+          $(INSTALL_DATA) $$x $(DESTDIR)$(javadir) || exit $$?; \
+        ;; \
+      esac; \
     ;; \
   esac; \
   exit 0; \
@@ -190,13 +197,20 @@ java: first-java
 
 uninstall-first-java:
 	@$(NORMAL_UNINSTALL)
-	@-':' #(
+	@-':' #(((
 	@{ ':'; \
-  case ''$(javadir) in \
+  case ''$(java_noinst) in \
     ?*) \
-      x=`expr X/$(java_dst) : 'X.*/\(.*\)'` || exit $$?; \
-      echo " rm -f '$(DESTDIR)$(javadir)/$$x'"; \
-      rm -f $(DESTDIR)$(javadir)/$$x; \
+      ':'; \
+    ;; \
+    *) \
+      case ''$(javadir) in \
+        ?*) \
+          x=`expr X/$(java_dst) : 'X.*/\(.*\)'` || exit $$?; \
+          echo " rm -f '$(DESTDIR)$(javadir)/$$x'"; \
+          rm -f $(DESTDIR)$(javadir)/$$x; \
+        ;; \
+      esac; \
     ;; \
   esac; \
   exit 0; \

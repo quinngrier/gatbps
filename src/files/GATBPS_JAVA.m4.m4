@@ -95,19 +95,26 @@ install-java: install-java-gatbps_x1
 
 install-java-gatbps_x1: java-gatbps_x1
 	@$[](NORMAL_INSTALL)
-	@-'\'':'\'' #(
+	@-'\'':'\'' #(((
 	@{ '\'':'\''; \
-  case '\'''\''$[](javadir) in \
+  case '\'''\''$[](java_[]gatbps_x2[]_noinst) in \
     ?*) \
-      echo " $[](MKDIR_P) '\''$[](DESTDIR)$[](javadir)'\''"; \
-      $[](MKDIR_P) $[](DESTDIR)$[](javadir) || exit $[]$[]?; \
-      if test -f $[](java_[]gatbps_x2[]_dst); then \
-        x=$[](java_[]gatbps_x2[]_dst); \
-      else \
-        x=$[](srcdir)/$[](java_[]gatbps_x2[]_dst); \
-      fi; \
-      echo " $[](INSTALL_DATA) $[]$[]x '\''$[](DESTDIR)$[](javadir)'\''"; \
-      $[](INSTALL_DATA) $[]$[]x $[](DESTDIR)$[](javadir) || exit $[]$[]?; \
+      '\'':'\''; \
+    ;; \
+    *) \
+      case '\'''\''$[](javadir) in \
+        ?*) \
+          echo " $[](MKDIR_P) '\''$[](DESTDIR)$[](javadir)'\''"; \
+          $[](MKDIR_P) $[](DESTDIR)$[](javadir) || exit $[]$[]?; \
+          if test -f $[](java_[]gatbps_x2[]_dst); then \
+            x=$[](java_[]gatbps_x2[]_dst); \
+          else \
+            x=$[](srcdir)/$[](java_[]gatbps_x2[]_dst); \
+          fi; \
+          echo " $[](INSTALL_DATA) $[]$[]x '\''$[](DESTDIR)$[](javadir)'\''"; \
+          $[](INSTALL_DATA) $[]$[]x $[](DESTDIR)$[](javadir) || exit $[]$[]?; \
+        ;; \
+      esac; \
     ;; \
   esac; \
   exit 0; \
@@ -168,13 +175,20 @@ uninstall-java: uninstall-java-gatbps_x1
 
 uninstall-java-gatbps_x1:
 	@$[](NORMAL_UNINSTALL)
-	@-'\'':'\'' #(
+	@-'\'':'\'' #(((
 	@{ '\'':'\''; \
-  case '\'''\''$[](javadir) in \
+  case '\'''\''$[](java_[]gatbps_x2[]_noinst) in \
     ?*) \
-      x=`expr X/$[](java_[]gatbps_x2[]_dst) : '\''X.*/\(.*\)'\''` || exit $[]$[]?; \
-      echo " rm -f '\''$[](DESTDIR)$[](javadir)/$[]$[]x'\''"; \
-      rm -f $[](DESTDIR)$[](javadir)/$[]$[]x; \
+      '\'':'\''; \
+    ;; \
+    *) \
+      case '\'''\''$[](javadir) in \
+        ?*) \
+          x=`expr X/$[](java_[]gatbps_x2[]_dst) : '\''X.*/\(.*\)'\''` || exit $[]$[]?; \
+          echo " rm -f '\''$[](DESTDIR)$[](javadir)/$[]$[]x'\''"; \
+          rm -f $[](DESTDIR)$[](javadir)/$[]$[]x; \
+        ;; \
+      esac; \
     ;; \
   esac; \
   exit 0; \
