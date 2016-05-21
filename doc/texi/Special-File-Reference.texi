@@ -33,7 +33,7 @@ It can be included
 in another Texinfo file where
 the appendix is desired to appear@.
 The appendix is labeled with
-@w{@t{@@node@w{ }Creative@w{ }Commons@w{ }Zero@w{ }1-0}}
+@w{@t{@@node Creative Commons Zero 1-0}}
 so that it maintains
 the usual node structure
 and can be cross-referenced@.
@@ -122,11 +122,11 @@ notation of @TeX{} in the other output formats:
 
 @example
 @@tex
-$1,@w{ }\ldots,@w{ }n$
-@@end@w{ }tex
+$1, \ldots, n$
+@@end tex
 @@ifnottex
-1,@w{ }@@bdots@{@},@w{ }@@i@{n@}
-@@end@w{ }ifnottex
+1, @@bdots@{@}, @@i@{n@}
+@@end ifnottex
 @end example
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
@@ -146,11 +146,11 @@ notation of @TeX{} in the other output formats:
 
 @example
 @@tex
-$x@w{ }/@w{ }y$
-@@end@w{ }tex
+$x / y$
+@@end tex
 @@ifnottex
-@@i@{x@}@w{ }@@dslash@{@}@w{ }@@i@{y@}
-@@end@w{ }ifnottex
+@@i@{x@} @@dslash@{@} @@i@{y@}
+@@end ifnottex
 @end example
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
@@ -170,11 +170,11 @@ notation of @TeX{} in the other output formats:
 
 @example
 @@tex
-$x@w{ }\ge@w{ }y$
-@@end@w{ }tex
+$x \ge y$
+@@end tex
 @@ifnottex
-@@i@{x@}@w{ }@@gequ@{@}@w{ }@@i@{y@}
-@@end@w{ }ifnottex
+@@i@{x@} @@gequ@{@} @@i@{y@}
+@@end ifnottex
 @end example
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
@@ -194,11 +194,11 @@ notation of @TeX{} in the other output formats:
 
 @example
 @@tex
-$\lceil@w{ }x@w{ }\rceil$
-@@end@w{ }tex
+$\lceil x \rceil$
+@@end tex
 @@ifnottex
 @@lcei@{@}@@i@{x@}@@rcei@{@}
-@@end@w{ }ifnottex
+@@end ifnottex
 @end example
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
@@ -218,11 +218,11 @@ notation of @TeX{} in the other output formats:
 
 @example
 @@tex
-$x@w{ }\le@w{ }y$
-@@end@w{ }tex
+$x \le y$
+@@end tex
 @@ifnottex
-@@i@{x@}@w{ }@@lequ@{@}@w{ }@@i@{y@}
-@@end@w{ }ifnottex
+@@i@{x@} @@lequ@{@} @@i@{y@}
+@@end ifnottex
 @end example
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
@@ -242,11 +242,11 @@ notation of @TeX{} in the other output formats:
 
 @example
 @@tex
-$\lfloor@w{ }x@w{ }\rfloor$
-@@end@w{ }tex
+$\lfloor x \rfloor$
+@@end tex
 @@ifnottex
 @@lflo@{@}@@i@{x@}@@rflo@{@}
-@@end@w{ }ifnottex
+@@end ifnottex
 @end example
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
@@ -279,11 +279,11 @@ notation of @TeX{} in the other output formats:
 
 @example
 @@tex
-$x@w{ }\cdot@w{ }y$
-@@end@w{ }tex
+$x \cdot y$
+@@end tex
 @@ifnottex
-@@i@{x@}@w{ }@@mdot@{@}@w{ }@@i@{y@}
-@@end@w{ }ifnottex
+@@i@{x@} @@mdot@{@} @@i@{y@}
+@@end ifnottex
 @end example
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
@@ -303,11 +303,11 @@ notation of @TeX{} in the other output formats:
 
 @example
 @@tex
-$1@w{ }+@w{ }\cdots@w{ }+@w{ }n$
-@@end@w{ }tex
+$1 + \cdots + n$
+@@end tex
 @@ifnottex
-1@w{ }+@w{ }@@mdots@{@}@w{ }+@w{ }@@i@{n@}
-@@end@w{ }ifnottex
+1 + @@mdots@{@} + @@i@{n@}
+@@end ifnottex
 @end example
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
@@ -327,11 +327,11 @@ notation of @TeX{} in the other output formats:
 
 @example
 @@tex
-$x@w{ }-@w{ }y$
-@@end@w{ }tex
+$x - y$
+@@end tex
 @@ifnottex
-@@i@{x@}@w{ }@@msign@{@}@w{ }@@i@{y@}
-@@end@w{ }ifnottex
+@@i@{x@} @@msign@{@} @@i@{y@}
+@@end ifnottex
 @end example
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
@@ -351,11 +351,11 @@ notation of @TeX{} in the other output formats:
 
 @example
 @@tex
-$x@w{ }\ne@w{ }y$
-@@end@w{ }tex
+$x \ne y$
+@@end tex
 @@ifnottex
-@@i@{x@}@w{ }@@nequ@{@}@w{ }@@i@{y@}
-@@end@w{ }ifnottex
+@@i@{x@} @@nequ@{@} @@i@{y@}
+@@end ifnottex
 @end example
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
@@ -376,10 +376,10 @@ notation of @TeX{} in the other output formats:
 @example
 @@tex
 $x'$
-@@end@w{ }tex
+@@end tex
 @@ifnottex
 @@i@{x@}@@prm@{@}
-@@end@w{ }ifnottex
+@@end ifnottex
 @end example
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
@@ -399,11 +399,11 @@ notation of @TeX{} in the other output formats:
 
 @example
 @@tex
-$P@w{ }\rightarrow@w{ }Q$
-@@end@w{ }tex
+$P \rightarrow Q$
+@@end tex
 @@ifnottex
-@@i@{P@}@w{ }@@rarrow@{@}@w{ }@@i@{Q@}
-@@end@w{ }ifnottex
+@@i@{P@} @@rarrow@{@} @@i@{Q@}
+@@end ifnottex
 @end example
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
@@ -423,11 +423,11 @@ notation of @TeX{} in the other output formats:
 
 @example
 @@tex
-$\lceil@w{ }x@w{ }\rceil$
-@@end@w{ }tex
+$\lceil x \rceil$
+@@end tex
 @@ifnottex
 @@lcei@{@}@@i@{x@}@@rcei@{@}
-@@end@w{ }ifnottex
+@@end ifnottex
 @end example
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
@@ -447,11 +447,11 @@ notation of @TeX{} in the other output formats:
 
 @example
 @@tex
-$\lfloor@w{ }x@w{ }\rfloor$
-@@end@w{ }tex
+$\lfloor x \rfloor$
+@@end tex
 @@ifnottex
 @@lflo@{@}@@i@{x@}@@rflo@{@}
-@@end@w{ }ifnottex
+@@end ifnottex
 @end example
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
@@ -463,7 +463,7 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 The
 @w{@t{sbs.@:texi}}
 special file defines the
-@w{@t{@@sbs@{}@i{L}@t{@comma{}@w{ }}@i{S}@t{@comma{}@w{ }}@i{R}@t{@}}}
+@w{@t{@@sbs@{}@i{L}@t{@comma{} }@i{S}@t{@comma{} }@i{R}@t{@}}}
 Texinfo macro, which inserts
 @w{@i{S}}
 as a subscript in the output formats other than @TeX{}@.
@@ -479,11 +479,11 @@ notation of @TeX{} in the other output formats:
 
 @example
 @@tex
-$x_@{y@w{ }+@w{ }z_w@}$
-@@end@w{ }tex
+$x_@{y + z_w@}$
+@@end tex
 @@ifnottex
-@@i@{x@}@@sbs@{(,@@i@{y@}@w{ }+@w{ }@@i@{z@}@@sbs@{,@@i@{w@},@},)@}
-@@end@w{ }ifnottex
+@@i@{x@}@@sbs@{(,@@i@{y@} + @@i@{z@}@@sbs@{,@@i@{w@},@},)@}
+@@end ifnottex
 @end example
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
@@ -506,7 +506,7 @@ For more information, @pxref{Invoking @w{@t{sh-form-sh}}}@.
 The
 @w{@t{sps.@:texi}}
 special file defines the
-@w{@t{@@sps@{}@i{L}@t{@comma{}@w{ }}@i{S}@t{@comma{}@w{ }}@i{R}@t{@}}}
+@w{@t{@@sps@{}@i{L}@t{@comma{} }@i{S}@t{@comma{} }@i{R}@t{@}}}
 Texinfo macro, which inserts
 @w{@i{S}}
 as a superscript in the output formats other than @TeX{}@.
@@ -522,11 +522,11 @@ notation of @TeX{} in the other output formats:
 
 @example
 @@tex
-$x^@{y@w{ }+@w{ }z^w@}$
-@@end@w{ }tex
+$x^@{y + z^w@}$
+@@end tex
 @@ifnottex
-@@i@{x@}@@sps@{(,@@i@{y@}@w{ }+@w{ }@@i@{z@}@@sps@{,@@i@{w@},@},)@}
-@@end@w{ }ifnottex
+@@i@{x@}@@sps@{(,@@i@{y@} + @@i@{z@}@@sps@{,@@i@{w@},@},)@}
+@@end ifnottex
 @end example
 
 For more information, @pxref{Mathematical Notation in Texinfo}@.
