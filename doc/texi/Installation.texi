@@ -10,12 +10,12 @@ some of the program descriptions to the 33rd column@.
 This can be prevented by setting the
 @w{@t{INSTALL_INFO_NO_INDENT}}
 environment variable to any value during the
-@w{@t{make@w{ }install}}
+@w{@t{make install}}
 command@.
 For example, the following command might be used:
 
 @example
-sudo@w{ }INSTALL_INFO_NO_INDENT=yes@w{ }make@w{ }install
+sudo INSTALL_INFO_NO_INDENT=yes make install
 @end example
 @ifxml
 @ifnotxml
