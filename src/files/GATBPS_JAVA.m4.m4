@@ -118,7 +118,8 @@ java: java-gatbps_x1
 java-gatbps_x1:
 	{ '\'':'\''; \
   x='\'''\''; \
-  x="$[]$[]{x}"'\''./'\''$[](java_[]gatbps_x2[]_sourcepath); \
+  x="$[]$[]{x}"'\''./'\''; \
+  x="$[]$[]{x}"$[](java_[]gatbps_x2[]_sourcepath); \
   x="$[]$[]{x}"'\'':'\''$[](srcdir)'\''/'\''$[](java_[]gatbps_x2[]_sourcepath); \
   case '\'''\''$[](CLASSPATH) in \
     ?*) \

@@ -118,7 +118,8 @@ clean-local: clean-first-java
 first-java:
 	{ ':'; \
   x=''; \
-  x="$${x}"'./'$(java_sourcepath); \
+  x="$${x}"'./'; \
+  x="$${x}"$(java_sourcepath); \
   x="$${x}"':'$(srcdir)'/'$(java_sourcepath); \
   case ''$(CLASSPATH) in \
     ?*) \
