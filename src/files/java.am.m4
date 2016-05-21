@@ -97,20 +97,17 @@ GATBPS_V_JAVAC_1 =
 
 .java.class:
 	$(GATBPS_V_JAVAC)$(MKDIR_P) $(GATBPS_SOURCEPATH)
-	$(AM_V_at){ ':'; \
-  $(JAVAC) \
-    '-classpath' \
-    $(GATBPS_CLASSPATH) \
-    '-d' \
-    $(GATBPS_SOURCEPATH) \
-    '-sourcepath' \
-    $(GATBPS_SOURCEPATH)':'$(srcdir)'/'$(GATBPS_SOURCEPATH) \
-    $(GATBPS_JAVACFLAGS) \
-    $(JAVACFLAGS) \
-    $< \
-  || 'exit' "$${?}"; \
-  'exit' '0'; \
-}
+	$(AM_V_at)$(JAVAC) \
+  '-classpath' \
+  $(GATBPS_CLASSPATH) \
+  '-d' \
+  $(GATBPS_SOURCEPATH) \
+  '-sourcepath' \
+  $(GATBPS_SOURCEPATH)':'$(srcdir)'/'$(GATBPS_SOURCEPATH) \
+  $(GATBPS_JAVACFLAGS) \
+  $(JAVACFLAGS) \
+  $< \
+;
 
 clean-first-java:
 	-rm -f $(java_dst)
