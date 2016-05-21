@@ -116,6 +116,7 @@ install-java-gatbps_x1: java-gatbps_x1
 java: java-gatbps_x1
 
 java-gatbps_x1:
+	@-'\'':'\'' #((
 	{ '\'':'\''; \
   x='\'''\''; \
   x="$[]$[]{x}"'\''./'\''; \

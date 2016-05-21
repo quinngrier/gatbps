@@ -116,6 +116,7 @@ clean-first-java:
 clean-local: clean-first-java
 
 first-java:
+	@-':' #((
 	{ ':'; \
   x=''; \
   x="$${x}"'./'; \
