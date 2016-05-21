@@ -2,7 +2,7 @@
 @chapter @w{@t{gatbps}} Synopsis
 
 @example
-gatbps@w{ }[<@i{argument}>]...
+gatbps [<@i{argument}>]...
 @end example
 @ifxml
 @ifnotxml
