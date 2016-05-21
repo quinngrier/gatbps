@@ -147,11 +147,9 @@ java-gatbps_x1:
   || '\''exit'\'' "$[]$[]{?}"; \
   javacflags=`'\''cat'\'' '\''tmpfile'\''` \
   || '\''exit'\'' "$[]$[]{?}"; \
-  x='\'''\''; \
-  x="$[]$[]{x}"'\''./'\''$[](java_[]gatbps_x2[]_sourcepath); \
   $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
     '\''--'\'' \
-    "$[]$[]{x}" \
+    '\''./'\''$[](java_[]gatbps_x2[]_sourcepath) \
     >'\''tmpfile'\'' \
   || '\''exit'\'' "$[]$[]{?}"; \
   sourcepath=`'\''cat'\'' '\''tmpfile'\''` \

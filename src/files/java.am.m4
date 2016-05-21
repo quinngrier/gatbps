@@ -147,11 +147,9 @@ first-java:
   || 'exit' "$${?}"; \
   javacflags=`'cat' 'tmpfile'` \
   || 'exit' "$${?}"; \
-  x=''; \
-  x="$${x}"'./'$(java_sourcepath); \
   $(srcdir)'/build-aux/sh-form.sh' \
     '--' \
-    "$${x}" \
+    './'$(java_sourcepath) \
     >'tmpfile' \
   || 'exit' "$${?}"; \
   sourcepath=`'cat' 'tmpfile'` \
