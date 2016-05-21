@@ -43,7 +43,7 @@ GATBPS_V_JAVAC_1 =
 ;
 	@-':' #(
 	$(AM_V_at){ ':'; \
-  f='cf'; \
+  c='cf'; \
   for x in \
     $(java_extra) \
     $(java_nested) \
@@ -60,13 +60,13 @@ GATBPS_V_JAVAC_1 =
       esac; \
     fi; \
     $(JAR) \
-      "$${f}" \
+      "$${c}" \
       './'$(java_dst)'.tmp/x.jar' \
       '-C' \
       "$${d}" \
       './'"$${x}" \
     || 'exit' "$${?}"; \
-    f='uf'; \
+    c='uf'; \
   done; \
   'exit' '0'; \
 }
