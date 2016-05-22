@@ -8,6 +8,17 @@ the GNU Autotools using the standard
 and
 @w{@t{jar}}
 utilities@.
+
+@include indent.texi
+The first step is to ensure that the
+@w{@t{JAVAC}}
+and
+@w{@t{JAR}}
+variables in your makefile will be set to commands that run the
+@w{@t{javac}}
+and
+@w{@t{jar}}
+utilities@.
 @ifxml
 @ifnotxml
 @c
