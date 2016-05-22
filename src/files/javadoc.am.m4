@@ -24,11 +24,12 @@ GATBPS_V_JAVADOC_1 =
 ## begin_rules
 
 $(javadoc_dst): $(javadoc_src)
+$(javadoc_dst): $(javadoc_src_nodist)
 	$(GATBPS_V_JAVADOC)rm -f -r $(javadoc_dst)
 	$(AM_V_at)$(MKDIR_P) $(javadoc_dst)
 	$(AM_V_at){ ':'; \
   src=''; \
-  for x in $(javadoc_src); do \
+  for x in $(javadoc_src) $(javadoc_src_nodist); do \
     if 'test' '-f' "$${x}"; then \
       src="$${src} $${x}"; \
     else \
