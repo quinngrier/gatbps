@@ -2,8 +2,12 @@
 @chapter Java Compilation with the GNU Autotools
 
 @noindent
-GATBPS provides a set of special files to support an alternative
-approach to Java compilation with the GNU Autotools@.
+GATBPS provides a set of special files to support Java compilation with
+the GNU Autotools using the standard
+@w{@t{javac}}
+and
+@w{@t{jar}}
+utilities@.
 @ifxml
 @ifnotxml
 @c
