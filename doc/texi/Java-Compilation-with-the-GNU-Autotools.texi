@@ -9,6 +9,8 @@ and
 @w{@t{jar}}
 utilities@.
 
+@sfindex @w{@t{GATBPS_PROG_JAR.@:m4}}
+@sfindex @w{@t{GATBPS_PROG_JAVAC.@:m4}}
 @include indent.texi
 The first step is to ensure that the
 @w{@t{JAVAC}}
@@ -19,6 +21,15 @@ variables in your makefile will be set to commands that run the
 and
 @w{@t{jar}}
 utilities@.
+The recommended way to do this is by using the
+@w{@t{GATBPS_PROG_JAVAC}}
+and
+@w{@t{GATBPS_PROG_JAR}}
+Autoconf macros, which are provided by the
+@w{@t{GATBPS_PROG_JAVAC.@:m4}}
+and
+@w{@t{GATBPS_PROG_JAR.@:m4}}
+special files@.
 @ifxml
 @ifnotxml
 @c
