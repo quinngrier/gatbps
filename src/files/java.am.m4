@@ -137,26 +137,51 @@ first-java:
     '--' \
     "$${x}" \
     >'first-java.tmp' \
-  || 'exit' "$${?}"; \
+  || { ':'; \
+    x="$${?}"; \
+    'rm' '-f' 'first-java.tmp'; \
+    'exit' "$${x}"; \
+  }; \
   classpath=` \
     'cat' 'first-java.tmp' \
-  ` || 'exit' "$${?}"; \
+  ` || { ':'; \
+    x="$${?}"; \
+    'rm' '-f' 'first-java.tmp'; \
+    'exit' "$${x}"; \
+  }; \
   $(srcdir)'/build-aux/sh-form.sh' \
     '--' \
     $(java_JAVACFLAGS) \
     >'first-java.tmp' \
-  || 'exit' "$${?}"; \
+  || { ':'; \
+    x="$${?}"; \
+    'rm' '-f' 'first-java.tmp'; \
+    'exit' "$${x}"; \
+  }; \
   javacflags=` \
     'cat' 'first-java.tmp' \
-  ` || 'exit' "$${?}"; \
+  ` || { ':'; \
+    x="$${?}"; \
+    'rm' '-f' 'first-java.tmp'; \
+    'exit' "$${x}"; \
+  }; \
   $(srcdir)'/build-aux/sh-form.sh' \
     '--' \
     './'$(java_sourcepath) \
     >'first-java.tmp' \
-  || 'exit' "$${?}"; \
+  || { ':'; \
+    x="$${?}"; \
+    'rm' '-f' 'first-java.tmp'; \
+    'exit' "$${x}"; \
+  }; \
   sourcepath=` \
     'cat' 'first-java.tmp' \
-  ` || 'exit' "$${?}"; \
+  ` || { ':'; \
+    x="$${?}"; \
+    'rm' '-f' 'first-java.tmp'; \
+    'exit' "$${x}"; \
+  }; \
+  'rm' '-f' 'first-java.tmp'; \
   $(MAKE) \
     $(AM_MAKEFLAGS) \
     'GATBPS_CLASSPATH='"$${classpath}" \
