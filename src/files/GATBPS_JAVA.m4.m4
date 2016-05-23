@@ -24,16 +24,16 @@ m4_foreach_w(
 
 '"$[]{GATBPS_JAVA_RULES}"'
 
-./$[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_dep)
-./$[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_extra)
-./$[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_src)
+$[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_dep)
+$[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_extra)
+$[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_src)
 	$[](GATBPS_V_JAR)'\''rm'\'' \
   '\''-f'\'' \
   '\''-r'\'' \
-  '\''./'\''$[](java_[]gatbps_x2[]_dst)'\''.tmp'\'' \
+  $[](java_[]gatbps_x2[]_dst)'\''.tmp'\'' \
 ;
 	$[](AM@&t@_V_at)$[](MKDIR_P) \
-  '\''./'\''$[](java_[]gatbps_x2[]_dst)'\''.tmp/x'\'' \
+  $[](java_[]gatbps_x2[]_dst)'\''.tmp/x'\'' \
 ;
 	@-'\'':'\'' #(
 	$[](AM@&t@_V_at){ '\'':'\''; \
@@ -55,7 +55,7 @@ m4_foreach_w(
     fi; \
     $[](JAR) \
       "$[]$[]{c}" \
-      '\''./'\''$[](java_[]gatbps_x2[]_dst)'\''.tmp/x.jar'\'' \
+      $[](java_[]gatbps_x2[]_dst)'\''.tmp/x.jar'\'' \
       '\''-C'\'' \
       "$[]$[]{d}" \
       '\''./'\''"$[]$[]{x}" \
@@ -65,20 +65,20 @@ m4_foreach_w(
   '\''exit'\'' '\''0'\''; \
 }
 	$[](AM@&t@_V_at)'\''cd'\'' \
-  '\''./'\''$[](java_[]gatbps_x2[]_dst)'\''.tmp/x'\'' \
+  $[](java_[]gatbps_x2[]_dst)'\''.tmp/x'\'' \
   && $[](JAR) '\''xf'\'' '\''../x.jar'\'' \
 ;
 	$[](AM@&t@_V_at)$[](JAR) \
   '\''cf'\'' \
-  '\''./'\''$[](java_[]gatbps_x2[]_dst) \
+  $[](java_[]gatbps_x2[]_dst) \
   '\''-C'\'' \
-  '\''./'\''$[](java_[]gatbps_x2[]_dst)'\''.tmp/x/'\''$[](GATBPS_SOURCEPATH) \
+  $[](java_[]gatbps_x2[]_dst)'\''.tmp/x/'\''$[](GATBPS_SOURCEPATH) \
   '\''.'\'' \
 ;
 	$[](AM@&t@_V_at)-'\''rm'\'' \
   '\''-f'\'' \
   '\''-r'\'' \
-  '\''./'\''$[](java_[]gatbps_x2[]_dst)'\''.tmp'\'' \
+  $[](java_[]gatbps_x2[]_dst)'\''.tmp'\'' \
 ;
 
 .PHONY: clean-java-gatbps_x1
@@ -195,7 +195,7 @@ java-gatbps_x1:
     '\''GATBPS_CLASSPATH='\''"$[]$[]{classpath}" \
     '\''GATBPS_JAVACFLAGS='\''"$[]$[]{javacflags}" \
     '\''GATBPS_SOURCEPATH='\''"$[]$[]{sourcepath}" \
-    '\''./'\''$[](java_[]gatbps_x2[]_dst) \
+    $[](java_[]gatbps_x2[]_dst) \
   || '\''exit'\'' "$[]$[]{?}"; \
   '\''exit'\'' '\''0'\''; \
 }
