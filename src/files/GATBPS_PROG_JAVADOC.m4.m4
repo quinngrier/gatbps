@@ -12,7 +12,7 @@ AC_DEFUN([GATBPS_PROG_JAVADOC], [{ ':'
 
 AC_CHECK_PROGS([JAVADOC], [javadoc])
 
-AC_ARG_VAR([JAVADOC], [Javadoc compiler command])
+AC_ARG_VAR([JAVADOC], [Javadoc generator command])
 
 }])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
