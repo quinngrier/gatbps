@@ -136,26 +136,26 @@ first-java:
   $(srcdir)'/build-aux/sh-form.sh' \
     '--' \
     "$${x}" \
-    >'tmpfile' \
+    >'first-java.tmp' \
   || 'exit' "$${?}"; \
   classpath=` \
-    'cat' 'tmpfile' \
+    'cat' 'first-java.tmp' \
   ` || 'exit' "$${?}"; \
   $(srcdir)'/build-aux/sh-form.sh' \
     '--' \
     $(java_JAVACFLAGS) \
-    >'tmpfile' \
+    >'first-java.tmp' \
   || 'exit' "$${?}"; \
   javacflags=` \
-    'cat' 'tmpfile' \
+    'cat' 'first-java.tmp' \
   ` || 'exit' "$${?}"; \
   $(srcdir)'/build-aux/sh-form.sh' \
     '--' \
     './'$(java_sourcepath) \
-    >'tmpfile' \
+    >'first-java.tmp' \
   || 'exit' "$${?}"; \
   sourcepath=` \
-    'cat' 'tmpfile' \
+    'cat' 'first-java.tmp' \
   ` || 'exit' "$${?}"; \
   $(MAKE) \
     $(AM_MAKEFLAGS) \
