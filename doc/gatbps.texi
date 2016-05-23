@@ -71,7 +71,7 @@ which was released on
 * Mathematical Notation in Texinfo::
 * Timestamp Preservation during Autoconf Instantiation::
 * Java Compilation with the GNU Autotools::
-* Javadoc Compilation with the GNU Autotools::
+* Javadoc Generation with the GNU Autotools::
 * Invoking @w{@t{awk-form-sh}}::
 * Invoking @w{@t{sh-form-sh}}::
 * Invoking @w{@t{texi-form-sh}}::
@@ -102,7 +102,7 @@ which was released on
 
 @include Java-Compilation-with-the-GNU-Autotools.texi
 
-@include Javadoc-Compilation-with-the-GNU-Autotools.texi
+@include Javadoc-Generation-with-the-GNU-Autotools.texi
 
 @include Invoking-awk-form-sh.texi
 
