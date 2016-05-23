@@ -7,7 +7,7 @@ the GNU Autotools using the standard
 @w{@t{javac}}
 and
 @w{@t{jar}}
-utilities@.
+tools@.
 
 @sfindex @w{@t{GATBPS_PROG_JAR.@:m4}}
 @sfindex @w{@t{GATBPS_PROG_JAVAC.@:m4}}
@@ -20,7 +20,7 @@ variables in your makefile will be set to commands that run the
 @w{@t{javac}}
 and
 @w{@t{jar}}
-utilities@.
+tools@.
 The recommended way to do this is by using the
 @w{@t{GATBPS_PROG_JAVAC}}
 and
