@@ -144,26 +144,51 @@ java-gatbps_x1:
     '\''--'\'' \
     "$[]$[]{x}" \
     >'\''java-gatbps_x1.tmp'\'' \
-  || '\''exit'\'' "$[]$[]{?}"; \
+  || { '\'':'\''; \
+    x="$[]$[]{?}"; \
+    '\''rm'\'' '\''-f'\'' '\''java-gatbps_x1.tmp'\''; \
+    '\''exit'\'' "$[]$[]{x}"; \
+  }; \
   classpath=` \
     '\''cat'\'' '\''java-gatbps_x1.tmp'\'' \
-  ` || '\''exit'\'' "$[]$[]{?}"; \
+  ` || { '\'':'\''; \
+    x="$[]$[]{?}"; \
+    '\''rm'\'' '\''-f'\'' '\''java-gatbps_x1.tmp'\''; \
+    '\''exit'\'' "$[]$[]{x}"; \
+  }; \
   $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
     '\''--'\'' \
     $[](java_[]gatbps_x2[]_JAVACFLAGS) \
     >'\''java-gatbps_x1.tmp'\'' \
-  || '\''exit'\'' "$[]$[]{?}"; \
+  || { '\'':'\''; \
+    x="$[]$[]{?}"; \
+    '\''rm'\'' '\''-f'\'' '\''java-gatbps_x1.tmp'\''; \
+    '\''exit'\'' "$[]$[]{x}"; \
+  }; \
   javacflags=` \
     '\''cat'\'' '\''java-gatbps_x1.tmp'\'' \
-  ` || '\''exit'\'' "$[]$[]{?}"; \
+  ` || { '\'':'\''; \
+    x="$[]$[]{?}"; \
+    '\''rm'\'' '\''-f'\'' '\''java-gatbps_x1.tmp'\''; \
+    '\''exit'\'' "$[]$[]{x}"; \
+  }; \
   $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
     '\''--'\'' \
     '\''./'\''$[](java_[]gatbps_x2[]_sourcepath) \
     >'\''java-gatbps_x1.tmp'\'' \
-  || '\''exit'\'' "$[]$[]{?}"; \
+  || { '\'':'\''; \
+    x="$[]$[]{?}"; \
+    '\''rm'\'' '\''-f'\'' '\''java-gatbps_x1.tmp'\''; \
+    '\''exit'\'' "$[]$[]{x}"; \
+  }; \
   sourcepath=` \
     '\''cat'\'' '\''java-gatbps_x1.tmp'\'' \
-  ` || '\''exit'\'' "$[]$[]{?}"; \
+  ` || { '\'':'\''; \
+    x="$[]$[]{?}"; \
+    '\''rm'\'' '\''-f'\'' '\''java-gatbps_x1.tmp'\''; \
+    '\''exit'\'' "$[]$[]{x}"; \
+  }; \
+  '\''rm'\'' '\''-f'\'' '\''java-gatbps_x1.tmp'\''; \
   $[](MAKE) \
     $[](AM_MAKEFLAGS) \
     '\''GATBPS_CLASSPATH='\''"$[]$[]{classpath}" \
