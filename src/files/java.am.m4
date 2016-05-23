@@ -31,16 +31,16 @@ GATBPS_V_JAVAC_1 =
 
 ## begin_rules
 
-./$(java_dst): $(java_dep)
-./$(java_dst): $(java_extra)
-./$(java_dst): $(java_src)
+$(java_dst): $(java_dep)
+$(java_dst): $(java_extra)
+$(java_dst): $(java_src)
 	$(GATBPS_V_JAR)'rm' \
   '-f' \
   '-r' \
-  './'$(java_dst)'.tmp' \
+  $(java_dst)'.tmp' \
 ;
 	$(AM_V_at)$(MKDIR_P) \
-  './'$(java_dst)'.tmp/x' \
+  $(java_dst)'.tmp/x' \
 ;
 	@-':' #(
 	$(AM_V_at){ ':'; \
@@ -62,7 +62,7 @@ GATBPS_V_JAVAC_1 =
     fi; \
     $(JAR) \
       "$${c}" \
-      './'$(java_dst)'.tmp/x.jar' \
+      $(java_dst)'.tmp/x.jar' \
       '-C' \
       "$${d}" \
       './'"$${x}" \
@@ -72,20 +72,20 @@ GATBPS_V_JAVAC_1 =
   'exit' '0'; \
 }
 	$(AM_V_at)'cd' \
-  './'$(java_dst)'.tmp/x' \
+  $(java_dst)'.tmp/x' \
   && $(JAR) 'xf' '../x.jar' \
 ;
 	$(AM_V_at)$(JAR) \
   'cf' \
-  './'$(java_dst) \
+  $(java_dst) \
   '-C' \
-  './'$(java_dst)'.tmp/x/'$(GATBPS_SOURCEPATH) \
+  $(java_dst)'.tmp/x/'$(GATBPS_SOURCEPATH) \
   '.' \
 ;
 	$(AM_V_at)-'rm' \
   '-f' \
   '-r' \
-  './'$(java_dst)'.tmp' \
+  $(java_dst)'.tmp' \
 ;
 
 .PHONY: clean-first-java
@@ -188,7 +188,7 @@ first-java:
     'GATBPS_CLASSPATH='"$${classpath}" \
     'GATBPS_JAVACFLAGS='"$${javacflags}" \
     'GATBPS_SOURCEPATH='"$${sourcepath}" \
-    './'$(java_dst) \
+    $(java_dst) \
   || 'exit' "$${?}"; \
   'exit' '0'; \
 }
