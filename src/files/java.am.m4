@@ -138,22 +138,25 @@ first-java:
     "$${x}" \
     >'tmpfile' \
   || 'exit' "$${?}"; \
-  classpath=`'cat' 'tmpfile'` \
-  || 'exit' "$${?}"; \
+  classpath=` \
+    'cat' 'tmpfile' \
+  ` || 'exit' "$${?}"; \
   $(srcdir)'/build-aux/sh-form.sh' \
     '--' \
     $(java_JAVACFLAGS) \
     >'tmpfile' \
   || 'exit' "$${?}"; \
-  javacflags=`'cat' 'tmpfile'` \
-  || 'exit' "$${?}"; \
+  javacflags=` \
+    'cat' 'tmpfile' \
+  ` || 'exit' "$${?}"; \
   $(srcdir)'/build-aux/sh-form.sh' \
     '--' \
     './'$(java_sourcepath) \
     >'tmpfile' \
   || 'exit' "$${?}"; \
-  sourcepath=`'cat' 'tmpfile'` \
-  || 'exit' "$${?}"; \
+  sourcepath=` \
+    'cat' 'tmpfile' \
+  ` || 'exit' "$${?}"; \
   $(MAKE) \
     $(AM_MAKEFLAGS) \
     'GATBPS_CLASSPATH='"$${classpath}" \
