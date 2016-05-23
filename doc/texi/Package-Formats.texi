@@ -44,7 +44,7 @@ Distribution archives are streamlined for building and installation@.
 If you are only interested in browsing the source code of the package,
 then you probably want to be working with a copy of the Git repository
 or a tree archive@.
-Distribution archives exclude some of the source code@.
+Distribution archives may exclude some of the source code@.
 
 @include indent.texi
 If you are interested in modifying the source code of the package, then
