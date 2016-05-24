@@ -98,7 +98,7 @@ $[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_src)
     '\''GATBPS_CLASSPATH='\''"$[]$[]{classpath}" \
     '\''GATBPS_JAVACFLAGS='\''"$[]$[]{javacflags}" \
     '\''GATBPS_SOURCEPATH='\''"$[]$[]{sourcepath}" \
-    'java-gatbps_x1' \
+    '\''java-gatbps_x1'\'' \
   || '\''exit'\'' "$[]$[]{?}"; \
   '\''exit'\'' '\''0'\''; \
 :;}
