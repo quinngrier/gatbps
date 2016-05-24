@@ -122,66 +122,51 @@ clean-first-java:
 clean-local: clean-first-java
 
 first-java:
-	$(AM_V_at)'rm' \
-  '-f' \
-  '-r' \
-  $(java_dst)'.tmp' \
-;
-	$(AM_V_at){ \
-  $(MKDIR_P) \
-    $(java_dst)'.tmp/x' \
-  || { \
-    x="$${?}"; \
-    'rm' \
-      '-f' \
-      '-r' \
-      $(java_dst)'.tmp' \
-    ; \
-    'exit' "$${x}"; \
-  :;}; \
-  'exit' '0'; \
-:;}
 	@-':' #(
 	$(AM_V_at){ \
-  c='cf'; \
-  for x in \
-    $(java_extra) \
-    $(java_nested) \
-    $(java_src) \
-  ; do \
-    if 'test' '-f' "$${x}"; then \
-      d='.'; \
-    else \
-      d=$(srcdir); \
-      case "$${d}" in \
-        '-'*) \
-          d='./'"$${d}"; \
-        ;; \
-      esac; \
-    fi; \
+  'rm' \
+    '-f' \
+    '-r' \
+    $(java_dst)'.tmp' \
+  || 'exit' "$${?}"; \
+  ( \
+    $(MKDIR_P) \
+      $(java_dst)'.tmp/x' \
+    || 'exit' "$${?}"; \
+    c='cf'; \
+    for x in \
+      $(java_extra) \
+      $(java_nested) \
+      $(java_src) \
+    ; do \
+      if 'test' '-f' "$${x}"; then \
+        d='.'; \
+      else \
+        d=$(srcdir); \
+        case "$${d}" in \
+          '-'*) \
+            d='./'"$${d}"; \
+          ;; \
+        esac; \
+      fi; \
+      $(JAR) \
+        "$${c}" \
+        $(java_dst)'.tmp/x.jar' \
+        '-C' \
+        "$${d}" \
+        './'"$${x}" \
+      || 'exit' "$${?}"; \
+      c='uf'; \
+    done; \
+    'cd' \
+      $(java_dst)'.tmp/x' \
+    || 'exit' "$${?}"; \
     $(JAR) \
-      "$${c}" \
-      $(java_dst)'.tmp/x.jar' \
-      '-C' \
-      "$${d}" \
-      './'"$${x}" \
-    || { \
-      y="$${?}"; \
-      'rm' \
-        '-f' \
-        '-r' \
-        $(java_dst)'.tmp' \
-      ; \
-      'exit' "$${y}"; \
-    :;}; \
-    c='uf'; \
-  done; \
-  'exit' '0'; \
-:;}
-	$(AM_V_at){ \
-  'cd' \
-    $(java_dst)'.tmp/x' \
-  || { \
+      'xf' \
+      '../x.jar' \
+    ; \
+    'exit' "$${?}"; \
+  :;) || { \
     x="$${?}"; \
     'rm' \
       '-f' \
@@ -190,21 +175,6 @@ first-java:
     ; \
     'exit' "$${x}"; \
   :;}; \
-  $(JAR) \
-    'xf' \
-    '../x.jar' \
-  || { \
-    x="$${?}"; \
-    'rm' \
-      '-f' \
-      '-r' \
-      $(java_dst)'.tmp' \
-    ; \
-    'exit' "$${x}"; \
-  :;}; \
-  'exit' '0'; \
-:;}
-	$(AM_V_at){ \
   $(JAR) \
     'cf' \
     $(java_dst) \
