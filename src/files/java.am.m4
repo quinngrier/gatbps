@@ -43,7 +43,7 @@ $(java_dst): $(java_src)
   $(java_dst)'.tmp/x' \
 ;
 	@-':' #(
-	$(AM_V_at){ ':'; \
+	$(AM_V_at){ \
   c='cf'; \
   for x in \
     $(java_extra) \
@@ -70,7 +70,7 @@ $(java_dst): $(java_src)
     c='uf'; \
   done; \
   'exit' '0'; \
-}
+:;}
 	$(AM_V_at)'cd' \
   $(java_dst)'.tmp/x' \
   && $(JAR) 'xf' '../x.jar' \
@@ -118,7 +118,7 @@ clean-local: clean-first-java
 
 first-java:
 	@-':' #((
-	{ ':'; \
+	{ \
   x=''; \
   x="$${x}"'./'; \
   x="$${x}"$(java_sourcepath); \
@@ -138,50 +138,50 @@ first-java:
     '--' \
     "$${x}" \
     >'first-java.tmp' \
-  || { ':'; \
+  || { \
     x="$${?}"; \
     'rm' '-f' 'first-java.tmp'; \
     'exit' "$${x}"; \
-  }; \
+  :;}; \
   classpath=` \
     'cat' 'first-java.tmp' \
-  ` || { ':'; \
+  ` || { \
     x="$${?}"; \
     'rm' '-f' 'first-java.tmp'; \
     'exit' "$${x}"; \
-  }; \
+  :;}; \
   $(srcdir)'/build-aux/sh-form.sh' \
     '--' \
     $(java_JAVACFLAGS) \
     >'first-java.tmp' \
-  || { ':'; \
+  || { \
     x="$${?}"; \
     'rm' '-f' 'first-java.tmp'; \
     'exit' "$${x}"; \
-  }; \
+  :;}; \
   javacflags=` \
     'cat' 'first-java.tmp' \
-  ` || { ':'; \
+  ` || { \
     x="$${?}"; \
     'rm' '-f' 'first-java.tmp'; \
     'exit' "$${x}"; \
-  }; \
+  :;}; \
   $(srcdir)'/build-aux/sh-form.sh' \
     '--' \
     './'$(java_sourcepath) \
     >'first-java.tmp' \
-  || { ':'; \
+  || { \
     x="$${?}"; \
     'rm' '-f' 'first-java.tmp'; \
     'exit' "$${x}"; \
-  }; \
+  :;}; \
   sourcepath=` \
     'cat' 'first-java.tmp' \
-  ` || { ':'; \
+  ` || { \
     x="$${?}"; \
     'rm' '-f' 'first-java.tmp'; \
     'exit' "$${x}"; \
-  }; \
+  :;}; \
   'rm' '-f' 'first-java.tmp'; \
   $(MAKE) \
     $(AM_MAKEFLAGS) \
@@ -191,12 +191,12 @@ first-java:
     $(java_dst) \
   || 'exit' "$${?}"; \
   'exit' '0'; \
-}
+:;}
 
 install-first-java: first-java
 	@$(NORMAL_INSTALL)
 	@-':' #(((
-	@{ ':'; \
+	@{ \
   case ''$(java_noinst) in \
     ?*) \
       ':'; \
@@ -218,7 +218,7 @@ install-first-java: first-java
     ;; \
   esac; \
   exit 0; \
-}
+:;}
 
 install-java: install-first-java
 
@@ -227,7 +227,7 @@ java: first-java
 uninstall-first-java:
 	@$(NORMAL_UNINSTALL)
 	@-':' #(((
-	@{ ':'; \
+	@{ \
   case ''$(java_noinst) in \
     ?*) \
       ':'; \
@@ -243,7 +243,7 @@ uninstall-first-java:
     ;; \
   esac; \
   exit 0; \
-}
+:;}
 
 uninstall-java: uninstall-first-java
 
