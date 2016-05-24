@@ -35,7 +35,7 @@ $(java_dst): $(java_dep)
 $(java_dst): $(java_extra)
 $(java_dst): $(java_src)
 	@-':' #((
-	{ \
+	$(GATBPS_V_JAR){ \
   x=''; \
   x="$${x}"'./'; \
   x="$${x}"$(java_sourcepath); \
@@ -139,7 +139,7 @@ clean-first-java:
 clean-local: clean-first-java
 
 first-java:
-	$(GATBPS_V_JAR)'rm' \
+	$(AM_V_at)'rm' \
   '-f' \
   '-r' \
   $(java_dst)'.tmp' \
