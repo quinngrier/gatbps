@@ -44,55 +44,38 @@ $[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_src)
       x="$[]$[]{x}"'\'':'\''$[](java_[]gatbps_x2[]_CLASSPATH); \
     ;; \
   esac; \
-  $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
-    '\''--'\'' \
-    "$[]$[]{x}" \
-    >'\''java-gatbps_x1.tmp'\'' \
-  || { \
+  ( \
+    $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
+      '\''--'\'' \
+      "$[]$[]{x}" \
+      >'\''java-gatbps_x1.tmp'\'' \
+    || '\''exit'\'' "$[]$[]{?}"; \
+    classpath=` \
+      '\''cat'\'' '\''java-gatbps_x1.tmp'\'' \
+    ` || '\''exit'\'' "$[]$[]{?}"; \
+    $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
+      '\''--'\'' \
+      $[](java_[]gatbps_x2[]_JAVACFLAGS) \
+      >'\''java-gatbps_x1.tmp'\'' \
+    || '\''exit'\'' "$[]$[]{?}"; \
+    javacflags=` \
+      '\''cat'\'' '\''java-gatbps_x1.tmp'\'' \
+    ` || '\''exit'\'' "$[]$[]{?}"; \
+    $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
+      '\''--'\'' \
+      '\''./'\''$[](java_[]gatbps_x2[]_sourcepath) \
+      >'\''java-gatbps_x1.tmp'\'' \
+    || '\''exit'\'' "$[]$[]{?}"; \
+    sourcepath=` \
+      '\''cat'\'' '\''java-gatbps_x1.tmp'\'' \
+    ` || '\''exit'\'' "$[]$[]{?}"; \
+    '\''rm'\'' '\''-f'\'' '\''java-gatbps_x1.tmp'\''; \
+    '\''exit'\'' '\''0'\''; \
+  :;) || { \
     x="$[]$[]{?}"; \
     '\''rm'\'' '\''-f'\'' '\''java-gatbps_x1.tmp'\''; \
     '\''exit'\'' "$[]$[]{x}"; \
   :;}; \
-  classpath=` \
-    '\''cat'\'' '\''java-gatbps_x1.tmp'\'' \
-  ` || { \
-    x="$[]$[]{?}"; \
-    '\''rm'\'' '\''-f'\'' '\''java-gatbps_x1.tmp'\''; \
-    '\''exit'\'' "$[]$[]{x}"; \
-  :;}; \
-  $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
-    '\''--'\'' \
-    $[](java_[]gatbps_x2[]_JAVACFLAGS) \
-    >'\''java-gatbps_x1.tmp'\'' \
-  || { \
-    x="$[]$[]{?}"; \
-    '\''rm'\'' '\''-f'\'' '\''java-gatbps_x1.tmp'\''; \
-    '\''exit'\'' "$[]$[]{x}"; \
-  :;}; \
-  javacflags=` \
-    '\''cat'\'' '\''java-gatbps_x1.tmp'\'' \
-  ` || { \
-    x="$[]$[]{?}"; \
-    '\''rm'\'' '\''-f'\'' '\''java-gatbps_x1.tmp'\''; \
-    '\''exit'\'' "$[]$[]{x}"; \
-  :;}; \
-  $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
-    '\''--'\'' \
-    '\''./'\''$[](java_[]gatbps_x2[]_sourcepath) \
-    >'\''java-gatbps_x1.tmp'\'' \
-  || { \
-    x="$[]$[]{?}"; \
-    '\''rm'\'' '\''-f'\'' '\''java-gatbps_x1.tmp'\''; \
-    '\''exit'\'' "$[]$[]{x}"; \
-  :;}; \
-  sourcepath=` \
-    '\''cat'\'' '\''java-gatbps_x1.tmp'\'' \
-  ` || { \
-    x="$[]$[]{?}"; \
-    '\''rm'\'' '\''-f'\'' '\''java-gatbps_x1.tmp'\''; \
-    '\''exit'\'' "$[]$[]{x}"; \
-  :;}; \
-  '\''rm'\'' '\''-f'\'' '\''java-gatbps_x1.tmp'\''; \
   $[](MAKE) \
     $[](AM_MAKEFLAGS) \
     '\''GATBPS_CLASSPATH='\''"$[]$[]{classpath}" \
