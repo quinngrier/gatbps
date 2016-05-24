@@ -134,11 +134,11 @@ java-gatbps_x1:
   '\''rm'\'' \
     '\''-f'\'' \
     '\''-r'\'' \
-    $[](java_[]gatbps_x2[]_dst)'\''.tmp'\'' \
+    '\''./'\''$[](java_[]gatbps_x2[]_dst)'\''.tmp'\'' \
   || '\''exit'\'' "$[]$[]{?}"; \
   ( \
     $[](MKDIR_P) \
-      $[](java_[]gatbps_x2[]_dst)'\''.tmp/x'\'' \
+      '\''./'\''$[](java_[]gatbps_x2[]_dst)'\''.tmp/x'\'' \
     || '\''exit'\'' "$[]$[]{?}"; \
     c='\''cf'\''; \
     for x in \
@@ -158,7 +158,7 @@ java-gatbps_x1:
       fi; \
       $[](JAR) \
         "$[]$[]{c}" \
-        $[](java_[]gatbps_x2[]_dst)'\''.tmp/x.jar'\'' \
+        '\''./'\''$[](java_[]gatbps_x2[]_dst)'\''.tmp/x.jar'\'' \
         '\''-C'\'' \
         "$[]$[]{d}" \
         '\''./'\''"$[]$[]{x}" \
@@ -166,7 +166,7 @@ java-gatbps_x1:
       c='\''uf'\''; \
     done; \
     '\''cd'\'' \
-      $[](java_[]gatbps_x2[]_dst)'\''.tmp/x'\'' \
+      '\''./'\''$[](java_[]gatbps_x2[]_dst)'\''.tmp/x'\'' \
     || '\''exit'\'' "$[]$[]{?}"; \
     $[](JAR) \
       '\''xf'\'' \
@@ -178,22 +178,22 @@ java-gatbps_x1:
     '\''rm'\'' \
       '\''-f'\'' \
       '\''-r'\'' \
-      $[](java_[]gatbps_x2[]_dst)'\''.tmp'\'' \
+      '\''./'\''$[](java_[]gatbps_x2[]_dst)'\''.tmp'\'' \
     ; \
     '\''exit'\'' "$[]$[]{x}"; \
   :;}; \
   $[](JAR) \
     '\''cf'\'' \
-    $[](java_[]gatbps_x2[]_dst) \
+    '\''./'\''$[](java_[]gatbps_x2[]_dst) \
     '\''-C'\'' \
-    $[](java_[]gatbps_x2[]_dst)'\''.tmp/x/'\''$[](GATBPS_SOURCEPATH) \
+    '\''./'\''$[](java_[]gatbps_x2[]_dst)'\''.tmp/x/'\''$[](GATBPS_SOURCEPATH) \
     '\''.'\'' \
   ; \
   x="$[]$[]{?}"; \
   '\''rm'\'' \
     '\''-f'\'' \
     '\''-r'\'' \
-    $[](java_[]gatbps_x2[]_dst)'\''.tmp'\'' \
+    '\''./'\''$[](java_[]gatbps_x2[]_dst)'\''.tmp'\'' \
   ; \
   '\''exit'\'' "$[]$[]{x}"; \
 :;}
