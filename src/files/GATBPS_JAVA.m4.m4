@@ -27,103 +27,6 @@ m4_foreach_w(
 $[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_dep)
 $[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_extra)
 $[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_src)
-	$[](GATBPS_V_JAR)'\''rm'\'' \
-  '\''-f'\'' \
-  '\''-r'\'' \
-  $[](java_[]gatbps_x2[]_dst)'\''.tmp'\'' \
-;
-	$[](AM@&t@_V_at)$[](MKDIR_P) \
-  $[](java_[]gatbps_x2[]_dst)'\''.tmp/x'\'' \
-;
-	@-'\'':'\'' #(
-	$[](AM@&t@_V_at){ \
-  c='\''cf'\''; \
-  for x in \
-    $[](java_[]gatbps_x2[]_extra) \
-    $[](java_[]gatbps_x2[]_nested) \
-    $[](java_[]gatbps_x2[]_src) \
-  ; do \
-    if '\''test'\'' '\''-f'\'' "$[]$[]{x}"; then \
-      d='\''.'\''; \
-    else \
-      d=$[](srcdir); \
-      case "$[]$[]{d}" in \
-        '\''-'\''*) \
-          d='\''./'\''"$[]$[]{d}"; \
-        ;; \
-      esac; \
-    fi; \
-    $[](JAR) \
-      "$[]$[]{c}" \
-      $[](java_[]gatbps_x2[]_dst)'\''.tmp/x.jar'\'' \
-      '\''-C'\'' \
-      "$[]$[]{d}" \
-      '\''./'\''"$[]$[]{x}" \
-    || '\''exit'\'' "$[]$[]{?}"; \
-    c='\''uf'\''; \
-  done; \
-  '\''exit'\'' '\''0'\''; \
-:;}
-	$[](AM@&t@_V_at)'\''cd'\'' \
-  $[](java_[]gatbps_x2[]_dst)'\''.tmp/x'\'' \
-  && $[](JAR) '\''xf'\'' '\''../x.jar'\'' \
-;
-	$[](AM@&t@_V_at)$[](JAR) \
-  '\''cf'\'' \
-  $[](java_[]gatbps_x2[]_dst) \
-  '\''-C'\'' \
-  $[](java_[]gatbps_x2[]_dst)'\''.tmp/x/'\''$[](GATBPS_SOURCEPATH) \
-  '\''.'\'' \
-;
-	$[](AM@&t@_V_at)-'\''rm'\'' \
-  '\''-f'\'' \
-  '\''-r'\'' \
-  $[](java_[]gatbps_x2[]_dst)'\''.tmp'\'' \
-;
-
-.PHONY: clean-java-gatbps_x1
-.PHONY: install-java-gatbps_x1
-.PHONY: java-gatbps_x1
-.PHONY: uninstall-java-gatbps_x1
-
-clean-java-gatbps_x1:
-	-rm -f $[](java_[]gatbps_x2[]_dst)
-	-rm -f $[](java_[]gatbps_x2[]_src) $[](java_[]gatbps_x2[]_nested)
-
-clean-local: clean-java-gatbps_x1
-
-install-java: install-java-gatbps_x1
-
-install-java-gatbps_x1: java-gatbps_x1
-	@$[](NORMAL_INSTALL)
-	@-'\'':'\'' #(((
-	@{ \
-  case '\'''\''$[](java_[]gatbps_x2[]_noinst) in \
-    ?*) \
-      '\'':'\''; \
-    ;; \
-    *) \
-      case '\'''\''$[](javadir) in \
-        ?*) \
-          echo " $[](MKDIR_P) '\''$[](DESTDIR)$[](javadir)'\''"; \
-          $[](MKDIR_P) $[](DESTDIR)$[](javadir) || exit $[]$[]?; \
-          if test -f $[](java_[]gatbps_x2[]_dst); then \
-            x=$[](java_[]gatbps_x2[]_dst); \
-          else \
-            x=$[](srcdir)/$[](java_[]gatbps_x2[]_dst); \
-          fi; \
-          echo " $[](INSTALL_DATA) $[]$[]x '\''$[](DESTDIR)$[](javadir)'\''"; \
-          $[](INSTALL_DATA) $[]$[]x $[](DESTDIR)$[](javadir) || exit $[]$[]?; \
-        ;; \
-      esac; \
-    ;; \
-  esac; \
-  exit 0; \
-:;}
-
-java: java-gatbps_x1
-
-java-gatbps_x1:
 	@-'\'':'\'' #((
 	{ \
   x='\'''\''; \
@@ -195,10 +98,107 @@ java-gatbps_x1:
     '\''GATBPS_CLASSPATH='\''"$[]$[]{classpath}" \
     '\''GATBPS_JAVACFLAGS='\''"$[]$[]{javacflags}" \
     '\''GATBPS_SOURCEPATH='\''"$[]$[]{sourcepath}" \
-    $[](java_[]gatbps_x2[]_dst) \
+    'java-gatbps_x1' \
   || '\''exit'\'' "$[]$[]{?}"; \
   '\''exit'\'' '\''0'\''; \
 :;}
+
+.PHONY: clean-java-gatbps_x1
+.PHONY: install-java-gatbps_x1
+.PHONY: java-gatbps_x1
+.PHONY: uninstall-java-gatbps_x1
+
+clean-java-gatbps_x1:
+	-rm -f $[](java_[]gatbps_x2[]_dst)
+	-rm -f $[](java_[]gatbps_x2[]_src) $[](java_[]gatbps_x2[]_nested)
+
+clean-local: clean-java-gatbps_x1
+
+install-java: install-java-gatbps_x1
+
+install-java-gatbps_x1: java-gatbps_x1
+	@$[](NORMAL_INSTALL)
+	@-'\'':'\'' #(((
+	@{ \
+  case '\'''\''$[](java_[]gatbps_x2[]_noinst) in \
+    ?*) \
+      '\'':'\''; \
+    ;; \
+    *) \
+      case '\'''\''$[](javadir) in \
+        ?*) \
+          echo " $[](MKDIR_P) '\''$[](DESTDIR)$[](javadir)'\''"; \
+          $[](MKDIR_P) $[](DESTDIR)$[](javadir) || exit $[]$[]?; \
+          if test -f $[](java_[]gatbps_x2[]_dst); then \
+            x=$[](java_[]gatbps_x2[]_dst); \
+          else \
+            x=$[](srcdir)/$[](java_[]gatbps_x2[]_dst); \
+          fi; \
+          echo " $[](INSTALL_DATA) $[]$[]x '\''$[](DESTDIR)$[](javadir)'\''"; \
+          $[](INSTALL_DATA) $[]$[]x $[](DESTDIR)$[](javadir) || exit $[]$[]?; \
+        ;; \
+      esac; \
+    ;; \
+  esac; \
+  exit 0; \
+:;}
+
+java: java-gatbps_x1
+
+java-gatbps_x1:
+	$[](GATBPS_V_JAR)'\''rm'\'' \
+  '\''-f'\'' \
+  '\''-r'\'' \
+  $[](java_[]gatbps_x2[]_dst)'\''.tmp'\'' \
+;
+	$[](AM@&t@_V_at)$[](MKDIR_P) \
+  $[](java_[]gatbps_x2[]_dst)'\''.tmp/x'\'' \
+;
+	@-'\'':'\'' #(
+	$[](AM@&t@_V_at){ \
+  c='\''cf'\''; \
+  for x in \
+    $[](java_[]gatbps_x2[]_extra) \
+    $[](java_[]gatbps_x2[]_nested) \
+    $[](java_[]gatbps_x2[]_src) \
+  ; do \
+    if '\''test'\'' '\''-f'\'' "$[]$[]{x}"; then \
+      d='\''.'\''; \
+    else \
+      d=$[](srcdir); \
+      case "$[]$[]{d}" in \
+        '\''-'\''*) \
+          d='\''./'\''"$[]$[]{d}"; \
+        ;; \
+      esac; \
+    fi; \
+    $[](JAR) \
+      "$[]$[]{c}" \
+      $[](java_[]gatbps_x2[]_dst)'\''.tmp/x.jar'\'' \
+      '\''-C'\'' \
+      "$[]$[]{d}" \
+      '\''./'\''"$[]$[]{x}" \
+    || '\''exit'\'' "$[]$[]{?}"; \
+    c='\''uf'\''; \
+  done; \
+  '\''exit'\'' '\''0'\''; \
+:;}
+	$[](AM@&t@_V_at)'\''cd'\'' \
+  $[](java_[]gatbps_x2[]_dst)'\''.tmp/x'\'' \
+  && $[](JAR) '\''xf'\'' '\''../x.jar'\'' \
+;
+	$[](AM@&t@_V_at)$[](JAR) \
+  '\''cf'\'' \
+  $[](java_[]gatbps_x2[]_dst) \
+  '\''-C'\'' \
+  $[](java_[]gatbps_x2[]_dst)'\''.tmp/x/'\''$[](GATBPS_SOURCEPATH) \
+  '\''.'\'' \
+;
+	$[](AM@&t@_V_at)-'\''rm'\'' \
+  '\''-f'\'' \
+  '\''-r'\'' \
+  $[](java_[]gatbps_x2[]_dst)'\''.tmp'\'' \
+;
 
 uninstall-java: uninstall-java-gatbps_x1
 
