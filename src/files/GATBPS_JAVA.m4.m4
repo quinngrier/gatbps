@@ -143,7 +143,7 @@ install-java-gatbps_x1: java-gatbps_x1
   exit 0; \
 :;}
 
-java: java-gatbps_x1
+java: $[](java_[]gatbps_x2[]_dst)
 
 java-gatbps_x1:
 	$[](AM@&t@_V_at)'\''rm'\'' \

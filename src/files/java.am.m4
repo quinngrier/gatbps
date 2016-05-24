@@ -222,7 +222,7 @@ install-first-java: first-java
 
 install-java: install-first-java
 
-java: first-java
+java: $(java_dst)
 
 uninstall-first-java:
 	@$(NORMAL_UNINSTALL)
