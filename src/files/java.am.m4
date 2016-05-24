@@ -127,11 +127,11 @@ first-java:
   'rm' \
     '-f' \
     '-r' \
-    $(java_dst)'.tmp' \
+    './'$(java_dst)'.tmp' \
   || 'exit' "$${?}"; \
   ( \
     $(MKDIR_P) \
-      $(java_dst)'.tmp/x' \
+      './'$(java_dst)'.tmp/x' \
     || 'exit' "$${?}"; \
     c='cf'; \
     for x in \
@@ -151,7 +151,7 @@ first-java:
       fi; \
       $(JAR) \
         "$${c}" \
-        $(java_dst)'.tmp/x.jar' \
+        './'$(java_dst)'.tmp/x.jar' \
         '-C' \
         "$${d}" \
         './'"$${x}" \
@@ -159,7 +159,7 @@ first-java:
       c='uf'; \
     done; \
     'cd' \
-      $(java_dst)'.tmp/x' \
+      './'$(java_dst)'.tmp/x' \
     || 'exit' "$${?}"; \
     $(JAR) \
       'xf' \
@@ -171,22 +171,22 @@ first-java:
     'rm' \
       '-f' \
       '-r' \
-      $(java_dst)'.tmp' \
+      './'$(java_dst)'.tmp' \
     ; \
     'exit' "$${x}"; \
   :;}; \
   $(JAR) \
     'cf' \
-    $(java_dst) \
+    './'$(java_dst) \
     '-C' \
-    $(java_dst)'.tmp/x/'$(GATBPS_SOURCEPATH) \
+    './'$(java_dst)'.tmp/x/'$(GATBPS_SOURCEPATH) \
     '.' \
   ; \
   x="$${?}"; \
   'rm' \
     '-f' \
     '-r' \
-    $(java_dst)'.tmp' \
+    './'$(java_dst)'.tmp' \
   ; \
   'exit' "$${x}"; \
 :;}
