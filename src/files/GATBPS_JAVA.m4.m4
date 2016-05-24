@@ -235,22 +235,15 @@ java-gatbps_x1:
     '\''-C'\'' \
     $[](java_[]gatbps_x2[]_dst)'\''.tmp/x/'\''$[](GATBPS_SOURCEPATH) \
     '\''.'\'' \
-  || { \
-    x="$[]$[]{?}"; \
-    '\''rm'\'' \
-      '\''-f'\'' \
-      '\''-r'\'' \
-      $[](java_[]gatbps_x2[]_dst)'\''.tmp'\'' \
-    ; \
-    '\''exit'\'' "$[]$[]{x}"; \
-  :;}; \
-  '\''exit'\'' '\''0'\''; \
+  ; \
+  x="$[]$[]{?}"; \
+  '\''rm'\'' \
+    '\''-f'\'' \
+    '\''-r'\'' \
+    $[](java_[]gatbps_x2[]_dst)'\''.tmp'\'' \
+  ; \
+  '\''exit'\'' "$[]$[]{x}"; \
 :;}
-	$[](AM@&t@_V_at)-'\''rm'\'' \
-  '\''-f'\'' \
-  '\''-r'\'' \
-  $[](java_[]gatbps_x2[]_dst)'\''.tmp'\'' \
-;
 
 uninstall-java: uninstall-java-gatbps_x1
 
