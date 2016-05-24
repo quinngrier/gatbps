@@ -51,55 +51,38 @@ $(java_dst): $(java_src)
       x="$${x}"':'$(java_CLASSPATH); \
     ;; \
   esac; \
-  $(srcdir)'/build-aux/sh-form.sh' \
-    '--' \
-    "$${x}" \
-    >'first-java.tmp' \
-  || { \
+  ( \
+    $(srcdir)'/build-aux/sh-form.sh' \
+      '--' \
+      "$${x}" \
+      >'first-java.tmp' \
+    || 'exit' "$${?}"; \
+    classpath=` \
+      'cat' 'first-java.tmp' \
+    ` || 'exit' "$${?}"; \
+    $(srcdir)'/build-aux/sh-form.sh' \
+      '--' \
+      $(java_JAVACFLAGS) \
+      >'first-java.tmp' \
+    || 'exit' "$${?}"; \
+    javacflags=` \
+      'cat' 'first-java.tmp' \
+    ` || 'exit' "$${?}"; \
+    $(srcdir)'/build-aux/sh-form.sh' \
+      '--' \
+      './'$(java_sourcepath) \
+      >'first-java.tmp' \
+    || 'exit' "$${?}"; \
+    sourcepath=` \
+      'cat' 'first-java.tmp' \
+    ` || 'exit' "$${?}"; \
+    'rm' '-f' 'first-java.tmp'; \
+    'exit' '0'; \
+  :;) || { \
     x="$${?}"; \
     'rm' '-f' 'first-java.tmp'; \
     'exit' "$${x}"; \
   :;}; \
-  classpath=` \
-    'cat' 'first-java.tmp' \
-  ` || { \
-    x="$${?}"; \
-    'rm' '-f' 'first-java.tmp'; \
-    'exit' "$${x}"; \
-  :;}; \
-  $(srcdir)'/build-aux/sh-form.sh' \
-    '--' \
-    $(java_JAVACFLAGS) \
-    >'first-java.tmp' \
-  || { \
-    x="$${?}"; \
-    'rm' '-f' 'first-java.tmp'; \
-    'exit' "$${x}"; \
-  :;}; \
-  javacflags=` \
-    'cat' 'first-java.tmp' \
-  ` || { \
-    x="$${?}"; \
-    'rm' '-f' 'first-java.tmp'; \
-    'exit' "$${x}"; \
-  :;}; \
-  $(srcdir)'/build-aux/sh-form.sh' \
-    '--' \
-    './'$(java_sourcepath) \
-    >'first-java.tmp' \
-  || { \
-    x="$${?}"; \
-    'rm' '-f' 'first-java.tmp'; \
-    'exit' "$${x}"; \
-  :;}; \
-  sourcepath=` \
-    'cat' 'first-java.tmp' \
-  ` || { \
-    x="$${?}"; \
-    'rm' '-f' 'first-java.tmp'; \
-    'exit' "$${x}"; \
-  :;}; \
-  'rm' '-f' 'first-java.tmp'; \
   $(MAKE) \
     $(AM_MAKEFLAGS) \
     'GATBPS_CLASSPATH='"$${classpath}" \
