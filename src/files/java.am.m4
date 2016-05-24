@@ -171,22 +171,63 @@ first-java:
       '-C' \
       "$${d}" \
       './'"$${x}" \
-    || 'exit' "$${?}"; \
+    || { \
+      y="$${?}"; \
+      'rm' \
+        '-f' \
+        '-r' \
+        $(java_dst)'.tmp' \
+      ; \
+      'exit' "$${y}"; \
+    :;}; \
     c='uf'; \
   done; \
   'exit' '0'; \
 :;}
-	$(AM_V_at)'cd' \
-  $(java_dst)'.tmp/x' \
-  && $(JAR) 'xf' '../x.jar' \
-;
-	$(AM_V_at)$(JAR) \
-  'cf' \
-  $(java_dst) \
-  '-C' \
-  $(java_dst)'.tmp/x/'$(GATBPS_SOURCEPATH) \
-  '.' \
-;
+	$(AM_V_at){ \
+  'cd' \
+    $(java_dst)'.tmp/x' \
+  || { \
+    x="$${?}"; \
+    'rm' \
+      '-f' \
+      '-r' \
+      $(java_dst)'.tmp' \
+    ; \
+    'exit' "$${x}"; \
+  :;}; \
+  $(JAR) \
+    'xf' \
+    '../x.jar' \
+  || { \
+    x="$${?}"; \
+    'rm' \
+      '-f' \
+      '-r' \
+      $(java_dst)'.tmp' \
+    ; \
+    'exit' "$${x}"; \
+  :;}; \
+  'exit' '0'; \
+:;}
+	$(AM_V_at){ \
+  $(JAR) \
+    'cf' \
+    $(java_dst) \
+    '-C' \
+    $(java_dst)'.tmp/x/'$(GATBPS_SOURCEPATH) \
+    '.' \
+  || { \
+    x="$${?}"; \
+    'rm' \
+      '-f' \
+      '-r' \
+      $(java_dst)'.tmp' \
+    ; \
+    'exit' "$${x}"; \
+  :;}; \
+  'exit' '0'; \
+:;}
 	$(AM_V_at)-'rm' \
   '-f' \
   '-r' \
