@@ -34,89 +34,6 @@ GATBPS_V_JAVAC_1 =
 $(java_dst): $(java_dep)
 $(java_dst): $(java_extra)
 $(java_dst): $(java_src)
-	$(GATBPS_V_JAR)'rm' \
-  '-f' \
-  '-r' \
-  $(java_dst)'.tmp' \
-;
-	$(AM_V_at)$(MKDIR_P) \
-  $(java_dst)'.tmp/x' \
-;
-	@-':' #(
-	$(AM_V_at){ \
-  c='cf'; \
-  for x in \
-    $(java_extra) \
-    $(java_nested) \
-    $(java_src) \
-  ; do \
-    if 'test' '-f' "$${x}"; then \
-      d='.'; \
-    else \
-      d=$(srcdir); \
-      case "$${d}" in \
-        '-'*) \
-          d='./'"$${d}"; \
-        ;; \
-      esac; \
-    fi; \
-    $(JAR) \
-      "$${c}" \
-      $(java_dst)'.tmp/x.jar' \
-      '-C' \
-      "$${d}" \
-      './'"$${x}" \
-    || 'exit' "$${?}"; \
-    c='uf'; \
-  done; \
-  'exit' '0'; \
-:;}
-	$(AM_V_at)'cd' \
-  $(java_dst)'.tmp/x' \
-  && $(JAR) 'xf' '../x.jar' \
-;
-	$(AM_V_at)$(JAR) \
-  'cf' \
-  $(java_dst) \
-  '-C' \
-  $(java_dst)'.tmp/x/'$(GATBPS_SOURCEPATH) \
-  '.' \
-;
-	$(AM_V_at)-'rm' \
-  '-f' \
-  '-r' \
-  $(java_dst)'.tmp' \
-;
-
-.PHONY: clean-first-java
-.PHONY: first-java
-.PHONY: install-first-java
-.PHONY: install-java
-.PHONY: java
-.PHONY: uninstall-first-java
-.PHONY: uninstall-java
-
-.java.class:
-	$(GATBPS_V_JAVAC)$(MKDIR_P) $(GATBPS_SOURCEPATH)
-	$(AM_V_at)$(JAVAC) \
-  '-classpath' \
-  $(GATBPS_CLASSPATH) \
-  '-d' \
-  $(GATBPS_SOURCEPATH) \
-  '-sourcepath' \
-  $(GATBPS_SOURCEPATH)':'$(srcdir)'/'$(GATBPS_SOURCEPATH) \
-  $(GATBPS_JAVACFLAGS) \
-  $(JAVACFLAGS) \
-  $< \
-;
-
-clean-first-java:
-	-rm -f $(java_dst)
-	-rm -f $(java_src) $(java_nested)
-
-clean-local: clean-first-java
-
-first-java:
 	@-':' #((
 	{ \
   x=''; \
@@ -188,10 +105,93 @@ first-java:
     'GATBPS_CLASSPATH='"$${classpath}" \
     'GATBPS_JAVACFLAGS='"$${javacflags}" \
     'GATBPS_SOURCEPATH='"$${sourcepath}" \
-    $(java_dst) \
+    'first-java' \
   || 'exit' "$${?}"; \
   'exit' '0'; \
 :;}
+
+.PHONY: clean-first-java
+.PHONY: first-java
+.PHONY: install-first-java
+.PHONY: install-java
+.PHONY: java
+.PHONY: uninstall-first-java
+.PHONY: uninstall-java
+
+.java.class:
+	$(GATBPS_V_JAVAC)$(MKDIR_P) $(GATBPS_SOURCEPATH)
+	$(AM_V_at)$(JAVAC) \
+  '-classpath' \
+  $(GATBPS_CLASSPATH) \
+  '-d' \
+  $(GATBPS_SOURCEPATH) \
+  '-sourcepath' \
+  $(GATBPS_SOURCEPATH)':'$(srcdir)'/'$(GATBPS_SOURCEPATH) \
+  $(GATBPS_JAVACFLAGS) \
+  $(JAVACFLAGS) \
+  $< \
+;
+
+clean-first-java:
+	-rm -f $(java_dst)
+	-rm -f $(java_src) $(java_nested)
+
+clean-local: clean-first-java
+
+first-java:
+	$(GATBPS_V_JAR)'rm' \
+  '-f' \
+  '-r' \
+  $(java_dst)'.tmp' \
+;
+	$(AM_V_at)$(MKDIR_P) \
+  $(java_dst)'.tmp/x' \
+;
+	@-':' #(
+	$(AM_V_at){ \
+  c='cf'; \
+  for x in \
+    $(java_extra) \
+    $(java_nested) \
+    $(java_src) \
+  ; do \
+    if 'test' '-f' "$${x}"; then \
+      d='.'; \
+    else \
+      d=$(srcdir); \
+      case "$${d}" in \
+        '-'*) \
+          d='./'"$${d}"; \
+        ;; \
+      esac; \
+    fi; \
+    $(JAR) \
+      "$${c}" \
+      $(java_dst)'.tmp/x.jar' \
+      '-C' \
+      "$${d}" \
+      './'"$${x}" \
+    || 'exit' "$${?}"; \
+    c='uf'; \
+  done; \
+  'exit' '0'; \
+:;}
+	$(AM_V_at)'cd' \
+  $(java_dst)'.tmp/x' \
+  && $(JAR) 'xf' '../x.jar' \
+;
+	$(AM_V_at)$(JAR) \
+  'cf' \
+  $(java_dst) \
+  '-C' \
+  $(java_dst)'.tmp/x/'$(GATBPS_SOURCEPATH) \
+  '.' \
+;
+	$(AM_V_at)-'rm' \
+  '-f' \
+  '-r' \
+  $(java_dst)'.tmp' \
+;
 
 install-first-java: first-java
 	@$(NORMAL_INSTALL)
