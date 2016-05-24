@@ -228,22 +228,15 @@ first-java:
     '-C' \
     $(java_dst)'.tmp/x/'$(GATBPS_SOURCEPATH) \
     '.' \
-  || { \
-    x="$${?}"; \
-    'rm' \
-      '-f' \
-      '-r' \
-      $(java_dst)'.tmp' \
-    ; \
-    'exit' "$${x}"; \
-  :;}; \
-  'exit' '0'; \
+  ; \
+  x="$${?}"; \
+  'rm' \
+    '-f' \
+    '-r' \
+    $(java_dst)'.tmp' \
+  ; \
+  'exit' "$${x}"; \
 :;}
-	$(AM_V_at)-'rm' \
-  '-f' \
-  '-r' \
-  $(java_dst)'.tmp' \
-;
 
 install-first-java: first-java
 	@$(NORMAL_INSTALL)
