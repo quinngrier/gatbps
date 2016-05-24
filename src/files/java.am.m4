@@ -144,9 +144,20 @@ first-java:
   '-r' \
   $(java_dst)'.tmp' \
 ;
-	$(AM_V_at)$(MKDIR_P) \
-  $(java_dst)'.tmp/x' \
-;
+	$(AM_V_at){ \
+  $(MKDIR_P) \
+    $(java_dst)'.tmp/x' \
+  || { \
+    x="$${?}"; \
+    'rm' \
+      '-f' \
+      '-r' \
+      $(java_dst)'.tmp' \
+    ; \
+    'exit' "$${x}"; \
+  :;}; \
+  'exit' '0'; \
+:;}
 	@-':' #(
 	$(AM_V_at){ \
   c='cf'; \
