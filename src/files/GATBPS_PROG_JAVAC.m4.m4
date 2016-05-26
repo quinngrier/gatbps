@@ -10,6 +10,11 @@ dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([GATBPS_PROG_JAVAC], [{ ':'
 
+m4_case(
+  [$#],
+  [0], [],
+  [m4_fatal([GATBPS_PROG_JAVAC requires exactly 0 arguments])])
+
 AC_CHECK_PROGS([JAVAC], [javac])
 
 AC_ARG_VAR([JAVAC], [Java compiler command])
