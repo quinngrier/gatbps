@@ -10,7 +10,9 @@ dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([GATBPS_PROG_JAVAC], [{
 
-# GATBPS_PROG_JAVAC
+#
+# This block is the expansion of the GATBPS_PROG_JAVAC macro.
+#
 
 m4_ifdef(
   [GATBPS_PROG_JAVAC_SEEN],
