@@ -8,13 +8,13 @@ dnl Special file: GATBPS_PROG_JAVADOC.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_PROG_JAVADOC], [{ ':'
+AC_DEFUN([GATBPS_PROG_JAVADOC], [{
 
 AC_CHECK_PROGS([JAVADOC], [javadoc])
 
 AC_ARG_VAR([JAVADOC], [Javadoc generator command])
 
-}])dnl
+:;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
 dnl
 dnl The authors of this file have waived all copyright and
