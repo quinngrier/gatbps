@@ -26,7 +26,7 @@ body {
   font-family: serif;
   margin: auto;
   max-width: 40em;
-  padding: 1.46em;
+  padding: 1.50em;
   text-align: justify;
 }
 
@@ -47,7 +47,7 @@ li {
 }
 
 span.indent-immediately-following-paragraph + p {
-  text-indent: 1.46em;
+  text-indent: 1.50em;
 }
 
 /*
