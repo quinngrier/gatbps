@@ -30,8 +30,20 @@ body {
   text-align: justify;
 }
 
+div.contents li {
+  margin: 0;
+}
+
+div.shortcontents li {
+  margin: 0;
+}
+
 hr {
   visibility: hidden;
+}
+
+li {
+  margin: 0.75em 0;
 }
 
 span.indent-immediately-following-paragraph + p {
