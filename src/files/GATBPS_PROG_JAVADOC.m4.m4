@@ -10,6 +10,10 @@ dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([GATBPS_PROG_JAVADOC], [{
 
+#
+# This block is the expansion of the GATBPS_PROG_JAVADOC macro.
+#
+
 AC_CHECK_PROGS([JAVADOC], [javadoc])
 
 AC_ARG_VAR([JAVADOC], [Javadoc generator command])
