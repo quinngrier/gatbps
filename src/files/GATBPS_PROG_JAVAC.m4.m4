@@ -10,6 +10,8 @@ dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([GATBPS_PROG_JAVAC], [{
 
+# GATBPS_PROG_JAVAC
+
 m4_ifdef(
   [GATBPS_PROG_JAVAC_SEEN],
   [m4_fatal([GATBPS_PROG_JAVAC must be called at most once])],
