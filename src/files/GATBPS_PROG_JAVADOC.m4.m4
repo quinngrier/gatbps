@@ -19,6 +19,11 @@ m4_ifdef(
   [m4_fatal([GATBPS_PROG_JAVADOC must be called at most once])],
   [m4_define([GATBPS_PROG_JAVADOC_SEEN], [])])
 
+m4_case(
+  [$#],
+  [0], [],
+  [m4_fatal([GATBPS_PROG_JAVADOC requires exactly 0 arguments])])
+
 AC_CHECK_PROGS([JAVADOC], [javadoc])
 
 AC_ARG_VAR([JAVADOC], [Javadoc generator command])
