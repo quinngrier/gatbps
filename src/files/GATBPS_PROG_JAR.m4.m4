@@ -14,6 +14,11 @@ AC_DEFUN([GATBPS_PROG_JAR], [{
 # This block is the expansion of the GATBPS_PROG_JAR macro.
 #
 
+m4_ifdef(
+  [GATBPS_PROG_JAR_SEEN],
+  [m4_fatal([GATBPS_PROG_JAR must be called at most once])],
+  [m4_define([GATBPS_PROG_JAR_SEEN], [])])
+
 AC_CHECK_PROGS([JAR], [jar])
 
 AC_ARG_VAR([JAR], [Java archiver command])
