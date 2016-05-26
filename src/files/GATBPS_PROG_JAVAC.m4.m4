@@ -8,7 +8,7 @@ dnl Special file: GATBPS_PROG_JAVAC.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_PROG_JAVAC], [{ ':'
+AC_DEFUN([GATBPS_PROG_JAVAC], [{
 
 m4_case(
   [$#],
@@ -19,7 +19,7 @@ AC_CHECK_PROGS([JAVAC], [javac])
 
 AC_ARG_VAR([JAVAC], [Java compiler command])
 
-}])dnl
+:;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
 dnl
 dnl The authors of this file have waived all copyright and
