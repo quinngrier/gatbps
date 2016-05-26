@@ -8,13 +8,13 @@ dnl Special file: GATBPS_PROG_JAR.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_PROG_JAR], [{ ':'
+AC_DEFUN([GATBPS_PROG_JAR], [{
 
 AC_CHECK_PROGS([JAR], [jar])
 
 AC_ARG_VAR([JAR], [Java archiver command])
 
-}])dnl
+:;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
 dnl
 dnl The authors of this file have waived all copyright and
