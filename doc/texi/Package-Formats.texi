@@ -6,7 +6,7 @@ GATBPS is available in three different package formats: as a copy of the
 Git repository, as a tree archive, and as a distribution archive@.
 The Git repository is the definitive copy of the package, a tree archive
 is a snapshot of the Git repository at a specific moment in history, and
-a distribution archive is a tree archive that has been streamlined for
+a distribution archive is a tree archive that has been optimized for
 building and installation@.
 The differences between the package formats are discussed throughout
 this manual, but they are particularly relevant to building and
@@ -38,7 +38,7 @@ Otherwise, you are working with a distribution archive@.
 @include indent.texi
 If you are only interested in building and installing the package, then
 you probably want to be working with a distribution archive@.
-Distribution archives are streamlined for building and installation@.
+Distribution archives are optimized for building and installation@.
 
 @include indent.texi
 If you are only interested in browsing the source code of the package,
