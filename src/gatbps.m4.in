@@ -7913,12 +7913,12 @@ EOF1
               esac
 
               'eval' '"${texi2any}" \
-  --plaintext \
-  ${unicode_args} \
-  '"${path_args}"' \
-  "${safe_tmp1}" \
-  >"${safe_tmp0}" \
-;'
+                --plaintext \
+                ${unicode_args} \
+                '"${path_args}"' \
+                "${safe_tmp1}" \
+                >"${safe_tmp0}" \
+              ;'
               case "${?}" in
               #(
                 '0')
@@ -8031,11 +8031,11 @@ EOF1
             esac
 
             'eval' '"${texi2any}" \
---plaintext \
-${unicode_args} \
-'"${path_args}"' \
-"${safe_tmp2}" \
->"${safe_tmp1}" \
+              --plaintext \
+              ${unicode_args} \
+              '"${path_args}"' \
+              "${safe_tmp2}" \
+              >"${safe_tmp1}" \
             ;'
             case "${?}" in
             #(
@@ -8158,12 +8158,12 @@ EOF1
               esac
 
               'eval' '"${texi2any}" \
-  --plaintext \
-  ${unicode_args} \
-  '"${path_args}"' \
-  "${safe_tmp3}" \
-  >>"${safe_tmp2}" \
-;'
+                --plaintext \
+                ${unicode_args} \
+                '"${path_args}"' \
+                "${safe_tmp3}" \
+                >>"${safe_tmp2}" \
+              ;'
               case "${?}" in
               #(
                 '0')
