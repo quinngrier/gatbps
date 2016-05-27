@@ -37,19 +37,19 @@ Otherwise, you are working with a distribution archive@.
 
 @include indent.texi
 If you are only interested in building and installing the package, then
-you probably want to be working with a distribution archive@.
+you probably want to work with a distribution archive@.
 Distribution archives are optimized for building and installation@.
 
 @include indent.texi
 If you are only interested in browsing the source code of the package,
-then you probably want to be working with a copy of the Git repository
-or a tree archive@.
+then you probably want to work with a copy of the Git repository or a
+tree archive@.
 Distribution archives include generated source code and may exclude some
 of the normal source code@.
 
 @include indent.texi
 If you are interested in modifying the source code of the package, then
-you probably want to be working with a copy of the Git repository@.
+you probably want to work with a copy of the Git repository@.
 Copies of the Git repository provide version control and include the
 complete development history of the package@.
 @ifxml
