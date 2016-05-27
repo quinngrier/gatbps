@@ -106,8 +106,7 @@ AS_HELP_STRING(
   ],
   [
     awk_default='auto'
-  ]
-)
+  ])
 AC_MSG_RESULT([${awk_default}])
 
 AC_MSG_CHECKING([which --sed value to use by default])
@@ -151,8 +150,7 @@ AS_HELP_STRING(
   ],
   [
     sed_default='auto'
-  ]
-)
+  ])
 AC_MSG_RESULT([${sed_default}])
 
 AC_MSG_CHECKING([which --texi2any value to use by default])
@@ -205,8 +203,7 @@ AS_HELP_STRING(
   ],
   [
     texi2any_default='auto'
-  ]
-)
+  ])
 AC_MSG_RESULT([${texi2any_default}])
 
 AWK_DEFAULT_SH=`sh "${srcdir}/build-aux/sh-form.sh" \
