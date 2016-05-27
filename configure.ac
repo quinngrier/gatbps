@@ -69,18 +69,21 @@ AC_ARG_ENABLE(
   [awk],
   [
 AS_HELP_STRING(
-  [--disable-awk],
-  [same as --enable-awk=no (default)])
+  [--enable-awk omitted],
+  [same as --enable-awk=no])
 AS_HELP_STRING(
   [--enable-awk],
   [same as --enable-awk=yes])
 AS_HELP_STRING(
-  [--enable-awk=no],
-  [use --awk=auto by default])
+  [--disable-awk],
+  [same as --enable-awk=no])
 AS_HELP_STRING(
   [--enable-awk=yes],
   [use --awk=V by default where V is
    the best choice for this particular system])
+AS_HELP_STRING(
+  [--enable-awk=no],
+  [use --awk=auto by default])
 AS_HELP_STRING(
   [--enable-awk=V],
   [use --awk=V by default])],
@@ -111,18 +114,21 @@ AC_ARG_ENABLE(
   [sed],
   [
 AS_HELP_STRING(
-  [--disable-sed],
-  [same as --enable-sed=no (default)])
+  [--enable-sed omitted],
+  [same as --enable-sed=no])
 AS_HELP_STRING(
   [--enable-sed],
   [same as --enable-sed=yes])
 AS_HELP_STRING(
-  [--enable-sed=no],
-  [use --sed=auto by default])
+  [--disable-sed],
+  [same as --enable-sed=no])
 AS_HELP_STRING(
   [--enable-sed=yes],
   [use --sed=V by default where V is
    the best choice for this particular system])
+AS_HELP_STRING(
+  [--enable-sed=no],
+  [use --sed=auto by default])
 AS_HELP_STRING(
   [--enable-sed=V],
   [use --sed=V by default])],
@@ -153,18 +159,21 @@ AC_ARG_ENABLE(
   [texi2any],
   [
 AS_HELP_STRING(
-  [--disable-texi2any],
-  [same as --enable-texi2any=no (default)])
+  [--enable-texi2any omitted],
+  [same as --enable-texi2any=no])
 AS_HELP_STRING(
   [--enable-texi2any],
   [same as --enable-texi2any=yes])
 AS_HELP_STRING(
-  [--enable-texi2any=no],
-  [use --texi2any=auto by default])
+  [--disable-texi2any],
+  [same as --enable-texi2any=no])
 AS_HELP_STRING(
   [--enable-texi2any=yes],
   [use --texi2any=V by default where V is
    the best choice for this particular system])
+AS_HELP_STRING(
+  [--enable-texi2any=no],
+  [use --texi2any=auto by default])
 AS_HELP_STRING(
   [--enable-texi2any=V],
   [use --texi2any=V by default])],
