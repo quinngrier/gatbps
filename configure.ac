@@ -40,10 +40,9 @@ case "${interpval}" in
   ;;
 esac
 
-AC_ARG_VAR([AWK], [the command name for awk])
 AC_PROG_AWK
+AC_ARG_VAR([AWK], [the command name for awk])
 
-AC_ARG_VAR([M4], [the command name for m4])
 AC_CHECK_PROGS([M4], [gm4 m4])
 case "${M4}" in
 #(
@@ -55,14 +54,15 @@ case "${M4}" in
     AC_MSG_ERROR([m4 is required], [1])
   ;;
 esac
+AC_ARG_VAR([M4], [the command name for m4])
 
 AC_ARG_VAR([MAKEINFO], [the command name for makeinfo])
 
-AC_ARG_VAR([SED], [the command name for sed])
 AC_PROG_SED
+AC_ARG_VAR([SED], [the command name for sed])
 
-AC_ARG_VAR([TEXI2ANY], [the command name for texi2any])
 AC_CHECK_PROGS([TEXI2ANY], [texi2any makeinfo])
+AC_ARG_VAR([TEXI2ANY], [the command name for texi2any])
 
 AC_MSG_CHECKING([which --awk value to use by default])
 AC_ARG_ENABLE(
