@@ -57,13 +57,13 @@ case "${M4}" in
   ;;
 esac
 
-AC_ARG_VAR([MAKEINFO], [the command name for makeinfo])
+AC_ARG_VAR([MAKEINFO], [makeinfo translator command])
 
 AC_PROG_SED
 AC_ARG_VAR([SED], [sed interpreter command])
 
 AC_CHECK_PROGS([TEXI2ANY], [texi2any makeinfo])
-AC_ARG_VAR([TEXI2ANY], [the command name for texi2any])
+AC_ARG_VAR([TEXI2ANY], [texi2any translator command])
 
 AC_MSG_CHECKING([which --awk value to use by default])
 AC_ARG_ENABLE(
