@@ -91,12 +91,12 @@ AS_HELP_STRING(
   [
     case "${enable_awk}" in
     #(
-      'no')
-        awk_default='auto'
-      ;;
-    #(
       'yes')
         awk_default="${AWK}"
+      ;;
+    #(
+      'no')
+        awk_default='auto'
       ;;
     #(
       *)
@@ -136,12 +136,12 @@ AS_HELP_STRING(
   [
     case "${enable_sed}" in
     #(
-      'no')
-        sed_default='auto'
-      ;;
-    #(
       'yes')
         sed_default="${SED}"
+      ;;
+    #(
+      'no')
+        sed_default='auto'
       ;;
     #(
       *)
@@ -181,10 +181,6 @@ AS_HELP_STRING(
   [
     case "${enable_texi2any}" in
     #(
-      'no')
-        texi2any_default='auto'
-      ;;
-    #(
       'yes')
         case "${TEXI2ANY}" in
         #(
@@ -196,6 +192,10 @@ AS_HELP_STRING(
             texi2any_default='auto'
           ;;
         esac
+      ;;
+    #(
+      'no')
+        texi2any_default='auto'
       ;;
     #(
       *)
