@@ -47,7 +47,7 @@ AC_CHECK_PROGS([M4], [gm4 m4])
 case "${M4}" in
 #(
   ?*)
-    :
+    ':'
   ;;
 #(
   *)
