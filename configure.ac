@@ -44,6 +44,8 @@ AC_PROG_AWK
 AC_ARG_VAR([AWK], [AWK interpreter command])
 
 AC_CHECK_PROGS([M4], [gm4 m4])
+AC_ARG_VAR([M4], [M4 preprocessor command])
+
 case "${M4}" in
 #(
   ?*)
@@ -54,7 +56,6 @@ case "${M4}" in
     AC_MSG_ERROR([m4 is required], [1])
   ;;
 esac
-AC_ARG_VAR([M4], [M4 preprocessor command])
 
 AC_ARG_VAR([MAKEINFO], [the command name for makeinfo])
 
