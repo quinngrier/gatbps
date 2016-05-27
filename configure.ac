@@ -88,7 +88,7 @@ AS_HELP_STRING(
 AS_HELP_STRING(
   [--enable-awk=V],
   [use --awk=V by default])],
-  [
+  [{
     case "${enable_awk}" in
     #(
       'yes')
@@ -103,10 +103,10 @@ AS_HELP_STRING(
         awk_default="${enable_awk}"
       ;;
     esac
-  ],
-  [
+  :;}],
+  [{
     awk_default='auto'
-  ])
+  :;}])
 AC_MSG_RESULT([${awk_default}])
 
 AC_MSG_CHECKING([which --sed value to use by default])
@@ -132,7 +132,7 @@ AS_HELP_STRING(
 AS_HELP_STRING(
   [--enable-sed=V],
   [use --sed=V by default])],
-  [
+  [{
     case "${enable_sed}" in
     #(
       'yes')
@@ -147,10 +147,10 @@ AS_HELP_STRING(
         sed_default="${enable_sed}"
       ;;
     esac
-  ],
-  [
+  :;}],
+  [{
     sed_default='auto'
-  ])
+  :;}])
 AC_MSG_RESULT([${sed_default}])
 
 AC_MSG_CHECKING([which --texi2any value to use by default])
@@ -176,7 +176,7 @@ AS_HELP_STRING(
 AS_HELP_STRING(
   [--enable-texi2any=V],
   [use --texi2any=V by default])],
-  [
+  [{
     case "${enable_texi2any}" in
     #(
       'yes')
@@ -200,10 +200,10 @@ AS_HELP_STRING(
         texi2any_default="${enable_texi2any}"
       ;;
     esac
-  ],
-  [
+  :;}],
+  [{
     texi2any_default='auto'
-  ])
+  :;}])
 AC_MSG_RESULT([${texi2any_default}])
 
 AWK_DEFAULT_SH=`sh "${srcdir}/build-aux/sh-form.sh" \
