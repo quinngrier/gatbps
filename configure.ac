@@ -53,7 +53,7 @@ case "${M4}" in
   ;;
 #(
   *)
-    AC_MSG_ERROR([m4 is required], [1])
+    AC_MSG_ERROR([an M4 preprocessor is required], [1])
   ;;
 esac
 
