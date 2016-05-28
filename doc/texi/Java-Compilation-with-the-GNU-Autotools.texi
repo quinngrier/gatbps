@@ -30,6 +30,11 @@ Autoconf macros, which are defined by the
 and
 @w{@t{GATBPS_PROG_JAR.@:m4}}
 special files@.
+The macros take no arguments and set up the variables by calling the
+@w{@t{AC_CHECK_PROGS}}
+and
+@w{@t{AC_ARG_VAR}}
+macros appropriately@.
 @ifxml
 @ifnotxml
 @c
