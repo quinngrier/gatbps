@@ -44,6 +44,38 @@ and
 lines to your
 @w{@t{Makefile.@:in}}
 file@.
+
+@include indent.texi
+For example, if you are using the
+@w{@t{m4}}
+directory to hold your macros, then you can generate the special files
+as follows:
+
+@example
+gatbps m4/GATBPS_PROG_JAVAC.m4
+gatbps m4/GATBPS_PROG_JAR.m4
+@end example
+
+@noindent
+Then you can add the following lines to your
+@w{@t{configure.@:ac}}
+file to call the macros:
+
+@example
+GATBPS_PROG_JAVAC
+GATBPS_PROG_JAR
+@end example
+
+@noindent
+If you are using Automake, then you're done@.
+Otherwise, you can add the following lines to your
+@w{@t{Makefile.@:in}}
+file to put the results of the calls into their variables:
+
+@example
+JAVAC = @@JAVAC@@
+JAR = @@JAR@@
+@end example
 @ifxml
 @ifnotxml
 @c
