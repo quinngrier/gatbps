@@ -16,11 +16,11 @@ The first step is to set the
 @w{@t{JAVAC}}
 and
 @w{@t{JAR}}
-variables in your makefile to commands that run the
+variables to commands that run the
 @w{@t{javac}}
 and
 @w{@t{jar}}
-tools@.
+tools in your makefile@.
 You can do this by calling the
 @w{@t{GATBPS_PROG_JAVAC}}
 and
