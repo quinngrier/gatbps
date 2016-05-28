@@ -37,11 +37,11 @@ The macros take no arguments and set up the variables by calling the
 and
 @w{@t{AC_ARG_VAR}}
 macros appropriately@.
-If you are not using Automake, then you also need to add
+If you are not using Automake, then you also need to add the
 @w{@t{JAVAC = @@JAVAC@@}}
 and
 @w{@t{JAR = @@JAR@@}}
-to your
+lines to your
 @w{@t{Makefile.@:in}}
 file@.
 @ifxml
