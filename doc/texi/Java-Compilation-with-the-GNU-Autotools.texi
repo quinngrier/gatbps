@@ -21,7 +21,7 @@ variables in your makefile to commands that run the
 and
 @w{@t{jar}}
 tools@.
-The recommended way to do this is by using the
+You can do this with the
 @w{@t{GATBPS_PROG_JAVAC}}
 and
 @w{@t{GATBPS_PROG_JAR}}
