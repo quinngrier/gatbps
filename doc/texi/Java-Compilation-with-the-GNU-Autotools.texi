@@ -12,11 +12,11 @@ tools@.
 @sfindex @w{@t{GATBPS_PROG_JAR.@:m4}}
 @sfindex @w{@t{GATBPS_PROG_JAVAC.@:m4}}
 @include indent.texi
-The first step is to ensure that the
+The first step is to set the
 @w{@t{JAVAC}}
 and
 @w{@t{JAR}}
-variables in your makefile will be set to commands that run the
+variables in your makefile to commands that run the
 @w{@t{javac}}
 and
 @w{@t{jar}}
