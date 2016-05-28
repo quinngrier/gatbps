@@ -25,7 +25,9 @@ You can do this by calling the
 @w{@t{GATBPS_PROG_JAVAC}}
 and
 @w{@t{GATBPS_PROG_JAR}}
-Autoconf macros, which are defined by the
+macros in your
+@w{@t{configure.@:ac}}
+file, which are defined by the
 @w{@t{GATBPS_PROG_JAVAC.@:m4}}
 and
 @w{@t{GATBPS_PROG_JAR.@:m4}}
