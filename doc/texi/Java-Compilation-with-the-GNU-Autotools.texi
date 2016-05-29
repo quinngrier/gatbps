@@ -88,7 +88,7 @@ and
 variables by calling the
 @w{@t{AC_ARG_VAR}}
 macro@.
-These variables are used when running the
+These variables are used with the
 @w{@t{javac}}
 tool, so you should also add the
 @w{@t{JAVACFLAGS = @@JAVACFLAGS@@}}
