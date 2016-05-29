@@ -34,94 +34,6 @@ GATBPS_V_JAVAC_1 =
 ./$(java_dst): $(java_dep)
 ./$(java_dst): $(java_extra)
 ./$(java_dst): $(java_src)
-	@-':' #((
-	$(GATBPS_V_JAR){ \
-  x=''; \
-  x="$${x}"'./'; \
-  x="$${x}"$(java_sourcepath); \
-  x="$${x}"':'; \
-  x="$${x}"$(srcdir)'/'$(java_sourcepath); \
-  case ''$(CLASSPATH) in \
-    ?*) \
-      x="$${x}"':'$(CLASSPATH); \
-    ;; \
-  esac; \
-  case ''$(java_CLASSPATH) in \
-    ?*) \
-      x="$${x}"':'$(java_CLASSPATH); \
-    ;; \
-  esac; \
-  ( \
-    $(srcdir)'/build-aux/sh-form.sh' \
-      '--' \
-      "$${x}" \
-      >'first-java.tmp' \
-    || 'exit' "$${?}"; \
-    classpath=` \
-      'cat' 'first-java.tmp' \
-    ` || 'exit' "$${?}"; \
-    $(srcdir)'/build-aux/sh-form.sh' \
-      '--' \
-      $(java_JAVACFLAGS) \
-      >'first-java.tmp' \
-    || 'exit' "$${?}"; \
-    javacflags=` \
-      'cat' 'first-java.tmp' \
-    ` || 'exit' "$${?}"; \
-    $(srcdir)'/build-aux/sh-form.sh' \
-      '--' \
-      './'$(java_sourcepath) \
-      >'first-java.tmp' \
-    || 'exit' "$${?}"; \
-    sourcepath=` \
-      'cat' 'first-java.tmp' \
-    ` || 'exit' "$${?}"; \
-    'rm' '-f' 'first-java.tmp'; \
-    'exit' '0'; \
-  :;) || { \
-    x="$${?}"; \
-    'rm' '-f' 'first-java.tmp'; \
-    'exit' "$${x}"; \
-  :;}; \
-  $(MAKE) \
-    $(AM_MAKEFLAGS) \
-    'GATBPS_CLASSPATH='"$${classpath}" \
-    'GATBPS_JAVACFLAGS='"$${javacflags}" \
-    'GATBPS_SOURCEPATH='"$${sourcepath}" \
-    'first-java' \
-  || 'exit' "$${?}"; \
-  'exit' '0'; \
-:;}
-
-.PHONY: clean-first-java
-.PHONY: first-java
-.PHONY: install-first-java
-.PHONY: install-java
-.PHONY: java
-.PHONY: uninstall-first-java
-.PHONY: uninstall-java
-
-.java.class:
-	$(GATBPS_V_JAVAC)$(MKDIR_P) $(GATBPS_SOURCEPATH)
-	$(AM_V_at)$(JAVAC) \
-  '-classpath' \
-  $(GATBPS_CLASSPATH) \
-  '-d' \
-  $(GATBPS_SOURCEPATH) \
-  '-sourcepath' \
-  $(GATBPS_SOURCEPATH)':'$(srcdir)'/'$(GATBPS_SOURCEPATH) \
-  $(GATBPS_JAVACFLAGS) \
-  $(JAVACFLAGS) \
-  $< \
-;
-
-clean-first-java:
-	-rm -f $(java_dst)
-	-rm -f $(java_src) $(java_nested)
-
-clean-local: clean-first-java
-
-first-java:
 	@-':' #(
 	$(AM_V_at){ \
   'rm' \
@@ -191,6 +103,94 @@ first-java:
   'exit' "$${x}"; \
 :;}
 
+.PHONY: clean-first-java
+.PHONY: first-java
+.PHONY: install-first-java
+.PHONY: install-java
+.PHONY: java
+.PHONY: uninstall-first-java
+.PHONY: uninstall-java
+
+.java.class:
+	$(GATBPS_V_JAVAC)$(MKDIR_P) $(GATBPS_SOURCEPATH)
+	$(AM_V_at)$(JAVAC) \
+  '-classpath' \
+  $(GATBPS_CLASSPATH) \
+  '-d' \
+  $(GATBPS_SOURCEPATH) \
+  '-sourcepath' \
+  $(GATBPS_SOURCEPATH)':'$(srcdir)'/'$(GATBPS_SOURCEPATH) \
+  $(GATBPS_JAVACFLAGS) \
+  $(JAVACFLAGS) \
+  $< \
+;
+
+clean-first-java:
+	-rm -f $(java_dst)
+	-rm -f $(java_src) $(java_nested)
+
+clean-local: clean-first-java
+
+first-java:
+	@-':' #((
+	$(GATBPS_V_JAR){ \
+  x=''; \
+  x="$${x}"'./'; \
+  x="$${x}"$(java_sourcepath); \
+  x="$${x}"':'; \
+  x="$${x}"$(srcdir)'/'$(java_sourcepath); \
+  case ''$(CLASSPATH) in \
+    ?*) \
+      x="$${x}"':'$(CLASSPATH); \
+    ;; \
+  esac; \
+  case ''$(java_CLASSPATH) in \
+    ?*) \
+      x="$${x}"':'$(java_CLASSPATH); \
+    ;; \
+  esac; \
+  ( \
+    $(srcdir)'/build-aux/sh-form.sh' \
+      '--' \
+      "$${x}" \
+      >'first-java.tmp' \
+    || 'exit' "$${?}"; \
+    classpath=` \
+      'cat' 'first-java.tmp' \
+    ` || 'exit' "$${?}"; \
+    $(srcdir)'/build-aux/sh-form.sh' \
+      '--' \
+      $(java_JAVACFLAGS) \
+      >'first-java.tmp' \
+    || 'exit' "$${?}"; \
+    javacflags=` \
+      'cat' 'first-java.tmp' \
+    ` || 'exit' "$${?}"; \
+    $(srcdir)'/build-aux/sh-form.sh' \
+      '--' \
+      './'$(java_sourcepath) \
+      >'first-java.tmp' \
+    || 'exit' "$${?}"; \
+    sourcepath=` \
+      'cat' 'first-java.tmp' \
+    ` || 'exit' "$${?}"; \
+    'rm' '-f' 'first-java.tmp'; \
+    'exit' '0'; \
+  :;) || { \
+    x="$${?}"; \
+    'rm' '-f' 'first-java.tmp'; \
+    'exit' "$${x}"; \
+  :;}; \
+  $(MAKE) \
+    $(AM_MAKEFLAGS) \
+    'GATBPS_CLASSPATH='"$${classpath}" \
+    'GATBPS_JAVACFLAGS='"$${javacflags}" \
+    'GATBPS_SOURCEPATH='"$${sourcepath}" \
+    './'$(java_dst) \
+  || 'exit' "$${?}"; \
+  'exit' '0'; \
+:;}
+
 install-first-java: first-java
 	@$(NORMAL_INSTALL)
 	@-':' #(((
@@ -220,7 +220,7 @@ install-first-java: first-java
 
 install-java: install-first-java
 
-java: $(java_dst)
+java: first-java
 
 uninstall-first-java:
 	@$(NORMAL_UNINSTALL)
