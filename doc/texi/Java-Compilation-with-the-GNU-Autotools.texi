@@ -90,13 +90,13 @@ variables by calling the
 macro@.
 These variables are used when running the
 @w{@t{javac}}
-tool, so if you are not using Automake, then you should also add the
+tool, so you should also add the
 @w{@t{JAVACFLAGS = @@JAVACFLAGS@@}}
 and
 @w{@t{CLASSPATH = @@CLASSPATH@@}}
 lines to your
 @w{@t{Makefile.@:in}}
-file@.
+file if you are not using Automake@.
 @ifxml
 @ifnotxml
 @c
