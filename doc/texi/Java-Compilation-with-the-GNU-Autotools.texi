@@ -71,7 +71,7 @@ GATBPS_PROG_JAR
 @noindent
 Then you can add the following lines to your
 @w{@t{Makefile.@:in}}
-file if you are not using Automake:
+file to set the variables if you are not using Automake:
 
 @example
 JAVAC = @@JAVAC@@
