@@ -37,7 +37,7 @@ They take zero arguments and prepare the variables by calling the
 @w{@t{AC_CHECK_PROGS}}
 and
 @w{@t{AC_ARG_VAR}}
-macros appropriately@.
+macros@.
 If you are using Automake, then this is all you need to do@.
 If you are not using Automake, then you also need to add the
 @w{@t{JAVAC = @@JAVAC@@}}
@@ -88,7 +88,7 @@ and
 @w{@t{CLASSPATH}}
 variables by calling the
 @w{@t{AC_ARG_VAR}}
-macro appropriately@.
+macro@.
 If you are not using Automake, then you should also add the
 @w{@t{JAVACFLAGS = @@JAVACFLAGS@@}}
 and
