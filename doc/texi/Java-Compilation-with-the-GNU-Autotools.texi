@@ -69,10 +69,10 @@ GATBPS_PROG_JAR
 @end example
 
 @noindent
-If you are using Automake, then you're done@.
-Otherwise, you can add the following lines to your
+Then you can add the following lines to your
 @w{@t{Makefile.@:in}}
-file to put the results of the calls into the makefile variables:
+file to put the results of the calls into the makefile variables if you
+are not using Automake:
 
 @example
 JAVAC = @@JAVAC@@
