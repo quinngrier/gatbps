@@ -134,22 +134,22 @@ clean-local: clean-first-java
 first-java:
 	@-':' #((
 	$(GATBPS_V_JAR){ \
-  x=''; \
-  x="$${x}"'./'; \
-  x="$${x}"$(java_sourcepath); \
-  x="$${x}"':'; \
-  x="$${x}"$(srcdir)'/'$(java_sourcepath); \
-  case ''$(CLASSPATH) in \
-    ?*) \
-      x="$${x}"':'$(CLASSPATH); \
-    ;; \
-  esac; \
-  case ''$(java_CLASSPATH) in \
-    ?*) \
-      x="$${x}"':'$(java_CLASSPATH); \
-    ;; \
-  esac; \
   ( \
+    x=''; \
+    x="$${x}"'./'; \
+    x="$${x}"$(java_sourcepath); \
+    x="$${x}"':'; \
+    x="$${x}"$(srcdir)'/'$(java_sourcepath); \
+    case ''$(CLASSPATH) in \
+      ?*) \
+        x="$${x}"':'$(CLASSPATH); \
+      ;; \
+    esac; \
+    case ''$(java_CLASSPATH) in \
+      ?*) \
+        x="$${x}"':'$(java_CLASSPATH); \
+      ;; \
+    esac; \
     'sh' $(srcdir)'/build-aux/sh-form.sh' \
       '--' \
       "$${x}" \
@@ -183,12 +183,10 @@ first-java:
       './'$(java_dst) \
     || 'exit' "$${?}"; \
     'exit' '0'; \
-  :;) || { \
-    x="$${?}"; \
-    'rm' '-f' 'first-java.tmp'; \
-    'exit' "$${x}"; \
-  :;}; \
-  'exit' '0'; \
+  :;); \
+  x="$${?}"; \
+  'rm' '-f' 'first-java.tmp'; \
+  'exit' "$${x}"; \
 :;}
 
 install-first-java: first-java
