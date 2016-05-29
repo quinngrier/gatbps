@@ -175,19 +175,19 @@ first-java:
       'cat' 'first-java.tmp' \
     ` || 'exit' "$${?}"; \
     'rm' '-f' 'first-java.tmp'; \
+    $(MAKE) \
+      $(AM_MAKEFLAGS) \
+      'GATBPS_CLASSPATH='"$${classpath}" \
+      'GATBPS_JAVACFLAGS='"$${javacflags}" \
+      'GATBPS_SOURCEPATH='"$${sourcepath}" \
+      './'$(java_dst) \
+    || 'exit' "$${?}"; \
     'exit' '0'; \
   :;) || { \
     x="$${?}"; \
     'rm' '-f' 'first-java.tmp'; \
     'exit' "$${x}"; \
   :;}; \
-  $(MAKE) \
-    $(AM_MAKEFLAGS) \
-    'GATBPS_CLASSPATH='"$${classpath}" \
-    'GATBPS_JAVACFLAGS='"$${javacflags}" \
-    'GATBPS_SOURCEPATH='"$${sourcepath}" \
-    './'$(java_dst) \
-  || 'exit' "$${?}"; \
   'exit' '0'; \
 :;}
 
