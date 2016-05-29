@@ -24,9 +24,9 @@ m4_foreach_w(
 
 '"$[]{GATBPS_JAVA_RULES}"'
 
-$[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_dep)
-$[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_extra)
-$[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_src)
+./$[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_dep)
+./$[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_extra)
+./$[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_src)
 	@-'\'':'\'' #((
 	$[](GATBPS_V_JAR){ \
   x='\'''\''; \
