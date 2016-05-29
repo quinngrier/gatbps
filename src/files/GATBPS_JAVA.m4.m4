@@ -27,108 +27,6 @@ m4_foreach_w(
 ./$[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_dep)
 ./$[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_extra)
 ./$[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_src)
-	@-'\'':'\'' #((
-	$[](GATBPS_V_JAR){ \
-  x='\'''\''; \
-  x="$[]$[]{x}"'\''./'\''; \
-  x="$[]$[]{x}"$[](java_[]gatbps_x2[]_sourcepath); \
-  x="$[]$[]{x}"'\'':'\''; \
-  x="$[]$[]{x}"$[](srcdir)'\''/'\''$[](java_[]gatbps_x2[]_sourcepath); \
-  case '\'''\''$[](CLASSPATH) in \
-    ?*) \
-      x="$[]$[]{x}"'\'':'\''$[](CLASSPATH); \
-    ;; \
-  esac; \
-  case '\'''\''$[](java_[]gatbps_x2[]_CLASSPATH) in \
-    ?*) \
-      x="$[]$[]{x}"'\'':'\''$[](java_[]gatbps_x2[]_CLASSPATH); \
-    ;; \
-  esac; \
-  ( \
-    $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
-      '\''--'\'' \
-      "$[]$[]{x}" \
-      >'\''java-gatbps_x1.tmp'\'' \
-    || '\''exit'\'' "$[]$[]{?}"; \
-    classpath=` \
-      '\''cat'\'' '\''java-gatbps_x1.tmp'\'' \
-    ` || '\''exit'\'' "$[]$[]{?}"; \
-    $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
-      '\''--'\'' \
-      $[](java_[]gatbps_x2[]_JAVACFLAGS) \
-      >'\''java-gatbps_x1.tmp'\'' \
-    || '\''exit'\'' "$[]$[]{?}"; \
-    javacflags=` \
-      '\''cat'\'' '\''java-gatbps_x1.tmp'\'' \
-    ` || '\''exit'\'' "$[]$[]{?}"; \
-    $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
-      '\''--'\'' \
-      '\''./'\''$[](java_[]gatbps_x2[]_sourcepath) \
-      >'\''java-gatbps_x1.tmp'\'' \
-    || '\''exit'\'' "$[]$[]{?}"; \
-    sourcepath=` \
-      '\''cat'\'' '\''java-gatbps_x1.tmp'\'' \
-    ` || '\''exit'\'' "$[]$[]{?}"; \
-    '\''rm'\'' '\''-f'\'' '\''java-gatbps_x1.tmp'\''; \
-    '\''exit'\'' '\''0'\''; \
-  :;) || { \
-    x="$[]$[]{?}"; \
-    '\''rm'\'' '\''-f'\'' '\''java-gatbps_x1.tmp'\''; \
-    '\''exit'\'' "$[]$[]{x}"; \
-  :;}; \
-  $[](MAKE) \
-    $[](AM_MAKEFLAGS) \
-    '\''GATBPS_CLASSPATH='\''"$[]$[]{classpath}" \
-    '\''GATBPS_JAVACFLAGS='\''"$[]$[]{javacflags}" \
-    '\''GATBPS_SOURCEPATH='\''"$[]$[]{sourcepath}" \
-    '\''java-gatbps_x1'\'' \
-  || '\''exit'\'' "$[]$[]{?}"; \
-  '\''exit'\'' '\''0'\''; \
-:;}
-
-.PHONY: clean-java-gatbps_x1
-.PHONY: install-java-gatbps_x1
-.PHONY: java-gatbps_x1
-.PHONY: uninstall-java-gatbps_x1
-
-clean-java-gatbps_x1:
-	-rm -f $[](java_[]gatbps_x2[]_dst)
-	-rm -f $[](java_[]gatbps_x2[]_src) $[](java_[]gatbps_x2[]_nested)
-
-clean-local: clean-java-gatbps_x1
-
-install-java: install-java-gatbps_x1
-
-install-java-gatbps_x1: java-gatbps_x1
-	@$[](NORMAL_INSTALL)
-	@-'\'':'\'' #(((
-	@{ \
-  case '\'''\''$[](java_[]gatbps_x2[]_noinst) in \
-    ?*) \
-      '\'':'\''; \
-    ;; \
-    *) \
-      case '\'''\''$[](javadir) in \
-        ?*) \
-          echo " $[](MKDIR_P) '\''$[](DESTDIR)$[](javadir)'\''"; \
-          $[](MKDIR_P) $[](DESTDIR)$[](javadir) || exit $[]$[]?; \
-          if test -f $[](java_[]gatbps_x2[]_dst); then \
-            x=$[](java_[]gatbps_x2[]_dst); \
-          else \
-            x=$[](srcdir)/$[](java_[]gatbps_x2[]_dst); \
-          fi; \
-          echo " $[](INSTALL_DATA) $[]$[]x '\''$[](DESTDIR)$[](javadir)'\''"; \
-          $[](INSTALL_DATA) $[]$[]x $[](DESTDIR)$[](javadir) || exit $[]$[]?; \
-        ;; \
-      esac; \
-    ;; \
-  esac; \
-  exit 0; \
-:;}
-
-java: $[](java_[]gatbps_x2[]_dst)
-
-java-gatbps_x1:
 	@-'\'':'\'' #(
 	$[](AM@&t@_V_at){ \
   '\''rm'\'' \
@@ -196,6 +94,108 @@ java-gatbps_x1:
     '\''./'\''$[](java_[]gatbps_x2[]_dst)'\''.tmp'\'' \
   ; \
   '\''exit'\'' "$[]$[]{x}"; \
+:;}
+
+.PHONY: clean-java-gatbps_x1
+.PHONY: install-java-gatbps_x1
+.PHONY: java-gatbps_x1
+.PHONY: uninstall-java-gatbps_x1
+
+clean-java-gatbps_x1:
+	-rm -f $[](java_[]gatbps_x2[]_dst)
+	-rm -f $[](java_[]gatbps_x2[]_src) $[](java_[]gatbps_x2[]_nested)
+
+clean-local: clean-java-gatbps_x1
+
+install-java: install-java-gatbps_x1
+
+install-java-gatbps_x1: java-gatbps_x1
+	@$[](NORMAL_INSTALL)
+	@-'\'':'\'' #(((
+	@{ \
+  case '\'''\''$[](java_[]gatbps_x2[]_noinst) in \
+    ?*) \
+      '\'':'\''; \
+    ;; \
+    *) \
+      case '\'''\''$[](javadir) in \
+        ?*) \
+          echo " $[](MKDIR_P) '\''$[](DESTDIR)$[](javadir)'\''"; \
+          $[](MKDIR_P) $[](DESTDIR)$[](javadir) || exit $[]$[]?; \
+          if test -f $[](java_[]gatbps_x2[]_dst); then \
+            x=$[](java_[]gatbps_x2[]_dst); \
+          else \
+            x=$[](srcdir)/$[](java_[]gatbps_x2[]_dst); \
+          fi; \
+          echo " $[](INSTALL_DATA) $[]$[]x '\''$[](DESTDIR)$[](javadir)'\''"; \
+          $[](INSTALL_DATA) $[]$[]x $[](DESTDIR)$[](javadir) || exit $[]$[]?; \
+        ;; \
+      esac; \
+    ;; \
+  esac; \
+  exit 0; \
+:;}
+
+java: java-gatbps_x1
+
+java-gatbps_x1:
+	@-'\'':'\'' #((
+	$[](GATBPS_V_JAR){ \
+  x='\'''\''; \
+  x="$[]$[]{x}"'\''./'\''; \
+  x="$[]$[]{x}"$[](java_[]gatbps_x2[]_sourcepath); \
+  x="$[]$[]{x}"'\'':'\''; \
+  x="$[]$[]{x}"$[](srcdir)'\''/'\''$[](java_[]gatbps_x2[]_sourcepath); \
+  case '\'''\''$[](CLASSPATH) in \
+    ?*) \
+      x="$[]$[]{x}"'\'':'\''$[](CLASSPATH); \
+    ;; \
+  esac; \
+  case '\'''\''$[](java_[]gatbps_x2[]_CLASSPATH) in \
+    ?*) \
+      x="$[]$[]{x}"'\'':'\''$[](java_[]gatbps_x2[]_CLASSPATH); \
+    ;; \
+  esac; \
+  ( \
+    $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
+      '\''--'\'' \
+      "$[]$[]{x}" \
+      >'\''java-gatbps_x1.tmp'\'' \
+    || '\''exit'\'' "$[]$[]{?}"; \
+    classpath=` \
+      '\''cat'\'' '\''java-gatbps_x1.tmp'\'' \
+    ` || '\''exit'\'' "$[]$[]{?}"; \
+    $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
+      '\''--'\'' \
+      $[](java_[]gatbps_x2[]_JAVACFLAGS) \
+      >'\''java-gatbps_x1.tmp'\'' \
+    || '\''exit'\'' "$[]$[]{?}"; \
+    javacflags=` \
+      '\''cat'\'' '\''java-gatbps_x1.tmp'\'' \
+    ` || '\''exit'\'' "$[]$[]{?}"; \
+    $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
+      '\''--'\'' \
+      '\''./'\''$[](java_[]gatbps_x2[]_sourcepath) \
+      >'\''java-gatbps_x1.tmp'\'' \
+    || '\''exit'\'' "$[]$[]{?}"; \
+    sourcepath=` \
+      '\''cat'\'' '\''java-gatbps_x1.tmp'\'' \
+    ` || '\''exit'\'' "$[]$[]{?}"; \
+    '\''rm'\'' '\''-f'\'' '\''java-gatbps_x1.tmp'\''; \
+    '\''exit'\'' '\''0'\''; \
+  :;) || { \
+    x="$[]$[]{?}"; \
+    '\''rm'\'' '\''-f'\'' '\''java-gatbps_x1.tmp'\''; \
+    '\''exit'\'' "$[]$[]{x}"; \
+  :;}; \
+  $[](MAKE) \
+    $[](AM_MAKEFLAGS) \
+    '\''GATBPS_CLASSPATH='\''"$[]$[]{classpath}" \
+    '\''GATBPS_JAVACFLAGS='\''"$[]$[]{javacflags}" \
+    '\''GATBPS_SOURCEPATH='\''"$[]$[]{sourcepath}" \
+    '\''./'\''$[](java_[]gatbps_x2[]_dst) \
+  || '\''exit'\'' "$[]$[]{?}"; \
+  '\''exit'\'' '\''0'\''; \
 :;}
 
 uninstall-java: uninstall-java-gatbps_x1
