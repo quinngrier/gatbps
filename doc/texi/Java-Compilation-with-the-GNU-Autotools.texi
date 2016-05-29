@@ -89,6 +89,9 @@ and
 variables by calling the
 @w{@t{AC_ARG_VAR}}
 macro@.
+These variables are used when running the
+@w{@t{javac}}
+tool@.
 If you are not using Automake, then you should also add the
 @w{@t{JAVACFLAGS = @@JAVACFLAGS@@}}
 and
