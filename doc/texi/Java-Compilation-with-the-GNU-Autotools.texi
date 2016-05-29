@@ -33,7 +33,7 @@ These macros are defined by the
 and
 @w{@t{GATBPS_PROG_JAR.@:m4}}
 special files@.
-They take zero arguments and set up the variables by calling the
+They take zero arguments and prepare the variables by calling the
 @w{@t{AC_CHECK_PROGS}}
 and
 @w{@t{AC_ARG_VAR}}
