@@ -39,7 +39,7 @@ and
 @w{@t{AC_ARG_VAR}}
 macros@.
 If you are using Automake, then this is all you need to do@.
-If you are not using Automake, then you also need to add the
+Otherwise, you also need to add the
 @w{@t{JAVAC = @@JAVAC@@}}
 and
 @w{@t{JAR = @@JAR@@}}
