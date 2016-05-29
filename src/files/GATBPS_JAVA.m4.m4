@@ -182,19 +182,19 @@ java-gatbps_x1:
       '\''cat'\'' '\''java-gatbps_x1.tmp'\'' \
     ` || '\''exit'\'' "$[]$[]{?}"; \
     '\''rm'\'' '\''-f'\'' '\''java-gatbps_x1.tmp'\''; \
+    $[](MAKE) \
+      $[](AM_MAKEFLAGS) \
+      '\''GATBPS_CLASSPATH='\''"$[]$[]{classpath}" \
+      '\''GATBPS_JAVACFLAGS='\''"$[]$[]{javacflags}" \
+      '\''GATBPS_SOURCEPATH='\''"$[]$[]{sourcepath}" \
+      '\''./'\''$[](java_[]gatbps_x2[]_dst) \
+    || '\''exit'\'' "$[]$[]{?}"; \
     '\''exit'\'' '\''0'\''; \
   :;) || { \
     x="$[]$[]{?}"; \
     '\''rm'\'' '\''-f'\'' '\''java-gatbps_x1.tmp'\''; \
     '\''exit'\'' "$[]$[]{x}"; \
   :;}; \
-  $[](MAKE) \
-    $[](AM_MAKEFLAGS) \
-    '\''GATBPS_CLASSPATH='\''"$[]$[]{classpath}" \
-    '\''GATBPS_JAVACFLAGS='\''"$[]$[]{javacflags}" \
-    '\''GATBPS_SOURCEPATH='\''"$[]$[]{sourcepath}" \
-    '\''./'\''$[](java_[]gatbps_x2[]_dst) \
-  || '\''exit'\'' "$[]$[]{?}"; \
   '\''exit'\'' '\''0'\''; \
 :;}
 
