@@ -150,7 +150,7 @@ first-java:
     ;; \
   esac; \
   ( \
-    $(srcdir)'/build-aux/sh-form.sh' \
+    'sh' $(srcdir)'/build-aux/sh-form.sh' \
       '--' \
       "$${x}" \
       >'first-java.tmp' \
@@ -158,7 +158,7 @@ first-java:
     classpath=` \
       'cat' 'first-java.tmp' \
     ` || 'exit' "$${?}"; \
-    $(srcdir)'/build-aux/sh-form.sh' \
+    'sh' $(srcdir)'/build-aux/sh-form.sh' \
       '--' \
       $(java_JAVACFLAGS) \
       >'first-java.tmp' \
@@ -166,7 +166,7 @@ first-java:
     javacflags=` \
       'cat' 'first-java.tmp' \
     ` || 'exit' "$${?}"; \
-    $(srcdir)'/build-aux/sh-form.sh' \
+    'sh' $(srcdir)'/build-aux/sh-form.sh' \
       '--' \
       './'$(java_sourcepath) \
       >'first-java.tmp' \
