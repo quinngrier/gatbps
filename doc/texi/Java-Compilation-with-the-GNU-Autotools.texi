@@ -91,8 +91,7 @@ variables by calling the
 macro@.
 These variables are used when running the
 @w{@t{javac}}
-tool@.
-If you are not using Automake, then you should also add the
+tool, so if you are not using Automake, then you should also add the
 @w{@t{JAVACFLAGS = @@JAVACFLAGS@@}}
 and
 @w{@t{CLASSPATH = @@CLASSPATH@@}}
