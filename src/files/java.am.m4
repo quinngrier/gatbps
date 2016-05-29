@@ -36,12 +36,12 @@ GATBPS_V_JAVAC_1 =
 ./$(java_dst): $(java_src)
 	@-':' #(
 	$(GATBPS_V_JAR){ \
-  'rm' \
-    '-f' \
-    '-r' \
-    './'$(java_dst)'.tmp' \
-  || 'exit' "$${?}"; \
   ( \
+    'rm' \
+      '-f' \
+      '-r' \
+      './'$(java_dst)'.tmp' \
+    || 'exit' "$${?}"; \
     $(MKDIR_P) \
       './'$(java_dst)'.tmp/x' \
     || 'exit' "$${?}"; \
@@ -70,30 +70,25 @@ GATBPS_V_JAVAC_1 =
       || 'exit' "$${?}"; \
       c='uf'; \
     done; \
-    'cd' \
-      './'$(java_dst)'.tmp/x' \
-    || 'exit' "$${?}"; \
+    ( \
+      'cd' \
+        './'$(java_dst)'.tmp/x' \
+      || 'exit' "$${?}"; \
+      $(JAR) \
+        'xf' \
+        '../x.jar' \
+      || 'exit' "$${?}"; \
+      'exit' '0'; \
+    :;) || 'exit' "$${?}"; \
     $(JAR) \
-      'xf' \
-      '../x.jar' \
-    ; \
-    'exit' "$${?}"; \
-  :;) || { \
-    x="$${?}"; \
-    'rm' \
-      '-f' \
-      '-r' \
-      './'$(java_dst)'.tmp' \
-    ; \
-    'exit' "$${x}"; \
-  :;}; \
-  $(JAR) \
-    'cf' \
-    './'$(java_dst) \
-    '-C' \
-    './'$(java_dst)'.tmp/x/'$(GATBPS_SOURCEPATH) \
-    '.' \
-  ; \
+      'cf' \
+      './'$(java_dst) \
+      '-C' \
+      './'$(java_dst)'.tmp/x/'$(GATBPS_SOURCEPATH) \
+      '.' \
+    || 'exit' "$${?}"; \
+    'exit' '0'; \
+  :;); \
   x="$${?}"; \
   'rm' \
     '-f' \
