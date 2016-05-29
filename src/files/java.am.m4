@@ -31,9 +31,9 @@ GATBPS_V_JAVAC_1 =
 
 ## begin_rules
 
-$(java_dst): $(java_dep)
-$(java_dst): $(java_extra)
-$(java_dst): $(java_src)
+./$(java_dst): $(java_dep)
+./$(java_dst): $(java_extra)
+./$(java_dst): $(java_src)
 	@-':' #((
 	$(GATBPS_V_JAR){ \
   x=''; \
