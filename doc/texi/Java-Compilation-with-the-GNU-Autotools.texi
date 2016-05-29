@@ -50,8 +50,8 @@ file@.
 @include indent.texi
 For example, if you are using the
 @w{@t{m4}}
-directory to hold your macros, then you can generate the special files
-as follows:
+directory to hold your macros, then you can use the following commands
+to generate the special files:
 
 @example
 gatbps m4/GATBPS_PROG_JAVAC.m4
