@@ -28,7 +28,7 @@ m4_foreach_w(
 ./$[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_extra)
 ./$[](java_[]gatbps_x2[]_dst): $[](java_[]gatbps_x2[]_src)
 	@-'\'':'\'' #(
-	$[](AM@&t@_V_at){ \
+	$[](GATBPS_V_JAR){ \
   '\''rm'\'' \
     '\''-f'\'' \
     '\''-r'\'' \
@@ -140,7 +140,7 @@ java: java-gatbps_x1
 
 java-gatbps_x1:
 	@-'\'':'\'' #((
-	$[](GATBPS_V_JAR){ \
+	$[](AM@&t@_V_at){ \
   ( \
     x='\'''\''; \
     x="$[]$[]{x}"'\''./'\''; \
