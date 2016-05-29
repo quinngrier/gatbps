@@ -28,6 +28,8 @@ AC_CHECK_PROGS([JAVAC], [javac])
 
 AC_ARG_VAR([JAVAC], [Java compiler command])
 
+AC_ARG_VAR([JAVACFLAGS], [Java compiler flags])
+
 :;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
 dnl
