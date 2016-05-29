@@ -78,6 +78,17 @@ file to put the results of the calls into the makefile variables:
 JAVAC = @@JAVAC@@
 JAR = @@JAR@@
 @end example
+
+@include indent.texi
+The
+@w{@t{GATBPS_PROG_JAVAC}}
+macro also prepares the
+@w{@t{JAVACFLAGS}}
+and
+@w{@t{CLASSPATH}}
+variables by calling the
+@w{@t{AC_ARG_VAR}}
+macro appropriately@.
 @ifxml
 @ifnotxml
 @c
