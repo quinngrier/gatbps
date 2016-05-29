@@ -35,7 +35,7 @@ GATBPS_V_JAVAC_1 =
 ./$(java_dst): $(java_extra)
 ./$(java_dst): $(java_src)
 	@-':' #(
-	$(AM_V_at){ \
+	$(GATBPS_V_JAR){ \
   'rm' \
     '-f' \
     '-r' \
@@ -133,7 +133,7 @@ clean-local: clean-first-java
 
 first-java:
 	@-':' #((
-	$(GATBPS_V_JAR){ \
+	$(AM_V_at){ \
   ( \
     x=''; \
     x="$${x}"'./'; \
