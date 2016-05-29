@@ -89,6 +89,13 @@ and
 variables by calling the
 @w{@t{AC_ARG_VAR}}
 macro appropriately@.
+If you are not using Automake, then you should also add the
+@w{@t{JAVACFLAGS = @@JAVACFLAGS@@}}
+and
+@w{@t{CLASSPATH = @@CLASSPATH@@}}
+lines to your
+@w{@t{Makefile.@:in}}
+file@.
 @ifxml
 @ifnotxml
 @c
