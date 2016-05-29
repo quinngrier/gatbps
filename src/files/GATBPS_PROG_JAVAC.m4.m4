@@ -30,6 +30,8 @@ AC_ARG_VAR([JAVAC], [Java compiler command])
 
 AC_ARG_VAR([JAVACFLAGS], [Java compiler flags])
 
+AC_ARG_VAR([CLASSPATH], [Java compiler class path])
+
 :;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
 dnl
