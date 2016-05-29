@@ -8,7 +8,7 @@ dnl Special file: GATBPS_JAVA.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_JAVA], [{ ':'
+AC_DEFUN([GATBPS_JAVA], [{
 
 m4_foreach_w(
   [gatbps_x1],
@@ -223,7 +223,7 @@ uninstall-java-gatbps_x1:
 AC_SUBST([GATBPS_JAVA_RULES])
 AM_SUBST_NOTMAKE([GATBPS_JAVA_RULES])
 
-}])dnl
+:;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
 dnl
 dnl The authors of this file have waived all copyright and
