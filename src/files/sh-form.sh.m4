@@ -59,7 +59,7 @@ style_stderr='never'
 # value 'unknown' and is lazily set to 'yes' or 'no' using the following
 # code just before each point where the value is needed.
 #
-# For isatty1:
+# For the isatty1 variable:
 #
 #       case "${isatty1}" in
 #       #(
@@ -72,7 +72,7 @@ style_stderr='never'
 #         ;;
 #       esac
 #
-# For isatty2:
+# For the isatty2 variable:
 #
 #       case "${isatty2}" in
 #       #(
