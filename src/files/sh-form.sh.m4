@@ -77,7 +77,7 @@ style_stderr='never'
 #       case "${isatty2}" in
 #       #(
 #         'unknown')
-#           if test '-t' '2'; then
+#           if 'test' '-t' '2'; then
 #             isatty2='yes'
 #           else
 #             isatty2='no'
@@ -699,7 +699,7 @@ EOF2
           case "${isatty2}" in
           #(
             'unknown')
-              if test '-t' '2'; then
+              if 'test' '-t' '2'; then
                 isatty2='yes'
               else
                 isatty2='no'
