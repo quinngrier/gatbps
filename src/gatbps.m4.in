@@ -2356,7 +2356,7 @@ EOF1
 
           #(
             *)
-              "${awk}" '
+              ${awk} '
 {
   if (sub(/.*\//, "", $0)) {
     name = $0
@@ -3559,7 +3559,7 @@ EOF1
       #(
         '--'*'='*)
 
-          "${awk}" '
+          ${awk} '
 {
   if (NR != 1) {
     name = name "\n"
@@ -3609,7 +3609,7 @@ EOF1
       #(
         '-'?*)
 
-          "${awk}" '
+          ${awk} '
 {
   name = substr($0 "\n", 1, 2)
   printf "'"${fr2}"'gatbps!'"${fR2}"' unknown option: '"${fB2}"'%s'"${fR2}"'\n", name
@@ -3679,7 +3679,7 @@ EOF1
           case "${print0}" in
           #(
             'yes')
-              "${awk}" '
+              ${awk} '
 {
   if (NR == 1) {
     x = $0
@@ -4737,7 +4737,7 @@ EOF2
     ;;
   esac
 
-  c=`"${awk}" '
+  c=`${awk} '
 BEGIN {
   c = -1
 }
@@ -7840,7 +7840,7 @@ EOF1
                 break
               fi
 
-              "${awk}" '
+              ${awk} '
 $0 !~ /^#/ {
   print $0
 }
@@ -7879,7 +7879,7 @@ EOF1
                 break
               fi
 
-              "${awk}" '
+              ${awk} '
 BEGIN {
   print "\\input texinfo"
   print "@AT@setfilename foo"
@@ -7997,7 +7997,7 @@ EOF1
               break
             fi
 
-            "${awk}" '
+            ${awk} '
 BEGIN {
   print "\\input texinfo"
   print "@AT@setfilename foo"
@@ -8068,7 +8068,7 @@ EOF1
                 break
               fi
 
-              "${awk}" '
+              ${awk} '
 BEGIN {
   print ""
 }
@@ -8124,7 +8124,7 @@ EOF1
                 ;;
               esac
 
-              "${awk}" '
+              ${awk} '
 BEGIN {
   print "\\input texinfo"
   print "@AT@setfilename foo"

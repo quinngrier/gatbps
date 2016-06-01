@@ -866,7 +866,7 @@ EOF2
       #(
         '--'*'='*)
 
-          "${awk}" '
+          ${awk} '
 {
   if (NR != 1) {
     name = name "\n"
@@ -916,7 +916,7 @@ EOF2
       #(
         '-'?*)
 
-          "${awk}" '
+          ${awk} '
 {
   name = substr($0 "\n", 1, 2)
   printf "'"${fr2}"'sh-form.sh!'"${fR2}"' unknown option: '"${fB2}"'%s'"${fR2}"'\n", name
@@ -1063,7 +1063,7 @@ case "${keep}" in
     case "${s}" in
     #(
       *"${nl}'")
-        s=`"${awk}" '
+        s=`${awk} '
 {
   if (NR == 1) {
     x = $0
