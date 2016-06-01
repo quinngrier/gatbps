@@ -124,7 +124,7 @@ isatty2='unknown'
 # value 0x1B, which do not normally appear in plain text. Text editors
 # often have special ways of displaying such characters. In particular,
 # some editors may actually interpret the escape sequences or silently
-# discard the escape characters.
+# hide or discard the escape characters.
 #
 # Although escape sequences offer a wide variety of functionality, the
 # variables balance utility and portability. The colors are limited to
