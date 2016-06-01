@@ -7913,7 +7913,7 @@ EOF1
                 ;;
               esac
 
-              'eval' '"${texi2any}" \
+              'eval' '${texi2any} \
                 --plaintext \
                 ${unicode_args} \
                 '"${path_args}"' \
@@ -8031,7 +8031,7 @@ EOF1
               ;;
             esac
 
-            'eval' '"${texi2any}" \
+            'eval' '${texi2any} \
               --plaintext \
               ${unicode_args} \
               '"${path_args}"' \
@@ -8158,7 +8158,7 @@ EOF1
                 ;;
               esac
 
-              'eval' '"${texi2any}" \
+              'eval' '${texi2any} \
                 --plaintext \
                 ${unicode_args} \
                 '"${path_args}"' \
