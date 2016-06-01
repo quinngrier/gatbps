@@ -147,9 +147,9 @@ fc2='' # stderr style: cyan
 
 #
 # For each program P of interest, the P_auto variable holds a command
-# name that resolves to the best available version of P. The variable
-# starts off as empty and is lazily set using the following code just
-# before each point where the value is needed.
+# that runs the best available version of P. The variable starts off
+# empty and is lazily set using the following code just before each
+# point where the value is needed.
 #
 # For awk:
 #
