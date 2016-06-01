@@ -260,8 +260,8 @@ case "${sed}" in
 esac
 
 #
-# The following code translates environment variables to arguments, as
-# described by the manual for this program.
+# The following code translates environment variables to arguments as
+# described by the manual page for this program.
 #
 
 case "${STYLE_STDOUT}" in
