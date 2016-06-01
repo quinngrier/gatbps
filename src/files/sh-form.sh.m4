@@ -159,7 +159,7 @@ fc2='' # stderr style: cyan
 # empty and is lazily set using the following code just before each
 # point where the value is needed.
 #
-# For awk:
+# For the awk program:
 #
 #       case "${awk_auto}" in
 #       #(
@@ -178,7 +178,7 @@ fc2='' # stderr style: cyan
 #         ;;
 #       esac
 #
-# For sed:
+# For the sed program:
 #
 #       case "${sed_auto}" in
 #       #(
