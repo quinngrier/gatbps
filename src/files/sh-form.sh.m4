@@ -172,7 +172,7 @@ fc2='' # stderr style: cyan
 #           for x in 'gawk' 'mawk' 'nawk'; do
 #             if "${x}" '' <'/dev/null' >'/dev/null' 2>&1; then
 #               awk_auto="${x}"
-#               break
+#               'break'
 #             fi
 #           done
 #         ;;
@@ -191,7 +191,7 @@ fc2='' # stderr style: cyan
 #           for x in 'gsed'; do
 #             if "${x}" '' <'/dev/null' >'/dev/null' 2>&1; then
 #               sed_auto="${x}"
-#               break
+#               'break'
 #             fi
 #           done
 #         ;;
@@ -226,7 +226,7 @@ case "${awk}" in
         for x in 'gawk' 'mawk' 'nawk'; do
           if "${x}" '' <'/dev/null' >'/dev/null' 2>&1; then
             awk_auto="${x}"
-            break
+            'break'
           fi
         done
       ;;
@@ -249,7 +249,7 @@ case "${sed}" in
         for x in 'gsed'; do
           if "${x}" '' <'/dev/null' >'/dev/null' 2>&1; then
             sed_auto="${x}"
-            break
+            'break'
           fi
         done
       ;;
@@ -417,7 +417,7 @@ EOF2
                   for x in 'gawk' 'mawk' 'nawk'; do
                     if "${x}" '' <'/dev/null' >'/dev/null' 2>&1; then
                       awk_auto="${x}"
-                      break
+                      'break'
                     fi
                   done
                 ;;
@@ -622,7 +622,7 @@ EOF2
                   for x in 'gsed'; do
                     if "${x}" '' <'/dev/null' >'/dev/null' 2>&1; then
                       sed_auto="${x}"
-                      break
+                      'break'
                     fi
                   done
                 ;;

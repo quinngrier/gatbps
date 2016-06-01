@@ -164,7 +164,7 @@ fc2='' # stderr style: cyan
 #           for x in 'gawk' 'mawk' 'nawk'; do
 #             if "${x}" '' <'/dev/null' >'/dev/null' 2>&1; then
 #               awk_auto="${x}"
-#               break
+#               'break'
 #             fi
 #           done
 #         ;;
@@ -183,7 +183,7 @@ fc2='' # stderr style: cyan
 #           for x in 'gsed'; do
 #             if "${x}" '' <'/dev/null' >'/dev/null' 2>&1; then
 #               sed_auto="${x}"
-#               break
+#               'break'
 #             fi
 #           done
 #         ;;
@@ -202,7 +202,7 @@ fc2='' # stderr style: cyan
 #           for x in 'texi2any'; do
 #             if "${x}" '--version' <'/dev/null' >'/dev/null' 2>&1; then
 #               texi2any_auto="${x}"
-#               break
+#               'break'
 #             fi
 #           done
 #         ;;
@@ -239,7 +239,7 @@ case "${awk}" in
         for x in 'gawk' 'mawk' 'nawk'; do
           if "${x}" '' <'/dev/null' >'/dev/null' 2>&1; then
             awk_auto="${x}"
-            break
+            'break'
           fi
         done
       ;;
@@ -262,7 +262,7 @@ case "${sed}" in
         for x in 'gsed'; do
           if "${x}" '' <'/dev/null' >'/dev/null' 2>&1; then
             sed_auto="${x}"
-            break
+            'break'
           fi
         done
       ;;
@@ -285,7 +285,7 @@ case "${texi2any}" in
         for x in 'texi2any'; do
           if "${x}" '--version' <'/dev/null' >'/dev/null' 2>&1; then
             texi2any_auto="${x}"
-            break
+            'break'
           fi
         done
       ;;
@@ -741,7 +741,7 @@ EOF1
                   for x in 'gawk' 'mawk' 'nawk'; do
                     if "${x}" '' <'/dev/null' >'/dev/null' 2>&1; then
                       awk_auto="${x}"
-                      break
+                      'break'
                     fi
                   done
                 ;;
@@ -3067,7 +3067,7 @@ EOF1
                   for x in 'gsed'; do
                     if "${x}" '' <'/dev/null' >'/dev/null' 2>&1; then
                       sed_auto="${x}"
-                      break
+                      'break'
                     fi
                   done
                 ;;
@@ -3372,7 +3372,7 @@ EOF1
                   for x in 'texi2any'; do
                     if "${x}" '--version' <'/dev/null' >'/dev/null' 2>&1; then
                       texi2any_auto="${x}"
-                      break
+                      'break'
                     fi
                   done
                 ;;
