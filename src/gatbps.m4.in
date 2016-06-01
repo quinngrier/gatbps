@@ -303,7 +303,7 @@ esac
 case "${TEXI2ANY}" in
 #(
   ?*)
-    set 'x' "--texi2any=${TEXI2ANY}" "${@AT@}"
+    'set' 'x' "--texi2any=${TEXI2ANY}" "${@AT@}"
     shift
   ;;
 esac
@@ -311,7 +311,7 @@ esac
 case "${STYLE_STDOUT}" in
 #(
   ?*)
-    set 'x' "--style-stdout=${STYLE_STDOUT}" "${@AT@}"
+    'set' 'x' "--style-stdout=${STYLE_STDOUT}" "${@AT@}"
     shift
   ;;
 esac
@@ -319,7 +319,7 @@ esac
 case "${STYLE_STDERR}" in
 #(
   ?*)
-    set 'x' "--style-stderr=${STYLE_STDERR}" "${@AT@}"
+    'set' 'x' "--style-stderr=${STYLE_STDERR}" "${@AT@}"
     shift
   ;;
 esac
@@ -327,7 +327,7 @@ esac
 case "${STYLE}" in
 #(
   ?*)
-    set 'x' "--style=${STYLE}" "${@AT@}"
+    'set' 'x' "--style=${STYLE}" "${@AT@}"
     shift
   ;;
 esac
@@ -335,7 +335,7 @@ esac
 case "${SED}" in
 #(
   ?*)
-    set 'x' "--sed=${SED}" "${@AT@}"
+    'set' 'x' "--sed=${SED}" "${@AT@}"
     shift
   ;;
 esac
@@ -343,7 +343,7 @@ esac
 case "${AWK}" in
 #(
   ?*)
-    set 'x' "--awk=${AWK}" "${@AT@}"
+    'set' 'x' "--awk=${AWK}" "${@AT@}"
     shift
   ;;
 esac

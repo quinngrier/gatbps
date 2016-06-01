@@ -267,7 +267,7 @@ esac
 case "${STYLE_STDOUT}" in
 #(
   ?*)
-    set 'x' "--style-stdout=${STYLE_STDOUT}" "${@}"
+    'set' 'x' "--style-stdout=${STYLE_STDOUT}" "${@}"
     shift
   ;;
 esac
@@ -275,7 +275,7 @@ esac
 case "${STYLE_STDERR}" in
 #(
   ?*)
-    set 'x' "--style-stderr=${STYLE_STDERR}" "${@}"
+    'set' 'x' "--style-stderr=${STYLE_STDERR}" "${@}"
     shift
   ;;
 esac
@@ -283,7 +283,7 @@ esac
 case "${STYLE}" in
 #(
   ?*)
-    set 'x' "--style=${STYLE}" "${@}"
+    'set' 'x' "--style=${STYLE}" "${@}"
     shift
   ;;
 esac
@@ -291,7 +291,7 @@ esac
 case "${SED}" in
 #(
   ?*)
-    set 'x' "--sed=${SED}" "${@}"
+    'set' 'x' "--sed=${SED}" "${@}"
     shift
   ;;
 esac
@@ -299,7 +299,7 @@ esac
 case "${AWK}" in
 #(
   ?*)
-    set 'x' "--awk=${AWK}" "${@}"
+    'set' 'x' "--awk=${AWK}" "${@}"
     shift
   ;;
 esac
