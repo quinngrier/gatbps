@@ -164,7 +164,7 @@ fc2='' # stderr style: cyan
 #       case "${awk_auto}" in
 #       #(
 #         ?*)
-#           :
+#           ':'
 #         ;;
 #       #(
 #         *)
@@ -183,7 +183,7 @@ fc2='' # stderr style: cyan
 #       case "${sed_auto}" in
 #       #(
 #         ?*)
-#           :
+#           ':'
 #         ;;
 #       #(
 #         *)
@@ -218,7 +218,7 @@ case "${awk}" in
     case "${awk_auto}" in
     #(
       ?*)
-        :
+        ':'
       ;;
     #(
       *)
@@ -241,7 +241,7 @@ case "${sed}" in
     case "${sed_auto}" in
     #(
       ?*)
-        :
+        ':'
       ;;
     #(
       *)
@@ -409,7 +409,7 @@ EOF2
               case "${awk_auto}" in
               #(
                 ?*)
-                  :
+                  ':'
                 ;;
               #(
                 *)
@@ -614,7 +614,7 @@ EOF2
               case "${sed_auto}" in
               #(
                 ?*)
-                  :
+                  ':'
                 ;;
               #(
                 *)

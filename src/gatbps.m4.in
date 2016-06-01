@@ -156,7 +156,7 @@ fc2='' # stderr style: cyan
 #       case "${awk_auto}" in
 #       #(
 #         ?*)
-#           :
+#           ':'
 #         ;;
 #       #(
 #         *)
@@ -175,7 +175,7 @@ fc2='' # stderr style: cyan
 #       case "${sed_auto}" in
 #       #(
 #         ?*)
-#           :
+#           ':'
 #         ;;
 #       #(
 #         *)
@@ -194,7 +194,7 @@ fc2='' # stderr style: cyan
 #       case "${texi2any_auto}" in
 #       #(
 #         ?*)
-#           :
+#           ':'
 #         ;;
 #       #(
 #         *)
@@ -231,7 +231,7 @@ case "${awk}" in
     case "${awk_auto}" in
     #(
       ?*)
-        :
+        ':'
       ;;
     #(
       *)
@@ -254,7 +254,7 @@ case "${sed}" in
     case "${sed_auto}" in
     #(
       ?*)
-        :
+        ':'
       ;;
     #(
       *)
@@ -277,7 +277,7 @@ case "${texi2any}" in
     case "${texi2any_auto}" in
     #(
       ?*)
-        :
+        ':'
       ;;
     #(
       *)
@@ -733,7 +733,7 @@ EOF1
               case "${awk_auto}" in
               #(
                 ?*)
-                  :
+                  ':'
                 ;;
               #(
                 *)
@@ -3059,7 +3059,7 @@ EOF1
               case "${sed_auto}" in
               #(
                 ?*)
-                  :
+                  ':'
                 ;;
               #(
                 *)
@@ -3364,7 +3364,7 @@ EOF1
               case "${texi2any_auto}" in
               #(
                 ?*)
-                  :
+                  ':'
                 ;;
               #(
                 *)
