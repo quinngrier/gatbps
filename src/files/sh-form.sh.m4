@@ -866,7 +866,7 @@ EOF2
       #(
         '--'*'='*)
 
-          ${awk} '
+          eval "${awk}"' '\''
 {
   if (NR != 1) {
     name = name "\n"
@@ -878,10 +878,10 @@ EOF2
   }
 }
 END {
-  printf "'"${fr2}"'sh-form.sh!'"${fR2}"' unknown option: '"${fB2}"'%s'"${fR2}"'\n", name
-  printf "'"${fr2}"'sh-form.sh!'"${fR2}"' try '"${fB2}"'sh sh-form.sh --help'"${fR2}"' for more information\n"
+  printf "'\''"${fr2}"'\''sh-form.sh!'\''"${fR2}"'\'' unknown option: '\''"${fB2}"'\''%s'\''"${fR2}"'\''\n", name
+  printf "'\''"${fr2}"'\''sh-form.sh!'\''"${fR2}"'\'' try '\''"${fB2}"'\''sh sh-form.sh --help'\''"${fR2}"'\'' for more information\n"
 }
-' >&2 <<EOF2
+'\''' >&2 <<EOF2
 ${1}
 EOF2
           case "${?}" in
@@ -916,14 +916,14 @@ EOF2
       #(
         '-'?*)
 
-          ${awk} '
+          eval "${awk}"' '\''
 {
   name = substr($0 "\n", 1, 2)
-  printf "'"${fr2}"'sh-form.sh!'"${fR2}"' unknown option: '"${fB2}"'%s'"${fR2}"'\n", name
-  printf "'"${fr2}"'sh-form.sh!'"${fR2}"' try '"${fB2}"'sh sh-form.sh --help'"${fR2}"' for more information\n"
+  printf "'\''"${fr2}"'\''sh-form.sh!'\''"${fR2}"'\'' unknown option: '\''"${fB2}"'\''%s'\''"${fR2}"'\''\n", name
+  printf "'\''"${fr2}"'\''sh-form.sh!'\''"${fR2}"'\'' try '\''"${fB2}"'\''sh sh-form.sh --help'\''"${fR2}"'\'' for more information\n"
   exit
 }
-' >&2 <<EOF2
+'\''' >&2 <<EOF2
 ${1}
 EOF2
           case "${?}" in
@@ -1063,7 +1063,7 @@ case "${keep}" in
     case "${s}" in
     #(
       *"${nl}'")
-        s=`${awk} '
+        s=`eval "${awk}"' '\\''
 {
   if (NR == 1) {
     x = $0
@@ -1073,9 +1073,9 @@ case "${keep}" in
   }
 }
 END {
-  printf "'\\''"
+  printf "'\\''\\'\\'''\\''"
 }
-' <<EOF2
+'\\''' <<EOF2
 ${s}
 EOF2
 `
