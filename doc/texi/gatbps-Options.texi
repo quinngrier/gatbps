@@ -48,6 +48,7 @@ For example,
 may be written as
 @w{@t{-}@i{SK}@.}
 
+@include indent.texi
 The following options are supported:
 
 @table @asis
