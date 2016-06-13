@@ -1,6 +1,7 @@
 @node @w{@t{gatbps}} Options
 @chapter @w{@t{gatbps}} Options
 
+@noindent
 Each option has one or more names, and each name is either long or
 short@.
 Each long name consists of two hyphen-minus characters followed by zero
