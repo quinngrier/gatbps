@@ -91,13 +91,18 @@ variables by calling the
 macro@.
 These variables are used with the
 @w{@t{javac}}
-tool, so you should also add the
+tool@.
+If you are using Automake, then you do not need to do anything beyond
+calling the
+@w{@t{GATBPS_PROG_JAVAC}}
+macro to set these variables@.
+Otherwise, you need to add the
 @w{@t{JAVACFLAGS = @@JAVACFLAGS@@}}
 and
 @w{@t{CLASSPATH = @@CLASSPATH@@}}
 lines to your
 @w{@t{Makefile.@:in}}
-file if you are not using Automake@.
+file@.
 @ifxml
 @ifnotxml
 @c
