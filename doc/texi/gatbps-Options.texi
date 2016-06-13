@@ -56,9 +56,8 @@ The following options are supported:
 @include ipez.texi
 The
 @w{@t{-@w{-}}}
-option disables option detection,
-causing all remaining arguments
-to be interpreted as operands@.
+option disables option detection, causing all remaining arguments to be
+interpreted as operands@.
 
 @item @w{@t{-@w{-}all}[@t{=}@i{V}]}
 @itemx @w{@t{-a}[@i{V}]}

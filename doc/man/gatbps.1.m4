@@ -117,9 +117,8 @@ The following options are supported:
 .IPEZ
 The
 .nohy "\fB\-\-\fR"
-option disables option detection,
-causing all remaining arguments
-to be interpreted as operands.
+option disables option detection, causing all remaining arguments to be
+interpreted as operands.
 .TP
 .nohy "\fB\-\-all\fR[\fB=\fIV\fR]"
 .TPZ
