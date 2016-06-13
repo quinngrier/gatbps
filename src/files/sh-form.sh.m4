@@ -94,7 +94,7 @@ isatty2='unknown'
 # bold, underline, and color styling of text written to standard output
 # and standard error. Each variable starts off empty so that styling is
 # disabled by default. Then, when appropriate, each group is set to the
-# appropriate values as follows.
+# appropriate values using the following code.
 #
 # For standard output:
 #
