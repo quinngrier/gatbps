@@ -205,9 +205,9 @@ sed_auto=''
 # For each program P of interest, the P variable holds the command that
 # will be used to run P. The variable starts off with a value chosen by
 # some outside force (such as a configure script) and is updated by the
-# P environment variable and each instance of the --P=V option. If the
-# variable starts off as 'auto', then it is immediately updated to the
-# value of the P_auto variable.
+# P environment variable (in all capital letters) and each instance of
+# the --P=V option. If the variable starts off as 'auto', then it is
+# immediately updated to the value of the P_auto variable.
 #
 
 awk='auto'
