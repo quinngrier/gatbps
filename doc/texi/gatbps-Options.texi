@@ -81,6 +81,7 @@ If
 begins with a hyphen-minus character, then a period character and a
 slash character are prepended to
 @w{@i{V}@.}
+Note that no special file name begins with a hyphen-minus character@.
 
 @item @w{@t{-@w{-}awk=}@i{V}}
 @include ipez.texi

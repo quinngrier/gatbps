@@ -143,6 +143,7 @@ If
 begins with a hyphen-minus character, then a period character and a
 slash character are prepended to
 .nohy "\fIV\fR."
+Note that no special file name begins with a hyphen-minus character.
 .TP
 .nohy "\fB\-\-awk=\fIV\fR"
 .IPEZ
