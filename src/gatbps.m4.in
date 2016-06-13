@@ -122,7 +122,7 @@ isatty2='unknown'
 # variables balance utility and portability. The colors are limited to
 # those that should always be legible and accurate, and the styles are
 # mutually exclusive. In particular, mixing bold and color is tempting
-# but would produce inconsistent results across systems.
+# but may produce inconsistent results across different systems.
 #
 
 fR1='' # stdout style: none
@@ -4693,7 +4693,7 @@ isatty2='unknown'
 # variables balance utility and portability. The colors are limited to
 # those that should always be legible and accurate, and the styles are
 # mutually exclusive. In particular, mixing bold and color is tempting
-# but would produce inconsistent results across systems.
+# but may produce inconsistent results across different systems.
 #
 
 fR1='' # stdout style: none
