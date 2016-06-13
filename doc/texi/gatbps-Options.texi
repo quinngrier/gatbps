@@ -76,6 +76,11 @@ If
 is not empty and does not end with a slash character, then a slash
 character is appended to
 @w{@i{V}@.}
+If
+@w{@i{V}}
+begins with a hyphen-minus character, then a period character and a
+slash character are prepended to
+@w{@i{V}@.}
 
 @item @w{@t{-@w{-}awk=}@i{V}}
 @include ipez.texi

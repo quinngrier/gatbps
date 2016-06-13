@@ -138,6 +138,11 @@ If
 is not empty and does not end with a slash character, then a slash
 character is appended to
 .nohy "\fIV\fR."
+If
+.nohy "\fIV\fR"
+begins with a hyphen-minus character, then a period character and a
+slash character are prepended to
+.nohy "\fIV\fR."
 .TP
 .nohy "\fB\-\-awk=\fIV\fR"
 .IPEZ
