@@ -66,18 +66,14 @@ and
 .nohy "\fBINSTALL\fR."
 .SH "OPTIONS"
 .LP
-Each option has
-one or more names, and each
-name is either long or short.
-Each long name consists of two
-hyphen-minus characters followed by
-zero or more printable characters except
-for the space and equals sign characters,
-and each short name consists of one hyphen-minus
-character followed by one printable character
-except for the space and hyphen-minus characters.
-Each option either requires a value,
-permits a value, or forbids a value.
+Each option has one or more names, and each name is either long or
+short.
+Each long name consists of two hyphen-minus characters followed by zero
+or more printable characters except for the space and equals sign
+characters, and each short name consists of one hyphen-minus character
+followed by one printable character except for the space and
+hyphen-minus characters.
+Each option either requires, permits, or forbids a value.
 .LP
 Let
 .nohy "\fB\-\-\fIL\fR"
