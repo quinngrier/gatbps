@@ -126,9 +126,8 @@ interpreted as operands.
 .IPEZ
 The
 .nohy "\fB\-\-all\fR[\fB=\fIV\fR]"
-option prepends the
-names of all special files
-to the remaining arguments.
+option inserts the names of all special files in front of the remaining
+arguments.
 Each name is prefixed with
 .nohy "\fIV\fR."
 If
