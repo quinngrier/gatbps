@@ -11,6 +11,7 @@ followed by one printable character except for the space and
 hyphen-minus characters@.
 Each option either requires, permits, or forbids a value@.
 
+@include indent.texi
 Let
 @w{@t{-@w{-}}@i{L}}
 and
