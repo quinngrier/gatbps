@@ -43,6 +43,10 @@ argument and inserting the
 character into the following argument just after the leading
 @w{@t{-}}
 character@.
+For example,
+@w{@t{-}@i{S} @t{-}@i{K}}
+may be written as
+@w{@t{-}@i{SK}@.}
 
 The following options are supported:
 
