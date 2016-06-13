@@ -96,7 +96,7 @@ If you are using Automake, then you do not need to do anything beyond
 calling the
 @w{@t{GATBPS_PROG_JAVAC}}
 macro to set these variables@.
-Otherwise, you need to add the
+Otherwise, you also need to add the
 @w{@t{JAVACFLAGS = @@JAVACFLAGS@@}}
 and
 @w{@t{CLASSPATH = @@CLASSPATH@@}}
