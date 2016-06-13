@@ -18,37 +18,28 @@ and
 be long and short names for an option and
 @w{@i{V}}
 be a value@.
-If the option
-requires a value,
-then it may be written as either
+If the option requires a value, then it may be written as either
 @w{@t{-@w{-}}@i{L}@t{=}@i{V}@comma{}}
 @w{@t{-@w{-}}@i{L V}@comma{}}
 @w{@t{-}@i{SV}@comma{}}
 or
 @w{@t{-}@i{S V}@.}
-If the option
-permits a value,
-then it may be written as either
+If the option permits a value, then it may be written as either
 @w{@t{-@w{-}}@i{L}@t{=}@i{V}@comma{}}
 @w{@t{-@w{-}}@i{L}@comma{}}
 @w{@t{-}@i{SV}@comma{}}
 or
 @w{@t{-}@i{S}@.}
-If the option
-forbids a value,
-then it may be written as either
+If the option forbids a value, then it may be written as either
 @w{@t{-@w{-}}@i{L}}
 or
 @w{@t{-}@i{S}@comma{}}
-and in the latter case
-it may be combined with an
-immediately following argument in
-(combined) short form by deleting the
+and in the latter case it may be combined with an immediately following
+argument in (combined) short form by deleting the
 @w{@t{-}@i{S}}
 argument and inserting the
 @w{@i{S}}
-character into the following
-argument just after the leading
+character into the following argument just after the leading
 @w{@t{-}}
 character@.
 
