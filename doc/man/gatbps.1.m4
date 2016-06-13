@@ -132,13 +132,11 @@ Each name is prefixed with
 .nohy "\fIV\fR."
 If
 .nohy "\fIV\fR"
-is omitted, then it
-is taken to be empty.
+is omitted, then it is taken to be empty.
 If
 .nohy "\fIV\fR"
-is not empty and does not
-end with a slash character,
-then a slash character is appended to
+is not empty and does not end with a slash character, then a slash
+character is appended to
 .nohy "\fIV\fR."
 .TP
 .nohy "\fB\-\-awk=\fIV\fR"
