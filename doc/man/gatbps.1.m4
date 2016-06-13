@@ -82,39 +82,34 @@ and
 be long and short names for an option and
 .nohy "\fIV\fR"
 be a value.
-If the option
-requires a value,
-then it may be written as either
+If the option requires a value, then it may be written as either
 .nohy "\fB\-\-\fIL\fB=\fIV\fR,"
 .nohy "\fB\-\-\fIL\ V\fR,"
 .nohy "\fB\-\fISV\fR,"
 or
 .nohy "\fB\-\fIS\ V\fR."
-If the option
-permits a value,
-then it may be written as either
+If the option permits a value, then it may be written as either
 .nohy "\fB\-\-\fIL\fB=\fIV\fR,"
 .nohy "\fB\-\-\fIL\fR,"
 .nohy "\fB\-\fISV\fR,"
 or
 .nohy "\fB\-\fIS\fR."
-If the option
-forbids a value,
-then it may be written as either
+If the option forbids a value, then it may be written as either
 .nohy "\fB\-\-\fIL\fR"
 or
 .nohy "\fB\-\fIS\fR,"
-and in the latter case
-it may be combined with an
-immediately following argument in
-(combined) short form by deleting the
+and in the latter case it may be combined with an immediately following
+short option or combination of short options by deleting the
 .nohy "\fB\-\fIS\fR"
 argument and inserting the
 .nohy "\fIS\fR"
-character into the following
-argument just after the leading
+character into the following argument just after the leading
 .nohy "\fB\-\fR"
 character.
+For example,
+.nohy "\fB\-\fIS\fR\ \fB\-\fIK\fR"
+may be written as
+.nohy "\fB\-\fISK\fR."
 .LP
 The following options are supported:
 .TP
