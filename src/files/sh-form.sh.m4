@@ -93,7 +93,7 @@ isatty2='unknown'
 # The following two groups of variables hold ANSI escape sequences for
 # bold, underline, and color styling of text written to standard output
 # and standard error. Each variable starts off empty so that styling is
-# disabled by default. Then, when desired, each group can be set to the
+# disabled by default. Then, when appropriate, each group is set to the
 # appropriate values as follows.
 #
 # For standard output:
