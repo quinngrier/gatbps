@@ -107,7 +107,7 @@ character into the following argument just after the leading
 .nohy "\fB\-\fR"
 character.
 For example,
-.nohy "\fB\-\fIS\fR\ \fB\-\fIK\fR"
+.nohy "\fB\-\fIS\ \fB\-\fIK\fR"
 may be written as
 .nohy "\fB\-\fISK\fR."
 .LP
