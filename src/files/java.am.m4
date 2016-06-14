@@ -127,7 +127,7 @@ clean-first-java:
 clean-local: clean-first-java
 
 first-java:
-	@-':' #((
+	@-':' #(((
 	$(AM_V_at){ \
   ( \
     x=''; \
@@ -145,7 +145,13 @@ first-java:
         x="$${x}"':'$(java_CLASSPATH); \
       ;; \
     esac; \
-    'sh' $(srcdir)'/build-aux/sh-form.sh' \
+    d=$(srcdir); \
+    case "$${d}" in \
+      '-'*) \
+        d='./'"$${d}"; \
+      ;; \
+    esac; \
+    'sh' "$${d}"'/build-aux/sh-form.sh' \
       '--' \
       "$${x}" \
       >'first-java.tmp' \
@@ -153,7 +159,7 @@ first-java:
     classpath=` \
       'cat' 'first-java.tmp' \
     ` || 'exit' "$${?}"; \
-    'sh' $(srcdir)'/build-aux/sh-form.sh' \
+    'sh' "$${d}"'/build-aux/sh-form.sh' \
       '--' \
       $(java_JAVACFLAGS) \
       >'first-java.tmp' \
@@ -161,7 +167,7 @@ first-java:
     javacflags=` \
       'cat' 'first-java.tmp' \
     ` || 'exit' "$${?}"; \
-    'sh' $(srcdir)'/build-aux/sh-form.sh' \
+    'sh' "$${d}"'/build-aux/sh-form.sh' \
       '--' \
       './'$(java_sourcepath) \
       >'first-java.tmp' \
