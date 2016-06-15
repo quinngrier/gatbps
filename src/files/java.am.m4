@@ -123,8 +123,23 @@ GATBPS_V_JAVAC_1 =
 clean-local: clean-main-java
 
 clean-main-java:
-	-rm -f $(java_dst)
-	-rm -f $(java_src) $(java_nested)
+	@-':' #(
+	-{ \
+  for x in \
+    $(java_dst) \
+    $(java_nested) \
+    $(java_src) \
+  ; do \
+    y="$${x}"; \
+    case "$${y}" in \
+      '-'*) \
+        y='./'"$${y}"; \
+      ;; \
+    esac; \
+    'rm' '-f' "$${y}"; \
+  done; \
+  'exit' '0'; \
+:;}
 
 install-java: install-main-java
 
