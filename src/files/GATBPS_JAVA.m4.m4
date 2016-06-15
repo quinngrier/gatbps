@@ -97,8 +97,23 @@ m4_foreach_w(
 .PHONY: uninstall-java-gatbps_x1
 
 clean-java-gatbps_x1:
-	-rm -f $[](java_[]gatbps_x2[]_dst)
-	-rm -f $[](java_[]gatbps_x2[]_src) $[](java_[]gatbps_x2[]_nested)
+	@-'\'':'\'' #(
+	-{ \
+  for x in \
+    $[](java_[]gatbps_x2[]_dst) \
+    $[](java_[]gatbps_x2[]_nested) \
+    $[](java_[]gatbps_x2[]_src) \
+  ; do \
+    y="$[]$[]{x}"; \
+    case "$[]$[]{y}" in \
+      '\''-'\''*) \
+        y='\''./'\''"$[]$[]{y}"; \
+      ;; \
+    esac; \
+    '\''rm'\'' '\''-f'\'' "$[]$[]{y}"; \
+  done; \
+  '\''exit'\'' '\''0'\''; \
+:;}
 
 clean-local: clean-java-gatbps_x1
 
