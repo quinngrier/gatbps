@@ -98,13 +98,13 @@ GATBPS_V_JAVAC_1 =
   'exit' "$${x}"; \
 :;}
 
-.PHONY: clean-first-java
-.PHONY: first-java
-.PHONY: install-first-java
+.PHONY: clean-main-java
 .PHONY: install-java
+.PHONY: install-main-java
 .PHONY: java
-.PHONY: uninstall-first-java
+.PHONY: main-java
 .PHONY: uninstall-java
+.PHONY: uninstall-main-java
 
 .java.class:
 	$(GATBPS_V_JAVAC)$(MKDIR_P) $(GATBPS_SOURCEPATH)
@@ -120,13 +120,44 @@ GATBPS_V_JAVAC_1 =
   $< \
 ;
 
-clean-first-java:
+clean-local: clean-main-java
+
+clean-main-java:
 	-rm -f $(java_dst)
 	-rm -f $(java_src) $(java_nested)
 
-clean-local: clean-first-java
+install-java: install-main-java
 
-first-java:
+install-main-java: main-java
+	@$(NORMAL_INSTALL)
+	@-':' #(((
+	@{ \
+  case ''$(java_noinst) in \
+    ?*) \
+      ':'; \
+    ;; \
+    *) \
+      case ''$(javadir) in \
+        ?*) \
+          echo " $(MKDIR_P) '$(DESTDIR)$(javadir)'"; \
+          $(MKDIR_P) $(DESTDIR)$(javadir) || exit $$?; \
+          if test -f $(java_dst); then \
+            x=$(java_dst); \
+          else \
+            x=$(srcdir)/$(java_dst); \
+          fi; \
+          echo " $(INSTALL_DATA) $$x '$(DESTDIR)$(javadir)'"; \
+          $(INSTALL_DATA) $$x $(DESTDIR)$(javadir) || exit $$?; \
+        ;; \
+      esac; \
+    ;; \
+  esac; \
+  exit 0; \
+:;}
+
+java: main-java
+
+main-java:
 	@-':' #(((
 	$(AM_V_at){ \
   ( \
@@ -154,28 +185,28 @@ first-java:
     'sh' "$${d}"'/build-aux/sh-form.sh' \
       '--' \
       "$${x}" \
-      >'first-java.tmp' \
+      >'main-java.tmp' \
     || 'exit' "$${?}"; \
     classpath=` \
-      'cat' 'first-java.tmp' \
+      'cat' 'main-java.tmp' \
     ` || 'exit' "$${?}"; \
     'sh' "$${d}"'/build-aux/sh-form.sh' \
       '--' \
       $(java_JAVACFLAGS) \
-      >'first-java.tmp' \
+      >'main-java.tmp' \
     || 'exit' "$${?}"; \
     javacflags=` \
-      'cat' 'first-java.tmp' \
+      'cat' 'main-java.tmp' \
     ` || 'exit' "$${?}"; \
     'sh' "$${d}"'/build-aux/sh-form.sh' \
       '--' \
       './'$(java_sourcepath) \
-      >'first-java.tmp' \
+      >'main-java.tmp' \
     || 'exit' "$${?}"; \
     sourcepath=` \
-      'cat' 'first-java.tmp' \
+      'cat' 'main-java.tmp' \
     ` || 'exit' "$${?}"; \
-    'rm' '-f' 'first-java.tmp'; \
+    'rm' '-f' 'main-java.tmp'; \
     $(MAKE) \
       $(AM_MAKEFLAGS) \
       'GATBPS_CLASSPATH='"$${classpath}" \
@@ -186,42 +217,13 @@ first-java:
     'exit' '0'; \
   :;); \
   x="$${?}"; \
-  'rm' '-f' 'first-java.tmp'; \
+  'rm' '-f' 'main-java.tmp'; \
   'exit' "$${x}"; \
 :;}
 
-install-first-java: first-java
-	@$(NORMAL_INSTALL)
-	@-':' #(((
-	@{ \
-  case ''$(java_noinst) in \
-    ?*) \
-      ':'; \
-    ;; \
-    *) \
-      case ''$(javadir) in \
-        ?*) \
-          echo " $(MKDIR_P) '$(DESTDIR)$(javadir)'"; \
-          $(MKDIR_P) $(DESTDIR)$(javadir) || exit $$?; \
-          if test -f $(java_dst); then \
-            x=$(java_dst); \
-          else \
-            x=$(srcdir)/$(java_dst); \
-          fi; \
-          echo " $(INSTALL_DATA) $$x '$(DESTDIR)$(javadir)'"; \
-          $(INSTALL_DATA) $$x $(DESTDIR)$(javadir) || exit $$?; \
-        ;; \
-      esac; \
-    ;; \
-  esac; \
-  exit 0; \
-:;}
+uninstall-java: uninstall-main-java
 
-install-java: install-first-java
-
-java: first-java
-
-uninstall-first-java:
+uninstall-main-java:
 	@$(NORMAL_UNINSTALL)
 	@-':' #(((
 	@{ \
@@ -241,8 +243,6 @@ uninstall-first-java:
   esac; \
   exit 0; \
 :;}
-
-uninstall-java: uninstall-first-java
 
 ## end_rules
 
