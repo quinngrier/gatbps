@@ -97,7 +97,6 @@ m4_foreach_w(
 .PHONY: uninstall-java-gatbps_x1
 
 clean-java-gatbps_x1:
-	@-'\'':'\'' #(
 	-{ \
   for x in \
     $[](java_[]gatbps_x2[]_dst) \
