@@ -30,7 +30,7 @@ body {
   text-align: justify;
 }
 
-div.contents li {
+div.contents > ul > li {
   margin: 0;
 }
 
