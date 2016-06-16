@@ -34,6 +34,10 @@ div.contents > ul > li {
   margin: 1.10em 0;
 }
 
+div.contents > ul > li > ul {
+  margin: 0.25em 0;
+}
+
 div.shortcontents > ul > li {
   margin: 0.25em 0;
 }
