@@ -123,7 +123,6 @@ GATBPS_V_JAVAC_1 =
 clean-local: clean-main-java
 
 clean-main-java:
-	@-':' #(
 	-{ \
   for x in \
     $(java_dst) \
