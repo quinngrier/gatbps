@@ -31,7 +31,7 @@ body {
 }
 
 div.contents > ul > li {
-  margin: 0;
+  margin: 1.10em 0;
 }
 
 div.shortcontents > ul > li {
