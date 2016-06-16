@@ -35,7 +35,7 @@ div.contents > ul > li {
 }
 
 div.shortcontents > ul > li {
-  margin: 0;
+  margin: 0.25em 0;
 }
 
 hr {
