@@ -130,13 +130,7 @@ clean-main-java:
     $(java_nested) \
     $(java_src) \
   ; do \
-    y="$${x}"; \
-    case "$${y}" in \
-      '-'*) \
-        y='./'"$${y}"; \
-      ;; \
-    esac; \
-    'rm' '-f' "$${y}"; \
+    'rm' '-f' './'"$${x}"; \
   done; \
   'exit' '0'; \
 :;}
