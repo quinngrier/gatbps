@@ -34,7 +34,7 @@ div.contents li {
   margin: 0;
 }
 
-div.shortcontents li {
+div.shortcontents > ul > li {
   margin: 0;
 }
 
