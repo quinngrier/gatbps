@@ -7,7 +7,7 @@
 @end ifclear
 
 @noindent
-All parts of GATBPS are original work except for most of the copyright
+All parts of GATBPS are original work except for some of the copyright
 texts@.
 The authors of the original work have waived all copyright and related
 or neighboring rights to the extent permitted by law as described by the
