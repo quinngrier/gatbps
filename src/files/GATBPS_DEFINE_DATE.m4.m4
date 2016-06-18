@@ -25,6 +25,11 @@ m4_if(
   [-1],
   [m4_fatal([the second argument to GATBPS_DEFINE_DATE must be an M4 identifier])])
 
+m4_if(
+  m4_bregexp([$3], [^\+?[0-9][0-9]*-[0-9][0-9]-[0-9][0-9]$]),
+  [-1],
+  [m4_fatal([the third argument to GATBPS_DEFINE_DATE must be a date])])
+
 m4_define([$1$2],
           [$3])
 AC_DEFINE([$2],
