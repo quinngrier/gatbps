@@ -521,6 +521,7 @@ EOF1
           set "${prefix}GATBPS_PROG_JAR.m4" "${@AT@}"
           set "${prefix}GATBPS_JAVA_RULES.am" "${@AT@}"
           set "${prefix}GATBPS_JAVA.m4" "${@AT@}"
+          set "${prefix}GATBPS_DEFINE_VERSION.m4" "${@AT@}"
           set "${prefix}GATBPS_DEFINE_DATE.m4" "${@AT@}"
           set "${prefix}GATBPS_CONFIG_FILE_SUBST.m4" "${@AT@}"
           set "${prefix}GATBPS_CONFIG_FILE_RULES.am" "${@AT@}"
@@ -1326,6 +1327,8 @@ EOF1
             ;;
 
 |%}help_code({%|GATBPS_DEFINE_DATE.m4|%}){%|
+
+|%}help_code({%|GATBPS_DEFINE_VERSION.m4|%}){%|
 
 |%}help_code({%|GATBPS_JAVA.m4|%}){%|
 
@@ -4181,6 +4184,8 @@ EOF1
 |%}generation_code({%|GATBPS_CONFIG_FILE_SUBST.m4|%}){%|
 
 |%}generation_code({%|GATBPS_DEFINE_DATE.m4|%}){%|
+
+|%}generation_code({%|GATBPS_DEFINE_VERSION.m4|%}){%|
 
 |%}generation_code({%|PACKAGEDATE.texi.in|%}){%|
 
@@ -8205,6 +8210,12 @@ EOF1
 
 |%}recursion_code(
   {%|GATBPS_DEFINE_DATE.m4|%},
+  {%|
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
+|%}){%|
+
+|%}recursion_code(
+  {%|GATBPS_DEFINE_VERSION.m4|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
