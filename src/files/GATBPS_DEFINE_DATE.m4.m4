@@ -10,9 +10,10 @@ dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([GATBPS_DEFINE_DATE], [{
 
-m4_case($#,
-        [3], [],
-        [m4_fatal([GATBPS_DEFINE_DATE requires exactly 3 arguments])])
+m4_case(
+  [$#],
+  [3], [],
+  [m4_fatal([GATBPS_DEFINE_DATE requires exactly 3 arguments])])
 
 m4_define([$1$2],
           [$3])
