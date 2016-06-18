@@ -63,6 +63,7 @@ bin_gatbps_src += doc/help/CC0-1.0-copying.texi.hd.m4
 bin_gatbps_src += doc/help/CC0-1.0-file.txt.hd.m4
 bin_gatbps_src += doc/help/CC0-1.0.txt.hd.m4
 bin_gatbps_src += doc/help/GATBPS_CONFIG_FILE_RULES.am.hd.m4
+bin_gatbps_src += doc/help/GATBPS_DEFINE_DATE.m4.hd.m4
 bin_gatbps_src += doc/help/GATBPS_JAVA.m4.hd.m4
 bin_gatbps_src += doc/help/GATBPS_JAVA_RULES.am.hd.m4
 bin_gatbps_src += doc/help/GATBPS_PROG_JAR.m4.hd.m4
