@@ -18,12 +18,12 @@ m4_case(
 m4_if(
   m4_bregexp([$1], [^[A-Z_a-z][0-9A-Z_a-z]*$]),
   [-1],
-  [m4_fatal([the first argument to GATBPS_DEFINE_DATE must be an M4 identifier])])
+  [m4_fatal([the first argument to GATBPS_DEFINE_DATE must be an identifier])])
 
 m4_if(
   m4_bregexp([$2], [^[A-Z_a-z][0-9A-Z_a-z]*$]),
   [-1],
-  [m4_fatal([the second argument to GATBPS_DEFINE_DATE must be an M4 identifier])])
+  [m4_fatal([the second argument to GATBPS_DEFINE_DATE must be an identifier])])
 
 m4_if(
   m4_bregexp([$3], [^\+?[0-9][0-9]*-[0-9][0-9]-[0-9][0-9]$]),
