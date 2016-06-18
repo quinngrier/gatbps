@@ -32,7 +32,6 @@ AM_INIT_AUTOMAKE([
 ])
 
 m4_include([build-aux/CC0-1.0-AC-COPYRIGHT.ac])
-m4_include([build-aux/VERSION.ac])
 
 AC_SYS_INTERPRETER
 case "${interpval}" in
