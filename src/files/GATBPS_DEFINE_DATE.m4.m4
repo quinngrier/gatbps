@@ -8,7 +8,7 @@ dnl Special file: GATBPS_DEFINE_DATE.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_DEFINE_DATE], [{ :
+AC_DEFUN([GATBPS_DEFINE_DATE], [{
 
   m4_case($#,
           [3], [],
@@ -100,7 +100,7 @@ AC_DEFUN([GATBPS_DEFINE_DATE], [{ :
   $2_DAY_ZPAD='$1$2_DAY_ZPAD'
   AC_SUBST([$2_DAY_ZPAD])
 
-}])dnl
+:;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
 dnl
 dnl The authors of this file have waived all copyright and
