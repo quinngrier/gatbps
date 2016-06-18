@@ -104,6 +104,7 @@ bin_gatbps_src += src/files/GATBPS_CHECK_VARS.m4.m4
 bin_gatbps_src += src/files/GATBPS_CONFIG_FILE.m4.m4
 bin_gatbps_src += src/files/GATBPS_CONFIG_FILE_RULES.am.m4
 bin_gatbps_src += src/files/GATBPS_CONFIG_FILE_SUBST.m4.m4
+bin_gatbps_src += src/files/GATBPS_DEFINE_DATE.m4.m4
 bin_gatbps_src += src/files/GATBPS_JAVA.m4.m4
 bin_gatbps_src += src/files/GATBPS_JAVA_RULES.am.m4
 bin_gatbps_src += src/files/GATBPS_PROG_JAR.m4.m4
