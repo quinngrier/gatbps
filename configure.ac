@@ -14,6 +14,10 @@ GATBPS_DEFINE_DATE(
     'sh' 'build-aux/DATE.sh'
   ])m4_if(m4_sysval, [0], [], [m4_fatal([DATE.sh failed])]))
 
+GATBPS_DEFINE_VERSION(
+  [AC_],
+  [PACKAGE_VERSION])
+
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_MACRO_DIRS([m4])
