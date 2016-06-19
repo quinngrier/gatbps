@@ -66,6 +66,9 @@ m4_if(
   [0],
   [m4_fatal([GATBPS_DEFINE_DATE requires its third argument to be a date])])dnl
 m4_define(
+  [$1$2_TROFF],
+  m4_bpatsubst($1$2, [-], [\\-]))dnl
+m4_define(
   [$1$2_MONTH_ZPAD],
   m4_bpatsubst($1$2_MONTH, [^.$], [0\&]))dnl
 m4_define(
@@ -81,8 +84,6 @@ AC_DEFINE(
 $2='$1$2'
 AC_SUBST([$2])
 
-m4_define([$1$2_TROFF],
-          m4_bpatsubst($1$2, [-], [\\-]))
 AC_DEFINE([$2_TROFF],
           ["m4_bpatsubst($1$2, [-], [\\\\-])"],
           [Define to $2 with - replaced by \-.])
