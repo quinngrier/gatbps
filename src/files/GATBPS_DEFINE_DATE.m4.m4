@@ -12,22 +12,22 @@ AC_DEFUN([GATBPS_DEFINE_DATE], [{
 m4_case(
   [$#],
   [3], [],
-  [m4_fatal([GATBPS_DEFINE_DATE requires exactly 3 arguments])])
+  [m4_fatal([GATBPS_DEFINE_DATE requires exactly 3 arguments])])dnl
 m4_if(
   m4_bregexp([$1], [^[A-Z_a-z][0-9A-Z_a-z]*$]),
   [-1],
-  [m4_fatal([GATBPS_DEFINE_DATE requires its first argument to be an identifier])])
+  [m4_fatal([GATBPS_DEFINE_DATE requires its first argument to be an identifier])])dnl
 m4_if(
   m4_bregexp([$2], [^[A-Z_a-z][0-9A-Z_a-z]*$]),
   [-1],
-  [m4_fatal([GATBPS_DEFINE_DATE requires its second argument to be an identifier])])
+  [m4_fatal([GATBPS_DEFINE_DATE requires its second argument to be an identifier])])dnl
 m4_if(
   m4_bregexp([$3], [^\+?[0-9][0-9]*-[0-9][0-9]-[0-9][0-9]$]),
   [-1],
-  [m4_fatal([GATBPS_DEFINE_DATE requires its third argument to be a date])])
+  [m4_fatal([GATBPS_DEFINE_DATE requires its third argument to be a date])])dnl
 m4_define(
   [$1$2],
-  [$3])
+  [$3])dnl
 AC_DEFINE(
   [$2],
   ["$1$2"],
