@@ -74,19 +74,21 @@ m4_define(
 m4_define(
   [$1$2_DAY_ZPAD],
   m4_bpatsubst($1$2_DAY, [^.$], [0\&]))dnl
-m4_define([$1$2_MONTH_NAME],
-          m4_if($1$2_MONTH, [1], [January],
-                $1$2_MONTH, [2], [February],
-                $1$2_MONTH, [3], [March],
-                $1$2_MONTH, [4], [April],
-                $1$2_MONTH, [5], [May],
-                $1$2_MONTH, [6], [June],
-                $1$2_MONTH, [7], [July],
-                $1$2_MONTH, [8], [August],
-                $1$2_MONTH, [9], [September],
-                $1$2_MONTH, [10], [October],
-                $1$2_MONTH, [11], [November],
-                $1$2_MONTH, [12], [December]))dnl
+m4_define(
+  [$1$2_MONTH_NAME],
+  m4_if(
+    $1$2_MONTH,  [1], [January],
+    $1$2_MONTH,  [2], [February],
+    $1$2_MONTH,  [3], [March],
+    $1$2_MONTH,  [4], [April],
+    $1$2_MONTH,  [5], [May],
+    $1$2_MONTH,  [6], [June],
+    $1$2_MONTH,  [7], [July],
+    $1$2_MONTH,  [8], [August],
+    $1$2_MONTH,  [9], [September],
+    $1$2_MONTH, [10], [October],
+    $1$2_MONTH, [11], [November],
+    $1$2_MONTH, [12], [December]))dnl
 m4_define(
   [$1$2_MONTH_ABBR],
   m4_substr($1$2_MONTH_NAME, [0], [3]))dnl
