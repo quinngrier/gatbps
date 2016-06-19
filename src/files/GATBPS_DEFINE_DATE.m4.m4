@@ -99,7 +99,7 @@ m4_define(
 
 AC_DEFINE(
   [$2],
-  ["$1$2"],
+  "$1$2",
   [Define to a character string literal
    containing the specified date in YYYY-MM-DD form.
    The year may be preceded by a + character and may
@@ -107,42 +107,42 @@ AC_DEFINE(
 
 AC_DEFINE(
   [$2_YEAR],
-  [$1$2_YEAR],
+  $1$2_YEAR,
   [Define to the year of $2.])
 
 AC_DEFINE(
   [$2_MONTH],
-  [$1$2_MONTH],
+  $1$2_MONTH,
   [Define to the month of $2.])
 
 AC_DEFINE(
   [$2_DAY],
-  [$1$2_DAY],
+  $1$2_DAY,
   [Define to the day of $2.])
 
 AC_DEFINE(
   [$2_TROFF],
-  ["m4_bpatsubst($1$2, [-], [\\\\-])"],
+  "m4_bpatsubst($1$2, [-], [\\\\-])",
   [Define to $2 with - replaced by \-.])
 
 AC_DEFINE(
   [$2_MONTH_NAME],
-  ["$1$2_MONTH_NAME"],
+  "$1$2_MONTH_NAME",
   [Define to the month name of $2.])
 
 AC_DEFINE(
   [$2_MONTH_ABBR],
-  ["$1$2_MONTH_ABBR"],
+  "$1$2_MONTH_ABBR",
   [Define to the abbreviated month name of $2.])
 
 AC_DEFINE(
   [$2_MONTH_ZPAD],
-  ["$1$2_MONTH_ZPAD"],
+  "$1$2_MONTH_ZPAD",
   [Define to the zero-padded month of $2.])
 
 AC_DEFINE(
   [$2_DAY_ZPAD],
-  ["$1$2_DAY_ZPAD"],
+  "$1$2_DAY_ZPAD",
   [Define to the zero-padded day of $2.])
 
 $2='$1$2'
