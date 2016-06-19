@@ -53,6 +53,9 @@ AC_SUBST([$2_TROFF])
 
 m4_define([$1$2_YEAR],
           m4_bregexp($1$2, [\+?0*\([^-]+\)], [\1]))
+m4_define(
+  [$1$2_YEAR_MOD_10000],
+  m4_bregexp($1$2_YEAR, [\([0-9][0-9]?[0-9]?[0-9]?\)$], [\1]))dnl
 AC_DEFINE([$2_YEAR],
           [$1$2_YEAR],
           [Define to the year of $2.])
