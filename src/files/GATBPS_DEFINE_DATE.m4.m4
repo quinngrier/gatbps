@@ -92,6 +92,11 @@ m4_define(
 m4_define(
   [$1$2_DAY_ZPAD],
   m4_bpatsubst($1$2_DAY, [^.$], [0\&]))dnl
+
+#
+# This block is an expansion of the GATBPS_DEFINE_DATE macro.
+#
+
 AC_DEFINE(
   [$2],
   ["$1$2"],
