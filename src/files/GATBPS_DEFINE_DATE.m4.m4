@@ -123,7 +123,7 @@ AC_DEFINE(
 AC_DEFINE(
   [$2_TROFF],
   "m4_bpatsubst($1$2_TROFF, [\\], [\\\\])",
-  [Define to $2 with - replaced by \-.])
+  [Define to $2 with a \ character inserted before each - character.])
 
 AC_DEFINE(
   [$2_MONTH_NAME],
