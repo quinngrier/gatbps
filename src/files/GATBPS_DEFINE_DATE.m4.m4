@@ -104,54 +104,63 @@ AC_DEFINE(
    containing the specified date in YYYY-MM-DD form.
    The year may be preceded by a + character and may
    have any number of digits, including leading zeros.])
+
 $2='$1$2'
 AC_SUBST([$2])
 
 AC_DEFINE([$2_TROFF],
           ["m4_bpatsubst($1$2, [-], [\\\\-])"],
           [Define to $2 with - replaced by \-.])
+
 $2_TROFF='$1$2_TROFF'
 AC_SUBST([$2_TROFF])
 
 AC_DEFINE([$2_YEAR],
           [$1$2_YEAR],
           [Define to the year of $2.])
+
 $2_YEAR='$1$2_YEAR'
 AC_SUBST([$2_YEAR])
 
 AC_DEFINE([$2_MONTH],
           [$1$2_MONTH],
           [Define to the month of $2.])
+
 $2_MONTH='$1$2_MONTH'
 AC_SUBST([$2_MONTH])
 
 AC_DEFINE([$2_MONTH_ZPAD],
           ["$1$2_MONTH_ZPAD"],
           [Define to the zero-padded month of $2.])
+
 $2_MONTH_ZPAD='$1$2_MONTH_ZPAD'
 AC_SUBST([$2_MONTH_ZPAD])
 
 AC_DEFINE([$2_MONTH_NAME],
           ["$1$2_MONTH_NAME"],
           [Define to the month name of $2.])
+
 $2_MONTH_NAME='$1$2_MONTH_NAME'
 AC_SUBST([$2_MONTH_NAME])
 
 AC_DEFINE([$2_MONTH_ABBR],
           ["$1$2_MONTH_ABBR"],
           [Define to the abbreviated month name of $2.])
+
 $2_MONTH_ABBR='$1$2_MONTH_ABBR'
 AC_SUBST([$2_MONTH_ABBR])
 
 AC_DEFINE([$2_DAY],
           [$1$2_DAY],
           [Define to the day of $2.])
+
 $2_DAY='$1$2_DAY'
 AC_SUBST([$2_DAY])
 
 AC_DEFINE([$2_DAY_ZPAD],
           ["$1$2_DAY_ZPAD"],
           [Define to the zero-padded day of $2.])
+
 $2_DAY_ZPAD='$1$2_DAY_ZPAD'
 AC_SUBST([$2_DAY_ZPAD])
 
