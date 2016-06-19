@@ -83,6 +83,9 @@ m4_if(
   ),
   [0],
   [m4_fatal([GATBPS_DEFINE_DATE requires its third argument to be a date])])dnl
+m4_define(
+  [$1$2_MONTH_ZPAD],
+  m4_bregexp($1$2, [[^-]*-\([^-]*\)], [\1]))dnl
 AC_DEFINE([$2_YEAR],
           [$1$2_YEAR],
           [Define to the year of $2.])
@@ -95,8 +98,6 @@ AC_DEFINE([$2_MONTH],
 $2_MONTH='$1$2_MONTH'
 AC_SUBST([$2_MONTH])
 
-m4_define([$1$2_MONTH_ZPAD],
-          m4_bregexp($1$2, [[^-]*-\([^-]*\)], [\1]))
 AC_DEFINE([$2_MONTH_ZPAD],
           ["$1$2_MONTH_ZPAD"],
           [Define to the zero-padded month of $2.])
