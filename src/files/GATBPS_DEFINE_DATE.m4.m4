@@ -36,10 +36,10 @@ m4_define(
 AC_DEFINE(
   [$2],
   ["$1$2"],
-  [Define to a character string literal containing
-   the appropriate date in YYYY-MM-DD form. The
-   year may optionally be preceded by a + character and
-   may have any number of digits, including leading zeros.])
+  [Define to a character string literal
+   containing the specified date in YYYY-MM-DD form.
+   The year may be preceded by a + character and may
+   have any number of digits, including leading zeros.])
 $2='$1$2'
 AC_SUBST([$2])
 
