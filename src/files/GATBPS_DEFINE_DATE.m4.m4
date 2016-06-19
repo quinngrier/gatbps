@@ -88,7 +88,7 @@ m4_define(
   m4_bpatsubst($1$2_MONTH, [^.$], [0\&]))dnl
 m4_define(
   [$1$2_DAY_ZPAD],
-  m4_bregexp($1$2, [.*-\(.*\)], [\1]))dnl
+  m4_bpatsubst($1$2_DAY, [^.$], [0\&]))dnl
 AC_DEFINE([$2_YEAR],
           [$1$2_YEAR],
           [Define to the year of $2.])
