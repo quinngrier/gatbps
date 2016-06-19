@@ -68,7 +68,8 @@ m4_define(
   m4_eval(
     ($1$2_YEAR_MOD_10000 % 4 == 0 &&
      $1$2_YEAR_MOD_10000 % 100 != 0) ||
-    ($1$2_YEAR_MOD_10000 % 400 == 0)))dnl
+    ($1$2_YEAR_MOD_10000 % 400 == 0)
+  ))dnl
 m4_if(
   m4_eval(
     ($1$2_DAY >= 1) &&
