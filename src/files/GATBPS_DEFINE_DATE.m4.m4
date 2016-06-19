@@ -69,12 +69,6 @@ m4_define(
   [$1$2_TROFF],
   m4_bpatsubst($1$2, [-], [\\-]))dnl
 m4_define(
-  [$1$2_MONTH_ZPAD],
-  m4_bpatsubst($1$2_MONTH, [^.$], [0\&]))dnl
-m4_define(
-  [$1$2_DAY_ZPAD],
-  m4_bpatsubst($1$2_DAY, [^.$], [0\&]))dnl
-m4_define(
   [$1$2_MONTH_NAME],
   m4_if(
     $1$2_MONTH,  [1], [January],
@@ -92,6 +86,12 @@ m4_define(
 m4_define(
   [$1$2_MONTH_ABBR],
   m4_substr($1$2_MONTH_NAME, [0], [3]))dnl
+m4_define(
+  [$1$2_MONTH_ZPAD],
+  m4_bpatsubst($1$2_MONTH, [^.$], [0\&]))dnl
+m4_define(
+  [$1$2_DAY_ZPAD],
+  m4_bpatsubst($1$2_DAY, [^.$], [0\&]))dnl
 AC_DEFINE(
   [$2],
   ["$1$2"],
