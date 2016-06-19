@@ -30,14 +30,16 @@ m4_if(
   [-1],
   [m4_fatal([GATBPS_DEFINE_DATE requires its third argument to be a date])])
 
-m4_define([$1$2],
-          [$3])
-AC_DEFINE([$2],
-          ["$1$2"],
-          [Define to a character string literal containing
-           the appropriate date in YYYY-MM-DD form. The
-           year may optionally be preceded by a + character and
-           may have any number of digits, including leading zeros.])
+m4_define(
+  [$1$2],
+  [$3])
+AC_DEFINE(
+  [$2],
+  ["$1$2"],
+  [Define to a character string literal containing
+   the appropriate date in YYYY-MM-DD form. The
+   year may optionally be preceded by a + character and
+   may have any number of digits, including leading zeros.])
 $2='$1$2'
 AC_SUBST([$2])
 
