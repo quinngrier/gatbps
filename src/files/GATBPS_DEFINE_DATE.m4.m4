@@ -69,6 +69,24 @@ m4_define(
     ($1$2_YEAR_MOD_10000 % 4 == 0 &&
      $1$2_YEAR_MOD_10000 % 100 != 0) ||
     ($1$2_YEAR_MOD_10000 % 400 == 0)))dnl
+m4_if(
+  m4_eval(
+    ($1$2_DAY >= 1) &&
+    (($1$2_MONTH ==  1 && $1$2_DAY <= 31) ||
+     ($1$2_MONTH ==  2 && $1$2_DAY <= 28 + $1$2_YEAR_IS_LEAP) ||
+     ($1$2_MONTH ==  3 && $1$2_DAY <= 31) ||
+     ($1$2_MONTH ==  4 && $1$2_DAY <= 30) ||
+     ($1$2_MONTH ==  5 && $1$2_DAY <= 31) ||
+     ($1$2_MONTH ==  6 && $1$2_DAY <= 30) ||
+     ($1$2_MONTH ==  7 && $1$2_DAY <= 31) ||
+     ($1$2_MONTH ==  8 && $1$2_DAY <= 31) ||
+     ($1$2_MONTH ==  9 && $1$2_DAY <= 30) ||
+     ($1$2_MONTH == 10 && $1$2_DAY <= 31) ||
+     ($1$2_MONTH == 11 && $1$2_DAY <= 30) ||
+     ($1$2_MONTH == 12 && $1$2_DAY <= 31))
+  ),
+  [0],
+  [m4_fatal([GATBPS_DEFINE_DATE requires its third argument to be a date])])dnl
 AC_DEFINE([$2_YEAR],
           [$1$2_YEAR],
           [Define to the year of $2.])
