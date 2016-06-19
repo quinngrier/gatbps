@@ -64,7 +64,7 @@ m4_define(
   [$1$2_YEAR_MOD_10000],
   m4_bregexp($1$2_YEAR, [\([0-9][0-9]?[0-9]?[0-9]?\)$], [\1]))dnl
 m4_define(
-  [$1$2_YEAR_IS_LEAP],
+  [$1$2_IS_LEAP_YEAR],
   m4_eval(
     ($1$2_YEAR_MOD_10000 % 4 == 0 &&
      $1$2_YEAR_MOD_10000 % 100 != 0) ||
@@ -74,7 +74,7 @@ m4_if(
   m4_eval(
     ($1$2_DAY >= 1) &&
     (($1$2_MONTH ==  1 && $1$2_DAY <= 31) ||
-     ($1$2_MONTH ==  2 && $1$2_DAY <= 28 + $1$2_YEAR_IS_LEAP) ||
+     ($1$2_MONTH ==  2 && $1$2_DAY <= 28 + $1$2_IS_LEAP_YEAR) ||
      ($1$2_MONTH ==  3 && $1$2_DAY <= 31) ||
      ($1$2_MONTH ==  4 && $1$2_DAY <= 30) ||
      ($1$2_MONTH ==  5 && $1$2_DAY <= 31) ||
