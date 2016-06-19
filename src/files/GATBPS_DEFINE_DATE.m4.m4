@@ -87,6 +87,9 @@ m4_define([$1$2_MONTH_NAME],
                 $1$2_MONTH, [10], [October],
                 $1$2_MONTH, [11], [November],
                 $1$2_MONTH, [12], [December]))dnl
+m4_define(
+  [$1$2_MONTH_ABBR],
+  m4_substr($1$2_MONTH_NAME, [0], [3]))dnl
 AC_DEFINE(
   [$2],
   ["$1$2"],
@@ -127,8 +130,6 @@ AC_DEFINE([$2_MONTH_NAME],
 $2_MONTH_NAME='$1$2_MONTH_NAME'
 AC_SUBST([$2_MONTH_NAME])
 
-m4_define([$1$2_MONTH_ABBR],
-          m4_substr($1$2_MONTH_NAME, [0], [3]))
 AC_DEFINE([$2_MONTH_ABBR],
           ["$1$2_MONTH_ABBR"],
           [Define to the abbreviated month name of $2.])
