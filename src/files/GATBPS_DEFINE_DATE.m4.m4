@@ -58,6 +58,9 @@ m4_define(
   [$1$2_MONTH],
   m4_bregexp($1$2, [[^-]*-0?\([^-]*\)], [\1]))dnl
 m4_define(
+  [$1$2_DAY],
+  m4_bregexp($1$2, [.*-0?\(.*\)], [\1]))dnl
+m4_define(
   [$1$2_YEAR_MOD_10000],
   m4_bregexp($1$2_YEAR, [\([0-9][0-9]?[0-9]?[0-9]?\)$], [\1]))dnl
 m4_define(
@@ -113,8 +116,6 @@ AC_DEFINE([$2_MONTH_ABBR],
 $2_MONTH_ABBR='$1$2_MONTH_ABBR'
 AC_SUBST([$2_MONTH_ABBR])
 
-m4_define([$1$2_DAY],
-          m4_bregexp($1$2, [.*-0?\(.*\)], [\1]))
 AC_DEFINE([$2_DAY],
           [$1$2_DAY],
           [Define to the day of $2.])
