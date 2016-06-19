@@ -86,6 +86,9 @@ m4_if(
 m4_define(
   [$1$2_MONTH_ZPAD],
   m4_bpatsubst($1$2_MONTH, [^.$], [0\&]))dnl
+m4_define(
+  [$1$2_DAY_ZPAD],
+  m4_bregexp($1$2, [.*-\(.*\)], [\1]))dnl
 AC_DEFINE([$2_YEAR],
           [$1$2_YEAR],
           [Define to the year of $2.])
@@ -137,8 +140,6 @@ AC_DEFINE([$2_DAY],
 $2_DAY='$1$2_DAY'
 AC_SUBST([$2_DAY])
 
-m4_define([$1$2_DAY_ZPAD],
-          m4_bregexp($1$2, [.*-\(.*\)], [\1]))
 AC_DEFINE([$2_DAY_ZPAD],
           ["$1$2_DAY_ZPAD"],
           [Define to the zero-padded day of $2.])
