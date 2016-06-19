@@ -85,7 +85,7 @@ m4_if(
   [m4_fatal([GATBPS_DEFINE_DATE requires its third argument to be a date])])dnl
 m4_define(
   [$1$2_MONTH_ZPAD],
-  m4_bregexp($1$2, [[^-]*-\([^-]*\)], [\1]))dnl
+  m4_bpatsubst($1$2_MONTH, [^.$], [0\&]))dnl
 AC_DEFINE([$2_YEAR],
           [$1$2_YEAR],
           [Define to the year of $2.])
