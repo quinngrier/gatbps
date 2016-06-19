@@ -28,24 +28,6 @@ m4_if(
 m4_define(
   [$1$2],
   [$3])dnl
-AC_DEFINE(
-  [$2],
-  ["$1$2"],
-  [Define to a character string literal
-   containing the specified date in YYYY-MM-DD form.
-   The year may be preceded by a + character and may
-   have any number of digits, including leading zeros.])
-$2='$1$2'
-AC_SUBST([$2])
-
-m4_define([$1$2_TROFF],
-          m4_bpatsubst($1$2, [-], [\\-]))
-AC_DEFINE([$2_TROFF],
-          ["m4_bpatsubst($1$2, [-], [\\\\-])"],
-          [Define to $2 with - replaced by \-.])
-$2_TROFF='$1$2_TROFF'
-AC_SUBST([$2_TROFF])
-
 m4_define(
   [$1$2_YEAR],
   m4_bregexp($1$2, [\+?0*\([^-]+\)], [\1]))dnl
@@ -89,6 +71,24 @@ m4_define(
 m4_define(
   [$1$2_DAY_ZPAD],
   m4_bpatsubst($1$2_DAY, [^.$], [0\&]))dnl
+AC_DEFINE(
+  [$2],
+  ["$1$2"],
+  [Define to a character string literal
+   containing the specified date in YYYY-MM-DD form.
+   The year may be preceded by a + character and may
+   have any number of digits, including leading zeros.])
+$2='$1$2'
+AC_SUBST([$2])
+
+m4_define([$1$2_TROFF],
+          m4_bpatsubst($1$2, [-], [\\-]))
+AC_DEFINE([$2_TROFF],
+          ["m4_bpatsubst($1$2, [-], [\\\\-])"],
+          [Define to $2 with - replaced by \-.])
+$2_TROFF='$1$2_TROFF'
+AC_SUBST([$2_TROFF])
+
 AC_DEFINE([$2_YEAR],
           [$1$2_YEAR],
           [Define to the year of $2.])
