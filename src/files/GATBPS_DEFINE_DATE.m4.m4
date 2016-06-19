@@ -56,6 +56,12 @@ m4_define([$1$2_YEAR],
 m4_define(
   [$1$2_YEAR_MOD_10000],
   m4_bregexp($1$2_YEAR, [\([0-9][0-9]?[0-9]?[0-9]?\)$], [\1]))dnl
+m4_define(
+  [$1$2_YEAR_IS_LEAP],
+  m4_eval(
+    ($1$2_YEAR_MOD_10000 % 4 == 0 &&
+     $1$2_YEAR_MOD_10000 % 100 != 0) ||
+    ($1$2_YEAR_MOD_10000 % 400 == 0)))dnl
 AC_DEFINE([$2_YEAR],
           [$1$2_YEAR],
           [Define to the year of $2.])
