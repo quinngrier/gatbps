@@ -39,7 +39,7 @@ m4_define(
   m4_bregexp($1$2, [.*-0?\(.*\)], [\1]))dnl
 m4_define(
   [$1$2_YEAR_MOD_10000],
-  m4_bregexp($1$2_YEAR, [\([0-9][0-9]?[0-9]?[0-9]?\)$], [\1]))dnl
+  m4_bregexp($1$2_YEAR, [[0-9][0-9]?[0-9]?[0-9]?$], [\&]))dnl
 m4_define(
   [$1$2_IS_LEAP_YEAR],
   m4_eval(
