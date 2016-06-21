@@ -31,19 +31,19 @@ body {
 }
 
 div.contents > ul > li {
-  margin: 0.75em 0.00em;
+  margin: 0.75em 0;
 }
 
 div.contents > ul > li > ul {
-  margin: 0.25em 0.00em;
+  margin: 0.25em 0;
 }
 
 div.contents > ul > li > ul li {
-  margin: 0.00em 0.00em;
+  margin: 0;
 }
 
 div.shortcontents > ul > li {
-  margin: 0.00em 0.00em;
+  margin: 0;
 }
 
 hr {
@@ -51,7 +51,7 @@ hr {
 }
 
 li {
-  margin: 0.75em 0.00em;
+  margin: 0.75em 0;
 }
 
 span.indent-immediately-following-paragraph + p {
