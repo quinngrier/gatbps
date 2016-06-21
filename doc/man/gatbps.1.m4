@@ -1444,11 +1444,9 @@ option of
 to embed it into the style sheet of the HTML output.
 .SH "EXIT STATUS"
 .LP
-Exit status zero indicates success
-and any other exit status indicates failure.
-Success means that
-all arguments were successfully processed
-and failure means that one or more were not.
+Exit status zero means success, and any other exit status means failure.
+Success means that all arguments were successfully processed, and
+failure means that one or more were not.
 .SH "CONSEQUENCES OF ERRORS"
 .LP
 All errors cause the
