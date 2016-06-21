@@ -30,10 +30,6 @@ body {
   text-align: justify;
 }
 
-div.contents > ul > li {
-  margin: 0.75em 0;
-}
-
 div.contents > ul > li > ul {
   margin: 0.25em 0;
 }
