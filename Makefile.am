@@ -116,6 +116,7 @@ bin_gatbps_src += src/files/GATBPS_PROG_JAVADOC.m4.m4
 bin_gatbps_src += src/files/Makefile.am.vim.m4
 bin_gatbps_src += src/files/PACKAGEDATE.texi.in.m4
 bin_gatbps_src += src/files/PACKAGEVERSION.texi.in.m4
+bin_gatbps_src += src/files/TEST_EXIT.h.m4
 bin_gatbps_src += src/files/docbook-dist.am.m4
 bin_gatbps_src += src/files/docbook.am.m4
 bin_gatbps_src += src/files/dvi-dist.am.m4
