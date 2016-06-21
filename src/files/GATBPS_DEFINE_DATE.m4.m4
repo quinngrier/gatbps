@@ -122,6 +122,11 @@ AC_DEFINE(
   [Define to the day of $2.])
 
 AC_DEFINE(
+  [$2_IS_LEAP_YEAR],
+  $1$2_IS_LEAP_YEAR,
+  [Define to 1 if $2_YEAR is a leap year, or 0 if not.])
+
+AC_DEFINE(
   [$2_TROFF],
   "m4_bpatsubst($1$2_TROFF, [\\], [\\\\])",
   [Define to $2 with a \ character inserted before each - character.])
