@@ -42,7 +42,7 @@ div.contents > ul > li > ul li {
   margin: 0;
 }
 
-div.shortcontents > ul > li {
+div.shortcontents li {
   margin: 0;
 }
 
