@@ -14,6 +14,11 @@ AC_DEFUN([GATBPS_DEFINE_VERSION], [{
 # This block is the expansion of the GATBPS_DEFINE_VERSION macro for
 # ($1)$2.
 #
+m4_case(
+  [$#],
+  [2], [],
+  [3], [],
+  [m4_fatal([GATBPS_DEFINE_VERSION requires exactly 2 or 3 arguments])])dnl
 
 :;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
