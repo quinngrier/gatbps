@@ -985,6 +985,26 @@ Universal Public Domain Dedication.
 .IP
 For more information, see the COPYRIGHT TEXTS section.
 .TP
+.nohy "\fBTEST_EXIT.h\fR"
+.IPEZ
+The
+.nohy "\fBTEST_EXIT.h\fR"
+special file is a C header file that defines the
+.nohy "\fBTEST_EXIT_ERROR\fR,"
+.nohy "\fBTEST_EXIT_FAIL\fR,"
+.nohy "\fBTEST_EXIT_PASS\fR,"
+and
+.nohy "\fBTEST_EXIT_SKIP\fR"
+macros to
+.nohy "\fB99\fR,"
+.nohy "\fB1\fR,"
+.nohy "\fB0\fR,"
+and
+.nohy "\fB77\fR,"
+respectively.
+These are the exit status values used by GNU Automake for a test suite
+with no test protocol.
+.TP
 .nohy "\fBbdots.texi\fR"
 .IPEZ
 The

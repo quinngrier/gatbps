@@ -6,6 +6,11 @@ header_comment({%|/*|%}, {%| *|%}){%|
  *
  * Special file: TEST_EXIT.h
  *
+ * The TEST_EXIT.h special file is a C header file that defines the
+ * TEST_EXIT_ERROR, TEST_EXIT_FAIL, TEST_EXIT_PASS, and TEST_EXIT_SKIP
+ * macros to 99, 1, 0, and 77, respectively. These are the exit status
+ * values used by GNU Automake for a test suite with no test protocol.
+ *
  * For more information, see the GATBPS manual.
  */
 

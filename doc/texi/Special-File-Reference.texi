@@ -107,6 +107,27 @@ Universal Public Domain Dedication@.
 
 For more information, @pxref{Copyright Texts}@.
 
+@sfindex @w{@t{TEST_EXIT.@:h}}
+@item @w{@t{TEST_EXIT.@:h}}
+@include ipez.texi
+The
+@w{@t{TEST_EXIT.@:h}}
+special file is a C header file that defines the
+@w{@t{TEST_EXIT_ERROR}@comma{}}
+@w{@t{TEST_EXIT_FAIL}@comma{}}
+@w{@t{TEST_EXIT_PASS}@comma{}}
+and
+@w{@t{TEST_EXIT_SKIP}}
+macros to
+@w{@t{99}@comma{}}
+@w{@t{1}@comma{}}
+@w{@t{0}@comma{}}
+and
+@w{@t{77}@comma{}}
+respectively@.
+These are the exit status values used by GNU Automake for a test suite
+with no test protocol@.
+
 @sfindex @w{@t{bdots.@:texi}}
 @tmindex @w{@t{@@bdots}}
 @item @w{@t{bdots.@:texi}}
