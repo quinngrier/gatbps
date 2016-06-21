@@ -43,7 +43,7 @@ div.shortcontents li {
 }
 
 hr {
-  visibility: hidden;
+  display: none;
 }
 
 li {
