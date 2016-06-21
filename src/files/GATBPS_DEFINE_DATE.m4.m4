@@ -9,6 +9,10 @@ dnl
 dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([GATBPS_DEFINE_DATE], [{
+
+#
+# This block is an expansion of the GATBPS_DEFINE_DATE macro.
+#
 m4_case(
   [$#],
   [3], [],
@@ -92,10 +96,6 @@ m4_define(
 m4_define(
   [$1$2_DAY_ZPAD],
   m4_bpatsubst($1$2_DAY, [^.$], [0\&]))dnl
-
-#
-# This block is an expansion of the GATBPS_DEFINE_DATE macro.
-#
 
 AC_DEFINE(
   [$2],
