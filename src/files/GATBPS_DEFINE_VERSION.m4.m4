@@ -9,6 +9,12 @@ dnl
 dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([GATBPS_DEFINE_VERSION], [{
+
+#
+# This block is the expansion of the GATBPS_DEFINE_VERSION macro for
+# ($1)$2.
+#
+
 :;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
 dnl
