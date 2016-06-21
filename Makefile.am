@@ -72,6 +72,7 @@ bin_gatbps_src += doc/help/GATBPS_PROG_JAVAC.m4.hd.m4
 bin_gatbps_src += doc/help/GATBPS_PROG_JAVADOC.m4.hd.m4
 bin_gatbps_src += doc/help/PACKAGEDATE.texi.in.hd.m4
 bin_gatbps_src += doc/help/PACKAGEVERSION.texi.in.hd.m4
+bin_gatbps_src += doc/help/TEST_EXIT.h.hd.m4
 bin_gatbps_src += doc/help/docbook-dist.am.hd.m4
 bin_gatbps_src += doc/help/docbook.am.hd.m4
 bin_gatbps_src += doc/help/dvi-dist.am.hd.m4
