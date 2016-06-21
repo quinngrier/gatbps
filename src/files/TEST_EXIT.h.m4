@@ -10,19 +10,19 @@ header_comment({%|/*|%}, {%| *|%}){%|
  */
 
 #ifndef TEST_EXIT_ERROR
-#define TEST_EXIT_ERROR 99
+  #define TEST_EXIT_ERROR 99
 #endif
 
 #ifndef TEST_EXIT_FAIL
-#define TEST_EXIT_FAIL 1
+  #define TEST_EXIT_FAIL 1
 #endif
 
 #ifndef TEST_EXIT_PASS
-#define TEST_EXIT_PASS 0
+  #define TEST_EXIT_PASS 0
 #endif
 
 #ifndef TEST_EXIT_SKIP
-#define TEST_EXIT_SKIP 77
+  #define TEST_EXIT_SKIP 77
 #endif
 
 |%}footer_comment({%|/*|%}, {%| *|%}, {%| */|%})dnl
