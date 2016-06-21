@@ -9,19 +9,19 @@ header_comment({%|/*|%}, {%| *|%}){%|
  * For more information, see the GATBPS manual.
  */
 
-#ifndef TEST_EXIT_ERROR
+#if (!defined(TEST_EXIT_ERROR))
   #define TEST_EXIT_ERROR 99
 #endif
 
-#ifndef TEST_EXIT_FAIL
+#if (!defined(TEST_EXIT_FAIL))
   #define TEST_EXIT_FAIL 1
 #endif
 
-#ifndef TEST_EXIT_PASS
+#if (!defined(TEST_EXIT_PASS))
   #define TEST_EXIT_PASS 0
 #endif
 
-#ifndef TEST_EXIT_SKIP
+#if (!defined(TEST_EXIT_SKIP))
   #define TEST_EXIT_SKIP 77
 #endif
 
