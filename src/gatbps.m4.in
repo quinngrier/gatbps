@@ -214,9 +214,16 @@ fc2='' # stderr style: cyan
 #         ;;
 #       #(
 #         *)
-#           texi2any_auto='makeinfo'
-#           for x in 'texi2any'; do
-#             if ${x} '--version' <'/dev/null' >'/dev/null' 2>&1; then
+#           texi2any_auto=''\''makeinfo'\'''
+#           for x in \
+#             ''\''texi2any'\''' \
+#           ; do
+#             if 'eval' \
+#               "${x}"' '\''--version'\''' \
+#               <'/dev/null' \
+#               >'/dev/null' \
+#               2>&1 \
+#             ; then
 #               texi2any_auto="${x}"
 #               'break'
 #             fi
@@ -314,9 +321,16 @@ case "${texi2any}" in
       ;;
     #(
       *)
-        texi2any_auto='makeinfo'
-        for x in 'texi2any'; do
-          if ${x} '--version' <'/dev/null' >'/dev/null' 2>&1; then
+        texi2any_auto=''\''makeinfo'\'''
+        for x in \
+          ''\''texi2any'\''' \
+        ; do
+          if 'eval' \
+            "${x}"' '\''--version'\''' \
+            <'/dev/null' \
+            >'/dev/null' \
+            2>&1 \
+          ; then
             texi2any_auto="${x}"
             'break'
           fi
@@ -3376,9 +3390,16 @@ EOF1
                 ;;
               #(
                 *)
-                  texi2any_auto='makeinfo'
-                  for x in 'texi2any'; do
-                    if ${x} '--version' <'/dev/null' >'/dev/null' 2>&1; then
+                  texi2any_auto=''\''makeinfo'\'''
+                  for x in \
+                    ''\''texi2any'\''' \
+                  ; do
+                    if 'eval' \
+                      "${x}"' '\''--version'\''' \
+                      <'/dev/null' \
+                      >'/dev/null' \
+                      2>&1 \
+                    ; then
                       texi2any_auto="${x}"
                       'break'
                     fi
