@@ -19,7 +19,7 @@ $(docbook_dist_dst): $(docbook_dist_dep)
 .PHONY: clean-$(docbook_dist_dst)
 
 clean-$(docbook_dist_dst):
-	-rm -f $(docbook_dist_dst)
+	-rm -f './'$(docbook_dist_dst)
 
 maintainer-clean-local: clean-$(docbook_dist_dst)
 
