@@ -196,9 +196,16 @@ fc2='' # stderr style: cyan
 #         ;;
 #       #(
 #         *)
-#           sed_auto='sed'
-#           for x in 'gsed'; do
-#             if ${x} '' <'/dev/null' >'/dev/null' 2>&1; then
+#           sed_auto=''\''sed'\'''
+#           for x in \
+#             ''\''gsed'\''' \
+#           ; do
+#             if 'eval' \
+#               "${x}"' '\'''\''' \
+#               <'/dev/null' \
+#               >'/dev/null' \
+#               2>&1 \
+#             ; then
 #               sed_auto="${x}"
 #               'break'
 #             fi
@@ -264,9 +271,16 @@ case "${sed}" in
       ;;
     #(
       *)
-        sed_auto='sed'
-        for x in 'gsed'; do
-          if ${x} '' <'/dev/null' >'/dev/null' 2>&1; then
+        sed_auto=''\''sed'\'''
+        for x in \
+          ''\''gsed'\''' \
+        ; do
+          if 'eval' \
+            "${x}"' '\'''\''' \
+            <'/dev/null' \
+            >'/dev/null' \
+            2>&1 \
+          ; then
             sed_auto="${x}"
             'break'
           fi
@@ -646,9 +660,16 @@ EOF2
                 ;;
               #(
                 *)
-                  sed_auto='sed'
-                  for x in 'gsed'; do
-                    if ${x} '' <'/dev/null' >'/dev/null' 2>&1; then
+                  sed_auto=''\''sed'\'''
+                  for x in \
+                    ''\''gsed'\''' \
+                  ; do
+                    if 'eval' \
+                      "${x}"' '\'''\''' \
+                      <'/dev/null' \
+                      >'/dev/null' \
+                      2>&1 \
+                    ; then
                       sed_auto="${x}"
                       'break'
                     fi
