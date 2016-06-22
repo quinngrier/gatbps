@@ -123,11 +123,11 @@ esac
 case "$[]{gatbps_cv_$2}" in
 #(
   'yes')
-    AC_DEFINE([$2], [1], [Define to 1 if you have $1 or 0 if not.])
+    AC_DEFINE([$2], [1], [Define to 1 if you have $1, or 0 if not.])
   ;;
 #(
   'no')
-    AC_DEFINE([$2], [0], [Define to 1 if you have $1 or 0 if not.])
+    AC_DEFINE([$2], [0], [Define to 1 if you have $1, or 0 if not.])
   ;;
 esac
 
