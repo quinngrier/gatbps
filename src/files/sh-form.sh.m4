@@ -168,9 +168,18 @@ fc2='' # stderr style: cyan
 #         ;;
 #       #(
 #         *)
-#           awk_auto='awk'
-#           for x in 'gawk' 'mawk' 'nawk'; do
-#             if ${x} '' <'/dev/null' >'/dev/null' 2>&1; then
+#           awk_auto=''\''awk'\'''
+#           for x in \
+#             ''\''gawk'\''' \
+#             ''\''mawk'\''' \
+#             ''\''nawk'\''' \
+#           ; do
+#             if 'eval' \
+#               "${x}"' '\'''\''' \
+#               <'/dev/null' \
+#               >'/dev/null' \
+#               2>&1 \
+#             ; then
 #               awk_auto="${x}"
 #               'break'
 #             fi
@@ -223,9 +232,18 @@ case "${awk}" in
       ;;
     #(
       *)
-        awk_auto='awk'
-        for x in 'gawk' 'mawk' 'nawk'; do
-          if ${x} '' <'/dev/null' >'/dev/null' 2>&1; then
+        awk_auto=''\''awk'\'''
+        for x in \
+          ''\''gawk'\''' \
+          ''\''mawk'\''' \
+          ''\''nawk'\''' \
+        ; do
+          if 'eval' \
+            "${x}"' '\'''\''' \
+            <'/dev/null' \
+            >'/dev/null' \
+            2>&1 \
+          ; then
             awk_auto="${x}"
             'break'
           fi
@@ -414,9 +432,18 @@ EOF2
                 ;;
               #(
                 *)
-                  awk_auto='awk'
-                  for x in 'gawk' 'mawk' 'nawk'; do
-                    if ${x} '' <'/dev/null' >'/dev/null' 2>&1; then
+                  awk_auto=''\''awk'\'''
+                  for x in \
+                    ''\''gawk'\''' \
+                    ''\''mawk'\''' \
+                    ''\''nawk'\''' \
+                  ; do
+                    if 'eval' \
+                      "${x}"' '\'''\''' \
+                      <'/dev/null' \
+                      >'/dev/null' \
+                      2>&1 \
+                    ; then
                       awk_auto="${x}"
                       'break'
                     fi
