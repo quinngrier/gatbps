@@ -37,6 +37,34 @@ $x + y$
 @end example
 
 @noindent
+Here, the
+@w{@t{@@i}}
+command has no effect on the
+@tex
+$x$
+@end tex
+@ifnottex
+@w{@i{x}}
+@end ifnottex
+and
+@tex
+$y$
+@end tex
+@ifnottex
+@w{@i{y}}
+@end ifnottex
+characters in plain text but makes them italic in the other output
+formats@.
+The end result is an expression that looks reasonable in every output
+format:
+@tex
+$x + y$.
+@end tex
+@ifnottex
+@w{@i{x} + @i{y}@.}
+@end ifnottex
+
+@include indent.texi
 The macros are then used in the
 @t{@@ifnottex}
 block to imitate various features of @TeX{}@.

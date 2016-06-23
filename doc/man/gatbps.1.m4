@@ -657,6 +657,18 @@ $x\ +\ y$
 @end\ ifnottex
 .fi
 .LP
+Here, the
+.nohy "\fB@i\fR"
+command has no effect on the
+.nohy "\fIx\fR"
+and
+.nohy "\fIy\fR"
+characters in plain text but makes them italic in the other output
+formats.
+The end result is an expression that looks reasonable in every output
+format:
+.nohy "\fIx\fR\ +\ \fIy\fR."
+.LP
 The macros are then used in the
 .nohy "\fB@ifnottex\fR"
 block to imitate various features of TeX.
