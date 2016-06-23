@@ -22,6 +22,10 @@ include({%|src/tools/header_comment.m4|%})dnl
  * For more information, see the GATBPS manual.
  */
 
+blockquote table {
+  border-spacing: 1.50em 0;
+}
+
 body {
   font-family: serif;
   margin: auto;
