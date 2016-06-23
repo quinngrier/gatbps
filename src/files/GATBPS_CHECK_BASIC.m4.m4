@@ -79,10 +79,10 @@ AC_CACHE_CHECK(
 #
 # The above AC_CACHE_CHECK code should have set the cache variable to
 # 'yes' or 'no', but this may not be the case, as some of the code is
-# provided by the caller of GATBPS_CHECK_BASIC, and this code may have
-# mistakes. The user may also accidentally set the cache variable to an
-# invalid value when editing the cache file. The following code helps to
-# catch these kinds of problems.
+# provided by the caller of GATBPS_CHECK_BASIC and might be buggy. The
+# user may also accidentally set the cache variable to an invalid value
+# when editing the cache file. The following code helps to detect these
+# kinds of problems.
 #
 
 case "$[]{gatbps_cv_$2}" in
