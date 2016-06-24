@@ -141,7 +141,8 @@ AC_DEFINE(
 AC_DEFINE(
   [$2_MONTH_NAME],
   "$1$2_MONTH_NAME",
-  [Define to the month name of $2.])
+  [Define to a character string literal
+   that contains the full month name of $2.])
 
 AC_DEFINE(
   [$2_MONTH_ABBR],
