@@ -118,7 +118,8 @@ AC_DEFINE(
 AC_DEFINE(
   [$2_MONTH],
   $1$2_MONTH,
-  [Define to the month of $2.])
+  [Define to the month of $2 as an
+   unsuffixed decimal integer constant.])
 
 AC_DEFINE(
   [$2_DAY],
