@@ -631,7 +631,7 @@ no files are necessarily deleted.
 GATBPS provides a set of special files to support an alternative
 approach to writing mathematical notation in Texinfo.
 This approach produces reasonable output in all output formats,
-including ASCII-encoded plain text.
+including ASCII plain text.
 .SH "WRITING MATHEMATICAL EXPRESSIONS TWICE"
 .LP
 The idea is to write two versions of each mathematical expression: one
