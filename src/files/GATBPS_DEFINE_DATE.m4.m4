@@ -33,7 +33,7 @@ m4_define(
   [$1$2],
   [$3])dnl
 m4_if(
-  m4_bregexp([$3], [^\+?[0-9]+-[0-9][0-9]-[0-9][0-9]$]),
+  m4_bregexp($1$2, [^\+?[0-9]+-[0-9][0-9]-[0-9][0-9]$]),
   [-1],
   [m4_fatal([GATBPS_DEFINE_DATE requires its third argument to be a date])])dnl
 m4_define(
