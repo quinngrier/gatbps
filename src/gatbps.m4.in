@@ -602,7 +602,7 @@ EOF1
         '-a')
 
           shift
-          set 'x' '--all=' "${@AT@}"
+          set 'x' '--all' "${@AT@}"
           continue
 
         ;;
