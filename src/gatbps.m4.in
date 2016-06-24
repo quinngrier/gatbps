@@ -420,7 +420,7 @@ path_args=''
 
 'set' 'x' "${@AT@}"
 
-while :; do
+while ':'; do
 
   shift
 

@@ -349,7 +349,7 @@ the_output=''
 
 'set' 'x' "${@}"
 
-while :; do
+while ':'; do
 
   shift
 
