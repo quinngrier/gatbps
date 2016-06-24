@@ -112,7 +112,8 @@ AC_DEFINE(
 AC_DEFINE(
   [$2_YEAR],
   $1$2_YEAR,
-  [Define to the year of $2.])
+  [Define to the year of $2 as an
+   unsuffixed decimal integer constant.])
 
 AC_DEFINE(
   [$2_MONTH],
