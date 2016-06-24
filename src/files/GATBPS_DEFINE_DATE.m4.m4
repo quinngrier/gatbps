@@ -147,7 +147,8 @@ AC_DEFINE(
 AC_DEFINE(
   [$2_MONTH_ABBR],
   "$1$2_MONTH_ABBR",
-  [Define to the abbreviated month name of $2.])
+  [Define to the same thing as $2_MONTH_NAME
+   but limited to three characters in length.])
 
 AC_DEFINE(
   [$2_MONTH_ZPAD],
