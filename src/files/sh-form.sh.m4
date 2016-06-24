@@ -347,7 +347,7 @@ keep='no'
 first_item='yes'
 the_output=''
 
-set 'x' "${@}"
+'set' 'x' "${@}"
 
 while :; do
 

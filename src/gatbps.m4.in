@@ -418,7 +418,7 @@ ferror1='no'
 
 path_args=''
 
-set 'x' "${@AT@}"
+'set' 'x' "${@AT@}"
 
 while :; do
 
