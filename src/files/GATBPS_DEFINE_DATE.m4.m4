@@ -135,8 +135,8 @@ AC_DEFINE(
 AC_DEFINE(
   [$2_TROFF],
   "m4_bpatsubst($1$2_TROFF, [\\], [\\\\])",
-  [Define to the same thing as $2 but with a backslash
-   character inserted before each hyphen-minus character.])
+  [Define to the same thing as $2 but with
+   each - character preceded by a \ character.])
 
 AC_DEFINE(
   [$2_MONTH_NAME],
