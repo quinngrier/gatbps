@@ -7762,7 +7762,7 @@ EOF1
               esac
 
               'eval' "${texi2any}"' \
-                --plaintext \
+                '\''--plaintext'\'' \
                 '"${unicode_args}"' \
                 '"${path_args}"' \
                 "${safe_tmp1}" \
@@ -7880,7 +7880,7 @@ EOF1
             esac
 
             'eval' "${texi2any}"' \
-              --plaintext \
+              '\''--plaintext'\'' \
               '"${unicode_args}"' \
               '"${path_args}"' \
               "${safe_tmp2}" \
@@ -8007,7 +8007,7 @@ EOF1
               esac
 
               'eval' "${texi2any}"' \
-                --plaintext \
+                '\''--plaintext'\'' \
                 '"${unicode_args}"' \
                 '"${path_args}"' \
                 "${safe_tmp3}" \
