@@ -1,0 +1,480 @@
+@node Writing Mathematical Expressions Twice
+@chapter Writing Mathematical Expressions Twice
+
+@noindent
+The idea is to write two versions of each mathematical expression: one
+with the
+@w{@t{@@tex}}
+environment, and the other with the
+@w{@t{@@ifnottex}}
+environment@.
+The
+@w{@t{@@tex}}
+version is considered to define the standard appearance of the
+expression, and the
+@w{@t{@@ifnottex}}
+version should try to imitate it@.
+For example,
+@tex
+$x + y$
+@end tex
+@ifnottex
+@w{@i{x} + @i{y}}
+@end ifnottex
+can be written as follows:
+
+@example
+@@tex
+$x + y$
+@@end tex
+@@ifnottex
+@@i@{x@} + @@i@{y@}
+@@end ifnottex
+@end example
+
+@noindent
+Here, the
+@w{@t{@@i}}
+command has no effect on the
+@tex
+$x$
+@end tex
+@ifnottex
+@w{@i{x}}
+@end ifnottex
+and
+@tex
+$y$
+@end tex
+@ifnottex
+@w{@i{y}}
+@end ifnottex
+characters in plain text but makes them italic in the other output
+formats@.
+The end result is an expression that looks reasonable in every output
+format:
+@tex
+$x + y$.
+@end tex
+@ifnottex
+@w{@i{x} + @i{y}@.}
+@end ifnottex
+
+@include indent.texi
+The macros are then used in the
+@t{@@ifnottex}
+block to imitate various features of @TeX{}@.
+For example, the
+@t{@@mdot}
+macro imitates the
+@t{\cdot}
+control sequence@.
+The macro names have been chosen
+to avoid collisions with the names of
+Texinfo commands and @TeX{} control sequences,
+as recommended by the Texinfo manual@.
+
+@sfindex @w{@t{math.@:texi}}
+@include indent.texi
+Each macro
+@t{@@}@i{M}
+is defined by the
+@i{M}@t{.@:texi}
+special file, which also uses the
+@i{M}@t{texi}
+flag as an include guard so
+that including the special file
+multiple times is equivalent to
+including it only the first time@.
+For example, the
+@t{@@mdot}
+macro is defined by the
+@t{mdot.@:texi}
+special file, which also uses the
+@t{mdottexi}
+flag as an include guard@.
+The
+@t{math.@:texi}
+special file is also provided, which includes every
+@i{M}@t{.@:texi}
+special file@.
+It can be generated under the effect of the
+@t{--recursive}
+option to generate all
+@i{M}@t{.@:texi}
+special files at once@.
+
+@include indent.texi
+The macros insert symbols
+as UTF-8 characters in Info
+and plain text and as numeric
+character references in DocBook,
+HTML, and XML by default, or as ASCII
+alternatives in all output formats if the
+@t{insertascii}
+flag is set at their points of inclusion@.
+For example, the
+@t{@@mdot}
+macro inserts a UTF-8
+dot operator character in
+Info and plain text and an
+@t{&#x22C5;}
+character reference
+in DocBook, HTML, and
+XML by default, or an ASCII
+@t{*}
+character in all output formats if the
+@t{insertascii}
+flag is set at its point of inclusion@.
+
+In DocBook, HTML, and XML, the macros use the
+@t{@@inlineraw}
+command to insert
+numeric character references@.
+This command was
+added in Texinfo 5.@:0,
+which was released on 2013-02-16@.
+The macros automatically
+detect older versions of
+Texinfo, in which case they
+insert UTF-8 characters instead@.
+
+The following table lists the
+macros that have no parameters,
+which insert individual symbols@.
+Along with each macro
+is its corresponding @TeX{} syntax,
+the Unicode character that it inserts by default,
+and the ASCII alternative that it inserts if the
+@w{@t{insertascii}}
+flag is set at its point of inclusion@.
+If this manual
+is translated to
+@TeX{} or without the
+@w{@t{insertascii}}
+flag set,
+then the table also
+shows the symbol of each macro@.
+
+@quotation
+@ifnottex
+@ifset insertascii
+@set HideSymbols
+@end ifset
+@end ifnottex
+@ifset HideSymbols
+@include mtvskiptop.texi
+@multitable {@t{\longleftrightarrow}} {@t{@@lldarrow@{@}}} {Unicode} {@t{floor(}}
+@c )
+@headitem @TeX{} @tab Macro @tab Unicode @tab ASCII
+@item @t{'} @tab @t{@@prm@{@}} @tab U+2032 @tab @t{'}
+@sfindex @w{@t{prm.@:texi}}
+@tmindex @w{@t{@@prm}}
+@item @t{-} @tab @t{@@msign@{@}} @tab U+2212 @tab @t{-}
+@sfindex @w{@t{msign.@:texi}}
+@tmindex @w{@t{@@msign}}
+@item @t{/} @tab @t{@@dslash@{@}} @tab U+2215 @tab @t{/}
+@sfindex @w{@t{dslash.@:texi}}
+@tmindex @w{@t{@@dslash}}
+@item @t{\cdot} @tab @t{@@mdot@{@}} @tab U+22C5 @tab @t{*}
+@sfindex @w{@t{mdot.@:texi}}
+@tmindex @w{@t{@@mdot}}
+@item @t{\cdots} @tab @t{@@mdots@{@}} @tab U+22EF @tab @t{.@:.@:.@:}
+@sfindex @w{@t{mdots.@:texi}}
+@tmindex @w{@t{@@mdots}}
+@item @t{\ge} @tab @t{@@gequ@{@}} @tab U+2265 @tab @t{>=}
+@sfindex @w{@t{gequ.@:texi}}
+@tmindex @w{@t{@@gequ}}
+@item @t{\lceil} @tab @t{@@lcei@{@}} @tab U+2308 @tab @t{ceil(}
+@c )
+@sfindex @w{@t{lcei.@:texi}}
+@tmindex @w{@t{@@lcei}}
+@item @t{\ldots} @tab @t{@@bdots@{@}} @tab U+2026 @tab @t{.@:.@:.@:}
+@sfindex @w{@t{bdots.@:texi}}
+@tmindex @w{@t{@@bdots}}
+@item @t{\le} @tab @t{@@lequ@{@}} @tab U+2264 @tab @t{<=}
+@sfindex @w{@t{lequ.@:texi}}
+@tmindex @w{@t{@@lequ}}
+@item @t{\lfloor} @tab @t{@@lflo@{@}} @tab U+230A @tab @t{floor(}
+@c )
+@sfindex @w{@t{lflo.@:texi}}
+@tmindex @w{@t{@@lflo}}
+@item @t{\ne} @tab @t{@@nequ@{@}} @tab U+2260 @tab @t{!=}
+@sfindex @w{@t{nequ.@:texi}}
+@tmindex @w{@t{@@nequ}}
+@c (
+@item @t{\rceil} @tab @t{@@rcei@{@}} @tab U+2309 @tab @t{)}
+@sfindex @w{@t{rcei.@:texi}}
+@tmindex @w{@t{@@rcei}}
+@c (
+@item @t{\rfloor} @tab @t{@@rflo@{@}} @tab U+230B @tab @t{)}
+@sfindex @w{@t{rflo.@:texi}}
+@tmindex @w{@t{@@rflo}}
+@item @t{\rightarrow} @tab @t{@@rarrow@{@}} @tab U+2192 @tab @t{->}
+@sfindex @w{@t{rarrow.@:texi}}
+@tmindex @w{@t{@@rarrow}}
+@end multitable
+@include mtvskipbot.texi
+@end ifset
+@ifclear HideSymbols
+@include mtvskiptop.texi
+@multitable {@t{\longleftrightarrow}} {@t{@@lldarrow@{@}}} {Unicode} {@t{floor(}} {Symbol}
+@c )
+@headitem @TeX{} @tab Macro @tab Unicode @tab ASCII @tab Symbol
+@item @t{'} @tab @t{@@prm@{@}} @tab U+2032 @tab @t{'}
+@sfindex @w{@t{prm.@:texi}}
+@tmindex @w{@t{@@prm}}
+@tab
+@tex
+$'$
+@end tex
+@ifnottex
+@prm{}
+@end ifnottex
+@item @t{-} @tab @t{@@msign@{@}} @tab U+2212 @tab @t{-}
+@sfindex @w{@t{msign.@:texi}}
+@tmindex @w{@t{@@msign}}
+@tab
+@tex
+$-$
+@end tex
+@ifnottex
+@msign{}
+@end ifnottex
+@item @t{/} @tab @t{@@dslash@{@}} @tab U+2215 @tab @t{/}
+@sfindex @w{@t{dslash.@:texi}}
+@tmindex @w{@t{@@dslash}}
+@tab
+@tex
+$/$
+@end tex
+@ifnottex
+@dslash{}
+@end ifnottex
+@item @t{\cdot} @tab @t{@@mdot@{@}} @tab U+22C5 @tab @t{*}
+@sfindex @w{@t{mdot.@:texi}}
+@tmindex @w{@t{@@mdot}}
+@tab
+@tex
+$\cdot$
+@end tex
+@ifnottex
+@mdot{}
+@end ifnottex
+@item @t{\cdots} @tab @t{@@mdots@{@}} @tab U+22EF @tab @t{.@:.@:.@:}
+@sfindex @w{@t{mdots.@:texi}}
+@tmindex @w{@t{@@mdots}}
+@tab
+@tex
+$\cdots$
+@end tex
+@ifnottex
+@mdots{}
+@end ifnottex
+@item @t{\ge} @tab @t{@@gequ@{@}} @tab U+2265 @tab @t{>=}
+@sfindex @w{@t{gequ.@:texi}}
+@tmindex @w{@t{@@gequ}}
+@tab
+@tex
+$\ge$
+@end tex
+@ifnottex
+@gequ{}
+@end ifnottex
+@item @t{\lceil} @tab @t{@@lcei@{@}} @tab U+2308 @tab @t{ceil(}
+@c )
+@sfindex @w{@t{lcei.@:texi}}
+@tmindex @w{@t{@@lcei}}
+@tab
+@tex
+$\lceil$
+@end tex
+@ifnottex
+@lcei{}
+@end ifnottex
+@item @t{\ldots} @tab @t{@@bdots@{@}} @tab U+2026 @tab @t{.@:.@:.@:}
+@sfindex @w{@t{bdots.@:texi}}
+@tmindex @w{@t{@@bdots}}
+@tab
+@tex
+$\ldots$
+@end tex
+@ifnottex
+@bdots{}
+@end ifnottex
+@item @t{\le} @tab @t{@@lequ@{@}} @tab U+2264 @tab @t{<=}
+@sfindex @w{@t{lequ.@:texi}}
+@tmindex @w{@t{@@lequ}}
+@tab
+@tex
+$\le$
+@end tex
+@ifnottex
+@lequ{}
+@end ifnottex
+@item @t{\lfloor} @tab @t{@@lflo@{@}} @tab U+230A @tab @t{floor(}
+@c )
+@sfindex @w{@t{lflo.@:texi}}
+@tmindex @w{@t{@@lflo}}
+@tab
+@tex
+$\lfloor$
+@end tex
+@ifnottex
+@lflo{}
+@end ifnottex
+@item @t{\ne} @tab @t{@@nequ@{@}} @tab U+2260 @tab @t{!=}
+@sfindex @w{@t{nequ.@:texi}}
+@tmindex @w{@t{@@nequ}}
+@tab
+@tex
+$\ne$
+@end tex
+@ifnottex
+@nequ{}
+@end ifnottex
+@c (
+@item @t{\rceil} @tab @t{@@rcei@{@}} @tab U+2309 @tab @t{)}
+@sfindex @w{@t{rcei.@:texi}}
+@tmindex @w{@t{@@rcei}}
+@tab
+@tex
+$\rceil$
+@end tex
+@ifnottex
+@rcei{}
+@end ifnottex
+@c (
+@item @t{\rfloor} @tab @t{@@rflo@{@}} @tab U+230B @tab @t{)}
+@sfindex @w{@t{rflo.@:texi}}
+@tmindex @w{@t{@@rflo}}
+@tab
+@tex
+$\rfloor$
+@end tex
+@ifnottex
+@rflo{}
+@end ifnottex
+@item @t{\rightarrow} @tab @t{@@rarrow@{@}} @tab U+2192 @tab @t{->}
+@sfindex @w{@t{rarrow.@:texi}}
+@tmindex @w{@t{@@rarrow}}
+@tab
+@tex
+$\rightarrow$
+@end tex
+@ifnottex
+@rarrow{}
+@end ifnottex
+@end multitable
+@include mtvskipbot.texi
+@end ifclear
+@end quotation
+
+@sfindex @w{@t{sbs.@:texi}}
+@sfindex @w{@t{sps.@:texi}}
+@tmindex @w{@t{@@sbs}}
+@tmindex @w{@t{@@sps}}
+The
+@t{@@sps@{}@i{L}@t{@comma{} }@i{S}@t{@comma{} }@i{R}@t{@}}
+and
+@t{@@sbs@{}@i{L}@t{@comma{} }@i{S}@t{@comma{} }@i{R}@t{@}}
+macros are provided for inserting
+@i{S}
+as a superscript or subscript@.
+In DocBook,
+@i{L}
+and
+@i{R}
+are ignored and
+@i{S}
+is inserted inside a
+@t{<superscript>}
+or
+@t{<subscript>}
+element@.
+In HTML and XML,
+@i{L}
+and
+@i{R}
+are ignored and
+@i{S}
+is inserted inside a
+@t{<sup>}
+or
+@t{<sub>}
+element@.
+In Info and plain text, an ASCII
+@t{^}
+or
+@t{_}
+character is inserted, followed by
+@i{L},
+then
+@i{S},
+then
+@i{R},
+so that
+@i{L}
+and
+@i{R}
+serve as parentheses around
+@i{S}@.
+Note that
+@i{L}
+and
+@i{R}
+may be left blank@.
+For example, the following code produces
+@tex
+$x^{y + z_w}$
+@end tex
+@ifnottex
+@i{x}@sps{(, @i{y} + @i{z}@sbs{, @i{w}, }, )}
+@end ifnottex
+@ifinfo
+in the current output format:
+@end ifinfo
+@ifnotinfo
+in the current output format and
+@t{x^(y + z_w)}
+in Info and plain text:
+@end ifnotinfo
+
+@example
+@@tex
+$x^@{y + z_w@}$
+@@end tex
+@@ifnottex
+@@i@{x@}@@sps@{(, @@i@{y@} + @@i@{z@}@@sbs@{, @@i@{w@}, @}, )@}
+@@end ifnottex
+@end example
+
+In DocBook, HTML, and XML, the
+@t{@@sps}
+and
+@t{@@sbs}
+macros use the
+@t{@@inlineraw}
+command to insert
+superscript and subscript elements@.
+This command was
+added in Texinfo 5.@:0,
+which was released on 2013-02-16@.
+The macros automatically
+detect older versions of
+Texinfo, in which case they
+behave as if the output format
+were Info or plain text instead@.
+@ifxml
+@ifnotxml
+@c
+@c The authors of this file have waived all copyright and
+@c related or neighboring rights to the extent permitted by
+@c law as described by the CC0 1.0 Universal Public Domain
+@c Dedication. You should have received a copy of the full
+@c dedication along with this file, typically as a file
+@c named <CC0-1.0.txt>. If not, it may be available at
+@c <https://creativecommons.org/publicdomain/zero/1.0/>.
+@c
+@end ifnotxml
+@end ifxml
