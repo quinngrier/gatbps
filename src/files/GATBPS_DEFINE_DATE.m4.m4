@@ -153,7 +153,8 @@ AC_DEFINE(
 AC_DEFINE(
   [$2_MONTH_ZPAD],
   "$1$2_MONTH_ZPAD",
-  [Define to the zero-padded month of $2.])
+  [Define to a character string literal
+   that contains the MM component of $2.])
 
 AC_DEFINE(
   [$2_DAY_ZPAD],
