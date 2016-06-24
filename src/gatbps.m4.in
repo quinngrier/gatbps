@@ -546,6 +546,7 @@ EOF1
           set "${prefix}indent.texi" "${@AT@}"
           set "${prefix}html-dist.am" "${@AT@}"
           set "${prefix}gequ.texi" "${@AT@}"
+          set "${prefix}echo.sh" "${@AT@}"
           set "${prefix}dvi-dist.am" "${@AT@}"
           set "${prefix}dslash.texi" "${@AT@}"
           set "${prefix}docbook.am" "${@AT@}"
@@ -1671,6 +1672,8 @@ EOF1
             ;;
 
 |%}help_code({%|dvi-dist.am|%}){%|
+
+|%}help_code({%|echo.sh|%}){%|
 
           #(
             '--help=gequ.texi'|'--help='*'/gequ.texi')
@@ -5241,6 +5244,8 @@ EOF1
 
 |%}generation_code({%|dvi-dist.am|%}){%|
 
+|%}generation_code({%|echo.sh|%}){%|
+
         #(
           'no,gequ.texi'|'no,'*'/gequ.texi')
             cat >"${safe_1}" <<'EOF1'
@@ -8336,6 +8341,12 @@ EOF1
 
 |%}recursion_code(
   {%|dvi-dist.am|%},
+  {%|
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
+|%}){%|
+
+|%}recursion_code(
+  {%|echo.sh|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
