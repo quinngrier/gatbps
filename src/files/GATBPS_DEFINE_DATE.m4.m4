@@ -26,6 +26,9 @@ m4_if(
   m4_bregexp([$2], [^[A-Z_a-z][0-9A-Z_a-z]*$]),
   [-1],
   [m4_fatal([GATBPS_DEFINE_DATE requires its second argument to be an identifier])])dnl
+m4_ifdef(
+  [$1$2],
+  [m4_fatal([$1$2 is already defined])])dnl
 m4_if(
   m4_bregexp([$3], [^\+?[0-9]+-[0-9][0-9]-[0-9][0-9]$]),
   [-1],
