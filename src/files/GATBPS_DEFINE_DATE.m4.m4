@@ -159,7 +159,8 @@ AC_DEFINE(
 AC_DEFINE(
   [$2_DAY_ZPAD],
   "$1$2_DAY_ZPAD",
-  [Define to the zero-padded day of $2.])
+  [Define to a character string literal
+   that contains the DD component of $2.])
 
 $2='$1$2'
 AC_SUBST([$2])
