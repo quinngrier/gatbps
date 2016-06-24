@@ -148,6 +148,144 @@ fb2='' # stderr style: blue
 fm2='' # stderr style: magenta
 fc2='' # stderr style: cyan
 
+#
+# For each program P of interest, the P_auto variable holds a command
+# that runs the best available version of P. The variable starts off
+# empty and is lazily set using the following code just before each
+# point where the value is needed.
+#
+# For the awk program:
+#
+#       case "${awk_auto}" in
+#       #(
+#         ?*)
+#           ':'
+#         ;;
+#       #(
+#         *)
+#           awk_auto=''\''awk'\'''
+#           for x in \
+#             ''\''gawk'\''' \
+#             ''\''mawk'\''' \
+#             ''\''nawk'\''' \
+#           ; do
+#             if 'eval' \
+#               "${x}"' '\'''\''' \
+#               <'/dev/null' \
+#               >'/dev/null' \
+#               2>&1 \
+#             ; then
+#               awk_auto="${x}"
+#               'break'
+#             fi
+#           done
+#         ;;
+#       esac
+#
+# For the sed program:
+#
+#       case "${sed_auto}" in
+#       #(
+#         ?*)
+#           ':'
+#         ;;
+#       #(
+#         *)
+#           sed_auto=''\''sed'\'''
+#           for x in \
+#             ''\''gsed'\''' \
+#           ; do
+#             if 'eval' \
+#               "${x}"' '\'''\''' \
+#               <'/dev/null' \
+#               >'/dev/null' \
+#               2>&1 \
+#             ; then
+#               sed_auto="${x}"
+#               'break'
+#             fi
+#           done
+#         ;;
+#       esac
+#
+
+awk_auto=''
+sed_auto=''
+
+#
+# For each program P of interest, the P variable holds the command that
+# will be used to run P. The variable starts off with a value chosen by
+# some outside force (such as a configure script) and is updated by the
+# P environment variable (in all capital letters) and each instance of
+# the --P=V option. If the variable starts off as 'auto', then it is
+# immediately updated to the value of the P_auto variable.
+#
+
+awk='auto'
+sed='auto'
+
+case "${awk}" in
+#(
+  'auto')
+    case "${awk_auto}" in
+    #(
+      ?*)
+        ':'
+      ;;
+    #(
+      *)
+        awk_auto=''\''awk'\'''
+        for x in \
+          ''\''gawk'\''' \
+          ''\''mawk'\''' \
+          ''\''nawk'\''' \
+        ; do
+          if 'eval' \
+            "${x}"' '\'''\''' \
+            <'/dev/null' \
+            >'/dev/null' \
+            2>&1 \
+          ; then
+            awk_auto="${x}"
+            'break'
+          fi
+        done
+      ;;
+    esac
+    awk="${awk_auto}"
+  ;;
+esac
+
+case "${sed}" in
+#(
+  'auto')
+    case "${sed_auto}" in
+    #(
+      ?*)
+        ':'
+      ;;
+    #(
+      *)
+        sed_auto=''\''sed'\'''
+        for x in \
+          ''\''gsed'\''' \
+        ; do
+          if 'eval' \
+            "${x}"' '\'''\''' \
+            <'/dev/null' \
+            >'/dev/null' \
+            2>&1 \
+          ; then
+            sed_auto="${x}"
+            'break'
+          fi
+        done
+      ;;
+    esac
+    sed="${sed_auto}"
+  ;;
+esac
+
 exit '1'
 
 |%}footer_comment({%|#|%}, {%|#|%}, {%|#|%})dnl
