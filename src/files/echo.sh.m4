@@ -286,6 +286,51 @@ case "${sed}" in
   ;;
 esac
 
+#
+# The following code translates environment variables to arguments as
+# described by the manual page for this program.
+#
+
+case "${STYLE_STDOUT}" in
+#(
+  ?*)
+    'set' 'x' "--style-stdout=${STYLE_STDOUT}" "${@}"
+    'shift'
+  ;;
+esac
+
+case "${STYLE_STDERR}" in
+#(
+  ?*)
+    'set' 'x' "--style-stderr=${STYLE_STDERR}" "${@}"
+    'shift'
+  ;;
+esac
+
+case "${STYLE}" in
+#(
+  ?*)
+    'set' 'x' "--style=${STYLE}" "${@}"
+    'shift'
+  ;;
+esac
+
+case "${SED}" in
+#(
+  ?*)
+    'set' 'x' "--sed=${SED}" "${@}"
+    'shift'
+  ;;
+esac
+
+case "${AWK}" in
+#(
+  ?*)
+    'set' 'x' "--awk=${AWK}" "${@}"
+    'shift'
+  ;;
+esac
+
 exit '1'
 
 |%}footer_comment({%|#|%}, {%|#|%}, {%|#|%})dnl
