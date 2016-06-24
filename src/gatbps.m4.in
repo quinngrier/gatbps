@@ -7763,7 +7763,7 @@ EOF1
 
               'eval' "${texi2any}"' \
                 --plaintext \
-                ${unicode_args} \
+                '"${unicode_args}"' \
                 '"${path_args}"' \
                 "${safe_tmp1}" \
                 >"${safe_tmp0}" \
@@ -7881,7 +7881,7 @@ EOF1
 
             'eval' "${texi2any}"' \
               --plaintext \
-              ${unicode_args} \
+              '"${unicode_args}"' \
               '"${path_args}"' \
               "${safe_tmp2}" \
               >"${safe_tmp1}" \
@@ -8008,7 +8008,7 @@ EOF1
 
               'eval' "${texi2any}"' \
                 --plaintext \
-                ${unicode_args} \
+                '"${unicode_args}"' \
                 '"${path_args}"' \
                 "${safe_tmp3}" \
                 >>"${safe_tmp2}" \
