@@ -22,6 +22,14 @@ header_comment({%|#|%}, {%|#|%}){%|
 LC_ALL='C'
 'export' 'LC_ALL'
 
+#
+# The nl variable holds a newline character. It can be used in a string
+# literal where an actual newline character would be awkward.
+#
+
+nl='
+'
+
 exit '1'
 
 |%}footer_comment({%|#|%}, {%|#|%}, {%|#|%})dnl
