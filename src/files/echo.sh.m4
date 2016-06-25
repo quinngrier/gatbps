@@ -344,6 +344,25 @@ while ':'; do
     ;;
   esac
 
+  case "${detect_options}" in
+  #(
+    'yes')
+
+      case "${1}" in
+
+      #(
+        '--')
+
+          detect_options='no'
+          'continue'
+
+        ;;
+
+      esac
+
+    ;;
+  esac
+
 done
 
 exit '1'
