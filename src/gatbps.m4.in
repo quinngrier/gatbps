@@ -349,7 +349,7 @@ esac
 case "${TEXI2ANY}" in
 #(
   ?*)
-    'set' 'x' "--texi2any=${TEXI2ANY}" "${@AT@}"
+    'set' 'x' '--texi2any='"${TEXI2ANY}" "${@AT@}"
     'shift'
   ;;
 esac
