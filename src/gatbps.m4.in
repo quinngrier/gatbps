@@ -441,7 +441,7 @@ while ':'; do
         '--')
 
           detect_options='no'
-          continue
+          'continue'
 
         ;;
 
@@ -461,7 +461,7 @@ EOF1
 
           shift
           set 'x' '--all=' "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -594,7 +594,7 @@ EOF1
 
           set 'x' "${@AT@}"
 
-          continue
+          'continue'
 
         ;;
 
@@ -603,7 +603,7 @@ EOF1
 
           shift
           set 'x' '--all' "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -637,7 +637,7 @@ EOF1
 
           shift
           set 'x' "--all=${x}" "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -645,7 +645,7 @@ EOF1
         '--append-path')
 
           path_args=''
-          continue
+          'continue'
 
         ;;
 
@@ -678,7 +678,7 @@ EOF1
 
           path_args="${path_args} ${x}"
 
-          continue
+          'continue'
 
         ;;
 
@@ -687,7 +687,7 @@ EOF1
 
           shift
           set 'x' '--append-path' "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -721,7 +721,7 @@ EOF1
 
           shift
           set 'x' "--append-path=${x}" "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -744,7 +744,7 @@ EOF1
           shift
           set 'x' "--awk=${x}" "${@AT@}"
 
-          continue
+          'continue'
 
         ;;
 
@@ -808,7 +808,7 @@ EOF1
             ;;
           esac
 
-          continue
+          'continue'
 
         ;;
 
@@ -816,7 +816,7 @@ EOF1
         '--boundary')
 
           boundary='yes'
-          continue
+          'continue'
 
         ;;
 
@@ -836,7 +836,7 @@ EOF1
 
           shift
           set 'x' '--boundary' "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -870,7 +870,7 @@ EOF1
 
           shift
           set 'x' '--boundary' "-${x}" "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -878,7 +878,7 @@ EOF1
         '--dry-run')
 
           dry_run='yes'
-          continue
+          'continue'
 
         ;;
 
@@ -898,7 +898,7 @@ EOF1
 
           shift
           set 'x' '--dry-run' "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -932,7 +932,7 @@ EOF1
 
           shift
           set 'x' '--dry-run' "-${x}" "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -2465,7 +2465,7 @@ EOF1
         '--no-dry-run')
 
           dry_run='no'
-          continue
+          'continue'
 
         ;;
 
@@ -2485,7 +2485,7 @@ EOF1
 
           shift
           set 'x' '--no-dry-run' "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -2519,7 +2519,7 @@ EOF1
 
           shift
           set 'x' '--no-dry-run' "-${x}" "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -2527,7 +2527,7 @@ EOF1
         '--no-plain')
 
           plain='no'
-          continue
+          'continue'
 
         ;;
 
@@ -2547,7 +2547,7 @@ EOF1
 
           shift
           set 'x' '--no-plain' "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -2581,7 +2581,7 @@ EOF1
 
           shift
           set 'x' '--no-plain' "-${x}" "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -2589,7 +2589,7 @@ EOF1
         '--no-print0')
 
           print0='no'
-          continue
+          'continue'
 
         ;;
 
@@ -2609,7 +2609,7 @@ EOF1
 
           shift
           set 'x' '--no-print0' "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -2643,7 +2643,7 @@ EOF1
 
           shift
           set 'x' '--no-print0' "-${x}" "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -2651,7 +2651,7 @@ EOF1
         '--no-recursive')
 
           recursive='no'
-          continue
+          'continue'
 
         ;;
 
@@ -2671,7 +2671,7 @@ EOF1
 
           shift
           set 'x' '--no-recursive' "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -2705,7 +2705,7 @@ EOF1
 
           shift
           set 'x' '--no-recursive' "-${x}" "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -2714,7 +2714,7 @@ EOF1
 
           unicode='no'
           unicode_args="${unicode_args_no}"
-          continue
+          'continue'
 
         ;;
 
@@ -2734,7 +2734,7 @@ EOF1
 
           shift
           set 'x' '--no-unicode' "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -2768,7 +2768,7 @@ EOF1
 
           shift
           set 'x' '--no-unicode' "-${x}" "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -2776,7 +2776,7 @@ EOF1
         '--no-verbose')
 
           verbose='no'
-          continue
+          'continue'
 
         ;;
 
@@ -2796,7 +2796,7 @@ EOF1
 
           shift
           set 'x' '--no-verbose' "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -2830,7 +2830,7 @@ EOF1
 
           shift
           set 'x' '--no-verbose' "-${x}" "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -2838,7 +2838,7 @@ EOF1
         '--plain')
 
           plain='yes'
-          continue
+          'continue'
 
         ;;
 
@@ -2858,7 +2858,7 @@ EOF1
 
           shift
           set 'x' '--plain' "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -2892,7 +2892,7 @@ EOF1
 
           shift
           set 'x' '--plain' "-${x}" "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -2900,7 +2900,7 @@ EOF1
         '--print0')
 
           print0='yes'
-          continue
+          'continue'
 
         ;;
 
@@ -2920,7 +2920,7 @@ EOF1
 
           shift
           set 'x' '--print0' "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -2954,7 +2954,7 @@ EOF1
 
           shift
           set 'x' '--print0' "-${x}" "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -2962,7 +2962,7 @@ EOF1
         '--recursive')
 
           recursive='yes'
-          continue
+          'continue'
 
         ;;
 
@@ -2982,7 +2982,7 @@ EOF1
 
           shift
           set 'x' '--recursive' "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -3016,7 +3016,7 @@ EOF1
 
           shift
           set 'x' '--recursive' "-${x}" "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -3039,7 +3039,7 @@ EOF1
           shift
           set 'x' "--sed=${x}" "${@AT@}"
 
-          continue
+          'continue'
 
         ;;
 
@@ -3101,7 +3101,7 @@ EOF1
             ;;
           esac
 
-          continue
+          'continue'
 
         ;;
 
@@ -3110,7 +3110,7 @@ EOF1
 
           shift
           set 'x' '--style-stderr=always' '--style-stdout=always' "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -3119,7 +3119,7 @@ EOF1
 
           shift
           set 'x' '--style-stderr=auto' '--style-stdout=auto' "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -3128,7 +3128,7 @@ EOF1
 
           shift
           set 'x' '--style-stderr=never' '--style-stdout=never' "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -3157,7 +3157,7 @@ EOF1
           fm2='[22m[24m[35m' # stderr style: magenta
           fc2='[22m[24m[36m' # stderr style: cyan
 
-          continue
+          'continue'
 
         ;;
 
@@ -3204,7 +3204,7 @@ EOF1
             ;;
           esac
 
-          continue
+          'continue'
 
         ;;
 
@@ -3223,7 +3223,7 @@ EOF1
           fm2='' # stderr style: magenta
           fc2='' # stderr style: cyan
 
-          continue
+          'continue'
 
         ;;
 
@@ -3252,7 +3252,7 @@ EOF1
           fm1='[22m[24m[35m' # stdout style: magenta
           fc1='[22m[24m[36m' # stdout style: cyan
 
-          continue
+          'continue'
 
         ;;
 
@@ -3299,7 +3299,7 @@ EOF1
             ;;
           esac
 
-          continue
+          'continue'
 
         ;;
 
@@ -3318,7 +3318,7 @@ EOF1
           fm1='' # stdout style: magenta
           fc1='' # stdout style: cyan
 
-          continue
+          'continue'
 
         ;;
 
@@ -3351,7 +3351,7 @@ EOF1
           shift
           set 'x' "--texi2any=${x}" "${@AT@}"
 
-          continue
+          'continue'
 
         ;;
 
@@ -3413,7 +3413,7 @@ EOF1
             ;;
           esac
 
-          continue
+          'continue'
 
         ;;
 
@@ -3422,7 +3422,7 @@ EOF1
 
           unicode='yes'
           unicode_args="${unicode_args_yes}"
-          continue
+          'continue'
 
         ;;
 
@@ -3442,7 +3442,7 @@ EOF1
 
           shift
           set 'x' '--unicode' "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -3476,7 +3476,7 @@ EOF1
 
           shift
           set 'x' '--unicode' "-${x}" "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -3484,7 +3484,7 @@ EOF1
         '--verbose')
 
           verbose='yes'
-          continue
+          'continue'
 
         ;;
 
@@ -3504,7 +3504,7 @@ EOF1
 
           shift
           set 'x' '--verbose' "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -3538,7 +3538,7 @@ EOF1
 
           shift
           set 'x' '--verbose' "-${x}" "${@AT@}"
-          continue
+          'continue'
 
         ;;
 
@@ -3685,7 +3685,7 @@ ${fy2}gatbps:${fR2} operands must not be empty
 ${fy2}gatbps:${fR2} operand failed
 EOF1
       exit_status='1'
-      continue
+      'continue'
     ;;
   esac
 
@@ -3697,7 +3697,7 @@ ${fy2}gatbps:${fR2} operands must not end with slashes
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
       exit_status='1'
-      continue
+      'continue'
     ;;
   esac
 

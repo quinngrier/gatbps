@@ -370,7 +370,7 @@ while ':'; do
         '--')
 
           detect_options='no'
-          continue
+          'continue'
 
         ;;
 
@@ -404,7 +404,7 @@ EOF2
           shift
           set 'x' "--awk=${x}" "${@}"
 
-          continue
+          'continue'
 
         ;;
 
@@ -468,7 +468,7 @@ EOF2
             ;;
           esac
 
-          continue
+          'continue'
 
         ;;
 
@@ -476,7 +476,7 @@ EOF2
         '--keep')
 
           keep='yes'
-          continue
+          'continue'
 
         ;;
 
@@ -496,7 +496,7 @@ EOF2
 
           shift
           set 'x' '--keep' "${@}"
-          continue
+          'continue'
 
         ;;
 
@@ -530,7 +530,7 @@ EOF2
 
           shift
           set 'x' '--keep' "-${x}" "${@}"
-          continue
+          'continue'
 
         ;;
 
@@ -618,7 +618,7 @@ EOF2
           shift
           set 'x' "--sed=${x}" "${@}"
 
-          continue
+          'continue'
 
         ;;
 
@@ -680,7 +680,7 @@ EOF2
             ;;
           esac
 
-          continue
+          'continue'
 
         ;;
 
@@ -689,7 +689,7 @@ EOF2
 
           shift
           set 'x' '--style-stderr=always' '--style-stdout=always' "${@}"
-          continue
+          'continue'
 
         ;;
 
@@ -698,7 +698,7 @@ EOF2
 
           shift
           set 'x' '--style-stderr=auto' '--style-stdout=auto' "${@}"
-          continue
+          'continue'
 
         ;;
 
@@ -707,7 +707,7 @@ EOF2
 
           shift
           set 'x' '--style-stderr=never' '--style-stdout=never' "${@}"
-          continue
+          'continue'
 
         ;;
 
@@ -736,7 +736,7 @@ EOF2
           fm2='[22m[24m[35m' # stderr style: magenta
           fc2='[22m[24m[36m' # stderr style: cyan
 
-          continue
+          'continue'
 
         ;;
 
@@ -783,7 +783,7 @@ EOF2
             ;;
           esac
 
-          continue
+          'continue'
 
         ;;
 
@@ -802,7 +802,7 @@ EOF2
           fm2='' # stderr style: magenta
           fc2='' # stderr style: cyan
 
-          continue
+          'continue'
 
         ;;
 
@@ -831,7 +831,7 @@ EOF2
           fm1='[22m[24m[35m' # stdout style: magenta
           fc1='[22m[24m[36m' # stdout style: cyan
 
-          continue
+          'continue'
 
         ;;
 
@@ -878,7 +878,7 @@ EOF2
             ;;
           esac
 
-          continue
+          'continue'
 
         ;;
 
@@ -897,7 +897,7 @@ EOF2
           fm1='' # stdout style: magenta
           fc1='' # stdout style: cyan
 
-          continue
+          'continue'
 
         ;;
 
