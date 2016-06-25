@@ -302,7 +302,7 @@ esac
 case "${STYLE_STDERR}" in
 #(
   ?*)
-    'set' 'x' "--style-stderr=${STYLE_STDERR}" "${@}"
+    'set' 'x' '--style-stderr='"${STYLE_STDERR}" "${@}"
     'shift'
   ;;
 esac
