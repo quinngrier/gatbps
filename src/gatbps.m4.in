@@ -389,7 +389,7 @@ esac
 case "${AWK}" in
 #(
   ?*)
-    'set' 'x' "--awk=${AWK}" "${@AT@}"
+    'set' 'x' '--awk='"${AWK}" "${@AT@}"
     'shift'
   ;;
 esac
