@@ -331,6 +331,21 @@ case "${AWK}" in
   ;;
 esac
 
+'set' 'x' "${@}"
+
+while ':'; do
+
+  'shift'
+
+  case "${#}" in
+  #(
+    '0')
+      'break'
+    ;;
+  esac
+
+done
+
 exit '1'
 
 |%}footer_comment({%|#|%}, {%|#|%}, {%|#|%})dnl
