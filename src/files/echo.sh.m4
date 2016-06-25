@@ -310,7 +310,7 @@ esac
 case "${STYLE}" in
 #(
   ?*)
-    'set' 'x' "--style=${STYLE}" "${@}"
+    'set' 'x' '--style='"${STYLE}" "${@}"
     'shift'
   ;;
 esac
