@@ -381,7 +381,7 @@ esac
 case "${SED}" in
 #(
   ?*)
-    'set' 'x' "--sed=${SED}" "${@AT@}"
+    'set' 'x' '--sed='"${SED}" "${@AT@}"
     'shift'
   ;;
 esac
