@@ -357,7 +357,7 @@ esac
 case "${STYLE_STDOUT}" in
 #(
   ?*)
-    'set' 'x' "--style-stdout=${STYLE_STDOUT}" "${@AT@}"
+    'set' 'x' '--style-stdout='"${STYLE_STDOUT}" "${@AT@}"
     'shift'
   ;;
 esac
