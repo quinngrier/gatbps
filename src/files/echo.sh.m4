@@ -365,7 +365,7 @@ while ':'; do
 
 done
 
-exit '1'
+'exit' '1'
 
 |%}footer_comment({%|#|%}, {%|#|%}, {%|#|%})dnl
 dnl

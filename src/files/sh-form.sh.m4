@@ -381,7 +381,7 @@ while ':'; do
 ${fr2}sh-form.sh!${fR2} ${fB2}--${fR2} forbids a value
 ${fr2}sh-form.sh!${fR2} try ${fB2}sh sh-form.sh --help${fR2} for more information
 EOF2
-          exit '1'
+          'exit' '1'
 
         ;;
 
@@ -395,7 +395,7 @@ EOF2
 ${fr2}sh-form.sh!${fR2} ${fB2}--awk${fR2} requires a value
 ${fr2}sh-form.sh!${fR2} try ${fB2}sh sh-form.sh --help${fR2} for more information
 EOF2
-              exit '1'
+              'exit' '1'
             ;;
           esac
 
@@ -431,7 +431,7 @@ ${fr2}sh-form.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}sh-form.sh!${fR2}   1. a here-document
 ${fr2}sh-form.sh!${fR2} and writing to: a command substitution
 EOF2
-              exit '1'
+              'exit' '1'
             ;;
           esac
           'eval' "${x}"
@@ -487,7 +487,7 @@ EOF2
 ${fr2}sh-form.sh!${fR2} ${fB2}--keep${fR2} forbids a value
 ${fr2}sh-form.sh!${fR2} try ${fB2}sh sh-form.sh --help${fR2} for more information
 EOF2
-          exit '1'
+          'exit' '1'
 
         ;;
 
@@ -523,7 +523,7 @@ ${fr2}sh-form.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}sh-form.sh!${fR2}   1. a here-document
 ${fr2}sh-form.sh!${fR2} and writing to: a command substitution
 EOF2
-              exit '1'
+              'exit' '1'
             ;;
           esac
           'eval' "${x}"
@@ -580,7 +580,7 @@ ${fr2}sh-form.sh!${fR2} ${fB2}cat${fR2} failed while reading from:
 ${fr2}sh-form.sh!${fR2}   1. a here-document
 ${fr2}sh-form.sh!${fR2} and writing to: standard output
 EOF2
-              exit '1'
+              'exit' '1'
             ;;
           esac
 
@@ -595,7 +595,7 @@ EOF2
 ${fr2}sh-form.sh!${fR2} ${fB2}--man${fR2} forbids a value
 ${fr2}sh-form.sh!${fR2} try ${fB2}sh sh-form.sh --help${fR2} for more information
 EOF2
-          exit '1'
+          'exit' '1'
 
         ;;
 
@@ -609,7 +609,7 @@ EOF2
 ${fr2}sh-form.sh!${fR2} ${fB2}--sed${fR2} requires a value
 ${fr2}sh-form.sh!${fR2} try ${fB2}sh sh-form.sh --help${fR2} for more information
 EOF2
-              exit '1'
+              'exit' '1'
             ;;
           esac
 
@@ -645,7 +645,7 @@ ${fr2}sh-form.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}sh-form.sh!${fR2}   1. a here-document
 ${fr2}sh-form.sh!${fR2} and writing to: a command substitution
 EOF2
-              exit '1'
+              'exit' '1'
             ;;
           esac
           'eval' "${x}"
@@ -717,7 +717,7 @@ EOF2
           'cat' >&2 <<EOF2
 ${fr2}sh-form.sh!${fR2} invalid ${fB2}--style${fR2} value
 EOF2
-          exit '1'
+          'exit' '1'
 
         ;;
 
@@ -812,7 +812,7 @@ EOF2
           'cat' >&2 <<EOF2
 ${fr2}sh-form.sh!${fR2} invalid ${fB2}--style-stderr${fR2} value
 EOF2
-          exit '1'
+          'exit' '1'
 
         ;;
 
@@ -907,7 +907,7 @@ EOF2
           'cat' >&2 <<EOF2
 ${fr2}sh-form.sh!${fR2} invalid ${fB2}--style-stdout${fR2} value
 EOF2
-          exit '1'
+          'exit' '1'
 
         ;;
 
@@ -946,7 +946,7 @@ ${fr2}sh-form.sh!${fR2} and writing to: standard error
 EOF2
             ;;
           esac
-          exit '1'
+          'exit' '1'
 
         ;;
 
@@ -957,7 +957,7 @@ EOF2
 ${fr2}sh-form.sh!${fR2} unknown option: ${fB2}${1}${fR2}
 ${fr2}sh-form.sh!${fR2} try ${fB2}sh sh-form.sh --help${fR2} for more information
 EOF2
-          exit '1'
+          'exit' '1'
 
         ;;
 
@@ -988,7 +988,7 @@ ${fr2}sh-form.sh!${fR2} and writing to: standard error
 EOF2
             ;;
           esac
-          exit '1'
+          'exit' '1'
 
         ;;
 
@@ -1024,7 +1024,7 @@ ${fr2}sh-form.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}sh-form.sh!${fR2}   1. a here-document
 ${fr2}sh-form.sh!${fR2} and writing to: a command substitution
 EOF2
-      exit '1'
+      'exit' '1'
     ;;
   esac
 
@@ -1051,7 +1051,7 @@ ${fr2}sh-form.sh!${fR2} ${fB2}cat${fR2} failed while reading from:
 ${fr2}sh-form.sh!${fR2}   1. a here-document
 ${fr2}sh-form.sh!${fR2} and writing to: standard output
 EOF2
-      exit '1'
+      'exit' '1'
     ;;
   esac
 
@@ -1076,7 +1076,7 @@ ${fr2}sh-form.sh!${fR2} ${fB2}cat${fR2} failed while reading from:
 ${fr2}sh-form.sh!${fR2}   1. standard input
 ${fr2}sh-form.sh!${fR2} and writing to: a command substitution
 EOF2
-    exit '1'
+    'exit' '1'
   ;;
 esac
 echo "'"
@@ -1090,7 +1090,7 @@ case "${?}" in
     'cat' >&2 <<EOF2
 ${fr2}sh-form.sh!${fR2} ${fB2}echo${fR2} failed while writing to: a command substitution
 EOF2
-    exit '1'
+    'exit' '1'
   ;;
 esac
 `
@@ -1101,7 +1101,7 @@ case "${?}" in
   ;;
 #(
   *)
-    exit '1'
+    'exit' '1'
   ;;
 esac
 
@@ -1139,7 +1139,7 @@ ${fr2}sh-form.sh!${fR2} ${fB2}${awk}${fR2} failed while reading from:
 ${fr2}sh-form.sh!${fR2}   1. a here-document
 ${fr2}sh-form.sh!${fR2} and writing to: a command substitution
 EOF2
-            exit '1'
+            'exit' '1'
           ;;
         esac
       ;;
@@ -1166,7 +1166,7 @@ ${fr2}sh-form.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}sh-form.sh!${fR2}   1. a here-document
 ${fr2}sh-form.sh!${fR2} and writing to: standard output
 EOF2
-    exit '1'
+    'exit' '1'
   ;;
 esac
 
