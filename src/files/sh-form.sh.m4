@@ -351,7 +351,7 @@ the_output=''
 
 while ':'; do
 
-  shift
+  'shift'
 
   case "${#}" in
   #(

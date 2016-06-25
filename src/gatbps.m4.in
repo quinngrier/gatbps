@@ -422,7 +422,7 @@ path_args=''
 
 while ':'; do
 
-  shift
+  'shift'
 
   case "${#}" in
   #(
