@@ -142,7 +142,7 @@ install-java-gatbps_x1: java-gatbps_x1
 java: java-gatbps_x1
 
 java-gatbps_x1:
-	@-'\'':'\'' #(((
+	@-'\'':'\'' #((
 	$[](AM@&t@_V_at){ \
   ( \
     x='\'''\''; \
@@ -160,13 +160,7 @@ java-gatbps_x1:
         x="$[]$[]{x}"'\'':'\''$[](java_[]gatbps_x2[]_CLASSPATH); \
       ;; \
     esac; \
-    d=$[](srcdir); \
-    case "$[]$[]{d}" in \
-      '\''-'\''*) \
-        d='\''./'\''"$[]$[]{d}"; \
-      ;; \
-    esac; \
-    '\''sh'\'' "$[]$[]{d}"'\''/build-aux/sh-form.sh'\'' \
+    '\''sh'\'' '\''-'\'' $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
       '\''--'\'' \
       "$[]$[]{x}" \
       >'\''java-gatbps_x1.tmp'\'' \
@@ -174,7 +168,7 @@ java-gatbps_x1:
     classpath=` \
       '\''cat'\'' '\''java-gatbps_x1.tmp'\'' \
     ` || '\''exit'\'' "$[]$[]{?}"; \
-    '\''sh'\'' "$[]$[]{d}"'\''/build-aux/sh-form.sh'\'' \
+    '\''sh'\'' '\''-'\'' $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
       '\''--'\'' \
       $[](java_[]gatbps_x2[]_JAVACFLAGS) \
       >'\''java-gatbps_x1.tmp'\'' \
@@ -182,7 +176,7 @@ java-gatbps_x1:
     javacflags=` \
       '\''cat'\'' '\''java-gatbps_x1.tmp'\'' \
     ` || '\''exit'\'' "$[]$[]{?}"; \
-    '\''sh'\'' "$[]$[]{d}"'\''/build-aux/sh-form.sh'\'' \
+    '\''sh'\'' '\''-'\'' $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
       '\''--'\'' \
       '\''./'\''$[](java_[]gatbps_x2[]_sourcepath) \
       >'\''java-gatbps_x1.tmp'\'' \
