@@ -331,6 +331,9 @@ case "${AWK}" in
   ;;
 esac
 
+first_operand='yes'
+output=''
+
 'set' 'x' "${@}"
 
 while ':'; do
@@ -374,9 +377,37 @@ EOF2
     ;;
   esac
 
+  case "${first_operand}" in
+  #(
+    'no')
+      output="${output}"' '
+    ;;
+  esac
+  output="${output}${1}"
+  first_operand='no'
+
 done
 
-'exit' '1'
+'cat' <<EOF2
+${output}
+EOF2
+case "${?}" in
+#(
+  '0')
+    ':'
+  ;;
+#(
+  *)
+    'cat' >&2 <<EOF2
+${fr2}echo.sh!${fR2} ${fB2}cat${fR2} failed while reading from:
+${fr2}echo.sh!${fR2}   1. a here-document
+${fr2}echo.sh!${fR2} and writing to: standard output
+EOF2
+    'exit' '1'
+  ;;
+esac
+
+'exit' '0'
 
 |%}footer_comment({%|#|%}, {%|#|%}, {%|#|%})dnl
 dnl
