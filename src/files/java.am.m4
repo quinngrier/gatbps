@@ -166,7 +166,7 @@ install-main-java: main-java
 java: main-java
 
 main-java:
-	@-':' #(((
+	@-':' #((
 	$(AM_V_at){ \
   ( \
     x=''; \
@@ -184,13 +184,7 @@ main-java:
         x="$${x}"':'$(java_CLASSPATH); \
       ;; \
     esac; \
-    d=$(srcdir); \
-    case "$${d}" in \
-      '-'*) \
-        d='./'"$${d}"; \
-      ;; \
-    esac; \
-    'sh' "$${d}"'/build-aux/sh-form.sh' \
+    'sh' '-' $(srcdir)'/build-aux/sh-form.sh' \
       '--' \
       "$${x}" \
       >'main-java.tmp' \
@@ -198,7 +192,7 @@ main-java:
     classpath=` \
       'cat' 'main-java.tmp' \
     ` || 'exit' "$${?}"; \
-    'sh' "$${d}"'/build-aux/sh-form.sh' \
+    'sh' '-' $(srcdir)'/build-aux/sh-form.sh' \
       '--' \
       $(java_JAVACFLAGS) \
       >'main-java.tmp' \
@@ -206,7 +200,7 @@ main-java:
     javacflags=` \
       'cat' 'main-java.tmp' \
     ` || 'exit' "$${?}"; \
-    'sh' "$${d}"'/build-aux/sh-form.sh' \
+    'sh' '-' $(srcdir)'/build-aux/sh-form.sh' \
       '--' \
       './'$(java_sourcepath) \
       >'main-java.tmp' \
