@@ -685,6 +685,131 @@ EOF2
         ;;
 
       #(
+        '--stdin')
+
+s=`
+cat
+case "${?}" in
+#(
+  '0')
+    :
+  ;;
+#(
+  *)
+    'cat' >&2 <<EOF2
+${fr2}sh-form.sh!${fR2} ${fB2}cat${fR2} failed while reading from:
+${fr2}sh-form.sh!${fR2}   1. standard input
+${fr2}sh-form.sh!${fR2} and writing to: a command substitution
+EOF2
+    'exit' '1'
+  ;;
+esac
+echo "'"
+case "${?}" in
+#(
+  '0')
+    :
+  ;;
+#(
+  *)
+    'cat' >&2 <<EOF2
+${fr2}sh-form.sh!${fR2} ${fB2}echo${fR2} failed while writing to: a command substitution
+EOF2
+    'exit' '1'
+  ;;
+esac
+`
+case "${?}" in
+#(
+  '0')
+    :
+  ;;
+#(
+  *)
+    'exit' '1'
+  ;;
+esac
+
+case "${keep}" in
+#(
+  'no')
+    case "${s}" in
+    #(
+      *"${nl}'")
+        s=`eval "${awk}"' '\\''
+{
+  if (NR == 1) {
+    x = $0
+  } else {
+    printf "%s", x
+    x = "\\n" $0
+  }
+}
+END {
+  printf "'\\''\\'\\'''\\''"
+}
+'\\''' <<EOF2
+${s}
+EOF2
+`
+        case "${?}" in
+        #(
+          '0')
+            :
+          ;;
+        #(
+          *)
+            'cat' >&2 <<EOF2
+${fr2}sh-form.sh!${fR2} ${fB2}${awk}${fR2} failed while reading from:
+${fr2}sh-form.sh!${fR2}   1. a here-document
+${fr2}sh-form.sh!${fR2} and writing to: a command substitution
+EOF2
+            'exit' '1'
+          ;;
+        esac
+      ;;
+    esac
+  ;;
+esac
+
+          case "${first_item}" in
+          #(
+            'no')
+              the_output="${the_output}"' '
+            ;;
+          esac
+
+          the_output="${the_output}"`eval "${sed}"' "
+s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
+1s/^/'\\''/
+\\$s/'\\''\\\\\\\\'\\'''\\''\\$/'\\''/
+"' <<EOF2
+${s}
+EOF2
+`
+case "${?}" in
+#(
+  '0')
+    :
+  ;;
+#(
+  *)
+    'cat' >&2 <<EOF2
+${fr2}sh-form.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
+${fr2}sh-form.sh!${fR2}   1. a here-document
+${fr2}sh-form.sh!${fR2} and writing to: a command substitution
+EOF2
+    'exit' '1'
+  ;;
+esac
+
+          first_item='no'
+
+          'continue'
+
+        ;;
+
+      #(
         '--style'|'--style=always')
 
           shift
@@ -1061,116 +1186,6 @@ EOF2
 esac
 
 'exit' '0'
-
-s=`
-cat
-case "${?}" in
-#(
-  '0')
-    :
-  ;;
-#(
-  *)
-    'cat' >&2 <<EOF2
-${fr2}sh-form.sh!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}sh-form.sh!${fR2}   1. standard input
-${fr2}sh-form.sh!${fR2} and writing to: a command substitution
-EOF2
-    'exit' '1'
-  ;;
-esac
-echo "'"
-case "${?}" in
-#(
-  '0')
-    :
-  ;;
-#(
-  *)
-    'cat' >&2 <<EOF2
-${fr2}sh-form.sh!${fR2} ${fB2}echo${fR2} failed while writing to: a command substitution
-EOF2
-    'exit' '1'
-  ;;
-esac
-`
-case "${?}" in
-#(
-  '0')
-    :
-  ;;
-#(
-  *)
-    'exit' '1'
-  ;;
-esac
-
-case "${keep}" in
-#(
-  'no')
-    case "${s}" in
-    #(
-      *"${nl}'")
-        s=`eval "${awk}"' '\\''
-{
-  if (NR == 1) {
-    x = $0
-  } else {
-    printf "%s", x
-    x = "\\n" $0
-  }
-}
-END {
-  printf "'\\''\\'\\'''\\''"
-}
-'\\''' <<EOF2
-${s}
-EOF2
-`
-        case "${?}" in
-        #(
-          '0')
-            :
-          ;;
-        #(
-          *)
-            'cat' >&2 <<EOF2
-${fr2}sh-form.sh!${fR2} ${fB2}${awk}${fR2} failed while reading from:
-${fr2}sh-form.sh!${fR2}   1. a here-document
-${fr2}sh-form.sh!${fR2} and writing to: a command substitution
-EOF2
-            'exit' '1'
-          ;;
-        esac
-      ;;
-    esac
-  ;;
-esac
-
-eval "${sed}"' "
-s/'\''/'\''\\\\'\'''\''/g
-1s/^/'\''/
-\$s/'\''\\\\'\'''\''\$/'\''/
-"' <<EOF2
-${s}
-EOF2
-case "${?}" in
-#(
-  '0')
-    :
-  ;;
-#(
-  *)
-    'cat' >&2 <<EOF2
-${fr2}sh-form.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fr2}sh-form.sh!${fR2}   1. a here-document
-${fr2}sh-form.sh!${fR2} and writing to: standard output
-EOF2
-    'exit' '1'
-  ;;
-esac
-
-exit '0'
 
 |%}footer_comment({%|#|%}, {%|#|%}, {%|#|%})dnl
 dnl
