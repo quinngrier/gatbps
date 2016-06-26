@@ -23,7 +23,7 @@ GATBPS_V_JAVAC = $(GATBPS_V_JAVAC_@AM_V@)
 
 GATBPS_V_JAVAC_ = $(GATBPS_V_JAVAC_@AM_DEFAULT_V@)
 
-GATBPS_V_JAVAC_0 = @'echo' '  JAVAC' $@;
+GATBPS_V_JAVAC_0 = @'sh' '-' $(srcdir)'/build-aux/echo.sh' '--' '  JAVAC' $@;
 
 GATBPS_V_JAVAC_1 =
 
