@@ -1157,10 +1157,6 @@ EOF2
 
 done
 
-case "${first_item}" in
-#(
-  'no')
-
     'cat' <<EOF2
 ${the_output}
 EOF2
@@ -1179,11 +1175,6 @@ EOF2
       'exit' '1'
     ;;
   esac
-
-    'exit' '0'
-
-  ;;
-esac
 
 'exit' '0'
 
