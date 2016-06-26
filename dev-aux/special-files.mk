@@ -16,6 +16,7 @@ all:
 	$(GATBPS) '--' 'build-aux/docbook-dist.am'
 	$(GATBPS) '--' 'build-aux/docbook.am'
 	$(GATBPS) '--' 'build-aux/dvi-dist.am'
+	$(GATBPS) '--' 'build-aux/echo.sh'
 	$(GATBPS) '--' 'build-aux/html-dist.am'
 	$(GATBPS) '--' 'build-aux/pdf-dist.am'
 	$(GATBPS) '--' 'build-aux/plaintext-dist.am'
