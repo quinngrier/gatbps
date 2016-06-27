@@ -68,10 +68,15 @@ and
 .LP
 Each option has one or more names, and each name is either long or
 short.
-Each long name consists of two hyphen-minus characters followed by zero
-or more characters except the equals sign character, and each short name
-consists of one hyphen-minus character followed by one character except
-the hyphen-minus character.
+Each long name consists of two
+.nohy "\fB\-\fR"
+characters followed by zero or more characters except the
+.nohy "\fB=\fR"
+character, and each short name consists of one
+.nohy "\fB\-\fR"
+character followed by one character except the
+.nohy "\fB\-\fR"
+character.
 Each option either requires, permits, or forbids a value.
 .LP
 Let

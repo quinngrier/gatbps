@@ -4,10 +4,15 @@
 @noindent
 Each option has one or more names, and each name is either long or
 short@.
-Each long name consists of two hyphen-minus characters followed by zero
-or more characters except the equals sign character, and each short name
-consists of one hyphen-minus character followed by one character except
-the hyphen-minus character@.
+Each long name consists of two
+@w{@t{-}}
+characters followed by zero or more characters except the
+@w{@t{=}}
+character, and each short name consists of one
+@w{@t{-}}
+character followed by one character except the
+@w{@t{-}}
+character@.
 Each option either requires, permits, or forbids a value@.
 
 @include indent.texi
