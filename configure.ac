@@ -63,7 +63,7 @@ AC_ARG_VAR([MAKEINFO], [makeinfo translator command])
 AC_PROG_MKDIR_P
 
 AC_PROG_SED
-AC_ARG_VAR([SED], [sed interpreter command])
+AC_ARG_VAR([SED], [sed interpreter command (will be field split)])
 
 AC_CHECK_PROGS([TEXI2ANY], [texi2any makeinfo])
 AC_ARG_VAR([TEXI2ANY], [texi2any translator command])
