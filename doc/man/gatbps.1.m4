@@ -69,10 +69,9 @@ and
 Each option has one or more names, and each name is either long or
 short.
 Each long name consists of two hyphen-minus characters followed by zero
-or more printable characters except for the space and equals sign
-characters, and each short name consists of one hyphen-minus character
-followed by one printable character except for the space and
-hyphen-minus characters.
+or more characters except the equals sign character, and each short name
+consists of one hyphen-minus character followed by one character except
+the hyphen-minus character.
 Each option either requires, permits, or forbids a value.
 .LP
 Let
