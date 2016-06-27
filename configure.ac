@@ -228,6 +228,25 @@ case "${?}" in
   ;;
 esac
 
+SED_SH=`
+  'sh' \
+    '-' \
+    "${srcdir}"'/build-aux/sh-form.sh' \
+    '--' \
+    ${SED} \
+  ;
+`
+case "${?}" in
+#(
+  '0')
+    ':'
+  ;;
+#(
+  *)
+    AC_MSG_ERROR([sh-form.sh failed], [1])
+  ;;
+esac
+
 AWK_DEFAULT_SH=`sh "${srcdir}/build-aux/sh-form.sh" \
   "--awk=${AWK}" \
   "--sed=${SED}" \
