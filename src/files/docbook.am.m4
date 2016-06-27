@@ -13,7 +13,7 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 $(docbook_dst): $(docbook_dep)
 $(docbook_dst): $(docbook_src)
-	$(AM_V_MAKEINFO)$(MKDIR_P) $(@D)
+	$(AM_V_MAKEINFO)$(MKDIR_P) './'$(@D)
 	$(AM_V_at){ ':'; \
   if test -f $(docbook_src); then \
     x=$(docbook_src); \

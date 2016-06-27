@@ -13,7 +13,7 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 $(pdf_dist_dst): $(pdf_dist_dep)
 	$(MAKE) $(AM_MAKEFLAGS) $(pdf_dist_src)
-	$(MKDIR_P) $(@D)
+	$(MKDIR_P) './'$(@D)
 	cp $(pdf_dist_src) $(pdf_dist_dst)
 
 .PHONY: clean-$(pdf_dist_dst)

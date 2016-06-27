@@ -85,7 +85,7 @@ clean-gatbps_output:
 distclean-local: clean-gatbps_output
 
 gatbps_output: gatbps_prereq
-	$[](MKDIR_P) $[](@D)
+	$[](MKDIR_P) '\''./'\''$[](@D)
 	echo @PACKAGE_NAME@ >$[]@
 	cd $[](top_builddir) && $[](SHELL) ./config.status $[]@gatbps_suffix'
 
