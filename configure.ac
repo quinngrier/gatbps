@@ -209,6 +209,25 @@ AS_HELP_STRING(
   :;}])
 AC_MSG_RESULT([${texi2any_default}])
 
+AWK_SH=`
+  'sh' \
+    '-' \
+    "${srcdir}"'/build-aux/sh-form.sh' \
+    '--' \
+    ${AWK} \
+  ;
+`
+case "${?}" in
+#(
+  '0')
+    ':'
+  ;;
+#(
+  *)
+    AC_MSG_ERROR([sh-form.sh failed], [1])
+  ;;
+esac
+
 AWK_DEFAULT_SH=`sh "${srcdir}/build-aux/sh-form.sh" \
   "--awk=${AWK}" \
   "--sed=${SED}" \
