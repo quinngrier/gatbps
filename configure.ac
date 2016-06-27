@@ -1,7 +1,7 @@
 AC_INIT(
   [GATBPS],
   m4_esyscmd_s([
-    'sh' 'build-aux/VERSION.sh'
+    'sh' '-' 'build-aux/VERSION.sh'
   ])m4_if(m4_sysval, [0], [], [m4_fatal([VERSION.sh failed])]),
   [quinn.grier@gmail.com],
   [gatbps],
@@ -11,7 +11,7 @@ GATBPS_DEFINE_DATE(
   [AC_],
   [PACKAGE_DATE],
   m4_esyscmd_s([
-    'sh' 'build-aux/DATE.sh'
+    'sh' '-' 'build-aux/DATE.sh'
   ])m4_if(m4_sysval, [0], [], [m4_fatal([DATE.sh failed])]))
 
 GATBPS_DEFINE_VERSION(
