@@ -29,6 +29,36 @@ m4_if(
 m4_ifdef(
   [$1$2],
   [m4_fatal([$1$2 is already defined])])dnl
+m4_ifdef(
+  [$1$2_YEAR],
+  [m4_fatal([$1$2_YEAR is already defined])])dnl
+m4_ifdef(
+  [$1$2_MONTH],
+  [m4_fatal([$1$2_MONTH is already defined])])dnl
+m4_ifdef(
+  [$1$2_DAY],
+  [m4_fatal([$1$2_DAY is already defined])])dnl
+m4_ifdef(
+  [$1$2_YEAR_MOD_10000],
+  [m4_fatal([$1$2_YEAR_MOD_10000 is already defined])])dnl
+m4_ifdef(
+  [$1$2_IS_LEAP_YEAR],
+  [m4_fatal([$1$2_IS_LEAP_YEAR is already defined])])dnl
+m4_ifdef(
+  [$1$2_TROFF],
+  [m4_fatal([$1$2_TROFF is already defined])])dnl
+m4_ifdef(
+  [$1$2_MONTH_NAME],
+  [m4_fatal([$1$2_MONTH_NAME is already defined])])dnl
+m4_ifdef(
+  [$1$2_MONTH_ABBR],
+  [m4_fatal([$1$2_MONTH_ABBR is already defined])])dnl
+m4_ifdef(
+  [$1$2_MONTH_ZPAD],
+  [m4_fatal([$1$2_MONTH_ZPAD is already defined])])dnl
+m4_ifdef(
+  [$1$2_DAY_ZPAD],
+  [m4_fatal([$1$2_DAY_ZPAD is already defined])])dnl
 m4_define(
   [$1$2],
   [$3])dnl
