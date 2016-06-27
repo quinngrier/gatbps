@@ -42,7 +42,7 @@ case "${interpval}" in
 esac
 
 AC_PROG_AWK
-AC_ARG_VAR([AWK], [AWK interpreter command])
+AC_ARG_VAR([AWK], [AWK interpreter command (will be field split)])
 
 AC_CHECK_PROGS([M4], [gm4 m4])
 AC_ARG_VAR([M4], [M4 preprocessor command])
