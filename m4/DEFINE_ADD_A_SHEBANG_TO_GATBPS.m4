@@ -8,6 +8,10 @@ m4_ifdef(
   [DEFINE_ADD_A_SHEBANG_TO_GATBPS_HAS_BEEN_CALLED],
   [m4_fatal([DEFINE_ADD_A_SHEBANG_TO_GATBPS must be called at most once])],
   [m4_define([DEFINE_ADD_A_SHEBANG_TO_GATBPS_HAS_BEEN_CALLED])])dnl
+m4_case(
+  [$#],
+  [0], [],
+  [m4_fatal([DEFINE_ADD_A_SHEBANG_TO_GATBPS requires exactly 0 arguments])])dnl
 
 GATBPS_ARG_ENABLE_BOOL(
   [permission to add a shebang to gatbps],
