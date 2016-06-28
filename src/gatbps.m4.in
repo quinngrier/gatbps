@@ -4,7 +4,7 @@ include({%|src/tools/footer_comment.m4|%})dnl
 include({%|src/tools/generation_code.m4|%})dnl
 include({%|src/tools/help_code.m4|%})dnl
 include({%|src/tools/recursion_code.m4|%})dnl
-{%|#!/bin/sh
+{%|#!/bin/sh -
 
 #
 # With LC_ALL=C, locale-aware programs use the C locale instead of the
