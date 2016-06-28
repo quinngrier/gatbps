@@ -7,16 +7,16 @@ AC_INIT(
   [gatbps],
   [http://www.quinngrier.com/gatbps])
 
+GATBPS_DEFINE_VERSION(
+  [AC_],
+  [PACKAGE_VERSION])
+
 GATBPS_DEFINE_DATE(
   [AC_],
   [PACKAGE_DATE],
   m4_esyscmd_s([
     'sh' '-' 'build-aux/DATE.sh'
   ])m4_if(m4_sysval, [0], [], [m4_fatal([DATE.sh failed])]))
-
-GATBPS_DEFINE_VERSION(
-  [AC_],
-  [PACKAGE_VERSION])
 
 m4_include([build-aux/CC0-1.0-AC-COPYRIGHT.ac])
 
