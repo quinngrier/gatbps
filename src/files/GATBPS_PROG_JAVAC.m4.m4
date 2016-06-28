@@ -15,9 +15,9 @@ AC_DEFUN([GATBPS_PROG_JAVAC], [{
 #
 
 m4_ifdef(
-  [GATBPS_PROG_JAVAC_SEEN],
+  [GATBPS_PROG_JAVAC_HAS_BEEN_CALLED],
   [m4_fatal([GATBPS_PROG_JAVAC must be called at most once])],
-  [m4_define([GATBPS_PROG_JAVAC_SEEN])])
+  [m4_define([GATBPS_PROG_JAVAC_HAS_BEEN_CALLED])])
 
 m4_case(
   [$#],
