@@ -7,6 +7,10 @@ m4_ifdef(
   [DEFINE_ALL_HAS_BEEN_CALLED],
   [m4_fatal([DEFINE_ALL must be called at most once])],
   [m4_define([DEFINE_ALL_HAS_BEEN_CALLED])])dnl
+m4_case(
+  [$#],
+  [0], [],
+  [m4_fatal([DEFINE_ALL requires exactly 0 arguments])])dnl
 
 AC_REQUIRE([DEFINE_ADD_A_SHEBANG_TO_GATBPS])
 
