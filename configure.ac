@@ -68,6 +68,25 @@ AC_ARG_VAR([SED], [sed interpreter command (will be field split)])
 AC_CHECK_PROGS([TEXI2ANY], [texi2any makeinfo])
 AC_ARG_VAR([TEXI2ANY], [texi2any translator command])
 
+AWK_SH=`
+  'sh' \
+    '-' \
+    "${srcdir}"'/build-aux/sh-form.sh' \
+    '--' \
+    ${AWK} \
+  ;
+`
+case "${?}" in
+#(
+  '0')
+    ':'
+  ;;
+#(
+  *)
+    AC_MSG_ERROR([sh-form.sh failed], [1])
+  ;;
+esac
+
 AC_MSG_CHECKING([which --awk value to use by default])
 AC_ARG_ENABLE(
   [awk],
@@ -208,25 +227,6 @@ AS_HELP_STRING(
     texi2any_default='auto'
   :;}])
 AC_MSG_RESULT([${texi2any_default}])
-
-AWK_SH=`
-  'sh' \
-    '-' \
-    "${srcdir}"'/build-aux/sh-form.sh' \
-    '--' \
-    ${AWK} \
-  ;
-`
-case "${?}" in
-#(
-  '0')
-    ':'
-  ;;
-#(
-  *)
-    AC_MSG_ERROR([sh-form.sh failed], [1])
-  ;;
-esac
 
 SED_SH=`
   'sh' \
