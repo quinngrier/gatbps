@@ -87,6 +87,25 @@ case "${?}" in
   ;;
 esac
 
+SED_SH=`
+  'sh' \
+    '-' \
+    "${srcdir}"'/build-aux/sh-form.sh' \
+    '--' \
+    ${SED} \
+  ;
+`
+case "${?}" in
+#(
+  '0')
+    ':'
+  ;;
+#(
+  *)
+    AC_MSG_ERROR([sh-form.sh failed], [1])
+  ;;
+esac
+
 AC_MSG_CHECKING([which --awk value to use by default])
 AC_ARG_ENABLE(
   [awk],
@@ -227,25 +246,6 @@ AS_HELP_STRING(
     texi2any_default='auto'
   :;}])
 AC_MSG_RESULT([${texi2any_default}])
-
-SED_SH=`
-  'sh' \
-    '-' \
-    "${srcdir}"'/build-aux/sh-form.sh' \
-    '--' \
-    ${SED} \
-  ;
-`
-case "${?}" in
-#(
-  '0')
-    ':'
-  ;;
-#(
-  *)
-    AC_MSG_ERROR([sh-form.sh failed], [1])
-  ;;
-esac
 
 AWK_DEFAULT_SH=`sh "${srcdir}/build-aux/sh-form.sh" \
   "--awk=${AWK}" \
