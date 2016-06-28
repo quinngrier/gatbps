@@ -177,7 +177,7 @@ AS_HELP_STRING(
     case "${enable_sed}" in
     #(
       'yes')
-        sed_default="${SED}"
+        sed_default="${SED_SH}"
       ;;
     #(
       'no')
