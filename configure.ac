@@ -33,6 +33,8 @@ AM_INIT_AUTOMAKE([
   tar-ustar
 ])
 
+DEFINE_ALL
+
 AC_SYS_INTERPRETER
 case "${interpval}" in
 #(
