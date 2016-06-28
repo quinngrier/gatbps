@@ -28,7 +28,7 @@ AC_CHECK_PROGS([JAR], [jar])
 
 AC_ARG_VAR(
   [JAR],
-  [Java archiver command])
+  [Java archiver command (always evaluated)])
 
 :;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
