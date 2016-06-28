@@ -26,7 +26,9 @@ m4_case(
 
 AC_CHECK_PROGS([JAR], [jar])
 
-AC_ARG_VAR([JAR], [Java archiver command])
+AC_ARG_VAR(
+  [JAR],
+  [Java archiver command])
 
 :;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl

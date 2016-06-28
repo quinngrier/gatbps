@@ -26,7 +26,9 @@ m4_case(
 
 AC_CHECK_PROGS([JAVADOC], [javadoc])
 
-AC_ARG_VAR([JAVADOC], [Javadoc generator command])
+AC_ARG_VAR(
+  [JAVADOC],
+  [Javadoc generator command])
 
 :;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl

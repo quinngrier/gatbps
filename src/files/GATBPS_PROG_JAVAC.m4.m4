@@ -26,11 +26,17 @@ m4_case(
 
 AC_CHECK_PROGS([JAVAC], [javac])
 
-AC_ARG_VAR([JAVAC], [Java compiler command])
+AC_ARG_VAR(
+  [JAVAC],
+  [Java compiler command])
 
-AC_ARG_VAR([JAVACFLAGS], [Java compiler flags])
+AC_ARG_VAR(
+  [JAVACFLAGS],
+  [Java compiler flags])
 
-AC_ARG_VAR([CLASSPATH], [Java compiler class path])
+AC_ARG_VAR(
+  [CLASSPATH],
+  [Java compiler class path])
 
 :;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl

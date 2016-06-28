@@ -42,10 +42,14 @@ case "${interpval}" in
 esac
 
 AC_PROG_AWK
-AC_ARG_VAR([AWK], [AWK interpreter command (will be field split)])
+AC_ARG_VAR(
+  [AWK],
+  [AWK interpreter command (will be field split)])
 
 AC_CHECK_PROGS([M4], [gm4 m4])
-AC_ARG_VAR([M4], [M4 preprocessor command])
+AC_ARG_VAR(
+  [M4],
+  [M4 preprocessor command])
 
 case "${M4}" in
 #(
@@ -58,15 +62,21 @@ case "${M4}" in
   ;;
 esac
 
-AC_ARG_VAR([MAKEINFO], [makeinfo translator command])
+AC_ARG_VAR(
+  [MAKEINFO],
+  [makeinfo translator command])
 
 AC_PROG_MKDIR_P
 
 AC_PROG_SED
-AC_ARG_VAR([SED], [sed interpreter command (will be field split)])
+AC_ARG_VAR(
+  [SED],
+  [sed interpreter command (will be field split)])
 
 AC_CHECK_PROGS([TEXI2ANY], [texi2any makeinfo])
-AC_ARG_VAR([TEXI2ANY], [texi2any translator command])
+AC_ARG_VAR(
+  [TEXI2ANY],
+  [texi2any translator command])
 
 AWK_SH=`
   'sh' \
