@@ -13,12 +13,10 @@ AC_DEFUN([GATBPS_PROG_JAVAC], [{
 #
 # This block is the expansion of the GATBPS_PROG_JAVAC macro.
 #
-
 m4_ifdef(
   [GATBPS_PROG_JAVAC_HAS_BEEN_CALLED],
   [m4_fatal([GATBPS_PROG_JAVAC must be called at most once])],
   [m4_define([GATBPS_PROG_JAVAC_HAS_BEEN_CALLED])])dnl
-
 m4_case(
   [$#],
   [0], [],
