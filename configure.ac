@@ -133,7 +133,7 @@ AS_HELP_STRING(
     case "${enable_awk}" in
     #(
       'yes')
-        awk_default="${AWK}"
+        awk_default="${AWK_SH}"
       ;;
     #(
       'no')
