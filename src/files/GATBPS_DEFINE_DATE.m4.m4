@@ -54,6 +54,9 @@ m4_ifdef(
   [$1$2_MONTH_ABBR],
   [m4_fatal([$1$2_MONTH_ABBR is already defined])])dnl
 m4_ifdef(
+  [$1$2_YEAR_ZPAD],
+  [m4_fatal([$1$2_YEAR_ZPAD is already defined])])dnl
+m4_ifdef(
   [$1$2_MONTH_ZPAD],
   [m4_fatal([$1$2_MONTH_ZPAD is already defined])])dnl
 m4_ifdef(
@@ -125,6 +128,13 @@ m4_define(
   [$1$2_MONTH_ABBR],
   m4_substr($1$2_MONTH_NAME, [0], [3]))dnl
 m4_define(
+  [$1$2_YEAR_ZPAD],
+  m4_if(
+    m4_eval(m4_len($1$2_YEAR) > 3),
+    [1],
+    $1$2_YEAR,
+    m4_bregexp([000]$1$2_YEAR, [....$], [\&])))
+m4_define(
   [$1$2_MONTH_ZPAD],
   m4_bpatsubst($1$2_MONTH, [^.$], [0\&]))dnl
 m4_define(
@@ -181,6 +191,14 @@ AC_DEFINE(
    but limited to three characters in length.])
 
 AC_DEFINE(
+  [$2_YEAR_ZPAD],
+  "$1$2_YEAR_ZPAD",
+  [Define to a character string literal
+   that contains $2_YEAR preceded by as
+   many zeros as necessary to ensure that
+   it is at least four characters in length.])
+
+AC_DEFINE(
   [$2_MONTH_ZPAD],
   "$1$2_MONTH_ZPAD",
   [Define to a character string literal
@@ -212,6 +230,9 @@ AC_SUBST([$2_MONTH_NAME])
 
 $2_MONTH_ABBR='$1$2_MONTH_ABBR'
 AC_SUBST([$2_MONTH_ABBR])
+
+$2_YEAR_ZPAD='$1$2_YEAR_ZPAD'
+AC_SUBST([$2_YEAR_ZPAD])
 
 $2_MONTH_ZPAD='$1$2_MONTH_ZPAD'
 AC_SUBST([$2_MONTH_ZPAD])
