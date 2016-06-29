@@ -14,6 +14,7 @@ m4_case(
   [m4_fatal([DEFINE_ALL requires exactly 0 arguments])])dnl
 
 AC_REQUIRE([DEFINE_HAVE_SHEBANG])
+AC_REQUIRE([DEFINE_SHEBANG_LINES])
 AC_REQUIRE([DEFINE_enable_SHEBANG])
 
 :;}])dnl
