@@ -1,7 +1,8 @@
 AC_DEFUN([DEFINE_ALL], [{
 
 #
-# This block is the expansion of the DEFINE_ALL macro.
+# The block that contains this comment is the expansion of the
+# DEFINE_ALL macro.
 #
 m4_ifdef(
   [DEFINE_ALL_HAS_BEEN_CALLED],

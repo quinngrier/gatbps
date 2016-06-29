@@ -11,8 +11,8 @@ dnl
 AC_DEFUN([GATBPS_DEFINE_DATE], [{
 
 #
-# This block is the expansion of the GATBPS_DEFINE_DATE macro for
-# ($1)$2.
+# The block that contains this comment is the expansion of the
+# GATBPS_DEFINE_DATE macro for ($1)$2.
 #
 m4_case(
   [$#],

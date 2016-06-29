@@ -1,8 +1,8 @@
 AC_DEFUN([DEFINE_ADD_A_SHEBANG_TO_GATBPS], [{
 
 #
-# This block is the expansion of the DEFINE_ADD_A_SHEBANG_TO_GATBPS
-# macro.
+# The block that contains this comment is the expansion of the
+# DEFINE_ADD_A_SHEBANG_TO_GATBPS macro.
 #
 m4_ifdef(
   [DEFINE_ADD_A_SHEBANG_TO_GATBPS_HAS_BEEN_CALLED],

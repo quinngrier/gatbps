@@ -11,8 +11,8 @@ dnl
 AC_DEFUN([GATBPS_DEFINE_VERSION], [{
 
 #
-# This block is the expansion of the GATBPS_DEFINE_VERSION macro for
-# ($1)$2.
+# The block that contains this comment is the expansion of the
+# GATBPS_DEFINE_VERSION macro for ($1)$2.
 #
 m4_case(
   [$#],

@@ -11,7 +11,8 @@ dnl
 AC_DEFUN([GATBPS_PROG_JAVAC], [{
 
 #
-# This block is the expansion of the GATBPS_PROG_JAVAC macro.
+# The block that contains this comment is the expansion of the
+# GATBPS_PROG_JAVAC macro.
 #
 m4_ifdef(
   [GATBPS_PROG_JAVAC_HAS_BEEN_CALLED],
