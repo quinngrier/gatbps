@@ -13,7 +13,7 @@ m4_case(
   [0], [],
   [m4_fatal([DEFINE_ALL requires exactly 0 arguments])])dnl
 
-AC_REQUIRE([DEFINE_ADD_A_SHEBANG_TO_GATBPS])
+AC_REQUIRE([DEFINE_enable_SHEBANG])
 
 :;}])dnl
 dnl
