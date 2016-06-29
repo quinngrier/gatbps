@@ -35,14 +35,6 @@ AM_INIT_AUTOMAKE([
 
 DEFINE_ALL
 
-AC_SYS_INTERPRETER
-case "${interpval}" in
-#(
-  'no')
-    AC_MSG_WARN([gatbps may not work properly])
-  ;;
-esac
-
 AC_PROG_AWK
 AC_ARG_VAR(
   [AWK],
