@@ -264,6 +264,7 @@ nodist_bin_gatbps_src += src/tools/PACKAGE_DATE.m4
 nodist_bin_gatbps_src += src/tools/PACKAGE_DATE_TROFF.m4
 nodist_bin_gatbps_src += src/tools/PACKAGE_VERSION.m4
 nodist_bin_gatbps_src += src/tools/SED_DEFAULT_TROFF.m4
+nodist_bin_gatbps_src += src/tools/SHEBANG_LINES.m4
 nodist_bin_gatbps_src += src/tools/TEXI2ANY_DEFAULT_TROFF.m4
 
 pdf_dist_dep =
