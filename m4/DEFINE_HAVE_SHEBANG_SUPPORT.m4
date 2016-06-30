@@ -1,23 +1,23 @@
-AC_DEFUN([DEFINE_HAVE_SHEBANG], [{
+AC_DEFUN([DEFINE_HAVE_SHEBANG_SUPPORT], [{
 
 #
 # The block that contains this comment is the expansion of the
-# DEFINE_HAVE_SHEBANG macro.
+# DEFINE_HAVE_SHEBANG_SUPPORT macro.
 #
 m4_ifdef(
-  [DEFINE_HAVE_SHEBANG_HAS_BEEN_CALLED],
-  [m4_fatal([DEFINE_HAVE_SHEBANG must be called at most once])],
-  [m4_define([DEFINE_HAVE_SHEBANG_HAS_BEEN_CALLED])])dnl
+  [DEFINE_HAVE_SHEBANG_SUPPORT_HAS_BEEN_CALLED],
+  [m4_fatal([DEFINE_HAVE_SHEBANG_SUPPORT must be called at most once])],
+  [m4_define([DEFINE_HAVE_SHEBANG_SUPPORT_HAS_BEEN_CALLED])])dnl
 m4_case(
   [$#],
   [0], [],
-  [m4_fatal([DEFINE_HAVE_SHEBANG requires exactly 0 arguments])])dnl
+  [m4_fatal([DEFINE_HAVE_SHEBANG_SUPPORT requires exactly 0 arguments])])dnl
 
 AC_SYS_INTERPRETER
 
 GATBPS_CHECK_VARS(
   [shebang support],
-  [HAVE_SHEBANG],
+  [HAVE_SHEBANG_SUPPORT],
   [
     interpval
   ])

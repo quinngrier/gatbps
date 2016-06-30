@@ -13,7 +13,7 @@ m4_case(
   [0], [],
   [m4_fatal([DEFINE_SHEBANG_LINE requires exactly 0 arguments])])dnl
 
-AC_REQUIRE([DEFINE_HAVE_SHEBANG])
+AC_REQUIRE([DEFINE_HAVE_SHEBANG_SUPPORT])
 AC_REQUIRE([DEFINE_enable_SHEBANG_LINE])
 
 SHEBANG_LINE_1='#!/bin/sh -
@@ -45,7 +45,7 @@ case "${cross_compiling}" in
     case "${enable_SHEBANG_LINE}" in
     #(
       '1')
-        case "${HAVE_SHEBANG}" in
+        case "${HAVE_SHEBANG_SUPPORT}" in
         #(
           '1')
             SHEBANG_LINE="${SHEBANG_LINE_1}"
@@ -57,7 +57,7 @@ case "${cross_compiling}" in
         #(
           *)
             AC_MSG_ERROR(
-              [invalid \${HAVE_SHEBANG} value: ${HAVE_SHEBANG}]
+              [invalid \${HAVE_SHEBANG_SUPPORT} value: ${HAVE_SHEBANG_SUPPORT}]
               [1])
           ;;
         esac
