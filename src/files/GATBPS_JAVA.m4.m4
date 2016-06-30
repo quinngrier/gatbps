@@ -205,7 +205,7 @@ java-gatbps_x1:
     ` || '\''exit'\'' "$[]$[]{?}"; \
     '\''rm'\'' '\''-f'\'' '\''java-gatbps_x1.tmp'\''; \
     $[](MAKE) \
-      $[](AM_MAKEFLAGS) \
+      $[](AM@&t@_MAKEFLAGS) \
       '\''GATBPS_CLASSPATH='\''"$[]$[]{classpath}" \
       '\''GATBPS_JAVACFLAGS='\''"$[]$[]{javacflags}" \
       '\''GATBPS_SOURCEPATH='\''"$[]$[]{sourcepath}" \
