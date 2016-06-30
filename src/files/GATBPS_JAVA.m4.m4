@@ -123,14 +123,23 @@ install-java-gatbps_x1: java-gatbps_x1
     *) \
       case '\'''\''$[](javadir) in \
         ?*) \
-          echo " $[](MKDIR_P) '\''$[](DESTDIR)$[](javadir)'\''"; \
+          '\''sh'\'' '\''-'\'' $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
+            '\''--'\'' \
+            $[](MKDIR_P) \
+            $[](DESTDIR)$[](javadir) \
+          ; \
           $[](MKDIR_P) $[](DESTDIR)$[](javadir) || exit $[]$[]?; \
           if test -f $[](java_[]gatbps_x2[]_dst); then \
             x=$[](java_[]gatbps_x2[]_dst); \
           else \
             x=$[](srcdir)/$[](java_[]gatbps_x2[]_dst); \
           fi; \
-          echo " $[](INSTALL_DATA) $[]$[]x '\''$[](DESTDIR)$[](javadir)'\''"; \
+          '\''sh'\'' '\''-'\'' $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
+            '\''--'\'' \
+            $[](INSTALL_DATA) \
+            "$[]$[]{x}" \
+            $[](DESTDIR)$[](javadir) \
+          ; \
           $[](INSTALL_DATA) $[]$[]x $[](DESTDIR)$[](javadir) || exit $[]$[]?; \
         ;; \
       esac; \
