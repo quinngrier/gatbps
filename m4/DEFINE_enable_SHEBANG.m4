@@ -14,12 +14,12 @@ m4_case(
   [m4_fatal([DEFINE_enable_SHEBANG requires exactly 0 arguments])])dnl
 
 GATBPS_ARG_ENABLE_BOOL(
-  [permission to add a shebang to gatbps],
+  [permission to add a shebang line to gatbps],
   [enable_SHEBANG],
   [shebang],
   [yes],
-  [add a shebang to gatbps],
-  [do not add a shebang to gatbps])
+  [add a shebang line to gatbps],
+  [do not add a shebang line to gatbps])
 
 :;}])dnl
 dnl
