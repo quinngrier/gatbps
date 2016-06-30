@@ -150,7 +150,7 @@ install-java: install-main-java
 
 install-main-java: main-java
 	@$(NORMAL_INSTALL)
-	@-':' #(((
+	@-':' #(((((
 	@{ \
   case ''$(java_noinst) in \
     ?*) \

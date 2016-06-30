@@ -114,7 +114,7 @@ install-java: install-java-gatbps_x1
 
 install-java-gatbps_x1: java-gatbps_x1
 	@$[](NORMAL_INSTALL)
-	@-'\'':'\'' #(((
+	@-'\'':'\'' #(((((
 	@{ \
   case '\'''\''$[](java_[]gatbps_x2[]_noinst) in \
     ?*) \
