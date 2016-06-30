@@ -1,22 +1,22 @@
-AC_DEFUN([DEFINE_enable_SHEBANG], [{
+AC_DEFUN([DEFINE_enable_SHEBANG_LINE], [{
 
 #
 # The block that contains this comment is the expansion of the
-# DEFINE_enable_SHEBANG macro.
+# DEFINE_enable_SHEBANG_LINE macro.
 #
 m4_ifdef(
-  [DEFINE_enable_SHEBANG_HAS_BEEN_CALLED],
-  [m4_fatal([DEFINE_enable_SHEBANG must be called at most once])],
-  [m4_define([DEFINE_enable_SHEBANG_HAS_BEEN_CALLED])])dnl
+  [DEFINE_enable_SHEBANG_LINE_HAS_BEEN_CALLED],
+  [m4_fatal([DEFINE_enable_SHEBANG_LINE must be called at most once])],
+  [m4_define([DEFINE_enable_SHEBANG_LINE_HAS_BEEN_CALLED])])dnl
 m4_case(
   [$#],
   [0], [],
-  [m4_fatal([DEFINE_enable_SHEBANG requires exactly 0 arguments])])dnl
+  [m4_fatal([DEFINE_enable_SHEBANG_LINE requires exactly 0 arguments])])dnl
 
 GATBPS_ARG_ENABLE_BOOL(
   [permission to add a shebang line to gatbps],
-  [enable_SHEBANG],
-  [shebang],
+  [enable_SHEBANG_LINE],
+  [shebang-line],
   [yes],
   [add a shebang line to gatbps],
   [do not add a shebang line to gatbps])
