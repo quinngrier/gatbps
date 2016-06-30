@@ -18,7 +18,7 @@ m4_foreach_w(
 
     m4_pushdef(
       [gatbps_x2],
-      m4_bpatsubst(gatbps_x1, [[^0-9A-Z_a-z]], [_]))
+      m4_bpatsubst(gatbps_x1, [[^0-9A-Z_a-z]], [_]))dnl
 
     GATBPS_JAVA_RULES='
 
@@ -259,7 +259,7 @@ uninstall-java-gatbps_x1:
 
 '
 
-    m4_popdef([gatbps_x2])
+    m4_popdef([gatbps_x2])dnl
 
   :;}])
 
