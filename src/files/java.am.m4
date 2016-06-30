@@ -147,14 +147,23 @@ install-main-java: main-java
     *) \
       case ''$(javadir) in \
         ?*) \
-          echo " $(MKDIR_P) '$(DESTDIR)$(javadir)'"; \
+          'sh' '-' $(srcdir)'/build-aux/sh-form.sh' \
+            '--' \
+            $(MKDIR_P) \
+            $(DESTDIR)$(javadir) \
+          ; \
           $(MKDIR_P) $(DESTDIR)$(javadir) || exit $$?; \
           if test -f $(java_dst); then \
             x=$(java_dst); \
           else \
             x=$(srcdir)/$(java_dst); \
           fi; \
-          echo " $(INSTALL_DATA) $$x '$(DESTDIR)$(javadir)'"; \
+          'sh' '-' $(srcdir)'/build-aux/sh-form.sh' \
+            '--' \
+            $(INSTALL_DATA) \
+            "$${x}" \
+            $(DESTDIR)$(javadir) \
+          ; \
           $(INSTALL_DATA) $$x $(DESTDIR)$(javadir) || exit $$?; \
         ;; \
       esac; \
