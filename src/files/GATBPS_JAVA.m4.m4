@@ -125,10 +125,11 @@ install-java-gatbps_x1: java-gatbps_x1
         ?*) \
           '\''sh'\'' \
             '\''-'\'' \
-            $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
+            $[](srcdir)'\''/build-aux/echo.sh'\'' \
             '\''--'\'' \
+            '\'' '\'' \
             $[](MKDIR_P) \
-            $[](DESTDIR)$[](javadir) \
+            \'\''$[](DESTDIR)$[](javadir)\'\'' \
           ; \
           $[](MKDIR_P) $[](DESTDIR)$[](javadir) || exit $[]$[]?; \
           if test -f $[](java_[]gatbps_x2[]_dst); then \
@@ -138,11 +139,12 @@ install-java-gatbps_x1: java-gatbps_x1
           fi; \
           '\''sh'\'' \
             '\''-'\'' \
-            $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
+            $[](srcdir)'\''/build-aux/echo.sh'\'' \
             '\''--'\'' \
+            '\'' '\'' \
             $[](INSTALL_DATA) \
             "$[]$[]{x}" \
-            $[](DESTDIR)$[](javadir) \
+            \'\''$[](DESTDIR)$[](javadir)\'\'' \
           ; \
           $[](INSTALL_DATA) $[]$[]x $[](DESTDIR)$[](javadir) || exit $[]$[]?; \
         ;; \
