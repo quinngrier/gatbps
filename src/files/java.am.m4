@@ -159,7 +159,9 @@ install-main-java: main-java
     *) \
       case ''$(javadir) in \
         ?*) \
-          'sh' '-' $(srcdir)'/build-aux/sh-form.sh' \
+          'sh' \
+            '-' \
+            $(srcdir)'/build-aux/sh-form.sh' \
             '--' \
             $(MKDIR_P) \
             $(DESTDIR)$(javadir) \
@@ -170,7 +172,9 @@ install-main-java: main-java
           else \
             x=$(srcdir)/$(java_dst); \
           fi; \
-          'sh' '-' $(srcdir)'/build-aux/sh-form.sh' \
+          'sh' \
+            '-' \
+            $(srcdir)'/build-aux/sh-form.sh' \
             '--' \
             $(INSTALL_DATA) \
             "$${x}" \
