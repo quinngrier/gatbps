@@ -161,10 +161,11 @@ install-main-java: main-java
         ?*) \
           'sh' \
             '-' \
-            $(srcdir)'/build-aux/sh-form.sh' \
+            $(srcdir)'/build-aux/echo.sh' \
             '--' \
+            ' ' \
             $(MKDIR_P) \
-            $(DESTDIR)$(javadir) \
+            \'$(DESTDIR)$(javadir)\' \
           ; \
           $(MKDIR_P) $(DESTDIR)$(javadir) || exit $$?; \
           if test -f $(java_dst); then \
@@ -174,11 +175,12 @@ install-main-java: main-java
           fi; \
           'sh' \
             '-' \
-            $(srcdir)'/build-aux/sh-form.sh' \
+            $(srcdir)'/build-aux/echo.sh' \
             '--' \
+            ' ' \
             $(INSTALL_DATA) \
             "$${x}" \
-            $(DESTDIR)$(javadir) \
+            \'$(DESTDIR)$(javadir)\' \
           ; \
           $(INSTALL_DATA) $$x $(DESTDIR)$(javadir) || exit $$?; \
         ;; \
