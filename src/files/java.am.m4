@@ -209,7 +209,9 @@ main-java:
         x="$${x}"':'$(java_CLASSPATH); \
       ;; \
     esac; \
-    'sh' '-' $(srcdir)'/build-aux/sh-form.sh' \
+    'sh' \
+      '-' \
+      $(srcdir)'/build-aux/sh-form.sh' \
       '--' \
       "$${x}" \
       >'main-java.tmp' \
@@ -217,7 +219,9 @@ main-java:
     classpath=` \
       'cat' 'main-java.tmp' \
     ` || 'exit' "$${?}"; \
-    'sh' '-' $(srcdir)'/build-aux/sh-form.sh' \
+    'sh' \
+      '-' \
+      $(srcdir)'/build-aux/sh-form.sh' \
       '--' \
       $(java_JAVACFLAGS) \
       >'main-java.tmp' \
@@ -225,7 +229,9 @@ main-java:
     javacflags=` \
       'cat' 'main-java.tmp' \
     ` || 'exit' "$${?}"; \
-    'sh' '-' $(srcdir)'/build-aux/sh-form.sh' \
+    'sh' \
+      '-' \
+      $(srcdir)'/build-aux/sh-form.sh' \
       '--' \
       './'$(java_sourcepath) \
       >'main-java.tmp' \
