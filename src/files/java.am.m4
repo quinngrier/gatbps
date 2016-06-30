@@ -170,10 +170,15 @@ install-main-java: main-java
           $(MKDIR_P) \
             $(DESTDIR)$(javadir) \
           || 'exit' "$${?}"; \
-          if test -f $(java_dst); then \
-            x=$(java_dst); \
+          if 'test' '-f' $(java_dst); then \
+            x='.'; \
           else \
-            x=$(srcdir)/$(java_dst); \
+            x=$(srcdir); \
+            case "$${x}" in \
+              '-'*) \
+                x='./'"$${x}"; \
+              ;; \
+            esac; \
           fi; \
           'sh' \
             '-' \
@@ -181,11 +186,11 @@ install-main-java: main-java
             '--' \
             ' ' \
             $(INSTALL_DATA) \
-            "$${x}" \
+            "$${x}"'/'$(java_dst) \
             \'$(DESTDIR)$(javadir)\' \
           ; \
           $(INSTALL_DATA) \
-            $$x \
+            "$${x}"'/'$(java_dst) \
             $(DESTDIR)$(javadir) \
           || 'exit' "$${?}"; \
         ;; \
