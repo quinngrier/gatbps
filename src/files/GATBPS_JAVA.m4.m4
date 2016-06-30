@@ -123,16 +123,22 @@ install-java-gatbps_x1: java-gatbps_x1
     *) \
       case '\'''\''$[](javadir) in \
         ?*) \
+          d=$[](DESTDIR)$[](javadir); \
+          case "$[]$[]{d}" in \
+            '\''-'\''*) \
+              d='\''./'\''"$[]$[]{d}"; \
+            ;; \
+          esac; \
           '\''sh'\'' \
             '\''-'\'' \
             $[](srcdir)'\''/build-aux/echo.sh'\'' \
             '\''--'\'' \
             '\'' '\'' \
             $[](MKDIR_P) \
-            \'\''$[](DESTDIR)$[](javadir)\'\'' \
+            \'\''"$[]$[]{d}"\'\'' \
           ; \
           $[](MKDIR_P) \
-            $[](DESTDIR)$[](javadir) \
+            "$[]$[]{d}" \
           || '\''exit'\'' "$[]$[]{?}"; \
           if '\''test'\'' '\''-f'\'' $[](java_[]gatbps_x2[]_dst); then \
             x='\''.'\''; \
@@ -151,11 +157,11 @@ install-java-gatbps_x1: java-gatbps_x1
             '\'' '\'' \
             $[](INSTALL_DATA) \
             "$[]$[]{x}"'\''/'\''$[](java_[]gatbps_x2[]_dst) \
-            \'\''$[](DESTDIR)$[](javadir)\'\'' \
+            \'\''"$[]$[]{d}"\'\'' \
           ; \
           $[](INSTALL_DATA) \
             "$[]$[]{x}"'\''/'\''$[](java_[]gatbps_x2[]_dst) \
-            $[](DESTDIR)$[](javadir) \
+            "$[]$[]{d}" \
           || '\''exit'\'' "$[]$[]{?}"; \
         ;; \
       esac; \
