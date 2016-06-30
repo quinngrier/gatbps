@@ -131,7 +131,9 @@ install-java-gatbps_x1: java-gatbps_x1
             $[](MKDIR_P) \
             \'\''$[](DESTDIR)$[](javadir)\'\'' \
           ; \
-          $[](MKDIR_P) $[](DESTDIR)$[](javadir) || exit $[]$[]?; \
+          $[](MKDIR_P) \
+            $[](DESTDIR)$[](javadir) \
+          || '\''exit'\'' "$[]$[]{?}"; \
           if test -f $[](java_[]gatbps_x2[]_dst); then \
             x=$[](java_[]gatbps_x2[]_dst); \
           else \
@@ -146,7 +148,10 @@ install-java-gatbps_x1: java-gatbps_x1
             "$[]$[]{x}" \
             \'\''$[](DESTDIR)$[](javadir)\'\'' \
           ; \
-          $[](INSTALL_DATA) $[]$[]x $[](DESTDIR)$[](javadir) || exit $[]$[]?; \
+          $[](INSTALL_DATA) \
+            $[]$[]x \
+            $[](DESTDIR)$[](javadir) \
+          || '\''exit'\'' "$[]$[]{?}"; \
         ;; \
       esac; \
     ;; \

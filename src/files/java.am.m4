@@ -167,7 +167,9 @@ install-main-java: main-java
             $(MKDIR_P) \
             \'$(DESTDIR)$(javadir)\' \
           ; \
-          $(MKDIR_P) $(DESTDIR)$(javadir) || exit $$?; \
+          $(MKDIR_P) \
+            $(DESTDIR)$(javadir) \
+          || 'exit' "$${?}"; \
           if test -f $(java_dst); then \
             x=$(java_dst); \
           else \
@@ -182,7 +184,10 @@ install-main-java: main-java
             "$${x}" \
             \'$(DESTDIR)$(javadir)\' \
           ; \
-          $(INSTALL_DATA) $$x $(DESTDIR)$(javadir) || exit $$?; \
+          $(INSTALL_DATA) \
+            $$x \
+            $(DESTDIR)$(javadir) \
+          || 'exit' "$${?}"; \
         ;; \
       esac; \
     ;; \
