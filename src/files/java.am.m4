@@ -187,7 +187,7 @@ install-main-java: main-java
       esac; \
     ;; \
   esac; \
-  exit 0; \
+  'exit' '0'; \
 :;}
 
 java: main-java
@@ -276,7 +276,7 @@ uninstall-main-java:
       esac; \
     ;; \
   esac; \
-  exit 0; \
+  'exit' '0'; \
 :;}
 
 ## end_rules

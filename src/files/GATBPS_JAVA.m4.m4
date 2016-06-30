@@ -151,7 +151,7 @@ install-java-gatbps_x1: java-gatbps_x1
       esac; \
     ;; \
   esac; \
-  exit 0; \
+  '\''exit'\'' '\''0'\''; \
 :;}
 
 java: java-gatbps_x1
@@ -240,7 +240,7 @@ uninstall-java-gatbps_x1:
       esac; \
     ;; \
   esac; \
-  exit 0; \
+  '\''exit'\'' '\''0'\''; \
 :;}
 
 '
