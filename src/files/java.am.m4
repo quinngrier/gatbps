@@ -167,11 +167,10 @@ install-main-java: main-java
           esac; \
           'sh' \
             '-' \
-            $(srcdir)'/build-aux/echo.sh' \
+            $(srcdir)'/build-aux/sh-form.sh' \
             '--' \
-            ' ' \
             $(MKDIR_P) \
-            \'"$${d}"\' \
+            "$${d}" \
           ; \
           $(MKDIR_P) \
             "$${d}" \
@@ -188,12 +187,11 @@ install-main-java: main-java
           fi; \
           'sh' \
             '-' \
-            $(srcdir)'/build-aux/echo.sh' \
+            $(srcdir)'/build-aux/sh-form.sh' \
             '--' \
-            ' ' \
             $(INSTALL_DATA) \
             "$${x}"'/'$(java_dst) \
-            \'"$${d}"\' \
+            "$${d}" \
           ; \
           $(INSTALL_DATA) \
             "$${x}"'/'$(java_dst) \
