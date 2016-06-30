@@ -133,7 +133,7 @@ m4_define(
     m4_eval(m4_len($1$2_YEAR) > 3),
     [1],
     $1$2_YEAR,
-    m4_bregexp([000]$1$2_YEAR, [....$], [\&])))
+    m4_bregexp([000]$1$2_YEAR, [....$], [\&])))dnl
 m4_define(
   [$1$2_MONTH_ZPAD],
   m4_bpatsubst($1$2_MONTH, [^.$], [0\&]))dnl
