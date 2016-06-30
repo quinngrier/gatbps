@@ -1,36 +1,36 @@
-AC_DEFUN([DEFINE_SHEBANG_LINES], [{
+AC_DEFUN([DEFINE_SHEBANG_LINE], [{
 
 #
 # The block that contains this comment is the expansion of the
-# DEFINE_SHEBANG_LINES macro.
+# DEFINE_SHEBANG_LINE macro.
 #
 m4_ifdef(
-  [DEFINE_SHEBANG_LINES_HAS_BEEN_CALLED],
-  [m4_fatal([DEFINE_SHEBANG_LINES must be called at most once])],
-  [m4_define([DEFINE_SHEBANG_LINES_HAS_BEEN_CALLED])])dnl
+  [DEFINE_SHEBANG_LINE_HAS_BEEN_CALLED],
+  [m4_fatal([DEFINE_SHEBANG_LINE must be called at most once])],
+  [m4_define([DEFINE_SHEBANG_LINE_HAS_BEEN_CALLED])])dnl
 m4_case(
   [$#],
   [0], [],
-  [m4_fatal([DEFINE_SHEBANG_LINES requires exactly 0 arguments])])dnl
+  [m4_fatal([DEFINE_SHEBANG_LINE requires exactly 0 arguments])])dnl
 
 AC_REQUIRE([DEFINE_HAVE_SHEBANG])
 AC_REQUIRE([DEFINE_enable_SHEBANG_LINE])
 
-SHEBANG_LINES_1='#!/bin/sh -
+SHEBANG_LINE_1='#!/bin/sh -
 
 '
-SHEBANG_LINES_0=''
+SHEBANG_LINE_0=''
 case "${cross_compiling}" in
 #(
   'yes')
     case "${enable_SHEBANG_LINE}" in
     #(
       '1')
-        SHEBANG_LINES="${SHEBANG_LINES_1}"
+        SHEBANG_LINE="${SHEBANG_LINE_1}"
       ;;
     #(
       '0')
-        SHEBANG_LINES="${SHEBANG_LINES_0}"
+        SHEBANG_LINE="${SHEBANG_LINE_0}"
       ;;
     #(
       *)
@@ -48,11 +48,11 @@ case "${cross_compiling}" in
         case "${HAVE_SHEBANG}" in
         #(
           '1')
-            SHEBANG_LINES="${SHEBANG_LINES_1}"
+            SHEBANG_LINE="${SHEBANG_LINE_1}"
           ;;
         #(
           '0')
-            SHEBANG_LINES="${SHEBANG_LINES_0}"
+            SHEBANG_LINE="${SHEBANG_LINE_0}"
           ;;
         #(
           *)
@@ -64,7 +64,7 @@ case "${cross_compiling}" in
       ;;
     #(
       '0')
-        SHEBANG_LINES="${SHEBANG_LINES_0}"
+        SHEBANG_LINE="${SHEBANG_LINE_0}"
       ;;
     #(
       *)
@@ -81,8 +81,8 @@ case "${cross_compiling}" in
       [1])
   ;;
 esac
-AC_SUBST([SHEBANG_LINES])
-AM_SUBST_NOTMAKE([SHEBANG_LINES])
+AC_SUBST([SHEBANG_LINE])
+AM_SUBST_NOTMAKE([SHEBANG_LINE])
 
 :;}])dnl
 dnl
