@@ -159,16 +159,22 @@ install-main-java: main-java
     *) \
       case ''$(javadir) in \
         ?*) \
+          d=$(DESTDIR)$(javadir); \
+          case "$${d}" in \
+            '-'*) \
+              d='./'"$${d}"; \
+            ;; \
+          esac; \
           'sh' \
             '-' \
             $(srcdir)'/build-aux/echo.sh' \
             '--' \
             ' ' \
             $(MKDIR_P) \
-            \'$(DESTDIR)$(javadir)\' \
+            \'"$${d}"\' \
           ; \
           $(MKDIR_P) \
-            $(DESTDIR)$(javadir) \
+            "$${d}" \
           || 'exit' "$${?}"; \
           if 'test' '-f' $(java_dst); then \
             x='.'; \
@@ -187,11 +193,11 @@ install-main-java: main-java
             ' ' \
             $(INSTALL_DATA) \
             "$${x}"'/'$(java_dst) \
-            \'$(DESTDIR)$(javadir)\' \
+            \'"$${d}"\' \
           ; \
           $(INSTALL_DATA) \
             "$${x}"'/'$(java_dst) \
-            $(DESTDIR)$(javadir) \
+            "$${d}" \
           || 'exit' "$${?}"; \
         ;; \
       esac; \
