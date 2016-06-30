@@ -131,11 +131,10 @@ install-java-gatbps_x1: java-gatbps_x1
           esac; \
           '\''sh'\'' \
             '\''-'\'' \
-            $[](srcdir)'\''/build-aux/echo.sh'\'' \
+            $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
             '\''--'\'' \
-            '\'' '\'' \
             $[](MKDIR_P) \
-            \'\''"$[]$[]{d}"\'\'' \
+            "$[]$[]{d}" \
           ; \
           $[](MKDIR_P) \
             "$[]$[]{d}" \
@@ -152,12 +151,11 @@ install-java-gatbps_x1: java-gatbps_x1
           fi; \
           '\''sh'\'' \
             '\''-'\'' \
-            $[](srcdir)'\''/build-aux/echo.sh'\'' \
+            $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
             '\''--'\'' \
-            '\'' '\'' \
             $[](INSTALL_DATA) \
             "$[]$[]{x}"'\''/'\''$[](java_[]gatbps_x2[]_dst) \
-            \'\''"$[]$[]{d}"\'\'' \
+            "$[]$[]{d}" \
           ; \
           $[](INSTALL_DATA) \
             "$[]$[]{x}"'\''/'\''$[](java_[]gatbps_x2[]_dst) \
