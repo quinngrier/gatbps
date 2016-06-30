@@ -15,7 +15,13 @@ GATBPS_V_JAR = $(GATBPS_V_JAR_@AM_V@)
 
 GATBPS_V_JAR_ = $(GATBPS_V_JAR_@AM_DEFAULT_V@)
 
-GATBPS_V_JAR_0 = @'sh' '-' $(srcdir)'/build-aux/echo.sh' '--' '  JAR' $@;
+GATBPS_V_JAR_0 = @'sh' \
+  '-' \
+  $(srcdir)'/build-aux/echo.sh' \
+  '--' \
+  '  JAR' \
+  $@ \
+;
 
 GATBPS_V_JAR_1 =
 
