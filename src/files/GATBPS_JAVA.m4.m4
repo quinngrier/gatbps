@@ -10,6 +10,10 @@ dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([GATBPS_JAVA], [{
 
+#
+# The block that contains this comment is the expansion of the
+# GATBPS_JAVA macro.
+#
 m4_foreach_w(
   [gatbps_x],
   [$1],
