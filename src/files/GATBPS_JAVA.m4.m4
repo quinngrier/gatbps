@@ -23,7 +23,7 @@ m4_foreach_w(
       [gatbps_y],
       m4_bpatsubst(gatbps_x, [[^0-9A-Z_a-z]], [_]))dnl
 
-    gatbps_rules='./$[](java_[]gatbps_y[]_dst): $[](java_[]gatbps_y[]_dep)
+    gatbps_new_rules='./$[](java_[]gatbps_y[]_dst): $[](java_[]gatbps_y[]_dep)
 ./$[](java_[]gatbps_y[]_dst): $[](java_[]gatbps_y[]_extra)
 ./$[](java_[]gatbps_y[]_dst): $[](java_[]gatbps_y[]_src)
 	@-'\'':'\'' #(
@@ -305,11 +305,11 @@ uninstall-java-gatbps_x:
       ?*)
         GATBPS_JAVA_RULES="$[]{GATBPS_JAVA_RULES}"'
 
-'"$[]{gatbps_rules}"
+'"$[]{gatbps_new_rules}"
       ;;
     #(
       *)
-        GATBPS_JAVA_RULES="$[]{gatbps_rules}"
+        GATBPS_JAVA_RULES="$[]{gatbps_new_rules}"
       ;;
     esac
 
