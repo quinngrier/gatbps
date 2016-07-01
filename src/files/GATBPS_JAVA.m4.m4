@@ -221,10 +221,6 @@ java-gatbps_x:
     sourcepath=` \
       '\''cat'\'' '\''java-gatbps_x.tmp'\'' \
     ` || '\''exit'\'' "$[]$[]{?}"; \
-    '\''rm'\'' \
-      '\''-f'\'' \
-      '\''java-gatbps_x.tmp'\'' \
-    ; \
     $[](MAKE) \
       $[](AM@&t@_MAKEFLAGS) \
       '\''GATBPS_CLASSPATH='\''"$[]$[]{classpath}" \
