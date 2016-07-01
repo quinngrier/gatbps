@@ -291,7 +291,10 @@ uninstall-java-gatbps_x:
             '\''exit'\'' '\''0'\''; \
           :;); \
           x="$[]$[]{?}"; \
-          '\''rm'\'' '\''-f'\'' '\''uninstall-java-gatbps_x.tmp'\''; \
+          '\''rm'\'' \
+            '\''-f'\'' \
+            '\''uninstall-java-gatbps_x.tmp'\'' \
+          ; \
           '\''exit'\'' "$[]$[]{x}"; \
         ;; \
       esac; \

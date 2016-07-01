@@ -328,7 +328,10 @@ uninstall-main-java:
             'exit' '0'; \
           :;); \
           x="$${?}"; \
-          'rm' '-f' 'uninstall-main-java.tmp'; \
+          'rm' \
+            '-f' \
+            'uninstall-main-java.tmp' \
+          ; \
           'exit' "$${x}"; \
         ;; \
       esac; \
