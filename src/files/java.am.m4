@@ -141,7 +141,10 @@ clean-main-java:
     $(java_nested) \
     $(java_src) \
   ; do \
-    'rm' '-f' './'"$${x}"; \
+    'rm' \
+      '-f' \
+      './'"$${x}" \
+    ; \
   done; \
   'exit' '0'; \
 :;}
