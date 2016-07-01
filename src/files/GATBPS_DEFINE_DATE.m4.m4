@@ -243,6 +243,18 @@ AC_SUBST([$2_MONTH_ZPAD])
 $2_DAY_ZPAD='$1$2_DAY_ZPAD'
 AC_SUBST([$2_DAY_ZPAD])
 
+AM_CONDITIONAL(
+  [$2_IS_LEAP_YEAR]
+  [(
+    case "$[]{$2_IS_LEAP_YEAR}" in
+    #(
+      '1')
+        'exit' '0'
+      ;;
+    esac
+    'exit' '1'
+  :;)])
+
 :;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
 dnl
