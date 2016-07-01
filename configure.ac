@@ -35,11 +35,6 @@ AM_INIT_AUTOMAKE([
 
 DEFINE_ALL
 
-AC_PROG_AWK
-AC_ARG_VAR(
-  [AWK],
-  [AWK interpreter command])
-
 AC_CHECK_PROGS([M4], [gm4 m4])
 AC_ARG_VAR(
   [M4],

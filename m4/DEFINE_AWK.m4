@@ -1,22 +1,23 @@
-AC_DEFUN([DEFINE_ALL], [{
+AC_DEFUN([DEFINE_AWK], [{
 
 #
 # The block that contains this comment is the expansion of the
-# DEFINE_ALL macro.
+# DEFINE_AWK macro.
 #
 m4_ifdef(
-  [DEFINE_ALL_HAS_BEEN_CALLED],
-  [m4_fatal([DEFINE_ALL must be called at most once])],
-  [m4_define([DEFINE_ALL_HAS_BEEN_CALLED])])dnl
+  [DEFINE_AWK_HAS_BEEN_CALLED],
+  [m4_fatal([DEFINE_AWK must be called at most once])],
+  [m4_define([DEFINE_AWK_HAS_BEEN_CALLED])])dnl
 m4_case(
   [$#],
   [0], [],
-  [m4_fatal([DEFINE_ALL requires exactly 0 arguments])])dnl
+  [m4_fatal([DEFINE_AWK requires exactly 0 arguments])])dnl
 
-AC_REQUIRE([DEFINE_AWK])
-AC_REQUIRE([DEFINE_HAVE_SHEBANG_SUPPORT])
-AC_REQUIRE([DEFINE_SHEBANG_LINE])
-AC_REQUIRE([DEFINE_enable_SHEBANG_LINE])
+AC_PROG_AWK
+
+AC_ARG_VAR(
+  [AWK],
+  [AWK interpreter command])
 
 :;}])dnl
 dnl
