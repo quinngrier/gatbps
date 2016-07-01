@@ -198,8 +198,8 @@ java-gatbps_x:
       "$[]$[]{x}" \
       >'\''java-gatbps_x.tmp'\'' \
     || '\''exit'\'' "$[]$[]{?}"; \
-    classpath=` \
-      '\''cat'\'' '\''java-gatbps_x.tmp'\'' \
+    classpath=`'\''cat'\'' \
+      '\''java-gatbps_x.tmp'\'' \
     ` || '\''exit'\'' "$[]$[]{?}"; \
     '\''sh'\'' \
       '\''-'\'' \
@@ -208,8 +208,8 @@ java-gatbps_x:
       $[](java_[]gatbps_y[]_JAVACFLAGS) \
       >'\''java-gatbps_x.tmp'\'' \
     || '\''exit'\'' "$[]$[]{?}"; \
-    javacflags=` \
-      '\''cat'\'' '\''java-gatbps_x.tmp'\'' \
+    javacflags=`'\''cat'\'' \
+      '\''java-gatbps_x.tmp'\'' \
     ` || '\''exit'\'' "$[]$[]{?}"; \
     '\''sh'\'' \
       '\''-'\'' \
@@ -218,8 +218,8 @@ java-gatbps_x:
       '\''./'\''$[](java_[]gatbps_y[]_sourcepath) \
       >'\''java-gatbps_x.tmp'\'' \
     || '\''exit'\'' "$[]$[]{?}"; \
-    sourcepath=` \
-      '\''cat'\'' '\''java-gatbps_x.tmp'\'' \
+    sourcepath=`'\''cat'\'' \
+      '\''java-gatbps_x.tmp'\'' \
     ` || '\''exit'\'' "$[]$[]{?}"; \
     $[](MAKE) \
       $[](AM@&t@_MAKEFLAGS) \

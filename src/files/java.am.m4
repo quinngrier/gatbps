@@ -235,8 +235,8 @@ main-java:
       "$${x}" \
       >'main-java.tmp' \
     || 'exit' "$${?}"; \
-    classpath=` \
-      'cat' 'main-java.tmp' \
+    classpath=`'cat' \
+      'main-java.tmp' \
     ` || 'exit' "$${?}"; \
     'sh' \
       '-' \
@@ -245,8 +245,8 @@ main-java:
       $(java_JAVACFLAGS) \
       >'main-java.tmp' \
     || 'exit' "$${?}"; \
-    javacflags=` \
-      'cat' 'main-java.tmp' \
+    javacflags=`'cat' \
+      'main-java.tmp' \
     ` || 'exit' "$${?}"; \
     'sh' \
       '-' \
@@ -255,8 +255,8 @@ main-java:
       './'$(java_sourcepath) \
       >'main-java.tmp' \
     || 'exit' "$${?}"; \
-    sourcepath=` \
-      'cat' 'main-java.tmp' \
+    sourcepath=`'cat' \
+      'main-java.tmp' \
     ` || 'exit' "$${?}"; \
     $(MAKE) \
       $(AM_MAKEFLAGS) \
