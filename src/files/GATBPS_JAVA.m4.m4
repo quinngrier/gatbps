@@ -237,7 +237,7 @@ uninstall-java: uninstall-java-gatbps_x
 
 uninstall-java-gatbps_x:
 	@$[](NORMAL_UNINSTALL)
-	@-'\'':'\'' #(((
+	@-'\'':'\'' #((((
 	@{ \
   case '\'''\''$[](java_[]gatbps_y[]_noinst) in \
     ?*) \
@@ -246,9 +246,44 @@ uninstall-java-gatbps_x:
     *) \
       case '\'''\''$[](javadir) in \
         ?*) \
-          x=`expr X/$[](java_[]gatbps_y[]_dst) : '\''X.*/\(.*\)'\''` || exit $[]$[]?; \
-          echo " rm -f '\''$[](DESTDIR)$[](javadir)/$[]$[]x'\''"; \
-          rm -f $[](DESTDIR)$[](javadir)/$[]$[]x; \
+          ( \
+            '\''expr'\'' \
+              '\''X/'\''$[](java_[]gatbps_y[]_dst) \
+              '\'':'\'' \
+              '\''X.*/\(.*\)'\'' \
+              >'\''uninstall-java-gatbps_x.tmp'\'' \
+            || '\''exit'\'' "$[]$[]{?}"; \
+            x=$[](srcdir); \
+            x='\''x='\''`'\''sh'\'' \
+              '\''-'\'' \
+              "$[]$[]{x}"'\''/build-aux/sh-form.sh'\'' \
+              '\''--stdin'\'' \
+              <'\''uninstall-java-gatbps_x.tmp'\'' \
+            ` || '\''exit'\'' "$[]$[]{?}"; \
+            '\''eval'\'' "$[]$[]{x}"; \
+            x=$[](DESTDIR)$[](javadir)'\''/'\''"$[]$[]{x}"; \
+            case "$[]$[]{x}" in \
+              '\''-'\''*) \
+                x='\''./'\''"$[]$[]{x}"; \
+              ;; \
+            esac; \
+            '\''sh'\'' \
+              '\''-'\'' \
+              $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
+              '\''--'\'' \
+              '\''rm'\'' \
+              '\''-f'\'' \
+              "$[]$[]{x}" \
+            ; \
+            '\''rm'\'' \
+              '\''-f'\'' \
+              "$[]$[]{x}" \
+            ; \
+            '\''exit'\'' '\''0'\''; \
+          :;); \
+          x="$[]$[]{?}"; \
+          '\''rm'\'' '\''-f'\'' '\''uninstall-java-gatbps_x.tmp'\''; \
+          '\''exit'\'' "$[]$[]{x}"; \
         ;; \
       esac; \
     ;; \
