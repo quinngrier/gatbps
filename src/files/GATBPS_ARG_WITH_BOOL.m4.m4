@@ -8,7 +8,7 @@ dnl Special file: GATBPS_ARG_WITH_BOOL.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_ARG_WITH_BOOL], [{ ':'
+AC_DEFUN([GATBPS_ARG_WITH_BOOL], [{
 
 m4_pushdef(
   [gatbps_with_var],
@@ -69,7 +69,7 @@ esac
 
 m4_popdef([gatbps_with_var])
 
-}])dnl
+:;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
 dnl
 dnl The authors of this file have waived all copyright and

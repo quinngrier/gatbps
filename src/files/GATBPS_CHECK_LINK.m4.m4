@@ -8,7 +8,7 @@ dnl Special file: GATBPS_CHECK_LINK.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_CHECK_LINK], [{ :
+AC_DEFUN([GATBPS_CHECK_LINK], [{
 
   GATBPS_CHECK_BASIC(
     [$1],
@@ -21,7 +21,7 @@ AC_DEFUN([GATBPS_CHECK_LINK], [{ :
     }],
     [$5])
 
-}])dnl
+:;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
 dnl
 dnl The authors of this file have waived all copyright and

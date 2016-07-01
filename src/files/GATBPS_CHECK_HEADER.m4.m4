@@ -8,7 +8,7 @@ dnl Special file: GATBPS_CHECK_HEADER.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_CHECK_HEADER], [{ :
+AC_DEFUN([GATBPS_CHECK_HEADER], [{
 
   GATBPS_CHECK_COMPILE(
     [$1],
@@ -17,7 +17,7 @@ AC_DEFUN([GATBPS_CHECK_HEADER], [{ :
     [],
     [$4])
 
-}])dnl
+:;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
 dnl
 dnl The authors of this file have waived all copyright and

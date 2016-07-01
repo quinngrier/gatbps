@@ -8,7 +8,7 @@ dnl Special file: GATBPS_CHECK_BASIC.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_CHECK_BASIC], [{ ':'
+AC_DEFUN([GATBPS_CHECK_BASIC], [{
 
 #
 # The following variable starts off as 'yes' and is updated to 'no' in
@@ -156,7 +156,7 @@ AM_CONDITIONAL([$2], [( ':'
   esac
 )])
 
-}])dnl
+:;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
 dnl
 dnl The authors of this file have waived all copyright and

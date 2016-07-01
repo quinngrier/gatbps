@@ -8,7 +8,7 @@ dnl Special file: GATBPS_CONFIG_FILE.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_CONFIG_FILE], [{ :
+AC_DEFUN([GATBPS_CONFIG_FILE], [{
 
   m4_case(
     [$#],
@@ -108,7 +108,7 @@ $[]{gatbps_rule}"
   m4_popdef([gatbps_inputs])
   m4_popdef([gatbps_output])
 
-}])dnl
+:;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
 dnl
 dnl The authors of this file have waived all copyright and
