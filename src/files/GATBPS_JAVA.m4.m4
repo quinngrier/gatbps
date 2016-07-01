@@ -221,7 +221,10 @@ java-gatbps_x:
     sourcepath=` \
       '\''cat'\'' '\''java-gatbps_x.tmp'\'' \
     ` || '\''exit'\'' "$[]$[]{?}"; \
-    '\''rm'\'' '\''-f'\'' '\''java-gatbps_x.tmp'\''; \
+    '\''rm'\'' \
+      '\''-f'\'' \
+      '\''java-gatbps_x.tmp'\'' \
+    ; \
     $[](MAKE) \
       $[](AM@&t@_MAKEFLAGS) \
       '\''GATBPS_CLASSPATH='\''"$[]$[]{classpath}" \
@@ -232,7 +235,10 @@ java-gatbps_x:
     '\''exit'\'' '\''0'\''; \
   :;); \
   x="$[]$[]{?}"; \
-  '\''rm'\'' '\''-f'\'' '\''java-gatbps_x.tmp'\''; \
+  '\''rm'\'' \
+    '\''-f'\'' \
+    '\''java-gatbps_x.tmp'\'' \
+  ; \
   '\''exit'\'' "$[]$[]{x}"; \
 :;}
 

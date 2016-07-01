@@ -258,7 +258,10 @@ main-java:
     sourcepath=` \
       'cat' 'main-java.tmp' \
     ` || 'exit' "$${?}"; \
-    'rm' '-f' 'main-java.tmp'; \
+    'rm' \
+      '-f' \
+      'main-java.tmp' \
+    ; \
     $(MAKE) \
       $(AM_MAKEFLAGS) \
       'GATBPS_CLASSPATH='"$${classpath}" \
@@ -269,7 +272,10 @@ main-java:
     'exit' '0'; \
   :;); \
   x="$${?}"; \
-  'rm' '-f' 'main-java.tmp'; \
+  'rm' \
+    '-f' \
+    'main-java.tmp' \
+  ; \
   'exit' "$${x}"; \
 :;}
 
