@@ -77,7 +77,7 @@ AC_DEFUN([GATBPS_CONFIG_FILE], [{
     }],
     [$4])
 
-  gatbps_rule='.PHONY: clean-gatbps_output
+  gatbps_new_rules='.PHONY: clean-gatbps_output
 
 clean-gatbps_output:
 	-rm -f gatbps_output
@@ -94,11 +94,11 @@ gatbps_output: gatbps_prereq
     ?*)
       GATBPS_CONFIG_FILE_RULES="$[]{GATBPS_CONFIG_FILE_RULES}
 
-$[]{gatbps_rule}"
+$[]{gatbps_new_rules}"
     ;;
   #(
     *)
-      GATBPS_CONFIG_FILE_RULES="$[]{gatbps_rule}"
+      GATBPS_CONFIG_FILE_RULES="$[]{gatbps_new_rules}"
     ;;
   esac
 
