@@ -274,7 +274,7 @@ uninstall-java: uninstall-main-java
 
 uninstall-main-java:
 	@$(NORMAL_UNINSTALL)
-	@-':' #(((
+	@-':' #((((
 	@{ \
   case ''$(java_noinst) in \
     ?*) \
@@ -283,9 +283,44 @@ uninstall-main-java:
     *) \
       case ''$(javadir) in \
         ?*) \
-          x=`expr X/$(java_dst) : 'X.*/\(.*\)'` || exit $$?; \
-          echo " rm -f '$(DESTDIR)$(javadir)/$$x'"; \
-          rm -f $(DESTDIR)$(javadir)/$$x; \
+          ( \
+            'expr' \
+              'X/'$(java_dst) \
+              ':' \
+              'X.*/\(.*\)' \
+              >'uninstall-main-java.tmp' \
+            || 'exit' "$${?}"; \
+            x=$(srcdir); \
+            x='x='`'sh' \
+              '-' \
+              "$${x}"'/build-aux/sh-form.sh' \
+              '--stdin' \
+              <'uninstall-main-java.tmp' \
+            ` || 'exit' "$${?}"; \
+            'eval' "$${x}"; \
+            x=$(DESTDIR)$(javadir)'/'"$${x}"; \
+            case "$${x}" in \
+              '-'*) \
+                x='./'"$${x}"; \
+              ;; \
+            esac; \
+            'sh' \
+              '-' \
+              $(srcdir)'/build-aux/sh-form.sh' \
+              '--' \
+              'rm' \
+              '-f' \
+              "$${x}" \
+            ; \
+            'rm' \
+              '-f' \
+              "$${x}" \
+            ; \
+            'exit' '0'; \
+          :;); \
+          x="$${?}"; \
+          'rm' '-f' 'uninstall-main-java.tmp'; \
+          'exit' "$${x}"; \
         ;; \
       esac; \
     ;; \
