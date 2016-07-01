@@ -151,16 +151,17 @@ install-java-gatbps_x: java-gatbps_x
               ;; \
             esac; \
           fi; \
+          x="$[]$[]{x}"'\''/'\''$[](java_[]gatbps_y[]_dst); \
           '\''sh'\'' \
             '\''-'\'' \
             $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
             '\''--'\'' \
             $[](INSTALL_DATA) \
-            "$[]$[]{x}"'\''/'\''$[](java_[]gatbps_y[]_dst) \
+            "$[]$[]{x}" \
             "$[]$[]{d}" \
           ; \
           $[](INSTALL_DATA) \
-            "$[]$[]{x}"'\''/'\''$[](java_[]gatbps_y[]_dst) \
+            "$[]$[]{x}" \
             "$[]$[]{d}" \
           || '\''exit'\'' "$[]$[]{?}"; \
         ;; \
