@@ -188,16 +188,17 @@ install-main-java: main-java
               ;; \
             esac; \
           fi; \
+          x="$${x}"'/'$(java_dst); \
           'sh' \
             '-' \
             $(srcdir)'/build-aux/sh-form.sh' \
             '--' \
             $(INSTALL_DATA) \
-            "$${x}"'/'$(java_dst) \
+            "$${x}" \
             "$${d}" \
           ; \
           $(INSTALL_DATA) \
-            "$${x}"'/'$(java_dst) \
+            "$${x}" \
             "$${d}" \
           || 'exit' "$${?}"; \
         ;; \
