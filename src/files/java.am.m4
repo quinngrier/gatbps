@@ -289,7 +289,7 @@ uninstall-java: uninstall-main-java
 uninstall-main-java:
 	@$(NORMAL_UNINSTALL)
 	@-':' #((((
-	@{ \
+	$(AM_V_at){ \
   case ''$(java_noinst) in \
     ?*) \
       ':'; \
@@ -318,14 +318,18 @@ uninstall-main-java:
                 x='./'"$${x}"; \
               ;; \
             esac; \
-            'sh' \
-              '-' \
-              $(srcdir)'/build-aux/sh-form.sh' \
-              '--' \
-              'rm' \
-              '-f' \
-              "$${x}" \
-            ; \
+            if $(AM_V_P); then \
+              ':'; \
+            else \
+              'sh' \
+                '-' \
+                $(srcdir)'/build-aux/sh-form.sh' \
+                '--' \
+                'rm' \
+                '-f' \
+                "$${x}" \
+              ; \
+            fi; \
             'rm' \
               '-f' \
               "$${x}" \

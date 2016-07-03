@@ -252,7 +252,7 @@ uninstall-java: uninstall-java-gatbps_x
 uninstall-java-gatbps_x:
 	@$[](NORMAL_UNINSTALL)
 	@-'\'':'\'' #((((
-	@{ \
+	$[](AM@&t@_V_at){ \
   case '\'''\''$[](java_[]gatbps_y[]_noinst) in \
     ?*) \
       '\'':'\''; \
@@ -281,14 +281,18 @@ uninstall-java-gatbps_x:
                 x='\''./'\''"$[]$[]{x}"; \
               ;; \
             esac; \
-            '\''sh'\'' \
-              '\''-'\'' \
-              $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
-              '\''--'\'' \
-              '\''rm'\'' \
-              '\''-f'\'' \
-              "$[]$[]{x}" \
-            ; \
+            if $[](AM@&t@_V_P); then \
+              '\'':'\''; \
+            else \
+              '\''sh'\'' \
+                '\''-'\'' \
+                $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
+                '\''--'\'' \
+                '\''rm'\'' \
+                '\''-f'\'' \
+                "$[]$[]{x}" \
+              ; \
+            fi; \
             '\''rm'\'' \
               '\''-f'\'' \
               "$[]$[]{x}" \
