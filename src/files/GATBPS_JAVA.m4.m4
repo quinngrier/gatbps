@@ -117,7 +117,7 @@ install-java: install-java-gatbps_x
 install-java-gatbps_x: java-gatbps_x
 	@$[](NORMAL_INSTALL)
 	@-'\'':'\'' #(((((
-	@{ \
+	$[](AM@&t@_V_at){ \
   case '\'''\''$[](java_[]gatbps_y[]_noinst) in \
     ?*) \
       '\'':'\''; \
@@ -131,13 +131,17 @@ install-java-gatbps_x: java-gatbps_x
               d='\''./'\''"$[]$[]{d}"; \
             ;; \
           esac; \
-          '\''sh'\'' \
-            '\''-'\'' \
-            $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
-            '\''--'\'' \
-            $[](MKDIR_P) \
-            "$[]$[]{d}" \
-          ; \
+          if $[](AM@&t@_V_P); then \
+            '\'':'\''; \
+          else \
+            '\''sh'\'' \
+              '\''-'\'' \
+              $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
+              '\''--'\'' \
+              $[](MKDIR_P) \
+              "$[]$[]{d}" \
+            ; \
+          fi; \
           $[](MKDIR_P) \
             "$[]$[]{d}" \
           || '\''exit'\'' "$[]$[]{?}"; \
@@ -152,14 +156,18 @@ install-java-gatbps_x: java-gatbps_x
             esac; \
           fi; \
           x="$[]$[]{x}"'\''/'\''$[](java_[]gatbps_y[]_dst); \
-          '\''sh'\'' \
-            '\''-'\'' \
-            $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
-            '\''--'\'' \
-            $[](INSTALL_DATA) \
-            "$[]$[]{x}" \
-            "$[]$[]{d}" \
-          ; \
+          if $[](AM@&t@_V_P); then \
+            '\'':'\''; \
+          else \
+            '\''sh'\'' \
+              '\''-'\'' \
+              $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
+              '\''--'\'' \
+              $[](INSTALL_DATA) \
+              "$[]$[]{x}" \
+              "$[]$[]{d}" \
+            ; \
+          fi; \
           $[](INSTALL_DATA) \
             "$[]$[]{x}" \
             "$[]$[]{d}" \

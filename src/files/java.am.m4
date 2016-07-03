@@ -154,7 +154,7 @@ install-java: install-main-java
 install-main-java: main-java
 	@$(NORMAL_INSTALL)
 	@-':' #(((((
-	@{ \
+	$(AM_V_at){ \
   case ''$(java_noinst) in \
     ?*) \
       ':'; \
@@ -168,13 +168,17 @@ install-main-java: main-java
               d='./'"$${d}"; \
             ;; \
           esac; \
-          'sh' \
-            '-' \
-            $(srcdir)'/build-aux/sh-form.sh' \
-            '--' \
-            $(MKDIR_P) \
-            "$${d}" \
-          ; \
+          if $(AM_V_P); then \
+            ':'; \
+          else \
+            'sh' \
+              '-' \
+              $(srcdir)'/build-aux/sh-form.sh' \
+              '--' \
+              $(MKDIR_P) \
+              "$${d}" \
+            ; \
+          fi; \
           $(MKDIR_P) \
             "$${d}" \
           || 'exit' "$${?}"; \
@@ -189,14 +193,18 @@ install-main-java: main-java
             esac; \
           fi; \
           x="$${x}"'/'$(java_dst); \
-          'sh' \
-            '-' \
-            $(srcdir)'/build-aux/sh-form.sh' \
-            '--' \
-            $(INSTALL_DATA) \
-            "$${x}" \
-            "$${d}" \
-          ; \
+          if $(AM_V_P); then \
+            ':'; \
+          else \
+            'sh' \
+              '-' \
+              $(srcdir)'/build-aux/sh-form.sh' \
+              '--' \
+              $(INSTALL_DATA) \
+              "$${x}" \
+              "$${d}" \
+            ; \
+          fi; \
           $(INSTALL_DATA) \
             "$${x}" \
             "$${d}" \
