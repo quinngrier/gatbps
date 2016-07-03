@@ -13,7 +13,7 @@ m4_case(
   [0], [],
   [m4_fatal([DEFINE_HAVE_SHEBANG_SUPPORT requires exactly 0 arguments])])dnl
 
-AC_SYS_INTERPRETER
+AC_REQUIRE([AC_SYS_INTERPRETER])
 
 GATBPS_CHECK_VARS(
   [shebang support],
