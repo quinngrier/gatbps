@@ -15,10 +15,6 @@ m4_case(
 
 AC_CHECK_PROGS([M4], [gm4 m4])
 
-AC_ARG_VAR(
-  [M4],
-  [M4 preprocessor command (always evaluated)])
-
 case "${M4}" in
 #(
   ?*)
@@ -29,6 +25,10 @@ case "${M4}" in
     AC_MSG_ERROR([an M4 preprocessor is required], [1])
   ;;
 esac
+
+AC_ARG_VAR(
+  [M4],
+  [M4 preprocessor command (always evaluated)])
 
 :;}])dnl
 dnl
