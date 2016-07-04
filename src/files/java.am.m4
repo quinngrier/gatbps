@@ -19,7 +19,7 @@ GATBPS_V_JAR_0 = @'sh' \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \
-  '  JAR' \
+  '  JAR     ' \
   $@ \
 ;
 
