@@ -121,6 +121,7 @@ GATBPS_V_JAVAC_1 =
 .java.class:
 	$(GATBPS_V_JAVAC)$(MKDIR_P) $(GATBPS_SOURCEPATH)
 	$(AM_V_at)$(JAVAC) \
+  '-Xprefer:source' \
   '-classpath' \
   $(GATBPS_CLASSPATH) \
   '-d' \
