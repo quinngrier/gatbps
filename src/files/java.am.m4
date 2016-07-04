@@ -125,6 +125,7 @@ GATBPS_V_JAVAC_1 =
   $(GATBPS_CLASSPATH) \
   '-d' \
   $(GATBPS_SOURCEPATH) \
+  '-implicit:none' \
   '-sourcepath' \
   $(GATBPS_SOURCEPATH)':'$(srcdir)'/'$(GATBPS_SOURCEPATH) \
   $(GATBPS_JAVACFLAGS) \
