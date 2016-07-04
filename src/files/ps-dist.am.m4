@@ -14,7 +14,7 @@ header_comment({%|##|%}, {%|##|%}){%|
 $(ps_dist_dst): $(ps_dist_dep)
 	$(MAKE) $(AM_MAKEFLAGS) $(ps_dist_src)
 	$(MKDIR_P) './'$(@D)
-	cp $(ps_dist_src) $(ps_dist_dst)
+	cp $(ps_dist_src) './'$(ps_dist_dst)
 
 .PHONY: clean-$(ps_dist_dst)
 

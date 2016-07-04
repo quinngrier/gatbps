@@ -14,7 +14,7 @@ header_comment({%|##|%}, {%|##|%}){%|
 $(docbook_dist_dst): $(docbook_dist_dep)
 	$(MAKE) $(AM_MAKEFLAGS) $(docbook_dist_src)
 	$(MKDIR_P) './'$(@D)
-	cp $(docbook_dist_src) $(docbook_dist_dst)
+	cp $(docbook_dist_src) './'$(docbook_dist_dst)
 
 .PHONY: clean-$(docbook_dist_dst)
 
