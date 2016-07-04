@@ -14,7 +14,7 @@ header_comment({%|##|%}, {%|##|%}){%|
 $(java_dist_dst): $(java_dist_dep)
 	$(MAKE) $(AM_MAKEFLAGS) $(java_dist_src)
 	$(MKDIR_P) './'$(@D)
-	cp './'$(java_dist_src) './'$(java_dist_dst)
+	'cp' './'$(java_dist_src) './'$(java_dist_dst)
 
 .PHONY: clean-$(java_dist_dst)
 

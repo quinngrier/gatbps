@@ -15,7 +15,7 @@ $(html_dist_dst): $(html_dist_dep)
 	$(MAKE) $(AM_MAKEFLAGS) $(html_dist_src)
 	$(MKDIR_P) './'$(@D)
 	rm -f -r './'$(html_dist_dst)
-	cp -R './'$(html_dist_src) './'$(html_dist_dst)
+	'cp' '-R' './'$(html_dist_src) './'$(html_dist_dst)
 
 .PHONY: clean-$(html_dist_dst)
 
