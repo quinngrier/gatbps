@@ -33,7 +33,7 @@ GATBPS_V_JAVAC_0 = @'sh' \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \
-  '  JAVAC' \
+  '  JAVAC   ' \
   $@ \
 ;
 
