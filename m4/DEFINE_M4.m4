@@ -13,7 +13,7 @@ m4_case(
   [0], [],
   [m4_fatal([DEFINE_M4 requires exactly 0 arguments])])dnl
 
-AC_CHECK_PROGS([M4], [gm4 m4])
+AC_REQUIRE([GATBPS_PROG_M4])
 
 case "${M4}" in
 #(
@@ -25,10 +25,6 @@ case "${M4}" in
     AC_MSG_ERROR([an M4 preprocessor is required], [1])
   ;;
 esac
-
-AC_ARG_VAR(
-  [M4],
-  [M4 preprocessor command])
 
 :;}])dnl
 dnl
