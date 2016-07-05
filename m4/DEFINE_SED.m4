@@ -1,24 +1,19 @@
-AC_DEFUN([DEFINE_ALL], [{
+AC_DEFUN([DEFINE_SED], [{
 
 #
 # The block that contains this comment is the expansion of the
-# DEFINE_ALL macro.
+# DEFINE_SED macro.
 #
 m4_ifdef(
-  [DEFINE_ALL_HAS_BEEN_CALLED],
-  [m4_fatal([DEFINE_ALL must be called at most once])],
-  [m4_define([DEFINE_ALL_HAS_BEEN_CALLED])])dnl
+  [DEFINE_SED_HAS_BEEN_CALLED],
+  [m4_fatal([DEFINE_SED must be called at most once])],
+  [m4_define([DEFINE_SED_HAS_BEEN_CALLED])])dnl
 m4_case(
   [$#],
   [0], [],
-  [m4_fatal([DEFINE_ALL requires exactly 0 arguments])])dnl
+  [m4_fatal([DEFINE_SED requires exactly 0 arguments])])dnl
 
-AC_REQUIRE([DEFINE_AWK])
-AC_REQUIRE([DEFINE_HAVE_SHEBANG_SUPPORT])
-AC_REQUIRE([DEFINE_M4])
-AC_REQUIRE([DEFINE_SED])
-AC_REQUIRE([DEFINE_SHEBANG_LINE])
-AC_REQUIRE([DEFINE_enable_SHEBANG_LINE])
+AC_REQUIRE([GATBPS_PROG_SED])
 
 :;}])dnl
 dnl

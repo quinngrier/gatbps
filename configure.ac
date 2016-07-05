@@ -41,11 +41,6 @@ AC_ARG_VAR(
 
 AC_PROG_MKDIR_P
 
-AC_PROG_SED
-AC_ARG_VAR(
-  [SED],
-  [sed interpreter command])
-
 AC_CHECK_PROGS([TEXI2ANY], [texi2any makeinfo])
 AC_ARG_VAR(
   [TEXI2ANY],
