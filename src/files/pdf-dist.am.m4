@@ -12,6 +12,7 @@ header_comment({%|##|%}, {%|##|%}){%|
 ## begin_rules
 
 $(pdf_dist_dst): $(pdf_dist_dep)
+	$(AM_V_at)$(MAKE) $(AM_MAKEFLAGS) $(pdf_dist_src)
 	$(AM_V_at){ \
   if $(AM_V_P); then \
     ':'; \
@@ -25,7 +26,6 @@ $(pdf_dist_dst): $(pdf_dist_dep)
   fi; \
   'exit' '0'; \
 :;}
-	$(AM_V_at)$(MAKE) $(AM_MAKEFLAGS) $(pdf_dist_src)
 	$(AM_V_at)$(MKDIR_P) './'$(@D)
 	$(AM_V_at)'cp' './'$(pdf_dist_src) './'$(pdf_dist_dst)
 
