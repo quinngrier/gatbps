@@ -25,9 +25,7 @@ m4_case(
 
 AC_CHECK_PROGS(
   [JAVADOC],
-  [
-    javadoc
-  ])
+  [javadoc])
 
 AC_ARG_VAR(
   [JAVADOC],

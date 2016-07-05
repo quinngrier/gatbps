@@ -25,10 +25,7 @@ m4_case(
 
 AC_CHECK_PROGS(
   [M4],
-  [
-    gm4
-    m4
-  ])
+  [gm4 m4])
 
 AC_ARG_VAR(
   [M4],

@@ -25,9 +25,7 @@ m4_case(
 
 AC_CHECK_PROGS(
   [JAR],
-  [
-    jar
-  ])
+  [jar])
 
 AC_ARG_VAR(
   [JAR],

@@ -25,9 +25,7 @@ m4_case(
 
 AC_CHECK_PROGS(
   [DOXYGEN],
-  [
-    doxygen
-  ])
+  [doxygen])
 
 AC_ARG_VAR(
   [DOXYGEN],

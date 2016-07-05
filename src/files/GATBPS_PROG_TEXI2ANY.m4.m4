@@ -25,10 +25,7 @@ m4_case(
 
 AC_CHECK_PROGS(
   [TEXI2ANY],
-  [
-    texi2any
-    makeinfo
-  ])
+  [texi2any makeinfo])
 
 AC_ARG_VAR(
   [TEXI2ANY],

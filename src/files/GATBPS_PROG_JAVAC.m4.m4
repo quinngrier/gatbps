@@ -25,9 +25,7 @@ m4_case(
 
 AC_CHECK_PROGS(
   [JAVAC],
-  [
-    javac
-  ])
+  [javac])
 
 AC_ARG_VAR(
   [JAVAC],
