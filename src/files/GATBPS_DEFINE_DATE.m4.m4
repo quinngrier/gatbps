@@ -244,7 +244,7 @@ $2_DAY_ZPAD='$1$2_DAY_ZPAD'
 AC_SUBST([$2_DAY_ZPAD])
 
 AM_CONDITIONAL(
-  [$2_IS_LEAP_YEAR]
+  [$2_IS_LEAP_YEAR],
   [(
     case "$[]{$2_IS_LEAP_YEAR}" in
     #(
