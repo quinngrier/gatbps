@@ -31,7 +31,7 @@ AC_CHECK_PROGS(
 
 AC_ARG_VAR(
   [DOXYGEN],
-  [Doxygen generator command])
+  [Doxygen documentation generator command])
 
 :;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
