@@ -23,7 +23,12 @@ m4_case(
   [0], [],
   [m4_fatal([GATBPS_PROG_TEXI2ANY requires exactly 0 arguments])])dnl
 
-AC_CHECK_PROGS([TEXI2ANY], [texi2any makeinfo])
+AC_CHECK_PROGS(
+  [TEXI2ANY],
+  [
+    texi2any
+    makeinfo
+  ])
 
 AC_ARG_VAR(
   [TEXI2ANY],

@@ -23,7 +23,12 @@ m4_case(
   [0], [],
   [m4_fatal([GATBPS_PROG_M4 requires exactly 0 arguments])])dnl
 
-AC_CHECK_PROGS([M4], [gm4 m4])
+AC_CHECK_PROGS(
+  [M4],
+  [
+    gm4
+    m4
+  ])
 
 AC_ARG_VAR(
   [M4],

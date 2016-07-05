@@ -23,7 +23,11 @@ m4_case(
   [0], [],
   [m4_fatal([GATBPS_PROG_JAR requires exactly 0 arguments])])dnl
 
-AC_CHECK_PROGS([JAR], [jar])
+AC_CHECK_PROGS(
+  [JAR],
+  [
+    jar
+  ])
 
 AC_ARG_VAR(
   [JAR],
