@@ -12,10 +12,23 @@ header_comment({%|##|%}, {%|##|%}){%|
 ## begin_rules
 
 $(html_dist_dst): $(html_dist_dep)
-	$(MAKE) $(AM_MAKEFLAGS) $(html_dist_src)
-	$(MKDIR_P) './'$(@D)
-	'rm' '-f' '-r' './'$(html_dist_dst)
-	'cp' '-R' './'$(html_dist_src) './'$(html_dist_dst)
+	$(AM_V_at){ \
+  if $(AM_V_P); then \
+    ':'; \
+  else \
+    'sh' \
+      '-' \
+      $(srcdir)'/build-aux/echo.sh' \
+      '  CP      ' \
+      $@ \
+    ; \
+  fi; \
+  'exit' '0'; \
+:;}
+	$(AM_V_at)$(MAKE) $(AM_MAKEFLAGS) $(html_dist_src)
+	$(AM_V_at)$(MKDIR_P) './'$(@D)
+	$(AM_V_at)'rm' '-f' '-r' './'$(html_dist_dst)
+	$(AM_V_at)'cp' '-R' './'$(html_dist_src) './'$(html_dist_dst)
 
 .PHONY: clean-$(html_dist_dst)
 
