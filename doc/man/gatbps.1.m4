@@ -103,7 +103,7 @@ If the option forbids a value, then it may be written as either
 or
 .nohy "\fB\-\fIS\fR,"
 and in the latter case it may be combined with an immediately following
-short option or combination of short options by deleting the
+option or combination of options by deleting the
 .nohy "\fB\-\fIS\fR"
 argument and inserting the
 .nohy "\fIS\fR"
@@ -112,8 +112,13 @@ character into the following argument just after the leading
 character.
 For example,
 .nohy "\fB\-\fIS\ \fB\-\fIK\fR"
+and
+.nohy "\fB\-\fIS\ \fB\-\-\fIK\fR"
 may be written as
-.nohy "\fB\-\fISK\fR."
+.nohy "\fB\-\fISK\fR"
+and
+.nohy "\fB\-\fIS\fB\-\fIK\fR,"
+respectively.
 .LP
 The following options are supported:
 .TP

@@ -40,7 +40,7 @@ If the option forbids a value, then it may be written as either
 or
 @w{@t{-}@i{S}@comma{}}
 and in the latter case it may be combined with an immediately following
-short option or combination of short options by deleting the
+option or combination of options by deleting the
 @w{@t{-}@i{S}}
 argument and inserting the
 @w{@i{S}}
@@ -49,8 +49,13 @@ character into the following argument just after the leading
 character@.
 For example,
 @w{@t{-}@i{S }@t{-}@i{K}}
+and
+@w{@t{-}@i{S }@t{-@w{-}}@i{K}}
 may be written as
-@w{@t{-}@i{SK}@.}
+@w{@t{-}@i{SK}}
+and
+@w{@t{-}@i{S}@t{-}@i{K}@comma{}}
+respectively@.
 
 @include indent.texi
 The following options are supported:
