@@ -35,11 +35,6 @@ AM_INIT_AUTOMAKE([
 
 DEFINE_ALL
 
-AC_CHECK_PROGS([TEXI2ANY], [texi2any makeinfo])
-AC_ARG_VAR(
-  [TEXI2ANY],
-  [texi2any translator command])
-
 AWK_SH=`
   'sh' \
     '-' \

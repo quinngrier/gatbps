@@ -1,27 +1,19 @@
-AC_DEFUN([DEFINE_ALL], [{
+AC_DEFUN([DEFINE_TEXI2ANY], [{
 
 #
 # The block that contains this comment is the expansion of the
-# DEFINE_ALL macro.
+# DEFINE_TEXI2ANY macro.
 #
 m4_ifdef(
-  [DEFINE_ALL_HAS_BEEN_CALLED],
-  [m4_fatal([DEFINE_ALL must be called at most once])],
-  [m4_define([DEFINE_ALL_HAS_BEEN_CALLED])])dnl
+  [DEFINE_TEXI2ANY_HAS_BEEN_CALLED],
+  [m4_fatal([DEFINE_TEXI2ANY must be called at most once])],
+  [m4_define([DEFINE_TEXI2ANY_HAS_BEEN_CALLED])])dnl
 m4_case(
   [$#],
   [0], [],
-  [m4_fatal([DEFINE_ALL requires exactly 0 arguments])])dnl
+  [m4_fatal([DEFINE_TEXI2ANY requires exactly 0 arguments])])dnl
 
-AC_REQUIRE([DEFINE_AWK])
-AC_REQUIRE([DEFINE_HAVE_SHEBANG_SUPPORT])
-AC_REQUIRE([DEFINE_M4])
-AC_REQUIRE([DEFINE_MAKEINFO])
-AC_REQUIRE([DEFINE_MKDIR_P])
-AC_REQUIRE([DEFINE_SED])
-AC_REQUIRE([DEFINE_SHEBANG_LINE])
-AC_REQUIRE([DEFINE_TEXI2ANY])
-AC_REQUIRE([DEFINE_enable_SHEBANG_LINE])
+AC_REQUIRE([GATBPS_PROG_TEXI2ANY])
 
 :;}])dnl
 dnl
