@@ -39,8 +39,6 @@ AC_ARG_VAR(
   [MAKEINFO],
   [makeinfo translator command])
 
-AC_PROG_MKDIR_P
-
 AC_CHECK_PROGS([TEXI2ANY], [texi2any makeinfo])
 AC_ARG_VAR(
   [TEXI2ANY],
