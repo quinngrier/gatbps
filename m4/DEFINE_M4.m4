@@ -28,7 +28,7 @@ esac
 
 AC_ARG_VAR(
   [M4],
-  [M4 preprocessor command (always evaluated)])
+  [M4 preprocessor command])
 
 :;}])dnl
 dnl

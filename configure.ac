@@ -49,7 +49,7 @@ AC_ARG_VAR(
 AC_CHECK_PROGS([TEXI2ANY], [texi2any makeinfo])
 AC_ARG_VAR(
   [TEXI2ANY],
-  [texi2any translator command (always evaluated)])
+  [texi2any translator command])
 
 AWK_SH=`
   'sh' \

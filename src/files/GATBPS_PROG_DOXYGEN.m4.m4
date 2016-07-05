@@ -27,7 +27,7 @@ AC_CHECK_PROGS([DOXYGEN], [doxygen])
 
 AC_ARG_VAR(
   [DOXYGEN],
-  [Doxygen generator command (always evaluated)])
+  [Doxygen generator command])
 
 :;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl

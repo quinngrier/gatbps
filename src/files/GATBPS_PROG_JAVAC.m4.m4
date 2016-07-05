@@ -27,7 +27,7 @@ AC_CHECK_PROGS([JAVAC], [javac])
 
 AC_ARG_VAR(
   [JAVAC],
-  [Java compiler command (always evaluated)])
+  [Java compiler command])
 
 AC_ARG_VAR(
   [JAVACFLAGS],

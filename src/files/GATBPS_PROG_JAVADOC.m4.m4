@@ -27,7 +27,7 @@ AC_CHECK_PROGS([JAVADOC], [javadoc])
 
 AC_ARG_VAR(
   [JAVADOC],
-  [Javadoc generator command (always evaluated)])
+  [Javadoc generator command])
 
 :;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
