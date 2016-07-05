@@ -44,6 +44,7 @@ all:
 	$(GATBPS) '--' 'm4/GATBPS_PROG_MAKEINFO.m4'
 	$(GATBPS) '--' 'm4/GATBPS_PROG_MKDIR_P.m4'
 	$(GATBPS) '--' 'm4/GATBPS_PROG_SED.m4'
+	$(GATBPS) '--' 'm4/GATBPS_PROG_TEXI2ANY.m4'
 
 ## end_rules
 
