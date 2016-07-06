@@ -15,11 +15,6 @@ GATBPS_CACHE_CHECK(
   [$2],
   [{ ':'
 
-    #
-    # This is the AC_CACHE_CHECK code, which only runs if the cache
-    # variable is not cached.
-    #
-
     gatbps_list=''
     { ':'m4_foreach_w(
       [gatbps_var],
