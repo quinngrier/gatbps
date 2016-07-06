@@ -34,6 +34,7 @@ all:
 	$(GATBPS) '--' 'dev-aux/Makefile.am.vim'
 	$(GATBPS) '--' 'doc/texi/indent.texi'
 	$(GATBPS) '--' 'm4/GATBPS_ARG_ENABLE_BOOL.m4'
+	$(GATBPS) '--' 'm4/GATBPS_CACHE_CHECK.m4'
 	$(GATBPS) '--' 'm4/GATBPS_CHECK_BASIC.m4'
 	$(GATBPS) '--' 'm4/GATBPS_CHECK_VARS.m4'
 	$(GATBPS) '--' 'm4/GATBPS_CONFIG_FILE.m4'
