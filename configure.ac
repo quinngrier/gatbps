@@ -35,23 +35,6 @@ AM_INIT_AUTOMAKE([
 
 DEFINE_ALL
 
-SED_SH=`'sh' \
-  '-' \
-  "${srcdir}"'/build-aux/sh-form.sh' \
-  '--' \
-  ${SED} \
-;`
-case "${?}" in
-#(
-  '0')
-    ':'
-  ;;
-#(
-  *)
-    AC_MSG_ERROR([sh-form.sh failed], [1])
-  ;;
-esac
-
 AC_MSG_CHECKING([which --awk value to use by default])
 AC_ARG_ENABLE(
   [awk],
