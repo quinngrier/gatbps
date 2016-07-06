@@ -11,6 +11,12 @@ dnl
 AC_DEFUN([GATBPS_CACHE_CHECK], [{
 
 #
+# The block that contains this comment is the expansion of the
+# GATBPS_CACHE_CHECK macro for
+# (gatbps_cv_)$2.
+#
+
+#
 # The following variable starts off as 'yes' and is updated to 'no' in
 # the AC_CACHE_CHECK code below, which only runs if the cache variable
 # is not cached.
