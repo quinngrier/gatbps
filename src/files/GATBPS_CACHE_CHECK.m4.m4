@@ -27,6 +27,10 @@ AC_DEFUN([GATBPS_CACHE_CHECK], [{
 
 $2_was_cached='yes'
 
+#
+# The rest of the code in this block is the expansion of AC_CACHE_CHECK.
+#
+
 AC_CACHE_CHECK(
   [$1],
   [gatbps_cv_$2],
