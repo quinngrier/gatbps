@@ -178,7 +178,7 @@ AC_MSG_RESULT([${texi2any_default}])
 
 AWK_DEFAULT_SH=`sh "${srcdir}/build-aux/sh-form.sh" \
   '--awk='"${AWK}" \
-  '--sed='"${SED_SH}" \
+  '--sed='"${SED}" \
   '--' \
   "${awk_default}"
 `
@@ -197,7 +197,7 @@ AM_SUBST_NOTMAKE([AWK_DEFAULT_SH])
 
 SED_DEFAULT_SH=`sh "${srcdir}/build-aux/sh-form.sh" \
   '--awk='"${AWK}" \
-  '--sed='"${SED_SH}" \
+  '--sed='"${SED}" \
   '--' \
   "${sed_default}"
 `
@@ -216,7 +216,7 @@ AM_SUBST_NOTMAKE([SED_DEFAULT_SH])
 
 TEXI2ANY_DEFAULT_SH=`sh "${srcdir}/build-aux/sh-form.sh" \
   '--awk='"${AWK}" \
-  '--sed='"${SED_SH}" \
+  '--sed='"${SED}" \
   '--' \
   "${texi2any_default}"
 `
