@@ -47,6 +47,11 @@ AC_CACHE_CHECK(
 
     $2_was_cached='no'
 
+    #
+    # The rest of the code in this block is the third argument that was
+    # given to GATBPS_CACHE_CHECK.
+    #
+
     $3
 
   :;}])
