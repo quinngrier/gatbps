@@ -10,25 +10,15 @@ dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([GATBPS_CHECK_BASIC], [{
 
-#
-# The following variable starts off as 'yes' and is updated to 'no' in
-# the AC_CACHE_CHECK code below, which only runs if the cache variable
-# is not cached.
-#
-
-$2_was_cached='yes'
-
-AC_CACHE_CHECK(
+GATBPS_CACHE_CHECK(
   [for $1],
-  [gatbps_cv_$2],
+  [$2],
   [{ ':'
 
     #
     # This is the AC_CACHE_CHECK code, which only runs if the cache
     # variable is not cached.
     #
-
-    $2_was_cached='no'
 
     gatbps_list=''
     { ':'m4_foreach_w(
