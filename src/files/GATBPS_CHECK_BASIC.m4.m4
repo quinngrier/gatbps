@@ -10,6 +10,15 @@ dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([GATBPS_CHECK_BASIC], [{
 
+#
+# The block that contains this comment is the expansion of the
+[# GATBPS_CHECK_BASIC] macro for m4_if(
+  m4_eval(m4_len([(gatbps_cv_)$2.]) > 41),
+  [1],
+  [
+# ])(gatbps_cv_)$2.
+#
+
 GATBPS_CACHE_CHECK(
   [$1],
   [$2],
