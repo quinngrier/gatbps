@@ -16,7 +16,7 @@ m4_case(
 AC_REQUIRE([AC_SYS_INTERPRETER])
 
 GATBPS_CHECK_VARS(
-  [shebang support],
+  [for shebang support],
   [HAVE_SHEBANG_SUPPORT],
   [
     interpval

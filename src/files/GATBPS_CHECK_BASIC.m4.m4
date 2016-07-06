@@ -11,7 +11,7 @@ dnl
 AC_DEFUN([GATBPS_CHECK_BASIC], [{
 
 GATBPS_CACHE_CHECK(
-  [for $1],
+  [$1],
   [$2],
   [{ ':'
 
