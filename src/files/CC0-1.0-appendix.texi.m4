@@ -21,10 +21,8 @@ header_comment({%|@ifxml
 @appendix Creative Commons Zero 1.@:0
 
 @noindent
-This appendix contains
-the complete text of the
-Creative Commons Zero (CC0) 1.@:0
-Universal Public Domain Dedication@.
+This appendix contains the complete text of the Creative Commons Zero
+(CC0) 1.@:0 Universal Public Domain Dedication@.
 The text follows@.
 
 @quotation
