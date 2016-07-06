@@ -35,14 +35,12 @@ AM_INIT_AUTOMAKE([
 
 DEFINE_ALL
 
-AWK_SH=`
-  'sh' \
-    '-' \
-    "${srcdir}"'/build-aux/sh-form.sh' \
-    '--' \
-    ${AWK} \
-  ;
-`
+AWK_SH=`'sh' \
+  '-' \
+  "${srcdir}"'/build-aux/sh-form.sh' \
+  '--' \
+  ${AWK} \
+;`
 case "${?}" in
 #(
   '0')
@@ -54,14 +52,12 @@ case "${?}" in
   ;;
 esac
 
-SED_SH=`
-  'sh' \
-    '-' \
-    "${srcdir}"'/build-aux/sh-form.sh' \
-    '--' \
-    ${SED} \
-  ;
-`
+SED_SH=`'sh' \
+  '-' \
+  "${srcdir}"'/build-aux/sh-form.sh' \
+  '--' \
+  ${SED} \
+;`
 case "${?}" in
 #(
   '0')
