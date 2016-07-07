@@ -8193,6 +8193,7 @@ EOF1
   {%|GATBPS_ARG_WITH_BOOL.m4|%},
   {%|
             set 'x' "${prefix}GATBPS_CHECK_VARS.m4" "${@AT@}"; shift
+            set 'x' "${prefix}GATBPS_ARG_WITH.m4" "${@AT@}"; shift
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
 
