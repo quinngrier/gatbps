@@ -207,8 +207,8 @@ AC_DEFINE(
   "$1$2_YEAR_ZPAD",
   [
     Define to a character string literal that contains $2_YEAR preceded
-    by as many zeros as necessary to ensure that it is at least four
-    characters in length.
+    by as many zeros as necessary to make it at least four characters
+    long. Note that no zeros are added if $2_YEAR is larger than 999.
   ])
 
 AC_DEFINE(
