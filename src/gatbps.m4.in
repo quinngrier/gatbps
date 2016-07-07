@@ -590,6 +590,7 @@ EOF1
           set "${prefix}GATBPS_CACHE_CHECK.m4" "${@AT@}"
           set "${prefix}GATBPS_ARG_WITH_BOOL.m4" "${@AT@}"
           set "${prefix}GATBPS_ARG_ENABLE_BOOL.m4" "${@AT@}"
+          set "${prefix}GATBPS_ARG_ENABLE.m4" "${@AT@}"
           set "${prefix}DATE.sh" "${@AT@}"
           set "${prefix}CC0-1.0.txt" "${@AT@}"
           set "${prefix}CC0-1.0-file.txt" "${@AT@}"
@@ -1098,6 +1099,8 @@ EOF1
                 ;;
               esac
             ;;
+
+|%}help_code({%|GATBPS_ARG_ENABLE.m4|%}){%|
 
           #(
             '--help=GATBPS_ARG_ENABLE_BOOL.m4'|'--help='*'/GATBPS_ARG_ENABLE_BOOL.m4')
@@ -4243,6 +4246,8 @@ EOF1
 |%}generation_code({%|GATBPS_PROG_TEXI2ANY.m4|%}){%|
 
 |%}generation_code({%|Makefile.am.vim|%}){%|
+
+|%}generation_code({%|GATBPS_ARG_ENABLE.m4|%}){%|
 
 |%}generation_code({%|GATBPS_ARG_ENABLE_BOOL.m4|%}){%|
 
@@ -8155,6 +8160,12 @@ EOF1
 
 |%}recursion_code(
   {%|DATE.sh|%},
+  {%|
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
+|%}){%|
+
+|%}recursion_code(
+  {%|GATBPS_ARG_ENABLE.m4|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
