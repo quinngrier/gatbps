@@ -11,7 +11,7 @@ dnl
 AC_DEFUN([GATBPS_ARG_ENABLE_BOOL], [{
 
 m4_pushdef(
-  [gatbps_enable_var],
+  [gatbps_x],
   enable_[]m4_bpatsubst([$3], [[^0-9A-Z_a-z]], [_]))
 
 AC_ARG_ENABLE(
@@ -23,47 +23,47 @@ AS_HELP_STRING([--disable-$3], [same as --enable-$3=no])
 AS_HELP_STRING([--enable-$3=yes], [$5])
 AS_HELP_STRING([--enable-$3=no], [$6])],
   [{ ':'
-    ]gatbps_enable_var[_was_given='yes'
+    ]gatbps_x[_was_given='yes'
   }],
   [{ ':'
-    ]gatbps_enable_var[_was_given='no'
-    ]gatbps_enable_var[='$4'
+    ]gatbps_x[_was_given='no'
+    ]gatbps_x[='$4'
   }])
 
-case "$[]{gatbps_enable_var}" in
+case "$[]{gatbps_x}" in
 #(
   'yes'|'no')
     ':'
   ;;
 #(
   *)
-    AC_MSG_ERROR([invalid --enable-$3 value: $[]{]gatbps_enable_var[}], [1])
+    AC_MSG_ERROR([invalid --enable-$3 value: $[]{]gatbps_x[}], [1])
   ;;
 esac
 
-GATBPS_CHECK_VARS([$1], [$2], gatbps_enable_var)
+GATBPS_CHECK_VARS([$1], [$2], gatbps_x)
 
 case "$[]{$2_was_cached}" in
 #(
   'yes')
-    AC_MSG_NOTICE([note: --enable-$3=$[]{]gatbps_enable_var[} was ignored])
+    AC_MSG_NOTICE([note: --enable-$3=$[]{]gatbps_x[} was ignored])
   ;;
 #(
   'no')
-    case "$[]{gatbps_enable_var[]_was_given}" in
+    case "$[]{gatbps_x[]_was_given}" in
     #(
       'yes')
-        AC_MSG_NOTICE([note: --enable-$3=$[]{]gatbps_enable_var[} was given])
+        AC_MSG_NOTICE([note: --enable-$3=$[]{]gatbps_x[} was given])
       ;;
     #(
       'no')
-        AC_MSG_NOTICE([note: --enable-$3=$[]{]gatbps_enable_var[} was implied])
+        AC_MSG_NOTICE([note: --enable-$3=$[]{]gatbps_x[} was implied])
       ;;
     esac
   ;;
 esac
 
-m4_popdef([gatbps_enable_var])
+m4_popdef([gatbps_x])
 
 :;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
