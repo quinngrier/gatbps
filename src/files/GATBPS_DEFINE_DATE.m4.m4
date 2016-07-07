@@ -144,71 +144,88 @@ m4_define(
 AC_DEFINE(
   [$2],
   "$1$2",
-  [Define to a character string literal that
-   contains the specified date in YYYY-MM-DD form.
-   The year may be preceded by a + character and may
-   have any number of digits, including leading zeros.])
+  [
+    Define to a character string literal that contains the specified
+    date in YYYY-MM-DD form. The year may be preceded by a + character
+    and may have any number of digits, including leading zeros.
+  ])
 
 AC_DEFINE(
   [$2_YEAR],
   $1$2_YEAR,
-  [Define to the year of $2 as an
-   unsuffixed decimal integer constant.])
+  [
+    Define to the year of $2 as an unsuffixed decimal integer constant.
+  ])
 
 AC_DEFINE(
   [$2_MONTH],
   $1$2_MONTH,
-  [Define to the month of $2 as an
-   unsuffixed decimal integer constant.])
+  [
+    Define to the month of $2 as an unsuffixed decimal integer constant.
+  ])
 
 AC_DEFINE(
   [$2_DAY],
   $1$2_DAY,
-  [Define to the day of $2 as an
-   unsuffixed decimal integer constant.])
+  [
+    Define to the day of $2 as an unsuffixed decimal integer constant.
+  ])
 
 AC_DEFINE(
   [$2_IS_LEAP_YEAR],
   $1$2_IS_LEAP_YEAR,
-  [Define to 1 if $2_YEAR is a leap year, or 0 if not.])
+  [
+    Define to 1 if $2_YEAR is a leap year, or 0 if not.
+  ])
 
 AC_DEFINE(
   [$2_TROFF],
   "m4_bpatsubst($1$2_TROFF, [\\], [\\\\])",
-  [Define to the same thing as $2 but with
-   each - character preceded by a \ character.])
+  [
+    Define to the same thing as $2 but with each - character preceded by
+    a \ character.
+  ])
 
 AC_DEFINE(
   [$2_MONTH_NAME],
   "$1$2_MONTH_NAME",
-  [Define to a character string literal that
-   contains the capitalized full month name of $2.])
+  [
+    Define to a character string literal that contains the capitalized
+    full month name of $2.
+  ])
 
 AC_DEFINE(
   [$2_MONTH_ABBR],
   "$1$2_MONTH_ABBR",
-  [Define to the same thing as $2_MONTH_NAME
-   but limited to three characters in length.])
+  [
+    Define to the same thing as $2_MONTH_NAME but limited to three
+    characters in length.
+  ])
 
 AC_DEFINE(
   [$2_YEAR_ZPAD],
   "$1$2_YEAR_ZPAD",
-  [Define to a character string literal
-   that contains $2_YEAR preceded by as
-   many zeros as necessary to ensure that
-   it is at least four characters in length.])
+  [
+    Define to a character string literal that contains $2_YEAR preceded
+    by as many zeros as necessary to ensure that it is at least four
+    characters in length.
+  ])
 
 AC_DEFINE(
   [$2_MONTH_ZPAD],
   "$1$2_MONTH_ZPAD",
-  [Define to a character string literal
-   that contains the MM component of $2.])
+  [
+    Define to a character string literal that contains the MM component
+    of $2.
+  ])
 
 AC_DEFINE(
   [$2_DAY_ZPAD],
   "$1$2_DAY_ZPAD",
-  [Define to a character string literal
-   that contains the DD component of $2.])
+  [
+    Define to a character string literal that contains the DD component
+    of $2.
+  ])
 
 $2='$1$2'
 AC_SUBST([$2])
