@@ -11,7 +11,7 @@ dnl
 AC_DEFUN([GATBPS_ARG_WITH_BOOL], [{
 
 m4_pushdef(
-  [gatbps_with_var],
+  [gatbps_x],
   with_[]m4_bpatsubst([$3], [[^0-9A-Z_a-z]], [_]))
 
 AC_ARG_WITH(
@@ -23,47 +23,47 @@ AS_HELP_STRING([--without-$3], [same as --with-$3=no])
 AS_HELP_STRING([--with-$3=yes], [$5])
 AS_HELP_STRING([--with-$3=no], [$6])],
   [{ ':'
-    ]gatbps_with_var[_was_given='yes'
+    ]gatbps_x[_was_given='yes'
   }],
   [{ ':'
-    ]gatbps_with_var[_was_given='no'
-    ]gatbps_with_var[='$4'
+    ]gatbps_x[_was_given='no'
+    ]gatbps_x[='$4'
   }])
 
-case "$[]{gatbps_with_var}" in
+case "$[]{gatbps_x}" in
 #(
   'yes'|'no')
     ':'
   ;;
 #(
   *)
-    AC_MSG_ERROR([invalid --with-$3 value: $[]{]gatbps_with_var[}], [1])
+    AC_MSG_ERROR([invalid --with-$3 value: $[]{]gatbps_x[}], [1])
   ;;
 esac
 
-GATBPS_CHECK_VARS([$1], [$2], gatbps_with_var)
+GATBPS_CHECK_VARS([$1], [$2], gatbps_x)
 
 case "$[]{$2_was_cached}" in
 #(
   'yes')
-    AC_MSG_NOTICE([note: --with-$3=$[]{]gatbps_with_var[} was ignored])
+    AC_MSG_NOTICE([note: --with-$3=$[]{]gatbps_x[} was ignored])
   ;;
 #(
   'no')
-    case "$[]{gatbps_with_var[]_was_given}" in
+    case "$[]{gatbps_x[]_was_given}" in
     #(
       'yes')
-        AC_MSG_NOTICE([note: --with-$3=$[]{]gatbps_with_var[} was given])
+        AC_MSG_NOTICE([note: --with-$3=$[]{]gatbps_x[} was given])
       ;;
     #(
       'no')
-        AC_MSG_NOTICE([note: --with-$3=$[]{]gatbps_with_var[} was implied])
+        AC_MSG_NOTICE([note: --with-$3=$[]{]gatbps_x[} was implied])
       ;;
     esac
   ;;
 esac
 
-m4_popdef([gatbps_with_var])
+m4_popdef([gatbps_x])
 
 :;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
