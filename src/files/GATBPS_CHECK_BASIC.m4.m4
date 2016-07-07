@@ -20,7 +20,7 @@ AC_DEFUN([GATBPS_CHECK_BASIC], [{
 #
 
 GATBPS_CACHE_CHECK(
-  [$1],
+  [for $1],
   [$2],
   [{ ':'
 
