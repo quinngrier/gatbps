@@ -145,7 +145,7 @@ AC_DEFINE(
   [$2],
   "$1$2",
   [
-    Define to a character string literal that contains the specified
+    Define to a character string literal that contains the appropriate
     date in YYYY-MM-DD form. The year may be preceded by a + character
     and may have any number of digits, including leading zeros.
   ])
