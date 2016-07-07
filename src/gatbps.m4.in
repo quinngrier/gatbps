@@ -8153,7 +8153,7 @@ EOF1
   #(
     *'yes'*)
 
-      while :; do
+      while :; do # recursion
         case "${1}" in
 
 |%}recursion_code(
