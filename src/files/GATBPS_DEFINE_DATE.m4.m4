@@ -182,8 +182,8 @@ AC_DEFINE(
   [$2_TROFF],
   "m4_bpatsubst($1$2_TROFF, [\\], [\\\\])",
   [
-    Define to the same thing as $2 but with each - character preceded by
-    a \ character.
+    Define to the same character string literal as $2 but with each -
+    character preceded by a \ character.
   ])
 
 AC_DEFINE(
