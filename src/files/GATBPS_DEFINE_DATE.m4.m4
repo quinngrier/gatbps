@@ -17,58 +17,90 @@ AC_DEFUN([GATBPS_DEFINE_DATE], [{
 m4_case(
   [$#],
   [3], [],
-  [m4_fatal([GATBPS_DEFINE_DATE requires exactly 3 arguments])])dnl
+  [m4_fatal(dnl
+[GATBPS_DEFINE_DATE requires exactly 3 arguments]dnl
+)])dnl
 m4_if(
   m4_bregexp([$1], [^[A-Z_a-z][0-9A-Z_a-z]*$]),
   [-1],
-  [m4_fatal([GATBPS_DEFINE_DATE requires its first argument to be an identifier])])dnl
+  [m4_fatal(dnl
+[GATBPS_DEFINE_DATE requires its first argument to be an identifier]dnl
+)])dnl
 m4_if(
   m4_bregexp([$2], [^[A-Z_a-z][0-9A-Z_a-z]*$]),
   [-1],
-  [m4_fatal([GATBPS_DEFINE_DATE requires its second argument to be an identifier])])dnl
+  [m4_fatal(dnl
+[GATBPS_DEFINE_DATE requires its second argument to be an identifier]dnl
+)])dnl
 m4_ifdef(
   [$1$2],
-  [m4_fatal([$1$2 is already defined])])dnl
+  [m4_fatal(dnl
+[$1$2 is already defined]dnl
+)])dnl
 m4_ifdef(
   [$1$2_YEAR],
-  [m4_fatal([$1$2_YEAR is already defined])])dnl
+  [m4_fatal(dnl
+[$1$2_YEAR is already defined]dnl
+)])dnl
 m4_ifdef(
   [$1$2_MONTH],
-  [m4_fatal([$1$2_MONTH is already defined])])dnl
+  [m4_fatal(dnl
+[$1$2_MONTH is already defined]dnl
+)])dnl
 m4_ifdef(
   [$1$2_DAY],
-  [m4_fatal([$1$2_DAY is already defined])])dnl
+  [m4_fatal(dnl
+[$1$2_DAY is already defined]dnl
+)])dnl
 m4_ifdef(
   [$1$2_YEAR_MOD_10000],
-  [m4_fatal([$1$2_YEAR_MOD_10000 is already defined])])dnl
+  [m4_fatal(dnl
+[$1$2_YEAR_MOD_10000 is already defined]dnl
+)])dnl
 m4_ifdef(
   [$1$2_IS_LEAP_YEAR],
-  [m4_fatal([$1$2_IS_LEAP_YEAR is already defined])])dnl
+  [m4_fatal(dnl
+[$1$2_IS_LEAP_YEAR is already defined]dnl
+)])dnl
 m4_ifdef(
   [$1$2_TROFF],
-  [m4_fatal([$1$2_TROFF is already defined])])dnl
+  [m4_fatal(dnl
+[$1$2_TROFF is already defined]dnl
+)])dnl
 m4_ifdef(
   [$1$2_MONTH_NAME],
-  [m4_fatal([$1$2_MONTH_NAME is already defined])])dnl
+  [m4_fatal(dnl
+[$1$2_MONTH_NAME is already defined]dnl
+)])dnl
 m4_ifdef(
   [$1$2_MONTH_ABBR],
-  [m4_fatal([$1$2_MONTH_ABBR is already defined])])dnl
+  [m4_fatal(dnl
+[$1$2_MONTH_ABBR is already defined]dnl
+)])dnl
 m4_ifdef(
   [$1$2_YEAR_ZPAD],
-  [m4_fatal([$1$2_YEAR_ZPAD is already defined])])dnl
+  [m4_fatal(dnl
+[$1$2_YEAR_ZPAD is already defined]dnl
+)])dnl
 m4_ifdef(
   [$1$2_MONTH_ZPAD],
-  [m4_fatal([$1$2_MONTH_ZPAD is already defined])])dnl
+  [m4_fatal(dnl
+[$1$2_MONTH_ZPAD is already defined]dnl
+)])dnl
 m4_ifdef(
   [$1$2_DAY_ZPAD],
-  [m4_fatal([$1$2_DAY_ZPAD is already defined])])dnl
+  [m4_fatal(dnl
+[$1$2_DAY_ZPAD is already defined]dnl
+)])dnl
 m4_define(
   [$1$2],
   [$3])dnl
 m4_if(
   m4_bregexp($1$2, [^\+?[0-9]+-[0-9][0-9]-[0-9][0-9]$]),
   [-1],
-  [m4_fatal([GATBPS_DEFINE_DATE requires its third argument to be a date])])dnl
+  [m4_fatal(dnl
+[GATBPS_DEFINE_DATE requires its third argument to be a date]dnl
+)])dnl
 m4_define(
   [$1$2_YEAR],
   m4_bregexp($1$2, [\+?0*\([^-]+\)], [\1]))dnl
@@ -105,7 +137,9 @@ m4_if(
      ($1$2_MONTH == 12 && $1$2_DAY <= 31))
   ),
   [0],
-  [m4_fatal([GATBPS_DEFINE_DATE requires its third argument to be a date])])dnl
+  [m4_fatal(dnl
+[GATBPS_DEFINE_DATE requires its third argument to be a date]dnl
+)])dnl
 m4_define(
   [$1$2_TROFF],
   m4_bpatsubst($1$2, [-], [\\-]))dnl
