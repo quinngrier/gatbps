@@ -188,8 +188,9 @@ AC_DEFINE(
   "$1$2",
   [
     Define to a character string literal that contains the appropriate
-    date in YYYY-MM-DD form. The year may be preceded by a + character
-    and may have any number of digits, including leading zeros.
+    proleptic Gregorian date in YYYY-MM-DD form, where the year may be
+    preceded by a + character and may have any number of digits,
+    including leading zeros.
   ])
 
 AC_DEFINE(
