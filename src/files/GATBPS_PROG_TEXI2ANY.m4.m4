@@ -16,7 +16,7 @@ AC_DEFUN([GATBPS_PROG_TEXI2ANY], [{
 #
 m4_ifdef(
   [GATBPS_PROG_TEXI2ANY_HAS_BEEN_CALLED],
-  [m4_fatal([GATBPS_PROG_TEXI2ANY must be called at most once])],
+  [m4_fatal([GATBPS_PROG_TEXI2ANY has already been called])],
   [m4_define([GATBPS_PROG_TEXI2ANY_HAS_BEEN_CALLED])])dnl
 m4_case(
   [$#],

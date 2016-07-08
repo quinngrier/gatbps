@@ -16,7 +16,7 @@ AC_DEFUN([GATBPS_PROG_AWK], [{
 #
 m4_ifdef(
   [GATBPS_PROG_AWK_HAS_BEEN_CALLED],
-  [m4_fatal([GATBPS_PROG_AWK must be called at most once])],
+  [m4_fatal([GATBPS_PROG_AWK has already been called])],
   [m4_define([GATBPS_PROG_AWK_HAS_BEEN_CALLED])])dnl
 m4_case(
   [$#],
