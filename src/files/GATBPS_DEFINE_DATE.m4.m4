@@ -101,7 +101,10 @@ m4_if(
   m4_bregexp($1$2, [^\+?[0-9]+-[0-9][0-9]-[0-9][0-9]$]),
   [-1],
   [m4_fatal(dnl
-[GATBPS_DEFINE_DATE requires its third argument to be a date]dnl
+[GATBPS_DEFINE_DATE requires its third argument to be a proleptic ]dnl
+[Gregorian date in YYYY-MM-DD form, where the year may be preceded ]dnl
+[by a + character and may have any number of digits, including ]dnl
+[leading zeros]dnl
 )])dnl
 m4_define(
   [$1$2_YEAR],
