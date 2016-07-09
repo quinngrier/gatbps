@@ -8,11 +8,11 @@ dnl Special file: GATBPS_CACHE_CHECK.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_CACHE_CHECK], [{
+AC_DEFUN([GATBPS_CACHE_CHECK], [[{
 
 #
 # The block that contains this comment is the expansion of the
-[# GATBPS_CACHE_CHECK] macro for m4_if(
+# GATBPS_CACHE_CHECK macro for ]m4_if(
   m4_eval(m4_len([(gatbps_cv_)$2.]) > 41),
   [1],
   [
