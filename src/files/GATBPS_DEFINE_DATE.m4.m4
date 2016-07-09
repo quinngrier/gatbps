@@ -176,7 +176,7 @@ m4_define(
 m4_define(
   [$1$2_YEAR_ZPAD],
   m4_if(
-    m4_eval(m4_len($1$2_YEAR) > 3),
+    m4_eval(m4_len($1$2_YEAR)[ > 3]),
     [1],
     $1$2_YEAR,
     m4_bregexp([000]$1$2_YEAR, [....$], [\&])))dnl
