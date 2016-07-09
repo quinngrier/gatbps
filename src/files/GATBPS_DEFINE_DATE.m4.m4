@@ -16,9 +16,9 @@ AC_DEFUN([GATBPS_DEFINE_DATE], [[{
   m4_eval(m4_len([($1)$2.]) > 41),
   [1],
   [[
-# ]])($1)$2.
+# ]])[($1)$2.
 #
-m4_case(
+]m4_case(
   [$#],
   [3], [],
   [m4_fatal(dnl
