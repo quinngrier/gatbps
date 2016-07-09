@@ -106,7 +106,7 @@ m4_if(
   [-1],
   [m4_fatal(dnl
 [GATBPS_DEFINE_DATE requires its third argument to be a proleptic ]dnl
-[Gregorian date in YYYY-MM-DD form, where the year may be preceded ]dnl
+[Gregorian date in YYYY-MM-DD form where the year may be preceded ]dnl
 [by a + character and may have any number of digits, including ]dnl
 [leading zeros]dnl
 )])dnl
@@ -148,7 +148,7 @@ m4_if(
   [0],
   [m4_fatal(dnl
 [GATBPS_DEFINE_DATE requires its third argument to be a proleptic ]dnl
-[Gregorian date in YYYY-MM-DD form, where the year may be preceded ]dnl
+[Gregorian date in YYYY-MM-DD form where the year may be preceded ]dnl
 [by a + character and may have any number of digits, including ]dnl
 [leading zeros]dnl
 )])dnl
@@ -192,7 +192,7 @@ AC_DEFINE(
   "$1$2",
   [
     Define to a character string literal that contains the appropriate
-    proleptic Gregorian date in YYYY-MM-DD form, where the year may be
+    proleptic Gregorian date in YYYY-MM-DD form where the year may be
     preceded by a + character and may have any number of digits,
     including leading zeros.
   ])
