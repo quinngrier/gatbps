@@ -189,7 +189,7 @@ m4_define(
 [
 ]AC_DEFINE(
   [$2],
-  "$1$2",
+  ["]$1$2["],
   [
     Define to a character string literal that contains the appropriate
     proleptic Gregorian date in YYYY-MM-DD form where the year may be
@@ -227,7 +227,7 @@ m4_define(
 
 ]AC_DEFINE(
   [$2_TROFF],
-  "m4_bpatsubst($1$2_TROFF, [\\], [\\\\])",
+  ["]m4_bpatsubst($1$2_TROFF, [\\], [\\\\])["],
   [
     Define to the same character string literal as $2 but with each -
     character preceded by a \ character.
@@ -235,7 +235,7 @@ m4_define(
 
 ]AC_DEFINE(
   [$2_MONTH_NAME],
-  "$1$2_MONTH_NAME",
+  ["]$1$2_MONTH_NAME["],
   [
     Define to a character string literal that contains the capitalized
     full month name of $2.
@@ -243,7 +243,7 @@ m4_define(
 
 ]AC_DEFINE(
   [$2_MONTH_ABBR],
-  "$1$2_MONTH_ABBR",
+  ["]$1$2_MONTH_ABBR["],
   [
     Define to the same character string literal as $2_MONTH_NAME but
     limited to three characters in length.
@@ -251,7 +251,7 @@ m4_define(
 
 ]AC_DEFINE(
   [$2_YEAR_ZPAD],
-  "$1$2_YEAR_ZPAD",
+  ["]$1$2_YEAR_ZPAD["],
   [
     Define to a character string literal that contains $2_YEAR preceded
     by as many zeros as necessary to make it at least four characters
@@ -260,7 +260,7 @@ m4_define(
 
 ]AC_DEFINE(
   [$2_MONTH_ZPAD],
-  "$1$2_MONTH_ZPAD",
+  ["]$1$2_MONTH_ZPAD["],
   [
     Define to a character string literal that contains the MM component
     of $2.
@@ -268,7 +268,7 @@ m4_define(
 
 ]AC_DEFINE(
   [$2_DAY_ZPAD],
-  "$1$2_DAY_ZPAD",
+  ["]$1$2_DAY_ZPAD["],
   [
     Define to a character string literal that contains the DD component
     of $2.
