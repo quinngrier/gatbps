@@ -21,8 +21,8 @@ AC_DEFUN([GATBPS_CACHE_CHECK], [{
 
 #
 # The following variable starts off as 'yes' and is updated to 'no' in
-# the AC_CACHE_CHECK code below, which only runs if the cache variable
-# is not cached. In other words, there are two possible outcomes:
+# the AC_CACHE_CHECK code below, which runs when the cache variable is
+# not cached. In other words, there are two possible outcomes:
 #
 #    1. If the cache variable is cached, then the AC_CACHE_CHECK code
 #       below is skipped, the cache variable is set by AC_CACHE_CHECK
