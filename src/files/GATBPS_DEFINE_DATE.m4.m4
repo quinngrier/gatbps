@@ -124,11 +124,11 @@ m4_define(
   m4_bregexp($1$2_YEAR, [..?.?.?$], [\&]))dnl
 m4_define(
   [$1$2_IS_LEAP_YEAR],
-  m4_eval(
-    ($1$2_YEAR_MOD_10000 % 4 == 0 &&
-     $1$2_YEAR_MOD_10000 % 100 != 0) ||
-    ($1$2_YEAR_MOD_10000 % 400 == 0)
-  ))dnl
+  m4_eval([
+    (]$1$2_YEAR_MOD_10000[ % 4 == 0 &&
+     ]$1$2_YEAR_MOD_10000[ % 100 != 0) ||
+    (]$1$2_YEAR_MOD_10000[ % 400 == 0)
+  ]))dnl
 m4_if(
   m4_eval(
     ($1$2_DAY >= 1) &&
