@@ -308,9 +308,9 @@ $2_DAY_ZPAD=']$1$2_DAY_ZPAD['
       ;;
     esac
     'exit' '1'
-  :;)])
+  :;)])[
 
-:;}])dnl
+:;}]])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
 dnl
 dnl The authors of this file have waived all copyright and
