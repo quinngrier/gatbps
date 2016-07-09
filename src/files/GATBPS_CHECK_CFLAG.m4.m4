@@ -13,7 +13,7 @@ AC_DEFUN([GATBPS_CHECK_CFLAG], [{
 GATBPS_CHECK_BASIC(
   [$1],
   [$2],
-  [{ :
+  [{
     gatbps_save_CFLAGS="$[]{CFLAGS}"
     CFLAGS="$[]{CFLAGS} "'$3'
     AC_LANG_PUSH([C])
@@ -23,7 +23,7 @@ GATBPS_CHECK_BASIC(
       [gatbps_cv_$2='no'])
     AC_LANG_POP([C])
     CFLAGS="$[]{gatbps_save_CFLAGS}"
-  }],
+  :;}],
   [$4])
 
 :;}])dnl
