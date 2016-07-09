@@ -10,21 +10,21 @@ dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([GATBPS_CHECK_CFLAG], [{
 
-  GATBPS_CHECK_BASIC(
-    [$1],
-    [$2],
-    [{ :
-      gatbps_save_CFLAGS="$[]{CFLAGS}"
-      CFLAGS="$[]{CFLAGS} "'$3'
-      AC_LANG_PUSH([C])
-      AC_COMPILE_IFELSE(
-        [AC_LANG_PROGRAM([], [])],
-        [gatbps_cv_$2='yes'],
-        [gatbps_cv_$2='no'])
-      AC_LANG_POP([C])
-      CFLAGS="$[]{gatbps_save_CFLAGS}"
-    }],
-    [$4])
+GATBPS_CHECK_BASIC(
+  [$1],
+  [$2],
+  [{ :
+    gatbps_save_CFLAGS="$[]{CFLAGS}"
+    CFLAGS="$[]{CFLAGS} "'$3'
+    AC_LANG_PUSH([C])
+    AC_COMPILE_IFELSE(
+      [AC_LANG_PROGRAM([], [])],
+      [gatbps_cv_$2='yes'],
+      [gatbps_cv_$2='no'])
+    AC_LANG_POP([C])
+    CFLAGS="$[]{gatbps_save_CFLAGS}"
+  }],
+  [$4])
 
 :;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
