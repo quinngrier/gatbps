@@ -15,8 +15,8 @@ AC_DEFUN([GATBPS_DEFINE_DATE], [[{
 # GATBPS_DEFINE_DATE macro for ]m4_if(
   m4_eval(m4_len([($1)$2.]) > 41),
   [1],
-  [
-# ])($1)$2.
+  [[
+# ]])($1)$2.
 #
 m4_case(
   [$#],
