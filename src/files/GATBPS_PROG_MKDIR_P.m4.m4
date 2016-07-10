@@ -27,7 +27,9 @@ AC_REQUIRE([AC_PROG_MKDIR_P])
 
 AC_ARG_VAR(
   [MKDIR_P],
-  [directory creation command])
+  [
+    directory creation command
+  ])
 
 :;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl

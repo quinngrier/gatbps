@@ -27,7 +27,9 @@ AC_REQUIRE([AC_PROG_AWK])
 
 AC_ARG_VAR(
   [AWK],
-  [AWK interpreter command])
+  [
+    AWK interpreter command
+  ])
 
 :;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl

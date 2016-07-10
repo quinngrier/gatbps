@@ -29,7 +29,9 @@ AC_CHECK_PROGS(
 
 AC_ARG_VAR(
   [TEXI2ANY],
-  [texi2any translator command])
+  [
+    texi2any translator command
+  ])
 
 :;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl

@@ -25,7 +25,9 @@ m4_case(
 
 AC_ARG_VAR(
   [MAKEINFO],
-  [makeinfo translator command])
+  [
+    makeinfo translator command
+  ])
 
 :;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl

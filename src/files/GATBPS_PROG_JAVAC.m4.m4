@@ -29,15 +29,21 @@ AC_CHECK_PROGS(
 
 AC_ARG_VAR(
   [JAVAC],
-  [Java compiler command])
+  [
+    Java compiler command
+  ])
 
 AC_ARG_VAR(
   [JAVACFLAGS],
-  [Java compiler flags])
+  [
+    Java compiler flags
+  ])
 
 AC_ARG_VAR(
   [CLASSPATH],
-  [Java compiler class path])
+  [
+    Java compiler class path
+  ])
 
 :;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl

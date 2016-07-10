@@ -27,7 +27,9 @@ AC_REQUIRE([AC_PROG_SED])
 
 AC_ARG_VAR(
   [SED],
-  [sed interpreter command])
+  [
+    sed interpreter command
+  ])
 
 :;}])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
