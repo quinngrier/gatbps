@@ -8,13 +8,13 @@ dnl Special file: GATBPS_PROG_JAVADOC.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_PROG_JAVADOC], [{
+AC_DEFUN([GATBPS_PROG_JAVADOC], [[{
 
 #
 # The block that contains this comment is the expansion of the
 # GATBPS_PROG_JAVADOC macro.
 #
-m4_ifdef(
+]m4_ifdef(
   [GATBPS_PROG_JAVADOC_HAS_BEEN_CALLED],
   [m4_fatal([GATBPS_PROG_JAVADOC has already been called])],
   [m4_define([GATBPS_PROG_JAVADOC_HAS_BEEN_CALLED])])dnl

@@ -8,13 +8,13 @@ dnl Special file: GATBPS_PROG_TEXI2ANY.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_PROG_TEXI2ANY], [{
+AC_DEFUN([GATBPS_PROG_TEXI2ANY], [[{
 
 #
 # The block that contains this comment is the expansion of the
 # GATBPS_PROG_TEXI2ANY macro.
 #
-m4_ifdef(
+]m4_ifdef(
   [GATBPS_PROG_TEXI2ANY_HAS_BEEN_CALLED],
   [m4_fatal([GATBPS_PROG_TEXI2ANY has already been called])],
   [m4_define([GATBPS_PROG_TEXI2ANY_HAS_BEEN_CALLED])])dnl

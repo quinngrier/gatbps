@@ -8,13 +8,13 @@ dnl Special file: GATBPS_PROG_M4.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_PROG_M4], [{
+AC_DEFUN([GATBPS_PROG_M4], [[{
 
 #
 # The block that contains this comment is the expansion of the
 # GATBPS_PROG_M4 macro.
 #
-m4_ifdef(
+]m4_ifdef(
   [GATBPS_PROG_M4_HAS_BEEN_CALLED],
   [m4_fatal([GATBPS_PROG_M4 has already been called])],
   [m4_define([GATBPS_PROG_M4_HAS_BEEN_CALLED])])dnl
