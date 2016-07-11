@@ -13,8 +13,8 @@ AC_DEFUN([GATBPS_PROG_MKDIR_P], [[{
 #
 # The block that contains this comment is the expansion of the
 # GATBPS_PROG_MKDIR_P macro.
-#
-]m4_ifdef(
+#]dnl
+m4_ifdef(
   [GATBPS_PROG_MKDIR_P_HAS_BEEN_CALLED],
   [m4_fatal([GATBPS_PROG_MKDIR_P has already been called])],
   [m4_define([GATBPS_PROG_MKDIR_P_HAS_BEEN_CALLED])])dnl
@@ -23,6 +23,7 @@ m4_case(
   [0], [],
   [m4_fatal([GATBPS_PROG_MKDIR_P requires exactly 0 arguments])])dnl
 [
+
 ]AC_REQUIRE([AC_PROG_MKDIR_P])[
 
 ]AC_ARG_VAR(

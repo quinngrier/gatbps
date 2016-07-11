@@ -13,8 +13,8 @@ AC_DEFUN([GATBPS_PROG_JAVAC], [[{
 #
 # The block that contains this comment is the expansion of the
 # GATBPS_PROG_JAVAC macro.
-#
-]m4_ifdef(
+#]dnl
+m4_ifdef(
   [GATBPS_PROG_JAVAC_HAS_BEEN_CALLED],
   [m4_fatal([GATBPS_PROG_JAVAC has already been called])],
   [m4_define([GATBPS_PROG_JAVAC_HAS_BEEN_CALLED])])dnl

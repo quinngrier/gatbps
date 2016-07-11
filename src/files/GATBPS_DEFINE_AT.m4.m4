@@ -13,8 +13,8 @@ AC_DEFUN([GATBPS_DEFINE_AT], [[{
 #
 # The block that contains this comment is the expansion of the
 # GATBPS_DEFINE_AT macro.
-#
-]m4_ifdef(
+#]dnl
+m4_ifdef(
   [GATBPS_DEFINE_AT_HAS_BEEN_CALLED],
   [m4_fatal([GATBPS_DEFINE_AT has already been called])],
   [m4_define([GATBPS_DEFINE_AT_HAS_BEEN_CALLED])])dnl
@@ -23,6 +23,7 @@ m4_case(
   [0], [],
   [m4_fatal([GATBPS_DEFINE_AT requires exactly 0 arguments])])dnl
 [
+
 AT='@'
 
 ]AC_SUBST([AT])[

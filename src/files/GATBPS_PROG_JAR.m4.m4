@@ -13,8 +13,8 @@ AC_DEFUN([GATBPS_PROG_JAR], [[{
 #
 # The block that contains this comment is the expansion of the
 # GATBPS_PROG_JAR macro.
-#
-]m4_ifdef(
+#]dnl
+m4_ifdef(
   [GATBPS_PROG_JAR_HAS_BEEN_CALLED],
   [m4_fatal([GATBPS_PROG_JAR has already been called])],
   [m4_define([GATBPS_PROG_JAR_HAS_BEEN_CALLED])])dnl
