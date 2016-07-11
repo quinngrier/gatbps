@@ -223,7 +223,8 @@ m4_define(
   [$2_IS_LEAP_YEAR],
   $1$2_IS_LEAP_YEAR,
   [
-    Define to 1 if $2_YEAR is a leap year, or 0 if not.
+    Define to the integer constant 1 if $2_YEAR is a leap year, or the
+    integer constant 0 if not.
   ])[
 
 ]AC_DEFINE(
