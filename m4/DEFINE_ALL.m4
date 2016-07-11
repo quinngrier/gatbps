@@ -13,6 +13,7 @@ m4_case(
   [0], [],
   [m4_fatal([DEFINE_ALL requires exactly 0 arguments])])dnl
 
+AC_REQUIRE([DEFINE_AT])
 AC_REQUIRE([DEFINE_AWK])
 AC_REQUIRE([DEFINE_AWK_SH])
 AC_REQUIRE([DEFINE_HAVE_SHEBANG_SUPPORT])
