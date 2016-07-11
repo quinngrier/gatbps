@@ -29,9 +29,9 @@ m4_case(
   [MKDIR_P],
   [
     directory creation command
-  ])
+  ])[
 
-:;}])dnl
+:;}]])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
 dnl
 dnl The authors of this file have waived all copyright and
