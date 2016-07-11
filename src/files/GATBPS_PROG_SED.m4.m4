@@ -22,8 +22,8 @@ m4_case(
   [$#],
   [0], [],
   [m4_fatal([GATBPS_PROG_SED requires exactly 0 arguments])])dnl
-
-AC_REQUIRE([AC_PROG_SED])
+[
+]AC_REQUIRE([AC_PROG_SED])
 
 AC_ARG_VAR(
   [SED],

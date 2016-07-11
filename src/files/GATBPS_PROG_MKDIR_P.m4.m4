@@ -22,8 +22,8 @@ m4_case(
   [$#],
   [0], [],
   [m4_fatal([GATBPS_PROG_MKDIR_P requires exactly 0 arguments])])dnl
-
-AC_REQUIRE([AC_PROG_MKDIR_P])
+[
+]AC_REQUIRE([AC_PROG_MKDIR_P])
 
 AC_ARG_VAR(
   [MKDIR_P],
