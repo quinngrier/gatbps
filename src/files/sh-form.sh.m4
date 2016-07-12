@@ -37,8 +37,8 @@ nl='
 
 #
 # The detect_options variable is set to 'yes' if the arguments are being
-# scanned for options or 'no' if not. It starts off with the value 'yes'
-# and is set to 'no' upon finding the -- option.
+# scanned for options, or 'no' if not. It starts off as 'yes' and is set
+# to 'no' upon finding the -- option.
 #
 
 detect_options='yes'
