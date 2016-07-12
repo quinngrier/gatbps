@@ -6,7 +6,7 @@ AC_DEFUN([DEFINE_HAVE_SHEBANG_SUPPORT], [{
 #
 m4_ifdef(
   [DEFINE_HAVE_SHEBANG_SUPPORT_HAS_BEEN_CALLED],
-  [m4_fatal([DEFINE_HAVE_SHEBANG_SUPPORT must be called at most once])],
+  [m4_fatal([DEFINE_HAVE_SHEBANG_SUPPORT has already been called])],
   [m4_define([DEFINE_HAVE_SHEBANG_SUPPORT_HAS_BEEN_CALLED])])dnl
 m4_case(
   [$#],

@@ -6,7 +6,7 @@ AC_DEFUN([DEFINE_TEXI2ANY], [{
 #
 m4_ifdef(
   [DEFINE_TEXI2ANY_HAS_BEEN_CALLED],
-  [m4_fatal([DEFINE_TEXI2ANY must be called at most once])],
+  [m4_fatal([DEFINE_TEXI2ANY has already been called])],
   [m4_define([DEFINE_TEXI2ANY_HAS_BEEN_CALLED])])dnl
 m4_case(
   [$#],

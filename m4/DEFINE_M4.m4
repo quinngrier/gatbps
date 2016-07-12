@@ -6,7 +6,7 @@ AC_DEFUN([DEFINE_M4], [{
 #
 m4_ifdef(
   [DEFINE_M4_HAS_BEEN_CALLED],
-  [m4_fatal([DEFINE_M4 must be called at most once])],
+  [m4_fatal([DEFINE_M4 has already been called])],
   [m4_define([DEFINE_M4_HAS_BEEN_CALLED])])dnl
 m4_case(
   [$#],

@@ -6,7 +6,7 @@ AC_DEFUN([DEFINE_SED], [{
 #
 m4_ifdef(
   [DEFINE_SED_HAS_BEEN_CALLED],
-  [m4_fatal([DEFINE_SED must be called at most once])],
+  [m4_fatal([DEFINE_SED has already been called])],
   [m4_define([DEFINE_SED_HAS_BEEN_CALLED])])dnl
 m4_case(
   [$#],

@@ -6,7 +6,7 @@ AC_DEFUN([DEFINE_AWK], [{
 #
 m4_ifdef(
   [DEFINE_AWK_HAS_BEEN_CALLED],
-  [m4_fatal([DEFINE_AWK must be called at most once])],
+  [m4_fatal([DEFINE_AWK has already been called])],
   [m4_define([DEFINE_AWK_HAS_BEEN_CALLED])])dnl
 m4_case(
   [$#],
