@@ -12,10 +12,11 @@ m4_case(
   [$#],
   [0], [],
   [m4_fatal([DEFINE_AWK requires exactly 0 arguments])])dnl
+[
 
-AC_REQUIRE([GATBPS_PROG_AWK])
+]AC_REQUIRE([GATBPS_PROG_AWK])[
 
-:;}])dnl
+:;}]])dnl
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by

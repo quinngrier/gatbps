@@ -12,17 +12,18 @@ m4_case(
   [$#],
   [0], [],
   [m4_fatal([DEFINE_HAVE_SHEBANG_SUPPORT requires exactly 0 arguments])])dnl
+[
 
-AC_REQUIRE([AC_SYS_INTERPRETER])
+]AC_REQUIRE([AC_SYS_INTERPRETER])[
 
-GATBPS_CHECK_VARS(
+]GATBPS_CHECK_VARS(
   [shebang support],
   [HAVE_SHEBANG_SUPPORT],
   [
     interpval
-  ])
+  ])[
 
-:;}])dnl
+:;}]])dnl
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by

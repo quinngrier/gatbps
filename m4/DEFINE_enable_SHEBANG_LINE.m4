@@ -12,16 +12,17 @@ m4_case(
   [$#],
   [0], [],
   [m4_fatal([DEFINE_enable_SHEBANG_LINE requires exactly 0 arguments])])dnl
+[
 
-GATBPS_ARG_ENABLE_BOOL(
+]GATBPS_ARG_ENABLE_BOOL(
   [permission to add a shebang line to gatbps],
   [enable_SHEBANG_LINE],
   [shebang-line],
   [yes],
   [add a shebang line to gatbps],
-  [do not add a shebang line to gatbps])
+  [do not add a shebang line to gatbps])[
 
-:;}])dnl
+:;}]])dnl
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by
