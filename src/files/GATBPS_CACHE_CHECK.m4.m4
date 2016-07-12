@@ -13,7 +13,7 @@ AC_DEFUN([GATBPS_CACHE_CHECK], [[{
 #
 # The block that contains this comment is the expansion of the
 # GATBPS_CACHE_CHECK macro for ]m4_if(
-  m4_eval(m4_len([(gatbps_cv_)$2.]) > 41),
+  m4_eval(m4_len([(gatbps_cv_)$2.])[ > 41]),
   [1],
   [
 # ])(gatbps_cv_)$2.
@@ -47,7 +47,7 @@ AC_CACHE_CHECK(
     #
     # The block that contains this comment is the AC_CACHE_CHECK code
     # for ]m4_if(
-      m4_eval(m4_len([(gatbps_cv_)$2.]) > 62),
+      m4_eval(m4_len([(gatbps_cv_)$2.])[ > 62]),
       [1],
       [
     # ])[(gatbps_cv_)$2.
