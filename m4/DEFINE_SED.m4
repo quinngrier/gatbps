@@ -1,9 +1,9 @@
-AC_DEFUN([DEFINE_SED], [{
+AC_DEFUN([DEFINE_SED], [[{
 
 #
 # The block that contains this comment is the expansion of the
 # DEFINE_SED macro.
-#
+#]dnl
 m4_ifdef(
   [DEFINE_SED_HAS_BEEN_CALLED],
   [m4_fatal([DEFINE_SED has already been called])],

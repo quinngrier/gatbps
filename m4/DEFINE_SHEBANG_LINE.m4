@@ -1,9 +1,9 @@
-AC_DEFUN([DEFINE_SHEBANG_LINE], [{
+AC_DEFUN([DEFINE_SHEBANG_LINE], [[{
 
 #
 # The block that contains this comment is the expansion of the
 # DEFINE_SHEBANG_LINE macro.
-#
+#]dnl
 m4_ifdef(
   [DEFINE_SHEBANG_LINE_HAS_BEEN_CALLED],
   [m4_fatal([DEFINE_SHEBANG_LINE has already been called])],

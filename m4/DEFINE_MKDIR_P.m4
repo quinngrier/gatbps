@@ -1,9 +1,9 @@
-AC_DEFUN([DEFINE_MKDIR_P], [{
+AC_DEFUN([DEFINE_MKDIR_P], [[{
 
 #
 # The block that contains this comment is the expansion of the
 # DEFINE_MKDIR_P macro.
-#
+#]dnl
 m4_ifdef(
   [DEFINE_MKDIR_P_HAS_BEEN_CALLED],
   [m4_fatal([DEFINE_MKDIR_P has already been called])],

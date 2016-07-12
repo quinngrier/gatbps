@@ -1,9 +1,9 @@
-AC_DEFUN([DEFINE_TEXI2ANY], [{
+AC_DEFUN([DEFINE_TEXI2ANY], [[{
 
 #
 # The block that contains this comment is the expansion of the
 # DEFINE_TEXI2ANY macro.
-#
+#]dnl
 m4_ifdef(
   [DEFINE_TEXI2ANY_HAS_BEEN_CALLED],
   [m4_fatal([DEFINE_TEXI2ANY has already been called])],

@@ -1,9 +1,9 @@
-AC_DEFUN([DEFINE_MAKEINFO], [{
+AC_DEFUN([DEFINE_MAKEINFO], [[{
 
 #
 # The block that contains this comment is the expansion of the
 # DEFINE_MAKEINFO macro.
-#
+#]dnl
 m4_ifdef(
   [DEFINE_MAKEINFO_HAS_BEEN_CALLED],
   [m4_fatal([DEFINE_MAKEINFO has already been called])],

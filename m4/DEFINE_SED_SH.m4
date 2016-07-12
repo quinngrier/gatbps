@@ -1,9 +1,9 @@
-AC_DEFUN([DEFINE_SED_SH], [{
+AC_DEFUN([DEFINE_SED_SH], [[{
 
 #
 # The block that contains this comment is the expansion of the
 # DEFINE_SED_SH macro.
-#
+#]dnl
 m4_ifdef(
   [DEFINE_SED_SH_HAS_BEEN_CALLED],
   [m4_fatal([DEFINE_SED_SH has already been called])],
