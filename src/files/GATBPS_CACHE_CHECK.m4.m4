@@ -30,7 +30,7 @@ AC_DEFUN([GATBPS_CACHE_CHECK], [[{
 #
 #    2. If the cache variable is not cached, then the AC_CACHE_CHECK
 #       code below runs, which updates the following variable to 'no'
-#       and runs the caller-provided code to set the cache variable.
+#       and runs the code to set the cache variable.
 #
 
 $2_was_cached='yes'
