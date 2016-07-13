@@ -78,31 +78,6 @@ file to set the variables if you are not using Automake:
 JAVAC = @@JAVAC@@
 JAR = @@JAR@@
 @end example
-
-@include indent.texi
-The
-@w{@t{GATBPS_PROG_JAVAC}}
-macro also prepares the
-@w{@t{JAVACFLAGS}}
-and
-@w{@t{CLASSPATH}}
-variables by calling the
-@w{@t{AC_ARG_VAR}}
-macro@.
-These variables are used with the
-@w{@t{javac}}
-tool@.
-If you are using Automake, then you do not need to do anything beyond
-calling the
-@w{@t{GATBPS_PROG_JAVAC}}
-macro to set these variables@.
-Otherwise, you also need to add the
-@w{@t{JAVACFLAGS = @@JAVACFLAGS@@}}
-and
-@w{@t{CLASSPATH = @@CLASSPATH@@}}
-lines to your
-@w{@t{Makefile.@:in}}
-file@.
 @ifxml
 @ifnotxml
 @c
