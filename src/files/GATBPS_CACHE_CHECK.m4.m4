@@ -49,8 +49,8 @@ $2_was_cached='yes'
     # for ]]m4_if(
       m4_eval(m4_len([(gatbps_cv_)$2.])[ > 62]),
       [1],
-      [
-    # ])[[(gatbps_cv_)$2.
+      [[
+    # ]])[[(gatbps_cv_)$2.
     #
 
     $2_was_cached='no'
