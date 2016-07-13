@@ -4,42 +4,33 @@ include({%|src/tools/footer_comment.m4|%})dnl
 include({%|src/tools/header_comment.m4|%})dnl
 header_comment({%|dnl|%}, {%|dnl|%}){%|
 dnl
-dnl Special file: GATBPS_PROG_JAVAC.m4
+dnl Special file: GATBPS_DEFINE_JAVACFLAGS.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_PROG_JAVAC], [[{
+AC_DEFUN([GATBPS_DEFINE_JAVACFLAGS], [[{
 
 #
 # The block that contains this comment is the expansion of the
-# GATBPS_PROG_JAVAC macro.
+# GATBPS_DEFINE_JAVACFLAGS macro.
 #]dnl
 m4_ifdef(
-  [GATBPS_PROG_JAVAC_HAS_BEEN_CALLED],
-  [m4_fatal([GATBPS_PROG_JAVAC has already been called])],
-  [m4_define([GATBPS_PROG_JAVAC_HAS_BEEN_CALLED])])dnl
+  [GATBPS_DEFINE_JAVACFLAGS_HAS_BEEN_CALLED],
+  [m4_fatal([GATBPS_DEFINE_JAVACFLAGS has already been called])],
+  [m4_define([GATBPS_DEFINE_JAVACFLAGS_HAS_BEEN_CALLED])])dnl
 m4_case(
   [$#],
   [0], [],
-  [m4_fatal([GATBPS_PROG_JAVAC requires exactly 0 arguments])])dnl
+  [m4_fatal([GATBPS_DEFINE_JAVACFLAGS requires exactly 0 arguments])])dnl
+[
 
-AC_CHECK_PROGS(
-  [JAVAC],
-  [javac])
-
-AC_ARG_VAR(
-  [JAVAC],
+]AC_ARG_VAR(
+  [JAVACFLAGS],
   [
-    Java compiler command
-  ])
+    Java compiler flags
+  ])[
 
-AC_ARG_VAR(
-  [CLASSPATH],
-  [
-    Java compiler class path
-  ])
-
-:;}])dnl
+:;}]])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
 dnl
 dnl The authors of this file have waived all copyright and
