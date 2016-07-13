@@ -46,11 +46,11 @@ $2_was_cached='yes'
 
     #
     # The block that contains this comment is the AC_CACHE_CHECK code
-    # for ]m4_if(
+    # for ]]m4_if(
       m4_eval(m4_len([(gatbps_cv_)$2.])[ > 62]),
       [1],
       [
-    # ])[(gatbps_cv_)$2.
+    # ])[[(gatbps_cv_)$2.
     #
 
     $2_was_cached='no'
