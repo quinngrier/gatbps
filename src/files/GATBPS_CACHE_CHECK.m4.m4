@@ -16,7 +16,7 @@ AC_DEFUN([GATBPS_CACHE_CHECK], [[{
   m4_eval(m4_len([(gatbps_cv_)$2.])[ > 41]),
   [1],
   [[
-# ]])(gatbps_cv_)$2.
+# ]])[(gatbps_cv_)$2.
 #
 
 #
@@ -39,7 +39,7 @@ $2_was_cached='yes'
 # The rest of the code in this block is the expansion of AC_CACHE_CHECK.
 #
 
-AC_CACHE_CHECK(
+]AC_CACHE_CHECK(
   [$1],
   [gatbps_cv_$2],
   [[{
