@@ -15,8 +15,8 @@ AC_DEFUN([GATBPS_CACHE_CHECK], [[{
 # GATBPS_CACHE_CHECK macro for ]m4_if(
   m4_eval(m4_len([(gatbps_cv_)$2.])[ > 41]),
   [1],
-  [
-# ])(gatbps_cv_)$2.
+  [[
+# ]])(gatbps_cv_)$2.
 #
 
 #
