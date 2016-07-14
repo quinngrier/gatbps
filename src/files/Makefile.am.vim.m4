@@ -11,6 +11,39 @@ header_comment({%|"|%}, {%|"|%}){%|
 
 let s:view = winsaveview()
 
+let s:mark = '\m^## \%(begin\|end\)_'
+
+let s:s1 = '\m^## begin_includes$'
+let s:s2 = '\m^## end_includes$'
+call cursor(1, 1)
+let s:n1 = search(s:s1, 'cW')
+while s:n1 != 0
+  call cursor(s:n1, 1)
+  let s:n2 = search(s:s2, 'W')
+  if s:n2 == 0
+    echoe 'missing end_includes for line ' . s:n1
+    call winrestview(s:view)
+    finish
+  endif
+  call cursor(s:n1, 1)
+  let s:n3 = search(s:mark, 'W')
+  if s:n3 != 0 && s:n3 < s:n2
+    echoe 'section conflict at line ' . s:n3
+    call winrestview(s:view)
+    finish
+  endif
+  exec s:n1 . ',' . s:n2 . 'g/\m^$/d'
+  exec s:n1 . 's/\m$/\r/'
+  call cursor(s:n1, 1)
+  let s:n2 = search(s:s2, 'W')
+  exec s:n1 . '+1,' . s:n2 . '-1sort u'
+  call cursor(s:n1, 1)
+  let s:n2 = search(s:s2, 'W')
+  exec s:n2 . 's/\m^/\r/'
+  call cursor(s:n1, 1)
+  let s:n1 = search(s:s1, 'W')
+endwhile
+
 let s:s1 = '\m^## begin_variables$'
 let s:s2 = '\m^## end_variables$'
 
