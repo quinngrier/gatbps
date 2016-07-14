@@ -548,6 +548,7 @@ EOF1
           set "${prefix}echo.sh" "${@AT@}"
           set "${prefix}dvi-dist.am" "${@AT@}"
           set "${prefix}dslash.texi" "${@AT@}"
+          set "${prefix}doxygen.am" "${@AT@}"
           set "${prefix}docbook.am" "${@AT@}"
           set "${prefix}docbook-dist.am" "${@AT@}"
           set "${prefix}contents.texi" "${@AT@}"
@@ -1673,6 +1674,8 @@ EOF1
 |%}help_code({%|docbook-dist.am|%}){%|
 
 |%}help_code({%|docbook.am|%}){%|
+
+|%}help_code({%|doxygen.am|%}){%|
 
           #(
             '--help=dslash.texi'|'--help='*'/dslash.texi')
@@ -5141,6 +5144,8 @@ EOF1
 
 |%}generation_code({%|docbook.am|%}){%|
 
+|%}generation_code({%|doxygen.am|%}){%|
+
         #(
           'no,dslash.texi'|'no,'*'/dslash.texi')
             cat >"${safe_1}" <<'EOF1'
@@ -8473,6 +8478,12 @@ EOF1
 
 |%}recursion_code(
   {%|docbook.am|%},
+  {%|
+            set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
+|%}){%|
+
+|%}recursion_code(
+  {%|doxygen.am|%},
   {%|
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
