@@ -24,6 +24,8 @@ m4_case(
   [m4_fatal([GATBPS_PROG_JAVAC requires exactly 0 arguments])])dnl
 [
 
+]AC_REQUIRE([GATBPS_DEFINE_JAVACFLAGS])[
+
 ]AC_CHECK_PROGS(
   [JAVAC],
   [javac])[

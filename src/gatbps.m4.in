@@ -8364,6 +8364,7 @@ EOF1
 |%}recursion_code(
   {%|GATBPS_PROG_JAVAC.m4|%},
   {%|
+            set 'x' "${prefix}GATBPS_DEFINE_JAVACFLAGS.m4" "${@AT@}"; shift
             set 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; shift
 |%}){%|
 
