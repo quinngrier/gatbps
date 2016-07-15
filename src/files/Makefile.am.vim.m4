@@ -27,7 +27,7 @@ while s:n1 != 0
   endif
   call cursor(s:n1, 1)
   let s:n3 = search(s:mark, 'W')
-  if s:n3 != 0 && s:n3 < s:n2
+  if s:n3 != s:n2
     echoe 'section conflict at line ' . s:n3
     call winrestview(s:view)
     finish
