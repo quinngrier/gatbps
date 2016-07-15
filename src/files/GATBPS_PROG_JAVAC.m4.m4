@@ -22,18 +22,19 @@ m4_case(
   [$#],
   [0], [],
   [m4_fatal([GATBPS_PROG_JAVAC requires exactly 0 arguments])])dnl
+[
 
-AC_CHECK_PROGS(
+]AC_CHECK_PROGS(
   [JAVAC],
-  [javac])
+  [javac])[
 
-AC_ARG_VAR(
+]AC_ARG_VAR(
   [JAVAC],
   [
     Java compiler command
-  ])
+  ])[
 
-:;}])dnl
+:;}]])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
 dnl
 dnl The authors of this file have waived all copyright and
