@@ -565,6 +565,7 @@ EOF1
           set "${prefix}PACKAGEVERSION.texi.in" "${@AT@}"
           set "${prefix}PACKAGEDATE.texi.in" "${@AT@}"
           set "${prefix}Makefile.am.vim" "${@AT@}"
+          set "${prefix}INPUT_FILTER.sh.in" "${@AT@}"
           set "${prefix}GATBPS_PROG_TEXI2ANY.m4" "${@AT@}"
           set "${prefix}GATBPS_PROG_SED.m4" "${@AT@}"
           set "${prefix}GATBPS_PROG_MKDIR_P.m4" "${@AT@}"
@@ -1436,6 +1437,8 @@ EOF1
 |%}help_code({%|GATBPS_PROG_SED.m4|%}){%|
 
 |%}help_code({%|GATBPS_PROG_TEXI2ANY.m4|%}){%|
+
+|%}help_code({%|INPUT_FILTER.sh.in|%}){%|
 
           #(
             '--help=Makefile.am.vim'|'--help='*'/Makefile.am.vim')
@@ -4265,6 +4268,8 @@ EOF1
 |%}generation_code({%|GATBPS_PROG_SED.m4|%}){%|
 
 |%}generation_code({%|GATBPS_PROG_TEXI2ANY.m4|%}){%|
+
+|%}generation_code({%|INPUT_FILTER.sh.in|%}){%|
 
 |%}generation_code({%|Makefile.am.vim|%}){%|
 
@@ -8406,6 +8411,12 @@ EOF1
 
 |%}recursion_code(
   {%|GATBPS_PROG_TEXI2ANY.m4|%},
+  {%|
+            'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|INPUT_FILTER.sh.in|%},
   {%|
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
