@@ -561,6 +561,7 @@ EOF1
           set "${prefix}VERSION.sh" "${@AT@}"
           set "${prefix}VERSION.ac" "${@AT@}"
           set "${prefix}TEST_EXIT.h" "${@AT@}"
+          set "${prefix}PACKAGE_VERSION.df.in" "${@AT@}"
           set "${prefix}PACKAGEVERSION.texi.in" "${@AT@}"
           set "${prefix}PACKAGEDATE.texi.in" "${@AT@}"
           set "${prefix}Makefile.am.vim" "${@AT@}"
@@ -1463,6 +1464,8 @@ EOF1
 |%}help_code({%|PACKAGEDATE.texi.in|%}){%|
 
 |%}help_code({%|PACKAGEVERSION.texi.in|%}){%|
+
+|%}help_code({%|PACKAGE_VERSION.df.in|%}){%|
 
 |%}help_code({%|TEST_EXIT.h|%}){%|
 
@@ -4310,6 +4313,8 @@ EOF1
 |%}generation_code({%|PACKAGEDATE.texi.in|%}){%|
 
 |%}generation_code({%|PACKAGEVERSION.texi.in|%}){%|
+
+|%}generation_code({%|PACKAGE_VERSION.df.in|%}){%|
 
 |%}generation_code({%|TEST_EXIT.h|%}){%|
 
@@ -8419,6 +8424,12 @@ EOF1
 
 |%}recursion_code(
   {%|PACKAGEVERSION.texi.in|%},
+  {%|
+            'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|PACKAGE_VERSION.df.in|%},
   {%|
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
