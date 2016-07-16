@@ -39,6 +39,7 @@ $(javadoc_dst): $(javadoc_src_nodist)
   $(JAVADOC) \
     '-d' \
     $(javadoc_dst) \
+    $(javadoc_JAVADOCFLAGS) \
     $(JAVADOCFLAGS) \
     $${src} \
   ; \
