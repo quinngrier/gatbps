@@ -36,7 +36,11 @@ $(javadoc_dst): $(javadoc_src_nodist)
       src="$${src} $(srcdir)/$${x}"; \
     fi; \
   done; \
-  $(JAVADOC) '-d' $(javadoc_dst) $${src}; \
+  $(JAVADOC) \
+    '-d' \
+    $(javadoc_dst) \
+    $${src} \
+  ; \
 }
 
 .PHONY: clean-javadoc
