@@ -30,7 +30,7 @@ For the copyright information on the copyright texts,
 @pxref{Copyright Texts}@.
 @end ifset
 @ifclear fullmanual
-see the Copyright Texts section of the manual@.
+see the Copyright Texts section of the GATBPS manual@.
 @end ifclear
 @ifxml
 @ifnotxml
