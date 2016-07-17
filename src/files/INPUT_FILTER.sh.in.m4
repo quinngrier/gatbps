@@ -24,6 +24,7 @@ LC_ALL='C'
 
 @SED@ '
   s/<!--\([\\@AT@]code{.*}\)--><blockquote><pre>$/\1/
+  s/<!--[\\@AT@]code-->{@AT@literal \([^{}]*\)}/\1/g
   s/<\/pre><\/blockquote><!--\([\\@AT@]endcode\)-->$/\1/
 ' <"${1}"
 
