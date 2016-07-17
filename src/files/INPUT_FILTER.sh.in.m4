@@ -23,8 +23,8 @@ LC_ALL='C'
 'export' 'LC_ALL'
 
 @SED@ '
-  s/<!--\(@AT@code{.*}\)--><blockquote><pre>$/\1/
-  s/<\/pre><\/blockquote><!--\(@AT@endcode\)-->$/\1/
+  s/<!--\([\\@AT@]code{.*}\)--><blockquote><pre>$/\1/
+  s/<\/pre><\/blockquote><!--\([\\@AT@]endcode\)-->$/\1/
 ' <"${1}"
 
 |%}footer_comment({%|#|%}, {%|#|%}, {%|#|%})dnl
