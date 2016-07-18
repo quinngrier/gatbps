@@ -11,7 +11,8 @@ All parts of GATBPS are original work except for some of the copyright
 texts@.
 The authors of the original work have waived all copyright and related
 or neighboring rights to the extent permitted by law as described by the
-Creative Commons Zero (CC0) 1.@:0 Universal Public Domain Dedication@.
+Creative Commons Zero (CC0)@tie{}1.@:0 Universal Public Domain
+Dedication@.
 @ifset fullmanual
 For the full dedication,
 @pxref{Creative Commons Zero 1-0}@.
