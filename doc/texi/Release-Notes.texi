@@ -8,7 +8,7 @@
 
 @ifset fullmanual
 @menu
-* @w{YYYY-MM-DD} --- GATBPS @w{0-1-0}::
+* @w{YYYY-MM-DD}@tie{}--- GATBPS@tie{}@w{0-1-0}::
 @end menu
 
 @end ifset

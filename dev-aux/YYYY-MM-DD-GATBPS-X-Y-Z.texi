@@ -1,9 +1,9 @@
 @ifset fullmanual
-@node @w{YYYY-MM-DD} --- GATBPS @w{X-Y-Z}
-@unnumbered @w{YYYY-MM-DD} --- GATBPS @w{X.@:Y.@:Z}
+@node @w{YYYY-MM-DD}@tie{}--- GATBPS@tie{}@w{X-Y-Z}
+@unnumbered @w{YYYY-MM-DD}@tie{}--- GATBPS@tie{}@w{X.@:Y.@:Z}
 @end ifset
 @ifclear fullmanual
-@unnumbered @w{YYYY-MM-DD} --- GATBPS @w{X.@:Y.@:Z}
+@unnumbered @w{YYYY-MM-DD}@tie{}--- GATBPS@tie{}@w{X.@:Y.@:Z}
 @end ifclear
 
 @ifxml
