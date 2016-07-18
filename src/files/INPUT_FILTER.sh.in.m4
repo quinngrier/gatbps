@@ -22,10 +22,49 @@ header_comment({%|#|%}, {%|#|%}){%|
 LC_ALL='C'
 'export' 'LC_ALL'
 
-@SED@ '
-  s/<!--\([\\@AT@]code{.*}\)--><blockquote><pre>$/\1/
-  s/<!--[\\@AT@]code-->{@AT@literal \([^{}]*\)}/\1/g
-  s/<\/pre><\/blockquote><!--\([\\@AT@]endcode\)-->$/\1/
+@AWK@ '
+  BEGIN {
+    in_code_block = 0
+  }
+  {
+    if (0 ||
+      $0 ~ /<!--[@AT@\\]code--><blockquote><pre>$/ ||
+      $0 ~ /<!--[@AT@\\]code{[^{}<>]*}--><blockquote><pre>$/ ||
+    0) {
+      n = split($0, x, /<!--/)
+      i = 0
+      $0 = ""
+      while (i != n) {
+        ++i
+        if (i == n) {
+          sub(/-->.*/, "", x[i])
+          command_character = substr(x[i], 1, 1)
+        } else if (i != 1) {
+          $0 = $0 "<!--"
+        }
+        $0 = $0 x[i]
+      }
+      in_code_block = 1
+    } else if (in_code_block) {
+      if ($0 ~ /<\/pre><\/blockquote>$/) {
+        sub(/<\/pre><\/blockquote>$/, "", $0)
+        $0 = $0 command_character "endcode"
+        in_code_block = 0
+      } else {
+        n = split($0, x, "{@literal ")
+        i = 0
+        $0 = ""
+        while (i != n) {
+          ++i
+          if (i != 1) {
+            sub(/[{}]/, "", x[i])
+          }
+          $0 = $0 x[i]
+        }
+      }
+    }
+    print $0
+  }
 ' <"${1}"
 
 |%}footer_comment({%|#|%}, {%|#|%}, {%|#|%})dnl
