@@ -54,8 +54,8 @@
 
 This manual is for
 GATBPS@tie{}@w{@value{PACKAGEVERSION}},
-which was released on
-@w{@value{PACKAGEDATE}}@.
+which was released
+on@tie{}@w{@value{PACKAGEDATE}}@.
 @ifplaintext
 
 @insertcopying
