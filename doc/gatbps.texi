@@ -34,11 +34,11 @@
 @end direntry
 
 @ifplaintext
-@chapheading GATBPS @w{@value{PACKAGEVERSION}}
+@chapheading GATBPS@tie{}@w{@value{PACKAGEVERSION}}
 @end ifplaintext
 
 @titlepage
-@title GATBPS @w{@value{PACKAGEVERSION}}
+@title GATBPS@tie{}@w{@value{PACKAGEVERSION}}
 @subtitle @w{@value{PACKAGEDATE}}
 @vskip 0pt plus 1filll
 @page
@@ -50,10 +50,10 @@
 
 @ifnottex
 @node Top
-@top GATBPS @w{@value{PACKAGEVERSION}}
+@top GATBPS@tie{}@w{@value{PACKAGEVERSION}}
 
-This manual is for GATBPS
-@w{@value{PACKAGEVERSION}@comma{}}
+This manual is for
+GATBPS@tie{}@w{@value{PACKAGEVERSION}@comma{}}
 which was released on
 @w{@value{PACKAGEDATE}@.}
 @ifplaintext
