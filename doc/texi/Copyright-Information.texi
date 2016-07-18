@@ -25,7 +25,7 @@ file, typically as a file named
 If not, it may be available at
 @url{https://creativecommons.org/publicdomain/zero/1.0/}@.
 @end ifclear
-For the copyright information on the copyright texts,
+For the copyright information regarding the copyright texts,
 @ifset fullmanual
 @pxref{Copyright Texts}@.
 @end ifset
