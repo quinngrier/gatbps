@@ -11,6 +11,24 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 ## begin_rules
 
+.PHONY: clean-main-doxygen
+.PHONY: doxygen
+.PHONY: main-doxygen
+
+clean-main-doxygen:
+	@-':' #(
+	-{ \
+  case ''$(doxygen_dst) in \
+    ?*) \
+      'rm' '-f' '-r' './'$(doxygen_dst) \
+    ;; \
+  esac; \
+:;}
+
+doxygen: main-doxygen
+
+main-doxygen: $(doxygen_dst)
+
 ## end_rules
 
 |%}footer_comment({%|##|%}, {%|##|%}, {%|##|%})dnl
