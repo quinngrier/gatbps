@@ -53,9 +53,9 @@
 @top GATBPS@tie{}@w{@value{PACKAGEVERSION}}
 
 This manual is for
-GATBPS@tie{}@w{@value{PACKAGEVERSION}@comma{}}
+GATBPS@tie{}@w{@value{PACKAGEVERSION}},
 which was released on
-@w{@value{PACKAGEDATE}@.}
+@w{@value{PACKAGEDATE}}@.
 @ifplaintext
 
 @insertcopying
