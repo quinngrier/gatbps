@@ -27,6 +27,7 @@ LC_ALL='C'
     in_javadoc_code_block = 0
   }
   {
+    #{
     if (0 ||
       $0 ~ /<!--[@AT@\\]code--><blockquote><pre>$/ ||
       $0 ~ /<!--[@AT@\\]code{[^}>]*}--><blockquote><pre>$/ ||
@@ -52,11 +53,13 @@ LC_ALL='C'
         in_javadoc_code_block = 0
       } else {
         n = split($0, x, /{@literal/)
+        #}
         i = 0
         $0 = ""
         while (i != n) {
           ++i
           if (i != 1) {
+            #{
             sub(/}/, "", x[i])
           }
           $0 = $0 x[i]
