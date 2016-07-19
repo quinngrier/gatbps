@@ -24,7 +24,7 @@ LC_ALL='C'
 
 @AWK@ '
   BEGIN {
-    in_code_block = 0
+    in_javadoc_code_block = 0
   }
   {
     if (0 ||
@@ -44,12 +44,12 @@ LC_ALL='C'
         }
         $0 = $0 x[i]
       }
-      in_code_block = 1
-    } else if (in_code_block) {
+      in_javadoc_code_block = 1
+    } else if (in_javadoc_code_block) {
       if ($0 ~ /<\/pre><\/blockquote>$/) {
         sub(/<\/pre><\/blockquote>$/, "", $0)
         $0 = $0 command_character "endcode"
-        in_code_block = 0
+        in_javadoc_code_block = 0
       } else {
         n = split($0, x, "{@literal ")
         i = 0
