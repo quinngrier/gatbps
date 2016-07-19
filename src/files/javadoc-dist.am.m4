@@ -37,7 +37,7 @@ clean-$(javadoc_dist_dst):
 	-{ \
   case ''$(javadoc_dist_dst) in \
     ?*) \
-      'rm' '-f' '-r' './'$(javadoc_dist_dst) \
+      'rm' '-f' '-r' './'$(javadoc_dist_dst); \
     ;; \
   esac; \
 :;}

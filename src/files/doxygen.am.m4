@@ -20,7 +20,7 @@ clean-main-doxygen:
 	-{ \
   case ''$(doxygen_dst) in \
     ?*) \
-      'rm' '-f' '-r' './'$(doxygen_dst) \
+      'rm' '-f' '-r' './'$(doxygen_dst); \
     ;; \
   esac; \
 :;}

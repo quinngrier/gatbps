@@ -37,7 +37,7 @@ clean-$(html_dist_dst):
 	-{ \
   case ''$(html_dist_dst) in \
     ?*) \
-      'rm' '-f' '-r' './'$(html_dist_dst) \
+      'rm' '-f' '-r' './'$(html_dist_dst); \
     ;; \
   esac; \
 :;}
