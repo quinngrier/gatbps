@@ -29,7 +29,7 @@ LC_ALL='C'
   {
     if (0 ||
       $0 ~ /<!--[@AT@\\]code--><blockquote><pre>$/ ||
-      $0 ~ /<!--[@AT@\\]code{[^{}<>]*}--><blockquote><pre>$/ ||
+      $0 ~ /<!--[@AT@\\]code{[^}>]*}--><blockquote><pre>$/ ||
     0) {
       n = split($0, x, /<!--/)
       i = 0
@@ -57,7 +57,7 @@ LC_ALL='C'
         while (i != n) {
           ++i
           if (i != 1) {
-            sub(/[{}]/, "", x[i])
+            sub(/}/, "", x[i])
           }
           $0 = $0 x[i]
         }
