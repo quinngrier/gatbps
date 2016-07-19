@@ -51,7 +51,7 @@ LC_ALL='C'
         $0 = $0 command_character "endcode"
         in_javadoc_code_block = 0
       } else {
-        n = split($0, x, /{@literal /)
+        n = split($0, x, /{@literal/)
         i = 0
         $0 = ""
         while (i != n) {
