@@ -12,12 +12,12 @@ header_comment({%|@ifxml
 @c contains the complete text of the Creative Commons Zero (CC0) 1.0
 @c Universal Public Domain Dedication. It can be included in another
 @c Texinfo file where the appendix is desired to appear. The appendix is
-@c labeled with @node Creative Commons Zero 1-0 so that it maintains the
+@c labeled with @node Creative Commons Zero@tie{}@w{1-0} so that it maintains the
 @c usual node structure and can be cross-referenced.
 @c
 @end ifnotxml
 @end ifxml
-@node Creative Commons Zero 1-0
+@node Creative Commons Zero@tie{}@w{1-0}
 @appendix Creative Commons Zero 1.@:0
 
 @noindent
