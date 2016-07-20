@@ -23,20 +23,19 @@ option of
 @include ipez.texi
 The
 @w{@t{CC0-1.@:0-appendix.@:texi}}
-special file
-is a Texinfo
-appendix that contains
-the complete text of the
-Creative Commons Zero (CC0) 1.@:0
+special file is a Texinfo appendix that contains the complete text of
+the Creative Commons Zero
+(CC0)@tie{}1.@:0
 Universal Public Domain Dedication@.
-It can be included
-in another Texinfo file where
-the appendix is desired to appear@.
+It can be included in a Texinfo document where the appendix is desired
+to appear@.
 The appendix is labeled with
-@w{@t{@@node Creative Commons Zero@tie{}@w{1-0}}}
-so that it maintains
-the usual node structure
-and can be cross-referenced@.
+@w{@t{@@node}}
+@w{@t{Creative}}
+@w{@t{Commons}}
+@w{@t{Zero@@tie@{@}@@w@{1-0@}}}
+so that it maintains the usual node structure and can be
+cross-referenced@.
 
 For more information, @pxref{Copyright Texts}@.
 
