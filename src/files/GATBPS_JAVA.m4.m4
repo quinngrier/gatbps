@@ -26,7 +26,6 @@ m4_foreach_w(
     gatbps_new_rules='./$[](java_[]gatbps_y[]_dst): $[](java_[]gatbps_y[]_dep)
 ./$[](java_[]gatbps_y[]_dst): $[](java_[]gatbps_y[]_extra)
 ./$[](java_[]gatbps_y[]_dst): $[](java_[]gatbps_y[]_src)
-	@-'\'':'\'' #(
 	$[](GATBPS_V_JAR){ \
   ( \
     '\''rm'\'' \
@@ -116,7 +115,6 @@ install-java: install-java-gatbps_x
 
 install-java-gatbps_x: java-gatbps_x
 	@$[](NORMAL_INSTALL)
-	@-'\'':'\'' #(((((
 	$[](AM@&t@_V_at){ \
   case '\'''\''$[](java_[]gatbps_y[]_noinst) in \
     ?*) \
@@ -182,7 +180,6 @@ install-java-gatbps_x: java-gatbps_x
 java: java-gatbps_x
 
 java-gatbps_x:
-	@-'\'':'\'' #((
 	$[](AM@&t@_V_at){ \
   ( \
     x='\'''\''; \
@@ -251,7 +248,6 @@ uninstall-java: uninstall-java-gatbps_x
 
 uninstall-java-gatbps_x:
 	@$[](NORMAL_UNINSTALL)
-	@-'\'':'\'' #((((
 	$[](AM@&t@_V_at){ \
   case '\'''\''$[](java_[]gatbps_y[]_noinst) in \
     ?*) \
