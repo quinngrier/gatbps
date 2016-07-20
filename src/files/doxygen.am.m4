@@ -16,7 +16,6 @@ header_comment({%|##|%}, {%|##|%}){%|
 .PHONY: main-doxygen
 
 clean-main-doxygen:
-	@-':' #(
 	-{ \
   case ''$(doxygen_dst) in \
     ?*) \

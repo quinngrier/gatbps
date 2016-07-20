@@ -33,7 +33,6 @@ $(html_dist_dst): $(html_dist_dep)
 .PHONY: clean-$(html_dist_dst)
 
 clean-$(html_dist_dst):
-	@-':' #(
 	-{ \
   case ''$(html_dist_dst) in \
     ?*) \

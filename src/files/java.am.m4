@@ -46,7 +46,6 @@ GATBPS_V_JAVAC_1 =
 ./$(java_dst): $(java_dep)
 ./$(java_dst): $(java_extra)
 ./$(java_dst): $(java_src)
-	@-':' #(
 	$(GATBPS_V_JAR){ \
   ( \
     'rm' \
@@ -157,7 +156,6 @@ install-java: install-main-java
 
 install-main-java: main-java
 	@$(NORMAL_INSTALL)
-	@-':' #(((((
 	$(AM_V_at){ \
   case ''$(java_noinst) in \
     ?*) \
@@ -223,7 +221,6 @@ install-main-java: main-java
 java: main-java
 
 main-java:
-	@-':' #((
 	$(AM_V_at){ \
   ( \
     x=''; \
@@ -292,7 +289,6 @@ uninstall-java: uninstall-main-java
 
 uninstall-main-java:
 	@$(NORMAL_UNINSTALL)
-	@-':' #((((
 	$(AM_V_at){ \
   case ''$(java_noinst) in \
     ?*) \

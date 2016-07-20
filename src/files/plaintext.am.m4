@@ -46,7 +46,6 @@ clean-plaintext: clean-plaintext-more
 install-plaintext: $(plaintext_dst)
 install-plaintext: install-plaintext-more
 	@$(NORMAL_INSTALL)
-	@-':' #(
 	@{ ':'; \
   case ''$(plaintextdir) in \
     ?*) \
@@ -68,7 +67,6 @@ plaintext: $(plaintext_dst)
 
 uninstall-plaintext: uninstall-plaintext-more
 	@$(NORMAL_UNINSTALL)
-	@-':' #(
 	@{ ':'; \
   case ''$(plaintextdir) in \
     ?*) \
