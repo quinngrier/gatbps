@@ -29,7 +29,7 @@ LC_ALL='C'
   {
     if (0 ||
       $0 ~ /<!--[@AT@\\]code--><blockquote><pre>$/ ||
-      $0 ~ /<!--[@AT@\\]code{[^}>]*}--><blockquote><pre>$/ ||
+      $0 ~ /<!--[@AT@\\]code{.*}--><blockquote><pre>$/ ||
     0) {
       n = split($0, x, /<!--/)
       i = 0
