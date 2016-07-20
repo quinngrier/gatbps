@@ -54,7 +54,9 @@ Commons Zero 1-0 appendix. It may also be available at
 @copying
 The authors of this manual have waived all copyright and
 related or neighboring rights to the extent permitted by
-law as described by the CC0 1.0 Universal Public Domain
+law as described by the
+CC0@tie{}1.0
+Universal Public Domain
 Dedication. For the full dedication,
 @pxref{Creative Commons Zero@tie{}@w{1-0}}.
 It may also be available at
@@ -65,7 +67,9 @@ It may also be available at
 @copying
 The authors of this manual have waived all copyright and
 related or neighboring rights to the extent permitted by
-law as described by the CC0 1.0 Universal Public Domain
+law as described by the
+CC0@tie{}1.0
+Universal Public Domain
 Dedication. For the full dedication,
 @pxref{Creative Commons Zero@tie{}@w{1-0}}.
 It may also be available at
