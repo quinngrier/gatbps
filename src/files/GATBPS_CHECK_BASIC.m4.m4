@@ -31,11 +31,9 @@ GATBPS_CACHE_CHECK(
       [
       { ':'
         case "$[]{gatbps_var}" in
-        #(
           'yes'|'no'|'1'|'0')
             :
           ;;
-        #(
           *)
             AC_MSG_RESULT([])
             AC_MSG_ERROR(
@@ -44,12 +42,10 @@ GATBPS_CACHE_CHECK(
           ;;
         esac
         case "$[]{gatbps_list}" in
-        #(
           ?*)
             gatbps_list="$[]{gatbps_list}"'
   gatbps_var='"$[]{gatbps_var}"
           ;;
-        #(
           *)
             gatbps_list='  gatbps_var='"$[]{gatbps_var}"
           ;;
@@ -58,11 +54,9 @@ GATBPS_CACHE_CHECK(
     }
 
     case "$[]{gatbps_list}" in
-    #(
       *'=no'*|*'=0'*)
         gatbps_cv_$2='no'
       ;;
-    #(
       *)
         $3
       ;;
@@ -80,11 +74,9 @@ GATBPS_CACHE_CHECK(
 #
 
 case "$[]{gatbps_cv_$2}" in
-#(
   'yes'|'no')
     ':'
   ;;
-#(
   *)
     AC_MSG_ERROR(
       [invalid \$[]{gatbps_cv_$2} value: $[]{gatbps_cv_$2}],
@@ -93,18 +85,14 @@ case "$[]{gatbps_cv_$2}" in
 esac
 
 case "$[]{GATBPS_CHECK_VERBOSE}" in
-#(
   ?*)
     case "$[]{$2_was_cached}" in
-    #(
       'no')
         case "$[]{gatbps_list}" in
-        #(
           ?*)
             AC_MSG_NOTICE([the values of the prerequisites for the above check were:
 $[]{gatbps_list}])
           ;;
-        #(
           *)
             AC_MSG_NOTICE([the above check has no prerequisites])
           ;;
@@ -115,22 +103,18 @@ $[]{gatbps_list}])
 esac
 
 case "$[]{gatbps_cv_$2}" in
-#(
   'yes')
     AC_DEFINE([$2], [1], [Define to 1 if you have $1, or 0 if not.])
   ;;
-#(
   'no')
     AC_DEFINE([$2], [0], [Define to 1 if you have $1, or 0 if not.])
   ;;
 esac
 
 case "$[]{gatbps_cv_$2}" in
-#(
   'yes')
     $2='1'
   ;;
-#(
   'no')
     $2='0'
   ;;
@@ -139,11 +123,9 @@ AC_SUBST([$2])
 
 AM_CONDITIONAL([$2], [( ':'
   case "$[]{gatbps_cv_$2}" in
-  #(
     'yes')
       'exit' '0'
     ;;
-  #(
     'no')
       'exit' '1'
     ;;

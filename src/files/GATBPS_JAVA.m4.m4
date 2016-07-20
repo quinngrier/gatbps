@@ -313,13 +313,11 @@ uninstall-java-gatbps_x:
 :;}'
 
     case "$[]{GATBPS_JAVA_RULES}" in
-    #(
       ?*)
         GATBPS_JAVA_RULES="$[]{GATBPS_JAVA_RULES}"'
 
 '"$[]{gatbps_new_rules}"
       ;;
-    #(
       *)
         GATBPS_JAVA_RULES="$[]{gatbps_new_rules}"
       ;;

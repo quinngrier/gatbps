@@ -60,15 +60,12 @@ AS_HELP_STRING(
   [use --awk=V by default])],
   [{
     case "${enable_awk}" in
-    #(
       'yes')
         awk_default="${AWK_SH}"
       ;;
-    #(
       'no')
         awk_default='auto'
       ;;
-    #(
       *)
         awk_default="${enable_awk}"
       ;;
@@ -104,15 +101,12 @@ AS_HELP_STRING(
   [use --sed=V by default])],
   [{
     case "${enable_sed}" in
-    #(
       'yes')
         sed_default="${SED_SH}"
       ;;
-    #(
       'no')
         sed_default='auto'
       ;;
-    #(
       *)
         sed_default="${enable_sed}"
       ;;
@@ -148,24 +142,19 @@ AS_HELP_STRING(
   [use --texi2any=V by default])],
   [{
     case "${enable_texi2any}" in
-    #(
       'yes')
         case "${TEXI2ANY}" in
-        #(
           ?*)
             texi2any_default="${TEXI2ANY}"
           ;;
-        #(
           *)
             texi2any_default='auto'
           ;;
         esac
       ;;
-    #(
       'no')
         texi2any_default='auto'
       ;;
-    #(
       *)
         texi2any_default="${enable_texi2any}"
       ;;
@@ -183,11 +172,9 @@ AWK_DEFAULT_SH=`sh "${srcdir}/build-aux/sh-form.sh" \
   "${awk_default}"
 `
 case "${?}" in
-#(
   '0')
     :
   ;;
-#(
   *)
     AC_MSG_ERROR([sh-form.sh failed], [1])
   ;;
@@ -202,11 +189,9 @@ SED_DEFAULT_SH=`sh "${srcdir}/build-aux/sh-form.sh" \
   "${sed_default}"
 `
 case "${?}" in
-#(
   '0')
     :
   ;;
-#(
   *)
     AC_MSG_ERROR([sh-form.sh failed], [1])
   ;;
@@ -221,11 +206,9 @@ TEXI2ANY_DEFAULT_SH=`sh "${srcdir}/build-aux/sh-form.sh" \
   "${texi2any_default}"
 `
 case "${?}" in
-#(
   '0')
     :
   ;;
-#(
   *)
     AC_MSG_ERROR([sh-form.sh failed], [1])
   ;;

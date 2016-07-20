@@ -304,7 +304,6 @@ $2_DAY_ZPAD=']$1$2_DAY_ZPAD['
   [$2_IS_LEAP_YEAR],
   [[(
     case "$][{$2_IS_LEAP_YEAR}" in
-    #(
       '1')
         'exit' '0'
       ;;

@@ -230,14 +230,11 @@ awk='auto'
 sed='auto'
 
 case "${awk}" in
-#(
   'auto')
     case "${awk_auto}" in
-    #(
       ?*)
         ':'
       ;;
-    #(
       *)
         awk_auto=''\''awk'\'''
         for x in \
@@ -262,14 +259,11 @@ case "${awk}" in
 esac
 
 case "${sed}" in
-#(
   'auto')
     case "${sed_auto}" in
-    #(
       ?*)
         ':'
       ;;
-    #(
       *)
         sed_auto=''\''sed'\'''
         for x in \
@@ -297,7 +291,6 @@ esac
 #
 
 case "${STYLE_STDOUT}" in
-#(
   ?*)
     'set' 'x' '--style-stdout='"${STYLE_STDOUT}" "${@}"
     'shift'
@@ -305,7 +298,6 @@ case "${STYLE_STDOUT}" in
 esac
 
 case "${STYLE_STDERR}" in
-#(
   ?*)
     'set' 'x' '--style-stderr='"${STYLE_STDERR}" "${@}"
     'shift'
@@ -313,7 +305,6 @@ case "${STYLE_STDERR}" in
 esac
 
 case "${STYLE}" in
-#(
   ?*)
     'set' 'x' '--style='"${STYLE}" "${@}"
     'shift'
@@ -321,7 +312,6 @@ case "${STYLE}" in
 esac
 
 case "${SED}" in
-#(
   ?*)
     'set' 'x' '--sed='"${SED}" "${@}"
     'shift'
@@ -329,7 +319,6 @@ case "${SED}" in
 esac
 
 case "${AWK}" in
-#(
   ?*)
     'set' 'x' '--awk='"${AWK}" "${@}"
     'shift'
@@ -354,19 +343,16 @@ while ':'; do
   'shift'
 
   case "${#}" in
-  #(
     '0')
       'break'
     ;;
   esac
 
   case "${detect_options}" in
-  #(
     'yes')
 
       case "${1}" in
 
-      #(
         '--')
 
           detect_options='no'
@@ -374,7 +360,6 @@ while ':'; do
 
         ;;
 
-      #(
         '--='*)
 
           'cat' >&2 <<EOF2
@@ -385,11 +370,9 @@ EOF2
 
         ;;
 
-      #(
         '--awk')
 
           case "${#}" in
-          #(
             '1')
               'cat' >&2 <<EOF2
 ${fr2}sh-form.sh!${fR2} ${fB2}--awk${fR2} requires a value
@@ -408,7 +391,6 @@ EOF2
 
         ;;
 
-      #(
         '--awk='*)
 
           x=`eval "${sed}"' "
@@ -420,11 +402,9 @@ ${1}
 EOF2
 `
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF2
 ${fr2}sh-form.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
@@ -437,14 +417,11 @@ EOF2
           'eval' "${x}"
 
           case "${awk}" in
-          #(
             'auto')
               case "${awk_auto}" in
-              #(
                 ?*)
                   ':'
                 ;;
-              #(
                 *)
                   awk_auto=''\''awk'\'''
                   for x in \
@@ -472,7 +449,6 @@ EOF2
 
         ;;
 
-      #(
         '--keep')
 
           keep='yes'
@@ -480,7 +456,6 @@ EOF2
 
         ;;
 
-      #(
         '--keep='*)
 
           'cat' >&2 <<EOF2
@@ -491,7 +466,6 @@ EOF2
 
         ;;
 
-      #(
         '-k')
 
           shift
@@ -500,7 +474,6 @@ EOF2
 
         ;;
 
-      #(
         '-k'*)
 
           x=`eval "${sed}"' "
@@ -512,11 +485,9 @@ ${1}
 EOF2
 `
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF2
 ${fr2}sh-form.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
@@ -534,7 +505,6 @@ EOF2
 
         ;;
 
-      #(
         '--man')
 
           cat <<'EOF2'
@@ -569,11 +539,9 @@ EOF2
 .\"
 EOF2
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF2
 ${fr2}sh-form.sh!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -588,7 +556,6 @@ EOF2
 
         ;;
 
-      #(
         '--man='*)
 
           'cat' >&2 <<EOF2
@@ -599,11 +566,9 @@ EOF2
 
         ;;
 
-      #(
         '--sed')
 
           case "${#}" in
-          #(
             '1')
               'cat' >&2 <<EOF2
 ${fr2}sh-form.sh!${fR2} ${fB2}--sed${fR2} requires a value
@@ -622,7 +587,6 @@ EOF2
 
         ;;
 
-      #(
         '--sed='*)
 
           x=`eval "${sed}"' "
@@ -634,11 +598,9 @@ ${1}
 EOF2
 `
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF2
 ${fr2}sh-form.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
@@ -651,14 +613,11 @@ EOF2
           'eval' "${x}"
 
           case "${sed}" in
-          #(
             'auto')
               case "${sed_auto}" in
-              #(
                 ?*)
                   ':'
                 ;;
-              #(
                 *)
                   sed_auto=''\''sed'\'''
                   for x in \
@@ -684,17 +643,14 @@ EOF2
 
         ;;
 
-      #(
         '--stdin')
 
 s=`
 cat
 case "${?}" in
-#(
   '0')
     :
   ;;
-#(
   *)
     'cat' >&2 <<EOF2
 ${fr2}sh-form.sh!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -706,11 +662,9 @@ EOF2
 esac
 echo "'"
 case "${?}" in
-#(
   '0')
     :
   ;;
-#(
   *)
     'cat' >&2 <<EOF2
 ${fr2}sh-form.sh!${fR2} ${fB2}echo${fR2} failed while writing to: a command substitution
@@ -720,21 +674,17 @@ EOF2
 esac
 `
 case "${?}" in
-#(
   '0')
     :
   ;;
-#(
   *)
     'exit' '1'
   ;;
 esac
 
 case "${keep}" in
-#(
   'no')
     case "${s}" in
-    #(
       *"${nl}'")
         s=`eval "${awk}"' '\\''
 {
@@ -753,11 +703,9 @@ ${s}
 EOF2
 `
         case "${?}" in
-        #(
           '0')
             :
           ;;
-        #(
           *)
             'cat' >&2 <<EOF2
 ${fr2}sh-form.sh!${fR2} ${fB2}${awk}${fR2} failed while reading from:
@@ -773,7 +721,6 @@ EOF2
 esac
 
           case "${first_item}" in
-          #(
             'no')
               the_output="${the_output}"' '
             ;;
@@ -788,11 +735,9 @@ ${s}
 EOF2
 `
 case "${?}" in
-#(
   '0')
     :
   ;;
-#(
   *)
     'cat' >&2 <<EOF2
 ${fr2}sh-form.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
@@ -809,7 +754,6 @@ esac
 
         ;;
 
-      #(
         '--style'|'--style=always')
 
           shift
@@ -818,7 +762,6 @@ esac
 
         ;;
 
-      #(
         '--style=auto')
 
           shift
@@ -827,7 +770,6 @@ esac
 
         ;;
 
-      #(
         '--style=never')
 
           shift
@@ -836,7 +778,6 @@ esac
 
         ;;
 
-      #(
         '--style='*)
 
           'cat' >&2 <<EOF2
@@ -846,7 +787,6 @@ EOF2
 
         ;;
 
-      #(
         '--style-stderr'|'--style-stderr=always')
 
           style_stderr='always'
@@ -865,13 +805,11 @@ EOF2
 
         ;;
 
-      #(
         '--style-stderr=auto')
 
           style_stderr='auto'
 
           case "${isatty2}" in
-          #(
             'unknown')
               if 'test' '-t' '2'; then
                 isatty2='yes'
@@ -882,7 +820,6 @@ EOF2
           esac
 
           case "${isatty2}" in
-          #(
             'yes')
               fR2='[22m[24m[39m' # stderr style: none
               fB2='[24m[39m[1m'  # stderr style: bold
@@ -894,7 +831,6 @@ EOF2
               fm2='[22m[24m[35m' # stderr style: magenta
               fc2='[22m[24m[36m' # stderr style: cyan
             ;;
-          #(
             'no')
               fR2='' # stderr style: none
               fB2='' # stderr style: bold
@@ -912,7 +848,6 @@ EOF2
 
         ;;
 
-      #(
         '--style-stderr=never')
 
           style_stderr='never'
@@ -931,7 +866,6 @@ EOF2
 
         ;;
 
-      #(
         '--style-stderr='*)
 
           'cat' >&2 <<EOF2
@@ -941,7 +875,6 @@ EOF2
 
         ;;
 
-      #(
         '--style-stdout'|'--style-stdout=always')
 
           style_stdout='always'
@@ -960,13 +893,11 @@ EOF2
 
         ;;
 
-      #(
         '--style-stdout=auto')
 
           style_stdout='auto'
 
           case "${isatty1}" in
-          #(
             'unknown')
               if 'test' '-t' '1'; then
                 isatty1='yes'
@@ -977,7 +908,6 @@ EOF2
           esac
 
           case "${isatty1}" in
-          #(
             'yes')
               fR1='[22m[24m[39m' # stdout style: none
               fB1='[24m[39m[1m'  # stdout style: bold
@@ -989,7 +919,6 @@ EOF2
               fm1='[22m[24m[35m' # stdout style: magenta
               fc1='[22m[24m[36m' # stdout style: cyan
             ;;
-          #(
             'no')
               fR1='' # stdout style: none
               fB1='' # stdout style: bold
@@ -1007,7 +936,6 @@ EOF2
 
         ;;
 
-      #(
         '--style-stdout=never')
 
           style_stdout='never'
@@ -1026,7 +954,6 @@ EOF2
 
         ;;
 
-      #(
         '--style-stdout='*)
 
           'cat' >&2 <<EOF2
@@ -1036,7 +963,6 @@ EOF2
 
         ;;
 
-      #(
         '--'*'='*)
 
           eval "${awk}"' '\''
@@ -1058,11 +984,9 @@ END {
 ${1}
 EOF2
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF2
 ${fr2}sh-form.sh!${fR2} ${fB2}${awk}${fR2} failed while reading from:
@@ -1075,7 +999,6 @@ EOF2
 
         ;;
 
-      #(
         '--'*|'-'?)
 
           'cat' >&2 <<EOF2
@@ -1086,7 +1009,6 @@ EOF2
 
         ;;
 
-      #(
         '-'?*)
 
           eval "${awk}"' '\''
@@ -1100,11 +1022,9 @@ EOF2
 ${1}
 EOF2
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF2
 ${fr2}sh-form.sh!${fR2} ${fB2}${awk}${fR2} failed while reading from:
@@ -1123,7 +1043,6 @@ EOF2
   esac
 
   case "${first_item}" in
-  #(
     'no')
       the_output="${the_output}"' '
     ;;
@@ -1138,11 +1057,9 @@ ${1}
 EOF2
 `
   case "${?}" in
-  #(
     '0')
       :
     ;;
-  #(
     *)
       'cat' >&2 <<EOF2
 ${fr2}sh-form.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
@@ -1161,11 +1078,9 @@ done
 ${the_output}
 EOF2
   case "${?}" in
-  #(
     '0')
       :
     ;;
-  #(
     *)
       'cat' >&2 <<EOF2
 ${fr2}sh-form.sh!${fR2} ${fB2}cat${fR2} failed while reading from:

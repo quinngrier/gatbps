@@ -31,21 +31,17 @@ AC_CONFIG_FILES(
     gatbps_dst=']gatbps_output['
     gatbps_aux="$[]{srcdir}/$[]{gatbps_dst}"
     case "$[]{gatbps_dst}" in
-    #(
       '-'*)
         gatbps_safe_dst="./$[]{gatbps_dst}"
       ;;
-    #(
       *)
         gatbps_safe_dst="$[]{gatbps_dst}"
       ;;
     esac
     case "$[]{gatbps_aux}" in
-    #(
       '-'*)
         gatbps_safe_aux="./$[]{gatbps_aux}"
       ;;
-    #(
       *)
         gatbps_safe_aux="$[]{gatbps_aux}"
       ;;
@@ -63,11 +59,9 @@ AC_CONFIG_FILES(
       AC_MSG_NOTICE([updating $[]{gatbps_dst}])
       cp "$[]{gatbps_safe_src}" "$[]{gatbps_safe_dst}"
       case "$[]{?}" in
-      #(
         '0')
           :
         ;;
-      #(
         *)
           exit 1
         ;;
@@ -90,13 +84,11 @@ gatbps_output: gatbps_prereq
 	cd $[](top_builddir) && $[](SHELL) ./config.status $[]@gatbps_suffix'
 
 case "$[]{GATBPS_CONFIG_FILE_RULES}" in
-#(
   ?*)
     GATBPS_CONFIG_FILE_RULES="$[]{GATBPS_CONFIG_FILE_RULES}
 
 $[]{gatbps_new_rules}"
   ;;
-#(
   *)
     GATBPS_CONFIG_FILE_RULES="$[]{gatbps_new_rules}"
   ;;

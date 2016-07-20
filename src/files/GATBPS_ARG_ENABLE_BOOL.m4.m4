@@ -25,11 +25,9 @@ AS_HELP_STRING([--enable-$3=no], [$6])],
   [$4])
 
 case "$[]{gatbps_x}" in
-#(
   'yes'|'no')
     ':'
   ;;
-#(
   *)
     AC_MSG_ERROR([invalid --enable-$3 value: $[]{]gatbps_x[}], [1])
   ;;
@@ -38,18 +36,14 @@ esac
 GATBPS_CHECK_VARS([$1], [$2], gatbps_x)
 
 case "$[]{$2_was_cached}" in
-#(
   'yes')
     AC_MSG_NOTICE([note: --enable-$3=$[]{]gatbps_x[} was ignored])
   ;;
-#(
   'no')
     case "$[]{gatbps_x[]_was_given}" in
-    #(
       'yes')
         AC_MSG_NOTICE([note: --enable-$3=$[]{]gatbps_x[} was given])
       ;;
-    #(
       'no')
         AC_MSG_NOTICE([note: --enable-$3=$[]{]gatbps_x[} was implied])
       ;;

@@ -225,14 +225,11 @@ awk='auto'
 sed='auto'
 
 case "${awk}" in
-#(
   'auto')
     case "${awk_auto}" in
-    #(
       ?*)
         ':'
       ;;
-    #(
       *)
         awk_auto=''\''awk'\'''
         for x in \
@@ -257,14 +254,11 @@ case "${awk}" in
 esac
 
 case "${sed}" in
-#(
   'auto')
     case "${sed_auto}" in
-    #(
       ?*)
         ':'
       ;;
-    #(
       *)
         sed_auto=''\''sed'\'''
         for x in \
@@ -292,7 +286,6 @@ esac
 #
 
 case "${STYLE_STDOUT}" in
-#(
   ?*)
     'set' 'x' '--style-stdout='"${STYLE_STDOUT}" "${@}"
     'shift'
@@ -300,7 +293,6 @@ case "${STYLE_STDOUT}" in
 esac
 
 case "${STYLE_STDERR}" in
-#(
   ?*)
     'set' 'x' '--style-stderr='"${STYLE_STDERR}" "${@}"
     'shift'
@@ -308,7 +300,6 @@ case "${STYLE_STDERR}" in
 esac
 
 case "${STYLE}" in
-#(
   ?*)
     'set' 'x' '--style='"${STYLE}" "${@}"
     'shift'
@@ -316,7 +307,6 @@ case "${STYLE}" in
 esac
 
 case "${SED}" in
-#(
   ?*)
     'set' 'x' '--sed='"${SED}" "${@}"
     'shift'
@@ -324,7 +314,6 @@ case "${SED}" in
 esac
 
 case "${AWK}" in
-#(
   ?*)
     'set' 'x' '--awk='"${AWK}" "${@}"
     'shift'
@@ -341,19 +330,16 @@ while ':'; do
   'shift'
 
   case "${#}" in
-  #(
     '0')
       'break'
     ;;
   esac
 
   case "${detect_options}" in
-  #(
     'yes')
 
       case "${1}" in
 
-      #(
         '--')
 
           detect_options='no'
@@ -361,7 +347,6 @@ while ':'; do
 
         ;;
 
-      #(
         '--='*)
 
           'cat' >&2 <<EOF2
@@ -378,7 +363,6 @@ EOF2
   esac
 
   case "${first_operand}" in
-  #(
     'no')
       output="${output}"' '
     ;;
@@ -392,11 +376,9 @@ done
 ${output}
 EOF2
 case "${?}" in
-#(
   '0')
     ':'
   ;;
-#(
   *)
     'cat' >&2 <<EOF2
 ${fr2}echo.sh!${fR2} ${fB2}cat${fR2} failed while reading from:

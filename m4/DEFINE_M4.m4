@@ -16,11 +16,9 @@ m4_case(
 AC_REQUIRE([GATBPS_PROG_M4])
 
 case "${M4}" in
-#(
   ?*)
     ':'
   ;;
-#(
   *)
     AC_MSG_ERROR([an M4 preprocessor is required], [1])
   ;;

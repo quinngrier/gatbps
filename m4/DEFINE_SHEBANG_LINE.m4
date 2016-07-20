@@ -21,18 +21,14 @@ SHEBANG_LINE_1='#!/bin/sh -
 '
 SHEBANG_LINE_0=''
 case "${cross_compiling}" in
-#(
   'yes')
     case "${enable_SHEBANG_LINE}" in
-    #(
       '1')
         SHEBANG_LINE="${SHEBANG_LINE_1}"
       ;;
-    #(
       '0')
         SHEBANG_LINE="${SHEBANG_LINE_0}"
       ;;
-    #(
       *)
         AC_MSG_ERROR(
           [invalid \${enable_SHEBANG_LINE} value: ${enable_SHEBANG_LINE}]
@@ -40,21 +36,16 @@ case "${cross_compiling}" in
       ;;
     esac
   ;;
-#(
   'no')
     case "${enable_SHEBANG_LINE}" in
-    #(
       '1')
         case "${HAVE_SHEBANG_SUPPORT}" in
-        #(
           '1')
             SHEBANG_LINE="${SHEBANG_LINE_1}"
           ;;
-        #(
           '0')
             SHEBANG_LINE="${SHEBANG_LINE_0}"
           ;;
-        #(
           *)
             AC_MSG_ERROR(
               [invalid \${HAVE_SHEBANG_SUPPORT} value: ${HAVE_SHEBANG_SUPPORT}]
@@ -62,11 +53,9 @@ case "${cross_compiling}" in
           ;;
         esac
       ;;
-    #(
       '0')
         SHEBANG_LINE="${SHEBANG_LINE_0}"
       ;;
-    #(
       *)
         AC_MSG_ERROR(
           [invalid \${enable_SHEBANG_LINE} value: ${enable_SHEBANG_LINE}]
@@ -74,7 +63,6 @@ case "${cross_compiling}" in
       ;;
     esac
   ;;
-#(
   *)
     AC_MSG_ERROR(
       [invalid \${cross_compiling} value: ${cross_compiling}]

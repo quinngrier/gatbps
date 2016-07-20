@@ -22,11 +22,9 @@ AWK_SH=`'sh' \
   ${AWK} \
 ;`
 case "${?}" in
-#(
   '0')
     ':'
   ;;
-#(
   *)
     AC_MSG_ERROR([sh-form.sh failed], [1])
   ;;

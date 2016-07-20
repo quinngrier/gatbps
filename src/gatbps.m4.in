@@ -249,14 +249,11 @@ sed=@SED_DEFAULT_SH@
 texi2any=@TEXI2ANY_DEFAULT_SH@
 
 case "${awk}" in
-#(
   'auto')
     case "${awk_auto}" in
-    #(
       ?*)
         ':'
       ;;
-    #(
       *)
         awk_auto=''\''awk'\'''
         for x in \
@@ -281,14 +278,11 @@ case "${awk}" in
 esac
 
 case "${sed}" in
-#(
   'auto')
     case "${sed_auto}" in
-    #(
       ?*)
         ':'
       ;;
-    #(
       *)
         sed_auto=''\''sed'\'''
         for x in \
@@ -311,14 +305,11 @@ case "${sed}" in
 esac
 
 case "${texi2any}" in
-#(
   'auto')
     case "${texi2any_auto}" in
-    #(
       ?*)
         ':'
       ;;
-    #(
       *)
         texi2any_auto=''\''makeinfo'\'''
         for x in \
@@ -346,7 +337,6 @@ esac
 #
 
 case "${TEXI2ANY}" in
-#(
   ?*)
     'set' 'x' '--texi2any='"${TEXI2ANY}" "${@AT@}"
     'shift'
@@ -354,7 +344,6 @@ case "${TEXI2ANY}" in
 esac
 
 case "${STYLE_STDOUT}" in
-#(
   ?*)
     'set' 'x' '--style-stdout='"${STYLE_STDOUT}" "${@AT@}"
     'shift'
@@ -362,7 +351,6 @@ case "${STYLE_STDOUT}" in
 esac
 
 case "${STYLE_STDERR}" in
-#(
   ?*)
     'set' 'x' '--style-stderr='"${STYLE_STDERR}" "${@AT@}"
     'shift'
@@ -370,7 +358,6 @@ case "${STYLE_STDERR}" in
 esac
 
 case "${STYLE}" in
-#(
   ?*)
     'set' 'x' '--style='"${STYLE}" "${@AT@}"
     'shift'
@@ -378,7 +365,6 @@ case "${STYLE}" in
 esac
 
 case "${SED}" in
-#(
   ?*)
     'set' 'x' '--sed='"${SED}" "${@AT@}"
     'shift'
@@ -386,7 +372,6 @@ case "${SED}" in
 esac
 
 case "${AWK}" in
-#(
   ?*)
     'set' 'x' '--awk='"${AWK}" "${@AT@}"
     'shift'
@@ -424,19 +409,16 @@ while ':'; do
   'shift'
 
   case "${#}" in
-  #(
     '0')
       'break'
     ;;
   esac
 
   case "${detect_options}" in
-  #(
     'yes')
 
       case "${1}" in
 
-      #(
         '--')
 
           detect_options='no'
@@ -444,7 +426,6 @@ while ':'; do
 
         ;;
 
-      #(
         '--='*)
 
           'cat' >&2 <<EOF1
@@ -455,7 +436,6 @@ EOF1
 
         ;;
 
-      #(
         '--all')
 
           shift
@@ -464,7 +444,6 @@ EOF1
 
         ;;
 
-      #(
         '--all='*)
 
           x=`eval "${sed}"' "
@@ -476,11 +455,9 @@ ${1}
 EOF1
 `
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
@@ -493,18 +470,15 @@ EOF1
           'eval' "${x}"
 
           case "${prefix}" in
-          #(
             *'/')
               :
             ;;
-          #(
             ?*)
               prefix="${prefix}/"
             ;;
           esac
 
           case "${prefix}" in
-          #(
             '-'*)
               prefix="./${prefix}"
             ;;
@@ -615,7 +589,6 @@ EOF1
 
         ;;
 
-      #(
         '-a')
 
           shift
@@ -624,7 +597,6 @@ EOF1
 
         ;;
 
-      #(
         '-a'*)
 
           x=`eval "${sed}"' "
@@ -636,11 +608,9 @@ ${1}
 EOF1
 `
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
@@ -658,7 +628,6 @@ EOF1
 
         ;;
 
-      #(
         '--append-path')
 
           path_args=''
@@ -666,7 +635,6 @@ EOF1
 
         ;;
 
-      #(
         '--append-path='*)
 
           x=`eval "${sed}"' "
@@ -678,11 +646,9 @@ ${1}
 EOF1
 `
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
@@ -699,7 +665,6 @@ EOF1
 
         ;;
 
-      #(
         '-I')
 
           shift
@@ -708,7 +673,6 @@ EOF1
 
         ;;
 
-      #(
         '-I'*)
 
           x=`eval "${sed}"' "
@@ -720,11 +684,9 @@ ${1}
 EOF1
 `
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
@@ -742,11 +704,9 @@ EOF1
 
         ;;
 
-      #(
         '--awk')
 
           case "${#}" in
-          #(
             '1')
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}--awk${fR2} requires a value
@@ -765,7 +725,6 @@ EOF1
 
         ;;
 
-      #(
         '--awk='*)
 
           x=`eval "${sed}"' "
@@ -777,11 +736,9 @@ ${1}
 EOF1
 `
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
@@ -794,14 +751,11 @@ EOF1
           'eval' "${x}"
 
           case "${awk}" in
-          #(
             'auto')
               case "${awk_auto}" in
-              #(
                 ?*)
                   ':'
                 ;;
-              #(
                 *)
                   awk_auto=''\''awk'\'''
                   for x in \
@@ -829,7 +783,6 @@ EOF1
 
         ;;
 
-      #(
         '--boundary')
 
           boundary='yes'
@@ -837,7 +790,6 @@ EOF1
 
         ;;
 
-      #(
         '--boundary='*)
 
           'cat' >&2 <<EOF1
@@ -848,7 +800,6 @@ EOF1
 
         ;;
 
-      #(
         '-b')
 
           shift
@@ -857,7 +808,6 @@ EOF1
 
         ;;
 
-      #(
         '-b'*)
 
           x=`eval "${sed}"' "
@@ -869,11 +819,9 @@ ${1}
 EOF1
 `
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
@@ -891,7 +839,6 @@ EOF1
 
         ;;
 
-      #(
         '--dry-run')
 
           dry_run='yes'
@@ -899,7 +846,6 @@ EOF1
 
         ;;
 
-      #(
         '--dry-run='*)
 
           'cat' >&2 <<EOF1
@@ -910,7 +856,6 @@ EOF1
 
         ;;
 
-      #(
         '-n')
 
           shift
@@ -919,7 +864,6 @@ EOF1
 
         ;;
 
-      #(
         '-n'*)
 
           x=`eval "${sed}"' "
@@ -931,11 +875,9 @@ ${1}
 EOF1
 `
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
@@ -953,7 +895,6 @@ EOF1
 
         ;;
 
-      #(
         '--help')
 
           cat <<EOF1
@@ -973,11 +914,9 @@ files like ${fB1}README${fR1} and ${fB1}INSTALL${fR1}.
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -992,12 +931,10 @@ EOF1
 
         ;;
 
-      #(
         '--help='*)
 
           case "${1}" in
 
-          #(
             '--help=')
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}--help${fR2} values must not be empty
@@ -1005,7 +942,6 @@ EOF1
               'exit' '1'
             ;;
 
-          #(
             '--help='*'/')
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}--help${fR2} values must not end with slashes
@@ -1013,7 +949,6 @@ EOF1
               'exit' '1'
             ;;
 
-          #(
             '--help=CC0-1.0-AC-COPYRIGHT.ac'|'--help='*'/CC0-1.0-AC-COPYRIGHT.ac')
               cat <<EOF1
 Special file: ${fB1}CC0-1.0-AC-COPYRIGHT.ac${fR1}
@@ -1028,11 +963,9 @@ ${fB1}AC_COPYRIGHT${fR1} call is desired to appear.
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1044,7 +977,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=CC0-1.0-AM-COPYRIGHT.am'|'--help='*'/CC0-1.0-AM-COPYRIGHT.am')
               cat <<EOF1
 Special file: ${fB1}CC0-1.0-AM-COPYRIGHT.am${fR1}
@@ -1059,11 +991,9 @@ desired to appear.
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1085,7 +1015,6 @@ EOF1
 
 |%}help_code({%|CC0-1.0.txt|%}){%|
 
-          #(
             '--help=DATE.sh'|'--help='*'/DATE.sh')
               cat <<EOF1
 Special file: ${fB1}DATE.sh${fR1}
@@ -1093,11 +1022,9 @@ Special file: ${fB1}DATE.sh${fR1}
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1111,7 +1038,6 @@ EOF1
 
 |%}help_code({%|GATBPS_ARG_ENABLE.m4|%}){%|
 
-          #(
             '--help=GATBPS_ARG_ENABLE_BOOL.m4'|'--help='*'/GATBPS_ARG_ENABLE_BOOL.m4')
               cat <<EOF1
 Special file: ${fB1}GATBPS_ARG_ENABLE_BOOL.m4${fR1}
@@ -1119,11 +1045,9 @@ Special file: ${fB1}GATBPS_ARG_ENABLE_BOOL.m4${fR1}
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1137,7 +1061,6 @@ EOF1
 
 |%}help_code({%|GATBPS_ARG_WITH.m4|%}){%|
 
-          #(
             '--help=GATBPS_ARG_WITH_BOOL.m4'|'--help='*'/GATBPS_ARG_WITH_BOOL.m4')
               cat <<EOF1
 Special file: ${fB1}GATBPS_ARG_WITH_BOOL.m4${fR1}
@@ -1145,11 +1068,9 @@ Special file: ${fB1}GATBPS_ARG_WITH_BOOL.m4${fR1}
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1163,7 +1084,6 @@ EOF1
 
 |%}help_code({%|GATBPS_CACHE_CHECK.m4|%}){%|
 
-          #(
             '--help=GATBPS_CHECK_BASIC.m4'|'--help='*'/GATBPS_CHECK_BASIC.m4')
               cat <<EOF1
 Special file: ${fB1}GATBPS_CHECK_BASIC.m4${fR1}
@@ -1171,11 +1091,9 @@ Special file: ${fB1}GATBPS_CHECK_BASIC.m4${fR1}
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1187,7 +1105,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=GATBPS_CHECK_CFLAG.m4'|'--help='*'/GATBPS_CHECK_CFLAG.m4')
               cat <<EOF1
 Special file: ${fB1}GATBPS_CHECK_CFLAG.m4${fR1}
@@ -1195,11 +1112,9 @@ Special file: ${fB1}GATBPS_CHECK_CFLAG.m4${fR1}
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1211,7 +1126,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=GATBPS_CHECK_COMPILE.m4'|'--help='*'/GATBPS_CHECK_COMPILE.m4')
               cat <<EOF1
 Special file: ${fB1}GATBPS_CHECK_COMPILE.m4${fR1}
@@ -1219,11 +1133,9 @@ Special file: ${fB1}GATBPS_CHECK_COMPILE.m4${fR1}
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1235,7 +1147,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=GATBPS_CHECK_HEADER.m4'|'--help='*'/GATBPS_CHECK_HEADER.m4')
               cat <<EOF1
 Special file: ${fB1}GATBPS_CHECK_HEADER.m4${fR1}
@@ -1243,11 +1154,9 @@ Special file: ${fB1}GATBPS_CHECK_HEADER.m4${fR1}
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1259,7 +1168,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=GATBPS_CHECK_LIB.m4'|'--help='*'/GATBPS_CHECK_LIB.m4')
               cat <<EOF1
 Special file: ${fB1}GATBPS_CHECK_LIB.m4${fR1}
@@ -1267,11 +1175,9 @@ Special file: ${fB1}GATBPS_CHECK_LIB.m4${fR1}
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1283,7 +1189,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=GATBPS_CHECK_LINK.m4'|'--help='*'/GATBPS_CHECK_LINK.m4')
               cat <<EOF1
 Special file: ${fB1}GATBPS_CHECK_LINK.m4${fR1}
@@ -1291,11 +1196,9 @@ Special file: ${fB1}GATBPS_CHECK_LINK.m4${fR1}
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1307,7 +1210,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=GATBPS_CHECK_RUN.m4'|'--help='*'/GATBPS_CHECK_RUN.m4')
               cat <<EOF1
 Special file: ${fB1}GATBPS_CHECK_RUN.m4${fR1}
@@ -1315,11 +1217,9 @@ Special file: ${fB1}GATBPS_CHECK_RUN.m4${fR1}
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1331,7 +1231,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=GATBPS_CHECK_VARS.m4'|'--help='*'/GATBPS_CHECK_VARS.m4')
               cat <<EOF1
 Special file: ${fB1}GATBPS_CHECK_VARS.m4${fR1}
@@ -1339,11 +1238,9 @@ Special file: ${fB1}GATBPS_CHECK_VARS.m4${fR1}
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1355,7 +1252,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=GATBPS_CONFIG_FILE.m4'|'--help='*'/GATBPS_CONFIG_FILE.m4')
               cat <<EOF1
 Special file: ${fB1}GATBPS_CONFIG_FILE.m4${fR1}
@@ -1363,11 +1259,9 @@ Special file: ${fB1}GATBPS_CONFIG_FILE.m4${fR1}
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1381,7 +1275,6 @@ EOF1
 
 |%}help_code({%|GATBPS_CONFIG_FILE_RULES.am|%}){%|
 
-          #(
             '--help=GATBPS_CONFIG_FILE_SUBST.m4'|'--help='*'/GATBPS_CONFIG_FILE_SUBST.m4')
               cat <<EOF1
 Special file: ${fB1}GATBPS_CONFIG_FILE_SUBST.m4${fR1}
@@ -1389,11 +1282,9 @@ Special file: ${fB1}GATBPS_CONFIG_FILE_SUBST.m4${fR1}
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1443,7 +1334,6 @@ EOF1
 
 |%}help_code({%|INPUT_FILTER.sh.in|%}){%|
 
-          #(
             '--help=Makefile.am.vim'|'--help='*'/Makefile.am.vim')
               cat <<EOF1
 Special file: ${fB1}Makefile.am.vim${fR1}
@@ -1451,11 +1341,9 @@ Special file: ${fB1}Makefile.am.vim${fR1}
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1475,7 +1363,6 @@ EOF1
 
 |%}help_code({%|TEST_EXIT.h|%}){%|
 
-          #(
             '--help=VERSION.ac'|'--help='*'/VERSION.ac')
               cat <<EOF1
 Special file: ${fB1}VERSION.ac${fR1}
@@ -1483,11 +1370,9 @@ Special file: ${fB1}VERSION.ac${fR1}
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1499,7 +1384,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=VERSION.sh'|'--help='*'/VERSION.sh')
               cat <<EOF1
 Special file: ${fB1}VERSION.sh${fR1}
@@ -1507,11 +1391,9 @@ Special file: ${fB1}VERSION.sh${fR1}
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1523,7 +1405,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=VERSION_LTCUR.sh'|'--help='*'/VERSION_LTCUR.sh')
               cat <<EOF1
 Special file: ${fB1}VERSION_LTCUR.sh${fR1}
@@ -1531,11 +1412,9 @@ Special file: ${fB1}VERSION_LTCUR.sh${fR1}
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1547,7 +1426,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=awk-form.sh'|'--help='*'/awk-form.sh')
               cat <<EOF1
 Special file: ${fB1}awk-form.sh${fR1}
@@ -1558,11 +1436,9 @@ input as an awk string literal.
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1574,7 +1450,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=bdots.texi'|'--help='*'/bdots.texi')
               cat <<EOF1
 Special file: ${fB1}bdots.texi${fR1}
@@ -1593,11 +1468,9 @@ formats:
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1609,7 +1482,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=bothcontents.texi'|'--help='*'/bothcontents.texi')
               cat <<EOF1
 Special file: ${fB1}bothcontents.texi${fR1}
@@ -1617,11 +1489,9 @@ Special file: ${fB1}bothcontents.texi${fR1}
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1633,7 +1503,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=configure.ac.vim'|'--help='*'/configure.ac.vim')
               cat <<EOF1
 Special file: ${fB1}configure.ac.vim${fR1}
@@ -1641,11 +1510,9 @@ Special file: ${fB1}configure.ac.vim${fR1}
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1657,7 +1524,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=contents.texi'|'--help='*'/contents.texi')
               cat <<EOF1
 Special file: ${fB1}contents.texi${fR1}
@@ -1665,11 +1531,9 @@ Special file: ${fB1}contents.texi${fR1}
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1689,7 +1553,6 @@ EOF1
 
 |%}help_code({%|doxygen.am|%}){%|
 
-          #(
             '--help=dslash.texi'|'--help='*'/dslash.texi')
               cat <<EOF1
 Special file: ${fB1}dslash.texi${fR1}
@@ -1708,11 +1571,9 @@ formats:
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1728,7 +1589,6 @@ EOF1
 
 |%}help_code({%|echo.sh|%}){%|
 
-          #(
             '--help=gequ.texi'|'--help='*'/gequ.texi')
               cat <<EOF1
 Special file: ${fB1}gequ.texi${fR1}
@@ -1747,11 +1607,9 @@ formats:
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1767,7 +1625,6 @@ EOF1
 
 |%}help_code({%|indent.texi|%}){%|
 
-          #(
             '--help=ipez.texi'|'--help='*'/ipez.texi')
               cat <<EOF1
 Special file: ${fB1}ipez.texi${fR1}
@@ -1775,11 +1632,9 @@ Special file: ${fB1}ipez.texi${fR1}
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1799,7 +1654,6 @@ EOF1
 
 |%}help_code({%|javadoc.am|%}){%|
 
-          #(
             '--help=lcei.texi'|'--help='*'/lcei.texi')
               cat <<EOF1
 Special file: ${fB1}lcei.texi${fR1}
@@ -1818,11 +1672,9 @@ formats:
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1834,7 +1686,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=lequ.texi'|'--help='*'/lequ.texi')
               cat <<EOF1
 Special file: ${fB1}lequ.texi${fR1}
@@ -1853,11 +1704,9 @@ formats:
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1869,7 +1718,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=lflo.texi'|'--help='*'/lflo.texi')
               cat <<EOF1
 Special file: ${fB1}lflo.texi${fR1}
@@ -1888,11 +1736,9 @@ formats:
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1904,7 +1750,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=math.texi'|'--help='*'/math.texi')
               cat <<EOF1
 Special file: ${fB1}math.texi${fR1}
@@ -1916,11 +1761,9 @@ in the other output formats.
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1932,7 +1775,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=mdot.texi'|'--help='*'/mdot.texi')
               cat <<EOF1
 Special file: ${fB1}mdot.texi${fR1}
@@ -1951,11 +1793,9 @@ formats:
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -1967,7 +1807,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=mdots.texi'|'--help='*'/mdots.texi')
               cat <<EOF1
 Special file: ${fB1}mdots.texi${fR1}
@@ -1986,11 +1825,9 @@ formats:
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -2002,7 +1839,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=msign.texi'|'--help='*'/msign.texi')
               cat <<EOF1
 Special file: ${fB1}msign.texi${fR1}
@@ -2021,11 +1857,9 @@ formats:
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -2037,7 +1871,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=mtvskipbot.texi'|'--help='*'/mtvskipbot.texi')
               cat <<EOF1
 Special file: ${fB1}mtvskipbot.texi${fR1}
@@ -2045,11 +1878,9 @@ Special file: ${fB1}mtvskipbot.texi${fR1}
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -2061,7 +1892,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=mtvskiptop.texi'|'--help='*'/mtvskiptop.texi')
               cat <<EOF1
 Special file: ${fB1}mtvskiptop.texi${fR1}
@@ -2069,11 +1899,9 @@ Special file: ${fB1}mtvskiptop.texi${fR1}
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -2085,7 +1913,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=nequ.texi'|'--help='*'/nequ.texi')
               cat <<EOF1
 Special file: ${fB1}nequ.texi${fR1}
@@ -2104,11 +1931,9 @@ formats:
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -2126,7 +1951,6 @@ EOF1
 
 |%}help_code({%|plaintext.am|%}){%|
 
-          #(
             '--help=prm.texi'|'--help='*'/prm.texi')
               cat <<EOF1
 Special file: ${fB1}prm.texi${fR1}
@@ -2145,11 +1969,9 @@ formats:
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -2163,7 +1985,6 @@ EOF1
 
 |%}help_code({%|ps-dist.am|%}){%|
 
-          #(
             '--help=rarrow.texi'|'--help='*'/rarrow.texi')
               cat <<EOF1
 Special file: ${fB1}rarrow.texi${fR1}
@@ -2182,11 +2003,9 @@ formats:
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -2198,7 +2017,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=rcei.texi'|'--help='*'/rcei.texi')
               cat <<EOF1
 Special file: ${fB1}rcei.texi${fR1}
@@ -2217,11 +2035,9 @@ formats:
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -2233,7 +2049,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=rflo.texi'|'--help='*'/rflo.texi')
               cat <<EOF1
 Special file: ${fB1}rflo.texi${fR1}
@@ -2252,11 +2067,9 @@ formats:
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -2268,7 +2081,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=sbs.texi'|'--help='*'/sbs.texi')
               cat <<EOF1
 Special file: ${fB1}sbs.texi${fR1}
@@ -2289,11 +2101,9 @@ the mathematical notation of TeX in the other output formats:
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -2307,7 +2117,6 @@ EOF1
 
 |%}help_code({%|sh-form.sh|%}){%|
 
-          #(
             '--help=shortcontents.texi'|'--help='*'/shortcontents.texi')
               cat <<EOF1
 Special file: ${fB1}shortcontents.texi${fR1}
@@ -2315,11 +2124,9 @@ Special file: ${fB1}shortcontents.texi${fR1}
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -2331,7 +2138,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=sps.texi'|'--help='*'/sps.texi')
               cat <<EOF1
 Special file: ${fB1}sps.texi${fR1}
@@ -2352,11 +2158,9 @@ the mathematical notation of TeX in the other output formats:
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -2368,7 +2172,6 @@ EOF1
               esac
             ;;
 
-          #(
             '--help=texi-form.sh'|'--help='*'/texi-form.sh')
               cat <<EOF1
 Special file: ${fB1}texi-form.sh${fR1}
@@ -2379,11 +2182,9 @@ its input as Texinfo text.
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -2397,7 +2198,6 @@ EOF1
 
 |%}help_code({%|texinfo.css|%}){%|
 
-          #(
             '--help=troff-form.sh'|'--help='*'/troff-form.sh')
               cat <<EOF1
 Special file: ${fB1}troff-form.sh${fR1}
@@ -2408,11 +2208,9 @@ its input as troff text.
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -2424,7 +2222,6 @@ EOF1
               esac
             ;;
 
-          #(
             *)
               eval "${awk}"' '\''
 {
@@ -2453,11 +2250,9 @@ END {
 ${1}
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}${awk}${fR2} failed while reading from:
@@ -2475,7 +2270,6 @@ EOF1
 
         ;;
 
-      #(
         '--man')
 
           cat <<'EOF1'
@@ -2484,11 +2278,9 @@ changequote({%|`|%}, {%|'|%})dnl
 include(`doc/man/gatbps.1.m4')dnl
 {%|EOF1
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -2503,7 +2295,6 @@ EOF1
 
         ;;
 
-      #(
         '--man='*)
 
           'cat' >&2 <<EOF1
@@ -2514,7 +2305,6 @@ EOF1
 
         ;;
 
-      #(
         '--no-dry-run')
 
           dry_run='no'
@@ -2522,7 +2312,6 @@ EOF1
 
         ;;
 
-      #(
         '--no-dry-run='*)
 
           'cat' >&2 <<EOF1
@@ -2533,7 +2322,6 @@ EOF1
 
         ;;
 
-      #(
         '-N')
 
           shift
@@ -2542,7 +2330,6 @@ EOF1
 
         ;;
 
-      #(
         '-N'*)
 
           x=`eval "${sed}"' "
@@ -2554,11 +2341,9 @@ ${1}
 EOF1
 `
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
@@ -2576,7 +2361,6 @@ EOF1
 
         ;;
 
-      #(
         '--no-plain')
 
           plain='no'
@@ -2584,7 +2368,6 @@ EOF1
 
         ;;
 
-      #(
         '--no-plain='*)
 
           'cat' >&2 <<EOF1
@@ -2595,7 +2378,6 @@ EOF1
 
         ;;
 
-      #(
         '-P')
 
           shift
@@ -2604,7 +2386,6 @@ EOF1
 
         ;;
 
-      #(
         '-P'*)
 
           x=`eval "${sed}"' "
@@ -2616,11 +2397,9 @@ ${1}
 EOF1
 `
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
@@ -2638,7 +2417,6 @@ EOF1
 
         ;;
 
-      #(
         '--no-print0')
 
           print0='no'
@@ -2646,7 +2424,6 @@ EOF1
 
         ;;
 
-      #(
         '--no-print0='*)
 
           'cat' >&2 <<EOF1
@@ -2657,7 +2434,6 @@ EOF1
 
         ;;
 
-      #(
         '-Z')
 
           shift
@@ -2666,7 +2442,6 @@ EOF1
 
         ;;
 
-      #(
         '-Z'*)
 
           x=`eval "${sed}"' "
@@ -2678,11 +2453,9 @@ ${1}
 EOF1
 `
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
@@ -2700,7 +2473,6 @@ EOF1
 
         ;;
 
-      #(
         '--no-recursive')
 
           recursive='no'
@@ -2708,7 +2480,6 @@ EOF1
 
         ;;
 
-      #(
         '--no-recursive='*)
 
           'cat' >&2 <<EOF1
@@ -2719,7 +2490,6 @@ EOF1
 
         ;;
 
-      #(
         '-R')
 
           shift
@@ -2728,7 +2498,6 @@ EOF1
 
         ;;
 
-      #(
         '-R'*)
 
           x=`eval "${sed}"' "
@@ -2740,11 +2509,9 @@ ${1}
 EOF1
 `
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
@@ -2762,7 +2529,6 @@ EOF1
 
         ;;
 
-      #(
         '--no-unicode')
 
           unicode='no'
@@ -2771,7 +2537,6 @@ EOF1
 
         ;;
 
-      #(
         '--no-unicode='*)
 
           'cat' >&2 <<EOF1
@@ -2782,7 +2547,6 @@ EOF1
 
         ;;
 
-      #(
         '-U')
 
           shift
@@ -2791,7 +2555,6 @@ EOF1
 
         ;;
 
-      #(
         '-U'*)
 
           x=`eval "${sed}"' "
@@ -2803,11 +2566,9 @@ ${1}
 EOF1
 `
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
@@ -2825,7 +2586,6 @@ EOF1
 
         ;;
 
-      #(
         '--no-verbose')
 
           verbose='no'
@@ -2833,7 +2593,6 @@ EOF1
 
         ;;
 
-      #(
         '--no-verbose='*)
 
           'cat' >&2 <<EOF1
@@ -2844,7 +2603,6 @@ EOF1
 
         ;;
 
-      #(
         '-V')
 
           shift
@@ -2853,7 +2611,6 @@ EOF1
 
         ;;
 
-      #(
         '-V'*)
 
           x=`eval "${sed}"' "
@@ -2865,11 +2622,9 @@ ${1}
 EOF1
 `
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
@@ -2887,7 +2642,6 @@ EOF1
 
         ;;
 
-      #(
         '--plain')
 
           plain='yes'
@@ -2895,7 +2649,6 @@ EOF1
 
         ;;
 
-      #(
         '--plain='*)
 
           'cat' >&2 <<EOF1
@@ -2906,7 +2659,6 @@ EOF1
 
         ;;
 
-      #(
         '-p')
 
           shift
@@ -2915,7 +2667,6 @@ EOF1
 
         ;;
 
-      #(
         '-p'*)
 
           x=`eval "${sed}"' "
@@ -2927,11 +2678,9 @@ ${1}
 EOF1
 `
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
@@ -2949,7 +2698,6 @@ EOF1
 
         ;;
 
-      #(
         '--print0')
 
           print0='yes'
@@ -2957,7 +2705,6 @@ EOF1
 
         ;;
 
-      #(
         '--print0='*)
 
           'cat' >&2 <<EOF1
@@ -2968,7 +2715,6 @@ EOF1
 
         ;;
 
-      #(
         '-z')
 
           shift
@@ -2977,7 +2723,6 @@ EOF1
 
         ;;
 
-      #(
         '-z'*)
 
           x=`eval "${sed}"' "
@@ -2989,11 +2734,9 @@ ${1}
 EOF1
 `
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
@@ -3011,7 +2754,6 @@ EOF1
 
         ;;
 
-      #(
         '--recursive')
 
           recursive='yes'
@@ -3019,7 +2761,6 @@ EOF1
 
         ;;
 
-      #(
         '--recursive='*)
 
           'cat' >&2 <<EOF1
@@ -3030,7 +2771,6 @@ EOF1
 
         ;;
 
-      #(
         '-r')
 
           shift
@@ -3039,7 +2779,6 @@ EOF1
 
         ;;
 
-      #(
         '-r'*)
 
           x=`eval "${sed}"' "
@@ -3051,11 +2790,9 @@ ${1}
 EOF1
 `
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
@@ -3073,11 +2810,9 @@ EOF1
 
         ;;
 
-      #(
         '--sed')
 
           case "${#}" in
-          #(
             '1')
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}--sed${fR2} requires a value
@@ -3096,7 +2831,6 @@ EOF1
 
         ;;
 
-      #(
         '--sed='*)
 
           x=`eval "${sed}"' "
@@ -3108,11 +2842,9 @@ ${1}
 EOF1
 `
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
@@ -3125,14 +2857,11 @@ EOF1
           'eval' "${x}"
 
           case "${sed}" in
-          #(
             'auto')
               case "${sed_auto}" in
-              #(
                 ?*)
                   ':'
                 ;;
-              #(
                 *)
                   sed_auto=''\''sed'\'''
                   for x in \
@@ -3158,7 +2887,6 @@ EOF1
 
         ;;
 
-      #(
         '--style'|'--style=always')
 
           shift
@@ -3167,7 +2895,6 @@ EOF1
 
         ;;
 
-      #(
         '--style=auto')
 
           shift
@@ -3176,7 +2903,6 @@ EOF1
 
         ;;
 
-      #(
         '--style=never')
 
           shift
@@ -3185,7 +2911,6 @@ EOF1
 
         ;;
 
-      #(
         '--style='*)
 
           'cat' >&2 <<EOF1
@@ -3195,7 +2920,6 @@ EOF1
 
         ;;
 
-      #(
         '--style-stderr'|'--style-stderr=always')
 
           style_stderr='always'
@@ -3214,13 +2938,11 @@ EOF1
 
         ;;
 
-      #(
         '--style-stderr=auto')
 
           style_stderr='auto'
 
           case "${isatty2}" in
-          #(
             'unknown')
               if 'test' '-t' '2'; then
                 isatty2='yes'
@@ -3231,7 +2953,6 @@ EOF1
           esac
 
           case "${isatty2}" in
-          #(
             'yes')
               fR2='[22m[24m[39m' # stderr style: none
               fB2='[24m[39m[1m'  # stderr style: bold
@@ -3243,7 +2964,6 @@ EOF1
               fm2='[22m[24m[35m' # stderr style: magenta
               fc2='[22m[24m[36m' # stderr style: cyan
             ;;
-          #(
             'no')
               fR2='' # stderr style: none
               fB2='' # stderr style: bold
@@ -3261,7 +2981,6 @@ EOF1
 
         ;;
 
-      #(
         '--style-stderr=never')
 
           style_stderr='never'
@@ -3280,7 +2999,6 @@ EOF1
 
         ;;
 
-      #(
         '--style-stderr='*)
 
           'cat' >&2 <<EOF1
@@ -3290,7 +3008,6 @@ EOF1
 
         ;;
 
-      #(
         '--style-stdout'|'--style-stdout=always')
 
           style_stdout='always'
@@ -3309,13 +3026,11 @@ EOF1
 
         ;;
 
-      #(
         '--style-stdout=auto')
 
           style_stdout='auto'
 
           case "${isatty1}" in
-          #(
             'unknown')
               if 'test' '-t' '1'; then
                 isatty1='yes'
@@ -3326,7 +3041,6 @@ EOF1
           esac
 
           case "${isatty1}" in
-          #(
             'yes')
               fR1='[22m[24m[39m' # stdout style: none
               fB1='[24m[39m[1m'  # stdout style: bold
@@ -3338,7 +3052,6 @@ EOF1
               fm1='[22m[24m[35m' # stdout style: magenta
               fc1='[22m[24m[36m' # stdout style: cyan
             ;;
-          #(
             'no')
               fR1='' # stdout style: none
               fB1='' # stdout style: bold
@@ -3356,7 +3069,6 @@ EOF1
 
         ;;
 
-      #(
         '--style-stdout=never')
 
           style_stdout='never'
@@ -3375,7 +3087,6 @@ EOF1
 
         ;;
 
-      #(
         '--style-stdout='*)
 
           'cat' >&2 <<EOF1
@@ -3385,11 +3096,9 @@ EOF1
 
         ;;
 
-      #(
         '--texi2any')
 
           case "${#}" in
-          #(
             '1')
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}--texi2any${fR2} requires a value
@@ -3408,7 +3117,6 @@ EOF1
 
         ;;
 
-      #(
         '--texi2any='*)
 
           x=`eval "${sed}"' "
@@ -3420,11 +3128,9 @@ ${1}
 EOF1
 `
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
@@ -3437,14 +3143,11 @@ EOF1
           'eval' "${x}"
 
           case "${texi2any}" in
-          #(
             'auto')
               case "${texi2any_auto}" in
-              #(
                 ?*)
                   ':'
                 ;;
-              #(
                 *)
                   texi2any_auto=''\''makeinfo'\'''
                   for x in \
@@ -3470,7 +3173,6 @@ EOF1
 
         ;;
 
-      #(
         '--unicode')
 
           unicode='yes'
@@ -3479,7 +3181,6 @@ EOF1
 
         ;;
 
-      #(
         '--unicode='*)
 
           'cat' >&2 <<EOF1
@@ -3490,7 +3191,6 @@ EOF1
 
         ;;
 
-      #(
         '-u')
 
           shift
@@ -3499,7 +3199,6 @@ EOF1
 
         ;;
 
-      #(
         '-u'*)
 
           x=`eval "${sed}"' "
@@ -3511,11 +3210,9 @@ ${1}
 EOF1
 `
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
@@ -3533,7 +3230,6 @@ EOF1
 
         ;;
 
-      #(
         '--verbose')
 
           verbose='yes'
@@ -3541,7 +3237,6 @@ EOF1
 
         ;;
 
-      #(
         '--verbose='*)
 
           'cat' >&2 <<EOF1
@@ -3552,7 +3247,6 @@ EOF1
 
         ;;
 
-      #(
         '-v')
 
           shift
@@ -3561,7 +3255,6 @@ EOF1
 
         ;;
 
-      #(
         '-v'*)
 
           x=`eval "${sed}"' "
@@ -3573,11 +3266,9 @@ ${1}
 EOF1
 `
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
@@ -3595,7 +3286,6 @@ EOF1
 
         ;;
 
-      #(
         '--version')
 
           cat <<EOF1
@@ -3610,11 +3300,9 @@ named <${fB1}CC0-1.0.txt${fR1}>. If not, it may be available at
 <${fB1}https://creativecommons.org/publicdomain/zero/1.0/${fR1}>.
 EOF1
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -3629,7 +3317,6 @@ EOF1
 
         ;;
 
-      #(
         '--version='*)
 
           'cat' >&2 <<EOF1
@@ -3640,7 +3327,6 @@ EOF1
 
         ;;
 
-      #(
         '--'*'='*)
 
           eval "${awk}"' '\''
@@ -3662,11 +3348,9 @@ END {
 ${1}
 EOF1
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}${awk}${fR2} failed while reading from:
@@ -3679,7 +3363,6 @@ EOF1
 
         ;;
 
-      #(
         '--'*|'-'?)
 
           'cat' >&2 <<EOF1
@@ -3690,7 +3373,6 @@ EOF1
 
         ;;
 
-      #(
         '-'?*)
 
           eval "${awk}"' '\''
@@ -3704,11 +3386,9 @@ EOF1
 ${1}
 EOF1
           case "${?}" in
-          #(
             '0')
               :
             ;;
-          #(
             *)
               'cat' >&2 <<EOF1
 ${fr2}gatbps!${fR2} ${fB2}${awk}${fR2} failed while reading from:
@@ -3727,11 +3407,9 @@ EOF1
   esac
 
   case "${1}" in
-  #(
     ?*)
       :
     ;;
-  #(
     *)
       'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} operands must not be empty
@@ -3743,7 +3421,6 @@ EOF1
   esac
 
   case "${1}" in
-  #(
     *'/')
       'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} operands must not end with slashes
@@ -3755,13 +3432,10 @@ EOF1
   esac
 
   case "${dry_run}${verbose}" in
-  #(
     *'yes'*)
       case "${ferror1}" in
-      #(
         'no')
           case "${print0}" in
-          #(
             'yes')
               eval "${awk}"' '\''
 {
@@ -3779,11 +3453,9 @@ END {
 ${1}
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}${awk}${fR2} failed while reading from:
@@ -3797,17 +3469,14 @@ EOF1
                 ;;
               esac
             ;;
-          #(
             'no')
               cat <<EOF1
 ${1}
 EOF1
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -3828,15 +3497,12 @@ EOF1
   esac
 
   case "${dry_run}" in
-  #(
     'no')
 
       case "${1}" in
-      #(
         '-'*)
           safe_1="./${1}"
         ;;
-      #(
         *)
           safe_1="${1}"
         ;;
@@ -3905,7 +3571,6 @@ EOF1
 
         case "${plain},${1}" in
 
-        #(
           'no,CC0-1.0-AC-COPYRIGHT.ac'|'no,'*'/CC0-1.0-AC-COPYRIGHT.ac')
             cat >"${safe_1}" <<'EOF1'
 dnl
@@ -3936,11 +3601,9 @@ dnl <https://creativecommons.org/publicdomain/zero/1.0/>.
 dnl
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -3954,7 +3617,6 @@ EOF1
             esac
           ;;
 
-        #(
           'no,CC0-1.0-AM-COPYRIGHT.am'|'no,'*'/CC0-1.0-AM-COPYRIGHT.am')
             cat >"${safe_1}" <<'EOF1'
 ##
@@ -3985,11 +3647,9 @@ EOF1
 ##
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -4011,7 +3671,6 @@ EOF1
 
 |%}generation_code({%|CC0-1.0-file.txt|%}){%|
 
-        #(
           'no,CC0-1.0.txt'|'no,'*'/CC0-1.0.txt')
             cat >"${safe_1}" <<'EOF1'
 Creative Commons Legal Code
@@ -4137,11 +3796,9 @@ express Statement of Purpose.
     this CC0 or use of the Work.
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -4155,7 +3812,6 @@ EOF1
             esac
           ;;
 
-        #(
           'no,DATE.sh'|'no,'*'/DATE.sh')
             cat >"${safe_1}" <<'EOF1'
 #
@@ -4230,11 +3886,9 @@ fi
 #
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -4328,7 +3982,6 @@ EOF1
 
 |%}generation_code({%|TEST_EXIT.h|%}){%|
 
-        #(
           'no,VERSION.ac'|'no,'*'/VERSION.ac')
             cat >"${safe_1}" <<'EOF1'
 dnl
@@ -4387,11 +4040,9 @@ dnl <https://creativecommons.org/publicdomain/zero/1.0/>.
 dnl
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -4405,7 +4056,6 @@ EOF1
             esac
           ;;
 
-        #(
           'no,VERSION.sh'|'no,'*'/VERSION.sh')
             cat >"${safe_1}" <<'EOF1'
 #
@@ -4475,11 +4125,9 @@ fi
 #
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -4493,7 +4141,6 @@ EOF1
             esac
           ;;
 
-        #(
           'no,VERSION_LTCUR.sh'|'no,'*'/VERSION_LTCUR.sh')
             cat >"${safe_1}" <<'EOF1'
 #
@@ -4655,11 +4302,9 @@ if "${git}" 'ls-files' '--error-unmatch' \
 
   "${git}" 'tag' >"${0}.tmp"
   case "${?}" in
-  #(
     '0')
       :
     ;;
-  #(
     *)
       'cat' >&2 <<EOF2
 ${fr2}VERSION_LTCUR.sh!${fR2} ${fB2}${git}${fR2} failed while writing to: ${fB2}${0}.tmp${fR2}
@@ -4690,11 +4335,9 @@ END {
 '\\''' <"${0}.tmp"
 `
   case "${?}" in
-  #(
     '0')
       :
     ;;
-  #(
     *)
       'cat' >&2 <<EOF2
 ${fr2}VERSION_LTCUR.sh!${fR2} ${fB2}${awk}${fR2} failed while reading from:
@@ -4709,11 +4352,9 @@ elif test '-f' 'VERSION_LTCUR'; then
 
   cat 'VERSION_LTCUR'
   case "${?}" in
-  #(
     '0')
       :
     ;;
-  #(
     *)
       'cat' >&2 <<EOF2
 ${fr2}VERSION_LTCUR.sh!${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -4746,11 +4387,9 @@ fi
 #
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -4764,7 +4403,6 @@ EOF1
             esac
           ;;
 
-        #(
           'no,awk-form.sh'|'no,'*'/awk-form.sh')
             cat >"${safe_1}" <<'EOF1'
 #
@@ -4795,11 +4433,9 @@ EOF1
 #
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -4813,7 +4449,6 @@ EOF1
             esac
           ;;
 
-        #(
           'no,bdots.texi'|'no,'*'/bdots.texi')
             cat >"${safe_1}" <<'EOF1'
 @AT@ifxml
@@ -4960,11 +4595,9 @@ EOF1
 @AT@end ifxml
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -4978,7 +4611,6 @@ EOF1
             esac
           ;;
 
-        #(
           'no,bothcontents.texi'|'no,'*'/bothcontents.texi')
             cat >"${safe_1}" <<'EOF1'
 @AT@ifxml
@@ -5033,11 +4665,9 @@ EOF1
 @AT@end ifxml
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -5051,7 +4681,6 @@ EOF1
             esac
           ;;
 
-        #(
           'no,configure.ac.vim'|'no,'*'/configure.ac.vim')
             cat >"${safe_1}" <<'EOF1'
 "
@@ -5076,11 +4705,9 @@ EOF1
 "
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -5094,7 +4721,6 @@ EOF1
             esac
           ;;
 
-        #(
           'no,contents.texi'|'no,'*'/contents.texi')
             cat >"${safe_1}" <<'EOF1'
 @AT@ifxml
@@ -5140,11 +4766,9 @@ EOF1
 @AT@end ifxml
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -5166,7 +4790,6 @@ EOF1
 
 |%}generation_code({%|doxygen.am|%}){%|
 
-        #(
           'no,dslash.texi'|'no,'*'/dslash.texi')
             cat >"${safe_1}" <<'EOF1'
 @AT@ifxml
@@ -5313,11 +4936,9 @@ EOF1
 @AT@end ifxml
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -5335,7 +4956,6 @@ EOF1
 
 |%}generation_code({%|echo.sh|%}){%|
 
-        #(
           'no,gequ.texi'|'no,'*'/gequ.texi')
             cat >"${safe_1}" <<'EOF1'
 @AT@ifxml
@@ -5482,11 +5102,9 @@ EOF1
 @AT@end ifxml
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -5504,7 +5122,6 @@ EOF1
 
 |%}generation_code({%|indent.texi|%}){%|
 
-        #(
           'no,ipez.texi'|'no,'*'/ipez.texi')
             cat >"${safe_1}" <<'EOF1'
 @AT@ifxml
@@ -5540,11 +5157,9 @@ EOF1
 @AT@end ifxml
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -5566,7 +5181,6 @@ EOF1
 
 |%}generation_code({%|javadoc.am|%}){%|
 
-        #(
           'no,lcei.texi'|'no,'*'/lcei.texi')
             cat >"${safe_1}" <<'EOF1'
 @AT@ifxml
@@ -5718,11 +5332,9 @@ ceil(
 @AT@end ifxml
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -5736,7 +5348,6 @@ EOF1
             esac
           ;;
 
-        #(
           'no,lequ.texi'|'no,'*'/lequ.texi')
             cat >"${safe_1}" <<'EOF1'
 @AT@ifxml
@@ -5883,11 +5494,9 @@ EOF1
 @AT@end ifxml
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -5901,7 +5510,6 @@ EOF1
             esac
           ;;
 
-        #(
           'no,lflo.texi'|'no,'*'/lflo.texi')
             cat >"${safe_1}" <<'EOF1'
 @AT@ifxml
@@ -6053,11 +5661,9 @@ floor(
 @AT@end ifxml
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -6071,7 +5677,6 @@ EOF1
             esac
           ;;
 
-        #(
           'no,math.texi'|'no,'*'/math.texi')
             cat >"${safe_1}" <<'EOF1'
 @AT@ifxml
@@ -6124,11 +5729,9 @@ EOF1
 @AT@end ifxml
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -6142,7 +5745,6 @@ EOF1
             esac
           ;;
 
-        #(
           'no,mdot.texi'|'no,'*'/mdot.texi')
             cat >"${safe_1}" <<'EOF1'
 @AT@ifxml
@@ -6289,11 +5891,9 @@ EOF1
 @AT@end ifxml
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -6307,7 +5907,6 @@ EOF1
             esac
           ;;
 
-        #(
           'no,mdots.texi'|'no,'*'/mdots.texi')
             cat >"${safe_1}" <<'EOF1'
 @AT@ifxml
@@ -6454,11 +6053,9 @@ EOF1
 @AT@end ifxml
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -6478,7 +6075,6 @@ EOF1
 
 |%}generation_code({%|mtvskiptop.texi|%}){%|
 
-        #(
           'no,nequ.texi'|'no,'*'/nequ.texi')
             cat >"${safe_1}" <<'EOF1'
 @AT@ifxml
@@ -6625,11 +6221,9 @@ EOF1
 @AT@end ifxml
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -6649,7 +6243,6 @@ EOF1
 
 |%}generation_code({%|plaintext.am|%}){%|
 
-        #(
           'no,prm.texi'|'no,'*'/prm.texi')
             cat >"${safe_1}" <<'EOF1'
 @AT@ifxml
@@ -6796,11 +6389,9 @@ EOF1
 @AT@end ifxml
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -6816,7 +6407,6 @@ EOF1
 
 |%}generation_code({%|ps-dist.am|%}){%|
 
-        #(
           'no,rarrow.texi'|'no,'*'/rarrow.texi')
             cat >"${safe_1}" <<'EOF1'
 @AT@ifxml
@@ -6963,11 +6553,9 @@ EOF1
 @AT@end ifxml
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -6981,7 +6569,6 @@ EOF1
             esac
           ;;
 
-        #(
           'no,rcei.texi'|'no,'*'/rcei.texi')
             cat >"${safe_1}" <<'EOF1'
 @AT@ifxml
@@ -7133,11 +6720,9 @@ EOF1
 @AT@end ifxml
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -7151,7 +6736,6 @@ EOF1
             esac
           ;;
 
-        #(
           'no,rflo.texi'|'no,'*'/rflo.texi')
             cat >"${safe_1}" <<'EOF1'
 @AT@ifxml
@@ -7303,11 +6887,9 @@ EOF1
 @AT@end ifxml
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -7321,7 +6903,6 @@ EOF1
             esac
           ;;
 
-        #(
           'no,sbs.texi'|'no,'*'/sbs.texi')
             cat >"${safe_1}" <<'EOF1'
 @AT@ifxml
@@ -7440,11 +7021,9 @@ _\L\\S\\R\
 @AT@end ifxml
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -7460,7 +7039,6 @@ EOF1
 
 |%}generation_code({%|sh-form.sh|%}){%|
 
-        #(
           'no,shortcontents.texi'|'no,'*'/shortcontents.texi')
             cat >"${safe_1}" <<'EOF1'
 @AT@ifxml
@@ -7506,11 +7084,9 @@ EOF1
 @AT@end ifxml
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -7524,7 +7100,6 @@ EOF1
             esac
           ;;
 
-        #(
           'no,sps.texi'|'no,'*'/sps.texi')
             cat >"${safe_1}" <<'EOF1'
 @AT@ifxml
@@ -7643,11 +7218,9 @@ EOF1
 @AT@end ifxml
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -7661,7 +7234,6 @@ EOF1
             esac
           ;;
 
-        #(
           'no,texi-form.sh'|'no,'*'/texi-form.sh')
             cat >"${safe_1}" <<'EOF1'
 #
@@ -7692,11 +7264,9 @@ EOF1
 #
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -7712,7 +7282,6 @@ EOF1
 
 |%}generation_code({%|texinfo.css|%}){%|
 
-        #(
           'no,troff-form.sh'|'no,'*'/troff-form.sh')
             cat >"${safe_1}" <<'EOF1'
 #
@@ -7743,11 +7312,9 @@ EOF1
 #
 EOF1
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -7761,7 +7328,6 @@ EOF1
             esac
           ;;
 
-        #(
           *)
 
             if test '-e' "${safe_1}.top"; then
@@ -7786,11 +7352,9 @@ END {
 }
 '\''' <"${safe_1}.top" >"${safe_tmp0}"
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}${awk}${fR2} failed while reading from:
@@ -7833,11 +7397,9 @@ END {
 }
 '\''' <"${safe_1}.top.texi" >"${safe_tmp1}"
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}${awk}${fR2} failed while reading from:
@@ -7858,11 +7420,9 @@ EOF1
                 >"${safe_tmp0}" \
               ;'
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}${texi2any}${fR2} failed while reading from: ${fB2}${tmp1}${fR2}
@@ -7876,11 +7436,9 @@ EOF1
 
               echo >>"${safe_tmp0}"
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}echo${fR2} failed while writing to: ${fB2}${tmp0}${fR2}
@@ -7895,11 +7453,9 @@ EOF1
 
               cat '/dev/null' >"${safe_tmp0}"
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -7951,11 +7507,9 @@ END {
 }
 '\''' <"${safe_1}.texi" >"${safe_tmp2}"
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}${awk}${fR2} failed while reading from:
@@ -7976,11 +7530,9 @@ EOF1
               >"${safe_tmp1}" \
             ;'
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}${texi2any}${fR2} failed while reading from: ${fB2}${tmp2}${fR2}
@@ -8014,11 +7566,9 @@ $0 !~ /^#/ {
 }
 '\''' <"${safe_1}.bot" >"${safe_tmp2}"
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}${awk}${fR2} failed while reading from:
@@ -8046,11 +7596,9 @@ EOF1
 
               echo >"${safe_tmp2}"
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}echo${fR2} failed while writing to: ${fB2}${tmp2}${fR2}
@@ -8078,11 +7626,9 @@ END {
 }
 '\''' <"${safe_1}.bot.texi" >"${safe_tmp3}"
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}${awk}${fR2} failed while reading from:
@@ -8103,11 +7649,9 @@ EOF1
                 >>"${safe_tmp2}" \
               ;'
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}${texi2any}${fR2} failed while reading from: ${fB2}${tmp3}${fR2}
@@ -8123,11 +7667,9 @@ EOF1
 
               cat '/dev/null' >"${safe_tmp2}"
               case "${?}" in
-              #(
                 '0')
                   :
                 ;;
-              #(
                 *)
                   'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -8144,11 +7686,9 @@ EOF1
 
             cat "${safe_tmp0}" "${safe_tmp1}" "${safe_tmp2}" >"${safe_1}"
             case "${?}" in
-            #(
               '0')
                 :
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
@@ -8172,7 +7712,6 @@ EOF1
       done
 
       case "${delete_tmp}" in
-      #(
         'yes')
           for i in '0' '1' '2' '3' '4' '5' '6' '7' '8' '9'; do
             if rm '-f' "${safe_1}.gatbps${i}"; then
@@ -8190,7 +7729,6 @@ EOF1
   esac
 
   case "${boundary}${recursive}" in
-  #(
     *'yes'*)
 
       while :; do # recursion

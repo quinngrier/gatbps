@@ -10,11 +10,9 @@ changequote({%|`|%}, {%|'|%})dnl
 include(`src/files/$1.m4'){%|
 EOF1
             case "$|%}{%|{?}" in
-            #(
               '0')
                 ':'
               ;;
-            #(
               *)
                 'cat' >&2 <<EOF1
 $|%}{%|{fy2}gatbps:$|%}{%|{fR2} $|%}{%|{fB2}cat$|%}{%|{fR2} failed while reading from:
