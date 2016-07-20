@@ -18,11 +18,12 @@ header_comment({%|@ifxml
 @end ifnotxml
 @end ifxml
 @node Creative Commons Zero@tie{}@w{1-0}
-@appendix Creative Commons Zero 1.@:0
+@appendix Creative Commons Zero@tie{}1.@:0
 
 @noindent
 This appendix contains the complete text of the Creative Commons Zero
-(CC0) 1.@:0 Universal Public Domain Dedication@.
+(CC0)@tie{}1.@:0
+Universal Public Domain Dedication@.
 The text follows@.
 
 @quotation
@@ -86,7 +87,7 @@ limited to, the following:
 
 @item
      rights protecting against unfair competition in regards to a Work,
-     subject to the limitations in paragraph 4(a), below;
+     subject to the limitations in paragraph@tie{}4(a), below;
 
 @item
      rights protecting the extraction, dissemination, use and reuse of data
@@ -94,7 +95,7 @@ limited to, the following:
 
 @item
      database rights (such as those arising under Directive 96/9/EC of the
-     European Parliament and of the Council of 11 March 1996 on the legal
+     European Parliament and of the Council of 11@tie{}March 1996 on the legal
      protection of databases, and under any national implementation
      thereof, including any amended or successor version of such
      directive); and
@@ -111,10 +112,10 @@ of, applicable law, Affirmer hereby overtly, fully, permanently,
 irrevocably and unconditionally waives, abandons, and surrenders all of
 Affirmer's Copyright and Related Rights and associated claims and causes
 of action, whether now known or unknown (including existing as well as
-future claims and causes of action), in the Work (i) in all territories
-worldwide, (ii) for the maximum duration provided by applicable law or
-treaty (including future time extensions), (iii) in any current or future
-medium and for any number of copies, and (iv) for any purpose whatsoever,
+future claims and causes of action), in the Work (i)@tie{}in all territories
+worldwide, (ii)@tie{}for the maximum duration provided by applicable law or
+treaty (including future time extensions), (iii)@tie{}in any current or future
+medium and for any number of copies, and (iv)@tie{}for any purpose whatsoever,
 including without limitation commercial, advertising or promotional
 purposes (the ``Waiver''). Affirmer makes the Waiver for the benefit of each
 member of the public at large and to the detriment of Affirmer's heirs and
@@ -131,18 +132,18 @@ account Affirmer's express Statement of Purpose. In addition, to the
 extent the Waiver is so judged Affirmer hereby grants to each affected
 person a royalty-free, non transferable, non sublicensable, non exclusive,
 irrevocable and unconditional license to exercise Affirmer's Copyright and
-Related Rights in the Work (i) in all territories worldwide, (ii) for the
+Related Rights in the Work (i)@tie{}in all territories worldwide, (ii)@tie{}for the
 maximum duration provided by applicable law or treaty (including future
-time extensions), (iii) in any current or future medium and for any number
-of copies, and (iv) for any purpose whatsoever, including without
+time extensions), (iii)@tie{}in any current or future medium and for any number
+of copies, and (iv)@tie{}for any purpose whatsoever, including without
 limitation commercial, advertising or promotional purposes (the
 ``License''). The License shall be deemed effective as of the date CC0 was
 applied by Affirmer to the Work. Should any part of the License for any
 reason be judged legally invalid or ineffective under applicable law, such
 partial invalidity or ineffectiveness shall not invalidate the remainder
 of the License, and in such case Affirmer hereby affirms that he or she
-will not (i) exercise any of his or her remaining Copyright and Related
-Rights in the Work or (ii) assert any associated claims and causes of
+will not (i)@tie{}exercise any of his or her remaining Copyright and Related
+Rights in the Work or (ii)@tie{}assert any associated claims and causes of
 action with respect to the Work, in either case contrary to Affirmer's
 express Statement of Purpose.
 
