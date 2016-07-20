@@ -966,17 +966,13 @@ The
 .nohy "\fBCC0\-1.0\-copying.texi\fR"
 special file invokes the
 .nohy "\fB@copying\fR"
-Texinfo command with a
-message stating that the
-authors of the manual have
-waived their rights to it by
-cross-referencing the appendix of the
+Texinfo command with a message stating that the authors of the manual
+have waived their rights to it by cross-referencing the appendix of the
 .nohy "\fBCC0\-1.0\-appendix.texi\fR"
 special file.
-It can be included in
-another Texinfo file where the
+It can be included in a Texinfo document where the invocation of the
 .nohy "\fB@copying\fR"
-command is desired to appear.
+command is desired to occur.
 .IP
 For more information, see the COPYRIGHT TEXTS section.
 .TP

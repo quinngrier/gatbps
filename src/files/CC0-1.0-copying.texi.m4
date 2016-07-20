@@ -11,8 +11,9 @@ header_comment({%|@ifxml
 @c The CC0-1.0-copying.texi special file invokes the @copying Texinfo
 @c command with a message stating that the authors of the manual have
 @c waived their rights to it by cross-referencing the appendix of the
-@c CC0-1.0-appendix.texi special file. It can be included in another
-@c Texinfo file where the @copying command is desired to appear.
+@c CC0-1.0-appendix.texi special file. It can be included in a Texinfo
+@c document where the invocation of the @copying command is desired to
+@c occur.
 @c
 @end ifnotxml
 @end ifxml
