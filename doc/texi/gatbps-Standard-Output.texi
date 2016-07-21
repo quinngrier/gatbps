@@ -9,8 +9,8 @@ followed by either a
 newline or null character
 is written to standard output@.
 The
-@w{@t{-@w{-}help}@comma{}}
-@w{@t{-@w{-}man}@comma{}}
+@w{@t{-@w{-}help}},
+@w{@t{-@w{-}man}},
 and
 @w{@t{-@w{-}version}}
 options also write to standard output@.

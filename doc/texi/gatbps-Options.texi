@@ -24,21 +24,21 @@ be long and short names for an option and
 @w{@i{V}}
 be a value@.
 If the option requires a value, then it may be written as either
-@w{@t{-@w{-}}@i{L}@t{=}@i{V}@comma{}}
-@w{@t{-@w{-}}@i{L V}@comma{}}
-@w{@t{-}@i{SV}@comma{}}
+@w{@t{-@w{-}}@i{L}@t{=}@i{V}},
+@w{@t{-@w{-}}@i{L V}},
+@w{@t{-}@i{SV}},
 or
 @w{@t{-}@i{S V}@.}
 If the option permits a value, then it may be written as either
-@w{@t{-@w{-}}@i{L}@t{=}@i{V}@comma{}}
-@w{@t{-@w{-}}@i{L}@comma{}}
-@w{@t{-}@i{SV}@comma{}}
+@w{@t{-@w{-}}@i{L}@t{=}@i{V}},
+@w{@t{-@w{-}}@i{L}},
+@w{@t{-}@i{SV}},
 or
 @w{@t{-}@i{S}@.}
 If the option forbids a value, then it may be written as either
 @w{@t{-@w{-}}@i{L}}
 or
-@w{@t{-}@i{S}@comma{}}
+@w{@t{-}@i{S}},
 and in the latter case it may be combined with an immediately following
 option or combination of options by deleting the
 @w{@t{-}@i{S}}
@@ -54,7 +54,7 @@ and
 may be written as
 @w{@t{-}@i{SK}}
 and
-@w{@t{-}@i{S}@t{-}@i{K}@comma{}}
+@w{@t{-}@i{S}@t{-}@i{K}},
 respectively@.
 
 @include indent.texi
@@ -104,7 +104,7 @@ program to
 If
 @w{@i{V}}
 is
-@w{@t{auto}@comma{}}
+@w{@t{auto}},
 then the command name is inferred@.
 The copy of the
 program that corresponds
@@ -215,7 +215,7 @@ program to
 If
 @w{@i{V}}
 is
-@w{@t{auto}@comma{}}
+@w{@t{auto}},
 then the command name is inferred@.
 The copy of the
 program that corresponds
@@ -261,17 +261,17 @@ is omitted, then it is taken to be
 If
 @w{@i{V}}
 is
-@w{@t{always}@comma{}}
+@w{@t{always}},
 then styling is enabled@.
 If
 @w{@i{V}}
 is
-@w{@t{never}@comma{}}
+@w{@t{never}},
 then styling is disabled@.
 If
 @w{@i{V}}
 is
-@w{@t{auto}@comma{}}
+@w{@t{auto}},
 then styling is enabled
 if standard error is associated
 with a terminal or disabled if not@.
@@ -292,17 +292,17 @@ is omitted, then it is taken to be
 If
 @w{@i{V}}
 is
-@w{@t{always}@comma{}}
+@w{@t{always}},
 then styling is enabled@.
 If
 @w{@i{V}}
 is
-@w{@t{never}@comma{}}
+@w{@t{never}},
 then styling is disabled@.
 If
 @w{@i{V}}
 is
-@w{@t{auto}@comma{}}
+@w{@t{auto}},
 then styling is enabled
 if standard output is associated
 with a terminal or disabled if not@.
@@ -320,7 +320,7 @@ program to
 If
 @w{@i{V}}
 is
-@w{@t{auto}@comma{}}
+@w{@t{auto}},
 then the command name is inferred@.
 The copy of the
 program that corresponds

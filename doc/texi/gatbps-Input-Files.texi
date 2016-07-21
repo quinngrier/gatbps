@@ -6,9 +6,9 @@ For each plain file
 that is generated, the input file
 @w{@i{R}@t{.@:texi}}
 is required and the input files
-@w{@i{R}@t{.@:top}@comma{}}
-@w{@i{R}@t{.@:top.@:texi}@comma{}}
-@w{@i{R}@t{.@:bot}@comma{}}
+@w{@i{R}@t{.@:top}},
+@w{@i{R}@t{.@:top.@:texi}},
+@w{@i{R}@t{.@:bot}},
 and
 @w{@i{R}@t{.@:bot.@:texi}}
 are optional@.

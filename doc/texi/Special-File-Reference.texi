@@ -108,17 +108,17 @@ For more information, @pxref{Copyright Texts}@.
 The
 @w{@t{TEST_EXIT.@:h}}
 special file is a C header file that defines the
-@w{@t{TEST_EXIT_ERROR}@comma{}}
-@w{@t{TEST_EXIT_FAIL}@comma{}}
-@w{@t{TEST_EXIT_PASS}@comma{}}
+@w{@t{TEST_EXIT_ERROR}},
+@w{@t{TEST_EXIT_FAIL}},
+@w{@t{TEST_EXIT_PASS}},
 and
 @w{@t{TEST_EXIT_SKIP}}
 macros to
-@w{@t{99}@comma{}}
-@w{@t{1}@comma{}}
-@w{@t{0}@comma{}}
+@w{@t{99}},
+@w{@t{1}},
+@w{@t{0}},
 and
-@w{@t{77}@comma{}}
+@w{@t{77}},
 respectively@.
 These are the exit status values used by GNU Automake for a test suite
 with no test protocol@.
@@ -488,7 +488,7 @@ and
 @w{@i{R}}
 are ignored except in Info and plain text,
 in which they are inserted to the left and right of
-@w{@i{S}@comma{}}
+@w{@i{S}},
 serving as parentheses@.
 This is used to imitate the mathematical
 notation of @TeX{} in the other output formats:
@@ -531,7 +531,7 @@ and
 @w{@i{R}}
 are ignored except in Info and plain text,
 in which they are inserted to the left and right of
-@w{@i{S}@comma{}}
+@w{@i{S}},
 serving as parentheses@.
 This is used to imitate the mathematical
 notation of @TeX{} in the other output formats:
