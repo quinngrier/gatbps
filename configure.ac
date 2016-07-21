@@ -5,7 +5,7 @@ AC_INIT(
   ])m4_if(m4_sysval, [0], [], [m4_fatal([VERSION.sh failed])]),
   [quinn.grier@gmail.com],
   [gatbps],
-  [http://www.quinngrier.com/gatbps])
+  [https://www.quinngrier.com/gatbps])
 
 GATBPS_DEFINE_VERSION(
   [AC_],
