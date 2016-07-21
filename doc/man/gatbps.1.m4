@@ -938,7 +938,7 @@ The appendix is labeled with
 .nohy "\fB@node\fR"
 .nohy "\fBCreative\fR"
 .nohy "\fBCommons\fR"
-.nohy "\fBZero@tie{}@w{1-0}\fR"
+.nohy "\fBZero@tie{}@w{1\-0}\fR"
 so that it maintains the usual node structure and can be
 cross-referenced.
 .IP
