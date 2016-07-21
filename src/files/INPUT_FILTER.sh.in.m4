@@ -62,6 +62,10 @@ LC_ALL='C'
           $0 = $0 x[i]
         }
       }
+    } else if ($0 ~ / @AT@see ["<]/) {
+    } else if ($0 ~ / @AT@see /) {
+      sub(/ @AT@see /, " @AT@see <code>", $0)
+      $0 = $0 "</code>"
     } else if ($0 ~ / @AT@throws /) {
       sub(/ @AT@throws /, " @AT@throws <code>", $0)
       $0 = $0 "</code>"
