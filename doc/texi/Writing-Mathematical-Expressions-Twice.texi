@@ -57,7 +57,7 @@ format:
 $x + y$.
 @end tex
 @ifnottex
-@w{@i{x} + @i{y}@.}
+@w{@i{x} + @i{y}}@.
 @end ifnottex
 
 @include indent.texi

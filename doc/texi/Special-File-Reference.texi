@@ -15,7 +15,7 @@ The short descriptions can
 also be shown by using the
 @w{@t{-@w{-}help=}@i{S}}
 option of
-@w{@t{gatbps}@.}
+@w{@t{gatbps}}@.
 
 @table @asis
 @sfindex @w{@t{CC0-1.@:0-appendix.@:texi}}

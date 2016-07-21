@@ -28,13 +28,13 @@ If the option requires a value, then it may be written as either
 @w{@t{-@w{-}}@i{L V}},
 @w{@t{-}@i{SV}},
 or
-@w{@t{-}@i{S V}@.}
+@w{@t{-}@i{S V}}@.
 If the option permits a value, then it may be written as either
 @w{@t{-@w{-}}@i{L}@t{=}@i{V}},
 @w{@t{-@w{-}}@i{L}},
 @w{@t{-}@i{SV}},
 or
-@w{@t{-}@i{S}@.}
+@w{@t{-}@i{S}}@.
 If the option forbids a value, then it may be written as either
 @w{@t{-@w{-}}@i{L}}
 or
@@ -76,7 +76,7 @@ The
 option inserts the names of all special files in front of the remaining
 arguments@.
 Each name is prefixed with
-@w{@i{V}@.}
+@w{@i{V}}@.
 If
 @w{@i{V}}
 is omitted, then it is taken to be empty@.
@@ -84,12 +84,12 @@ If
 @w{@i{V}}
 is not empty and does not end with a slash character, then a slash
 character is appended to
-@w{@i{V}@.}
+@w{@i{V}}@.
 If
 @w{@i{V}}
 begins with a hyphen-minus character, then a period character and a
 slash character are prepended to
-@w{@i{V}@.}
+@w{@i{V}}@.
 Note that no special file name begins with a hyphen-minus character@.
 
 @item @w{@t{-@w{-}awk=}@i{V}}
@@ -100,7 +100,7 @@ option sets the command name
 that will be used to invoke the
 @w{@t{awk}}
 program to
-@w{@i{V}@.}
+@w{@i{V}}@.
 If
 @w{@i{V}}
 is
@@ -211,7 +211,7 @@ option sets the command name
 that will be used to invoke the
 @w{@t{sed}}
 program to
-@w{@i{V}@.}
+@w{@i{V}}@.
 If
 @w{@i{V}}
 is
@@ -244,7 +244,7 @@ If
 is omitted, then neither
 instance is given a value@.
 Otherwise, both are given the value
-@w{@i{V}@.}
+@w{@i{V}}@.
 
 @item @w{@t{-@w{-}style-stderr}[@t{=}@i{V}]}
 @include ipez.texi
@@ -257,7 +257,7 @@ which is initially disabled@.
 If
 @w{@i{V}}
 is omitted, then it is taken to be
-@w{@t{always}@.}
+@w{@t{always}}@.
 If
 @w{@i{V}}
 is
@@ -288,7 +288,7 @@ which is initially disabled@.
 If
 @w{@i{V}}
 is omitted, then it is taken to be
-@w{@t{always}@.}
+@w{@t{always}}@.
 If
 @w{@i{V}}
 is
@@ -316,7 +316,7 @@ option sets the command name
 that will be used to invoke the
 @w{@t{texi2any}}
 program to
-@w{@i{V}@.}
+@w{@i{V}}@.
 If
 @w{@i{V}}
 is
