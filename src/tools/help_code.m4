@@ -3,8 +3,7 @@ ifdef(
   {%||%},
   {%|define(
     {%|help_code|%},
-    {%|{%|          #(
-            '--help=$1'|'--help='*'/$1')
+    {%|{%|            '--help=$1'|'--help='*'/$1')
               'cat' <<EOF1|%}
 changequote({%|`|%}, {%|'|%})dnl
 include(`doc/help/$1.hd.m4'){%|
