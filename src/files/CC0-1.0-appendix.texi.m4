@@ -95,7 +95,7 @@ limited to, the following:
 
 @item
      database rights (such as those arising under Directive@tie{}96/9/EC of the
-     European Parliament and of the Council of 11@tie{}March@tie{}1996 on the legal
+     European Parliament and of the Council of@tie{}11@tie{}March@tie{}1996 on the legal
      protection of databases, and under any national implementation
      thereof, including any amended or successor version of such
      directive); and
