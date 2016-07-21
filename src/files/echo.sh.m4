@@ -23,8 +23,8 @@ LC_ALL='C'
 'export' 'LC_ALL'
 
 #
-# The nl variable holds a newline character. It can be used in a string
-# literal where an actual newline character would be awkward.
+# The nl variable holds a newline character. It can be used where a
+# literal newline character might be awkward.
 #
 
 nl='
