@@ -252,7 +252,8 @@ docbook_dep =
 docbook_dep += $(doc_gatbps_TEXINFOS)
 
 docbook_dist_dep =
-docbook_dist_dep += doc/gatbps.texi $(doc_gatbps_TEXINFOS)
+docbook_dist_dep += $(doc_gatbps_TEXINFOS)
+docbook_dist_dep += doc/gatbps.texi
 
 docbook_dist_dst =
 docbook_dist_dst += doc/gatbps-$(PACKAGE_VERSION).xml
@@ -270,7 +271,8 @@ docbookdir =
 docbookdir += $(docdir)
 
 dvi_dist_dep =
-dvi_dist_dep += doc/gatbps.texi $(doc_gatbps_TEXINFOS)
+dvi_dist_dep += $(doc_gatbps_TEXINFOS)
+dvi_dist_dep += doc/gatbps.texi
 
 dvi_dist_dst =
 dvi_dist_dst += doc/gatbps-$(PACKAGE_VERSION).dvi
@@ -279,7 +281,8 @@ dvi_dist_src =
 dvi_dist_src += doc/gatbps.dvi
 
 html_dist_dep =
-html_dist_dep += doc/gatbps.texi $(doc_gatbps_TEXINFOS)
+html_dist_dep += $(doc_gatbps_TEXINFOS)
+html_dist_dep += doc/gatbps.texi
 
 html_dist_dst =
 html_dist_dst += doc/gatbps-$(PACKAGE_VERSION).html
@@ -304,7 +307,8 @@ nodist_bin_gatbps_src += src/tools/SHEBANG_LINE.m4
 nodist_bin_gatbps_src += src/tools/TEXI2ANY_DEFAULT_TROFF.m4
 
 pdf_dist_dep =
-pdf_dist_dep += doc/gatbps.texi $(doc_gatbps_TEXINFOS)
+pdf_dist_dep += $(doc_gatbps_TEXINFOS)
+pdf_dist_dep += doc/gatbps.texi
 
 pdf_dist_dst =
 pdf_dist_dst += doc/gatbps-$(PACKAGE_VERSION).pdf
@@ -316,7 +320,8 @@ plaintext_dep =
 plaintext_dep += $(doc_gatbps_TEXINFOS)
 
 plaintext_dist_dep =
-plaintext_dist_dep += doc/gatbps.texi $(doc_gatbps_TEXINFOS)
+plaintext_dist_dep += $(doc_gatbps_TEXINFOS)
+plaintext_dist_dep += doc/gatbps.texi
 
 plaintext_dist_dst =
 plaintext_dist_dst += doc/gatbps-$(PACKAGE_VERSION).txt
@@ -334,7 +339,8 @@ plaintextdir =
 plaintextdir += $(docdir)
 
 ps_dist_dep =
-ps_dist_dep += doc/gatbps.texi $(doc_gatbps_TEXINFOS)
+ps_dist_dep += $(doc_gatbps_TEXINFOS)
+ps_dist_dep += doc/gatbps.texi
 
 ps_dist_dst =
 ps_dist_dst += doc/gatbps-$(PACKAGE_VERSION).ps
