@@ -35,7 +35,11 @@ $(javadoc_dist_dst): $(javadoc_dist_dep)
     ;; \
   esac; \
 :;}
-	$(AM_V_at)'cp' '-R' './'$(javadoc_dist_src) './'$(javadoc_dist_dst)
+	$(AM_V_at)'cp' \
+  '-R' \
+  './'$(javadoc_dist_src) \
+  './'$(javadoc_dist_dst) \
+;
 
 .PHONY: clean-$(javadoc_dist_dst)
 

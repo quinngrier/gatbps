@@ -35,7 +35,11 @@ $(html_dist_dst): $(html_dist_dep)
     ;; \
   esac; \
 :;}
-	$(AM_V_at)'cp' '-R' './'$(html_dist_src) './'$(html_dist_dst)
+	$(AM_V_at)'cp' \
+  '-R' \
+  './'$(html_dist_src) \
+  './'$(html_dist_dst) \
+;
 
 .PHONY: clean-$(html_dist_dst)
 
