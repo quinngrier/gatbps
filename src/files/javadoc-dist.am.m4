@@ -27,7 +27,14 @@ $(javadoc_dist_dst): $(javadoc_dist_dep)
   'exit' '0'; \
 :;}
 	$(AM_V_at)$(MKDIR_P) './'$(@D)
-	$(AM_V_at)'rm' '-f' '-r' './'$(javadoc_dist_dst)
+	$(AM_V_at){ \
+  case ''$(javadoc_dist_dst) in \
+    ?*) \
+      'rm' '-f' '-r' './'$(javadoc_dist_dst); \
+      'exit' "$${?}"; \
+    ;; \
+  esac; \
+:;}
 	$(AM_V_at)'cp' '-R' './'$(javadoc_dist_src) './'$(javadoc_dist_dst)
 
 .PHONY: clean-$(javadoc_dist_dst)
