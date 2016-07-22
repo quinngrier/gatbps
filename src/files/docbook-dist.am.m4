@@ -12,7 +12,10 @@ header_comment({%|##|%}, {%|##|%}){%|
 ## begin_rules
 
 $(docbook_dist_dst): $(docbook_dist_dep)
-	$(AM_V_at)$(MAKE) $(AM_MAKEFLAGS) $(docbook_dist_src)
+	$(AM_V_at)$(MAKE) \
+  $(AM_MAKEFLAGS) \
+  $(docbook_dist_src) \
+;
 	$(AM_V_at){ \
   if $(AM_V_P); then \
     ':'; \

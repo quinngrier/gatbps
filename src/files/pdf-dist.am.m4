@@ -12,7 +12,10 @@ header_comment({%|##|%}, {%|##|%}){%|
 ## begin_rules
 
 $(pdf_dist_dst): $(pdf_dist_dep)
-	$(AM_V_at)$(MAKE) $(AM_MAKEFLAGS) $(pdf_dist_src)
+	$(AM_V_at)$(MAKE) \
+  $(AM_MAKEFLAGS) \
+  $(pdf_dist_src) \
+;
 	$(AM_V_at){ \
   if $(AM_V_P); then \
     ':'; \

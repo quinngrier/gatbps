@@ -12,7 +12,10 @@ header_comment({%|##|%}, {%|##|%}){%|
 ## begin_rules
 
 $(javadoc_dist_dst): $(javadoc_dist_dep)
-	$(AM_V_at)$(MAKE) $(AM_MAKEFLAGS) $(javadoc_dist_src)
+	$(AM_V_at)$(MAKE) \
+  $(AM_MAKEFLAGS) \
+  $(javadoc_dist_src) \
+;
 	$(AM_V_at){ \
   if $(AM_V_P); then \
     ':'; \
