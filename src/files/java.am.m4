@@ -110,12 +110,12 @@ GATBPS_V_JAVAC_1 =
 :;}
 
 .PHONY: all-java
-.PHONY: clean-main-java
+.PHONY: clean-java
 .PHONY: install-all-java
-.PHONY: install-main-java
-.PHONY: main-java
+.PHONY: install-java
+.PHONY: java
 .PHONY: uninstall-all-java
-.PHONY: uninstall-main-java
+.PHONY: uninstall-java
 
 .java.class:
 	$(GATBPS_V_JAVAC)$(MKDIR_P) \
@@ -135,11 +135,9 @@ GATBPS_V_JAVAC_1 =
   $< \
 ;
 
-all-java: main-java
+all-java: java
 
-clean-local: clean-main-java
-
-clean-main-java:
+clean-java:
 	-{ \
   for x in \
     $(java_dst) \
@@ -154,9 +152,11 @@ clean-main-java:
   'exit' '0'; \
 :;}
 
-install-all-java: install-main-java
+clean-local: clean-java
 
-install-main-java: main-java
+install-all-java: install-java
+
+install-java: java
 	@$(NORMAL_INSTALL)
 	$(AM_V_at){ \
   case ''$(java_noinst) in \
@@ -220,7 +220,7 @@ install-main-java: main-java
   'exit' '0'; \
 :;}
 
-main-java:
+java:
 	$(AM_V_at){ \
   ( \
     x=''; \
@@ -243,30 +243,30 @@ main-java:
       $(srcdir)'/build-aux/sh-form.sh' \
       '--' \
       "$${x}" \
-      >'main-java.tmp' \
+      >'java.tmp' \
     || 'exit' "$${?}"; \
     classpath=`'cat' \
-      'main-java.tmp' \
+      'java.tmp' \
     ` || 'exit' "$${?}"; \
     'sh' \
       '-' \
       $(srcdir)'/build-aux/sh-form.sh' \
       '--' \
       $(java_JAVACFLAGS) \
-      >'main-java.tmp' \
+      >'java.tmp' \
     || 'exit' "$${?}"; \
     javacflags=`'cat' \
-      'main-java.tmp' \
+      'java.tmp' \
     ` || 'exit' "$${?}"; \
     'sh' \
       '-' \
       $(srcdir)'/build-aux/sh-form.sh' \
       '--' \
       './'$(java_sourcepath) \
-      >'main-java.tmp' \
+      >'java.tmp' \
     || 'exit' "$${?}"; \
     sourcepath=`'cat' \
-      'main-java.tmp' \
+      'java.tmp' \
     ` || 'exit' "$${?}"; \
     $(MAKE) \
       $(AM_MAKEFLAGS) \
@@ -280,14 +280,14 @@ main-java:
   x="$${?}"; \
   'rm' \
     '-f' \
-    'main-java.tmp' \
+    'java.tmp' \
   ; \
   'exit' "$${x}"; \
 :;}
 
-uninstall-all-java: uninstall-main-java
+uninstall-all-java: uninstall-java
 
-uninstall-main-java:
+uninstall-java:
 	@$(NORMAL_UNINSTALL)
 	$(AM_V_at){ \
   case ''$(java_noinst) in \
@@ -302,14 +302,14 @@ uninstall-main-java:
               'X/'$(java_dst) \
               ':' \
               'X.*/\(.*\)' \
-              >'uninstall-main-java.tmp' \
+              >'uninstall-java.tmp' \
             || 'exit' "$${?}"; \
             x=$(srcdir); \
             x='x='`'sh' \
               '-' \
               "$${x}"'/build-aux/sh-form.sh' \
               '--stdin' \
-              <'uninstall-main-java.tmp' \
+              <'uninstall-java.tmp' \
             ` || 'exit' "$${?}"; \
             'eval' "$${x}"; \
             x=$(DESTDIR)$(javadir)'/'"$${x}"; \
@@ -339,7 +339,7 @@ uninstall-main-java:
           x="$${?}"; \
           'rm' \
             '-f' \
-            'uninstall-main-java.tmp' \
+            'uninstall-java.tmp' \
           ; \
           'exit' "$${x}"; \
         ;; \
