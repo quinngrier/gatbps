@@ -55,6 +55,7 @@ clean-$(javadoc_dist_dst):
       'rm' '-f' '-r' './'$(javadoc_dist_dst); \
     ;; \
   esac; \
+  'exit' '0'; \
 :;}
 
 maintainer-clean-local: clean-$(javadoc_dist_dst)

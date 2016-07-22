@@ -55,6 +55,7 @@ clean-$(html_dist_dst):
       'rm' '-f' '-r' './'$(html_dist_dst); \
     ;; \
   esac; \
+  'exit' '0'; \
 :;}
 
 maintainer-clean-local: clean-$(html_dist_dst)
