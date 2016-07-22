@@ -38,6 +38,7 @@ $(java_dist_dst): $(java_dist_dep)
 ;
 
 .PHONY: clean-java_dist
+.PHONY: java_dist
 
 clean-java_dist:
 	-{ \
@@ -48,6 +49,8 @@ clean-java_dist:
   esac; \
   'exit' '0'; \
 :;}
+
+java-dist: $(java_dist_dst)
 
 maintainer-clean-local: clean-java_dist
 

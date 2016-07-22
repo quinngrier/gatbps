@@ -47,6 +47,7 @@ $(javadoc_dist_dst): $(javadoc_dist_dep)
 ;
 
 .PHONY: clean-javadoc_dist
+.PHONY: javadoc_dist
 
 clean-javadoc_dist:
 	-{ \
@@ -57,6 +58,8 @@ clean-javadoc_dist:
   esac; \
   'exit' '0'; \
 :;}
+
+javadoc-dist: $(javadoc_dist_dst)
 
 maintainer-clean-local: clean-javadoc_dist
 

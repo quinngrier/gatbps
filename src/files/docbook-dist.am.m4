@@ -38,6 +38,7 @@ $(docbook_dist_dst): $(docbook_dist_dep)
 ;
 
 .PHONY: clean-docbook_dist
+.PHONY: docbook_dist
 
 clean-docbook_dist:
 	-{ \
@@ -48,6 +49,8 @@ clean-docbook_dist:
   esac; \
   'exit' '0'; \
 :;}
+
+docbook-dist: $(docbook_dist_dst)
 
 maintainer-clean-local: clean-docbook_dist
 

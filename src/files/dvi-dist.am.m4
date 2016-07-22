@@ -38,6 +38,7 @@ $(dvi_dist_dst): $(dvi_dist_dep)
 ;
 
 .PHONY: clean-dvi_dist
+.PHONY: dvi_dist
 
 clean-dvi_dist:
 	-{ \
@@ -48,6 +49,8 @@ clean-dvi_dist:
   esac; \
   'exit' '0'; \
 :;}
+
+dvi-dist: $(dvi_dist_dst)
 
 maintainer-clean-local: clean-dvi_dist
 

@@ -38,6 +38,7 @@ $(ps_dist_dst): $(ps_dist_dep)
 ;
 
 .PHONY: clean-ps_dist
+.PHONY: ps_dist
 
 clean-ps_dist:
 	-{ \
@@ -50,6 +51,8 @@ clean-ps_dist:
 :;}
 
 maintainer-clean-local: clean-ps_dist
+
+ps-dist: $(ps_dist_dst)
 
 ## end_rules
 

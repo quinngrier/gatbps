@@ -38,6 +38,7 @@ $(pdf_dist_dst): $(pdf_dist_dep)
 ;
 
 .PHONY: clean-pdf_dist
+.PHONY: pdf_dist
 
 clean-pdf_dist:
 	-{ \
@@ -50,6 +51,8 @@ clean-pdf_dist:
 :;}
 
 maintainer-clean-local: clean-pdf_dist
+
+pdf-dist: $(pdf_dist_dst)
 
 ## end_rules
 

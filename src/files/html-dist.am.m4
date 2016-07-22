@@ -47,6 +47,7 @@ $(html_dist_dst): $(html_dist_dep)
 ;
 
 .PHONY: clean-html_dist
+.PHONY: html_dist
 
 clean-html_dist:
 	-{ \
@@ -57,6 +58,8 @@ clean-html_dist:
   esac; \
   'exit' '0'; \
 :;}
+
+html-dist: $(html_dist_dst)
 
 maintainer-clean-local: clean-html_dist
 

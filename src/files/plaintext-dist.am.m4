@@ -38,6 +38,7 @@ $(plaintext_dist_dst): $(plaintext_dist_dep)
 ;
 
 .PHONY: clean-plaintext_dist
+.PHONY: plaintext_dist
 
 clean-plaintext_dist:
 	-{ \
@@ -50,6 +51,8 @@ clean-plaintext_dist:
 :;}
 
 maintainer-clean-local: clean-plaintext_dist
+
+plaintext-dist: $(plaintext_dist_dst)
 
 ## end_rules
 
