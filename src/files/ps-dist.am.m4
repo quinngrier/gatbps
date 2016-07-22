@@ -37,9 +37,9 @@ $(ps_dist_dst): $(ps_dist_dep)
   './'$(ps_dist_dst) \
 ;
 
-.PHONY: clean-$(ps_dist_dst)
+.PHONY: clean-ps_dist
 
-clean-$(ps_dist_dst):
+clean-ps_dist:
 	-{ \
   case ''$(ps_dist_dst) in \
     ?*) \
@@ -49,7 +49,7 @@ clean-$(ps_dist_dst):
   'exit' '0'; \
 :;}
 
-maintainer-clean-local: clean-$(ps_dist_dst)
+maintainer-clean-local: clean-ps_dist
 
 ## end_rules
 

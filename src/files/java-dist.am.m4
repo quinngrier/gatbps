@@ -37,9 +37,9 @@ $(java_dist_dst): $(java_dist_dep)
   './'$(java_dist_dst) \
 ;
 
-.PHONY: clean-$(java_dist_dst)
+.PHONY: clean-java_dist
 
-clean-$(java_dist_dst):
+clean-java_dist:
 	-{ \
   case ''$(java_dist_dst) in \
     ?*) \
@@ -49,7 +49,7 @@ clean-$(java_dist_dst):
   'exit' '0'; \
 :;}
 
-maintainer-clean-local: clean-$(java_dist_dst)
+maintainer-clean-local: clean-java_dist
 
 ## end_rules
 

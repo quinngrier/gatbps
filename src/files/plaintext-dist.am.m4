@@ -37,9 +37,9 @@ $(plaintext_dist_dst): $(plaintext_dist_dep)
   './'$(plaintext_dist_dst) \
 ;
 
-.PHONY: clean-$(plaintext_dist_dst)
+.PHONY: clean-plaintext_dist
 
-clean-$(plaintext_dist_dst):
+clean-plaintext_dist:
 	-{ \
   case ''$(plaintext_dist_dst) in \
     ?*) \
@@ -49,7 +49,7 @@ clean-$(plaintext_dist_dst):
   'exit' '0'; \
 :;}
 
-maintainer-clean-local: clean-$(plaintext_dist_dst)
+maintainer-clean-local: clean-plaintext_dist
 
 ## end_rules
 

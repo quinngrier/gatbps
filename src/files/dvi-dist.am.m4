@@ -37,9 +37,9 @@ $(dvi_dist_dst): $(dvi_dist_dep)
   './'$(dvi_dist_dst) \
 ;
 
-.PHONY: clean-$(dvi_dist_dst)
+.PHONY: clean-dvi_dist
 
-clean-$(dvi_dist_dst):
+clean-dvi_dist:
 	-{ \
   case ''$(dvi_dist_dst) in \
     ?*) \
@@ -49,7 +49,7 @@ clean-$(dvi_dist_dst):
   'exit' '0'; \
 :;}
 
-maintainer-clean-local: clean-$(dvi_dist_dst)
+maintainer-clean-local: clean-dvi_dist
 
 ## end_rules
 

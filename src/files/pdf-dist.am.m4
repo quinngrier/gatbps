@@ -37,9 +37,9 @@ $(pdf_dist_dst): $(pdf_dist_dep)
   './'$(pdf_dist_dst) \
 ;
 
-.PHONY: clean-$(pdf_dist_dst)
+.PHONY: clean-pdf_dist
 
-clean-$(pdf_dist_dst):
+clean-pdf_dist:
 	-{ \
   case ''$(pdf_dist_dst) in \
     ?*) \
@@ -49,7 +49,7 @@ clean-$(pdf_dist_dst):
   'exit' '0'; \
 :;}
 
-maintainer-clean-local: clean-$(pdf_dist_dst)
+maintainer-clean-local: clean-pdf_dist
 
 ## end_rules
 
