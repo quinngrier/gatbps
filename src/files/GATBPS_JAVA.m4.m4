@@ -113,7 +113,7 @@ clean-java-gatbps_x:
 
 clean-local: clean-java-gatbps_x
 
-install-java: install-java-gatbps_x
+install-all-java: install-java-gatbps_x
 
 install-java-gatbps_x: java-gatbps_x
 	@$[](NORMAL_INSTALL)

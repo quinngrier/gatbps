@@ -111,7 +111,7 @@ GATBPS_V_JAVAC_1 =
 
 .PHONY: all-java
 .PHONY: clean-main-java
-.PHONY: install-java
+.PHONY: install-all-java
 .PHONY: install-main-java
 .PHONY: main-java
 .PHONY: uninstall-java
@@ -154,7 +154,7 @@ clean-main-java:
   'exit' '0'; \
 :;}
 
-install-java: install-main-java
+install-all-java: install-main-java
 
 install-main-java: main-java
 	@$(NORMAL_INSTALL)
