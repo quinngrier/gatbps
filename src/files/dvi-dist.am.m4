@@ -32,7 +32,10 @@ $(dvi_dist_dst): $(dvi_dist_dep)
 	$(AM_V_at)$(MKDIR_P) \
   './'$(@D) \
 ;
-	$(AM_V_at)'cp' './'$(dvi_dist_src) './'$(dvi_dist_dst)
+	$(AM_V_at)'cp' \
+  './'$(dvi_dist_src) \
+  './'$(dvi_dist_dst) \
+;
 
 .PHONY: clean-$(dvi_dist_dst)
 
