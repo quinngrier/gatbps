@@ -29,7 +29,9 @@ $(dvi_dist_dst): $(dvi_dist_dep)
   fi; \
   'exit' '0'; \
 :;}
-	$(AM_V_at)$(MKDIR_P) './'$(@D)
+	$(AM_V_at)$(MKDIR_P) \
+  './'$(@D) \
+;
 	$(AM_V_at)'cp' './'$(dvi_dist_src) './'$(dvi_dist_dst)
 
 .PHONY: clean-$(dvi_dist_dst)

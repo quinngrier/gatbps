@@ -29,7 +29,9 @@ $(javadoc_dist_dst): $(javadoc_dist_dep)
   fi; \
   'exit' '0'; \
 :;}
-	$(AM_V_at)$(MKDIR_P) './'$(@D)
+	$(AM_V_at)$(MKDIR_P) \
+  './'$(@D) \
+;
 	$(AM_V_at){ \
   case ''$(javadoc_dist_dst) in \
     ?*) \

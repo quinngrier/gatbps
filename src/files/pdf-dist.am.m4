@@ -29,7 +29,9 @@ $(pdf_dist_dst): $(pdf_dist_dep)
   fi; \
   'exit' '0'; \
 :;}
-	$(AM_V_at)$(MKDIR_P) './'$(@D)
+	$(AM_V_at)$(MKDIR_P) \
+  './'$(@D) \
+;
 	$(AM_V_at)'cp' './'$(pdf_dist_src) './'$(pdf_dist_dst)
 
 .PHONY: clean-$(pdf_dist_dst)

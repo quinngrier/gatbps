@@ -29,7 +29,9 @@ $(html_dist_dst): $(html_dist_dep)
   fi; \
   'exit' '0'; \
 :;}
-	$(AM_V_at)$(MKDIR_P) './'$(@D)
+	$(AM_V_at)$(MKDIR_P) \
+  './'$(@D) \
+;
 	$(AM_V_at){ \
   case ''$(html_dist_dst) in \
     ?*) \

@@ -29,7 +29,9 @@ $(java_dist_dst): $(java_dist_dep)
   fi; \
   'exit' '0'; \
 :;}
-	$(AM_V_at)$(MKDIR_P) './'$(@D)
+	$(AM_V_at)$(MKDIR_P) \
+  './'$(@D) \
+;
 	$(AM_V_at)'cp' './'$(java_dist_src) './'$(java_dist_dst)
 
 .PHONY: clean-$(java_dist_dst)

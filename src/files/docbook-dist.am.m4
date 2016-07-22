@@ -29,7 +29,9 @@ $(docbook_dist_dst): $(docbook_dist_dep)
   fi; \
   'exit' '0'; \
 :;}
-	$(AM_V_at)$(MKDIR_P) './'$(@D)
+	$(AM_V_at)$(MKDIR_P) \
+  './'$(@D) \
+;
 	$(AM_V_at)'cp' './'$(docbook_dist_src) './'$(docbook_dist_dst)
 
 .PHONY: clean-$(docbook_dist_dst)
