@@ -40,7 +40,14 @@ $(java_dist_dst): $(java_dist_dep)
 .PHONY: clean-$(java_dist_dst)
 
 clean-$(java_dist_dst):
-	-'rm' '-f' './'$(java_dist_dst)
+	-{ \
+  case ''$(java_dist_dst) in \
+    ?*) \
+      'rm' '-f' './'$(java_dist_dst); \
+    ;; \
+  esac; \
+  'exit' '0'; \
+:;}
 
 maintainer-clean-local: clean-$(java_dist_dst)
 

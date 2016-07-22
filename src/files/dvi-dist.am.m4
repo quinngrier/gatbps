@@ -40,7 +40,14 @@ $(dvi_dist_dst): $(dvi_dist_dep)
 .PHONY: clean-$(dvi_dist_dst)
 
 clean-$(dvi_dist_dst):
-	-'rm' '-f' './'$(dvi_dist_dst)
+	-{ \
+  case ''$(dvi_dist_dst) in \
+    ?*) \
+      'rm' '-f' './'$(dvi_dist_dst); \
+    ;; \
+  esac; \
+  'exit' '0'; \
+:;}
 
 maintainer-clean-local: clean-$(dvi_dist_dst)
 

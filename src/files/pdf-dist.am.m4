@@ -40,7 +40,14 @@ $(pdf_dist_dst): $(pdf_dist_dep)
 .PHONY: clean-$(pdf_dist_dst)
 
 clean-$(pdf_dist_dst):
-	-'rm' '-f' './'$(pdf_dist_dst)
+	-{ \
+  case ''$(pdf_dist_dst) in \
+    ?*) \
+      'rm' '-f' './'$(pdf_dist_dst); \
+    ;; \
+  esac; \
+  'exit' '0'; \
+:;}
 
 maintainer-clean-local: clean-$(pdf_dist_dst)
 

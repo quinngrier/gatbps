@@ -40,7 +40,14 @@ $(ps_dist_dst): $(ps_dist_dep)
 .PHONY: clean-$(ps_dist_dst)
 
 clean-$(ps_dist_dst):
-	-'rm' '-f' './'$(ps_dist_dst)
+	-{ \
+  case ''$(ps_dist_dst) in \
+    ?*) \
+      'rm' '-f' './'$(ps_dist_dst); \
+    ;; \
+  esac; \
+  'exit' '0'; \
+:;}
 
 maintainer-clean-local: clean-$(ps_dist_dst)
 

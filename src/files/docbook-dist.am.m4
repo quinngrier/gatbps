@@ -40,7 +40,14 @@ $(docbook_dist_dst): $(docbook_dist_dep)
 .PHONY: clean-$(docbook_dist_dst)
 
 clean-$(docbook_dist_dst):
-	-'rm' '-f' './'$(docbook_dist_dst)
+	-{ \
+  case ''$(docbook_dist_dst) in \
+    ?*) \
+      'rm' '-f' './'$(docbook_dist_dst); \
+    ;; \
+  esac; \
+  'exit' '0'; \
+:;}
 
 maintainer-clean-local: clean-$(docbook_dist_dst)
 
