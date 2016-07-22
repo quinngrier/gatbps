@@ -109,10 +109,10 @@ GATBPS_V_JAVAC_1 =
   'exit' "$${x}"; \
 :;}
 
+.PHONY: all-java
 .PHONY: clean-main-java
 .PHONY: install-java
 .PHONY: install-main-java
-.PHONY: java
 .PHONY: main-java
 .PHONY: uninstall-java
 .PHONY: uninstall-main-java
@@ -134,6 +134,8 @@ GATBPS_V_JAVAC_1 =
   $(JAVACFLAGS) \
   $< \
 ;
+
+all-java: main-java
 
 clean-local: clean-main-java
 
@@ -217,8 +219,6 @@ install-main-java: main-java
   esac; \
   'exit' '0'; \
 :;}
-
-java: main-java
 
 main-java:
 	$(AM_V_at){ \
