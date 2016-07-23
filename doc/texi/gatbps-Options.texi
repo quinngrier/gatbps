@@ -26,8 +26,7 @@ If the option requires a value, then it may be written as either
 @w{@t{-@w{-}}@i{L}@t{=}@i{V}},
 @w{@t{-@w{-}}@i{L V}},
 @w{@t{-}@i{SV}},
-or
-@w{@t{-}@i{S V}}@.
+or@tie{}@w{@t{-}@i{S V}}@.
 If the option permits a value, then it may be written as either
 @w{@t{-@w{-}}@i{L}@t{=}@i{V}},
 @w{@t{-@w{-}}@i{L}},

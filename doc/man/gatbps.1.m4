@@ -99,7 +99,7 @@ If the option permits a value, then it may be written as either
 .nohy "\fB\-\-\fIL\fB=\fIV\fR,"
 .nohy "\fB\-\-\fIL\fR,"
 .nohy "\fB\-\fISV\fR,"
-or
+or\~\c
 .nohy "\fB\-\fIS\fR."
 If the option forbids a value, then it may be written as either
 .nohy "\fB\-\-\fIL\fR"
