@@ -37,10 +37,10 @@ $(ps_dist_dst): $(ps_dist_dep)
   './'$(ps_dist_dst) \
 ;
 
-.PHONY: clean-ps_dist
-.PHONY: ps_dist
+.PHONY: clean-ps-dist
+.PHONY: ps-dist
 
-clean-ps_dist:
+clean-ps-dist:
 	-{ \
   case ''$(ps_dist_dst) in \
     ?*) \
@@ -50,7 +50,7 @@ clean-ps_dist:
   'exit' '0'; \
 :;}
 
-maintainer-clean-local: clean-ps_dist
+maintainer-clean-local: clean-ps-dist
 
 ps-dist: $(ps_dist_dst)
 

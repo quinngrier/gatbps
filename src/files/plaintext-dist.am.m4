@@ -37,10 +37,10 @@ $(plaintext_dist_dst): $(plaintext_dist_dep)
   './'$(plaintext_dist_dst) \
 ;
 
-.PHONY: clean-plaintext_dist
-.PHONY: plaintext_dist
+.PHONY: clean-plaintext-dist
+.PHONY: plaintext-dist
 
-clean-plaintext_dist:
+clean-plaintext-dist:
 	-{ \
   case ''$(plaintext_dist_dst) in \
     ?*) \
@@ -50,7 +50,7 @@ clean-plaintext_dist:
   'exit' '0'; \
 :;}
 
-maintainer-clean-local: clean-plaintext_dist
+maintainer-clean-local: clean-plaintext-dist
 
 plaintext-dist: $(plaintext_dist_dst)
 

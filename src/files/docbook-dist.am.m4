@@ -37,10 +37,10 @@ $(docbook_dist_dst): $(docbook_dist_dep)
   './'$(docbook_dist_dst) \
 ;
 
-.PHONY: clean-docbook_dist
-.PHONY: docbook_dist
+.PHONY: clean-docbook-dist
+.PHONY: docbook-dist
 
-clean-docbook_dist:
+clean-docbook-dist:
 	-{ \
   case ''$(docbook_dist_dst) in \
     ?*) \
@@ -52,7 +52,7 @@ clean-docbook_dist:
 
 docbook-dist: $(docbook_dist_dst)
 
-maintainer-clean-local: clean-docbook_dist
+maintainer-clean-local: clean-docbook-dist
 
 ## end_rules
 

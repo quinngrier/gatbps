@@ -46,10 +46,10 @@ $(html_dist_dst): $(html_dist_dep)
   './'$(html_dist_dst) \
 ;
 
-.PHONY: clean-html_dist
-.PHONY: html_dist
+.PHONY: clean-html-dist
+.PHONY: html-dist
 
-clean-html_dist:
+clean-html-dist:
 	-{ \
   case ''$(html_dist_dst) in \
     ?*) \
@@ -61,7 +61,7 @@ clean-html_dist:
 
 html-dist: $(html_dist_dst)
 
-maintainer-clean-local: clean-html_dist
+maintainer-clean-local: clean-html-dist
 
 ## end_rules
 
