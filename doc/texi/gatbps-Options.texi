@@ -34,12 +34,11 @@ If the option permits a value, then it may be written as either
 or@tie{}@w{@t{-}@i{S}}@.
 If the option forbids a value, then it may be written as either
 @w{@t{-@w{-}}@i{L}}
-or
-@w{@t{-}@i{S}},
+or@tie{}@w{@t{-}@i{S}},
 and in the latter case it may be combined with an immediately following
 option or combination of options by deleting the
-@w{@t{-}@i{S}}
-argument and inserting the
+@w{@t{-}@i{S}}@tie{}argument
+and inserting the
 @w{@i{S}}@tie{}character
 into the following argument just after the leading
 @w{@t{-}}@tie{}character@.

@@ -103,12 +103,13 @@ or\~\c
 .nohy "\fB\-\fIS\fR."
 If the option forbids a value, then it may be written as either
 .nohy "\fB\-\-\fIL\fR"
-or
+or\~\c
 .nohy "\fB\-\fIS\fR,"
 and in the latter case it may be combined with an immediately following
 option or combination of options by deleting the
-.nohy "\fB\-\fIS\fR"
-argument and inserting the
+.nohy "\fB\-\fIS\fR\c"
+\~argument
+and inserting the
 .nohy "\fIS\fR\c"
 \~character
 into the following argument just after the leading
