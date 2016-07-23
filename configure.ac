@@ -5,20 +5,20 @@ AC_INIT(
   ])m4_if(m4_sysval, [0], [], [m4_fatal([VERSION.sh failed])]),
   [quinn.grier@gmail.com],
   [gatbps],
-  [https://www.quinngrier.com/gatbps])
+  [https://www.quinngrier.com/gatbps])[
 
-GATBPS_DEFINE_VERSION(
+]GATBPS_DEFINE_VERSION(
   [AC_],
-  [PACKAGE_VERSION])
+  [PACKAGE_VERSION])[
 
-GATBPS_DEFINE_DATE(
+]GATBPS_DEFINE_DATE(
   [AC_],
   [PACKAGE_DATE],
   m4_esyscmd_s([
     'sh' '-' 'build-aux/DATE.sh'
-  ])m4_if(m4_sysval, [0], [], [m4_fatal([DATE.sh failed])]))
+  ])m4_if(m4_sysval, [0], [], [m4_fatal([DATE.sh failed])]))[
 
-m4_include([build-aux/CC0-1.0-AC-COPYRIGHT.ac])
+]m4_include([build-aux/CC0-1.0-AC-COPYRIGHT.ac])
 
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([m4])
