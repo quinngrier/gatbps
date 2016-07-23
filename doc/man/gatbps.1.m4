@@ -69,14 +69,17 @@ and
 Each option has one or more names, and each name is either long or
 short.
 Each long name consists of two
-.nohy "\fB\-\fR"
-characters followed by zero or more characters except the
-.nohy "\fB=\fR"
-character, and each short name consists of one
-.nohy "\fB\-\fR"
-character followed by one character except the
-.nohy "\fB\-\fR"
-character.
+.nohy "\fB\-\fR\c"
+\~characters
+followed by zero or more characters except the
+.nohy "\fB=\fR\c"
+\~character,
+and each short name consists of one
+.nohy "\fB\-\fR\c"
+\~character
+followed by one character except the
+.nohy "\fB\-\fR\c"
+\~character.
 Each option either requires, permits, or forbids a value.
 .LP
 Let
