@@ -109,10 +109,11 @@ and in the latter case it may be combined with an immediately following
 option or combination of options by deleting the
 .nohy "\fB\-\fIS\fR"
 argument and inserting the
-.nohy "\fIS\fR"
-character into the following argument just after the leading
-.nohy "\fB\-\fR"
-character.
+.nohy "\fIS\fR\c"
+\~character
+into the following argument just after the leading
+.nohy "\fB\-\fR\c"
+\~character.
 For example,
 .nohy "\fB\-\fIS\ \fB\-\fIK\fR"
 and

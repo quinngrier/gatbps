@@ -40,10 +40,9 @@ and in the latter case it may be combined with an immediately following
 option or combination of options by deleting the
 @w{@t{-}@i{S}}
 argument and inserting the
-@w{@i{S}}
-character into the following argument just after the leading
-@w{@t{-}}
-character@.
+@w{@i{S}}@tie{}character
+into the following argument just after the leading
+@w{@t{-}}@tie{}character@.
 For example,
 @w{@t{-}@i{S }@t{-}@i{K}}
 and
