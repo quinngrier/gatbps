@@ -98,6 +98,126 @@ m4_ifdef(
   [m4_fatal(dnl
 [$1$2_DAY_ZPAD is already defined]dnl
 )])dnl
+m4_ifdef(
+  [January],
+  [m4_fatal(dnl
+["January" is defined as an M4 macro]dnl
+)])dnl
+m4_ifdef(
+  [February],
+  [m4_fatal(dnl
+["February" is defined as an M4 macro]dnl
+)])dnl
+m4_ifdef(
+  [March],
+  [m4_fatal(dnl
+["March" is defined as an M4 macro]dnl
+)])dnl
+m4_ifdef(
+  [April],
+  [m4_fatal(dnl
+["April" is defined as an M4 macro]dnl
+)])dnl
+m4_ifdef(
+  [May],
+  [m4_fatal(dnl
+["May" is defined as an M4 macro]dnl
+)])dnl
+m4_ifdef(
+  [June],
+  [m4_fatal(dnl
+["June" is defined as an M4 macro]dnl
+)])dnl
+m4_ifdef(
+  [July],
+  [m4_fatal(dnl
+["July" is defined as an M4 macro]dnl
+)])dnl
+m4_ifdef(
+  [August],
+  [m4_fatal(dnl
+["August" is defined as an M4 macro]dnl
+)])dnl
+m4_ifdef(
+  [September],
+  [m4_fatal(dnl
+["September" is defined as an M4 macro]dnl
+)])dnl
+m4_ifdef(
+  [October],
+  [m4_fatal(dnl
+["October" is defined as an M4 macro]dnl
+)])dnl
+m4_ifdef(
+  [November],
+  [m4_fatal(dnl
+["November" is defined as an M4 macro]dnl
+)])dnl
+m4_ifdef(
+  [December],
+  [m4_fatal(dnl
+["December" is defined as an M4 macro]dnl
+)])dnl
+m4_ifdef(
+  [Jan],
+  [m4_fatal(dnl
+["Jan" is defined as an M4 macro]dnl
+)])dnl
+m4_ifdef(
+  [Feb],
+  [m4_fatal(dnl
+["Feb" is defined as an M4 macro]dnl
+)])dnl
+m4_ifdef(
+  [Mar],
+  [m4_fatal(dnl
+["Mar" is defined as an M4 macro]dnl
+)])dnl
+m4_ifdef(
+  [Apr],
+  [m4_fatal(dnl
+["Apr" is defined as an M4 macro]dnl
+)])dnl
+m4_ifdef(
+  [May],
+  [m4_fatal(dnl
+["May" is defined as an M4 macro]dnl
+)])dnl
+m4_ifdef(
+  [Jun],
+  [m4_fatal(dnl
+["Jun" is defined as an M4 macro]dnl
+)])dnl
+m4_ifdef(
+  [Jul],
+  [m4_fatal(dnl
+["Jul" is defined as an M4 macro]dnl
+)])dnl
+m4_ifdef(
+  [Aug],
+  [m4_fatal(dnl
+["Aug" is defined as an M4 macro]dnl
+)])dnl
+m4_ifdef(
+  [Sep],
+  [m4_fatal(dnl
+["Sep" is defined as an M4 macro]dnl
+)])dnl
+m4_ifdef(
+  [Oct],
+  [m4_fatal(dnl
+["Oct" is defined as an M4 macro]dnl
+)])dnl
+m4_ifdef(
+  [Nov],
+  [m4_fatal(dnl
+["Nov" is defined as an M4 macro]dnl
+)])dnl
+m4_ifdef(
+  [Dec],
+  [m4_fatal(dnl
+["Dec" is defined as an M4 macro]dnl
+)])dnl
 m4_define(
   [$1$2],
   [$3])dnl
