@@ -8,23 +8,24 @@ dnl Special file: GATBPS_DEFINE_VERSION.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_DEFINE_VERSION], [{
+AC_DEFUN([GATBPS_DEFINE_VERSION], [[{
 
 #
 # The block that contains this comment is the expansion of the
-# GATBPS_DEFINE_VERSION macro for m4_if(
+# GATBPS_DEFINE_VERSION macro for ]m4_if(
   m4_eval(m4_len([($1)$2.])[ > 38]),
   [1],
   [[
-# ]])($1)$2.
-#
+# ]])[($1)$2.
+#]dnl
 m4_case(
   [$#],
   [2], [],
   [3], [],
   [m4_fatal([GATBPS_DEFINE_VERSION requires exactly 2 or 3 arguments])])dnl
+[
 
-:;}])dnl
+:;}]])dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
 dnl
 dnl The authors of this file have waived all copyright and
