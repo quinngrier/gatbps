@@ -22,7 +22,9 @@ m4_case(
   [$#],
   [2], [],
   [3], [],
-  [m4_fatal([GATBPS_DEFINE_VERSION requires exactly 2 or 3 arguments])])dnl
+  [m4_fatal(dnl
+[GATBPS_DEFINE_VERSION requires exactly 2 or 3 arguments]dnl
+)])dnl
 [
 
 :;}]])dnl
