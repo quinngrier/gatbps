@@ -86,7 +86,7 @@ Let
 .nohy "\fB\-\-\fIL\fR"
 and\~\c
 .nohy "\fB\-\fIS\fR"
-be long and short names for an option and
+be long and short names for an option, and let
 .nohy "\fIV\fR"
 be a value.
 If the option requires a value, then it may be written as either

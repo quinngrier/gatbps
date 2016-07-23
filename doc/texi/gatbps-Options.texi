@@ -18,7 +18,7 @@ Each option either requires, permits, or forbids a value@.
 Let
 @w{@t{-@w{-}}@i{L}}
 and@tie{}@w{@t{-}@i{S}}
-be long and short names for an option and
+be long and short names for an option, and let
 @w{@i{V}}
 be a value@.
 If the option requires a value, then it may be written as either
