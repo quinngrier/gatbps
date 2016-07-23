@@ -17,8 +17,7 @@ Each option either requires, permits, or forbids a value@.
 @include indent.texi
 Let
 @w{@t{-@w{-}}@i{L}}
-and
-@w{@t{-}@i{S}}
+and@tie{}@w{@t{-}@i{S}}
 be long and short names for an option and
 @w{@i{V}}
 be a value@.

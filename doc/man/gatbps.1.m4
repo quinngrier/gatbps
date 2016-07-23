@@ -84,7 +84,7 @@ Each option either requires, permits, or forbids a value.
 .LP
 Let
 .nohy "\fB\-\-\fIL\fR"
-and
+and\~\c
 .nohy "\fB\-\fIS\fR"
 be long and short names for an option and
 .nohy "\fIV\fR"
