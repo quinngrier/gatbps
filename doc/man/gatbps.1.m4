@@ -116,11 +116,11 @@ into the following argument just after the leading
 \~character.
 For example,
 .nohy "\fB\-\fIS\ \fB\-\fIK\fR"
-and
+and\~\c
 .nohy "\fB\-\fIS\ \fB\-\-\fIK\fR"
 may be written as
 .nohy "\fB\-\fISK\fR"
-and
+and\~\c
 .nohy "\fB\-\fIS\fB\-\fIK\fR,"
 respectively.
 .LP

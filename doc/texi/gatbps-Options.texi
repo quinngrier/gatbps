@@ -45,12 +45,10 @@ into the following argument just after the leading
 @w{@t{-}}@tie{}character@.
 For example,
 @w{@t{-}@i{S }@t{-}@i{K}}
-and
-@w{@t{-}@i{S }@t{-@w{-}}@i{K}}
+and@tie{}@w{@t{-}@i{S }@t{-@w{-}}@i{K}}
 may be written as
 @w{@t{-}@i{SK}}
-and
-@w{@t{-}@i{S}@t{-}@i{K}},
+and@tie{}@w{@t{-}@i{S}@t{-}@i{K}},
 respectively@.
 
 @include indent.texi
