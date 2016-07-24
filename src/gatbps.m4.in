@@ -17,6 +17,7 @@ SHEBANG_LINE{%|#
 
 LC_ALL='C'
 'export' 'LC_ALL'
+'readonly' 'LC_ALL'
 
 #
 # The nl variable holds a newline character. It can be used where a
@@ -3857,6 +3858,7 @@ EOF1
 
 LC_ALL='C'
 'export' 'LC_ALL'
+'readonly' 'LC_ALL'
 
 set -e
 trap 'rm -f DATE.tmp' EXIT
@@ -4100,6 +4102,7 @@ EOF1
 
 LC_ALL='C'
 'export' 'LC_ALL'
+'readonly' 'LC_ALL'
 
 set -e
 trap 'rm -f VERSION.tmp' EXIT
@@ -4167,6 +4170,7 @@ EOF1
 
 LC_ALL='C'
 'export' 'LC_ALL'
+'readonly' 'LC_ALL'
 
 #
 # The nl variable holds a newline character. It can be used where a

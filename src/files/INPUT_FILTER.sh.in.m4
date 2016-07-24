@@ -21,6 +21,7 @@ header_comment({%|#|%}, {%|#|%}){%|
 
 LC_ALL='C'
 'export' 'LC_ALL'
+'readonly' 'LC_ALL'
 
 @AWK@ '
   BEGIN {
