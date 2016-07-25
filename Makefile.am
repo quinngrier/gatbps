@@ -353,7 +353,12 @@ ps_dist_src += doc/gatbps.ps
 ## begin_rules
 
 .m4:
-	$(M4) $(AM_M4FLAGS) $(M4FLAGS) $< >$@
+	$(M4) \
+  $(AM_M4FLAGS) \
+  $(M4FLAGS) \
+  $< \
+  >$@ \
+;
 
 bin/gatbps: $(bin_gatbps_src)
 bin/gatbps: $(nodist_bin_gatbps_src)
