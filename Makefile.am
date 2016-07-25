@@ -356,7 +356,7 @@ ps_dist_src += doc/gatbps.ps
 	$(M4) \
   $(AM_M4FLAGS) \
   $(M4FLAGS) \
-  $< \
+  <$< \
   >$@ \
 ;
 
