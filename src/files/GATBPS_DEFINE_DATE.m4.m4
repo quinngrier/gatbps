@@ -499,6 +499,18 @@ $2_YEAR_ZPAD=']$1$2_YEAR_ZPAD['
 $2_MONTH_ZPAD=']$1$2_MONTH_ZPAD['
 $2_DAY_ZPAD=']$1$2_DAY_ZPAD['
 
+'readonly' '$2'
+'readonly' '$2_YEAR'
+'readonly' '$2_MONTH'
+'readonly' '$2_DAY'
+'readonly' '$2_IS_LEAP_YEAR'
+'readonly' '$2_TROFF'
+'readonly' '$2_MONTH_NAME'
+'readonly' '$2_MONTH_ABBR'
+'readonly' '$2_YEAR_ZPAD'
+'readonly' '$2_MONTH_ZPAD'
+'readonly' '$2_DAY_ZPAD'
+
 ]AC_SUBST([$2])[
 ]AC_SUBST([$2_YEAR])[
 ]AC_SUBST([$2_MONTH])[
