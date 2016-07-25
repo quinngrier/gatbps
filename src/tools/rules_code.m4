@@ -7,7 +7,7 @@ ifdef(
       {%|make_rules|%},
       {%|ifdef(
         {%|rules_target|%},
-        {%|divert({%|0|%})rules_target{%|: $1
+        {%|divert({%|0|%})rules_target{%|: $1.m4
 |%}|%},
         {%|define(
           {%|rules_target|%},

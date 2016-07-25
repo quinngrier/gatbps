@@ -1,6 +1,6 @@
 include({%|src/tools/rules_code.m4|%})dnl
-rules_code({%|src/tools/SED_DEFAULT_TROFF.m4|%})dnl
-rules_code({%|src/tools/rules_code.m4|%})dnl
+rules_code({%|src/tools/SED_DEFAULT_TROFF|%})dnl
+rules_code({%|src/tools/rules_code|%})dnl
 ifdef(
   {%|SED_DEFAULT_TROFF|%},
   {%||%},

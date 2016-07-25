@@ -1,6 +1,6 @@
 include({%|src/tools/rules_code.m4|%})dnl
-rules_code({%|src/tools/recursion_code.m4|%})dnl
-rules_code({%|src/tools/rules_code.m4|%})dnl
+rules_code({%|src/tools/recursion_code|%})dnl
+rules_code({%|src/tools/rules_code|%})dnl
 ifdef(
   {%|recursion_code|%},
   {%||%},

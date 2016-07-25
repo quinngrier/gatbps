@@ -1,8 +1,8 @@
 changecom`'dnl
 changequote(`{%|', `|%}')dnl
 include({%|src/tools/rules_code.m4|%})dnl
-rules_code({%|src/files/CC0-1.0-file.txt.m4|%})dnl
-rules_code({%|src/tools/rules_code.m4|%})dnl
+rules_code({%|src/files/CC0-1.0-file.txt|%})dnl
+rules_code({%|src/tools/rules_code|%})dnl
 {%|The authors of this file have waived all copyright and
 related or neighboring rights to the extent permitted by
 law as described by the CC0 1.0 Universal Public Domain
