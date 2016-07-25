@@ -359,6 +359,14 @@ ps_dist_src += doc/gatbps.ps
   <$< \
   >$@ \
 ;
+	$(M4) \
+  $(AM_M4FLAGS) \
+  $(M4FLAGS) \
+  '-D' \
+  'make_rules' \
+  <$< \
+  >$@'.d' \
+;
 
 bin/gatbps: $(bin_gatbps_src)
 bin/gatbps: $(nodist_bin_gatbps_src)
