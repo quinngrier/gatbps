@@ -1,3 +1,6 @@
+include({%|src/tools/rules_code.m4|%})dnl
+rules_code({%|src/tools/math_symbol.m4|%})dnl
+rules_code({%|src/tools/rules_code.m4|%})dnl
 ifdef(
   {%|math_symbol|%},
   {%||%},
