@@ -28,6 +28,13 @@ m4_case(
   [m4_fatal(dnl
 [GATBPS_DEFINE_VERSION requires exactly 2 or 3 arguments]dnl
 )])dnl
+m4_if(
+  m4_bregexp([$1], [^[A-Z_a-z][0-9A-Z_a-z]*$]),
+  [-1],
+  [m4_fatal(dnl
+[GATBPS_DEFINE_VERSION requires its first argument to match the ]dnl
+[following regular expression: ^[A-Z_a-z][0-9A-Z_a-z]*$]dnl
+)])dnl
 [
 
 :;}]])dnl
