@@ -3,17 +3,17 @@ ifdef(
   {%||%},
   {%|define(
     {%|rules_code|%},
-    {%|dnl
-ifdef(
-  {%|make_rules|%},
-  {%|dnl
-ifdef(
-  {%|rules_target|%},
-  {%|divert({%|0|%})rules_target{%|: $1
+    {%|ifdef(
+      {%|make_rules|%},
+      {%|ifdef(
+        {%|rules_target|%},
+        {%|divert({%|0|%})rules_target{%|: $1
 |%}|%},
-  {%|define({%|rules_target|%}, {%|{%|$1|%}|%})|%})dnl
-divert({%|-1|%})|%},
-  {%||%})|%})|%})dnl
+        {%|define(
+          {%|rules_target|%},
+          {%|{%|$1|%}|%})|%})divert({%|-1|%})|%},
+      {%||%})dnl
+|%})|%})dnl
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by
