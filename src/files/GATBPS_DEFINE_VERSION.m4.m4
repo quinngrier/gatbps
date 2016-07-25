@@ -35,6 +35,13 @@ m4_if(
 [GATBPS_DEFINE_VERSION requires its first argument to match the ]dnl
 [following regular expression: ^[A-Z_a-z][0-9A-Z_a-z]*$]dnl
 )])dnl
+m4_if(
+  m4_bregexp([$2], [^[A-Z_a-z][0-9A-Z_a-z]*$]),
+  [-1],
+  [m4_fatal(dnl
+[GATBPS_DEFINE_VERSION requires its second argument to match the ]dnl
+[following regular expression: ^[A-Z_a-z][0-9A-Z_a-z]*$]dnl
+)])dnl
 [
 
 :;}]])dnl
