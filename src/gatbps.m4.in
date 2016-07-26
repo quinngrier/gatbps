@@ -560,6 +560,7 @@ EOF1
           set "${prefix}GATBPS_DEFINE_VERSION.m4" "${@AT@}"
           set "${prefix}GATBPS_DEFINE_JAVADOCFLAGS.m4" "${@AT@}"
           set "${prefix}GATBPS_DEFINE_JAVACFLAGS.m4" "${@AT@}"
+          set "${prefix}GATBPS_DEFINE_HARD_INCLUDE.m4" "${@AT@}"
           set "${prefix}GATBPS_DEFINE_DATE.m4" "${@AT@}"
           set "${prefix}GATBPS_DEFINE_CLASSPATH.m4" "${@AT@}"
           set "${prefix}GATBPS_DEFINE_AT.m4" "${@AT@}"
@@ -1309,6 +1310,8 @@ EOF1
 |%}help_code({%|GATBPS_DEFINE_CLASSPATH.m4|%}){%|
 
 |%}help_code({%|GATBPS_DEFINE_DATE.m4|%}){%|
+
+|%}help_code({%|GATBPS_DEFINE_HARD_INCLUDE.m4|%}){%|
 
 |%}help_code({%|GATBPS_DEFINE_JAVACFLAGS.m4|%}){%|
 
@@ -3978,6 +3981,8 @@ EOF1
 |%}generation_code({%|GATBPS_DEFINE_CLASSPATH.m4|%}){%|
 
 |%}generation_code({%|GATBPS_DEFINE_DATE.m4|%}){%|
+
+|%}generation_code({%|GATBPS_DEFINE_HARD_INCLUDE.m4|%}){%|
 
 |%}generation_code({%|GATBPS_DEFINE_JAVACFLAGS.m4|%}){%|
 
@@ -7890,6 +7895,12 @@ EOF1
 
 |%}recursion_code(
   {%|GATBPS_DEFINE_DATE.m4|%},
+  {%|
+            'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|GATBPS_DEFINE_HARD_INCLUDE.m4|%},
   {%|
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
