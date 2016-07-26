@@ -30,7 +30,7 @@ m4_case(
 case "$][{HARD_INCLUDE+x}" in
   ?*)
     ]AC_MSG_ERROR(
-[[HARD_INCLUDE is already set]]dnl
+[[\$][{HARD_INCLUDE} is already set]]dnl
 , [[1]])[
   ;;
 esac

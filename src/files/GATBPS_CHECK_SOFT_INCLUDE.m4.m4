@@ -35,7 +35,7 @@ m4_case(
     case "$][{gatbps_cv_SOFT_INCLUDE+x}" in
       ?*)
         ]AC_MSG_ERROR(
-[[gatbps_cv_SOFT_INCLUDE is already set]]dnl
+[[\$][{gatbps_cv_SOFT_INCLUDE} is already set]]dnl
 , [[1]])[
       ;;
     esac
@@ -76,7 +76,7 @@ EOF
         case "$][{gatbps_vogmxrfr+x}" in
           ?*)
             ]AC_MSG_ERROR(
-[[gatbps_vogmxrfr is already set]]dnl
+[[\$][{gatbps_vogmxrfr} is already set]]dnl
 , [[1]])[
           ;;
         esac
@@ -103,7 +103,7 @@ EOF
             case "$][{gatbps_grflspuq+x}" in
               ?*)
                 ]AC_MSG_ERROR(
-[[gatbps_grflspuq is already set]]dnl
+[[\$][{gatbps_grflspuq} is already set]]dnl
 , [[1]])[
               ;;
             esac
@@ -157,7 +157,7 @@ EOF
         case "$][{gatbps_gqjyluxk+x}" in
           ?*)
             ]AC_MSG_ERROR(
-[[gatbps_gqjyluxk is already set]]dnl
+[[\$][{gatbps_gqjyluxk} is already set]]dnl
 , [[1]])[
           ;;
         esac
@@ -184,7 +184,7 @@ EOF
             case "$][{gatbps_yxdlenrf+x}" in
               ?*)
                 ]AC_MSG_ERROR(
-[[gatbps_yxdlenrf is already set]]dnl
+[[\$][{gatbps_yxdlenrf} is already set]]dnl
 , [[1]])[
               ;;
             esac
@@ -214,7 +214,7 @@ EOF
 case "$][{SOFT_INCLUDE+x}" in
   ?*)
     ]AC_MSG_ERROR(
-[[SOFT_INCLUDE is already set]]dnl
+[[\$][{SOFT_INCLUDE} is already set]]dnl
 , [[1]])[
   ;;
 esac
@@ -227,7 +227,7 @@ SOFT_INCLUDE="$][{gatbps_cv_SOFT_INCLUDE}"
 case "$][{gatbps_have_soft_include+x}" in
   ?*)
     ]AC_MSG_ERROR(
-[[gatbps_have_soft_include is already set]]dnl
+[[\$][{gatbps_have_soft_include} is already set]]dnl
 , [[1]])[
   ;;
 esac
