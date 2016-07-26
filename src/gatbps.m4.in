@@ -7846,6 +7846,8 @@ EOF1
 |%}recursion_code(
   {%|GATBPS_CHECK_SOFT_INCLUDE.m4|%},
   {%|
+            'set' 'x' "${prefix}GATBPS_CHECK_VARS.m4" "${@AT@}"; 'shift'
+            'set' 'x' "${prefix}GATBPS_CACHE_CHECK.m4" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 
