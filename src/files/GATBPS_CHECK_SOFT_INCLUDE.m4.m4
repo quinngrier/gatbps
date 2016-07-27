@@ -32,14 +32,6 @@ m4_case(
   [SOFT_INCLUDE],
   [[{
 
-    case "$][{gatbps_cv_SOFT_INCLUDE+x}" in
-      ?*)
-        ]AC_MSG_ERROR(
-[[\$][{gatbps_cv_SOFT_INCLUDE} is already set]]dnl
-, [[1]])[
-      ;;
-    esac
-
     gatbps_cv_SOFT_INCLUDE='#'
 
     case "$][{gatbps_cv_SOFT_INCLUDE}" in

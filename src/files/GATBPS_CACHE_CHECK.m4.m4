@@ -58,6 +58,14 @@ $2_was_cached='yes'
 
     $2_was_cached='no'
 
+    case "$][{gatbps_cv_$2+x}" in
+      ?*)
+        ]AC_MSG_ERROR(
+[[\$][{gatbps_cv_$2} is already set]]dnl
+, [[1]])[
+      ;;
+    esac
+
     #
     # The rest of the code in this block is the third argument that was
     # given to GATBPS_CACHE_CHECK.
