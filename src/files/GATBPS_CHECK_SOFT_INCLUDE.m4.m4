@@ -200,10 +200,10 @@ EOF
       ;;
     esac
 
+    'readonly' 'gatbps_cv_SOFT_INCLUDE'
+
     'rm' '-f' 'conftest1.mk'
     'rm' '-f' 'conftest2.mk'
-
-    'readonly' 'gatbps_cv_SOFT_INCLUDE'
 
   :;}]])[
 
