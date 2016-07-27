@@ -74,8 +74,10 @@ EOF
         esac
 
         gatbps_vogmxrfr=`'make' '-f' 'conftest1.mk'`
-        case "$][{?}"','"$][{gatbps_vogmxrfr}" in
-          '0,#1')
+        gatbps_vogmxrfr="$][{?}""$][{gatbps_vogmxrfr}"
+        'readonly' 'gatbps_vogmxrfr'
+        case "$][{gatbps_vogmxrfr}" in
+          '0#1')
 
             'cat' >'conftest2.mk' <<'EOF'
 2:
@@ -101,16 +103,16 @@ EOF
             esac
 
             gatbps_grflspuq=`'make' '-f' 'conftest1.mk'`
-            case "$][{?}"','"$][{gatbps_grflspuq}" in
-              '0,#2')
+            gatbps_grflspuq="$][{?}""$][{gatbps_grflspuq}"
+            'readonly' 'gatbps_grflspuq'
+            case "$][{gatbps_grflspuq}" in
+              '0#2')
                 gatbps_cv_SOFT_INCLUDE='-include'
               ;;
             esac
-            'readonly' 'gatbps_grflspuq'
 
           ;;
         esac
-        'readonly' 'gatbps_vogmxrfr'
 
       ;;
     esac
@@ -155,8 +157,10 @@ EOF
         esac
 
         gatbps_gqjyluxk=`'make' '-f' 'conftest1.mk'`
-        case "$][{?}"','"$][{gatbps_gqjyluxk}" in
-          '0,#1')
+        gatbps_gqjyluxk="$][{?}""$][{gatbps_gqjyluxk}"
+        'readonly' 'gatbps_gqjyluxk'
+        case "$][{gatbps_gqjyluxk}" in
+          '0#1')
 
             'cat' >'conftest2.mk' <<'EOF'
 2:
@@ -182,16 +186,16 @@ EOF
             esac
 
             gatbps_yxdlenrf=`'make' '-f' 'conftest1.mk'`
-            case "$][{?}"','"$][{gatbps_yxdlenrf}" in
-              '0,#2')
+            gatbps_yxdlenrf="$][{?}""$][{gatbps_yxdlenrf}"
+            'readonly' 'gatbps_yxdlenrf'
+            case "$][{gatbps_yxdlenrf}" in
+              '0#2')
                 gatbps_cv_SOFT_INCLUDE='sinclude'
               ;;
             esac
-            'readonly' 'gatbps_yxdlenrf'
 
           ;;
         esac
-        'readonly' 'gatbps_gqjyluxk'
 
       ;;
     esac
