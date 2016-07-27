@@ -899,20 +899,16 @@ The
 .nohy "\fBCC0\-1.0\-AC\-COPYRIGHT.ac\fR"
 special file calls the
 .nohy "\fBAC_COPYRIGHT\fR"
-Autoconf
-macro with a message stating that some parts of the
-.nohy "\fBconfigure\fR"
-script are
-from the package, and that the authors of those parts have waived their
-rights to them by referencing the
+Autoconf macro with a message stating that some parts of the script
+are from the package and that the authors of those parts have waived
+their rights to them by referencing the
 .nohy "\fBCC0\-1.0.txt\fR"
 special file.
-This can be
-included in another Autoconf file with the
+It can be included in an Autoconf file with the
 .nohy "\fBm4_include\fR"
 macro where the
 .nohy "\fBAC_COPYRIGHT\fR"
-call is desired to appear.
+call is desired to occur.
 .TP
 .nohy "\fBCC0\-1.0\-AM\-COPYRIGHT.am\fR"
 .IPEZ

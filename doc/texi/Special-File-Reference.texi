@@ -18,6 +18,24 @@ option of
 @w{@t{gatbps}}@.
 
 @table @asis
+@sfindex @w{@t{CC0-1.@:0-AC-COPYRIGHT.@:ac}}
+@item @w{@t{CC0-1.@:0-AC-COPYRIGHT.@:ac}}
+@include ipez.texi
+The
+@w{@t{CC0-1.@:0-AC-COPYRIGHT.@:ac}}
+special file calls the
+@w{@t{AC_COPYRIGHT}}
+Autoconf macro with a message stating that some parts of the script
+are from the package and that the authors of those parts have waived
+their rights to them by referencing the
+@w{@t{CC0-1.@:0.@:txt}}
+special file@.
+It can be included in an Autoconf file with the
+@w{@t{m4_include}}
+macro where the
+@w{@t{AC_COPYRIGHT}}
+call is desired to occur@.
+
 @sfindex @w{@t{CC0-1.@:0-appendix.@:texi}}
 @item @w{@t{CC0-1.@:0-appendix.@:texi}}
 @include ipez.texi

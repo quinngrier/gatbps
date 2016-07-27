@@ -3,11 +3,11 @@ changequote(`{%|', `|%}')dnl
 {%|Special file: ${fB1}CC0-1.0-AC-COPYRIGHT.ac${fR1}
 
 The ${fB1}CC0-1.0-AC-COPYRIGHT.ac${fR1} special file calls the ${fB1}AC_COPYRIGHT${fR1} Autoconf
-macro with a message stating that some parts of the ${fB1}configure${fR1} script are
-from the package, and that the authors of those parts have waived their
-rights to them by referencing the ${fB1}CC0-1.0.txt${fR1} special file. This can be
-included in another Autoconf file with the ${fB1}m4_include${fR1} macro where the
-${fB1}AC_COPYRIGHT${fR1} call is desired to appear.
+macro with a message stating that some parts of the script are from the
+package and that the authors of those parts have waived their rights to
+them by referencing the ${fB1}CC0-1.0.txt${fR1} special file. It can be included in
+an Autoconf file with the ${fB1}m4_include${fR1} macro where the ${fB1}AC_COPYRIGHT${fR1} call
+is desired to occur.
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.|%}dnl
 dnl
