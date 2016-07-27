@@ -904,9 +904,7 @@ are from the package and that the authors of those parts have waived
 their rights to them by referencing the
 .nohy "\fBCC0\-1.0.txt\fR"
 special file.
-It can be included in an Autoconf file with the
-.nohy "\fBm4_include\fR"
-macro where the
+It can be included in an Autoconf file where the
 .nohy "\fBAC_COPYRIGHT\fR"
 call is desired to occur.
 .TP

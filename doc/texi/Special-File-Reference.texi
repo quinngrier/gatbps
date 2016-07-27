@@ -30,9 +30,7 @@ are from the package and that the authors of those parts have waived
 their rights to them by referencing the
 @w{@t{CC0-1.@:0.@:txt}}
 special file@.
-It can be included in an Autoconf file with the
-@w{@t{m4_include}}
-macro where the
+It can be included in an Autoconf file where the
 @w{@t{AC_COPYRIGHT}}
 call is desired to occur@.
 

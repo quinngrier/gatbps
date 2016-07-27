@@ -13,8 +13,8 @@ dnl The CC0-1.0-AC-COPYRIGHT.ac special file calls the AC_COPYRIGHT
 dnl Autoconf macro with a message stating that some parts of the script
 dnl are from the package and that the authors of those parts have waived
 dnl their rights to them by referencing the CC0-1.0.txt special file. It
-dnl can be included in an Autoconf file with the m4_include macro where
-dnl the AC_COPYRIGHT call is desired to occur.
+dnl can be included in an Autoconf file where the AC_COPYRIGHT call is
+dnl desired to occur.
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
