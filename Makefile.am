@@ -376,6 +376,7 @@ ps_dist_src += doc/gatbps.ps
 
 bin/gatbps: $(bin_gatbps_src)
 bin/gatbps: $(nodist_bin_gatbps_src)
+bin/gatbps: src/gatbps.m4
 	$(MKDIR_P) bin
 	$(M4) $(AM_M4FLAGS) $(M4FLAGS) src/gatbps.m4 >bin/gatbps
 	chmod +x bin/gatbps
