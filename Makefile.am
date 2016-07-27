@@ -57,6 +57,7 @@ bin_SCRIPTS =
 bin_SCRIPTS += bin/gatbps
 
 bin_gatbps_src =
+bin_gatbps_src += doc/help/CC0-1.0-AC-COPYRIGHT.ac.hd.m4
 bin_gatbps_src += doc/help/CC0-1.0-appendix.texi.hd.m4
 bin_gatbps_src += doc/help/CC0-1.0-commit.txt.hd.m4
 bin_gatbps_src += doc/help/CC0-1.0-copying.texi.hd.m4
@@ -110,6 +111,7 @@ bin_gatbps_src += doc/help/ps-dist.am.hd.m4
 bin_gatbps_src += doc/help/sh-form.sh.hd.m4
 bin_gatbps_src += doc/help/texinfo.css.hd.m4
 bin_gatbps_src += doc/man/gatbps.1.m4
+bin_gatbps_src += src/files/CC0-1.0-AC-COPYRIGHT.ac.m4
 bin_gatbps_src += src/files/CC0-1.0-appendix.texi.m4
 bin_gatbps_src += src/files/CC0-1.0-commit.txt.m4
 bin_gatbps_src += src/files/CC0-1.0-copying.texi.m4
