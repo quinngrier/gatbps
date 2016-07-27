@@ -7684,6 +7684,12 @@ EOF1
         case "${1}" in
 
 |%}recursion_code(
+  {%|CC0-1.0-AC-COPYRIGHT.ac|%},
+  {%|
+            'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
   {%|CC0-1.0-appendix.texi|%},
   {%|
             'set' 'x' "${prefix}indent.texi" "${@AT@}"; 'shift'
