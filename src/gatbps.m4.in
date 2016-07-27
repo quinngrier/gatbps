@@ -956,33 +956,7 @@ EOF1
               'exit' '1'
             ;;
 
-            '--help=CC0-1.0-AC-COPYRIGHT.ac'|'--help='*'/CC0-1.0-AC-COPYRIGHT.ac')
-              cat <<EOF1
-Special file: ${fB1}CC0-1.0-AC-COPYRIGHT.ac${fR1}
-
-The ${fB1}CC0-1.0-AC-COPYRIGHT.ac${fR1} special file calls the ${fB1}AC_COPYRIGHT${fR1} Autoconf
-macro with a message stating that some parts of the ${fB1}configure${fR1} script are
-from the package, and that the authors of those parts have waived their
-rights to them by referencing the ${fB1}CC0-1.0.txt${fR1} special file. This can be
-included in another Autoconf file with the ${fB1}m4_include${fR1} macro where the
-${fB1}AC_COPYRIGHT${fR1} call is desired to appear.
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|CC0-1.0-AC-COPYRIGHT.ac|%}){%|
 
             '--help=CC0-1.0-AM-COPYRIGHT.am'|'--help='*'/CC0-1.0-AM-COPYRIGHT.am')
               cat <<EOF1
