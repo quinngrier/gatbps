@@ -312,7 +312,7 @@ m4_define(
 [
 
 ]AC_DEFINE(
-  [$2],
+  [[$2]],
   [["]]$1$2[["]],
   [
     Define to a character string literal that contains the appropriate
@@ -322,28 +322,28 @@ m4_define(
   ])[
 
 ]AC_DEFINE(
-  [$2_YEAR],
+  [[$2_YEAR]],
   $1$2_YEAR,
   [
     Define to the year of $2 as an unsuffixed decimal integer constant.
   ])[
 
 ]AC_DEFINE(
-  [$2_MONTH],
+  [[$2_MONTH]],
   $1$2_MONTH,
   [
     Define to the month of $2 as an unsuffixed decimal integer constant.
   ])[
 
 ]AC_DEFINE(
-  [$2_DAY],
+  [[$2_DAY]],
   $1$2_DAY,
   [
     Define to the day of $2 as an unsuffixed decimal integer constant.
   ])[
 
 ]AC_DEFINE(
-  [$2_IS_LEAP_YEAR],
+  [[$2_IS_LEAP_YEAR]],
   $1$2_IS_LEAP_YEAR,
   [
     Define to the integer constant 1 if $2_YEAR is a leap year, or the
@@ -351,7 +351,7 @@ m4_define(
   ])[
 
 ]AC_DEFINE(
-  [$2_TROFF],
+  [[$2_TROFF]],
   [["]]m4_bpatsubst($1$2_TROFF, [\\], [\\\\])[["]],
   [
     Define to the same character string literal as $2 but with each -
@@ -359,7 +359,7 @@ m4_define(
   ])[
 
 ]AC_DEFINE(
-  [$2_MONTH_NAME],
+  [[$2_MONTH_NAME]],
   [["]]$1$2_MONTH_NAME[["]],
   [
     Define to a character string literal that contains the capitalized
@@ -367,7 +367,7 @@ m4_define(
   ])[
 
 ]AC_DEFINE(
-  [$2_MONTH_ABBR],
+  [[$2_MONTH_ABBR]],
   [["]]$1$2_MONTH_ABBR[["]],
   [
     Define to the same character string literal as $2_MONTH_NAME but
@@ -375,7 +375,7 @@ m4_define(
   ])[
 
 ]AC_DEFINE(
-  [$2_YEAR_ZPAD],
+  [[$2_YEAR_ZPAD]],
   [["]]$1$2_YEAR_ZPAD[["]],
   [
     Define to a character string literal that contains $2_YEAR preceded
@@ -384,7 +384,7 @@ m4_define(
   ])[
 
 ]AC_DEFINE(
-  [$2_MONTH_ZPAD],
+  [[$2_MONTH_ZPAD]],
   [["]]$1$2_MONTH_ZPAD[["]],
   [
     Define to a character string literal that contains the MM component
@@ -392,7 +392,7 @@ m4_define(
   ])[
 
 ]AC_DEFINE(
-  [$2_DAY_ZPAD],
+  [[$2_DAY_ZPAD]],
   [["]]$1$2_DAY_ZPAD[["]],
   [
     Define to a character string literal that contains the DD component
