@@ -20,7 +20,7 @@ AC_DEFUN([GATBPS_DEFINE_DATE], [[{
   [1],
   [[
 # ]])[($1)$2.
-#]dnl
+#][]dnl
 m4_case(
   [$#],
   [3], [],

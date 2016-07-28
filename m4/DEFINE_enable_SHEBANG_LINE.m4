@@ -3,7 +3,7 @@ AC_DEFUN([DEFINE_enable_SHEBANG_LINE], [[{
 #
 # The block that contains this comment is the expansion of the
 # DEFINE_enable_SHEBANG_LINE macro.
-#]dnl
+#][]dnl
 m4_ifdef(
   [DEFINE_enable_SHEBANG_LINE_HAS_BEEN_CALLED],
   [m4_fatal([DEFINE_enable_SHEBANG_LINE has already been called])],
