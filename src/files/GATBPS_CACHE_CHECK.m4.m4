@@ -44,9 +44,9 @@ $2_was_cached='yes'
 
 ]AC_CACHE_CHECK(
   [m4_if(
-    m4_bregexp([$1], [^{VERBATIM}]),
+    m4_bregexp([$1], [^{--VERBATIM--}]),
     [0],
-    [m4_bpatsubst([[$1]], [^\(.\){VERBATIM}], [\1])],
+    [m4_bpatsubst([[$1]], [^\(.\){--VERBATIM--}], [\1])],
     [m4_normalize([$1])])],
   [gatbps_cv_$2],
   [[{
