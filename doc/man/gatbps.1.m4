@@ -1,13 +1,13 @@
 changecom`'dnl
 changequote(`{%|', `|%}')dnl
-include({%|src/tools/rules_code.m4|%})dnl
+include({%|src/tools/rules_code.m4|%}){%||%}dnl
 rules_code({%|doc/man/gatbps.1|%})dnl
 rules_code({%|src/tools/rules_code|%})dnl
-include({%|src/tools/AWK_DEFAULT_TROFF.m4|%})dnl
-include({%|src/tools/PACKAGE_DATE_TROFF.m4|%})dnl
-include({%|src/tools/PACKAGE_VERSION.m4|%})dnl
-include({%|src/tools/SED_DEFAULT_TROFF.m4|%})dnl
-include({%|src/tools/TEXI2ANY_DEFAULT_TROFF.m4|%})dnl
+include({%|src/tools/AWK_DEFAULT_TROFF.m4|%}){%||%}dnl
+include({%|src/tools/PACKAGE_DATE_TROFF.m4|%}){%||%}dnl
+include({%|src/tools/PACKAGE_VERSION.m4|%}){%||%}dnl
+include({%|src/tools/SED_DEFAULT_TROFF.m4|%}){%||%}dnl
+include({%|src/tools/TEXI2ANY_DEFAULT_TROFF.m4|%}){%||%}dnl
 {%|.de nohy
 .nh
 \\$1

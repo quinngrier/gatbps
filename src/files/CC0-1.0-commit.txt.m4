@@ -1,6 +1,6 @@
 changecom`'dnl
 changequote(`{%|', `|%}')dnl
-include({%|src/tools/rules_code.m4|%})dnl
+include({%|src/tools/rules_code.m4|%}){%||%}dnl
 rules_code({%|src/files/CC0-1.0-commit.txt|%})dnl
 rules_code({%|src/tools/rules_code|%})dnl
 {%|
