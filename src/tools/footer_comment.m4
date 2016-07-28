@@ -1,6 +1,6 @@
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|src/tools/footer_comment|%})dnl
-rules_code({%|src/tools/rules_code|%})dnl
+rules_code({%|src/tools/footer_comment|%}){%||%}dnl
+rules_code({%|src/tools/rules_code|%}){%||%}dnl
 ifdef(
   {%|footer_comment|%},
   {%||%},
