@@ -1,5 +1,5 @@
 changecom`'dnl
-changequote(`{%|', `|%}')dnl
+changequote(`{%|', `|%}'){%||%}dnl
 {%|Special file: ${fB1}CC0-1.0-AC-COPYRIGHT.ac${fR1}
 
 The ${fB1}CC0-1.0-AC-COPYRIGHT.ac${fR1} special file calls the ${fB1}AC_COPYRIGHT${fR1} Autoconf

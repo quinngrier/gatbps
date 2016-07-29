@@ -8,7 +8,7 @@ ifdef(
     {%|generation_code|%},
     {%|{%|          'no,$1'|'no,'*'/$1')
             cat >"$|%}{%|{safe_1}" <<'EOF1'|%}
-changequote({%|`|%}, {%|'|%})dnl
+changequote({%|`|%}, {%|'|%}){%||%}dnl
 include(`src/files/$1.m4'){%|
 EOF1
             case "$|%}{%|{?}" in

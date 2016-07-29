@@ -1,5 +1,5 @@
 changecom`'dnl
-changequote(`{%|', `|%}')dnl
+changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
 rules_code({%|src/files/INPUT_FILTER.sh.in|%}){%||%}dnl
 rules_code({%|src/tools/rules_code|%}){%||%}dnl

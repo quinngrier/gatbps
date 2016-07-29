@@ -1,5 +1,5 @@
 changecom`'dnl
-changequote(`{%|', `|%}')dnl
+changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
 rules_code({%|src/gatbps|%}){%||%}dnl
 rules_code({%|src/tools/rules_code|%}){%||%}dnl
@@ -2259,7 +2259,7 @@ EOF1
 
           cat <<'EOF1'
 |%}dnl
-changequote({%|`|%}, {%|'|%})dnl
+changequote({%|`|%}, {%|'|%}){%||%}dnl
 include(`doc/man/gatbps.1.m4')dnl
 {%|EOF1
           case "${?}" in

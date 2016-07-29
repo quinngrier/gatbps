@@ -1,5 +1,5 @@
 changecom`'dnl
-changequote(`{%|', `|%}')dnl
+changequote(`{%|', `|%}'){%||%}dnl
 {%|Special file: ${fB1}CC0-1.0-appendix.texi${fR1}
 
 The ${fB1}CC0-1.0-appendix.texi${fR1} special file is a Texinfo appendix that

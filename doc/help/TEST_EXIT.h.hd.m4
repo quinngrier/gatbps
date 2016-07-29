@@ -1,5 +1,5 @@
 changecom`'dnl
-changequote(`{%|', `|%}')dnl
+changequote(`{%|', `|%}'){%||%}dnl
 {%|Special file: ${fB1}TEST_EXIT.h${fR1}
 
 The ${fB1}TEST_EXIT.h${fR1} special file is a C header file that defines the

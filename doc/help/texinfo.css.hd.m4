@@ -1,5 +1,5 @@
 changecom`'dnl
-changequote(`{%|', `|%}')dnl
+changequote(`{%|', `|%}'){%||%}dnl
 {%|Special file: ${fB1}texinfo.css${fR1}
 
 The ${fB1}texinfo.css${fR1} special file is a cascading style sheet that makes

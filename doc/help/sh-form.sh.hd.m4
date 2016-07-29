@@ -1,5 +1,5 @@
 changecom`'dnl
-changequote(`{%|', `|%}')dnl
+changequote(`{%|', `|%}'){%||%}dnl
 {%|Special file: ${fB1}sh-form.sh${fR1}
 
 The ${fB1}sh-form.sh${fR1} special file is a portable shell script that formats its

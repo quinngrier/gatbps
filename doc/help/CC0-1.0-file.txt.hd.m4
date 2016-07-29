@@ -1,5 +1,5 @@
 changecom`'dnl
-changequote(`{%|', `|%}')dnl
+changequote(`{%|', `|%}'){%||%}dnl
 {%|Special file: ${fB1}CC0-1.0-file.txt${fR1}
 
 The ${fB1}CC0-1.0-file.txt${fR1} special file contains a message stating that the
