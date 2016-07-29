@@ -398,7 +398,7 @@ EOF2
 
         '--awk='*)
 
-          x=`eval "${sed}"' "
+          x=`'eval' "${sed}"' "
 s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
 1s/^--awk=/awk='\\''/
 \\$s/\\$/'\\''/
@@ -481,7 +481,7 @@ EOF2
 
         '-k'*)
 
-          x=`eval "${sed}"' "
+          x=`'eval' "${sed}"' "
 s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
 1s/^-./x='\\''/
 \\$s/\\$/'\\''/
@@ -594,7 +594,7 @@ EOF2
 
         '--sed='*)
 
-          x=`eval "${sed}"' "
+          x=`'eval' "${sed}"' "
 s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
 1s/^--sed=/sed='\\''/
 \\$s/\\$/'\\''/
@@ -691,7 +691,7 @@ case "${keep}" in
   'no')
     case "${s}" in
       *"${nl}'")
-        s=`eval "${awk}"' '\\''
+        s=`'eval' "${awk}"' '\\''
 {
   if (NR == 1) {
     x = $0
@@ -731,7 +731,7 @@ esac
             ;;
           esac
 
-          the_output="${the_output}"`eval "${sed}"' "
+          the_output="${the_output}"`'eval' "${sed}"' "
 s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
 1s/^/'\\''/
 \\$s/'\\''\\\\\\\\'\\'''\\''\\$/'\\''/
@@ -970,7 +970,7 @@ EOF2
 
         '--'*'='*)
 
-          eval "${awk}"' '\''
+          'eval' "${awk}"' '\''
 {
   if (NR != 1) {
     name = name "\n"
@@ -1016,7 +1016,7 @@ EOF2
 
         '-'?*)
 
-          eval "${awk}"' '\''
+          'eval' "${awk}"' '\''
 {
   name = substr($0 "\n", 1, 2)
   printf "'\''"${fr2}"'\''sh-form.sh!'\''"${fR2}"'\'' unknown option: '\''"${fB2}"'\''%s'\''"${fR2}"'\''\n", name
@@ -1053,7 +1053,7 @@ EOF2
     ;;
   esac
 
-  the_output="${the_output}"`eval "${sed}"' "
+  the_output="${the_output}"`'eval' "${sed}"' "
 s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
 1s/^/'\\''/
 \\$s/\\$/'\\''/
