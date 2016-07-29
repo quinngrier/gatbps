@@ -23,7 +23,8 @@ AC_DEFUN([GATBPS_CHECK_BASIC], [{
 #
 
 GATBPS_CACHE_CHECK(
-  [for ]m4_bpatsubst([[$1]], [{--DETAILS--}.*\(.\)], [\1]),
+  [for ]m4_bpatsubst([[$1]], [{--DETAILS--}\(.\|
+\)*\(.\)], [\2]),
   [$2],
   [{ ':'
 
@@ -126,10 +127,12 @@ case "$[]{gatbps_cv_$2}" in
           Define to 1 if you have
           ]m4_normalize(
             m4_bpatsubst(
-              m4_bpatsubst([[[$1]]], [{--DETAILS--}.*\(..\)], [\1]),
+              m4_bpatsubst([[[$1]]], [{--DETAILS--}\(.\|
+\)*\(..\)], [\2]),
               [{--VERBATIM--}]))[,
           or 0 if not.
-          ]m4_bpatsubst([[$1]], [\(.\).*{--DETAILS--}], [\1])[
+          ]m4_bpatsubst([[$1]], [\(.\)\(.\|
+\)*{--DETAILS--}], [\1])[
         ])])
   ;;
   'no')
@@ -152,10 +155,12 @@ case "$[]{gatbps_cv_$2}" in
           Define to 1 if you have
           ]m4_normalize(
             m4_bpatsubst(
-              m4_bpatsubst([[[$1]]], [{--DETAILS--}.*\(..\)], [\1]),
+              m4_bpatsubst([[[$1]]], [{--DETAILS--}\(.\|
+\)*\(..\)], [\2]),
               [{--VERBATIM--}]))[,
           or 0 if not.
-          ]m4_bpatsubst([[$1]], [\(.\).*{--DETAILS--}], [\1])[
+          ]m4_bpatsubst([[$1]], [\(.\)\(.\|
+\)*{--DETAILS--}], [\1])[
         ])])
   ;;
 esac
