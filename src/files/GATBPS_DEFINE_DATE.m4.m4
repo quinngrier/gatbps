@@ -26,204 +26,204 @@ m4_case(
   [3], [],
   [m4_fatal(
 [GATBPS_DEFINE_DATE requires exactly 3 arguments]dnl
-)])dnl
+)])[]dnl
 m4_if(
   m4_bregexp([$1], [^[A-Z_a-z][0-9A-Z_a-z]*$]),
   [-1],
   [m4_fatal(
 [GATBPS_DEFINE_DATE requires its first argument to match the ]dnl
 [following regular expression: ^[A-Z_a-z][0-9A-Z_a-z]*$]dnl
-)])dnl
+)])[]dnl
 m4_if(
   m4_bregexp([$2], [^[A-Z_a-z][0-9A-Z_a-z]*$]),
   [-1],
   [m4_fatal(
 [GATBPS_DEFINE_DATE requires its second argument to match the ]dnl
 [following regular expression: ^[A-Z_a-z][0-9A-Z_a-z]*$]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [$1$2],
   [m4_fatal(
 [$1$2 is already defined]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [$1$2_YEAR],
   [m4_fatal(
 [$1$2_YEAR is already defined]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [$1$2_MONTH],
   [m4_fatal(
 [$1$2_MONTH is already defined]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [$1$2_DAY],
   [m4_fatal(
 [$1$2_DAY is already defined]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [$1$2_YEAR_MOD_10000],
   [m4_fatal(
 [$1$2_YEAR_MOD_10000 is already defined]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [$1$2_IS_LEAP_YEAR],
   [m4_fatal(
 [$1$2_IS_LEAP_YEAR is already defined]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [$1$2_TROFF],
   [m4_fatal(
 [$1$2_TROFF is already defined]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [$1$2_MONTH_NAME],
   [m4_fatal(
 [$1$2_MONTH_NAME is already defined]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [$1$2_MONTH_ABBR],
   [m4_fatal(
 [$1$2_MONTH_ABBR is already defined]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [$1$2_YEAR_ZPAD],
   [m4_fatal(
 [$1$2_YEAR_ZPAD is already defined]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [$1$2_MONTH_ZPAD],
   [m4_fatal(
 [$1$2_MONTH_ZPAD is already defined]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [$1$2_DAY_ZPAD],
   [m4_fatal(
 [$1$2_DAY_ZPAD is already defined]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [January],
   [m4_fatal(
 ["January" is defined as a macro]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [February],
   [m4_fatal(
 ["February" is defined as a macro]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [March],
   [m4_fatal(
 ["March" is defined as a macro]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [April],
   [m4_fatal(
 ["April" is defined as a macro]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [May],
   [m4_fatal(
 ["May" is defined as a macro]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [June],
   [m4_fatal(
 ["June" is defined as a macro]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [July],
   [m4_fatal(
 ["July" is defined as a macro]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [August],
   [m4_fatal(
 ["August" is defined as a macro]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [September],
   [m4_fatal(
 ["September" is defined as a macro]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [October],
   [m4_fatal(
 ["October" is defined as a macro]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [November],
   [m4_fatal(
 ["November" is defined as a macro]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [December],
   [m4_fatal(
 ["December" is defined as a macro]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [Jan],
   [m4_fatal(
 ["Jan" is defined as a macro]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [Feb],
   [m4_fatal(
 ["Feb" is defined as a macro]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [Mar],
   [m4_fatal(
 ["Mar" is defined as a macro]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [Apr],
   [m4_fatal(
 ["Apr" is defined as a macro]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [May],
   [m4_fatal(
 ["May" is defined as a macro]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [Jun],
   [m4_fatal(
 ["Jun" is defined as a macro]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [Jul],
   [m4_fatal(
 ["Jul" is defined as a macro]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [Aug],
   [m4_fatal(
 ["Aug" is defined as a macro]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [Sep],
   [m4_fatal(
 ["Sep" is defined as a macro]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [Oct],
   [m4_fatal(
 ["Oct" is defined as a macro]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [Nov],
   [m4_fatal(
 ["Nov" is defined as a macro]dnl
-)])dnl
+)])[]dnl
 m4_ifdef(
   [Dec],
   [m4_fatal(
 ["Dec" is defined as a macro]dnl
-)])dnl
+)])[]dnl
 m4_define(
   [$1$2],
-  [$3])dnl
+  [$3])[]dnl
 m4_if(
   m4_bregexp($1$2, [^\+?[0-9]+-[0-9][0-9]-[0-9][0-9]$]),
   [-1],
@@ -232,26 +232,26 @@ m4_if(
 [Gregorian date in YYYY-MM-DD form where the year may be preceded ]dnl
 [by a + character and may have any number of digits, including ]dnl
 [leading zeros]dnl
-)])dnl
+)])[]dnl
 m4_define(
   [$1$2_YEAR],
-  m4_bregexp($1$2, [\+?0*\([^-]+\)], [\1]))dnl
+  m4_bregexp($1$2, [\+?0*\([^-]+\)], [\1]))[]dnl
 m4_define(
   [$1$2_MONTH],
-  m4_bregexp($1$2, [[^-]*-0?\([^-]*\)], [\1]))dnl
+  m4_bregexp($1$2, [[^-]*-0?\([^-]*\)], [\1]))[]dnl
 m4_define(
   [$1$2_DAY],
-  m4_bregexp($1$2, [.*-0?\(.*\)], [\1]))dnl
+  m4_bregexp($1$2, [.*-0?\(.*\)], [\1]))[]dnl
 m4_define(
   [$1$2_YEAR_MOD_10000],
-  m4_bregexp($1$2_YEAR, [..?.?.?$], [\&]))dnl
+  m4_bregexp($1$2_YEAR, [..?.?.?$], [\&]))[]dnl
 m4_define(
   [$1$2_IS_LEAP_YEAR],
   m4_eval([
     (]$1$2_YEAR_MOD_10000[ % 4 == 0 &&
      ]$1$2_YEAR_MOD_10000[ % 100 != 0) ||
     (]$1$2_YEAR_MOD_10000[ % 400 == 0)
-  ]))dnl
+  ]))[]dnl
 m4_if(
   m4_eval([
     (]$1$2_DAY[ >= 1) &&
@@ -274,10 +274,10 @@ m4_if(
 [Gregorian date in YYYY-MM-DD form where the year may be preceded ]dnl
 [by a + character and may have any number of digits, including ]dnl
 [leading zeros]dnl
-)])dnl
+)])[]dnl
 m4_define(
   [$1$2_TROFF],
-  m4_bpatsubst($1$2, [-], [\\-]))dnl
+  m4_bpatsubst($1$2, [-], [\\-]))[]dnl
 m4_define(
   [$1$2_MONTH_NAME],
   m4_if(
@@ -292,23 +292,23 @@ m4_define(
     $1$2_MONTH,  [9], [September],
     $1$2_MONTH, [10], [October],
     $1$2_MONTH, [11], [November],
-    $1$2_MONTH, [12], [December]))dnl
+    $1$2_MONTH, [12], [December]))[]dnl
 m4_define(
   [$1$2_MONTH_ABBR],
-  m4_substr($1$2_MONTH_NAME, [0], [3]))dnl
+  m4_substr($1$2_MONTH_NAME, [0], [3]))[]dnl
 m4_define(
   [$1$2_YEAR_ZPAD],
   m4_if(
     m4_eval(m4_len($1$2_YEAR)[ > 3]),
     [1],
     [$1$2_YEAR],
-    [m4_bregexp([000]$1$2_YEAR, [....$], [\&])]))dnl
+    [m4_bregexp([000]$1$2_YEAR, [....$], [\&])]))[]dnl
 m4_define(
   [$1$2_MONTH_ZPAD],
-  m4_bpatsubst($1$2_MONTH, [^.$], [0\&]))dnl
+  m4_bpatsubst($1$2_MONTH, [^.$], [0\&]))[]dnl
 m4_define(
   [$1$2_DAY_ZPAD],
-  m4_bpatsubst($1$2_DAY, [^.$], [0\&]))dnl
+  m4_bpatsubst($1$2_DAY, [^.$], [0\&]))[]dnl
 [
 
 ]AC_DEFINE(
@@ -534,7 +534,7 @@ $2_DAY_ZPAD=']$1$2_DAY_ZPAD['
     'exit' '1'
   :;)]])[
 
-:;}]])dnl
+:;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})dnl
 dnl
 dnl The authors of this file have waived all copyright and
