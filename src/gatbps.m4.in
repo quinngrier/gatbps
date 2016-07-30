@@ -2262,7 +2262,7 @@ EOF1
 
           cat <<'EOF1'
 |%}dnl
-changequote({%|`|%}, {%|'|%}){%||%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
 include(`doc/man/gatbps.1.m4')dnl
 {%|EOF1
           case "${?}" in
