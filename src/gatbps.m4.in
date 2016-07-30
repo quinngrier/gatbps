@@ -498,6 +498,7 @@ EOF1
           set "${prefix}shortcontents.texi" "${@AT@}"
           set "${prefix}sh-form.sh" "${@AT@}"
           set "${prefix}sbs.texi" "${@AT@}"
+          set "${prefix}rules_code.m4" "${@AT@}"
           set "${prefix}rflo.texi" "${@AT@}"
           set "${prefix}rcei.texi" "${@AT@}"
           set "${prefix}rarrow.texi" "${@AT@}"
@@ -2065,6 +2066,8 @@ EOF1
                 ;;
               esac
             ;;
+
+|%}help_code({%|rules_code.m4|%}){%|
 
             '--help=sbs.texi'|'--help='*'/sbs.texi')
               cat <<EOF1
@@ -6852,6 +6855,8 @@ EOF1
             esac
           ;;
 
+|%}generation_code({%|rules_code.m4|%}){%|
+
           'no,sbs.texi'|'no,'*'/sbs.texi')
             cat >"${safe_1}" <<'EOF1'
 @AT@ifxml
@@ -8227,6 +8232,12 @@ EOF1
 
 |%}recursion_code(
   {%|rflo.texi|%},
+  {%|
+            'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|rules_code.m4|%},
   {%|
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
