@@ -1,5 +1,8 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
+include({%|src/tools/rules_code.m4|%}){%||%}dnl
+rules_code({%|doc/help/echo.sh.hd|%}){%||%}dnl
+rules_code({%|src/tools/rules_code|%}){%||%}dnl
 {%|Special file: ${fB1}echo.sh${fR1}
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.|%}dnl

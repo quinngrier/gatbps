@@ -1,5 +1,8 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
+include({%|src/tools/rules_code.m4|%}){%||%}dnl
+rules_code({%|doc/help/texinfo.css.hd|%}){%||%}dnl
+rules_code({%|src/tools/rules_code|%}){%||%}dnl
 {%|Special file: ${fB1}texinfo.css${fR1}
 
 The ${fB1}texinfo.css${fR1} special file is a cascading style sheet that makes

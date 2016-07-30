@@ -1,5 +1,8 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
+include({%|src/tools/rules_code.m4|%}){%||%}dnl
+rules_code({%|doc/help/GATBPS_DEFINE_AT.m4.hd|%}){%||%}dnl
+rules_code({%|src/tools/rules_code|%}){%||%}dnl
 {%|Special file: ${fB1}GATBPS_DEFINE_AT.m4${fR1}
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.|%}dnl

@@ -1,5 +1,8 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
+include({%|src/tools/rules_code.m4|%}){%||%}dnl
+rules_code({%|doc/help/TEST_EXIT.h.hd|%}){%||%}dnl
+rules_code({%|src/tools/rules_code|%}){%||%}dnl
 {%|Special file: ${fB1}TEST_EXIT.h${fR1}
 
 The ${fB1}TEST_EXIT.h${fR1} special file is a C header file that defines the
