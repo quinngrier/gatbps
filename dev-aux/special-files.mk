@@ -75,6 +75,7 @@ all:
 	$(GATBPS) '--' 'm4/GATBPS_PROG_MKDIR_P.m4'
 	$(GATBPS) '--' 'm4/GATBPS_PROG_SED.m4'
 	$(GATBPS) '--' 'm4/GATBPS_PROG_TEXI2ANY.m4'
+	$(GATBPS) '--' 'm4/gatbps_fatal.m4'
 	$(GATBPS) '--' 'src/tools/rules_code.m4'
 
 ## end_rules
