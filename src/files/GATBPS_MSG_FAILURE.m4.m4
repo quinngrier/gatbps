@@ -16,7 +16,7 @@ AC_DEFUN([GATBPS_MSG_FAILURE],
     m4_eval([$# < 2]),
     [1],
     [AC_MSG_FAILURE(m4_normalize([$1]))],
-    [AC_MSG_FAILURE(m4_normalize([$1]), [$2])])])dnl
+    [AC_MSG_FAILURE(m4_normalize([$1]), [$2])])])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%}){%||%}dnl
 dnl
 dnl The authors of this file have waived all copyright and
