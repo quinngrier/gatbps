@@ -20,7 +20,7 @@ AC_DEFUN([GATBPS_CHECK_HEADER], [{
     [],
     [$4])
 
-:;}])dnl
+:;}])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%}){%||%}dnl
 dnl
 dnl The authors of this file have waived all copyright and

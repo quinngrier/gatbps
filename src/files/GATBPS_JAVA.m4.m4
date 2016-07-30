@@ -328,7 +328,7 @@ uninstall-java-gatbps_x:
 AC_SUBST([GATBPS_JAVA_RULES])
 AM_SUBST_NOTMAKE([GATBPS_JAVA_RULES])
 
-:;}])dnl
+:;}])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%}){%||%}dnl
 dnl
 dnl The authors of this file have waived all copyright and

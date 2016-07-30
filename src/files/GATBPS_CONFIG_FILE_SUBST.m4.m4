@@ -16,7 +16,7 @@ AC_DEFUN([GATBPS_CONFIG_FILE_SUBST], [{
 AC_SUBST([GATBPS_CONFIG_FILE_RULES])
 AM_SUBST_NOTMAKE([GATBPS_CONFIG_FILE_RULES])
 
-:;}])dnl
+:;}])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%}){%||%}dnl
 dnl
 dnl The authors of this file have waived all copyright and

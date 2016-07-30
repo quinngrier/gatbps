@@ -30,7 +30,7 @@ AC_ARG_WITH(
 
 m4_popdef([gatbps_x])
 
-:;}])dnl
+:;}])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%}){%||%}dnl
 dnl
 dnl The authors of this file have waived all copyright and

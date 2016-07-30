@@ -36,7 +36,7 @@ AC_ARG_VAR(
     M4 preprocessor command
   ])
 
-:;}])dnl
+:;}])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%}){%||%}dnl
 dnl
 dnl The authors of this file have waived all copyright and
