@@ -11,7 +11,23 @@ dnl Special file: GATBPS_MSG_WARN.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_MSG_WARN], [AC_MSG_WARN([m4_normalize([$1])])])[]dnl
+AC_DEFUN([GATBPS_MSG_WARN], [[{
+
+#
+# The block that contains this comment is an expansion of the
+# GATBPS_MSG_WARN macro.
+#][]dnl
+m4_case(
+  [$#],
+  [1], [],
+  [gatbps_fatal([
+    GATBPS_MSG_WARN requires exactly 1 argument
+  ])])[]dnl
+[
+
+]AC_MSG_WARN([m4_normalize([$1])])[
+
+:;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%}){%||%}dnl
 dnl
 dnl The authors of this file have waived all copyright and
