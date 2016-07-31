@@ -11,12 +11,28 @@ dnl Special file: GATBPS_MSG_ERROR.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_MSG_ERROR],
-  [m4_if(
-    m4_eval([$# < 2]),
-    [1],
-    [AC_MSG_ERROR([m4_normalize([$1])])],
-    [AC_MSG_ERROR([m4_normalize([$1])], [$2])])])[]dnl
+AC_DEFUN([GATBPS_MSG_ERROR], [[{
+
+#
+# The block that contains this comment is an expansion of the
+# GATBPS_MSG_ERROR macro.
+#][]dnl
+m4_case(
+  [$#],
+  [1], [],
+  [2], [],
+  [gatbps_fatal([
+    GATBPS_MSG_ERROR requires exactly 1 or 2 arguments
+  ])])[]dnl
+[
+
+]m4_if(
+  m4_eval([$# == 1]),
+  [1],
+  [AC_MSG_ERROR([m4_normalize([$1])], [[1]])],
+  [AC_MSG_ERROR([m4_normalize([$1])], [[$2]])])[
+
+:;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%}){%||%}dnl
 dnl
 dnl The authors of this file have waived all copyright and
