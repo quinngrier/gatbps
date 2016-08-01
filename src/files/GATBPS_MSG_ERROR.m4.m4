@@ -16,7 +16,7 @@ AC_DEFUN([GATBPS_MSG_ERROR], [[{
 #
 # The block that contains this comment is an expansion of the
 # GATBPS_MSG_ERROR macro.
-#][]dnl
+#]dnl
 m4_case(
   [$#],
   [1], [],

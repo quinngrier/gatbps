@@ -16,7 +16,7 @@ AC_DEFUN([GATBPS_CHECK_SOFT_INCLUDE], [[{
 #
 # The block that contains this comment is the expansion of the
 # GATBPS_CHECK_SOFT_INCLUDE macro.
-#][]dnl
+#]dnl
 m4_ifdef(
   [GATBPS_CHECK_SOFT_INCLUDE_HAS_BEEN_CALLED],
   [m4_fatal([GATBPS_CHECK_SOFT_INCLUDE has already been called])],

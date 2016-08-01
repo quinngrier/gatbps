@@ -3,7 +3,7 @@ AC_DEFUN([DEFINE_ALL], [[{
 #
 # The block that contains this comment is the expansion of the
 # DEFINE_ALL macro.
-#][]dnl
+#]dnl
 m4_ifdef(
   [DEFINE_ALL_HAS_BEEN_CALLED],
   [m4_fatal([DEFINE_ALL has already been called])],

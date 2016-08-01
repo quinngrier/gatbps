@@ -16,7 +16,7 @@ AC_DEFUN([GATBPS_DEFINE_JAVADOCFLAGS], [[{
 #
 # The block that contains this comment is the expansion of the
 # GATBPS_DEFINE_JAVADOCFLAGS macro.
-#][]dnl
+#]dnl
 m4_ifdef(
   [GATBPS_DEFINE_JAVADOCFLAGS_HAS_BEEN_CALLED],
   [m4_fatal([GATBPS_DEFINE_JAVADOCFLAGS has already been called])],

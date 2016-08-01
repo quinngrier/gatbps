@@ -20,7 +20,7 @@ AC_DEFUN([GATBPS_DEFINE_VERSION], [[{
   [1],
   [[
 # ]])[($1)$2.
-#][]dnl
+#]dnl
 m4_case(
   [$#],
   [2], [],

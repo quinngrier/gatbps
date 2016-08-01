@@ -16,7 +16,7 @@ AC_DEFUN([GATBPS_PROG_TEXI2ANY], [[{
 #
 # The block that contains this comment is the expansion of the
 # GATBPS_PROG_TEXI2ANY macro.
-#][]dnl
+#]dnl
 m4_ifdef(
   [GATBPS_PROG_TEXI2ANY_HAS_BEEN_CALLED],
   [m4_fatal([GATBPS_PROG_TEXI2ANY has already been called])],

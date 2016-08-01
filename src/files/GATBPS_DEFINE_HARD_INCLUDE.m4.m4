@@ -16,7 +16,7 @@ AC_DEFUN([GATBPS_DEFINE_HARD_INCLUDE], [[{
 #
 # The block that contains this comment is the expansion of the
 # GATBPS_DEFINE_HARD_INCLUDE macro.
-#][]dnl
+#]dnl
 m4_ifdef(
   [GATBPS_DEFINE_HARD_INCLUDE_HAS_BEEN_CALLED],
   [m4_fatal([GATBPS_DEFINE_HARD_INCLUDE has already been called])],
