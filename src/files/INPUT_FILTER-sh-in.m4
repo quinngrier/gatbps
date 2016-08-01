@@ -31,6 +31,7 @@ LC_ALL='C'
     in_javadoc_code_block = 0
   }
   {
+    gsub(/<code><!--::-->/, "<code>::", $0)
     if (0 ||
       $0 ~ /<!--[@AT@\\]code--><blockquote><pre>$/ ||
       $0 ~ /<!--[@AT@\\]code{.*}--><blockquote><pre>$/ ||
