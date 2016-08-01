@@ -1585,6 +1585,8 @@ EOF1
 
 |%}help_code({%|echo.sh|%}){%|
 
+|%}help_code({%|gatbps_fatal.m4|%}){%|
+
             '--help=gequ.texi'|'--help='*'/gequ.texi')
               cat <<EOF1
 Special file: ${fB1}gequ.texi${fR1}
@@ -1616,8 +1618,6 @@ EOF1
                 ;;
               esac
             ;;
-
-|%}help_code({%|gatbps_fatal.m4|%}){%|
 
 |%}help_code({%|html-dist.am|%}){%|
 
@@ -4926,6 +4926,8 @@ EOF1
 
 |%}generation_code({%|echo.sh|%}){%|
 
+|%}generation_code({%|gatbps_fatal.m4|%}){%|
+
           'no,gequ.texi'|'no,'*'/gequ.texi')
             cat >"${safe_1}" <<'EOF1'
 @AT@ifxml
@@ -5087,8 +5089,6 @@ EOF1
               ;;
             esac
           ;;
-
-|%}generation_code({%|gatbps_fatal.m4|%}){%|
 
 |%}generation_code({%|html-dist.am|%}){%|
 
@@ -8106,13 +8106,13 @@ EOF1
 |%}){%|
 
 |%}recursion_code(
-  {%|gequ.texi|%},
+  {%|gatbps_fatal.m4|%},
   {%|
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
-  {%|gatbps_fatal.m4|%},
+  {%|gequ.texi|%},
   {%|
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
