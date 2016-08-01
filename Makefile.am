@@ -400,11 +400,6 @@ doc/man/gatbps.1: bin/gatbps
 	$(MKDIR_P) doc/man
 	bin/gatbps --man >doc/man/gatbps.1
 
-src/files/mtvskiptop.texi: src/tools/PACKAGE_DATE.m4
-src/files/mtvskiptop.texi: src/tools/PACKAGE_VERSION.m4
-src/files/mtvskiptop.texi: src/tools/footer_comment.m4
-src/files/mtvskiptop.texi: src/tools/header_comment.m4
-
 ## end_rules
 
 ## begin_includes
