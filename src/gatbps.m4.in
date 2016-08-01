@@ -7899,18 +7899,21 @@ EOF1
 |%}recursion_code(
   {%|GATBPS_MSG_ERROR.m4|%},
   {%|
+            'set' 'x' "${prefix}gatbps_fatal.m4" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_MSG_FAILURE.m4|%},
   {%|
+            'set' 'x' "${prefix}gatbps_fatal.m4" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_MSG_WARN.m4|%},
   {%|
+            'set' 'x' "${prefix}gatbps_fatal.m4" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 
