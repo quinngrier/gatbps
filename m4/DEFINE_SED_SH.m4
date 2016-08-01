@@ -18,11 +18,11 @@ m4_case(
 
 SED_SH=`'sh' \
   '-' \
-  "${srcdir}"'/build-aux/sh-form.sh' \
+  "$][{srcdir}"'/build-aux/sh-form.sh' \
   '--' \
-  ${SED} \
+  $][{SED} \
 ;`
-case "${?}" in
+case "$][{?}" in
   '0')
     ':'
   ;;

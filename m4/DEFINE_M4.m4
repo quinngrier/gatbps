@@ -16,7 +16,7 @@ m4_case(
 
 ]AC_REQUIRE([GATBPS_PROG_M4])[
 
-case "${M4}" in
+case "$][{M4}" in
   ?*)
     ':'
   ;;

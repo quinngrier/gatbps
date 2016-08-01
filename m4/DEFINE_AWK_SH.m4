@@ -18,11 +18,11 @@ m4_case(
 
 AWK_SH=`'sh' \
   '-' \
-  "${srcdir}"'/build-aux/sh-form.sh' \
+  "$][{srcdir}"'/build-aux/sh-form.sh' \
   '--' \
-  ${AWK} \
+  $][{AWK} \
 ;`
-case "${?}" in
+case "$][{?}" in
   '0')
     ':'
   ;;
