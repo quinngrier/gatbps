@@ -7,16 +7,16 @@ AC_DEFUN([DEFINE_SED], [[{
 m4_ifdef(
   [DEFINE_SED_HAS_BEEN_CALLED],
   [m4_fatal([DEFINE_SED has already been called])],
-  [m4_define([DEFINE_SED_HAS_BEEN_CALLED])])dnl
+  [m4_define([DEFINE_SED_HAS_BEEN_CALLED])])[]dnl
 m4_case(
   [$#],
   [0], [],
-  [m4_fatal([DEFINE_SED requires exactly 0 arguments])])dnl
+  [m4_fatal([DEFINE_SED requires exactly 0 arguments])])[]dnl
 [
 
 ]AC_REQUIRE([GATBPS_PROG_SED])[
 
-:;}]])dnl
+:;}]])[]dnl
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by

@@ -7,11 +7,11 @@ AC_DEFUN([DEFINE_SHEBANG_LINE], [[{
 m4_ifdef(
   [DEFINE_SHEBANG_LINE_HAS_BEEN_CALLED],
   [m4_fatal([DEFINE_SHEBANG_LINE has already been called])],
-  [m4_define([DEFINE_SHEBANG_LINE_HAS_BEEN_CALLED])])dnl
+  [m4_define([DEFINE_SHEBANG_LINE_HAS_BEEN_CALLED])])[]dnl
 m4_case(
   [$#],
   [0], [],
-  [m4_fatal([DEFINE_SHEBANG_LINE requires exactly 0 arguments])])dnl
+  [m4_fatal([DEFINE_SHEBANG_LINE requires exactly 0 arguments])])[]dnl
 
 AC_REQUIRE([DEFINE_HAVE_SHEBANG_SUPPORT])
 AC_REQUIRE([DEFINE_enable_SHEBANG_LINE])
@@ -72,7 +72,7 @@ esac
 AC_SUBST([SHEBANG_LINE])
 AM_SUBST_NOTMAKE([SHEBANG_LINE])
 
-:;}])dnl
+:;}])[]dnl
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by

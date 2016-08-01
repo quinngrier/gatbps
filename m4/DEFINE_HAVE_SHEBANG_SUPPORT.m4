@@ -7,11 +7,11 @@ AC_DEFUN([DEFINE_HAVE_SHEBANG_SUPPORT], [[{
 m4_ifdef(
   [DEFINE_HAVE_SHEBANG_SUPPORT_HAS_BEEN_CALLED],
   [m4_fatal([DEFINE_HAVE_SHEBANG_SUPPORT has already been called])],
-  [m4_define([DEFINE_HAVE_SHEBANG_SUPPORT_HAS_BEEN_CALLED])])dnl
+  [m4_define([DEFINE_HAVE_SHEBANG_SUPPORT_HAS_BEEN_CALLED])])[]dnl
 m4_case(
   [$#],
   [0], [],
-  [m4_fatal([DEFINE_HAVE_SHEBANG_SUPPORT requires exactly 0 arguments])])dnl
+  [m4_fatal([DEFINE_HAVE_SHEBANG_SUPPORT requires exactly 0 arguments])])[]dnl
 [
 
 ]AC_REQUIRE([AC_SYS_INTERPRETER])[
@@ -23,7 +23,7 @@ m4_case(
     interpval
   ])[
 
-:;}]])dnl
+:;}]])[]dnl
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by

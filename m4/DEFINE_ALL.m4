@@ -7,11 +7,11 @@ AC_DEFUN([DEFINE_ALL], [[{
 m4_ifdef(
   [DEFINE_ALL_HAS_BEEN_CALLED],
   [m4_fatal([DEFINE_ALL has already been called])],
-  [m4_define([DEFINE_ALL_HAS_BEEN_CALLED])])dnl
+  [m4_define([DEFINE_ALL_HAS_BEEN_CALLED])])[]dnl
 m4_case(
   [$#],
   [0], [],
-  [m4_fatal([DEFINE_ALL requires exactly 0 arguments])])dnl
+  [m4_fatal([DEFINE_ALL requires exactly 0 arguments])])[]dnl
 [
 
 ]AC_REQUIRE([DEFINE_AT])[
@@ -27,7 +27,7 @@ m4_case(
 ]AC_REQUIRE([DEFINE_TEXI2ANY])[
 ]AC_REQUIRE([DEFINE_enable_SHEBANG_LINE])[
 
-:;}]])dnl
+:;}]])[]dnl
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by

@@ -7,11 +7,11 @@ AC_DEFUN([DEFINE_M4], [[{
 m4_ifdef(
   [DEFINE_M4_HAS_BEEN_CALLED],
   [m4_fatal([DEFINE_M4 has already been called])],
-  [m4_define([DEFINE_M4_HAS_BEEN_CALLED])])dnl
+  [m4_define([DEFINE_M4_HAS_BEEN_CALLED])])[]dnl
 m4_case(
   [$#],
   [0], [],
-  [m4_fatal([DEFINE_M4 requires exactly 0 arguments])])dnl
+  [m4_fatal([DEFINE_M4 requires exactly 0 arguments])])[]dnl
 
 AC_REQUIRE([GATBPS_PROG_M4])
 
@@ -24,7 +24,7 @@ case "${M4}" in
   ;;
 esac
 
-:;}])dnl
+:;}])[]dnl
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by

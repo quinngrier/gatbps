@@ -7,11 +7,11 @@ AC_DEFUN([DEFINE_enable_SHEBANG_LINE], [[{
 m4_ifdef(
   [DEFINE_enable_SHEBANG_LINE_HAS_BEEN_CALLED],
   [m4_fatal([DEFINE_enable_SHEBANG_LINE has already been called])],
-  [m4_define([DEFINE_enable_SHEBANG_LINE_HAS_BEEN_CALLED])])dnl
+  [m4_define([DEFINE_enable_SHEBANG_LINE_HAS_BEEN_CALLED])])[]dnl
 m4_case(
   [$#],
   [0], [],
-  [m4_fatal([DEFINE_enable_SHEBANG_LINE requires exactly 0 arguments])])dnl
+  [m4_fatal([DEFINE_enable_SHEBANG_LINE requires exactly 0 arguments])])[]dnl
 [
 
 ]GATBPS_ARG_ENABLE_BOOL(
@@ -22,7 +22,7 @@ m4_case(
   [add a shebang line to gatbps],
   [do not add a shebang line to gatbps])[
 
-:;}]])dnl
+:;}]])[]dnl
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by

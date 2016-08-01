@@ -7,16 +7,16 @@ AC_DEFUN([DEFINE_TEXI2ANY], [[{
 m4_ifdef(
   [DEFINE_TEXI2ANY_HAS_BEEN_CALLED],
   [m4_fatal([DEFINE_TEXI2ANY has already been called])],
-  [m4_define([DEFINE_TEXI2ANY_HAS_BEEN_CALLED])])dnl
+  [m4_define([DEFINE_TEXI2ANY_HAS_BEEN_CALLED])])[]dnl
 m4_case(
   [$#],
   [0], [],
-  [m4_fatal([DEFINE_TEXI2ANY requires exactly 0 arguments])])dnl
+  [m4_fatal([DEFINE_TEXI2ANY requires exactly 0 arguments])])[]dnl
 [
 
 ]AC_REQUIRE([GATBPS_PROG_TEXI2ANY])[
 
-:;}]])dnl
+:;}]])[]dnl
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by

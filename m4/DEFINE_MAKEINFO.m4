@@ -7,16 +7,16 @@ AC_DEFUN([DEFINE_MAKEINFO], [[{
 m4_ifdef(
   [DEFINE_MAKEINFO_HAS_BEEN_CALLED],
   [m4_fatal([DEFINE_MAKEINFO has already been called])],
-  [m4_define([DEFINE_MAKEINFO_HAS_BEEN_CALLED])])dnl
+  [m4_define([DEFINE_MAKEINFO_HAS_BEEN_CALLED])])[]dnl
 m4_case(
   [$#],
   [0], [],
-  [m4_fatal([DEFINE_MAKEINFO requires exactly 0 arguments])])dnl
+  [m4_fatal([DEFINE_MAKEINFO requires exactly 0 arguments])])[]dnl
 [
 
 ]AC_REQUIRE([GATBPS_PROG_MAKEINFO])[
 
-:;}]])dnl
+:;}]])[]dnl
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by
