@@ -19,8 +19,12 @@ m4_case(
   [enable_SHEBANG_LINE],
   [shebang-line],
   [yes],
-  [add a shebang line to gatbps],
-  [do not add a shebang line to gatbps])[
+  [
+    add a shebang line to gatbps
+  ],
+  [
+    do not add a shebang line to gatbps
+  ])[
 
 :;}]])[]dnl
 dnl
