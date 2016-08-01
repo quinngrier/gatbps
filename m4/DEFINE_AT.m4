@@ -6,7 +6,9 @@ AC_DEFUN([DEFINE_AT], [[{
 #]dnl
 m4_ifdef(
   [DEFINE_AT_HAS_BEEN_CALLED],
-  [m4_fatal([DEFINE_AT has already been called])],
+  [gatbps_fatal([
+    DEFINE_AT has already been called
+  ])],
   [m4_define([DEFINE_AT_HAS_BEEN_CALLED])])[]dnl
 m4_case(
   [$#],

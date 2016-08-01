@@ -6,7 +6,9 @@ AC_DEFUN([DEFINE_AWK_SH], [[{
 #]dnl
 m4_ifdef(
   [DEFINE_AWK_SH_HAS_BEEN_CALLED],
-  [m4_fatal([DEFINE_AWK_SH has already been called])],
+  [gatbps_fatal([
+    DEFINE_AWK_SH has already been called
+  ])],
   [m4_define([DEFINE_AWK_SH_HAS_BEEN_CALLED])])[]dnl
 m4_case(
   [$#],

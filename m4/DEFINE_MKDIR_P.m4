@@ -6,7 +6,9 @@ AC_DEFUN([DEFINE_MKDIR_P], [[{
 #]dnl
 m4_ifdef(
   [DEFINE_MKDIR_P_HAS_BEEN_CALLED],
-  [m4_fatal([DEFINE_MKDIR_P has already been called])],
+  [gatbps_fatal([
+    DEFINE_MKDIR_P has already been called
+  ])],
   [m4_define([DEFINE_MKDIR_P_HAS_BEEN_CALLED])])[]dnl
 m4_case(
   [$#],

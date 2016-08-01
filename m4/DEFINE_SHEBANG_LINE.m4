@@ -6,7 +6,9 @@ AC_DEFUN([DEFINE_SHEBANG_LINE], [[{
 #]dnl
 m4_ifdef(
   [DEFINE_SHEBANG_LINE_HAS_BEEN_CALLED],
-  [m4_fatal([DEFINE_SHEBANG_LINE has already been called])],
+  [gatbps_fatal([
+    DEFINE_SHEBANG_LINE has already been called
+  ])],
   [m4_define([DEFINE_SHEBANG_LINE_HAS_BEEN_CALLED])])[]dnl
 m4_case(
   [$#],

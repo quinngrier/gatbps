@@ -6,7 +6,9 @@ AC_DEFUN([DEFINE_SED], [[{
 #]dnl
 m4_ifdef(
   [DEFINE_SED_HAS_BEEN_CALLED],
-  [m4_fatal([DEFINE_SED has already been called])],
+  [gatbps_fatal([
+    DEFINE_SED has already been called
+  ])],
   [m4_define([DEFINE_SED_HAS_BEEN_CALLED])])[]dnl
 m4_case(
   [$#],
