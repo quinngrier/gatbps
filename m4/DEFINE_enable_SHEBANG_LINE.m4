@@ -13,7 +13,9 @@ m4_ifdef(
 m4_case(
   [$#],
   [0], [],
-  [m4_fatal([DEFINE_enable_SHEBANG_LINE requires exactly 0 arguments])])[]dnl
+  [gatbps_fatal([
+    DEFINE_enable_SHEBANG_LINE requires exactly 0 arguments
+  ])])[]dnl
 [
 
 ]GATBPS_ARG_ENABLE_BOOL(

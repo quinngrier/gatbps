@@ -13,7 +13,9 @@ m4_ifdef(
 m4_case(
   [$#],
   [0], [],
-  [m4_fatal([DEFINE_SED requires exactly 0 arguments])])[]dnl
+  [gatbps_fatal([
+    DEFINE_SED requires exactly 0 arguments
+  ])])[]dnl
 [
 
 ]AC_REQUIRE([GATBPS_PROG_SED])[
