@@ -12,8 +12,9 @@ m4_case(
   [$#],
   [0], [],
   [m4_fatal([DEFINE_AWK_SH requires exactly 0 arguments])])[]dnl
+[
 
-AC_REQUIRE([DEFINE_AWK])
+]AC_REQUIRE([DEFINE_AWK])[
 
 AWK_SH=`'sh' \
   '-' \
@@ -26,11 +27,11 @@ case "${?}" in
     ':'
   ;;
   *)
-    AC_MSG_ERROR([sh-form.sh failed], [1])
+    ]AC_MSG_ERROR([sh-form.sh failed], [1])[
   ;;
 esac
 
-:;}])[]dnl
+:;}]])[]dnl
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by
