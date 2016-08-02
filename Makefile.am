@@ -483,6 +483,7 @@ doc/man/gatbps.1: bin/gatbps
 @SOFT_INCLUDE@ src/files/texinfo-css.d
 @SOFT_INCLUDE@ src/gatbps.d
 include $(srcdir)/build-aux/GATBPS_CONFIG_FILE_RULES.am
+include $(srcdir)/build-aux/cp.am
 include $(srcdir)/build-aux/docbook-dist.am
 include $(srcdir)/build-aux/docbook.am
 include $(srcdir)/build-aux/dvi-dist.am
