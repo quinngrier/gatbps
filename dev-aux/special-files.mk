@@ -20,6 +20,7 @@ all:
 	$(GATBPS) $(GATBPSFLAGS) '--' 'build-aux/GATBPS_CONFIG_FILE_RULES.am'
 	$(GATBPS) $(GATBPSFLAGS) '--' 'build-aux/VERSION.sh'
 	$(GATBPS) $(GATBPSFLAGS) '--' 'build-aux/VERSION_LTCUR.sh'
+	$(GATBPS) $(GATBPSFLAGS) '--' 'build-aux/cp.am'
 	$(GATBPS) $(GATBPSFLAGS) '--' 'build-aux/docbook-dist.am'
 	$(GATBPS) $(GATBPSFLAGS) '--' 'build-aux/docbook.am'
 	$(GATBPS) $(GATBPSFLAGS) '--' 'build-aux/dvi-dist.am'
