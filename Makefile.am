@@ -199,6 +199,7 @@ bin_gatbps_src += src/tools/recursion_code.m4
 doc_gatbps_TEXINFOS =
 doc_gatbps_TEXINFOS += build-aux/texinfo.css
 doc_gatbps_TEXINFOS += doc/texi/AWKDEFAULTTEXI.texi
+doc_gatbps_TEXINFOS += doc/texi/Automatic-Dependency-Tracking-for-M4-Code.texi
 doc_gatbps_TEXINFOS += doc/texi/Build-System-Initialization.texi
 doc_gatbps_TEXINFOS += doc/texi/Building-and-Installation.texi
 doc_gatbps_TEXINFOS += doc/texi/Building.texi
