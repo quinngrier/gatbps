@@ -1,7 +1,7 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|doc/help/ps-dist.am.hd|%}){%||%}dnl
+rules_code({%|doc/help/ps-dist-am-hd|%}){%||%}dnl
 rules_code({%|src/tools/rules_code|%}){%||%}dnl
 {%|Special file: ${fB1}ps-dist.am${fR1}
 

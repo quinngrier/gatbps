@@ -1,7 +1,7 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|doc/help/PACKAGE_VERSION.df.in.hd|%}){%||%}dnl
+rules_code({%|doc/help/PACKAGE_VERSION-df-in-hd|%}){%||%}dnl
 rules_code({%|src/tools/rules_code|%}){%||%}dnl
 {%|Special file: ${fB1}PACKAGE_VERSION.df.in${fR1}
 

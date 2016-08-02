@@ -1,7 +1,7 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|doc/help/PACKAGEVERSION.texi.in.hd|%}){%||%}dnl
+rules_code({%|doc/help/PACKAGEVERSION-texi-in-hd|%}){%||%}dnl
 rules_code({%|src/tools/rules_code|%}){%||%}dnl
 {%|Special file: ${fB1}PACKAGEVERSION.texi.in${fR1}
 
