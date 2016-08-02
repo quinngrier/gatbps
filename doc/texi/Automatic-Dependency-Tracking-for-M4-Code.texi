@@ -1,11 +1,6 @@
 @node Automatic Dependency Tracking for M4 Code
 @chapter Automatic Dependency Tracking for M4 Code
 
-Any directory components in the file path given to the
-@w{@t{rules_code}}
-macro must not contain any
-`@w{@t{.@:}}'@tie{}characters@.
-
 @ifxml
 @ifnotxml
 @c
