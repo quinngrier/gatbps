@@ -109,6 +109,7 @@ bin_gatbps_src += doc/help/java-am-hd.m4
 bin_gatbps_src += doc/help/java-dist-am-hd.m4
 bin_gatbps_src += doc/help/javadoc-am-hd.m4
 bin_gatbps_src += doc/help/javadoc-dist-am-hd.m4
+bin_gatbps_src += doc/help/m4-am-hd.m4
 bin_gatbps_src += doc/help/pdf-dist-am-hd.m4
 bin_gatbps_src += doc/help/plaintext-am-hd.m4
 bin_gatbps_src += doc/help/plaintext-dist-am-hd.m4
@@ -181,6 +182,7 @@ bin_gatbps_src += src/files/java-am.m4
 bin_gatbps_src += src/files/java-dist-am.m4
 bin_gatbps_src += src/files/javadoc-am.m4
 bin_gatbps_src += src/files/javadoc-dist-am.m4
+bin_gatbps_src += src/files/m4-am.m4
 bin_gatbps_src += src/files/msign-texi.m4
 bin_gatbps_src += src/files/mtvskipbot-texi.m4
 bin_gatbps_src += src/files/mtvskiptop-texi.m4
@@ -471,6 +473,7 @@ doc/man/gatbps.1: bin/gatbps
 @SOFT_INCLUDE@ src/files/java-dist-am.d
 @SOFT_INCLUDE@ src/files/javadoc-am.d
 @SOFT_INCLUDE@ src/files/javadoc-dist-am.d
+@SOFT_INCLUDE@ src/files/m4-am.d
 @SOFT_INCLUDE@ src/files/msign-texi.d
 @SOFT_INCLUDE@ src/files/mtvskipbot-texi.d
 @SOFT_INCLUDE@ src/files/mtvskiptop-texi.d

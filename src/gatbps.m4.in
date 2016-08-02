@@ -514,6 +514,7 @@ EOF1
           set "${prefix}mdots.texi" "${@AT@}"
           set "${prefix}mdot.texi" "${@AT@}"
           set "${prefix}math.texi" "${@AT@}"
+          set "${prefix}m4.am" "${@AT@}"
           set "${prefix}lflo.texi" "${@AT@}"
           set "${prefix}lequ.texi" "${@AT@}"
           set "${prefix}lcei.texi" "${@AT@}"
@@ -1750,6 +1751,8 @@ EOF1
                 ;;
               esac
             ;;
+
+|%}help_code({%|m4.am|%}){%|
 
             '--help=math.texi'|'--help='*'/math.texi')
               cat <<EOF1
@@ -5654,6 +5657,8 @@ EOF1
             esac
           ;;
 
+|%}generation_code({%|m4.am|%}){%|
+
           'no,math.texi'|'no,'*'/math.texi')
             cat >"${safe_1}" <<'EOF1'
 @AT@ifxml
@@ -8186,6 +8191,13 @@ EOF1
 |%}recursion_code(
   {%|lflo.texi|%},
   {%|
+            'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|m4.am|%},
+  {%|
+            'set' 'x' "${prefix}echo.sh" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 
