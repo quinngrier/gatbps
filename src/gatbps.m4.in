@@ -533,6 +533,7 @@ EOF1
           set "${prefix}doxygen-dist.am" "${@AT@}"
           set "${prefix}docbook.am" "${@AT@}"
           set "${prefix}docbook-dist.am" "${@AT@}"
+          set "${prefix}cp.am" "${@AT@}"
           set "${prefix}contents.texi" "${@AT@}"
           set "${prefix}configure.ac.vim" "${@AT@}"
           set "${prefix}bothcontents.texi" "${@AT@}"
@@ -1540,6 +1541,8 @@ EOF1
                 ;;
               esac
             ;;
+
+|%}help_code({%|cp.am|%}){%|
 
 |%}help_code({%|docbook-dist.am|%}){%|
 
@@ -4751,6 +4754,8 @@ EOF1
               ;;
             esac
           ;;
+
+|%}generation_code({%|cp.am|%}){%|
 
 |%}generation_code({%|docbook-dist.am|%}){%|
 
@@ -8060,6 +8065,13 @@ EOF1
 |%}recursion_code(
   {%|contents.texi|%},
   {%|
+            'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|cp.am|%},
+  {%|
+            'set' 'x' "${prefix}echo.sh" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 

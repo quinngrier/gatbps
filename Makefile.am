@@ -95,6 +95,7 @@ bin_gatbps_src += doc/help/PACKAGEDATE-texi-in-hd.m4
 bin_gatbps_src += doc/help/PACKAGEVERSION-texi-in-hd.m4
 bin_gatbps_src += doc/help/PACKAGE_VERSION-df-in-hd.m4
 bin_gatbps_src += doc/help/TEST_EXIT-h-hd.m4
+bin_gatbps_src += doc/help/cp-am-hd.m4
 bin_gatbps_src += doc/help/docbook-am-hd.m4
 bin_gatbps_src += doc/help/docbook-dist-am-hd.m4
 bin_gatbps_src += doc/help/doxygen-am-hd.m4
@@ -166,6 +167,7 @@ bin_gatbps_src += src/files/PACKAGEDATE-texi-in.m4
 bin_gatbps_src += src/files/PACKAGEVERSION-texi-in.m4
 bin_gatbps_src += src/files/PACKAGE_VERSION-df-in.m4
 bin_gatbps_src += src/files/TEST_EXIT-h.m4
+bin_gatbps_src += src/files/cp-am.m4
 bin_gatbps_src += src/files/docbook-am.m4
 bin_gatbps_src += src/files/docbook-dist-am.m4
 bin_gatbps_src += src/files/doxygen-am.m4
@@ -455,6 +457,7 @@ doc/man/gatbps.1: bin/gatbps
 @SOFT_INCLUDE@ src/files/PACKAGEVERSION-texi-in.d
 @SOFT_INCLUDE@ src/files/PACKAGE_VERSION-df-in.d
 @SOFT_INCLUDE@ src/files/TEST_EXIT-h.d
+@SOFT_INCLUDE@ src/files/cp-am.d
 @SOFT_INCLUDE@ src/files/docbook-am.d
 @SOFT_INCLUDE@ src/files/docbook-dist-am.d
 @SOFT_INCLUDE@ src/files/doxygen-am.d
