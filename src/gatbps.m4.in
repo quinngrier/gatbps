@@ -8083,6 +8083,7 @@ EOF1
 |%}recursion_code(
   {%|docbook-dist.am|%},
   {%|
+            'set' 'x' "${prefix}cp.am" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 
@@ -8095,6 +8096,7 @@ EOF1
 |%}recursion_code(
   {%|doxygen-dist.am|%},
   {%|
+            'set' 'x' "${prefix}cp.am" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 
@@ -8113,6 +8115,7 @@ EOF1
 |%}recursion_code(
   {%|dvi-dist.am|%},
   {%|
+            'set' 'x' "${prefix}cp.am" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 
@@ -8137,6 +8140,7 @@ EOF1
 |%}recursion_code(
   {%|html-dist.am|%},
   {%|
+            'set' 'x' "${prefix}cp.am" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 
@@ -8155,6 +8159,7 @@ EOF1
 |%}recursion_code(
   {%|java-dist.am|%},
   {%|
+            'set' 'x' "${prefix}cp.am" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 
@@ -8167,6 +8172,7 @@ EOF1
 |%}recursion_code(
   {%|javadoc-dist.am|%},
   {%|
+            'set' 'x' "${prefix}cp.am" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 
@@ -8262,12 +8268,14 @@ EOF1
 |%}recursion_code(
   {%|pdf-dist.am|%},
   {%|
+            'set' 'x' "${prefix}cp.am" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|plaintext-dist.am|%},
   {%|
+            'set' 'x' "${prefix}cp.am" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 
@@ -8286,6 +8294,7 @@ EOF1
 |%}recursion_code(
   {%|ps-dist.am|%},
   {%|
+            'set' 'x' "${prefix}cp.am" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 

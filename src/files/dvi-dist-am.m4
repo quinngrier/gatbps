@@ -15,23 +15,10 @@ header_comment({%|##|%}, {%|##|%}){%|
 ## begin_rules
 
 $(dvi_dist_dst): $(dvi_dist_dep)
-	$(AM_V_at)$(MAKE) \
+	$(GATBPS_V_CP)$(MAKE) \
   $(AM_MAKEFLAGS) \
   $(dvi_dist_src) \
 ;
-	$(AM_V_at){ \
-  if $(AM_V_P); then \
-    ':'; \
-  else \
-    'sh' \
-      '-' \
-      $(srcdir)'/build-aux/echo.sh' \
-      '  CP      ' \
-      $@ \
-    ; \
-  fi; \
-  'exit' '0'; \
-:;}
 	$(AM_V_at)$(MKDIR_P) \
   './'$(@D) \
 ;
