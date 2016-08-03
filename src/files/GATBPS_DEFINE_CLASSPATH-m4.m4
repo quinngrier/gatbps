@@ -19,7 +19,9 @@ AC_DEFUN([GATBPS_DEFINE_CLASSPATH], [[{
 #]dnl
 m4_ifdef(
   [GATBPS_DEFINE_CLASSPATH_HAS_BEEN_CALLED],
-  [m4_fatal([GATBPS_DEFINE_CLASSPATH has already been called])],
+  [gatbps_fatal([
+    GATBPS_DEFINE_CLASSPATH has already been called
+  ])],
   [m4_define([GATBPS_DEFINE_CLASSPATH_HAS_BEEN_CALLED])])dnl
 m4_case(
   [$#],

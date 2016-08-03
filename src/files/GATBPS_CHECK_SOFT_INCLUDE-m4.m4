@@ -19,7 +19,9 @@ AC_DEFUN([GATBPS_CHECK_SOFT_INCLUDE], [[{
 #]dnl
 m4_ifdef(
   [GATBPS_CHECK_SOFT_INCLUDE_HAS_BEEN_CALLED],
-  [m4_fatal([GATBPS_CHECK_SOFT_INCLUDE has already been called])],
+  [gatbps_fatal([
+    GATBPS_CHECK_SOFT_INCLUDE has already been called
+  ])],
   [m4_define([GATBPS_CHECK_SOFT_INCLUDE_HAS_BEEN_CALLED])])[]dnl
 m4_case(
   [$#],

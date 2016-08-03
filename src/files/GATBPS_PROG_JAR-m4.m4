@@ -19,7 +19,9 @@ AC_DEFUN([GATBPS_PROG_JAR], [[{
 #]dnl
 m4_ifdef(
   [GATBPS_PROG_JAR_HAS_BEEN_CALLED],
-  [m4_fatal([GATBPS_PROG_JAR has already been called])],
+  [gatbps_fatal([
+    GATBPS_PROG_JAR has already been called
+  ])],
   [m4_define([GATBPS_PROG_JAR_HAS_BEEN_CALLED])])dnl
 m4_case(
   [$#],

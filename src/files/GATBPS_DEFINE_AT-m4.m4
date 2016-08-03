@@ -19,7 +19,9 @@ AC_DEFUN([GATBPS_DEFINE_AT], [[{
 #]dnl
 m4_ifdef(
   [GATBPS_DEFINE_AT_HAS_BEEN_CALLED],
-  [m4_fatal([GATBPS_DEFINE_AT has already been called])],
+  [gatbps_fatal([
+    GATBPS_DEFINE_AT has already been called
+  ])],
   [m4_define([GATBPS_DEFINE_AT_HAS_BEEN_CALLED])])dnl
 m4_case(
   [$#],

@@ -19,7 +19,9 @@ AC_DEFUN([GATBPS_PROG_MAKEINFO], [[{
 #]dnl
 m4_ifdef(
   [GATBPS_PROG_MAKEINFO_HAS_BEEN_CALLED],
-  [m4_fatal([GATBPS_PROG_MAKEINFO has already been called])],
+  [gatbps_fatal([
+    GATBPS_PROG_MAKEINFO has already been called
+  ])],
   [m4_define([GATBPS_PROG_MAKEINFO_HAS_BEEN_CALLED])])dnl
 m4_case(
   [$#],
