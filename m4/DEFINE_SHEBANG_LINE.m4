@@ -103,6 +103,7 @@ case "$][{cross_compiling}" in
   ;;
 esac
 'readonly' 'SHEBANG_LINE'
+
 ]AC_SUBST([SHEBANG_LINE])[
 ]AM_SUBST_NOTMAKE([SHEBANG_LINE])[
 
