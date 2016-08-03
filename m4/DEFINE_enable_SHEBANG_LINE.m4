@@ -19,7 +19,9 @@ m4_case(
 [
 
 ]GATBPS_ARG_ENABLE_BOOL(
-  [permission to add a shebang line to gatbps],
+  [
+    permission to add a shebang line to gatbps
+  ],
   [enable_SHEBANG_LINE],
   [shebang-line],
   [yes],
