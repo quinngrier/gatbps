@@ -230,7 +230,7 @@ m4_if(
   [gatbps_fatal([
     GATBPS_DEFINE_DATE requires its third argument to be a proleptic
     Gregorian date in YYYY-MM-DD form where the year may be preceded by
-    a + character and may have any number of digits, including leading
+    a '+' character and may have any number of digits, including leading
     zeros
   ])])[]dnl
 m4_define(
@@ -272,7 +272,7 @@ m4_if(
   [gatbps_fatal([
     GATBPS_DEFINE_DATE requires its third argument to be a proleptic
     Gregorian date in YYYY-MM-DD form where the year may be preceded by
-    a + character and may have any number of digits, including leading
+    a '+' character and may have any number of digits, including leading
     zeros
   ])])[]dnl
 m4_define(
@@ -317,7 +317,7 @@ m4_define(
   [
     Define to a character string literal that contains the appropriate
     proleptic Gregorian date in YYYY-MM-DD form where the year may be
-    preceded by a + character and may have any number of digits,
+    preceded by a '+' character and may have any number of digits,
     including leading zeros.
   ])[
 
