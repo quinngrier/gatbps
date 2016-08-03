@@ -31,7 +31,8 @@ esac
 SHEBANG_LINE_1='#!/bin/sh -
 
 '
-'readonly' 'SHEBANG_LINE_1'
+# Autoconf unset readonly newline bug
+# 'readonly' 'SHEBANG_LINE_1'
 
 case "$][{SHEBANG_LINE_0+x}" in
   ?*)
@@ -102,7 +103,8 @@ case "$][{cross_compiling}" in
     ])[
   ;;
 esac
-'readonly' 'SHEBANG_LINE'
+# Autoconf unset readonly newline bug
+# 'readonly' 'SHEBANG_LINE'
 
 ]AC_SUBST([SHEBANG_LINE])[
 ]AM_SUBST_NOTMAKE([SHEBANG_LINE])[
