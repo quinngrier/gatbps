@@ -11,9 +11,9 @@ dnl Special file: GATBPS_CONFIG_FILE.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_CONFIG_FILE], [{
+AC_DEFUN([GATBPS_CONFIG_FILE], [[{
 
-m4_case(
+]m4_case(
   [$#],
   [1], [],
   [2], [],
