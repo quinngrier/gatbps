@@ -24,7 +24,8 @@ m4_case(
   [shebang-line],
   [yes],
   [
-    add a shebang line to gatbps
+    add a shebang line to gatbps if shebang lines are supported or if
+    cross-compiling
   ],
   [
     do not add a shebang line to gatbps
