@@ -20,11 +20,11 @@ AC_DEFUN([GATBPS_CHECK_SOFT_INCLUDE], [[{
 m4_ifdef(
   [GATBPS_CHECK_SOFT_INCLUDE_HAS_BEEN_CALLED],
   [m4_fatal([GATBPS_CHECK_SOFT_INCLUDE has already been called])],
-  [m4_define([GATBPS_CHECK_SOFT_INCLUDE_HAS_BEEN_CALLED])])dnl
+  [m4_define([GATBPS_CHECK_SOFT_INCLUDE_HAS_BEEN_CALLED])])[]dnl
 m4_case(
   [$#],
   [0], [],
-  [m4_fatal([GATBPS_CHECK_SOFT_INCLUDE requires exactly 0 arguments])])dnl
+  [m4_fatal([GATBPS_CHECK_SOFT_INCLUDE requires exactly 0 arguments])])[]dnl
 [
 
 ]GATBPS_CACHE_CHECK(
@@ -245,7 +245,7 @@ esac
     gatbps_have_soft_include
   ])[
 
-:;}]])dnl
+:;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%}){%||%}dnl
 dnl
 dnl The authors of this file have waived all copyright and
