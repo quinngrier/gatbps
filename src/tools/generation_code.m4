@@ -9,7 +9,7 @@ ifdef(
     {%|{%|          'no,$1'|'no,'*'/$1')
             cat >"$|%}{%|{safe_1}" <<'EOF1'|%}
 changequote({%|`|%}, {%|'|%})`'dnl
-include(translit(``src/files/$1'', `.', `-')`.m4'){%|
+include(`src/files/'translit(``$1'', `.', `-')`.m4'){%|
 EOF1
             case "$|%}{%|{?}" in
               '0')

@@ -9,7 +9,7 @@ ifdef(
     {%|{%|            '--help=$1'|'--help='*'/$1')
               'cat' <<EOF1|%}
 changequote({%|`|%}, {%|'|%})`'dnl
-include(translit(``doc/help/$1.hd'', `.', `-')`.m4'){%|
+include(`doc/help/'translit(``$1.hd'', `.', `-')`.m4'){%|
 EOF1
               case "$|%}{%|{?}" in
                 '0')
