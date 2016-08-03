@@ -14,6 +14,45 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 ## begin_rules
 
+$(doxygen_dist_dst): $(doxygen_dist_dep)
+	$(GATBPS_V_CP)$(MAKE) \
+  $(AM_MAKEFLAGS) \
+  $(doxygen_dist_src) \
+;
+	$(AM_V_at)$(MKDIR_P) \
+  './'$(@D) \
+;
+	$(AM_V_at){ \
+  case ''$(doxygen_dist_dst) in \
+    ?*) \
+      'rm' '-f' '-r' './'$(doxygen_dist_dst); \
+      'exit' "$${?}"; \
+    ;; \
+  esac; \
+:;}
+	$(AM_V_at)'cp' \
+  '-R' \
+  './'$(doxygen_dist_src) \
+  './'$(doxygen_dist_dst) \
+;
+
+.PHONY: clean-doxygen-dist
+.PHONY: doxygen-dist
+
+clean-doxygen-dist:
+	-{ \
+  case ''$(doxygen_dist_dst) in \
+    ?*) \
+      'rm' '-f' '-r' './'$(doxygen_dist_dst); \
+    ;; \
+  esac; \
+  'exit' '0'; \
+:;}
+
+doxygen-dist: $(doxygen_dist_dst)
+
+maintainer-clean-local: clean-doxygen-dist
+
 ## end_rules
 
 |%}footer_comment({%|##|%}, {%|##|%}, {%|##|%}){%||%}dnl
