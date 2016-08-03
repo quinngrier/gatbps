@@ -31,7 +31,9 @@ case "$][{?}" in
     ':'
   ;;
   *)
-    ]AC_MSG_ERROR([sh-form.sh failed], [1])[
+    ]GATBPS_MSG_ERROR([
+      sh-form.sh failed
+    ])[
   ;;
 esac
 

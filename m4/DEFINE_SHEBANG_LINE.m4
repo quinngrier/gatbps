@@ -34,9 +34,9 @@ case "${cross_compiling}" in
         SHEBANG_LINE="${SHEBANG_LINE_0}"
       ;;
       *)
-        AC_MSG_ERROR(
-          [invalid \${enable_SHEBANG_LINE} value: ${enable_SHEBANG_LINE}]
-          [1])
+        GATBPS_MSG_ERROR([
+          invalid \${enable_SHEBANG_LINE} value: ${enable_SHEBANG_LINE}
+        ])
       ;;
     esac
   ;;
@@ -51,9 +51,10 @@ case "${cross_compiling}" in
             SHEBANG_LINE="${SHEBANG_LINE_0}"
           ;;
           *)
-            AC_MSG_ERROR(
-              [invalid \${HAVE_SHEBANG_SUPPORT} value: ${HAVE_SHEBANG_SUPPORT}]
-              [1])
+            GATBPS_MSG_ERROR([
+              invalid \${HAVE_SHEBANG_SUPPORT} value:
+              ${HAVE_SHEBANG_SUPPORT}
+            ])
           ;;
         esac
       ;;
@@ -61,16 +62,16 @@ case "${cross_compiling}" in
         SHEBANG_LINE="${SHEBANG_LINE_0}"
       ;;
       *)
-        AC_MSG_ERROR(
-          [invalid \${enable_SHEBANG_LINE} value: ${enable_SHEBANG_LINE}]
-          [1])
+        GATBPS_MSG_ERROR([
+          invalid \${enable_SHEBANG_LINE} value: ${enable_SHEBANG_LINE}
+        ])
       ;;
     esac
   ;;
   *)
-    AC_MSG_ERROR(
-      [invalid \${cross_compiling} value: ${cross_compiling}]
-      [1])
+    GATBPS_MSG_ERROR([
+      invalid \${cross_compiling} value: ${cross_compiling}
+    ])
   ;;
 esac
 AC_SUBST([SHEBANG_LINE])
