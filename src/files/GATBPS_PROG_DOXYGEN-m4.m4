@@ -26,7 +26,9 @@ m4_ifdef(
 m4_case(
   [$#],
   [0], [],
-  [m4_fatal([GATBPS_PROG_DOXYGEN requires exactly 0 arguments])])dnl
+  [gatbps_fatal([
+    GATBPS_PROG_DOXYGEN requires exactly 0 arguments
+  ])])dnl
 
 AC_CHECK_PROGS(
   [DOXYGEN],
