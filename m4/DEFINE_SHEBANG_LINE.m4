@@ -16,68 +16,71 @@ m4_case(
   [gatbps_fatal([
     DEFINE_SHEBANG_LINE requires exactly 0 arguments
   ])])[]dnl
+[
 
-AC_REQUIRE([DEFINE_HAVE_SHEBANG_SUPPORT])
-AC_REQUIRE([DEFINE_enable_SHEBANG_LINE])
+]AC_REQUIRE([DEFINE_HAVE_SHEBANG_SUPPORT])[
+]AC_REQUIRE([DEFINE_enable_SHEBANG_LINE])[
 
 SHEBANG_LINE_1='#!/bin/sh -
 
 '
 SHEBANG_LINE_0=''
-case "${cross_compiling}" in
+case "$][{cross_compiling}" in
   'yes')
-    case "${enable_SHEBANG_LINE}" in
+    case "$][{enable_SHEBANG_LINE}" in
       '1')
-        SHEBANG_LINE="${SHEBANG_LINE_1}"
+        SHEBANG_LINE="$][{SHEBANG_LINE_1}"
       ;;
       '0')
-        SHEBANG_LINE="${SHEBANG_LINE_0}"
+        SHEBANG_LINE="$][{SHEBANG_LINE_0}"
       ;;
       *)
-        GATBPS_MSG_ERROR([
-          invalid \${enable_SHEBANG_LINE} value: ${enable_SHEBANG_LINE}
-        ])
+        ]GATBPS_MSG_ERROR([
+          invalid \$][{enable_SHEBANG_LINE} value:
+          $][{enable_SHEBANG_LINE}
+        ])[
       ;;
     esac
   ;;
   'no')
-    case "${enable_SHEBANG_LINE}" in
+    case "$][{enable_SHEBANG_LINE}" in
       '1')
-        case "${HAVE_SHEBANG_SUPPORT}" in
+        case "$][{HAVE_SHEBANG_SUPPORT}" in
           '1')
-            SHEBANG_LINE="${SHEBANG_LINE_1}"
+            SHEBANG_LINE="$][{SHEBANG_LINE_1}"
           ;;
           '0')
-            SHEBANG_LINE="${SHEBANG_LINE_0}"
+            SHEBANG_LINE="$][{SHEBANG_LINE_0}"
           ;;
           *)
-            GATBPS_MSG_ERROR([
-              invalid \${HAVE_SHEBANG_SUPPORT} value:
-              ${HAVE_SHEBANG_SUPPORT}
-            ])
+            ]GATBPS_MSG_ERROR([
+              invalid \$][{HAVE_SHEBANG_SUPPORT} value:
+              $][{HAVE_SHEBANG_SUPPORT}
+            ])[
           ;;
         esac
       ;;
       '0')
-        SHEBANG_LINE="${SHEBANG_LINE_0}"
+        SHEBANG_LINE="$][{SHEBANG_LINE_0}"
       ;;
       *)
-        GATBPS_MSG_ERROR([
-          invalid \${enable_SHEBANG_LINE} value: ${enable_SHEBANG_LINE}
-        ])
+        ]GATBPS_MSG_ERROR([
+          invalid \$][{enable_SHEBANG_LINE} value:
+          $][{enable_SHEBANG_LINE}
+        ])[
       ;;
     esac
   ;;
   *)
-    GATBPS_MSG_ERROR([
-      invalid \${cross_compiling} value: ${cross_compiling}
-    ])
+    ]GATBPS_MSG_ERROR([
+      invalid \$][{cross_compiling} value: $][{cross_compiling}
+    ])[
   ;;
 esac
-AC_SUBST([SHEBANG_LINE])
-AM_SUBST_NOTMAKE([SHEBANG_LINE])
+]AC_SUBST([SHEBANG_LINE])[
+]AM_SUBST_NOTMAKE([SHEBANG_LINE])[
 
-:;}])[]dnl
+:;}]])[]dnl
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by
