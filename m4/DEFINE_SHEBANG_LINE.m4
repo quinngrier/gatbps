@@ -21,14 +21,35 @@ m4_case(
 ]AC_REQUIRE([DEFINE_HAVE_SHEBANG_SUPPORT])[
 ]AC_REQUIRE([DEFINE_enable_SHEBANG_LINE])[
 
+case "$][{SHEBANG_LINE_1+x}" in
+  ?*)
+    ]GATBPS_MSG_ERROR([
+      \$][{SHEBANG_LINE_1} is already set
+    ])[
+  ;;
+esac
 SHEBANG_LINE_1='#!/bin/sh -
 
 '
 'readonly' 'SHEBANG_LINE_1'
 
+case "$][{SHEBANG_LINE_0+x}" in
+  ?*)
+    ]GATBPS_MSG_ERROR([
+      \$][{SHEBANG_LINE_0} is already set
+    ])[
+  ;;
+esac
 SHEBANG_LINE_0=''
 'readonly' 'SHEBANG_LINE_0'
 
+case "$][{SHEBANG_LINE+x}" in
+  ?*)
+    ]GATBPS_MSG_ERROR([
+      \$][{SHEBANG_LINE} is already set
+    ])[
+  ;;
+esac
 case "$][{cross_compiling}" in
   'yes')
     case "$][{enable_SHEBANG_LINE}" in
