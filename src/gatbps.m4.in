@@ -7822,6 +7822,7 @@ EOF1
 |%}recursion_code(
   {%|GATBPS_CHECK_SOFT_INCLUDE.m4|%},
   {%|
+            'set' 'x' "${prefix}gatbps_fatal.m4" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}GATBPS_CHECK_VARS.m4" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}GATBPS_CACHE_CHECK.m4" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
@@ -7855,12 +7856,14 @@ EOF1
 |%}recursion_code(
   {%|GATBPS_DEFINE_AT.m4|%},
   {%|
+            'set' 'x' "${prefix}gatbps_fatal.m4" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_DEFINE_CLASSPATH.m4|%},
   {%|
+            'set' 'x' "${prefix}gatbps_fatal.m4" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 
@@ -7873,18 +7876,21 @@ EOF1
 |%}recursion_code(
   {%|GATBPS_DEFINE_HARD_INCLUDE.m4|%},
   {%|
+            'set' 'x' "${prefix}gatbps_fatal.m4" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_DEFINE_JAVACFLAGS.m4|%},
   {%|
+            'set' 'x' "${prefix}gatbps_fatal.m4" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_DEFINE_JAVADOCFLAGS.m4|%},
   {%|
+            'set' 'x' "${prefix}gatbps_fatal.m4" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 
@@ -7930,24 +7936,28 @@ EOF1
 |%}recursion_code(
   {%|GATBPS_PROG_AWK.m4|%},
   {%|
+            'set' 'x' "${prefix}gatbps_fatal.m4" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_PROG_DOXYGEN.m4|%},
   {%|
+            'set' 'x' "${prefix}gatbps_fatal.m4" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_PROG_JAR.m4|%},
   {%|
+            'set' 'x' "${prefix}gatbps_fatal.m4" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_PROG_JAVAC.m4|%},
   {%|
+            'set' 'x' "${prefix}gatbps_fatal.m4" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}GATBPS_DEFINE_JAVACFLAGS.m4" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}GATBPS_DEFINE_CLASSPATH.m4" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
@@ -7956,36 +7966,42 @@ EOF1
 |%}recursion_code(
   {%|GATBPS_PROG_JAVADOC.m4|%},
   {%|
+            'set' 'x' "${prefix}gatbps_fatal.m4" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_PROG_M4.m4|%},
   {%|
+            'set' 'x' "${prefix}gatbps_fatal.m4" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_PROG_MAKEINFO.m4|%},
   {%|
+            'set' 'x' "${prefix}gatbps_fatal.m4" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_PROG_MKDIR_P.m4|%},
   {%|
+            'set' 'x' "${prefix}gatbps_fatal.m4" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_PROG_SED.m4|%},
   {%|
+            'set' 'x' "${prefix}gatbps_fatal.m4" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_PROG_TEXI2ANY.m4|%},
   {%|
+            'set' 'x' "${prefix}gatbps_fatal.m4" "${@AT@}"; 'shift'
             'set' 'x' "${prefix}CC0-1.0.txt" "${@AT@}"; 'shift'
 |%}){%|
 
