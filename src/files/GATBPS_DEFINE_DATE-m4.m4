@@ -401,89 +401,89 @@ m4_define(
 
 case "$][{$2+x}" in
   ?*)
-    ]AC_MSG_ERROR(
-[[\$][{$2} is already set]]dnl
-, [[1]])[
+    ]GATBPS_MSG_ERROR([
+      \$][{$2} is already set
+    ])[
   ;;
 esac
 
 case "$][{$2_YEAR+x}" in
   ?*)
-    ]AC_MSG_ERROR(
-[[\$][{$2_YEAR} is already set]]dnl
-, [[1]])[
+    ]GATBPS_MSG_ERROR([
+      [\$]{$2_YEAR} is already set
+    ])[
   ;;
 esac
 
 case "$][{$2_MONTH+x}" in
   ?*)
-    ]AC_MSG_ERROR(
-[[\$][{$2_MONTH} is already set]]dnl
-, [[1]])[
+    ]GATBPS_MSG_ERROR([
+      [\$]{$2_MONTH} is already set
+    ])[
   ;;
 esac
 
 case "$][{$2_DAY+x}" in
   ?*)
-    ]AC_MSG_ERROR(
-[[\$][{$2_DAY} is already set]]dnl
-, [[1]])[
+    ]GATBPS_MSG_ERROR([
+      [\$]{$2_DAY} is already set
+    ])[
   ;;
 esac
 
 case "$][{$2_IS_LEAP_YEAR+x}" in
   ?*)
-    ]AC_MSG_ERROR(
-[[\$][{$2_IS_LEAP_YEAR} is already set]]dnl
-, [[1]])[
+    ]GATBPS_MSG_ERROR([
+      [\$]{$2_IS_LEAP_YEAR} is already set
+    ])[
   ;;
 esac
 
 case "$][{$2_TROFF+x}" in
   ?*)
-    ]AC_MSG_ERROR(
-[[\$][{$2_TROFF} is already set]]dnl
-, [[1]])[
+    ]GATBPS_MSG_ERROR([
+      [\$]{$2_TROFF} is already set
+    ])[
   ;;
 esac
 
 case "$][{$2_MONTH_NAME+x}" in
   ?*)
-    ]AC_MSG_ERROR(
-[[\$][{$2_MONTH_NAME} is already set]]dnl
-, [[1]])[
+    ]GATBPS_MSG_ERROR([
+      [\$]{$2_MONTH_NAME} is already set
+    ])[
   ;;
 esac
 
 case "$][{$2_MONTH_ABBR+x}" in
   ?*)
-    ]AC_MSG_ERROR(
-[[\$][{$2_MONTH_ABBR} is already set]]dnl
-, [[1]])[
+    ]GATBPS_MSG_ERROR([
+      [\$]{$2_MONTH_ABBR} is already set
+    ])[
   ;;
 esac
 
 case "$][{$2_YEAR_ZPAD+x}" in
   ?*)
-    ]AC_MSG_ERROR(
-[[\$][{$2_YEAR_ZPAD} is already set]]dnl
-, [[1]])[
+    ]GATBPS_MSG_ERROR([
+      [\$]{$2_YEAR_ZPAD} is already set
+    ])[
   ;;
 esac
 
 case "$][{$2_MONTH_ZPAD+x}" in
   ?*)
-    ]AC_MSG_ERROR(
-[[\$][{$2_MONTH_ZPAD} is already set]]dnl
-, [[1]])[
+    ]GATBPS_MSG_ERROR([
+      [\$]{$2_MONTH_ZPAD} is already set
+    ])[
   ;;
 esac
 
 case "$][{$2_DAY_ZPAD+x}" in
   ?*)
-    ]AC_MSG_ERROR(
-[[\$][{$2_DAY_ZPAD} is already set]]dnl
-, [[1]])[
+    ]GATBPS_MSG_ERROR([
+      [\$]{$2_DAY_ZPAD} is already set
+    ])[
   ;;
 esac
 
