@@ -31,13 +31,13 @@ $(plaintext_dst): $(plaintext_src)
     esac; \
   fi; \
   $(MAKEINFO) \
-    --plaintext \
-    -o $(plaintext_dst) \
+    '--plaintext' \
+    '-o' $(plaintext_dst) \
     $(AM_MAKEINFOFLAGS) \
     $(MAKEINFOFLAGS) \
     "$${d}"'/'$(plaintext_src) \
   ; \
-  exit $$?; \
+  'exit' "$${?}"; \
 :;}
 
 .PHONY: clean-plaintext

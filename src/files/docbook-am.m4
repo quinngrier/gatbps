@@ -31,13 +31,13 @@ $(docbook_dst): $(docbook_src)
     esac; \
   fi; \
   $(MAKEINFO) \
-    --docbook \
-    -o $(docbook_dst) \
+    '--docbook' \
+    '-o' $(docbook_dst) \
     $(AM_MAKEINFOFLAGS) \
     $(MAKEINFOFLAGS) \
     "$${d}"'/'$(docbook_src) \
   ; \
-  exit $$?; \
+  'exit' "$${?}"; \
 :;}
 
 .PHONY: clean-docbook
