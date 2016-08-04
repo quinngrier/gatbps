@@ -19,7 +19,7 @@ $(plaintext_dst): $(plaintext_src)
 	$(AM_V_MAKEINFO)$(MKDIR_P) \
   './'$(@D) \
 ;
-	$(AM_V_at){ ':'; \
+	$(AM_V_at){ \
   if test -f $(plaintext_src); then \
     x=$(plaintext_src); \
   else \
@@ -33,7 +33,7 @@ $(plaintext_dst): $(plaintext_src)
     $$x \
   ; \
   exit $$?; \
-}
+:;}
 
 .PHONY: clean-plaintext
 .PHONY: clean-plaintext-more
@@ -51,7 +51,7 @@ clean-plaintext: clean-plaintext-more
 install-plaintext: $(plaintext_dst)
 install-plaintext: install-plaintext-more
 	@$(NORMAL_INSTALL)
-	@{ ':'; \
+	@{ \
   case ''$(plaintextdir) in \
     ?*) \
       echo " $(MKDIR_P) '$(DESTDIR)$(plaintextdir)'"; \
@@ -66,13 +66,13 @@ install-plaintext: install-plaintext-more
     ;; \
   esac; \
   exit 0; \
-}
+:;}
 
 plaintext: $(plaintext_dst)
 
 uninstall-plaintext: uninstall-plaintext-more
 	@$(NORMAL_UNINSTALL)
-	@{ ':'; \
+	@{ \
   case ''$(plaintextdir) in \
     ?*) \
       x=`expr X/$(plaintext_dst) : 'X.*/\(.*\)'` || exit $$?; \
@@ -81,7 +81,7 @@ uninstall-plaintext: uninstall-plaintext-more
     ;; \
   esac; \
   exit 0; \
-}
+:;}
 
 ## end_rules
 
