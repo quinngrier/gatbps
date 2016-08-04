@@ -41,7 +41,6 @@ $(plaintext_dst): $(plaintext_src)
 :;}
 
 .PHONY: clean-plaintext
-.PHONY: clean-plaintext-more
 .PHONY: install-plaintext
 .PHONY: install-plaintext-more
 .PHONY: plaintext
