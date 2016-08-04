@@ -56,8 +56,15 @@ $(javadoc_dst): $(javadoc_src_nodist)
 .PHONY: uninstall-javadoc
 .PHONY: uninstall-javadoc-more
 
-clean-javadoc: clean-javadoc-more
-	-rm -f -r $(javadoc_dst)
+clean-javadoc:
+	-{ \
+  case ''$(javadoc_dst) in \
+    ?*) \
+      'rm' '-f' '-r' './'$(javadoc_dst); \
+    ;; \
+  esac; \
+  'exit' '0'; \
+:;}
 
 clean-local: clean-javadoc
 
