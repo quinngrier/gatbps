@@ -30,7 +30,7 @@ $(javadoc_dst): $(javadoc_src)
 $(javadoc_dst): $(javadoc_src_nodist)
 	$(GATBPS_V_JAVADOC)rm -f -r $(javadoc_dst)
 	$(AM_V_at)$(MKDIR_P) $(javadoc_dst)
-	$(AM_V_at){ ':'; \
+	$(AM_V_at){ \
   src=''; \
   for x in $(javadoc_src) $(javadoc_src_nodist); do \
     if 'test' '-f' "$${x}"; then \
@@ -46,7 +46,7 @@ $(javadoc_dst): $(javadoc_src_nodist)
     $(JAVADOCFLAGS) \
     $${src} \
   ; \
-}
+:;}
 
 .PHONY: clean-javadoc
 .PHONY: clean-javadoc-more
@@ -64,7 +64,7 @@ clean-local: clean-javadoc
 install-javadoc: $(javadoc_dst)
 install-javadoc: install-javadoc-more
 	@$(NORMAL_INSTALL)
-	@{ ':'; \
+	@{ \
   case ''$(javadocdir) in \
     ?*) \
       echo " $(MKDIR_P) '$(DESTDIR)$(javadocdir)'"; \
@@ -79,13 +79,13 @@ install-javadoc: install-javadoc-more
     ;; \
   esac; \
   exit 0; \
-}
+:;}
 
 javadoc: $(javadoc_dst)
 
 uninstall-javadoc: uninstall-javadoc-more
 	@$(NORMAL_UNINSTALL)
-	@{ ':'; \
+	@{ \
   case ''$(javadocdir) in \
     ?*) \
       x=`expr X/$(javadoc_dst) : 'X.*/\(.*\)'` || exit $$?; \
@@ -94,7 +94,7 @@ uninstall-javadoc: uninstall-javadoc-more
     ;; \
   esac; \
   exit 0; \
-}
+:;}
 
 ## end_rules
 
