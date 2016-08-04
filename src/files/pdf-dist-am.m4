@@ -22,10 +22,23 @@ $(pdf_dist_dst): $(pdf_dist_dep)
 	$(AM_V_at)$(MKDIR_P) \
   './'$(@D) \
 ;
-	$(AM_V_at)'cp' \
-  './'$(pdf_dist_src) \
-  './'$(pdf_dist_dst) \
-;
+	$(AM_V_at){ \
+  if 'test' '-f' $(pdf_dist_src); then \
+    d='.'; \
+  else \
+    d=$(srcdir); \
+    case "$${d}" in \
+      '-'*) \
+        d='./'"$${d}"; \
+      ;; \
+    esac; \
+  fi; \
+  'cp' \
+    "$${d}"'/'$(pdf_dist_src) \
+    './'$(pdf_dist_dst) \
+  ; \
+  'exit' "$${?}"; \
+:;}
 
 .PHONY: clean-pdf-dist
 .PHONY: pdf-dist

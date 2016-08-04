@@ -30,11 +30,27 @@ $(html_dist_dst): $(html_dist_dep)
     ;; \
   esac; \
 :;}
-	$(AM_V_at)'cp' \
-  '-R' \
-  './'$(html_dist_src) \
-  './'$(html_dist_dst) \
-;
+	$(AM_V_at){ \
+  if \
+    'test' '-f' $(html_dist_src) || \
+    'test' '-d' $(html_dist_src) \
+  ; then \
+    d='.'; \
+  else \
+    d=$(srcdir); \
+    case "$${d}" in \
+      '-'*) \
+        d='./'"$${d}"; \
+      ;; \
+    esac; \
+  fi; \
+  'cp' \
+    '-R' \
+    "$${d}"'/'$(html_dist_src) \
+    './'$(html_dist_dst) \
+  ; \
+  'exit' "$${?}"; \
+:;}
 
 .PHONY: clean-html-dist
 .PHONY: html-dist

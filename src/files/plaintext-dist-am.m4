@@ -22,10 +22,23 @@ $(plaintext_dist_dst): $(plaintext_dist_dep)
 	$(AM_V_at)$(MKDIR_P) \
   './'$(@D) \
 ;
-	$(AM_V_at)'cp' \
-  './'$(plaintext_dist_src) \
-  './'$(plaintext_dist_dst) \
-;
+	$(AM_V_at){ \
+  if 'test' '-f' $(plaintext_dist_src); then \
+    d='.'; \
+  else \
+    d=$(srcdir); \
+    case "$${d}" in \
+      '-'*) \
+        d='./'"$${d}"; \
+      ;; \
+    esac; \
+  fi; \
+  'cp' \
+    "$${d}"'/'$(plaintext_dist_src) \
+    './'$(plaintext_dist_dst) \
+  ; \
+  'exit' "$${?}"; \
+:;}
 
 .PHONY: clean-plaintext-dist
 .PHONY: plaintext-dist

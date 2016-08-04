@@ -30,11 +30,27 @@ $(javadoc_dist_dst): $(javadoc_dist_dep)
     ;; \
   esac; \
 :;}
-	$(AM_V_at)'cp' \
-  '-R' \
-  './'$(javadoc_dist_src) \
-  './'$(javadoc_dist_dst) \
-;
+	$(AM_V_at){ \
+  if \
+    'test' '-f' $(javadoc_dist_src) || \
+    'test' '-d' $(javadoc_dist_src) \
+  ; then \
+    d='.'; \
+  else \
+    d=$(srcdir); \
+    case "$${d}" in \
+      '-'*) \
+        d='./'"$${d}"; \
+      ;; \
+    esac; \
+  fi; \
+  'cp' \
+    '-R' \
+    "$${d}"'/'$(javadoc_dist_src) \
+    './'$(javadoc_dist_dst) \
+  ; \
+  'exit' "$${?}"; \
+:;}
 
 .PHONY: clean-javadoc-dist
 .PHONY: javadoc-dist

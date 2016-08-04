@@ -22,10 +22,23 @@ $(docbook_dist_dst): $(docbook_dist_dep)
 	$(AM_V_at)$(MKDIR_P) \
   './'$(@D) \
 ;
-	$(AM_V_at)'cp' \
-  './'$(docbook_dist_src) \
-  './'$(docbook_dist_dst) \
-;
+	$(AM_V_at){ \
+  if 'test' '-f' $(docbook_dist_src); then \
+    d='.'; \
+  else \
+    d=$(srcdir); \
+    case "$${d}" in \
+      '-'*) \
+        d='./'"$${d}"; \
+      ;; \
+    esac; \
+  fi; \
+  'cp' \
+    "$${d}"'/'$(docbook_dist_src) \
+    './'$(docbook_dist_dst) \
+  ; \
+  'exit' "$${?}"; \
+:;}
 
 .PHONY: clean-docbook-dist
 .PHONY: docbook-dist

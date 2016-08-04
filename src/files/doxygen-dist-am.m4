@@ -30,11 +30,27 @@ $(doxygen_dist_dst): $(doxygen_dist_dep)
     ;; \
   esac; \
 :;}
-	$(AM_V_at)'cp' \
-  '-R' \
-  './'$(doxygen_dist_src) \
-  './'$(doxygen_dist_dst) \
-;
+	$(AM_V_at){ \
+  if \
+    'test' '-f' $(doxygen_dist_src) || \
+    'test' '-d' $(doxygen_dist_src) \
+  ; then \
+    d='.'; \
+  else \
+    d=$(srcdir); \
+    case "$${d}" in \
+      '-'*) \
+        d='./'"$${d}"; \
+      ;; \
+    esac; \
+  fi; \
+  'cp' \
+    '-R' \
+    "$${d}"'/'$(doxygen_dist_src) \
+    './'$(doxygen_dist_dst) \
+  ; \
+  'exit' "$${?}"; \
+:;}
 
 .PHONY: clean-doxygen-dist
 .PHONY: doxygen-dist

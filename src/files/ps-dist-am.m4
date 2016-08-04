@@ -22,10 +22,23 @@ $(ps_dist_dst): $(ps_dist_dep)
 	$(AM_V_at)$(MKDIR_P) \
   './'$(@D) \
 ;
-	$(AM_V_at)'cp' \
-  './'$(ps_dist_src) \
-  './'$(ps_dist_dst) \
-;
+	$(AM_V_at){ \
+  if 'test' '-f' $(ps_dist_src); then \
+    d='.'; \
+  else \
+    d=$(srcdir); \
+    case "$${d}" in \
+      '-'*) \
+        d='./'"$${d}"; \
+      ;; \
+    esac; \
+  fi; \
+  'cp' \
+    "$${d}"'/'$(ps_dist_src) \
+    './'$(ps_dist_dst) \
+  ; \
+  'exit' "$${?}"; \
+:;}
 
 .PHONY: clean-ps-dist
 .PHONY: ps-dist
