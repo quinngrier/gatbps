@@ -41,7 +41,6 @@ $(docbook_dst): $(docbook_src)
 :;}
 
 .PHONY: clean-docbook
-.PHONY: clean-docbook-more
 .PHONY: docbook
 .PHONY: install-docbook
 .PHONY: install-docbook-more
