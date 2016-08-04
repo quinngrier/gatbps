@@ -8184,6 +8184,8 @@ EOF1
 |%}recursion_code(
   {%|java.am|%},
   {%|
+            'set' 'x' "${prefix}"'sh-form.sh' "${@AT@}"; 'shift'
+            'set' 'x' "${prefix}"'echo.sh' "${@AT@}"; 'shift'
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@AT@}"; 'shift'
 |%}){%|
 
