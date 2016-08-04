@@ -42,6 +42,7 @@ $(pdf_dist_dst): $(pdf_dist_dep)
 
 .PHONY: clean-pdf-dist
 .PHONY: clean-pdf-dist-main
+.PHONY: pdf-dist
 .PHONY: pdf-dist-main
 
 clean-pdf-dist: clean-pdf-dist-main
@@ -57,6 +58,8 @@ clean-pdf-dist-main:
 :;}
 
 maintainer-clean-local: clean-pdf-dist
+
+pdf-dist: pdf-dist-main
 
 pdf-dist-main: $(pdf_dist_dst)
 

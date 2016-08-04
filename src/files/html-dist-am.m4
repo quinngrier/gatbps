@@ -54,6 +54,7 @@ $(html_dist_dst): $(html_dist_dep)
 
 .PHONY: clean-html-dist
 .PHONY: clean-html-dist-main
+.PHONY: html-dist
 .PHONY: html-dist-main
 
 clean-html-dist: clean-html-dist-main
@@ -67,6 +68,8 @@ clean-html-dist-main:
   esac; \
   'exit' '0'; \
 :;}
+
+html-dist: html-dist-main
 
 html-dist-main: $(html_dist_dst)
 

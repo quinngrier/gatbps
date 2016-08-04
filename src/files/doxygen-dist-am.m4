@@ -54,6 +54,7 @@ $(doxygen_dist_dst): $(doxygen_dist_dep)
 
 .PHONY: clean-doxygen-dist
 .PHONY: clean-doxygen-dist-main
+.PHONY: doxygen-dist
 .PHONY: doxygen-dist-main
 
 clean-doxygen-dist: clean-doxygen-dist-main
@@ -67,6 +68,8 @@ clean-doxygen-dist-main:
   esac; \
   'exit' '0'; \
 :;}
+
+doxygen-dist: doxygen-dist-main
 
 doxygen-dist-main: $(doxygen_dist_dst)
 

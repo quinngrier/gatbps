@@ -42,6 +42,7 @@ $(java_dist_dst): $(java_dist_dep)
 
 .PHONY: clean-java-dist
 .PHONY: clean-java-dist-main
+.PHONY: java-dist
 .PHONY: java-dist-main
 
 clean-java-dist: clean-java-dist-main
@@ -55,6 +56,8 @@ clean-java-dist-main:
   esac; \
   'exit' '0'; \
 :;}
+
+java-dist: java-dist-main
 
 java-dist-main: $(java_dist_dst)
 

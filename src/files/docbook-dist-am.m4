@@ -42,6 +42,7 @@ $(docbook_dist_dst): $(docbook_dist_dep)
 
 .PHONY: clean-docbook-dist
 .PHONY: clean-docbook-dist-main
+.PHONY: docbook-dist
 .PHONY: docbook-dist-main
 
 clean-docbook-dist: clean-docbook-dist-main
@@ -55,6 +56,8 @@ clean-docbook-dist-main:
   esac; \
   'exit' '0'; \
 :;}
+
+docbook-dist: docbook-dist-main
 
 docbook-dist-main: $(docbook_dist_dst)
 

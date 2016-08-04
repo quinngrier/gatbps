@@ -42,6 +42,7 @@ $(plaintext_dist_dst): $(plaintext_dist_dep)
 
 .PHONY: clean-plaintext-dist
 .PHONY: clean-plaintext-dist-main
+.PHONY: plaintext-dist
 .PHONY: plaintext-dist-main
 
 clean-plaintext-dist: clean-plaintext-dist-main
@@ -57,6 +58,8 @@ clean-plaintext-dist-main:
 :;}
 
 maintainer-clean-local: clean-plaintext-dist
+
+plaintext-dist: plaintext-dist-main
 
 plaintext-dist-main: $(plaintext_dist_dst)
 

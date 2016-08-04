@@ -42,6 +42,7 @@ $(dvi_dist_dst): $(dvi_dist_dep)
 
 .PHONY: clean-dvi-dist
 .PHONY: clean-dvi-dist-main
+.PHONY: dvi-dist
 .PHONY: dvi-dist-main
 
 clean-dvi-dist: clean-dvi-dist-main
@@ -55,6 +56,8 @@ clean-dvi-dist-main:
   esac; \
   'exit' '0'; \
 :;}
+
+dvi-dist: dvi-dist-main
 
 dvi-dist-main: $(dvi_dist_dst)
 
