@@ -20,7 +20,7 @@ $(docbook_dst): $(docbook_src)
   './'$(@D) \
 ;
 	$(AM_V_at){ \
-  if test -f $(docbook_src); then \
+  if 'test' '-f' $(docbook_src); then \
     x=$(docbook_src); \
   else \
     x=$(srcdir)/$(docbook_src); \
@@ -58,7 +58,7 @@ install-docbook: install-docbook-more
     ?*) \
       echo " $(MKDIR_P) '$(DESTDIR)$(docbookdir)'"; \
       $(MKDIR_P) $(DESTDIR)$(docbookdir) || exit $$?; \
-      if test -f $(docbook_dst); then \
+      if 'test' '-f' $(docbook_dst); then \
         x=$(docbook_dst); \
       else \
         x=$(srcdir)/$(docbook_dst); \

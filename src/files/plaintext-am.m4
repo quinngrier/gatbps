@@ -20,7 +20,7 @@ $(plaintext_dst): $(plaintext_src)
   './'$(@D) \
 ;
 	$(AM_V_at){ \
-  if test -f $(plaintext_src); then \
+  if 'test' '-f' $(plaintext_src); then \
     x=$(plaintext_src); \
   else \
     x=$(srcdir)/$(plaintext_src); \
@@ -56,7 +56,7 @@ install-plaintext: install-plaintext-more
     ?*) \
       echo " $(MKDIR_P) '$(DESTDIR)$(plaintextdir)'"; \
       $(MKDIR_P) $(DESTDIR)$(plaintextdir) || exit $$?; \
-      if test -f $(plaintext_dst); then \
+      if 'test' '-f' $(plaintext_dst); then \
         x=$(plaintext_dst); \
       else \
         x=$(srcdir)/$(plaintext_dst); \
