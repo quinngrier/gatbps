@@ -16,7 +16,9 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 $(plaintext_dst): $(plaintext_dep)
 $(plaintext_dst): $(plaintext_src)
-	$(AM_V_MAKEINFO)$(MKDIR_P) './'$(@D)
+	$(AM_V_MAKEINFO)$(MKDIR_P) \
+  './'$(@D) \
+;
 	$(AM_V_at){ ':'; \
   if test -f $(plaintext_src); then \
     x=$(plaintext_src); \
