@@ -113,7 +113,7 @@ GATBPS_V_JAVAC_1 =
 :;}
 
 .PHONY: all-java
-.PHONY: clean-java
+.PHONY: clean-java-main
 .PHONY: install-all-java
 .PHONY: install-java
 .PHONY: java
@@ -140,7 +140,7 @@ GATBPS_V_JAVAC_1 =
 
 all-java: java
 
-clean-java:
+clean-java-main:
 	-{ \
   for x in \
     $(java_dst) \
@@ -155,7 +155,7 @@ clean-java:
   'exit' '0'; \
 :;}
 
-clean-local: clean-java
+clean-local: clean-java-main
 
 install-all-java: install-java
 
