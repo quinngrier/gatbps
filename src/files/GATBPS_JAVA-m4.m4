@@ -247,7 +247,7 @@ java-gatbps_x:
   '\''exit'\'' "$[]$[]{x}"; \
 :;}
 
-uninstall-all-java: uninstall-java-gatbps_x
+uninstall-java: uninstall-java-gatbps_x
 
 uninstall-java-gatbps_x:
 	@$[](NORMAL_UNINSTALL)

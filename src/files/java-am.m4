@@ -117,7 +117,7 @@ GATBPS_V_JAVAC_1 =
 .PHONY: install-all-java
 .PHONY: install-java-main
 .PHONY: java-main
-.PHONY: uninstall-all-java
+.PHONY: uninstall-java
 .PHONY: uninstall-java-main
 
 .java.class:
@@ -288,7 +288,7 @@ java:
   'exit' "$${x}"; \
 :;}
 
-uninstall-all-java: uninstall-java-main
+uninstall-java: uninstall-java-main
 
 uninstall-java-main:
 	@$(NORMAL_UNINSTALL)
