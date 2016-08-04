@@ -32,7 +32,7 @@ $(plaintext_dst): $(plaintext_src)
   fi; \
   $(MAKEINFO) \
     '--plaintext' \
-    '-o' $(plaintext_dst) \
+    '--output='$(plaintext_dst) \
     $(AM_MAKEINFOFLAGS) \
     $(MAKEINFOFLAGS) \
     "$${d}"'/'$(plaintext_src) \

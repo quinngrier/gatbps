@@ -32,7 +32,7 @@ $(docbook_dst): $(docbook_src)
   fi; \
   $(MAKEINFO) \
     '--docbook' \
-    '-o' $(docbook_dst) \
+    '--output='$(docbook_dst) \
     $(AM_MAKEINFOFLAGS) \
     $(MAKEINFOFLAGS) \
     "$${d}"'/'$(docbook_src) \
