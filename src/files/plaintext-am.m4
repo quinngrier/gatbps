@@ -21,16 +21,21 @@ $(plaintext_dst): $(plaintext_src)
 ;
 	$(AM_V_at){ \
   if 'test' '-f' $(plaintext_src); then \
-    x=$(plaintext_src); \
+    d='.'; \
   else \
-    x=$(srcdir)/$(plaintext_src); \
+    d=$(srcdir); \
+    case "$${d}" in \
+      '-'*) \
+        d='./'"$${d}"; \
+      ;; \
+    esac; \
   fi; \
   $(MAKEINFO) \
     --plaintext \
     -o $(plaintext_dst) \
     $(AM_MAKEINFOFLAGS) \
     $(MAKEINFOFLAGS) \
-    $$x \
+    "$${d}"'/'$(plaintext_src) \
   ; \
   exit $$?; \
 :;}
