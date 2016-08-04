@@ -112,6 +112,7 @@ GATBPS_V_JAVAC_1 =
   'exit' "$${x}"; \
 :;}
 
+.PHONY: clean-java
 .PHONY: clean-java-main
 .PHONY: install-java
 .PHONY: install-java-main
@@ -138,6 +139,8 @@ GATBPS_V_JAVAC_1 =
   $< \
 ;
 
+clean-java: clean-java-main
+
 clean-java-main:
 	-{ \
   for x in \
@@ -153,7 +156,7 @@ clean-java-main:
   'exit' '0'; \
 :;}
 
-clean-local: clean-java-main
+clean-local: clean-java
 
 install-java: install-java-main
 

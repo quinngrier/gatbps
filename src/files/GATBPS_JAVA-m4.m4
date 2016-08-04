@@ -97,6 +97,8 @@ m4_foreach_w(
 .PHONY: java-gatbps_x
 .PHONY: uninstall-java-gatbps_x
 
+clean-java: clean-java-gatbps_x
+
 clean-java-gatbps_x:
 	-{ \
   for x in \
@@ -111,8 +113,6 @@ clean-java-gatbps_x:
   done; \
   '\''exit'\'' '\''0'\''; \
 :;}
-
-clean-local: clean-java-gatbps_x
 
 install-java: install-java-gatbps_x
 
