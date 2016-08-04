@@ -21,16 +21,21 @@ $(docbook_dst): $(docbook_src)
 ;
 	$(AM_V_at){ \
   if 'test' '-f' $(docbook_src); then \
-    x=$(docbook_src); \
+    d='.'; \
   else \
-    x=$(srcdir)/$(docbook_src); \
+    d=$(srcdir); \
+    case "$${d}" in \
+      '-'*) \
+        d='./'"$${d}"; \
+      ;; \
+    esac; \
   fi; \
   $(MAKEINFO) \
     --docbook \
     -o $(docbook_dst) \
     $(AM_MAKEINFOFLAGS) \
     $(MAKEINFOFLAGS) \
-    $$x \
+    "$${d}"'/'$(docbook_src) \
   ; \
   exit $$?; \
 :;}
