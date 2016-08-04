@@ -52,10 +52,10 @@ $(javadoc_dist_dst): $(javadoc_dist_dep)
   'exit' "$${?}"; \
 :;}
 
-.PHONY: clean-javadoc-dist
-.PHONY: javadoc-dist
+.PHONY: clean-javadoc-dist-main
+.PHONY: javadoc-dist-main
 
-clean-javadoc-dist:
+clean-javadoc-dist-main:
 	-{ \
   case ''$(javadoc_dist_dst) in \
     ?*) \
@@ -65,9 +65,9 @@ clean-javadoc-dist:
   'exit' '0'; \
 :;}
 
-javadoc-dist: $(javadoc_dist_dst)
+javadoc-dist-main: $(javadoc_dist_dst)
 
-maintainer-clean-local: clean-javadoc-dist
+maintainer-clean-local: clean-javadoc-dist-main
 
 ## end_rules
 

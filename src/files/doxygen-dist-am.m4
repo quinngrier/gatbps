@@ -52,10 +52,10 @@ $(doxygen_dist_dst): $(doxygen_dist_dep)
   'exit' "$${?}"; \
 :;}
 
-.PHONY: clean-doxygen-dist
-.PHONY: doxygen-dist
+.PHONY: clean-doxygen-dist-main
+.PHONY: doxygen-dist-main
 
-clean-doxygen-dist:
+clean-doxygen-dist-main:
 	-{ \
   case ''$(doxygen_dist_dst) in \
     ?*) \
@@ -65,9 +65,9 @@ clean-doxygen-dist:
   'exit' '0'; \
 :;}
 
-doxygen-dist: $(doxygen_dist_dst)
+doxygen-dist-main: $(doxygen_dist_dst)
 
-maintainer-clean-local: clean-doxygen-dist
+maintainer-clean-local: clean-doxygen-dist-main
 
 ## end_rules
 

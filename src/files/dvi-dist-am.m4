@@ -40,10 +40,10 @@ $(dvi_dist_dst): $(dvi_dist_dep)
   'exit' "$${?}"; \
 :;}
 
-.PHONY: clean-dvi-dist
-.PHONY: dvi-dist
+.PHONY: clean-dvi-dist-main
+.PHONY: dvi-dist-main
 
-clean-dvi-dist:
+clean-dvi-dist-main:
 	-{ \
   case ''$(dvi_dist_dst) in \
     ?*) \
@@ -53,9 +53,9 @@ clean-dvi-dist:
   'exit' '0'; \
 :;}
 
-dvi-dist: $(dvi_dist_dst)
+dvi-dist-main: $(dvi_dist_dst)
 
-maintainer-clean-local: clean-dvi-dist
+maintainer-clean-local: clean-dvi-dist-main
 
 ## end_rules
 

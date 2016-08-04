@@ -40,10 +40,10 @@ $(java_dist_dst): $(java_dist_dep)
   'exit' "$${?}"; \
 :;}
 
-.PHONY: clean-java-dist
-.PHONY: java-dist
+.PHONY: clean-java-dist-main
+.PHONY: java-dist-main
 
-clean-java-dist:
+clean-java-dist-main:
 	-{ \
   case ''$(java_dist_dst) in \
     ?*) \
@@ -53,9 +53,9 @@ clean-java-dist:
   'exit' '0'; \
 :;}
 
-java-dist: $(java_dist_dst)
+java-dist-main: $(java_dist_dst)
 
-maintainer-clean-local: clean-java-dist
+maintainer-clean-local: clean-java-dist-main
 
 ## end_rules
 

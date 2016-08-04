@@ -52,10 +52,10 @@ $(html_dist_dst): $(html_dist_dep)
   'exit' "$${?}"; \
 :;}
 
-.PHONY: clean-html-dist
-.PHONY: html-dist
+.PHONY: clean-html-dist-main
+.PHONY: html-dist-main
 
-clean-html-dist:
+clean-html-dist-main:
 	-{ \
   case ''$(html_dist_dst) in \
     ?*) \
@@ -65,9 +65,9 @@ clean-html-dist:
   'exit' '0'; \
 :;}
 
-html-dist: $(html_dist_dst)
+html-dist-main: $(html_dist_dst)
 
-maintainer-clean-local: clean-html-dist
+maintainer-clean-local: clean-html-dist-main
 
 ## end_rules
 

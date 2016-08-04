@@ -40,10 +40,10 @@ $(pdf_dist_dst): $(pdf_dist_dep)
   'exit' "$${?}"; \
 :;}
 
-.PHONY: clean-pdf-dist
-.PHONY: pdf-dist
+.PHONY: clean-pdf-dist-main
+.PHONY: pdf-dist-main
 
-clean-pdf-dist:
+clean-pdf-dist-main:
 	-{ \
   case ''$(pdf_dist_dst) in \
     ?*) \
@@ -53,9 +53,9 @@ clean-pdf-dist:
   'exit' '0'; \
 :;}
 
-maintainer-clean-local: clean-pdf-dist
+maintainer-clean-local: clean-pdf-dist-main
 
-pdf-dist: $(pdf_dist_dst)
+pdf-dist-main: $(pdf_dist_dst)
 
 ## end_rules
 
