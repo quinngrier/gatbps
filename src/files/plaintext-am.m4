@@ -50,8 +50,15 @@ $(plaintext_dst): $(plaintext_src)
 
 clean-local: clean-plaintext
 
-clean-plaintext: clean-plaintext-more
-	-rm -f $(plaintext_dst)
+clean-plaintext:
+	-{ \
+  case ''$(plaintext_dst) in \
+    ?*) \
+      'rm' '-f' './'$(plaintext_dst); \
+    ;; \
+  esac; \
+  'exit' '0'; \
+:;}
 
 install-plaintext: $(plaintext_dst)
 install-plaintext: install-plaintext-more
