@@ -25,6 +25,7 @@ clean-doxygen-main:
       'rm' '-f' '-r' './'$(doxygen_dst); \
     ;; \
   esac; \
+  'exit' '0'; \
 :;}
 
 doxygen: doxygen-main
