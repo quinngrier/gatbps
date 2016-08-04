@@ -40,8 +40,11 @@ $(plaintext_dist_dst): $(plaintext_dist_dep)
   'exit' "$${?}"; \
 :;}
 
+.PHONY: clean-plaintext-dist
 .PHONY: clean-plaintext-dist-main
 .PHONY: plaintext-dist-main
+
+clean-plaintext-dist: clean-plaintext-dist-main
 
 clean-plaintext-dist-main:
 	-{ \
@@ -53,7 +56,7 @@ clean-plaintext-dist-main:
   'exit' '0'; \
 :;}
 
-maintainer-clean-local: clean-plaintext-dist-main
+maintainer-clean-local: clean-plaintext-dist
 
 plaintext-dist-main: $(plaintext_dist_dst)
 

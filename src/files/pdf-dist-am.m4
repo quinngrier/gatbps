@@ -40,8 +40,11 @@ $(pdf_dist_dst): $(pdf_dist_dep)
   'exit' "$${?}"; \
 :;}
 
+.PHONY: clean-pdf-dist
 .PHONY: clean-pdf-dist-main
 .PHONY: pdf-dist-main
+
+clean-pdf-dist: clean-pdf-dist-main
 
 clean-pdf-dist-main:
 	-{ \
@@ -53,7 +56,7 @@ clean-pdf-dist-main:
   'exit' '0'; \
 :;}
 
-maintainer-clean-local: clean-pdf-dist-main
+maintainer-clean-local: clean-pdf-dist
 
 pdf-dist-main: $(pdf_dist_dst)
 

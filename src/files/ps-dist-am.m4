@@ -40,8 +40,11 @@ $(ps_dist_dst): $(ps_dist_dep)
   'exit' "$${?}"; \
 :;}
 
+.PHONY: clean-ps-dist
 .PHONY: clean-ps-dist-main
 .PHONY: ps-dist-main
+
+clean-ps-dist: clean-ps-dist-main
 
 clean-ps-dist-main:
 	-{ \
@@ -53,7 +56,7 @@ clean-ps-dist-main:
   'exit' '0'; \
 :;}
 
-maintainer-clean-local: clean-ps-dist-main
+maintainer-clean-local: clean-ps-dist
 
 ps-dist-main: $(ps_dist_dst)
 

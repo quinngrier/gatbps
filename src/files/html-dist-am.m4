@@ -52,8 +52,11 @@ $(html_dist_dst): $(html_dist_dep)
   'exit' "$${?}"; \
 :;}
 
+.PHONY: clean-html-dist
 .PHONY: clean-html-dist-main
 .PHONY: html-dist-main
+
+clean-html-dist: clean-html-dist-main
 
 clean-html-dist-main:
 	-{ \
@@ -67,7 +70,7 @@ clean-html-dist-main:
 
 html-dist-main: $(html_dist_dst)
 
-maintainer-clean-local: clean-html-dist-main
+maintainer-clean-local: clean-html-dist
 
 ## end_rules
 

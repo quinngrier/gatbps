@@ -40,8 +40,11 @@ $(docbook_dist_dst): $(docbook_dist_dep)
   'exit' "$${?}"; \
 :;}
 
+.PHONY: clean-docbook-dist
 .PHONY: clean-docbook-dist-main
 .PHONY: docbook-dist-main
+
+clean-docbook-dist: clean-docbook-dist-main
 
 clean-docbook-dist-main:
 	-{ \
@@ -55,7 +58,7 @@ clean-docbook-dist-main:
 
 docbook-dist-main: $(docbook_dist_dst)
 
-maintainer-clean-local: clean-docbook-dist-main
+maintainer-clean-local: clean-docbook-dist
 
 ## end_rules
 
