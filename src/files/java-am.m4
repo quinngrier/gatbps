@@ -118,7 +118,7 @@ GATBPS_V_JAVAC_1 =
 .PHONY: install-java
 .PHONY: java
 .PHONY: uninstall-all-java
-.PHONY: uninstall-java
+.PHONY: uninstall-java-main
 
 .java.class:
 	$(GATBPS_V_JAVAC)$(MKDIR_P) \
@@ -288,9 +288,9 @@ java:
   'exit' "$${x}"; \
 :;}
 
-uninstall-all-java: uninstall-java
+uninstall-all-java: uninstall-java-main
 
-uninstall-java:
+uninstall-java-main:
 	@$(NORMAL_UNINSTALL)
 	$(AM_V_at){ \
   case ''$(java_noinst) in \
@@ -305,14 +305,14 @@ uninstall-java:
               'X/'$(java_dst) \
               ':' \
               'X.*/\(.*\)' \
-              >'uninstall-java.tmp' \
+              >'uninstall-java-main.tmp' \
             || 'exit' "$${?}"; \
             x=$(srcdir); \
             x='x='`'sh' \
               '-' \
               "$${x}"'/build-aux/sh-form.sh' \
               '--stdin' \
-              <'uninstall-java.tmp' \
+              <'uninstall-java-main.tmp' \
             ` || 'exit' "$${?}"; \
             'eval' "$${x}"; \
             x=$(DESTDIR)$(javadir)'/'"$${x}"; \
@@ -342,7 +342,7 @@ uninstall-java:
           x="$${?}"; \
           'rm' \
             '-f' \
-            'uninstall-java.tmp' \
+            'uninstall-java-main.tmp' \
           ; \
           'exit' "$${x}"; \
         ;; \
