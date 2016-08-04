@@ -116,7 +116,7 @@ GATBPS_V_JAVAC_1 =
 .PHONY: clean-java-main
 .PHONY: install-all-java
 .PHONY: install-java-main
-.PHONY: java
+.PHONY: java-main
 .PHONY: uninstall-all-java
 .PHONY: uninstall-java-main
 
@@ -138,7 +138,7 @@ GATBPS_V_JAVAC_1 =
   $< \
 ;
 
-all-java: java
+all-java: java-main
 
 clean-java-main:
 	-{ \
@@ -159,7 +159,7 @@ clean-local: clean-java-main
 
 install-all-java: install-java-main
 
-install-java-main: java
+install-java-main: java-main
 	@$(NORMAL_INSTALL)
 	$(AM_V_at){ \
   case ''$(java_noinst) in \
