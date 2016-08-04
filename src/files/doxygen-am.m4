@@ -16,7 +16,7 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 .PHONY: clean-doxygen-main
 .PHONY: doxygen
-.PHONY: main-doxygen
+.PHONY: doxygen-main
 
 clean-doxygen-main:
 	-{ \
@@ -27,9 +27,9 @@ clean-doxygen-main:
   esac; \
 :;}
 
-doxygen: main-doxygen
+doxygen: doxygen-main
 
-main-doxygen: $(doxygen_dst)
+doxygen-main: $(doxygen_dst)
 
 ## end_rules
 
