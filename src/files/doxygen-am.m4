@@ -14,11 +14,11 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 ## begin_rules
 
-.PHONY: clean-main-doxygen
+.PHONY: clean-doxygen-main
 .PHONY: doxygen
 .PHONY: main-doxygen
 
-clean-main-doxygen:
+clean-doxygen-main:
 	-{ \
   case ''$(doxygen_dst) in \
     ?*) \
