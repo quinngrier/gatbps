@@ -48,8 +48,15 @@ $(docbook_dst): $(docbook_src)
 .PHONY: uninstall-docbook
 .PHONY: uninstall-docbook-more
 
-clean-docbook: clean-docbook-more
-	-rm -f $(docbook_dst)
+clean-docbook:
+	-{ \
+  case ''$(docbook_dst) in \
+    ?*) \
+      'rm' '-f' './'$(docbook_dst); \
+    ;; \
+  esac; \
+  'exit' '0'; \
+:;}
 
 clean-local: clean-docbook
 
