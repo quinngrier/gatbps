@@ -49,7 +49,6 @@ $(javadoc_dst): $(javadoc_src_nodist)
 :;}
 
 .PHONY: clean-javadoc
-.PHONY: clean-javadoc-more
 .PHONY: install-javadoc
 .PHONY: install-javadoc-more
 .PHONY: javadoc
