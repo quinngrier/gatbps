@@ -45,10 +45,7 @@ $(doxygen_dist_dst): $(doxygen_dist_dep)
   './'$(doxygen_dist_dst) \
 ;
 	$(AM_V_at){ \
-  if \
-    'test' '-f' $(doxygen_dist_src) || \
-    'test' '-d' $(doxygen_dist_src) \
-  ; then \
+  if 'test' '-d' $(doxygen_dist_src); then \
     d='.'; \
   else \
     d=$(srcdir); \
