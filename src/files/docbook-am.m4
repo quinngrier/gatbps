@@ -51,7 +51,7 @@ $(docbook_dst): $(docbook_src)
     '--docbook' \
     '--output='$(docbook_dst) \
     $(AM_MAKEINFOFLAGS) \
-    $(docbook_flags) \
+    $(docbook_MAKEINFOFLAGS) \
     $(MAKEINFOFLAGS) \
     "$${d}"'/'$(docbook_src) \
   ; \
