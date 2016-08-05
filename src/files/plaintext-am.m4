@@ -125,17 +125,66 @@ install-plaintext: plaintext
 
 plaintext: $(plaintext_dst)
 
-uninstall-plaintext: uninstall-plaintext-more
+uninstall-plaintext:
 	@$(NORMAL_UNINSTALL)
-	@{ \
-  case ''$(plaintextdir) in \
+	$(AM_V_at){ \
+  case ''$(plaintext_noinst) in \
     ?*) \
-      x=`expr X/$(plaintext_dst) : 'X.*/\(.*\)'` || exit $$?; \
-      echo " rm -f '$(DESTDIR)$(plaintextdir)/$$x'"; \
-      rm -f $(DESTDIR)$(plaintextdir)/$$x; \
+      ':'; \
+    ;; \
+    *) \
+      case ''$(plaintextdir) in \
+        ?*) \
+          ( \
+            'expr' \
+              'X/'$(plaintext_dst) \
+              ':' \
+              'X.*/\(.*\)' \
+              >'uninstall-plaintext.tmp' \
+            || 'exit' "$${?}"; \
+            x=$(srcdir); \
+            x='x='`'sh' \
+              '-' \
+              "$${x}"'/build-aux/sh-form.sh' \
+              '--stdin' \
+              <'uninstall-plaintext.tmp' \
+            ` || 'exit' "$${?}"; \
+            'eval' "$${x}"; \
+            x=$(DESTDIR)$(plaintextdir)'/'"$${x}"; \
+            case "$${x}" in \
+              '-'*) \
+                x='./'"$${x}"; \
+              ;; \
+            esac; \
+            if $(AM_V_P); then \
+              ':'; \
+            else \
+              'sh' \
+                '-' \
+                $(srcdir)'/build-aux/sh-form.sh' \
+                '--' \
+                'rm' \
+                '-f' \
+                "$${x}" \
+              ; \
+            fi; \
+            'rm' \
+              '-f' \
+              "$${x}" \
+            ; \
+            'exit' '0'; \
+          :;); \
+          x="$${?}"; \
+          'rm' \
+            '-f' \
+            'uninstall-plaintext.tmp' \
+          ; \
+          'exit' "$${x}"; \
+        ;; \
+      esac; \
     ;; \
   esac; \
-  exit 0; \
+  'exit' '0'; \
 :;}
 
 ## end_rules
