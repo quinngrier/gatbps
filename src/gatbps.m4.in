@@ -8108,6 +8108,7 @@ EOF1
 |%}recursion_code(
   {%|docbook.am|%},
   {%|
+            'set' 'x' "${prefix}"'sh-form.sh' "${@AT@}"; 'shift'
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@AT@}"; 'shift'
 |%}){%|
 
@@ -8302,6 +8303,7 @@ EOF1
 |%}recursion_code(
   {%|plaintext.am|%},
   {%|
+            'set' 'x' "${prefix}"'sh-form.sh' "${@AT@}"; 'shift'
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@AT@}"; 'shift'
 |%}){%|
 
