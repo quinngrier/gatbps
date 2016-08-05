@@ -17,6 +17,22 @@ header_comment({%|##|%}, {%|##|%}){%|
 $(docbook_dst): $(docbook_dep)
 $(docbook_dst): $(docbook_src)
 	$(AM_V_MAKEINFO)':'
+	$(AM_V_at){ \
+  case ''$(docbook_dst) in \
+    ?*) \
+      'exit' '0'; \
+    ;; \
+  esac; \
+  'exit' '1'; \
+:;}
+	$(AM_V_at){ \
+  case ''$(docbook_src) in \
+    ?*) \
+      'exit' '0'; \
+    ;; \
+  esac; \
+  'exit' '1'; \
+:;}
 	$(MKDIR_P) \
   './'$(@D) \
 ;
