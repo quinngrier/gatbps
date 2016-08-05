@@ -28,6 +28,7 @@ all:
 	$(GENERATE) 'build-aux/dvi-dist.am'
 	$(GENERATE) 'build-aux/echo.sh'
 	$(GENERATE) 'build-aux/html-dist.am'
+	$(GENERATE) 'build-aux/m4.am'
 	$(GENERATE) 'build-aux/pdf-dist.am'
 	$(GENERATE) 'build-aux/plaintext-dist.am'
 	$(GENERATE) 'build-aux/plaintext.am'
