@@ -61,24 +61,68 @@ clean-local: clean-docbook
 
 docbook: $(docbook_dst)
 
-install-docbook: $(docbook_dst)
-install-docbook: install-docbook-more
+install-docbook: docbook
 	@$(NORMAL_INSTALL)
-	@{ \
-  case ''$(docbookdir) in \
+	$(AM_V_at){ \
+  case ''$(docbook_noinst) in \
     ?*) \
-      echo " $(MKDIR_P) '$(DESTDIR)$(docbookdir)'"; \
-      $(MKDIR_P) $(DESTDIR)$(docbookdir) || exit $$?; \
-      if 'test' '-f' $(docbook_dst); then \
-        x=$(docbook_dst); \
-      else \
-        x=$(srcdir)/$(docbook_dst); \
-      fi; \
-      echo " $(INSTALL_DATA) $$x '$(DESTDIR)$(docbookdir)'"; \
-      $(INSTALL_DATA) $$x $(DESTDIR)$(docbookdir) || exit $$?; \
+      ':'; \
+    ;; \
+    *) \
+      case ''$(docbookdir) in \
+        ?*) \
+          d=$(DESTDIR)$(docbookdir); \
+          case "$${d}" in \
+            '-'*) \
+              d='./'"$${d}"; \
+            ;; \
+          esac; \
+          if $(AM_V_P); then \
+            ':'; \
+          else \
+            'sh' \
+              '-' \
+              $(srcdir)'/build-aux/sh-form.sh' \
+              '--' \
+              $(MKDIR_P) \
+              "$${d}" \
+            ; \
+          fi; \
+          $(MKDIR_P) \
+            "$${d}" \
+          || 'exit' "$${?}"; \
+          if 'test' '-f' $(docbook_dst); then \
+            x='.'; \
+          else \
+            x=$(srcdir); \
+            case "$${x}" in \
+              '-'*) \
+                x='./'"$${x}"; \
+              ;; \
+            esac; \
+          fi; \
+          x="$${x}"'/'$(docbook_dst); \
+          if $(AM_V_P); then \
+            ':'; \
+          else \
+            'sh' \
+              '-' \
+              $(srcdir)'/build-aux/sh-form.sh' \
+              '--' \
+              $(INSTALL_DATA) \
+              "$${x}" \
+              "$${d}" \
+            ; \
+          fi; \
+          $(INSTALL_DATA) \
+            "$${x}" \
+            "$${d}" \
+          || 'exit' "$${?}"; \
+        ;; \
+      esac; \
     ;; \
   esac; \
-  exit 0; \
+  'exit' '0'; \
 :;}
 
 uninstall-docbook: uninstall-docbook-more
