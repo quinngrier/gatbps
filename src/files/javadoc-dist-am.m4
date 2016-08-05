@@ -45,10 +45,7 @@ $(javadoc_dist_dst): $(javadoc_dist_dep)
   './'$(javadoc_dist_dst) \
 ;
 	$(AM_V_at){ \
-  if \
-    'test' '-f' $(javadoc_dist_src) || \
-    'test' '-d' $(javadoc_dist_src) \
-  ; then \
+  if 'test' '-d' $(javadoc_dist_src); then \
     d='.'; \
   else \
     d=$(srcdir); \
