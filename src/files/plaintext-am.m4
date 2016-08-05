@@ -16,7 +16,24 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 $(plaintext_dst): $(plaintext_dep)
 $(plaintext_dst): $(plaintext_src)
-	$(AM_V_MAKEINFO)$(MKDIR_P) \
+	$(AM_V_MAKEINFO)':'
+	$(AM_V_at){ \
+  case ''$(plaintext_dst) in \
+    ?*) \
+      'exit' '0'; \
+    ;; \
+  esac; \
+  'exit' '1'; \
+:;}
+	$(AM_V_at){ \
+  case ''$(plaintext_src) in \
+    ?*) \
+      'exit' '0'; \
+    ;; \
+  esac; \
+  'exit' '1'; \
+:;}
+	$(MKDIR_P) \
   './'$(@D) \
 ;
 	$(AM_V_at){ \
@@ -35,21 +52,26 @@ $(plaintext_dst): $(plaintext_src)
     '--output='$(plaintext_dst) \
     $(AM_MAKEINFOFLAGS) \
     $(MAKEINFOFLAGS) \
+    $(plaintext_flags) \
     "$${d}"'/'$(plaintext_src) \
   ; \
   'exit' "$${?}"; \
 :;}
 
 .PHONY: clean-plaintext
+.PHONY: clean-plaintext-main
 .PHONY: install-plaintext
-.PHONY: install-plaintext-more
+.PHONY: install-plaintext-main
 .PHONY: plaintext
+.PHONY: plaintext-main
 .PHONY: uninstall-plaintext
-.PHONY: uninstall-plaintext-more
+.PHONY: uninstall-plaintext-main
 
 clean-local: clean-plaintext
 
-clean-plaintext:
+clean-plaintext: clean-plaintext-main
+
+clean-plaintext-main:
 	-{ \
   case ''$(plaintext_dst) in \
     ?*) \
@@ -59,129 +81,159 @@ clean-plaintext:
   'exit' '0'; \
 :;}
 
-install-plaintext: plaintext
+install-plaintext: install-plaintext-main
+
+install-plaintext-main: plaintext-main
 	@$(NORMAL_INSTALL)
+	$(AM_V_at){ \
+  case ''$(plaintext_dst) in \
+    ?*) \
+      'exit' '0'; \
+    ;; \
+  esac; \
+  'exit' '1'; \
+:;}
+	$(AM_V_at){ \
+  case ''$(plaintextdir) in \
+    ?*) \
+      'exit' '0'; \
+    ;; \
+  esac; \
+  'exit' '1'; \
+:;}
 	$(AM_V_at){ \
   case ''$(plaintext_noinst) in \
     ?*) \
       ':'; \
     ;; \
     *) \
-      case ''$(plaintextdir) in \
-        ?*) \
-          d=$(DESTDIR)$(plaintextdir); \
-          case "$${d}" in \
-            '-'*) \
-              d='./'"$${d}"; \
-            ;; \
-          esac; \
-          if $(AM_V_P); then \
-            ':'; \
-          else \
-            'sh' \
-              '-' \
-              $(srcdir)'/build-aux/sh-form.sh' \
-              '--' \
-              $(MKDIR_P) \
-              "$${d}" \
-            ; \
-          fi; \
-          $(MKDIR_P) \
-            "$${d}" \
-          || 'exit' "$${?}"; \
-          if 'test' '-f' $(plaintext_dst); then \
-            x='.'; \
-          else \
-            x=$(srcdir); \
-            case "$${x}" in \
-              '-'*) \
-                x='./'"$${x}"; \
-              ;; \
-            esac; \
-          fi; \
-          x="$${x}"'/'$(plaintext_dst); \
-          if $(AM_V_P); then \
-            ':'; \
-          else \
-            'sh' \
-              '-' \
-              $(srcdir)'/build-aux/sh-form.sh' \
-              '--' \
-              $(INSTALL_DATA) \
-              "$${x}" \
-              "$${d}" \
-            ; \
-          fi; \
-          $(INSTALL_DATA) \
-            "$${x}" \
-            "$${d}" \
-          || 'exit' "$${?}"; \
+      d=$(DESTDIR)$(plaintextdir); \
+      case "$${d}" in \
+        '-'*) \
+          d='./'"$${d}"; \
         ;; \
       esac; \
+      if $(AM_V_P); then \
+        ':'; \
+      else \
+        'sh' \
+          '-' \
+          $(srcdir)'/build-aux/sh-form.sh' \
+          '--' \
+          $(MKDIR_P) \
+          "$${d}" \
+        ; \
+      fi; \
+      $(MKDIR_P) \
+        "$${d}" \
+      || 'exit' "$${?}"; \
+      if 'test' '-f' $(plaintext_dst); then \
+        x='.'; \
+      else \
+        x=$(srcdir); \
+        case "$${x}" in \
+          '-'*) \
+            x='./'"$${x}"; \
+          ;; \
+        esac; \
+      fi; \
+      x="$${x}"'/'$(plaintext_dst); \
+      if $(AM_V_P); then \
+        ':'; \
+      else \
+        'sh' \
+          '-' \
+          $(srcdir)'/build-aux/sh-form.sh' \
+          '--' \
+          $(INSTALL_DATA) \
+          "$${x}" \
+          "$${d}" \
+        ; \
+      fi; \
+      $(INSTALL_DATA) \
+        "$${x}" \
+        "$${d}" \
+      || 'exit' "$${?}"; \
     ;; \
   esac; \
   'exit' '0'; \
 :;}
 
-plaintext: $(plaintext_dst)
+plaintext: plaintext-main
 
-uninstall-plaintext:
+plaintext-main: $(plaintext_dst)
+
+uninstall-plaintext: uninstall-plaintext-main
+
+uninstall-plaintext-main:
 	@$(NORMAL_UNINSTALL)
+	$(AM_V_at){ \
+  case ''$(plaintext_dst) in \
+    ?*) \
+      'exit' '0'; \
+    ;; \
+  esac; \
+  'exit' '1'; \
+:;}
+	$(AM_V_at){ \
+  case ''$(plaintextdir) in \
+    ?*) \
+      'exit' '0'; \
+    ;; \
+  esac; \
+  'exit' '1'; \
+:;}
 	$(AM_V_at){ \
   case ''$(plaintext_noinst) in \
     ?*) \
       ':'; \
     ;; \
     *) \
-      case ''$(plaintextdir) in \
-        ?*) \
-          ( \
-            'expr' \
-              'X/'$(plaintext_dst) \
-              ':' \
-              'X.*/\(.*\)' \
-              >'uninstall-plaintext.tmp' \
-            || 'exit' "$${?}"; \
-            x=$(srcdir); \
-            x='x='`'sh' \
-              '-' \
-              "$${x}"'/build-aux/sh-form.sh' \
-              '--stdin' \
-              <'uninstall-plaintext.tmp' \
-            ` || 'exit' "$${?}"; \
-            'eval' "$${x}"; \
-            x=$(DESTDIR)$(plaintextdir)'/'"$${x}"; \
-            case "$${x}" in \
-              '-'*) \
-                x='./'"$${x}"; \
-              ;; \
-            esac; \
-            if $(AM_V_P); then \
-              ':'; \
-            else \
-              'sh' \
-                '-' \
-                $(srcdir)'/build-aux/sh-form.sh' \
-                '--' \
-                'rm' \
-                '-f' \
-                "$${x}" \
-              ; \
-            fi; \
+      ( \
+        'expr' \
+          'X/'$(plaintext_dst) \
+          ':' \
+          'X.*/\(.*\)' \
+          >'uninstall-plaintext-main.tmp' \
+        || 'exit' "$${?}"; \
+        x=$(srcdir); \
+        x='x='`'sh' \
+          '-' \
+          "$${x}"'/build-aux/sh-form.sh' \
+          '--stdin' \
+          <'uninstall-plaintext-main.tmp' \
+        ` || 'exit' "$${?}"; \
+        'eval' "$${x}"; \
+        x=$(DESTDIR)$(plaintextdir)'/'"$${x}"; \
+        case "$${x}" in \
+          '-'*) \
+            x='./'"$${x}"; \
+          ;; \
+        esac; \
+        if $(AM_V_P); then \
+          ':'; \
+        else \
+          'sh' \
+            '-' \
+            $(srcdir)'/build-aux/sh-form.sh' \
+            '--' \
             'rm' \
-              '-f' \
-              "$${x}" \
-            ; \
-            'exit' '0'; \
-          :;); \
-          x="$${?}"; \
-          'rm' \
             '-f' \
-            'uninstall-plaintext.tmp' \
+            "$${x}" \
           ; \
-          'exit' "$${x}"; \
-        ;; \
-      esac; \
+        fi; \
+        'rm' \
+          '-f' \
+          "$${x}" \
+        ; \
+        'exit' '0'; \
+      :;); \
+      x="$${?}"; \
+      'rm' \
+        '-f' \
+        'uninstall-plaintext-main.tmp' \
+      ; \
+      'exit' "$${x}"; \
     ;; \
   esac; \
   'exit' '0'; \
