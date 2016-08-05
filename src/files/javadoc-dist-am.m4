@@ -15,7 +15,8 @@ header_comment({%|##|%}, {%|##|%}){%|
 ## begin_rules
 
 $(javadoc_dist_dst): $(javadoc_dist_dep)
-	$(GATBPS_V_CP)$(MAKE) \
+	$(GATBPS_V_CP)':' \
+	$(AM_V_at)$(MAKE) \
   $(AM_MAKEFLAGS) \
   $(javadoc_dist_src) \
 ;

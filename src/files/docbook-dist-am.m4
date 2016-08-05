@@ -15,7 +15,8 @@ header_comment({%|##|%}, {%|##|%}){%|
 ## begin_rules
 
 $(docbook_dist_dst): $(docbook_dist_dep)
-	$(GATBPS_V_CP)$(MAKE) \
+	$(GATBPS_V_CP)':' \
+	$(AM_V_at)$(MAKE) \
   $(AM_MAKEFLAGS) \
   $(docbook_dist_src) \
 ;

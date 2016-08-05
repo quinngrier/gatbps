@@ -15,7 +15,8 @@ header_comment({%|##|%}, {%|##|%}){%|
 ## begin_rules
 
 $(plaintext_dist_dst): $(plaintext_dist_dep)
-	$(GATBPS_V_CP)$(MAKE) \
+	$(GATBPS_V_CP)':' \
+	$(AM_V_at)$(MAKE) \
   $(AM_MAKEFLAGS) \
   $(plaintext_dist_src) \
 ;
