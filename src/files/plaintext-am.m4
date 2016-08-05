@@ -51,7 +51,7 @@ $(plaintext_dst): $(plaintext_src)
     '--plaintext' \
     '--output='$(plaintext_dst) \
     $(AM_MAKEINFOFLAGS) \
-    $(plaintext_flags) \
+    $(plaintext_MAKEINFOFLAGS) \
     $(MAKEINFOFLAGS) \
     "$${d}"'/'$(plaintext_src) \
   ; \
