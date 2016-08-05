@@ -157,60 +157,72 @@ install-docbook: docbook
 uninstall-docbook:
 	@$(NORMAL_UNINSTALL)
 	$(AM_V_at){ \
+  case ''$(docbook_dst) in \
+    ?*) \
+      'exit' '0'; \
+    ;; \
+  esac; \
+  'exit' '1'; \
+:;}
+	$(AM_V_at){ \
+  case ''$(docbookdir) in \
+    ?*) \
+      'exit' '0'; \
+    ;; \
+  esac; \
+  'exit' '1'; \
+:;}
+	$(AM_V_at){ \
   case ''$(docbook_noinst) in \
     ?*) \
       ':'; \
     ;; \
     *) \
-      case ''$(docbookdir) in \
-        ?*) \
-          ( \
-            'expr' \
-              'X/'$(docbook_dst) \
-              ':' \
-              'X.*/\(.*\)' \
-              >'uninstall-docbook.tmp' \
-            || 'exit' "$${?}"; \
-            x=$(srcdir); \
-            x='x='`'sh' \
-              '-' \
-              "$${x}"'/build-aux/sh-form.sh' \
-              '--stdin' \
-              <'uninstall-docbook.tmp' \
-            ` || 'exit' "$${?}"; \
-            'eval' "$${x}"; \
-            x=$(DESTDIR)$(docbookdir)'/'"$${x}"; \
-            case "$${x}" in \
-              '-'*) \
-                x='./'"$${x}"; \
-              ;; \
-            esac; \
-            if $(AM_V_P); then \
-              ':'; \
-            else \
-              'sh' \
-                '-' \
-                $(srcdir)'/build-aux/sh-form.sh' \
-                '--' \
-                'rm' \
-                '-f' \
-                "$${x}" \
-              ; \
-            fi; \
+      ( \
+        'expr' \
+          'X/'$(docbook_dst) \
+          ':' \
+          'X.*/\(.*\)' \
+          >'uninstall-docbook.tmp' \
+        || 'exit' "$${?}"; \
+        x=$(srcdir); \
+        x='x='`'sh' \
+          '-' \
+          "$${x}"'/build-aux/sh-form.sh' \
+          '--stdin' \
+          <'uninstall-docbook.tmp' \
+        ` || 'exit' "$${?}"; \
+        'eval' "$${x}"; \
+        x=$(DESTDIR)$(docbookdir)'/'"$${x}"; \
+        case "$${x}" in \
+          '-'*) \
+            x='./'"$${x}"; \
+          ;; \
+        esac; \
+        if $(AM_V_P); then \
+          ':'; \
+        else \
+          'sh' \
+            '-' \
+            $(srcdir)'/build-aux/sh-form.sh' \
+            '--' \
             'rm' \
-              '-f' \
-              "$${x}" \
-            ; \
-            'exit' '0'; \
-          :;); \
-          x="$${?}"; \
-          'rm' \
             '-f' \
-            'uninstall-docbook.tmp' \
+            "$${x}" \
           ; \
-          'exit' "$${x}"; \
-        ;; \
-      esac; \
+        fi; \
+        'rm' \
+          '-f' \
+          "$${x}" \
+        ; \
+        'exit' '0'; \
+      :;); \
+      x="$${?}"; \
+      'rm' \
+        '-f' \
+        'uninstall-docbook.tmp' \
+      ; \
+      'exit' "$${x}"; \
     ;; \
   esac; \
   'exit' '0'; \
