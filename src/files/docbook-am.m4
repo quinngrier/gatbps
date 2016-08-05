@@ -61,6 +61,7 @@ $(docbook_dst): $(docbook_src)
 .PHONY: clean-docbook-main
 .PHONY: docbook
 .PHONY: docbook-main
+.PHONY: install-docbook
 .PHONY: install-docbook-main
 .PHONY: uninstall-docbook-main
 
@@ -81,6 +82,8 @@ clean-local: clean-docbook
 docbook: docbook-main
 
 docbook-main: $(docbook_dst)
+
+install-docbook: install-docbook-main
 
 install-docbook-main: docbook-main
 	@$(NORMAL_INSTALL)
