@@ -410,7 +410,7 @@ esac
 case "$][{$2_YEAR+x}" in
   ?*)
     ]GATBPS_MSG_ERROR([
-      [\$]{$2_YEAR} is already set
+      \$][{$2_YEAR} is already set
     ])[
   ;;
 esac
@@ -418,7 +418,7 @@ esac
 case "$][{$2_MONTH+x}" in
   ?*)
     ]GATBPS_MSG_ERROR([
-      [\$]{$2_MONTH} is already set
+      \$][{$2_MONTH} is already set
     ])[
   ;;
 esac
@@ -426,7 +426,7 @@ esac
 case "$][{$2_DAY+x}" in
   ?*)
     ]GATBPS_MSG_ERROR([
-      [\$]{$2_DAY} is already set
+      \$][{$2_DAY} is already set
     ])[
   ;;
 esac
@@ -434,7 +434,7 @@ esac
 case "$][{$2_IS_LEAP_YEAR+x}" in
   ?*)
     ]GATBPS_MSG_ERROR([
-      [\$]{$2_IS_LEAP_YEAR} is already set
+      \$][{$2_IS_LEAP_YEAR} is already set
     ])[
   ;;
 esac
@@ -442,7 +442,7 @@ esac
 case "$][{$2_TROFF+x}" in
   ?*)
     ]GATBPS_MSG_ERROR([
-      [\$]{$2_TROFF} is already set
+      \$][{$2_TROFF} is already set
     ])[
   ;;
 esac
@@ -450,7 +450,7 @@ esac
 case "$][{$2_MONTH_NAME+x}" in
   ?*)
     ]GATBPS_MSG_ERROR([
-      [\$]{$2_MONTH_NAME} is already set
+      \$][{$2_MONTH_NAME} is already set
     ])[
   ;;
 esac
@@ -458,7 +458,7 @@ esac
 case "$][{$2_MONTH_ABBR+x}" in
   ?*)
     ]GATBPS_MSG_ERROR([
-      [\$]{$2_MONTH_ABBR} is already set
+      \$][{$2_MONTH_ABBR} is already set
     ])[
   ;;
 esac
@@ -466,7 +466,7 @@ esac
 case "$][{$2_YEAR_ZPAD+x}" in
   ?*)
     ]GATBPS_MSG_ERROR([
-      [\$]{$2_YEAR_ZPAD} is already set
+      \$][{$2_YEAR_ZPAD} is already set
     ])[
   ;;
 esac
@@ -474,7 +474,7 @@ esac
 case "$][{$2_MONTH_ZPAD+x}" in
   ?*)
     ]GATBPS_MSG_ERROR([
-      [\$]{$2_MONTH_ZPAD} is already set
+      \$][{$2_MONTH_ZPAD} is already set
     ])[
   ;;
 esac
@@ -482,7 +482,7 @@ esac
 case "$][{$2_DAY_ZPAD+x}" in
   ?*)
     ]GATBPS_MSG_ERROR([
-      [\$]{$2_DAY_ZPAD} is already set
+      \$][{$2_DAY_ZPAD} is already set
     ])[
   ;;
 esac
