@@ -125,17 +125,66 @@ install-docbook: docbook
   'exit' '0'; \
 :;}
 
-uninstall-docbook: uninstall-docbook-more
+uninstall-docbook:
 	@$(NORMAL_UNINSTALL)
-	@{ \
-  case ''$(docbookdir) in \
+	$(AM_V_at){ \
+  case ''$(docbook_noinst) in \
     ?*) \
-      x=`expr X/$(docbook_dst) : 'X.*/\(.*\)'` || exit $$?; \
-      echo " rm -f '$(DESTDIR)$(docbookdir)/$$x'"; \
-      rm -f $(DESTDIR)$(docbookdir)/$$x; \
+      ':'; \
+    ;; \
+    *) \
+      case ''$(docbookdir) in \
+        ?*) \
+          ( \
+            'expr' \
+              'X/'$(docbook_dst) \
+              ':' \
+              'X.*/\(.*\)' \
+              >'uninstall-docbook.tmp' \
+            || 'exit' "$${?}"; \
+            x=$(srcdir); \
+            x='x='`'sh' \
+              '-' \
+              "$${x}"'/build-aux/sh-form.sh' \
+              '--stdin' \
+              <'uninstall-docbook.tmp' \
+            ` || 'exit' "$${?}"; \
+            'eval' "$${x}"; \
+            x=$(DESTDIR)$(docbookdir)'/'"$${x}"; \
+            case "$${x}" in \
+              '-'*) \
+                x='./'"$${x}"; \
+              ;; \
+            esac; \
+            if $(AM_V_P); then \
+              ':'; \
+            else \
+              'sh' \
+                '-' \
+                $(srcdir)'/build-aux/sh-form.sh' \
+                '--' \
+                'rm' \
+                '-f' \
+                "$${x}" \
+              ; \
+            fi; \
+            'rm' \
+              '-f' \
+              "$${x}" \
+            ; \
+            'exit' '0'; \
+          :;); \
+          x="$${?}"; \
+          'rm' \
+            '-f' \
+            'uninstall-docbook.tmp' \
+          ; \
+          'exit' "$${x}"; \
+        ;; \
+      esac; \
     ;; \
   esac; \
-  exit 0; \
+  'exit' '0'; \
 :;}
 
 ## end_rules
