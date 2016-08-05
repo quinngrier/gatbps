@@ -52,6 +52,7 @@ $(docbook_dst): $(docbook_src)
     '--output='$(docbook_dst) \
     $(AM_MAKEINFOFLAGS) \
     $(MAKEINFOFLAGS) \
+    $(docbook_flags) \
     "$${d}"'/'$(docbook_src) \
   ; \
   'exit' "$${?}"; \
