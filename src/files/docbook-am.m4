@@ -60,7 +60,7 @@ $(docbook_dst): $(docbook_src)
 .PHONY: clean-docbook-main
 .PHONY: docbook
 .PHONY: install-docbook
-.PHONY: uninstall-docbook
+.PHONY: uninstall-docbook-main
 
 clean-docbook-main:
 	-{ \
@@ -152,7 +152,7 @@ install-docbook: docbook
   'exit' '0'; \
 :;}
 
-uninstall-docbook:
+uninstall-docbook-main:
 	@$(NORMAL_UNINSTALL)
 	$(AM_V_at){ \
   case ''$(docbook_dst) in \
@@ -181,14 +181,14 @@ uninstall-docbook:
           'X/'$(docbook_dst) \
           ':' \
           'X.*/\(.*\)' \
-          >'uninstall-docbook.tmp' \
+          >'uninstall-docbook-main.tmp' \
         || 'exit' "$${?}"; \
         x=$(srcdir); \
         x='x='`'sh' \
           '-' \
           "$${x}"'/build-aux/sh-form.sh' \
           '--stdin' \
-          <'uninstall-docbook.tmp' \
+          <'uninstall-docbook-main.tmp' \
         ` || 'exit' "$${?}"; \
         'eval' "$${x}"; \
         x=$(DESTDIR)$(docbookdir)'/'"$${x}"; \
@@ -218,7 +218,7 @@ uninstall-docbook:
       x="$${?}"; \
       'rm' \
         '-f' \
-        'uninstall-docbook.tmp' \
+        'uninstall-docbook-main.tmp' \
       ; \
       'exit' "$${x}"; \
     ;; \
