@@ -81,62 +81,74 @@ docbook: $(docbook_dst)
 install-docbook: docbook
 	@$(NORMAL_INSTALL)
 	$(AM_V_at){ \
+  case ''$(docbook_dst) in \
+    ?*) \
+      'exit' '0'; \
+    ;; \
+  esac; \
+  'exit' '1'; \
+:;}
+	$(AM_V_at){ \
+  case ''$(docbookdir) in \
+    ?*) \
+      'exit' '0'; \
+    ;; \
+  esac; \
+  'exit' '1'; \
+:;}
+	$(AM_V_at){ \
   case ''$(docbook_noinst) in \
     ?*) \
       ':'; \
     ;; \
     *) \
-      case ''$(docbookdir) in \
-        ?*) \
-          d=$(DESTDIR)$(docbookdir); \
-          case "$${d}" in \
-            '-'*) \
-              d='./'"$${d}"; \
-            ;; \
-          esac; \
-          if $(AM_V_P); then \
-            ':'; \
-          else \
-            'sh' \
-              '-' \
-              $(srcdir)'/build-aux/sh-form.sh' \
-              '--' \
-              $(MKDIR_P) \
-              "$${d}" \
-            ; \
-          fi; \
-          $(MKDIR_P) \
-            "$${d}" \
-          || 'exit' "$${?}"; \
-          if 'test' '-f' $(docbook_dst); then \
-            x='.'; \
-          else \
-            x=$(srcdir); \
-            case "$${x}" in \
-              '-'*) \
-                x='./'"$${x}"; \
-              ;; \
-            esac; \
-          fi; \
-          x="$${x}"'/'$(docbook_dst); \
-          if $(AM_V_P); then \
-            ':'; \
-          else \
-            'sh' \
-              '-' \
-              $(srcdir)'/build-aux/sh-form.sh' \
-              '--' \
-              $(INSTALL_DATA) \
-              "$${x}" \
-              "$${d}" \
-            ; \
-          fi; \
-          $(INSTALL_DATA) \
-            "$${x}" \
-            "$${d}" \
-          || 'exit' "$${?}"; \
+      d=$(DESTDIR)$(docbookdir); \
+      case "$${d}" in \
+        '-'*) \
+          d='./'"$${d}"; \
         ;; \
       esac; \
+      if $(AM_V_P); then \
+        ':'; \
+      else \
+        'sh' \
+          '-' \
+          $(srcdir)'/build-aux/sh-form.sh' \
+          '--' \
+          $(MKDIR_P) \
+          "$${d}" \
+        ; \
+      fi; \
+      $(MKDIR_P) \
+        "$${d}" \
+      || 'exit' "$${?}"; \
+      if 'test' '-f' $(docbook_dst); then \
+        x='.'; \
+      else \
+        x=$(srcdir); \
+        case "$${x}" in \
+          '-'*) \
+            x='./'"$${x}"; \
+          ;; \
+        esac; \
+      fi; \
+      x="$${x}"'/'$(docbook_dst); \
+      if $(AM_V_P); then \
+        ':'; \
+      else \
+        'sh' \
+          '-' \
+          $(srcdir)'/build-aux/sh-form.sh' \
+          '--' \
+          $(INSTALL_DATA) \
+          "$${x}" \
+          "$${d}" \
+        ; \
+      fi; \
+      $(INSTALL_DATA) \
+        "$${x}" \
+        "$${d}" \
+      || 'exit' "$${?}"; \
     ;; \
   esac; \
   'exit' '0'; \
