@@ -226,7 +226,7 @@ install-java-main: java-main
 
 java: java-main
 
-java:
+java-main:
 	$(AM_V_at){ \
   ( \
     x=''; \
@@ -249,30 +249,30 @@ java:
       $(srcdir)'/build-aux/sh-form.sh' \
       '--' \
       "$${x}" \
-      >'java.tmp' \
+      >'java-main.tmp' \
     || 'exit' "$${?}"; \
     classpath=`'cat' \
-      'java.tmp' \
+      'java-main.tmp' \
     ` || 'exit' "$${?}"; \
     'sh' \
       '-' \
       $(srcdir)'/build-aux/sh-form.sh' \
       '--' \
       $(java_JAVACFLAGS) \
-      >'java.tmp' \
+      >'java-main.tmp' \
     || 'exit' "$${?}"; \
     javacflags=`'cat' \
-      'java.tmp' \
+      'java-main.tmp' \
     ` || 'exit' "$${?}"; \
     'sh' \
       '-' \
       $(srcdir)'/build-aux/sh-form.sh' \
       '--' \
       './'$(java_sourcepath) \
-      >'java.tmp' \
+      >'java-main.tmp' \
     || 'exit' "$${?}"; \
     sourcepath=`'cat' \
-      'java.tmp' \
+      'java-main.tmp' \
     ` || 'exit' "$${?}"; \
     $(MAKE) \
       $(AM_MAKEFLAGS) \
@@ -286,7 +286,7 @@ java:
   x="$${?}"; \
   'rm' \
     '-f' \
-    'java.tmp' \
+    'java-main.tmp' \
   ; \
   'exit' "$${x}"; \
 :;}
