@@ -57,12 +57,12 @@ $(docbook_dst): $(docbook_src)
   'exit' "$${?}"; \
 :;}
 
-.PHONY: clean-docbook
+.PHONY: clean-docbook-main
 .PHONY: docbook
 .PHONY: install-docbook
 .PHONY: uninstall-docbook
 
-clean-docbook:
+clean-docbook-main:
 	-{ \
   case ''$(docbook_dst) in \
     ?*) \
@@ -72,7 +72,7 @@ clean-docbook:
   'exit' '0'; \
 :;}
 
-clean-local: clean-docbook
+clean-local: clean-docbook-main
 
 docbook: $(docbook_dst)
 
