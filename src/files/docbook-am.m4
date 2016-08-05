@@ -60,9 +60,7 @@ $(docbook_dst): $(docbook_src)
 .PHONY: clean-docbook
 .PHONY: docbook
 .PHONY: install-docbook
-.PHONY: install-docbook-more
 .PHONY: uninstall-docbook
-.PHONY: uninstall-docbook-more
 
 clean-docbook:
 	-{ \
