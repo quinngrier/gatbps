@@ -58,7 +58,7 @@ $(docbook_dst): $(docbook_src)
 :;}
 
 .PHONY: clean-docbook-main
-.PHONY: docbook
+.PHONY: docbook-main
 .PHONY: install-docbook-main
 .PHONY: uninstall-docbook-main
 
@@ -74,9 +74,9 @@ clean-docbook-main:
 
 clean-local: clean-docbook-main
 
-docbook: $(docbook_dst)
+docbook-main: $(docbook_dst)
 
-install-docbook-main: docbook
+install-docbook-main: docbook-main
 	@$(NORMAL_INSTALL)
 	$(AM_V_at){ \
   case ''$(docbook_dst) in \
