@@ -16,7 +16,8 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 $(docbook_dst): $(docbook_dep)
 $(docbook_dst): $(docbook_src)
-	$(AM_V_MAKEINFO)$(MKDIR_P) \
+	$(AM_V_MAKEINFO)':'
+	$(MKDIR_P) \
   './'$(@D) \
 ;
 	$(AM_V_at){ \
