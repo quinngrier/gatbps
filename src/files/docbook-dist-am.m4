@@ -15,7 +15,7 @@ header_comment({%|##|%}, {%|##|%}){%|
 ## begin_rules
 
 $(docbook_dist_dst): $(docbook_dist_dep)
-	$(GATBPS_V_CP)':' \
+	$(GATBPS_V_CP)':'
 	$(AM_V_at){ \
   case ''$(docbook_dist_dst) in \
     ?*) \

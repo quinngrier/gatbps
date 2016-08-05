@@ -15,7 +15,7 @@ header_comment({%|##|%}, {%|##|%}){%|
 ## begin_rules
 
 $(doxygen_dist_dst): $(doxygen_dist_dep)
-	$(GATBPS_V_CP)':' \
+	$(GATBPS_V_CP)':'
 	$(AM_V_at){ \
   case ''$(doxygen_dist_dst) in \
     ?*) \
