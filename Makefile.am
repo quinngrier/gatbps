@@ -373,22 +373,6 @@ ps_dist_src += doc/gatbps.ps
 
 ## begin_rules
 
-.m4:
-	$(M4) \
-  $(AM_M4FLAGS) \
-  $(M4FLAGS) \
-  <$< \
-  >$@ \
-;
-	$(M4) \
-  $(AM_M4FLAGS) \
-  $(M4FLAGS) \
-  '-D' \
-  'make_rules' \
-  <$< \
-  >$@'.d' \
-;
-
 bin/gatbps: $(bin_gatbps_src)
 bin/gatbps: $(nodist_bin_gatbps_src)
 bin/gatbps: src/gatbps.m4
@@ -491,6 +475,7 @@ include $(srcdir)/build-aux/docbook-dist.am
 include $(srcdir)/build-aux/docbook.am
 include $(srcdir)/build-aux/dvi-dist.am
 include $(srcdir)/build-aux/html-dist.am
+include $(srcdir)/build-aux/m4.am
 include $(srcdir)/build-aux/pdf-dist.am
 include $(srcdir)/build-aux/plaintext-dist.am
 include $(srcdir)/build-aux/plaintext.am
