@@ -63,6 +63,7 @@ $(docbook_dst): $(docbook_src)
 .PHONY: docbook-main
 .PHONY: install-docbook
 .PHONY: install-docbook-main
+.PHONY: uninstall-docbook
 .PHONY: uninstall-docbook-main
 
 clean-docbook: clean-docbook-main
@@ -160,6 +161,8 @@ install-docbook-main: docbook-main
   esac; \
   'exit' '0'; \
 :;}
+
+uninstall-docbook: uninstall-docbook-main
 
 uninstall-docbook-main:
 	@$(NORMAL_UNINSTALL)
