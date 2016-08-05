@@ -59,24 +59,68 @@ clean-plaintext:
   'exit' '0'; \
 :;}
 
-install-plaintext: $(plaintext_dst)
-install-plaintext: install-plaintext-more
+install-plaintext: plaintext
 	@$(NORMAL_INSTALL)
-	@{ \
-  case ''$(plaintextdir) in \
+	$(AM_V_at){ \
+  case ''$(plaintext_noinst) in \
     ?*) \
-      echo " $(MKDIR_P) '$(DESTDIR)$(plaintextdir)'"; \
-      $(MKDIR_P) $(DESTDIR)$(plaintextdir) || exit $$?; \
-      if 'test' '-f' $(plaintext_dst); then \
-        x=$(plaintext_dst); \
-      else \
-        x=$(srcdir)/$(plaintext_dst); \
-      fi; \
-      echo " $(INSTALL_DATA) $$x '$(DESTDIR)$(plaintextdir)'"; \
-      $(INSTALL_DATA) $$x $(DESTDIR)$(plaintextdir) || exit $$?; \
+      ':'; \
+    ;; \
+    *) \
+      case ''$(plaintextdir) in \
+        ?*) \
+          d=$(DESTDIR)$(plaintextdir); \
+          case "$${d}" in \
+            '-'*) \
+              d='./'"$${d}"; \
+            ;; \
+          esac; \
+          if $(AM_V_P); then \
+            ':'; \
+          else \
+            'sh' \
+              '-' \
+              $(srcdir)'/build-aux/sh-form.sh' \
+              '--' \
+              $(MKDIR_P) \
+              "$${d}" \
+            ; \
+          fi; \
+          $(MKDIR_P) \
+            "$${d}" \
+          || 'exit' "$${?}"; \
+          if 'test' '-f' $(plaintext_dst); then \
+            x='.'; \
+          else \
+            x=$(srcdir); \
+            case "$${x}" in \
+              '-'*) \
+                x='./'"$${x}"; \
+              ;; \
+            esac; \
+          fi; \
+          x="$${x}"'/'$(plaintext_dst); \
+          if $(AM_V_P); then \
+            ':'; \
+          else \
+            'sh' \
+              '-' \
+              $(srcdir)'/build-aux/sh-form.sh' \
+              '--' \
+              $(INSTALL_DATA) \
+              "$${x}" \
+              "$${d}" \
+            ; \
+          fi; \
+          $(INSTALL_DATA) \
+            "$${x}" \
+            "$${d}" \
+          || 'exit' "$${?}"; \
+        ;; \
+      esac; \
     ;; \
   esac; \
-  exit 0; \
+  'exit' '0'; \
 :;}
 
 plaintext: $(plaintext_dst)
