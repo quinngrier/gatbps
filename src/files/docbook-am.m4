@@ -58,6 +58,7 @@ $(docbook_dst): $(docbook_src)
 :;}
 
 .PHONY: clean-docbook-main
+.PHONY: docbook
 .PHONY: docbook-main
 .PHONY: install-docbook-main
 .PHONY: uninstall-docbook-main
@@ -73,6 +74,8 @@ clean-docbook-main:
 :;}
 
 clean-local: clean-docbook-main
+
+docbook: docbook-main
 
 docbook-main: $(docbook_dst)
 
