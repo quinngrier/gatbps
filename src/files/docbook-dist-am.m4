@@ -16,6 +16,22 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 $(docbook_dist_dst): $(docbook_dist_dep)
 	$(GATBPS_V_CP)':' \
+	$(AM_V_at){ \
+  case ''$(docbook_dist_dst) in \
+    ?*) \
+      'exit' '0'; \
+    ;; \
+  esac; \
+  'exit' '1'; \
+:;}
+	$(AM_V_at){ \
+  case ''$(docbook_dist_src) in \
+    ?*) \
+      'exit' '0'; \
+    ;; \
+  esac; \
+  'exit' '1'; \
+:;}
 	$(AM_V_at)$(MAKE) \
   $(AM_MAKEFLAGS) \
   $(docbook_dist_src) \

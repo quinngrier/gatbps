@@ -16,6 +16,22 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 $(dvi_dist_dst): $(dvi_dist_dep)
 	$(GATBPS_V_CP)':' \
+	$(AM_V_at){ \
+  case ''$(dvi_dist_dst) in \
+    ?*) \
+      'exit' '0'; \
+    ;; \
+  esac; \
+  'exit' '1'; \
+:;}
+	$(AM_V_at){ \
+  case ''$(dvi_dist_src) in \
+    ?*) \
+      'exit' '0'; \
+    ;; \
+  esac; \
+  'exit' '1'; \
+:;}
 	$(AM_V_at)$(MAKE) \
   $(AM_MAKEFLAGS) \
   $(dvi_dist_src) \
