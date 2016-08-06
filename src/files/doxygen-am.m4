@@ -18,6 +18,22 @@ header_comment({%|##|%}, {%|##|%}){%|
 .PHONY: doxygen
 .PHONY: doxygen-main
 
+.am_dfv_INPUT.dfv:
+	$(AM_V_GEN)':'
+	$(AM_V_at){ \
+  if 'test' '-f' $<; then \
+    d='.'; \
+  else \
+    d=$(srcdir); \
+  fi; \
+  $(SED) \
+    '/ =/d;s/+= /&VPATH:/;/+=/s/^[^ ]*/INPUT/' \
+    <"$${d}"'/'$< \
+    >$@ \
+  ; \
+  'exit' "$${?}"; \
+:;}
+
 clean-doxygen-main:
 	-{ \
   case ''$(doxygen_dst) in \
