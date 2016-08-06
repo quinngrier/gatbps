@@ -327,60 +327,72 @@ uninstall-java: uninstall-java-main
 uninstall-java-main:
 	@$(NORMAL_UNINSTALL)
 	$(AM_V_at){ \
+  case ''$(java_dst) in \
+    ?*) \
+      'exit' '0'; \
+    ;; \
+  esac; \
+  'exit' '1'; \
+:;}
+	$(AM_V_at){ \
+  case ''$(javadir) in \
+    ?*) \
+      'exit' '0'; \
+    ;; \
+  esac; \
+  'exit' '1'; \
+:;}
+	$(AM_V_at){ \
   case ''$(java_noinst) in \
     ?*) \
       ':'; \
     ;; \
     *) \
-      case ''$(javadir) in \
-        ?*) \
-          ( \
-            'expr' \
-              'X/'$(java_dst) \
-              ':' \
-              'X.*/\(.*\)' \
-              >'uninstall-java-main.tmp' \
-            || 'exit' "$${?}"; \
-            x=$(srcdir); \
-            x='x='`'sh' \
-              '-' \
-              "$${x}"'/build-aux/sh-form.sh' \
-              '--stdin' \
-              <'uninstall-java-main.tmp' \
-            ` || 'exit' "$${?}"; \
-            'eval' "$${x}"; \
-            x=$(DESTDIR)$(javadir)'/'"$${x}"; \
-            case "$${x}" in \
-              '-'*) \
-                x='./'"$${x}"; \
-              ;; \
-            esac; \
-            if $(AM_V_P); then \
-              ':'; \
-            else \
-              'sh' \
-                '-' \
-                $(srcdir)'/build-aux/sh-form.sh' \
-                '--' \
-                'rm' \
-                '-f' \
-                "$${x}" \
-              ; \
-            fi; \
+      ( \
+        'expr' \
+          'X/'$(java_dst) \
+          ':' \
+          'X.*/\(.*\)' \
+          >'uninstall-java-main.tmp' \
+        || 'exit' "$${?}"; \
+        x=$(srcdir); \
+        x='x='`'sh' \
+          '-' \
+          "$${x}"'/build-aux/sh-form.sh' \
+          '--stdin' \
+          <'uninstall-java-main.tmp' \
+        ` || 'exit' "$${?}"; \
+        'eval' "$${x}"; \
+        x=$(DESTDIR)$(javadir)'/'"$${x}"; \
+        case "$${x}" in \
+          '-'*) \
+            x='./'"$${x}"; \
+          ;; \
+        esac; \
+        if $(AM_V_P); then \
+          ':'; \
+        else \
+          'sh' \
+            '-' \
+            $(srcdir)'/build-aux/sh-form.sh' \
+            '--' \
             'rm' \
-              '-f' \
-              "$${x}" \
-            ; \
-            'exit' '0'; \
-          :;); \
-          x="$${?}"; \
-          'rm' \
             '-f' \
-            'uninstall-java-main.tmp' \
+            "$${x}" \
           ; \
-          'exit' "$${x}"; \
-        ;; \
-      esac; \
+        fi; \
+        'rm' \
+          '-f' \
+          "$${x}" \
+        ; \
+        'exit' '0'; \
+      :;); \
+      x="$${?}"; \
+      'rm' \
+        '-f' \
+        'uninstall-java-main.tmp' \
+      ; \
+      'exit' "$${x}"; \
     ;; \
   esac; \
   'exit' '0'; \
