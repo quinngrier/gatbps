@@ -210,16 +210,35 @@ java-gatbps_x:
     classpath=`'\''cat'\'' \
       '\''java-gatbps_x.tmp'\'' \
     ` || '\''exit'\'' "$[]$[]{?}"; \
-    '\''sh'\'' \
-      '\''-'\'' \
-      $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
-      '\''--'\'' \
-      $[](java_[]gatbps_y[]_JAVACFLAGS) \
-      >'\''java-gatbps_x.tmp'\'' \
-    || '\''exit'\'' "$[]$[]{?}"; \
-    javacflags=`'\''cat'\'' \
-      '\''java-gatbps_x.tmp'\'' \
-    ` || '\''exit'\'' "$[]$[]{?}"; \
+    x='\''x'\''; \
+    for y in $[](java_[]gatbps_y[]_JAVACFLAGS); do \
+      '\''sh'\'' \
+        '\''-'\'' \
+        $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
+        '\''--'\'' \
+        $[](java_[]gatbps_y[]_JAVACFLAGS) \
+        >'\''java-gatbps_x.tmp'\'' \
+      || '\''exit'\'' "$[]$[]{?}"; \
+      javacflags=`'\''cat'\'' \
+        '\''java-gatbps_x.tmp'\'' \
+      ` || '\''exit'\'' "$[]$[]{?}"; \
+      x='\'''\''; \
+      '\''break'\''; \
+    done; \
+    case "$[]$[]{x}" in \
+      ?*) \
+        '\''sh'\'' \
+          '\''-'\'' \
+          $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
+          '\''--'\'' \
+          $[](AM@&t@_JAVACFLAGS) \
+          >'\''java-gatbps_x.tmp'\'' \
+        || '\''exit'\'' "$[]$[]{?}"; \
+        javacflags=`'\''cat'\'' \
+          '\''java-gatbps_x.tmp'\'' \
+        ` || '\''exit'\'' "$[]$[]{?}"; \
+      ;; \
+    esac; \
     '\''sh'\'' \
       '\''-'\'' \
       $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
