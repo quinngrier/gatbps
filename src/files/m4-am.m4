@@ -33,7 +33,8 @@ GATBPS_V_M4_1 =
 ## begin_rules
 
 .m4:
-	$(GATBPS_V_M4)$(M4) \
+	$(GATBPS_V_M4)':'
+	$(AM_V_at)$(M4) \
   $(AM_M4FLAGS) \
   $(M4FLAGS) \
   <$< \
