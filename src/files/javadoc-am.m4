@@ -57,8 +57,7 @@ $(javadoc_dst): $(javadoc_src_nodist)
 .PHONY: clean-javadoc
 .PHONY: install-javadoc-main
 .PHONY: javadoc
-.PHONY: uninstall-javadoc
-.PHONY: uninstall-javadoc-more
+.PHONY: uninstall-javadoc-main
 
 clean-javadoc:
 	-{ \
@@ -170,17 +169,80 @@ install-javadoc-main: javadoc-main
 
 javadoc: $(javadoc_dst)
 
-uninstall-javadoc: uninstall-javadoc-more
+uninstall-javadoc-main:
 	@$(NORMAL_UNINSTALL)
-	@{ \
-  case ''$(javadocdir) in \
+	$(AM_V_at){ \
+  case ''$(javadoc_dst) in \
     ?*) \
-      x=`expr X/$(javadoc_dst) : 'X.*/\(.*\)'` || exit $$?; \
-      echo " rm -f -r '$(DESTDIR)$(javadocdir)/$$x'"; \
-      rm -f -r $(DESTDIR)$(javadocdir)/$$x; \
+      'exit' '0'; \
     ;; \
   esac; \
-  exit 0; \
+  'exit' '1'; \
+:;}
+	$(AM_V_at){ \
+  case ''$(javadocdir) in \
+    ?*) \
+      'exit' '0'; \
+    ;; \
+  esac; \
+  'exit' '1'; \
+:;}
+	$(AM_V_at){ \
+  case ''$(javadoc_noinst) in \
+    ?*) \
+      ':'; \
+    ;; \
+    *) \
+      ( \
+        'expr' \
+          'X/'$(javadoc_dst) \
+          ':' \
+          'X.*/\(.*\)' \
+          >'uninstall-javadoc-main.tmp' \
+        || 'exit' "$${?}"; \
+        x=$(srcdir); \
+        x=`'sh' \
+          '-' \
+          "$${x}"'/build-aux/sh-form.sh' \
+          '--stdin' \
+          <'uninstall-javadoc-main.tmp' \
+        ` || 'exit' "$${?}"; \
+        'eval' 'x='"$${x}"; \
+        x=$(DESTDIR)$(javadocdir)'/'"$${x}"; \
+        case "$${x}" in \
+          '-'*) \
+            x='./'"$${x}"; \
+          ;; \
+        esac; \
+        if $(AM_V_P); then \
+          ':'; \
+        else \
+          'sh' \
+            '-' \
+            $(srcdir)'/build-aux/sh-form.sh' \
+            '--' \
+            'rm' \
+            '-f' \
+            '-r' \
+            "$${x}" \
+          ; \
+        fi; \
+        'rm' \
+          '-f' \
+          "$${x}" \
+        ; \
+        'exit' '0'; \
+      :;); \
+      x="$${?}"; \
+      'rm' \
+        '-f' \
+        '-r' \
+        'uninstall-javadoc-main.tmp' \
+      ; \
+      'exit' "$${x}"; \
+    ;; \
+  esac; \
+  'exit' '0'; \
 :;}
 
 ## end_rules
