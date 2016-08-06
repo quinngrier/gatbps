@@ -55,8 +55,7 @@ $(javadoc_dst): $(javadoc_src_nodist)
 :;}
 
 .PHONY: clean-javadoc
-.PHONY: install-javadoc
-.PHONY: install-javadoc-more
+.PHONY: install-javadoc-main
 .PHONY: javadoc
 .PHONY: uninstall-javadoc
 .PHONY: uninstall-javadoc-more
@@ -73,24 +72,100 @@ clean-javadoc:
 
 clean-local: clean-javadoc
 
-install-javadoc: $(javadoc_dst)
-install-javadoc: install-javadoc-more
+install-javadoc-main: javadoc-main
 	@$(NORMAL_INSTALL)
-	@{ \
-  case ''$(javadocdir) in \
+	$(AM_V_at){ \
+  case ''$(javadoc_dst) in \
     ?*) \
-      echo " $(MKDIR_P) '$(DESTDIR)$(javadocdir)'"; \
-      $(MKDIR_P) $(DESTDIR)$(javadocdir) || exit $$?; \
-      if test -d $(javadoc_dst); then \
-        x=$(javadoc_dst); \
-      else \
-        x=$(srcdir)/$(javadoc_dst); \
-      fi; \
-      echo " cp -R $$x '$(DESTDIR)$(javadocdir)'"; \
-      cp -R $$x $(DESTDIR)$(javadocdir) || exit $$?; \
+      'exit' '0'; \
     ;; \
   esac; \
-  exit 0; \
+  'exit' '1'; \
+:;}
+	$(AM_V_at){ \
+  case ''$(javadocdir) in \
+    ?*) \
+      'exit' '0'; \
+    ;; \
+  esac; \
+  'exit' '1'; \
+:;}
+	$(AM_V_at){ \
+  case ''$(javadoc_noinst) in \
+    ?*) \
+      ':'; \
+    ;; \
+    *) \
+      d=$(DESTDIR)$(javadocdir); \
+      case "$${d}" in \
+        '-'*) \
+          d='./'"$${d}"; \
+        ;; \
+      esac; \
+      if $(AM_V_P); then \
+        ':'; \
+      else \
+        'sh' \
+          '-' \
+          $(srcdir)'/build-aux/sh-form.sh' \
+          '--' \
+          $(MKDIR_P) \
+          "$${d}" \
+        ; \
+      fi; \
+      $(MKDIR_P) \
+        "$${d}" \
+      || 'exit' "$${?}"; \
+      if 'test' '-d' $(javadoc_dst); then \
+        x='.'; \
+      else \
+        x=$(srcdir); \
+        case "$${x}" in \
+          '-'*) \
+            x='./'"$${x}"; \
+          ;; \
+        esac; \
+      fi; \
+      x="$${x}"'/'$(javadoc_dst); \
+      if $(AM_V_P); then \
+        ':'; \
+      else \
+        'sh' \
+          '-' \
+          $(srcdir)'/build-aux/sh-form.sh' \
+          '--' \
+          'rm' \
+          '-f' \
+          '-r' \
+          "$${x}" \
+        ; \
+      fi; \
+      'rm' \
+        '-f' \
+        '-r' \
+        "$${x}" \
+      || 'exit' "$${?}"; \
+      if $(AM_V_P); then \
+        ':'; \
+      else \
+        'sh' \
+          '-' \
+          $(srcdir)'/build-aux/sh-form.sh' \
+          '--' \
+          'cp' \
+          '-R' \
+          "$${x}" \
+          "$${d}" \
+        ; \
+      fi; \
+      'cp' \
+        '-R' \
+        "$${x}" \
+        "$${d}" \
+      || 'exit' "$${?}"; \
+    ;; \
+  esac; \
+  'exit' '0'; \
 :;}
 
 javadoc: $(javadoc_dst)
