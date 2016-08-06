@@ -312,13 +312,13 @@ uninstall-java-gatbps_x:
           >'\''uninstall-java-gatbps_x.tmp'\'' \
         || '\''exit'\'' "$[]$[]{?}"; \
         x=$[](srcdir); \
-        x='\''x='\''`'\''sh'\'' \
+        x=`'\''sh'\'' \
           '\''-'\'' \
           "$[]$[]{x}"'\''/build-aux/sh-form.sh'\'' \
           '\''--stdin'\'' \
           <'\''uninstall-java-gatbps_x.tmp'\'' \
         ` || '\''exit'\'' "$[]$[]{?}"; \
-        '\''eval'\'' "$[]$[]{x}"; \
+        '\''eval'\'' '\''x='\''"$[]$[]{x}"; \
         x=$[](DESTDIR)$[](javadir)'\''/'\''"$[]$[]{x}"; \
         case "$[]$[]{x}" in \
           '\''-'\''*) \

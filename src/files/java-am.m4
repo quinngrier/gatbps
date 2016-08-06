@@ -356,13 +356,13 @@ uninstall-java-main:
           >'uninstall-java-main.tmp' \
         || 'exit' "$${?}"; \
         x=$(srcdir); \
-        x='x='`'sh' \
+        x=`'sh' \
           '-' \
           "$${x}"'/build-aux/sh-form.sh' \
           '--stdin' \
           <'uninstall-java-main.tmp' \
         ` || 'exit' "$${?}"; \
-        'eval' "$${x}"; \
+        'eval' 'x='"$${x}"; \
         x=$(DESTDIR)$(javadir)'/'"$${x}"; \
         case "$${x}" in \
           '-'*) \

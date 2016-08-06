@@ -197,13 +197,13 @@ uninstall-plaintext-main:
           >'uninstall-plaintext-main.tmp' \
         || 'exit' "$${?}"; \
         x=$(srcdir); \
-        x='x='`'sh' \
+        x=`'sh' \
           '-' \
           "$${x}"'/build-aux/sh-form.sh' \
           '--stdin' \
           <'uninstall-plaintext-main.tmp' \
         ` || 'exit' "$${?}"; \
-        'eval' "$${x}"; \
+        'eval' 'x='"$${x}"; \
         x=$(DESTDIR)$(plaintextdir)'/'"$${x}"; \
         case "$${x}" in \
           '-'*) \
