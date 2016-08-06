@@ -119,62 +119,74 @@ install-java: install-java-gatbps_x
 install-java-gatbps_x: java-gatbps_x
 	@$[](NORMAL_INSTALL)
 	$[](AM@&t@_V_at){ \
+  case '\'''\''$[](java_[]gatbps_y[]_dst) in \
+    ?*) \
+      '\''exit'\'' '\''0'\''; \
+    ;; \
+  esac; \
+  '\''exit'\'' '\''1'\''; \
+:;}
+	$[](AM@&t@_V_at){ \
+  case '\'''\''$[](javadir) in \
+    ?*) \
+      '\''exit'\'' '\''0'\''; \
+    ;; \
+  esac; \
+  '\''exit'\'' '\''1'\''; \
+:;}
+	$[](AM@&t@_V_at){ \
   case '\'''\''$[](java_[]gatbps_y[]_noinst) in \
     ?*) \
       '\'':'\''; \
     ;; \
     *) \
-      case '\'''\''$[](javadir) in \
-        ?*) \
-          d=$[](DESTDIR)$[](javadir); \
-          case "$[]$[]{d}" in \
-            '\''-'\''*) \
-              d='\''./'\''"$[]$[]{d}"; \
-            ;; \
-          esac; \
-          if $[](AM@&t@_V_P); then \
-            '\'':'\''; \
-          else \
-            '\''sh'\'' \
-              '\''-'\'' \
-              $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
-              '\''--'\'' \
-              $[](MKDIR_P) \
-              "$[]$[]{d}" \
-            ; \
-          fi; \
-          $[](MKDIR_P) \
-            "$[]$[]{d}" \
-          || '\''exit'\'' "$[]$[]{?}"; \
-          if '\''test'\'' '\''-f'\'' $[](java_[]gatbps_y[]_dst); then \
-            x='\''.'\''; \
-          else \
-            x=$[](srcdir); \
-            case "$[]$[]{x}" in \
-              '\''-'\''*) \
-                x='\''./'\''"$[]$[]{x}"; \
-              ;; \
-            esac; \
-          fi; \
-          x="$[]$[]{x}"'\''/'\''$[](java_[]gatbps_y[]_dst); \
-          if $[](AM@&t@_V_P); then \
-            '\'':'\''; \
-          else \
-            '\''sh'\'' \
-              '\''-'\'' \
-              $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
-              '\''--'\'' \
-              $[](INSTALL_DATA) \
-              "$[]$[]{x}" \
-              "$[]$[]{d}" \
-            ; \
-          fi; \
-          $[](INSTALL_DATA) \
-            "$[]$[]{x}" \
-            "$[]$[]{d}" \
-          || '\''exit'\'' "$[]$[]{?}"; \
+      d=$[](DESTDIR)$[](javadir); \
+      case "$[]$[]{d}" in \
+        '\''-'\''*) \
+          d='\''./'\''"$[]$[]{d}"; \
         ;; \
       esac; \
+      if $[](AM@&t@_V_P); then \
+        '\'':'\''; \
+      else \
+        '\''sh'\'' \
+          '\''-'\'' \
+          $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
+          '\''--'\'' \
+          $[](MKDIR_P) \
+          "$[]$[]{d}" \
+        ; \
+      fi; \
+      $[](MKDIR_P) \
+        "$[]$[]{d}" \
+      || '\''exit'\'' "$[]$[]{?}"; \
+      if '\''test'\'' '\''-f'\'' $[](java_[]gatbps_y[]_dst); then \
+        x='\''.'\''; \
+      else \
+        x=$[](srcdir); \
+        case "$[]$[]{x}" in \
+          '\''-'\''*) \
+            x='\''./'\''"$[]$[]{x}"; \
+          ;; \
+        esac; \
+      fi; \
+      x="$[]$[]{x}"'\''/'\''$[](java_[]gatbps_y[]_dst); \
+      if $[](AM@&t@_V_P); then \
+        '\'':'\''; \
+      else \
+        '\''sh'\'' \
+          '\''-'\'' \
+          $[](srcdir)'\''/build-aux/sh-form.sh'\'' \
+          '\''--'\'' \
+          $[](INSTALL_DATA) \
+          "$[]$[]{x}" \
+          "$[]$[]{d}" \
+        ; \
+      fi; \
+      $[](INSTALL_DATA) \
+        "$[]$[]{x}" \
+        "$[]$[]{d}" \
+      || '\''exit'\'' "$[]$[]{?}"; \
     ;; \
   esac; \
   '\''exit'\'' '\''0'\''; \
