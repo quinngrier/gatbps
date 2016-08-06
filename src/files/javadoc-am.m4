@@ -35,6 +35,22 @@ GATBPS_V_JAVADOC_1 =
 $(javadoc_dst): $(javadoc_src)
 $(javadoc_dst): $(javadoc_src_nodist)
 	$(GATBPS_V_JAVADOC)':'
+	$(AM_V_at){ \
+  case ''$(javadoc_dst) in \
+    ?*) \
+      'exit' '0'; \
+    ;; \
+  esac; \
+  'exit' '1'; \
+:;}
+	$(AM_V_at){ \
+  case ''$(javadoc_src)$(javadoc_src_nodist) in \
+    ?*) \
+      'exit' '0'; \
+    ;; \
+  esac; \
+  'exit' '1'; \
+:;}
 	'rm' \
   '-f' \
   '-r' \
