@@ -49,7 +49,7 @@ $(javadoc_dst): $(javadoc_src_nodist)
   done; \
   'exit' '1'; \
 :;}
-	'rm' \
+	$(AM_V_at)'rm' \
   '-f' \
   '-r' \
   './'$(javadoc_dst) \
