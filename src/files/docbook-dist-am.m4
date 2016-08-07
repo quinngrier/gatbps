@@ -25,6 +25,7 @@ $(docbook_dist_dst): $(docbook_dist_dep)
         'echo' \
           '$$(docbook_dist_dst)' \
           'contains multiple words' \
+          >&2 \
         ; \
         'exit' '1'; \
       ;; \
@@ -38,6 +39,7 @@ $(docbook_dist_dst): $(docbook_dist_dep)
   'echo' \
     '$$(docbook_dist_dst)' \
     'is not set' \
+    >&2 \
   ; \
   'exit' '1'; \
 :;}
@@ -50,6 +52,7 @@ $(docbook_dist_dst): $(docbook_dist_dep)
         'echo' \
           '$$(docbook_dist_src)' \
           'contains multiple words' \
+          >&2 \
         ; \
         'exit' '1'; \
       ;; \
@@ -63,6 +66,7 @@ $(docbook_dist_dst): $(docbook_dist_dep)
   'echo' \
     '$$(docbook_dist_src)' \
     'is not set' \
+    >&2 \
   ; \
   'exit' '1'; \
 :;}

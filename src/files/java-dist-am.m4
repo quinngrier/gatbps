@@ -25,6 +25,7 @@ $(java_dist_dst): $(java_dist_dep)
         'echo' \
           '$$(java_dist_dst)' \
           'contains multiple words' \
+          >&2 \
         ; \
         'exit' '1'; \
       ;; \
@@ -38,6 +39,7 @@ $(java_dist_dst): $(java_dist_dep)
   'echo' \
     '$$(java_dist_dst)' \
     'is not set' \
+    >&2 \
   ; \
   'exit' '1'; \
 :;}
@@ -50,6 +52,7 @@ $(java_dist_dst): $(java_dist_dep)
         'echo' \
           '$$(java_dist_src)' \
           'contains multiple words' \
+          >&2 \
         ; \
         'exit' '1'; \
       ;; \
@@ -63,6 +66,7 @@ $(java_dist_dst): $(java_dist_dep)
   'echo' \
     '$$(java_dist_src)' \
     'is not set' \
+    >&2 \
   ; \
   'exit' '1'; \
 :;}
