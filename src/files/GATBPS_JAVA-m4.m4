@@ -135,11 +135,13 @@ install-java-gatbps_x: java-gatbps_x
   '\''exit'\'' '\''1'\''; \
 :;}
 	$[](AM@&t@_V_at){ \
-  case '\'''\''$[](java_[]gatbps_y[]_noinst) in \
+  x='\''x'\''; \
+  for y in $[](java_[]gatbps_y[]_noinst); do \
+    x='\'''\''; \
+    '\''break'\''; \
+  done; \
+  case "$[]$[]{x}" in \
     ?*) \
-      '\'':'\''; \
-    ;; \
-    *) \
       d=$[](DESTDIR)$[](javadir); \
       case "$[]$[]{d}" in \
         '\''-'\''*) \
@@ -299,11 +301,13 @@ uninstall-java-gatbps_x:
   '\''exit'\'' '\''1'\''; \
 :;}
 	$[](AM@&t@_V_at){ \
-  case '\'''\''$[](java_[]gatbps_y[]_noinst) in \
+  x='\''x'\''; \
+  for y in $[](java_[]gatbps_y[]_noinst); do \
+    x='\'''\''; \
+    '\''break'\''; \
+  done; \
+  case "$[]$[]{x}" in \
     ?*) \
-      '\'':'\''; \
-    ;; \
-    *) \
       ( \
         '\''expr'\'' \
           '\''X/'\''$[](java_[]gatbps_y[]_dst) \

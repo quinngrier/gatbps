@@ -181,11 +181,13 @@ install-javadoc-main: javadoc-main
   'exit' '1'; \
 :;}
 	$(AM_V_at){ \
-  case ''$(javadoc_noinst) in \
+  x='x'; \
+  for y in $(javadoc_noinst); do \
+    x=''; \
+    'break'; \
+  done; \
+  case "$${x}" in \
     ?*) \
-      ':'; \
-    ;; \
-    *) \
       d=$(DESTDIR)$(javadocdir); \
       case "$${d}" in \
         '-'*) \
@@ -283,11 +285,13 @@ uninstall-javadoc-main:
   'exit' '1'; \
 :;}
 	$(AM_V_at){ \
-  case ''$(javadoc_noinst) in \
+  x='x'; \
+  for y in $(javadoc_noinst); do \
+    x=''; \
+    'break'; \
+  done; \
+  case "$${x}" in \
     ?*) \
-      ':'; \
-    ;; \
-    *) \
       ( \
         'expr' \
           'X/'$(javadoc_dst) \

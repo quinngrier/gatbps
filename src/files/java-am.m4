@@ -179,11 +179,13 @@ install-java-main: java-main
   'exit' '1'; \
 :;}
 	$(AM_V_at){ \
-  case ''$(java_noinst) in \
+  x='x'; \
+  for y in $(java_noinst); do \
+    x=''; \
+    'break'; \
+  done; \
+  case "$${x}" in \
     ?*) \
-      ':'; \
-    ;; \
-    *) \
       d=$(DESTDIR)$(javadir); \
       case "$${d}" in \
         '-'*) \
@@ -343,11 +345,13 @@ uninstall-java-main:
   'exit' '1'; \
 :;}
 	$(AM_V_at){ \
-  case ''$(java_noinst) in \
+  x='x'; \
+  for y in $(java_noinst); do \
+    x=''; \
+    'break'; \
+  done; \
+  case "$${x}" in \
     ?*) \
-      ':'; \
-    ;; \
-    *) \
       ( \
         'expr' \
           'X/'$(java_dst) \

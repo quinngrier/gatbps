@@ -109,11 +109,13 @@ install-docbook-main: docbook-main
   'exit' '1'; \
 :;}
 	$(AM_V_at){ \
-  case ''$(docbook_noinst) in \
+  x='x'; \
+  for y in $(docbook_noinst); do \
+    x=''; \
+    'break'; \
+  done; \
+  case "$${x}" in \
     ?*) \
-      ':'; \
-    ;; \
-    *) \
       d=$(DESTDIR)$(docbookdir); \
       case "$${d}" in \
         '-'*) \
@@ -187,11 +189,13 @@ uninstall-docbook-main:
   'exit' '1'; \
 :;}
 	$(AM_V_at){ \
-  case ''$(docbook_noinst) in \
+  x='x'; \
+  for y in $(docbook_noinst); do \
+    x=''; \
+    'break'; \
+  done; \
+  case "$${x}" in \
     ?*) \
-      ':'; \
-    ;; \
-    *) \
       ( \
         'expr' \
           'X/'$(docbook_dst) \

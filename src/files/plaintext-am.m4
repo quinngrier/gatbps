@@ -105,11 +105,13 @@ install-plaintext-main: plaintext-main
   'exit' '1'; \
 :;}
 	$(AM_V_at){ \
-  case ''$(plaintext_noinst) in \
+  x='x'; \
+  for y in $(plaintext_noinst); do \
+    x=''; \
+    'break'; \
+  done; \
+  case "$${x}" in \
     ?*) \
-      ':'; \
-    ;; \
-    *) \
       d=$(DESTDIR)$(plaintextdir); \
       case "$${d}" in \
         '-'*) \
@@ -187,11 +189,13 @@ uninstall-plaintext-main:
   'exit' '1'; \
 :;}
 	$(AM_V_at){ \
-  case ''$(plaintext_noinst) in \
+  x='x'; \
+  for y in $(plaintext_noinst); do \
+    x=''; \
+    'break'; \
+  done; \
+  case "$${x}" in \
     ?*) \
-      ':'; \
-    ;; \
-    *) \
       ( \
         'expr' \
           'X/'$(plaintext_dst) \
