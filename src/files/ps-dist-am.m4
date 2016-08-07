@@ -88,7 +88,19 @@ clean-ps-dist: clean-ps-dist-main
 
 clean-ps-dist-main:
 	-{ \
-  case ''$(ps_dist_dst) in \
+  x=''; \
+  for y in $(ps_dist_dst); do \
+    x="$${x}"'x'; \
+    case "$${x}" in \
+      ??*) \
+        'break'; \
+      ;; \
+    esac; \
+  done; \
+  case "$${x}" in \
+    ??*) \
+      ':'; \
+    ;; \
     ?*) \
       'rm' \
         '-f' \

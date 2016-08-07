@@ -88,7 +88,19 @@ clean-java-dist: clean-java-dist-main
 
 clean-java-dist-main:
 	-{ \
-  case ''$(java_dist_dst) in \
+  x=''; \
+  for y in $(java_dist_dst); do \
+    x="$${x}"'x'; \
+    case "$${x}" in \
+      ??*) \
+        'break'; \
+      ;; \
+    esac; \
+  done; \
+  case "$${x}" in \
+    ??*) \
+      ':'; \
+    ;; \
     ?*) \
       'rm' \
         '-f' \

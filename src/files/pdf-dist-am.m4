@@ -88,7 +88,19 @@ clean-pdf-dist: clean-pdf-dist-main
 
 clean-pdf-dist-main:
 	-{ \
-  case ''$(pdf_dist_dst) in \
+  x=''; \
+  for y in $(pdf_dist_dst); do \
+    x="$${x}"'x'; \
+    case "$${x}" in \
+      ??*) \
+        'break'; \
+      ;; \
+    esac; \
+  done; \
+  case "$${x}" in \
+    ??*) \
+      ':'; \
+    ;; \
     ?*) \
       'rm' \
         '-f' \

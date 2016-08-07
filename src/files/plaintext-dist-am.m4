@@ -88,7 +88,19 @@ clean-plaintext-dist: clean-plaintext-dist-main
 
 clean-plaintext-dist-main:
 	-{ \
-  case ''$(plaintext_dist_dst) in \
+  x=''; \
+  for y in $(plaintext_dist_dst); do \
+    x="$${x}"'x'; \
+    case "$${x}" in \
+      ??*) \
+        'break'; \
+      ;; \
+    esac; \
+  done; \
+  case "$${x}" in \
+    ??*) \
+      ':'; \
+    ;; \
     ?*) \
       'rm' \
         '-f' \

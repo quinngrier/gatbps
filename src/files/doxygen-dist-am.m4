@@ -94,7 +94,19 @@ clean-doxygen-dist: clean-doxygen-dist-main
 
 clean-doxygen-dist-main:
 	-{ \
-  case ''$(doxygen_dist_dst) in \
+  x=''; \
+  for y in $(doxygen_dist_dst); do \
+    x="$${x}"'x'; \
+    case "$${x}" in \
+      ??*) \
+        'break'; \
+      ;; \
+    esac; \
+  done; \
+  case "$${x}" in \
+    ??*) \
+      ':'; \
+    ;; \
     ?*) \
       'rm' \
         '-f' \

@@ -97,7 +97,19 @@ clean-html-dist: clean-html-dist-main
 
 clean-html-dist-main:
 	-{ \
-  case ''$(html_dist_dst) in \
+  x=''; \
+  for y in $(html_dist_dst); do \
+    x="$${x}"'x'; \
+    case "$${x}" in \
+      ??*) \
+        'break'; \
+      ;; \
+    esac; \
+  done; \
+  case "$${x}" in \
+    ??*) \
+      ':'; \
+    ;; \
     ?*) \
       'rm' \
         '-f' \

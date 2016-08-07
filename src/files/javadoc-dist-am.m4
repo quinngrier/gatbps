@@ -94,7 +94,19 @@ clean-javadoc-dist: clean-javadoc-dist-main
 
 clean-javadoc-dist-main:
 	-{ \
-  case ''$(javadoc_dist_dst) in \
+  x=''; \
+  for y in $(javadoc_dist_dst); do \
+    x="$${x}"'x'; \
+    case "$${x}" in \
+      ??*) \
+        'break'; \
+      ;; \
+    esac; \
+  done; \
+  case "$${x}" in \
+    ??*) \
+      ':'; \
+    ;; \
     ?*) \
       'rm' \
         '-f' \

@@ -88,7 +88,19 @@ clean-docbook-dist: clean-docbook-dist-main
 
 clean-docbook-dist-main:
 	-{ \
-  case ''$(docbook_dist_dst) in \
+  x=''; \
+  for y in $(docbook_dist_dst); do \
+    x="$${x}"'x'; \
+    case "$${x}" in \
+      ??*) \
+        'break'; \
+      ;; \
+    esac; \
+  done; \
+  case "$${x}" in \
+    ??*) \
+      ':'; \
+    ;; \
     ?*) \
       'rm' \
         '-f' \

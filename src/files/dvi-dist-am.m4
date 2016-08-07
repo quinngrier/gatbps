@@ -88,7 +88,19 @@ clean-dvi-dist: clean-dvi-dist-main
 
 clean-dvi-dist-main:
 	-{ \
-  case ''$(dvi_dist_dst) in \
+  x=''; \
+  for y in $(dvi_dist_dst); do \
+    x="$${x}"'x'; \
+    case "$${x}" in \
+      ??*) \
+        'break'; \
+      ;; \
+    esac; \
+  done; \
+  case "$${x}" in \
+    ??*) \
+      ':'; \
+    ;; \
     ?*) \
       'rm' \
         '-f' \
