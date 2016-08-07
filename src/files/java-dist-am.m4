@@ -68,7 +68,10 @@ clean-java-dist-main:
 	-{ \
   case ''$(java_dist_dst) in \
     ?*) \
-      'rm' '-f' './'$(java_dist_dst); \
+      'rm' \
+        '-f' \
+        './'$(java_dist_dst) \
+      ; \
     ;; \
   esac; \
   'exit' '0'; \

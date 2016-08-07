@@ -68,7 +68,10 @@ clean-plaintext-dist-main:
 	-{ \
   case ''$(plaintext_dist_dst) in \
     ?*) \
-      'rm' '-f' './'$(plaintext_dist_dst); \
+      'rm' \
+        '-f' \
+        './'$(plaintext_dist_dst) \
+      ; \
     ;; \
   esac; \
   'exit' '0'; \

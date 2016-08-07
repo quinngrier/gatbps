@@ -68,7 +68,10 @@ clean-dvi-dist-main:
 	-{ \
   case ''$(dvi_dist_dst) in \
     ?*) \
-      'rm' '-f' './'$(dvi_dist_dst); \
+      'rm' \
+        '-f' \
+        './'$(dvi_dist_dst) \
+      ; \
     ;; \
   esac; \
   'exit' '0'; \

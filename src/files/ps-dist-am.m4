@@ -68,7 +68,10 @@ clean-ps-dist-main:
 	-{ \
   case ''$(ps_dist_dst) in \
     ?*) \
-      'rm' '-f' './'$(ps_dist_dst); \
+      'rm' \
+        '-f' \
+        './'$(ps_dist_dst) \
+      ; \
     ;; \
   esac; \
   'exit' '0'; \

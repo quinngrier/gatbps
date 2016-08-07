@@ -74,7 +74,11 @@ clean-javadoc-dist-main:
 	-{ \
   case ''$(javadoc_dist_dst) in \
     ?*) \
-      'rm' '-f' '-r' './'$(javadoc_dist_dst); \
+      'rm' \
+        '-f' \
+        '-r' \
+        './'$(javadoc_dist_dst) \
+      ; \
     ;; \
   esac; \
   'exit' '0'; \

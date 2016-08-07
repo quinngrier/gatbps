@@ -68,7 +68,10 @@ clean-docbook-dist-main:
 	-{ \
   case ''$(docbook_dist_dst) in \
     ?*) \
-      'rm' '-f' './'$(docbook_dist_dst); \
+      'rm' \
+        '-f' \
+        './'$(docbook_dist_dst) \
+      ; \
     ;; \
   esac; \
   'exit' '0'; \

@@ -68,7 +68,10 @@ clean-pdf-dist-main:
 	-{ \
   case ''$(pdf_dist_dst) in \
     ?*) \
-      'rm' '-f' './'$(pdf_dist_dst); \
+      'rm' \
+        '-f' \
+        './'$(pdf_dist_dst) \
+      ; \
     ;; \
   esac; \
   'exit' '0'; \
