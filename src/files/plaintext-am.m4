@@ -75,7 +75,10 @@ clean-plaintext-main:
 	-{ \
   case ''$(plaintext_dst) in \
     ?*) \
-      'rm' '-f' './'$(plaintext_dst); \
+      'rm' \
+        '-f' \
+        './'$(plaintext_dst) \
+      ; \
     ;; \
   esac; \
   'exit' '0'; \

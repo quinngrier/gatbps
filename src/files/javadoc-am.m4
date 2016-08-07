@@ -148,7 +148,11 @@ clean-javadoc-main:
 	-{ \
   case ''$(javadoc_dst) in \
     ?*) \
-      'rm' '-f' '-r' './'$(javadoc_dst); \
+      'rm' \
+        '-f' \
+        '-r' \
+        './'$(javadoc_dst) \
+      ; \
     ;; \
   esac; \
   'exit' '0'; \

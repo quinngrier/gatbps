@@ -73,7 +73,10 @@ clean-docbook-main:
 	-{ \
   case ''$(docbook_dst) in \
     ?*) \
-      'rm' '-f' './'$(docbook_dst); \
+      'rm' \
+        '-f' \
+        './'$(docbook_dst) \
+      ; \
     ;; \
   esac; \
   'exit' '0'; \
