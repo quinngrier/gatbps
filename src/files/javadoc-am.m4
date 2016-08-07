@@ -139,6 +139,7 @@ $(javadoc_dst): $(javadoc_src_nodist)
 .PHONY: install-javadoc-main
 .PHONY: javadoc
 .PHONY: javadoc-main
+.PHONY: uninstall-javadoc
 .PHONY: uninstall-javadoc-main
 
 clean-javadoc: clean-javadoc-main
@@ -256,6 +257,8 @@ install-javadoc-main: javadoc-main
 javadoc: javadoc-main
 
 javadoc-main: $(javadoc_dst)
+
+uninstall-javadoc: uninstall-javadoc-main
 
 uninstall-javadoc-main:
 	@$(NORMAL_UNINSTALL)
