@@ -22,7 +22,10 @@ $(html_dist_dst): $(html_dist_dep)
     x="$${x}"'x'; \
     case "$${x}" in \
       ??*) \
-        'echo' '$$(html_dist_dst) contains multiple words'; \
+        'echo' \
+          '$$(html_dist_dst)' \
+          'contains multiple words' \
+        ; \
         'exit' '1'; \
       ;; \
     esac; \
@@ -32,7 +35,10 @@ $(html_dist_dst): $(html_dist_dep)
       'exit' '0'; \
     ;; \
   esac; \
-  'echo' '$$(html_dist_dst) is not set'; \
+  'echo' \
+    '$$(html_dist_dst)' \
+    'is not set' \
+  ; \
   'exit' '1'; \
 :;}
 	$(AM_V_at){ \
@@ -41,7 +47,10 @@ $(html_dist_dst): $(html_dist_dep)
     x="$${x}"'x'; \
     case "$${x}" in \
       ??*) \
-        'echo' '$$(html_dist_src) contains multiple words'; \
+        'echo' \
+          '$$(html_dist_src)' \
+          'contains multiple words' \
+        ; \
         'exit' '1'; \
       ;; \
     esac; \
@@ -51,7 +60,10 @@ $(html_dist_dst): $(html_dist_dep)
       'exit' '0'; \
     ;; \
   esac; \
-  'echo' '$$(html_dist_src) is not set'; \
+  'echo' \
+    '$$(html_dist_src)' \
+    'is not set' \
+  ; \
   'exit' '1'; \
 :;}
 	$(AM_V_at)$(MAKE) \

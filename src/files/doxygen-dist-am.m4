@@ -22,7 +22,10 @@ $(doxygen_dist_dst): $(doxygen_dist_dep)
     x="$${x}"'x'; \
     case "$${x}" in \
       ??*) \
-        'echo' '$$(doxygen_dist_dst) contains multiple words'; \
+        'echo' \
+          '$$(doxygen_dist_dst)' \
+          'contains multiple words' \
+        ; \
         'exit' '1'; \
       ;; \
     esac; \
@@ -32,7 +35,10 @@ $(doxygen_dist_dst): $(doxygen_dist_dep)
       'exit' '0'; \
     ;; \
   esac; \
-  'echo' '$$(doxygen_dist_dst) is not set'; \
+  'echo' \
+    '$$(doxygen_dist_dst)' \
+    'is not set' \
+  ; \
   'exit' '1'; \
 :;}
 	$(AM_V_at){ \
@@ -41,7 +47,10 @@ $(doxygen_dist_dst): $(doxygen_dist_dep)
     x="$${x}"'x'; \
     case "$${x}" in \
       ??*) \
-        'echo' '$$(doxygen_dist_src) contains multiple words'; \
+        'echo' \
+          '$$(doxygen_dist_src)' \
+          'contains multiple words' \
+        ; \
         'exit' '1'; \
       ;; \
     esac; \
@@ -51,7 +60,10 @@ $(doxygen_dist_dst): $(doxygen_dist_dep)
       'exit' '0'; \
     ;; \
   esac; \
-  'echo' '$$(doxygen_dist_src) is not set'; \
+  'echo' \
+    '$$(doxygen_dist_src)' \
+    'is not set' \
+  ; \
   'exit' '1'; \
 :;}
 	$(AM_V_at)$(MAKE) \
