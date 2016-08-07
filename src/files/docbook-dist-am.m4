@@ -109,14 +109,11 @@ clean-docbook-dist-main:
     x="$${x}"'x'; \
     case "$${x}" in \
       ??*) \
-        'break'; \
+        'exit' '0'; \
       ;; \
     esac; \
   done; \
   case "$${x}" in \
-    ??*) \
-      ':'; \
-    ;; \
     ?*) \
       'rm' \
         '-f' \
