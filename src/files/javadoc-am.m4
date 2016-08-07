@@ -59,17 +59,37 @@ $(javadoc_dst): $(javadoc_src_nodist)
 ;
 	$(AM_V_at){ \
   ( \
-    'sh' \
-      '-' \
-      $(srcdir)'/build-aux/sh-form.sh' \
-      '--' \
-      $(JAVADOC) \
-      '-d' \
-      $(javadoc_dst) \
-      $(javadoc_JAVADOCFLAGS) \
-      $(JAVADOCFLAGS) \
-      >'javadoc-main.tmp1' \
-    || 'exit' "$${?}"; \
+    x='x'; \
+    for y in $(javadoc_JAVADOCFLAGS); do \
+      'sh' \
+        '-' \
+        $(srcdir)'/build-aux/sh-form.sh' \
+        '--' \
+        $(JAVADOC) \
+        '-d' \
+        $(javadoc_dst) \
+        $(javadoc_JAVADOCFLAGS) \
+        $(JAVADOCFLAGS) \
+        >'javadoc-main.tmp1' \
+      || 'exit' "$${?}"; \
+      x=''; \
+      'break'; \
+    done; \
+    case "$${x}" in \
+      ?*) \
+        'sh' \
+          '-' \
+          $(srcdir)'/build-aux/sh-form.sh' \
+          '--' \
+          $(JAVADOC) \
+          '-d' \
+          $(javadoc_dst) \
+          $(AM_JAVADOCFLAGS) \
+          $(JAVADOCFLAGS) \
+          >'javadoc-main.tmp1' \
+        || 'exit' "$${?}"; \
+      ;; \
+    esac; \
     $(SED) \
       '$$s/$$/ \\/' \
       <'javadoc-main.tmp1' \
