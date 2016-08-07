@@ -44,11 +44,9 @@ $(javadoc_dst): $(javadoc_src_nodist)
   'exit' '1'; \
 :;}
 	$(AM_V_at){ \
-  case ''$(javadoc_src)$(javadoc_src_nodist) in \
-    ?*) \
-      'exit' '0'; \
-    ;; \
-  esac; \
+  for x in $(javadoc_src) $(javadoc_src_nodist); do \
+    'exit' '0'; \
+  done; \
   'exit' '1'; \
 :;}
 	'rm' \
