@@ -17,19 +17,41 @@ header_comment({%|##|%}, {%|##|%}){%|
 $(java_dist_dst): $(java_dist_dep)
 	$(GATBPS_V_CP)':'
 	$(AM_V_at){ \
-  case ''$(java_dist_dst) in \
+  x=''; \
+  for y in $(java_dist_dst); do \
+    x="$${x}"'x'; \
+    case "$${x}" in \
+      ??*) \
+        'echo' '$$(java_dist_dst) contains multiple words'; \
+        'exit' '1'; \
+      ;; \
+    esac; \
+  done; \
+  case "$${x}" in \
     ?*) \
       'exit' '0'; \
     ;; \
   esac; \
+  'echo' '$$(java_dist_dst) is not set'; \
   'exit' '1'; \
 :;}
 	$(AM_V_at){ \
-  case ''$(java_dist_src) in \
+  x=''; \
+  for y in $(java_dist_src); do \
+    x="$${x}"'x'; \
+    case "$${x}" in \
+      ??*) \
+        'echo' '$$(java_dist_src) contains multiple words'; \
+        'exit' '1'; \
+      ;; \
+    esac; \
+  done; \
+  case "$${x}" in \
     ?*) \
       'exit' '0'; \
     ;; \
   esac; \
+  'echo' '$$(java_dist_src) is not set'; \
   'exit' '1'; \
 :;}
 	$(AM_V_at)$(MAKE) \
