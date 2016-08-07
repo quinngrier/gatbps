@@ -331,7 +331,6 @@ uninstall-javadoc-main:
       x="$${?}"; \
       'rm' \
         '-f' \
-        '-r' \
         'uninstall-javadoc-main.tmp' \
       ; \
       'exit' "$${x}"; \
