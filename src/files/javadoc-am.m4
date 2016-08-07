@@ -133,10 +133,13 @@ $(javadoc_dst): $(javadoc_src_nodist)
   'exit' "$${x}"; \
 :;}
 
+.PHONY: clean-javadoc
 .PHONY: clean-javadoc-main
 .PHONY: install-javadoc-main
 .PHONY: javadoc-main
 .PHONY: uninstall-javadoc-main
+
+clean-javadoc: clean-javadoc-main
 
 clean-javadoc-main:
 	-{ \
@@ -148,7 +151,7 @@ clean-javadoc-main:
   'exit' '0'; \
 :;}
 
-clean-local: clean-javadoc-main
+clean-local: clean-javadoc
 
 install-javadoc-main: javadoc-main
 	@$(NORMAL_INSTALL)
