@@ -60,21 +60,59 @@ $(javadoc_dst): $(javadoc_src_nodist)
   './'$(javadoc_dst) \
 ;
 	$(AM_V_at){ \
-  src=''; \
-  for x in $(javadoc_src) $(javadoc_src_nodist); do \
-    if 'test' '-f' "$${x}"; then \
-      src="$${src} $${x}"; \
-    else \
-      src="$${src} $(srcdir)/$${x}"; \
-    fi; \
-  done; \
-  $(JAVADOC) \
-    '-d' \
-    $(javadoc_dst) \
-    $(javadoc_JAVADOCFLAGS) \
-    $(JAVADOCFLAGS) \
-    $${src} \
+  ( \
+    'sh' \
+      '-' \
+      $(srcdir)'/build-aux/sh-form.sh' \
+      '--' \
+      $(JAVADOC) \
+      '-d' \
+      $(javadoc_dst) \
+      $(javadoc_JAVADOCFLAGS) \
+      $(JAVADOCFLAGS) \
+      >'javadoc-main.tmp1' \
+    || 'exit' "$${?}"; \
+    $(SED) \
+      '$$s/$$/ \\/' \
+      <'javadoc-main.tmp1' \
+      >'javadoc-main.tmp2' \
+    || 'exit' "$${?}"; \
+    for x in $(javadoc_src) $(javadoc_src_nodist); do \
+      if 'test' '-f' "$${x}"; then \
+        d='.'; \
+      else \
+        d=$(srcdir); \
+      fi; \
+      'sh' \
+        '-' \
+        $(srcdir)'/build-aux/sh-form.sh' \
+        '--' \
+        "$${d}"'/'"$${x}" \
+        >'javadoc-main.tmp1' \
+      || 'exit' "$${?}"; \
+      $(SED) \
+        '$$s/$$/ \\/' \
+        <'javadoc-main.tmp1' \
+        >>'javadoc-main.tmp2' \
+      || 'exit' "$${?}"; \
+    done; \
+    'echo' \
+      ';' \
+      >>'javadoc-main.tmp2' \
+    || 'exit' "$${?}"; \
+    x=`'cat' \
+      'javadoc-main.tmp2' \
+    ` || 'exit' "$${?}"; \
+    'eval' "$${x}"; \
+    'exit' "$${?}"; \
+  :;); \
+  x="$${?}"; \
+  'rm' \
+    '-f' \
+    'javadoc-main.tmp1' \
+    'javadoc-main.tmp2' \
   ; \
+  'exit' "$${x}"; \
 :;}
 
 .PHONY: clean-javadoc
