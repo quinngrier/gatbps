@@ -200,6 +200,7 @@ bin_gatbps_src += src/tools/header_comment.m4
 bin_gatbps_src += src/tools/help_code.m4
 bin_gatbps_src += src/tools/math_symbol.m4
 bin_gatbps_src += src/tools/recursion_code.m4
+bin_gatbps_src += src/tools/rules_code.m4
 
 doc_gatbps_TEXINFOS =
 doc_gatbps_TEXINFOS += build-aux/texinfo.css
