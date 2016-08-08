@@ -394,6 +394,11 @@ doc/man/gatbps.1: bin/gatbps
 
 ## end_rules
 
+##
+## The following section should use @SOFT_INCLUDE@ to include
+## src/gatbps.m4 and src/files/*.m4 with ".m4" replaced by ".d".
+##
+
 ## begin_includes
 
 @SOFT_INCLUDE@ src/files/CC0-1-0-AC-COPYRIGHT-ac.d
@@ -472,6 +477,11 @@ doc/man/gatbps.1: bin/gatbps
 @SOFT_INCLUDE@ src/files/sh-form-sh.d
 @SOFT_INCLUDE@ src/files/texinfo-css.d
 @SOFT_INCLUDE@ src/gatbps.d
+
+## end_includes
+
+## begin_includes
+
 include $(srcdir)/build-aux/GATBPS_CONFIG_FILE_RULES.am
 include $(srcdir)/build-aux/cp.am
 include $(srcdir)/build-aux/docbook-dist.am
