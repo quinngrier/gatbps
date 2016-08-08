@@ -3,6 +3,7 @@ changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
 rules_code({%|src/files/GATBPS_JAVA-m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code|%}){%||%}dnl
+include({%|src/tools/contains_exactly_one_word_m.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
 header_comment({%|dnl|%}, {%|dnl|%}){%|
@@ -119,22 +120,10 @@ install-java: install-java-]gatbps_x[
 
 install-java-]gatbps_x[: java-]gatbps_x[
 	@$][(NORMAL_INSTALL)
-	$][(AM@&t@_V_at){ \
-  case '\'''\''$][(java_]gatbps_y[_dst) in \
-    ?*) \
-      '\''exit'\'' '\''0'\''; \
-    ;; \
-  esac; \
-  '\''exit'\'' '\''1'\''; \
-:;}
-	$][(AM@&t@_V_at){ \
-  case '\'''\''$][(javadir) in \
-    ?*) \
-      '\''exit'\'' '\''0'\''; \
-    ;; \
-  esac; \
-  '\''exit'\'' '\''1'\''; \
-:;}
+	$][(AM@&t@_V_at)|%}dnl
+contains_exactly_one_word_m({%|java_]gatbps_y[_dst|%}){%|
+	$][(AM@&t@_V_at)|%}dnl
+contains_exactly_one_word_m({%|javadir|%}){%|
 	$][(AM@&t@_V_at){ \
   x='\''x'\''; \
   for y in $][(java_]gatbps_y[_noinst); do \
@@ -285,22 +274,10 @@ uninstall-java: uninstall-java-]gatbps_x[
 
 uninstall-java-]gatbps_x[:
 	@$][(NORMAL_UNINSTALL)
-	$][(AM@&t@_V_at){ \
-  case '\'''\''$][(java_]gatbps_y[_dst) in \
-    ?*) \
-      '\''exit'\'' '\''0'\''; \
-    ;; \
-  esac; \
-  '\''exit'\'' '\''1'\''; \
-:;}
-	$][(AM@&t@_V_at){ \
-  case '\'''\''$][(javadir) in \
-    ?*) \
-      '\''exit'\'' '\''0'\''; \
-    ;; \
-  esac; \
-  '\''exit'\'' '\''1'\''; \
-:;}
+	$][(AM@&t@_V_at)|%}dnl
+contains_exactly_one_word_m({%|java_]gatbps_y[_dst|%}){%|
+	$][(AM@&t@_V_at)|%}dnl
+contains_exactly_one_word_m({%|javadir|%}){%|
 	$][(AM@&t@_V_at){ \
   x='\''x'\''; \
   for y in $][(java_]gatbps_y[_noinst); do \
