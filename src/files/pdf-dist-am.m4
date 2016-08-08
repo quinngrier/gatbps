@@ -3,6 +3,7 @@ changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
 rules_code({%|src/files/pdf-dist-am|%}){%||%}dnl
 rules_code({%|src/tools/rules_code|%}){%||%}dnl
+include({%|src/tools/contains_exactly_one_word.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
 header_comment({%|##|%}, {%|##|%}){%|
@@ -16,60 +17,10 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 $(pdf_dist_dst): $(pdf_dist_dep)
 	$(GATBPS_V_CP)':'
-	$(AM_V_at){ \
-  x=''; \
-  for y in $(pdf_dist_dst); do \
-    x="$${x}"'x'; \
-    case "$${x}" in \
-      ??*) \
-        'echo' \
-          '$$(pdf_dist_dst)' \
-          'contains multiple words' \
-          >&2 \
-        ; \
-        'exit' '1'; \
-      ;; \
-    esac; \
-  done; \
-  case "$${x}" in \
-    ?*) \
-      'exit' '0'; \
-    ;; \
-  esac; \
-  'echo' \
-    '$$(pdf_dist_dst)' \
-    'is not set' \
-    >&2 \
-  ; \
-  'exit' '1'; \
-:;}
-	$(AM_V_at){ \
-  x=''; \
-  for y in $(pdf_dist_src); do \
-    x="$${x}"'x'; \
-    case "$${x}" in \
-      ??*) \
-        'echo' \
-          '$$(pdf_dist_src)' \
-          'contains multiple words' \
-          >&2 \
-        ; \
-        'exit' '1'; \
-      ;; \
-    esac; \
-  done; \
-  case "$${x}" in \
-    ?*) \
-      'exit' '0'; \
-    ;; \
-  esac; \
-  'echo' \
-    '$$(pdf_dist_src)' \
-    'is not set' \
-    >&2 \
-  ; \
-  'exit' '1'; \
-:;}
+	$(AM_V_at)|%}dnl
+contains_exactly_one_word({%|pdf_dist_dst|%}){%|
+	$(AM_V_at)|%}dnl
+contains_exactly_one_word({%|pdf_dist_src|%}){%|
 	$(AM_V_at)$(MAKE) \
   $(AM_MAKEFLAGS) \
   $(pdf_dist_src) \
