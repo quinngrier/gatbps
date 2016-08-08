@@ -3,6 +3,7 @@ changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
 rules_code({%|src/files/java-am|%}){%||%}dnl
 rules_code({%|src/tools/rules_code|%}){%||%}dnl
+include({%|src/tools/contains_exactly_one_word.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
 header_comment({%|##|%}, {%|##|%}){%|
@@ -162,22 +163,10 @@ install-java: install-java-main
 
 install-java-main: java-main
 	@$(NORMAL_INSTALL)
-	$(AM_V_at){ \
-  case ''$(java_dst) in \
-    ?*) \
-      'exit' '0'; \
-    ;; \
-  esac; \
-  'exit' '1'; \
-:;}
-	$(AM_V_at){ \
-  case ''$(javadir) in \
-    ?*) \
-      'exit' '0'; \
-    ;; \
-  esac; \
-  'exit' '1'; \
-:;}
+	$(AM_V_at)|%}dnl
+contains_exactly_one_word({%|java_dst|%}){%|
+	$(AM_V_at)|%}dnl
+contains_exactly_one_word({%|javadir|%}){%|
 	$(AM_V_at){ \
   x='x'; \
   for y in $(java_noinst); do \
@@ -328,22 +317,10 @@ uninstall-java: uninstall-java-main
 
 uninstall-java-main:
 	@$(NORMAL_UNINSTALL)
-	$(AM_V_at){ \
-  case ''$(java_dst) in \
-    ?*) \
-      'exit' '0'; \
-    ;; \
-  esac; \
-  'exit' '1'; \
-:;}
-	$(AM_V_at){ \
-  case ''$(javadir) in \
-    ?*) \
-      'exit' '0'; \
-    ;; \
-  esac; \
-  'exit' '1'; \
-:;}
+	$(AM_V_at)|%}dnl
+contains_exactly_one_word({%|java_dst|%}){%|
+	$(AM_V_at)|%}dnl
+contains_exactly_one_word({%|javadir|%}){%|
 	$(AM_V_at){ \
   x='x'; \
   for y in $(java_noinst); do \

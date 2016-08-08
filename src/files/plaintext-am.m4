@@ -3,6 +3,7 @@ changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
 rules_code({%|src/files/plaintext-am|%}){%||%}dnl
 rules_code({%|src/tools/rules_code|%}){%||%}dnl
+include({%|src/tools/contains_exactly_one_word.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
 header_comment({%|##|%}, {%|##|%}){%|
@@ -17,22 +18,10 @@ header_comment({%|##|%}, {%|##|%}){%|
 $(plaintext_dst): $(plaintext_dep)
 $(plaintext_dst): $(plaintext_src)
 	$(AM_V_MAKEINFO)':'
-	$(AM_V_at){ \
-  case ''$(plaintext_dst) in \
-    ?*) \
-      'exit' '0'; \
-    ;; \
-  esac; \
-  'exit' '1'; \
-:;}
-	$(AM_V_at){ \
-  case ''$(plaintext_src) in \
-    ?*) \
-      'exit' '0'; \
-    ;; \
-  esac; \
-  'exit' '1'; \
-:;}
+	$(AM_V_at)|%}dnl
+contains_exactly_one_word({%|plaintext_dst|%}){%|
+	$(AM_V_at)|%}dnl
+contains_exactly_one_word({%|plaintext_src|%}){%|
 	$(MKDIR_P) \
   './'$(@D) \
 ;
@@ -88,22 +77,10 @@ install-plaintext: install-plaintext-main
 
 install-plaintext-main: plaintext-main
 	@$(NORMAL_INSTALL)
-	$(AM_V_at){ \
-  case ''$(plaintext_dst) in \
-    ?*) \
-      'exit' '0'; \
-    ;; \
-  esac; \
-  'exit' '1'; \
-:;}
-	$(AM_V_at){ \
-  case ''$(plaintextdir) in \
-    ?*) \
-      'exit' '0'; \
-    ;; \
-  esac; \
-  'exit' '1'; \
-:;}
+	$(AM_V_at)|%}dnl
+contains_exactly_one_word({%|plaintext_dst|%}){%|
+	$(AM_V_at)|%}dnl
+contains_exactly_one_word({%|plaintextdir|%}){%|
 	$(AM_V_at){ \
   x='x'; \
   for y in $(plaintext_noinst); do \
@@ -172,22 +149,10 @@ uninstall-plaintext: uninstall-plaintext-main
 
 uninstall-plaintext-main:
 	@$(NORMAL_UNINSTALL)
-	$(AM_V_at){ \
-  case ''$(plaintext_dst) in \
-    ?*) \
-      'exit' '0'; \
-    ;; \
-  esac; \
-  'exit' '1'; \
-:;}
-	$(AM_V_at){ \
-  case ''$(plaintextdir) in \
-    ?*) \
-      'exit' '0'; \
-    ;; \
-  esac; \
-  'exit' '1'; \
-:;}
+	$(AM_V_at)|%}dnl
+contains_exactly_one_word({%|plaintext_dst|%}){%|
+	$(AM_V_at)|%}dnl
+contains_exactly_one_word({%|plaintextdir|%}){%|
 	$(AM_V_at){ \
   x='x'; \
   for y in $(plaintext_noinst); do \

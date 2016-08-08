@@ -3,6 +3,7 @@ changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
 rules_code({%|src/files/javadoc-am|%}){%||%}dnl
 rules_code({%|src/tools/rules_code|%}){%||%}dnl
+include({%|src/tools/contains_exactly_one_word.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
 header_comment({%|##|%}, {%|##|%}){%|
@@ -35,14 +36,8 @@ GATBPS_V_JAVADOC_1 =
 $(javadoc_dst): $(javadoc_src)
 $(javadoc_dst): $(javadoc_src_nodist)
 	$(GATBPS_V_JAVADOC)':'
-	$(AM_V_at){ \
-  case ''$(javadoc_dst) in \
-    ?*) \
-      'exit' '0'; \
-    ;; \
-  esac; \
-  'exit' '1'; \
-:;}
+	$(AM_V_at)|%}dnl
+contains_exactly_one_word({%|javadoc_dst|%}){%|
 	$(AM_V_at){ \
   for x in $(javadoc_src) $(javadoc_src_nodist); do \
     'exit' '0'; \
@@ -164,22 +159,10 @@ install-javadoc: install-javadoc-main
 
 install-javadoc-main: javadoc-main
 	@$(NORMAL_INSTALL)
-	$(AM_V_at){ \
-  case ''$(javadoc_dst) in \
-    ?*) \
-      'exit' '0'; \
-    ;; \
-  esac; \
-  'exit' '1'; \
-:;}
-	$(AM_V_at){ \
-  case ''$(javadocdir) in \
-    ?*) \
-      'exit' '0'; \
-    ;; \
-  esac; \
-  'exit' '1'; \
-:;}
+	$(AM_V_at)|%}dnl
+contains_exactly_one_word({%|javadoc_dst|%}){%|
+	$(AM_V_at)|%}dnl
+contains_exactly_one_word({%|javadocdir|%}){%|
 	$(AM_V_at){ \
   x='x'; \
   for y in $(javadoc_noinst); do \
@@ -268,22 +251,10 @@ uninstall-javadoc: uninstall-javadoc-main
 
 uninstall-javadoc-main:
 	@$(NORMAL_UNINSTALL)
-	$(AM_V_at){ \
-  case ''$(javadoc_dst) in \
-    ?*) \
-      'exit' '0'; \
-    ;; \
-  esac; \
-  'exit' '1'; \
-:;}
-	$(AM_V_at){ \
-  case ''$(javadocdir) in \
-    ?*) \
-      'exit' '0'; \
-    ;; \
-  esac; \
-  'exit' '1'; \
-:;}
+	$(AM_V_at)|%}dnl
+contains_exactly_one_word({%|javadoc_dst|%}){%|
+	$(AM_V_at)|%}dnl
+contains_exactly_one_word({%|javadocdir|%}){%|
 	$(AM_V_at){ \
   x='x'; \
   for y in $(javadoc_noinst); do \

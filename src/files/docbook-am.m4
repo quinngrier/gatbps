@@ -3,6 +3,7 @@ changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
 rules_code({%|src/files/docbook-am|%}){%||%}dnl
 rules_code({%|src/tools/rules_code|%}){%||%}dnl
+include({%|src/tools/contains_exactly_one_word.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
 header_comment({%|##|%}, {%|##|%}){%|
@@ -17,22 +18,10 @@ header_comment({%|##|%}, {%|##|%}){%|
 $(docbook_dst): $(docbook_dep)
 $(docbook_dst): $(docbook_src)
 	$(AM_V_MAKEINFO)':'
-	$(AM_V_at){ \
-  case ''$(docbook_dst) in \
-    ?*) \
-      'exit' '0'; \
-    ;; \
-  esac; \
-  'exit' '1'; \
-:;}
-	$(AM_V_at){ \
-  case ''$(docbook_src) in \
-    ?*) \
-      'exit' '0'; \
-    ;; \
-  esac; \
-  'exit' '1'; \
-:;}
+	$(AM_V_at)|%}dnl
+contains_exactly_one_word({%|docbook_dst|%}){%|
+	$(AM_V_at)|%}dnl
+contains_exactly_one_word({%|docbook_src|%}){%|
 	$(MKDIR_P) \
   './'$(@D) \
 ;
@@ -92,22 +81,10 @@ install-docbook: install-docbook-main
 
 install-docbook-main: docbook-main
 	@$(NORMAL_INSTALL)
-	$(AM_V_at){ \
-  case ''$(docbook_dst) in \
-    ?*) \
-      'exit' '0'; \
-    ;; \
-  esac; \
-  'exit' '1'; \
-:;}
-	$(AM_V_at){ \
-  case ''$(docbookdir) in \
-    ?*) \
-      'exit' '0'; \
-    ;; \
-  esac; \
-  'exit' '1'; \
-:;}
+	$(AM_V_at)|%}dnl
+contains_exactly_one_word({%|docbook_dst|%}){%|
+	$(AM_V_at)|%}dnl
+contains_exactly_one_word({%|docbookdir|%}){%|
 	$(AM_V_at){ \
   x='x'; \
   for y in $(docbook_noinst); do \
@@ -172,22 +149,10 @@ uninstall-docbook: uninstall-docbook-main
 
 uninstall-docbook-main:
 	@$(NORMAL_UNINSTALL)
-	$(AM_V_at){ \
-  case ''$(docbook_dst) in \
-    ?*) \
-      'exit' '0'; \
-    ;; \
-  esac; \
-  'exit' '1'; \
-:;}
-	$(AM_V_at){ \
-  case ''$(docbookdir) in \
-    ?*) \
-      'exit' '0'; \
-    ;; \
-  esac; \
-  'exit' '1'; \
-:;}
+	$(AM_V_at)|%}dnl
+contains_exactly_one_word({%|docbook_dst|%}){%|
+	$(AM_V_at)|%}dnl
+contains_exactly_one_word({%|docbookdir|%}){%|
 	$(AM_V_at){ \
   x='x'; \
   for y in $(docbook_noinst); do \
