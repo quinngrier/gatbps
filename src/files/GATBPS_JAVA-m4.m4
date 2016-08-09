@@ -31,7 +31,8 @@ m4_foreach_w(
     gatbps_new_rules='./$][(java_]gatbps_y[_dst): $][(java_]gatbps_y[_dep)
 ./$][(java_]gatbps_y[_dst): $][(java_]gatbps_y[_extra)
 ./$][(java_]gatbps_y[_dst): $][(java_]gatbps_y[_src)
-	$][(GATBPS_V_JAR){ \
+	$][(GATBPS_V_JAR)'\'':'\''
+	$][(AM@&t@_V_at){ \
   ( \
     '\''rm'\'' \
       '\''-f'\'' \

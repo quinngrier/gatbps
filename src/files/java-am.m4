@@ -50,7 +50,8 @@ GATBPS_V_JAVAC_1 =
 ./$(java_dst): $(java_dep)
 ./$(java_dst): $(java_extra)
 ./$(java_dst): $(java_src)
-	$(GATBPS_V_JAR){ \
+	$(GATBPS_V_JAR)':'
+	$(AM_V_at){ \
   ( \
     'rm' \
       '-f' \
