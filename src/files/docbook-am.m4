@@ -19,9 +19,11 @@ $(docbook_dst): $(docbook_dep)
 $(docbook_dst): $(docbook_src)
 	$(AM_V_MAKEINFO)':'
 	$(AM_V_at)|%}dnl
-contains_exactly_one_word({%|docbook_dst|%}){%|
+contains_exactly_one_word(
+  {%|docbook_dst|%}){%|
 	$(AM_V_at)|%}dnl
-contains_exactly_one_word({%|docbook_src|%}){%|
+contains_exactly_one_word(
+  {%|docbook_src|%}){%|
 	$(MKDIR_P) \
   './'$(@D) \
 ;
@@ -82,9 +84,11 @@ install-docbook: install-docbook-main
 install-docbook-main: docbook-main
 	@$(NORMAL_INSTALL)
 	$(AM_V_at)|%}dnl
-contains_exactly_one_word({%|docbook_dst|%}){%|
+contains_exactly_one_word(
+  {%|docbook_dst|%}){%|
 	$(AM_V_at)|%}dnl
-contains_exactly_one_word({%|docbookdir|%}){%|
+contains_exactly_one_word(
+  {%|docbookdir|%}){%|
 	$(AM_V_at){ \
   x='x'; \
   for y in $(docbook_noinst); do \
@@ -150,9 +154,11 @@ uninstall-docbook: uninstall-docbook-main
 uninstall-docbook-main:
 	@$(NORMAL_UNINSTALL)
 	$(AM_V_at)|%}dnl
-contains_exactly_one_word({%|docbook_dst|%}){%|
+contains_exactly_one_word(
+  {%|docbook_dst|%}){%|
 	$(AM_V_at)|%}dnl
-contains_exactly_one_word({%|docbookdir|%}){%|
+contains_exactly_one_word(
+  {%|docbookdir|%}){%|
 	$(AM_V_at){ \
   x='x'; \
   for y in $(docbook_noinst); do \

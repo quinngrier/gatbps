@@ -18,9 +18,11 @@ header_comment({%|##|%}, {%|##|%}){%|
 $(dvi_dist_dst): $(dvi_dist_dep)
 	$(GATBPS_V_CP)':'
 	$(AM_V_at)|%}dnl
-contains_exactly_one_word({%|dvi_dist_dst|%}){%|
+contains_exactly_one_word(
+  {%|dvi_dist_dst|%}){%|
 	$(AM_V_at)|%}dnl
-contains_exactly_one_word({%|dvi_dist_src|%}){%|
+contains_exactly_one_word(
+  {%|dvi_dist_src|%}){%|
 	$(AM_V_at)$(MAKE) \
   $(AM_MAKEFLAGS) \
   $(dvi_dist_src) \

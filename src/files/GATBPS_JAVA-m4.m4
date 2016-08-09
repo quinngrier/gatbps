@@ -121,9 +121,11 @@ install-java: install-java-]gatbps_x[
 install-java-]gatbps_x[: java-]gatbps_x[
 	@$][(NORMAL_INSTALL)
 	$][(AM@&t@_V_at)|%}dnl
-contains_exactly_one_word_m({%|java_]gatbps_y[_dst|%}){%|
+contains_exactly_one_word_m(
+  {%|java_]gatbps_y[_dst|%}){%|
 	$][(AM@&t@_V_at)|%}dnl
-contains_exactly_one_word_m({%|javadir|%}){%|
+contains_exactly_one_word_m(
+  {%|javadir|%}){%|
 	$][(AM@&t@_V_at){ \
   x='\''x'\''; \
   for y in $][(java_]gatbps_y[_noinst); do \
@@ -275,9 +277,11 @@ uninstall-java: uninstall-java-]gatbps_x[
 uninstall-java-]gatbps_x[:
 	@$][(NORMAL_UNINSTALL)
 	$][(AM@&t@_V_at)|%}dnl
-contains_exactly_one_word_m({%|java_]gatbps_y[_dst|%}){%|
+contains_exactly_one_word_m(
+  {%|java_]gatbps_y[_dst|%}){%|
 	$][(AM@&t@_V_at)|%}dnl
-contains_exactly_one_word_m({%|javadir|%}){%|
+contains_exactly_one_word_m(
+  {%|javadir|%}){%|
 	$][(AM@&t@_V_at){ \
   x='\''x'\''; \
   for y in $][(java_]gatbps_y[_noinst); do \
