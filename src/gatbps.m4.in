@@ -560,6 +560,7 @@ EOF1
           set "${prefix}GATBPS_PROG_DOXYGEN.m4" "${@AT@}"
           set "${prefix}GATBPS_PROG_AWK.m4" "${@AT@}"
           set "${prefix}GATBPS_MSG_WARN.m4" "${@AT@}"
+          set "${prefix}GATBPS_MSG_NOTICE.m4" "${@AT@}"
           set "${prefix}GATBPS_MSG_FAILURE.m4" "${@AT@}"
           set "${prefix}GATBPS_MSG_ERROR.m4" "${@AT@}"
           set "${prefix}GATBPS_JAVA_RULES.am" "${@AT@}"
@@ -1307,6 +1308,8 @@ EOF1
 |%}help_code({%|GATBPS_MSG_ERROR.m4|%}){%|
 
 |%}help_code({%|GATBPS_MSG_FAILURE.m4|%}){%|
+
+|%}help_code({%|GATBPS_MSG_NOTICE.m4|%}){%|
 
 |%}help_code({%|GATBPS_MSG_WARN.m4|%}){%|
 
@@ -3872,6 +3875,8 @@ EOF1
 |%}generation_code({%|GATBPS_MSG_ERROR.m4|%}){%|
 
 |%}generation_code({%|GATBPS_MSG_FAILURE.m4|%}){%|
+
+|%}generation_code({%|GATBPS_MSG_NOTICE.m4|%}){%|
 
 |%}generation_code({%|GATBPS_MSG_WARN.m4|%}){%|
 
@@ -7923,6 +7928,13 @@ EOF1
 
 |%}recursion_code(
   {%|GATBPS_MSG_FAILURE.m4|%},
+  {%|
+            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@AT@}"; 'shift'
+            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@AT@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|GATBPS_MSG_NOTICE.m4|%},
   {%|
             'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@AT@}"; 'shift'
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@AT@}"; 'shift'

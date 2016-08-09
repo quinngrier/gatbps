@@ -79,6 +79,7 @@ bin_gatbps_src += doc/help/GATBPS_JAVA-m4-hd.m4
 bin_gatbps_src += doc/help/GATBPS_JAVA_RULES-am-hd.m4
 bin_gatbps_src += doc/help/GATBPS_MSG_ERROR-m4-hd.m4
 bin_gatbps_src += doc/help/GATBPS_MSG_FAILURE-m4-hd.m4
+bin_gatbps_src += doc/help/GATBPS_MSG_NOTICE-m4-hd.m4
 bin_gatbps_src += doc/help/GATBPS_MSG_WARN-m4-hd.m4
 bin_gatbps_src += doc/help/GATBPS_PROG_AWK-m4-hd.m4
 bin_gatbps_src += doc/help/GATBPS_PROG_DOXYGEN-m4-hd.m4
@@ -151,6 +152,7 @@ bin_gatbps_src += src/files/GATBPS_JAVA-m4.m4
 bin_gatbps_src += src/files/GATBPS_JAVA_RULES-am.m4
 bin_gatbps_src += src/files/GATBPS_MSG_ERROR-m4.m4
 bin_gatbps_src += src/files/GATBPS_MSG_FAILURE-m4.m4
+bin_gatbps_src += src/files/GATBPS_MSG_NOTICE-m4.m4
 bin_gatbps_src += src/files/GATBPS_MSG_WARN-m4.m4
 bin_gatbps_src += src/files/GATBPS_PROG_AWK-m4.m4
 bin_gatbps_src += src/files/GATBPS_PROG_DOXYGEN-m4.m4
@@ -435,6 +437,7 @@ doc/man/gatbps.1: bin/gatbps
 @SOFT_INCLUDE@ src/files/GATBPS_JAVA_RULES-am.d
 @SOFT_INCLUDE@ src/files/GATBPS_MSG_ERROR-m4.d
 @SOFT_INCLUDE@ src/files/GATBPS_MSG_FAILURE-m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_MSG_NOTICE-m4.d
 @SOFT_INCLUDE@ src/files/GATBPS_MSG_WARN-m4.d
 @SOFT_INCLUDE@ src/files/GATBPS_PROG_AWK-m4.d
 @SOFT_INCLUDE@ src/files/GATBPS_PROG_DOXYGEN-m4.d
