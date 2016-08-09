@@ -3,6 +3,7 @@ changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
 rules_code({%|src/files/javadoc-am|%}){%||%}dnl
 rules_code({%|src/tools/rules_code|%}){%||%}dnl
+include({%|src/tools/contains_at_least_one_word.m4|%}){%||%}dnl
 include({%|src/tools/contains_exactly_one_word.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
@@ -38,12 +39,10 @@ $(javadoc_dst): $(javadoc_src_nodist)
 	$(GATBPS_V_JAVADOC)':'
 	$(AM_V_at)|%}dnl
 contains_exactly_one_word({%|javadoc_dst|%}){%|
-	$(AM_V_at){ \
-  for x in $(javadoc_src) $(javadoc_src_nodist); do \
-    'exit' '0'; \
-  done; \
-  'exit' '1'; \
-:;}
+	$(AM_V_at)|%}dnl
+contains_at_least_one_word(
+  {%|javadoc_src|%},
+  {%|javadoc_src_nodist|%}){%|
 	$(AM_V_at)'rm' \
   '-f' \
   '-r' \
