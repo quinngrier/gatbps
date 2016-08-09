@@ -196,6 +196,7 @@ bin_gatbps_src += src/files/rules_code-m4.m4
 bin_gatbps_src += src/files/sh-form-sh.m4
 bin_gatbps_src += src/files/texinfo-css.m4
 bin_gatbps_src += src/tools/contains_at_least_one_word.m4
+bin_gatbps_src += src/tools/contains_at_least_one_word_m.m4
 bin_gatbps_src += src/tools/contains_exactly_one_word.m4
 bin_gatbps_src += src/tools/contains_exactly_one_word_m.m4
 bin_gatbps_src += src/tools/footer_comment.m4
