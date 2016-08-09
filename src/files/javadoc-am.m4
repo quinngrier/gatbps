@@ -113,11 +113,11 @@ contains_at_least_one_word(
       ';' \
       >>'javadoc-main.tmp2' \
     || 'exit' "$${?}"; \
-    x=`'cat' \
+    'sh' \
+      '-' \
       'javadoc-main.tmp2' \
-    ` || 'exit' "$${?}"; \
-    'eval' "$${x}"; \
-    'exit' "$${?}"; \
+    || 'exit' "$${?}"; \
+    'exit' '0'; \
   :;); \
   x="$${?}"; \
   'rm' \
