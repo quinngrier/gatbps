@@ -34,8 +34,8 @@ LC_ALL='C'
     gsub(/<code><!--#-->/, "<code>#", $0)
     gsub(/<code><!--::-->/, "<code>::", $0)
     if (0 ||
-      $0 ~ /<!--[@AT@\\]code--><blockquote><pre>$/ ||
-      $0 ~ /<!--[@AT@\\]code{.*}--><blockquote><pre>$/ ||
+      $0 ~ /<!--code--><blockquote><pre>$/ ||
+      $0 ~ /<!--code{.*}--><blockquote><pre>$/ ||
     0) {
       n = split($0, x, /<!--/)
       i = 0
@@ -43,8 +43,8 @@ LC_ALL='C'
       while (i != n) {
         ++i
         if (i == n) {
+          x[i] = "@AT@" x[i]
           sub(/-->.*/, "", x[i])
-          command_character = substr(x[i], 1, 1)
         } else if (i != 1) {
           $0 = $0 "<!--"
         }
@@ -54,7 +54,7 @@ LC_ALL='C'
     } else if (in_javadoc_code_block) {
       if ($0 ~ /<\/pre><\/blockquote>$/) {
         sub(/<\/pre><\/blockquote>$/, "", $0)
-        $0 = $0 command_character "endcode"
+        $0 = $0 "@AT@endcode"
         in_javadoc_code_block = 0
       } else {
         n = split($0, x, /{@AT@literal/)
