@@ -27,7 +27,7 @@ m4_case(
 [
 
 ]m4_if(
-  m4_eval([$# == 1]),
+  [$#],
   [1],
   [AC_MSG_ERROR([m4_normalize([$1])], [[1]])],
   [AC_MSG_ERROR([m4_normalize([$1])], [[$2]])])[
