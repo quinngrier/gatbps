@@ -572,6 +572,7 @@ EOF1
           set "${prefix}GATBPS_DEFINE_DATE.m4" "${@AT@}"
           set "${prefix}GATBPS_DEFINE_CLASSPATH.m4" "${@AT@}"
           set "${prefix}GATBPS_DEFINE_AT.m4" "${@AT@}"
+          set "${prefix}GATBPS_CP.m4" "${@AT@}"
           set "${prefix}GATBPS_CONFIG_FILE_SUBST.m4" "${@AT@}"
           set "${prefix}GATBPS_CONFIG_FILE_RULES.am" "${@AT@}"
           set "${prefix}GATBPS_CONFIG_FILE.m4" "${@AT@}"
@@ -1286,6 +1287,8 @@ EOF1
                 ;;
               esac
             ;;
+
+|%}help_code({%|GATBPS_CP.m4|%}){%|
 
 |%}help_code({%|GATBPS_DEFINE_AT.m4|%}){%|
 
@@ -3937,6 +3940,8 @@ EOF1
 |%}generation_code({%|GATBPS_CONFIG_FILE_RULES.am|%}){%|
 
 |%}generation_code({%|GATBPS_CONFIG_FILE_SUBST.m4|%}){%|
+
+|%}generation_code({%|GATBPS_CP.m4|%}){%|
 
 |%}generation_code({%|GATBPS_DEFINE_AT.m4|%}){%|
 
@@ -7855,6 +7860,14 @@ EOF1
 |%}recursion_code(
   {%|GATBPS_CONFIG_FILE_SUBST.m4|%},
   {%|
+            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@AT@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|GATBPS_CP.m4|%},
+  {%|
+            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@AT@}"; 'shift'
+            'set' 'x' "${prefix}"'cp.am' "${@AT@}"; 'shift'
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@AT@}"; 'shift'
 |%}){%|
 
