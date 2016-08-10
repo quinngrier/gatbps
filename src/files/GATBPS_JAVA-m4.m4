@@ -15,7 +15,7 @@ dnl
 AC_DEFUN([GATBPS_JAVA], [{
 
 #
-# The block that contains this comment is the expansion of the
+# The block that contains this comment is an expansion of the
 # GATBPS_JAVA macro.
 #
 m4_foreach_w(
