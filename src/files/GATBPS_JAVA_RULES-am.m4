@@ -18,7 +18,7 @@ header_comment({%|##|%}, {%|##|%}){%|
 ## The above substitution adds prerequisites to the below target, but
 ## Automake cannot see them because substitution occurs after Automake
 ## runs. If the below line were omitted and the target did not appear
-## elsewhere, then Automake might not add it as a prerequisite to its
+## elsewhere, then Automake might not add it as a prerequisite to the
 ## corresponding non-local target, disconnecting the non-local target
 ## from the new prerequisites. This is why the below line is included.
 ##
