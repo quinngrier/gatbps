@@ -11,7 +11,7 @@ dnl Special file: gatbps_fatal.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([gatbps_fatal], [[]dnl
+AC_DEFUN([gatbps_fatal], [dnl
 m4_case(
   [$#],
   [1], [],
