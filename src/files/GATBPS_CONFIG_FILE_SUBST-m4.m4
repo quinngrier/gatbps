@@ -13,6 +13,24 @@ dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([GATBPS_CONFIG_FILE_SUBST], [[{
 
+#
+# The block that contains this comment is the expansion of the
+# GATBPS_CONFIG_FILE_SUBST macro.
+#]dnl
+m4_ifdef(
+  [GATBPS_CONFIG_FILE_SUBST_HAS_BEEN_CALLED],
+  [gatbps_fatal([
+    GATBPS_CONFIG_FILE_SUBST has already been called
+  ])],
+  [m4_define([GATBPS_CONFIG_FILE_SUBST_HAS_BEEN_CALLED])])dnl
+m4_case(
+  [$#],
+  [0], [],
+  [gatbps_fatal([
+    GATBPS_CONFIG_FILE_SUBST requires exactly 0 arguments
+  ])])dnl
+[
+
 ]AC_SUBST([GATBPS_CONFIG_FILE_RULES])[
 ]AM_SUBST_NOTMAKE([GATBPS_CONFIG_FILE_RULES])[
 
