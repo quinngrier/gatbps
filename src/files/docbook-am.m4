@@ -45,8 +45,8 @@ contains_exactly_one_word(
     $(docbook_MAKEINFOFLAGS) \
     $(MAKEINFOFLAGS) \
     "$${d}"'/'$(docbook_src) \
-  ; \
-  'exit' "$${?}"; \
+  || 'exit' "$${?}"; \
+  'exit' '0'; \
 :;}
 
 .PHONY: clean-docbook

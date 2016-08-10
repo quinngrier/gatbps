@@ -50,8 +50,8 @@ contains_exactly_one_word(
     '-R' \
     "$${d}"'/'$(doxygen_dist_src) \
     './'$(doxygen_dist_dst) \
-  ; \
-  'exit' "$${?}"; \
+  || 'exit' "$${?}"; \
+  'exit' '0'; \
 :;}
 
 .PHONY: clean-doxygen-dist

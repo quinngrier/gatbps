@@ -44,8 +44,8 @@ contains_exactly_one_word(
   'cp' \
     "$${d}"'/'$(pdf_dist_src) \
     './'$(pdf_dist_dst) \
-  ; \
-  'exit' "$${?}"; \
+  || 'exit' "$${?}"; \
+  'exit' '0'; \
 :;}
 
 .PHONY: clean-pdf-dist

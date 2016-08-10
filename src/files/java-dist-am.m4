@@ -44,8 +44,8 @@ contains_exactly_one_word(
   'cp' \
     "$${d}"'/'$(java_dist_src) \
     './'$(java_dist_dst) \
-  ; \
-  'exit' "$${?}"; \
+  || 'exit' "$${?}"; \
+  'exit' '0'; \
 :;}
 
 .PHONY: clean-java-dist

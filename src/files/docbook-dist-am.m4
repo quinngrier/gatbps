@@ -44,8 +44,8 @@ contains_exactly_one_word(
   'cp' \
     "$${d}"'/'$(docbook_dist_src) \
     './'$(docbook_dist_dst) \
-  ; \
-  'exit' "$${?}"; \
+  || 'exit' "$${?}"; \
+  'exit' '0'; \
 :;}
 
 .PHONY: clean-docbook-dist

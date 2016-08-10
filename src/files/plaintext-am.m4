@@ -45,8 +45,8 @@ contains_exactly_one_word(
     $(plaintext_MAKEINFOFLAGS) \
     $(MAKEINFOFLAGS) \
     "$${d}"'/'$(plaintext_src) \
-  ; \
-  'exit' "$${?}"; \
+  || 'exit' "$${?}"; \
+  'exit' '0'; \
 :;}
 
 .PHONY: clean-plaintext

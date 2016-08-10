@@ -50,8 +50,8 @@ contains_exactly_one_word(
     '-R' \
     "$${d}"'/'$(javadoc_dist_src) \
     './'$(javadoc_dist_dst) \
-  ; \
-  'exit' "$${?}"; \
+  || 'exit' "$${?}"; \
+  'exit' '0'; \
 :;}
 
 .PHONY: clean-javadoc-dist

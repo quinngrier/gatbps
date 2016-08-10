@@ -53,8 +53,8 @@ contains_exactly_one_word(
     '-R' \
     "$${d}"'/'$(html_dist_src) \
     './'$(html_dist_dst) \
-  ; \
-  'exit' "$${?}"; \
+  || 'exit' "$${?}"; \
+  'exit' '0'; \
 :;}
 
 .PHONY: clean-html-dist

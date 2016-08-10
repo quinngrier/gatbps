@@ -44,8 +44,8 @@ contains_exactly_one_word(
   'cp' \
     "$${d}"'/'$(ps_dist_src) \
     './'$(ps_dist_dst) \
-  ; \
-  'exit' "$${?}"; \
+  || 'exit' "$${?}"; \
+  'exit' '0'; \
 :;}
 
 .PHONY: clean-ps-dist

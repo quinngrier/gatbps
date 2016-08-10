@@ -44,8 +44,8 @@ contains_exactly_one_word(
   'cp' \
     "$${d}"'/'$(plaintext_dist_src) \
     './'$(plaintext_dist_dst) \
-  ; \
-  'exit' "$${?}"; \
+  || 'exit' "$${?}"; \
+  'exit' '0'; \
 :;}
 
 .PHONY: clean-plaintext-dist
