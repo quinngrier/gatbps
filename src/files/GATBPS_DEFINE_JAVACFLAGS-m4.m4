@@ -22,7 +22,7 @@ m4_ifdef(
   [gatbps_fatal([
     GATBPS_DEFINE_JAVACFLAGS has already been called
   ])],
-  [m4_define([GATBPS_DEFINE_JAVACFLAGS_HAS_BEEN_CALLED])])dnl
+  [m4_define([GATBPS_DEFINE_JAVACFLAGS_HAS_BEEN_CALLED])])[]dnl
 m4_case(
   [$#],
   [0], [],

@@ -22,7 +22,7 @@ m4_ifdef(
   [gatbps_fatal([
     GATBPS_CONFIG_FILE_SUBST has already been called
   ])],
-  [m4_define([GATBPS_CONFIG_FILE_SUBST_HAS_BEEN_CALLED])])dnl
+  [m4_define([GATBPS_CONFIG_FILE_SUBST_HAS_BEEN_CALLED])])[]dnl
 m4_case(
   [$#],
   [0], [],

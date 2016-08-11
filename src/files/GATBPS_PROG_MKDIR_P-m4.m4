@@ -22,7 +22,7 @@ m4_ifdef(
   [gatbps_fatal([
     GATBPS_PROG_MKDIR_P has already been called
   ])],
-  [m4_define([GATBPS_PROG_MKDIR_P_HAS_BEEN_CALLED])])dnl
+  [m4_define([GATBPS_PROG_MKDIR_P_HAS_BEEN_CALLED])])[]dnl
 m4_case(
   [$#],
   [0], [],

@@ -22,7 +22,7 @@ m4_ifdef(
   [gatbps_fatal([
     GATBPS_PROG_MAKEINFO has already been called
   ])],
-  [m4_define([GATBPS_PROG_MAKEINFO_HAS_BEEN_CALLED])])dnl
+  [m4_define([GATBPS_PROG_MAKEINFO_HAS_BEEN_CALLED])])[]dnl
 m4_case(
   [$#],
   [0], [],
