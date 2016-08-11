@@ -26,7 +26,7 @@ m4_case(
   [2], [],
   [3], [],
   [gatbps_fatal([
-    GATBPS_DEFINE_VERSION requires exactly 2 or 3 arguments
+    GATBPS_DEFINE_VERSION requires 2 to 3 arguments
   ])])[]dnl
 m4_if(
   m4_bregexp([$1], [^[A-Z_a-z][0-9A-Z_a-z]*$]),

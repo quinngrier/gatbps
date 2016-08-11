@@ -22,7 +22,7 @@ m4_case(
   [1], [],
   [2], [],
   [gatbps_fatal([
-    GATBPS_MSG_ERROR requires exactly 1 or 2 arguments
+    GATBPS_MSG_ERROR requires 1 to 2 arguments
   ])])[]dnl
 [
 
