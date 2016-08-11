@@ -28,7 +28,7 @@ m4_case(
   [0], [],
   [gatbps_fatal([
     GATBPS_PROG_DOXYGEN requires exactly 0 arguments
-  ])])dnl
+  ])])[]dnl
 
 AC_CHECK_PROGS(
   [DOXYGEN],

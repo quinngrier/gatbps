@@ -28,7 +28,7 @@ m4_case(
   [0], [],
   [gatbps_fatal([
     GATBPS_DEFINE_JAVACFLAGS requires exactly 0 arguments
-  ])])dnl
+  ])])[]dnl
 [
 
 ]AC_ARG_VAR(

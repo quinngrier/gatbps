@@ -28,7 +28,7 @@ m4_case(
   [0], [],
   [gatbps_fatal([
     GATBPS_CONFIG_FILE_SUBST requires exactly 0 arguments
-  ])])dnl
+  ])])[]dnl
 [
 
 ]AC_SUBST([GATBPS_CONFIG_FILE_RULES])[

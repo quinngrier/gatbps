@@ -28,7 +28,7 @@ m4_case(
   [0], [],
   [gatbps_fatal([
     GATBPS_PROG_JAVAC requires exactly 0 arguments
-  ])])dnl
+  ])])[]dnl
 [
 
 ]AC_REQUIRE([GATBPS_DEFINE_CLASSPATH])[
