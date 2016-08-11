@@ -7848,6 +7848,7 @@ EOF1
 |%}recursion_code(
   {%|GATBPS_CONFIG_FILE.m4|%},
   {%|
+            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@AT@}"; 'shift'
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@AT@}"; 'shift'
 |%}){%|
 
