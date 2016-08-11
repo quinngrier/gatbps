@@ -5,6 +5,7 @@ rules_code({%|src/files/GATBPS_CONFIG_FILE_RULES-am|%}){%||%}dnl
 rules_code({%|src/tools/rules_code|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
+include({%|src/tools/substitution_comment_singular.m4|%}){%||%}dnl
 header_comment({%|##|%}, {%|##|%}){%|
 ##
 ## Special file: GATBPS_CONFIG_FILE_RULES.am
@@ -14,14 +15,7 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 @GATBPS_CONFIG_FILE_RULES@
 
-##
-## The above substitution adds prerequisites to the below target, but
-## Automake cannot see them because substitution occurs after Automake
-## runs. If the below line were omitted and the target did not appear
-## elsewhere, then Automake might not add it as a prerequisite to the
-## corresponding non-local target, disconnecting the non-local target
-## from the new prerequisites. This is why the below line is included.
-##
+|%}substitution_comment_singular{%|
 
 distclean-local:
 
