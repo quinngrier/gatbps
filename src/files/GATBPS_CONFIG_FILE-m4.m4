@@ -20,7 +20,7 @@ AC_DEFUN([GATBPS_CONFIG_FILE], [[{
   [3], [],
   [4], [],
   [gatbps_fatal([
-    GATBPS_CONFIG_FILE requires 1 to 4 arguments
+    GATBPS_CONFIG_FILE requires exactly 1, 2, 3, or 4 arguments
   ])])
 
 m4_pushdef([gatbps_output], m4_bpatsubst([$1], [:.*]))
