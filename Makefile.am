@@ -208,6 +208,7 @@ bin_gatbps_src += src/tools/help_code.m4
 bin_gatbps_src += src/tools/math_symbol.m4
 bin_gatbps_src += src/tools/recursion_code.m4
 bin_gatbps_src += src/tools/rules_code.m4
+bin_gatbps_src += src/tools/substitution_comment_plural.m4
 bin_gatbps_src += src/tools/substitution_comment_singular.m4
 
 doc_gatbps_TEXINFOS =
