@@ -75,6 +75,7 @@ bin_gatbps_src += doc/help/GATBPS_DEFINE_AT-m4-hd.m4
 bin_gatbps_src += doc/help/GATBPS_DEFINE_CLASSPATH-m4-hd.m4
 bin_gatbps_src += doc/help/GATBPS_DEFINE_DATE-m4-hd.m4
 bin_gatbps_src += doc/help/GATBPS_DEFINE_HARD_INCLUDE-m4-hd.m4
+bin_gatbps_src += doc/help/GATBPS_DEFINE_JARFLAGS-m4-hd.m4
 bin_gatbps_src += doc/help/GATBPS_DEFINE_JAVACFLAGS-m4-hd.m4
 bin_gatbps_src += doc/help/GATBPS_DEFINE_JAVADOCFLAGS-m4-hd.m4
 bin_gatbps_src += doc/help/GATBPS_DEFINE_VERSION-m4-hd.m4
@@ -152,6 +153,7 @@ bin_gatbps_src += src/files/GATBPS_DEFINE_AT-m4.m4
 bin_gatbps_src += src/files/GATBPS_DEFINE_CLASSPATH-m4.m4
 bin_gatbps_src += src/files/GATBPS_DEFINE_DATE-m4.m4
 bin_gatbps_src += src/files/GATBPS_DEFINE_HARD_INCLUDE-m4.m4
+bin_gatbps_src += src/files/GATBPS_DEFINE_JARFLAGS-m4.m4
 bin_gatbps_src += src/files/GATBPS_DEFINE_JAVACFLAGS-m4.m4
 bin_gatbps_src += src/files/GATBPS_DEFINE_JAVADOCFLAGS-m4.m4
 bin_gatbps_src += src/files/GATBPS_DEFINE_VERSION-m4.m4
@@ -444,6 +446,7 @@ doc/man/gatbps.1: bin/gatbps
 @SOFT_INCLUDE@ src/files/GATBPS_DEFINE_CLASSPATH-m4.d
 @SOFT_INCLUDE@ src/files/GATBPS_DEFINE_DATE-m4.d
 @SOFT_INCLUDE@ src/files/GATBPS_DEFINE_HARD_INCLUDE-m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_DEFINE_JARFLAGS-m4.d
 @SOFT_INCLUDE@ src/files/GATBPS_DEFINE_JAVACFLAGS-m4.d
 @SOFT_INCLUDE@ src/files/GATBPS_DEFINE_JAVADOCFLAGS-m4.d
 @SOFT_INCLUDE@ src/files/GATBPS_DEFINE_VERSION-m4.d
