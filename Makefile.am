@@ -70,6 +70,7 @@ bin_gatbps_src += doc/help/GATBPS_CHECK_SOFT_INCLUDE-m4-hd.m4
 bin_gatbps_src += doc/help/GATBPS_CONFIG_FILE_RULES-am-hd.m4
 bin_gatbps_src += doc/help/GATBPS_CP-m4-hd.m4
 bin_gatbps_src += doc/help/GATBPS_CP_RULES-am-hd.m4
+bin_gatbps_src += doc/help/GATBPS_CP_SUBST-m4-hd.m4
 bin_gatbps_src += doc/help/GATBPS_DEFINE_AT-m4-hd.m4
 bin_gatbps_src += doc/help/GATBPS_DEFINE_CLASSPATH-m4-hd.m4
 bin_gatbps_src += doc/help/GATBPS_DEFINE_DATE-m4-hd.m4
@@ -145,6 +146,7 @@ bin_gatbps_src += src/files/GATBPS_CONFIG_FILE_RULES-am.m4
 bin_gatbps_src += src/files/GATBPS_CONFIG_FILE_SUBST-m4.m4
 bin_gatbps_src += src/files/GATBPS_CP-m4.m4
 bin_gatbps_src += src/files/GATBPS_CP_RULES-am.m4
+bin_gatbps_src += src/files/GATBPS_CP_SUBST-m4.m4
 bin_gatbps_src += src/files/GATBPS_DEFINE_AT-m4.m4
 bin_gatbps_src += src/files/GATBPS_DEFINE_CLASSPATH-m4.m4
 bin_gatbps_src += src/files/GATBPS_DEFINE_DATE-m4.m4
@@ -435,6 +437,7 @@ doc/man/gatbps.1: bin/gatbps
 @SOFT_INCLUDE@ src/files/GATBPS_CONFIG_FILE_SUBST-m4.d
 @SOFT_INCLUDE@ src/files/GATBPS_CP-m4.d
 @SOFT_INCLUDE@ src/files/GATBPS_CP_RULES-am.d
+@SOFT_INCLUDE@ src/files/GATBPS_CP_SUBST-m4.d
 @SOFT_INCLUDE@ src/files/GATBPS_DEFINE_AT-m4.d
 @SOFT_INCLUDE@ src/files/GATBPS_DEFINE_CLASSPATH-m4.d
 @SOFT_INCLUDE@ src/files/GATBPS_DEFINE_DATE-m4.d
