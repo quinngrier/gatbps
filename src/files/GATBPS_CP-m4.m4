@@ -20,8 +20,9 @@ AC_DEFUN([GATBPS_CP], [[{
 m4_case(
   [$#],
   [2], [],
+  [3], [],
   [gatbps_fatal([
-    GATBPS_CP requires exactly 2 arguments
+    GATBPS_CP requires exactly 2 or 3 arguments
   ])])[]dnl
 m4_if(
   [$1],
@@ -34,6 +35,15 @@ m4_if(
   [],
   [gatbps_fatal([
     GATBPS_CP requires its second argument to be nonempty
+  ])])[]dnl
+m4_case(
+  [$3],
+  [], [],
+  [r], [],
+  [x], [],
+  [gatbps_fatal([
+    GATBPS_CP requires its third argument to be either empty, the 'r'
+    character, or the 'x' character
   ])])[]dnl
 [
 
@@ -60,16 +70,34 @@ GATBPS_CP_RULES="$][{GATBPS_CP_RULES}"\
       ;; \
     esac; \
   fi; \
-  '\''cp'\'' \
+  '\''cp'\'' \]dnl
+m4_if(
+  [$3],
+  [r],
+  [[
+    '\''-R'\'' \]])[
     "$][$][{d}"'\''/'\''"$][$][{x}" \
     '\''./'\''']$1[' \
-  || '\''exit'\'' "$][$][{?}"; \
+  || '\''exit'\'' "$][$][{?}"; \]dnl
+m4_if(
+  [$3],
+  [x],
+  [[
+  '\''chmod'\'' \
+    '\''a+x'\'' \
+    '\''./'\''']$1[' \
+  || '\''exit'\'' "$][$][{?}"; \]])[
   '\''exit'\'' '\''0'\''; \
 :;}
 
 clean-']$1[':
 	-'\''rm'\'' \
-  '\''-f'\'' \
+  '\''-f'\'' \]dnl
+m4_if(
+  [$3],
+  [r],
+  [[
+  '\''-r'\'' \]])[
   '\''./'\''']$1[' \
 ;
 
