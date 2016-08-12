@@ -25,16 +25,18 @@ m4_case(
     GATBPS_CP requires exactly 2 or 3 arguments
   ])])[]dnl
 m4_if(
-  [$1],
-  [],
+  m4_bregexp([$1], [^[-./0-9A-Z_a-z]+$]),
+  [-1],
   [gatbps_fatal([
-    GATBPS_CP requires its first argument to be nonempty
+    GATBPS_CP requires its first argument to match the following regular
+    expression: ^[-./0-9A-Z_a-z]+$
   ])])[]dnl
 m4_if(
-  [$2],
-  [],
+  m4_bregexp([$2], [^[-./0-9A-Z_a-z]+$]),
+  [-1],
   [gatbps_fatal([
-    GATBPS_CP requires its second argument to be nonempty
+    GATBPS_CP requires its second argument to match the following
+    regular expression: ^[-./0-9A-Z_a-z]+$
   ])])[]dnl
 m4_case(
   [$3],
