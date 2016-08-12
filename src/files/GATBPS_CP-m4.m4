@@ -45,6 +45,18 @@ m4_case(
     GATBPS_CP requires its third argument to be either empty, the 'r'
     character, or the 'x' character
   ])])[]dnl
+m4_pushdef(
+  [target_sh],
+  m4_bpatsubst([[$1]], ['], ['\\'']))[]dnl
+m4_pushdef(
+  [source_sh],
+  m4_bpatsubst([[$2]], ['], ['\\'']))[]dnl
+m4_pushdef(
+  [target_sh_sh],
+  m4_bpatsubst([[$1]], ['], ['\\''\\'\\'''\\'']))[]dnl
+m4_pushdef(
+  [source_sh_sh],
+  m4_bpatsubst([[$2]], ['], ['\\''\\'\\'''\\'']))[]dnl
 [
 
 case "$][{GATBPS_CP_RULES}" in
@@ -56,10 +68,10 @@ case "$][{GATBPS_CP_RULES}" in
 esac
 
 GATBPS_CP_RULES="$][{GATBPS_CP_RULES}"\
-'']$1[': ']$2['
+']target_sh[: ]source_sh[
 	$][(GATBPS_V_CP)'\'':'\''
 	$][(AM@&t@_V_at){ \
-  x=']$2['; \
+  x='\'']source_sh_sh['\''; \
   if '\''test'\'' '\''-f'\'' "$][$][{x}"; then \
     d='\''.'\''; \
   else \
@@ -77,7 +89,7 @@ m4_if(
   [[
     '\''-R'\'' \]])[
     "$][$][{d}"'\''/'\''"$][$][{x}" \
-    '\''./'\''']$1[' \
+    '\''./]target_sh_sh['\'' \
   || '\''exit'\'' "$][$][{?}"; \]dnl
 m4_if(
   [$3],
@@ -85,14 +97,14 @@ m4_if(
   [[
   '\''chmod'\'' \
     '\''a+x'\'' \
-    '\''./'\''']$1[' \
+    '\''./]target_sh_sh['\'' \
   || '\''exit'\'' "$][$][{?}"; \]])[
   '\''exit'\'' '\''0'\''; \
 :;}
 
-.PHONY: clean-']$1['
+.PHONY: clean-]target_sh[
 
-clean-']$1[':
+clean-]target_sh[:
 	-'\''rm'\'' \
   '\''-f'\'' \]dnl
 m4_if(
@@ -100,11 +112,16 @@ m4_if(
   [r],
   [[
   '\''-r'\'' \]])[
-  '\''./'\''']$1[' \
+  '\''./]target_sh_sh['\'' \
 ;
 
-clean-local: clean-']$1[''
-
+clean-local: clean-]target_sh['
+]dnl
+m4_popdef([source_sh_sh])[]dnl
+m4_popdef([target_sh_sh])[]dnl
+m4_popdef([source_sh])[]dnl
+m4_popdef([target_sh])[]dnl
+[
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%}){%||%}dnl
 dnl
