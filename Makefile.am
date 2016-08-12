@@ -502,6 +502,7 @@ doc/man/gatbps.1: bin/gatbps
 ## begin_includes
 
 include $(srcdir)/build-aux/GATBPS_CONFIG_FILE_RULES.am
+include $(srcdir)/build-aux/GATBPS_CP_RULES.am
 include $(srcdir)/build-aux/cp.am
 include $(srcdir)/build-aux/docbook-dist.am
 include $(srcdir)/build-aux/docbook.am
