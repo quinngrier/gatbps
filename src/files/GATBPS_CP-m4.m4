@@ -72,6 +72,9 @@ esac
 GATBPS_CP_RULES="$][{GATBPS_CP_RULES}"\
 ']target_sh[: ]source_sh[
 	$][(GATBPS_V_CP)'\'':'\''
+	$][(AM@&t@_V_at)$(MKDIR_P) \
+  '\''./'\''$][(@D) \
+;
 	$][(AM@&t@_V_at){ \
   x='\'']source_sh_sh['\''; \
   if '\''test'\'' '\''-f'\'' "$][$][{x}"; then \
