@@ -50,6 +50,19 @@ m4_if(
       GATBPS_CP requires its third argument to be either "regular",
       "directory", or "executable"
     ])])])[]dnl
+m4_if(
+  m4_eval([$# >= 4]),
+  [1],
+  [m4_case(
+    [$4],
+    [mostlyclean], [],
+    [clean], [],
+    [distclean], [],
+    [maintainer-clean], [],
+    [gatbps_fatal([
+      GATBPS_CP requires its fourth argument to be either "mostlyclean",
+      "clean", "distclean", or "maintainer-clean"
+    ])])])[]dnl
 m4_pushdef(
   [target_sh],
   m4_bpatsubst([[$1]], ['], ['\\'']))[]dnl
@@ -123,7 +136,7 @@ m4_if(
   '\''./]target_sh_sh['\'' \
 ;
 
-clean-local: clean-]target_sh['
+]m4_if([$4], [], [[mostlyclean]], [[$4]])[-local: clean-]target_sh['
 ]dnl
 m4_popdef([source_sh_sh])[]dnl
 m4_popdef([target_sh_sh])[]dnl

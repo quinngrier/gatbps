@@ -5,7 +5,7 @@ rules_code({%|src/files/GATBPS_CP_RULES-am|%}){%||%}dnl
 rules_code({%|src/tools/rules_code|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
-include({%|src/tools/substitution_comment_singular.m4|%}){%||%}dnl
+include({%|src/tools/substitution_comment_plural.m4|%}){%||%}dnl
 header_comment({%|##|%}, {%|##|%}){%|
 ##
 ## Special file: GATBPS_CP_RULES.am
@@ -15,9 +15,12 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 @GATBPS_CP_RULES@
 
-|%}substitution_comment_singular{%|
+|%}substitution_comment_plural{%|
 
+mostlyclean-local:
 clean-local:
+distclean-local:
+maintainer-clean-local:
 
 |%}footer_comment({%|##|%}, {%|##|%}, {%|##|%}){%||%}dnl
 dnl
