@@ -113,7 +113,8 @@ m4_if([$5], [], [], [[
 ;
 	$][(AM@&t@_V_at){ \
   x='\'']source_sh_sh['\''; \
-  if '\''test'\'' '\''-f'\'' "$][$][{x}"; then \
+  if '\''test'\'' '\''-]dnl
+m4_if([$3], [directory], [[d]], [[f]])['\'' "$][$][{x}"; then \
     d='\''.'\''; \
   else \
     d=$][(srcdir); \
