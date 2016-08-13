@@ -101,6 +101,7 @@ GATBPS_V_JAVAC_1 =
       './'$(java_dst) \
       '-C' \
       './'$(java_dst)'.tmp/x/'$(GATBPS_SOURCEPATH) \
+      $(JARFLAGS) \
       '.' \
     || 'exit' "$${?}"; \
     'exit' '0'; \
