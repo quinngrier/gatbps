@@ -38,15 +38,18 @@ m4_if(
     GATBPS_CP requires its second argument to match the following
     regular expression: ^[-./0-9A-Z_a-z]+$
   ])])[]dnl
-m4_case(
-  [$3],
-  [], [],
-  [r], [],
-  [x], [],
-  [gatbps_fatal([
-    GATBPS_CP requires its third argument to be either empty, the 'r'
-    character, or the 'x' character
-  ])])[]dnl
+m4_if(
+  m4_eval([$# >= 3]),
+  [1],
+  [m4_case(
+    [$3],
+    [regular], [],
+    [directory], [],
+    [executable], [],
+    [gatbps_fatal([
+      GATBPS_CP requires its third argument to be either "regular",
+      "directory", or "executable"
+    ])])])[]dnl
 m4_pushdef(
   [target_sh],
   m4_bpatsubst([[$1]], ['], ['\\'']))[]dnl
@@ -90,7 +93,7 @@ GATBPS_CP_RULES="$][{GATBPS_CP_RULES}"\
   '\''cp'\'' \]dnl
 m4_if(
   [$3],
-  [r],
+  [directory],
   [[
     '\''-R'\'' \]])[
     "$][$][{d}"'\''/'\''"$][$][{x}" \
@@ -98,7 +101,7 @@ m4_if(
   || '\''exit'\'' "$][$][{?}"; \]dnl
 m4_if(
   [$3],
-  [x],
+  [executable],
   [[
   '\''chmod'\'' \
     '\''a+x'\'' \
@@ -114,7 +117,7 @@ clean-]target_sh[:
   '\''-f'\'' \]dnl
 m4_if(
   [$3],
-  [r],
+  [directory],
   [[
   '\''-r'\'' \]])[
   '\''./]target_sh_sh['\'' \
