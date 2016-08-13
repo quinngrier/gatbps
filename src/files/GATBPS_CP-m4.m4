@@ -106,7 +106,7 @@ GATBPS_CP_RULES="$][{GATBPS_CP_RULES}"\
 m4_if([$5], [], [], [[
 	$][(AM@&t@_V_at)$(MAKE) \
   $][(AM@&t@_MAKEFLAGS) \
-  ]source_sh_sh[ \
+  '\'']source_sh_sh['\'' \
 ;]])[
 	$][(AM@&t@_V_at)$(MKDIR_P) \
   '\''./'\''$][(@D) \
