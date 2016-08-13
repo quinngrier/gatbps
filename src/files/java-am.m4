@@ -96,14 +96,33 @@ GATBPS_V_JAVAC_1 =
       || 'exit' "$${?}"; \
       'exit' '0'; \
     :;) || 'exit' "$${?}"; \
-    $(JAR) \
-      'cf' \
-      './'$(java_dst) \
-      '-C' \
-      './'$(java_dst)'.tmp/x/'$(GATBPS_SOURCEPATH) \
-      $(JARFLAGS) \
-      '.' \
-    || 'exit' "$${?}"; \
+    x='x'; \
+    for y in $(java_JARFLAGS); do \
+      $(JAR) \
+        'cf' \
+        './'$(java_dst) \
+        '-C' \
+        './'$(java_dst)'.tmp/x/'$(GATBPS_SOURCEPATH) \
+        $(java_JARFLAGS) \
+        $(JARFLAGS) \
+        '.' \
+      || 'exit' "$${?}"; \
+      x=''; \
+      'break'; \
+    done; \
+    case "$${x}" in \
+      ?*) \
+        $(JAR) \
+          'cf' \
+          './'$(java_dst) \
+          '-C' \
+          './'$(java_dst)'.tmp/x/'$(GATBPS_SOURCEPATH) \
+          $(AM_JARFLAGS) \
+          $(JARFLAGS) \
+          '.' \
+        || 'exit' "$${?}"; \
+      ;; \
+    esac; \
     'exit' '0'; \
   :;); \
   x="$${?}"; \

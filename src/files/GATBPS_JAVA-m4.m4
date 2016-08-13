@@ -77,14 +77,33 @@ m4_foreach_w(
       || '\''exit'\'' "$][$][{?}"; \
       '\''exit'\'' '\''0'\''; \
     :;) || '\''exit'\'' "$][$][{?}"; \
-    $][(JAR) \
-      '\''cf'\'' \
-      '\''./'\''$][(java_]gatbps_y[_dst) \
-      '\''-C'\'' \
-      '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x/'\''$][(GATBPS_SOURCEPATH) \
-      $][(JARFLAGS) \
-      '\''.'\'' \
-    || '\''exit'\'' "$][$][{?}"; \
+    x='\''x'\''; \
+    for y in $][(java_]gatbps_y[_JARFLAGS); do \
+      $][(JAR) \
+        '\''cf'\'' \
+        '\''./'\''$][(java_]gatbps_y[_dst) \
+        '\''-C'\'' \
+        '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x/'\''$][(GATBPS_SOURCEPATH) \
+        $][(java_]gatbps_y[_JARFLAGS) \
+        $][(JARFLAGS) \
+        '\''.'\'' \
+      || '\''exit'\'' "$][$][{?}"; \
+      x='\'''\''; \
+      '\''break'\''; \
+    done; \
+    case "$][$][{x}" in \
+      ?*) \
+        $][(JAR) \
+          '\''cf'\'' \
+          '\''./'\''$][(java_]gatbps_y[_dst) \
+          '\''-C'\'' \
+          '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x/'\''$][(GATBPS_SOURCEPATH) \
+          $][(AM@&t@_JARFLAGS) \
+          $][(JARFLAGS) \
+          '\''.'\'' \
+        || '\''exit'\'' "$][$][{?}"; \
+      ;; \
+    esac; \
     '\''exit'\'' '\''0'\''; \
   :;); \
   x="$][$][{?}"; \
