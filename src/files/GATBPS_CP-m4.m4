@@ -63,12 +63,25 @@ m4_if(
       GATBPS_CP requires its fourth argument to be either "mostlyclean",
       "clean", "distclean", or "maintainer-clean"
     ])])])[]dnl
+m4_if(
+  m4_eval([$# >= 5]),
+  [1],
+  [m4_if(
+    m4_bregexp([$5], [^[-./0-9A-Z_a-z]+$]),
+    [-1],
+    [gatbps_fatal([
+      GATBPS_CP requires its fifth argument to match the following
+      regular expression: ^[-./0-9A-Z_a-z]+$
+    ])])])[]dnl
 m4_pushdef(
   [target_sh],
   m4_bpatsubst([[$1]], ['], ['\\'']))[]dnl
 m4_pushdef(
   [source_sh],
   m4_bpatsubst([[$2]], ['], ['\\'']))[]dnl
+m4_pushdef(
+  [prereq_sh],
+  m4_bpatsubst([[$5]], ['], ['\\'']))[]dnl
 m4_pushdef(
   [target_sh_sh],
   m4_bpatsubst([[$1]], ['], ['\\''\\'\\'''\\'']))[]dnl
@@ -86,8 +99,13 @@ case "$][{GATBPS_CP_RULES}" in
 esac
 
 GATBPS_CP_RULES="$][{GATBPS_CP_RULES}"\
-']target_sh[: ]source_sh[
-	$][(GATBPS_V_CP)'\'':'\''
+']target_sh[: ]m4_if([$5], [], [source_sh], [prereq_sh])[
+	$][(GATBPS_V_CP)'\'':'\'']dnl
+m4_if([$5], [], [], [[
+	$][(AM@&t@_V_at)$(MAKE) \
+  $][(AM@&t@_MAKEFLAGS) \
+  ]source_sh_sh[ \
+;]])[
 	$][(AM@&t@_V_at)$(MKDIR_P) \
   '\''./'\''$][(@D) \
 ;
@@ -140,6 +158,7 @@ m4_if(
 ]dnl
 m4_popdef([source_sh_sh])[]dnl
 m4_popdef([target_sh_sh])[]dnl
+m4_popdef([prereq_sh])[]dnl
 m4_popdef([source_sh])[]dnl
 m4_popdef([target_sh])[]dnl
 [
