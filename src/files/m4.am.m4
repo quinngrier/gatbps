@@ -32,7 +32,7 @@ GATBPS_V_M4_1 =
 
 ## begin_rules
 
-.m4.m4o:
+.m4.m4out:
 	$(GATBPS_V_M4)':'
 	$(AM_V_at)$(M4) \
   $(AM_M4FLAGS) \
