@@ -17,7 +17,7 @@ AC_DEFUN([GATBPS_CONFIG_FILE], [[{
 # The block that contains this comment is an expansion of the
 # GATBPS_CONFIG_FILE macro.
 #]dnl
-]m4_case(
+m4_case(
   [$#],
   [1], [],
   [2], [],
