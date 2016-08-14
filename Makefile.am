@@ -392,18 +392,6 @@ ps_dist_src += doc/gatbps.ps
 
 ## begin_rules
 
-bin/gatbps: $(bin_gatbps_src)
-bin/gatbps: $(nodist_bin_gatbps_src)
-bin/gatbps: src/gatbps.m4
-	$(MKDIR_P) bin
-	$(M4) \
-  $(AM_M4FLAGS) \
-  $(M4FLAGS) \
-  src/gatbps.m4 \
-  >bin/gatbps \
-;
-	chmod +x bin/gatbps
-
 doc/man/gatbps.1: bin/gatbps
 	$(MKDIR_P) doc/man
 	bin/gatbps --man >doc/man/gatbps.1

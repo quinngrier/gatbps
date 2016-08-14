@@ -257,6 +257,9 @@ GATBPS_CONFIG_FILE([src/tools/SHEBANG_LINE.m4])
 GATBPS_CONFIG_FILE([src/tools/TEXI2ANY_DEFAULT_TROFF.m4])
 
 GATBPS_CONFIG_FILE_SUBST
+
+GATBPS_CP([bin/gatbps], [src/gatbps.m4out], [executable])
+
 GATBPS_CP_SUBST
 
 AC_CONFIG_FILES([Makefile])
