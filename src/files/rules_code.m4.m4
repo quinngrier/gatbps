@@ -21,7 +21,7 @@ ifdef(
       {'`%|make_rules|%'`},
       {'`%|ifdef(
         {'`%|rules_target|%'`},
-        {'`%|divert({'`%|0|%'`})rules_target{'`%|.m4out: $1.m4
+        {'`%|divert({'`%|0|%'`})rules_target{'`%|out: $1
 |%'`}|%'`},
         {'`%|define(
           {'`%|rules_target|%'`},
