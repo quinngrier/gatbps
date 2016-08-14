@@ -71,10 +71,14 @@ m4_if(
   [m4_if(
     m4_bregexp([$5], [^[-./0-9A-Z_a-z]+$]),
     [-1],
-    [gatbps_fatal([
-      GATBPS_CP requires its fifth argument to match the following
-      regular expression: ^[-./0-9A-Z_a-z]+$
-    ])])])[]dnl
+    [m4_if(
+      m4_bregexp([$5], [^\$([A-Z_a-z][0-9A-Z_a-z]*)$]),
+      [-1],
+      [gatbps_fatal([
+        GATBPS_CP requires its fifth argument to match one of the
+        following regular expressions: ^[-./0-9A-Z_a-z]+$ or
+        ^\$([A-Z_a-z][0-9A-Z_a-z]*)$
+      ])])])])[]dnl
 m4_pushdef(
   [target_sh],
   m4_bpatsubst([[$1]], ['], ['\\'']))[]dnl
