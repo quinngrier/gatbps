@@ -1,8 +1,8 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|src/files/GATBPS_JAVA_RULES.am|%}){%||%}dnl
-rules_code({%|src/tools/rules_code|%}){%||%}dnl
+rules_code({%|src/files/GATBPS_JAVA_RULES.am.m4|%}){%||%}dnl
+rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
 include({%|src/tools/substitution_comment_singular.m4|%}){%||%}dnl

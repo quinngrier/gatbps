@@ -1,8 +1,8 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|src/files/GATBPS_DEFINE_JARFLAGS.m4|%}){%||%}dnl
-rules_code({%|src/tools/rules_code|%}){%||%}dnl
+rules_code({%|src/files/GATBPS_DEFINE_JARFLAGS.m4.m4|%}){%||%}dnl
+rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
 header_comment({%|dnl|%}, {%|dnl|%}){%|

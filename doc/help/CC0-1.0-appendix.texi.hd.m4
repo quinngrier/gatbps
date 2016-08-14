@@ -1,8 +1,8 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|doc/help/CC0-1.0-appendix.texi.hd|%}){%||%}dnl
-rules_code({%|src/tools/rules_code|%}){%||%}dnl
+rules_code({%|doc/help/CC0-1.0-appendix.texi.hd.m4|%}){%||%}dnl
+rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 {%|Special file: ${fB1}CC0-1.0-appendix.texi${fR1}
 
 The ${fB1}CC0-1.0-appendix.texi${fR1} special file is a Texinfo appendix that

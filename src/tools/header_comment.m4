@@ -1,6 +1,6 @@
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|src/tools/header_comment|%}){%||%}dnl
-rules_code({%|src/tools/rules_code|%}){%||%}dnl
+rules_code({%|src/tools/header_comment.m4|%}){%||%}dnl
+rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/PACKAGE_DATE.m4|%}){%||%}dnl
 include({%|src/tools/PACKAGE_VERSION.m4|%}){%||%}dnl
 ifdef(

@@ -1,6 +1,6 @@
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|src/tools/contains_exactly_one_word|%}){%||%}dnl
-rules_code({%|src/tools/rules_code|%}){%||%}dnl
+rules_code({%|src/tools/contains_exactly_one_word.m4|%}){%||%}dnl
+rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 ifdef(
   {%|contains_exactly_one_word|%},
   {%||%},

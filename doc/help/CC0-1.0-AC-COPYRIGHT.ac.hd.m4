@@ -1,8 +1,8 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|doc/help/CC0-1.0-AC-COPYRIGHT.ac.hd|%}){%||%}dnl
-rules_code({%|src/tools/rules_code|%}){%||%}dnl
+rules_code({%|doc/help/CC0-1.0-AC-COPYRIGHT.ac.hd.m4|%}){%||%}dnl
+rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 {%|Special file: ${fB1}CC0-1.0-AC-COPYRIGHT.ac${fR1}
 
 The ${fB1}CC0-1.0-AC-COPYRIGHT.ac${fR1} special file calls the ${fB1}AC_COPYRIGHT${fR1} Autoconf

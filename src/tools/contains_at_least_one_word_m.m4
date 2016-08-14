@@ -1,6 +1,6 @@
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|src/tools/contains_at_least_one_word_m|%}){%||%}dnl
-rules_code({%|src/tools/rules_code|%}){%||%}dnl
+rules_code({%|src/tools/contains_at_least_one_word_m.m4|%}){%||%}dnl
+rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 ifdef(
   {%|contains_at_least_one_word_m|%},
   {%||%},
