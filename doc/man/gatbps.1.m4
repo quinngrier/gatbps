@@ -36,34 +36,18 @@ include({%|src/tools/TEXI2ANY_DEFAULT_TROFF.m4|%}){%||%}dnl
 .SH "DESCRIPTION"
 .LP
 .nohy "\fBgatbps\fR"
-generates basic files
-for software packages.
-The arguments
-are processed one
-at a time, in order.
-Each argument
-is classified as
-either an operand or
-(roughly) as an option.
-Each operand
-generates a file,
-and each option changes the
-overall behavior of the program.
-Each operand is
-classified by its file
-name as either special or plain.
-There is a fixed
-list of special files,
-and any other file is plain.
-Each special file
-is fixed in content,
-with examples including
-copyright texts and scripts
-to be used with the build system.
-Each plain file is
-generated as the plain text
-output of a corresponding Texinfo file,
-which is useful for writing files like
+generates basic files for software packages.
+The arguments are processed one at a time, in order.
+Each argument is classified as either an operand or (roughly) as an
+option.
+Each operand generates a file, and each option changes the overall
+behavior of the program.
+Each operand is classified by its file name as either special or plain.
+There is a fixed list of special files, and any other file is plain.
+Each special file is fixed in content, with examples including copyright
+texts and scripts to be used with the build system.
+Each plain file is generated as the plain text output of a corresponding
+Texinfo file, which is useful for writing files like
 .nohy "\fBREADME\fR"
 and
 .nohy "\fBINSTALL\fR."
