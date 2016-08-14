@@ -392,10 +392,6 @@ ps_dist_src += doc/gatbps.ps
 
 ## begin_rules
 
-doc/man/gatbps.1: bin/gatbps
-	$(MKDIR_P) doc/man
-	bin/gatbps --man >doc/man/gatbps.1
-
 ## end_rules
 
 ##
