@@ -32,7 +32,7 @@ GATBPS_V_M4_1 =
 
 ## begin_rules
 
-.m4:
+.m4.m4o:
 	$(GATBPS_V_M4)':'
 	$(AM_V_at)$(M4) \
   $(AM_M4FLAGS) \
@@ -46,7 +46,7 @@ GATBPS_V_M4_1 =
   '-D' \
   'make_rules' \
   <$< \
-  >$@'.d' \
+  >$<'.d' \
 ;
 
 ## end_rules
