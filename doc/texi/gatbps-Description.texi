@@ -5,7 +5,7 @@
 @w{@t{gatbps}}
 generates basic files for software packages@.
 The arguments are processed one at a time, in order@.
-Each argument is classified as either an operand or (roughly) as an
+Each argument is classified either as an operand or (roughly) as an
 option@.
 Each operand generates a file, and each option changes the overall
 behavior of the program@.

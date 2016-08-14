@@ -38,7 +38,7 @@ include({%|src/tools/TEXI2ANY_DEFAULT_TROFF.m4|%}){%||%}dnl
 .nohy "\fBgatbps\fR"
 generates basic files for software packages.
 The arguments are processed one at a time, in order.
-Each argument is classified as either an operand or (roughly) as an
+Each argument is classified either as an operand or (roughly) as an
 option.
 Each operand generates a file, and each option changes the overall
 behavior of the program.
