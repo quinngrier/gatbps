@@ -125,10 +125,7 @@ m4_if([$3], [directory], [[d]], [[f]])['\'' "$][$][{x}"; then \
     esac; \
   fi; \
   '\''cp'\'' \]dnl
-m4_if(
-  [$3],
-  [directory],
-  [[
+m4_if([$3], [directory], [[
     '\''-R'\'' \]])[
     "$][$][{d}"'\''/'\''"$][$][{x}" \
     '\''./]target_sh_sh['\'' \
@@ -146,10 +143,7 @@ m4_if([$3], [executable], [[
 clean-]target_sh[:
 	-'\''rm'\'' \
   '\''-f'\'' \]dnl
-m4_if(
-  [$3],
-  [directory],
-  [[
+m4_if([$3], [directory], [[
   '\''-r'\'' \]])[
   '\''./]target_sh_sh['\'' \
 ;
