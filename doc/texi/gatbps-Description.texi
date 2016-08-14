@@ -1,6 +1,7 @@
 @node @w{@t{gatbps}} Description
 @chapter @w{@t{gatbps}} Description
 
+@noindent
 @w{@t{gatbps}}
 generates basic files for software packages@.
 The arguments are processed one at a time, in order@.
