@@ -57,154 +57,154 @@ bin_SCRIPTS =
 bin_SCRIPTS += bin/gatbps
 
 bin_gatbps_src =
-bin_gatbps_src += doc/help/CC0-1-0-AC-COPYRIGHT-ac-hd.m4
-bin_gatbps_src += doc/help/CC0-1-0-appendix-texi-hd.m4
-bin_gatbps_src += doc/help/CC0-1-0-commit-txt-hd.m4
-bin_gatbps_src += doc/help/CC0-1-0-copying-texi-hd.m4
-bin_gatbps_src += doc/help/CC0-1-0-file-txt-hd.m4
-bin_gatbps_src += doc/help/CC0-1-0-txt-hd.m4
-bin_gatbps_src += doc/help/GATBPS_ARG_ENABLE-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_ARG_WITH-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_CACHE_CHECK-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_CHECK_SOFT_INCLUDE-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_CONFIG_FILE_RULES-am-hd.m4
-bin_gatbps_src += doc/help/GATBPS_CP-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_CP_RULES-am-hd.m4
-bin_gatbps_src += doc/help/GATBPS_CP_SUBST-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_DEFINE_AT-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_DEFINE_CLASSPATH-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_DEFINE_DATE-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_DEFINE_HARD_INCLUDE-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_DEFINE_JARFLAGS-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_DEFINE_JAVACFLAGS-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_DEFINE_JAVADOCFLAGS-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_DEFINE_VERSION-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_JAVA-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_JAVA_RULES-am-hd.m4
-bin_gatbps_src += doc/help/GATBPS_JAVA_SUBST-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_MSG_ERROR-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_MSG_FAILURE-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_MSG_NOTICE-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_MSG_WARN-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_PROG_AWK-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_PROG_DOXYGEN-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_PROG_JAR-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_PROG_JAVAC-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_PROG_JAVADOC-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_PROG_M4-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_PROG_MAKEINFO-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_PROG_MKDIR_P-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_PROG_SED-m4-hd.m4
-bin_gatbps_src += doc/help/GATBPS_PROG_TEXI2ANY-m4-hd.m4
-bin_gatbps_src += doc/help/INPUT_FILTER-sh-in-hd.m4
-bin_gatbps_src += doc/help/PACKAGEDATE-texi-in-hd.m4
-bin_gatbps_src += doc/help/PACKAGEVERSION-texi-in-hd.m4
-bin_gatbps_src += doc/help/PACKAGE_VERSION-df-in-hd.m4
-bin_gatbps_src += doc/help/TEST_EXIT-h-hd.m4
-bin_gatbps_src += doc/help/cp-am-hd.m4
-bin_gatbps_src += doc/help/docbook-am-hd.m4
-bin_gatbps_src += doc/help/docbook-dist-am-hd.m4
-bin_gatbps_src += doc/help/doxygen-am-hd.m4
-bin_gatbps_src += doc/help/doxygen-dist-am-hd.m4
-bin_gatbps_src += doc/help/dvi-dist-am-hd.m4
-bin_gatbps_src += doc/help/echo-sh-hd.m4
-bin_gatbps_src += doc/help/gatbps_fatal-m4-hd.m4
-bin_gatbps_src += doc/help/html-dist-am-hd.m4
-bin_gatbps_src += doc/help/indent-texi-hd.m4
-bin_gatbps_src += doc/help/java-am-hd.m4
-bin_gatbps_src += doc/help/java-dist-am-hd.m4
-bin_gatbps_src += doc/help/javadoc-am-hd.m4
-bin_gatbps_src += doc/help/javadoc-dist-am-hd.m4
-bin_gatbps_src += doc/help/m4-am-hd.m4
-bin_gatbps_src += doc/help/pdf-dist-am-hd.m4
-bin_gatbps_src += doc/help/plaintext-am-hd.m4
-bin_gatbps_src += doc/help/plaintext-dist-am-hd.m4
-bin_gatbps_src += doc/help/ps-dist-am-hd.m4
-bin_gatbps_src += doc/help/rules_code-m4-hd.m4
-bin_gatbps_src += doc/help/sh-form-sh-hd.m4
-bin_gatbps_src += doc/help/texinfo-css-hd.m4
-bin_gatbps_src += doc/man/gatbps-1.m4
-bin_gatbps_src += src/files/CC0-1-0-AC-COPYRIGHT-ac.m4
-bin_gatbps_src += src/files/CC0-1-0-appendix-texi.m4
-bin_gatbps_src += src/files/CC0-1-0-commit-txt.m4
-bin_gatbps_src += src/files/CC0-1-0-copying-texi.m4
-bin_gatbps_src += src/files/CC0-1-0-file-txt.m4
-bin_gatbps_src += src/files/GATBPS_ARG_ENABLE-m4.m4
-bin_gatbps_src += src/files/GATBPS_ARG_ENABLE_BOOL-m4.m4
-bin_gatbps_src += src/files/GATBPS_ARG_WITH-m4.m4
-bin_gatbps_src += src/files/GATBPS_ARG_WITH_BOOL-m4.m4
-bin_gatbps_src += src/files/GATBPS_CACHE_CHECK-m4.m4
-bin_gatbps_src += src/files/GATBPS_CHECK_BASIC-m4.m4
-bin_gatbps_src += src/files/GATBPS_CHECK_CFLAG-m4.m4
-bin_gatbps_src += src/files/GATBPS_CHECK_COMPILE-m4.m4
-bin_gatbps_src += src/files/GATBPS_CHECK_HEADER-m4.m4
-bin_gatbps_src += src/files/GATBPS_CHECK_LIB-m4.m4
-bin_gatbps_src += src/files/GATBPS_CHECK_LINK-m4.m4
-bin_gatbps_src += src/files/GATBPS_CHECK_RUN-m4.m4
-bin_gatbps_src += src/files/GATBPS_CHECK_SOFT_INCLUDE-m4.m4
-bin_gatbps_src += src/files/GATBPS_CHECK_VARS-m4.m4
-bin_gatbps_src += src/files/GATBPS_CONFIG_FILE-m4.m4
-bin_gatbps_src += src/files/GATBPS_CONFIG_FILE_RULES-am.m4
-bin_gatbps_src += src/files/GATBPS_CONFIG_FILE_SUBST-m4.m4
-bin_gatbps_src += src/files/GATBPS_CP-m4.m4
-bin_gatbps_src += src/files/GATBPS_CP_RULES-am.m4
-bin_gatbps_src += src/files/GATBPS_CP_SUBST-m4.m4
-bin_gatbps_src += src/files/GATBPS_DEFINE_AT-m4.m4
-bin_gatbps_src += src/files/GATBPS_DEFINE_CLASSPATH-m4.m4
-bin_gatbps_src += src/files/GATBPS_DEFINE_DATE-m4.m4
-bin_gatbps_src += src/files/GATBPS_DEFINE_HARD_INCLUDE-m4.m4
-bin_gatbps_src += src/files/GATBPS_DEFINE_JARFLAGS-m4.m4
-bin_gatbps_src += src/files/GATBPS_DEFINE_JAVACFLAGS-m4.m4
-bin_gatbps_src += src/files/GATBPS_DEFINE_JAVADOCFLAGS-m4.m4
-bin_gatbps_src += src/files/GATBPS_DEFINE_VERSION-m4.m4
-bin_gatbps_src += src/files/GATBPS_JAVA-m4.m4
-bin_gatbps_src += src/files/GATBPS_JAVA_RULES-am.m4
-bin_gatbps_src += src/files/GATBPS_JAVA_SUBST-m4.m4
-bin_gatbps_src += src/files/GATBPS_MSG_ERROR-m4.m4
-bin_gatbps_src += src/files/GATBPS_MSG_FAILURE-m4.m4
-bin_gatbps_src += src/files/GATBPS_MSG_NOTICE-m4.m4
-bin_gatbps_src += src/files/GATBPS_MSG_WARN-m4.m4
-bin_gatbps_src += src/files/GATBPS_PROG_AWK-m4.m4
-bin_gatbps_src += src/files/GATBPS_PROG_DOXYGEN-m4.m4
-bin_gatbps_src += src/files/GATBPS_PROG_JAR-m4.m4
-bin_gatbps_src += src/files/GATBPS_PROG_JAVAC-m4.m4
-bin_gatbps_src += src/files/GATBPS_PROG_JAVADOC-m4.m4
-bin_gatbps_src += src/files/GATBPS_PROG_M4-m4.m4
-bin_gatbps_src += src/files/GATBPS_PROG_MAKEINFO-m4.m4
-bin_gatbps_src += src/files/GATBPS_PROG_MKDIR_P-m4.m4
-bin_gatbps_src += src/files/GATBPS_PROG_SED-m4.m4
-bin_gatbps_src += src/files/GATBPS_PROG_TEXI2ANY-m4.m4
-bin_gatbps_src += src/files/INPUT_FILTER-sh-in.m4
-bin_gatbps_src += src/files/Makefile-am-vim.m4
-bin_gatbps_src += src/files/PACKAGEDATE-texi-in.m4
-bin_gatbps_src += src/files/PACKAGEVERSION-texi-in.m4
-bin_gatbps_src += src/files/PACKAGE_VERSION-df-in.m4
-bin_gatbps_src += src/files/TEST_EXIT-h.m4
-bin_gatbps_src += src/files/cp-am.m4
-bin_gatbps_src += src/files/docbook-am.m4
-bin_gatbps_src += src/files/docbook-dist-am.m4
-bin_gatbps_src += src/files/doxygen-am.m4
-bin_gatbps_src += src/files/doxygen-dist-am.m4
-bin_gatbps_src += src/files/dvi-dist-am.m4
-bin_gatbps_src += src/files/echo-sh.m4
-bin_gatbps_src += src/files/gatbps_fatal-m4.m4
-bin_gatbps_src += src/files/html-dist-am.m4
-bin_gatbps_src += src/files/indent-texi.m4
-bin_gatbps_src += src/files/java-am.m4
-bin_gatbps_src += src/files/java-dist-am.m4
-bin_gatbps_src += src/files/javadoc-am.m4
-bin_gatbps_src += src/files/javadoc-dist-am.m4
-bin_gatbps_src += src/files/m4-am.m4
-bin_gatbps_src += src/files/msign-texi.m4
-bin_gatbps_src += src/files/mtvskipbot-texi.m4
-bin_gatbps_src += src/files/mtvskiptop-texi.m4
-bin_gatbps_src += src/files/pdf-dist-am.m4
-bin_gatbps_src += src/files/plaintext-am.m4
-bin_gatbps_src += src/files/plaintext-dist-am.m4
-bin_gatbps_src += src/files/ps-dist-am.m4
-bin_gatbps_src += src/files/rules_code-m4.m4
-bin_gatbps_src += src/files/sh-form-sh.m4
-bin_gatbps_src += src/files/texinfo-css.m4
+bin_gatbps_src += doc/help/CC0-1.0-AC-COPYRIGHT.ac.hd.m4
+bin_gatbps_src += doc/help/CC0-1.0-appendix.texi.hd.m4
+bin_gatbps_src += doc/help/CC0-1.0-commit.txt.hd.m4
+bin_gatbps_src += doc/help/CC0-1.0-copying.texi.hd.m4
+bin_gatbps_src += doc/help/CC0-1.0-file.txt.hd.m4
+bin_gatbps_src += doc/help/CC0-1.0.txt.hd.m4
+bin_gatbps_src += doc/help/GATBPS_ARG_ENABLE.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_ARG_WITH.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_CACHE_CHECK.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_CHECK_SOFT_INCLUDE.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_CONFIG_FILE_RULES.am.hd.m4
+bin_gatbps_src += doc/help/GATBPS_CP.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_CP_RULES.am.hd.m4
+bin_gatbps_src += doc/help/GATBPS_CP_SUBST.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_DEFINE_AT.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_DEFINE_CLASSPATH.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_DEFINE_DATE.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_DEFINE_HARD_INCLUDE.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_DEFINE_JARFLAGS.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_DEFINE_JAVACFLAGS.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_DEFINE_JAVADOCFLAGS.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_DEFINE_VERSION.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_JAVA.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_JAVA_RULES.am.hd.m4
+bin_gatbps_src += doc/help/GATBPS_JAVA_SUBST.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_MSG_ERROR.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_MSG_FAILURE.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_MSG_NOTICE.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_MSG_WARN.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_PROG_AWK.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_PROG_DOXYGEN.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_PROG_JAR.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_PROG_JAVAC.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_PROG_JAVADOC.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_PROG_M4.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_PROG_MAKEINFO.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_PROG_MKDIR_P.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_PROG_SED.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_PROG_TEXI2ANY.m4.hd.m4
+bin_gatbps_src += doc/help/INPUT_FILTER.sh.in.hd.m4
+bin_gatbps_src += doc/help/PACKAGEDATE.texi.in.hd.m4
+bin_gatbps_src += doc/help/PACKAGEVERSION.texi.in.hd.m4
+bin_gatbps_src += doc/help/PACKAGE_VERSION.df.in.hd.m4
+bin_gatbps_src += doc/help/TEST_EXIT.h.hd.m4
+bin_gatbps_src += doc/help/cp.am.hd.m4
+bin_gatbps_src += doc/help/docbook-dist.am.hd.m4
+bin_gatbps_src += doc/help/docbook.am.hd.m4
+bin_gatbps_src += doc/help/doxygen-dist.am.hd.m4
+bin_gatbps_src += doc/help/doxygen.am.hd.m4
+bin_gatbps_src += doc/help/dvi-dist.am.hd.m4
+bin_gatbps_src += doc/help/echo.sh.hd.m4
+bin_gatbps_src += doc/help/gatbps_fatal.m4.hd.m4
+bin_gatbps_src += doc/help/html-dist.am.hd.m4
+bin_gatbps_src += doc/help/indent.texi.hd.m4
+bin_gatbps_src += doc/help/java-dist.am.hd.m4
+bin_gatbps_src += doc/help/java.am.hd.m4
+bin_gatbps_src += doc/help/javadoc-dist.am.hd.m4
+bin_gatbps_src += doc/help/javadoc.am.hd.m4
+bin_gatbps_src += doc/help/m4.am.hd.m4
+bin_gatbps_src += doc/help/pdf-dist.am.hd.m4
+bin_gatbps_src += doc/help/plaintext-dist.am.hd.m4
+bin_gatbps_src += doc/help/plaintext.am.hd.m4
+bin_gatbps_src += doc/help/ps-dist.am.hd.m4
+bin_gatbps_src += doc/help/rules_code.m4.hd.m4
+bin_gatbps_src += doc/help/sh-form.sh.hd.m4
+bin_gatbps_src += doc/help/texinfo.css.hd.m4
+bin_gatbps_src += doc/man/gatbps.1.m4
+bin_gatbps_src += src/files/CC0-1.0-AC-COPYRIGHT.ac.m4
+bin_gatbps_src += src/files/CC0-1.0-appendix.texi.m4
+bin_gatbps_src += src/files/CC0-1.0-commit.txt.m4
+bin_gatbps_src += src/files/CC0-1.0-copying.texi.m4
+bin_gatbps_src += src/files/CC0-1.0-file.txt.m4
+bin_gatbps_src += src/files/GATBPS_ARG_ENABLE.m4.m4
+bin_gatbps_src += src/files/GATBPS_ARG_ENABLE_BOOL.m4.m4
+bin_gatbps_src += src/files/GATBPS_ARG_WITH.m4.m4
+bin_gatbps_src += src/files/GATBPS_ARG_WITH_BOOL.m4.m4
+bin_gatbps_src += src/files/GATBPS_CACHE_CHECK.m4.m4
+bin_gatbps_src += src/files/GATBPS_CHECK_BASIC.m4.m4
+bin_gatbps_src += src/files/GATBPS_CHECK_CFLAG.m4.m4
+bin_gatbps_src += src/files/GATBPS_CHECK_COMPILE.m4.m4
+bin_gatbps_src += src/files/GATBPS_CHECK_HEADER.m4.m4
+bin_gatbps_src += src/files/GATBPS_CHECK_LIB.m4.m4
+bin_gatbps_src += src/files/GATBPS_CHECK_LINK.m4.m4
+bin_gatbps_src += src/files/GATBPS_CHECK_RUN.m4.m4
+bin_gatbps_src += src/files/GATBPS_CHECK_SOFT_INCLUDE.m4.m4
+bin_gatbps_src += src/files/GATBPS_CHECK_VARS.m4.m4
+bin_gatbps_src += src/files/GATBPS_CONFIG_FILE.m4.m4
+bin_gatbps_src += src/files/GATBPS_CONFIG_FILE_RULES.am.m4
+bin_gatbps_src += src/files/GATBPS_CONFIG_FILE_SUBST.m4.m4
+bin_gatbps_src += src/files/GATBPS_CP.m4.m4
+bin_gatbps_src += src/files/GATBPS_CP_RULES.am.m4
+bin_gatbps_src += src/files/GATBPS_CP_SUBST.m4.m4
+bin_gatbps_src += src/files/GATBPS_DEFINE_AT.m4.m4
+bin_gatbps_src += src/files/GATBPS_DEFINE_CLASSPATH.m4.m4
+bin_gatbps_src += src/files/GATBPS_DEFINE_DATE.m4.m4
+bin_gatbps_src += src/files/GATBPS_DEFINE_HARD_INCLUDE.m4.m4
+bin_gatbps_src += src/files/GATBPS_DEFINE_JARFLAGS.m4.m4
+bin_gatbps_src += src/files/GATBPS_DEFINE_JAVACFLAGS.m4.m4
+bin_gatbps_src += src/files/GATBPS_DEFINE_JAVADOCFLAGS.m4.m4
+bin_gatbps_src += src/files/GATBPS_DEFINE_VERSION.m4.m4
+bin_gatbps_src += src/files/GATBPS_JAVA.m4.m4
+bin_gatbps_src += src/files/GATBPS_JAVA_RULES.am.m4
+bin_gatbps_src += src/files/GATBPS_JAVA_SUBST.m4.m4
+bin_gatbps_src += src/files/GATBPS_MSG_ERROR.m4.m4
+bin_gatbps_src += src/files/GATBPS_MSG_FAILURE.m4.m4
+bin_gatbps_src += src/files/GATBPS_MSG_NOTICE.m4.m4
+bin_gatbps_src += src/files/GATBPS_MSG_WARN.m4.m4
+bin_gatbps_src += src/files/GATBPS_PROG_AWK.m4.m4
+bin_gatbps_src += src/files/GATBPS_PROG_DOXYGEN.m4.m4
+bin_gatbps_src += src/files/GATBPS_PROG_JAR.m4.m4
+bin_gatbps_src += src/files/GATBPS_PROG_JAVAC.m4.m4
+bin_gatbps_src += src/files/GATBPS_PROG_JAVADOC.m4.m4
+bin_gatbps_src += src/files/GATBPS_PROG_M4.m4.m4
+bin_gatbps_src += src/files/GATBPS_PROG_MAKEINFO.m4.m4
+bin_gatbps_src += src/files/GATBPS_PROG_MKDIR_P.m4.m4
+bin_gatbps_src += src/files/GATBPS_PROG_SED.m4.m4
+bin_gatbps_src += src/files/GATBPS_PROG_TEXI2ANY.m4.m4
+bin_gatbps_src += src/files/INPUT_FILTER.sh.in.m4
+bin_gatbps_src += src/files/Makefile.am.vim.m4
+bin_gatbps_src += src/files/PACKAGEDATE.texi.in.m4
+bin_gatbps_src += src/files/PACKAGEVERSION.texi.in.m4
+bin_gatbps_src += src/files/PACKAGE_VERSION.df.in.m4
+bin_gatbps_src += src/files/TEST_EXIT.h.m4
+bin_gatbps_src += src/files/cp.am.m4
+bin_gatbps_src += src/files/docbook-dist.am.m4
+bin_gatbps_src += src/files/docbook.am.m4
+bin_gatbps_src += src/files/doxygen-dist.am.m4
+bin_gatbps_src += src/files/doxygen.am.m4
+bin_gatbps_src += src/files/dvi-dist.am.m4
+bin_gatbps_src += src/files/echo.sh.m4
+bin_gatbps_src += src/files/gatbps_fatal.m4.m4
+bin_gatbps_src += src/files/html-dist.am.m4
+bin_gatbps_src += src/files/indent.texi.m4
+bin_gatbps_src += src/files/java-dist.am.m4
+bin_gatbps_src += src/files/java.am.m4
+bin_gatbps_src += src/files/javadoc-dist.am.m4
+bin_gatbps_src += src/files/javadoc.am.m4
+bin_gatbps_src += src/files/m4.am.m4
+bin_gatbps_src += src/files/msign.texi.m4
+bin_gatbps_src += src/files/mtvskipbot.texi.m4
+bin_gatbps_src += src/files/mtvskiptop.texi.m4
+bin_gatbps_src += src/files/pdf-dist.am.m4
+bin_gatbps_src += src/files/plaintext-dist.am.m4
+bin_gatbps_src += src/files/plaintext.am.m4
+bin_gatbps_src += src/files/ps-dist.am.m4
+bin_gatbps_src += src/files/rules_code.m4.m4
+bin_gatbps_src += src/files/sh-form.sh.m4
+bin_gatbps_src += src/files/texinfo.css.m4
 bin_gatbps_src += src/tools/contains_at_least_one_word.m4
 bin_gatbps_src += src/tools/contains_at_least_one_word_m.m4
 bin_gatbps_src += src/tools/contains_exactly_one_word.m4
@@ -412,93 +412,93 @@ doc/man/gatbps.1: bin/gatbps
 
 ##
 ## The following section should use @SOFT_INCLUDE@ to include
-## src/gatbps.m4 and src/files/*.m4 with ".m4" replaced by ".d".
+## src/gatbps.m4 and src/files/*.m4 with .d appended to each name.
 ##
 
 ## begin_includes
 
-@SOFT_INCLUDE@ src/files/CC0-1-0-AC-COPYRIGHT-ac.d
-@SOFT_INCLUDE@ src/files/CC0-1-0-appendix-texi.d
-@SOFT_INCLUDE@ src/files/CC0-1-0-commit-txt.d
-@SOFT_INCLUDE@ src/files/CC0-1-0-copying-texi.d
-@SOFT_INCLUDE@ src/files/CC0-1-0-file-txt.d
-@SOFT_INCLUDE@ src/files/GATBPS_ARG_ENABLE-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_ARG_ENABLE_BOOL-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_ARG_WITH-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_ARG_WITH_BOOL-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_CACHE_CHECK-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_CHECK_BASIC-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_CHECK_CFLAG-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_CHECK_COMPILE-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_CHECK_HEADER-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_CHECK_LIB-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_CHECK_LINK-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_CHECK_RUN-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_CHECK_SOFT_INCLUDE-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_CHECK_VARS-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_CONFIG_FILE-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_CONFIG_FILE_RULES-am.d
-@SOFT_INCLUDE@ src/files/GATBPS_CONFIG_FILE_SUBST-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_CP-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_CP_RULES-am.d
-@SOFT_INCLUDE@ src/files/GATBPS_CP_SUBST-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_DEFINE_AT-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_DEFINE_CLASSPATH-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_DEFINE_DATE-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_DEFINE_HARD_INCLUDE-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_DEFINE_JARFLAGS-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_DEFINE_JAVACFLAGS-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_DEFINE_JAVADOCFLAGS-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_DEFINE_VERSION-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_JAVA-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_JAVA_RULES-am.d
-@SOFT_INCLUDE@ src/files/GATBPS_JAVA_SUBST-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_MSG_ERROR-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_MSG_FAILURE-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_MSG_NOTICE-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_MSG_WARN-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_PROG_AWK-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_PROG_DOXYGEN-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_PROG_JAR-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_PROG_JAVAC-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_PROG_JAVADOC-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_PROG_M4-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_PROG_MAKEINFO-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_PROG_MKDIR_P-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_PROG_SED-m4.d
-@SOFT_INCLUDE@ src/files/GATBPS_PROG_TEXI2ANY-m4.d
-@SOFT_INCLUDE@ src/files/INPUT_FILTER-sh-in.d
-@SOFT_INCLUDE@ src/files/Makefile-am-vim.d
-@SOFT_INCLUDE@ src/files/PACKAGEDATE-texi-in.d
-@SOFT_INCLUDE@ src/files/PACKAGEVERSION-texi-in.d
-@SOFT_INCLUDE@ src/files/PACKAGE_VERSION-df-in.d
-@SOFT_INCLUDE@ src/files/TEST_EXIT-h.d
-@SOFT_INCLUDE@ src/files/cp-am.d
-@SOFT_INCLUDE@ src/files/docbook-am.d
-@SOFT_INCLUDE@ src/files/docbook-dist-am.d
-@SOFT_INCLUDE@ src/files/doxygen-am.d
-@SOFT_INCLUDE@ src/files/doxygen-dist-am.d
-@SOFT_INCLUDE@ src/files/dvi-dist-am.d
-@SOFT_INCLUDE@ src/files/echo-sh.d
-@SOFT_INCLUDE@ src/files/gatbps_fatal-m4.d
-@SOFT_INCLUDE@ src/files/html-dist-am.d
-@SOFT_INCLUDE@ src/files/indent-texi.d
-@SOFT_INCLUDE@ src/files/java-am.d
-@SOFT_INCLUDE@ src/files/java-dist-am.d
-@SOFT_INCLUDE@ src/files/javadoc-am.d
-@SOFT_INCLUDE@ src/files/javadoc-dist-am.d
-@SOFT_INCLUDE@ src/files/m4-am.d
-@SOFT_INCLUDE@ src/files/msign-texi.d
-@SOFT_INCLUDE@ src/files/mtvskipbot-texi.d
-@SOFT_INCLUDE@ src/files/mtvskiptop-texi.d
-@SOFT_INCLUDE@ src/files/pdf-dist-am.d
-@SOFT_INCLUDE@ src/files/plaintext-am.d
-@SOFT_INCLUDE@ src/files/plaintext-dist-am.d
-@SOFT_INCLUDE@ src/files/ps-dist-am.d
-@SOFT_INCLUDE@ src/files/rules_code-m4.d
-@SOFT_INCLUDE@ src/files/sh-form-sh.d
-@SOFT_INCLUDE@ src/files/texinfo-css.d
-@SOFT_INCLUDE@ src/gatbps.d
+@SOFT_INCLUDE@ src/files/CC0-1.0-AC-COPYRIGHT.ac.m4.d
+@SOFT_INCLUDE@ src/files/CC0-1.0-appendix.texi.m4.d
+@SOFT_INCLUDE@ src/files/CC0-1.0-commit.txt.m4.d
+@SOFT_INCLUDE@ src/files/CC0-1.0-copying.texi.m4.d
+@SOFT_INCLUDE@ src/files/CC0-1.0-file.txt.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_ARG_ENABLE.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_ARG_ENABLE_BOOL.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_ARG_WITH.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_ARG_WITH_BOOL.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_CACHE_CHECK.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_CHECK_BASIC.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_CHECK_CFLAG.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_CHECK_COMPILE.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_CHECK_HEADER.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_CHECK_LIB.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_CHECK_LINK.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_CHECK_RUN.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_CHECK_SOFT_INCLUDE.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_CHECK_VARS.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_CONFIG_FILE.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_CONFIG_FILE_RULES.am.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_CONFIG_FILE_SUBST.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_CP.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_CP_RULES.am.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_CP_SUBST.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_DEFINE_AT.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_DEFINE_CLASSPATH.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_DEFINE_DATE.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_DEFINE_HARD_INCLUDE.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_DEFINE_JARFLAGS.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_DEFINE_JAVACFLAGS.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_DEFINE_JAVADOCFLAGS.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_DEFINE_VERSION.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_JAVA.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_JAVA_RULES.am.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_JAVA_SUBST.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_MSG_ERROR.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_MSG_FAILURE.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_MSG_NOTICE.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_MSG_WARN.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_PROG_AWK.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_PROG_DOXYGEN.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_PROG_JAR.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_PROG_JAVAC.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_PROG_JAVADOC.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_PROG_M4.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_PROG_MAKEINFO.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_PROG_MKDIR_P.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_PROG_SED.m4.m4.d
+@SOFT_INCLUDE@ src/files/GATBPS_PROG_TEXI2ANY.m4.m4.d
+@SOFT_INCLUDE@ src/files/INPUT_FILTER.sh.in.m4.d
+@SOFT_INCLUDE@ src/files/Makefile.am.vim.m4.d
+@SOFT_INCLUDE@ src/files/PACKAGEDATE.texi.in.m4.d
+@SOFT_INCLUDE@ src/files/PACKAGEVERSION.texi.in.m4.d
+@SOFT_INCLUDE@ src/files/PACKAGE_VERSION.df.in.m4.d
+@SOFT_INCLUDE@ src/files/TEST_EXIT.h.m4.d
+@SOFT_INCLUDE@ src/files/cp.am.m4.d
+@SOFT_INCLUDE@ src/files/docbook-dist.am.m4.d
+@SOFT_INCLUDE@ src/files/docbook.am.m4.d
+@SOFT_INCLUDE@ src/files/doxygen-dist.am.m4.d
+@SOFT_INCLUDE@ src/files/doxygen.am.m4.d
+@SOFT_INCLUDE@ src/files/dvi-dist.am.m4.d
+@SOFT_INCLUDE@ src/files/echo.sh.m4.d
+@SOFT_INCLUDE@ src/files/gatbps_fatal.m4.m4.d
+@SOFT_INCLUDE@ src/files/html-dist.am.m4.d
+@SOFT_INCLUDE@ src/files/indent.texi.m4.d
+@SOFT_INCLUDE@ src/files/java-dist.am.m4.d
+@SOFT_INCLUDE@ src/files/java.am.m4.d
+@SOFT_INCLUDE@ src/files/javadoc-dist.am.m4.d
+@SOFT_INCLUDE@ src/files/javadoc.am.m4.d
+@SOFT_INCLUDE@ src/files/m4.am.m4.d
+@SOFT_INCLUDE@ src/files/msign.texi.m4.d
+@SOFT_INCLUDE@ src/files/mtvskipbot.texi.m4.d
+@SOFT_INCLUDE@ src/files/mtvskiptop.texi.m4.d
+@SOFT_INCLUDE@ src/files/pdf-dist.am.m4.d
+@SOFT_INCLUDE@ src/files/plaintext-dist.am.m4.d
+@SOFT_INCLUDE@ src/files/plaintext.am.m4.d
+@SOFT_INCLUDE@ src/files/ps-dist.am.m4.d
+@SOFT_INCLUDE@ src/files/rules_code.m4.m4.d
+@SOFT_INCLUDE@ src/files/sh-form.sh.m4.d
+@SOFT_INCLUDE@ src/files/texinfo.css.m4.d
+@SOFT_INCLUDE@ src/gatbps.m4.d
 
 ## end_includes
 
