@@ -491,6 +491,7 @@ EOF1
 
           shift
 
+          set "${prefix}xml.am" "${@AT@}"
           set "${prefix}troff-form.sh" "${@AT@}"
           set "${prefix}texinfo.css" "${@AT@}"
           set "${prefix}texi-form.sh" "${@AT@}"
@@ -2245,6 +2246,8 @@ EOF1
                 ;;
               esac
             ;;
+
+|%}help_code({%|xml.am|%}){%|
 
             *)
               'eval' "${awk}"' '\''
@@ -7342,6 +7345,8 @@ EOF1
             esac
           ;;
 
+|%}generation_code({%|xml.am|%}){%|
+
           *)
 
             if test '-e' "${safe_1}.top"; then
@@ -8456,6 +8461,13 @@ EOF1
 |%}recursion_code(
   {%|troff-form.sh|%},
   {%|
+            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@AT@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|xml.am|%},
+  {%|
+            'set' 'x' "${prefix}"'sh-form.sh' "${@AT@}"; 'shift'
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@AT@}"; 'shift'
 |%}){%|
 

@@ -122,6 +122,7 @@ bin_gatbps_src += doc/help/ps-dist.am.hd.m4
 bin_gatbps_src += doc/help/rules_code.m4.hd.m4
 bin_gatbps_src += doc/help/sh-form.sh.hd.m4
 bin_gatbps_src += doc/help/texinfo.css.hd.m4
+bin_gatbps_src += doc/help/xml.am.hd.m4
 bin_gatbps_src += doc/man/gatbps.1.m4
 bin_gatbps_src += src/files/CC0-1.0-AC-COPYRIGHT.ac.m4
 bin_gatbps_src += src/files/CC0-1.0-appendix.texi.m4
@@ -204,6 +205,7 @@ bin_gatbps_src += src/files/ps-dist.am.m4
 bin_gatbps_src += src/files/rules_code.m4.m4
 bin_gatbps_src += src/files/sh-form.sh.m4
 bin_gatbps_src += src/files/texinfo.css.m4
+bin_gatbps_src += src/files/xml.am.m4
 bin_gatbps_src += src/tools/contains_at_least_one_word.m4
 bin_gatbps_src += src/tools/contains_at_least_one_word_m.m4
 bin_gatbps_src += src/tools/contains_exactly_one_word.m4
@@ -481,6 +483,7 @@ ps_dist_src += doc/gatbps.ps
 @SOFT_INCLUDE@ src/files/rules_code.m4.m4.d
 @SOFT_INCLUDE@ src/files/sh-form.sh.m4.d
 @SOFT_INCLUDE@ src/files/texinfo.css.m4.d
+@SOFT_INCLUDE@ src/files/xml.am.m4.d
 @SOFT_INCLUDE@ src/gatbps.m4.d
 
 ## end_includes
