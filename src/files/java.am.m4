@@ -43,6 +43,9 @@ GATBPS_V_JAVAC_0 = @'sh' \
 
 GATBPS_V_JAVAC_1 =
 
+SUFFIXES += .class
+SUFFIXES += .java
+
 ## end_variables
 
 ## begin_rules
