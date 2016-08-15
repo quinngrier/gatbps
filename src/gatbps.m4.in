@@ -492,6 +492,7 @@ EOF1
           shift
 
           set "${prefix}xml.am" "${@AT@}"
+          set "${prefix}xml-dist.am" "${@AT@}"
           set "${prefix}troff-form.sh" "${@AT@}"
           set "${prefix}texinfo.css" "${@AT@}"
           set "${prefix}texi-form.sh" "${@AT@}"
@@ -2246,6 +2247,8 @@ EOF1
                 ;;
               esac
             ;;
+
+|%}help_code({%|xml-dist.am|%}){%|
 
 |%}help_code({%|xml.am|%}){%|
 
@@ -7345,6 +7348,8 @@ EOF1
             esac
           ;;
 
+|%}generation_code({%|xml-dist.am|%}){%|
+
 |%}generation_code({%|xml.am|%}){%|
 
           *)
@@ -8461,6 +8466,13 @@ EOF1
 |%}recursion_code(
   {%|troff-form.sh|%},
   {%|
+            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@AT@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|xml-dist.am|%},
+  {%|
+            'set' 'x' "${prefix}"'cp.am' "${@AT@}"; 'shift'
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@AT@}"; 'shift'
 |%}){%|
 
