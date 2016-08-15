@@ -57,13 +57,13 @@ m4_if(
   [1],
   [m4_case(
     [$4],
-    [mostlyclean], [],
     [clean], [],
     [distclean], [],
     [maintainer-clean], [],
+    [mostlyclean], [],
     [gatbps_fatal([
-      GATBPS_CP requires its fourth argument to be either "mostlyclean",
-      "clean", "distclean", or "maintainer-clean"
+      GATBPS_CP requires its fourth argument to be either "clean",
+      "distclean", "maintainer-clean", or "mostlyclean"
     ])])])[]dnl
 m4_if(
   m4_eval([$# >= 5]),
