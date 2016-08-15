@@ -17,17 +17,41 @@ header_comment({%|/*|%}, {%| *|%}){%|
  * For more information, see the GATBPS manual.
  */
 
+/**
+ * @file
+ */
+
+/**
+ *
+ * @showinitializer
+ */
+
 #if (!defined(TEST_EXIT_ERROR))
   #define TEST_EXIT_ERROR 99
 #endif
+
+/**
+ *
+ * @showinitializer
+ */
 
 #if (!defined(TEST_EXIT_FAIL))
   #define TEST_EXIT_FAIL 1
 #endif
 
+/**
+ *
+ * @showinitializer
+ */
+
 #if (!defined(TEST_EXIT_PASS))
   #define TEST_EXIT_PASS 0
 #endif
+
+/**
+ *
+ * @showinitializer
+ */
 
 #if (!defined(TEST_EXIT_SKIP))
   #define TEST_EXIT_SKIP 77
