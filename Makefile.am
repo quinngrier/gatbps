@@ -100,6 +100,7 @@ bin_gatbps_src += doc/help/PACKAGEDATE.texi.in.hd.m4
 bin_gatbps_src += doc/help/PACKAGEVERSION.texi.in.hd.m4
 bin_gatbps_src += doc/help/PACKAGE_VERSION.df.in.hd.m4
 bin_gatbps_src += doc/help/TEST_EXIT.h.hd.m4
+bin_gatbps_src += doc/help/configure.ac.vim.hd.m4
 bin_gatbps_src += doc/help/cp.am.hd.m4
 bin_gatbps_src += doc/help/docbook-dist.am.hd.m4
 bin_gatbps_src += doc/help/docbook.am.hd.m4
