@@ -17,10 +17,10 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 |%}substitution_comment_plural{%|
 
-mostlyclean-local:
 clean-local:
 distclean-local:
 maintainer-clean-local:
+mostlyclean-local:
 
 |%}footer_comment({%|##|%}, {%|##|%}, {%|##|%}){%||%}dnl
 dnl
