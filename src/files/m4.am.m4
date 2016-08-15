@@ -28,6 +28,9 @@ GATBPS_V_M4_0 = @'sh' \
 
 GATBPS_V_M4_1 =
 
+SUFFIXES += .m4
+SUFFIXES += .m4out
+
 ## end_variables
 
 ## begin_rules
