@@ -14,6 +14,9 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 ## begin_variables
 
+SUFFIXES += .am_dfv_INPUT
+SUFFIXES += .dfv
+
 ## end_variables
 
 ## begin_rules
