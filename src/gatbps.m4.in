@@ -973,33 +973,7 @@ EOF1
 
 |%}help_code({%|CC0-1.0-AC-COPYRIGHT.ac|%}){%|
 
-            '--help=CC0-1.0-AM-COPYRIGHT.am'|'--help='*'/CC0-1.0-AM-COPYRIGHT.am')
-              cat <<EOF1
-Special file: ${fB1}CC0-1.0-AM-COPYRIGHT.am${fR1}
-
-The ${fB1}CC0-1.0-AM-COPYRIGHT.am${fR1} special file contains an Automake comment
-that states that some parts of the ${fB1}Makefile${fR1} are from the package, and
-that the authors of those parts have waived their rights to them by
-referencing the ${fB1}CC0-1.0.txt${fR1} special file. This can be included in
-another Automake file with the ${fB1}include${fR1} directive where the comment is
-desired to appear.
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|CC0-1.0-AM-COPYRIGHT.am|%}){%|
 
 |%}help_code({%|CC0-1.0-appendix.texi|%}){%|
 
@@ -1011,288 +985,41 @@ EOF1
 
 |%}help_code({%|CC0-1.0.txt|%}){%|
 
-            '--help=DATE.sh'|'--help='*'/DATE.sh')
-              cat <<EOF1
-Special file: ${fB1}DATE.sh${fR1}
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|DATE.sh|%}){%|
 
 |%}help_code({%|GATBPS_ARG_ENABLE.m4|%}){%|
 
-            '--help=GATBPS_ARG_ENABLE_BOOL.m4'|'--help='*'/GATBPS_ARG_ENABLE_BOOL.m4')
-              cat <<EOF1
-Special file: ${fB1}GATBPS_ARG_ENABLE_BOOL.m4${fR1}
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|GATBPS_ARG_ENABLE_BOOL.m4|%}){%|
 
 |%}help_code({%|GATBPS_ARG_WITH.m4|%}){%|
 
-            '--help=GATBPS_ARG_WITH_BOOL.m4'|'--help='*'/GATBPS_ARG_WITH_BOOL.m4')
-              cat <<EOF1
-Special file: ${fB1}GATBPS_ARG_WITH_BOOL.m4${fR1}
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|GATBPS_ARG_WITH_BOOL.m4|%}){%|
 
 |%}help_code({%|GATBPS_CACHE_CHECK.m4|%}){%|
 
-            '--help=GATBPS_CHECK_BASIC.m4'|'--help='*'/GATBPS_CHECK_BASIC.m4')
-              cat <<EOF1
-Special file: ${fB1}GATBPS_CHECK_BASIC.m4${fR1}
+|%}help_code({%|GATBPS_CHECK_BASIC.m4|%}){%|
 
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|GATBPS_CHECK_CFLAG.m4|%}){%|
 
-            '--help=GATBPS_CHECK_CFLAG.m4'|'--help='*'/GATBPS_CHECK_CFLAG.m4')
-              cat <<EOF1
-Special file: ${fB1}GATBPS_CHECK_CFLAG.m4${fR1}
+|%}help_code({%|GATBPS_CHECK_COMPILE.m4|%}){%|
 
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|GATBPS_CHECK_HEADER.m4|%}){%|
 
-            '--help=GATBPS_CHECK_COMPILE.m4'|'--help='*'/GATBPS_CHECK_COMPILE.m4')
-              cat <<EOF1
-Special file: ${fB1}GATBPS_CHECK_COMPILE.m4${fR1}
+|%}help_code({%|GATBPS_CHECK_LIB.m4|%}){%|
 
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|GATBPS_CHECK_LINK.m4|%}){%|
 
-            '--help=GATBPS_CHECK_HEADER.m4'|'--help='*'/GATBPS_CHECK_HEADER.m4')
-              cat <<EOF1
-Special file: ${fB1}GATBPS_CHECK_HEADER.m4${fR1}
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
-
-            '--help=GATBPS_CHECK_LIB.m4'|'--help='*'/GATBPS_CHECK_LIB.m4')
-              cat <<EOF1
-Special file: ${fB1}GATBPS_CHECK_LIB.m4${fR1}
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
-
-            '--help=GATBPS_CHECK_LINK.m4'|'--help='*'/GATBPS_CHECK_LINK.m4')
-              cat <<EOF1
-Special file: ${fB1}GATBPS_CHECK_LINK.m4${fR1}
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
-
-            '--help=GATBPS_CHECK_RUN.m4'|'--help='*'/GATBPS_CHECK_RUN.m4')
-              cat <<EOF1
-Special file: ${fB1}GATBPS_CHECK_RUN.m4${fR1}
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|GATBPS_CHECK_RUN.m4|%}){%|
 
 |%}help_code({%|GATBPS_CHECK_SOFT_INCLUDE.m4|%}){%|
 
-            '--help=GATBPS_CHECK_VARS.m4'|'--help='*'/GATBPS_CHECK_VARS.m4')
-              cat <<EOF1
-Special file: ${fB1}GATBPS_CHECK_VARS.m4${fR1}
+|%}help_code({%|GATBPS_CHECK_VARS.m4|%}){%|
 
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
-
-            '--help=GATBPS_CONFIG_FILE.m4'|'--help='*'/GATBPS_CONFIG_FILE.m4')
-              cat <<EOF1
-Special file: ${fB1}GATBPS_CONFIG_FILE.m4${fR1}
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|GATBPS_CONFIG_FILE.m4|%}){%|
 
 |%}help_code({%|GATBPS_CONFIG_FILE_RULES.am|%}){%|
 
-            '--help=GATBPS_CONFIG_FILE_SUBST.m4'|'--help='*'/GATBPS_CONFIG_FILE_SUBST.m4')
-              cat <<EOF1
-Special file: ${fB1}GATBPS_CONFIG_FILE_SUBST.m4${fR1}
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|GATBPS_CONFIG_FILE_SUBST.m4|%}){%|
 
 |%}help_code({%|GATBPS_CP.m4|%}){%|
 
@@ -1352,26 +1079,7 @@ EOF1
 
 |%}help_code({%|INPUT_FILTER.sh.in|%}){%|
 
-            '--help=Makefile.am.vim'|'--help='*'/Makefile.am.vim')
-              cat <<EOF1
-Special file: ${fB1}Makefile.am.vim${fR1}
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|Makefile.am.vim|%}){%|
 
 |%}help_code({%|PACKAGEDATE.texi.in|%}){%|
 
@@ -1381,168 +1089,21 @@ EOF1
 
 |%}help_code({%|TEST_EXIT.h|%}){%|
 
-            '--help=VERSION.ac'|'--help='*'/VERSION.ac')
-              cat <<EOF1
-Special file: ${fB1}VERSION.ac${fR1}
+|%}help_code({%|VERSION.ac|%}){%|
 
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|VERSION.sh|%}){%|
 
-            '--help=VERSION.sh'|'--help='*'/VERSION.sh')
-              cat <<EOF1
-Special file: ${fB1}VERSION.sh${fR1}
+|%}help_code({%|VERSION_LTCUR.sh|%}){%|
 
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|awk-form.sh|%}){%|
 
-            '--help=VERSION_LTCUR.sh'|'--help='*'/VERSION_LTCUR.sh')
-              cat <<EOF1
-Special file: ${fB1}VERSION_LTCUR.sh${fR1}
+|%}help_code({%|bdots.texi|%}){%|
 
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
-
-            '--help=awk-form.sh'|'--help='*'/awk-form.sh')
-              cat <<EOF1
-Special file: ${fB1}awk-form.sh${fR1}
-
-The ${fB1}awk-form.sh${fR1} special file is a portable shell script that formats its
-input as an awk string literal.
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
-
-            '--help=bdots.texi'|'--help='*'/bdots.texi')
-              cat <<EOF1
-Special file: ${fB1}bdots.texi${fR1}
-
-The ${fB1}bdots.texi${fR1} special file defines the ${fB1}@AT@bdots{}${fR1} Texinfo macro, which is
-used to imitate the mathematical notation of TeX in the other output
-formats:
-
-      @AT@tex
-      \$1, \\ldots, n\$
-      @AT@end tex
-      @AT@ifnottex
-      1, @AT@bdots{}, @AT@i{n}
-      @AT@end ifnottex
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
-
-            '--help=bothcontents.texi'|'--help='*'/bothcontents.texi')
-              cat <<EOF1
-Special file: ${fB1}bothcontents.texi${fR1}
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|bothcontents.texi|%}){%|
 
 |%}help_code({%|configure.ac.vim|%}){%|
 
-            '--help=contents.texi'|'--help='*'/contents.texi')
-              cat <<EOF1
-Special file: ${fB1}contents.texi${fR1}
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|contents.texi|%}){%|
 
 |%}help_code({%|cp.am|%}){%|
 
@@ -1554,37 +1115,7 @@ EOF1
 
 |%}help_code({%|doxygen.am|%}){%|
 
-            '--help=dslash.texi'|'--help='*'/dslash.texi')
-              cat <<EOF1
-Special file: ${fB1}dslash.texi${fR1}
-
-The ${fB1}dslash.texi${fR1} special file defines the ${fB1}@AT@dslash{}${fR1} Texinfo macro, which
-is used to imitate the mathematical notation of TeX in the other output
-formats:
-
-      @AT@tex
-      \$x / y\$
-      @AT@end tex
-      @AT@ifnottex
-      @AT@i{x} @AT@dslash{} @AT@i{y}
-      @AT@end ifnottex
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|dslash.texi|%}){%|
 
 |%}help_code({%|dvi-dist.am|%}){%|
 
@@ -1592,62 +1123,13 @@ EOF1
 
 |%}help_code({%|gatbps_fatal.m4|%}){%|
 
-            '--help=gequ.texi'|'--help='*'/gequ.texi')
-              cat <<EOF1
-Special file: ${fB1}gequ.texi${fR1}
-
-The ${fB1}gequ.texi${fR1} special file defines the ${fB1}@AT@gequ{}${fR1} Texinfo macro, which is
-used to imitate the mathematical notation of TeX in the other output
-formats:
-
-      @AT@tex
-      \$x \\ge y\$
-      @AT@end tex
-      @AT@ifnottex
-      @AT@i{x} @AT@gequ{} @AT@i{y}
-      @AT@end ifnottex
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|gequ.texi|%}){%|
 
 |%}help_code({%|html-dist.am|%}){%|
 
 |%}help_code({%|indent.texi|%}){%|
 
-            '--help=ipez.texi'|'--help='*'/ipez.texi')
-              cat <<EOF1
-Special file: ${fB1}ipez.texi${fR1}
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|ipez.texi|%}){%|
 
 |%}help_code({%|java-dist.am|%}){%|
 
@@ -1657,298 +1139,27 @@ EOF1
 
 |%}help_code({%|javadoc.am|%}){%|
 
-            '--help=lcei.texi'|'--help='*'/lcei.texi')
-              cat <<EOF1
-Special file: ${fB1}lcei.texi${fR1}
+|%}help_code({%|lcei.texi|%}){%|
 
-The ${fB1}lcei.texi${fR1} special file defines the ${fB1}@AT@lcei{}${fR1} Texinfo macro, which is
-used to imitate the mathematical notation of TeX in the other output
-formats:
+|%}help_code({%|lequ.texi|%}){%|
 
-      @AT@tex
-      \$\\lceil x \\rceil\$
-      @AT@end tex
-      @AT@ifnottex
-      @AT@lcei{}@AT@i{x}@AT@rcei{}
-      @AT@end ifnottex
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
-
-            '--help=lequ.texi'|'--help='*'/lequ.texi')
-              cat <<EOF1
-Special file: ${fB1}lequ.texi${fR1}
-
-The ${fB1}lequ.texi${fR1} special file defines the ${fB1}@AT@lequ{}${fR1} Texinfo macro, which is
-used to imitate the mathematical notation of TeX in the other output
-formats:
-
-      @AT@tex
-      \$x \\le y\$
-      @AT@end tex
-      @AT@ifnottex
-      @AT@i{x} @AT@lequ{} @AT@i{y}
-      @AT@end ifnottex
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
-
-            '--help=lflo.texi'|'--help='*'/lflo.texi')
-              cat <<EOF1
-Special file: ${fB1}lflo.texi${fR1}
-
-The ${fB1}lflo.texi${fR1} special file defines the ${fB1}@AT@lflo{}${fR1} Texinfo macro, which is
-used to imitate the mathematical notation of TeX in the other output
-formats:
-
-      @AT@tex
-      \$\\lfloor x \\rfloor\$
-      @AT@end tex
-      @AT@ifnottex
-      @AT@lflo{}@AT@i{x}@AT@rflo{}
-      @AT@end ifnottex
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|lflo.texi|%}){%|
 
 |%}help_code({%|m4.am|%}){%|
 
-            '--help=math.texi'|'--help='*'/math.texi')
-              cat <<EOF1
-Special file: ${fB1}math.texi${fR1}
+|%}help_code({%|math.texi|%}){%|
 
-The ${fB1}math.texi${fR1} special file is a Texinfo file that includes every special
-file that defines a macro for imitating the mathematical notation of TeX
-in the other output formats.
+|%}help_code({%|mdot.texi|%}){%|
 
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|mdots.texi|%}){%|
 
-            '--help=mdot.texi'|'--help='*'/mdot.texi')
-              cat <<EOF1
-Special file: ${fB1}mdot.texi${fR1}
+|%}help_code({%|msign.texi|%}){%|
 
-The ${fB1}mdot.texi${fR1} special file defines the ${fB1}@AT@mdot{}${fR1} Texinfo macro, which is
-used to imitate the mathematical notation of TeX in the other output
-formats:
+|%}help_code({%|mtvskipbot.texi|%}){%|
 
-      @AT@tex
-      \$x \\cdot y\$
-      @AT@end tex
-      @AT@ifnottex
-      @AT@i{x} @AT@mdot{} @AT@i{y}
-      @AT@end ifnottex
+|%}help_code({%|mtvskiptop.texi|%}){%|
 
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
-
-            '--help=mdots.texi'|'--help='*'/mdots.texi')
-              cat <<EOF1
-Special file: ${fB1}mdots.texi${fR1}
-
-The ${fB1}mdots.texi${fR1} special file defines the ${fB1}@AT@mdots{}${fR1} Texinfo macro, which is
-used to imitate the mathematical notation of TeX in the other output
-formats:
-
-      @AT@tex
-      \$1 + \\cdots + n\$
-      @AT@end tex
-      @AT@ifnottex
-      1 + @AT@mdots{} + @AT@i{n}
-      @AT@end ifnottex
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
-
-            '--help=msign.texi'|'--help='*'/msign.texi')
-              cat <<EOF1
-Special file: ${fB1}msign.texi${fR1}
-
-The ${fB1}msign.texi${fR1} special file defines the ${fB1}@AT@msign{}${fR1} Texinfo macro, which is
-used to imitate the mathematical notation of TeX in the other output
-formats:
-
-      @AT@tex
-      \$x - y\$
-      @AT@end tex
-      @AT@ifnottex
-      @AT@i{x} @AT@msign{} @AT@i{y}
-      @AT@end ifnottex
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
-
-            '--help=mtvskipbot.texi'|'--help='*'/mtvskipbot.texi')
-              cat <<EOF1
-Special file: ${fB1}mtvskipbot.texi${fR1}
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
-
-            '--help=mtvskiptop.texi'|'--help='*'/mtvskiptop.texi')
-              cat <<EOF1
-Special file: ${fB1}mtvskiptop.texi${fR1}
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
-
-            '--help=nequ.texi'|'--help='*'/nequ.texi')
-              cat <<EOF1
-Special file: ${fB1}nequ.texi${fR1}
-
-The ${fB1}nequ.texi${fR1} special file defines the ${fB1}@AT@nequ{}${fR1} Texinfo macro, which is
-used to imitate the mathematical notation of TeX in the other output
-formats:
-
-      @AT@tex
-      \$x \\ne y\$
-      @AT@end tex
-      @AT@ifnottex
-      @AT@i{x} @AT@nequ{} @AT@i{y}
-      @AT@end ifnottex
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|nequ.texi|%}){%|
 
 |%}help_code({%|pdf-dist.am|%}){%|
 
@@ -1956,278 +1167,31 @@ EOF1
 
 |%}help_code({%|plaintext.am|%}){%|
 
-            '--help=prm.texi'|'--help='*'/prm.texi')
-              cat <<EOF1
-Special file: ${fB1}prm.texi${fR1}
-
-The ${fB1}prm.texi${fR1} special file defines the ${fB1}@AT@prm{}${fR1} Texinfo macro, which is
-used to imitate the mathematical notation of TeX in the other output
-formats:
-
-      @AT@tex
-      \$x'\$
-      @AT@end tex
-      @AT@ifnottex
-      @AT@i{x}@AT@prm{}
-      @AT@end ifnottex
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|prm.texi|%}){%|
 
 |%}help_code({%|ps-dist.am|%}){%|
 
-            '--help=rarrow.texi'|'--help='*'/rarrow.texi')
-              cat <<EOF1
-Special file: ${fB1}rarrow.texi${fR1}
+|%}help_code({%|rarrow.texi|%}){%|
 
-The ${fB1}rarrow.texi${fR1} special file defines the ${fB1}@AT@rarrow{}${fR1} Texinfo macro, which
-is used to imitate the mathematical notation of TeX in the other output
-formats:
+|%}help_code({%|rcei.texi|%}){%|
 
-      @AT@tex
-      \$P \\rightarrow Q\$
-      @AT@end tex
-      @AT@ifnottex
-      @AT@i{P} @AT@rarrow{} @AT@i{Q}
-      @AT@end ifnottex
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
-
-            '--help=rcei.texi'|'--help='*'/rcei.texi')
-              cat <<EOF1
-Special file: ${fB1}rcei.texi${fR1}
-
-The ${fB1}rcei.texi${fR1} special file defines the ${fB1}@AT@rcei{}${fR1} Texinfo macro, which is
-used to imitate the mathematical notation of TeX in the other output
-formats:
-
-      @AT@tex
-      \$\\lceil x \\rceil\$
-      @AT@end tex
-      @AT@ifnottex
-      @AT@lcei{}@AT@i{x}@AT@rcei{}
-      @AT@end ifnottex
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
-
-            '--help=rflo.texi'|'--help='*'/rflo.texi')
-              cat <<EOF1
-Special file: ${fB1}rflo.texi${fR1}
-
-The ${fB1}rflo.texi${fR1} special file defines the ${fB1}@AT@rflo{}${fR1} Texinfo macro, which is
-used to imitate the mathematical notation of TeX in the other output
-formats:
-
-      @AT@tex
-      \$\\lfloor x \\rfloor\$
-      @AT@end tex
-      @AT@ifnottex
-      @AT@lflo{}@AT@i{x}@AT@rflo{}
-      @AT@end ifnottex
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|rflo.texi|%}){%|
 
 |%}help_code({%|rules_code.m4|%}){%|
 
-            '--help=sbs.texi'|'--help='*'/sbs.texi')
-              cat <<EOF1
-Special file: ${fB1}sbs.texi${fR1}
-
-The ${fB1}sbs.texi${fR1} special file defines the ${fB1}@AT@sbs{${fI1}L${fB1}, ${fI1}S${fB1}, ${fI1}R${fB1}}${fR1} Texinfo macro, which
-inserts ${fI1}S${fR1} as a subscript in the output formats other than TeX. ${fI1}L${fR1} and ${fI1}R${fR1}
-are ignored except in Info and plain text, in which they are inserted to
-the left and right of ${fI1}S${fR1}, serving as parentheses. This is used to imitate
-the mathematical notation of TeX in the other output formats:
-
-      @AT@tex
-      \$x_{y + z_w}\$
-      @AT@end tex
-      @AT@ifnottex
-      @AT@i{x}@AT@sbs{(,@AT@i{y} + @AT@i{z}@AT@sbs{,@AT@i{w},},)}
-      @AT@end ifnottex
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|sbs.texi|%}){%|
 
 |%}help_code({%|sh-form.sh|%}){%|
 
-            '--help=shortcontents.texi'|'--help='*'/shortcontents.texi')
-              cat <<EOF1
-Special file: ${fB1}shortcontents.texi${fR1}
+|%}help_code({%|shortcontents.texi|%}){%|
 
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|sps.texi|%}){%|
 
-            '--help=sps.texi'|'--help='*'/sps.texi')
-              cat <<EOF1
-Special file: ${fB1}sps.texi${fR1}
-
-The ${fB1}sps.texi${fR1} special file defines the ${fB1}@AT@sps{${fI1}L${fB1}, ${fI1}S${fB1}, ${fI1}R${fB1}}${fR1} Texinfo macro, which
-inserts ${fI1}S${fR1} as a superscript in the output formats other than TeX. ${fI1}L${fR1} and ${fI1}R${fR1}
-are ignored except in Info and plain text, in which they are inserted to
-the left and right of ${fI1}S${fR1}, serving as parentheses. This is used to imitate
-the mathematical notation of TeX in the other output formats:
-
-      @AT@tex
-      \$x^{y + z^w}\$
-      @AT@end tex
-      @AT@ifnottex
-      @AT@i{x}@AT@sps{(,@AT@i{y} + @AT@i{z}@AT@sps{,@AT@i{w},},)}
-      @AT@end ifnottex
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
-
-            '--help=texi-form.sh'|'--help='*'/texi-form.sh')
-              cat <<EOF1
-Special file: ${fB1}texi-form.sh${fR1}
-
-The ${fB1}texi-form.sh${fR1} special file is a portable shell script that formats
-its input as Texinfo text.
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|texi-form.sh|%}){%|
 
 |%}help_code({%|texinfo.css|%}){%|
 
-            '--help=troff-form.sh'|'--help='*'/troff-form.sh')
-              cat <<EOF1
-Special file: ${fB1}troff-form.sh${fR1}
-
-The ${fB1}troff-form.sh${fR1} special file is a portable shell script that formats
-its input as troff text.
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
-EOF1
-              case "${?}" in
-                '0')
-                  :
-                ;;
-                *)
-                  'cat' >&2 <<EOF1
-${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}gatbps!${fR2}   1. a here-document
-${fr2}gatbps!${fR2} and writing to: standard output
-EOF1
-                  'exit' '1'
-                ;;
-              esac
-            ;;
+|%}help_code({%|troff-form.sh|%}){%|
 
 |%}help_code({%|xml-dist.am|%}){%|
 
