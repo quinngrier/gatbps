@@ -258,7 +258,7 @@ java-]gatbps_x[:
           '\''-'\'' \
           $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
           '\''--'\'' \
-          $][(AM@&t@_JAVACFLAGS) \
+          $][(GATBPS_JAVACFLAGS) \
           >'\''java-]gatbps_x[.tmp'\'' \
         || '\''exit'\'' "$][$][{?}"; \
         javacflags=`'\''cat'\'' \

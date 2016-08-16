@@ -304,7 +304,7 @@ java-main:
           '-' \
           $(srcdir)'/build-aux/sh-form.sh' \
           '--' \
-          $(AM_JAVACFLAGS) \
+          $(GATBPS_JAVACFLAGS) \
           >'java-main.tmp' \
         || 'exit' "$${?}"; \
         javacflags=`'cat' \
