@@ -1,8 +1,5 @@
 ## begin_variables
 
-AM_M4FLAGS =
-AM_M4FLAGS += '-I' $(srcdir)
-
 AM_MAKEINFOFLAGS =
 AM_MAKEINFOFLAGS += '-I' 'doc/texi' '-I' $(srcdir)'/doc/texi'
 
@@ -40,6 +37,9 @@ EXTRA_DIST += VERSION
 EXTRA_DIST += build-aux/DATE.sh
 EXTRA_DIST += build-aux/VERSION.sh
 EXTRA_DIST += build-aux/sh-form.sh
+
+GATBPS_M4FLAGS =
+GATBPS_M4FLAGS += '-I' $(srcdir)
 
 MAINTAINERCLEANFILES =
 
