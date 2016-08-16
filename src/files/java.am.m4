@@ -120,7 +120,7 @@ SUFFIXES += .java
           './'$(java_dst) \
           '-C' \
           './'$(java_dst)'.tmp/x/'$(GATBPS_RECURSIVE_SOURCEPATH) \
-          $(AM_JARFLAGS) \
+          $(GATBPS_JARFLAGS) \
           $(JARFLAGS) \
           '.' \
         || 'exit' "$${?}"; \

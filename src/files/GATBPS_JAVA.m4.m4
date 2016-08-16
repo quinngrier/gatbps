@@ -98,7 +98,7 @@ m4_foreach_w(
           '\''./'\''$][(java_]gatbps_y[_dst) \
           '\''-C'\'' \
           '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x/'\''$][(GATBPS_RECURSIVE_SOURCEPATH) \
-          $][(AM@&t@_JARFLAGS) \
+          $][(GATBPS_JARFLAGS) \
           $][(JARFLAGS) \
           '\''.'\'' \
         || '\''exit'\'' "$][$][{?}"; \
