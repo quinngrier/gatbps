@@ -79,7 +79,7 @@ contains_at_least_one_word(
           $(JAVADOC) \
           '-d' \
           $(javadoc_dst) \
-          $(AM_JAVADOCFLAGS) \
+          $(GATBPS_JAVADOCFLAGS) \
           $(JAVADOCFLAGS) \
           >'javadoc-main.tmp1' \
         || 'exit' "$${?}"; \
