@@ -105,7 +105,7 @@ SUFFIXES += .java
         'cf' \
         './'$(java_dst) \
         '-C' \
-        './'$(java_dst)'.tmp/x/'$(GATBPS_INFERENCE_SOURCEPATH) \
+        './'$(java_dst)'.tmp/x/'$(GATBPS_RECURSIVE_SOURCEPATH) \
         $(java_JARFLAGS) \
         $(JARFLAGS) \
         '.' \
@@ -119,7 +119,7 @@ SUFFIXES += .java
           'cf' \
           './'$(java_dst) \
           '-C' \
-          './'$(java_dst)'.tmp/x/'$(GATBPS_INFERENCE_SOURCEPATH) \
+          './'$(java_dst)'.tmp/x/'$(GATBPS_RECURSIVE_SOURCEPATH) \
           $(AM_JARFLAGS) \
           $(JARFLAGS) \
           '.' \
@@ -148,18 +148,18 @@ SUFFIXES += .java
 
 .java.class:
 	$(GATBPS_V_JAVAC)$(MKDIR_P) \
-  $(GATBPS_INFERENCE_SOURCEPATH) \
+  $(GATBPS_RECURSIVE_SOURCEPATH) \
 ;
 	$(AM_V_at)$(JAVAC) \
   '-Xprefer:source' \
   '-classpath' \
-  $(GATBPS_INFERENCE_CLASSPATH) \
+  $(GATBPS_RECURSIVE_CLASSPATH) \
   '-d' \
-  $(GATBPS_INFERENCE_SOURCEPATH) \
+  $(GATBPS_RECURSIVE_SOURCEPATH) \
   '-implicit:none' \
   '-sourcepath' \
-  $(GATBPS_INFERENCE_SOURCEPATH)':'$(srcdir)'/'$(GATBPS_INFERENCE_SOURCEPATH) \
-  $(GATBPS_INFERENCE_JAVACFLAGS) \
+  $(GATBPS_RECURSIVE_SOURCEPATH)':'$(srcdir)'/'$(GATBPS_RECURSIVE_SOURCEPATH) \
+  $(GATBPS_RECURSIVE_JAVACFLAGS) \
   $(JAVACFLAGS) \
   $< \
 ;
@@ -324,9 +324,9 @@ java-main:
     ` || 'exit' "$${?}"; \
     $(MAKE) \
       $(AM_MAKEFLAGS) \
-      'GATBPS_INFERENCE_CLASSPATH='"$${classpath}" \
-      'GATBPS_INFERENCE_JAVACFLAGS='"$${javacflags}" \
-      'GATBPS_INFERENCE_SOURCEPATH='"$${sourcepath}" \
+      'GATBPS_RECURSIVE_CLASSPATH='"$${classpath}" \
+      'GATBPS_RECURSIVE_JAVACFLAGS='"$${javacflags}" \
+      'GATBPS_RECURSIVE_SOURCEPATH='"$${sourcepath}" \
       './'$(java_dst) \
     || 'exit' "$${?}"; \
     'exit' '0'; \
