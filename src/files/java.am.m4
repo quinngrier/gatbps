@@ -159,7 +159,7 @@ SUFFIXES += .java
   '-implicit:none' \
   '-sourcepath' \
   $(GATBPS_SOURCEPATH)':'$(srcdir)'/'$(GATBPS_SOURCEPATH) \
-  $(GATBPS_JAVACFLAGS) \
+  $(GATBPS_INFERENCE_JAVACFLAGS) \
   $(JAVACFLAGS) \
   $< \
 ;
@@ -325,7 +325,7 @@ java-main:
     $(MAKE) \
       $(AM_MAKEFLAGS) \
       'GATBPS_INFERENCE_CLASSPATH='"$${classpath}" \
-      'GATBPS_JAVACFLAGS='"$${javacflags}" \
+      'GATBPS_INFERENCE_JAVACFLAGS='"$${javacflags}" \
       'GATBPS_SOURCEPATH='"$${sourcepath}" \
       './'$(java_dst) \
     || 'exit' "$${?}"; \
