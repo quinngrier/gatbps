@@ -70,6 +70,10 @@ while s:n1 != 0
   exec s:n1 . 's/\m$/\r/'
   call cursor(s:n1, 1)
   let s:n2 = search(s:s2, 'W')
+  exec s:n1 . '+1,' . s:n2 . '-1g/\m\\$/s/\m$/\b/'
+  exec s:n1 . '+1,' . s:n2 . '-1g/\m\\\b$/.,/\m\%(\\\b\)\@<!$/j!'
+  call cursor(s:n1, 1)
+  let s:n2 = search(s:s2, 'W')
   exec s:n1 . '+1,' . s:n2 . '-1g/\m+=/.,/\m^$/-1sort u'
   exec s:n1 . '+1,' . s:n2 . '-1g/\m./s/\m$/\b/'
   exec s:n1 . '+1,' . s:n2 . '-2g/\m^\n./.+1,/\m^$/-1j!'
