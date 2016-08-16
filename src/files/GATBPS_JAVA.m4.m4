@@ -83,7 +83,7 @@ m4_foreach_w(
         '\''cf'\'' \
         '\''./'\''$][(java_]gatbps_y[_dst) \
         '\''-C'\'' \
-        '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x/'\''$][(GATBPS_SOURCEPATH) \
+        '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x/'\''$][(GATBPS_INFERENCE_SOURCEPATH) \
         $][(java_]gatbps_y[_JARFLAGS) \
         $][(JARFLAGS) \
         '\''.'\'' \
@@ -97,7 +97,7 @@ m4_foreach_w(
           '\''cf'\'' \
           '\''./'\''$][(java_]gatbps_y[_dst) \
           '\''-C'\'' \
-          '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x/'\''$][(GATBPS_SOURCEPATH) \
+          '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x/'\''$][(GATBPS_INFERENCE_SOURCEPATH) \
           $][(AM@&t@_JARFLAGS) \
           $][(JARFLAGS) \
           '\''.'\'' \
@@ -280,7 +280,7 @@ java-]gatbps_x[:
       $][(AM@&t@_MAKEFLAGS) \
       '\''GATBPS_INFERENCE_CLASSPATH='\''"$][$][{classpath}" \
       '\''GATBPS_INFERENCE_JAVACFLAGS='\''"$][$][{javacflags}" \
-      '\''GATBPS_SOURCEPATH='\''"$][$][{sourcepath}" \
+      '\''GATBPS_INFERENCE_SOURCEPATH='\''"$][$][{sourcepath}" \
       '\''./'\''$][(java_]gatbps_y[_dst) \
     || '\''exit'\'' "$][$][{?}"; \
     '\''exit'\'' '\''0'\''; \

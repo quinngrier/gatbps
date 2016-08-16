@@ -105,7 +105,7 @@ SUFFIXES += .java
         'cf' \
         './'$(java_dst) \
         '-C' \
-        './'$(java_dst)'.tmp/x/'$(GATBPS_SOURCEPATH) \
+        './'$(java_dst)'.tmp/x/'$(GATBPS_INFERENCE_SOURCEPATH) \
         $(java_JARFLAGS) \
         $(JARFLAGS) \
         '.' \
@@ -119,7 +119,7 @@ SUFFIXES += .java
           'cf' \
           './'$(java_dst) \
           '-C' \
-          './'$(java_dst)'.tmp/x/'$(GATBPS_SOURCEPATH) \
+          './'$(java_dst)'.tmp/x/'$(GATBPS_INFERENCE_SOURCEPATH) \
           $(AM_JARFLAGS) \
           $(JARFLAGS) \
           '.' \
@@ -148,17 +148,17 @@ SUFFIXES += .java
 
 .java.class:
 	$(GATBPS_V_JAVAC)$(MKDIR_P) \
-  $(GATBPS_SOURCEPATH) \
+  $(GATBPS_INFERENCE_SOURCEPATH) \
 ;
 	$(AM_V_at)$(JAVAC) \
   '-Xprefer:source' \
   '-classpath' \
   $(GATBPS_INFERENCE_CLASSPATH) \
   '-d' \
-  $(GATBPS_SOURCEPATH) \
+  $(GATBPS_INFERENCE_SOURCEPATH) \
   '-implicit:none' \
   '-sourcepath' \
-  $(GATBPS_SOURCEPATH)':'$(srcdir)'/'$(GATBPS_SOURCEPATH) \
+  $(GATBPS_INFERENCE_SOURCEPATH)':'$(srcdir)'/'$(GATBPS_INFERENCE_SOURCEPATH) \
   $(GATBPS_INFERENCE_JAVACFLAGS) \
   $(JAVACFLAGS) \
   $< \
@@ -326,7 +326,7 @@ java-main:
       $(AM_MAKEFLAGS) \
       'GATBPS_INFERENCE_CLASSPATH='"$${classpath}" \
       'GATBPS_INFERENCE_JAVACFLAGS='"$${javacflags}" \
-      'GATBPS_SOURCEPATH='"$${sourcepath}" \
+      'GATBPS_INFERENCE_SOURCEPATH='"$${sourcepath}" \
       './'$(java_dst) \
     || 'exit' "$${?}"; \
     'exit' '0'; \
