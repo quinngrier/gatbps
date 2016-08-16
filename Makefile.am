@@ -300,6 +300,7 @@ doc_gatbps_TEXINFOS += doc/texi/CC0-1.0-copying.texi
 doc_gatbps_TEXINFOS += doc/texi/Configuration.texi
 doc_gatbps_TEXINFOS += doc/texi/Copyright-Information.texi
 doc_gatbps_TEXINFOS += doc/texi/Copyright-Texts.texi
+doc_gatbps_TEXINFOS += doc/texi/Formatting-Automake-Files.texi
 doc_gatbps_TEXINFOS += doc/texi/Installation.texi
 doc_gatbps_TEXINFOS += doc/texi/Introduction.texi
 doc_gatbps_TEXINFOS += doc/texi/Invoking-awk-form-sh.texi
