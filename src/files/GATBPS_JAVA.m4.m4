@@ -278,7 +278,7 @@ java-]gatbps_x[:
     ` || '\''exit'\'' "$][$][{?}"; \
     $][(MAKE) \
       $][(AM@&t@_MAKEFLAGS) \
-      '\''GATBPS_CLASSPATH='\''"$][$][{classpath}" \
+      '\''GATBPS_INFERENCE_CLASSPATH='\''"$][$][{classpath}" \
       '\''GATBPS_JAVACFLAGS='\''"$][$][{javacflags}" \
       '\''GATBPS_SOURCEPATH='\''"$][$][{sourcepath}" \
       '\''./'\''$][(java_]gatbps_y[_dst) \

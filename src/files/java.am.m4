@@ -153,7 +153,7 @@ SUFFIXES += .java
 	$(AM_V_at)$(JAVAC) \
   '-Xprefer:source' \
   '-classpath' \
-  $(GATBPS_CLASSPATH) \
+  $(GATBPS_INFERENCE_CLASSPATH) \
   '-d' \
   $(GATBPS_SOURCEPATH) \
   '-implicit:none' \
@@ -324,7 +324,7 @@ java-main:
     ` || 'exit' "$${?}"; \
     $(MAKE) \
       $(AM_MAKEFLAGS) \
-      'GATBPS_CLASSPATH='"$${classpath}" \
+      'GATBPS_INFERENCE_CLASSPATH='"$${classpath}" \
       'GATBPS_JAVACFLAGS='"$${javacflags}" \
       'GATBPS_SOURCEPATH='"$${sourcepath}" \
       './'$(java_dst) \
