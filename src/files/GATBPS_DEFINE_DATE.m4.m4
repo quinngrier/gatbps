@@ -101,126 +101,6 @@ m4_ifdef(
   [gatbps_fatal([
     $1$2_DAY_ZPAD is already defined
   ])])[]dnl
-m4_ifdef(
-  [January],
-  [gatbps_fatal([
-    "January" is defined as a macro
-  ])])[]dnl
-m4_ifdef(
-  [February],
-  [gatbps_fatal([
-    "February" is defined as a macro
-  ])])[]dnl
-m4_ifdef(
-  [March],
-  [gatbps_fatal([
-    "March" is defined as a macro
-  ])])[]dnl
-m4_ifdef(
-  [April],
-  [gatbps_fatal([
-    "April" is defined as a macro
-  ])])[]dnl
-m4_ifdef(
-  [May],
-  [gatbps_fatal([
-    "May" is defined as a macro
-  ])])[]dnl
-m4_ifdef(
-  [June],
-  [gatbps_fatal([
-    "June" is defined as a macro
-  ])])[]dnl
-m4_ifdef(
-  [July],
-  [gatbps_fatal([
-    "July" is defined as a macro
-  ])])[]dnl
-m4_ifdef(
-  [August],
-  [gatbps_fatal([
-    "August" is defined as a macro
-  ])])[]dnl
-m4_ifdef(
-  [September],
-  [gatbps_fatal([
-    "September" is defined as a macro
-  ])])[]dnl
-m4_ifdef(
-  [October],
-  [gatbps_fatal([
-    "October" is defined as a macro
-  ])])[]dnl
-m4_ifdef(
-  [November],
-  [gatbps_fatal([
-    "November" is defined as a macro
-  ])])[]dnl
-m4_ifdef(
-  [December],
-  [gatbps_fatal([
-    "December" is defined as a macro
-  ])])[]dnl
-m4_ifdef(
-  [Jan],
-  [gatbps_fatal([
-    "Jan" is defined as a macro
-  ])])[]dnl
-m4_ifdef(
-  [Feb],
-  [gatbps_fatal([
-    "Feb" is defined as a macro
-  ])])[]dnl
-m4_ifdef(
-  [Mar],
-  [gatbps_fatal([
-    "Mar" is defined as a macro
-  ])])[]dnl
-m4_ifdef(
-  [Apr],
-  [gatbps_fatal([
-    "Apr" is defined as a macro
-  ])])[]dnl
-m4_ifdef(
-  [May],
-  [gatbps_fatal([
-    "May" is defined as a macro
-  ])])[]dnl
-m4_ifdef(
-  [Jun],
-  [gatbps_fatal([
-    "Jun" is defined as a macro
-  ])])[]dnl
-m4_ifdef(
-  [Jul],
-  [gatbps_fatal([
-    "Jul" is defined as a macro
-  ])])[]dnl
-m4_ifdef(
-  [Aug],
-  [gatbps_fatal([
-    "Aug" is defined as a macro
-  ])])[]dnl
-m4_ifdef(
-  [Sep],
-  [gatbps_fatal([
-    "Sep" is defined as a macro
-  ])])[]dnl
-m4_ifdef(
-  [Oct],
-  [gatbps_fatal([
-    "Oct" is defined as a macro
-  ])])[]dnl
-m4_ifdef(
-  [Nov],
-  [gatbps_fatal([
-    "Nov" is defined as a macro
-  ])])[]dnl
-m4_ifdef(
-  [Dec],
-  [gatbps_fatal([
-    "Dec" is defined as a macro
-  ])])[]dnl
 m4_define(
   [$1$2],
   [$3])[]dnl
@@ -281,21 +161,21 @@ m4_define(
 m4_define(
   [$1$2_MONTH_NAME],
   m4_if(
-    $1$2_MONTH,  [1], [January],
-    $1$2_MONTH,  [2], [February],
-    $1$2_MONTH,  [3], [March],
-    $1$2_MONTH,  [4], [April],
-    $1$2_MONTH,  [5], [May],
-    $1$2_MONTH,  [6], [June],
-    $1$2_MONTH,  [7], [July],
-    $1$2_MONTH,  [8], [August],
-    $1$2_MONTH,  [9], [September],
-    $1$2_MONTH, [10], [October],
-    $1$2_MONTH, [11], [November],
-    $1$2_MONTH, [12], [December]))[]dnl
+    $1$2_MONTH,  [1], [[[January]]],
+    $1$2_MONTH,  [2], [[[February]]],
+    $1$2_MONTH,  [3], [[[March]]],
+    $1$2_MONTH,  [4], [[[April]]],
+    $1$2_MONTH,  [5], [[[May]]],
+    $1$2_MONTH,  [6], [[[June]]],
+    $1$2_MONTH,  [7], [[[July]]],
+    $1$2_MONTH,  [8], [[[August]]],
+    $1$2_MONTH,  [9], [[[September]]],
+    $1$2_MONTH, [10], [[[October]]],
+    $1$2_MONTH, [11], [[[November]]],
+    $1$2_MONTH, [12], [[[December]]]))[]dnl
 m4_define(
   [$1$2_MONTH_ABBR],
-  m4_substr($1$2_MONTH_NAME, [0], [3]))[]dnl
+  m4_bregexp($1$2_MONTH_NAME, [...], [[[\&]]]))[]dnl
 m4_define(
   [$1$2_YEAR_ZPAD],
   m4_if(
@@ -360,7 +240,7 @@ m4_define(
 
 ]AC_DEFINE(
   [[$2_MONTH_NAME]],
-  [["]]$1$2_MONTH_NAME[["]],
+  [["]$1$2_MONTH_NAME["]],
   [
     Define to a character string literal that contains the capitalized
     full month name of $2.
@@ -368,7 +248,7 @@ m4_define(
 
 ]AC_DEFINE(
   [[$2_MONTH_ABBR]],
-  [["]]$1$2_MONTH_ABBR[["]],
+  [["]$1$2_MONTH_ABBR["]],
   [
     Define to the same character string literal as $2_MONTH_NAME but
     limited to three characters in length.
