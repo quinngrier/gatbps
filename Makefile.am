@@ -234,6 +234,7 @@ bin_gatbps_src += src/files/VERSION_LTCUR.sh.m4
 bin_gatbps_src += src/files/awk-form.sh.m4
 bin_gatbps_src += src/files/bdots.texi.m4
 bin_gatbps_src += src/files/bothcontents.texi.m4
+bin_gatbps_src += src/files/configure.ac.vim.m4
 bin_gatbps_src += src/files/contents.texi.m4
 bin_gatbps_src += src/files/cp.am.m4
 bin_gatbps_src += src/files/docbook-dist.am.m4
