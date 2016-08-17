@@ -87,6 +87,11 @@ m4_ifdef(
   [gatbps_fatal([
     $1$2_PATCH is already defined
   ])])[]dnl
+m4_ifdef(
+  [$1$2_LTREV],
+  [gatbps_fatal([
+    $1$2_LTREV is already defined
+  ])])[]dnl
 [
 
 :;}]])dnl
