@@ -77,6 +77,11 @@ m4_ifdef(
   [gatbps_fatal([
     $1$2_MAJOR is already defined
   ])])[]dnl
+m4_ifdef(
+  [$1$2_MINOR],
+  [gatbps_fatal([
+    $1$2_MINOR is already defined
+  ])])[]dnl
 [
 
 :;}]])dnl
