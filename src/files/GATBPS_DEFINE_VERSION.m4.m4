@@ -53,6 +53,17 @@ m4_if(
       GATBPS_DEFINE_VERSION requires its first argument to be "AC_" when
       it is given exactly 2 arguments
     ])])])[]dnl
+m4_if(
+  [$#],
+  [2],
+  [m4_if(
+    [$2],
+    [PACKAGE_VERSION],
+    [],
+    [gatbps_fatal([
+      GATBPS_DEFINE_VERSION requires its second argument to be
+      "PACKAGE_VERSION" when it is given exactly 2 arguments
+    ])])])[]dnl
 [
 
 :;}]])dnl
