@@ -474,12 +474,14 @@ ps_dist_src += doc/gatbps.ps
 ## end_rules
 
 ##
-## The following section should use @SOFT_INCLUDE@ to include
-## src/gatbps.m4 and src/files/*.m4 with .d appended to each name.
+## The following variable section should use @SOFT_INCLUDE@ to include
+## doc/man/gatbps.1.m4, src/files/*.m4, and src/gatbps.m4 with ".d"
+## appended to each file name.
 ##
 
 ## begin_includes
 
+@SOFT_INCLUDE@ doc/man/gatbps.1.m4.d
 @SOFT_INCLUDE@ src/files/CC0-1.0-AC-COPYRIGHT.ac.m4.d
 @SOFT_INCLUDE@ src/files/CC0-1.0-AM-COPYRIGHT.am.m4.d
 @SOFT_INCLUDE@ src/files/CC0-1.0-appendix.texi.m4.d
