@@ -55,44 +55,38 @@ while s:n1 != 0
   call cursor(s:n1, 1)
   let s:n2 = search(s:s2, 'W')
   if s:n2 == 0
-    echoe 'missing end_variables for line ' . s:n1
-    call winrestview(s:view)
-    finish
+    break
   endif
   call cursor(s:n1, 1)
-  let s:n3 = search(s:mark, 'W')
-  if s:n3 != s:n2
-    echoe 'section conflict at line ' . s:n3
-    call winrestview(s:view)
-    finish
+  if search(s:mark, 'W') == s:n2
+    exec s:n2 . 's/\m^/\r/'
+    exec s:n1 . 's/\m$/\r/'
+    call cursor(s:n1, 1)
+    let s:n2 = search(s:s2, 'W')
+    exec s:n1 . '+1,' . s:n2 . '-1g/\m\\$/s/\m$/\b/'
+    exec s:n1 . '+1,' . s:n2 . '-1g/\m\\\b$/.,/\m\%(\\\b\)\@<!$/j!'
+    call cursor(s:n1, 1)
+    let s:n2 = search(s:s2, 'W')
+    exec s:n1 . '+1,' . s:n2 . '-1g/\m\%(^[^\b#]*+=.*\)\@<!\n[^\b#]*+=/.+1,/\m\%(^[^\b#]*+=.*\)\@<!$/-1sort u'
+    call cursor(s:n1, 1)
+    let s:n2 = search(s:s2, 'W')
+    exec s:n1 . '+1,' . s:n2 . '-1g/\m./s/\m$/\b/'
+    exec s:n1 . '+1,' . s:n2 . '-2g/\m^\n./.+1,/\m^$/-1j!'
+    call cursor(s:n1, 1)
+    let s:n2 = search(s:s2, 'W')
+    exec s:n1 . '+1,' . s:n2 . '-1g/\m^$/d'
+    call cursor(s:n1, 1)
+    let s:n2 = search(s:s2, 'W')
+    exec s:n1 . 's/\m$/\r/'
+    call cursor(s:n1, 1)
+    let s:n2 = search(s:s2, 'W')
+    exec s:n1 . '+1,' . s:n2 . '-1sort u'
+    call cursor(s:n1, 1)
+    let s:n2 = search(s:s2, 'W')
+    exec s:n1 . '+1,' . s:n2 . '-1s/\m\b/\r/eg'
+    call cursor(s:n1, 1)
+    let s:n1 = search(s:s1, 'W')
   endif
-  exec s:n2 . 's/\m^/\r/'
-  exec s:n1 . 's/\m$/\r/'
-  call cursor(s:n1, 1)
-  let s:n2 = search(s:s2, 'W')
-  exec s:n1 . '+1,' . s:n2 . '-1g/\m\\$/s/\m$/\b/'
-  exec s:n1 . '+1,' . s:n2 . '-1g/\m\\\b$/.,/\m\%(\\\b\)\@<!$/j!'
-  call cursor(s:n1, 1)
-  let s:n2 = search(s:s2, 'W')
-  exec s:n1 . '+1,' . s:n2 . '-1g/\m\%(^[^\b#]*+=.*\)\@<!\n[^\b#]*+=/.+1,/\m\%(^[^\b#]*+=.*\)\@<!$/-1sort u'
-  call cursor(s:n1, 1)
-  let s:n2 = search(s:s2, 'W')
-  exec s:n1 . '+1,' . s:n2 . '-1g/\m./s/\m$/\b/'
-  exec s:n1 . '+1,' . s:n2 . '-2g/\m^\n./.+1,/\m^$/-1j!'
-  call cursor(s:n1, 1)
-  let s:n2 = search(s:s2, 'W')
-  exec s:n1 . '+1,' . s:n2 . '-1g/\m^$/d'
-  call cursor(s:n1, 1)
-  let s:n2 = search(s:s2, 'W')
-  exec s:n1 . 's/\m$/\r/'
-  call cursor(s:n1, 1)
-  let s:n2 = search(s:s2, 'W')
-  exec s:n1 . '+1,' . s:n2 . '-1sort u'
-  call cursor(s:n1, 1)
-  let s:n2 = search(s:s2, 'W')
-  exec s:n1 . '+1,' . s:n2 . '-1s/\m\b/\r/eg'
-  call cursor(s:n1, 1)
-  let s:n1 = search(s:s1, 'W')
 endwhile
 
 let s:s1 = '\m^## begin_rules$'
