@@ -171,6 +171,7 @@ bin_gatbps_src += doc/help/xml-dist.am.hd.m4
 bin_gatbps_src += doc/help/xml.am.hd.m4
 bin_gatbps_src += doc/man/gatbps.1.m4
 bin_gatbps_src += src/files/CC0-1.0-AC-COPYRIGHT.ac.m4
+bin_gatbps_src += src/files/CC0-1.0-AM-COPYRIGHT.am.m4
 bin_gatbps_src += src/files/CC0-1.0-appendix.texi.m4
 bin_gatbps_src += src/files/CC0-1.0-commit.txt.m4
 bin_gatbps_src += src/files/CC0-1.0-copying.texi.m4
