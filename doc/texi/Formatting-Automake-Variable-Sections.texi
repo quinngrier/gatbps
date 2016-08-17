@@ -1,6 +1,19 @@
 @node Formatting Automake Variable Sections
 @chapter Formatting Automake Variable Sections
 
+@noindent
+A sequence of zero or more lines that is immediately preceded by a line
+containing exactly
+``@w{@t{## begin_variables}}'',
+that is immediately followed by a line containing exactly
+``@w{@t{## end_variables}}'',
+and that does not contain any lines beginning with
+``@w{@t{## begin_}}''
+or
+``@w{@t{## end_}}''
+is called an
+@i{Automake variable section}@.
+
 @example
 foo =
 # A comment block can go here.
