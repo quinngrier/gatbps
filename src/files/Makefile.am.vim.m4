@@ -24,27 +24,21 @@ while s:n1 != 0
   call cursor(s:n1, 1)
   let s:n2 = search(s:s2, 'W')
   if s:n2 == 0
-    echoe 'missing end_includes for line ' . s:n1
-    call winrestview(s:view)
-    finish
+    break
   endif
   call cursor(s:n1, 1)
-  let s:n3 = search(s:mark, 'W')
-  if s:n3 != s:n2
-    echoe 'section conflict at line ' . s:n3
-    call winrestview(s:view)
-    finish
+  if search(s:mark, 'W') == s:n2
+    exec s:n1 . ',' . s:n2 . 'g/\m^$/d'
+    exec s:n1 . 's/\m$/\r/'
+    call cursor(s:n1, 1)
+    let s:n2 = search(s:s2, 'W')
+    exec s:n1 . '+1,' . s:n2 . '-1sort u'
+    call cursor(s:n1, 1)
+    let s:n2 = search(s:s2, 'W')
+    exec s:n2 . 's/\m^/\r/'
+    call cursor(s:n1, 1)
+    let s:n1 = search(s:s1, 'W')
   endif
-  exec s:n1 . ',' . s:n2 . 'g/\m^$/d'
-  exec s:n1 . 's/\m$/\r/'
-  call cursor(s:n1, 1)
-  let s:n2 = search(s:s2, 'W')
-  exec s:n1 . '+1,' . s:n2 . '-1sort u'
-  call cursor(s:n1, 1)
-  let s:n2 = search(s:s2, 'W')
-  exec s:n2 . 's/\m^/\r/'
-  call cursor(s:n1, 1)
-  let s:n1 = search(s:s1, 'W')
 endwhile
 
 let s:s1 = '\m^## begin_variables$'
