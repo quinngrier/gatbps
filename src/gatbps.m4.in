@@ -2556,6 +2556,10 @@ EOF1
 ## you're doing the right thing. Depending on how GATBPS
 ## is being used, your changes may be automatically lost.
 ##
+## Special file: CC0-1.0-AM-COPYRIGHT.am
+##
+## For more information, see the GATBPS manual.
+##
 #
 # Some parts of this file are from @AT@PACKAGE_NAME@AT@,
 # namely those with significant content from <Makefile.am>.
