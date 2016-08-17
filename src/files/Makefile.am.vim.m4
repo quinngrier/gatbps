@@ -59,7 +59,7 @@ while s:n1 != 0
   endif
   call cursor(s:n1, 1)
   if search(s:mark, 'W') == s:n2
-    exec s:n2 . 's/\m^/\r/'
+    exec s:n2 . 's/\m^/\r\r/'
     exec s:n1 . 's/\m$/\r/'
     call cursor(s:n1, 1)
     let s:n2 = search(s:s2, 'W')
