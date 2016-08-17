@@ -64,6 +64,14 @@ m4_if(
       GATBPS_DEFINE_VERSION requires its second argument to be
       "PACKAGE_VERSION" when it is given exactly 2 arguments
     ])])])[]dnl
+m4_if(
+  [$#],
+  [3],
+  [m4_ifdef(
+    [$1$2],
+    [gatbps_fatal([
+      $1$2 is already defined
+    ])])])[]dnl
 [
 
 :;}]])dnl
