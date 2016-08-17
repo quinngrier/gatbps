@@ -301,6 +301,7 @@ doc_gatbps_TEXINFOS += doc/texi/Configuration.texi
 doc_gatbps_TEXINFOS += doc/texi/Copyright-Information.texi
 doc_gatbps_TEXINFOS += doc/texi/Copyright-Texts.texi
 doc_gatbps_TEXINFOS += doc/texi/Formatting-Automake-Files.texi
+doc_gatbps_TEXINFOS += doc/texi/Formatting-Automake-Variable-Sections.texi
 doc_gatbps_TEXINFOS += doc/texi/Installation.texi
 doc_gatbps_TEXINFOS += doc/texi/Introduction.texi
 doc_gatbps_TEXINFOS += doc/texi/Invoking-awk-form-sh.texi

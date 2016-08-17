@@ -1,13 +1,6 @@
-@node Formatting Automake Files
-@chapter Formatting Automake Files
+@node Formatting Automake Variable Sections
+@chapter Formatting Automake Variable Sections
 
-@menu
-* Formatting Automake Variable Sections::
-@end menu
-
-@lowersections
-@include Formatting-Automake-Variable-Sections.texi
-@raisesections
 @ifxml
 @ifnotxml
 @c
