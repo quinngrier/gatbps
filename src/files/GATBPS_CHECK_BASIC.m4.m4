@@ -11,16 +11,16 @@ dnl Special file: GATBPS_CHECK_BASIC.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_CHECK_BASIC], [{
+AC_DEFUN([GATBPS_CHECK_BASIC], [[{
 
 #
 # The block that contains this comment is the expansion of the
-[# GATBPS_CHECK_BASIC] macro for m4_if(
-  m4_eval(m4_len([(gatbps_cv_)$2.])[ > 41]),
+# GATBPS_CHECK_BASIC macro for]m4_if(
+  m4_eval(m4_len([ (gatbps_cv_)$2.])[ > 42]),
   [1],
-  [
-# ])(gatbps_cv_)$2.
-#
+  [[
+#]])[ (gatbps_cv_)$2.
+#]dnl
 
 GATBPS_CACHE_CHECK(
   [for ]m4_bpatsubst([[$1]], [{--DETAILS--}\(.\|

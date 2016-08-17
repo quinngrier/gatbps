@@ -15,11 +15,11 @@ AC_DEFUN([GATBPS_DEFINE_VERSION], [[{
 
 #
 # The block that contains this comment is the expansion of the
-# GATBPS_DEFINE_VERSION macro for ]m4_if(
-  m4_eval(m4_len([($1)$2.])[ > 38]),
+# GATBPS_DEFINE_VERSION macro for]m4_if(
+  m4_eval(m4_len([ ($1)$2.])[ > 39]),
   [1],
   [[
-# ]])[($1)$2.
+#]])[ ($1)$2.
 #]dnl
 m4_case(
   [$#],
