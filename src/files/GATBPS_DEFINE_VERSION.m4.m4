@@ -97,6 +97,12 @@ m4_ifdef(
   [gatbps_fatal([
     $1$2_LTAGE is already defined
   ])])[]dnl
+m4_if(
+  [$#],
+  [3],
+  [m4_define(
+    [$1$2],
+    [$3])])[]dnl
 [
 
 :;}]])dnl
