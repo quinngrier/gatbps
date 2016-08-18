@@ -1,7 +1,7 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|doc/help/configure.ac.vim.hd.m4|%}){%||%}dnl
+rules_code({%|doc/help/VERSION_LTCUR.sh.hd.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 {%|Special file: ${fB1}VERSION_LTCUR.sh${fR1}
 

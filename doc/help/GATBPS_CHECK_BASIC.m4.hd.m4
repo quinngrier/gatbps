@@ -1,7 +1,7 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|doc/help/configure.ac.vim.hd.m4|%}){%||%}dnl
+rules_code({%|doc/help/GATBPS_CHECK_BASIC.m4.hd.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 {%|Special file: ${fB1}GATBPS_CHECK_BASIC.m4${fR1}
 
