@@ -127,6 +127,9 @@ m4_define(
 m4_define(
   [$1$2_LTREV],
   m4_dquote($1$2_PATCH))[]dnl
+m4_define(
+  [$1$2_LTAGE],
+  m4_dquote($1$2_MINOR))[]dnl
 [
 
 :;}]])dnl
