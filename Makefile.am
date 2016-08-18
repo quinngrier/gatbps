@@ -115,7 +115,6 @@ bin_gatbps_src += doc/help/PACKAGEDATE.texi.in.hd.m4
 bin_gatbps_src += doc/help/PACKAGEVERSION.texi.in.hd.m4
 bin_gatbps_src += doc/help/PACKAGE_VERSION.df.in.hd.m4
 bin_gatbps_src += doc/help/TEST_EXIT.h.hd.m4
-bin_gatbps_src += doc/help/VERSION.ac.hd.m4
 bin_gatbps_src += doc/help/VERSION.sh.hd.m4
 bin_gatbps_src += doc/help/VERSION_LTCUR.sh.hd.m4
 bin_gatbps_src += doc/help/awk-form.sh.hd.m4
