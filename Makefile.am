@@ -281,6 +281,7 @@ bin_gatbps_src += src/files/texinfo.css.m4
 bin_gatbps_src += src/files/troff-form.sh.m4
 bin_gatbps_src += src/files/xml-dist.am.m4
 bin_gatbps_src += src/files/xml.am.m4
+bin_gatbps_src += src/gatbps.m4
 bin_gatbps_src += src/tools/contains_at_least_one_word.m4
 bin_gatbps_src += src/tools/contains_at_least_one_word_m.m4
 bin_gatbps_src += src/tools/contains_exactly_one_word.m4
@@ -417,7 +418,6 @@ man_MANS =
 man_MANS += doc/man/gatbps.1
 
 nodist_bin_gatbps_src =
-nodist_bin_gatbps_src += src/gatbps.m4
 nodist_bin_gatbps_src += src/tools/AWK_DEFAULT_SH.m4
 nodist_bin_gatbps_src += src/tools/AWK_DEFAULT_TROFF.m4
 nodist_bin_gatbps_src += src/tools/PACKAGE_DATE.m4
