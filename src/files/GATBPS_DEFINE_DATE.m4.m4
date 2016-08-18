@@ -103,7 +103,7 @@ m4_ifdef(
   ])])[]dnl
 m4_define(
   [$1$2],
-  [$3])[]dnl
+  [[$3]])[]dnl
 m4_if(
   m4_bregexp($1$2, [^\+?[0-9]+-[0-9][0-9]-[0-9][0-9]$]),
   [-1],
@@ -115,23 +115,23 @@ m4_if(
   ])])[]dnl
 m4_define(
   [$1$2_YEAR],
-  m4_bregexp($1$2, [\+?0*\([^-]+\)], [\1]))[]dnl
+  m4_bregexp($1$2, [\+?0*\([^-]+\)], [[[\1]]]))[]dnl
 m4_define(
   [$1$2_MONTH],
-  m4_bregexp($1$2, [[^-]*-0?\([^-]*\)], [\1]))[]dnl
+  m4_bregexp($1$2, [[^-]*-0?\([^-]*\)], [[[\1]]]))[]dnl
 m4_define(
   [$1$2_DAY],
-  m4_bregexp($1$2, [.*-0?\(.*\)], [\1]))[]dnl
+  m4_bregexp($1$2, [.*-0?\(.*\)], [[[\1]]]))[]dnl
 m4_define(
   [$1$2_YEAR_MOD_10000],
-  m4_bregexp($1$2_YEAR, [..?.?.?$], [\&]))[]dnl
+  m4_bregexp($1$2_YEAR, [..?.?.?$], [[[\&]]]))[]dnl
 m4_define(
   [$1$2_IS_LEAP_YEAR],
-  m4_eval([
+  m4_dquote(m4_eval([
     (]$1$2_YEAR_MOD_10000[ % 4 == 0 &&
      ]$1$2_YEAR_MOD_10000[ % 100 != 0) ||
     (]$1$2_YEAR_MOD_10000[ % 400 == 0)
-  ]))[]dnl
+  ])))[]dnl
 m4_if(
   m4_eval([
     (]$1$2_DAY[ >= 1) &&
@@ -157,7 +157,7 @@ m4_if(
   ])])[]dnl
 m4_define(
   [$1$2_TROFF],
-  m4_bpatsubst($1$2, [-], [\\-]))[]dnl
+  m4_dquote(m4_bpatsubsts($1$2, [-], [\\-])))[]dnl
 m4_define(
   [$1$2_MONTH_NAME],
   m4_if(
@@ -181,19 +181,19 @@ m4_define(
   m4_if(
     m4_eval(m4_len($1$2_YEAR)[ > 3]),
     [1],
-    [$1$2_YEAR],
-    [m4_bregexp([000]$1$2_YEAR, [....$], [\&])]))[]dnl
+    [m4_dquote($1$2_YEAR)],
+    [m4_bregexp([000]$1$2_YEAR, [....$], [[[\&]]])]))[]dnl
 m4_define(
   [$1$2_MONTH_ZPAD],
-  m4_bpatsubst($1$2_MONTH, [^.$], [0\&]))[]dnl
+  m4_bregexp([0]$1$2_MONTH, [..$], [[[\&]]]))[]dnl
 m4_define(
   [$1$2_DAY_ZPAD],
-  m4_bpatsubst($1$2_DAY, [^.$], [0\&]))[]dnl
+  m4_bregexp([0]$1$2_DAY, [..$], [[[\&]]]))[]dnl
 [
 
 ]AC_DEFINE(
   [[$2]],
-  [["]]$1$2[["]],
+  [["]$1$2["]],
   [
     Define to a character string literal that contains the appropriate
     proleptic Gregorian date in YYYY-MM-DD form where the year may be
@@ -203,28 +203,28 @@ m4_define(
 
 ]AC_DEFINE(
   [[$2_YEAR]],
-  $1$2_YEAR,
+  [$1$2_YEAR],
   [
     Define to the year of $2 as an unsuffixed decimal integer constant.
   ])[
 
 ]AC_DEFINE(
   [[$2_MONTH]],
-  $1$2_MONTH,
+  [$1$2_MONTH],
   [
     Define to the month of $2 as an unsuffixed decimal integer constant.
   ])[
 
 ]AC_DEFINE(
   [[$2_DAY]],
-  $1$2_DAY,
+  [$1$2_DAY],
   [
     Define to the day of $2 as an unsuffixed decimal integer constant.
   ])[
 
 ]AC_DEFINE(
   [[$2_IS_LEAP_YEAR]],
-  $1$2_IS_LEAP_YEAR,
+  [$1$2_IS_LEAP_YEAR],
   [
     Define to the integer constant 1 if $2_YEAR is a leap year, or the
     integer constant 0 if not.
@@ -232,7 +232,7 @@ m4_define(
 
 ]AC_DEFINE(
   [[$2_TROFF]],
-  [["]]m4_bpatsubst($1$2_TROFF, [\\], [\\\\])[["]],
+  [["]m4_bpatsubsts($1$2_TROFF, [\\], [\\\\])["]],
   [
     Define to the same character string literal as $2 but with each '-'
     character preceded by a '\' character.
@@ -256,7 +256,7 @@ m4_define(
 
 ]AC_DEFINE(
   [[$2_YEAR_ZPAD]],
-  [["]]$1$2_YEAR_ZPAD[["]],
+  [["]$1$2_YEAR_ZPAD["]],
   [
     Define to a character string literal that contains $2_YEAR preceded
     by as many zeros as necessary to make it at least four characters
@@ -265,7 +265,7 @@ m4_define(
 
 ]AC_DEFINE(
   [[$2_MONTH_ZPAD]],
-  [["]]$1$2_MONTH_ZPAD[["]],
+  [["]$1$2_MONTH_ZPAD["]],
   [
     Define to a character string literal that contains the MM component
     of $2.
@@ -273,7 +273,7 @@ m4_define(
 
 ]AC_DEFINE(
   [[$2_DAY_ZPAD]],
-  [["]]$1$2_DAY_ZPAD[["]],
+  [["]$1$2_DAY_ZPAD["]],
   [
     Define to a character string literal that contains the DD component
     of $2.
