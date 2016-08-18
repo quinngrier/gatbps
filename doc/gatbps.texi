@@ -71,6 +71,7 @@ on@tie{}@w{@value{PACKAGEDATE}}@.
 * Mathematical Notation in Texinfo::
 * Timestamp Preservation during Autoconf Instantiation::
 * Automatic Dependency Tracking for M4 Code::
+* Formatting Autoconf Files::
 * Formatting Automake Files::
 * Java Compilation with the GNU Autotools::
 * Javadoc Generation with the GNU Autotools::
@@ -103,6 +104,8 @@ on@tie{}@w{@value{PACKAGEDATE}}@.
 @include Timestamp-Preservation-during-Autoconf-Instantiation.texi
 
 @include Automatic-Dependency-Tracking-for-M4-Code.texi
+
+@include Formatting-Autoconf-Files.texi
 
 @include Formatting-Automake-Files.texi
 
