@@ -327,6 +327,7 @@ doc_gatbps_TEXINFOS += doc/texi/PACKAGEDATE.texi
 doc_gatbps_TEXINFOS += doc/texi/PACKAGEVERSION.texi
 doc_gatbps_TEXINFOS += doc/texi/Package-Formats.texi
 doc_gatbps_TEXINFOS += doc/texi/Plain-Files.texi
+doc_gatbps_TEXINFOS += doc/texi/Processing-M4-with-the-Autotools.texi
 doc_gatbps_TEXINFOS += doc/texi/Release-Notes.texi
 doc_gatbps_TEXINFOS += doc/texi/Required-Packages.texi
 doc_gatbps_TEXINFOS += doc/texi/SEDDEFAULTTEXI.texi
