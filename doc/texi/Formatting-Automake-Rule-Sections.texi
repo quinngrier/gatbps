@@ -1,16 +1,18 @@
-@node Formatting Automake Files
-@chapter Formatting Automake Files
+@node Formatting Automake Rule Sections
+@chapter Formatting Automake Rule Sections
 
-@menu
-* Formatting Automake Rule Sections::
-* Formatting Automake Variable Sections::
-@end menu
-
-@lowersections
-@include Formatting-Automake-Rule-Sections.texi
-
-@include Formatting-Automake-Variable-Sections.texi
-@raisesections
+@noindent
+A sequence of zero or more lines that is immediately preceded by a line
+containing exactly
+``@w{@t{## begin_rules}}'',
+that is immediately followed by a line containing exactly
+``@w{@t{## end_rules}}'',
+and that does not contain any lines beginning with
+``@w{@t{## begin_}}''
+or
+``@w{@t{## end_}}''
+is called an
+@i{Automake rule section}@.
 @ifxml
 @ifnotxml
 @c
