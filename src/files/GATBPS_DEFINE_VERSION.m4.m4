@@ -45,24 +45,10 @@ m4_if(
 m4_if(
   [$#],
   [2],
-  [m4_if(
-    [$1],
-    [AC_],
-    [],
+  [m4_ifndef(
+    [$1$2],
     [gatbps_fatal([
-      GATBPS_DEFINE_VERSION requires its first argument to be "AC_" when
-      it is given exactly 2 arguments
-    ])])])[]dnl
-m4_if(
-  [$#],
-  [2],
-  [m4_if(
-    [$2],
-    [PACKAGE_VERSION],
-    [],
-    [gatbps_fatal([
-      GATBPS_DEFINE_VERSION requires its second argument to be
-      "PACKAGE_VERSION" when it is given exactly 2 arguments
+      $1$2 is not defined
     ])])])[]dnl
 m4_if(
   [$#],
