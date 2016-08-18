@@ -1,19 +1,18 @@
-@node Formatting Automake Files
-@chapter Formatting Automake Files
+@node Formatting Automake Include Sections
+@chapter Formatting Automake Include Sections
 
-@menu
-* Formatting Automake Include Sections::
-* Formatting Automake Rule Sections::
-* Formatting Automake Variable Sections::
-@end menu
-
-@lowersections
-@include Formatting-Automake-Include-Sections.texi
-
-@include Formatting-Automake-Rule-Sections.texi
-
-@include Formatting-Automake-Variable-Sections.texi
-@raisesections
+@noindent
+A sequence of zero or more lines that is immediately preceded by a line
+containing exactly
+``@w{@t{## begin_includes}}'',
+that is immediately followed by a line containing exactly
+``@w{@t{## end_includes}}'',
+and that does not contain any lines beginning with
+``@w{@t{## begin_}}''
+or
+``@w{@t{## end_}}''
+is called an
+@i{Automake include section}@.
 @ifxml
 @ifnotxml
 @c

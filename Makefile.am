@@ -309,6 +309,7 @@ doc_gatbps_TEXINFOS += doc/texi/Configuration.texi
 doc_gatbps_TEXINFOS += doc/texi/Copyright-Information.texi
 doc_gatbps_TEXINFOS += doc/texi/Copyright-Texts.texi
 doc_gatbps_TEXINFOS += doc/texi/Formatting-Automake-Files.texi
+doc_gatbps_TEXINFOS += doc/texi/Formatting-Automake-Include-Sections.texi
 doc_gatbps_TEXINFOS += doc/texi/Formatting-Automake-Rule-Sections.texi
 doc_gatbps_TEXINFOS += doc/texi/Formatting-Automake-Variable-Sections.texi
 doc_gatbps_TEXINFOS += doc/texi/Installation.texi
