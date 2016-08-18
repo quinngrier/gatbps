@@ -23,9 +23,10 @@ AC_DEFUN([GATBPS_DEFINE_DATE], [[{
 #]dnl
 m4_case(
   [$#],
+  [2], [],
   [3], [],
   [gatbps_fatal([
-    GATBPS_DEFINE_DATE requires exactly 3 arguments
+    GATBPS_DEFINE_DATE requires exactly 2 or 3 arguments
   ])])[]dnl
 m4_if(
   m4_bregexp([$1], [^[A-Z_a-z][0-9A-Z_a-z]*$]),
@@ -41,11 +42,22 @@ m4_if(
     GATBPS_DEFINE_DATE requires its second argument to match the
     following regular expression: ^[A-Z_a-z][0-9A-Z_a-z]*$
   ])])[]dnl
-m4_ifdef(
-  [$1$2],
-  [gatbps_fatal([
-    $1$2 is already defined
-  ])])[]dnl
+m4_if(
+  [$#],
+  [2],
+  [m4_ifndef(
+    [$1$2],
+    [gatbps_fatal([
+      $1$2 is not defined
+    ])])])[]dnl
+m4_if(
+  [$#],
+  [3],
+  [m4_ifdef(
+    [$1$2],
+    [gatbps_fatal([
+      $1$2 is already defined
+    ])])])[]dnl
 m4_ifdef(
   [$1$2_YEAR],
   [gatbps_fatal([
@@ -101,9 +113,12 @@ m4_ifdef(
   [gatbps_fatal([
     $1$2_DAY_ZPAD is already defined
   ])])[]dnl
-m4_define(
-  [$1$2],
-  [[$3]])[]dnl
+m4_if(
+  [$#],
+  [3],
+  [m4_define(
+    [$1$2],
+    [[$3]])])[]dnl
 m4_if(
   m4_bregexp($1$2, [^\+?[0-9]+-[0-9][0-9]-[0-9][0-9]$]),
   [-1],
