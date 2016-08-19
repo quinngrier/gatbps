@@ -73,7 +73,7 @@ on@tie{}@w{@value{PACKAGEDATE}}@.
 * Processing M4 with the Autotools::
 * Formatting Autoconf Files::
 * Formatting Automake Files::
-* Java Compilation with the GNU Autotools::
+* Compiling Java with the Autotools::
 * Javadoc Generation with the GNU Autotools::
 * Invoking @w{@t{awk-form-sh}}::
 * Invoking @w{@t{sh-form-sh}}::
@@ -109,7 +109,7 @@ on@tie{}@w{@value{PACKAGEDATE}}@.
 
 @include Formatting-Automake-Files.texi
 
-@include Java-Compilation-with-the-GNU-Autotools.texi
+@include Compiling-Java-with-the-Autotools.texi
 
 @include Javadoc-Generation-with-the-GNU-Autotools.texi
 
