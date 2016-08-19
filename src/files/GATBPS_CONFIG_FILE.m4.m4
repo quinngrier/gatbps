@@ -28,19 +28,19 @@ m4_case(
   ])])[]dnl
 m4_pushdef(
   [gatbps_output],
-  m4_bpatsubst([$1], [:.*]))
+  m4_bpatsubst([$1], [:.*]))[]dnl
 m4_pushdef(
   [gatbps_inputs],
-  m4_bpatsubst([$1], [^[^:]*]))
+  m4_bpatsubst([$1], [^[^:]*]))[]dnl
 m4_pushdef(
   [gatbps_inputs],
-  m4_ifval(gatbps_inputs, [gatbps_inputs], [:gatbps_output.in]))
+  m4_ifval(gatbps_inputs, [gatbps_inputs], [:gatbps_output.in]))[]dnl
 m4_pushdef(
   [gatbps_suffix],
-  m4_if([$#], [1], [.out], [$2]))
+  m4_if([$#], [1], [.out], [$2]))[]dnl
 m4_pushdef(
   [gatbps_prereq],
-  m4_bpatsubst(gatbps_inputs, [:], [ ]))
+  m4_bpatsubst(gatbps_inputs, [:], [ ]))[]dnl
 
 AC_CONFIG_FILES(
   gatbps_output[]gatbps_suffix[]gatbps_inputs,
