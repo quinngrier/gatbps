@@ -334,6 +334,7 @@ doc_gatbps_TEXINFOS += doc/texi/SEDDEFAULTTEXI.texi
 doc_gatbps_TEXINFOS += doc/texi/Special-File-Reference.texi
 doc_gatbps_TEXINFOS += doc/texi/TEXIANYDEFAULTTEXI.texi
 doc_gatbps_TEXINFOS += doc/texi/Timestamp-Preservation-during-Autoconf-Instantiation.texi
+doc_gatbps_TEXINFOS += doc/texi/Writing-Mathematical-Expressions-Twice.texi
 doc_gatbps_TEXINFOS += doc/texi/YYYY-MM-DD-GATBPS-0-1-0.texi
 doc_gatbps_TEXINFOS += doc/texi/bdots.texi
 doc_gatbps_TEXINFOS += doc/texi/bothcontents.texi
