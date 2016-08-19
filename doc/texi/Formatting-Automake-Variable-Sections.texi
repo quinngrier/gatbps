@@ -13,6 +13,9 @@ or
 ``@w{@t{## end_}}''
 is called an
 @i{Automake variable section}@.
+If the last line of a variable section ends with a
+`@w{@t{\}}'@tie{}character,
+then a blank line is implicitly appended to the variable section@.
 
 @example
 foo =
