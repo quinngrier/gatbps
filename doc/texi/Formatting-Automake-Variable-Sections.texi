@@ -16,6 +16,13 @@ is called an
 If the last line of a variable section ends with a
 `@w{@t{\}}'@tie{}character,
 then a blank line is implicitly appended to the variable section@.
+Each maximal contiguous subsequence of lines that consists of a line
+that does not end with a
+`@w{@t{\}}'@tie{}character
+along with any immediately preceding lines that end with
+`@w{@t{\}}'@tie{}characters
+is called a
+@i{logical line}@.
 
 @example
 foo =
