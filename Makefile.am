@@ -44,8 +44,8 @@ GATBPS_M4FLAGS += '-I' $(srcdir)
 MAINTAINERCLEANFILES =
 
 MOSTLYCLEANFILES =
-MOSTLYCLEANFILES += bin/gatbps
-MOSTLYCLEANFILES += doc/man/gatbps.1
+MOSTLYCLEANFILES += doc/man/gatbps.1.m4out
+MOSTLYCLEANFILES += src/gatbps.m4out
 
 SUFFIXES =
 
