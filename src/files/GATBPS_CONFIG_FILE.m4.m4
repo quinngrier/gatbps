@@ -112,11 +112,11 @@ $[]{gatbps_new_rules}"
   ;;
 esac
 
-m4_popdef([gatbps_prereq])
-m4_popdef([gatbps_suffix])
-m4_popdef([gatbps_inputs])
-m4_popdef([gatbps_inputs])
-m4_popdef([gatbps_output])
+m4_popdef([gatbps_prereq])[]dnl
+m4_popdef([gatbps_suffix])[]dnl
+m4_popdef([gatbps_inputs])[]dnl
+m4_popdef([gatbps_inputs])[]dnl
+m4_popdef([gatbps_output])[]dnl
 [
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%}){%||%}dnl
