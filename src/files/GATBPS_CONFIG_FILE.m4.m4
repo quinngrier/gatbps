@@ -23,9 +23,21 @@ m4_case(
   [2], [],
   [3], [],
   [4], [],
+  [5], [],
   [gatbps_fatal([
-    GATBPS_CONFIG_FILE requires exactly 1, 2, 3, or 4 arguments
+    GATBPS_CONFIG_FILE requires exactly 1, 2, 3, 4, or 5 arguments
   ])])[]dnl
+m4_if(
+  m4_eval([$# >= 2]),
+  [1],
+  [m4_case(
+    [$2],
+    [distclean], [],
+    [maintainer-clean], [],
+    [gatbps_fatal([
+      GATBPS_CONFIG_FILE requires its second argument to be either
+      "distclean" or "maintainer-clean"
+    ])])])[]dnl
 m4_pushdef(
   [gatbps_output],
   m4_bpatsubst([$1], [:.*]))[]dnl
@@ -37,7 +49,7 @@ m4_pushdef(
   m4_ifval(gatbps_inputs, [gatbps_inputs], [:gatbps_output.in]))[]dnl
 m4_pushdef(
   [gatbps_suffix],
-  m4_if([$#], [1], [.out], [$2]))[]dnl
+  m4_if(m4_eval([$# < 3]), [1], [.out], [$3]))[]dnl
 m4_pushdef(
   [gatbps_prereq],
   m4_bpatsubst(gatbps_inputs, [:], [ ]))[]dnl
@@ -84,17 +96,21 @@ m4_pushdef(
           exit 1
         ;;
       esac
-      $3
+      $4
     fi
   }],
-  [$4])
+  [$5])
 
 gatbps_new_rules='.PHONY: clean-gatbps_output
 
 clean-gatbps_output:
 	-rm -f gatbps_output
 
-distclean-local: clean-gatbps_output
+[
+
+]m4_if([$2], [], [[distclean]], [[$2]])[-local: clean-]gatbps_output[
+
+]
 
 gatbps_output: gatbps_prereq
 	$[](MKDIR_P) '\''./'\''$[](@D)
