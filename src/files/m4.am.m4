@@ -37,6 +37,9 @@ SUFFIXES += .m4out
 
 .m4.m4out:
 	$(GATBPS_V_M4)':'
+	$(AM_V_at)$(MKDIR_P) \
+  './'$(@D) \
+;
 	$(AM_V_at)$(M4) \
   $(GATBPS_M4FLAGS) \
   $(M4FLAGS) \
