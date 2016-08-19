@@ -25,7 +25,7 @@ m4_case(
   [4], [],
   [gatbps_fatal([
     GATBPS_CONFIG_FILE requires exactly 1, 2, 3, or 4 arguments
-  ])])
+  ])])[]dnl
 
 m4_pushdef([gatbps_output], m4_bpatsubst([$1], [:.*]))
 m4_pushdef([gatbps_inputs], m4_bpatsubst([$1], [^[^:]*]))
