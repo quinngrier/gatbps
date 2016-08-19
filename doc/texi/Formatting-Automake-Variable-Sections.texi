@@ -1,6 +1,7 @@
 @node Formatting Automake Variable Sections
 @chapter Formatting Automake Variable Sections
 
+@cindex Automake variable section
 @noindent
 A sequence of zero or more lines that is immediately preceded by a line
 containing exactly
