@@ -7,7 +7,7 @@
 @end ifclear
 
 @noindent
-GATBPS uses the GNU Build System for building and installation@.
+GATBPS uses the GNU build system for building and installation@.
 
 @menu
 * Package Formats::
