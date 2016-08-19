@@ -26,7 +26,7 @@ case "$][{M4}" in
   ;;
   *)
     ]GATBPS_MSG_ERROR([
-      an M4 preprocessor is required
+      an M4 processor is required
     ])[
   ;;
 esac
