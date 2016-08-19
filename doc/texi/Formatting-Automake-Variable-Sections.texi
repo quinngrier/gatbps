@@ -23,6 +23,9 @@ along with any immediately preceding lines that end with
 `@w{@t{\}}'@tie{}characters
 is called a
 @i{logical line}@.
+Each maximal contiguous subsequence of logical lines that does not
+contain a logical line containing solely a blank line is called a
+@i{variable paragraph}@.
 
 @example
 foo =
