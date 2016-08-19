@@ -41,8 +41,9 @@ m4_pushdef(
 m4_pushdef(
   [gatbps_prereq],
   m4_bpatsubst(gatbps_inputs, [:], [ ]))[]dnl
+[
 
-AC_CONFIG_FILES(
+]AC_CONFIG_FILES(
   gatbps_output[]gatbps_suffix[]gatbps_inputs,
   [{ :
     gatbps_dst=']gatbps_output['
