@@ -208,7 +208,7 @@ m4_define(
 
 ]AC_DEFINE(
   [[$2]],
-  [["]$1$2["]],
+  [["]]m4_dquote(m4_dquote($1$2))[["]],
   [
     Define to a character string literal that contains the appropriate
     proleptic Gregorian date in YYYY-MM-DD form where the year may be
@@ -218,28 +218,28 @@ m4_define(
 
 ]AC_DEFINE(
   [[$2_YEAR]],
-  [$1$2_YEAR],
+  m4_dquote(m4_dquote($1$2_YEAR)),
   [
     Define to the year of $2 as an unsuffixed decimal integer constant.
   ])[
 
 ]AC_DEFINE(
   [[$2_MONTH]],
-  [$1$2_MONTH],
+  m4_dquote(m4_dquote($1$2_MONTH)),
   [
     Define to the month of $2 as an unsuffixed decimal integer constant.
   ])[
 
 ]AC_DEFINE(
   [[$2_DAY]],
-  [$1$2_DAY],
+  m4_dquote(m4_dquote($1$2_DAY)),
   [
     Define to the day of $2 as an unsuffixed decimal integer constant.
   ])[
 
 ]AC_DEFINE(
   [[$2_IS_LEAP_YEAR]],
-  [$1$2_IS_LEAP_YEAR],
+  m4_dquote(m4_dquote($1$2_IS_LEAP_YEAR)),
   [
     Define to the integer constant 1 if $2_YEAR is a leap year, or the
     integer constant 0 if not.
@@ -247,7 +247,7 @@ m4_define(
 
 ]AC_DEFINE(
   [[$2_TROFF]],
-  [["]m4_bpatsubsts($1$2_TROFF, [\\], [\\\\])["]],
+  [["]]m4_dquote(m4_dquote(m4_bpatsubsts($1$2_TROFF, [\\], [\\\\])))[["]],
   [
     Define to the same character string literal as $2 but with each '-'
     character preceded by a '\' character.
@@ -255,7 +255,7 @@ m4_define(
 
 ]AC_DEFINE(
   [[$2_MONTH_NAME]],
-  [["]$1$2_MONTH_NAME["]],
+  [["]]m4_dquote(m4_dquote($1$2_MONTH_NAME))[["]],
   [
     Define to a character string literal that contains the capitalized
     full month name of $2.
@@ -263,7 +263,7 @@ m4_define(
 
 ]AC_DEFINE(
   [[$2_MONTH_ABBR]],
-  [["]$1$2_MONTH_ABBR["]],
+  [["]]m4_dquote(m4_dquote($1$2_MONTH_ABBR))[["]],
   [
     Define to the same character string literal as $2_MONTH_NAME but
     limited to three characters in length.
@@ -271,7 +271,7 @@ m4_define(
 
 ]AC_DEFINE(
   [[$2_YEAR_ZPAD]],
-  [["]$1$2_YEAR_ZPAD["]],
+  [["]]m4_dquote(m4_dquote($1$2_YEAR_ZPAD))[["]],
   [
     Define to a character string literal that contains $2_YEAR preceded
     by as many zeros as necessary to make it at least four characters
@@ -280,7 +280,7 @@ m4_define(
 
 ]AC_DEFINE(
   [[$2_MONTH_ZPAD]],
-  [["]$1$2_MONTH_ZPAD["]],
+  [["]]m4_dquote(m4_dquote($1$2_MONTH_ZPAD))[["]],
   [
     Define to a character string literal that contains the MM component
     of $2.
@@ -288,7 +288,7 @@ m4_define(
 
 ]AC_DEFINE(
   [[$2_DAY_ZPAD]],
-  [["]$1$2_DAY_ZPAD["]],
+  [["]]m4_dquote(m4_dquote($1$2_DAY_ZPAD))[["]],
   [
     Define to a character string literal that contains the DD component
     of $2.
