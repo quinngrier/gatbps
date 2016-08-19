@@ -127,6 +127,11 @@ on@tie{}@w{@value{PACKAGEDATE}}@.
 
 @include CC0-1.0-appendix.texi
 
+@node Concept Index
+@unnumbered Concept Index
+
+@printindex cp
+
 @node Special File Index
 @unnumbered Special File Index
 
