@@ -49,7 +49,7 @@ SUFFIXES += .m4out
   '-D' \
   'make_rules' \
   <$< \
-  >$<'.d' \
+  >$@'.d' \
 ;
 
 ## end_rules
