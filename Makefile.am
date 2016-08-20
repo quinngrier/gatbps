@@ -124,6 +124,8 @@ MOSTLYCLEANFILES += src/files/GATBPS_JAVA_RULES.am.m4out
 MOSTLYCLEANFILES += src/files/GATBPS_JAVA_RULES.am.m4out.d
 MOSTLYCLEANFILES += src/files/GATBPS_JAVA_SUBST.m4.m4out
 MOSTLYCLEANFILES += src/files/GATBPS_JAVA_SUBST.m4.m4out.d
+MOSTLYCLEANFILES += src/files/GATBPS_M4_RULES.am.m4out
+MOSTLYCLEANFILES += src/files/GATBPS_M4_RULES.am.m4out.d
 MOSTLYCLEANFILES += src/files/GATBPS_M4_SUBST.m4.m4out
 MOSTLYCLEANFILES += src/files/GATBPS_M4_SUBST.m4.m4out.d
 MOSTLYCLEANFILES += src/files/GATBPS_MSG_ERROR.m4.m4out
@@ -323,6 +325,7 @@ bin_gatbps_src += doc/help/GATBPS_DEFINE_VERSION.m4.hd.m4
 bin_gatbps_src += doc/help/GATBPS_JAVA.m4.hd.m4
 bin_gatbps_src += doc/help/GATBPS_JAVA_RULES.am.hd.m4
 bin_gatbps_src += doc/help/GATBPS_JAVA_SUBST.m4.hd.m4
+bin_gatbps_src += doc/help/GATBPS_M4_RULES.am.hd.m4
 bin_gatbps_src += doc/help/GATBPS_M4_SUBST.m4.hd.m4
 bin_gatbps_src += doc/help/GATBPS_MSG_ERROR.m4.hd.m4
 bin_gatbps_src += doc/help/GATBPS_MSG_FAILURE.m4.hd.m4
@@ -437,6 +440,7 @@ bin_gatbps_src += src/files/GATBPS_DEFINE_VERSION.m4.m4
 bin_gatbps_src += src/files/GATBPS_JAVA.m4.m4
 bin_gatbps_src += src/files/GATBPS_JAVA_RULES.am.m4
 bin_gatbps_src += src/files/GATBPS_JAVA_SUBST.m4.m4
+bin_gatbps_src += src/files/GATBPS_M4_RULES.am.m4
 bin_gatbps_src += src/files/GATBPS_M4_SUBST.m4.m4
 bin_gatbps_src += src/files/GATBPS_MSG_ERROR.m4.m4
 bin_gatbps_src += src/files/GATBPS_MSG_FAILURE.m4.m4
@@ -758,6 +762,7 @@ ps_dist_src += doc/gatbps.ps
 @SOFT_INCLUDE@ src/files/GATBPS_JAVA.m4.m4out.d
 @SOFT_INCLUDE@ src/files/GATBPS_JAVA_RULES.am.m4out.d
 @SOFT_INCLUDE@ src/files/GATBPS_JAVA_SUBST.m4.m4out.d
+@SOFT_INCLUDE@ src/files/GATBPS_M4_RULES.am.m4out.d
 @SOFT_INCLUDE@ src/files/GATBPS_M4_SUBST.m4.m4out.d
 @SOFT_INCLUDE@ src/files/GATBPS_MSG_ERROR.m4.m4out.d
 @SOFT_INCLUDE@ src/files/GATBPS_MSG_FAILURE.m4.m4out.d
