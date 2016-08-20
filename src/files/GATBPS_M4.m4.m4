@@ -53,10 +53,6 @@ MOSTLYCLEANFILES += ]target_sh[.m4out.d
 '"$][{SOFT_INCLUDE}"' ]target_sh[.m4out.d
 EXTRA_DIST += ]target_sh[.m4'
 ]dnl
-m4_popdef([source_sh_sh])[]dnl
-m4_popdef([target_sh_sh])[]dnl
-m4_popdef([prereq_sh])[]dnl
-m4_popdef([source_sh])[]dnl
 m4_popdef([target_sh])[]dnl
 [
 :;}]])[]dnl
