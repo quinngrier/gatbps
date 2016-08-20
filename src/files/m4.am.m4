@@ -43,16 +43,16 @@ SUFFIXES += .m4out
 	$(AM_V_at)$(M4) \
   $(GATBPS_M4FLAGS) \
   $(M4FLAGS) \
-  <$< \
-  >$@ \
-;
-	$(AM_V_at)$(M4) \
-  $(GATBPS_M4FLAGS) \
-  $(M4FLAGS) \
   '-D' \
   'make_rules' \
   <$< \
   >$@'.d' \
+;
+	$(AM_V_at)$(M4) \
+  $(GATBPS_M4FLAGS) \
+  $(M4FLAGS) \
+  <$< \
+  >$@ \
 ;
 
 ## end_rules
