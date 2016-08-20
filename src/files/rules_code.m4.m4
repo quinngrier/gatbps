@@ -22,6 +22,7 @@ ifdef(
       {'`%|ifdef(
         {'`%|rules_target|%'`},
         {'`%|divert({'`%|0|%'`})rules_target{'`%|out: $1
+$1:
 |%'`}|%'`},
         {'`%|define(
           {'`%|rules_target|%'`},
