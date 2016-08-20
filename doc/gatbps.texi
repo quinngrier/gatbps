@@ -82,6 +82,7 @@ on@tie{}@w{@value{PACKAGEDATE}}@.
 * Special File Reference::
 * Release Notes::
 * Creative Commons Zero@tie{}@w{1-0}::
+* Concept Index::
 * Special File Index::
 * Texinfo Macro Index::
 @end menu
