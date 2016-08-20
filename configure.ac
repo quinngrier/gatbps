@@ -263,6 +263,7 @@ GATBPS_CP([doc/man/gatbps.1], [doc/man/gatbps.1.m4out], [regular])
 
 GATBPS_CONFIG_FILE_SUBST
 GATBPS_CP_SUBST
+GATBPS_M4_SUBST
 
 AC_CONFIG_FILES([Makefile])
 
