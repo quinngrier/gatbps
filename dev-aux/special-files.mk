@@ -21,6 +21,7 @@ all:
 	$(GENERATE) 'build-aux/DATE.sh'
 	$(GENERATE) 'build-aux/GATBPS_CONFIG_FILE_RULES.am'
 	$(GENERATE) 'build-aux/GATBPS_CP_RULES.am'
+	$(GENERATE) 'build-aux/GATBPS_M4_RULES.am'
 	$(GENERATE) 'build-aux/VERSION.sh'
 	$(GENERATE) 'build-aux/VERSION_LTCUR.sh'
 	$(GENERATE) 'build-aux/cp.am'
