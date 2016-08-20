@@ -13,22 +13,22 @@ dnl
 dnl For more information, see the GATBPS manual.
 dnl
 ifdef(
-  {'`%|rules_code|%'`},
-  {'`%||%'`},
-  {'`%|define(
-    {'`%|rules_code|%'`},
-    {'`%|ifdef(
-      {'`%|make_rules|%'`},
-      {'`%|ifdef(
-        {'`%|rules_target|%'`},
-        {'`%|divert({'`%|0|%'`})rules_target{'`%|out: $1
+  {%|rules_code|%},
+  {%||%},
+  {%|define(
+    {%|rules_code|%},
+    {%|ifdef(
+      {%|make_rules|%},
+      {%|ifdef(
+        {%|rules_target|%},
+        {%|divert({%|0|%})rules_target{%|out: $1
 $1:
-|%'`}|%'`},
-        {'`%|define(
-          {'`%|rules_target|%'`},
-          {'`%|{'`%|$1|%'`}|%'`})|%'`})divert({'`%|-1|%'`})|%'`},
-      {'`%||%'`}){'`%||%'`}dnl
-|%'`})|%'`}){'`%||%'`}dnl
+|%}|%},
+        {%|define(
+          {%|rules_target|%},
+          {%|{%|$1|%}|%})|%})divert({%|-1|%})|%},
+      {%||%}){%||%}dnl
+|%})|%}){%||%}dnl
 'changequote(`{%|', `|%}'){%||%}dnl
 footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%}){%||%}dnl
 dnl
