@@ -32,7 +32,7 @@ m4_if(
   ])])[]dnl
 m4_pushdef(
   [target_sh],
-  m4_bpatsubst([[$1]], ['], ['\\'']))[]dnl
+  m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
 [
 
 ]GATBPS_CP([$1], [$1.m4out])[
