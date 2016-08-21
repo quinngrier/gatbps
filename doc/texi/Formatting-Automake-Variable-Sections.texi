@@ -29,11 +29,15 @@ contain a logical line containing solely a blank line is called a
 @i{variable paragraph}@.
 
 @example
+## begin_variables
+
 foo =
 # A comment block can go here.
 ## Automake comments are okay too.
 foo += bar
 foo += baz
+
+## end_variables
 @end example
 
 @example
