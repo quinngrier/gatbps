@@ -104,8 +104,9 @@ case "$][{GATBPS_CP_RULES}" in
   ;;
 esac
 
-GATBPS_CP_RULES="$][{GATBPS_CP_RULES}"\
-']target_sh[: ]m4_if([$5], [], [source_sh], [prereq_sh])[
+GATBPS_CP_RULES="$][{GATBPS_CP_RULES}"'
+
+]target_sh[: ]m4_if([$5], [], [source_sh], [prereq_sh])[
 	$][(GATBPS_V_CP)'\'':'\'']dnl
 m4_if([$5], [], [], [[
 	$][(AM@&t@_V_at)$(MAKE) \
@@ -152,7 +153,9 @@ m4_if([$3], [directory], [[
   '\''./]target_sh_sh['\'' \
 ;
 
-]m4_if([$4], [], [[mostlyclean]], [[$4]])[-local: clean-]target_sh['
+]m4_if([$4], [], [[mostlyclean]], [[$4]])[-local: clean-]target_sh[
+
+'
 ]dnl
 m4_popdef([source_sh_sh])[]dnl
 m4_popdef([target_sh_sh])[]dnl
