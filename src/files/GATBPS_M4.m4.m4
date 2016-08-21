@@ -37,14 +37,6 @@ m4_pushdef(
 
 ]GATBPS_CP([$1], [$1.m4out])[
 
-case "$][{GATBPS_M4_RULES}" in
-  ?*)
-    GATBPS_M4_RULES="$][{GATBPS_M4_RULES}"'
-
-'
-  ;;
-esac
-
 GATBPS_M4_RULES="$][{GATBPS_M4_RULES}"'
 
 ]target_sh[.m4out: ]target_sh[.m4out.d
