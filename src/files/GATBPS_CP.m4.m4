@@ -96,14 +96,6 @@ m4_pushdef(
   m4_bpatsubst([[[$2]]], ['], ['\\''\\'\\'''\\'']))[]dnl
 [
 
-case "$][{GATBPS_CP_RULES}" in
-  ?*)
-    GATBPS_CP_RULES="$][{GATBPS_CP_RULES}"'
-
-'
-  ;;
-esac
-
 GATBPS_CP_RULES="$][{GATBPS_CP_RULES}"'
 
 ]target_sh[: ]m4_if([$5], [], [source_sh], [prereq_sh])[
