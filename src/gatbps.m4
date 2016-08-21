@@ -3435,7 +3435,7 @@ EOF1
 |%}recursion_code(
   {%|GATBPS_M4_RULES.am|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' 'x' "${prefix}"'GATBPS_M4_SUBST.m4' "${@}"; 'shift'
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
