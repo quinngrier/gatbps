@@ -45,13 +45,21 @@ case "$][{GATBPS_M4_RULES}" in
   ;;
 esac
 
-GATBPS_M4_RULES="$][{GATBPS_M4_RULES}"\
-']target_sh[.m4out: ]target_sh[.m4out.d
+GATBPS_M4_RULES="$][{GATBPS_M4_RULES}"'
+
+]target_sh[.m4out: ]target_sh[.m4out.d
+
 ]target_sh[.m4out.d:
+
 MOSTLYCLEANFILES += ]target_sh[.m4out
+
 MOSTLYCLEANFILES += ]target_sh[.m4out.d
+
 '"$][{SOFT_INCLUDE}"' ]target_sh[.m4out.d
-EXTRA_DIST += ]target_sh[.m4'
+
+EXTRA_DIST += ]target_sh[.m4
+
+'
 ]dnl
 m4_popdef([target_sh])[]dnl
 [
