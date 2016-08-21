@@ -17,7 +17,6 @@ header_comment({%|##|%}, {%|##|%}){%|
 ## begin_rules
 
 $(doxygen_dist_dst): $(doxygen_dist_dep)
-	$(GATBPS_V_CP)':'
 	$(AM_V_at)|%}dnl
 contains_exactly_one_word(
   {%|doxygen_dist_dst|%}){%|
@@ -40,6 +39,7 @@ contains_exactly_one_word(
   $(AM_MAKEFLAGS) \
   $(doxygen_dist_src) \
 ;
+	$(GATBPS_V_CP)':'
 	$(AM_V_at)$(MKDIR_P) \
   './'$(@D) \
 ;
