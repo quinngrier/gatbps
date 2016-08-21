@@ -81,19 +81,19 @@ m4_if(
       ])])])])[]dnl
 m4_pushdef(
   [target_sh],
-  m4_bpatsubst([[$1]], ['], ['\\'']))[]dnl
+  m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
 m4_pushdef(
   [source_sh],
-  m4_bpatsubst([[$2]], ['], ['\\'']))[]dnl
+  m4_bpatsubst([[[$2]]], ['], ['\\'']))[]dnl
 m4_pushdef(
   [prereq_sh],
-  m4_bpatsubst([[$5]], ['], ['\\'']))[]dnl
+  m4_bpatsubst([[[$5]]], ['], ['\\'']))[]dnl
 m4_pushdef(
   [target_sh_sh],
-  m4_bpatsubst([[$1]], ['], ['\\''\\'\\'''\\'']))[]dnl
+  m4_bpatsubst([[[$1]]], ['], ['\\''\\'\\'''\\'']))[]dnl
 m4_pushdef(
   [source_sh_sh],
-  m4_bpatsubst([[$2]], ['], ['\\''\\'\\'''\\'']))[]dnl
+  m4_bpatsubst([[[$2]]], ['], ['\\''\\'\\'''\\'']))[]dnl
 [
 
 case "$][{GATBPS_CP_RULES}" in
