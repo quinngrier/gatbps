@@ -21,12 +21,17 @@ ifdef(
       {%|make_rules|%},
       {%|ifdef(
         {%|rules_target|%},
-        {%|divert({%|0|%})rules_target{%|: $1
+        {%|dnl
+divert({%|0|%}){%||%}dnl
+rules_target{%|: $1
 $1:
-|%}|%},
-        {%|define(
-          {%|rules_target|%},
-          {%|{%|$1out|%}|%})|%})divert({%|-1|%})|%},
+|%}dnl
+divert({%|-1|%}){%||%}dnl
+|%},
+        {%|dnl
+define({%|rules_target|%}, {%|{%|$1out|%}|%}){%||%}dnl
+divert({%|-1|%}){%||%}dnl
+|%})|%},
       {%||%}){%||%}dnl
 |%})|%}){%||%}dnl
 'changequote(`{%|', `|%}'){%||%}dnl
