@@ -3,6 +3,7 @@ changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
 rules_code({%|src/files/doxygen-dist.am.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
+include({%|src/tools/contains_at_least_one_word.m4|%}){%||%}dnl
 include({%|src/tools/contains_exactly_one_word.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
@@ -21,8 +22,20 @@ $(doxygen_dist_dst): $(doxygen_dist_dep)
 contains_exactly_one_word(
   {%|doxygen_dist_dst|%}){%|
 	$(AM_V_at)|%}dnl
+contains_at_least_one_word(
+  {%|doxygen_dist_dep|%}){%|
+	$(AM_V_at)|%}dnl
+contains_at_least_one_word(
+  {%|MAKE|%}){%|
+	$(AM_V_at)|%}dnl
 contains_exactly_one_word(
   {%|doxygen_dist_src|%}){%|
+	$(AM_V_at)|%}dnl
+contains_at_least_one_word(
+  {%|MKDIR_P|%}){%|
+	$(AM_V_at)|%}dnl
+contains_exactly_one_word(
+  {%|srcdir|%}){%|
 	$(AM_V_at)$(MAKE) \
   $(AM_MAKEFLAGS) \
   $(doxygen_dist_src) \
