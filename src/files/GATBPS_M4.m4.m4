@@ -20,8 +20,9 @@ AC_DEFUN([GATBPS_M4], [[{
 m4_case(
   [$#],
   [1], [],
+  [2], [],
   [gatbps_fatal([
-    GATBPS_M4 requires exactly 1 argument
+    GATBPS_M4 requires exactly 1 or 2 arguments
   ])])[]dnl
 m4_if(
   m4_bregexp([$1], [^[-./0-9A-Z_a-z]+$]),
@@ -30,6 +31,19 @@ m4_if(
     GATBPS_M4 requires its first argument to match the following regular
     expression: ^[-./0-9A-Z_a-z]+$
   ])])[]dnl
+m4_if(
+  m4_eval([$# >= 2]),
+  [1],
+  [m4_case(
+    [$2],
+    [clean], [],
+    [distclean], [],
+    [maintainer-clean], [],
+    [mostlyclean], [],
+    [gatbps_fatal([
+      GATBPS_M4 requires its second argument to be either "clean",
+      "distclean", "maintainer-clean", or "mostlyclean"
+    ])])])[]dnl
 m4_pushdef(
   [target_sh],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
@@ -64,9 +78,9 @@ clean-]target_sh[.m4out.d:
   '\''./]target_sh_sh[.m4out.d'\'' \
 ;
 
-mostlyclean-local: clean-]target_sh[.m4out
+]m4_if([$2], [], [[mostlyclean]], [[$2]])[-local: clean-]target_sh[.m4out
 
-mostlyclean-local: clean-]target_sh[.m4out.d
+]m4_if([$2], [], [[mostlyclean]], [[$2]])[-local: clean-]target_sh[.m4out.d
 
 '"$][{SOFT_INCLUDE}"' ]target_sh[.m4out.d
 
