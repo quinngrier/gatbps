@@ -4,8 +4,8 @@
 @cindex Automake variable section
 @cindex variable section, Automake
 @noindent
-A sequence of zero or more lines that is immediately preceded by a line
-containing exactly
+A sequence of zero or more lines of text that is immediately preceded by
+a line containing exactly
 ``@w{@t{## begin_variables}}'',
 that is immediately followed by a line containing exactly
 ``@w{@t{## end_variables}}'',
