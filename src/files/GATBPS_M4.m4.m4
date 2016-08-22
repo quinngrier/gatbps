@@ -38,6 +38,8 @@ m4_pushdef(
   m4_bpatsubst([[[$1]]], ['], ['\\''\\'\\'''\\'']))[]dnl
 [
 
+]AC_REQUIRE([GATBPS_CHECK_SOFT_INCLUDE])[
+
 ]GATBPS_CP([$1], [$1.m4out])[
 
 GATBPS_M4_RULES="$][{GATBPS_M4_RULES}"'
