@@ -1,11 +1,11 @@
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|src/tools/contains_at_least_one_word_m.m4|%}){%||%}dnl
+rules_code({%|src/tools/contains_at_least_one_word_sh.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 ifdef(
-  {%|contains_at_least_one_word_m|%},
+  {%|contains_at_least_one_word_sh|%},
   {%||%},
   {%|define(
-    {%|contains_at_least_one_word_m|%},
+    {%|contains_at_least_one_word_sh|%},
     {%|{%|{ \
   for x in \|%}dnl
 ifelse(
