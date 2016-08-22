@@ -15,6 +15,8 @@ or
 ``@w{@t{## end_}}''
 is called an
 @i{Automake variable section}@.
+To reduce ambiguity with upcoming terminology, these lines are called
+@i{physical lines}@.
 If the last line ends with a
 `@w{@t{\}}'@tie{}character,
 then a blank line is implicitly appended@.
