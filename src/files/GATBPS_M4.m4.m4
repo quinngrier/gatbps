@@ -33,6 +33,9 @@ m4_if(
 m4_pushdef(
   [target_sh],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
+m4_pushdef(
+  [target_sh_sh],
+  m4_bpatsubst([[[$1]]], ['], ['\\''\\'\\'''\\'']))[]dnl
 [
 
 ]GATBPS_CP([$1], [$1.m4out])[
@@ -43,14 +46,31 @@ GATBPS_M4_RULES="$][{GATBPS_M4_RULES}"'
 
 ]target_sh[.m4out.d:
 
-MOSTLYCLEANFILES += ]target_sh[.m4out
+.PHONY: clean-]target_sh[.m4out
 
-MOSTLYCLEANFILES += ]target_sh[.m4out.d
+.PHONY: clean-]target_sh[.m4out.d
+
+clean-]target_sh[.m4out:
+	-'\''rm'\'' \
+  '\''-f'\'' \
+  '\''./]target_sh_sh[.m4out'\'' \
+;
+
+clean-]target_sh[.m4out.d:
+	-'\''rm'\'' \
+  '\''-f'\'' \
+  '\''./]target_sh_sh[.m4out.d'\'' \
+;
+
+mostlyclean-local: clean-]target_sh[.m4out
+
+mostlyclean-local: clean-]target_sh[.m4out.d
 
 '"$][{SOFT_INCLUDE}"' ]target_sh[.m4out.d
 
 '
 ]dnl
+m4_popdef([target_sh_sh])[]dnl
 m4_popdef([target_sh])[]dnl
 [
 :;}]])[]dnl
