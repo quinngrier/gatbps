@@ -3,6 +3,7 @@ changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
 rules_code({%|src/files/GATBPS_CP.m4.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
+include({%|src/tools/contains_at_least_one_word_sh.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
 header_comment({%|dnl|%}, {%|dnl|%}){%|
@@ -99,6 +100,9 @@ m4_pushdef(
 GATBPS_CP_RULES="$][{GATBPS_CP_RULES}"'
 
 ]target_sh[: ]m4_if([$5], [], [source_sh], [prereq_sh])[
+	$][(AM@&t@_V_at)|%}dnl
+contains_at_least_one_word_sh(
+  {%|MKDIR_P|%}){%|
 	$][(GATBPS_V_CP)'\'':'\'']dnl
 m4_if([$5], [], [], [[
 	$][(AM@&t@_V_at)$(MAKE) \
