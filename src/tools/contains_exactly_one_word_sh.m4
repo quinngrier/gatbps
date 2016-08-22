@@ -1,11 +1,11 @@
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|src/tools/contains_exactly_one_word_m.m4|%}){%||%}dnl
+rules_code({%|src/tools/contains_exactly_one_word_sh.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 ifdef(
-  {%|contains_exactly_one_word_m|%},
+  {%|contains_exactly_one_word_sh|%},
   {%||%},
   {%|define(
-    {%|contains_exactly_one_word_m|%},
+    {%|contains_exactly_one_word_sh|%},
     {%|{%|{ \
   x='\'''\''; \
   for y in $|%}{%|][($1); do \
