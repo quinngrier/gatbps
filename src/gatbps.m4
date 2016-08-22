@@ -3429,6 +3429,8 @@ EOF1
   {%|GATBPS_M4.m4|%},
   {%|
             'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' 'x' "${prefix}"'GATBPS_CP.m4' "${@}"; 'shift'
+            'set' 'x' "${prefix}"'GATBPS_CHECK_SOFT_INCLUDE.m4' "${@}"; 'shift'
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
