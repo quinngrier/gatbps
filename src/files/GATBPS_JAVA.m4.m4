@@ -28,7 +28,9 @@ m4_foreach_w(
       m4_bpatsubst(gatbps_x, [[^0-9A-Z_a-z]], [_]))dnl
 [
 
-    gatbps_new_rules='./$][(java_]gatbps_y[_dst): $][(java_]gatbps_y[_dep)
+    gatbps_new_rules='
+
+./$][(java_]gatbps_y[_dst): $][(java_]gatbps_y[_dep)
 ./$][(java_]gatbps_y[_dst): $][(java_]gatbps_y[_extra)
 ./$][(java_]gatbps_y[_dst): $][(java_]gatbps_y[_src)
 	$][(GATBPS_V_JAR)'\'':'\''
@@ -359,7 +361,9 @@ contains_exactly_one_word_sh(
     ;; \
   esac; \
   '\''exit'\'' '\''0'\''; \
-:;}'
+:;}
+
+'
 
 ]
     case "$[]{GATBPS_JAVA_RULES}" in
