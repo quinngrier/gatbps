@@ -15,8 +15,6 @@ or
 ``@w{@t{## end_}}''
 is called an
 @i{Automake variable section}@.
-To reduce ambiguity with upcoming terminology, these lines are called
-@i{physical lines}@.
 If the last physical line ends with a
 `@w{@t{\}}'@tie{}character,
 then a blank physical line is implicitly appended@.
@@ -27,6 +25,8 @@ along with any immediately preceding physical lines ending with
 `@w{@t{\}}'@tie{}characters
 is called a
 @i{logical line}@.
+To reduce confusion, the original lines are sometimes called
+@i{physical lines}@.
 Each maximal contiguous subsequence of logical lines that does not
 contain a logical line containing solely a physical blank line is called
 a
