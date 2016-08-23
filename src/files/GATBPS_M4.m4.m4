@@ -46,9 +46,6 @@ m4_if(
 m4_pushdef(
   [target_sh],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
-m4_pushdef(
-  [target_sh_sh],
-  m4_bpatsubst([[[$1]]], ['], ['\\''\\'\\'''\\'']))[]dnl
 [
 
 ]AC_REQUIRE([GATBPS_CHECK_SOFT_INCLUDE])[
@@ -68,13 +65,13 @@ GATBPS_M4_RULES="$][{GATBPS_M4_RULES}"'
 clean-]target_sh[.m4out:
 	-'\''rm'\'' \
   '\''-f'\'' \
-  '\''./]target_sh_sh[.m4out'\'' \
+  '\''./'\'']target_sh['\''.m4out'\'' \
 ;
 
 clean-]target_sh[.m4out.d:
 	-'\''rm'\'' \
   '\''-f'\'' \
-  '\''./]target_sh_sh[.m4out.d'\'' \
+  '\''./'\'']target_sh['\''.m4out.d'\'' \
 ;
 
 ]m4_if([$2], [], [[mostlyclean]], [[$2]])[-local: clean-]target_sh[.m4out
@@ -85,7 +82,6 @@ clean-]target_sh[.m4out.d:
 
 '
 ]dnl
-m4_popdef([target_sh_sh])[]dnl
 m4_popdef([target_sh])[]dnl
 [
 :;}]])[]dnl
