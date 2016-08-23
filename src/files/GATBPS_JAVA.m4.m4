@@ -24,7 +24,7 @@ m4_pushdef([gatbps_x], [$1])
       m4_bpatsubst(gatbps_x, [[^0-9A-Z_a-z]], [_]))dnl
 [
 
-    gatbps_new_rules='
+GATBPS_JAVA_RULES="$][{GATBPS_JAVA_RULES}"'
 
 ./$][(java_]gatbps_y[_dst): $][(java_]gatbps_y[_dep)
 ./$][(java_]gatbps_y[_dst): $][(java_]gatbps_y[_extra)
@@ -362,16 +362,6 @@ contains_exactly_one_word_sh(
 '
 
 ]
-    case "$[]{GATBPS_JAVA_RULES}" in
-      ?*)
-        GATBPS_JAVA_RULES="$[]{GATBPS_JAVA_RULES}"'
-
-'"$[]{gatbps_new_rules}"
-      ;;
-      *)
-        GATBPS_JAVA_RULES="$[]{gatbps_new_rules}"
-      ;;
-    esac
 
     m4_popdef([gatbps_y])dnl
     m4_popdef([gatbps_x])dnl
