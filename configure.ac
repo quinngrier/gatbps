@@ -260,6 +260,12 @@ GATBPS_CONFIG_FILE([src/tools/TEXI2ANY_DEFAULT_TROFF.m4])
 
 GATBPS_CP([bin/gatbps], [src/gatbps], [executable])
 
+GATBPS_CP(
+  [gh-pages/$(html_dist_dst)],
+  [$(html_dist_dst)],
+  [regular],
+  [maintainer-clean])
+
 GATBPS_M4([doc/man/gatbps.1])
 GATBPS_M4([src/files/CC0-1.0-AC-COPYRIGHT.ac])
 GATBPS_M4([src/files/CC0-1.0-AM-COPYRIGHT.am])
