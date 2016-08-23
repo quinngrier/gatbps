@@ -87,12 +87,6 @@ m4_pushdef(
 m4_pushdef(
   [prereq_sh],
   m4_bpatsubst([[[$5]]], ['], ['\\'']))[]dnl
-m4_pushdef(
-  [target_sh_sh],
-  m4_bpatsubst([[[$1]]], ['], ['\\''\\'\\'''\\'']))[]dnl
-m4_pushdef(
-  [source_sh_sh],
-  m4_bpatsubst([[[$2]]], ['], ['\\''\\'\\'''\\'']))[]dnl
 [
 
 GATBPS_CP_RULES="$][{GATBPS_CP_RULES}"'
@@ -105,13 +99,13 @@ contains_at_least_one_word_sh(
 m4_if([$5], [], [], [[
 	$][(AM@&t@_V_at)$(MAKE) \
   $][(AM@&t@_MAKEFLAGS) \
-  '\'']source_sh_sh['\'' \
+  ]source_sh[ \
 ;]])[
 	$][(AM@&t@_V_at)$(MKDIR_P) \
   '\''./'\''$][(@D) \
 ;
 	$][(AM@&t@_V_at){ \
-  x='\'']source_sh_sh['\''; \
+  x=]source_sh[; \
   if '\''test'\'' '\''-]dnl
 m4_if([$3], [directory], [[d]], [[f]])['\'' "$][$][{x}"; then \
     d='\''.'\''; \
@@ -127,14 +121,14 @@ m4_if([$3], [directory], [[d]], [[f]])['\'' "$][$][{x}"; then \
 m4_if([$3], [directory], [[
     '\''-R'\'' \]])[
     "$][$][{d}"'\''/'\''"$][$][{x}" \
-    '\''./]target_sh_sh['\'' \
+    '\''./'\'']target_sh[ \
   || '\''exit'\'' "$][$][{?}"; \
   '\''exit'\'' '\''0'\''; \
 :;}]dnl
 m4_if([$3], [executable], [[
 	'\''chmod'\'' \
   '\''a+x'\'' \
-  '\''./]target_sh_sh['\'' \
+  '\''./'\'']target_sh[ \
 ;]])[
 
 .PHONY: clean-]target_sh[
@@ -144,15 +138,13 @@ clean-]target_sh[:
   '\''-f'\'' \]dnl
 m4_if([$3], [directory], [[
   '\''-r'\'' \]])[
-  '\''./]target_sh_sh['\'' \
+  '\''./'\'']target_sh[ \
 ;
 
 ]m4_if([$4], [], [[mostlyclean]], [[$4]])[-local: clean-]target_sh[
 
 '
 ]dnl
-m4_popdef([source_sh_sh])[]dnl
-m4_popdef([target_sh_sh])[]dnl
 m4_popdef([prereq_sh])[]dnl
 m4_popdef([source_sh])[]dnl
 m4_popdef([target_sh])[]dnl
