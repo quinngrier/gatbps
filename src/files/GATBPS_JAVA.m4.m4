@@ -376,9 +376,6 @@ contains_exactly_one_word_sh(
     m4_popdef([gatbps_y])dnl
     m4_popdef([gatbps_x])dnl
 
-AC_SUBST([GATBPS_JAVA_RULES])
-AM_SUBST_NOTMAKE([GATBPS_JAVA_RULES])
-
 :;}])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%}){%||%}dnl
 dnl
