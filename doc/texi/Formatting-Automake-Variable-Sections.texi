@@ -15,9 +15,9 @@ or
 ``@w{@t{## end_}}''
 is called an
 @i{Automake variable section}@.
-If the last physical line ends with a
+If the last line of an Automake variable section ends with a
 `@w{@t{\}}'@tie{}character,
-then a blank physical line is implicitly appended@.
+then a blank line is implicitly appended to the variable section@.
 Each maximal contiguous subsequence of physical lines that consists of a
 line not ending with a
 `@w{@t{\}}'@tie{}character
