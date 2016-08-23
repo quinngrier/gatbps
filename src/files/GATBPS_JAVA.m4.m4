@@ -18,11 +18,7 @@ AC_DEFUN([GATBPS_JAVA], [{
 # The block that contains this comment is an expansion of the
 # GATBPS_JAVA macro.
 #
-m4_foreach_w(
-  [gatbps_x],
-  [$1],
-  [
-  {
+m4_pushdef([gatbps_x], [$1])
     m4_pushdef(
       [gatbps_y],
       m4_bpatsubst(gatbps_x, [[^0-9A-Z_a-z]], [_]))dnl
@@ -378,7 +374,7 @@ contains_exactly_one_word_sh(
     esac
 
     m4_popdef([gatbps_y])dnl
-  :;}])
+    m4_popdef([gatbps_x])dnl
 
 AC_SUBST([GATBPS_JAVA_RULES])
 AM_SUBST_NOTMAKE([GATBPS_JAVA_RULES])
