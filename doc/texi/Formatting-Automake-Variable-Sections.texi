@@ -28,8 +28,8 @@ is called a
 To reduce confusion, the original lines are sometimes called
 @i{physical lines}@.
 Each maximal contiguous subsequence of logical lines that does not
-contain a logical line containing solely a physical blank line is called
-a
+contain a logical line containing exactly an empty physical line is
+called a
 @i{variable paragraph}@.
 
 @example
