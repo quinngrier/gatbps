@@ -2521,8 +2521,20 @@ EOF1
       while :; do
 
         for i in '0' '1' '2' '3' '4' '5' '6' '7' '8' '9'; do
-          if test '!' '-e' "${safe_1}.gatbps${i}"; then
-            :
+          if 'mkdir' "${safe_1}.gatbps${i}" 2>'/dev/null'; then
+            'rmdir' "${safe_1}.gatbps${i}"
+            case "${?}" in
+              '0')
+              ;;
+              *)
+                'cat' >&2 <<EOF1
+${fy2}gatbps:${fR2} ${fB2}rmdir${fR2} failed while deleting: ${fB2}${1}.gatbps${i}${fR2}
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
+EOF1
+                exit_status='1'
+                break '2'
+              ;;
+            esac
           elif test '-f' "${safe_1}.gatbps${i}"; then
             :
           elif test '-d' "${safe_1}.gatbps${i}"; then
