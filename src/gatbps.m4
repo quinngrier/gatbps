@@ -2532,7 +2532,7 @@ ${fy2}gatbps:${fR2} ${fB2}rmdir${fR2} failed while deleting: ${fB2}${1}.gatbps${
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
-                break '2'
+                'break' '2'
               ;;
             esac
           elif test '-f' "${safe_1}"'.gatbps'"${i}"; then
@@ -2543,14 +2543,14 @@ ${fy2}gatbps:${fR2} file must not be a directory: ${fB2}${1}.gatbps${i}${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
-            break '2'
+            'break' '2'
           else
             'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} file must not be nonregular: ${fB2}${1}.gatbps${i}${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
-            break '2'
+            'break' '2'
           fi
         done
 
