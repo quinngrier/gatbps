@@ -28,16 +28,20 @@ m4_case(
     GATBPS_CP requires exactly 2, 3, 4, or 5 arguments
   ])])[]dnl
 m4_if(
-  [$1],
-  [],
+  m4_bregexp([$1], [[^
+	 ]]),
+  [-1],
   [gatbps_fatal([
-    GATBPS_CP requires its first argument to be nonempty
+    GATBPS_CP requires its first argument to contain at least one
+    character that is not a space, tab, or newline
   ])])[]dnl
 m4_if(
-  [$2],
-  [],
+  m4_bregexp([$2], [[^
+	 ]]),
+  [-1],
   [gatbps_fatal([
-    GATBPS_CP requires its second argument to be nonempty
+    GATBPS_CP requires its second argument to contain at least one
+    character that is not a space, tab, or newline
   ])])[]dnl
 m4_if(
   m4_eval([$# >= 3]),
