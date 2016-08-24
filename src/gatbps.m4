@@ -2518,7 +2518,7 @@ EOF1
 
       delete_tmp='no'
 
-      while :; do
+      while ':'; do
 
         for i in '0' '1' '2' '3' '4' '5' '6' '7' '8' '9'; do
           if 'mkdir' "${safe_1}"'.gatbps'"${i}" 2>'/dev/null'; then
@@ -3202,7 +3202,7 @@ EOF1
   case "${boundary}${recursive}" in
     *'yes'*)
 
-      while :; do # recursion
+      while ':'; do # recursion
         case "${1}" in
 
 |%}recursion_code(
