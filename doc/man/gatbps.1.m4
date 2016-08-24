@@ -611,10 +611,15 @@ is generated and the ten files
 through
 .nohy "\fIR\fB.gatbps9\fR"
 are reserved for temporary use.
-If any temporary file
-is nonregular or a directory,
-then all of them are ignored
-and generation fails.
+The generation
+of\~\c
+.nohy "\fIR\fR"
+begins by verifying that each temporary file either definitely exists as
+a regular file or definitely does not exist.
+If this fails, then no further action is taken and the generation
+of\~\c
+.nohy "\fIR\fR"
+fails.
 Otherwise, some of them may
 be used during generation and
 all of them are deleted after

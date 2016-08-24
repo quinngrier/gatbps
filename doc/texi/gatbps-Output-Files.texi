@@ -11,10 +11,13 @@ is generated and the ten files
 through
 @w{@i{R}@t{.@:gatbps9}}
 are reserved for temporary use@.
-If any temporary file
-is nonregular or a directory,
-then all of them are ignored
-and generation fails@.
+The generation
+of@tie{}@w{@i{R}}
+begins by verifying that each temporary file either definitely exists as
+a regular file or definitely does not exist@.
+If this fails, then no further action is taken and the generation
+of@tie{}@w{@i{R}}
+fails@.
 Otherwise, some of them may
 be used during generation and
 all of them are deleted after
