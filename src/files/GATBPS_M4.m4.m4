@@ -25,10 +25,12 @@ m4_case(
     GATBPS_M4 requires exactly 1 or 2 arguments
   ])])[]dnl
 m4_if(
-  [$1],
-  [],
+  m4_bregexp([$1], [[^
+	 ]]),
+  [-1],
   [gatbps_fatal([
-    GATBPS_M4 requires its first argument to be nonempty
+    GATBPS_M4 requires its first argument to contain at least one
+    character that is not a space, tab, or newline
   ])])[]dnl
 m4_if(
   m4_eval([$# >= 2]),
