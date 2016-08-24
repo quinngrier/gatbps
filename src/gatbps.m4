@@ -2564,7 +2564,7 @@ ${fy2}gatbps:${fR2} each operand must not be a directory
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
           exit_status='1'
-          break
+          'break'
         fi
 
         case "${plain},${1}" in
@@ -2811,7 +2811,7 @@ ${fy2}gatbps:${fR2} file must not be a directory: ${fB2}${1}.top${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
-                break
+                'break'
               fi
 
               'eval' "${awk}"' '\''
@@ -2834,7 +2834,7 @@ ${fy2}gatbps:${fR2} and writing to: ${fB2}${tmp0}${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                   exit_status='1'
-                  break
+                  'break'
                 ;;
               esac
 
@@ -2848,7 +2848,7 @@ ${fy2}gatbps:${fR2} file must not be a directory: ${fB2}${1}.top.texi${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
-                break
+                'break'
               fi
 
               'eval' "${awk}"' '\''
@@ -2879,7 +2879,7 @@ ${fy2}gatbps:${fR2} and writing to: ${fB2}${tmp1}${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                   exit_status='1'
-                  break
+                  'break'
                 ;;
               esac
 
@@ -2901,7 +2901,7 @@ ${fy2}gatbps:${fR2} and writing to: ${fB2}${tmp0}${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                   exit_status='1'
-                  break
+                  'break'
                 ;;
               esac
 
@@ -2916,7 +2916,7 @@ ${fy2}gatbps:${fR2} ${fB2}echo${fR2} failed while writing to: ${fB2}${tmp0}${fR2
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                   exit_status='1'
-                  break
+                  'break'
                 ;;
               esac
 
@@ -2935,7 +2935,7 @@ ${fy2}gatbps:${fR2} and writing to: ${fB2}${tmp0}${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                   exit_status='1'
-                  break
+                  'break'
                 ;;
               esac
 
@@ -2950,7 +2950,7 @@ ${fy2}gatbps:${fR2} file must not be a directory: ${fB2}${1}.texi${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
-                break
+                'break'
               fi
             else
               'cat' >&2 <<EOF1
@@ -2958,7 +2958,7 @@ ${fy2}gatbps:${fR2} file must exist: ${fB2}${1}.texi${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
               exit_status='1'
-              break
+              'break'
             fi
 
             'eval' "${awk}"' '\''
@@ -2989,7 +2989,7 @@ ${fy2}gatbps:${fR2} and writing to: ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
-                break
+                'break'
               ;;
             esac
 
@@ -3011,7 +3011,7 @@ ${fy2}gatbps:${fR2} and writing to: ${fB2}${tmp1}${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
-                break
+                'break'
               ;;
             esac
 
@@ -3025,7 +3025,7 @@ ${fy2}gatbps:${fR2} file must not be a directory: ${fB2}${1}.bot${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
-                break
+                'break'
               fi
 
               'eval' "${awk}"' '\''
@@ -3048,7 +3048,7 @@ ${fy2}gatbps:${fR2} and writing to: ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                   exit_status='1'
-                  break
+                  'break'
                 ;;
               esac
 
@@ -3062,7 +3062,7 @@ ${fy2}gatbps:${fR2} file must not be a directory: ${fB2}${1}.bot.texi${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
-                break
+                'break'
               fi
 
               echo >"${safe_tmp2}"
@@ -3076,7 +3076,7 @@ ${fy2}gatbps:${fR2} ${fB2}echo${fR2} failed while writing to: ${fB2}${tmp2}${fR2
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                   exit_status='1'
-                  break
+                  'break'
                 ;;
               esac
 
@@ -3108,7 +3108,7 @@ ${fy2}gatbps:${fR2} and writing to: ${fB2}${tmp3}${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                   exit_status='1'
-                  break
+                  'break'
                 ;;
               esac
 
@@ -3130,7 +3130,7 @@ ${fy2}gatbps:${fR2} and writing to: ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                   exit_status='1'
-                  break
+                  'break'
                 ;;
               esac
 
@@ -3149,7 +3149,7 @@ ${fy2}gatbps:${fR2} and writing to: ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                   exit_status='1'
-                  break
+                  'break'
                 ;;
               esac
 
@@ -3170,7 +3170,7 @@ ${fy2}gatbps:${fR2} and writing to: ${fB2}${1}${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
-                break
+                'break'
               ;;
             esac
 
@@ -3178,7 +3178,7 @@ EOF1
 
         esac
 
-        break
+        'break'
 
       done
 
