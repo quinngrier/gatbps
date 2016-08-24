@@ -11,10 +11,7 @@ GATBPSFLAGS =
 ## begin_rules
 
 .PHONY: all
-.PHONY: always-make-COPYING
-.PHONY: always-make-INSTALL
-.PHONY: always-make-NEWS
-.PHONY: always-make-README
+.PHONY: always-make
 
 .SUFFIXES:
 .SUFFIXES: .texi
@@ -29,13 +26,13 @@ GATBPSFLAGS =
   $@ \
 ;
 
-COPYING: always-make-COPYING
+COPYING: always-make
 
-INSTALL: always-make-INSTALL
+INSTALL: always-make
 
-NEWS: always-make-NEWS
+NEWS: always-make
 
-README: always-make-README
+README: always-make
 
 all: COPYING
 all: INSTALL
