@@ -2518,7 +2518,7 @@ EOF1
 
       delete_tmp='no'
 
-      while ':'; do
+      while ':'; do # generation
 
         for i in '0' '1' '2' '3' '4' '5' '6' '7' '8' '9'; do
           if 'mkdir' "${safe_1}"'.gatbps'"${i}" 2>'/dev/null'; then
@@ -3180,7 +3180,7 @@ EOF1
 
         'break'
 
-      done
+      done # generation
 
       case "${delete_tmp}" in
         'yes')
