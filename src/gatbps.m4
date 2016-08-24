@@ -2521,8 +2521,8 @@ EOF1
       while :; do
 
         for i in '0' '1' '2' '3' '4' '5' '6' '7' '8' '9'; do
-          if 'mkdir' "${safe_1}.gatbps${i}" 2>'/dev/null'; then
-            'rmdir' "${safe_1}.gatbps${i}"
+          if 'mkdir' "${safe_1}"'.gatbps'"${i}" 2>'/dev/null'; then
+            'rmdir' "${safe_1}"'.gatbps'"${i}"
             case "${?}" in
               '0')
               ;;
@@ -2535,9 +2535,9 @@ EOF1
                 break '2'
               ;;
             esac
-          elif test '-f' "${safe_1}.gatbps${i}"; then
+          elif test '-f' "${safe_1}"'.gatbps'"${i}"; then
             :
-          elif test '-d' "${safe_1}.gatbps${i}"; then
+          elif test '-d' "${safe_1}"'.gatbps'"${i}"; then
             'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} file must not be a directory: ${fB2}${1}.gatbps${i}${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
@@ -3185,7 +3185,7 @@ EOF1
       case "${delete_tmp}" in
         'yes')
           for i in '0' '1' '2' '3' '4' '5' '6' '7' '8' '9'; do
-            if rm '-f' "${safe_1}.gatbps${i}"; then
+            if rm '-f' "${safe_1}"'.gatbps'"${i}"; then
               :
             else
               'cat' >&2 <<EOF1
