@@ -25,7 +25,7 @@ along with each immediately preceding line ending with a
 `@w{@t{\}}'@tie{}character
 is called a
 @i{logical line}@.
-To reduce confusion, the original lines are sometimes called
+To reduce confusion, the original lines are often called
 @i{physical lines}@.
 Each maximal contiguous subsequence of logical lines that does not
 contain a logical line containing exactly an empty physical line is
