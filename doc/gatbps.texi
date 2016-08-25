@@ -9,7 +9,7 @@
 
 @include PACKAGEVERSION.texi
 
-@settitle GATBPS @value{PACKAGEVERSION}
+@settitle GATBPS @value{PACKAGEVERSION} Manual
 
 @include AWKDEFAULTTEXI.texi
 @include CC0-1.0-copying.texi
@@ -34,11 +34,11 @@
 @end direntry
 
 @ifplaintext
-@chapheading GATBPS@tie{}@w{@value{PACKAGEVERSION}}
+@chapheading GATBPS@tie{}@w{@value{PACKAGEVERSION}} Manual
 @end ifplaintext
 
 @titlepage
-@title GATBPS@tie{}@w{@value{PACKAGEVERSION}}
+@title GATBPS@tie{}@w{@value{PACKAGEVERSION}} Manual
 @subtitle @w{@value{PACKAGEDATE}}
 @vskip 0pt plus 1filll
 @page
@@ -50,7 +50,7 @@
 
 @ifnottex
 @node Top
-@top GATBPS@tie{}@w{@value{PACKAGEVERSION}}
+@top GATBPS@tie{}@w{@value{PACKAGEVERSION}} Manual
 
 This manual is for
 GATBPS@tie{}@w{@value{PACKAGEVERSION}},
