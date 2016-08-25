@@ -1,6 +1,7 @@
 @node @w{@t{gatbps}} Input Files
 @chapter @w{@t{gatbps}} Input Files
 
+@noindent
 For each plain file
 @w{@i{X}}
 that is generated, the input file
