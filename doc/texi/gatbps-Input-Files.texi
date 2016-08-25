@@ -2,8 +2,8 @@
 @chapter @w{@t{gatbps}} Input Files
 
 @noindent
-For each plain file
-@w{@i{X}}
+For each plain
+file@tie{}@w{@i{X}}
 that is generated, the input file
 @w{@i{X}@t{.@:texi}}
 is required and the input files

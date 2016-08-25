@@ -436,7 +436,8 @@ By default, only generation is enabled.
 Not used.
 .SH "INPUT FILES"
 .LP
-For each plain file
+For each plain
+file\~\c
 .nohy "\fIX\fR"
 that is generated, the input file
 .nohy "\fIX\fB.texi\fR"
