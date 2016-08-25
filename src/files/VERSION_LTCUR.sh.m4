@@ -162,7 +162,6 @@ if "${git}" 'ls-files' '--error-unmatch' \
   "${git}" 'tag' >"${0}.tmp"
   case "${?}" in
     '0')
-      :
     ;;
     *)
       'cat' >&2 <<EOF2
@@ -195,7 +194,6 @@ END {
 `
   case "${?}" in
     '0')
-      :
     ;;
     *)
       'cat' >&2 <<EOF2
@@ -212,7 +210,6 @@ elif test '-f' 'VERSION_LTCUR'; then
   cat 'VERSION_LTCUR'
   case "${?}" in
     '0')
-      :
     ;;
     *)
       'cat' >&2 <<EOF2

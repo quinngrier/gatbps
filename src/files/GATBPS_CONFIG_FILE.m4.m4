@@ -90,7 +90,6 @@ m4_pushdef(
       cp "$[]{gatbps_safe_src}" "$[]{gatbps_safe_dst}"
       case "$[]{?}" in
         '0')
-          :
         ;;
         *)
           exit 1

@@ -466,7 +466,6 @@ EOF1
 `
           case "${?}" in
             '0')
-              :
             ;;
             *)
               'cat' >&2 <<EOF1
@@ -481,7 +480,6 @@ EOF1
 
           case "${prefix}" in
             *'/')
-              :
             ;;
             ?*)
               prefix="${prefix}/"
@@ -638,7 +636,6 @@ EOF1
 `
           case "${?}" in
             '0')
-              :
             ;;
             *)
               'cat' >&2 <<EOF1
@@ -676,7 +673,6 @@ EOF1
 `
           case "${?}" in
             '0')
-              :
             ;;
             *)
               'cat' >&2 <<EOF1
@@ -714,7 +710,6 @@ EOF1
 `
           case "${?}" in
             '0')
-              :
             ;;
             *)
               'cat' >&2 <<EOF1
@@ -766,7 +761,6 @@ EOF1
 `
           case "${?}" in
             '0')
-              :
             ;;
             *)
               'cat' >&2 <<EOF1
@@ -849,7 +843,6 @@ EOF1
 `
           case "${?}" in
             '0')
-              :
             ;;
             *)
               'cat' >&2 <<EOF1
@@ -905,7 +898,6 @@ EOF1
 `
           case "${?}" in
             '0')
-              :
             ;;
             *)
               'cat' >&2 <<EOF1
@@ -944,7 +936,6 @@ Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.
 EOF1
           case "${?}" in
             '0')
-              :
             ;;
             *)
               'cat' >&2 <<EOF1
@@ -1237,7 +1228,6 @@ ${1}
 EOF1
               case "${?}" in
                 '0')
-                  :
                 ;;
                 *)
                   'cat' >&2 <<EOF1
@@ -1265,7 +1255,6 @@ include(`doc/man/gatbps.1.m4')dnl
 {%|EOF1
           case "${?}" in
             '0')
-              :
             ;;
             *)
               'cat' >&2 <<EOF1
@@ -1328,7 +1317,6 @@ EOF1
 `
           case "${?}" in
             '0')
-              :
             ;;
             *)
               'cat' >&2 <<EOF1
@@ -1384,7 +1372,6 @@ EOF1
 `
           case "${?}" in
             '0')
-              :
             ;;
             *)
               'cat' >&2 <<EOF1
@@ -1440,7 +1427,6 @@ EOF1
 `
           case "${?}" in
             '0')
-              :
             ;;
             *)
               'cat' >&2 <<EOF1
@@ -1496,7 +1482,6 @@ EOF1
 `
           case "${?}" in
             '0')
-              :
             ;;
             *)
               'cat' >&2 <<EOF1
@@ -1553,7 +1538,6 @@ EOF1
 `
           case "${?}" in
             '0')
-              :
             ;;
             *)
               'cat' >&2 <<EOF1
@@ -1609,7 +1593,6 @@ EOF1
 `
           case "${?}" in
             '0')
-              :
             ;;
             *)
               'cat' >&2 <<EOF1
@@ -1665,7 +1648,6 @@ EOF1
 `
           case "${?}" in
             '0')
-              :
             ;;
             *)
               'cat' >&2 <<EOF1
@@ -1721,7 +1703,6 @@ EOF1
 `
           case "${?}" in
             '0')
-              :
             ;;
             *)
               'cat' >&2 <<EOF1
@@ -1777,7 +1758,6 @@ EOF1
 `
           case "${?}" in
             '0')
-              :
             ;;
             *)
               'cat' >&2 <<EOF1
@@ -1829,7 +1809,6 @@ EOF1
 `
           case "${?}" in
             '0')
-              :
             ;;
             *)
               'cat' >&2 <<EOF1
@@ -2115,7 +2094,6 @@ EOF1
 `
           case "${?}" in
             '0')
-              :
             ;;
             *)
               'cat' >&2 <<EOF1
@@ -2197,7 +2175,6 @@ EOF1
 `
           case "${?}" in
             '0')
-              :
             ;;
             *)
               'cat' >&2 <<EOF1
@@ -2253,7 +2230,6 @@ EOF1
 `
           case "${?}" in
             '0')
-              :
             ;;
             *)
               'cat' >&2 <<EOF1
@@ -2287,7 +2263,6 @@ named <${fB1}CC0-1.0.txt${fR1}>. If not, it may be available at
 EOF1
           case "${?}" in
             '0')
-              :
             ;;
             *)
               'cat' >&2 <<EOF1
@@ -2335,7 +2310,6 @@ ${1}
 EOF1
           case "${?}" in
             '0')
-              :
             ;;
             *)
               'cat' >&2 <<EOF1
@@ -2373,7 +2347,6 @@ ${1}
 EOF1
           case "${?}" in
             '0')
-              :
             ;;
             *)
               'cat' >&2 <<EOF1
@@ -2394,7 +2367,6 @@ EOF1
 
   case "${1}" in
     ?*)
-      :
     ;;
     *)
       'cat' >&2 <<EOF1
@@ -2440,7 +2412,6 @@ ${1}
 EOF1
               case "${?}" in
                 '0')
-                  :
                 ;;
                 *)
                   'cat' >&2 <<EOF1
@@ -2461,7 +2432,6 @@ ${1}
 EOF1
               case "${?}" in
                 '0')
-                  :
                 ;;
                 *)
                   'cat' >&2 <<EOF1
@@ -2824,7 +2794,6 @@ END {
 '\''' <"${safe_1}.top" >"${safe_tmp0}"
               case "${?}" in
                 '0')
-                  :
                 ;;
                 *)
                   'cat' >&2 <<EOF1
@@ -2869,7 +2838,6 @@ END {
 '\''' <"${safe_1}.top.texi" >"${safe_tmp1}"
               case "${?}" in
                 '0')
-                  :
                 ;;
                 *)
                   'cat' >&2 <<EOF1
@@ -2892,7 +2860,6 @@ EOF1
               ;'
               case "${?}" in
                 '0')
-                  :
                 ;;
                 *)
                   'cat' >&2 <<EOF1
@@ -2908,7 +2875,6 @@ EOF1
               echo >>"${safe_tmp0}"
               case "${?}" in
                 '0')
-                  :
                 ;;
                 *)
                   'cat' >&2 <<EOF1
@@ -2925,7 +2891,6 @@ EOF1
               cat '/dev/null' >"${safe_tmp0}"
               case "${?}" in
                 '0')
-                  :
                 ;;
                 *)
                   'cat' >&2 <<EOF1
@@ -2979,7 +2944,6 @@ END {
 '\''' <"${safe_1}.texi" >"${safe_tmp2}"
             case "${?}" in
               '0')
-                :
               ;;
               *)
                 'cat' >&2 <<EOF1
@@ -3002,7 +2966,6 @@ EOF1
             ;'
             case "${?}" in
               '0')
-                :
               ;;
               *)
                 'cat' >&2 <<EOF1
@@ -3038,7 +3001,6 @@ $0 !~ /^#/ {
 '\''' <"${safe_1}.bot" >"${safe_tmp2}"
               case "${?}" in
                 '0')
-                  :
                 ;;
                 *)
                   'cat' >&2 <<EOF1
@@ -3068,7 +3030,6 @@ EOF1
               echo >"${safe_tmp2}"
               case "${?}" in
                 '0')
-                  :
                 ;;
                 *)
                   'cat' >&2 <<EOF1
@@ -3098,7 +3059,6 @@ END {
 '\''' <"${safe_1}.bot.texi" >"${safe_tmp3}"
               case "${?}" in
                 '0')
-                  :
                 ;;
                 *)
                   'cat' >&2 <<EOF1
@@ -3121,7 +3081,6 @@ EOF1
               ;'
               case "${?}" in
                 '0')
-                  :
                 ;;
                 *)
                   'cat' >&2 <<EOF1
@@ -3139,7 +3098,6 @@ EOF1
               cat '/dev/null' >"${safe_tmp2}"
               case "${?}" in
                 '0')
-                  :
                 ;;
                 *)
                   'cat' >&2 <<EOF1
@@ -3158,7 +3116,6 @@ EOF1
             cat "${safe_tmp0}" "${safe_tmp1}" "${safe_tmp2}" >"${safe_1}"
             case "${?}" in
               '0')
-                :
               ;;
               *)
                 'cat' >&2 <<EOF1

@@ -36,7 +36,6 @@ GATBPS_CACHE_CHECK(
       { ':'
         case "$[]{gatbps_var}" in
           'yes'|'no'|'1'|'0')
-            :
           ;;
           *)
             AC_MSG_RESULT([])
