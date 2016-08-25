@@ -2,28 +2,28 @@
 @chapter @w{@t{gatbps}} Output Files
 
 For each operand
-@w{@i{R}}
+@w{@i{X}}
 for which generation
 is enabled, the file
-@w{@i{R}}
+@w{@i{X}}
 is generated and the ten files
-@w{@i{R}@t{.@:gatbps0}}
+@w{@i{X}@t{.@:gatbps0}}
 through
-@w{@i{R}@t{.@:gatbps9}}
+@w{@i{X}@t{.@:gatbps9}}
 are reserved for temporary use@.
 The generation
-of@tie{}@w{@i{R}}
+of@tie{}@w{@i{X}}
 begins by verifying that each temporary file either definitely exists as
 a regular file or definitely does not exist@.
 If this fails, then no further action is taken and the generation
-of@tie{}@w{@i{R}}
+of@tie{}@w{@i{X}}
 fails@.
 Otherwise, some of them may
 be used during generation and
 all of them are deleted after
 generation succeeds or fails@.
 If generation fails, then
-@w{@i{R}}
+@w{@i{X}}
 is not necessarily deleted@.
 If the program is
 terminated by a signal, then

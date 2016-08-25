@@ -2,9 +2,9 @@
 @chapter @w{@t{gatbps}} Standard Output
 
 For each operand
-@w{@i{R}}
+@w{@i{X}}
 for which printing is enabled,
-@w{@i{R}}
+@w{@i{X}}
 followed by either a
 newline or null character
 is written to standard output@.

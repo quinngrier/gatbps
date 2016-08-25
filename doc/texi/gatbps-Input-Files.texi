@@ -2,15 +2,15 @@
 @chapter @w{@t{gatbps}} Input Files
 
 For each plain file
-@w{@i{R}}
+@w{@i{X}}
 that is generated, the input file
-@w{@i{R}@t{.@:texi}}
+@w{@i{X}@t{.@:texi}}
 is required and the input files
-@w{@i{R}@t{.@:top}},
-@w{@i{R}@t{.@:top.@:texi}},
-@w{@i{R}@t{.@:bot}},
+@w{@i{X}@t{.@:top}},
+@w{@i{X}@t{.@:top.@:texi}},
+@w{@i{X}@t{.@:bot}},
 and
-@w{@i{R}@t{.@:bot.@:texi}}
+@w{@i{X}@t{.@:bot.@:texi}}
 are optional@.
 @ifxml
 @ifnotxml

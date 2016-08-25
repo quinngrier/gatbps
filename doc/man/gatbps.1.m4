@@ -437,15 +437,15 @@ Not used.
 .SH "INPUT FILES"
 .LP
 For each plain file
-.nohy "\fIR\fR"
+.nohy "\fIX\fR"
 that is generated, the input file
-.nohy "\fIR\fB.texi\fR"
+.nohy "\fIX\fB.texi\fR"
 is required and the input files
-.nohy "\fIR\fB.top\fR,"
-.nohy "\fIR\fB.top.texi\fR,"
-.nohy "\fIR\fB.bot\fR,"
+.nohy "\fIX\fB.top\fR,"
+.nohy "\fIX\fB.top.texi\fR,"
+.nohy "\fIX\fB.bot\fR,"
 and
-.nohy "\fIR\fB.bot.texi\fR"
+.nohy "\fIX\fB.bot.texi\fR"
 are optional.
 .SH "ENVIRONMENT VARIABLES"
 .LP
@@ -566,9 +566,9 @@ Default.
 .SH "STDOUT"
 .LP
 For each operand
-.nohy "\fIR\fR"
+.nohy "\fIX\fR"
 for which printing is enabled,
-.nohy "\fIR\fR"
+.nohy "\fIX\fR"
 followed by either a
 newline or null character
 is written to standard output.
@@ -602,30 +602,30 @@ messages to standard error.
 .SH "OUTPUT FILES"
 .LP
 For each operand
-.nohy "\fIR\fR"
+.nohy "\fIX\fR"
 for which generation
 is enabled, the file
-.nohy "\fIR\fR"
+.nohy "\fIX\fR"
 is generated and the ten files
-.nohy "\fIR\fB.gatbps0\fR"
+.nohy "\fIX\fB.gatbps0\fR"
 through
-.nohy "\fIR\fB.gatbps9\fR"
+.nohy "\fIX\fB.gatbps9\fR"
 are reserved for temporary use.
 The generation
 of\~\c
-.nohy "\fIR\fR"
+.nohy "\fIX\fR"
 begins by verifying that each temporary file either definitely exists as
 a regular file or definitely does not exist.
 If this fails, then no further action is taken and the generation
 of\~\c
-.nohy "\fIR\fR"
+.nohy "\fIX\fR"
 fails.
 Otherwise, some of them may
 be used during generation and
 all of them are deleted after
 generation succeeds or fails.
 If generation fails, then
-.nohy "\fIR\fR"
+.nohy "\fIX\fR"
 is not necessarily deleted.
 If the program is
 terminated by a signal, then
