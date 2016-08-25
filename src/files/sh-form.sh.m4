@@ -238,7 +238,6 @@ case "${awk}" in
   'auto')
     case "${awk_auto}" in
       ?*)
-        ':'
       ;;
       *)
         awk_auto=''\''awk'\'''
@@ -267,7 +266,6 @@ case "${sed}" in
   'auto')
     case "${sed_auto}" in
       ?*)
-        ':'
       ;;
       *)
         sed_auto=''\''sed'\'''
@@ -424,7 +422,6 @@ EOF2
             'auto')
               case "${awk_auto}" in
                 ?*)
-                  ':'
                 ;;
                 *)
                   awk_auto=''\''awk'\'''
@@ -617,7 +614,6 @@ EOF2
             'auto')
               case "${sed_auto}" in
                 ?*)
-                  ':'
                 ;;
                 *)
                   sed_auto=''\''sed'\'''

@@ -13,7 +13,6 @@ include(`src/files/$1.m4'){%|
 EOF1
             case "$|%}{%|{?}" in
               '0')
-                ':'
               ;;
               *)
                 'cat' >&2 <<EOF1

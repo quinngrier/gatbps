@@ -233,7 +233,6 @@ case "${awk}" in
   'auto')
     case "${awk_auto}" in
       ?*)
-        ':'
       ;;
       *)
         awk_auto=''\''awk'\'''
@@ -262,7 +261,6 @@ case "${sed}" in
   'auto')
     case "${sed_auto}" in
       ?*)
-        ':'
       ;;
       *)
         sed_auto=''\''sed'\'''
@@ -382,7 +380,6 @@ ${output}
 EOF2
 case "${?}" in
   '0')
-    ':'
   ;;
   *)
     'cat' >&2 <<EOF2

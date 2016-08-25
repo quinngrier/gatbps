@@ -262,7 +262,6 @@ case "${awk}" in
   'auto')
     case "${awk_auto}" in
       ?*)
-        ':'
       ;;
       *)
         awk_auto=''\''awk'\'''
@@ -291,7 +290,6 @@ case "${sed}" in
   'auto')
     case "${sed_auto}" in
       ?*)
-        ':'
       ;;
       *)
         sed_auto=''\''sed'\'''
@@ -318,7 +316,6 @@ case "${texi2any}" in
   'auto')
     case "${texi2any_auto}" in
       ?*)
-        ':'
       ;;
       *)
         texi2any_auto=''\''makeinfo'\'''
@@ -777,7 +774,6 @@ EOF1
             'auto')
               case "${awk_auto}" in
                 ?*)
-                  ':'
                 ;;
                 *)
                   awk_auto=''\''awk'\'''
@@ -1825,7 +1821,6 @@ EOF1
             'auto')
               case "${sed_auto}" in
                 ?*)
-                  ':'
                 ;;
                 *)
                   sed_auto=''\''sed'\'''
@@ -2110,7 +2105,6 @@ EOF1
             'auto')
               case "${texi2any_auto}" in
                 ?*)
-                  ':'
                 ;;
                 *)
                   texi2any_auto=''\''makeinfo'\'''

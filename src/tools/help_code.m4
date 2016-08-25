@@ -13,7 +13,6 @@ include(`doc/help/$1.hd.m4'){%|
 EOF1
               case "$|%}{%|{?}" in
                 '0')
-                  ':'
                 ;;
                 *)
                   'cat' >&2 <<EOF1

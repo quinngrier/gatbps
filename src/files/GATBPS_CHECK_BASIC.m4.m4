@@ -78,7 +78,6 @@ GATBPS_CACHE_CHECK(
 
 case "$[]{gatbps_cv_$2}" in
   'yes'|'no')
-    ':'
   ;;
   *)
     AC_MSG_ERROR(

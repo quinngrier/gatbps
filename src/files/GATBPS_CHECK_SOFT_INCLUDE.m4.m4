@@ -48,7 +48,6 @@ m4_case(
 EOF
         case "$][{?}" in
           '0')
-            ':'
           ;;
           *)
             ]AC_MSG_ERROR(
@@ -60,7 +59,6 @@ EOF
         'rm' '-f' 'conftest2.mk'
         case "$][{?}" in
           '0')
-            ':'
           ;;
           *)
             ]AC_MSG_ERROR(
@@ -89,7 +87,6 @@ EOF
 EOF
             case "$][{?}" in
               '0')
-                ':'
               ;;
               *)
                 ]AC_MSG_ERROR(
@@ -131,7 +128,6 @@ sinclude conftest2.mk
 EOF
         case "$][{?}" in
           '0')
-            ':'
           ;;
           *)
             ]AC_MSG_ERROR(
@@ -143,7 +139,6 @@ EOF
         'rm' '-f' 'conftest2.mk'
         case "$][{?}" in
           '0')
-            ':'
           ;;
           *)
             ]AC_MSG_ERROR(
@@ -172,7 +167,6 @@ EOF
 EOF
             case "$][{?}" in
               '0')
-                ':'
               ;;
               *)
                 ]AC_MSG_ERROR(

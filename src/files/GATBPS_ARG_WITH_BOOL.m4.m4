@@ -29,7 +29,6 @@ AS_HELP_STRING([--with-$3=no], [$6])],
 
 case "$[]{gatbps_x}" in
   'yes'|'no')
-    ':'
   ;;
   *)
     AC_MSG_ERROR([invalid --with-$3 value: $[]{]gatbps_x[}], [1])
