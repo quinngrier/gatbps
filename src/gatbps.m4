@@ -1197,29 +1197,29 @@ EOF1
 
             *)
               'eval' "${awk}"' '\''
-{
-  if (sub(/.*\//, "", $0)) {
-    name = $0
-  } else if (NR == 1) {
-    sub(/--help=/, "", $0)
-    name = $0
-  } else {
-    name = name "\n" $0
-  }
-}
-END {
-  printf "Plain file: '\''"${fB1}"'\''%s'\''"${fR1}"'\''\n", name
-  print ""
-  print "A plain file F is created by adding startup and shutdown code to F.texi"
-  print "and calling texi2any --plaintext. If F.top exists, it is prepended to F"
-  print "with a trailing newline and lines beginning with '\''\'\'''\''#'\''\'\'''\'' removed. Otherwise,"
-  print "if F.top.texi exists, it is handled like F.texi and prepended to F with"
-  print "a trailing newline. The same is done for F.bot(.texi), but appending to"
-  print "F with a leading newline."
-  print ""
-  print "Try '\''"${fB1}"'\''man gatbps'\''"${fR1}"'\'' or '\''"${fB1}"'\''info gatbps'\''"${fR1}"'\'' for more information."
-}
-'\''' <<EOF1
+                {
+                  if (sub(/.*\//, "", $0)) {
+                    name = $0
+                  } else if (NR == 1) {
+                    sub(/--help=/, "", $0)
+                    name = $0
+                  } else {
+                    name = name "\n" $0
+                  }
+                }
+                END {
+                  printf "Plain file: '\''"${fB1}"'\''%s'\''"${fR1}"'\''\n", name
+                  print ""
+                  print "A plain file F is created by adding startup and shutdown code to F.texi"
+                  print "and calling texi2any --plaintext. If F.top exists, it is prepended to F"
+                  print "with a trailing newline and lines beginning with '\''\'\'''\''#'\''\'\'''\'' removed. Otherwise,"
+                  print "if F.top.texi exists, it is handled like F.texi and prepended to F with"
+                  print "a trailing newline. The same is done for F.bot(.texi), but appending to"
+                  print "F with a leading newline."
+                  print ""
+                  print "Try '\''"${fB1}"'\''man gatbps'\''"${fR1}"'\'' or '\''"${fB1}"'\''info gatbps'\''"${fR1}"'\'' for more information."
+                }
+              '\''' <<EOF1
 ${1}
 EOF1
               case "${?}" in
@@ -2285,21 +2285,21 @@ EOF1
         '--'*'='*)
 
           'eval' "${awk}"' '\''
-{
-  if (NR != 1) {
-    name = name "\n"
-  }
-  done = sub(/=.*/, "", $0)
-  name = name $0
-  if (done) {
-    exit
-  }
-}
-END {
-  printf "'\''"${fr2}"'\''gatbps!'\''"${fR2}"'\'' unknown option: '\''"${fB2}"'\''%s'\''"${fR2}"'\''\n", name
-  printf "'\''"${fr2}"'\''gatbps!'\''"${fR2}"'\'' try '\''"${fB2}"'\''gatbps --help'\''"${fR2}"'\'' for more information\n"
-}
-'\''' >&2 <<EOF1
+            {
+              if (NR != 1) {
+                name = name "\n"
+              }
+              done = sub(/=.*/, "", $0)
+              name = name $0
+              if (done) {
+                exit
+              }
+            }
+            END {
+              printf "'\''"${fr2}"'\''gatbps!'\''"${fR2}"'\'' unknown option: '\''"${fB2}"'\''%s'\''"${fR2}"'\''\n", name
+              printf "'\''"${fr2}"'\''gatbps!'\''"${fR2}"'\'' try '\''"${fB2}"'\''gatbps --help'\''"${fR2}"'\'' for more information\n"
+            }
+          '\''' >&2 <<EOF1
 ${1}
 EOF1
           case "${?}" in
@@ -2330,13 +2330,13 @@ EOF1
         '-'?*)
 
           'eval' "${awk}"' '\''
-{
-  name = substr($0 "\n", 1, 2)
-  printf "'\''"${fr2}"'\''gatbps!'\''"${fR2}"'\'' unknown option: '\''"${fB2}"'\''%s'\''"${fR2}"'\''\n", name
-  printf "'\''"${fr2}"'\''gatbps!'\''"${fR2}"'\'' try '\''"${fB2}"'\''gatbps --help'\''"${fR2}"'\'' for more information\n"
-  exit
-}
-'\''' >&2 <<EOF1
+            {
+              name = substr($0 "\n", 1, 2)
+              printf "'\''"${fr2}"'\''gatbps!'\''"${fR2}"'\'' unknown option: '\''"${fB2}"'\''%s'\''"${fR2}"'\''\n", name
+              printf "'\''"${fr2}"'\''gatbps!'\''"${fR2}"'\'' try '\''"${fB2}"'\''gatbps --help'\''"${fR2}"'\'' for more information\n"
+              exit
+            }
+          '\''' >&2 <<EOF1
 ${1}
 EOF1
           case "${?}" in
@@ -2390,18 +2390,18 @@ EOF1
           case "${print0}" in
             'yes')
               'eval' "${awk}"' '\''
-{
-  if (NR == 1) {
-    x = $0
-  } else {
-    printf "%s", x
-    x = "\n" $0
-  }
-}
-END {
-  printf "%s%c", x, 0
-}
-'\''' <<EOF1
+                {
+                  if (NR == 1) {
+                    x = $0
+                  } else {
+                    printf "%s", x
+                    x = "\n" $0
+                  }
+                }
+                END {
+                  printf "%s%c", x, 0
+                }
+              '\''' <<EOF1
 ${1}
 EOF1
               case "${?}" in
@@ -2779,13 +2779,13 @@ EOF1
               fi
 
               'eval' "${awk}"' '\''
-$0 !~ /^#/ {
-  print $0
-}
-END {
-  print ""
-}
-'\''' <"${safe_1}.top" >"${safe_tmp0}"
+                $0 !~ /^#/ {
+                  print $0
+                }
+                END {
+                  print ""
+                }
+              '\''' <"${safe_1}.top" >"${safe_tmp0}"
               case "${?}" in
                 '0')
                 ;;
@@ -2815,21 +2815,21 @@ EOF1
               fi
 
               'eval' "${awk}"' '\''
-BEGIN {
-  print "\\input texinfo"
-  print "@setfilename foo"
-  print "@ifclear insertascii"
-  print "@documentencoding UTF-8"
-  print "@end ifclear"
-  print "@settitle foo"
-}
-{
-  print $0
-}
-END {
-  print "@bye"
-}
-'\''' <"${safe_1}.top.texi" >"${safe_tmp1}"
+                BEGIN {
+                  print "\\input texinfo"
+                  print "@setfilename foo"
+                  print "@ifclear insertascii"
+                  print "@documentencoding UTF-8"
+                  print "@end ifclear"
+                  print "@settitle foo"
+                }
+                {
+                  print $0
+                }
+                END {
+                  print "@bye"
+                }
+              '\''' <"${safe_1}.top.texi" >"${safe_tmp1}"
               case "${?}" in
                 '0')
                 ;;
@@ -2921,21 +2921,21 @@ EOF1
             fi
 
             'eval' "${awk}"' '\''
-BEGIN {
-  print "\\input texinfo"
-  print "@setfilename foo"
-  print "@ifclear insertascii"
-  print "@documentencoding UTF-8"
-  print "@end ifclear"
-  print "@settitle foo"
-}
-{
-  print $0
-}
-END {
-  print "@bye"
-}
-'\''' <"${safe_1}.texi" >"${safe_tmp2}"
+              BEGIN {
+                print "\\input texinfo"
+                print "@setfilename foo"
+                print "@ifclear insertascii"
+                print "@documentencoding UTF-8"
+                print "@end ifclear"
+                print "@settitle foo"
+              }
+              {
+                print $0
+              }
+              END {
+                print "@bye"
+              }
+            '\''' <"${safe_1}.texi" >"${safe_tmp2}"
             case "${?}" in
               '0')
               ;;
@@ -2986,13 +2986,13 @@ EOF1
               fi
 
               'eval' "${awk}"' '\''
-BEGIN {
-  print ""
-}
-$0 !~ /^#/ {
-  print $0
-}
-'\''' <"${safe_1}.bot" >"${safe_tmp2}"
+                BEGIN {
+                  print ""
+                }
+                $0 !~ /^#/ {
+                  print $0
+                }
+              '\''' <"${safe_1}.bot" >"${safe_tmp2}"
               case "${?}" in
                 '0')
                 ;;
@@ -3036,21 +3036,21 @@ EOF1
               esac
 
               'eval' "${awk}"' '\''
-BEGIN {
-  print "\\input texinfo"
-  print "@setfilename foo"
-  print "@ifclear insertascii"
-  print "@documentencoding UTF-8"
-  print "@end ifclear"
-  print "@settitle foo"
-}
-{
-  print $0
-}
-END {
-  print "@bye"
-}
-'\''' <"${safe_1}.bot.texi" >"${safe_tmp3}"
+                BEGIN {
+                  print "\\input texinfo"
+                  print "@setfilename foo"
+                  print "@ifclear insertascii"
+                  print "@documentencoding UTF-8"
+                  print "@end ifclear"
+                  print "@settitle foo"
+                }
+                {
+                  print $0
+                }
+                END {
+                  print "@bye"
+                }
+              '\''' <"${safe_1}.bot.texi" >"${safe_tmp3}"
               case "${?}" in
                 '0')
                 ;;

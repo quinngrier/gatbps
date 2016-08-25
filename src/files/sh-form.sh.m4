@@ -681,18 +681,18 @@ case "${keep}" in
     case "${s}" in
       *"${nl}'")
         s=`'eval' "${awk}"' '\\''
-{
-  if (NR == 1) {
-    x = $0
-  } else {
-    printf "%s", x
-    x = "\\n" $0
-  }
-}
-END {
-  printf "'\\''\\'\\'''\\''"
-}
-'\\''' <<EOF2
+          {
+            if (NR == 1) {
+              x = $0
+            } else {
+              printf "%s", x
+              x = "\\n" $0
+            }
+          }
+          END {
+            printf "'\\''\\'\\'''\\''"
+          }
+        '\\''' <<EOF2
 ${s}
 EOF2
 `
@@ -958,21 +958,21 @@ EOF2
         '--'*'='*)
 
           'eval' "${awk}"' '\''
-{
-  if (NR != 1) {
-    name = name "\n"
-  }
-  done = sub(/=.*/, "", $0)
-  name = name $0
-  if (done) {
-    exit
-  }
-}
-END {
-  printf "'\''"${fr2}"'\''sh-form.sh!'\''"${fR2}"'\'' unknown option: '\''"${fB2}"'\''%s'\''"${fR2}"'\''\n", name
-  printf "'\''"${fr2}"'\''sh-form.sh!'\''"${fR2}"'\'' try '\''"${fB2}"'\''sh sh-form.sh --help'\''"${fR2}"'\'' for more information\n"
-}
-'\''' >&2 <<EOF2
+            {
+              if (NR != 1) {
+                name = name "\n"
+              }
+              done = sub(/=.*/, "", $0)
+              name = name $0
+              if (done) {
+                exit
+              }
+            }
+            END {
+              printf "'\''"${fr2}"'\''sh-form.sh!'\''"${fR2}"'\'' unknown option: '\''"${fB2}"'\''%s'\''"${fR2}"'\''\n", name
+              printf "'\''"${fr2}"'\''sh-form.sh!'\''"${fR2}"'\'' try '\''"${fB2}"'\''sh sh-form.sh --help'\''"${fR2}"'\'' for more information\n"
+            }
+          '\''' >&2 <<EOF2
 ${1}
 EOF2
           case "${?}" in
@@ -1003,13 +1003,13 @@ EOF2
         '-'?*)
 
           'eval' "${awk}"' '\''
-{
-  name = substr($0 "\n", 1, 2)
-  printf "'\''"${fr2}"'\''sh-form.sh!'\''"${fR2}"'\'' unknown option: '\''"${fB2}"'\''%s'\''"${fR2}"'\''\n", name
-  printf "'\''"${fr2}"'\''sh-form.sh!'\''"${fR2}"'\'' try '\''"${fB2}"'\''sh sh-form.sh --help'\''"${fR2}"'\'' for more information\n"
-  exit
-}
-'\''' >&2 <<EOF2
+            {
+              name = substr($0 "\n", 1, 2)
+              printf "'\''"${fr2}"'\''sh-form.sh!'\''"${fR2}"'\'' unknown option: '\''"${fB2}"'\''%s'\''"${fR2}"'\''\n", name
+              printf "'\''"${fr2}"'\''sh-form.sh!'\''"${fR2}"'\'' try '\''"${fB2}"'\''sh sh-form.sh --help'\''"${fR2}"'\'' for more information\n"
+              exit
+            }
+          '\''' >&2 <<EOF2
 ${1}
 EOF2
           case "${?}" in
