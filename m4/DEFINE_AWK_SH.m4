@@ -28,7 +28,6 @@ AWK_SH=`'sh' \
 ;`
 case "$][{?}" in
   '0')
-    ':'
   ;;
   *)
     ]GATBPS_MSG_ERROR([

@@ -22,7 +22,6 @@ m4_case(
 
 case "$][{M4}" in
   ?*)
-    ':'
   ;;
   *)
     ]GATBPS_MSG_ERROR([
