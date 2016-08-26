@@ -1,6 +1,8 @@
 @node Formatting Automake Rule Sections
 @chapter Formatting Automake Rule Sections
 
+@cindex Automake rule section
+@cindex rule section, Automake
 @noindent
 A sequence of zero or more lines of text that is immediately preceded by
 a line containing exactly

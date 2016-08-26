@@ -1,6 +1,8 @@
 @node Formatting Automake Include Sections
 @chapter Formatting Automake Include Sections
 
+@cindex Automake include section
+@cindex include section, Automake
 @noindent
 A sequence of zero or more lines of text that is immediately preceded by
 a line containing exactly
