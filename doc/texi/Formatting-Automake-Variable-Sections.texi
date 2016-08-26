@@ -28,7 +28,7 @@ is called a
 @i{logical line}@.
 The original lines are often called
 @i{physical lines}
-to reduce confusion@.
+to avoid confusion@.
 Each maximal contiguous subsequence of logical lines that does not
 contain a logical line containing exactly an empty physical line is
 called a
