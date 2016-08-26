@@ -2,8 +2,8 @@
 @chapter Formatting Automake Include Sections
 
 @noindent
-A sequence of zero or more lines that is immediately preceded by a line
-containing exactly
+A sequence of zero or more lines of text that is immediately preceded by
+a line containing exactly
 ``@w{@t{## begin_includes}}'',
 that is immediately followed by a line containing exactly
 ``@w{@t{## end_includes}}'',
