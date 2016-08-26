@@ -22,8 +22,8 @@ section@.
 Each maximal contiguous subsequence of lines that consists of a line not
 ending with a
 `@w{@t{\}}'@tie{}character
-along with each immediately preceding line ending with a
-`@w{@t{\}}'@tie{}character
+along with all immediately preceding lines ending with
+`@w{@t{\}}'@tie{}characters
 is called a
 @i{logical line}@.
 To reduce confusion, the original lines are often called
