@@ -162,7 +162,7 @@ is
 then the command name is inferred.
 The copy of the
 program that corresponds
-to this copy of the manual page
+to this copy of the man page
 behaves as if an instance of the
 .nohy "\fB\-\-awk=|%}AWK_DEFAULT_TROFF{%|\fR"
 option were added to the
@@ -213,7 +213,7 @@ The
 option writes text to standard output and
 causes all remaining arguments to be ignored.
 The text is the source code
-of the program's manual page,
+of the program's man page,
 which can be processed with any
 command that is analogous to the
 .nohy "\fBtbl\ |\ nroff\ \-man\fR"
@@ -279,7 +279,7 @@ is
 then the command name is inferred.
 The copy of the
 program that corresponds
-to this copy of the manual page
+to this copy of the man page
 behaves as if an instance of the
 .nohy "\fB\-\-sed=|%}SED_DEFAULT_TROFF{%|\fR"
 option were added to the
@@ -384,7 +384,7 @@ is
 then the command name is inferred.
 The copy of the
 program that corresponds
-to this copy of the manual page
+to this copy of the man page
 behaves as if an instance of the
 .nohy "\fB\-\-texi2any=|%}TEXI2ANY_DEFAULT_TROFF{%|\fR"
 option were added to the

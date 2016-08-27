@@ -149,7 +149,7 @@ The
 option writes text to standard output and
 causes all remaining arguments to be ignored@.
 The text is the source code
-of the program's manual page,
+of the program's man page,
 which can be processed with any
 command that is analogous to the
 @w{@t{tbl | nroff -man}}
