@@ -33,6 +33,28 @@ m4_case(
 
 case "$][{javadir+x}" in
   ?*)
+    case "$][{javadir}" in
+      *[^-./0-9A-Z_a-z]*)
+        ]GATBPS_MSG_NOTICE([
+          error: invalid \$][{javadir} value: "$][{javadir}"
+        ])[
+        ]GATBPS_MSG_ERROR([
+          \$][{javadir} must match the following regular expression:
+          /[-./0-9A-Z_a-z]*
+        ])[
+      ;;
+      /*)
+      ;;
+      *)
+        ]GATBPS_MSG_NOTICE([
+          error: invalid \$][{javadir} value: "$][{javadir}"
+        ])[
+        ]GATBPS_MSG_ERROR([
+          \$][{javadir} must match the following regular expression:
+          /[-./0-9A-Z_a-z]*
+        ])[
+      ;;
+    esac
   ;;
   *)
     javadir='$][{datadir}/java'
