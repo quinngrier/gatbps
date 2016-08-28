@@ -127,7 +127,7 @@ m4_if([$3], [directory], [[
   '\''exit'\'' '\''0'\''; \
 :;}]dnl
 m4_if([$3], [executable], [[
-	'\''chmod'\'' \
+	$][(AM@&t@_V_at)'\''chmod'\'' \
   '\''a+x'\'' \
   '\''./'\'']target_sh[ \
 ;]])[
