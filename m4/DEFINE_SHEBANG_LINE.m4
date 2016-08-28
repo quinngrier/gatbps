@@ -28,7 +28,7 @@ case "$][{SHEBANG_LINE_1+x}" in
     ])[
   ;;
 esac
-SHEBANG_LINE_1='#!/bin/sh -
+SHEBANG_LINE_1='#! /bin/sh -
 
 '
 # Autoconf unset readonly newline bug
