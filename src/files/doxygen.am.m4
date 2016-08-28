@@ -29,14 +29,9 @@ SUFFIXES += .dfv
 .am_dfv_INPUT.dfv:
 	$(AM_V_GEN)':'
 	$(AM_V_at){ \
-  if 'test' '-f' $<; then \
-    d='.'; \
-  else \
-    d=$(srcdir); \
-  fi; \
   $(SED) \
     's/+=[	 ]*/&VPATH:/;/+=/s/^[^+]*/INPUT /' \
-    <"$${d}"'/'$< \
+    <$< \
     >$@ \
   || 'exit' "$${?}"; \
   'exit' '0'; \
@@ -45,14 +40,9 @@ SUFFIXES += .dfv
 .dfv.df:
 	$(AM_V_GEN)':'
 	$(AM_V_at){ \
-  if 'test' '-f' $<; then \
-    d='.'; \
-  else \
-    d=$(srcdir); \
-  fi; \
   $(SED) \
     's/VPATH://' \
-    <"$${d}"'/'$< \
+    <$< \
     >$@ \
   || 'exit' "$${?}"; \
   'exit' '0'; \
