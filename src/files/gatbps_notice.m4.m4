@@ -15,9 +15,7 @@ AC_DEFUN([gatbps_notice], [dnl
 m4_case(
   [$#],
   [0],
-  [gatbps_fatal([
-    gatbps_notice requires 1 or more arguments
-  ])],
+  [m4_fatal([gatbps_fatal requires 1 or more arguments])],
   [1],
   [m4_errprintn(m4_normalize(__file__[:]__line__[: $1]))],
   [gatbps_notice([$1])[]gatbps_notice(m4_shift($@))])[]dnl
