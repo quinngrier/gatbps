@@ -15,7 +15,7 @@ AC_DEFUN([gatbps_notice], [dnl
 m4_case(
   [$#],
   [0],
-  [m4_fatal([gatbps_fatal requires 1 or more arguments])],
+  [m4_fatal([gatbps_notice requires 1 or more arguments])],
   [1],
   [m4_errprintn(m4_location[: ]m4_if(
     m4_bregexp([$1], [\[--VERBATIM--\]]),
