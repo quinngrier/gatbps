@@ -3664,13 +3664,13 @@ EOF1
 |%}recursion_code(
   {%|gatbps_fatal.m4|%},
   {%|
+            'set' 'x' "${prefix}"'gatbps_notice.m4' "${@}"; 'shift'
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|gatbps_notice.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
