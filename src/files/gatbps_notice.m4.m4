@@ -14,11 +14,13 @@ dnl
 AC_DEFUN([gatbps_notice], [dnl
 m4_case(
   [$#],
-  [1], [],
+  [0],
   [gatbps_fatal([
-    gatbps_notice requires exactly 1 argument
-  ])])[]dnl
-m4_errprintn(m4_normalize(__file__[:]__line__[: $1]))[]dnl
+    gatbps_notice requires 1 or more arguments
+  ])],
+  [1],
+  [m4_errprintn(m4_normalize(__file__[:]__line__[: $1]))],
+  [gatbps_notice([$1])[]gatbps_notice(m4_shift($@))])[]dnl
 ])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%}){%||%}dnl
 dnl
