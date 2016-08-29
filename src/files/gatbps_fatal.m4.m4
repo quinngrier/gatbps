@@ -17,7 +17,13 @@ m4_case(
   [0],
   [m4_fatal([gatbps_fatal requires 1 or more arguments])],
   [1],
-  [m4_fatal(m4_normalize([$1]))],
+  [m4_fatal(m4_location[: ]m4_if(
+    m4_bregexp([$1], [\[--VERBATIM--\]]),
+    [-1],
+    [m4_normalize([$1])],
+    [m4_normalize(m4_bpatsubst([[$1]], [\[--VERBATIM--\]\(.\|
+\)*\(.\)], [\2]))[]m4_bregexp([[$1]], [\(\[\)--VERBATIM--\]\(\(.\|
+\)*\)], [\1\2])]))],
   [gatbps_notice([error: $1])[]gatbps_fatal(m4_shift($@))])[]dnl
 ])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%}){%||%}dnl
