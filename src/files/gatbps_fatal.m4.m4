@@ -14,9 +14,11 @@ dnl
 AC_DEFUN([gatbps_fatal], [dnl
 m4_case(
   [$#],
-  [1], [],
-  [m4_fatal([gatbps_fatal requires exactly 1 argument])])[]dnl
-m4_fatal(m4_normalize([$1]))[]dnl
+  [0],
+  [m4_fatal([gatbps_fatal requires 1 or more arguments])],
+  [1],
+  [m4_fatal(m4_normalize([$1]))],
+  [gatbps_notice([error: $1])[]gatbps_fatal(m4_shift($@))])[]dnl
 ])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%}){%||%}dnl
 dnl
