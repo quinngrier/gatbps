@@ -17,7 +17,7 @@ m4_case(
   [0],
   [m4_fatal([gatbps_fatal requires 1 or more arguments])],
   [1],
-  [m4_errprintn(m4_normalize(m4_location[: $1]))],
+  [m4_errprintn(m4_location[: ]m4_normalize([$1]))],
   [gatbps_notice([$1])[]gatbps_notice(m4_shift($@))])[]dnl
 ])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%}){%||%}dnl
