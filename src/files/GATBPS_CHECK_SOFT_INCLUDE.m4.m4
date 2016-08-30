@@ -217,6 +217,7 @@ SOFT_INCLUDE="$][{gatbps_cv_SOFT_INCLUDE}"
 'readonly' 'SOFT_INCLUDE'
 
 ]AC_SUBST([SOFT_INCLUDE])[
+]AM_SUBST_NOTMAKE([SOFT_INCLUDE])[
 
 case "$][{gatbps_have_soft_include+x}" in
   ?*)
