@@ -22,6 +22,8 @@ function s:Format()
 
   let s:view = winsaveview()
 
+  let s:affected_search_history = 0
+
   let s:mark = '\m^## \%(begin\|end\)_'
 
   let s:s1 = '\m^## begin_includes$'
@@ -46,6 +48,7 @@ function s:Format()
       exec s:n2 . 's/\m^/\r/'
       call cursor(s:n1, 1)
       let s:n1 = search(s:s1, 'W')
+      let s:affected_search_history = 1
     endif
   endwhile
 
@@ -88,6 +91,7 @@ function s:Format()
       exec s:n1 . '+1,' . s:n2 . '-1s/\m\b/\r/eg'
       call cursor(s:n1, 1)
       let s:n1 = search(s:s1, 'W')
+      let s:affected_search_history = 1
     endif
   endwhile
 
@@ -132,8 +136,13 @@ function s:Format()
       exec s:n1 . '+1,' . s:n2 . '-1s/\m\b/\r/eg'
       call cursor(s:n1, 1)
       let s:n1 = search(s:s1, 'W')
+      let s:affected_search_history = 1
     endif
   endwhile
+
+  if s:affected_search_history
+    call histdel('search', -1)
+  endif
 
   call winrestview(s:view)
 
