@@ -39,6 +39,8 @@ all: INSTALL
 all: NEWS
 all: README
 
+always-make:
+
 ## end_rules
 
 #
