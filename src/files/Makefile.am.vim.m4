@@ -12,122 +12,134 @@ header_comment({%|"|%}, {%|"|%}){%|
 " For more information, see the GATBPS manual.
 "
 
-let s:view = winsaveview()
+"
+" The code is in a function only so that it does not affect the last
+" used search pattern or the redo command. For more information, run
+" :help function-search-undo in Vim.
+"
 
-let s:mark = '\m^## \%(begin\|end\)_'
+function s:Format()
 
-let s:s1 = '\m^## begin_includes$'
-let s:s2 = '\m^## end_includes$'
-call cursor(1, 1)
-let s:n1 = search(s:s1, 'cW')
-while s:n1 != 0
-  call cursor(s:n1, 1)
-  let s:n2 = search(s:s2, 'W')
-  if s:n2 == 0
-    break
-  endif
-  call cursor(s:n1, 1)
-  if search(s:mark, 'W') == s:n2
-    exec s:n1 . ',' . s:n2 . 'g/\m^$/d'
-    exec s:n1 . 's/\m$/\r/'
-    call cursor(s:n1, 1)
-    let s:n2 = search(s:s2, 'W')
-    exec s:n1 . '+1,' . s:n2 . '-1sort u'
-    call cursor(s:n1, 1)
-    let s:n2 = search(s:s2, 'W')
-    exec s:n2 . 's/\m^/\r/'
-    call cursor(s:n1, 1)
-    let s:n1 = search(s:s1, 'W')
-  endif
-endwhile
+  let s:view = winsaveview()
 
-let s:s1 = '\m^## begin_rules$'
-let s:s2 = '\m^## end_rules$'
-call cursor(1, 1)
-let s:n1 = search(s:s1, 'cW')
-while s:n1 != 0
-  call cursor(s:n1, 1)
-  let s:n2 = search(s:s2, 'W')
-  if s:n2 == 0
-    break
-  endif
-  call cursor(s:n1, 1)
-  if search(s:mark, 'W') == s:n2
-    exec s:n2 . 's/\m^/\r\r/'
-    exec s:n1 . 's/\m$/\r/'
-    call cursor(s:n1, 1)
-    let s:n2 = search(s:s2, 'W')
-    exec s:n1 . '+1,' . s:n2 . '-1g/\m\\$/s/\m$/\b/'
-    exec s:n1 . '+1,' . s:n2 . '-1g/\m\\\b$/.,/\m\%(\\\b\)\@<!$/j!'
-    call cursor(s:n1, 1)
-    let s:n2 = search(s:s2, 'W')
-    exec s:n1 . '+1,' . s:n2 . '-1g/\m\%(^[^\b#]*:.*\)\@<!\n[^\b#]*:/.+1,/\m\%(^[^\b#]*:.*\)\@<!$/-1sort u'
-    call cursor(s:n1, 1)
-    let s:n2 = search(s:s2, 'W')
-    exec s:n1 . '+1,' . s:n2 . '-1g/\m./s/\m$/\b/'
-    exec s:n1 . '+1,' . s:n2 . '-2g/\m^\n./.+1,/\m^$/-1j!'
-    call cursor(s:n1, 1)
-    let s:n2 = search(s:s2, 'W')
-    exec s:n1 . '+1,' . s:n2 . '-1g/\m^$/d'
-    call cursor(s:n1, 1)
-    let s:n2 = search(s:s2, 'W')
-    exec s:n1 . 's/\m$/\r/'
-    call cursor(s:n1, 1)
-    let s:n2 = search(s:s2, 'W')
-    exec s:n1 . '+1,' . s:n2 . '-1sort ru /^[^:]*/'
-    call cursor(s:n1, 1)
-    let s:n2 = search(s:s2, 'W')
-    exec s:n1 . '+1,' . s:n2 . '-1s/\m\b/\r/eg'
-    call cursor(s:n1, 1)
-    let s:n1 = search(s:s1, 'W')
-  endif
-endwhile
+  let s:mark = '\m^## \%(begin\|end\)_'
 
-let s:s1 = '\m^## begin_variables$'
-let s:s2 = '\m^## end_variables$'
-call cursor(1, 1)
-let s:n1 = search(s:s1, 'cW')
-while s:n1 != 0
-  call cursor(s:n1, 1)
-  let s:n2 = search(s:s2, 'W')
-  if s:n2 == 0
-    break
-  endif
-  call cursor(s:n1, 1)
-  if search(s:mark, 'W') == s:n2
-    exec s:n2 . 's/\m^/\r\r/'
-    exec s:n1 . 's/\m$/\r/'
+  let s:s1 = '\m^## begin_includes$'
+  let s:s2 = '\m^## end_includes$'
+  call cursor(1, 1)
+  let s:n1 = search(s:s1, 'cW')
+  while s:n1 != 0
     call cursor(s:n1, 1)
     let s:n2 = search(s:s2, 'W')
-    exec s:n1 . '+1,' . s:n2 . '-1g/\m\\$/s/\m$/\b/'
-    exec s:n1 . '+1,' . s:n2 . '-1g/\m\\\b$/.,/\m\%(\\\b\)\@<!$/j!'
+    if s:n2 == 0
+      break
+    endif
     call cursor(s:n1, 1)
-    let s:n2 = search(s:s2, 'W')
-    exec s:n1 . '+1,' . s:n2 . '-1g/\m\%(^[^\b#=]*+=.*\)\@<!\n[^\b#=]*+=/.+1,/\m\%(^[^\b#=]*+=.*\)\@<!$/-1sort u'
-    call cursor(s:n1, 1)
-    let s:n2 = search(s:s2, 'W')
-    exec s:n1 . '+1,' . s:n2 . '-1g/\m./s/\m$/\b/'
-    exec s:n1 . '+1,' . s:n2 . '-2g/\m^\n./.+1,/\m^$/-1j!'
-    call cursor(s:n1, 1)
-    let s:n2 = search(s:s2, 'W')
-    exec s:n1 . '+1,' . s:n2 . '-1g/\m^$/d'
-    call cursor(s:n1, 1)
-    let s:n2 = search(s:s2, 'W')
-    exec s:n1 . 's/\m$/\r/'
-    call cursor(s:n1, 1)
-    let s:n2 = search(s:s2, 'W')
-    exec s:n1 . '+1,' . s:n2 . '-1s/=/\b=/g'
-    exec s:n1 . '+1,' . s:n2 . '-1sort u'
-    exec s:n1 . '+1,' . s:n2 . '-1s/\b=/=/g'
-    call cursor(s:n1, 1)
-    let s:n2 = search(s:s2, 'W')
-    exec s:n1 . '+1,' . s:n2 . '-1s/\m\b/\r/eg'
-    call cursor(s:n1, 1)
-    let s:n1 = search(s:s1, 'W')
-  endif
-endwhile
+    if search(s:mark, 'W') == s:n2
+      exec s:n1 . ',' . s:n2 . 'g/\m^$/d'
+      exec s:n1 . 's/\m$/\r/'
+      call cursor(s:n1, 1)
+      let s:n2 = search(s:s2, 'W')
+      exec s:n1 . '+1,' . s:n2 . '-1sort u'
+      call cursor(s:n1, 1)
+      let s:n2 = search(s:s2, 'W')
+      exec s:n2 . 's/\m^/\r/'
+      call cursor(s:n1, 1)
+      let s:n1 = search(s:s1, 'W')
+    endif
+  endwhile
 
-call winrestview(s:view)
+  let s:s1 = '\m^## begin_rules$'
+  let s:s2 = '\m^## end_rules$'
+  call cursor(1, 1)
+  let s:n1 = search(s:s1, 'cW')
+  while s:n1 != 0
+    call cursor(s:n1, 1)
+    let s:n2 = search(s:s2, 'W')
+    if s:n2 == 0
+      break
+    endif
+    call cursor(s:n1, 1)
+    if search(s:mark, 'W') == s:n2
+      exec s:n2 . 's/\m^/\r\r/'
+      exec s:n1 . 's/\m$/\r/'
+      call cursor(s:n1, 1)
+      let s:n2 = search(s:s2, 'W')
+      exec s:n1 . '+1,' . s:n2 . '-1g/\m\\$/s/\m$/\b/'
+      exec s:n1 . '+1,' . s:n2 . '-1g/\m\\\b$/.,/\m\%(\\\b\)\@<!$/j!'
+      call cursor(s:n1, 1)
+      let s:n2 = search(s:s2, 'W')
+      exec s:n1 . '+1,' . s:n2 . '-1g/\m\%(^[^\b#]*:.*\)\@<!\n[^\b#]*:/.+1,/\m\%(^[^\b#]*:.*\)\@<!$/-1sort u'
+      call cursor(s:n1, 1)
+      let s:n2 = search(s:s2, 'W')
+      exec s:n1 . '+1,' . s:n2 . '-1g/\m./s/\m$/\b/'
+      exec s:n1 . '+1,' . s:n2 . '-2g/\m^\n./.+1,/\m^$/-1j!'
+      call cursor(s:n1, 1)
+      let s:n2 = search(s:s2, 'W')
+      exec s:n1 . '+1,' . s:n2 . '-1g/\m^$/d'
+      call cursor(s:n1, 1)
+      let s:n2 = search(s:s2, 'W')
+      exec s:n1 . 's/\m$/\r/'
+      call cursor(s:n1, 1)
+      let s:n2 = search(s:s2, 'W')
+      exec s:n1 . '+1,' . s:n2 . '-1sort ru /^[^:]*/'
+      call cursor(s:n1, 1)
+      let s:n2 = search(s:s2, 'W')
+      exec s:n1 . '+1,' . s:n2 . '-1s/\m\b/\r/eg'
+      call cursor(s:n1, 1)
+      let s:n1 = search(s:s1, 'W')
+    endif
+  endwhile
+
+  let s:s1 = '\m^## begin_variables$'
+  let s:s2 = '\m^## end_variables$'
+  call cursor(1, 1)
+  let s:n1 = search(s:s1, 'cW')
+  while s:n1 != 0
+    call cursor(s:n1, 1)
+    let s:n2 = search(s:s2, 'W')
+    if s:n2 == 0
+      break
+    endif
+    call cursor(s:n1, 1)
+    if search(s:mark, 'W') == s:n2
+      exec s:n2 . 's/\m^/\r\r/'
+      exec s:n1 . 's/\m$/\r/'
+      call cursor(s:n1, 1)
+      let s:n2 = search(s:s2, 'W')
+      exec s:n1 . '+1,' . s:n2 . '-1g/\m\\$/s/\m$/\b/'
+      exec s:n1 . '+1,' . s:n2 . '-1g/\m\\\b$/.,/\m\%(\\\b\)\@<!$/j!'
+      call cursor(s:n1, 1)
+      let s:n2 = search(s:s2, 'W')
+      exec s:n1 . '+1,' . s:n2 . '-1g/\m\%(^[^\b#=]*+=.*\)\@<!\n[^\b#=]*+=/.+1,/\m\%(^[^\b#=]*+=.*\)\@<!$/-1sort u'
+      call cursor(s:n1, 1)
+      let s:n2 = search(s:s2, 'W')
+      exec s:n1 . '+1,' . s:n2 . '-1g/\m./s/\m$/\b/'
+      exec s:n1 . '+1,' . s:n2 . '-2g/\m^\n./.+1,/\m^$/-1j!'
+      call cursor(s:n1, 1)
+      let s:n2 = search(s:s2, 'W')
+      exec s:n1 . '+1,' . s:n2 . '-1g/\m^$/d'
+      call cursor(s:n1, 1)
+      let s:n2 = search(s:s2, 'W')
+      exec s:n1 . 's/\m$/\r/'
+      call cursor(s:n1, 1)
+      let s:n2 = search(s:s2, 'W')
+      exec s:n1 . '+1,' . s:n2 . '-1s/=/\b=/g'
+      exec s:n1 . '+1,' . s:n2 . '-1sort u'
+      exec s:n1 . '+1,' . s:n2 . '-1s/\b=/=/g'
+      call cursor(s:n1, 1)
+      let s:n2 = search(s:s2, 'W')
+      exec s:n1 . '+1,' . s:n2 . '-1s/\m\b/\r/eg'
+      call cursor(s:n1, 1)
+      let s:n1 = search(s:s1, 'W')
+    endif
+  endwhile
+
+  call winrestview(s:view)
+
+endfunction
+
+call s:Format()
 
 |%}footer_comment({%|"|%}, {%|"|%}, {%|"|%}){%||%}dnl
 dnl
