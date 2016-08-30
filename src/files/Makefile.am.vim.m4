@@ -20,7 +20,7 @@ header_comment({%|"|%}, {%|"|%}){%|
 
 function s:Format()
 
-  let s:view = winsaveview()
+  let s:original_window_view = winsaveview()
 
   let s:affected_search_history = 0
 
@@ -144,7 +144,7 @@ function s:Format()
     call histdel('search', -1)
   endif
 
-  call winrestview(s:view)
+  call winrestview(s:original_window_view)
 
 endfunction
 
