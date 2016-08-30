@@ -114,7 +114,7 @@ case "$[]{gatbps_cv_$2}" in
         [[1]],
         [
           Define to 1 if you have
-          ]m4_normalize(m4_bpatsubst([[$1]], [{--VERBATIM--}]))[,
+          ]m4_normalize(m4_bpatsubst([[$1]], [\[--VERBATIM--\]]))[,
           or 0 if not.
         ])],
       [AC_DEFINE(
@@ -126,7 +126,7 @@ case "$[]{gatbps_cv_$2}" in
             m4_bpatsubst(
               m4_bpatsubst([[[$1]]], [{--DETAILS--}\(.\|
 \)*\(..\)], [\2]),
-              [{--VERBATIM--}]))[,
+              [\[--VERBATIM--\]]))[,
           or 0 if not.
           ]m4_bpatsubst([[$1]], [\(.\)\(.\|
 \)*{--DETAILS--}], [\1])[
@@ -141,7 +141,7 @@ case "$[]{gatbps_cv_$2}" in
         [[0]],
         [
           Define to 1 if you have
-          ]m4_normalize(m4_bpatsubst([[$1]], [{--VERBATIM--}]))[,
+          ]m4_normalize(m4_bpatsubst([[$1]], [\[--VERBATIM--\]]))[,
           or 0 if not.
         ])],
       [AC_DEFINE(
@@ -153,7 +153,7 @@ case "$[]{gatbps_cv_$2}" in
             m4_bpatsubst(
               m4_bpatsubst([[[$1]]], [{--DETAILS--}\(.\|
 \)*\(..\)], [\2]),
-              [{--VERBATIM--}]))[,
+              [\[--VERBATIM--\]]))[,
           or 0 if not.
           ]m4_bpatsubst([[$1]], [\(.\)\(.\|
 \)*{--DETAILS--}], [\1])[
