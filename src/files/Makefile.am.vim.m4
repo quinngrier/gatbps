@@ -46,10 +46,10 @@ function s:FormatAutomakeFile()
       call cursor(s:n1, 1)
       let s:n2 = search(s:s2, 'W')
       exec s:n2 . 's/\m^/\r/'
-      call cursor(s:n1, 1)
-      let s:n1 = search(s:s1, 'W')
       let s:affected_search_history = 1
     endif
+    call cursor(s:n1, 1)
+    let s:n1 = search(s:s1, 'W')
   endwhile
 
   let s:s1 = '\m^## begin_rules$'
@@ -92,11 +92,11 @@ function s:FormatAutomakeFile()
         call cursor(s:n1, 1)
         let s:n2 = search(s:s2, 'W')
         exec s:n1 . '+1,' . s:n2 . '-1s/\m\b/\r/eg'
-        call cursor(s:n1, 1)
-        let s:n1 = search(s:s1, 'W')
         let s:affected_search_history = 1
       endif
     endif
+    call cursor(s:n1, 1)
+    let s:n1 = search(s:s1, 'W')
   endwhile
 
   let s:s1 = '\m^## begin_variables$'
@@ -141,11 +141,11 @@ function s:FormatAutomakeFile()
         call cursor(s:n1, 1)
         let s:n2 = search(s:s2, 'W')
         exec s:n1 . '+1,' . s:n2 . '-1s/\m\b/\r/eg'
-        call cursor(s:n1, 1)
-        let s:n1 = search(s:s1, 'W')
         let s:affected_search_history = 1
       endif
     endif
+    call cursor(s:n1, 1)
+    let s:n1 = search(s:s1, 'W')
   endwhile
 
   if s:affected_search_history
