@@ -9,11 +9,11 @@ a line containing exactly
 ``@w{@t{## begin_variables}}'',
 that is immediately followed by a line containing exactly
 ``@w{@t{## end_variables}}'',
-and that does not contain any lines beginning with
+that does not contain any lines beginning with
 ``@w{@t{## begin_}}''
 or
-``@w{@t{## end_}}''
-is called an
+``@w{@t{## end_}}'',
+and that does not contain any backspace control characters is called an
 @i{Automake variable section}@.
 If the last line of an Automake variable section ends with a
 ``@w{@t{\}}''@tie{}character,
