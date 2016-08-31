@@ -114,23 +114,30 @@ case "$[]{gatbps_cv_$2}" in
         [[1]],
         [
           Define to 1 if you have
-          ]m4_normalize(m4_bpatsubst([[$1]], [\[--VERBATIM--\]]))[,
+          ]m4_if(
+            m4_bregexp([$1], [\[--VERBATIM--\]]),
+            [-1],
+            [[$1]],
+            [m4_bregexp([[$1]], [\(\[\)--VERBATIM--\]\(\(.\|
+\)*\)], [\1\2])])[,
           or 0 if not.
         ])],
-      [AC_DEFINE(
+      [m4_pushdef([x], [m4_bpatsubst([[$1]], [\[--DETAILS--\]\(.\|
+\)*\(.\)], [\2])])[]AC_DEFINE(
         [[$2]],
         [[1]],
         [
           Define to 1 if you have
-          ]m4_normalize(
-            m4_bpatsubst(
-              m4_bpatsubst([[[$1]]], [\[--DETAILS--\]\(.\|
-\)*\(..\)], [\2]),
-              [\[--VERBATIM--\]]))[,
+          ]m4_if(
+            m4_bregexp(x, [\[--VERBATIM--\]]),
+            [-1],
+            m4_dquote(x),
+            [m4_bregexp(m4_dquote(x), [\(\[\)--VERBATIM--\]\(\(.\|
+\)*\)], [\1\2])])[,
           or 0 if not.
-          ]m4_bpatsubst([[$1]], [\(.\)\(.\|
-\)*\[--DETAILS--\]], [\1])[
-        ])])
+          ]m4_bregexp([[$1]], [\(\[\)--DETAILS--\]\(\(.\|
+\)*\)], [\1\2])[
+        ])[]m4_popdef([x])])
   ;;
   'no')
     m4_if(
@@ -141,23 +148,30 @@ case "$[]{gatbps_cv_$2}" in
         [[0]],
         [
           Define to 1 if you have
-          ]m4_normalize(m4_bpatsubst([[$1]], [\[--VERBATIM--\]]))[,
+          ]m4_if(
+            m4_bregexp([$1], [\[--VERBATIM--\]]),
+            [-1],
+            [[$1]],
+            [m4_bregexp([[$1]], [\(\[\)--VERBATIM--\]\(\(.\|
+\)*\)], [\1\2])])[,
           or 0 if not.
         ])],
-      [AC_DEFINE(
+      [m4_pushdef([x], [m4_bpatsubst([[$1]], [\[--DETAILS--\]\(.\|
+\)*\(.\)], [\2])])[]AC_DEFINE(
         [[$2]],
         [[0]],
         [
           Define to 1 if you have
-          ]m4_normalize(
-            m4_bpatsubst(
-              m4_bpatsubst([[[$1]]], [\[--DETAILS--\]\(.\|
-\)*\(..\)], [\2]),
-              [\[--VERBATIM--\]]))[,
+          ]m4_if(
+            m4_bregexp(x, [\[--VERBATIM--\]]),
+            [-1],
+            m4_dquote(x),
+            [m4_bregexp(m4_dquote(x), [\(\[\)--VERBATIM--\]\(\(.\|
+\)*\)], [\1\2])])[,
           or 0 if not.
-          ]m4_bpatsubst([[$1]], [\(.\)\(.\|
-\)*\[--DETAILS--\]], [\1])[
-        ])])
+          ]m4_bregexp([[$1]], [\(\[\)--DETAILS--\]\(\(.\|
+\)*\)], [\1\2])[
+        ])[]m4_popdef([x])])
   ;;
 esac
 
