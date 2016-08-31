@@ -69,7 +69,7 @@ span.indent-immediately-following-paragraph + p {
  * also have mixed the content of the original CSS file with the normal
  * HTML content that it produces, making it difficult to determine what
  * came from the original CSS file.
-|%}footer_comment({%| *|%}, {%| *|%}, {%| */|%}){%||%}dnl
+|%}footer_comment({%| *|%}, {%| *|%}, {%| */|%})
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by

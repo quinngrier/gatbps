@@ -19,7 +19,7 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 distclean-local:
 
-|%}footer_comment({%|##|%}, {%|##|%}, {%|##|%}){%||%}dnl
+|%}footer_comment({%|##|%}, {%|##|%}, {%|##|%})
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by

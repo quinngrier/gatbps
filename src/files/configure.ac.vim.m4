@@ -11,7 +11,7 @@ header_comment({%|"|%}, {%|"|%}){%|
 "
 " For more information, see the GATBPS manual.
 "
-|%}footer_comment({%|"|%}, {%|"|%}, {%|"|%}){%||%}dnl
+|%}footer_comment({%|"|%}, {%|"|%}, {%|"|%})
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by
