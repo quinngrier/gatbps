@@ -44,7 +44,7 @@ m4_case(
         'cat' >'conftest1.mk' <<'EOF'
 -include conftest2.mk
 1:
-	#1
+	'exit' '0'
 EOF
         case "$][{?}" in
           '0')
@@ -67,23 +67,14 @@ EOF
           ;;
         esac
 
-        case "$][{gatbps_vogmxrfr+x}" in
-          ?*)
-            ]AC_MSG_ERROR(
-[[\$][{gatbps_vogmxrfr} is already set]]dnl
-, [[1]])[
-          ;;
-        esac
+        'make' '-f' 'conftest1.mk' >'/dev/null' 2>&1
+        case "$][{?}" in
+          '0')
 
-        gatbps_vogmxrfr=`'make' '-f' 'conftest1.mk'`
-        gatbps_vogmxrfr="$][{?}""$][{gatbps_vogmxrfr}"
-        'readonly' 'gatbps_vogmxrfr'
-        case "$][{gatbps_vogmxrfr}" in
-          '0#1')
-
-            'cat' >'conftest2.mk' <<'EOF'
-2:
-	#2
+            'cat' >'conftest1.mk' <<'EOF'
+-include conftest2.mk
+1:
+	'exit' '1'
 EOF
             case "$][{?}" in
               '0')
@@ -95,19 +86,23 @@ EOF
               ;;
             esac
 
-            case "$][{gatbps_grflspuq+x}" in
-              ?*)
+            'cat' >'conftest2.mk' <<'EOF'
+2:
+	'exit' '0'
+EOF
+            case "$][{?}" in
+              '0')
+              ;;
+              *)
                 ]AC_MSG_ERROR(
-[[\$][{gatbps_grflspuq} is already set]]dnl
+[[cat failed]]dnl
 , [[1]])[
               ;;
             esac
 
-            gatbps_grflspuq=`'make' '-f' 'conftest1.mk'`
-            gatbps_grflspuq="$][{?}""$][{gatbps_grflspuq}"
-            'readonly' 'gatbps_grflspuq'
-            case "$][{gatbps_grflspuq}" in
-              '0#2')
+            'make' '-f' 'conftest1.mk' >'/dev/null' 2>&1
+            case "$][{?}" in
+              '0')
                 gatbps_cv_SOFT_INCLUDE='-include'
               ;;
             esac
@@ -124,7 +119,7 @@ EOF
         'cat' >'conftest1.mk' <<'EOF'
 sinclude conftest2.mk
 1:
-	#1
+	'exit' '0'
 EOF
         case "$][{?}" in
           '0')
@@ -147,23 +142,14 @@ EOF
           ;;
         esac
 
-        case "$][{gatbps_gqjyluxk+x}" in
-          ?*)
-            ]AC_MSG_ERROR(
-[[\$][{gatbps_gqjyluxk} is already set]]dnl
-, [[1]])[
-          ;;
-        esac
+        'make' '-f' 'conftest1.mk' >'/dev/null' 2>&1
+        case "$][{?}" in
+          '0')
 
-        gatbps_gqjyluxk=`'make' '-f' 'conftest1.mk'`
-        gatbps_gqjyluxk="$][{?}""$][{gatbps_gqjyluxk}"
-        'readonly' 'gatbps_gqjyluxk'
-        case "$][{gatbps_gqjyluxk}" in
-          '0#1')
-
-            'cat' >'conftest2.mk' <<'EOF'
-2:
-	#2
+            'cat' >'conftest1.mk' <<'EOF'
+sinclude conftest2.mk
+1:
+	'exit' '1'
 EOF
             case "$][{?}" in
               '0')
@@ -175,19 +161,23 @@ EOF
               ;;
             esac
 
-            case "$][{gatbps_yxdlenrf+x}" in
-              ?*)
+            'cat' >'conftest2.mk' <<'EOF'
+2:
+	'exit' '0'
+EOF
+            case "$][{?}" in
+              '0')
+              ;;
+              *)
                 ]AC_MSG_ERROR(
-[[\$][{gatbps_yxdlenrf} is already set]]dnl
+[[cat failed]]dnl
 , [[1]])[
               ;;
             esac
 
-            gatbps_yxdlenrf=`'make' '-f' 'conftest1.mk'`
-            gatbps_yxdlenrf="$][{?}""$][{gatbps_yxdlenrf}"
-            'readonly' 'gatbps_yxdlenrf'
-            case "$][{gatbps_yxdlenrf}" in
-              '0#2')
+            'make' '-f' 'conftest1.mk' >'/dev/null' 2>&1
+            case "$][{?}" in
+              '0')
                 gatbps_cv_SOFT_INCLUDE='sinclude'
               ;;
             esac
