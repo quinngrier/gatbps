@@ -21,6 +21,26 @@ AC_DEFUN([GATBPS_CHECK_BASIC], [[{
   [[
 #]])[ (gatbps_cv_)$2.
 #]dnl
+m4_pushdef(
+  [GATBPS_CHECK_BASIC_message],
+  m4_dquote([Define to 1 if you have ]m4_if(
+    m4_bregexp([$1], [\[--DETAILS--\]]),
+    [-1],
+    [m4_if(
+      m4_bregexp([$1], [\[--VERBATIM--\]]),
+      [-1],
+      [[$1]],
+      [m4_bregexp([[$1]], [\(\[\)--VERBATIM--\]\(\(.\|
+\)*\)], [\1\2])])[, or 0 if not.]],
+    [m4_pushdef([x], m4_bpatsubst([[[$1]]], [\[--DETAILS--\]\(.\|
+\)*\(..\)], [\2]))[]m4_if(
+      m4_bregexp(x, [\[--VERBATIM--\]]),
+      [-1],
+      m4_dquote(x),
+      [m4_bregexp(m4_dquote(x), [\(\[\)--VERBATIM--\]\(\(.\|
+\)*\)], [\1\2])])[]m4_popdef([x])[, or 0 if not. ]m4_bregexp(
+[[$1]], [\(\[\)--DETAILS--\]\(\(.\|
+\)*\)], [\1\2])])))
 
 GATBPS_CACHE_CHECK(
   [for ]m4_bpatsubst([[$1]], [\[--DETAILS--\]\(.\|
@@ -106,72 +126,10 @@ esac
 
 case "$[]{gatbps_cv_$2}" in
   'yes')
-    m4_if(
-      m4_bregexp([$1], [\[--DETAILS--\]]),
-      [-1],
-      [AC_DEFINE(
-        [[$2]],
-        [[1]],
-        [
-          Define to 1 if you have
-          ]m4_if(
-            m4_bregexp([$1], [\[--VERBATIM--\]]),
-            [-1],
-            [[$1]],
-            [m4_bregexp([[$1]], [\(\[\)--VERBATIM--\]\(\(.\|
-\)*\)], [\1\2])])[,
-          or 0 if not.
-        ])],
-      [m4_pushdef([x], [m4_bpatsubst([[$1]], [\[--DETAILS--\]\(.\|
-\)*\(.\)], [\2])])[]AC_DEFINE(
-        [[$2]],
-        [[1]],
-        [
-          Define to 1 if you have
-          ]m4_if(
-            m4_bregexp(x, [\[--VERBATIM--\]]),
-            [-1],
-            m4_dquote(x),
-            [m4_bregexp(m4_dquote(x), [\(\[\)--VERBATIM--\]\(\(.\|
-\)*\)], [\1\2])])[,
-          or 0 if not.
-          ]m4_bregexp([[$1]], [\(\[\)--DETAILS--\]\(\(.\|
-\)*\)], [\1\2])[
-        ])[]m4_popdef([x])])
+    AC_DEFINE([[$2]], [[1]], GATBPS_CHECK_BASIC_message)
   ;;
   'no')
-    m4_if(
-      m4_bregexp([$1], [\[--DETAILS--\]]),
-      [-1],
-      [AC_DEFINE(
-        [[$2]],
-        [[0]],
-        [
-          Define to 1 if you have
-          ]m4_if(
-            m4_bregexp([$1], [\[--VERBATIM--\]]),
-            [-1],
-            [[$1]],
-            [m4_bregexp([[$1]], [\(\[\)--VERBATIM--\]\(\(.\|
-\)*\)], [\1\2])])[,
-          or 0 if not.
-        ])],
-      [m4_pushdef([x], [m4_bpatsubst([[$1]], [\[--DETAILS--\]\(.\|
-\)*\(.\)], [\2])])[]AC_DEFINE(
-        [[$2]],
-        [[0]],
-        [
-          Define to 1 if you have
-          ]m4_if(
-            m4_bregexp(x, [\[--VERBATIM--\]]),
-            [-1],
-            m4_dquote(x),
-            [m4_bregexp(m4_dquote(x), [\(\[\)--VERBATIM--\]\(\(.\|
-\)*\)], [\1\2])])[,
-          or 0 if not.
-          ]m4_bregexp([[$1]], [\(\[\)--DETAILS--\]\(\(.\|
-\)*\)], [\1\2])[
-        ])[]m4_popdef([x])])
+    AC_DEFINE([[$2]], [[0]], GATBPS_CHECK_BASIC_message)
   ;;
 esac
 
@@ -194,9 +152,11 @@ AM_CONDITIONAL([$2], [( ':'
       'exit' '1'
     ;;
   esac
-)])
-
-:;}])[]dnl
+)])[
+]dnl
+m4_popdef([GATBPS_CHECK_BASIC_message])[]dnl
+[
+:;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%}){%||%}dnl
 dnl
 dnl The authors of this file have waived all copyright and
