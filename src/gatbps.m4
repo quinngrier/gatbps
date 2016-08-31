@@ -589,6 +589,7 @@ EOF1
           set "${prefix}GATBPS_CONFIG_FILE.m4" "${@}"
           set "${prefix}GATBPS_CHECK_VARS.m4" "${@}"
           set "${prefix}GATBPS_CHECK_SOFT_INCLUDE.m4" "${@}"
+          set "${prefix}GATBPS_CHECK_SHEBANG_LINE.m4" "${@}"
           set "${prefix}GATBPS_CHECK_RUN.m4" "${@}"
           set "${prefix}GATBPS_CHECK_LINK.m4" "${@}"
           set "${prefix}GATBPS_CHECK_LIB.m4" "${@}"
@@ -1007,6 +1008,8 @@ EOF1
 |%}help_code({%|GATBPS_CHECK_LINK.m4|%}){%|
 
 |%}help_code({%|GATBPS_CHECK_RUN.m4|%}){%|
+
+|%}help_code({%|GATBPS_CHECK_SHEBANG_LINE.m4|%}){%|
 
 |%}help_code({%|GATBPS_CHECK_SOFT_INCLUDE.m4|%}){%|
 
@@ -2582,6 +2585,8 @@ EOF1
 
 |%}generation_code({%|GATBPS_CHECK_RUN.m4|%}){%|
 
+|%}generation_code({%|GATBPS_CHECK_SHEBANG_LINE.m4|%}){%|
+
 |%}generation_code({%|GATBPS_CHECK_SOFT_INCLUDE.m4|%}){%|
 
 |%}generation_code({%|GATBPS_CHECK_VARS.m4|%}){%|
@@ -3269,6 +3274,13 @@ EOF1
   {%|GATBPS_CHECK_RUN.m4|%},
   {%|
             'set' 'x' "${prefix}"'GATBPS_CHECK_BASIC.m4' "${@}"; 'shift'
+            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|GATBPS_CHECK_SHEBANG_LINE.m4|%},
+  {%|
+            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
