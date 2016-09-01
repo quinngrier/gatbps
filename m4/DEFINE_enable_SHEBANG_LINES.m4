@@ -1,36 +1,24 @@
-AC_DEFUN([DEFINE_ALL], [[{
+AC_DEFUN([DEFINE_enable_SHEBANG_LINES], [[{
 
 #
 # The block that contains this comment is the expansion of the
-# DEFINE_ALL macro.
+# DEFINE_enable_SHEBANG_LINES macro.
 #]dnl
 m4_ifdef(
-  [DEFINE_ALL_HAS_BEEN_CALLED],
+  [DEFINE_enable_SHEBANG_LINES_HAS_BEEN_CALLED],
   [gatbps_fatal([
-    DEFINE_ALL has already been called
+    DEFINE_enable_SHEBANG_LINES has already been called
   ])],
-  [m4_define([DEFINE_ALL_HAS_BEEN_CALLED])])[]dnl
+  [m4_define([DEFINE_enable_SHEBANG_LINES_HAS_BEEN_CALLED])])[]dnl
 m4_case(
   [$#],
   [0], [],
   [gatbps_fatal([
-    DEFINE_ALL requires exactly 0 arguments
+    DEFINE_enable_SHEBANG_LINES requires exactly 0 arguments
   ])])[]dnl
 [
 
-]AC_REQUIRE([DEFINE_AWK])[
-]AC_REQUIRE([DEFINE_M4])[
-]AC_REQUIRE([DEFINE_MAKEINFO])[
-]AC_REQUIRE([DEFINE_MKDIR_P])[
-]AC_REQUIRE([DEFINE_SED])[
-]AC_REQUIRE([DEFINE_TEXI2ANY])[
-]AC_REQUIRE([DEFINE_enable_SHEBANG_LINES])[
-
-]AC_REQUIRE([DEFINE_AT])[
-]AC_REQUIRE([DEFINE_AWK_SH])[
-]AC_REQUIRE([DEFINE_SED_SH])[
-]AC_REQUIRE([DEFINE_SHEBANG_LINE])[
-]AC_REQUIRE([DEFINE_SOFT_INCLUDE])[
+]AC_REQUIRE([GATBPS_DEFINE_enable_SHEBANG_LINES])[
 
 :;}]])[]dnl
 dnl
