@@ -17,20 +17,27 @@ AC_DEFUN([GATBPS_MSG_ERROR], [[{
 # The block that contains this comment is an expansion of the
 # GATBPS_MSG_ERROR macro.
 #]dnl
-m4_case(
+m4_if(
   [$#],
-  [1], [],
-  [2], [],
+  [0],
   [gatbps_fatal([
-    GATBPS_MSG_ERROR requires exactly 1 or 2 arguments
+    GATBPS_MSG_ERROR requires 1 or more arguments
   ])])[]dnl
 [
 
 ]m4_if(
   [$#],
   [1],
-  [AC_MSG_ERROR([m4_normalize([$1])], [[1]])],
-  [AC_MSG_ERROR([m4_normalize([$1])], [[$2]])])[
+  [AC_MSG_ERROR([m4_if(
+    m4_bregexp([$1], [\[--VERBATIM--\]]),
+    [-1],
+    [m4_normalize([$1])],
+    [m4_normalize(m4_bpatsubst([[$1]], [\[--VERBATIM--\]\(.\|
+\)*\(.\)], [\2]))[]m4_bregexp([[$1]], [\(\[\)--VERBATIM--\]\(\(.\|
+\)*\)], [\1\2])])], [[1]])],
+  [GATBPS_MSG_NOTICE([$1])[
+
+]GATBPS_MSG_ERROR(m4_shift($@))])[
 
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
