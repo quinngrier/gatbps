@@ -226,7 +226,9 @@ esac
 'readonly' 'gatbps_have_soft_include'
 
 ]GATBPS_CHECK_VARS(
-  [soft makefile include support],
+  [
+    soft makefile include support
+  ],
   [HAVE_SOFT_INCLUDE],
   [
     gatbps_have_soft_include
