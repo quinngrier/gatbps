@@ -13,7 +13,9 @@ include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/generation_code.m4|%}){%||%}dnl
 include({%|src/tools/help_code.m4|%}){%||%}dnl
 include({%|src/tools/recursion_code.m4|%}){%||%}dnl
-SHEBANG_LINE{%|#
+SHEBANG_LINE{%|#! /bin/sh -
+
+#
 # With LC_ALL=C, locale-aware programs use the C locale instead of the
 # current locale. This is generally the best approach for code that is
 # not deliberately designed to work in other locales. The C locale has
