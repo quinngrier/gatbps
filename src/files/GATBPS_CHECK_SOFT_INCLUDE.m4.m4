@@ -208,22 +208,22 @@ SOFT_INCLUDE="$][{gatbps_cv_SOFT_INCLUDE}"
 ]AC_SUBST([SOFT_INCLUDE])[
 ]AM_SUBST_NOTMAKE([SOFT_INCLUDE])[
 
-case "$][{gatbps_have_soft_include+x}" in
+case "$][{GATBPS_CHECK_SOFT_INCLUDE_have+x}" in
   ?*)
     ]AC_MSG_ERROR(
-[[\$][{gatbps_have_soft_include} is already set]]dnl
+[[\$][{GATBPS_CHECK_SOFT_INCLUDE_have} is already set]]dnl
 , [[1]])[
   ;;
 esac
 case "$][{SOFT_INCLUDE}" in
   '#')
-    gatbps_have_soft_include='0'
+    GATBPS_CHECK_SOFT_INCLUDE_have='0'
   ;;
   *)
-    gatbps_have_soft_include='1'
+    GATBPS_CHECK_SOFT_INCLUDE_have='1'
   ;;
 esac
-'readonly' 'gatbps_have_soft_include'
+'readonly' 'GATBPS_CHECK_SOFT_INCLUDE_have'
 
 ]GATBPS_CHECK_VARS(
   [
@@ -231,7 +231,7 @@ esac
   ],
   [HAVE_SOFT_INCLUDE],
   [
-    gatbps_have_soft_include
+    GATBPS_CHECK_SOFT_INCLUDE_have
   ])[
 
 :;}]])[]dnl
