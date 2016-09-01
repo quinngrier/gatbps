@@ -103,7 +103,7 @@ case "$][{cross_compiling}" in
   'no')
     case "$][{enable_SHEBANG_LINE}" in
       '1')
-        case "$][{HAVE_SHEBANG_SUPPORT}" in
+        case "$][{HAVE_SHEBANG_LINE}" in
           '1')
             SHEBANG_LINE="$][{SHEBANG_LINE_1}"
           ;;
@@ -112,8 +112,8 @@ case "$][{cross_compiling}" in
           ;;
           *)
             ]GATBPS_MSG_ERROR([
-              invalid \$][{HAVE_SHEBANG_SUPPORT} value:
-              $][{HAVE_SHEBANG_SUPPORT}
+              invalid \$][{HAVE_SHEBANG_LINE} value:
+              $][{HAVE_SHEBANG_LINE}
             ])[
           ;;
         esac
