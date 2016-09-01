@@ -43,16 +43,6 @@ m4_case(
     interpval
   ])[
 
-case "$][{SHEBANG_LINE_1+x}" in
-  ?*)
-    ]GATBPS_MSG_ERROR([
-      \$][{SHEBANG_LINE_1} is already set
-    ])[
-  ;;
-esac
-SHEBANG_LINE_1=''
-'readonly' 'SHEBANG_LINE_1'
-
 case "$][{SHEBANG_LINE_0+x}" in
   ?*)
     ]GATBPS_MSG_ERROR([
@@ -74,7 +64,7 @@ case "$][{cross_compiling}" in
   'yes')
     case "$][{enable_SHEBANG_LINES}" in
       '1')
-        SHEBANG_LINE="$][{SHEBANG_LINE_1}"
+        SHEBANG_LINE=''
       ;;
       '0')
         SHEBANG_LINE="$][{SHEBANG_LINE_0}"
@@ -92,7 +82,7 @@ case "$][{cross_compiling}" in
       '1')
         case "$][{HAVE_SHEBANG_LINE}" in
           '1')
-            SHEBANG_LINE="$][{SHEBANG_LINE_1}"
+            SHEBANG_LINE=''
           ;;
           '0')
             SHEBANG_LINE="$][{SHEBANG_LINE_0}"
