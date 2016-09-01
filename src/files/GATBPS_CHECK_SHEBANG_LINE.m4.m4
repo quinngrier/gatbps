@@ -15,19 +15,19 @@ AC_DEFUN([GATBPS_CHECK_SHEBANG_LINE], [[{
 
 #
 # The block that contains this comment is the expansion of the
-# DEFINE_CHECK_SHEBANG_LINE macro.
+# GATBPS_CHECK_SHEBANG_LINE macro.
 #]dnl
 m4_ifdef(
-  [DEFINE_CHECK_SHEBANG_LINE_HAS_BEEN_CALLED],
+  [GATBPS_CHECK_SHEBANG_LINE_HAS_BEEN_CALLED],
   [gatbps_fatal([
-    DEFINE_CHECK_SHEBANG_LINE has already been called
+    GATBPS_CHECK_SHEBANG_LINE has already been called
   ])],
-  [m4_define([DEFINE_CHECK_SHEBANG_LINE_HAS_BEEN_CALLED])])[]dnl
+  [m4_define([GATBPS_CHECK_SHEBANG_LINE_HAS_BEEN_CALLED])])[]dnl
 m4_case(
   [$#],
   [0], [],
   [gatbps_fatal([
-    DEFINE_CHECK_SHEBANG_LINE requires exactly 0 arguments
+    GATBPS_CHECK_SHEBANG_LINE requires exactly 0 arguments
   ])])[]dnl
 [
 
