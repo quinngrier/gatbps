@@ -22,7 +22,7 @@ AC_DEFUN([GATBPS_CHECK_BASIC], [[{
 #]])[ (gatbps_cv_)$2.
 #]dnl
 m4_pushdef(
-  [GATBPS_CHECK_BASIC_message],
+  [GATBPS_CHECK_BASIC_macro_description],
   m4_dquote([Define to 1 if you have ]m4_if(
     m4_bregexp([$1], [\[--DETAILS--\]]),
     [-1],
@@ -128,10 +128,10 @@ esac
 
 case "$[]{gatbps_cv_$2}" in
   'yes')
-    AC_DEFINE([[$2]], [[1]], GATBPS_CHECK_BASIC_message)
+    AC_DEFINE([[$2]], [[1]], GATBPS_CHECK_BASIC_macro_description)
   ;;
   'no')
-    AC_DEFINE([[$2]], [[0]], GATBPS_CHECK_BASIC_message)
+    AC_DEFINE([[$2]], [[0]], GATBPS_CHECK_BASIC_macro_description)
   ;;
 esac
 
@@ -156,7 +156,7 @@ AM_CONDITIONAL([$2], [( ':'
   esac
 )])[
 ]dnl
-m4_popdef([GATBPS_CHECK_BASIC_message])[]dnl
+m4_popdef([GATBPS_CHECK_BASIC_macro_description])[]dnl
 [
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
