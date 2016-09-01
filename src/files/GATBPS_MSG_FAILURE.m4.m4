@@ -35,7 +35,7 @@ m4_if(
     [m4_normalize(m4_bpatsubst([[$1]], [\[--VERBATIM--\]\(.\|
 \)*\(.\)], [\2]))[]m4_bregexp([[$1]], [\(\[\)--VERBATIM--\]\(\(.\|
 \)*\)], [\1\2])])], [[1]])],
-  [GATBPS_MSG_NOTICE([$1])[
+  [GATBPS_MSG_NOTICE([error: $1])[
 
 ]GATBPS_MSG_FAILURE(m4_shift($@))])[
 
