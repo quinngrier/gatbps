@@ -32,6 +32,7 @@ m4_case(
 [
 
 ]AC_REQUIRE([AC_SYS_INTERPRETER])[
+]AC_REQUIRE([GATBPS_DEFINE_enable_SHEBANG_LINES])[
 
 ]GATBPS_CHECK_VARS(
   [
@@ -40,20 +41,6 @@ m4_case(
   [HAVE_SHEBANG_LINE],
   [
     interpval
-  ])[
-
-]GATBPS_ARG_ENABLE_BOOL(
-  [
-    permission to enable shebang lines in scripts
-  ],
-  [enable_SHEBANG_LINE],
-  [shebang-lines],
-  [yes],
-  [
-    enable shebang lines if they are supported or if cross-compiling
-  ],
-  [
-    disable shebang lines
   ])[
 
 case "$][{SHEBANG_LINE_1+x}" in
@@ -85,7 +72,7 @@ case "$][{SHEBANG_LINE+x}" in
 esac
 case "$][{cross_compiling}" in
   'yes')
-    case "$][{enable_SHEBANG_LINE}" in
+    case "$][{enable_SHEBANG_LINES}" in
       '1')
         SHEBANG_LINE="$][{SHEBANG_LINE_1}"
       ;;
@@ -94,14 +81,14 @@ case "$][{cross_compiling}" in
       ;;
       *)
         ]GATBPS_MSG_ERROR([
-          invalid \$][{enable_SHEBANG_LINE} value:
-          $][{enable_SHEBANG_LINE}
+          invalid \$][{enable_SHEBANG_LINES} value:
+          $][{enable_SHEBANG_LINES}
         ])[
       ;;
     esac
   ;;
   'no')
-    case "$][{enable_SHEBANG_LINE}" in
+    case "$][{enable_SHEBANG_LINES}" in
       '1')
         case "$][{HAVE_SHEBANG_LINE}" in
           '1')
@@ -123,8 +110,8 @@ case "$][{cross_compiling}" in
       ;;
       *)
         ]GATBPS_MSG_ERROR([
-          invalid \$][{enable_SHEBANG_LINE} value:
-          $][{enable_SHEBANG_LINE}
+          invalid \$][{enable_SHEBANG_LINES} value:
+          $][{enable_SHEBANG_LINES}
         ])[
       ;;
     esac
