@@ -202,7 +202,6 @@ case "$][{SOFT_INCLUDE+x}" in
 , [[1]])[
   ;;
 esac
-
 SOFT_INCLUDE="$][{gatbps_cv_SOFT_INCLUDE}"
 'readonly' 'SOFT_INCLUDE'
 
@@ -216,7 +215,6 @@ case "$][{gatbps_have_soft_include+x}" in
 , [[1]])[
   ;;
 esac
-
 case "$][{SOFT_INCLUDE}" in
   '#')
     gatbps_have_soft_include='0'
