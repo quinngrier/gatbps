@@ -47,6 +47,8 @@ case "$][{SHEBANG_LINE+x}" in
   ?*)
     ]GATBPS_MSG_ERROR([
       \$][{SHEBANG_LINE} is already set
+    ], [
+      GATBPS_CHECK_SHEBANG_LINE reserves this variable for all use
     ])[
   ;;
 esac
@@ -64,7 +66,9 @@ case "$][{cross_compiling}" in
           *)
             ]GATBPS_MSG_ERROR([
               invalid \$][{HAVE_SHEBANG_LINE} value:
-              $][{HAVE_SHEBANG_LINE}
+              [--VERBATIM--] "$][{HAVE_SHEBANG_LINE}"
+            ], [
+              this probably means that there is a bug in GATBPS
             ])[
           ;;
         esac
@@ -75,7 +79,9 @@ case "$][{cross_compiling}" in
       *)
         ]GATBPS_MSG_ERROR([
           invalid \$][{enable_SHEBANG_LINES} value:
-          $][{enable_SHEBANG_LINES}
+          [--VERBATIM--] "$][{enable_SHEBANG_LINES}"
+        ], [
+          this probably means that there is a bug in GATBPS
         ])[
       ;;
     esac
@@ -91,7 +97,9 @@ case "$][{cross_compiling}" in
       *)
         ]GATBPS_MSG_ERROR([
           invalid \$][{enable_SHEBANG_LINES} value:
-          $][{enable_SHEBANG_LINES}
+          [--VERBATIM--] "$][{enable_SHEBANG_LINES}"
+        ], [
+          this probably means that there is a bug in GATBPS
         ])[
       ;;
     esac
