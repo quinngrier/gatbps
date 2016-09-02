@@ -51,22 +51,6 @@ case "$][{SHEBANG_LINE+x}" in
   ;;
 esac
 case "$][{cross_compiling}" in
-  'yes')
-    case "$][{enable_SHEBANG_LINES}" in
-      '1')
-        SHEBANG_LINE=''
-      ;;
-      '0')
-        SHEBANG_LINE='# shebang line disabled: '
-      ;;
-      *)
-        ]GATBPS_MSG_ERROR([
-          invalid \$][{enable_SHEBANG_LINES} value:
-          $][{enable_SHEBANG_LINES}
-        ])[
-      ;;
-    esac
-  ;;
   'no')
     case "$][{enable_SHEBANG_LINES}" in
       '1')
@@ -97,9 +81,20 @@ case "$][{cross_compiling}" in
     esac
   ;;
   *)
-    ]GATBPS_MSG_ERROR([
-      invalid \$][{cross_compiling} value: $][{cross_compiling}
-    ])[
+    case "$][{enable_SHEBANG_LINES}" in
+      '1')
+        SHEBANG_LINE=''
+      ;;
+      '0')
+        SHEBANG_LINE='# shebang line disabled: '
+      ;;
+      *)
+        ]GATBPS_MSG_ERROR([
+          invalid \$][{enable_SHEBANG_LINES} value:
+          $][{enable_SHEBANG_LINES}
+        ])[
+      ;;
+    esac
   ;;
 esac
 'readonly' 'SHEBANG_LINE'
