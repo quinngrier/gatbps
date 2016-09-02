@@ -13,9 +13,9 @@ header_comment({%|"|%}, {%|"|%}){%|
 "
 
 "
-" The code is in a function only so that it does not affect the last
-" used search pattern or the redo command. For more information, run
-" :help function-search-undo in Vim.
+" The following code is in a function so that it does not affect the
+" last used search pattern or the redo command. For more information,
+" see :help function-search-undo in Vim.
 "
 
 function! s:FormatAutomakeFile()
