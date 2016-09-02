@@ -88,9 +88,9 @@ function! s:FormatAutomakeFile()
         exec s:n1 . 's/\m$/\r/'
         call cursor(s:n1, 1)
         let s:n2 = search(s:s2, 'W')
-        exec s:n1 . '+1,' . s:n2 . '-1s/:/\b:/g'
+        exec s:n1 . '+1,' . s:n2 . '-1s/:/\b:/eg'
         exec s:n1 . '+1,' . s:n2 . '-1sort u'
-        exec s:n1 . '+1,' . s:n2 . '-1s/\b:/:/g'
+        exec s:n1 . '+1,' . s:n2 . '-1s/\b:/:/eg'
         call cursor(s:n1, 1)
         let s:n2 = search(s:s2, 'W')
         exec s:n1 . '+1,' . s:n2 . '-1s/\m\b/\r/eg'
@@ -137,9 +137,9 @@ function! s:FormatAutomakeFile()
         exec s:n1 . 's/\m$/\r/'
         call cursor(s:n1, 1)
         let s:n2 = search(s:s2, 'W')
-        exec s:n1 . '+1,' . s:n2 . '-1s/=/\b=/g'
+        exec s:n1 . '+1,' . s:n2 . '-1s/=/\b=/eg'
         exec s:n1 . '+1,' . s:n2 . '-1sort u'
-        exec s:n1 . '+1,' . s:n2 . '-1s/\b=/=/g'
+        exec s:n1 . '+1,' . s:n2 . '-1s/\b=/=/eg'
         call cursor(s:n1, 1)
         let s:n2 = search(s:s2, 'W')
         exec s:n1 . '+1,' . s:n2 . '-1s/\m\b/\r/eg'
