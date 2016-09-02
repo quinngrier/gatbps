@@ -24,7 +24,7 @@ GATBPS_V_CP_0 = @'sh' \
   '--' \
   '  CP      ' \
   $@ \
-;
+|| 'exit' '1';
 
 GATBPS_V_CP_1 =
 

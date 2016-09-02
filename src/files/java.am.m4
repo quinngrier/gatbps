@@ -25,7 +25,7 @@ GATBPS_V_JAR_0 = @'sh' \
   '--' \
   '  JAR     ' \
   $@ \
-;
+|| 'exit' '1';
 
 GATBPS_V_JAR_1 =
 

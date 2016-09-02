@@ -26,7 +26,7 @@ GATBPS_V_JAVADOC_0 = @'sh' \
   '--' \
   '  JAVADOC ' \
   $@ \
-;
+|| 'exit' '1';
 
 GATBPS_V_JAVADOC_1 =
 
