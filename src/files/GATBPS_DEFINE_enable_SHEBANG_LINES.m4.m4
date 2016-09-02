@@ -33,17 +33,17 @@ m4_case(
 
 ]GATBPS_ARG_ENABLE_BOOL(
   [
-    permission to enable shebang lines in scripts
+    permission to enable shebang lines in executable scripts
   ],
   [enable_SHEBANG_LINES],
   [shebang-lines],
   [yes],
   [
-    enable shebang lines in scripts if they are supported or if
-    cross-compiling
+    enable shebang lines in executable scripts if they are supported on
+    the build system or if $][{cross_compiling} is not "no"
   ],
   [
-    disable shebang lines in scripts
+    disable shebang lines in executable scripts
   ])[
 
 :;}]])dnl
