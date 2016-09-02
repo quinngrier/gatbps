@@ -39,8 +39,8 @@ m4_case(
   [shebang-lines],
   [yes],
   [
-    enable shebang lines in executable scripts if they are supported on
-    the build system or if $][{cross_compiling} is not "no"
+    enable shebang lines in executable scripts if $][{cross_compiling}
+    is not "no" or if shebang lines are supported on the build machine
   ],
   [
     disable shebang lines in executable scripts
