@@ -39,7 +39,7 @@ contains_exactly_one_word(
   $(AM_MAKEFLAGS) \
   $(ps_dist_src) \
 ;
-	$(GATBPS_V_CP)':'
+	$(GATBPS_V_CP): make: $@
 	$(AM_V_at)$(MKDIR_P) \
   './'$(@D) \
 ;
@@ -72,6 +72,7 @@ contains_exactly_one_word(
   || 'exit' "$${?}"; \
   'exit' '0'; \
 :;}
+	$(AM_V_at): done: $@
 
 .PHONY: clean-ps-dist
 .PHONY: clean-ps-dist-main
