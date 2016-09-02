@@ -53,6 +53,17 @@ contains_exactly_one_word(
     d='.'; \
   else \
     d=$(srcdir); \
+    if 'test' '-d' "$${d}"'/'$(doxygen_dist_src); then \
+      ':'; \
+    else \
+      'sh' \
+        '-' \
+        $(srcdir)'/build-aux/echo.sh' \
+        'missing prerequisite:' \
+        '"'$(doxygen_dist_src)'"' \
+      ; \
+      'exit' '1'; \
+    fi; \
     case "$${d}" in \
       '-'*) \
         d='./'"$${d}"; \
