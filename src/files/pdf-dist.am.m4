@@ -56,6 +56,7 @@ contains_exactly_one_word(
         $(srcdir)'/build-aux/echo.sh' \
         'missing prerequisite:' \
         '"'$(pdf_dist_src)'"' \
+        >&2 \
       ; \
       'exit' '1'; \
     fi; \
