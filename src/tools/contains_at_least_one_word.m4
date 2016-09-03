@@ -82,7 +82,8 @@ ifelse(
   ; do \
     'exit' '0'; \
   done; \
-  'echo' \|%}dnl
+  'echo' \
+    'error:' \|%}dnl
 ifelse(
   {%|$1|%},
   {%||%},
