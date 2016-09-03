@@ -28,6 +28,20 @@ GATBPS_V_GIT_CLONE_0 = @'sh' \
 
 GATBPS_V_GIT_CLONE_1 =
 
+GATBPS_V_GIT_ARCHIVE = $(GATBPS_V_GIT_ARCHIVE_@AM_V@)
+
+GATBPS_V_GIT_ARCHIVE_ = $(GATBPS_V_GIT_ARCHIVE_@AM_DEFAULT_V@)
+
+GATBPS_V_GIT_ARCHIVE_0 = @'sh' \
+  '-' \
+  $(srcdir)'/build-aux/echo.sh' \
+  '--' \
+  '  ARCHIVE ' \
+  $@ \
+|| 'exit' '1';
+
+GATBPS_V_GIT_ARCHIVE_1 =
+
 ## end_variables
 
 |%}footer_comment({%|##|%}, {%|##|%}, {%|##|%})
