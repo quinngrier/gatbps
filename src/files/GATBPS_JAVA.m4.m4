@@ -51,7 +51,9 @@ GATBPS_JAVA_RULES="$][{GATBPS_JAVA_RULES}"'
       else \
         d=$][(srcdir); \
         case "$][$][{d}" in \
-          '\''-'\''*) \
+          '\''/'\''*) \
+          ;; \
+          *) \
             d='\''./'\''"$][$][{d}"; \
           ;; \
         esac; \
@@ -155,7 +157,9 @@ contains_exactly_one_word_sh(
     ?*) \
       d=$][(DESTDIR)$][(javadir); \
       case "$][$][{d}" in \
-        '\''-'\''*) \
+        '\''/'\''*) \
+        ;; \
+        *) \
           d='\''./'\''"$][$][{d}"; \
         ;; \
       esac; \
@@ -178,7 +182,9 @@ contains_exactly_one_word_sh(
       else \
         x=$][(srcdir); \
         case "$][$][{x}" in \
-          '\''-'\''*) \
+          '\''/'\''*) \
+          ;; \
+          *) \
             x='\''./'\''"$][$][{x}"; \
           ;; \
         esac; \
@@ -326,7 +332,9 @@ contains_exactly_one_word_sh(
         '\''eval'\'' '\''x='\''"$][$][{x}"; \
         x=$][(DESTDIR)$][(javadir)'\''/'\''"$][$][{x}"; \
         case "$][$][{x}" in \
-          '\''-'\''*) \
+          '\''/'\''*) \
+          ;; \
+          *) \
             x='\''./'\''"$][$][{x}"; \
           ;; \
         esac; \
