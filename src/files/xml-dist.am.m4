@@ -54,7 +54,7 @@ contains_exactly_one_word(
       'sh' \
         '-' \
         $(srcdir)'/build-aux/echo.sh' \
-        'missing prerequisite:' \
+        'error: missing prerequisite:' \
         '"'$(xml_dist_src)'"' \
         >&2 \
       ; \

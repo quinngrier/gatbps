@@ -59,7 +59,7 @@ contains_exactly_one_word(
       'sh' \
         '-' \
         $(srcdir)'/build-aux/echo.sh' \
-        'missing prerequisite:' \
+        'error: missing prerequisite:' \
         '"'$(doxygen_dist_src)'"' \
         >&2 \
       ; \
