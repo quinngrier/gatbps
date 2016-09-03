@@ -486,7 +486,9 @@ EOF1
           esac
 
           case "${prefix}" in
-            '-'*)
+            '/'*)
+            ;;
+            *)
               prefix="./${prefix}"
             ;;
           esac
@@ -2512,7 +2514,9 @@ EOF1
     'no')
 
       case "${1}" in
-        '-'*)
+        '/'*)
+        ;;
+        *)
           safe_1="./${1}"
         ;;
         *)

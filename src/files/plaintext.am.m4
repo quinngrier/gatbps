@@ -33,7 +33,9 @@ contains_exactly_one_word(
   else \
     d=$(srcdir); \
     case "$${d}" in \
-      '-'*) \
+      '/'*) \
+      ;; \
+      *) \
         d='./'"$${d}"; \
       ;; \
     esac; \
@@ -95,7 +97,9 @@ contains_exactly_one_word(
     ?*) \
       d=$(DESTDIR)$(plaintextdir); \
       case "$${d}" in \
-        '-'*) \
+        '/'*) \
+        ;; \
+        *) \
           d='./'"$${d}"; \
         ;; \
       esac; \
@@ -118,7 +122,9 @@ contains_exactly_one_word(
       else \
         x=$(srcdir); \
         case "$${x}" in \
-          '-'*) \
+          '/'*) \
+          ;; \
+          *) \
             x='./'"$${x}"; \
           ;; \
         esac; \
@@ -184,7 +190,9 @@ contains_exactly_one_word(
         'eval' 'x='"$${x}"; \
         x=$(DESTDIR)$(plaintextdir)'/'"$${x}"; \
         case "$${x}" in \
-          '-'*) \
+          '/'*) \
+          ;; \
+          *) \
             x='./'"$${x}"; \
           ;; \
         esac; \

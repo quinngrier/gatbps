@@ -75,7 +75,9 @@ SUFFIXES += .java
       else \
         d=$(srcdir); \
         case "$${d}" in \
-          '-'*) \
+          '/'*) \
+          ;; \
+          *) \
             d='./'"$${d}"; \
           ;; \
         esac; \
@@ -203,7 +205,9 @@ contains_exactly_one_word(
     ?*) \
       d=$(DESTDIR)$(javadir); \
       case "$${d}" in \
-        '-'*) \
+        '/'*) \
+        ;; \
+        *) \
           d='./'"$${d}"; \
         ;; \
       esac; \
@@ -226,7 +230,9 @@ contains_exactly_one_word(
       else \
         x=$(srcdir); \
         case "$${x}" in \
-          '-'*) \
+          '/'*) \
+          ;; \
+          *) \
             x='./'"$${x}"; \
           ;; \
         esac; \
@@ -374,7 +380,9 @@ contains_exactly_one_word(
         'eval' 'x='"$${x}"; \
         x=$(DESTDIR)$(javadir)'/'"$${x}"; \
         case "$${x}" in \
-          '-'*) \
+          '/'*) \
+          ;; \
+          *) \
             x='./'"$${x}"; \
           ;; \
         esac; \
