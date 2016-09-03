@@ -37,7 +37,7 @@ m4_case(
     Java archiver flags
   ])[
 
-:;}]])dnl
+:;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
 dnl
 dnl The authors of this file have waived all copyright and

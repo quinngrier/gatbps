@@ -118,7 +118,7 @@ m4_define(
   m4_dquote($1$2_MINOR))[]dnl
 [
 
-:;}]])dnl
+:;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
 dnl
 dnl The authors of this file have waived all copyright and

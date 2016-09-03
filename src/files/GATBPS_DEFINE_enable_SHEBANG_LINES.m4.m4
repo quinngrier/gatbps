@@ -46,7 +46,7 @@ m4_case(
     disable shebang lines in executable scripts
   ])[
 
-:;}]])dnl
+:;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
 dnl
 dnl The authors of this file have waived all copyright and
