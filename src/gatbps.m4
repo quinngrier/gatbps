@@ -559,6 +559,7 @@ EOF1
           set "${prefix}PACKAGEDATE.texi.in" "${@}"
           set "${prefix}Makefile.am.vim" "${@}"
           set "${prefix}INPUT_FILTER.sh.in" "${@}"
+          set "${prefix}GATBPS_WGET_SUBST.m4" "${@}"
           set "${prefix}GATBPS_PROG_XZ.m4" "${@}"
           set "${prefix}GATBPS_PROG_WGET.m4" "${@}"
           set "${prefix}GATBPS_PROG_TEXI2ANY.m4" "${@}"
@@ -1118,6 +1119,8 @@ EOF1
 |%}help_code({%|GATBPS_PROG_WGET.m4|%}){%|
 
 |%}help_code({%|GATBPS_PROG_XZ.m4|%}){%|
+
+|%}help_code({%|GATBPS_WGET_SUBST.m4|%}){%|
 
 |%}help_code({%|INPUT_FILTER.sh.in|%}){%|
 
@@ -2723,6 +2726,8 @@ EOF1
 
 |%}generation_code({%|GATBPS_PROG_XZ.m4|%}){%|
 
+|%}generation_code({%|GATBPS_WGET_SUBST.m4|%}){%|
+
 |%}generation_code({%|INPUT_FILTER.sh.in|%}){%|
 
 |%}generation_code({%|Makefile.am.vim|%}){%|
@@ -3678,6 +3683,12 @@ EOF1
   {%|GATBPS_PROG_XZ.m4|%},
   {%|
             'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|GATBPS_WGET_SUBST.m4|%},
+  {%|
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
