@@ -21,7 +21,7 @@ AC_DEFUN([GATBPS_JAVA], [{
 m4_pushdef([gatbps_x], [$1])
     m4_pushdef(
       [gatbps_y],
-      m4_bpatsubst(gatbps_x, [[^0-9A-Z_a-z]], [_]))dnl
+      m4_bpatsubst(gatbps_x, [[^0-9A-Z_a-z]], [_]))[]dnl
 [
 
 GATBPS_JAVA_RULES="$][{GATBPS_JAVA_RULES}"'
@@ -363,8 +363,8 @@ contains_exactly_one_word_sh(
 
 ]
 
-    m4_popdef([gatbps_y])dnl
-    m4_popdef([gatbps_x])dnl
+    m4_popdef([gatbps_y])[]dnl
+    m4_popdef([gatbps_x])[]dnl
 
 :;}])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
