@@ -396,6 +396,7 @@ GATBPS_M4([src/files/troff-form.sh])
 GATBPS_M4([src/files/wget.am])
 GATBPS_M4([src/files/xml-dist.am])
 GATBPS_M4([src/files/xml.am])
+GATBPS_M4([src/files/xz.am])
 GATBPS_M4([src/gatbps])
 
 GATBPS_CONFIG_FILE_SUBST

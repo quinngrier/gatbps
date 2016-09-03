@@ -493,6 +493,7 @@ EOF1
 
           shift
 
+          set "${prefix}xz.am" "${@}"
           set "${prefix}xml.am" "${@}"
           set "${prefix}xml-dist.am" "${@}"
           set "${prefix}wget.am" "${@}"
@@ -1238,6 +1239,8 @@ EOF1
 |%}help_code({%|xml-dist.am|%}){%|
 
 |%}help_code({%|xml.am|%}){%|
+
+|%}help_code({%|xz.am|%}){%|
 
             *)
               'eval' "${awk}"' '\''
@@ -2835,6 +2838,8 @@ EOF1
 
 |%}generation_code({%|xml.am|%}){%|
 
+|%}generation_code({%|xz.am|%}){%|
+
           *)
 
             if test '-e' "${safe_1}.top"; then
@@ -4064,6 +4069,12 @@ EOF1
   {%|xml.am|%},
   {%|
             'set' 'x' "${prefix}"'sh-form.sh' "${@}"; 'shift'
+            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|xz.am|%},
+  {%|
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
