@@ -14,11 +14,11 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 ## begin_variables
 
-GATBPS_V_CLONE = $(GATBPS_V_CLONE_@AM_V@)
+GATBPS_V_GIT_CLONE = $(GATBPS_V_GIT_CLONE_@AM_V@)
 
-GATBPS_V_CLONE_ = $(GATBPS_V_CLONE_@AM_DEFAULT_V@)
+GATBPS_V_GIT_CLONE_ = $(GATBPS_V_GIT_CLONE_@AM_DEFAULT_V@)
 
-GATBPS_V_CLONE_0 = @'sh' \
+GATBPS_V_GIT_CLONE_0 = @'sh' \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \
@@ -26,7 +26,7 @@ GATBPS_V_CLONE_0 = @'sh' \
   $@ \
 || 'exit' '1';
 
-GATBPS_V_CLONE_1 =
+GATBPS_V_GIT_CLONE_1 =
 
 ## end_variables
 
