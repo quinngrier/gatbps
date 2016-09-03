@@ -530,6 +530,7 @@ EOF1
           set "${prefix}ipez.texi" "${@}"
           set "${prefix}indent.texi" "${@}"
           set "${prefix}html-dist.am" "${@}"
+          set "${prefix}gzip.am" "${@}"
           set "${prefix}git.am" "${@}"
           set "${prefix}gequ.texi" "${@}"
           set "${prefix}gatbps_notice.m4" "${@}"
@@ -1161,6 +1162,8 @@ EOF1
 |%}help_code({%|gequ.texi|%}){%|
 
 |%}help_code({%|git.am|%}){%|
+
+|%}help_code({%|gzip.am|%}){%|
 
 |%}help_code({%|html-dist.am|%}){%|
 
@@ -2756,6 +2759,8 @@ EOF1
 
 |%}generation_code({%|git.am|%}){%|
 
+|%}generation_code({%|gzip.am|%}){%|
+
 |%}generation_code({%|html-dist.am|%}){%|
 
 |%}generation_code({%|indent.texi|%}){%|
@@ -3802,6 +3807,12 @@ EOF1
 
 |%}recursion_code(
   {%|git.am|%},
+  {%|
+            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|gzip.am|%},
   {%|
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
