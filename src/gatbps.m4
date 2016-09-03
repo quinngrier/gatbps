@@ -555,6 +555,7 @@ EOF1
           set "${prefix}Makefile.am.vim" "${@}"
           set "${prefix}INPUT_FILTER.sh.in" "${@}"
           set "${prefix}GATBPS_PROG_TEXI2ANY.m4" "${@}"
+          set "${prefix}GATBPS_PROG_TAR.m4" "${@}"
           set "${prefix}GATBPS_PROG_SED.m4" "${@}"
           set "${prefix}GATBPS_PROG_MKDIR_P.m4" "${@}"
           set "${prefix}GATBPS_PROG_MAKEINFO.m4" "${@}"
@@ -1087,6 +1088,8 @@ EOF1
 |%}help_code({%|GATBPS_PROG_MKDIR_P.m4|%}){%|
 
 |%}help_code({%|GATBPS_PROG_SED.m4|%}){%|
+
+|%}help_code({%|GATBPS_PROG_TAR.m4|%}){%|
 
 |%}help_code({%|GATBPS_PROG_TEXI2ANY.m4|%}){%|
 
@@ -2666,6 +2669,8 @@ EOF1
 
 |%}generation_code({%|GATBPS_PROG_SED.m4|%}){%|
 
+|%}generation_code({%|GATBPS_PROG_TAR.m4|%}){%|
+
 |%}generation_code({%|GATBPS_PROG_TEXI2ANY.m4|%}){%|
 
 |%}generation_code({%|INPUT_FILTER.sh.in|%}){%|
@@ -3550,6 +3555,13 @@ EOF1
 
 |%}recursion_code(
   {%|GATBPS_PROG_SED.m4|%},
+  {%|
+            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|GATBPS_PROG_TAR.m4|%},
   {%|
             'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
