@@ -61,7 +61,9 @@ contains_exactly_one_word(
       'exit' '1'; \
     fi; \
     case "$${d}" in \
-      '-'*) \
+      '/'*) \
+      ;; \
+      *) \
         d='./'"$${d}"; \
       ;; \
     esac; \
