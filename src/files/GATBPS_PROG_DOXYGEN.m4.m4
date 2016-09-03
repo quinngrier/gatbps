@@ -37,7 +37,7 @@ AC_CHECK_PROGS(
 AC_ARG_VAR(
   [DOXYGEN],
   [
-    Doxygen documentation generator command
+    command for doxygen
   ])
 
 :;}])[]dnl

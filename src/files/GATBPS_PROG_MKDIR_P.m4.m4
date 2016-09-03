@@ -36,7 +36,7 @@ m4_case(
 ]AC_ARG_VAR(
   [MKDIR_P],
   [
-    directory creation command
+    command for mkdir -p
   ])[
 
 :;}]])[]dnl

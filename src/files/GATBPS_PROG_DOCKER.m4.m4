@@ -38,7 +38,7 @@ m4_case(
 ]AC_ARG_VAR(
   [DOCKER],
   [
-    docker command
+    command for docker
   ])[
 
 :;}]])[]dnl

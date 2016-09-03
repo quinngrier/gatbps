@@ -37,7 +37,7 @@ AC_CHECK_PROGS(
 AC_ARG_VAR(
   [JAVADOC],
   [
-    Javadoc documentation generator command
+    command for javadoc
   ])
 
 :;}])[]dnl

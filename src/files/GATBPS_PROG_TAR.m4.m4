@@ -38,7 +38,7 @@ m4_case(
 ]AC_ARG_VAR(
   [TAR],
   [
-    tar archiver command
+    command for tar
   ])[
 
 :;}]])[]dnl

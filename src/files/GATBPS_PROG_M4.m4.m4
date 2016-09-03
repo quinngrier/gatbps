@@ -37,7 +37,7 @@ AC_CHECK_PROGS(
 AC_ARG_VAR(
   [M4],
   [
-    M4 processor command
+    command for m4
   ])
 
 :;}])[]dnl

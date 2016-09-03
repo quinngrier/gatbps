@@ -37,7 +37,7 @@ AC_CHECK_PROGS(
 AC_ARG_VAR(
   [JAR],
   [
-    Java archiver command
+    command for jar
   ])
 
 :;}])[]dnl

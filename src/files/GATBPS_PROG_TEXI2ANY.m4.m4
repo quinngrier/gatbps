@@ -37,7 +37,7 @@ AC_CHECK_PROGS(
 AC_ARG_VAR(
   [TEXI2ANY],
   [
-    texi2any translator command
+    command for texi2any
   ])
 
 :;}])[]dnl
