@@ -34,6 +34,7 @@ m4_case(
 AT='@'
 
 ]AC_SUBST([AT])[
+]AM_SUBST_NOTMAKE([AT])[
 
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
