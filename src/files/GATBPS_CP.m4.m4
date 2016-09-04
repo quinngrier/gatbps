@@ -98,11 +98,11 @@ contains_at_least_one_word_sh(
   {%|MKDIR_P|%}){%|
 	$][(GATBPS_V_CP): make: $][@]dnl
 m4_if([$5], [], [], [[
-	$][(AM@&t@_V_at)$(MAKE) \
+	$][(AM@&t@_V_at)$][(MAKE) \
   $][(AM@&t@_MAKEFLAGS) \
   ]source_sh[ \
 ;]])[
-	$][(AM@&t@_V_at)$(MKDIR_P) \
+	$][(AM@&t@_V_at)$][(MKDIR_P) \
   '\''./'\''$][(@D) \
 ;
 	$][(AM@&t@_V_at){ \
