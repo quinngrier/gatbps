@@ -62,22 +62,18 @@ m4_pushdef(
     gatbps_aux="$[]{srcdir}/$[]{gatbps_dst}"
     case "$[]{gatbps_dst}" in
       '/'*)
+        gatbps_safe_dst="$[]{gatbps_dst}"
       ;;
       *)
         gatbps_safe_dst="./$[]{gatbps_dst}"
       ;;
-      *)
-        gatbps_safe_dst="$[]{gatbps_dst}"
-      ;;
     esac
     case "$[]{gatbps_aux}" in
       '/'*)
+        gatbps_safe_aux="$[]{gatbps_aux}"
       ;;
       *)
         gatbps_safe_aux="./$[]{gatbps_aux}"
-      ;;
-      *)
-        gatbps_safe_aux="$[]{gatbps_aux}"
       ;;
     esac
     gatbps_safe_src="$[]{gatbps_safe_dst}"']gatbps_suffix['
