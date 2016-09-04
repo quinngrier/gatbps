@@ -101,21 +101,21 @@ GATBPS_WGET_RULES="$][{GATBPS_WGET_RULES}"'
 contains_at_least_one_word_sh(
   {%|MKDIR_P|%}){%|
 	$][(GATBPS_V_WGET): make: $][@
-	$][(AM@&t@_V_at)$(MKDIR_P) \
+	$][(AM@&t@_V_at)$][(MKDIR_P) \
   '\''./'\''$][(@D) \
 ;
-	$][(AM@&t@_V_at)$(WGET) \
+	$][(AM@&t@_V_at)$][(WGET) \
   '\''-O'\'' \
   ]target_sh['\''.tmp'\'' \
   '\''--'\'' \
   ]source_sh[ \
 ;]dnl
 m4_if([$3], [], [], [[
-	$][(AM@&t@_V_at)$(OPENSSL) \
+	$][(AM@&t@_V_at)$][(OPENSSL) \
   '\''dgst'\'' \
   '\''-]algorithm['\'' \
   <]target_sh['\''.tmp'\'' \
-| $(GREP) \
+| $][(GREP) \
   '\'']digest[$][$]['\'' \
   >'\''/dev/null'\'' \
 ;]])[
