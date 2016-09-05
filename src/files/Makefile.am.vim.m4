@@ -18,7 +18,7 @@ header_comment({%|"|%}, {%|"|%}){%|
 " :help function-search-undo in Vim.
 "
 
-function! s:FormatAutomakeFile()
+function s:FormatAutomakeFile()
 
   let s:original_window_view = winsaveview()
 
@@ -159,6 +159,8 @@ function! s:FormatAutomakeFile()
 endfunction
 
 call s:FormatAutomakeFile()
+
+delfunction s:FormatAutomakeFile
 
 |%}footer_comment({%|"|%}, {%|"|%}, {%|"|%})
 dnl
