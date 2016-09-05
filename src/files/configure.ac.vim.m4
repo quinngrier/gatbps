@@ -24,7 +24,7 @@ function s:FormatAutoconfFile()
 
   let affected_search_history = 0
 
-  let mark = '\m^## \%(begin\|end\)_'
+  let mark = '\m^dnl \%(begin\|end\)_'
 
   let s1 = '\m^dnl begin_targets$'
   let s2 = '\m^dnl end_targets$'
