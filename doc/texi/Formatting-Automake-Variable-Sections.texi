@@ -38,11 +38,14 @@ does not contain a paragraph separator is called a
 @example
 ## begin_variables
 
-foo =
+bin_PROGRAMS =
 # A comment block can go here.
 ## Automake comments are okay too.
-foo += bar
-foo += baz
+bin_PROGRAMS += hello
+
+hello_SOURCES =
+hello_SOURCES += \
+  hello.c
 
 ## end_variables
 @end example
