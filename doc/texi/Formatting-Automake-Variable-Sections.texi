@@ -46,14 +46,6 @@ foo += baz
 
 ## end_variables
 @end example
-
-@example
-foo +=
-# A comment block can go here.
-## Automake comments are okay too.
-foo += bar
-foo += baz
-@end example
 @ifxml
 @ifnotxml
 @c
