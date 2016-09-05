@@ -26,6 +26,48 @@ function s:FormatAutoconfFile()
 
   let mark = '\m^## \%(begin\|end\)_'
 
+  let s1 = '\m^dnl begin_targets$'
+  let s2 = '\m^dnl end_targets$'
+  call cursor(1, 1)
+  let n1 = search(s1, 'cW')
+  while n1 != 0
+    call cursor(n1, 1)
+    let n2 = search(s2, 'W')
+    if n2 == 0
+      break
+    endif
+    call cursor(n1, 1)
+    if search(mark, 'W') == n2
+      call cursor(n1, 1)
+      let n3 = search('\m\b', 'W')
+      if n3 == 0 || n3 > n2
+        exec n2 . 's/\m^/\r\r/'
+        exec n1 . 's/\m$/\r/'
+        call cursor(n1, 1)
+        let n2 = search(s2, 'W')
+        exec n1 . '+1,' . n2 . '-1g/\m./s/\m$/\b/'
+        exec n1 . '+1,' . n2 . '-2g/\m^\n./.+1,/\m^$/-1j!'
+        call cursor(n1, 1)
+        let n2 = search(s2, 'W')
+        exec n1 . '+1,' . n2 . '-1g/\m^$/d'
+        call cursor(n1, 1)
+        let n2 = search(s2, 'W')
+        exec n1 . 's/\m$/\r/'
+        call cursor(n1, 1)
+        let n2 = search(s2, 'W')
+        exec n1 . '+1,' . n2 . '-1s/\m\]/\b]/eg'
+        exec n1 . '+1,' . n2 . '-1sort u'
+        exec n1 . '+1,' . n2 . '-1s/\m\b\]/]/eg'
+        call cursor(n1, 1)
+        let n2 = search(s2, 'W')
+        exec n1 . '+1,' . n2 . '-1s/\m\b/\r/eg'
+        let affected_search_history = 1
+      endif
+    endif
+    call cursor(n1, 1)
+    let n1 = search(s1, 'W')
+  endwhile
+
   if affected_search_history
     call histdel('search', -1)
   endif
