@@ -28,7 +28,7 @@ is called a
 @i{logical line}@.
 The original lines are often called
 @i{physical lines}
-to avoid confusion@.
+to avoid confusion with logical lines@.
 A logical line that contains exactly an empty physical line is called a
 @i{paragraph separator}@.
 Each maximal contiguous subsequence of one or more logical lines that
