@@ -20,141 +20,141 @@ header_comment({%|"|%}, {%|"|%}){%|
 
 function s:FormatAutomakeFile()
 
-  let s:original_window_view = winsaveview()
+  let original_window_view = winsaveview()
 
-  let s:affected_search_history = 0
+  let affected_search_history = 0
 
-  let s:mark = '\m^## \%(begin\|end\)_'
+  let mark = '\m^## \%(begin\|end\)_'
 
-  let s:s1 = '\m^## begin_includes$'
-  let s:s2 = '\m^## end_includes$'
+  let s1 = '\m^## begin_includes$'
+  let s2 = '\m^## end_includes$'
   call cursor(1, 1)
-  let s:n1 = search(s:s1, 'cW')
-  while s:n1 != 0
-    call cursor(s:n1, 1)
-    let s:n2 = search(s:s2, 'W')
-    if s:n2 == 0
+  let n1 = search(s1, 'cW')
+  while n1 != 0
+    call cursor(n1, 1)
+    let n2 = search(s2, 'W')
+    if n2 == 0
       break
     endif
-    call cursor(s:n1, 1)
-    if search(s:mark, 'W') == s:n2
-      exec s:n1 . ',' . s:n2 . 'g/\m^$/d'
-      exec s:n1 . 's/\m$/\r/'
-      call cursor(s:n1, 1)
-      let s:n2 = search(s:s2, 'W')
-      exec s:n1 . '+1,' . s:n2 . '-1sort u'
-      call cursor(s:n1, 1)
-      let s:n2 = search(s:s2, 'W')
-      exec s:n2 . 's/\m^/\r/'
-      let s:affected_search_history = 1
+    call cursor(n1, 1)
+    if search(mark, 'W') == n2
+      exec n1 . ',' . n2 . 'g/\m^$/d'
+      exec n1 . 's/\m$/\r/'
+      call cursor(n1, 1)
+      let n2 = search(s2, 'W')
+      exec n1 . '+1,' . n2 . '-1sort u'
+      call cursor(n1, 1)
+      let n2 = search(s2, 'W')
+      exec n2 . 's/\m^/\r/'
+      let affected_search_history = 1
     endif
-    call cursor(s:n1, 1)
-    let s:n1 = search(s:s1, 'W')
+    call cursor(n1, 1)
+    let n1 = search(s1, 'W')
   endwhile
 
-  let s:s1 = '\m^## begin_rules$'
-  let s:s2 = '\m^## end_rules$'
+  let s1 = '\m^## begin_rules$'
+  let s2 = '\m^## end_rules$'
   call cursor(1, 1)
-  let s:n1 = search(s:s1, 'cW')
-  while s:n1 != 0
-    call cursor(s:n1, 1)
-    let s:n2 = search(s:s2, 'W')
-    if s:n2 == 0
+  let n1 = search(s1, 'cW')
+  while n1 != 0
+    call cursor(n1, 1)
+    let n2 = search(s2, 'W')
+    if n2 == 0
       break
     endif
-    call cursor(s:n1, 1)
-    if search(s:mark, 'W') == s:n2
-      call cursor(s:n1, 1)
-      let s:n3 = search('\m\b', 'W')
-      if s:n3 == 0 || s:n3 > s:n2
-        exec s:n2 . 's/\m^/\r\r/'
-        exec s:n1 . 's/\m$/\r/'
-        call cursor(s:n1, 1)
-        let s:n2 = search(s:s2, 'W')
-        exec s:n1 . '+1,' . s:n2 . '-1g/\m\\$/s/\m$/\b/'
-        exec s:n1 . '+1,' . s:n2 . '-1g/\m\\\b$/.,/\m\%(\\\b\)\@<!$/j!'
-        call cursor(s:n1, 1)
-        let s:n2 = search(s:s2, 'W')
-        exec s:n1 . '+1,' . s:n2 . '-1g/\m\%(^[^\b#]*:.*\)\@<!\n[^\b#]*:/.+1,/\m\%(^[^\b#]*:.*\)\@<!$/-1sort u'
-        call cursor(s:n1, 1)
-        let s:n2 = search(s:s2, 'W')
-        exec s:n1 . '+1,' . s:n2 . '-1g/\m./s/\m$/\b/'
-        exec s:n1 . '+1,' . s:n2 . '-2g/\m^\n./.+1,/\m^$/-1j!'
-        call cursor(s:n1, 1)
-        let s:n2 = search(s:s2, 'W')
-        exec s:n1 . '+1,' . s:n2 . '-1g/\m^$/d'
-        call cursor(s:n1, 1)
-        let s:n2 = search(s:s2, 'W')
-        exec s:n1 . 's/\m$/\r/'
-        call cursor(s:n1, 1)
-        let s:n2 = search(s:s2, 'W')
-        exec s:n1 . '+1,' . s:n2 . '-1s/\m:/\b:/eg'
-        exec s:n1 . '+1,' . s:n2 . '-1sort u'
-        exec s:n1 . '+1,' . s:n2 . '-1s/\m\b:/:/eg'
-        call cursor(s:n1, 1)
-        let s:n2 = search(s:s2, 'W')
-        exec s:n1 . '+1,' . s:n2 . '-1s/\m\b/\r/eg'
-        let s:affected_search_history = 1
+    call cursor(n1, 1)
+    if search(mark, 'W') == n2
+      call cursor(n1, 1)
+      let n3 = search('\m\b', 'W')
+      if n3 == 0 || n3 > n2
+        exec n2 . 's/\m^/\r\r/'
+        exec n1 . 's/\m$/\r/'
+        call cursor(n1, 1)
+        let n2 = search(s2, 'W')
+        exec n1 . '+1,' . n2 . '-1g/\m\\$/s/\m$/\b/'
+        exec n1 . '+1,' . n2 . '-1g/\m\\\b$/.,/\m\%(\\\b\)\@<!$/j!'
+        call cursor(n1, 1)
+        let n2 = search(s2, 'W')
+        exec n1 . '+1,' . n2 . '-1g/\m\%(^[^\b#]*:.*\)\@<!\n[^\b#]*:/.+1,/\m\%(^[^\b#]*:.*\)\@<!$/-1sort u'
+        call cursor(n1, 1)
+        let n2 = search(s2, 'W')
+        exec n1 . '+1,' . n2 . '-1g/\m./s/\m$/\b/'
+        exec n1 . '+1,' . n2 . '-2g/\m^\n./.+1,/\m^$/-1j!'
+        call cursor(n1, 1)
+        let n2 = search(s2, 'W')
+        exec n1 . '+1,' . n2 . '-1g/\m^$/d'
+        call cursor(n1, 1)
+        let n2 = search(s2, 'W')
+        exec n1 . 's/\m$/\r/'
+        call cursor(n1, 1)
+        let n2 = search(s2, 'W')
+        exec n1 . '+1,' . n2 . '-1s/\m:/\b:/eg'
+        exec n1 . '+1,' . n2 . '-1sort u'
+        exec n1 . '+1,' . n2 . '-1s/\m\b:/:/eg'
+        call cursor(n1, 1)
+        let n2 = search(s2, 'W')
+        exec n1 . '+1,' . n2 . '-1s/\m\b/\r/eg'
+        let affected_search_history = 1
       endif
     endif
-    call cursor(s:n1, 1)
-    let s:n1 = search(s:s1, 'W')
+    call cursor(n1, 1)
+    let n1 = search(s1, 'W')
   endwhile
 
-  let s:s1 = '\m^## begin_variables$'
-  let s:s2 = '\m^## end_variables$'
+  let s1 = '\m^## begin_variables$'
+  let s2 = '\m^## end_variables$'
   call cursor(1, 1)
-  let s:n1 = search(s:s1, 'cW')
-  while s:n1 != 0
-    call cursor(s:n1, 1)
-    let s:n2 = search(s:s2, 'W')
-    if s:n2 == 0
+  let n1 = search(s1, 'cW')
+  while n1 != 0
+    call cursor(n1, 1)
+    let n2 = search(s2, 'W')
+    if n2 == 0
       break
     endif
-    call cursor(s:n1, 1)
-    if search(s:mark, 'W') == s:n2
-      call cursor(s:n1, 1)
-      let s:n3 = search('\m\b', 'W')
-      if s:n3 == 0 || s:n3 > s:n2
-        exec s:n2 . 's/\m^/\r\r/'
-        exec s:n1 . 's/\m$/\r/'
-        call cursor(s:n1, 1)
-        let s:n2 = search(s:s2, 'W')
-        exec s:n1 . '+1,' . s:n2 . '-1g/\m\\$/s/\m$/\b/'
-        exec s:n1 . '+1,' . s:n2 . '-1g/\m\\\b$/.,/\m\%(\\\b\)\@<!$/j!'
-        call cursor(s:n1, 1)
-        let s:n2 = search(s:s2, 'W')
-        exec s:n1 . '+1,' . s:n2 . '-1g/\m\%(^[^\b#=]*+=.*\)\@<!\n[^\b#=]*+=/.+1,/\m\%(^[^\b#=]*+=.*\)\@<!$/-1sort u'
-        call cursor(s:n1, 1)
-        let s:n2 = search(s:s2, 'W')
-        exec s:n1 . '+1,' . s:n2 . '-1g/\m./s/\m$/\b/'
-        exec s:n1 . '+1,' . s:n2 . '-2g/\m^\n./.+1,/\m^$/-1j!'
-        call cursor(s:n1, 1)
-        let s:n2 = search(s:s2, 'W')
-        exec s:n1 . '+1,' . s:n2 . '-1g/\m^$/d'
-        call cursor(s:n1, 1)
-        let s:n2 = search(s:s2, 'W')
-        exec s:n1 . 's/\m$/\r/'
-        call cursor(s:n1, 1)
-        let s:n2 = search(s:s2, 'W')
-        exec s:n1 . '+1,' . s:n2 . '-1s/\m=/\b=/eg'
-        exec s:n1 . '+1,' . s:n2 . '-1sort u'
-        exec s:n1 . '+1,' . s:n2 . '-1s/\m\b=/=/eg'
-        call cursor(s:n1, 1)
-        let s:n2 = search(s:s2, 'W')
-        exec s:n1 . '+1,' . s:n2 . '-1s/\m\b/\r/eg'
-        let s:affected_search_history = 1
+    call cursor(n1, 1)
+    if search(mark, 'W') == n2
+      call cursor(n1, 1)
+      let n3 = search('\m\b', 'W')
+      if n3 == 0 || n3 > n2
+        exec n2 . 's/\m^/\r\r/'
+        exec n1 . 's/\m$/\r/'
+        call cursor(n1, 1)
+        let n2 = search(s2, 'W')
+        exec n1 . '+1,' . n2 . '-1g/\m\\$/s/\m$/\b/'
+        exec n1 . '+1,' . n2 . '-1g/\m\\\b$/.,/\m\%(\\\b\)\@<!$/j!'
+        call cursor(n1, 1)
+        let n2 = search(s2, 'W')
+        exec n1 . '+1,' . n2 . '-1g/\m\%(^[^\b#=]*+=.*\)\@<!\n[^\b#=]*+=/.+1,/\m\%(^[^\b#=]*+=.*\)\@<!$/-1sort u'
+        call cursor(n1, 1)
+        let n2 = search(s2, 'W')
+        exec n1 . '+1,' . n2 . '-1g/\m./s/\m$/\b/'
+        exec n1 . '+1,' . n2 . '-2g/\m^\n./.+1,/\m^$/-1j!'
+        call cursor(n1, 1)
+        let n2 = search(s2, 'W')
+        exec n1 . '+1,' . n2 . '-1g/\m^$/d'
+        call cursor(n1, 1)
+        let n2 = search(s2, 'W')
+        exec n1 . 's/\m$/\r/'
+        call cursor(n1, 1)
+        let n2 = search(s2, 'W')
+        exec n1 . '+1,' . n2 . '-1s/\m=/\b=/eg'
+        exec n1 . '+1,' . n2 . '-1sort u'
+        exec n1 . '+1,' . n2 . '-1s/\m\b=/=/eg'
+        call cursor(n1, 1)
+        let n2 = search(s2, 'W')
+        exec n1 . '+1,' . n2 . '-1s/\m\b/\r/eg'
+        let affected_search_history = 1
       endif
     endif
-    call cursor(s:n1, 1)
-    let s:n1 = search(s:s1, 'W')
+    call cursor(n1, 1)
+    let n1 = search(s1, 'W')
   endwhile
 
-  if s:affected_search_history
+  if affected_search_history
     call histdel('search', -1)
   endif
 
-  call winrestview(s:original_window_view)
+  call winrestview(original_window_view)
 
 endfunction
 
