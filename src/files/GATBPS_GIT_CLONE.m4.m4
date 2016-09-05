@@ -68,8 +68,8 @@ GATBPS_GIT_CLONE_RULES="$][{GATBPS_GIT_CLONE_RULES}"'
 	$][(AM@&t@_V_at)|%}dnl
 contains_at_least_one_word_sh(
   {%|MKDIR_P|%}){%|
-	$][(GATBPS_V_GIT_CLONE): make: $@
-	$][(AM@&t@_V_at)$(MKDIR_P) \
+	$][(GATBPS_V_GIT_CLONE): make: $][@
+	$][(AM@&t@_V_at)$][(MKDIR_P) \
   '\''./'\''$][(@D) \
 ;
 	$][(AM@&t@_V_at)'\''rm'\'' \
@@ -77,7 +77,7 @@ contains_at_least_one_word_sh(
   '\''-r'\'' \
   '\''./'\'']target_sh['\''.tmp'\'' \
 ;
-	$][(AM@&t@_V_at)$(GIT) \
+	$][(AM@&t@_V_at)$][(GIT) \
   '\''clone'\'' \
   '\''--'\'' \
   ]source_sh[ \
@@ -87,7 +87,7 @@ contains_at_least_one_word_sh(
   '\''./'\'']target_sh['\''.tmp'\'' \
   '\''./'\'']target_sh[ \
 ;
-	$][(AM@&t@_V_at): done: $@
+	$][(AM@&t@_V_at): done: $][@
 
 .PHONY: clean-]target_sh[
 
