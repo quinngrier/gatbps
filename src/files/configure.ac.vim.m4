@@ -20,6 +20,18 @@ header_comment({%|"|%}, {%|"|%}){%|
 
 function s:FormatAutoconfFile()
 
+  let original_window_view = winsaveview()
+
+  let affected_search_history = 0
+
+  let mark = '\m^## \%(begin\|end\)_'
+
+  if affected_search_history
+    call histdel('search', -1)
+  endif
+
+  call winrestview(original_window_view)
+
 endfunction
 
 call s:FormatAutoconfFile()
