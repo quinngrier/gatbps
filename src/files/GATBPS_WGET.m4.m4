@@ -77,7 +77,7 @@ m4_if(
     [maintainer-clean], [],
     [mostlyclean], [],
     [gatbps_fatal([
-      GATBPS_WGET requires its third argument to be either "clean",
+      GATBPS_WGET requires its fourth argument to be either "clean",
       "distclean", "maintainer-clean", or "mostlyclean"
     ])])])[]dnl
 m4_pushdef(
