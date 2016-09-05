@@ -31,8 +31,8 @@ The original lines are often called
 to avoid confusion@.
 A logical line that contains exactly an empty physical line is called a
 @i{paragraph separator}@.
-Each maximal contiguous subsequence of logical lines that does not
-contain a paragraph separator is called a
+Each maximal contiguous subsequence of one or more logical lines that
+does not contain a paragraph separator is called a
 @i{variable paragraph}@.
 
 @example
