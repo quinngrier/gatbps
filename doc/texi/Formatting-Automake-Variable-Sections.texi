@@ -29,9 +29,10 @@ is called a
 The original lines are often called
 @i{physical lines}
 to avoid confusion@.
+A logical line that contains exactly an empty physical line is called a
+@i{paragraph separator}@.
 Each maximal contiguous subsequence of logical lines that does not
-contain a logical line containing exactly an empty physical line is
-called a
+contain a paragraph separator is called a
 @i{variable paragraph}@.
 
 @example
