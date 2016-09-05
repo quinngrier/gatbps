@@ -563,6 +563,7 @@ EOF1
           set "${prefix}INPUT_FILTER.sh.in" "${@}"
           set "${prefix}GATBPS_XZ_SUBST.m4" "${@}"
           set "${prefix}GATBPS_XZ_RULES.am" "${@}"
+          set "${prefix}GATBPS_XZ.m4" "${@}"
           set "${prefix}GATBPS_WGET_SUBST.m4" "${@}"
           set "${prefix}GATBPS_WGET_RULES.am" "${@}"
           set "${prefix}GATBPS_WGET.m4" "${@}"
@@ -1152,6 +1153,8 @@ EOF1
 |%}help_code({%|GATBPS_WGET_RULES.am|%}){%|
 
 |%}help_code({%|GATBPS_WGET_SUBST.m4|%}){%|
+
+|%}help_code({%|GATBPS_XZ.m4|%}){%|
 
 |%}help_code({%|GATBPS_XZ_RULES.am|%}){%|
 
@@ -2781,6 +2784,8 @@ EOF1
 
 |%}generation_code({%|GATBPS_WGET_SUBST.m4|%}){%|
 
+|%}generation_code({%|GATBPS_XZ.m4|%}){%|
+
 |%}generation_code({%|GATBPS_XZ_RULES.am|%}){%|
 
 |%}generation_code({%|GATBPS_XZ_SUBST.m4|%}){%|
@@ -3801,6 +3806,12 @@ EOF1
 
 |%}recursion_code(
   {%|GATBPS_WGET_SUBST.m4|%},
+  {%|
+            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|GATBPS_XZ.m4|%},
   {%|
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
