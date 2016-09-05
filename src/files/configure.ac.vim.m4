@@ -18,11 +18,13 @@ header_comment({%|"|%}, {%|"|%}){%|
 " :help function-search-undo in Vim.
 "
 
-function! s:FormatAutoconfFile()
+function s:FormatAutoconfFile()
 
 endfunction
 
 call s:FormatAutoconfFile()
+
+delfunction s:FormatAutoconfFile
 
 |%}footer_comment({%|"|%}, {%|"|%}, {%|"|%})
 dnl
