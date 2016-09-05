@@ -11,6 +11,19 @@ header_comment({%|"|%}, {%|"|%}){%|
 "
 " For more information, see the GATBPS manual.
 "
+
+"
+" The code is in a function only so that it does not affect the last
+" used search pattern or the redo command. For more information, see
+" :help function-search-undo in Vim.
+"
+
+function! s:FormatAutoconfFile()
+
+endfunction
+
+call s:FormatAutoconfFile()
+
 |%}footer_comment({%|"|%}, {%|"|%}, {%|"|%})
 dnl
 dnl The authors of this file have waived all copyright and
