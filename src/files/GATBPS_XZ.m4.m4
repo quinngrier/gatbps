@@ -124,7 +124,7 @@ clean-]target_sh[:
   '\''./'\'']target_sh[ \
 ;
 
-]m4_if([$3], [], [[clean]], [[$3]])[-local: clean-]target_sh[
+]m4_if([$3], [], [[mostlyclean]], [[$3]])[-local: clean-]target_sh[
 
 '
 ]dnl
