@@ -544,6 +544,7 @@ EOF1
           set "${prefix}dslash.texi" "${@}"
           set "${prefix}doxygen.am" "${@}"
           set "${prefix}doxygen-dist.am" "${@}"
+          set "${prefix}docker.am" "${@}"
           set "${prefix}docbook.am" "${@}"
           set "${prefix}docbook-dist.am" "${@}"
           set "${prefix}cp.am" "${@}"
@@ -1199,6 +1200,8 @@ EOF1
 |%}help_code({%|docbook-dist.am|%}){%|
 
 |%}help_code({%|docbook.am|%}){%|
+
+|%}help_code({%|docker.am|%}){%|
 
 |%}help_code({%|doxygen-dist.am|%}){%|
 
@@ -2834,6 +2837,8 @@ EOF1
 
 |%}generation_code({%|docbook.am|%}){%|
 
+|%}generation_code({%|docker.am|%}){%|
+
 |%}generation_code({%|doxygen-dist.am|%}){%|
 
 |%}generation_code({%|doxygen.am|%}){%|
@@ -3952,6 +3957,12 @@ EOF1
   {%|docbook.am|%},
   {%|
             'set' 'x' "${prefix}"'sh-form.sh' "${@}"; 'shift'
+            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|docker.am|%},
+  {%|
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 

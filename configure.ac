@@ -482,6 +482,8 @@ GATBPS_M4([src/files/docbook-dist.am])
 
 GATBPS_M4([src/files/docbook.am])
 
+GATBPS_M4([src/files/docker.am])
+
 GATBPS_M4([src/files/doxygen-dist.am])
 
 GATBPS_M4([src/files/doxygen.am])
