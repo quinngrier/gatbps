@@ -603,6 +603,7 @@ EOF1
           set "${prefix}GATBPS_GIT_CLONE.m4" "${@}"
           set "${prefix}GATBPS_GIT_ARCHIVE_SUBST.m4" "${@}"
           set "${prefix}GATBPS_GIT_ARCHIVE_RULES.am" "${@}"
+          set "${prefix}GATBPS_GIT_ARCHIVE.m4" "${@}"
           set "${prefix}GATBPS_DEFINE_javadir.m4" "${@}"
           set "${prefix}GATBPS_DEFINE_enable_SHEBANG_LINES.m4" "${@}"
           set "${prefix}GATBPS_DEFINE_VERSION.m4" "${@}"
@@ -1078,6 +1079,8 @@ EOF1
 |%}help_code({%|GATBPS_DEFINE_enable_SHEBANG_LINES.m4|%}){%|
 
 |%}help_code({%|GATBPS_DEFINE_javadir.m4|%}){%|
+
+|%}help_code({%|GATBPS_GIT_ARCHIVE.m4|%}){%|
 
 |%}help_code({%|GATBPS_GIT_ARCHIVE_RULES.am|%}){%|
 
@@ -2711,6 +2714,8 @@ EOF1
 
 |%}generation_code({%|GATBPS_DEFINE_javadir.m4|%}){%|
 
+|%}generation_code({%|GATBPS_GIT_ARCHIVE.m4|%}){%|
+
 |%}generation_code({%|GATBPS_GIT_ARCHIVE_RULES.am|%}){%|
 
 |%}generation_code({%|GATBPS_GIT_ARCHIVE_SUBST.m4|%}){%|
@@ -3555,6 +3560,12 @@ EOF1
             'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
             'set' 'x' "${prefix}"'GATBPS_MSG_NOTICE.m4' "${@}"; 'shift'
             'set' 'x' "${prefix}"'GATBPS_MSG_ERROR.m4' "${@}"; 'shift'
+            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|GATBPS_GIT_ARCHIVE.m4|%},
+  {%|
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
