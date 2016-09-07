@@ -1,9 +1,9 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|doc/help/GATBPS_DOCKER_BUILD_RULES.am.hd.m4|%}){%||%}dnl
+rules_code({%|doc/help/GATBPS_DOCKER_SUBST.m4.hd.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
-{%|Special file: ${fB1}GATBPS_DOCKER_BUILD_RULES.am${fR1}
+{%|Special file: ${fB1}GATBPS_DOCKER_SUBST.m4${fR1}
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.|%}dnl
 dnl

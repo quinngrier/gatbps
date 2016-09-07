@@ -14,11 +14,11 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 ## begin_variables
 
-GATBPS_V_DOCKER_BUILD = $(GATBPS_V_DOCKER_BUILD_@AM_V@)
+GATBPS_V_DOCKER = $(GATBPS_V_DOCKER_@AM_V@)
 
-GATBPS_V_DOCKER_BUILD_ = $(GATBPS_V_DOCKER_BUILD_@AM_DEFAULT_V@)
+GATBPS_V_DOCKER_ = $(GATBPS_V_DOCKER_@AM_DEFAULT_V@)
 
-GATBPS_V_DOCKER_BUILD_0 = @'sh' \
+GATBPS_V_DOCKER_0 = @'sh' \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \
@@ -26,7 +26,7 @@ GATBPS_V_DOCKER_BUILD_0 = @'sh' \
   $@ \
 || 'exit' '1';
 
-GATBPS_V_DOCKER_BUILD_1 =
+GATBPS_V_DOCKER_1 =
 
 GATBPS_V_DOCKER_SAVE = $(GATBPS_V_DOCKER_SAVE_@AM_V@)
 

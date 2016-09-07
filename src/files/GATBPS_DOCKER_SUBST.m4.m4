@@ -1,38 +1,38 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|src/files/GATBPS_DOCKER_BUILD_SUBST.m4.m4|%}){%||%}dnl
+rules_code({%|src/files/GATBPS_DOCKER_SUBST.m4.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
 header_comment({%|dnl|%}, {%|dnl|%}){%|
 dnl
-dnl Special file: GATBPS_DOCKER_BUILD_SUBST.m4
+dnl Special file: GATBPS_DOCKER_SUBST.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_DOCKER_BUILD_SUBST], [[{
+AC_DEFUN([GATBPS_DOCKER_SUBST], [[{
 
 #
 # The block that contains this comment is the expansion of the
-# GATBPS_DOCKER_BUILD_SUBST macro.
+# GATBPS_DOCKER_SUBST macro.
 #]dnl
 m4_ifdef(
-  [GATBPS_DOCKER_BUILD_SUBST_HAS_BEEN_CALLED],
+  [GATBPS_DOCKER_SUBST_HAS_BEEN_CALLED],
   [gatbps_fatal([
-    GATBPS_DOCKER_BUILD_SUBST has already been called
+    GATBPS_DOCKER_SUBST has already been called
   ])],
-  [m4_define([GATBPS_DOCKER_BUILD_SUBST_HAS_BEEN_CALLED])])[]dnl
+  [m4_define([GATBPS_DOCKER_SUBST_HAS_BEEN_CALLED])])[]dnl
 m4_case(
   [$#],
   [0], [],
   [gatbps_fatal([
-    GATBPS_DOCKER_BUILD_SUBST requires exactly 0 arguments
+    GATBPS_DOCKER_SUBST requires exactly 0 arguments
   ])])[]dnl
 [
 
-]AC_SUBST([GATBPS_DOCKER_BUILD_RULES])[
-]AM_SUBST_NOTMAKE([GATBPS_DOCKER_BUILD_RULES])[
+]AC_SUBST([GATBPS_DOCKER_RULES])[
+]AM_SUBST_NOTMAKE([GATBPS_DOCKER_RULES])[
 
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})

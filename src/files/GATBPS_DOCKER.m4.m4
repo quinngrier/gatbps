@@ -1,22 +1,22 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|src/files/GATBPS_DOCKER_BUILD.m4.m4|%}){%||%}dnl
+rules_code({%|src/files/GATBPS_DOCKER.m4.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/contains_at_least_one_word_sh.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
 header_comment({%|dnl|%}, {%|dnl|%}){%|
 dnl
-dnl Special file: GATBPS_DOCKER_BUILD.m4
+dnl Special file: GATBPS_DOCKER.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
-AC_DEFUN([GATBPS_DOCKER_BUILD], [[{
+AC_DEFUN([GATBPS_DOCKER], [[{
 
 #
 # The block that contains this comment is an expansion of the
-# GATBPS_DOCKER_BUILD macro.
+# GATBPS_DOCKER macro.
 #]dnl
 m4_case(
   [$#],
@@ -25,14 +25,14 @@ m4_case(
   [6], [],
   [7], [],
   [gatbps_fatal([
-    GATBPS_DOCKER_BUILD requires exactly 4, 5, 6, or 7 arguments
+    GATBPS_DOCKER requires exactly 4, 5, 6, or 7 arguments
   ])])[]dnl
 m4_if(
   m4_bregexp([$1], [[^
 	 ]]),
   [-1],
   [gatbps_fatal([
-    GATBPS_DOCKER_BUILD requires its first argument to contain at least
+    GATBPS_DOCKER requires its first argument to contain at least
     one character that is not a space, tab, or newline
   ])])[]dnl
 m4_if(
@@ -40,7 +40,7 @@ m4_if(
 	 ]]),
   [-1],
   [gatbps_fatal([
-    GATBPS_DOCKER_BUILD requires its second argument to contain at least
+    GATBPS_DOCKER requires its second argument to contain at least
     one character that is not a space, tab, or newline
   ])])[]dnl
 m4_if(
@@ -53,7 +53,7 @@ m4_if(
     [maintainer-clean], [],
     [mostlyclean], [],
     [gatbps_fatal([
-      GATBPS_DOCKER_BUILD requires its fourth argument to be either "clean",
+      GATBPS_DOCKER requires its fourth argument to be either "clean",
       "distclean", "maintainer-clean", or "mostlyclean"
     ])])])[]dnl
 m4_pushdef(
@@ -67,10 +67,10 @@ m4_pushdef(
   m4_bpatsubst([[[$7]]], ['], ['\\'']))[]dnl
 [
 
-GATBPS_DOCKER_BUILD_RULES="$][{GATBPS_DOCKER_BUILD_RULES}"'
+GATBPS_DOCKER_RULES="$][{GATBPS_DOCKER_RULES}"'
 
 ]target_sh[: ]m4_if([$7], [], [source_sh], [prereq_sh])[
-	$][(GATBPS_V_DOCKER_BUILD): make: $][@]dnl
+	$][(GATBPS_V_DOCKER): make: $][@]dnl
 m4_if([$7], [], [], [[
 	$][(AM@&t@_V_at)$][(MAKE) \
   $][(AM@&t@_MAKEFLAGS) \
