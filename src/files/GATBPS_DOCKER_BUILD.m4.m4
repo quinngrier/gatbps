@@ -23,8 +23,9 @@ m4_case(
   [4], [],
   [5], [],
   [6], [],
+  [7], [],
   [gatbps_fatal([
-    GATBPS_DOCKER_BUILD requires exactly 4, 5, or 6 arguments
+    GATBPS_DOCKER_BUILD requires exactly 4, 5, 6, or 7 arguments
   ])])[]dnl
 m4_if(
   m4_bregexp([$1], [[^
@@ -42,6 +43,19 @@ m4_if(
     GATBPS_DOCKER_BUILD requires its second argument to contain at least
     one character that is not a space, tab, or newline
   ])])[]dnl
+m4_if(
+  m4_eval([$# >= 6]),
+  [1],
+  [m4_case(
+    [$6],
+    [clean], [],
+    [distclean], [],
+    [maintainer-clean], [],
+    [mostlyclean], [],
+    [gatbps_fatal([
+      GATBPS_DOCKER_BUILD requires its fourth argument to be either "clean",
+      "distclean", "maintainer-clean", or "mostlyclean"
+    ])])])[]dnl
 m4_pushdef(
   [target_sh],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
@@ -50,14 +64,14 @@ m4_pushdef(
   m4_bpatsubst([[[$3]]], ['], ['\\'']))[]dnl
 m4_pushdef(
   [prereq_sh],
-  m4_bpatsubst([[[$6]]], ['], ['\\'']))[]dnl
+  m4_bpatsubst([[[$7]]], ['], ['\\'']))[]dnl
 [
 
 GATBPS_DOCKER_BUILD_RULES="$][{GATBPS_DOCKER_BUILD_RULES}"'
 
-]target_sh[: ]m4_if([$6], [], [source_sh], [prereq_sh])[
+]target_sh[: ]m4_if([$7], [], [source_sh], [prereq_sh])[
 	$][(GATBPS_V_DOCKER_BUILD): make: $][@]dnl
-m4_if([$6], [], [], [[
+m4_if([$7], [], [], [[
 	$][(AM@&t@_V_at)$][(MAKE) \
   $][(AM@&t@_MAKEFLAGS) \
   ]source_sh[ \
@@ -78,6 +92,16 @@ m4_if([$6], [], [], [[
   '\''exit'\'' '\''0'\''; \
 :;}
 	$][(AM@&t@_V_at): done: $][@
+
+.PHONY: clean-]target_sh[
+
+clean-]target_sh[:
+	-'\''rm'\'' \
+  '\''-f'\'' \
+  '\''./'\'']target_sh[ \
+;
+
+]m4_if([$6], [], [[mostlyclean]], [[$6]])[-local: clean-]target_sh[
 
 '
 ]dnl
