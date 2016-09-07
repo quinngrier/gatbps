@@ -65,7 +65,7 @@ esac
 ]AC_ARG_VAR(
   [javadir],
   [
-    JAR file installation directory [DATAROOTDIR/java]
+    the directory to which to install JAR files (default: ${datadir}/java)
   ])[
 
 :;}]])[]dnl
