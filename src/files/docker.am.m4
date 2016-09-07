@@ -28,20 +28,6 @@ GATBPS_V_DOCKER_0 = @'sh' \
 
 GATBPS_V_DOCKER_1 =
 
-GATBPS_V_DOCKER_SAVE = $(GATBPS_V_DOCKER_SAVE_@AM_V@)
-
-GATBPS_V_DOCKER_SAVE_ = $(GATBPS_V_DOCKER_SAVE_@AM_DEFAULT_V@)
-
-GATBPS_V_DOCKER_SAVE_0 = @'sh' \
-  '-' \
-  $(srcdir)'/build-aux/echo.sh' \
-  '--' \
-  '  SAVE    ' \
-  $@ \
-|| 'exit' '1';
-
-GATBPS_V_DOCKER_SAVE_1 =
-
 ## end_variables
 
 |%}footer_comment({%|##|%}, {%|##|%}, {%|##|%})
