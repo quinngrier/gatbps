@@ -27,7 +27,7 @@ m4_case(
     GATBPS_DOCKER_BUILD requires exactly 4, 5, or 6 arguments
   ])])[]dnl
 m4_if(
-  m4_bregexp([$2], [[^
+  m4_bregexp([$1], [[^
 	 ]]),
   [-1],
   [gatbps_fatal([
@@ -44,7 +44,7 @@ m4_if(
   ])])[]dnl
 m4_pushdef(
   [target_sh],
-  m4_bpatsubst([[[$2]]], ['], ['\\'']))[]dnl
+  m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
 m4_pushdef(
   [source_sh],
   m4_bpatsubst([[[$3]]], ['], ['\\'']))[]dnl
@@ -55,9 +55,7 @@ m4_pushdef(
 
 GATBPS_DOCKER_BUILD_RULES="$][{GATBPS_DOCKER_BUILD_RULES}"'
 
-.PHONY: ]target_sh[/build
-
-]target_sh[/build: ]m4_if([$6], [], [source_sh], [prereq_sh])[
+]target_sh[: ]m4_if([$6], [], [source_sh], [prereq_sh])[
 	$][(GATBPS_V_DOCKER_BUILD): make: $][@]dnl
 m4_if([$6], [], [], [[
 	$][(AM@&t@_V_at)$][(MAKE) \
@@ -67,7 +65,7 @@ m4_if([$6], [], [], [[
 	$][(AM@&t@_V_at){ \
   ( \
     '\''cd'\'' \
-      '\''./'\''$][(@D) \
+      '\''./'\'']$2[ \
     || '\''exit'\'' "$][$][{?}"; \
     $][(DOCKER) \
       '\''build'\'' \
