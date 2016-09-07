@@ -20,13 +20,14 @@ AC_DEFUN([GATBPS_DOCKER_BUILD], [[{
 #]dnl
 m4_case(
   [$#],
-  [3], [],
   [4], [],
+  [5], [],
+  [6], [],
   [gatbps_fatal([
-    GATBPS_DOCKER_BUILD requires exactly 3 or 4 arguments
+    GATBPS_DOCKER_BUILD requires exactly 4, 5, or 6 arguments
   ])])[]dnl
 m4_if(
-  m4_bregexp([$1], [[^
+  m4_bregexp([$2], [[^
 	 ]]),
   [-1],
   [gatbps_fatal([
@@ -34,7 +35,7 @@ m4_if(
     one character that is not a space, tab, or newline
   ])])[]dnl
 m4_if(
-  m4_bregexp([$2], [[^
+  m4_bregexp([$3], [[^
 	 ]]),
   [-1],
   [gatbps_fatal([
@@ -43,22 +44,22 @@ m4_if(
   ])])[]dnl
 m4_pushdef(
   [target_sh],
-  m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
-m4_pushdef(
-  [source_sh],
   m4_bpatsubst([[[$2]]], ['], ['\\'']))[]dnl
 m4_pushdef(
+  [source_sh],
+  m4_bpatsubst([[[$3]]], ['], ['\\'']))[]dnl
+m4_pushdef(
   [prereq_sh],
-  m4_bpatsubst([[[$4]]], ['], ['\\'']))[]dnl
+  m4_bpatsubst([[[$6]]], ['], ['\\'']))[]dnl
 [
 
 GATBPS_DOCKER_BUILD_RULES="$][{GATBPS_DOCKER_BUILD_RULES}"'
 
 .PHONY: ]target_sh[/build
 
-]target_sh[/build: ]m4_if([$4], [], [source_sh], [prereq_sh])[
+]target_sh[/build: ]m4_if([$6], [], [source_sh], [prereq_sh])[
 	$][(GATBPS_V_DOCKER_BUILD): make: $][@]dnl
-m4_if([$4], [], [], [[
+m4_if([$6], [], [], [[
 	$][(AM@&t@_V_at)$][(MAKE) \
   $][(AM@&t@_MAKEFLAGS) \
   ]source_sh[ \
@@ -71,7 +72,7 @@ m4_if([$4], [], [], [[
     $][(DOCKER) \
       '\''build'\'' \
       '\''--tag'\'' \
-      ]$3[ \
+      ]$4[ \
       '\''.'\'' \
     || '\''exit'\'' "$][$][{?}"; \
     '\''exit'\'' '\''0'\''; \
