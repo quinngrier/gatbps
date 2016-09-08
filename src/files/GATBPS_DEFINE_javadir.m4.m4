@@ -66,7 +66,7 @@ esac
   [javadir],
   [
     the directory to which to install JAR files (default:
-    javadir='${datarootdir}/java')
+    javadir='$][{datarootdir}/java')
   ])[
 
 :;}]])[]dnl
