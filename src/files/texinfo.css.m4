@@ -17,10 +17,9 @@ include({%|src/tools/header_comment.m4|%}){%||%}dnl
  *
  * Special file: texinfo.css
  *
- * The texinfo.css special file is a cascading style sheet that makes
- * Texinfo's HTML output look more like its TeX output. It can be used
- * with the --css-include option of texi2any to embed it into the style
- * sheet of the HTML output.
+ * The texinfo.css special file is a CSS file that makes Texinfo's HTML
+ * output look more like its TeX output. It can be copied into the HTML
+ * output by using the --css-include option of the texi2any program.
  *
  * For more information, see the GATBPS manual.
  */

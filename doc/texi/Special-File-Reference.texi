@@ -568,15 +568,15 @@ For more information, @pxref{Mathematical Notation in Texinfo}@.
 @include ipez.texi
 The
 @w{@t{texinfo.@:css}}
-special file is a cascading style sheet that makes Texinfo's HTML output
-look more like its
+special file is a CSS file that makes Texinfo's HTML output look more
+like its
 @TeX{}
 output@.
-It can be used with the
+It can be copied into the HTML output by using the
 @w{@t{-@w{-}css-include}}
-option of
+option of the
 @w{@t{texi2any}}
-to embed it into the style sheet of the HTML output@.
+program@.
 @end table
 @ifxml
 @ifnotxml

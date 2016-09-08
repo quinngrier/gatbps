@@ -1443,15 +1443,15 @@ For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
 .IPEZ
 The
 .nohy "\fBtexinfo.css\fR"
-special file is a cascading style sheet that makes Texinfo's HTML output
-look more like its
+special file is a CSS file that makes Texinfo's HTML output look more
+like its
 TeX
 output.
-It can be used with the
-.nohy "\fB--css-include\fR"
-option of
+It can be copied into the HTML output by using the
+.nohy "\fB\-\-css\-include\fR"
+option of the
 .nohy "\fBtexi2any\fR"
-to embed it into the style sheet of the HTML output.
+program.
 .SH "EXIT STATUS"
 .LP
 Exit status zero means success, and any other exit status means failure.
