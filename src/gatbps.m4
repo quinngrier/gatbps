@@ -345,42 +345,42 @@ esac
 # described by the man page for this program.
 #
 
-case "${TEXI2ANY}" in
+case "${TEXI2ANY+x}" in
   ?*)
     'set' 'x' '--texi2any='"${TEXI2ANY}" "${@}"
     'shift'
   ;;
 esac
 
-case "${STYLE_STDOUT}" in
+case "${STYLE_STDOUT+x}" in
   ?*)
     'set' 'x' '--style-stdout='"${STYLE_STDOUT}" "${@}"
     'shift'
   ;;
 esac
 
-case "${STYLE_STDERR}" in
+case "${STYLE_STDERR+x}" in
   ?*)
     'set' 'x' '--style-stderr='"${STYLE_STDERR}" "${@}"
     'shift'
   ;;
 esac
 
-case "${STYLE}" in
+case "${STYLE+x}" in
   ?*)
     'set' 'x' '--style='"${STYLE}" "${@}"
     'shift'
   ;;
 esac
 
-case "${SED}" in
+case "${SED+x}" in
   ?*)
     'set' 'x' '--sed='"${SED}" "${@}"
     'shift'
   ;;
 esac
 
-case "${AWK}" in
+case "${AWK+x}" in
   ?*)
     'set' 'x' '--awk='"${AWK}" "${@}"
     'shift'

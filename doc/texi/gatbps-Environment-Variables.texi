@@ -9,7 +9,7 @@ The following environment variables are supported:
 If the
 @w{@t{AWK}}
 environment variable
-is set to a nonempty value
+is set and has value
 @w{@i{V}},
 then an instance of the
 @w{@t{-@w{-}awk=}@i{V}}
@@ -26,7 +26,7 @@ environment variable has no effect@.
 If the
 @w{@t{SED}}
 environment variable
-is set to a nonempty value
+is set and has value
 @w{@i{V}},
 then an instance of the
 @w{@t{-@w{-}sed=}@i{V}}
@@ -43,7 +43,7 @@ environment variable has no effect@.
 If the
 @w{@t{STYLE}}
 environment variable
-is set to a nonempty value
+is set and has value
 @w{@i{V}},
 then an instance of the
 @w{@t{-@w{-}style=}@i{V}}
@@ -64,7 +64,7 @@ environment variable has no effect@.
 If the
 @w{@t{STYLE_STDERR}}
 environment variable
-is set to a nonempty value
+is set and has value
 @w{@i{V}},
 then an instance of the
 @w{@t{-@w{-}style-stderr=}@i{V}}
@@ -83,7 +83,7 @@ environment variable has no effect@.
 If the
 @w{@t{STYLE_STDOUT}}
 environment variable
-is set to a nonempty value
+is set and has value
 @w{@i{V}},
 then an instance of the
 @w{@t{-@w{-}style-stdout=}@i{V}}
@@ -102,7 +102,7 @@ environment variable has no effect@.
 If the
 @w{@t{TEXI2ANY}}
 environment variable
-is set to a nonempty value
+is set and has value
 @w{@i{V}},
 then an instance of the
 @w{@t{-@w{-}texi2any=}@i{V}}

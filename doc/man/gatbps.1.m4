@@ -457,7 +457,7 @@ The following environment variables are supported:
 If the
 .nohy "\fBAWK\fR"
 environment variable
-is set to a nonempty value
+is set and has value
 .nohy "\fIV\fR,"
 then an instance of the
 .nohy "\fB\-\-awk=\fIV\fR"
@@ -474,7 +474,7 @@ environment variable has no effect.
 If the
 .nohy "\fBSED\fR"
 environment variable
-is set to a nonempty value
+is set and has value
 .nohy "\fIV\fR,"
 then an instance of the
 .nohy "\fB\-\-sed=\fIV\fR"
@@ -491,7 +491,7 @@ environment variable has no effect.
 If the
 .nohy "\fBSTYLE\fR"
 environment variable
-is set to a nonempty value
+is set and has value
 .nohy "\fIV\fR,"
 then an instance of the
 .nohy "\fB\-\-style=\fIV\fR"
@@ -512,7 +512,7 @@ environment variable has no effect.
 If the
 .nohy "\fBSTYLE_STDERR\fR"
 environment variable
-is set to a nonempty value
+is set and has value
 .nohy "\fIV\fR,"
 then an instance of the
 .nohy "\fB\-\-style\-stderr=\fIV\fR"
@@ -531,7 +531,7 @@ environment variable has no effect.
 If the
 .nohy "\fBSTYLE_STDOUT\fR"
 environment variable
-is set to a nonempty value
+is set and has value
 .nohy "\fIV\fR,"
 then an instance of the
 .nohy "\fB\-\-style\-stdout=\fIV\fR"
@@ -550,7 +550,7 @@ environment variable has no effect.
 If the
 .nohy "\fBTEXI2ANY\fR"
 environment variable
-is set to a nonempty value
+is set and has value
 .nohy "\fIV\fR,"
 then an instance of the
 .nohy "\fB\-\-texi2any=\fIV\fR"
