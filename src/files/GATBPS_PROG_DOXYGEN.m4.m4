@@ -37,7 +37,7 @@ AC_CHECK_PROGS(
 AC_ARG_VAR(
   [DOXYGEN],
   [
-    command for doxygen
+    the command to use to run doxygen
   ])
 
 :;}])[]dnl

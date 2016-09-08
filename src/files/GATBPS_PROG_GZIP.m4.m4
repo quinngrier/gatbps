@@ -38,7 +38,7 @@ m4_case(
 ]AC_ARG_VAR(
   [GZIP],
   [
-    command for gzip
+    the command to use to run gzip
   ])[
 
 :;}]])[]dnl

@@ -36,7 +36,7 @@ m4_case(
 ]AC_ARG_VAR(
   [MKDIR_P],
   [
-    command for mkdir -p
+    the command to use to run mkdir -p
   ])[
 
 :;}]])[]dnl

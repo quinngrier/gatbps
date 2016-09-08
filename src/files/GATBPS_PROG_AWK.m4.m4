@@ -36,7 +36,7 @@ m4_case(
 ]AC_ARG_VAR(
   [AWK],
   [
-    command for awk
+    the command to use to run awk
   ])[
 
 :;}]])[]dnl

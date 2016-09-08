@@ -38,7 +38,7 @@ m4_case(
 ]AC_ARG_VAR(
   [OPENSSL],
   [
-    command for openssl
+    the command to use to run openssl
   ])[
 
 :;}]])[]dnl

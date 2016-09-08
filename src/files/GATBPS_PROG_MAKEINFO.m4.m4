@@ -33,7 +33,7 @@ m4_case(
 AC_ARG_VAR(
   [MAKEINFO],
   [
-    command for makeinfo
+    the command to use to run makeinfo
   ])
 
 :;}])[]dnl

@@ -36,7 +36,7 @@ m4_case(
 ]AC_ARG_VAR(
   [SED],
   [
-    command for sed
+    the command to use to run sed
   ])[
 
 :;}]])[]dnl

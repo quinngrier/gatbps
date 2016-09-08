@@ -38,7 +38,7 @@ m4_case(
 ]AC_ARG_VAR(
   [XZ],
   [
-    command for xz
+    the command to use to run xz
   ])[
 
 :;}]])[]dnl

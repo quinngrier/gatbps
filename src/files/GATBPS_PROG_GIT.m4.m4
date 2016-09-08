@@ -38,7 +38,7 @@ m4_case(
 ]AC_ARG_VAR(
   [GIT],
   [
-    command for git
+    the command to use to run git
   ])[
 
 :;}]])[]dnl

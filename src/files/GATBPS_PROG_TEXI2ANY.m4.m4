@@ -37,7 +37,7 @@ AC_CHECK_PROGS(
 AC_ARG_VAR(
   [TEXI2ANY],
   [
-    command for texi2any
+    the command to use to run texi2any
   ])
 
 :;}])[]dnl

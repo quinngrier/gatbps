@@ -38,7 +38,7 @@ m4_case(
 ]AC_ARG_VAR(
   [WGET],
   [
-    command for wget
+    the command to use to run wget
   ])[
 
 :;}]])[]dnl

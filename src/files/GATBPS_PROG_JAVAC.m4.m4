@@ -41,7 +41,7 @@ m4_case(
 ]AC_ARG_VAR(
   [JAVAC],
   [
-    command for javac
+    the command to use to run javac
   ])[
 
 :;}]])[]dnl

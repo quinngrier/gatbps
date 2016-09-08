@@ -36,7 +36,7 @@ m4_case(
 ]AC_ARG_VAR(
   [GREP],
   [
-    command for grep
+    the command to use to run grep
   ])[
 
 :;}]])[]dnl

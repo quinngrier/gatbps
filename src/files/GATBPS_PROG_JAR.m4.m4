@@ -37,7 +37,7 @@ AC_CHECK_PROGS(
 AC_ARG_VAR(
   [JAR],
   [
-    command for jar
+    the command to use to run jar
   ])
 
 :;}])[]dnl

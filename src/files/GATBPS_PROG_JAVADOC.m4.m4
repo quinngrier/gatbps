@@ -37,7 +37,7 @@ AC_CHECK_PROGS(
 AC_ARG_VAR(
   [JAVADOC],
   [
-    command for javadoc
+    the command to use to run javadoc
   ])
 
 :;}])[]dnl
