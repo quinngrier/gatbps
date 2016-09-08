@@ -2573,59 +2573,59 @@ EOF1
         ;;
       esac
 
-      tmp0="${1}.gatbps0"
-      tmp1="${1}.gatbps1"
-      tmp2="${1}.gatbps2"
-      tmp3="${1}.gatbps3"
-      tmp4="${1}.gatbps4"
-      tmp5="${1}.gatbps5"
-      tmp6="${1}.gatbps6"
-      tmp7="${1}.gatbps7"
-      tmp8="${1}.gatbps8"
-      tmp9="${1}.gatbps9"
+      tmp0="${1}.tmp0"
+      tmp1="${1}.tmp1"
+      tmp2="${1}.tmp2"
+      tmp3="${1}.tmp3"
+      tmp4="${1}.tmp4"
+      tmp5="${1}.tmp5"
+      tmp6="${1}.tmp6"
+      tmp7="${1}.tmp7"
+      tmp8="${1}.tmp8"
+      tmp9="${1}.tmp9"
 
-      safe_tmp0="${safe_1}.gatbps0"
-      safe_tmp1="${safe_1}.gatbps1"
-      safe_tmp2="${safe_1}.gatbps2"
-      safe_tmp3="${safe_1}.gatbps3"
-      safe_tmp4="${safe_1}.gatbps4"
-      safe_tmp5="${safe_1}.gatbps5"
-      safe_tmp6="${safe_1}.gatbps6"
-      safe_tmp7="${safe_1}.gatbps7"
-      safe_tmp8="${safe_1}.gatbps8"
-      safe_tmp9="${safe_1}.gatbps9"
+      safe_tmp0="${safe_1}.tmp0"
+      safe_tmp1="${safe_1}.tmp1"
+      safe_tmp2="${safe_1}.tmp2"
+      safe_tmp3="${safe_1}.tmp3"
+      safe_tmp4="${safe_1}.tmp4"
+      safe_tmp5="${safe_1}.tmp5"
+      safe_tmp6="${safe_1}.tmp6"
+      safe_tmp7="${safe_1}.tmp7"
+      safe_tmp8="${safe_1}.tmp8"
+      safe_tmp9="${safe_1}.tmp9"
 
       delete_tmp='no'
 
       while ':'; do # generation
 
         for i in '0' '1' '2' '3' '4' '5' '6' '7' '8' '9'; do
-          if 'mkdir' "${safe_1}"'.gatbps'"${i}" 2>'/dev/null'; then
-            'rmdir' "${safe_1}"'.gatbps'"${i}"
+          if 'mkdir' "${safe_1}"'.tmp'"${i}" 2>'/dev/null'; then
+            'rmdir' "${safe_1}"'.tmp'"${i}"
             case "${?}" in
               '0')
               ;;
               *)
                 'cat' >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}rmdir${fR2} failed while deleting: ${fB2}${1}.gatbps${i}${fR2}
+${fy2}gatbps:${fR2} ${fB2}rmdir${fR2} failed while deleting: ${fB2}${1}.tmp${i}${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
                 exit_status='1'
                 'break' '2' # generation
               ;;
             esac
-          elif test '-f' "${safe_1}"'.gatbps'"${i}"; then
+          elif test '-f' "${safe_1}"'.tmp'"${i}"; then
             :
-          elif test '-d' "${safe_1}"'.gatbps'"${i}"; then
+          elif test '-d' "${safe_1}"'.tmp'"${i}"; then
             'cat' >&2 <<EOF1
-${fy2}gatbps:${fR2} file must not be a directory: ${fB2}${1}.gatbps${i}${fR2}
+${fy2}gatbps:${fR2} file must not be a directory: ${fB2}${1}.tmp${i}${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
             'break' '2' # generation
           else
             'cat' >&2 <<EOF1
-${fy2}gatbps:${fR2} file must not be nonregular: ${fB2}${1}.gatbps${i}${fR2}
+${fy2}gatbps:${fR2} file must not be nonregular: ${fB2}${1}.tmp${i}${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
@@ -3325,11 +3325,11 @@ EOF1
       case "${delete_tmp}" in
         'yes')
           for i in '0' '1' '2' '3' '4' '5' '6' '7' '8' '9'; do
-            if rm '-f' "${safe_1}"'.gatbps'"${i}"; then
+            if rm '-f' "${safe_1}"'.tmp'"${i}"; then
               :
             else
               'cat' >&2 <<EOF1
-${fc2}gatbps.${fR2} ${fB2}rm${fR2} failed while deleting: ${fB2}${1}.gatbps${i}${fR2}
+${fc2}gatbps.${fR2} ${fB2}rm${fR2} failed while deleting: ${fB2}${1}.tmp${i}${fR2}
 EOF1
             fi
           done

@@ -608,9 +608,9 @@ for which generation
 is enabled, the file
 .nohy "\fIX\fR"
 is generated and the ten files
-.nohy "\fIX\fB.gatbps0\fR"
+.nohy "\fIX\fB.tmp0\fR"
 through
-.nohy "\fIX\fB.gatbps9\fR"
+.nohy "\fIX\fB.tmp9\fR"
 are reserved for temporary use.
 The generation
 of\~\c

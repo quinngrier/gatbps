@@ -7,9 +7,9 @@ for which generation
 is enabled, the file
 @w{@i{X}}
 is generated and the ten files
-@w{@i{X}@t{.@:gatbps0}}
+@w{@i{X}@t{.@:tmp0}}
 through
-@w{@i{X}@t{.@:gatbps9}}
+@w{@i{X}@t{.@:tmp9}}
 are reserved for temporary use@.
 The generation
 of@tie{}@w{@i{X}}
