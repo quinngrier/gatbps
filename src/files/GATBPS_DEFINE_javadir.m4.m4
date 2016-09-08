@@ -57,7 +57,7 @@ case "$][{javadir+x}" in
     esac
   ;;
   *)
-    javadir='$][{datadir}/java'
+    javadir='$][{datarootdir}/java'
   ;;
 esac
 'readonly' 'javadir'
@@ -65,7 +65,8 @@ esac
 ]AC_ARG_VAR(
   [javadir],
   [
-    the directory to which to install JAR files (default: ${datadir}/java)
+    the directory to which to install JAR files (default:
+    ${datarootdir}/java)
   ])[
 
 :;}]])[]dnl
