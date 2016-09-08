@@ -7,12 +7,12 @@ include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
 {%|/*
  * If you are reading this comment in an HTML file, then the CSS file
- * that originally held this comment has been embedded into this HTML
- * file by Texinfo. In this case, the "file" spoken of by this comment
- * is not this HTML file, but rather the original CSS file. Texinfo may
- * also have mixed the content of the original CSS file with the normal
- * HTML content that it produces, making it difficult to determine what
- * came from the original CSS file.
+ * that originally held this comment has been copied into this HTML file
+ * by Texinfo. In this case, the "file" spoken of by this comment is not
+ * this HTML file, but rather the original CSS file. The contents of the
+ * original CSS file should be contained between this header comment and
+ * the matching footer comment, which should be below, but be aware that
+ * Texinfo may have reorganized things.
 |%}header_comment({%| *|%}, {%| *|%}){%|
  *
  * Special file: texinfo.css
@@ -62,12 +62,12 @@ span.indent-immediately-following-paragraph + p {
 
 /*
  * If you are reading this comment in an HTML file, then the CSS file
- * that originally held this comment has been embedded into this HTML
- * file by Texinfo. In this case, the "file" spoken of by this comment
- * is not this HTML file, but rather the original CSS file. Texinfo may
- * also have mixed the content of the original CSS file with the normal
- * HTML content that it produces, making it difficult to determine what
- * came from the original CSS file.
+ * that originally held this comment has been copied into this HTML file
+ * by Texinfo. In this case, the "file" spoken of by this comment is not
+ * this HTML file, but rather the original CSS file. The contents of the
+ * original CSS file should be contained between this footer comment and
+ * the matching header comment, which should be above, but be aware that
+ * Texinfo may have reorganized things.
 |%}footer_comment({%| *|%}, {%| *|%}, {%| */|%})
 dnl
 dnl The authors of this file have waived all copyright and
