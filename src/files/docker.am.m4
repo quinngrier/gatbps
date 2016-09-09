@@ -22,7 +22,7 @@ GATBPS_V_DOCKER_0 = @'sh' \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \
-  '  BUILD   ' \
+  $(GATBPS_V_PAD_LEFT)'BUILD'$(GATBPS_V_PAD_RIGHT_5) \
   $@ \
 || 'exit' '1';
 

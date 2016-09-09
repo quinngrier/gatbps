@@ -22,7 +22,7 @@ GATBPS_V_GIT_CLONE_0 = @'sh' \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \
-  '  CLONE   ' \
+  $(GATBPS_V_PAD_LEFT)'CLONE'$(GATBPS_V_PAD_RIGHT_5) \
   $@ \
 || 'exit' '1';
 
@@ -36,7 +36,7 @@ GATBPS_V_GIT_ARCHIVE_0 = @'sh' \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \
-  '  ARCHIVE ' \
+  $(GATBPS_V_PAD_LEFT)'ARCHIVE'$(GATBPS_V_PAD_RIGHT_7) \
   $@ \
 || 'exit' '1';
 

@@ -24,7 +24,7 @@ GATBPS_V_JAVADOC_0 = @'sh' \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \
-  '  JAVADOC ' \
+  $(GATBPS_V_PAD_LEFT)'JAVADOC'$(GATBPS_V_PAD_RIGHT_7) \
   $@ \
 || 'exit' '1';
 

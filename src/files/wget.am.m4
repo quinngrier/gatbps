@@ -22,7 +22,7 @@ GATBPS_V_WGET_0 = @'sh' \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \
-  '  WGET    ' \
+  $(GATBPS_V_PAD_LEFT)'WGET'$(GATBPS_V_PAD_RIGHT_4) \
   $@ \
 || 'exit' '1';
 

@@ -22,7 +22,7 @@ GATBPS_V_TAR_0 = @'sh' \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \
-  '  TAR     ' \
+  $(GATBPS_V_PAD_LEFT)'TAR'$(GATBPS_V_PAD_RIGHT_3) \
   $@ \
 || 'exit' '1';
 
@@ -36,7 +36,7 @@ GATBPS_V_UNTAR_0 = @'sh' \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \
-  '  UNTAR   ' \
+  $(GATBPS_V_PAD_LEFT)'UNTAR'$(GATBPS_V_PAD_RIGHT_5) \
   $@ \
 || 'exit' '1';
 

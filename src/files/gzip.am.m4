@@ -22,7 +22,7 @@ GATBPS_V_GUNZIP_0 = @'sh' \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \
-  '  GUNZIP  ' \
+  $(GATBPS_V_PAD_LEFT)'GUNZIP'$(GATBPS_V_PAD_RIGHT_6) \
   $@ \
 || 'exit' '1';
 
@@ -36,7 +36,7 @@ GATBPS_V_GZIP_0 = @'sh' \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \
-  '  GZIP    ' \
+  $(GATBPS_V_PAD_LEFT)'GZIP'$(GATBPS_V_PAD_RIGHT_4) \
   $@ \
 || 'exit' '1';
 

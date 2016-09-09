@@ -23,7 +23,7 @@ GATBPS_V_JAR_0 = @'sh' \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \
-  '  JAR     ' \
+  $(GATBPS_V_PAD_LEFT)'JAR'$(GATBPS_V_PAD_RIGHT_3) \
   $@ \
 || 'exit' '1';
 
@@ -37,7 +37,7 @@ GATBPS_V_JAVAC_0 = @'sh' \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \
-  '  JAVAC   ' \
+  $(GATBPS_V_PAD_LEFT)'JAVAC'$(GATBPS_V_PAD_RIGHT_5) \
   $@ \
 ;
 

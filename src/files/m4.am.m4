@@ -22,7 +22,7 @@ GATBPS_V_M4_0 = @'sh' \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \
-  '  M4      ' \
+  $(GATBPS_V_PAD_LEFT)'M4'$(GATBPS_V_PAD_RIGHT_2) \
   $@ \
 || 'exit' '1';
 
