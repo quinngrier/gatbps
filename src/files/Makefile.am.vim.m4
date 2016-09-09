@@ -75,7 +75,7 @@ function s:FormatAutomakeFile()
         exec n1 . '+1,' . n2 . '-1g/\m\\\b$/.,/\m\%(\\\b\)\@<!$/j!'
         call cursor(n1, 1)
         let n2 = search(s2, 'W')
-        exec n1 . '+1,' . n2 . '-1g/\m\%(^[^\t][^\b#]*:.*\)\@<!\n[^\b#]*:/.+1,/\m\%(^[^\t][^\b#]*:.*\)\@<!$/-1sort u'
+        exec n1 . '+1,' . n2 . '-1g/\m\%(^[^\t][^\b#]*:.*\)\@<!\n[^\t][^\b#]*:/.+1,/\m\%(^[^\t][^\b#]*:.*\)\@<!$/-1sort u'
         call cursor(n1, 1)
         let n2 = search(s2, 'W')
         exec n1 . '+1,' . n2 . '-1g/\m./s/\m$/\b/'
