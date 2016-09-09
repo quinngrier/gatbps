@@ -4154,6 +4154,9 @@ EOF1
   {%|m4.am|%},
   {%|
             'set' 'x' "${prefix}"'echo.sh' "${@}"; 'shift'
+            'set' 'x' "${prefix}"'GATBPS_V_PAD.am' "${@}"; 'shift'
+            'set' 'x' "${prefix}"'GATBPS_PROG_MKDIR_P.m4' "${@}"; 'shift'
+            'set' 'x' "${prefix}"'GATBPS_PROG_M4.m4' "${@}"; 'shift'
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
