@@ -40,18 +40,35 @@ SUFFIXES += .m4out
 	$(AM_V_at)$(MKDIR_P) \
   './'$(@D) \
 ;
-	$(AM_V_at)$(M4) \
-  $(GATBPS_M4FLAGS) \
-  $(M4FLAGS) \
-  '-D' \
-  'make_rules' \
-  <$< \
-  >$@'.d.tmp' \
-;
-	$(AM_V_at)'mv' \
-  './'$@'.d.tmp' \
-  './'$@'.d' \
-;
+	$(AM_V_at){ \
+  'rm' \
+    '-f' \
+    '-r' \
+    './'$@'.d.tmp' \
+  || 'exit' "$${?}"; \
+  ( \
+    $(M4) \
+      $(GATBPS_M4FLAGS) \
+      $(M4FLAGS) \
+      '-D' \
+      'make_rules' \
+      <$< \
+      >$@'.d.tmp' \
+    || 'exit' "$${?}"; \
+    'mv' \
+      './'$@'.d.tmp' \
+      './'$@'.d' \
+    || 'exit' "$${?}"; \
+    'exit' '0'; \
+  :;); \
+  x="$${?}"; \
+  'rm' \
+    '-f' \
+    '-r' \
+    './'$@'.d.tmp' \
+  ; \
+  'exit' "$${x}"; \
+:;}
 	$(AM_V_at)$(M4) \
   $(GATBPS_M4FLAGS) \
   $(M4FLAGS) \
