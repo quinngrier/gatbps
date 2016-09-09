@@ -36,7 +36,7 @@ SUFFIXES += .m4out
 ## begin_rules
 
 .m4.m4out:
-	$(GATBPS_V_M4)':'
+	$(GATBPS_V_M4): make: $@
 	$(AM_V_at)$(MKDIR_P) \
   './'$(@D) \
 ;
@@ -54,6 +54,7 @@ SUFFIXES += .m4out
   <$< \
   >$@ \
 ;
+	$(AM_V_at): done: $@
 
 ## end_rules
 
