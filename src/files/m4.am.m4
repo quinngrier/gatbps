@@ -46,13 +46,21 @@ SUFFIXES += .m4out
   '-D' \
   'make_rules' \
   <$< \
-  >$@'.d' \
+  >$@'.d.tmp' \
+;
+	$(AM_V_at)'mv' \
+  './'$@'.d.tmp' \
+  './'$@'.d' \
 ;
 	$(AM_V_at)$(M4) \
   $(GATBPS_M4FLAGS) \
   $(M4FLAGS) \
   <$< \
-  >$@ \
+  >$@'.tmp' \
+;
+	$(AM_V_at)'mv' \
+  './'$@'.tmp' \
+  './'$@ \
 ;
 	$(AM_V_at): done: $@
 
