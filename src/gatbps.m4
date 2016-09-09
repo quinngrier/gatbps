@@ -581,6 +581,7 @@ EOF1
           set "${prefix}GATBPS_PROG_MKDIR_P.m4" "${@}"
           set "${prefix}GATBPS_PROG_MAKEINFO.m4" "${@}"
           set "${prefix}GATBPS_PROG_M4.m4" "${@}"
+          set "${prefix}GATBPS_PROG_JDEPS.m4" "${@}"
           set "${prefix}GATBPS_PROG_JAVADOC.m4" "${@}"
           set "${prefix}GATBPS_PROG_JAVAC.m4" "${@}"
           set "${prefix}GATBPS_PROG_JAR.m4" "${@}"
@@ -1140,6 +1141,8 @@ EOF1
 |%}help_code({%|GATBPS_PROG_JAVAC.m4|%}){%|
 
 |%}help_code({%|GATBPS_PROG_JAVADOC.m4|%}){%|
+
+|%}help_code({%|GATBPS_PROG_JDEPS.m4|%}){%|
 
 |%}help_code({%|GATBPS_PROG_M4.m4|%}){%|
 
@@ -2785,6 +2788,8 @@ EOF1
 
 |%}generation_code({%|GATBPS_PROG_JAVADOC.m4|%}){%|
 
+|%}generation_code({%|GATBPS_PROG_JDEPS.m4|%}){%|
+
 |%}generation_code({%|GATBPS_PROG_M4.m4|%}){%|
 
 |%}generation_code({%|GATBPS_PROG_MAKEINFO.m4|%}){%|
@@ -3771,6 +3776,13 @@ EOF1
 
 |%}recursion_code(
   {%|GATBPS_PROG_JAVADOC.m4|%},
+  {%|
+            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|GATBPS_PROG_JDEPS.m4|%},
   {%|
             'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
