@@ -29,18 +29,19 @@ m4_case(
   [gatbps_fatal([
     GATBPS_PROG_JAVADOC requires exactly 0 arguments
   ])])[]dnl
+[
 
-AC_CHECK_PROGS(
+]AC_CHECK_PROGS(
   [JAVADOC],
-  [javadoc])
+  [javadoc])[
 
-AC_ARG_VAR(
+]AC_ARG_VAR(
   [JAVADOC],
   [
     the command to use to run javadoc
-  ])
+  ])[
 
-:;}])[]dnl
+:;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
 dnl
 dnl The authors of this file have waived all copyright and

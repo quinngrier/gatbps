@@ -29,18 +29,19 @@ m4_case(
   [gatbps_fatal([
     GATBPS_PROG_M4 requires exactly 0 arguments
   ])])[]dnl
+[
 
-AC_CHECK_PROGS(
+]AC_CHECK_PROGS(
   [M4],
-  [gm4 m4])
+  [gm4 m4])[
 
-AC_ARG_VAR(
+]AC_ARG_VAR(
   [M4],
   [
     the command to use to run m4
-  ])
+  ])[
 
-:;}])[]dnl
+:;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
 dnl
 dnl The authors of this file have waived all copyright and

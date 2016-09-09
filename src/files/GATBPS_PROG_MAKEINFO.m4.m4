@@ -29,14 +29,15 @@ m4_case(
   [gatbps_fatal([
     GATBPS_PROG_MAKEINFO requires exactly 0 arguments
   ])])[]dnl
+[
 
-AC_ARG_VAR(
+]AC_ARG_VAR(
   [MAKEINFO],
   [
     the command to use to run makeinfo
-  ])
+  ])[
 
-:;}])[]dnl
+:;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
 dnl
 dnl The authors of this file have waived all copyright and

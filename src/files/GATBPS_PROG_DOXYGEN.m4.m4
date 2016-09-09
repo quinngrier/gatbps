@@ -29,18 +29,19 @@ m4_case(
   [gatbps_fatal([
     GATBPS_PROG_DOXYGEN requires exactly 0 arguments
   ])])[]dnl
+[
 
-AC_CHECK_PROGS(
+]AC_CHECK_PROGS(
   [DOXYGEN],
-  [doxygen])
+  [doxygen])[
 
-AC_ARG_VAR(
+]AC_ARG_VAR(
   [DOXYGEN],
   [
     the command to use to run doxygen
-  ])
+  ])[
 
-:;}])[]dnl
+:;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
 dnl
 dnl The authors of this file have waived all copyright and
