@@ -69,16 +69,33 @@ SUFFIXES += .m4out
   ; \
   'exit' "$${x}"; \
 :;}
-	$(AM_V_at)$(M4) \
-  $(GATBPS_M4FLAGS) \
-  $(M4FLAGS) \
-  <$< \
-  >$@'.tmp' \
-;
-	$(AM_V_at)'mv' \
-  './'$@'.tmp' \
-  './'$@ \
-;
+	$(AM_V_at){ \
+  'rm' \
+    '-f' \
+    '-r' \
+    './'$@'.tmp' \
+  || 'exit' "$${?}"; \
+  ( \
+    $(M4) \
+      $(GATBPS_M4FLAGS) \
+      $(M4FLAGS) \
+      <$< \
+      >$@'.tmp' \
+    || 'exit' "$${?}"; \
+    'mv' \
+      './'$@'.tmp' \
+      './'$@ \
+    || 'exit' "$${?}"; \
+    'exit' '0'; \
+  :;); \
+  x="$${?}"; \
+  'rm' \
+    '-f' \
+    '-r' \
+    './'$@'.tmp' \
+  ; \
+  'exit' "$${x}"; \
+:;}
 	$(AM_V_at): done: $@
 
 ## end_rules
