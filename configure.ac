@@ -442,6 +442,8 @@ GATBPS_M4([src/files/GATBPS_TAR_RULES.am])
 
 GATBPS_M4([src/files/GATBPS_TAR_SUBST.m4])
 
+GATBPS_M4([src/files/GATBPS_V_PAD.am])
+
 GATBPS_M4([src/files/GATBPS_WGET.m4])
 
 GATBPS_M4([src/files/GATBPS_WGET_RULES.am])

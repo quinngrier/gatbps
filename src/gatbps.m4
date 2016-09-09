@@ -568,6 +568,7 @@ EOF1
           set "${prefix}GATBPS_WGET_SUBST.m4" "${@}"
           set "${prefix}GATBPS_WGET_RULES.am" "${@}"
           set "${prefix}GATBPS_WGET.m4" "${@}"
+          set "${prefix}GATBPS_V_PAD.am" "${@}"
           set "${prefix}GATBPS_TAR_SUBST.m4" "${@}"
           set "${prefix}GATBPS_TAR_RULES.am" "${@}"
           set "${prefix}GATBPS_TAR.m4" "${@}"
@@ -1163,6 +1164,8 @@ EOF1
 |%}help_code({%|GATBPS_TAR_RULES.am|%}){%|
 
 |%}help_code({%|GATBPS_TAR_SUBST.m4|%}){%|
+
+|%}help_code({%|GATBPS_V_PAD.am|%}){%|
 
 |%}help_code({%|GATBPS_WGET.m4|%}){%|
 
@@ -2806,6 +2809,8 @@ EOF1
 
 |%}generation_code({%|GATBPS_TAR_SUBST.m4|%}){%|
 
+|%}generation_code({%|GATBPS_V_PAD.am|%}){%|
+
 |%}generation_code({%|GATBPS_WGET.m4|%}){%|
 
 |%}generation_code({%|GATBPS_WGET_RULES.am|%}){%|
@@ -3848,6 +3853,12 @@ EOF1
 
 |%}recursion_code(
   {%|GATBPS_TAR_SUBST.m4|%},
+  {%|
+            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|GATBPS_V_PAD.am|%},
   {%|
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
