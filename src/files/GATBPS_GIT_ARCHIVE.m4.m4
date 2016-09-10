@@ -43,16 +43,12 @@ m4_if(
     one character that is not a space, tab, or newline
   ])])[]dnl
 m4_if(
-  m4_bregexp([$4], [^]dnl
-[[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
-[[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
-[[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
-[[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
-[[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
-[$]),
+  m4_bregexp([$4], [[^
+	 ]]),
   [-1],
   [gatbps_fatal([
-    GATBPS_GIT_ARCHIVE requires its third argument to be a hash
+    GATBPS_GIT_ARCHIVE requires its fourth argument to contain at least
+    one character that is not a space, tab, or newline
   ])])[]dnl
 m4_if(
   m4_eval([$# >= 5]),
