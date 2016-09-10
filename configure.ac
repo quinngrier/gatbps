@@ -309,472 +309,628 @@ AC_SUBST([TEXI2DVIFLAGS])
   [maintainer-clean])[
 
 ]GATBPS_M4(
-  [doc/man/gatbps.1])[
+  [doc/man/gatbps.1],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/CC0-1.0-AC-COPYRIGHT.ac])[
+  [src/files/CC0-1.0-AC-COPYRIGHT.ac],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/CC0-1.0-AM-COPYRIGHT.am])[
+  [src/files/CC0-1.0-AM-COPYRIGHT.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/CC0-1.0-appendix.texi])[
+  [src/files/CC0-1.0-appendix.texi],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/CC0-1.0-commit.txt])[
+  [src/files/CC0-1.0-commit.txt],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/CC0-1.0-copying.texi])[
+  [src/files/CC0-1.0-copying.texi],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/CC0-1.0-file.txt])[
+  [src/files/CC0-1.0-file.txt],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/CC0-1.0.txt])[
+  [src/files/CC0-1.0.txt],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/DATE.sh])[
+  [src/files/DATE.sh],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_ARG_ENABLE.m4])[
+  [src/files/GATBPS_ARG_ENABLE.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_ARG_ENABLE_BOOL.m4])[
+  [src/files/GATBPS_ARG_ENABLE_BOOL.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_ARG_WITH.m4])[
+  [src/files/GATBPS_ARG_WITH.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_ARG_WITH_BOOL.m4])[
+  [src/files/GATBPS_ARG_WITH_BOOL.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_CACHE_CHECK.m4])[
+  [src/files/GATBPS_CACHE_CHECK.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_CHECK_BASIC.m4])[
+  [src/files/GATBPS_CHECK_BASIC.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_CHECK_CFLAG.m4])[
+  [src/files/GATBPS_CHECK_CFLAG.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_CHECK_COMPILE.m4])[
+  [src/files/GATBPS_CHECK_COMPILE.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_CHECK_HEADER.m4])[
+  [src/files/GATBPS_CHECK_HEADER.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_CHECK_LIB.m4])[
+  [src/files/GATBPS_CHECK_LIB.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_CHECK_LINK.m4])[
+  [src/files/GATBPS_CHECK_LINK.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_CHECK_RUN.m4])[
+  [src/files/GATBPS_CHECK_RUN.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_CHECK_SHEBANG_LINE.m4])[
+  [src/files/GATBPS_CHECK_SHEBANG_LINE.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_CHECK_SOFT_INCLUDE.m4])[
+  [src/files/GATBPS_CHECK_SOFT_INCLUDE.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_CHECK_VARS.m4])[
+  [src/files/GATBPS_CHECK_VARS.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_CONFIG_FILE.m4])[
+  [src/files/GATBPS_CONFIG_FILE.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_CONFIG_FILE_RULES.am])[
+  [src/files/GATBPS_CONFIG_FILE_RULES.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_CONFIG_FILE_SUBST.m4])[
+  [src/files/GATBPS_CONFIG_FILE_SUBST.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_CP.m4])[
+  [src/files/GATBPS_CP.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_CP_RULES.am])[
+  [src/files/GATBPS_CP_RULES.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_CP_SUBST.m4])[
+  [src/files/GATBPS_CP_SUBST.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_DEFINE_AT.m4])[
+  [src/files/GATBPS_DEFINE_AT.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_DEFINE_CLASSPATH.m4])[
+  [src/files/GATBPS_DEFINE_CLASSPATH.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_DEFINE_DATE.m4])[
+  [src/files/GATBPS_DEFINE_DATE.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_DEFINE_HARD_INCLUDE.m4])[
+  [src/files/GATBPS_DEFINE_HARD_INCLUDE.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_DEFINE_JARFLAGS.m4])[
+  [src/files/GATBPS_DEFINE_JARFLAGS.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_DEFINE_JAVACFLAGS.m4])[
+  [src/files/GATBPS_DEFINE_JAVACFLAGS.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_DEFINE_JAVADOCFLAGS.m4])[
+  [src/files/GATBPS_DEFINE_JAVADOCFLAGS.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_DEFINE_VERSION.m4])[
+  [src/files/GATBPS_DEFINE_VERSION.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_DEFINE_enable_SHEBANG_LINES.m4])[
+  [src/files/GATBPS_DEFINE_enable_SHEBANG_LINES.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_DEFINE_javadir.m4])[
+  [src/files/GATBPS_DEFINE_javadir.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_DOCKER.m4])[
+  [src/files/GATBPS_DOCKER.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_DOCKER_RULES.am])[
+  [src/files/GATBPS_DOCKER_RULES.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_DOCKER_SUBST.m4])[
+  [src/files/GATBPS_DOCKER_SUBST.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_GIT_ARCHIVE.m4])[
+  [src/files/GATBPS_GIT_ARCHIVE.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_GIT_ARCHIVE_RULES.am])[
+  [src/files/GATBPS_GIT_ARCHIVE_RULES.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_GIT_ARCHIVE_SUBST.m4])[
+  [src/files/GATBPS_GIT_ARCHIVE_SUBST.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_GIT_CLONE.m4])[
+  [src/files/GATBPS_GIT_CLONE.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_GIT_CLONE_RULES.am])[
+  [src/files/GATBPS_GIT_CLONE_RULES.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_GIT_CLONE_SUBST.m4])[
+  [src/files/GATBPS_GIT_CLONE_SUBST.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_JAVA.m4])[
+  [src/files/GATBPS_JAVA.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_JAVA_RULES.am])[
+  [src/files/GATBPS_JAVA_RULES.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_JAVA_SUBST.m4])[
+  [src/files/GATBPS_JAVA_SUBST.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_M4.m4])[
+  [src/files/GATBPS_M4.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_M4_RULES.am])[
+  [src/files/GATBPS_M4_RULES.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_M4_SUBST.m4])[
+  [src/files/GATBPS_M4_SUBST.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_MSG_ERROR.m4])[
+  [src/files/GATBPS_MSG_ERROR.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_MSG_FAILURE.m4])[
+  [src/files/GATBPS_MSG_FAILURE.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_MSG_NOTICE.m4])[
+  [src/files/GATBPS_MSG_NOTICE.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_MSG_WARN.m4])[
+  [src/files/GATBPS_MSG_WARN.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_PROG_AWK.m4])[
+  [src/files/GATBPS_PROG_AWK.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_PROG_DOCKER.m4])[
+  [src/files/GATBPS_PROG_DOCKER.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_PROG_DOXYGEN.m4])[
+  [src/files/GATBPS_PROG_DOXYGEN.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_PROG_GIT.m4])[
+  [src/files/GATBPS_PROG_GIT.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_PROG_GREP.m4])[
+  [src/files/GATBPS_PROG_GREP.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_PROG_GZIP.m4])[
+  [src/files/GATBPS_PROG_GZIP.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_PROG_JAR.m4])[
+  [src/files/GATBPS_PROG_JAR.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_PROG_JAVAC.m4])[
+  [src/files/GATBPS_PROG_JAVAC.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_PROG_JAVADOC.m4])[
+  [src/files/GATBPS_PROG_JAVADOC.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_PROG_JDEPS.m4])[
+  [src/files/GATBPS_PROG_JDEPS.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_PROG_M4.m4])[
+  [src/files/GATBPS_PROG_M4.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_PROG_MAKEINFO.m4])[
+  [src/files/GATBPS_PROG_MAKEINFO.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_PROG_MKDIR_P.m4])[
+  [src/files/GATBPS_PROG_MKDIR_P.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_PROG_OPENSSL.m4])[
+  [src/files/GATBPS_PROG_OPENSSL.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_PROG_SED.m4])[
+  [src/files/GATBPS_PROG_SED.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_PROG_TAR.m4])[
+  [src/files/GATBPS_PROG_TAR.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_PROG_TEXI2ANY.m4])[
+  [src/files/GATBPS_PROG_TEXI2ANY.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_PROG_WGET.m4])[
+  [src/files/GATBPS_PROG_WGET.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_PROG_XZ.m4])[
+  [src/files/GATBPS_PROG_XZ.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_TAR.m4])[
+  [src/files/GATBPS_TAR.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_TAR_RULES.am])[
+  [src/files/GATBPS_TAR_RULES.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_TAR_SUBST.m4])[
+  [src/files/GATBPS_TAR_SUBST.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_V_PAD.am])[
+  [src/files/GATBPS_V_PAD.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_WGET.m4])[
+  [src/files/GATBPS_WGET.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_WGET_RULES.am])[
+  [src/files/GATBPS_WGET_RULES.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_WGET_SUBST.m4])[
+  [src/files/GATBPS_WGET_SUBST.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_XZ.m4])[
+  [src/files/GATBPS_XZ.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_XZ_RULES.am])[
+  [src/files/GATBPS_XZ_RULES.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_XZ_SUBST.m4])[
+  [src/files/GATBPS_XZ_SUBST.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/INPUT_FILTER.sh.in])[
+  [src/files/INPUT_FILTER.sh.in],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/Makefile.am.vim])[
+  [src/files/Makefile.am.vim],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/PACKAGEDATE.texi.in])[
+  [src/files/PACKAGEDATE.texi.in],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/PACKAGEVERSION.texi.in])[
+  [src/files/PACKAGEVERSION.texi.in],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/PACKAGE_STRING.df.in])[
+  [src/files/PACKAGE_STRING.df.in],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/PACKAGE_VERSION.df.in])[
+  [src/files/PACKAGE_VERSION.df.in],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/TEST_EXIT.h])[
+  [src/files/TEST_EXIT.h],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/VERSION.sh])[
+  [src/files/VERSION.sh],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/VERSION_LTCUR.sh])[
+  [src/files/VERSION_LTCUR.sh],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/awk-form.sh])[
+  [src/files/awk-form.sh],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/bdots.texi])[
+  [src/files/bdots.texi],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/bothcontents.texi])[
+  [src/files/bothcontents.texi],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/configure.ac.vim])[
+  [src/files/configure.ac.vim],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/contents.texi])[
+  [src/files/contents.texi],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/cp.am])[
+  [src/files/cp.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/docbook-dist.am])[
+  [src/files/docbook-dist.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/docbook.am])[
+  [src/files/docbook.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/docker.am])[
+  [src/files/docker.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/doxygen-dist.am])[
+  [src/files/doxygen-dist.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/doxygen.am])[
+  [src/files/doxygen.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/dslash.texi])[
+  [src/files/dslash.texi],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/dvi-dist.am])[
+  [src/files/dvi-dist.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/echo.sh])[
+  [src/files/echo.sh],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/gatbps_fatal.m4])[
+  [src/files/gatbps_fatal.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/gatbps_notice.m4])[
+  [src/files/gatbps_notice.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/gequ.texi])[
+  [src/files/gequ.texi],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/git.am])[
+  [src/files/git.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/gzip.am])[
+  [src/files/gzip.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/html-dist.am])[
+  [src/files/html-dist.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/indent.texi])[
+  [src/files/indent.texi],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/ipez.texi])[
+  [src/files/ipez.texi],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/java-dist.am])[
+  [src/files/java-dist.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/java.am])[
+  [src/files/java.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/javadoc-dist.am])[
+  [src/files/javadoc-dist.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/javadoc.am])[
+  [src/files/javadoc.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/lcei.texi])[
+  [src/files/lcei.texi],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/lequ.texi])[
+  [src/files/lequ.texi],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/lflo.texi])[
+  [src/files/lflo.texi],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/m4.am])[
+  [src/files/m4.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/math.texi])[
+  [src/files/math.texi],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/mdot.texi])[
+  [src/files/mdot.texi],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/mdots.texi])[
+  [src/files/mdots.texi],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/msign.texi])[
+  [src/files/msign.texi],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/mtvskipbot.texi])[
+  [src/files/mtvskipbot.texi],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/mtvskiptop.texi])[
+  [src/files/mtvskiptop.texi],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/nequ.texi])[
+  [src/files/nequ.texi],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/pdf-dist.am])[
+  [src/files/pdf-dist.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/plaintext-dist.am])[
+  [src/files/plaintext-dist.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/plaintext.am])[
+  [src/files/plaintext.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/prm.texi])[
+  [src/files/prm.texi],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/ps-dist.am])[
+  [src/files/ps-dist.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/rarrow.texi])[
+  [src/files/rarrow.texi],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/rcei.texi])[
+  [src/files/rcei.texi],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/rflo.texi])[
+  [src/files/rflo.texi],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/rules_code.m4])[
+  [src/files/rules_code.m4],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/sbs.texi])[
+  [src/files/sbs.texi],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/sh-form.sh])[
+  [src/files/sh-form.sh],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/shortcontents.texi])[
+  [src/files/shortcontents.texi],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/sps.texi])[
+  [src/files/sps.texi],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/tar.am])[
+  [src/files/tar.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/texi-form.sh])[
+  [src/files/texi-form.sh],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/texinfo.css])[
+  [src/files/texinfo.css],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/troff-form.sh])[
+  [src/files/troff-form.sh],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/wget.am])[
+  [src/files/wget.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/xml-dist.am])[
+  [src/files/xml-dist.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/xml.am])[
+  [src/files/xml.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/xz.am])[
+  [src/files/xz.am],
+  [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/gatbps])[
+  [src/gatbps],
+  [mostlyclean])[
 
 ]dnl end_targets
 [
