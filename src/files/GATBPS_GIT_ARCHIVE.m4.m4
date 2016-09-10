@@ -81,6 +81,9 @@ m4_pushdef(
   [source_sh],
   m4_bpatsubst([[[$2]]], ['], ['\\'']))[]dnl
 m4_pushdef(
+  [tree_sh],
+  m4_bpatsubst([[[$4]]], ['], ['\\'']))[]dnl
+m4_pushdef(
   [prereq_sh],
   m4_bpatsubst([[[$6]]], ['], ['\\'']))[]dnl
 [
@@ -119,7 +122,7 @@ m4_if([$6], [], [], [[
     $][(GIT) \
       '\''cat-file'\'' \
       '\''-e'\'' \
-      '\'']$4['\'' \
+      ]tree_sh[ \
     || ( \
       $][(GIT) \
         '\''remote'\'' \
@@ -128,7 +131,7 @@ m4_if([$6], [], [], [[
       $][(GIT) \
         '\''cat-file'\'' \
         '\''-e'\'' \
-        '\'']$4['\'' \
+        ]tree_sh[ \
       || '\''exit'\'' "$][$][{?}"; \
       '\''exit'\'' '\''0'\''; \
     ) || '\''exit'\'' "$][$][{?}"; \
@@ -136,7 +139,7 @@ m4_if([$6], [], [], [[
       '\''archive'\'' \
       '\''--format=tar'\'' \
       '\''--prefix='\'']$3['\''/'\'' \
-      '\'']$4['\'' \
+      ]tree_sh[ \
     || '\''exit'\'' "$][$][{?}"; \
     '\''exit'\'' '\''0'\''; \
   :;) >'\''./'\'']target_sh['\''.tmp'\'' \
@@ -162,6 +165,7 @@ clean-]target_sh[:
 '
 ]dnl
 m4_popdef([prereq_sh])[]dnl
+m4_popdef([tree_sh])[]dnl
 m4_popdef([source_sh])[]dnl
 m4_popdef([target_sh])[]dnl
 [
