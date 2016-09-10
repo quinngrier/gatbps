@@ -24,10 +24,10 @@ function s:FormatAutoconfFile()
 
   let affected_search_history = 0
 
-  let mark = '\m^dnl \%(begin\|end\)_'
+  let mark = '\m^]dnl \%(begin\|end\)_'
 
-  let s1 = '\m^dnl begin_includes$'
-  let s2 = '\m^dnl end_includes$'
+  let s1 = '\m^]dnl begin_includes\n[$'
+  let s2 = '\m^]dnl end_includes$'
   call cursor(1, 1)
   let n1 = search(s1, 'cW')
   while n1 != 0
@@ -38,13 +38,13 @@ function s:FormatAutoconfFile()
     endif
     call cursor(n1, 1)
     if search(mark, 'W') == n2
-      exec n1 . ',' . n2 . 'g/\m^$/d'
-      exec n1 . 's/\m$/\r/'
+      exec n1 . '+1,' . n2 . 'g/\m^$/d'
+      exec n1 . '+1s/\m$/\r/'
       call cursor(n1, 1)
       let n2 = search(s2, 'W')
-      exec n1 . '+1,' . n2 . '-1s/\m\]/\b]/eg'
-      exec n1 . '+1,' . n2 . '-1sort u'
-      exec n1 . '+1,' . n2 . '-1s/\m\b\]/]/eg'
+      exec n1 . '+2,' . n2 . '-1s/\m\]/\b]/eg'
+      exec n1 . '+2,' . n2 . '-1sort u'
+      exec n1 . '+2,' . n2 . '-1s/\m\b\]/]/eg'
       call cursor(n1, 1)
       let n2 = search(s2, 'W')
       exec n2 . 's/\m^/\r/'
@@ -54,8 +54,8 @@ function s:FormatAutoconfFile()
     let n1 = search(s1, 'W')
   endwhile
 
-  let s1 = '\m^dnl begin_targets$'
-  let s2 = '\m^dnl end_targets$'
+  let s1 = '\m^]dnl begin_targets\n[$'
+  let s2 = '\m^]dnl end_targets$'
   call cursor(1, 1)
   let n1 = search(s1, 'cW')
   while n1 != 0
@@ -70,25 +70,25 @@ function s:FormatAutoconfFile()
       let n3 = search('\m\b', 'W')
       if n3 == 0 || n3 > n2
         exec n2 . 's/\m^/\r\r/'
-        exec n1 . 's/\m$/\r/'
+        exec n1 . '+1s/\m$/\r/'
         call cursor(n1, 1)
         let n2 = search(s2, 'W')
-        exec n1 . '+1,' . n2 . '-1g/\m./s/\m$/\b/'
-        exec n1 . '+1,' . n2 . '-2g/\m^\n./.+1,/\m^$/-1j!'
+        exec n1 . '+2,' . n2 . '-1g/\m./s/\m$/\b/'
+        exec n1 . '+2,' . n2 . '-2g/\m^\n./.+1,/\m^$/-1j!'
         call cursor(n1, 1)
         let n2 = search(s2, 'W')
-        exec n1 . '+1,' . n2 . '-1g/\m^$/d'
+        exec n1 . '+2,' . n2 . '-1g/\m^$/d'
         call cursor(n1, 1)
         let n2 = search(s2, 'W')
-        exec n1 . 's/\m$/\r/'
+        exec n1 . '+1s/\m$/\r/'
         call cursor(n1, 1)
         let n2 = search(s2, 'W')
-        exec n1 . '+1,' . n2 . '-1s/\m\]/\b]/eg'
-        exec n1 . '+1,' . n2 . '-1sort u'
-        exec n1 . '+1,' . n2 . '-1s/\m\b\]/]/eg'
+        exec n1 . '+2,' . n2 . '-1s/\m\]/\b]/eg'
+        exec n1 . '+2,' . n2 . '-1sort u'
+        exec n1 . '+2,' . n2 . '-1s/\m\b\]/]/eg'
         call cursor(n1, 1)
         let n2 = search(s2, 'W')
-        exec n1 . '+1,' . n2 . '-1s/\m\b/\r/eg'
+        exec n1 . '+2,' . n2 . '-1s/\m\b/\r/eg'
         let affected_search_history = 1
       endif
     endif
