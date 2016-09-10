@@ -250,9 +250,6 @@ java-]gatbps_x[:
         $][(java_]gatbps_y[_JAVACFLAGS) \
         >'\''java-]gatbps_x[.tmp'\'' \
       || '\''exit'\'' "$][$][{?}"; \
-      javacflags=`'\''cat'\'' \
-        '\''java-]gatbps_x[.tmp'\'' \
-      ` || '\''exit'\'' "$][$][{?}"; \
       x='\'''\''; \
       '\''break'\''; \
     done; \
@@ -265,11 +262,11 @@ java-]gatbps_x[:
           $][(GATBPS_JAVACFLAGS) \
           >'\''java-]gatbps_x[.tmp'\'' \
         || '\''exit'\'' "$][$][{?}"; \
-        javacflags=`'\''cat'\'' \
-          '\''java-]gatbps_x[.tmp'\'' \
-        ` || '\''exit'\'' "$][$][{?}"; \
       ;; \
     esac; \
+    javacflags=`'\''cat'\'' \
+      '\''java-]gatbps_x[.tmp'\'' \
+    ` || '\''exit'\'' "$][$][{?}"; \
     '\''sh'\'' \
       '\''-'\'' \
       $][(srcdir)'\''/build-aux/sh-form.sh'\'' \

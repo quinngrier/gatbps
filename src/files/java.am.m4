@@ -298,9 +298,6 @@ java-main:
         $(java_JAVACFLAGS) \
         >'java-main.tmp' \
       || 'exit' "$${?}"; \
-      javacflags=`'cat' \
-        'java-main.tmp' \
-      ` || 'exit' "$${?}"; \
       x=''; \
       'break'; \
     done; \
@@ -313,11 +310,11 @@ java-main:
           $(GATBPS_JAVACFLAGS) \
           >'java-main.tmp' \
         || 'exit' "$${?}"; \
-        javacflags=`'cat' \
-          'java-main.tmp' \
-        ` || 'exit' "$${?}"; \
       ;; \
     esac; \
+    javacflags=`'cat' \
+      'java-main.tmp' \
+    ` || 'exit' "$${?}"; \
     'sh' \
       '-' \
       $(srcdir)'/build-aux/sh-form.sh' \
