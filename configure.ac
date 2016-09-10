@@ -243,6 +243,7 @@ AM_SUBST_NOTMAKE([TEXI2ANY_DEFAULT_TROFF])
 AC_SUBST([TEXI2DVIFLAGS])
 
 [
+
 ]dnl begin_targets
 [
 
@@ -776,15 +777,17 @@ AC_SUBST([TEXI2DVIFLAGS])
   [src/gatbps])[
 
 ]dnl end_targets
+[
 
-GATBPS_CONFIG_FILE_SUBST
-GATBPS_CP_SUBST
-GATBPS_M4_SUBST
+]GATBPS_CONFIG_FILE_SUBST[
+]GATBPS_CP_SUBST[
+]GATBPS_M4_SUBST[
 
-AC_CONFIG_FILES([Makefile])
+]AC_CONFIG_FILES([Makefile])[
 
-AC_OUTPUT
+]AC_OUTPUT[
 
+]dnl
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by
