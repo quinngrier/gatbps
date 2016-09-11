@@ -24,10 +24,10 @@ function s:FormatAutoconfFile()
 
   let affected_search_history = 0
 
-  let mark = '\m^]dnl \%(begin\|end\)_'
+  let mark = '\m^\]dnl \%(begin\|end\)_'
 
-  let s1 = '\m^]dnl begin_includes\n[$'
-  let s2 = '\m^]dnl end_includes$'
+  let s1 = '\m^\]dnl begin_includes\n\[$'
+  let s2 = '\m^\]dnl end_includes$'
   call cursor(1, 1)
   let n1 = search(s1, 'cW')
   while n1 != 0
@@ -54,8 +54,8 @@ function s:FormatAutoconfFile()
     let n1 = search(s1, 'W')
   endwhile
 
-  let s1 = '\m^]dnl begin_targets\n[$'
-  let s2 = '\m^]dnl end_targets$'
+  let s1 = '\m^\]dnl begin_targets\n\[$'
+  let s2 = '\m^\]dnl end_targets$'
   call cursor(1, 1)
   let n1 = search(s1, 'cW')
   while n1 != 0
