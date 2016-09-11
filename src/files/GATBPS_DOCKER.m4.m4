@@ -20,12 +20,12 @@ AC_DEFUN([GATBPS_DOCKER], [[{
 #]dnl
 m4_case(
   [$#],
+  [3], [],
   [4], [],
   [5], [],
   [6], [],
-  [7], [],
   [gatbps_fatal([
-    GATBPS_DOCKER requires exactly 4, 5, 6, or 7 arguments
+    GATBPS_DOCKER requires exactly 3, 4, 5, or 6 arguments
   ])])[]dnl
 m4_if(
   m4_bregexp([$1], [[^
@@ -44,10 +44,10 @@ m4_if(
     one character that is not a space, tab, or newline
   ])])[]dnl
 m4_if(
-  m4_eval([$# >= 6]),
+  m4_eval([$# >= 5]),
   [1],
   [m4_case(
-    [$6],
+    [$5],
     [clean], [],
     [distclean], [],
     [maintainer-clean], [],
@@ -64,14 +64,14 @@ m4_pushdef(
   m4_bpatsubst([[[$3]]], ['], ['\\'']))[]dnl
 m4_pushdef(
   [prereq_sh],
-  m4_bpatsubst([[[$7]]], ['], ['\\'']))[]dnl
+  m4_bpatsubst([[[$6]]], ['], ['\\'']))[]dnl
 [
 
 GATBPS_DOCKER_RULES="$][{GATBPS_DOCKER_RULES}"'
 
-]target_sh[: ]m4_if([$7], [], [source_sh], [prereq_sh])[
+]target_sh[: ]m4_if([$6], [], [source_sh], [prereq_sh])[
 	$][(GATBPS_V_DOCKER): make: $][@]dnl
-m4_if([$7], [], [], [[
+m4_if([$6], [], [], [[
 	$][(AM@&t@_V_at)$][(MAKE) \
   $][(AM@&t@_MAKEFLAGS) \
   ]source_sh[ \
@@ -93,12 +93,12 @@ m4_if([$7], [], [], [[
     $][(DOCKER) \
       '\''tag'\'' \
       '\''tmp'\''"$][$][{$][$][}" \
-      ]$5[ \
+      ]$4[ \
     || '\''exit'\'' "$][$][{?}"; \
     ( \
       $][(DOCKER) \
         '\''save'\'' \
-        ]$5[ \
+        ]$4[ \
       || '\''exit'\'' "$][$][{?}"; \
       '\''exit'\'' '\''0'\''; \
     :;) \
@@ -122,7 +122,7 @@ clean-]target_sh[:
   '\''./'\'']target_sh[ \
 ;
 
-]m4_if([$6], [], [[mostlyclean]], [[$6]])[-local: clean-]target_sh[
+]m4_if([$5], [], [[mostlyclean]], [[$5]])[-local: clean-]target_sh[
 
 '
 ]dnl
