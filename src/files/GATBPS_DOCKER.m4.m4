@@ -223,6 +223,8 @@ clean-]output_file_sh[:
 	-'\''rm'\'' \
   '\''-f'\'' \
   '\''./'\'']output_file_sh[ \
+  '\''./'\'']output_file_sh['\''.tmp'\'' \
+  '\''build-tmp/GATBPS_DOCKER/'\'']input_directory_sh[ \
 ;
 
 ]m4_if([$5], [], [[mostlyclean]], [[$5]])[-local: clean-]output_file_sh[
