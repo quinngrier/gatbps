@@ -24,8 +24,9 @@ m4_case(
   [3], [],
   [4], [],
   [5], [],
+  [6], [],
   [gatbps_fatal([
-    GATBPS_CP requires exactly 2, 3, 4, or 5 arguments
+    GATBPS_CP requires exactly 2, 3, 4, 5, or 6 arguments
   ])])[]dnl
 m4_if(
   m4_bregexp([$1], [[^
@@ -56,10 +57,10 @@ m4_if(
       "executable", or "regular"
     ])])])[]dnl
 m4_if(
-  m4_eval([$# >= 4]),
+  m4_eval([$# >= 5]),
   [1],
   [m4_case(
-    [$4],
+    [$5],
     [clean], [],
     [distclean], [],
     [maintainer-clean], [],
@@ -69,10 +70,10 @@ m4_if(
       "distclean", "maintainer-clean", or "mostlyclean"
     ])])])[]dnl
 m4_if(
-  m4_eval([$# >= 5]),
+  m4_eval([$# >= 6]),
   [1],
   [m4_if(
-    m4_bregexp([$5], [[^
+    m4_bregexp([$6], [[^
 	 ]]),
     [-1],
     [gatbps_fatal([
@@ -87,17 +88,17 @@ m4_pushdef(
   m4_bpatsubst([[[$2]]], ['], ['\\'']))[]dnl
 m4_pushdef(
   [leaf_prerequisites],
-  m4_bpatsubst([[[$5]]], ['], ['\\'']))[]dnl
+  m4_bpatsubst([[[$6]]], ['], ['\\'']))[]dnl
 [
 
 GATBPS_CP_RULES="$][{GATBPS_CP_RULES}"'
 
-]target_sh[: ]m4_if([$5], [], [source_sh], [leaf_prerequisites])[
+]target_sh[: ]m4_if([$6], [], [source_sh], [leaf_prerequisites])[
 	$][(AM@&t@_V_at)|%}dnl
 contains_at_least_one_word_sh(
   {%|MKDIR_P|%}){%|
 	$][(GATBPS_V_CP): make: $][@]dnl
-m4_if([$5], [], [], [[
+m4_if([$6], [], [], [[
 	$][(AM@&t@_V_at)$][(MAKE) \
   $][(AM@&t@_MAKEFLAGS) \
   ]source_sh[ \
@@ -145,7 +146,7 @@ m4_if([$3], [directory], [[
   '\''./'\'']target_sh[ \
 ;
 
-]m4_if([$4], [], [[mostlyclean]], [[$4]])[-local: clean-]target_sh[
+]m4_if([$5], [], [[mostlyclean]], [[$5]])[-local: clean-]target_sh[
 
 '
 ]dnl
