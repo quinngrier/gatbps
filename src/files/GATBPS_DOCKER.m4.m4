@@ -60,6 +60,9 @@ m4_pushdef(
   [output_file_sh],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
 m4_pushdef(
+  [input_directory_sh],
+  m4_bpatsubst([[[$2]]], ['], ['\\'']))[]dnl
+m4_pushdef(
   [source_sh],
   m4_bpatsubst([[[$3]]], ['], ['\\'']))[]dnl
 m4_pushdef(
@@ -81,7 +84,7 @@ m4_if([$6], [], [], [[
   '\''-r'\'' \
   '\''./'\'']output_file_sh[ \
   '\''./'\'']output_file_sh['\''.tmp'\'' \
-  '\''build-tmp/GATBPS_DOCKER/'\'']$2[ \
+  '\''build-tmp/GATBPS_DOCKER/'\'']input_directory_sh[ \
 ;
 	$][(AM@&t@_V_at){ \
   ( \
@@ -143,24 +146,24 @@ m4_if([$6], [], [], [[
     '\''readonly'\'' '\''merge'\''; \
     case "$][$][{merge}" in \
       '\''yes'\'') \
-        context='\''build-tmp/GATBPS_DOCKER/'\'']$2[; \
+        context='\''build-tmp/GATBPS_DOCKER/'\'']input_directory_sh[; \
         '\''readonly'\'' '\''context'\''; \
         $][(MKDIR_P) \
           "$][$][{context}" \
         || '\''exit'\'' "$][$][{?}"; \
         '\''cp'\'' \
           '\''-R'\'' \
-          '\''./'\'']$2['\''/'\''* \
+          '\''./'\'']input_directory_sh['\''/'\''* \
           "$][$][{context}" \
         || '\''exit'\'' "$][$][{?}"; \
         '\''cp'\'' \
           '\''-R'\'' \
-          $][(srcdir)'\''/'\'']$2['\''/'\''* \
+          $][(srcdir)'\''/'\'']input_directory_sh['\''/'\''* \
           "$][$][{context}" \
         || '\''exit'\'' "$][$][{?}"; \
       ;; \
       '\''no'\'') \
-        context="$][$][{context}"'\''/'\'']$2[; \
+        context="$][$][{context}"'\''/'\'']input_directory_sh[; \
         '\''readonly'\'' '\''context'\''; \
       ;; \
     esac; \
@@ -196,7 +199,7 @@ m4_foreach_w([name], [$4], [[
   '\''rm'\'' \
     '\''-f'\'' \
     '\''-r'\'' \
-    '\''build-tmp/GATBPS_DOCKER/'\'']$2[ \
+    '\''build-tmp/GATBPS_DOCKER/'\'']input_directory_sh[ \
   ; \
   case "$][$][{x}" in \
     '\''0'\'') \
@@ -228,6 +231,7 @@ clean-]output_file_sh[:
 ]dnl
 m4_popdef([prereq_sh])[]dnl
 m4_popdef([source_sh])[]dnl
+m4_popdef([input_directory_sh])[]dnl
 m4_popdef([output_file_sh])[]dnl
 [
 :;}]])[]dnl
