@@ -43,7 +43,7 @@ m4_if(
     one character that is not a space, tab, or newline
   ])])[]dnl
 m4_if(
-  m4_bregexp([$4], [[^
+  m4_bregexp([$3], [[^
 	 ]]),
   [-1],
   [gatbps_fatal([
@@ -81,10 +81,10 @@ m4_pushdef(
   [source_sh],
   m4_bpatsubst([[[$2]]], ['], ['\\'']))[]dnl
 m4_pushdef(
-  [prefix_sh],
+  [tree_sh],
   m4_bpatsubst([[[$3]]], ['], ['\\'']))[]dnl
 m4_pushdef(
-  [tree_sh],
+  [prefix_sh],
   m4_bpatsubst([[[$4]]], ['], ['\\'']))[]dnl
 m4_pushdef(
   [prereq_sh],
@@ -199,8 +199,8 @@ clean-]target_sh[:
 '
 ]dnl
 m4_popdef([prereq_sh])[]dnl
-m4_popdef([tree_sh])[]dnl
 m4_popdef([prefix_sh])[]dnl
+m4_popdef([tree_sh])[]dnl
 m4_popdef([source_sh])[]dnl
 m4_popdef([target_sh])[]dnl
 [
