@@ -36,7 +36,7 @@ m4_if(
     one character that is not a space, tab, or newline
   ])])[]dnl
 m4_if(
-  m4_bregexp([$3], [[^
+  m4_bregexp([$4], [[^
 	 ]]),
   [-1],
   [gatbps_fatal([
@@ -63,11 +63,11 @@ m4_pushdef(
   [input_directory_sh],
   m4_bpatsubst([[[$2]]], ['], ['\\'']))[]dnl
 m4_pushdef(
-  [source_sh],
-  m4_bpatsubst([[[$3]]], ['], ['\\'']))[]dnl
-m4_pushdef(
   [image_names],
-  [[$4]])[]dnl
+  [[$3]])[]dnl
+m4_pushdef(
+  [source_sh],
+  m4_bpatsubst([[[$4]]], ['], ['\\'']))[]dnl
 m4_pushdef(
   [prereq_sh],
   m4_bpatsubst([[[$6]]], ['], ['\\'']))[]dnl
@@ -235,8 +235,8 @@ clean-]output_file_sh[:
 '
 ]dnl
 m4_popdef([prereq_sh])[]dnl
-m4_popdef([image_names])[]dnl
 m4_popdef([source_sh])[]dnl
+m4_popdef([image_names])[]dnl
 m4_popdef([input_directory_sh])[]dnl
 m4_popdef([output_file_sh])[]dnl
 [
