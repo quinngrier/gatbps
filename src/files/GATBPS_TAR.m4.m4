@@ -93,7 +93,7 @@ m4_pushdef(
     [m4_dquote(source_sh)],
     [m4_bpatsubst([[[$4]]], ['], ['\\''])]))[]dnl
 m4_pushdef(
-  [prereq_sh],
+  [leaf_prerequisites],
   m4_bpatsubst([[[$6]]], ['], ['\\'']))[]dnl
 [
 
@@ -103,7 +103,7 @@ GATBPS_TAR_RULES="$][{GATBPS_TAR_RULES}"'
   [$6],
   [],
   [child_prerequisites],
-  [prereq_sh])[
+  [leaf_prerequisites])[
 	$][(AM@&t@_V_at)|%}dnl
 contains_at_least_one_word_sh(
   {%|MKDIR_P|%}){%|
@@ -190,7 +190,7 @@ clean-]target_sh[:
 
 '
 ]dnl
-m4_popdef([prereq_sh])[]dnl
+m4_popdef([leaf_prerequisites])[]dnl
 m4_popdef([child_prerequisites])[]dnl
 m4_popdef([source_sh])[]dnl
 m4_popdef([target_sh])[]dnl

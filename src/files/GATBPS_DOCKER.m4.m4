@@ -69,13 +69,13 @@ m4_pushdef(
   [source_sh],
   m4_bpatsubst([[[$4]]], ['], ['\\'']))[]dnl
 m4_pushdef(
-  [prereq_sh],
+  [leaf_prerequisites],
   m4_bpatsubst([[[$6]]], ['], ['\\'']))[]dnl
 [
 
 GATBPS_DOCKER_RULES="$][{GATBPS_DOCKER_RULES}"'
 
-]output_file_sh[: ]m4_if([$6], [], [source_sh], [prereq_sh])[
+]output_file_sh[: ]m4_if([$6], [], [source_sh], [leaf_prerequisites])[
 	$][(GATBPS_V_DOCKER): make: $][@]dnl
 m4_if([$6], [], [], [[
 	$][(AM@&t@_V_at)$][(MAKE) \
@@ -234,7 +234,7 @@ clean-]output_file_sh[:
 
 '
 ]dnl
-m4_popdef([prereq_sh])[]dnl
+m4_popdef([leaf_prerequisites])[]dnl
 m4_popdef([source_sh])[]dnl
 m4_popdef([image_names])[]dnl
 m4_popdef([input_directory_sh])[]dnl
