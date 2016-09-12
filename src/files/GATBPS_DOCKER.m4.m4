@@ -66,6 +66,9 @@ m4_pushdef(
   [source_sh],
   m4_bpatsubst([[[$3]]], ['], ['\\'']))[]dnl
 m4_pushdef(
+  [image_names],
+  [[$4]])[]dnl
+m4_pushdef(
   [prereq_sh],
   m4_bpatsubst([[[$6]]], ['], ['\\'']))[]dnl
 [
@@ -171,7 +174,7 @@ m4_if([$6], [], [], [[
       '\''build'\'' \
       '\''--tag'\'' \
       '\''tmp'\''"$][$][{$][$][}" \]dnl
-m4_foreach_w([name], [$4], [[
+m4_foreach_w([name], image_names, [[
       '\''--tag'\'' \
       '\'']m4_bpatsubst(name, ['], ['\''])['\'' \]])[
       "$][$][{context}" \
@@ -185,7 +188,7 @@ m4_foreach_w([name], [$4], [[
     $][(DOCKER) \
       '\''save'\'' \
       "$][$][{hash}" \]dnl
-m4_foreach_w([name], [$4], [[
+m4_foreach_w([name], image_names, [[
       '\'']m4_bpatsubst(name, ['], ['\''])['\'' \]])[
       >'\''./'\'']output_file_sh['\''.tmp'\'' \
     || '\''exit'\'' "$][$][{?}"; \
@@ -232,6 +235,7 @@ clean-]output_file_sh[:
 '
 ]dnl
 m4_popdef([prereq_sh])[]dnl
+m4_popdef([image_names])[]dnl
 m4_popdef([source_sh])[]dnl
 m4_popdef([input_directory_sh])[]dnl
 m4_popdef([output_file_sh])[]dnl
