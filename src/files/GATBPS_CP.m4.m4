@@ -87,13 +87,24 @@ m4_pushdef(
   [source_sh],
   m4_bpatsubst([[[$2]]], ['], ['\\'']))[]dnl
 m4_pushdef(
+  [child_prerequisites],
+  m4_if(
+    [$4],
+    [],
+    [m4_dquote(source_sh)],
+    [m4_bpatsubst([[[$4]]], ['], ['\\''])]))[]dnl
+m4_pushdef(
   [leaf_prerequisites],
   m4_bpatsubst([[[$6]]], ['], ['\\'']))[]dnl
 [
 
 GATBPS_CP_RULES="$][{GATBPS_CP_RULES}"'
 
-]target_sh[: ]m4_if([$6], [], [source_sh], [leaf_prerequisites])[
+]target_sh[: ]m4_if(
+  [$6],
+  [],
+  [child_prerequisites],
+  [leaf_prerequisites])[
 	$][(AM@&t@_V_at)|%}dnl
 contains_at_least_one_word_sh(
   {%|MKDIR_P|%}){%|
@@ -101,7 +112,7 @@ contains_at_least_one_word_sh(
 m4_if([$6], [], [], [[
 	$][(AM@&t@_V_at)$][(MAKE) \
   $][(AM@&t@_MAKEFLAGS) \
-  ]source_sh[ \
+  ]child_prerequisites[ \
 ;]])[
 	$][(AM@&t@_V_at)$][(MKDIR_P) \
   '\''./'\''$][(@D) \
@@ -151,6 +162,7 @@ m4_if([$3], [directory], [[
 '
 ]dnl
 m4_popdef([leaf_prerequisites])[]dnl
+m4_popdef([child_prerequisites])[]dnl
 m4_popdef([source_sh])[]dnl
 m4_popdef([target_sh])[]dnl
 [
