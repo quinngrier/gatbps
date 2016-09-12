@@ -305,8 +305,7 @@ AC_SUBST([TEXI2DVIFLAGS])
 ]GATBPS_CP(
   [gh-pages/$(html_dist_dst)],
   [$(html_dist_dst)],
-  [regular],
-  [maintainer-clean])[
+  [regular])[
 
 ]GATBPS_M4(
   [doc/man/gatbps.1],
