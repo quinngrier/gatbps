@@ -86,13 +86,24 @@ m4_pushdef(
   [source_sh],
   m4_bpatsubst([[[$2]]], ['], ['\\'']))[]dnl
 m4_pushdef(
+  [child_prerequisites],
+  m4_if(
+    [$4],
+    [],
+    [m4_dquote(source_sh)],
+    [m4_bpatsubst([[[$4]]], ['], ['\\''])]))[]dnl
+m4_pushdef(
   [prereq_sh],
   m4_bpatsubst([[[$6]]], ['], ['\\'']))[]dnl
 [
 
 GATBPS_TAR_RULES="$][{GATBPS_TAR_RULES}"'
 
-]target_sh[: ]m4_if([$6], [], [source_sh], [prereq_sh])[
+]target_sh[: ]m4_if(
+  [$6],
+  [],
+  [child_prerequisites],
+  [prereq_sh])[
 	$][(AM@&t@_V_at)|%}dnl
 contains_at_least_one_word_sh(
   {%|MKDIR_P|%}){%|
@@ -100,7 +111,7 @@ contains_at_least_one_word_sh(
 m4_if([$6], [], [], [[
 	$][(AM@&t@_V_at)$][(MAKE) \
   $][(AM@&t@_MAKEFLAGS) \
-  ]source_sh[ \
+  ]child_prerequisites[ \
 ;]])[
 	$][(AM@&t@_V_at)$][(MKDIR_P) \
   '\''./'\''$][(@D) \
@@ -180,6 +191,7 @@ clean-]target_sh[:
 '
 ]dnl
 m4_popdef([prereq_sh])[]dnl
+m4_popdef([child_prerequisites])[]dnl
 m4_popdef([source_sh])[]dnl
 m4_popdef([target_sh])[]dnl
 [
