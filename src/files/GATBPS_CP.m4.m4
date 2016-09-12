@@ -84,14 +84,14 @@ m4_pushdef(
   [target_sh],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
 m4_pushdef(
-  [source_sh],
+  [input_file_or_directory],
   m4_bpatsubst([[[$2]]], ['], ['\\'']))[]dnl
 m4_pushdef(
   [child_prerequisites],
   m4_if(
     [$4],
     [],
-    [m4_dquote(source_sh)],
+    [m4_dquote(input_file_or_directory)],
     [m4_bpatsubst([[[$4]]], ['], ['\\''])]))[]dnl
 m4_pushdef(
   [leaf_prerequisites],
@@ -118,7 +118,7 @@ m4_if([$6], [], [], [[
   '\''./'\''$][(@D) \
 ;
 	$][(AM@&t@_V_at){ \
-  x=]source_sh[; \
+  x=]input_file_or_directory[; \
   if '\''test'\'' '\''-]dnl
 m4_if([$3], [directory], [[d]], [[f]])['\'' "$][$][{x}"; then \
     d='\''.'\''; \
@@ -163,7 +163,7 @@ m4_if([$3], [directory], [[
 ]dnl
 m4_popdef([leaf_prerequisites])[]dnl
 m4_popdef([child_prerequisites])[]dnl
-m4_popdef([source_sh])[]dnl
+m4_popdef([input_file_or_directory])[]dnl
 m4_popdef([target_sh])[]dnl
 [
 :;}]])[]dnl
