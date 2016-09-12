@@ -57,7 +57,7 @@ m4_if(
       "distclean", "maintainer-clean", or "mostlyclean"
     ])])])[]dnl
 m4_pushdef(
-  [target_sh],
+  [output_file_sh],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
 m4_pushdef(
   [source_sh],
@@ -69,7 +69,7 @@ m4_pushdef(
 
 GATBPS_DOCKER_RULES="$][{GATBPS_DOCKER_RULES}"'
 
-]target_sh[: ]m4_if([$6], [], [source_sh], [prereq_sh])[
+]output_file_sh[: ]m4_if([$6], [], [source_sh], [prereq_sh])[
 	$][(GATBPS_V_DOCKER): make: $][@]dnl
 m4_if([$6], [], [], [[
 	$][(AM@&t@_V_at)$][(MAKE) \
@@ -79,8 +79,8 @@ m4_if([$6], [], [], [[
 	$][(AM@&t@_V_at)'\''rm'\'' \
   '\''-f'\'' \
   '\''-r'\'' \
-  '\''./'\'']target_sh[ \
-  '\''./'\'']target_sh['\''.tmp'\'' \
+  '\''./'\'']output_file_sh[ \
+  '\''./'\'']output_file_sh['\''.tmp'\'' \
   '\''build-tmp/GATBPS_DOCKER/'\'']$2[ \
 ;
 	$][(AM@&t@_V_at){ \
@@ -184,11 +184,11 @@ m4_foreach_w([name], [$4], [[
       "$][$][{hash}" \]dnl
 m4_foreach_w([name], [$4], [[
       '\'']m4_bpatsubst(name, ['], ['\''])['\'' \]])[
-      >'\''./'\'']target_sh['\''.tmp'\'' \
+      >'\''./'\'']output_file_sh['\''.tmp'\'' \
     || '\''exit'\'' "$][$][{?}"; \
     '\''mv'\'' \
-      '\''./'\'']target_sh['\''.tmp'\'' \
-      '\''./'\'']target_sh[ \
+      '\''./'\'']output_file_sh['\''.tmp'\'' \
+      '\''./'\'']output_file_sh[ \
     || '\''exit'\'' "$][$][{?}"; \
     '\''exit'\'' '\''0'\''; \
   :;); \
@@ -205,8 +205,8 @@ m4_foreach_w([name], [$4], [[
       '\''rm'\'' \
         '\''-f'\'' \
         '\''-r'\'' \
-        '\''./'\'']target_sh[ \
-        '\''./'\'']target_sh['\''.tmp'\'' \
+        '\''./'\'']output_file_sh[ \
+        '\''./'\'']output_file_sh['\''.tmp'\'' \
       ; \
     ;; \
   esac; \
@@ -214,21 +214,21 @@ m4_foreach_w([name], [$4], [[
 :;}
 	$][(AM@&t@_V_at): done: $][@
 
-.PHONY: clean-]target_sh[
+.PHONY: clean-]output_file_sh[
 
-clean-]target_sh[:
+clean-]output_file_sh[:
 	-'\''rm'\'' \
   '\''-f'\'' \
-  '\''./'\'']target_sh[ \
+  '\''./'\'']output_file_sh[ \
 ;
 
-]m4_if([$5], [], [[mostlyclean]], [[$5]])[-local: clean-]target_sh[
+]m4_if([$5], [], [[mostlyclean]], [[$5]])[-local: clean-]output_file_sh[
 
 '
 ]dnl
 m4_popdef([prereq_sh])[]dnl
 m4_popdef([source_sh])[]dnl
-m4_popdef([target_sh])[]dnl
+m4_popdef([output_file_sh])[]dnl
 [
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
