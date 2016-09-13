@@ -49,12 +49,12 @@ m4_if(
   [1],
   [m4_case(
     [$3],
+    [], [],
     [directory], [],
     [executable], [],
-    [regular], [],
     [gatbps_fatal([
-      GATBPS_CP requires its third argument to be either "directory",
-      "executable", or "regular"
+      GATBPS_CP requires its third argument to be either empty,
+      "directory", or "executable"
     ])])])[]dnl
 m4_if(
   m4_eval([$# >= 5]),
