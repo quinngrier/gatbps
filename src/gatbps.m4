@@ -539,6 +539,7 @@ EOF1
           set "${prefix}gequ.texi" "${@}"
           set "${prefix}gatbps_notice.m4" "${@}"
           set "${prefix}gatbps_fatal.m4" "${@}"
+          set "${prefix}gatbps.am" "${@}"
           set "${prefix}echo.sh" "${@}"
           set "${prefix}dvi-dist.am" "${@}"
           set "${prefix}dslash.texi" "${@}"
@@ -1233,6 +1234,8 @@ EOF1
 |%}help_code({%|dvi-dist.am|%}){%|
 
 |%}help_code({%|echo.sh|%}){%|
+
+|%}help_code({%|gatbps.am|%}){%|
 
 |%}help_code({%|gatbps_fatal.m4|%}){%|
 
@@ -2884,6 +2887,8 @@ EOF1
 
 |%}generation_code({%|echo.sh|%}){%|
 
+|%}generation_code({%|gatbps.am|%}){%|
+
 |%}generation_code({%|gatbps_fatal.m4|%}){%|
 
 |%}generation_code({%|gatbps_notice.m4|%}){%|
@@ -4075,6 +4080,14 @@ EOF1
 |%}recursion_code(
   {%|echo.sh|%},
   {%|
+            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|gatbps.am|%},
+  {%|
+            'set' 'x' "${prefix}"'echo.sh' "${@}"; 'shift'
+            'set' 'x' "${prefix}"'GATBPS_V_PAD.am' "${@}"; 'shift'
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 

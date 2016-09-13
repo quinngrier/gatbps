@@ -760,6 +760,10 @@ AC_SUBST([TEXI2DVIFLAGS])
   [mostlyclean])[
 
 ]GATBPS_M4(
+  [src/files/gatbps.am],
+  [mostlyclean])[
+
+]GATBPS_M4(
   [src/files/gatbps_fatal.m4],
   [mostlyclean])[
 
