@@ -46,7 +46,7 @@ m4_if(
   m4_eval([$# >= 3]),
   [1],
   [m4_if(
-    m4_bregexp([$3], [^sha512:]dnl
+    m4_bregexp([$3], [^sha512:]dnl [0-9a-f]\{128\} doesn't work
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
