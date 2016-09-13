@@ -187,6 +187,7 @@ m4_foreach_w(
   [[
       $][(OPENSSL) \
         '\''dgst'\'' \
+        '\''-non-fips-allow'\'' \
         '\''-]m4_bregexp(pair, [\(.[^:]*\).*\(.\)], [\1\2])['\'' \
         <]output_file['\''.tmp'\'' \
       | $][(GREP) \
