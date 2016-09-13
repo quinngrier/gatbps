@@ -617,6 +617,7 @@ EOF1
           set "${prefix}GATBPS_DEFINE_JAVACFLAGS.m4" "${@}"
           set "${prefix}GATBPS_DEFINE_JARFLAGS.m4" "${@}"
           set "${prefix}GATBPS_DEFINE_HARD_INCLUDE.m4" "${@}"
+          set "${prefix}GATBPS_DEFINE_DOCKER_BUILD_FLAGS.m4" "${@}"
           set "${prefix}GATBPS_DEFINE_DATE.m4" "${@}"
           set "${prefix}GATBPS_DEFINE_CLASSPATH.m4" "${@}"
           set "${prefix}GATBPS_DEFINE_AT.m4" "${@}"
@@ -1071,6 +1072,8 @@ EOF1
 |%}help_code({%|GATBPS_DEFINE_CLASSPATH.m4|%}){%|
 
 |%}help_code({%|GATBPS_DEFINE_DATE.m4|%}){%|
+
+|%}help_code({%|GATBPS_DEFINE_DOCKER_BUILD_FLAGS.m4|%}){%|
 
 |%}help_code({%|GATBPS_DEFINE_HARD_INCLUDE.m4|%}){%|
 
@@ -2718,6 +2721,8 @@ EOF1
 
 |%}generation_code({%|GATBPS_DEFINE_DATE.m4|%}){%|
 
+|%}generation_code({%|GATBPS_DEFINE_DOCKER_BUILD_FLAGS.m4|%}){%|
+
 |%}generation_code({%|GATBPS_DEFINE_HARD_INCLUDE.m4|%}){%|
 
 |%}generation_code({%|GATBPS_DEFINE_JARFLAGS.m4|%}){%|
@@ -3538,6 +3543,13 @@ EOF1
   {%|
             'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
             'set' 'x' "${prefix}"'GATBPS_MSG_ERROR.m4' "${@}"; 'shift'
+            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|GATBPS_DEFINE_DOCKER_BUILD_FLAGS.m4|%},
+  {%|
+            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
