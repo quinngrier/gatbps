@@ -49,6 +49,15 @@ m4_if(
     [pair],
     [$3],
     [m4_if(
+      m4_bregexp(pair, [^[][]sha1:]dnl [0-9a-f]\{40\} doesn't work
+[[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
+[[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
+[[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
+[[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
+[[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
+[[][]$]),
+      [0],
+      [],
       m4_bregexp(pair, [^[][]sha256:]dnl [0-9a-f]\{64\} doesn't work
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
