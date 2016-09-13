@@ -45,8 +45,11 @@ m4_if(
 m4_if(
   m4_eval([$# >= 3]),
   [1],
-  [m4_if(
-    m4_bregexp([$3], [^sha512:]dnl [0-9a-f]\{128\} doesn't work
+  [m4_foreach_w(
+    [pair],
+    [$3],
+    [m4_if(
+      m4_bregexp(pair, [^[][]sha512:]dnl [0-9a-f]\{128\} doesn't work
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
@@ -63,10 +66,10 @@ m4_if(
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
-[$]), [0], [],
-    [gatbps_fatal([
-      GATBPS_WGET bad third argument
-    ])])])[]dnl
+[[][]$]), [0], [],
+      [gatbps_fatal([
+        GATBPS_WGET bad third argument
+      ])])])])[]dnl
 m4_if(
   m4_eval([$# >= 4]),
   [1],
@@ -86,12 +89,6 @@ m4_pushdef(
 m4_pushdef(
   [source_sh],
   m4_bpatsubst([[[$2]]], ['], ['\\'']))[]dnl
-m4_pushdef(
-  [algorithm],
-  m4_bregexp([[[$3]]], [\(..[^:]*\).*\(..\)], [\1\2]))[]dnl
-m4_pushdef(
-  [digest],
-  m4_bregexp([[[$3]]], [\(..\).*:\(.*\)], [\1\2]))[]dnl
 [
 
 GATBPS_WGET_RULES="$][{GATBPS_WGET_RULES}"'
@@ -110,13 +107,16 @@ contains_at_least_one_word_sh(
   '\''--'\'' \
   ]source_sh[ \
 ;]dnl
-m4_if([$3], [], [], [[
+m4_foreach_w(
+  [pair],
+  [$3],
+  [[
 	$][(AM@&t@_V_at)$][(OPENSSL) \
   '\''dgst'\'' \
-  '\''-]algorithm['\'' \
+  '\''-]m4_bregexp(pair, [\(.[^:]*\).*\(.\)], [\1\2])['\'' \
   <]target_sh['\''.tmp'\'' \
 | $][(GREP) \
-  '\'']digest[$][$]['\'' \
+  '\'']m4_bregexp(pair, [\(.\).*:\(.*\)], [\1\2])[$][$]['\'' \
   >'\''/dev/null'\'' \
 ;]])[
 	$][(AM@&t@_V_at)'\''mv'\'' \
@@ -138,8 +138,6 @@ clean-]target_sh[:
 
 '
 ]dnl
-m4_popdef([digest])[]dnl
-m4_popdef([algorithm])[]dnl
 m4_popdef([source_sh])[]dnl
 m4_popdef([target_sh])[]dnl
 [
