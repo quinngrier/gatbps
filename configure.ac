@@ -1,4 +1,6 @@
-AC_INIT(
+[
+
+]AC_INIT(
   [[GATBPS]],
   m4_esyscmd_s([
     'sh' '-' 'build-aux/VERSION.sh'
