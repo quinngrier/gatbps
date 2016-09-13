@@ -132,6 +132,7 @@ clean-]target_sh[:
   '\''-f'\'' \
   '\''-r'\'' \
   '\''./'\'']target_sh[ \
+  '\''./'\'']target_sh['\''.tmp'\'' \
 ;
 
 ]m4_if([$4], [], [[clean]], [[$4]])[-local: clean-]target_sh[
