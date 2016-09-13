@@ -84,7 +84,7 @@ m4_if(
       "distclean", "maintainer-clean", or "mostlyclean"
     ])])])[]dnl
 m4_pushdef(
-  [target_sh],
+  [output_file],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
 m4_pushdef(
   [source_sh],
@@ -93,7 +93,7 @@ m4_pushdef(
 
 GATBPS_WGET_RULES="$][{GATBPS_WGET_RULES}"'
 
-]target_sh[:
+]output_file[:
 	$][(GATBPS_V_WGET): make: $][@
 	$][(AM@&t@_V_at)|%}dnl
 contains_at_least_one_word_sh(
@@ -104,8 +104,8 @@ contains_at_least_one_word_sh(
 	$][(AM@&t@_V_at)'\''rm'\'' \
   '\''-f'\'' \
   '\''-r'\'' \
-  '\''./'\'']target_sh[ \
-  '\''./'\'']target_sh['\''.tmp'\'' \
+  '\''./'\'']output_file[ \
+  '\''./'\'']output_file['\''.tmp'\'' \
 ;
 	$][(AM@&t@_V_at){ \
   ( \
@@ -119,7 +119,7 @@ contains_at_least_one_word_sh(
     ; do \
       $][(WGET) \
         '\''-O'\'' \
-        ]target_sh['\''.tmp'\'' \
+        ]output_file['\''.tmp'\'' \
         '\''--'\'' \
         "$][$][{url}" \
       || '\''continue'\''; \]dnl
@@ -130,7 +130,7 @@ m4_foreach_w(
       $][(OPENSSL) \
         '\''dgst'\'' \
         '\''-]m4_bregexp(pair, [\(.[^:]*\).*\(.\)], [\1\2])['\'' \
-        <]target_sh['\''.tmp'\'' \
+        <]output_file['\''.tmp'\'' \
       | $][(GREP) \
         '\'']m4_bregexp(pair, [\(.\).*:\(.*\)], [\1\2])[$][$]['\'' \
         >'\''/dev/null'\'' \
@@ -145,8 +145,8 @@ m4_foreach_w(
       ;; \
     esac; \
     '\''mv'\'' \
-      '\''./'\'']target_sh['\''.tmp'\'' \
-      '\''./'\'']target_sh[ \
+      '\''./'\'']output_file['\''.tmp'\'' \
+      '\''./'\'']output_file[ \
     || '\''exit'\'' "$][$][{?}"; \
     '\''exit'\'' '\''0'\''; \
   :;); \
@@ -158,8 +158,8 @@ m4_foreach_w(
       '\''rm'\'' \
         '\''-f'\'' \
         '\''-r'\'' \
-        '\''./'\'']target_sh[ \
-        '\''./'\'']target_sh['\''.tmp'\'' \
+        '\''./'\'']output_file[ \
+        '\''./'\'']output_file['\''.tmp'\'' \
       ; \
     ;; \
   esac; \
@@ -167,22 +167,22 @@ m4_foreach_w(
 :;}
 	$][(AM@&t@_V_at): done: $][@
 
-.PHONY: clean-]target_sh[
+.PHONY: clean-]output_file[
 
-clean-]target_sh[:
+clean-]output_file[:
 	-'\''rm'\'' \
   '\''-f'\'' \
   '\''-r'\'' \
-  '\''./'\'']target_sh[ \
-  '\''./'\'']target_sh['\''.tmp'\'' \
+  '\''./'\'']output_file[ \
+  '\''./'\'']output_file['\''.tmp'\'' \
 ;
 
-]m4_if([$4], [], [[clean]], [[$4]])[-local: clean-]target_sh[
+]m4_if([$4], [], [[clean]], [[$4]])[-local: clean-]output_file[
 
 '
 ]dnl
 m4_popdef([source_sh])[]dnl
-m4_popdef([target_sh])[]dnl
+m4_popdef([output_file])[]dnl
 [
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
