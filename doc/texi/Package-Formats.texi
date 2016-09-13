@@ -3,11 +3,11 @@
 
 @noindent
 GATBPS is available in three different package formats: as a copy of the
-Git repository, as a tree archive, and as a distribution archive@.
-The Git repository is the definitive copy of the package, a tree archive
-is a snapshot of the Git repository at a specific moment in history, and
-a distribution archive is a tree archive that has been optimized for
-building and installation@.
+Git repository, as a source archive, and as a distribution archive@.
+The Git repository is the definitive copy of the package, a source
+archive is a snapshot of the Git repository at a specific moment in
+history, and a distribution archive is a source archive that has been
+optimized for building and installation@.
 The differences between the package formats are discussed throughout
 this manual, but they are particularly relevant to building and
 installation@.
@@ -29,7 +29,7 @@ Otherwise, if there is a subdirectory named
 @w{@t{dev-aux}}
 in the directory that contains the
 @w{@t{configure.@:ac}}
-file, then you are working with a tree archive@.
+file, then you are working with a source archive@.
 
 @item
 Otherwise, you are working with a distribution archive@.
@@ -43,7 +43,7 @@ Distribution archives are optimized for building and installation@.
 @include indent.texi
 If you are only interested in browsing the source code of the package,
 then you probably want to work with a copy of the Git repository or a
-tree archive@.
+source archive@.
 Distribution archives include generated source code and may exclude some
 of the normal source code@.
 
