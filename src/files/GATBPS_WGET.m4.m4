@@ -87,7 +87,7 @@ m4_pushdef(
   [output_file],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
 m4_pushdef(
-  [source_sh],
+  [input_urls],
   m4_bpatsubst([[[$2]]], ['], ['\\'']))[]dnl
 [
 
@@ -112,7 +112,7 @@ contains_at_least_one_word_sh(
     got='\''no'\''; \
     for url in \
       ]m4_bpatsubst(
-        m4_dquote(m4_normalize(source_sh)),
+        m4_dquote(m4_normalize(input_urls)),
         [ ],
         [ \\
       ])[ \
@@ -181,7 +181,7 @@ clean-]output_file[:
 
 '
 ]dnl
-m4_popdef([source_sh])[]dnl
+m4_popdef([input_urls])[]dnl
 m4_popdef([output_file])[]dnl
 [
 :;}]])[]dnl
