@@ -94,10 +94,10 @@ m4_pushdef(
 GATBPS_WGET_RULES="$][{GATBPS_WGET_RULES}"'
 
 ]target_sh[:
+	$][(GATBPS_V_WGET): make: $][@
 	$][(AM@&t@_V_at)|%}dnl
 contains_at_least_one_word_sh(
   {%|MKDIR_P|%}){%|
-	$][(GATBPS_V_WGET): make: $][@
 	$][(AM@&t@_V_at)$][(MKDIR_P) \
   '\''./'\''$][(@D) \
 ;
