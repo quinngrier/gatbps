@@ -49,11 +49,11 @@ m4_if(
   [1],
   [m4_case(
     [$3],
+    [], [],
     [contents], [],
-    [normal], [],
     [gatbps_fatal([
-      GATBPS_TAR requires its third argument to be either "contents" or
-      "normal"
+      GATBPS_TAR requires its third argument to be either empty or
+      "contents"
     ])])])[]dnl
 m4_if(
   m4_eval([$# >= 5]),
@@ -147,7 +147,7 @@ m4_if(
   || '\''exit'\'' "$][$][{?}"; \
   '\''exit'\'' '\''0'\''; \
 :;}]],
-[$3], [normal], [[
+[$3], [], [[
 	$][(AM@&t@_V_at){ \
   x=]input_directory[; \
   if \
