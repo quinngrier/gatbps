@@ -3907,6 +3907,12 @@ EOF1
 |%}recursion_code(
   {%|GATBPS_WGET.m4|%},
   {%|
+            'set' 'x' "${prefix}"'wget.am' "${@}"; 'shift'
+            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' 'x' "${prefix}"'GATBPS_PROG_WGET.m4' "${@}"; 'shift'
+            'set' 'x' "${prefix}"'GATBPS_PROG_OPENSSL.m4' "${@}"; 'shift'
+            'set' 'x' "${prefix}"'GATBPS_PROG_MKDIR_P.m4' "${@}"; 'shift'
+            'set' 'x' "${prefix}"'GATBPS_PROG_GREP.m4' "${@}"; 'shift'
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
