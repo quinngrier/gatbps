@@ -109,24 +109,41 @@ contains_at_least_one_word_sh(
 ;
 	$][(AM@&t@_V_at){ \
   ( \
-    $][(WGET) \
-      '\''-O'\'' \
-      ]target_sh['\''.tmp'\'' \
-      '\''--'\'' \
-      ]source_sh[ \
-    || '\''exit'\'' "$][$][{?}"; \]dnl
+    got='\''no'\''; \
+    for url in \
+      ]m4_bpatsubst(
+        m4_dquote(m4_normalize(source_sh)),
+        [ ],
+        [ \\
+      ])[ \
+    ; do \
+      $][(WGET) \
+        '\''-O'\'' \
+        ]target_sh['\''.tmp'\'' \
+        '\''--'\'' \
+        "$][$][{url}" \
+      || '\''continue'\''; \]dnl
 m4_foreach_w(
   [pair],
   [$3],
   [[
-    $][(OPENSSL) \
-      '\''dgst'\'' \
-      '\''-]m4_bregexp(pair, [\(.[^:]*\).*\(.\)], [\1\2])['\'' \
-      <]target_sh['\''.tmp'\'' \
-    | $][(GREP) \
-      '\'']m4_bregexp(pair, [\(.\).*:\(.*\)], [\1\2])[$][$]['\'' \
-      >'\''/dev/null'\'' \
-    || '\''exit'\'' "$][$][{?}"; \]])[
+      $][(OPENSSL) \
+        '\''dgst'\'' \
+        '\''-]m4_bregexp(pair, [\(.[^:]*\).*\(.\)], [\1\2])['\'' \
+        <]target_sh['\''.tmp'\'' \
+      | $][(GREP) \
+        '\'']m4_bregexp(pair, [\(.\).*:\(.*\)], [\1\2])[$][$]['\'' \
+        >'\''/dev/null'\'' \
+      || '\''continue'\''; \]])[
+      got='\''yes'\''; \
+      '\''break'\''; \
+    done; \
+    '\''readonly'\'' '\''got'\''; \
+    case "$][$][{got}" in \
+      '\''no'\'') \
+        '\''exit'\'' '\''1'\''; \
+      ;; \
+    esac; \
     '\''mv'\'' \
       '\''./'\'']target_sh['\''.tmp'\'' \
       '\''./'\'']target_sh[ \
