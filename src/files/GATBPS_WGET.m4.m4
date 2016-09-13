@@ -66,7 +66,9 @@ m4_if(
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
-[[][]$]), [0], [],
+[[][]$]),
+      [0],
+      [],
       [gatbps_fatal([
         GATBPS_WGET bad third argument
       ])])])])[]dnl
