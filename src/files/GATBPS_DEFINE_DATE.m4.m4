@@ -43,20 +43,17 @@ m4_if(
     following regular expression: ^[A-Z_a-z][0-9A-Z_a-z]*$
   ])])[]dnl
 m4_if(
-  [$#],
-  [2],
-  [m4_ifndef(
-    [$1$2],
-    [gatbps_fatal([
-      $1$2 is not defined
-    ])])])[]dnl
-m4_if(
-  [$#],
-  [3],
+  m4_eval([$# >= 3]),
+  [1],
   [m4_ifdef(
     [$1$2],
     [gatbps_fatal([
       $1$2 is already defined
+    ])])],
+  [m4_ifndef(
+    [$1$2],
+    [gatbps_fatal([
+      $1$2 is not defined
     ])])])[]dnl
 m4_ifdef(
   [$1$2_YEAR],
@@ -114,8 +111,8 @@ m4_ifdef(
     $1$2_DAY_ZPAD is already defined
   ])])[]dnl
 m4_if(
-  [$#],
-  [3],
+  m4_eval([$# >= 3]),
+  [1],
   [m4_define(
     [$1$2],
     [[$3]])])[]dnl
