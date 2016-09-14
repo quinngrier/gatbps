@@ -167,7 +167,7 @@ contains_at_least_one_word_sh(
 ;
 	$][(AM@&t@_V_at){ \
   ( \
-    got='\''no'\''; \
+    success='\''no'\''; \
     for url in \
       ]m4_bpatsubst(
         m4_dquote(m4_normalize(input_urls)),
@@ -194,11 +194,11 @@ m4_foreach_w(
         '\'']m4_bregexp(pair, [\(.\).*:\(.*\)], [\1\2])['\'' \
         >'\''/dev/null'\'' \
       || '\''continue'\''; \]])[
-      got='\''yes'\''; \
+      success='\''yes'\''; \
       '\''break'\''; \
     done; \
-    '\''readonly'\'' '\''got'\''; \
-    case "$][$][{got}" in \
+    '\''readonly'\'' '\''success'\''; \
+    case "$][$][{success}" in \
       '\''no'\'') \
         '\''exit'\'' '\''1'\''; \
       ;; \
