@@ -176,8 +176,12 @@ m4_if([$6], [], [], [[
     $][(DOCKER) \
       '\''build'\'' \
       '\''--tag=tmp'\''"$][$][{$][$][}" \]dnl
-m4_foreach_w([name], image_names, [[
-      '\''--tag=]m4_bpatsubst(name, ['], ['\''])['\'' \]])[
+m4_foreach_w(
+  [name],
+  image_names,
+  [[
+      '\''--tag=]m4_bpatsubst(name, ['], ['\''])['\'' \]])[]dnl
+[
       $][(DOCKER_BUILD_FLAGS) \
       "$][$][{context}" \
     || '\''exit'\'' "$][$][{?}"; \
@@ -190,8 +194,12 @@ m4_foreach_w([name], image_names, [[
     $][(DOCKER) \
       '\''save'\'' \
       "$][$][{hash}" \]dnl
-m4_foreach_w([name], image_names, [[
-      '\'']m4_bpatsubst(name, ['], ['\''])['\'' \]])[
+m4_foreach_w(
+  [name],
+  image_names,
+  [[
+      '\'']m4_bpatsubst(name, ['], ['\''])['\'' \]])[]dnl
+[
       >'\''./'\'']output_file_sh['\''.tmp'\'' \
     || '\''exit'\'' "$][$][{?}"; \
     '\''mv'\'' \
