@@ -24,7 +24,7 @@ m4_case(
   [5], [],
   [6], [],
   [gatbps_fatal([
-    GATBPS_GIT_ARCHIVE requires exactly 4, 5, or 6 arguments
+    GATBPS_GIT_ARCHIVE requires 4 to 6 arguments
   ])])[]dnl
 m4_if(
   m4_bregexp([$1], [[^

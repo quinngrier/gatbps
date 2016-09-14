@@ -22,7 +22,7 @@ m4_case(
   [1], [],
   [2], [],
   [gatbps_fatal([
-    GATBPS_M4 requires exactly 1 or 2 arguments
+    GATBPS_M4 requires 1 to 2 arguments
   ])])[]dnl
 m4_if(
   m4_bregexp([$1], [[^

@@ -25,7 +25,7 @@ m4_case(
   [4], [],
   [5], [],
   [gatbps_fatal([
-    GATBPS_CONFIG_FILE requires exactly 1, 2, 3, 4, or 5 arguments
+    GATBPS_CONFIG_FILE requires 1 to 5 arguments
   ])])[]dnl
 m4_if(
   m4_eval([$# >= 2]),

@@ -26,7 +26,7 @@ m4_case(
   [5], [],
   [6], [],
   [gatbps_fatal([
-    GATBPS_TAR requires exactly 2, 3, 4, 5, or 6 arguments
+    GATBPS_TAR requires 2 to 6 arguments
   ])])[]dnl
 m4_if(
   m4_bregexp([$1], [[^

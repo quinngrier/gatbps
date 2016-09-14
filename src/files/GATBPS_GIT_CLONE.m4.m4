@@ -23,7 +23,7 @@ m4_case(
   [2], [],
   [3], [],
   [gatbps_fatal([
-    GATBPS_GIT_CLONE requires exactly 2 or 3 arguments
+    GATBPS_GIT_CLONE requires 2 to 3 arguments
   ])])[]dnl
 m4_if(
   m4_bregexp([$1], [[^

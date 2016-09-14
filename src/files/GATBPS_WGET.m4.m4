@@ -24,7 +24,7 @@ m4_case(
   [3], [],
   [4], [],
   [gatbps_fatal([
-    GATBPS_WGET requires exactly 2, 3, or 4 arguments
+    GATBPS_WGET requires 2 to 4 arguments
   ])])[]dnl
 m4_if(
   m4_bregexp([$1], [[^
