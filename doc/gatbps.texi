@@ -75,6 +75,7 @@ on@tie{}@w{@value{PACKAGEDATE}}@.
 * Formatting Automake Files::
 * Compiling Java with the Autotools::
 * Generating Javadoc with the Autotools::
+* Building Docker Images with the Autotools::
 * Invoking @w{@t{awk-form-sh}}::
 * Invoking @w{@t{sh-form-sh}}::
 * Invoking @w{@t{texi-form-sh}}::
@@ -113,6 +114,8 @@ on@tie{}@w{@value{PACKAGEDATE}}@.
 @include Compiling-Java-with-the-Autotools.texi
 
 @include Generating-Javadoc-with-the-Autotools.texi
+
+@include Building-Docker-Images-with-the-Autotools.texi
 
 @include Invoking-awk-form-sh.texi
 
