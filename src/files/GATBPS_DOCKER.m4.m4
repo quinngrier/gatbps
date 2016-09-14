@@ -96,58 +96,61 @@ m4_if([$6], [], [], [[
   ( \
     merge='\''no'\''; \
     context='\'''\''; \
+    first_iteration='\''yes'\''; \
     for x in '\'''\'' ]source_sh[; do \
-      case "$][$][{x}" in \
-        ?*) \
-          if '\''test'\'' '\''-r'\'' "$][$][{x}"; then \
-            '\''test'\'' \
-              '\''-f'\'' \
-              "$][$][{x}" \
-            || '\''test'\'' \
-              '\''-d'\'' \
-              "$][$][{x}" \
-            || '\''exit'\'' "$][$][{?}"; \
-            case "$][$][{merge}" in \
-              '\''no'\'') \
-                case "$][$][{context}" in \
-                  '\''.'\'') \
-                  ;; \
-                  ?*) \
-                    merge='\''yes'\''; \
-                    '\''readonly'\'' '\''merge'\''; \
-                  ;; \
-                  *) \
-                    context='\''.'\''; \
-                  ;; \
-                esac; \
-              ;; \
-            esac; \
-          else \
-            '\''test'\'' \
-              '\''-f'\'' \
-              $][(srcdir)'\''/'\''"$][$][{x}" \
-            || '\''test'\'' \
-              '\''-d'\'' \
-              $][(srcdir)'\''/'\''"$][$][{x}" \
-            || '\''exit'\'' "$][$][{?}"; \
-            case "$][$][{merge}" in \
-              '\''no'\'') \
-                case "$][$][{context}" in \
-                  $][(srcdir)) \
-                  ;; \
-                  ?*) \
-                    merge='\''yes'\''; \
-                    '\''readonly'\'' '\''merge'\''; \
-                  ;; \
-                  *) \
-                    context=$][(srcdir); \
-                  ;; \
-                esac; \
-              ;; \
-            esac; \
-          fi; \
+      case "$][$][{first_iteration}" in \
+        '\''yes'\'') \
+          first_iteration='\''no'\''; \
+          '\''continue'\''; \
         ;; \
       esac; \
+      if '\''test'\'' '\''-r'\'' "$][$][{x}"; then \
+        '\''test'\'' \
+          '\''-f'\'' \
+          "$][$][{x}" \
+        || '\''test'\'' \
+          '\''-d'\'' \
+          "$][$][{x}" \
+        || '\''exit'\'' "$][$][{?}"; \
+        case "$][$][{merge}" in \
+          '\''no'\'') \
+            case "$][$][{context}" in \
+              '\''.'\'') \
+              ;; \
+              ?*) \
+                merge='\''yes'\''; \
+                '\''readonly'\'' '\''merge'\''; \
+              ;; \
+              *) \
+                context='\''.'\''; \
+              ;; \
+            esac; \
+          ;; \
+        esac; \
+      else \
+        '\''test'\'' \
+          '\''-f'\'' \
+          $][(srcdir)'\''/'\''"$][$][{x}" \
+        || '\''test'\'' \
+          '\''-d'\'' \
+          $][(srcdir)'\''/'\''"$][$][{x}" \
+        || '\''exit'\'' "$][$][{?}"; \
+        case "$][$][{merge}" in \
+          '\''no'\'') \
+            case "$][$][{context}" in \
+              $][(srcdir)) \
+              ;; \
+              ?*) \
+                merge='\''yes'\''; \
+                '\''readonly'\'' '\''merge'\''; \
+              ;; \
+              *) \
+                context=$][(srcdir); \
+              ;; \
+            esac; \
+          ;; \
+        esac; \
+      fi; \
     done; \
     '\''readonly'\'' '\''merge'\''; \
     case "$][$][{merge}" in \
