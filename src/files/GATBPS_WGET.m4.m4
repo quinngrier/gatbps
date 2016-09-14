@@ -168,7 +168,7 @@ contains_at_least_one_word_sh(
     success='\''no'\''; \
     for url in \
       ]m4_bpatsubst(
-        m4_dquote(m4_normalize(input_urls)),
+        m4_normalize(input_urls),
         [ ],
         [ \\
       ])[ \
