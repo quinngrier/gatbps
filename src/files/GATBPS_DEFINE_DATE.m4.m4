@@ -25,7 +25,7 @@ m4_if(
   m4_eval([$# < 2 || $# > 3]),
   [1],
   [gatbps_fatal([
-    GATBPS_DEFINE_DATE requires exactly 2 or 3 arguments
+    GATBPS_DEFINE_DATE requires 2 to 3 arguments
   ])])[]dnl
 m4_if(
   m4_bregexp([$1], [^[A-Z_a-z][0-9A-Z_a-z]*$]),
