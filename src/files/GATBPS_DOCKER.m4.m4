@@ -175,11 +175,9 @@ m4_if([$6], [], [], [[
     esac; \
     $][(DOCKER) \
       '\''build'\'' \
-      '\''--tag'\'' \
-      '\''tmp'\''"$][$][{$][$][}" \]dnl
+      '\''--tag=tmp'\''"$][$][{$][$][}" \]dnl
 m4_foreach_w([name], image_names, [[
-      '\''--tag'\'' \
-      '\'']m4_bpatsubst(name, ['], ['\''])['\'' \]])[
+      '\''--tag=]m4_bpatsubst(name, ['], ['\''])['\'' \]])[
       $][(DOCKER_BUILD_FLAGS) \
       "$][$][{context}" \
     || '\''exit'\'' "$][$][{?}"; \
