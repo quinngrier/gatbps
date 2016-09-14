@@ -21,10 +21,9 @@ AC_DEFUN([GATBPS_DEFINE_VERSION], [[{
   [[
 #]])[ ($1)$2.
 #]dnl
-m4_case(
-  [$#],
-  [2], [],
-  [3], [],
+m4_if(
+  m4_eval([$# < 2 || $# > 3]),
+  [1],
   [gatbps_fatal([
     GATBPS_DEFINE_VERSION requires 2 to 3 arguments
   ])])[]dnl

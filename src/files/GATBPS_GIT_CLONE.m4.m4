@@ -18,10 +18,9 @@ AC_DEFUN([GATBPS_GIT_CLONE], [[{
 # The block that contains this comment is an expansion of the
 # GATBPS_GIT_CLONE macro.
 #]dnl
-m4_case(
-  [$#],
-  [2], [],
-  [3], [],
+m4_if(
+  m4_eval([$# < 2 || $# > 3]),
+  [1],
   [gatbps_fatal([
     GATBPS_GIT_CLONE requires 2 to 3 arguments
   ])])[]dnl

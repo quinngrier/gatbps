@@ -18,13 +18,9 @@ AC_DEFUN([GATBPS_CP], [[{
 # The block that contains this comment is an expansion of the GATBPS_CP
 # macro.
 #]dnl
-m4_case(
-  [$#],
-  [2], [],
-  [3], [],
-  [4], [],
-  [5], [],
-  [6], [],
+m4_if(
+  m4_eval([$# < 2 || $# > 6]),
+  [1],
   [gatbps_fatal([
     GATBPS_CP requires 2 to 6 arguments
   ])])[]dnl

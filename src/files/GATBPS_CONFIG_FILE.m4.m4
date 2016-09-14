@@ -17,13 +17,9 @@ AC_DEFUN([GATBPS_CONFIG_FILE], [[{
 # The block that contains this comment is an expansion of the
 # GATBPS_CONFIG_FILE macro.
 #]dnl
-m4_case(
-  [$#],
-  [1], [],
-  [2], [],
-  [3], [],
-  [4], [],
-  [5], [],
+m4_if(
+  m4_eval([$# < 1 || $# > 5]),
+  [1],
   [gatbps_fatal([
     GATBPS_CONFIG_FILE requires 1 to 5 arguments
   ])])[]dnl

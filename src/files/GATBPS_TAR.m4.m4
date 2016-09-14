@@ -18,13 +18,9 @@ AC_DEFUN([GATBPS_TAR], [[{
 # The block that contains this comment is an expansion of the GATBPS_TAR
 # macro.
 #]dnl
-m4_case(
-  [$#],
-  [2], [],
-  [3], [],
-  [4], [],
-  [5], [],
-  [6], [],
+m4_if(
+  m4_eval([$# < 2 || $# > 6]),
+  [1],
   [gatbps_fatal([
     GATBPS_TAR requires 2 to 6 arguments
   ])])[]dnl

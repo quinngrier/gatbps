@@ -18,12 +18,9 @@ AC_DEFUN([GATBPS_DOCKER], [[{
 # The block that contains this comment is an expansion of the
 # GATBPS_DOCKER macro.
 #]dnl
-m4_case(
-  [$#],
-  [3], [],
-  [4], [],
-  [5], [],
-  [6], [],
+m4_if(
+  m4_eval([$# < 3 || $# > 6]),
+  [1],
   [gatbps_fatal([
     GATBPS_DOCKER requires 3 to 6 arguments
   ])])[]dnl

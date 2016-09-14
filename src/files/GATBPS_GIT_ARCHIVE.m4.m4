@@ -18,11 +18,9 @@ AC_DEFUN([GATBPS_GIT_ARCHIVE], [[{
 # The block that contains this comment is an expansion of the
 # GATBPS_GIT_ARCHIVE macro.
 #]dnl
-m4_case(
-  [$#],
-  [4], [],
-  [5], [],
-  [6], [],
+m4_if(
+  m4_eval([$# < 4 || $# > 6]),
+  [1],
   [gatbps_fatal([
     GATBPS_GIT_ARCHIVE requires 4 to 6 arguments
   ])])[]dnl
