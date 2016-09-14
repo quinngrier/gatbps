@@ -180,7 +180,7 @@ m4_foreach_w(
   [name],
   image_names,
   [[
-      '\''--tag=]m4_bpatsubst(name, ['], ['\''])['\'' \]])[]dnl
+      '\''--tag=]name['\'' \]])[]dnl
 [
       $][(DOCKER_BUILD_FLAGS) \
       "$][$][{context}" \
@@ -198,7 +198,7 @@ m4_foreach_w(
   [name],
   image_names,
   [[
-      '\'']m4_bpatsubst(name, ['], ['\''])['\'' \]])[]dnl
+      '\'']name['\'' \]])[]dnl
 [
       >'\''./'\'']output_file_sh['\''.tmp'\'' \
     || '\''exit'\'' "$][$][{?}"; \
