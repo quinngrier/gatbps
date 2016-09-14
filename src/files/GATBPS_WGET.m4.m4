@@ -47,24 +47,24 @@ m4_if(
     [pair],
     [$3],
     [m4_if(
-      m4_bregexp(pair, [^[][]md5:]dnl [0-9a-f]\{32\} doesn't work
+      m4_bregexp(pair, [^md5:]dnl [0-9a-f]\{32\} doesn't work
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
-[[][]$]),
+[$]),
       [0],
       [],
-      m4_bregexp(pair, [^[][]sha1:]dnl [0-9a-f]\{40\} doesn't work
+      m4_bregexp(pair, [^sha1:]dnl [0-9a-f]\{40\} doesn't work
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
-[[][]$]),
+[$]),
       [0],
       [],
-      m4_bregexp(pair, [^[][]sha224:]dnl [0-9a-f]\{56\} doesn't work
+      m4_bregexp(pair, [^sha224:]dnl [0-9a-f]\{56\} doesn't work
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
@@ -72,10 +72,10 @@ m4_if(
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
-[[][]$]),
+[$]),
       [0],
       [],
-      m4_bregexp(pair, [^[][]sha256:]dnl [0-9a-f]\{64\} doesn't work
+      m4_bregexp(pair, [^sha256:]dnl [0-9a-f]\{64\} doesn't work
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
@@ -84,10 +84,10 @@ m4_if(
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
-[[][]$]),
+[$]),
       [0],
       [],
-      m4_bregexp(pair, [^[][]sha384:]dnl [0-9a-f]\{96\} doesn't work
+      m4_bregexp(pair, [^sha384:]dnl [0-9a-f]\{96\} doesn't work
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
@@ -100,10 +100,10 @@ m4_if(
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
-[[][]$]),
+[$]),
       [0],
       [],
-      m4_bregexp(pair, [^[][]sha512:]dnl [0-9a-f]\{128\} doesn't work
+      m4_bregexp(pair, [^sha512:]dnl [0-9a-f]\{128\} doesn't work
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
@@ -120,7 +120,7 @@ m4_if(
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
 [[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]]dnl
-[[][]$]),
+[$]),
       [0],
       [],
       [gatbps_fatal([
@@ -186,10 +186,10 @@ m4_foreach_w(
       $][(OPENSSL) \
         '\''dgst'\'' \
         '\''-non-fips-allow'\'' \
-        '\''-]m4_bregexp(pair, [\(.[^:]*\).*\(.\)], [\1\2])['\'' \
+        '\''-]m4_bregexp(pair, [[^:]*], [[\&]])['\'' \
         <]output_file['\''.tmp'\'' \
       | $][(GREP) \
-        '\'']m4_bregexp(pair, [\(.\).*:\(.*\)], [\1\2])['\'' \
+        '\'']m4_bregexp(pair, [:\(.*\)], [[\1]])['\'' \
         >'\''/dev/null'\'' \
       || '\''continue'\''; \]])[
       success='\''yes'\''; \
