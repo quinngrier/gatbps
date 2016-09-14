@@ -23,9 +23,9 @@ m4_ifdef(
     GATBPS_CP_SUBST has already been called
   ])],
   [m4_define([GATBPS_CP_SUBST_HAS_BEEN_CALLED])])[]dnl
-m4_case(
-  [$#],
-  [0], [],
+m4_if(
+  m4_eval([$# < 0 || $# > 0]),
+  [1],
   [gatbps_fatal([
     GATBPS_CP_SUBST requires exactly 0 arguments
   ])])[]dnl

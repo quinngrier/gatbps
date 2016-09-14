@@ -23,9 +23,9 @@ m4_ifdef(
     GATBPS_PROG_XZ has already been called
   ])],
   [m4_define([GATBPS_PROG_XZ_HAS_BEEN_CALLED])])[]dnl
-m4_case(
-  [$#],
-  [0], [],
+m4_if(
+  m4_eval([$# < 0 || $# > 0]),
+  [1],
   [gatbps_fatal([
     GATBPS_PROG_XZ requires exactly 0 arguments
   ])])[]dnl
