@@ -77,7 +77,7 @@ m4_if(
       character that is not a space, tab, or newline
     ])])])[]dnl
 m4_pushdef(
-  [target_sh],
+  [output_file_or_directory],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
 m4_pushdef(
   [input_file_or_directory],
@@ -96,7 +96,7 @@ m4_pushdef(
 
 GATBPS_CP_RULES="$][{GATBPS_CP_RULES}"'
 
-]target_sh[: ]m4_if(
+]output_file_or_directory[: ]m4_if(
   [$6],
   [],
   [child_prerequisites],
@@ -132,35 +132,35 @@ m4_if([$3], [directory], [[d]], [[f]])['\'' "$][$][{x}"; then \
 m4_if([$3], [directory], [[
     '\''-R'\'' \]])[
     "$][$][{d}"'\''/'\''"$][$][{x}" \
-    '\''./'\'']target_sh[ \
+    '\''./'\'']output_file_or_directory[ \
   || '\''exit'\'' "$][$][{?}"; \
   '\''exit'\'' '\''0'\''; \
 :;}]dnl
 m4_if([$3], [executable], [[
 	$][(AM@&t@_V_at)'\''chmod'\'' \
   '\''a+x'\'' \
-  '\''./'\'']target_sh[ \
+  '\''./'\'']output_file_or_directory[ \
 ;]])[
 	$][(AM@&t@_V_at): done: $][@
 
-.PHONY: clean-]target_sh[
+.PHONY: clean-]output_file_or_directory[
 
-clean-]target_sh[:
+clean-]output_file_or_directory[:
 	-'\''rm'\'' \
   '\''-f'\'' \]dnl
 m4_if([$3], [directory], [[
   '\''-r'\'' \]])[
-  '\''./'\'']target_sh[ \
+  '\''./'\'']output_file_or_directory[ \
 ;
 
-]m4_if([$5], [], [[mostlyclean]], [[$5]])[-local: clean-]target_sh[
+]m4_if([$5], [], [[mostlyclean]], [[$5]])[-local: clean-]output_file_or_directory[
 
 '
 ]dnl
 m4_popdef([leaf_prerequisites])[]dnl
 m4_popdef([child_prerequisites])[]dnl
 m4_popdef([input_file_or_directory])[]dnl
-m4_popdef([target_sh])[]dnl
+m4_popdef([output_file_or_directory])[]dnl
 [
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
