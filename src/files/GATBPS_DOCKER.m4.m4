@@ -179,8 +179,12 @@ m4_if([$6], [], [], [[
 m4_foreach(
   [name],
   image_names,
-  [[
-      '\''--tag='\'']m4_bpatsubst(m4_dquote(name), ['], ['\\''])[ \]])[]dnl
+  [m4_if(
+    m4_defn([name]),
+    [],
+    [],
+    [[
+      '\''--tag='\'']m4_bpatsubst(m4_dquote(name), ['], ['\\''])[ \]])])[]dnl
 [
       $][(DOCKER_BUILD_FLAGS) \
       "$][$][{context}" \
@@ -197,8 +201,12 @@ m4_foreach(
 m4_foreach(
   [name],
   image_names,
-  [[
-      ]m4_bpatsubst(m4_dquote(name), ['], ['\\''])[ \]])[]dnl
+  [m4_if(
+    m4_defn([name]),
+    [],
+    [],
+    [[
+      ]m4_bpatsubst(m4_dquote(name), ['], ['\\''])[ \]])])[]dnl
 [
       >'\''./'\'']output_file_sh['\''.tmp'\'' \
     || '\''exit'\'' "$][$][{?}"; \
