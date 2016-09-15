@@ -1,5 +1,5 @@
-@node Compiling Java with the Autotools
-@chapter Compiling Java with the Autotools
+@node Using the Autotools to Compile Java
+@chapter Using the Autotools to Compile Java
 
 @noindent
 GATBPS provides a set of special files for Java compilation with the GNU

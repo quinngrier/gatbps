@@ -73,7 +73,7 @@ on@tie{}@w{@value{PACKAGEDATE}}@.
 * Processing M4 with the Autotools::
 * Formatting Autoconf Files::
 * Formatting Automake Files::
-* Compiling Java with the Autotools::
+* Using the Autotools to Compile Java::
 * Generating Javadoc with the Autotools::
 * Using the Autotools to Clone Git Repositories::
 * Using the Autotools to Create Git Archives::
@@ -113,7 +113,7 @@ on@tie{}@w{@value{PACKAGEDATE}}@.
 
 @include Formatting-Automake-Files.texi
 
-@include Compiling-Java-with-the-Autotools.texi
+@include Using-the-Autotools-to-Compile-Java.texi
 
 @include Generating-Javadoc-with-the-Autotools.texi
 
