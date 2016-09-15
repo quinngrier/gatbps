@@ -63,7 +63,7 @@ m4_pushdef(
   [image_names],
   [[$3]])[]dnl
 m4_pushdef(
-  [source_sh],
+  [child_prerequisites],
   m4_bpatsubst([[[$4]]], ['], ['\\'']))[]dnl
 m4_pushdef(
   [leaf_prerequisites],
@@ -72,12 +72,12 @@ m4_pushdef(
 
 GATBPS_DOCKER_RULES="$][{GATBPS_DOCKER_RULES}"'
 
-]output_file_sh[: ]m4_if([$6], [], [source_sh], [leaf_prerequisites])[
+]output_file_sh[: ]m4_if([$6], [], [child_prerequisites], [leaf_prerequisites])[
 	$][(GATBPS_V_DOCKER): make: $][@]dnl
 m4_if([$6], [], [], [[
 	$][(AM@&t@_V_at)$][(MAKE) \
   $][(AM@&t@_MAKEFLAGS) \
-  ]source_sh[ \
+  ]child_prerequisites[ \
 ;]])[
 	$][(AM@&t@_V_at)$][(MKDIR_P) \
   '\''./'\''$][(@D) \
@@ -94,7 +94,7 @@ m4_if([$6], [], [], [[
     merge='\''no'\''; \
     context='\'''\''; \
     first_iteration='\''yes'\''; \
-    for x in '\'''\'' ]source_sh[; do \
+    for x in '\'''\'' ]child_prerequisites[; do \
       case "$][$][{first_iteration}" in \
         '\''yes'\'') \
           first_iteration='\''no'\''; \
@@ -253,7 +253,7 @@ clean-]output_file_sh[:
 '
 ]dnl
 m4_popdef([leaf_prerequisites])[]dnl
-m4_popdef([source_sh])[]dnl
+m4_popdef([child_prerequisites])[]dnl
 m4_popdef([image_names])[]dnl
 m4_popdef([input_directory_sh])[]dnl
 m4_popdef([output_file_sh])[]dnl
