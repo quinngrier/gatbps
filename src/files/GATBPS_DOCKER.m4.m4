@@ -57,7 +57,7 @@ m4_pushdef(
   [output_file],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
 m4_pushdef(
-  [input_directory_sh],
+  [input_directory],
   m4_bpatsubst([[[$2]]], ['], ['\\'']))[]dnl
 m4_pushdef(
   [image_names],
@@ -87,7 +87,7 @@ m4_if([$6], [], [], [[
   '\''-r'\'' \
   '\''./'\'']output_file[ \
   '\''./'\'']output_file['\''.tmp'\'' \
-  '\''build-tmp/GATBPS_DOCKER/'\'']input_directory_sh[ \
+  '\''build-tmp/GATBPS_DOCKER/'\'']input_directory[ \
 ;
 	$][(AM@&t@_V_at){ \
   ( \
@@ -152,24 +152,24 @@ m4_if([$6], [], [], [[
     '\''readonly'\'' '\''merge'\''; \
     case "$][$][{merge}" in \
       '\''yes'\'') \
-        context='\''build-tmp/GATBPS_DOCKER/'\'']input_directory_sh[; \
+        context='\''build-tmp/GATBPS_DOCKER/'\'']input_directory[; \
         '\''readonly'\'' '\''context'\''; \
         $][(MKDIR_P) \
           "$][$][{context}" \
         || '\''exit'\'' "$][$][{?}"; \
         '\''cp'\'' \
           '\''-R'\'' \
-          $][(srcdir)'\''/'\'']input_directory_sh['\''/'\''* \
+          $][(srcdir)'\''/'\'']input_directory['\''/'\''* \
           "$][$][{context}" \
         || '\''exit'\'' "$][$][{?}"; \
         '\''cp'\'' \
           '\''-R'\'' \
-          '\''./'\'']input_directory_sh['\''/'\''* \
+          '\''./'\'']input_directory['\''/'\''* \
           "$][$][{context}" \
         || '\''exit'\'' "$][$][{?}"; \
       ;; \
       '\''no'\'') \
-        context="$][$][{context}"'\''/'\'']input_directory_sh[; \
+        context="$][$][{context}"'\''/'\'']input_directory[; \
         '\''readonly'\'' '\''context'\''; \
       ;; \
     esac; \
@@ -220,7 +220,7 @@ m4_foreach(
   '\''rm'\'' \
     '\''-f'\'' \
     '\''-r'\'' \
-    '\''build-tmp/GATBPS_DOCKER/'\'']input_directory_sh[ \
+    '\''build-tmp/GATBPS_DOCKER/'\'']input_directory[ \
   ; \
   case "$][$][{x}" in \
     '\''0'\'') \
@@ -245,7 +245,7 @@ clean-]output_file[:
   '\''-f'\'' \
   '\''./'\'']output_file[ \
   '\''./'\'']output_file['\''.tmp'\'' \
-  '\''build-tmp/GATBPS_DOCKER/'\'']input_directory_sh[ \
+  '\''build-tmp/GATBPS_DOCKER/'\'']input_directory[ \
 ;
 
 ]m4_if([$5], [], [[mostlyclean]], [[$5]])[-local: clean-]output_file[
@@ -255,7 +255,7 @@ clean-]output_file[:
 m4_popdef([leaf_prerequisites])[]dnl
 m4_popdef([child_prerequisites])[]dnl
 m4_popdef([image_names])[]dnl
-m4_popdef([input_directory_sh])[]dnl
+m4_popdef([input_directory])[]dnl
 m4_popdef([output_file])[]dnl
 [
 :;}]])[]dnl
