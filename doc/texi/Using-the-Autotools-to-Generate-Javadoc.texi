@@ -1,5 +1,5 @@
-@node Generating Javadoc with the Autotools
-@chapter Generating Javadoc with the Autotools
+@node Using the Autotools to Generate Javadoc
+@chapter Using the Autotools to Generate Javadoc
 
 @noindent
 GATBPS provides a set of special files for Javadoc generation with the

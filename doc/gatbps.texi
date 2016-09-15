@@ -74,7 +74,7 @@ on@tie{}@w{@value{PACKAGEDATE}}@.
 * Formatting Autoconf Files::
 * Formatting Automake Files::
 * Using the Autotools to Compile Java::
-* Generating Javadoc with the Autotools::
+* Using the Autotools to Generate Javadoc::
 * Using the Autotools to Clone Git Repositories::
 * Using the Autotools to Create Git Archives::
 * Using the Autotools to Build Docker Images::
@@ -115,7 +115,7 @@ on@tie{}@w{@value{PACKAGEDATE}}@.
 
 @include Using-the-Autotools-to-Compile-Java.texi
 
-@include Generating-Javadoc-with-the-Autotools.texi
+@include Using-the-Autotools-to-Generate-Javadoc.texi
 
 @include Using-the-Autotools-to-Clone-Git-Repositories.texi
 
