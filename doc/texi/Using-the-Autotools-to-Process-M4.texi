@@ -1,5 +1,5 @@
-@node Processing M4 with the Autotools
-@chapter Processing M4 with the Autotools
+@node Using the Autotools to Process M4
+@chapter Using the Autotools to Process M4
 
 @menu
 * Automatic Dependency Tracking for M4 Code::

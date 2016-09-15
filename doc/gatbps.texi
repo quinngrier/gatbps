@@ -70,7 +70,7 @@ on@tie{}@w{@value{PACKAGEDATE}}@.
 * Copyright Texts::
 * Mathematical Notation in Texinfo::
 * Timestamp Preservation during Autoconf Instantiation::
-* Processing M4 with the Autotools::
+* Using the Autotools to Process M4::
 * Formatting Autoconf Files::
 * Formatting Automake Files::
 * Using the Autotools to Compile Java::
@@ -107,7 +107,7 @@ on@tie{}@w{@value{PACKAGEDATE}}@.
 
 @include Timestamp-Preservation-during-Autoconf-Instantiation.texi
 
-@include Processing-M4-with-the-Autotools.texi
+@include Using-the-Autotools-to-Process-M4.texi
 
 @include Formatting-Autoconf-Files.texi
 
