@@ -1,5 +1,5 @@
-@node Building Docker Images with the Autotools
-@chapter Building Docker Images with the Autotools
+@node Using the Autotools to Build Docker Images
+@chapter Using the Autotools to Build Docker Images
 
 @ifxml
 @ifnotxml

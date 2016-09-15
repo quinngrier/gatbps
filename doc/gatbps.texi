@@ -77,7 +77,7 @@ on@tie{}@w{@value{PACKAGEDATE}}@.
 * Generating Javadoc with the Autotools::
 * Using the Autotools to Clone Git Repositories::
 * Using the Autotools to Create Git Archives::
-* Building Docker Images with the Autotools::
+* Using the Autotools to Build Docker Images::
 * Invoking @w{@t{awk-form-sh}}::
 * Invoking @w{@t{sh-form-sh}}::
 * Invoking @w{@t{texi-form-sh}}::
@@ -121,7 +121,7 @@ on@tie{}@w{@value{PACKAGEDATE}}@.
 
 @include Using-the-Autotools-to-Create-Git-Archives.texi
 
-@include Building-Docker-Images-with-the-Autotools.texi
+@include Using-the-Autotools-to-Build-Docker-Images.texi
 
 @include Invoking-awk-form-sh.texi
 
