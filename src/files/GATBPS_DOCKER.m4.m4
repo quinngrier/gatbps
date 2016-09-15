@@ -54,7 +54,7 @@ m4_if(
       "distclean", "maintainer-clean", or "mostlyclean"
     ])])])[]dnl
 m4_pushdef(
-  [output_file_sh],
+  [output_file],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
 m4_pushdef(
   [input_directory_sh],
@@ -72,7 +72,7 @@ m4_pushdef(
 
 GATBPS_DOCKER_RULES="$][{GATBPS_DOCKER_RULES}"'
 
-]output_file_sh[: ]m4_if([$6], [], [child_prerequisites], [leaf_prerequisites])[
+]output_file[: ]m4_if([$6], [], [child_prerequisites], [leaf_prerequisites])[
 	$][(GATBPS_V_DOCKER): make: $][@]dnl
 m4_if([$6], [], [], [[
 	$][(AM@&t@_V_at)$][(MAKE) \
@@ -85,8 +85,8 @@ m4_if([$6], [], [], [[
 	$][(AM@&t@_V_at)'\''rm'\'' \
   '\''-f'\'' \
   '\''-r'\'' \
-  '\''./'\'']output_file_sh[ \
-  '\''./'\'']output_file_sh['\''.tmp'\'' \
+  '\''./'\'']output_file[ \
+  '\''./'\'']output_file['\''.tmp'\'' \
   '\''build-tmp/GATBPS_DOCKER/'\'']input_directory_sh[ \
 ;
 	$][(AM@&t@_V_at){ \
@@ -208,11 +208,11 @@ m4_foreach(
     [[
       ]m4_bpatsubst(m4_dquote(name), ['], ['\\''])[ \]])])[]dnl
 [
-      >'\''./'\'']output_file_sh['\''.tmp'\'' \
+      >'\''./'\'']output_file['\''.tmp'\'' \
     || '\''exit'\'' "$][$][{?}"; \
     '\''mv'\'' \
-      '\''./'\'']output_file_sh['\''.tmp'\'' \
-      '\''./'\'']output_file_sh[ \
+      '\''./'\'']output_file['\''.tmp'\'' \
+      '\''./'\'']output_file[ \
     || '\''exit'\'' "$][$][{?}"; \
     '\''exit'\'' '\''0'\''; \
   :;); \
@@ -229,8 +229,8 @@ m4_foreach(
       '\''rm'\'' \
         '\''-f'\'' \
         '\''-r'\'' \
-        '\''./'\'']output_file_sh[ \
-        '\''./'\'']output_file_sh['\''.tmp'\'' \
+        '\''./'\'']output_file[ \
+        '\''./'\'']output_file['\''.tmp'\'' \
       ; \
     ;; \
   esac; \
@@ -238,17 +238,17 @@ m4_foreach(
 :;}
 	$][(AM@&t@_V_at): done: $][@
 
-.PHONY: clean-]output_file_sh[
+.PHONY: clean-]output_file[
 
-clean-]output_file_sh[:
+clean-]output_file[:
 	-'\''rm'\'' \
   '\''-f'\'' \
-  '\''./'\'']output_file_sh[ \
-  '\''./'\'']output_file_sh['\''.tmp'\'' \
+  '\''./'\'']output_file[ \
+  '\''./'\'']output_file['\''.tmp'\'' \
   '\''build-tmp/GATBPS_DOCKER/'\'']input_directory_sh[ \
 ;
 
-]m4_if([$5], [], [[mostlyclean]], [[$5]])[-local: clean-]output_file_sh[
+]m4_if([$5], [], [[mostlyclean]], [[$5]])[-local: clean-]output_file[
 
 '
 ]dnl
@@ -256,7 +256,7 @@ m4_popdef([leaf_prerequisites])[]dnl
 m4_popdef([child_prerequisites])[]dnl
 m4_popdef([image_names])[]dnl
 m4_popdef([input_directory_sh])[]dnl
-m4_popdef([output_file_sh])[]dnl
+m4_popdef([output_file])[]dnl
 [
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
