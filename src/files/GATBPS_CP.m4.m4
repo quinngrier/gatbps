@@ -135,7 +135,7 @@ m4_if([$6], [], [], [[
     '\''cp'\'' \
       '\''-R'\'' \
       "$][$][{d}"'\''/'\''"$][$][{x}" \
-      '\''./'\'']output_file_or_directory[ \
+      '\''./'\'']output_file_or_directory['\''.tmp'\'' \
     || '\''exit'\'' "$][$][{?}"; \]dnl
 m4_if(
   [$3],
@@ -143,8 +143,12 @@ m4_if(
   [[
     '\''chmod'\'' \
       '\''a+x'\'' \
-      '\''./'\'']output_file_or_directory[ \
+      '\''./'\'']output_file_or_directory['\''.tmp'\'' \
     || '\''exit'\'' "$][$][{?}"; \]])[
+    '\''mv'\'' \
+      '\''./'\'']output_file_or_directory['\''.tmp'\'' \
+      '\''./'\'']output_file_or_directory[ \
+    || '\''exit'\'' "$][$][{?}"; \
     '\''exit'\'' '\''0'\''; \
   :;); \
   x="$][$][{?}"; \
@@ -156,6 +160,7 @@ m4_if(
         '\''-f'\'' \
         '\''-r'\'' \
         '\''./'\'']output_file_or_directory[ \
+        '\''./'\'']output_file_or_directory['\''.tmp'\'' \
       ; \
     ;; \
   esac; \
@@ -170,6 +175,7 @@ clean-]output_file_or_directory[:
   '\''-f'\'' \
   '\''-r'\'' \
   '\''./'\'']output_file_or_directory[ \
+  '\''./'\'']output_file_or_directory['\''.tmp'\'' \
 ;
 
 ]m4_if([$5], [], [[mostlyclean]], [[$5]])[-local: clean-]output_file_or_directory[
