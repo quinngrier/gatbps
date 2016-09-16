@@ -149,9 +149,8 @@ m4_if([$3], [executable], [[
 
 clean-]output_file_or_directory[:
 	-'\''rm'\'' \
-  '\''-f'\'' \]dnl
-m4_if([$3], [directory], [[
-  '\''-r'\'' \]])[
+  '\''-f'\'' \
+  '\''-r'\'' \
   '\''./'\'']output_file_or_directory[ \
 ;
 
