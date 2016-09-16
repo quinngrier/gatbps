@@ -135,14 +135,17 @@ m4_if([$6], [], [], [[
     '\''-R'\'' \
     "$][$][{d}"'\''/'\''"$][$][{x}" \
     '\''./'\'']output_file_or_directory[ \
-  || '\''exit'\'' "$][$][{?}"; \
+  || '\''exit'\'' "$][$][{?}"; \]dnl
+m4_if(
+  [$3],
+  [executable],
+  [[
+  '\''chmod'\'' \
+    '\''a+x'\'' \
+    '\''./'\'']output_file_or_directory[ \
+  || '\''exit'\'' "$][$][{?}"; \]])[
   '\''exit'\'' '\''0'\''; \
-:;}]dnl
-m4_if([$3], [executable], [[
-	$][(AM@&t@_V_at)'\''chmod'\'' \
-  '\''a+x'\'' \
-  '\''./'\'']output_file_or_directory[ \
-;]])[
+:;}
 	$][(AM@&t@_V_at): done: $][@
 
 .PHONY: clean-]output_file_or_directory[
