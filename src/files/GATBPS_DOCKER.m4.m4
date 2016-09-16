@@ -243,6 +243,7 @@ m4_foreach(
 clean-]output_file[:
 	-'\''rm'\'' \
   '\''-f'\'' \
+  '\''-r'\'' \
   '\''./'\'']output_file[ \
   '\''./'\'']output_file['\''.tmp'\'' \
   '\''build-tmp/GATBPS_DOCKER/'\'']input_directory[ \
