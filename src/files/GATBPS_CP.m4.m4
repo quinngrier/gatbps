@@ -144,7 +144,8 @@ m4_if(
     '\''chmod'\'' \
       '\''a+x'\'' \
       '\''./'\'']output_file_or_directory['\''.tmp'\'' \
-    || '\''exit'\'' "$][$][{?}"; \]])[
+    || '\''exit'\'' "$][$][{?}"; \]])[]dnl
+[
     '\''mv'\'' \
       '\''./'\'']output_file_or_directory['\''.tmp'\'' \
       '\''./'\'']output_file_or_directory[ \
