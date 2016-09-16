@@ -48,9 +48,10 @@ m4_if(
     [directory], [],
     [executable], [],
     [file], [],
+    [file_or_directory], [],
     [gatbps_fatal([
       GATBPS_CP requires its third argument to be either "directory",
-      "executable", or "file"
+      "executable", "file", or "file_or_directory"
     ])])])[]dnl
 m4_if(
   m4_eval([$# >= 5]),
@@ -130,7 +131,15 @@ m4_if([$6], [], [], [[
     fi; \
     '\''test'\'' \
       '\''-]m4_if([$3], [directory], [[d]], [[f]])['\'' \
-      "$][$][{d}"'\''/'\''"$][$][{x}" \
+      "$][$][{d}"'\''/'\''"$][$][{x}" \]dnl
+m4_if(
+  [$3],
+  [file_or_directory],
+  [[
+    || '\''test'\'' \
+      '\''-d'\'' \
+      "$][$][{d}"'\''/'\''"$][$][{x}" \]])[]dnl
+[
     || '\''exit'\'' "$][$][{?}"; \
     '\''cp'\'' \
       '\''-R'\'' \
