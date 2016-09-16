@@ -63,7 +63,7 @@ m4_if(
     [maintainer-clean], [],
     [mostlyclean], [],
     [gatbps_fatal([
-      GATBPS_CP requires its fourth argument to be either "clean",
+      GATBPS_CP requires its fifth argument to be either "clean",
       "distclean", "maintainer-clean", or "mostlyclean"
     ])])])[]dnl
 m4_if(
@@ -74,7 +74,7 @@ m4_if(
 	 ]]),
     [-1],
     [gatbps_fatal([
-      GATBPS_CP requires its fifth argument to contain at least one
+      GATBPS_CP requires its sixth argument to contain at least one
       character that is not a space, tab, or newline
     ])])])[]dnl
 m4_pushdef(
