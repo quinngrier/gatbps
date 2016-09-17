@@ -72,12 +72,13 @@ m4_if(
   m4_eval([$# >= 6]),
   [1],
   [m4_if(
-    m4_bregexp([$6], [[^
-	 ]]),
-    [-1],
+    m4_bregexp([$6], [^[
+	 ]+$]),
+    [0],
     [gatbps_fatal([
-      GATBPS_CP requires its sixth argument to contain at least one
-      character that is not a space, tab, or newline
+      GATBPS_CP requires its sixth argument either to be empty or to
+      contain at least one character that is not a space, tab, or
+      newline character
     ])])])[]dnl
 m4_pushdef(
   [output_file_or_directory],
