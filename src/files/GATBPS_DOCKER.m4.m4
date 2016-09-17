@@ -30,7 +30,7 @@ m4_if(
   [-1],
   [gatbps_fatal([
     GATBPS_DOCKER requires its first argument to contain at least
-    one character that is not a space, tab, or newline
+    one character that is not a space, tab, or newline character
   ])])[]dnl
 m4_if(
   m4_bregexp([$4], [[^
@@ -38,7 +38,7 @@ m4_if(
   [-1],
   [gatbps_fatal([
     GATBPS_DOCKER requires its second argument to contain at least
-    one character that is not a space, tab, or newline
+    one character that is not a space, tab, or newline character
   ])])[]dnl
 m4_if(
   m4_eval([$# >= 5]),

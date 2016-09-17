@@ -29,7 +29,7 @@ m4_if(
   [-1],
   [gatbps_fatal([
     GATBPS_M4 requires its first argument to contain at least one
-    character that is not a space, tab, or newline
+    character that is not a space, tab, or newline character
   ])])[]dnl
 m4_if(
   m4_eval([$# >= 2]),
