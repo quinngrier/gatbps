@@ -302,11 +302,21 @@ AC_SUBST([TEXI2DVIFLAGS])
 ]GATBPS_CP(
   [bin/gatbps],
   [src/gatbps],
-  [executable])[
+  [executable],
+  [
+    [src/gatbps],
+  ],
+  [mostlyclean],
+  [])[
 
 ]GATBPS_CP(
   [gh-pages/$(html_dist_dst)],
   [$(html_dist_dst)],
+  [file],
+  [
+    [$(html_dist_dst)],
+  ],
+  [mostlyclean],
   [])[
 
 ]GATBPS_M4(
