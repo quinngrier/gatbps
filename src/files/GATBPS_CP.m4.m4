@@ -59,12 +59,13 @@ m4_if(
   [1],
   [m4_case(
     [$5],
+    [], [],
     [clean], [],
     [distclean], [],
     [maintainer-clean], [],
     [mostlyclean], [],
     [gatbps_fatal([
-      GATBPS_CP requires its fifth argument to be either "clean",
+      GATBPS_CP requires its fifth argument to be either empty, "clean",
       "distclean", "maintainer-clean", or "mostlyclean"
     ])])])[]dnl
 m4_if(
