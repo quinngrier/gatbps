@@ -55,6 +55,18 @@ m4_if(
       "directory", "executable", "file", or "file_or_directory"
     ])])])[]dnl
 m4_if(
+  m4_eval([$# >= 4]),
+  [1],
+  [m4_if(
+    m4_bregexp([$4], [^[
+	 ]+$]),
+    [0],
+    [gatbps_fatal([
+      GATBPS_CP requires its fourth argument either to be empty or to
+      contain at least one character that is not a space, tab, or
+      newline character
+    ])])])[]dnl
+m4_if(
   m4_eval([$# >= 5]),
   [1],
   [m4_case(
