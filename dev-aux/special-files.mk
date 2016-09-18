@@ -96,6 +96,7 @@ all:
 	$(GENERATE) 'm4/GATBPS_PROG_SED.m4'
 	$(GENERATE) 'm4/GATBPS_PROG_TEXI2ANY.m4'
 	$(GENERATE) 'm4/gatbps_fatal.m4'
+	$(GENERATE) 'm4/gatbps_notice.m4'
 	$(GENERATE) 'src/tools/rules_code.m4'
 
 ## end_rules
