@@ -123,6 +123,11 @@ m4_pushdef(
 output_file_or_directory[: ]dnl
 m4_bpatsubst([[$1]], ['], ['\\''])dnl
 GATBPS_CP_rule_lines(m4_shift($@))])])[dnl
+]m4_ifdef(
+  [GATBPS_CP_make_lines],
+  [gatbps_fatal([
+    GATBPS_CP_make_lines is already defined
+  ])])[dnl
 ]m4_define(
   [GATBPS_CP_make_lines],
   [m4_if(
