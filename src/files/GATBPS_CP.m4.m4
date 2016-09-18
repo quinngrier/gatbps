@@ -92,6 +92,13 @@ m4_pushdef(
 m4_pushdef(
   [leaf_prerequisites],
   m4_dquote(list_6))[]dnl
+m4_pushdef(
+  [rule_prerequisites],
+  m4_if(
+    leaf_prerequisites,
+    [],
+    [m4_dquote(child_prerequisites)],
+    [m4_dquote(leaf_prerequisites)]))[]dnl
 ]m4_ifdef(
   [GATBPS_CP_rule_lines],
   [gatbps_fatal([
@@ -125,12 +132,7 @@ GATBPS_CP_make_lines(m4_shift($@))])])[dnl
 
 GATBPS_CP_RULES="$][{GATBPS_CP_RULES}"'
 
-]GATBPS_CP_rule_lines(
-  m4_if(
-    leaf_prerequisites,
-    [],
-    child_prerequisites,
-    leaf_prerequisites))[
+]GATBPS_CP_rule_lines(m4_if(,,rule_prerequisites))[
 	$][(AM@&t@_V_at)|%}dnl
 contains_at_least_one_word_sh(
   {%|MKDIR_P|%}){%|
@@ -231,6 +233,7 @@ clean-]output_file_or_directory[:
 
 '
 ]dnl
+m4_popdef([rule_prerequisites])[]dnl
 m4_popdef([leaf_prerequisites])[]dnl
 m4_popdef([child_prerequisites])[]dnl
 m4_popdef([input_file_or_directory])[]dnl
