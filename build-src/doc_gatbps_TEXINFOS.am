@@ -1,0 +1,91 @@
+## begin_variables
+
+doc_gatbps_TEXINFOS += build-aux/texinfo.css
+doc_gatbps_TEXINFOS += doc/texi/AWKDEFAULTTEXI.texi
+doc_gatbps_TEXINFOS += doc/texi/Automatic-Dependency-Tracking-for-M4-Code.texi
+doc_gatbps_TEXINFOS += doc/texi/Build-System-Initialization.texi
+doc_gatbps_TEXINFOS += doc/texi/Building-and-Installation.texi
+doc_gatbps_TEXINFOS += doc/texi/Building.texi
+doc_gatbps_TEXINFOS += doc/texi/CC0-1.0-appendix.texi
+doc_gatbps_TEXINFOS += doc/texi/CC0-1.0-copying.texi
+doc_gatbps_TEXINFOS += doc/texi/Configuration.texi
+doc_gatbps_TEXINFOS += doc/texi/Copyright-Information.texi
+doc_gatbps_TEXINFOS += doc/texi/Copyright-Texts.texi
+doc_gatbps_TEXINFOS += doc/texi/Formatting-Autoconf-Files.texi
+doc_gatbps_TEXINFOS += doc/texi/Formatting-Automake-Files.texi
+doc_gatbps_TEXINFOS += doc/texi/Formatting-Automake-Include-Sections.texi
+doc_gatbps_TEXINFOS += doc/texi/Formatting-Automake-Rule-Sections.texi
+doc_gatbps_TEXINFOS += doc/texi/Formatting-Automake-Variable-Sections.texi
+doc_gatbps_TEXINFOS += doc/texi/Installation.texi
+doc_gatbps_TEXINFOS += doc/texi/Introduction.texi
+doc_gatbps_TEXINFOS += doc/texi/Invoking-awk-form-sh.texi
+doc_gatbps_TEXINFOS += doc/texi/Invoking-gatbps.texi
+doc_gatbps_TEXINFOS += doc/texi/Invoking-sh-form-sh.texi
+doc_gatbps_TEXINFOS += doc/texi/Invoking-texi-form-sh.texi
+doc_gatbps_TEXINFOS += doc/texi/Invoking-troff-form-sh.texi
+doc_gatbps_TEXINFOS += doc/texi/Mathematical-Notation-in-Texinfo.texi
+doc_gatbps_TEXINFOS += doc/texi/PACKAGEDATE.texi
+doc_gatbps_TEXINFOS += doc/texi/PACKAGEVERSION.texi
+doc_gatbps_TEXINFOS += doc/texi/Package-Formats.texi
+doc_gatbps_TEXINFOS += doc/texi/Plain-Files.texi
+doc_gatbps_TEXINFOS += doc/texi/Release-Notes.texi
+doc_gatbps_TEXINFOS += doc/texi/Required-Packages.texi
+doc_gatbps_TEXINFOS += doc/texi/SEDDEFAULTTEXI.texi
+doc_gatbps_TEXINFOS += doc/texi/Special-File-Reference.texi
+doc_gatbps_TEXINFOS += doc/texi/TEXIANYDEFAULTTEXI.texi
+doc_gatbps_TEXINFOS += doc/texi/Timestamp-Preservation-during-Autoconf-Instantiation.texi
+doc_gatbps_TEXINFOS += doc/texi/Using-the-Autotools-to-Build-Docker-Images.texi
+doc_gatbps_TEXINFOS += doc/texi/Using-the-Autotools-to-Clone-Git-Repositories.texi
+doc_gatbps_TEXINFOS += doc/texi/Using-the-Autotools-to-Compile-Java.texi
+doc_gatbps_TEXINFOS += doc/texi/Using-the-Autotools-to-Create-Git-Archives.texi
+doc_gatbps_TEXINFOS += doc/texi/Using-the-Autotools-to-Generate-Javadoc.texi
+doc_gatbps_TEXINFOS += doc/texi/Using-the-Autotools-to-Process-M4.texi
+doc_gatbps_TEXINFOS += doc/texi/Writing-Mathematical-Expressions-Twice.texi
+doc_gatbps_TEXINFOS += doc/texi/XXXX-XX-XX-GATBPS-0-1-0.texi
+doc_gatbps_TEXINFOS += doc/texi/bdots.texi
+doc_gatbps_TEXINFOS += doc/texi/bothcontents.texi
+doc_gatbps_TEXINFOS += doc/texi/dslash.texi
+doc_gatbps_TEXINFOS += doc/texi/gatbps-Asynchronous-Events.texi
+doc_gatbps_TEXINFOS += doc/texi/gatbps-Consequences-of-Errors.texi
+doc_gatbps_TEXINFOS += doc/texi/gatbps-Description.texi
+doc_gatbps_TEXINFOS += doc/texi/gatbps-Environment-Variables.texi
+doc_gatbps_TEXINFOS += doc/texi/gatbps-Exit-Status.texi
+doc_gatbps_TEXINFOS += doc/texi/gatbps-Input-Files.texi
+doc_gatbps_TEXINFOS += doc/texi/gatbps-Operands.texi
+doc_gatbps_TEXINFOS += doc/texi/gatbps-Options.texi
+doc_gatbps_TEXINFOS += doc/texi/gatbps-Output-Files.texi
+doc_gatbps_TEXINFOS += doc/texi/gatbps-Standard-Error.texi
+doc_gatbps_TEXINFOS += doc/texi/gatbps-Standard-Input.texi
+doc_gatbps_TEXINFOS += doc/texi/gatbps-Standard-Output.texi
+doc_gatbps_TEXINFOS += doc/texi/gatbps-Synopsis.texi
+doc_gatbps_TEXINFOS += doc/texi/gequ.texi
+doc_gatbps_TEXINFOS += doc/texi/indent.texi
+doc_gatbps_TEXINFOS += doc/texi/ipez.texi
+doc_gatbps_TEXINFOS += doc/texi/lcei.texi
+doc_gatbps_TEXINFOS += doc/texi/lequ.texi
+doc_gatbps_TEXINFOS += doc/texi/lflo.texi
+doc_gatbps_TEXINFOS += doc/texi/math.texi
+doc_gatbps_TEXINFOS += doc/texi/mdot.texi
+doc_gatbps_TEXINFOS += doc/texi/mdots.texi
+doc_gatbps_TEXINFOS += doc/texi/msign.texi
+doc_gatbps_TEXINFOS += doc/texi/mtvskipbot.texi
+doc_gatbps_TEXINFOS += doc/texi/mtvskiptop.texi
+doc_gatbps_TEXINFOS += doc/texi/nequ.texi
+doc_gatbps_TEXINFOS += doc/texi/prm.texi
+doc_gatbps_TEXINFOS += doc/texi/rarrow.texi
+doc_gatbps_TEXINFOS += doc/texi/rcei.texi
+doc_gatbps_TEXINFOS += doc/texi/rflo.texi
+doc_gatbps_TEXINFOS += doc/texi/sbs.texi
+doc_gatbps_TEXINFOS += doc/texi/sps.texi
+
+## end_variables
+
+##
+## The authors of this file have waived all copyright and
+## related or neighboring rights to the extent permitted by
+## law as described by the CC0 1.0 Universal Public Domain
+## Dedication. You should have received a copy of the full
+## dedication along with this file, typically as a file
+## named <CC0-1.0.txt>. If not, it may be available at
+## <https://creativecommons.org/publicdomain/zero/1.0/>.
+##
