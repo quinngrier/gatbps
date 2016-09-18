@@ -108,6 +108,11 @@ m4_pushdef(
 m4_pushdef(
   [leaf_prerequisites],
   [[$6]])[]dnl
+]m4_ifdef(
+  [GATBPS_CP_rule_lines],
+  [gatbps_fatal([
+    GATBPS_CP_rule_lines is already defined
+  ])])[dnl
 ]m4_define(
   [GATBPS_CP_rule_lines],
   [m4_if(
