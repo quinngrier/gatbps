@@ -58,6 +58,42 @@ m4_pushdef(
   [list_4],
   m4_bpatsubst([[[$4]]], [^\(..\)[
 	 ]+], [\1]))[]dnl
+]m4_ifdef(
+  [GATBPS_CP_check_4],
+  [gatbps_fatal([
+    GATBPS_CP_check_4 is already defined
+  ])])[dnl
+]m4_define(
+  [GATBPS_CP_check_4],
+  [m4_if(
+    [$#],
+    [1],
+    [m4_if(
+      m4_bregexp([$1], [^[
+	 ]+$]),
+      [0],
+      [gatbps_fatal([
+        invalid last subargument of the fourth GATBPS_CP argument:
+        [--VERBATIM--] "$1"
+      ], [
+        the last subargument must either be empty or contain at least
+        one character that is not a space, tab, or newline character
+      ])])],
+    [m4_if(
+      m4_bregexp([$1], [[^
+	 ]]),
+      [-1],
+      [gatbps_fatal([
+        invalid subargument of the fourth GATBPS_CP argument:
+        [--VERBATIM--] "$1"
+      ], [
+        each subargument except the last must contain at least one
+        character that is not a space, tab, or newline character
+      ])])[]GATBPS_CP_check_4(m4_shift($@))])])[dnl
+m4_if(
+  m4_eval([$# >= 4]),
+  [1],
+  [GATBPS_CP_check_4(m4_if(,,list_4))])[]dnl
 m4_if(
   m4_eval([$# >= 5]),
   [1],
