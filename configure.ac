@@ -307,7 +307,8 @@ AC_SUBST([TEXI2DVIFLAGS])
     [src/gatbps],
   ],
   [mostlyclean],
-  [])[
+  [
+  ])[
 
 ]GATBPS_CP(
   [gh-pages/$(html_dist_dst)],
@@ -317,7 +318,8 @@ AC_SUBST([TEXI2DVIFLAGS])
     [$(html_dist_dst)],
   ],
   [mostlyclean],
-  [])[
+  [
+  ])[
 
 ]GATBPS_M4(
   [doc/man/gatbps.1],
