@@ -61,23 +61,14 @@ GATBPS_M4_RULES="$][{GATBPS_M4_RULES}"'
 
 .PHONY: clean-]target_sh[.m4out
 
-.PHONY: clean-]target_sh[.m4out.d
-
 clean-]target_sh[.m4out:
 	-'\''rm'\'' \
   '\''-f'\'' \
   '\''./'\'']target_sh['\''.m4out'\'' \
-;
-
-clean-]target_sh[.m4out.d:
-	-'\''rm'\'' \
-  '\''-f'\'' \
   '\''./'\'']target_sh['\''.m4out.d'\'' \
 ;
 
 ]m4_if([$2], [], [[mostlyclean]], [[$2]])[-local: clean-]target_sh[.m4out
-
-]m4_if([$2], [], [[mostlyclean]], [[$2]])[-local: clean-]target_sh[.m4out.d
 
 '"$][{SOFT_INCLUDE}"' ]target_sh[.m4out.d
 
