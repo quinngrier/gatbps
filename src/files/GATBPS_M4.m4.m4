@@ -64,8 +64,11 @@ GATBPS_M4_RULES="$][{GATBPS_M4_RULES}"'
 clean-]target_sh[.m4out:
 	-'\''rm'\'' \
   '\''-f'\'' \
+  '\''-r'\'' \
   '\''./'\'']target_sh['\''.m4out'\'' \
   '\''./'\'']target_sh['\''.m4out.d'\'' \
+  '\''./'\'']target_sh['\''.m4out.d.tmp'\'' \
+  '\''./'\'']target_sh['\''.m4out.tmp'\'' \
 ;
 
 ]m4_if([$2], [], [[mostlyclean]], [[$2]])[-local: clean-]target_sh[.m4out
