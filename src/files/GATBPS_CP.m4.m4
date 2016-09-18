@@ -54,18 +54,10 @@ m4_if(
       GATBPS_CP requires its third argument to be either empty,
       "directory", "executable", "file", or "file_or_directory"
     ])])])[]dnl
-m4_if(
-  m4_eval([$# >= 4]),
-  [1],
-  [m4_if(
-    m4_bregexp([$4], [^[
-	 ]+$]),
-    [0],
-    [gatbps_fatal([
-      GATBPS_CP requires its fourth argument either to be empty or to
-      contain at least one character that is not a space, tab, or
-      newline character
-    ])])])[]dnl
+m4_pushdef(
+  [list_4],
+  m4_bpatsubst([[[$4]]], [^\(..\)[
+	 ]+], [\1]))[]dnl
 m4_if(
   m4_eval([$# >= 5]),
   [1],
@@ -80,18 +72,10 @@ m4_if(
       GATBPS_CP requires its fifth argument to be either empty, "clean",
       "distclean", "maintainer-clean", or "mostlyclean"
     ])])])[]dnl
-m4_if(
-  m4_eval([$# >= 6]),
-  [1],
-  [m4_if(
-    m4_bregexp([$6], [^[
-	 ]+$]),
-    [0],
-    [gatbps_fatal([
-      GATBPS_CP requires its sixth argument either to be empty or to
-      contain at least one character that is not a space, tab, or
-      newline character
-    ])])])[]dnl
+m4_pushdef(
+  [list_6],
+  m4_bpatsubst([[[$6]]], [^\(..\)[
+	 ]+], [\1]))[]dnl
 m4_pushdef(
   [output_file_or_directory],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
@@ -101,13 +85,13 @@ m4_pushdef(
 m4_pushdef(
   [child_prerequisites],
   m4_if(
-    [$4],
+    list_4,
     [],
     [[[[$2]]]],
-    [[[$4]]]))[]dnl
+    [m4_dquote(list_4)])))[]dnl
 m4_pushdef(
   [leaf_prerequisites],
-  [[$6]])[]dnl
+  m4_dquote(list_6))[]dnl
 ]m4_ifdef(
   [GATBPS_CP_rule_lines],
   [gatbps_fatal([
@@ -145,14 +129,8 @@ GATBPS_CP_RULES="$][{GATBPS_CP_RULES}"'
   m4_if(
     leaf_prerequisites,
     [],
-    [m4_bpatsubst(
-      child_prerequisites,
-      [^[
-	 ]*])],
-    [m4_bpatsubst(
-      leaf_prerequisites,
-      [^[
-	 ]*])]))[
+    child_prerequisites,
+    leaf_prerequisites))[
 	$][(AM@&t@_V_at)|%}dnl
 contains_at_least_one_word_sh(
   {%|MKDIR_P|%}){%|
@@ -164,11 +142,7 @@ m4_if(
   [[
 	$][(AM@&t@_V_at)$][(MAKE) \
   $][(AM@&t@_MAKEFLAGS) \]dnl
-GATBPS_CP_make_lines(
-  m4_bpatsubst(
-    child_prerequisites,
-    [^[
-	 ]*]))[
+GATBPS_CP_make_lines(m4_if(,,child_prerequisites))[
 ;]])[
 	$][(AM@&t@_V_at)$][(MKDIR_P) \
   '\''./'\''$][(@D) \
@@ -261,6 +235,8 @@ m4_popdef([leaf_prerequisites])[]dnl
 m4_popdef([child_prerequisites])[]dnl
 m4_popdef([input_file_or_directory])[]dnl
 m4_popdef([output_file_or_directory])[]dnl
+m4_popdef([list_6])[]dnl
+m4_popdef([list_4])[]dnl
 [
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
