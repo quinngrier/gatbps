@@ -17,16 +17,12 @@ AC_DEFUN([GATBPS_MSG_FAILURE], [[{
 # The block that contains this comment is an expansion of the
 # GATBPS_MSG_FAILURE macro.
 #]dnl
-m4_if(
-  [$#],
-  [0],
-  [gatbps_fatal([
-    GATBPS_MSG_FAILURE requires 1 or more arguments
-  ])])[]dnl
 [
 
-]m4_if(
+]m4_case(
   [$#],
+  [0],
+  [AC_MSG_FAILURE()],
   [1],
   [AC_MSG_FAILURE([[]dnl
 m4_normalize(m4_bpatsubst([[$1]], [\[--VERBATIM--\]\(.\|
