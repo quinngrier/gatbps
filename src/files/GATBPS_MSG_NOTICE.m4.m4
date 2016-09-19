@@ -17,16 +17,12 @@ AC_DEFUN([GATBPS_MSG_NOTICE], [[{
 # The block that contains this comment is an expansion of the
 # GATBPS_MSG_NOTICE macro.
 #]dnl
-m4_if(
-  [$#],
-  [0],
-  [gatbps_fatal([
-    GATBPS_MSG_NOTICE requires 1 or more arguments
-  ])])[]dnl
 [
 
-]m4_if(
+]m4_case(
   [$#],
+  [0],
+  [AC_MSG_NOTICE()],
   [1],
   [AC_MSG_NOTICE([[]dnl
 m4_normalize(m4_bpatsubst([[$1]], [\[--VERBATIM--\]\(.\|
