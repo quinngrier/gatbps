@@ -12,6 +12,9 @@ dnl
 dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([gatbps_fatal], [dnl
+m4_ifndef(
+  [gatbps_notice],
+  [m4_fatal(m4_location[: gatbps_notice is not defined])])[]dnl
 m4_case(
   [$#],
   [0],
