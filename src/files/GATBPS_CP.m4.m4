@@ -138,7 +138,7 @@ m4_pushdef(
 	 ]]),
       [-1],
       [gatbps_fatal([
-        invalid subargument of the sixth GATBPS_CP argument:
+        invalid non-last subargument of the sixth GATBPS_CP argument:
         [--VERBATIM--] "$1"
       ], [
         each subargument except the last must contain at least one
