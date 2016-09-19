@@ -17,13 +17,11 @@ m4_case(
   [0],
   [m4_fatal([gatbps_notice requires 1 or more arguments])],
   [1],
-  [m4_errprintn(m4_location[: ]m4_if(
-    m4_bregexp([$1], [\[--VERBATIM--\]]),
-    [-1],
-    [m4_normalize([$1])],
-    [m4_normalize(m4_bpatsubst([[$1]], [\[--VERBATIM--\]\(.\|
-\)*\(.\)], [\2]))[]m4_bregexp([[$1]], [\(\[\)--VERBATIM--\]\(\(.\|
-\)*\)], [\1\2])]))],
+  [m4_errprintn(m4_location[: ]dnl
+m4_normalize(m4_bpatsubst([[$1]], [\[--VERBATIM--\]\(.\|
+\)*\(.\)], [\2]))[]dnl
+m4_bregexp([[$1]], [\(\[\)--VERBATIM--\]\(\(.\|
+\)*\)], [\1\2]))],
   [gatbps_notice([$1])[]gatbps_notice(m4_shift($@))])[]dnl
 ])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
