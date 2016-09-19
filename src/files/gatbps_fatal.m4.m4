@@ -15,7 +15,7 @@ AC_DEFUN([gatbps_fatal], [dnl
 m4_case(
   [$#],
   [0],
-  [m4_fatal([gatbps_fatal requires 1 or more arguments])],
+  [m4_fatal(m4_location)],
   [1],
   [m4_fatal(m4_location[: ]dnl
 m4_normalize(m4_bpatsubst([[$1]], [\[--VERBATIM--\]\(.\|
