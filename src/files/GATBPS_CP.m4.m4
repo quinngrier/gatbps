@@ -87,8 +87,8 @@ m4_pushdef(
         invalid non-last subargument of the fourth GATBPS_CP argument:
         [--VERBATIM--] "$1"
       ], [
-        each subargument except the last must contain at least one
-        character that is not a space, tab, or newline character
+        each non-last subargument must contain at least one character
+        that is not a space, tab, or newline character
       ])])[]GATBPS_CP_check_4(m4_shift($@))])])[dnl
 m4_if(
   m4_eval([$# >= 4]),
@@ -141,8 +141,8 @@ m4_pushdef(
         invalid non-last subargument of the sixth GATBPS_CP argument:
         [--VERBATIM--] "$1"
       ], [
-        each subargument except the last must contain at least one
-        character that is not a space, tab, or newline character
+        each non-last subargument must contain at least one character
+        that is not a space, tab, or newline character
       ])])[]GATBPS_CP_check_6(m4_shift($@))])])[dnl
 m4_if(
   m4_eval([$# >= 6]),
