@@ -28,13 +28,11 @@ m4_if(
 ]m4_if(
   [$#],
   [1],
-  [AC_MSG_FAILURE([m4_if(
-    m4_bregexp([$1], [\[--VERBATIM--\]]),
-    [-1],
-    [m4_normalize([$1])],
-    [m4_normalize(m4_bpatsubst([[$1]], [\[--VERBATIM--\]\(.\|
-\)*\(.\)], [\2]))[]m4_bregexp([[$1]], [\(\[\)--VERBATIM--\]\(\(.\|
-\)*\)], [\1\2])])], [[1]])],
+  [AC_MSG_FAILURE([[]dnl
+m4_normalize(m4_bpatsubst([[$1]], [\[--VERBATIM--\]\(.\|
+\)*\(.\)], [\2]))[]dnl
+m4_bregexp([[$1]], [\(\[\)--VERBATIM--\]\(\(.\|
+\)*\)], [\1\2])], [[1]])],
   [GATBPS_MSG_NOTICE([error: $1])[
 
 ]GATBPS_MSG_FAILURE(m4_shift($@))])[
