@@ -14,7 +14,11 @@ dnl
 AC_DEFUN([gatbps_fatal], [dnl
 m4_ifndef(
   [gatbps_notice],
-  [m4_fatal(m4_location[: gatbps_notice is not defined])])[]dnl
+  [dnl
+m4_errprintn(m4_location[: error: gatbps_notice is not defined])[]dnl
+m4_fatal([this probably means that you forgot to add ]dnl
+[gatbps_notice.m4 to your Autoconf macros])[]dnl
+])[]dnl
 m4_case(
   [$#],
   [0],
