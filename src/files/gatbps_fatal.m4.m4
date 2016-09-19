@@ -22,9 +22,9 @@ m4_fatal([this probably means that you forgot to add ]dnl
 m4_case(
   [$#],
   [0],
-  [m4_fatal(m4_location)],
+  [m4_fatal()],
   [1],
-  [m4_fatal(m4_location[: ]dnl
+  [m4_fatal(dnl
 m4_normalize(m4_bpatsubst([[$1]], [\[--VERBATIM--\]\(.\|
 \)*\(.\)], [\2]))[]dnl
 m4_bregexp([[$1]], [\(\[\)--VERBATIM--\]\(\(.\|
