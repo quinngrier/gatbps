@@ -17,6 +17,14 @@ AC_DEFUN([GATBPS_MSG_ERROR], [[{
 # The block that contains this comment is an expansion of the
 # GATBPS_MSG_ERROR macro.
 #]dnl
+m4_ifndef(
+  [GATBPS_MSG_NOTICE],
+  [gatbps_fatal([
+    GATBPS_MSG_NOTICE is not defined
+  ], [
+    this probably means that you forgot to add GATBPS_MSG_NOTICE.m4 to
+    your Autoconf macros
+  ])])[]dnl
 [
 
 ]m4_case(
