@@ -27,10 +27,8 @@ m4_ifndef(
   ])])[]dnl
 [
 
-]m4_case(
-  [$#],
-  [0],
-  [AC_MSG_FAILURE()],
+]m4_if(
+  m4_eval([$# <= 1]),
   [1],
   [AC_MSG_FAILURE([[]dnl
 m4_normalize(m4_bpatsubst([[$1]], [\[--VERBATIM--\]\(.\|
