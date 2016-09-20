@@ -22,15 +22,17 @@ AC_DEFUN([GATBPS_CHECK_BASIC], [[{
 #]])[ (gatbps_cv_)$2.
 #]dnl
 m4_pushdef(
+  [noun_phrase],
+  m4_bpatsubst([[[$1]]], [\[--DETAILS--\]\(.\|
+\)*\(..\)], [\2]))[]dnl
+m4_pushdef(
   [GATBPS_CHECK_BASIC_macro_description],
   m4_dquote([Define to 1 if you have ]dnl
-m4_pushdef([noun_phrase], m4_bpatsubst([[[$1]]], [\[--DETAILS--\]\(.\|
-\)*\(..\)], [\2]))[]dnl
 m4_bpatsubst(m4_dquote(noun_phrase), [\[--VERBATIM--\]\(.\|
 \)*\(.\)], [\2])[]dnl
 m4_bregexp(m4_dquote(noun_phrase), [\(\[\)--VERBATIM--\]\(\(.\|
 \)*\)], [\1\2])[]dnl
-m4_popdef([noun_phrase])[, or 0 if not.]dnl
+[, or 0 if not.]dnl
 m4_bregexp([[$1]], [\(\[\)--DETAILS--\]\(\(.\|
 \)*\)], [ \1\2])))
 
@@ -147,6 +149,7 @@ AM_CONDITIONAL([$2], [( ':'
 )])[
 ]dnl
 m4_popdef([GATBPS_CHECK_BASIC_macro_description])[]dnl
+m4_popdef([noun_phrase])[]dnl
 [
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
