@@ -26,7 +26,7 @@ m4_pushdef(
   m4_bpatsubst([[[$1]]], [\[--DETAILS--\]\(.\|
 \)*\(..\)], [\2]))[]dnl
 m4_pushdef(
-  [GATBPS_CHECK_BASIC_macro_description],
+  [macro_description],
   m4_dquote([Define to 1 if you have ]dnl
 m4_bpatsubst(m4_dquote(noun_phrase), [\[--VERBATIM--\]\(.\|
 \)*\(.\)], [\2])[]dnl
@@ -120,10 +120,10 @@ esac
 
 case "$[]{gatbps_cv_$2}" in
   'yes')
-    AC_DEFINE([[$2]], [[1]], GATBPS_CHECK_BASIC_macro_description)
+    AC_DEFINE([[$2]], [[1]], macro_description)
   ;;
   'no')
-    AC_DEFINE([[$2]], [[0]], GATBPS_CHECK_BASIC_macro_description)
+    AC_DEFINE([[$2]], [[0]], macro_description)
   ;;
 esac
 
@@ -148,7 +148,7 @@ AM_CONDITIONAL([$2], [( ':'
   esac
 )])[
 ]dnl
-m4_popdef([GATBPS_CHECK_BASIC_macro_description])[]dnl
+m4_popdef([macro_description])[]dnl
 m4_popdef([noun_phrase])[]dnl
 [
 :;}]])[]dnl
