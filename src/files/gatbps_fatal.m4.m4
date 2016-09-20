@@ -19,10 +19,8 @@ m4_errprintn(m4_location[: error: gatbps_notice is not defined])[]dnl
 m4_fatal([this probably means that you forgot to add ]dnl
 [gatbps_notice.m4 to your Autoconf macros])[]dnl
 ])[]dnl
-m4_case(
-  [$#],
-  [0],
-  [m4_fatal()],
+m4_if(
+  m4_eval([$# <= 1]),
   [1],
   [m4_fatal(dnl
 m4_normalize(m4_bpatsubst([[$1]], [\[--VERBATIM--\]\(.\|

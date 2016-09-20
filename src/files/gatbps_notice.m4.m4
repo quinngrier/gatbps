@@ -12,10 +12,8 @@ dnl
 dnl For more information, see the GATBPS manual.
 dnl
 AC_DEFUN([gatbps_notice], [dnl
-m4_case(
-  [$#],
-  [0],
-  [m4_errprintn(m4_location)],
+m4_if(
+  m4_eval([$# <= 1]),
   [1],
   [m4_errprintn(m4_location[: ]dnl
 m4_normalize(m4_bpatsubst([[$1]], [\[--VERBATIM--\]\(.\|
