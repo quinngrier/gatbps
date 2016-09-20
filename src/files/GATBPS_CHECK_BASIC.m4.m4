@@ -32,9 +32,9 @@ m4_pushdef(
     [m4_pushdef([x], m4_bpatsubst([[[$1]]], [\[--DETAILS--\]\(.\|
 \)*\(..\)], [\2]))[]m4_normalize(m4_bpatsubst(m4_dquote(x), [\[--VERBATIM--\]\(.\|
 \)*\(.\)], [\2]))[]m4_bregexp(m4_dquote(x), [\(\[\)--VERBATIM--\]\(\(.\|
-\)*\)], [\1\2])[]m4_popdef([x])[, or 0 if not. ]m4_bregexp(
+\)*\)], [\1\2])[]m4_popdef([x])[, or 0 if not.]m4_bregexp(
 [[$1]], [\(\[\)--DETAILS--\]\(\(.\|
-\)*\)], [\1\2])])))
+\)*\)], [ \1\2])])))
 
 GATBPS_CACHE_CHECK(
   [for ]m4_bpatsubst([[$1]], [\[--DETAILS--\]\(.\|
