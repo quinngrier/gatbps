@@ -34,9 +34,10 @@ m4_bregexp(m4_dquote(noun_phrase), [\(\[\)--VERBATIM--\]\(\(.\|
 \)*\)], [\1\2])[]dnl
 [, or 0 if not.]dnl
 m4_bregexp([[$1]], [\(\[\)--DETAILS--\]\(\(.\|
-\)*\)], [ \1\2])))
+\)*\)], [ \1\2])))[]dnl
+[
 
-GATBPS_CACHE_CHECK(
+]GATBPS_CACHE_CHECK(
   [for ]m4_bpatsubst([[$1]], [\[--DETAILS--\]\(.\|
 \)*\(.\)], [\2]),
   [$2],
