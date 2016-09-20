@@ -43,9 +43,12 @@ $2_was_cached='yes'
 #
 
 ]AC_CACHE_CHECK(
-  m4_dquote(m4_normalize(m4_bpatsubst([[$1]], [\[--VERBATIM--\]\(.\|
-\)*\(.\)], [\2]))[]m4_bregexp([[$1]], [\(\[\)--VERBATIM--\]\(\(.\|
-\)*\)], [\1\2])),
+  m4_dquote(dnl
+m4_normalize(m4_bpatsubst([[$1]], [\[--VERBATIM--\]\(.\|
+\)*\(.\)], [\2]))[]dnl
+m4_bregexp([[$1]], [\(\[\)--VERBATIM--\]\(\(.\|
+\)*\)], [\1\2])[]dnl
+),
   [gatbps_cv_$2],
   [[{
 
