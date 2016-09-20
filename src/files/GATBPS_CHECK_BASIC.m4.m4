@@ -30,13 +30,9 @@ m4_pushdef(
 \)*\(.\)], [\2]))[]m4_bregexp([[$1]], [\(\[\)--VERBATIM--\]\(\(.\|
 \)*\)], [\1\2])[, or 0 if not.]],
     [m4_pushdef([x], m4_bpatsubst([[[$1]]], [\[--DETAILS--\]\(.\|
-\)*\(..\)], [\2]))[]m4_if(
-      m4_bregexp(x, [\[--VERBATIM--\]]),
-      [-1],
-      m4_dquote(x),
-      [m4_normalize(m4_bpatsubst(m4_dquote(x), [\[--VERBATIM--\]\(.\|
+\)*\(..\)], [\2]))[]m4_normalize(m4_bpatsubst(m4_dquote(x), [\[--VERBATIM--\]\(.\|
 \)*\(.\)], [\2]))[]m4_bregexp(m4_dquote(x), [\(\[\)--VERBATIM--\]\(\(.\|
-\)*\)], [\1\2])])[]m4_popdef([x])[, or 0 if not. ]m4_bregexp(
+\)*\)], [\1\2])[]m4_popdef([x])[, or 0 if not. ]m4_bregexp(
 [[$1]], [\(\[\)--DETAILS--\]\(\(.\|
 \)*\)], [\1\2])])))
 
