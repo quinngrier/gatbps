@@ -26,13 +26,9 @@ m4_pushdef(
   m4_dquote([Define to 1 if you have ]m4_if(
     m4_bregexp([$1], [\[--DETAILS--\]]),
     [-1],
-    [m4_if(
-      m4_bregexp([$1], [\[--VERBATIM--\]]),
-      [-1],
-      [[$1]],
-      [m4_normalize(m4_bpatsubst([[$1]], [\[--VERBATIM--\]\(.\|
+    [m4_normalize(m4_bpatsubst([[$1]], [\[--VERBATIM--\]\(.\|
 \)*\(.\)], [\2]))[]m4_bregexp([[$1]], [\(\[\)--VERBATIM--\]\(\(.\|
-\)*\)], [\1\2])])[, or 0 if not.]],
+\)*\)], [\1\2])[, or 0 if not.]],
     [m4_pushdef([x], m4_bpatsubst([[[$1]]], [\[--DETAILS--\]\(.\|
 \)*\(..\)], [\2]))[]m4_if(
       m4_bregexp(x, [\[--VERBATIM--\]]),
