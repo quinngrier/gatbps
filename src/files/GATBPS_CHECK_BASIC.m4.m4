@@ -24,13 +24,13 @@ AC_DEFUN([GATBPS_CHECK_BASIC], [[{
 m4_pushdef(
   [GATBPS_CHECK_BASIC_macro_description],
   m4_dquote([Define to 1 if you have ]dnl
-m4_pushdef([x], m4_bpatsubst([[[$1]]], [\[--DETAILS--\]\(.\|
+m4_pushdef([noun_phrase], m4_bpatsubst([[[$1]]], [\[--DETAILS--\]\(.\|
 \)*\(..\)], [\2]))[]dnl
-m4_bpatsubst(m4_dquote(x), [\[--VERBATIM--\]\(.\|
+m4_bpatsubst(m4_dquote(noun_phrase), [\[--VERBATIM--\]\(.\|
 \)*\(.\)], [\2])[]dnl
-m4_bregexp(m4_dquote(x), [\(\[\)--VERBATIM--\]\(\(.\|
+m4_bregexp(m4_dquote(noun_phrase), [\(\[\)--VERBATIM--\]\(\(.\|
 \)*\)], [\1\2])[]dnl
-m4_popdef([x])[, or 0 if not.]dnl
+m4_popdef([noun_phrase])[, or 0 if not.]dnl
 m4_bregexp([[$1]], [\(\[\)--DETAILS--\]\(\(.\|
 \)*\)], [ \1\2])))
 
