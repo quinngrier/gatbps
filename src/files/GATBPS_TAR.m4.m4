@@ -82,6 +82,13 @@ m4_pushdef(
   [input_directory],
   m4_bpatsubst([[[$2]]], ['], ['\\'']))[]dnl
 m4_pushdef(
+  [output_mode],
+  m4_if(
+    [$3],
+    [],
+    [[[directory_itself]]],
+    [[[$3]]]))[]dnl
+m4_pushdef(
   [child_prerequisites],
   m4_if(
     [$4],
@@ -113,7 +120,7 @@ m4_if([$6], [], [], [[
   '\''./'\''$][(@D) \
 ;]dnl
 m4_if(
-[$3], [contents], [[
+output_mode, [contents], [[
 	$][(AM@&t@_V_at){ \
   x=]input_directory[; \
   if '\''test'\'' '\''-d'\'' "$][$][{x}"; then \
@@ -143,7 +150,7 @@ m4_if(
   || '\''exit'\'' "$][$][{?}"; \
   '\''exit'\'' '\''0'\''; \
 :;}]],
-[$3], [], [[
+output_mode, [], [[
 	$][(AM@&t@_V_at){ \
   x=]input_directory[; \
   if \
@@ -188,6 +195,7 @@ clean-]target_sh[:
 ]dnl
 m4_popdef([leaf_prerequisites])[]dnl
 m4_popdef([child_prerequisites])[]dnl
+m4_popdef([output_mode])[]dnl
 m4_popdef([input_directory])[]dnl
 m4_popdef([target_sh])[]dnl
 [
