@@ -40,8 +40,11 @@ m4_if(
 	 ]]),
   [-1],
   [gatbps_fatal([
-    GATBPS_CP requires its second argument to contain at least one
-    character that is not a space, tab, or newline character
+    invalid second argument to GATBPS_CP:
+    [--VERBATIM--] "$2"
+  ], [
+    the second argument must contain at least one character that is not
+    a space, tab, or newline character
   ])])[]dnl
 m4_if(
   m4_eval([$# >= 3]),
