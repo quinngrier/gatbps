@@ -155,6 +155,13 @@ m4_pushdef(
   [input_file_or_directory],
   m4_bpatsubst([[[$2]]], ['], ['\\'']))[]dnl
 m4_pushdef(
+  [output_mode],
+  m4_if(
+    [$3],
+    [],
+    [[[file_or_directory]]],
+    [[[$3]]]))[]dnl
+m4_pushdef(
   [child_prerequisites],
   m4_if(
     list_4,
@@ -250,10 +257,10 @@ GATBPS_CP_make_lines(m4_if(,,child_prerequisites))[
       esac; \
     fi; \
     '\''test'\'' \
-      '\''-]m4_if([$3], [directory], [[d]], [[f]])['\'' \
+      '\''-]m4_if(output_mode, [directory], [[d]], [[f]])['\'' \
       "$][$][{d}"'\''/'\''"$][$][{x}" \]dnl
 m4_if(
-  [$3],
+  output_mode,
   [file_or_directory],
   [[
     || '\''test'\'' \
@@ -267,7 +274,7 @@ m4_if(
       '\''./'\'']output_file_or_directory['\''.tmp'\'' \
     || '\''exit'\'' "$][$][{?}"; \]dnl
 m4_if(
-  [$3],
+  output_mode,
   [executable],
   [[
     '\''chmod'\'' \
@@ -316,6 +323,7 @@ m4_popdef([rule_prerequisites])[]dnl
 m4_popdef([leaf_prerequisites])[]dnl
 m4_popdef([clean_target])[]dnl
 m4_popdef([child_prerequisites])[]dnl
+m4_popdef([output_mode])[]dnl
 m4_popdef([input_file_or_directory])[]dnl
 m4_popdef([output_file_or_directory])[]dnl
 m4_popdef([list_6])[]dnl
