@@ -155,30 +155,66 @@ m4_pushdef(
 m4_pushdef(
   [child_prerequisites],
   m4_if(
-    [$4],
+    list_4,
     [],
-    [m4_dquote(input_directory)],
-    [m4_bpatsubst([[[$4]]], ['], ['\\''])]))[]dnl
+    [[[[$2]]]],
+    [m4_dquote(list_4)]))[]dnl
 m4_pushdef(
   [leaf_prerequisites],
-  m4_bpatsubst([[[$6]]], ['], ['\\'']))[]dnl
+  m4_dquote(list_6))[]dnl
+m4_pushdef(
+  [rule_prerequisites],
+  m4_if(
+    leaf_prerequisites,
+    [],
+    [m4_dquote(child_prerequisites)],
+    [m4_dquote(leaf_prerequisites)]))[]dnl
+]m4_ifdef(
+  [GATBPS_TAR_rule_lines],
+  [gatbps_fatal([
+    GATBPS_TAR_rule_lines is already defined
+  ])])[dnl
+]m4_define(
+  [GATBPS_TAR_rule_lines],
+  [m4_if(
+    [$1],
+    [],
+    [],
+    [
+output_file[: ]dnl
+m4_bpatsubst([[$1]], ['], ['\\''])dnl
+GATBPS_TAR_rule_lines(m4_shift($@))])])[dnl
+]m4_ifdef(
+  [GATBPS_TAR_make_lines],
+  [gatbps_fatal([
+    GATBPS_TAR_make_lines is already defined
+  ])])[dnl
+]m4_define(
+  [GATBPS_TAR_make_lines],
+  [m4_if(
+    [$1],
+    [],
+    [],
+    [
+  m4_bpatsubst([[$1]], ['], ['\\''])[ \]dnl
+GATBPS_TAR_make_lines(m4_shift($@))])])[dnl
 [
 
 GATBPS_TAR_RULES="$][{GATBPS_TAR_RULES}"'
 
-]output_file[: ]m4_if(
-  [$6],
-  [],
-  [child_prerequisites],
-  [leaf_prerequisites])[
+]GATBPS_TAR_rule_lines(m4_if(,,rule_prerequisites))[
 	$][(AM@&t@_V_at)|%}dnl
 contains_at_least_one_word_sh(
   {%|MKDIR_P|%}){%|
 	$][(GATBPS_V_TAR): make: $][@]dnl
-m4_if([$6], [], [], [[
+m4_if(
+  leaf_prerequisites,
+  [],
+  [],
+  [[
 	$][(AM@&t@_V_at)$][(MAKE) \
-  $][(AM@&t@_MAKEFLAGS) \
-  ]child_prerequisites[ \
+  $][(AM@&t@_MAKEFLAGS) \]dnl
+GATBPS_TAR_make_lines(m4_if(,,child_prerequisites))[
 ;]])[
 	$][(AM@&t@_V_at)$][(MKDIR_P) \
   '\''./'\''$][(@D) \
@@ -257,6 +293,7 @@ clean-]output_file[:
 
 '
 ]dnl
+m4_popdef([rule_prerequisites])[]dnl
 m4_popdef([leaf_prerequisites])[]dnl
 m4_popdef([child_prerequisites])[]dnl
 m4_popdef([output_mode])[]dnl
