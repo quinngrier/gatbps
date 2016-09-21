@@ -77,7 +77,7 @@ m4_if(
       character that is not a space, tab, or newline character
     ])])])[]dnl
 m4_pushdef(
-  [target_sh],
+  [output_file],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
 m4_pushdef(
   [input_directory],
@@ -103,7 +103,7 @@ m4_pushdef(
 
 GATBPS_TAR_RULES="$][{GATBPS_TAR_RULES}"'
 
-]target_sh[: ]m4_if(
+]output_file[: ]m4_if(
   [$6],
   [],
   [child_prerequisites],
@@ -147,7 +147,7 @@ output_mode, [directory_contents], [[
     || '\''exit'\'' "$][$][{?}"; \
     '\''exit'\'' '\''0'\''; \
   :;) \
-    >'\''./'\'']target_sh['\''.tmp'\'' \
+    >'\''./'\'']output_file['\''.tmp'\'' \
   || '\''exit'\'' "$][$][{?}"; \
   '\''exit'\'' '\''0'\''; \
 :;}]],
@@ -171,26 +171,26 @@ output_mode, [directory_itself], [gatbps_fatal([not supported yet])[
   fi; \
   $][(TAR) \
     '\''cf'\'' \
-    '\''./'\'']target_sh['\''.tmp'\'' \
+    '\''./'\'']output_file['\''.tmp'\'' \
     "$][$][{d}"'\''/'\''"$][$][{x}" \
   || '\''exit'\'' "$][$][{?}"; \
   '\''exit'\'' '\''0'\''; \
 :;}]], [gatbps_fatal([missing case])])[
 	$][(AM@&t@_V_at)'\''mv'\'' \
-  '\''./'\'']target_sh['\''.tmp'\'' \
-  '\''./'\'']target_sh[ \
+  '\''./'\'']output_file['\''.tmp'\'' \
+  '\''./'\'']output_file[ \
 ;
 	$][(AM@&t@_V_at): done: $][@
 
-.PHONY: clean-]target_sh[
+.PHONY: clean-]output_file[
 
-clean-]target_sh[:
+clean-]output_file[:
 	-'\''rm'\'' \
   '\''-f'\'' \
-  '\''./'\'']target_sh[ \
+  '\''./'\'']output_file[ \
 ;
 
-]m4_if([$5], [], [[mostlyclean]], [[$5]])[-local: clean-]target_sh[
+]m4_if([$5], [], [[mostlyclean]], [[$5]])[-local: clean-]output_file[
 
 '
 ]dnl
@@ -198,7 +198,7 @@ m4_popdef([leaf_prerequisites])[]dnl
 m4_popdef([child_prerequisites])[]dnl
 m4_popdef([output_mode])[]dnl
 m4_popdef([input_directory])[]dnl
-m4_popdef([target_sh])[]dnl
+m4_popdef([output_file])[]dnl
 [
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
