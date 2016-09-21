@@ -96,10 +96,7 @@ m4_pushdef(
         each non-last subargument must contain at least one character
         that is not a space, tab, or newline character
       ])])[]GATBPS_CP_check_4(m4_shift($@))])])[dnl
-m4_if(
-  m4_eval([$# >= 4]),
-  [1],
-  [GATBPS_CP_check_4(m4_if(,,list_4))])[]dnl
+GATBPS_CP_check_4(m4_if(,,list_4))[]dnl
 m4_if(
   m4_eval([$# >= 5]),
   [1],
