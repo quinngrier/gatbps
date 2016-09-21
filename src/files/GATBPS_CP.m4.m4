@@ -160,7 +160,7 @@ m4_pushdef(
     list_4,
     [],
     [[[[$2]]]],
-    [m4_dquote(list_4)])))[]dnl
+    [m4_dquote(list_4)]))[]dnl
 m4_pushdef(
   [clean_target],
   m4_if(
