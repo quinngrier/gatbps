@@ -26,6 +26,7 @@ m4_if(
   [1],
   [gatbps_fatal([
     GATBPS_DEFINE_VERSION requires 2 to 3 arguments
+    ($# ]m4_if([$#], [1], [[was]], [[were]])[ given)
   ])])[]dnl
 m4_if(
   m4_bregexp([$1], [^[A-Z_a-z][0-9A-Z_a-z]*$]),

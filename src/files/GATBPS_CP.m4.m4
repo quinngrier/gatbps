@@ -23,6 +23,7 @@ m4_if(
   [1],
   [gatbps_fatal([
     GATBPS_CP requires 2 to 6 arguments
+    ($# ]m4_if([$#], [1], [[was]], [[were]])[ given)
   ])])[]dnl
 m4_if(
   m4_bregexp([$1], [[^
