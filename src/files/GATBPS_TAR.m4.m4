@@ -46,10 +46,10 @@ m4_if(
   [m4_case(
     [$3],
     [], [],
-    [contents], [],
+    [directory_contents], [],
     [gatbps_fatal([
       GATBPS_TAR requires its third argument to be either empty or
-      "contents"
+      "directory_contents"
     ])])])[]dnl
 m4_if(
   m4_eval([$# >= 5]),
@@ -120,7 +120,7 @@ m4_if([$6], [], [], [[
   '\''./'\''$][(@D) \
 ;]dnl
 m4_if(
-output_mode, [contents], [[
+output_mode, [directory_contents], [[
 	$][(AM@&t@_V_at){ \
   x=]input_directory[; \
   if '\''test'\'' '\''-d'\'' "$][$][{x}"; then \
