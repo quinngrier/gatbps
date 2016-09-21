@@ -54,8 +54,11 @@ m4_case(
   [file], [],
   [file_or_directory], [],
   [gatbps_fatal([
-    GATBPS_CP requires its third argument to be either empty,
-    "directory", "executable", "file", or "file_or_directory"
+    invalid third argument to GATBPS_CP:
+    [--VERBATIM--] "$3"
+  ], [
+    the third argument must be either empty, "directory", "executable",
+    "file", or "file_or_directory"
   ])])[]dnl
 m4_pushdef(
   [list_4],
