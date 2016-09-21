@@ -47,9 +47,10 @@ m4_if(
     [$3],
     [], [],
     [directory_contents], [],
+    [directory_itself], [],
     [gatbps_fatal([
-      GATBPS_TAR requires its third argument to be either empty or
-      "directory_contents"
+      GATBPS_TAR requires its third argument to be either empty,
+      "directory_contents", or "directory_itself"
     ])])])[]dnl
 m4_if(
   m4_eval([$# >= 5]),
@@ -150,7 +151,7 @@ output_mode, [directory_contents], [[
   || '\''exit'\'' "$][$][{?}"; \
   '\''exit'\'' '\''0'\''; \
 :;}]],
-output_mode, [], [[
+output_mode, [directory_itself], [[
 	$][(AM@&t@_V_at){ \
   x=]input_directory[; \
   if \
