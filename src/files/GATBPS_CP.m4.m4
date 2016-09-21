@@ -97,20 +97,17 @@ m4_pushdef(
         that is not a space, tab, or newline character
       ])])[]GATBPS_CP_check_4(m4_shift($@))])])[dnl
 GATBPS_CP_check_4(m4_if(,,list_4))[]dnl
-m4_if(
-  m4_eval([$# >= 5]),
-  [1],
-  [m4_case(
-    [$5],
-    [], [],
-    [clean], [],
-    [distclean], [],
-    [maintainer-clean], [],
-    [mostlyclean], [],
-    [gatbps_fatal([
-      GATBPS_CP requires its fifth argument to be either empty, "clean",
-      "distclean", "maintainer-clean", or "mostlyclean"
-    ])])])[]dnl
+m4_case(
+  [$5],
+  [], [],
+  [clean], [],
+  [distclean], [],
+  [maintainer-clean], [],
+  [mostlyclean], [],
+  [gatbps_fatal([
+    GATBPS_CP requires its fifth argument to be either empty, "clean",
+    "distclean", "maintainer-clean", or "mostlyclean"
+  ])])[]dnl
 m4_pushdef(
   [list_6],
   m4_bpatsubst([[[$6]]], [^\(..\)[
