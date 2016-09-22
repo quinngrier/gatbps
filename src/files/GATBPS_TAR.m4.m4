@@ -155,7 +155,7 @@ m4_pushdef(
   [input_directory],
   m4_bpatsubst([[[$2]]], ['], ['\\'']))[]dnl
 m4_pushdef(
-  [output_mode],
+  [input_mode],
   m4_if(
     [$3],
     [],
@@ -229,7 +229,7 @@ GATBPS_TAR_make_lines(m4_if(,,child_prerequisites))[
   '\''./'\''$][(@D) \
 ;]dnl
 m4_if(
-output_mode, [directory_contents], [[
+input_mode, [directory_contents], [[
 	$][(AM@&t@_V_at){ \
   x=]input_directory[; \
   if '\''test'\'' '\''-d'\'' "$][$][{x}"; then \
@@ -259,7 +259,7 @@ output_mode, [directory_contents], [[
   || '\''exit'\'' "$][$][{?}"; \
   '\''exit'\'' '\''0'\''; \
 :;}]],
-output_mode, [directory_itself], [gatbps_fatal([not supported yet])[
+input_mode, [directory_itself], [gatbps_fatal([not supported yet])[
 	$][(AM@&t@_V_at){ \
   x=]input_directory[; \
   if \
@@ -305,7 +305,7 @@ clean-]output_file[:
 m4_popdef([rule_prerequisites])[]dnl
 m4_popdef([leaf_prerequisites])[]dnl
 m4_popdef([child_prerequisites])[]dnl
-m4_popdef([output_mode])[]dnl
+m4_popdef([input_mode])[]dnl
 m4_popdef([input_directory])[]dnl
 m4_popdef([output_file])[]dnl
 [
