@@ -502,6 +502,7 @@ ps_dist_src += doc/gatbps.ps
 include $(srcdir)/build-aux/GATBPS_CONFIG_FILE_RULES.am
 include $(srcdir)/build-aux/GATBPS_CP_RULES.am
 include $(srcdir)/build-aux/GATBPS_M4_RULES.am
+include $(srcdir)/build-aux/GATBPS_RECIPE_MARKER.am
 include $(srcdir)/build-aux/GATBPS_V_PAD.am
 include $(srcdir)/build-aux/cp.am
 include $(srcdir)/build-aux/docbook-dist.am
