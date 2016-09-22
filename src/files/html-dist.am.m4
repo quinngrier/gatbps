@@ -86,7 +86,7 @@ contains_exactly_one_word(
   || 'exit' "$${?}"; \
   'exit' '0'; \
 :;}
-	$(AM_V_at): done: $@
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
 .PHONY: clean-html-dist
 .PHONY: clean-html-dist-main

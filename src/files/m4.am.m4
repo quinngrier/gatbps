@@ -91,7 +91,7 @@ SUFFIXES += .m4out
   esac; \
   'exit' "$${x}"; \
 :;}
-	$(AM_V_at): done: $@
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
 ## end_rules
 

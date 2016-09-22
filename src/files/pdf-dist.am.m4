@@ -74,7 +74,7 @@ contains_exactly_one_word(
   || 'exit' "$${?}"; \
   'exit' '0'; \
 :;}
-	$(AM_V_at): done: $@
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
 .PHONY: clean-pdf-dist
 .PHONY: clean-pdf-dist-main
