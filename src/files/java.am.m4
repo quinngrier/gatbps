@@ -189,11 +189,9 @@ install-java: install-java-main
 
 install-java-main: java-main
 	@$(NORMAL_INSTALL)
-	$(AM_V_at)|%}dnl
-contains_exactly_one_word(
+	$(AM_V_at)|%}contains_exactly_one_word(
   {%|java_dst|%}){%|
-	$(AM_V_at)|%}dnl
-contains_exactly_one_word(
+	$(AM_V_at)|%}contains_exactly_one_word(
   {%|javadir|%}){%|
 	$(AM_V_at){ \
   x='x'; \
@@ -346,11 +344,9 @@ uninstall-java: uninstall-java-main
 
 uninstall-java-main:
 	@$(NORMAL_UNINSTALL)
-	$(AM_V_at)|%}dnl
-contains_exactly_one_word(
+	$(AM_V_at)|%}contains_exactly_one_word(
   {%|java_dst|%}){%|
-	$(AM_V_at)|%}dnl
-contains_exactly_one_word(
+	$(AM_V_at)|%}contains_exactly_one_word(
   {%|javadir|%}){%|
 	$(AM_V_at){ \
   x='x'; \

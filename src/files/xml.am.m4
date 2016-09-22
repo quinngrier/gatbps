@@ -18,11 +18,9 @@ header_comment({%|##|%}, {%|##|%}){%|
 $(xml_dst): $(xml_dep)
 $(xml_dst): $(xml_src)
 	$(AM_V_MAKEINFO)':'
-	$(AM_V_at)|%}dnl
-contains_exactly_one_word(
+	$(AM_V_at)|%}contains_exactly_one_word(
   {%|xml_dst|%}){%|
-	$(AM_V_at)|%}dnl
-contains_exactly_one_word(
+	$(AM_V_at)|%}contains_exactly_one_word(
   {%|xml_src|%}){%|
 	$(MKDIR_P) \
   './'$(@D) \
@@ -81,11 +79,9 @@ install-xml: install-xml-main
 
 install-xml-main: xml-main
 	@$(NORMAL_INSTALL)
-	$(AM_V_at)|%}dnl
-contains_exactly_one_word(
+	$(AM_V_at)|%}contains_exactly_one_word(
   {%|xml_dst|%}){%|
-	$(AM_V_at)|%}dnl
-contains_exactly_one_word(
+	$(AM_V_at)|%}contains_exactly_one_word(
   {%|xmldir|%}){%|
 	$(AM_V_at){ \
   x='x'; \
@@ -155,11 +151,9 @@ uninstall-xml: uninstall-xml-main
 
 uninstall-xml-main:
 	@$(NORMAL_UNINSTALL)
-	$(AM_V_at)|%}dnl
-contains_exactly_one_word(
+	$(AM_V_at)|%}contains_exactly_one_word(
   {%|xml_dst|%}){%|
-	$(AM_V_at)|%}dnl
-contains_exactly_one_word(
+	$(AM_V_at)|%}contains_exactly_one_word(
   {%|xmldir|%}){%|
 	$(AM_V_at){ \
   x='x'; \

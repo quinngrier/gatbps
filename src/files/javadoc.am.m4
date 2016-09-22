@@ -37,11 +37,9 @@ GATBPS_V_JAVADOC_1 =
 $(javadoc_dst): $(javadoc_src)
 $(javadoc_dst): $(javadoc_src_nodist)
 	$(GATBPS_V_JAVADOC)':'
-	$(AM_V_at)|%}dnl
-contains_exactly_one_word(
+	$(AM_V_at)|%}contains_exactly_one_word(
   {%|javadoc_dst|%}){%|
-	$(AM_V_at)|%}dnl
-contains_at_least_one_word(
+	$(AM_V_at)|%}contains_at_least_one_word(
   {%|javadoc_src|%},
   {%|javadoc_src_nodist|%}){%|
 	$(AM_V_at)'rm' \
@@ -159,11 +157,9 @@ install-javadoc: install-javadoc-main
 
 install-javadoc-main: javadoc-main
 	@$(NORMAL_INSTALL)
-	$(AM_V_at)|%}dnl
-contains_exactly_one_word(
+	$(AM_V_at)|%}contains_exactly_one_word(
   {%|javadoc_dst|%}){%|
-	$(AM_V_at)|%}dnl
-contains_exactly_one_word(
+	$(AM_V_at)|%}contains_exactly_one_word(
   {%|javadocdir|%}){%|
 	$(AM_V_at){ \
   x='x'; \
@@ -257,11 +253,9 @@ uninstall-javadoc: uninstall-javadoc-main
 
 uninstall-javadoc-main:
 	@$(NORMAL_UNINSTALL)
-	$(AM_V_at)|%}dnl
-contains_exactly_one_word(
+	$(AM_V_at)|%}contains_exactly_one_word(
   {%|javadoc_dst|%}){%|
-	$(AM_V_at)|%}dnl
-contains_exactly_one_word(
+	$(AM_V_at)|%}contains_exactly_one_word(
   {%|javadocdir|%}){%|
 	$(AM_V_at){ \
   x='x'; \
