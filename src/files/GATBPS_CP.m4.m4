@@ -106,8 +106,11 @@ m4_case(
   [maintainer-clean], [],
   [mostlyclean], [],
   [gatbps_fatal([
-    GATBPS_CP requires its fifth argument to be either empty, "clean",
-    "distclean", "maintainer-clean", or "mostlyclean"
+    invalid fifth argument to GATBPS_CP:
+    [--VERBATIM--] "$5"
+  ], [
+    the fifth argument must be either empty, "clean", "distclean",
+    "maintainer-clean", or "mostlyclean"
   ])])[]dnl
 m4_pushdef(
   [list_6],
