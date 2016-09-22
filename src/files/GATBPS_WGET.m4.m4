@@ -151,7 +151,7 @@ m4_pushdef(
 GATBPS_WGET_RULES="$][{GATBPS_WGET_RULES}"'
 
 ]output_file[:
-	$][(GATBPS_V_WGET): make: $][@
+	$][(GATBPS_V_WGET)$][(GATBPS_RECIPE_MARKER_TOP)
 	$][(AM@&t@_V_at)|%}dnl
 contains_at_least_one_word_sh(
   {%|MKDIR_P|%}){%|

@@ -229,7 +229,7 @@ m4_if(
   $][(AM@&t@_MAKEFLAGS) \]dnl
 GATBPS_CP_make_lines(m4_if(,,child_prerequisites))[
 ;]])[
-	$][(GATBPS_V_CP): make: $][@]dnl
+	$][(GATBPS_V_CP)$][(GATBPS_RECIPE_MARKER_TOP)]dnl
 	$][(AM@&t@_V_at)|%}dnl
 contains_at_least_one_word_sh(
   {%|MKDIR_P|%}){%|

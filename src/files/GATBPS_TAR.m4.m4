@@ -207,7 +207,7 @@ GATBPS_TAR_RULES="$][{GATBPS_TAR_RULES}"'
 	$][(AM@&t@_V_at)|%}dnl
 contains_at_least_one_word_sh(
   {%|MKDIR_P|%}){%|
-	$][(GATBPS_V_TAR): make: $][@]dnl
+	$][(GATBPS_V_TAR)$][(GATBPS_RECIPE_MARKER_TOP)]dnl
 m4_if(
   leaf_prerequisites,
   [],

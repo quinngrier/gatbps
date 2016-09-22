@@ -82,7 +82,7 @@ GATBPS_XZ_RULES="$][{GATBPS_XZ_RULES}"'
 	$][(AM@&t@_V_at)|%}dnl
 contains_at_least_one_word_sh(
   {%|MKDIR_P|%}){%|
-	$][(GATBPS_V_XZ): make: $][@]dnl
+	$][(GATBPS_V_XZ)$][(GATBPS_RECIPE_MARKER_TOP)]dnl
 m4_if([$4], [], [], [[
 	$][(AM@&t@_V_at)$][(MAKE) \
   $][(AM@&t@_MAKEFLAGS) \

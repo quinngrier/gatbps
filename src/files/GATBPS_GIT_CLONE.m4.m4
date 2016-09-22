@@ -68,7 +68,7 @@ GATBPS_GIT_CLONE_RULES="$][{GATBPS_GIT_CLONE_RULES}"'
 	$][(AM@&t@_V_at)|%}dnl
 contains_at_least_one_word_sh(
   {%|MKDIR_P|%}){%|
-	$][(GATBPS_V_GIT_CLONE): make: $][@
+	$][(GATBPS_V_GIT_CLONE)$][(GATBPS_RECIPE_MARKER_TOP)
 	$][(AM@&t@_V_at)$][(MKDIR_P) \
   '\''./'\''$][(@D) \
 ;

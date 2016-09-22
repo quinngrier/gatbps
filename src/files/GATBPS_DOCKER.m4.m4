@@ -74,7 +74,7 @@ m4_pushdef(
 GATBPS_DOCKER_RULES="$][{GATBPS_DOCKER_RULES}"'
 
 ]output_file[: ]m4_if([$6], [], [child_prerequisites], [leaf_prerequisites])[
-	$][(GATBPS_V_DOCKER): make: $][@]dnl
+	$][(GATBPS_V_DOCKER)$][(GATBPS_RECIPE_MARKER_TOP)]dnl
 m4_if([$6], [], [], [[
 	$][(AM@&t@_V_at)$][(MAKE) \
   $][(AM@&t@_MAKEFLAGS) \
