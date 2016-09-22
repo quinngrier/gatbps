@@ -39,7 +39,7 @@ contains_exactly_one_word(
   $(AM_MAKEFLAGS) \
   $(javadoc_dist_src) \
 ;
-	$(GATBPS_V_CP): make: $@
+	$(GATBPS_V_CP)$(GATBPS_RECIPE_MARKER_TOP)
 	$(AM_V_at)$(MKDIR_P) \
   './'$(@D) \
 ;
