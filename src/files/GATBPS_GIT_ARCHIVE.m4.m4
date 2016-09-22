@@ -183,7 +183,7 @@ m4_if([$6], [], [], [[
   esac; \
   '\''exit'\'' "$][$][{x}"; \
 :;}
-	$][(AM@&t@_V_at): done: $][@
+	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
 .PHONY: clean-]target_sh[
 

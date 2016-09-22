@@ -280,7 +280,7 @@ output_mode, [directory_itself], [gatbps_fatal([not supported yet])[
   '\''./'\'']output_file['\''.tmp'\'' \
   '\''./'\'']output_file[ \
 ;
-	$][(AM@&t@_V_at): done: $][@
+	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
 .PHONY: clean-]output_file[
 

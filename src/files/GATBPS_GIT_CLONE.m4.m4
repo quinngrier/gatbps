@@ -87,7 +87,7 @@ contains_at_least_one_word_sh(
   '\''./'\'']target_sh['\''.tmp'\'' \
   '\''./'\'']target_sh[ \
 ;
-	$][(AM@&t@_V_at): done: $][@
+	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
 .PHONY: clean-]target_sh[
 

@@ -223,7 +223,7 @@ m4_foreach_w(
   esac; \
   '\''exit'\'' "$][$][{x}"; \
 :;}
-	$][(AM@&t@_V_at): done: $][@
+	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
 .PHONY: clean-]output_file[
 
