@@ -3,6 +3,9 @@ changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
 rules_code({%|src/files/GATBPS_XZ_SUBST.m4.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
+include({%|src/tools/PACKAGE_DATE_DAY_ZPAD.m4|%}){%||%}dnl
+include({%|src/tools/PACKAGE_DATE_MONTH_ZPAD.m4|%}){%||%}dnl
+include({%|src/tools/PACKAGE_DATE_YEAR.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
 header_comment({%|dnl|%}, {%|dnl|%}){%|
@@ -11,6 +14,11 @@ dnl Special file: GATBPS_XZ_SUBST.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
+#serial |%}dnl
+PACKAGE_DATE_YEAR{%||%}dnl
+PACKAGE_DATE_MONTH_ZPAD{%||%}dnl
+PACKAGE_DATE_DAY_ZPAD{%||%}dnl
+{%|
 AC_DEFUN([GATBPS_XZ_SUBST], [[{
 
 #
