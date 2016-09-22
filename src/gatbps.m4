@@ -3523,6 +3523,8 @@ EOF1
   {%|
             'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
             'set' 'x' "${prefix}"'cp.am' "${@}"; 'shift'
+            'set' 'x' "${prefix}"'GATBPS_RECIPE_MARKER.am' "${@}"; 'shift'
+            'set' 'x' "${prefix}"'GATBPS_PROG_MKDIR_P.m4' "${@}"; 'shift'
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
