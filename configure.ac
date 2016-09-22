@@ -642,6 +642,10 @@ AC_SUBST([TEXI2DVIFLAGS])
   [mostlyclean])[
 
 ]GATBPS_M4(
+  [src/files/GATBPS_RECIPE_MARKER.am],
+  [mostlyclean])[
+
+]GATBPS_M4(
   [src/files/GATBPS_TAR.m4],
   [mostlyclean])[
 
