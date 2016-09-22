@@ -19,9 +19,11 @@ $(plaintext_dst): $(plaintext_dep)
 $(plaintext_dst): $(plaintext_src)
 	$(AM_V_MAKEINFO)':'
 	$(AM_V_at)|%}contains_exactly_one_word(
-  {%|plaintext_dst|%}){%|
+  {%|plaintext_dst|%}){%||%}dnl
+{%|
 	$(AM_V_at)|%}contains_exactly_one_word(
-  {%|plaintext_src|%}){%|
+  {%|plaintext_src|%}){%||%}dnl
+{%|
 	$(MKDIR_P) \
   './'$(@D) \
 ;
@@ -80,9 +82,11 @@ install-plaintext: install-plaintext-main
 install-plaintext-main: plaintext-main
 	@$(NORMAL_INSTALL)
 	$(AM_V_at)|%}contains_exactly_one_word(
-  {%|plaintext_dst|%}){%|
+  {%|plaintext_dst|%}){%||%}dnl
+{%|
 	$(AM_V_at)|%}contains_exactly_one_word(
-  {%|plaintextdir|%}){%|
+  {%|plaintextdir|%}){%||%}dnl
+{%|
 	$(AM_V_at){ \
   x='x'; \
   for y in $(plaintext_noinst); do \
@@ -156,9 +160,11 @@ uninstall-plaintext: uninstall-plaintext-main
 uninstall-plaintext-main:
 	@$(NORMAL_UNINSTALL)
 	$(AM_V_at)|%}contains_exactly_one_word(
-  {%|plaintext_dst|%}){%|
+  {%|plaintext_dst|%}){%||%}dnl
+{%|
 	$(AM_V_at)|%}contains_exactly_one_word(
-  {%|plaintextdir|%}){%|
+  {%|plaintextdir|%}){%||%}dnl
+{%|
 	$(AM_V_at){ \
   x='x'; \
   for y in $(plaintext_noinst); do \

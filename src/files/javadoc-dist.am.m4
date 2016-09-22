@@ -18,17 +18,23 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 $(javadoc_dist_dst): $(javadoc_dist_dep)
 	$(AM_V_at)|%}contains_exactly_one_word(
-  {%|javadoc_dist_dst|%}){%|
+  {%|javadoc_dist_dst|%}){%||%}dnl
+{%|
 	$(AM_V_at)|%}contains_at_least_one_word(
-  {%|javadoc_dist_dep|%}){%|
+  {%|javadoc_dist_dep|%}){%||%}dnl
+{%|
 	$(AM_V_at)|%}contains_at_least_one_word(
-  {%|MAKE|%}){%|
+  {%|MAKE|%}){%||%}dnl
+{%|
 	$(AM_V_at)|%}contains_exactly_one_word(
-  {%|javadoc_dist_src|%}){%|
+  {%|javadoc_dist_src|%}){%||%}dnl
+{%|
 	$(AM_V_at)|%}contains_at_least_one_word(
-  {%|MKDIR_P|%}){%|
+  {%|MKDIR_P|%}){%||%}dnl
+{%|
 	$(AM_V_at)|%}contains_exactly_one_word(
-  {%|srcdir|%}){%|
+  {%|srcdir|%}){%||%}dnl
+{%|
 	$(AM_V_at)$(MAKE) \
   $(AM_MAKEFLAGS) \
   $(javadoc_dist_src) \

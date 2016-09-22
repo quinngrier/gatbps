@@ -18,17 +18,23 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 $(html_dist_dst): $(html_dist_dep)
 	$(AM_V_at)|%}contains_exactly_one_word(
-  {%|html_dist_dst|%}){%|
+  {%|html_dist_dst|%}){%||%}dnl
+{%|
 	$(AM_V_at)|%}contains_at_least_one_word(
-  {%|html_dist_dep|%}){%|
+  {%|html_dist_dep|%}){%||%}dnl
+{%|
 	$(AM_V_at)|%}contains_at_least_one_word(
-  {%|MAKE|%}){%|
+  {%|MAKE|%}){%||%}dnl
+{%|
 	$(AM_V_at)|%}contains_exactly_one_word(
-  {%|html_dist_src|%}){%|
+  {%|html_dist_src|%}){%||%}dnl
+{%|
 	$(AM_V_at)|%}contains_at_least_one_word(
-  {%|MKDIR_P|%}){%|
+  {%|MKDIR_P|%}){%||%}dnl
+{%|
 	$(AM_V_at)|%}contains_exactly_one_word(
-  {%|srcdir|%}){%|
+  {%|srcdir|%}){%||%}dnl
+{%|
 	$(AM_V_at)$(MAKE) \
   $(AM_MAKEFLAGS) \
   $(html_dist_src) \

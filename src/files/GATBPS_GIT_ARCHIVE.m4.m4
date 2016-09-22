@@ -102,7 +102,8 @@ GATBPS_GIT_ARCHIVE_RULES="$][{GATBPS_GIT_ARCHIVE_RULES}"'
 
 ]target_sh[: ]m4_if([$6], [], [source_sh], [leaf_prerequisites])[
 	$][(AM@&t@_V_at)|%}contains_at_least_one_word_sh(
-  {%|MKDIR_P|%}){%|
+  {%|MKDIR_P|%}){%||%}dnl
+{%|
 	$][(GATBPS_V_GIT_ARCHIVE)$][(GATBPS_RECIPE_MARKER_TOP)]dnl
 m4_if([$6], [], [], [[
 	$][(AM@&t@_V_at)$][(MAKE) \

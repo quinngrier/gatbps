@@ -213,7 +213,8 @@ GATBPS_TAR_RULES="$][{GATBPS_TAR_RULES}"'
 
 ]GATBPS_TAR_rule_lines(m4_if(,,rule_prerequisites))[
 	$][(AM@&t@_V_at)|%}contains_at_least_one_word_sh(
-  {%|MKDIR_P|%}){%|
+  {%|MKDIR_P|%}){%||%}dnl
+{%|
 	$][(GATBPS_V_TAR)$][(GATBPS_RECIPE_MARKER_TOP)]dnl
 m4_if(
   leaf_prerequisites,
