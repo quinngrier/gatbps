@@ -441,6 +441,7 @@ nodist_bin_gatbps_src =
 nodist_bin_gatbps_src += src/tools/AWK_DEFAULT_SH.m4
 nodist_bin_gatbps_src += src/tools/AWK_DEFAULT_TROFF.m4
 nodist_bin_gatbps_src += src/tools/PACKAGE_DATE.m4
+nodist_bin_gatbps_src += src/tools/PACKAGE_DATE_DAY_ZPAD.m4
 nodist_bin_gatbps_src += src/tools/PACKAGE_DATE_MONTH_ZPAD.m4
 nodist_bin_gatbps_src += src/tools/PACKAGE_DATE_TROFF.m4
 nodist_bin_gatbps_src += src/tools/PACKAGE_DATE_YEAR.m4
