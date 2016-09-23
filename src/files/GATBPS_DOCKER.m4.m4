@@ -246,6 +246,20 @@ GATBPS_DOCKER_rule_lines(m4_shift($@))])])[dnl
   ]m4_bpatsubst([[$1]], ['], ['\\''])[ \]dnl
 GATBPS_DOCKER_make_lines(m4_shift($@))])])[dnl
 ]m4_ifdef(
+  [GATBPS_DOCKER_loop_lines],
+  [gatbps_fatal([
+    GATBPS_DOCKER_loop_lines is already defined
+  ])])[dnl
+]m4_define(
+  [GATBPS_DOCKER_loop_lines],
+  [m4_if(
+    [$1],
+    [],
+    [],
+    [[
+      ]m4_bpatsubst([[$1]], ['], ['\\''])[ \]dnl
+GATBPS_DOCKER_loop_lines(m4_shift($@))])])[dnl
+]m4_ifdef(
   [GATBPS_DOCKER_build_names],
   [gatbps_fatal([
     GATBPS_DOCKER_build_names is already defined
@@ -303,7 +317,9 @@ GATBPS_CP_make_lines(m4_if(,,child_prerequisites))[
     merge='\''no'\''; \
     context='\'''\''; \
     first_iteration='\''yes'\''; \
-    for x in '\'''\'' ]child_prerequisites[; do \
+    for x in '\'''\'' \]dnl
+GATBPS_DOCKER_loop_lines(m4_if(,,child_prerequisites))[
+    ; do \
       case "$][$][{first_iteration}" in \
         '\''yes'\'') \
           first_iteration='\''no'\''; \
