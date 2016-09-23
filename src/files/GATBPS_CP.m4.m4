@@ -228,7 +228,7 @@ GATBPS_CP_make_lines(m4_shift($@))])])[dnl
 
 GATBPS_CP_RULES="$][{GATBPS_CP_RULES}"'
 
-]GATBPS_CP_rule_lines(m4_if(,,rule_prerequisites))[
+]GATBPS_CP_rule_lines(m4_if(,,rule_prerequisites))[]dnl
 m4_if(
   leaf_prerequisites,
   [],
@@ -238,7 +238,7 @@ m4_if(
   $][(AM@&t@_MAKEFLAGS) \]dnl
 GATBPS_CP_make_lines(m4_if(,,child_prerequisites))[
 ;]])[
-	$][(GATBPS_V_CP)$][(GATBPS_RECIPE_MARKER_TOP)]dnl
+	$][(GATBPS_V_CP)$][(GATBPS_RECIPE_MARKER_TOP)
 	$][(AM@&t@_V_at)|%}contains_at_least_one_word_sh(
   {%|MKDIR_P|%}){%||%}dnl
 {%|
