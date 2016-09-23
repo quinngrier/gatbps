@@ -146,6 +146,44 @@ m4_case(
     "maintainer-clean", or "mostlyclean"
   ])])[]dnl
 m4_pushdef(
+  [list_6],
+  m4_bpatsubst([[[$6]]], [^\(..\)[
+	 ]+], [\1]))[]dnl
+]m4_ifdef(
+  [GATBPS_DOCKER_check_6],
+  [gatbps_fatal([
+    GATBPS_DOCKER_check_6 is already defined
+  ])])[dnl
+]m4_define(
+  [GATBPS_DOCKER_check_6],
+  [m4_if(
+    [$#],
+    [1],
+    [m4_if(
+      m4_bregexp([$1], [^[
+	 ]+$]),
+      [0],
+      [gatbps_fatal([
+        invalid last subargument of the sixth GATBPS_DOCKER argument:
+        [--VERBATIM--] "$1"
+      ], [
+        the last subargument must either be empty or contain at least
+        one character that is not a space, tab, or newline character
+      ])])],
+    [m4_if(
+      m4_bregexp([$1], [[^
+	 ]]),
+      [-1],
+      [gatbps_fatal([
+        invalid non-last subargument of the sixth GATBPS_DOCKER
+        argument:
+        [--VERBATIM--] "$1"
+      ], [
+        each non-last subargument must contain at least one character
+        that is not a space, tab, or newline character
+      ])])[]GATBPS_DOCKER_check_6(m4_shift($@))])])[dnl
+GATBPS_DOCKER_check_6(m4_if(,,list_6))[]dnl
+m4_pushdef(
   [output_file],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
 m4_pushdef(
