@@ -217,6 +217,21 @@ m4_pushdef(
     [m4_dquote(child_prerequisites)],
     [m4_dquote(leaf_prerequisites)]))[]dnl
 ]m4_ifdef(
+  [GATBPS_DOCKER_rule_lines],
+  [gatbps_fatal([
+    GATBPS_DOCKER_rule_lines is already defined
+  ])])[dnl
+]m4_define(
+  [GATBPS_DOCKER_rule_lines],
+  [m4_if(
+    [$1],
+    [],
+    [],
+    [[
+]output_file_or_directory[: ]dnl
+m4_bpatsubst([[$1]], ['], ['\\''])[]dnl
+GATBPS_DOCKER_rule_lines(m4_shift($@))])])[dnl
+]m4_ifdef(
   [GATBPS_DOCKER_build_names],
   [gatbps_fatal([
     GATBPS_DOCKER_build_names is already defined
@@ -248,7 +263,7 @@ GATBPS_DOCKER_save_names(m4_shift($@))])])[dnl
 
 GATBPS_DOCKER_RULES="$][{GATBPS_DOCKER_RULES}"'
 
-]output_file[: ]m4_if([$6], [], [child_prerequisites], [leaf_prerequisites])[
+]GATBPS_DOCKER_rule_lines(m4_if(,,rule_prerequisites))[
 	$][(GATBPS_V_DOCKER)$][(GATBPS_RECIPE_MARKER_TOP)]dnl
 m4_if([$6], [], [], [[
 	$][(AM@&t@_V_at)$][(MAKE) \
