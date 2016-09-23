@@ -229,7 +229,7 @@ m4_pushdef(
     [],
     [],
     [[
-]output_file_or_directory[: ]dnl
+]output_file[: ]dnl
 m4_bpatsubst([[$1]], ['], ['\\''])[]dnl
 GATBPS_DOCKER_rule_lines(m4_shift($@))])])[dnl
 ]m4_ifdef(
