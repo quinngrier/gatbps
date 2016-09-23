@@ -274,19 +274,19 @@ GATBPS_DOCKER_loop_lines(m4_shift($@))])])[dnl
   '\''--tag='\'']m4_bpatsubst([[$1]], ['], ['\\''])[ \]dnl
 GATBPS_DOCKER_build_lines(m4_shift($@))])])[dnl
 ]m4_ifdef(
-  [GATBPS_DOCKER_save_names],
+  [GATBPS_DOCKER_save_lines],
   [gatbps_fatal([
-    GATBPS_DOCKER_save_names is already defined
+    GATBPS_DOCKER_save_lines is already defined
   ])])[dnl
 ]m4_define(
-  [GATBPS_DOCKER_save_names],
+  [GATBPS_DOCKER_save_lines],
   [m4_if(
     [$1],
     [],
     [],
     [[
   ]m4_bpatsubst([[$1]], ['], ['\\''])[ \]dnl
-GATBPS_DOCKER_save_names(m4_shift($@))])])[dnl
+GATBPS_DOCKER_save_lines(m4_shift($@))])])[dnl
 [
 
 GATBPS_DOCKER_RULES="$][{GATBPS_DOCKER_RULES}"'
@@ -414,7 +414,7 @@ GATBPS_DOCKER_build_lines(m4_if(,,image_names))[
     $][(DOCKER) \
       '\''save'\'' \
       "$][$][{hash}" \]dnl
-GATBPS_DOCKER_save_names(m4_if(,,image_names))[
+GATBPS_DOCKER_save_lines(m4_if(,,image_names))[
       >'\''./'\'']output_file['\''.tmp'\'' \
     || '\''exit'\'' "$][$][{?}"; \
     '\''mv'\'' \
