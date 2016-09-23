@@ -75,6 +75,13 @@ m4_pushdef(
   [child_prerequisites],
   m4_bpatsubst([[[$4]]], ['], ['\\'']))[]dnl
 m4_pushdef(
+  [clean_target],
+  m4_if(
+    [$5],
+    [],
+    [[[mostlyclean]]],
+    [[[$5]]]))[]dnl
+m4_pushdef(
   [leaf_prerequisites],
   m4_bpatsubst([[[$6]]], ['], ['\\'']))[]dnl
 [
@@ -258,7 +265,7 @@ clean-]output_file[:
   '\''build-tmp/GATBPS_DOCKER/'\'']input_directory[ \
 ;
 
-]m4_if([$5], [], [[mostlyclean]], [[$5]])[-local: clean-]output_file[
+]clean_target[-local: clean-]output_file[
 
 '
 ]dnl
