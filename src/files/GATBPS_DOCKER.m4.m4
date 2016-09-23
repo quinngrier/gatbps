@@ -194,7 +194,11 @@ m4_pushdef(
   m4_dquote(list_3)])[]dnl
 m4_pushdef(
   [child_prerequisites],
-  m4_bpatsubst([[[$4]]], ['], ['\\'']))[]dnl
+  m4_if(
+    list_4,
+    [],
+    [[[[$2]]]],
+    [m4_dquote(list_4)]))[]dnl
 m4_pushdef(
   [clean_target],
   m4_if(
@@ -204,7 +208,14 @@ m4_pushdef(
     [[[$5]]]))[]dnl
 m4_pushdef(
   [leaf_prerequisites],
-  m4_bpatsubst([[[$6]]], ['], ['\\'']))[]dnl
+  m4_dquote(list_6))[]dnl
+m4_pushdef(
+  [rule_prerequisites],
+  m4_if(
+    leaf_prerequisites,
+    [],
+    [m4_dquote(child_prerequisites)],
+    [m4_dquote(leaf_prerequisites)]))[]dnl
 ]m4_ifdef(
   [GATBPS_DOCKER_build_names],
   [gatbps_fatal([
