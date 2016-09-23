@@ -302,6 +302,9 @@ m4_if(
 GATBPS_DOCKER_make_lines(m4_if(,,child_prerequisites))[
 ;]])[
 	$][(GATBPS_V_DOCKER)$][(GATBPS_RECIPE_MARKER_TOP)
+	$][(AM@&t@_V_at)|%}contains_at_least_one_word_sh(
+  {%|MKDIR_P|%}){%||%}dnl
+{%|
 	$][(AM@&t@_V_at)$][(MKDIR_P) \
   '\''./'\''$][(@D) \
 ;
