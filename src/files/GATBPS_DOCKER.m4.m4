@@ -49,19 +49,20 @@ m4_if(
     GATBPS_DOCKER requires its second argument to contain at least
     one character that is not a space, tab, or newline character
   ])])[]dnl
-m4_if(
-  m4_eval([$# >= 5]),
-  [1],
-  [m4_case(
-    [$5],
-    [clean], [],
-    [distclean], [],
-    [maintainer-clean], [],
-    [mostlyclean], [],
-    [gatbps_fatal([
-      GATBPS_DOCKER requires its fourth argument to be either "clean",
-      "distclean", "maintainer-clean", or "mostlyclean"
-    ])])])[]dnl
+m4_case(
+  [$5],
+  [], [],
+  [clean], [],
+  [distclean], [],
+  [maintainer-clean], [],
+  [mostlyclean], [],
+  [gatbps_fatal([
+    invalid fifth argument to GATBPS_DOCKER:
+    [--VERBATIM--] "$5"
+  ], [
+    the fifth argument must be either empty, "clean", "distclean",
+    "maintainer-clean", or "mostlyclean"
+  ])])[]dnl
 m4_pushdef(
   [output_file],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
