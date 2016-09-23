@@ -299,7 +299,7 @@ m4_if(
   [[
 	$][(AM@&t@_V_at)$][(MAKE) \
   $][(AM@&t@_MAKEFLAGS) \]dnl
-GATBPS_CP_make_lines(m4_if(,,child_prerequisites))[
+GATBPS_DOCKER_make_lines(m4_if(,,child_prerequisites))[
 ;]])[
 	$][(GATBPS_V_DOCKER)$][(GATBPS_RECIPE_MARKER_TOP)
 	$][(AM@&t@_V_at)$][(MKDIR_P) \
