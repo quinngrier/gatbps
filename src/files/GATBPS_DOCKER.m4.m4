@@ -198,7 +198,7 @@ m4_pushdef(
   m4_if(
     list_4,
     [],
-    [[[[$2]]]],
+    [[[[$2/Dockerfile]]]],
     [m4_dquote(list_4)]))[]dnl
 m4_pushdef(
   [clean_target],
