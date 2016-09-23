@@ -221,8 +221,8 @@ GATBPS_CP_rule_lines(m4_shift($@))])])[dnl
     [$1],
     [],
     [],
-    [
-  m4_bpatsubst([[$1]], ['], ['\\''])[ \]dnl
+    [[
+  ]m4_bpatsubst([[$1]], ['], ['\\''])[ \]dnl
 GATBPS_CP_make_lines(m4_shift($@))])])[dnl
 [
 
