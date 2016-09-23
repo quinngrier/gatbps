@@ -192,7 +192,7 @@ m4_pushdef(
   m4_bpatsubst([[[$2]]], ['], ['\\'']))[]dnl
 m4_pushdef(
   [image_names],
-  m4_dquote(list_3)])[]dnl
+  m4_dquote(list_3))[]dnl
 m4_pushdef(
   [child_prerequisites],
   m4_if(
