@@ -263,13 +263,13 @@ GATBPS_DOCKER_save_names(m4_shift($@))])])[dnl
 
 GATBPS_DOCKER_RULES="$][{GATBPS_DOCKER_RULES}"'
 
-]GATBPS_DOCKER_rule_lines(m4_if(,,rule_prerequisites))[
-	$][(GATBPS_V_DOCKER)$][(GATBPS_RECIPE_MARKER_TOP)]dnl
+]GATBPS_DOCKER_rule_lines(m4_if(,,rule_prerequisites))[]dnl
 m4_if([$6], [], [], [[
 	$][(AM@&t@_V_at)$][(MAKE) \
   $][(AM@&t@_MAKEFLAGS) \
   ]child_prerequisites[ \
 ;]])[
+	$][(GATBPS_V_DOCKER)$][(GATBPS_RECIPE_MARKER_TOP)
 	$][(AM@&t@_V_at)$][(MKDIR_P) \
   '\''./'\''$][(@D) \
 ;
