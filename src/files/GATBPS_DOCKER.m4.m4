@@ -28,10 +28,10 @@ AC_DEFUN([GATBPS_DOCKER], [[{
 # GATBPS_DOCKER macro.
 #]dnl
 m4_if(
-  m4_eval([$# < 3 || $# > 6]),
+  m4_eval([$# < 2 || $# > 6]),
   [1],
   [gatbps_fatal([
-    GATBPS_DOCKER requires 3 to 6 arguments
+    GATBPS_DOCKER requires 2 to 6 arguments
     ($# ]m4_if([$#], [1], [[was]], [[were]])[ given)
   ])])[]dnl
 m4_if(
