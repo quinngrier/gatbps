@@ -189,9 +189,9 @@ m4_pushdef(
     [$1],
     [],
     [],
-    [
-output_file[: ]dnl
-m4_bpatsubst([[$1]], ['], ['\\''])dnl
+    [[
+]output_file[: ]dnl
+m4_bpatsubst([[$1]], ['], ['\\''])[]dnl
 GATBPS_TAR_rule_lines(m4_shift($@))])])[dnl
 ]m4_ifdef(
   [GATBPS_TAR_make_lines],
@@ -204,8 +204,8 @@ GATBPS_TAR_rule_lines(m4_shift($@))])])[dnl
     [$1],
     [],
     [],
-    [
-  m4_bpatsubst([[$1]], ['], ['\\''])[ \]dnl
+    [[
+  ]m4_bpatsubst([[$1]], ['], ['\\''])[ \]dnl
 GATBPS_TAR_make_lines(m4_shift($@))])])[dnl
 [
 
