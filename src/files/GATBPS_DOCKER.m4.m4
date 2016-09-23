@@ -38,8 +38,11 @@ m4_if(
 	 ]]),
   [-1],
   [gatbps_fatal([
-    GATBPS_DOCKER requires its first argument to contain at least
-    one character that is not a space, tab, or newline character
+    invalid first argument to GATBPS_DOCKER:
+    [--VERBATIM--] "$1"
+  ], [
+    the first argument must contain at least one character that is not a
+    space, tab, or newline character
   ])])[]dnl
 m4_if(
   m4_bregexp([$4], [[^
