@@ -42,24 +42,24 @@ m4_if(
 case "$][{javadir+x}" in
   ?*)
     case "$][{javadir}" in
-      *[^-./0-9A-Z_a-z]*)
-        ]GATBPS_MSG_NOTICE([
-          error: invalid \$][{javadir} value: "$][{javadir}"
-        ])[
+      *'/')
         ]GATBPS_MSG_ERROR([
-          \$][{javadir} must match the following regular expression:
-          /[-./0-9A-Z_a-z]*
+          invalid \$][{javadir} value:
+          [--VERBATIM--] "$][{javadir}"
+        ], [
+          \$][{javadir} must not end with a "/" character
         ])[
       ;;
-      /*)
+      '/'*)
+      ;;
+      '$'*)
       ;;
       *)
-        ]GATBPS_MSG_NOTICE([
-          error: invalid \$][{javadir} value: "$][{javadir}"
-        ])[
         ]GATBPS_MSG_ERROR([
-          \$][{javadir} must match the following regular expression:
-          /[-./0-9A-Z_a-z]*
+          invalid \$][{javadir} value:
+          [--VERBATIM--] "$][{javadir}"
+        ], [
+          \$][{javadir} must begin with a "/" or "$" character
         ])[
       ;;
     esac
