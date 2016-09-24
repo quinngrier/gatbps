@@ -70,6 +70,11 @@ SUFFIXES += .java
       $(java_nested) \
       $(java_src) \
     ; do \
+      case "$${x}" in \
+        *'*'*) \
+          continue; \
+        ;; \
+      esac; \
       if 'test' '-f' "$${x}"; then \
         d='.'; \
       else \

@@ -54,6 +54,11 @@ GATBPS_JAVA_RULES="$][{GATBPS_JAVA_RULES}"'
       $][(java_]gatbps_y[_nested) \
       $][(java_]gatbps_y[_src) \
     ; do \
+      case "$][$][{x}" in \
+        *'\''*'\''*) \
+          continue; \
+        ;; \
+      esac; \
       if '\''test'\'' '\''-f'\'' "$][$][{x}"; then \
         d='\''.'\''; \
       else \
