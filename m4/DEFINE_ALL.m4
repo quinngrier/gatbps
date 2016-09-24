@@ -18,6 +18,8 @@ m4_case(
   ])])[]dnl
 [
 
+]AC_REQUIRE([DEFINE_docbookdir])[
+
 ]AC_REQUIRE([DEFINE_AWK])[
 ]AC_REQUIRE([DEFINE_M4])[
 ]AC_REQUIRE([DEFINE_MAKEINFO])[

@@ -410,9 +410,6 @@ docbook_dst += doc/gatbps.xml
 docbook_src =
 docbook_src += doc/gatbps.texi
 
-docbookdir =
-docbookdir += $(docdir)
-
 dvi_dist_dep =
 dvi_dist_dep += $(doc_gatbps_TEXINFOS)
 dvi_dist_dep += doc/gatbps.texi
