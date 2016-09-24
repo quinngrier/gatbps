@@ -272,7 +272,7 @@ GATBPS_DOCKER_loop_lines(m4_shift($@))])])[dnl
     [],
     [],
     [[
-  '\''--tag='\'']m4_bpatsubst([[$1]], ['], ['\\''])[ \]dnl
+      '\''--tag='\'']m4_bpatsubst([[$1]], ['], ['\\''])[ \]dnl
 GATBPS_DOCKER_build_lines(m4_shift($@))])])[dnl
 ]m4_ifdef(
   [GATBPS_DOCKER_save_lines],
@@ -286,7 +286,7 @@ GATBPS_DOCKER_build_lines(m4_shift($@))])])[dnl
     [],
     [],
     [[
-  ]m4_bpatsubst([[$1]], ['], ['\\''])[ \]dnl
+      ]m4_bpatsubst([[$1]], ['], ['\\''])[ \]dnl
 GATBPS_DOCKER_save_lines(m4_shift($@))])])[dnl
 [
 
