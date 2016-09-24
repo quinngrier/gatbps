@@ -615,6 +615,7 @@ EOF1
           'set' "${prefix}"'GATBPS_DOCKER.m4' "${@}"
           'set' "${prefix}"'GATBPS_DEFINE_javadir.m4' "${@}"
           'set' "${prefix}"'GATBPS_DEFINE_enable_SHEBANG_LINES.m4' "${@}"
+          'set' "${prefix}"'GATBPS_DEFINE_docbookdir.m4' "${@}"
           'set' "${prefix}"'GATBPS_DEFINE_VERSION.m4' "${@}"
           'set' "${prefix}"'GATBPS_DEFINE_JAVADOCFLAGS.m4' "${@}"
           'set' "${prefix}"'GATBPS_DEFINE_JAVACFLAGS.m4' "${@}"
@@ -1087,6 +1088,8 @@ EOF1
 |%}help_code({%|GATBPS_DEFINE_JAVADOCFLAGS.m4|%}){%|
 
 |%}help_code({%|GATBPS_DEFINE_VERSION.m4|%}){%|
+
+|%}help_code({%|GATBPS_DEFINE_docbookdir.m4|%}){%|
 
 |%}help_code({%|GATBPS_DEFINE_enable_SHEBANG_LINES.m4|%}){%|
 
@@ -2742,6 +2745,8 @@ EOF1
 
 |%}generation_code({%|GATBPS_DEFINE_VERSION.m4|%}){%|
 
+|%}generation_code({%|GATBPS_DEFINE_docbookdir.m4|%}){%|
+
 |%}generation_code({%|GATBPS_DEFINE_enable_SHEBANG_LINES.m4|%}){%|
 
 |%}generation_code({%|GATBPS_DEFINE_javadir.m4|%}){%|
@@ -3602,6 +3607,14 @@ EOF1
   {%|GATBPS_DEFINE_VERSION.m4|%},
   {%|
             'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|GATBPS_DEFINE_docbookdir.m4|%},
+  {%|
+            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' 'x' "${prefix}"'GATBPS_MSG_ERROR.m4' "${@}"; 'shift'
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
