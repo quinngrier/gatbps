@@ -40,8 +40,7 @@ m4_if(
   [-1],
   [gatbps_fatal([
     invalid first argument to GATBPS_CP:
-    [--VERBATIM--] "$1"
-  ], [
+  [--VERBATIM--] "$1"], [
     the first argument must contain at least one character that is not a
     space, tab, or newline character
   ])])[]dnl
@@ -51,8 +50,7 @@ m4_if(
   [-1],
   [gatbps_fatal([
     invalid second argument to GATBPS_CP:
-    [--VERBATIM--] "$2"
-  ], [
+  [--VERBATIM--] "$2"], [
     the second argument must contain at least one character that is not
     a space, tab, or newline character
   ])])[]dnl
@@ -65,8 +63,7 @@ m4_case(
   [file_or_directory], [],
   [gatbps_fatal([
     invalid third argument to GATBPS_CP:
-    [--VERBATIM--] "$3"
-  ], [
+  [--VERBATIM--] "$3"], [
     the third argument must be either empty, "directory", "executable",
     "file", or "file_or_directory"
   ])])[]dnl
@@ -90,8 +87,7 @@ m4_pushdef(
       [0],
       [gatbps_fatal([
         invalid last subargument of the fourth GATBPS_CP argument:
-        [--VERBATIM--] "$1"
-      ], [
+      [--VERBATIM--] "$1"], [
         the last subargument must either be empty or contain at least
         one character that is not a space, tab, or newline character
       ])])],
@@ -101,8 +97,7 @@ m4_pushdef(
       [-1],
       [gatbps_fatal([
         invalid non-last subargument of the fourth GATBPS_CP argument:
-        [--VERBATIM--] "$1"
-      ], [
+      [--VERBATIM--] "$1"], [
         each non-last subargument must contain at least one character
         that is not a space, tab, or newline character
       ])])[]GATBPS_CP_check_4(m4_shift($@))])])[dnl
@@ -116,8 +111,7 @@ m4_case(
   [mostlyclean], [],
   [gatbps_fatal([
     invalid fifth argument to GATBPS_CP:
-    [--VERBATIM--] "$5"
-  ], [
+  [--VERBATIM--] "$5"], [
     the fifth argument must be either empty, "clean", "distclean",
     "maintainer-clean", or "mostlyclean"
   ])])[]dnl
@@ -141,8 +135,7 @@ m4_pushdef(
       [0],
       [gatbps_fatal([
         invalid last subargument of the sixth GATBPS_CP argument:
-        [--VERBATIM--] "$1"
-      ], [
+      [--VERBATIM--] "$1"], [
         the last subargument must either be empty or contain at least
         one character that is not a space, tab, or newline character
       ])])],
@@ -152,8 +145,7 @@ m4_pushdef(
       [-1],
       [gatbps_fatal([
         invalid non-last subargument of the sixth GATBPS_CP argument:
-        [--VERBATIM--] "$1"
-      ], [
+      [--VERBATIM--] "$1"], [
         each non-last subargument must contain at least one character
         that is not a space, tab, or newline character
       ])])[]GATBPS_CP_check_6(m4_shift($@))])])[dnl

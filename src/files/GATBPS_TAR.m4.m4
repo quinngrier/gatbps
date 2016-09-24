@@ -81,8 +81,7 @@ m4_pushdef(
       [0],
       [gatbps_fatal([
         invalid last subargument of the fourth GATBPS_TAR argument:
-        [--VERBATIM--] "$1"
-      ], [
+      [--VERBATIM--] "$1"], [
         the last subargument must either be empty or contain at least
         one character that is not a space, tab, or newline character
       ])])],
@@ -92,8 +91,7 @@ m4_pushdef(
       [-1],
       [gatbps_fatal([
         invalid non-last subargument of the fourth GATBPS_TAR argument:
-        [--VERBATIM--] "$1"
-      ], [
+      [--VERBATIM--] "$1"], [
         each non-last subargument must contain at least one character
         that is not a space, tab, or newline character
       ])])[]GATBPS_TAR_check_4(m4_shift($@))])])[dnl
@@ -131,8 +129,7 @@ m4_pushdef(
       [0],
       [gatbps_fatal([
         invalid last subargument of the sixth GATBPS_TAR argument:
-        [--VERBATIM--] "$1"
-      ], [
+      [--VERBATIM--] "$1"], [
         the last subargument must either be empty or contain at least
         one character that is not a space, tab, or newline character
       ])])],
@@ -142,8 +139,7 @@ m4_pushdef(
       [-1],
       [gatbps_fatal([
         invalid non-last subargument of the sixth GATBPS_TAR argument:
-        [--VERBATIM--] "$1"
-      ], [
+      [--VERBATIM--] "$1"], [
         each non-last subargument must contain at least one character
         that is not a space, tab, or newline character
       ])])[]GATBPS_TAR_check_6(m4_shift($@))])])[dnl

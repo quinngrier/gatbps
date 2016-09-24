@@ -40,8 +40,7 @@ m4_if(
   [-1],
   [gatbps_fatal([
     invalid first argument to GATBPS_DOCKER:
-    [--VERBATIM--] "$1"
-  ], [
+  [--VERBATIM--] "$1"], [
     the first argument must contain at least one character that is not a
     space, tab, or newline character
   ])])[]dnl
@@ -51,8 +50,7 @@ m4_if(
   [-1],
   [gatbps_fatal([
     invalid second argument to GATBPS_DOCKER:
-    [--VERBATIM--] "$2"
-  ], [
+  [--VERBATIM--] "$2"], [
     the second argument must contain at least one character that is not
     a space, tab, or newline character
   ])])[]dnl
@@ -76,8 +74,7 @@ m4_pushdef(
       [0],
       [gatbps_fatal([
         invalid last subargument of the third GATBPS_DOCKER argument:
-        [--VERBATIM--] "$1"
-      ], [
+      [--VERBATIM--] "$1"], [
         the last subargument must either be empty or contain at least
         one character that is not a space, tab, or newline character
       ])])],
@@ -88,8 +85,7 @@ m4_pushdef(
       [gatbps_fatal([
         invalid non-last subargument of the third GATBPS_DOCKER
         argument:
-        [--VERBATIM--] "$1"
-      ], [
+      [--VERBATIM--] "$1"], [
         each non-last subargument must contain at least one character
         that is not a space, tab, or newline character
       ])])[]GATBPS_DOCKER_check_3(m4_shift($@))])])[dnl
@@ -114,8 +110,7 @@ m4_pushdef(
       [0],
       [gatbps_fatal([
         invalid last subargument of the fourth GATBPS_DOCKER argument:
-        [--VERBATIM--] "$1"
-      ], [
+      [--VERBATIM--] "$1"], [
         the last subargument must either be empty or contain at least
         one character that is not a space, tab, or newline character
       ])])],
@@ -126,8 +121,7 @@ m4_pushdef(
       [gatbps_fatal([
         invalid non-last subargument of the fourth GATBPS_DOCKER
         argument:
-        [--VERBATIM--] "$1"
-      ], [
+      [--VERBATIM--] "$1"], [
         each non-last subargument must contain at least one character
         that is not a space, tab, or newline character
       ])])[]GATBPS_DOCKER_check_4(m4_shift($@))])])[dnl
@@ -141,8 +135,7 @@ m4_case(
   [mostlyclean], [],
   [gatbps_fatal([
     invalid fifth argument to GATBPS_DOCKER:
-    [--VERBATIM--] "$5"
-  ], [
+  [--VERBATIM--] "$5"], [
     the fifth argument must be either empty, "clean", "distclean",
     "maintainer-clean", or "mostlyclean"
   ])])[]dnl
@@ -166,8 +159,7 @@ m4_pushdef(
       [0],
       [gatbps_fatal([
         invalid last subargument of the sixth GATBPS_DOCKER argument:
-        [--VERBATIM--] "$1"
-      ], [
+      [--VERBATIM--] "$1"], [
         the last subargument must either be empty or contain at least
         one character that is not a space, tab, or newline character
       ])])],
@@ -178,8 +170,7 @@ m4_pushdef(
       [gatbps_fatal([
         invalid non-last subargument of the sixth GATBPS_DOCKER
         argument:
-        [--VERBATIM--] "$1"
-      ], [
+      [--VERBATIM--] "$1"], [
         each non-last subargument must contain at least one character
         that is not a space, tab, or newline character
       ])])[]GATBPS_DOCKER_check_6(m4_shift($@))])])[dnl
