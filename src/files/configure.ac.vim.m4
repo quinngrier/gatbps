@@ -24,7 +24,7 @@ function s:FormatAutoconfFile()
 
   let affected_search_history = 0
 
-  let mark = '\m^\]dnl \%(begin\|end\)_'
+  let section_marker = '\m^\]dnl \%(begin\|end\)_'
 
   let s1 = '\m^\]dnl begin_includes\n\[$'
   let s2 = '\m^\]dnl end_includes$'
@@ -37,7 +37,7 @@ function s:FormatAutoconfFile()
       break
     endif
     call cursor(n1, 1)
-    if search(mark, 'W') == n2
+    if search(section_marker, 'W') == n2
       exec n1 . '+1,' . n2 . 'g/\m^$/d'
       exec n1 . '+1s/\m$/\r/'
       call cursor(n1, 1)
@@ -65,7 +65,7 @@ function s:FormatAutoconfFile()
       break
     endif
     call cursor(n1, 1)
-    if search(mark, 'W') == n2
+    if search(section_marker, 'W') == n2
       call cursor(n1, 1)
       let n3 = search('\m\b', 'W')
       if n3 == 0 || n3 > n2
