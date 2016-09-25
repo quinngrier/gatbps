@@ -275,9 +275,9 @@ m4_case(
       esac; \
     fi; \
     '\''test'\'' \
-      '\''-]m4_if(input_mode, [directory], [[d]], [[f]])['\'' \
+      '\''-]m4_case(input_mode, [directory], [[d]], [[f]])['\'' \
       "$][$][{d}"'\''/'\''"$][$][{x}" \]dnl
-m4_if(
+m4_case(
   input_mode,
   [file_or_directory],
   [[
@@ -291,7 +291,7 @@ m4_if(
       "$][$][{d}"'\''/'\''"$][$][{x}" \
       '\''./'\'']output_file_or_directory['\''.tmp'\'' \
     || '\''exit'\'' "$][$][{?}"; \]dnl
-m4_if(
+m4_case(
   input_mode,
   [executable],
   [[
