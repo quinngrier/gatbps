@@ -166,7 +166,7 @@ m4_pushdef(
   m4_if(
     [$3],
     [],
-    [[[file_or_directory]]],
+    [[[file]]],
     [[[$3]]]))[]dnl
 m4_pushdef(
   [child_prerequisites],
