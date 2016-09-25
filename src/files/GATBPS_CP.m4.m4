@@ -246,8 +246,16 @@ GATBPS_CP_make_lines(m4_if(,,child_prerequisites))[
   '\''./'\''$][(@D) \
 ;
 	$][(AM@&t@_V_at)'\''rm'\'' \
-  '\''-f'\'' \
-  '\''-r'\'' \
+  '\''-f'\'' \]dnl
+m4_case(
+  input_mode,
+  [directory],
+  [[
+  '\''-r'\'' \]],
+  [file_or_directory],
+  [[
+  '\''-r'\'' \]])[]dnl
+[
   '\''./'\'']output_file_or_directory[ \
   '\''./'\'']output_file_or_directory['\''.tmp'\'' \
 ;
@@ -304,8 +312,16 @@ m4_if(
     ;; \
     *) \
       '\''rm'\'' \
-        '\''-f'\'' \
-        '\''-r'\'' \
+        '\''-f'\'' \]dnl
+m4_case(
+  input_mode,
+  [directory],
+  [[
+        '\''-r'\'' \]],
+  [file_or_directory],
+  [[
+        '\''-r'\'' \]])[]dnl
+[
         '\''./'\'']output_file_or_directory[ \
         '\''./'\'']output_file_or_directory['\''.tmp'\'' \
       ; \
@@ -319,8 +335,16 @@ m4_if(
 
 clean-]output_file_or_directory[:
 	-'\''rm'\'' \
-  '\''-f'\'' \
-  '\''-r'\'' \
+  '\''-f'\'' \]dnl
+m4_case(
+  input_mode,
+  [directory],
+  [[
+  '\''-r'\'' \]],
+  [file_or_directory],
+  [[
+  '\''-r'\'' \]])[]dnl
+[
   '\''./'\'']output_file_or_directory[ \
   '\''./'\'']output_file_or_directory['\''.tmp'\'' \
 ;
