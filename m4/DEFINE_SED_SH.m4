@@ -10,9 +10,9 @@ m4_ifdef(
     DEFINE_SED_SH has already been called
   ])],
   [m4_define([DEFINE_SED_SH_HAS_BEEN_CALLED])])[]dnl
-m4_case(
-  [$#],
-  [0], [],
+m4_if(
+  m4_eval([$# < 0 || $# > 0]),
+  [1],
   [gatbps_fatal([
     DEFINE_SED_SH requires exactly 0 arguments
   ])])[]dnl

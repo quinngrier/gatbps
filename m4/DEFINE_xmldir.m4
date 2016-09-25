@@ -10,9 +10,9 @@ m4_ifdef(
     DEFINE_xmldir has already been called
   ])],
   [m4_define([DEFINE_xmldir_HAS_BEEN_CALLED])])[]dnl
-m4_case(
-  [$#],
-  [0], [],
+m4_if(
+  m4_eval([$# < 0 || $# > 0]),
+  [1],
   [gatbps_fatal([
     DEFINE_xmldir requires exactly 0 arguments
   ])])[]dnl
