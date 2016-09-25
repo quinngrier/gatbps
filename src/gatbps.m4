@@ -3635,7 +3635,6 @@ EOF1
   {%|GATBPS_DEFINE_javadir.m4|%},
   {%|
             'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'GATBPS_MSG_NOTICE.m4' "${@}"; 'shift'
             'set' 'x' "${prefix}"'GATBPS_MSG_ERROR.m4' "${@}"; 'shift'
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
