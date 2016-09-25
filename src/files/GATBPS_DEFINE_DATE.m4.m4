@@ -133,10 +133,11 @@ m4_if(
   m4_bregexp($1$2, [^\+?[0-9]+-[0-9][0-9]-[0-9][0-9]$]),
   [-1],
   [gatbps_fatal([
-    GATBPS_DEFINE_DATE requires its third argument to be a proleptic
-    Gregorian date in YYYY-MM-DD form where the year may be preceded by
-    a "+" character and may have any number of digits, including leading
-    zeros
+    invalid third argument to GATBPS_DEFINE_DATE:
+  [--VERBATIM--] "$3"], [
+    the third argument must be a proleptic Gregorian date in YYYY-MM-DD
+    form where the year may be preceded by a "+" character and may have
+    any number of digits, including leading zeros
   ])])[]dnl
 m4_define(
   [$1$2_YEAR],
