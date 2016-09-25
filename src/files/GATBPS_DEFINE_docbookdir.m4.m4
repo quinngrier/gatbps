@@ -46,7 +46,7 @@ case "$][{docbookdir+x}" in
         ]GATBPS_MSG_ERROR([
           invalid \$][{docbookdir} value:
         [--VERBATIM--] "$][{docbookdir}"], [
-          \$][{docbookdir} must not end with a "/" character
+          \$][{docbookdir} must not end with "/"
         ])[
       ;;
       '/'*)
