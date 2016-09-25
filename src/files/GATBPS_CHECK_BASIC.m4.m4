@@ -23,7 +23,8 @@ AC_DEFUN([GATBPS_CHECK_BASIC], [[{
 
 #
 # The block that contains this comment is the expansion of the
-# GATBPS_CHECK_BASIC macro for]m4_if(
+# GATBPS_CHECK_BASIC macro for]dnl
+m4_if(
   m4_eval(m4_len([ (gatbps_cv_)$2.])[ > 42]),
   [1],
   [[
