@@ -20,6 +20,7 @@ m4_case(
 
 ]AC_REQUIRE([DEFINE_docbookdir])[
 ]AC_REQUIRE([DEFINE_plaintextdir])[
+]AC_REQUIRE([DEFINE_xmldir])[
 
 ]AC_REQUIRE([DEFINE_AWK])[
 ]AC_REQUIRE([DEFINE_M4])[
