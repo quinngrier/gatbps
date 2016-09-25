@@ -51,13 +51,13 @@ case "$][{javadir+x}" in
       ;;
       '/'*)
       ;;
-      '$'*)
+      '${'*)
       ;;
       *)
         ]GATBPS_MSG_ERROR([
           invalid \$][{javadir} value:
         [--VERBATIM--] "$][{javadir}"], [
-          \$][{javadir} must begin with a "/" or "$" character
+          \$][{javadir} must begin with "/" or "\${"
         ])[
       ;;
     esac

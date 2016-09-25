@@ -51,13 +51,13 @@ case "$][{docbookdir+x}" in
       ;;
       '/'*)
       ;;
-      '$'*)
+      '${'*)
       ;;
       *)
         ]GATBPS_MSG_ERROR([
           invalid \$][{docbookdir} value:
         [--VERBATIM--] "$][{docbookdir}"], [
-          \$][{docbookdir} must begin with a "/" or "$" character
+          \$][{docbookdir} must begin with "/" or "\${"
         ])[
       ;;
     esac
