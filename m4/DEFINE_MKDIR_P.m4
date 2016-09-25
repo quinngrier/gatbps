@@ -15,6 +15,7 @@ m4_if(
   [1],
   [gatbps_fatal([
     DEFINE_MKDIR_P requires exactly 0 arguments
+    ($# ]m4_if([$#], [1], [[was]], [[were]])[ given)
   ])])[]dnl
 [
 
