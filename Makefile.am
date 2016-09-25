@@ -486,9 +486,6 @@ plaintext_dst += doc/gatbps.txt
 plaintext_src =
 plaintext_src += doc/gatbps.texi
 
-plaintextdir =
-plaintextdir += $(docdir)
-
 ps_dist_dep =
 ps_dist_dep += $(doc_gatbps_TEXINFOS)
 ps_dist_dep += doc/gatbps.texi
