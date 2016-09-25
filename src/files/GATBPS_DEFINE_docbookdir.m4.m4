@@ -71,8 +71,8 @@ esac
 ]AC_ARG_VAR(
   [docbookdir],
   [
-    the directory to which to install DocBook files (default:
-    docbookdir='$][{docdir}')
+    the directory to which to install DocBook documentation files
+    (default: docbookdir='$][{docdir}')
   ])[
 
 :;}]])[]dnl
