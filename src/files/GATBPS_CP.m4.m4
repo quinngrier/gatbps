@@ -24,8 +24,13 @@ PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 AC_DEFUN([GATBPS_CP], [[{
 
 #
-# The block that contains this comment is an expansion of the GATBPS_CP
-# macro.
+# The block that contains this comment is the expansion of the GATBPS_CP
+# macro for]dnl
+m4_if(
+  m4_eval(m4_len([ $1.])[ > 61]),
+  [1],
+  [[
+#]])[ $1.
 #]dnl
 m4_if(
   m4_eval([$# < 2 || $# > 6]),
