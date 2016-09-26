@@ -274,8 +274,15 @@ m4_case(
         ;; \
       esac; \
     fi; \
-    '\''test'\'' \
-      '\''-]m4_case(input_mode, [directory], [[d]], [[f]])['\'' \
+    '\''test'\'' \]dnl
+m4_case(
+  input_mode,
+  [directory],
+  [[
+      '\''-d'\'' \]],
+  [[
+      '\''-f'\'' \]])[]dnl
+[
       "$][$][{d}"'\''/'\''"$][$][{x}" \]dnl
 m4_case(
   input_mode,
