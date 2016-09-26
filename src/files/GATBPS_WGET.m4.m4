@@ -135,19 +135,19 @@ m4_if(
       [gatbps_fatal([
         GATBPS_WGET bad third argument
       ])])])])[]dnl
-m4_if(
-  m4_eval([$# >= 4]),
-  [1],
-  [m4_case(
-    [$4],
-    [clean], [],
-    [distclean], [],
-    [maintainer-clean], [],
-    [mostlyclean], [],
-    [gatbps_fatal([
-      GATBPS_WGET requires its fourth argument to be either "clean",
-      "distclean", "maintainer-clean", or "mostlyclean"
-    ])])])[]dnl
+m4_case(
+  [$4],
+  [], [],
+  [clean], [],
+  [distclean], [],
+  [maintainer-clean], [],
+  [mostlyclean], [],
+  [gatbps_fatal([
+    invalid fourth argument to GATBPS_WGET:
+  [--VERBATIM--] "$4"], [
+    the fourth argument must be either empty, "clean", "distclean",
+    "maintainer-clean", or "mostlyclean"
+  ])])[]dnl
 m4_pushdef(
   [output_file],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
