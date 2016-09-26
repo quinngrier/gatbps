@@ -154,6 +154,13 @@ m4_pushdef(
 m4_pushdef(
   [input_urls],
   m4_bpatsubst([[[$2]]], ['], ['\\'']))[]dnl
+m4_pushdef(
+  [clean_target],
+  m4_if(
+    [$4],
+    [],
+    [[[clean]]],
+    [[[$4]]]))[]dnl
 [
 
 GATBPS_WGET_RULES="$][{GATBPS_WGET_RULES}"'
@@ -243,10 +250,11 @@ clean-]output_file[:
   '\''./'\'']output_file['\''.tmp'\'' \
 ;
 
-]m4_if([$4], [], [[clean]], [[$4]])[-local: clean-]output_file[
+]clean_target[-local: clean-]output_file[
 
 '
 ]dnl
+m4_popdef([clean_target])[]dnl
 m4_popdef([input_urls])[]dnl
 m4_popdef([output_file])[]dnl
 [
