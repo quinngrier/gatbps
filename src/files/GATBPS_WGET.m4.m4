@@ -217,7 +217,7 @@ m4_pushdef(
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
 m4_pushdef(
   [input_urls],
-  m4_bpatsubst([[[$2]]], ['], ['\\'']))[]dnl
+  m4_dquote(list_2))[]dnl
 m4_pushdef(
   [file_hashes],
   m4_dquote(list_3))[]dnl
@@ -228,6 +228,20 @@ m4_pushdef(
     [],
     [[[clean]]],
     [[[$4]]]))[]dnl
+]m4_ifdef(
+  [GATBPS_WGET_url_lines],
+  [gatbps_fatal([
+    GATBPS_WGET_url_lines is already defined
+  ])])[dnl
+]m4_define(
+  [GATBPS_WGET_url_lines],
+  [m4_if(
+    [$1],
+    [],
+    [],
+    [[
+      ]m4_bpatsubst([[$1]], ['], ['\\''])[ \]dnl
+GATBPS_WGET_url_lines(m4_shift($@))])])[dnl
 [
 
 GATBPS_WGET_RULES="$][{GATBPS_WGET_RULES}"'
@@ -248,12 +262,8 @@ GATBPS_WGET_RULES="$][{GATBPS_WGET_RULES}"'
 	$][(AM@&t@_V_at){ \
   ( \
     success='\''no'\''; \
-    for url in \
-      ]m4_bpatsubst(
-        m4_normalize(input_urls),
-        [ ],
-        [ \\
-      ])[ \
+    for url in \]dnl
+GATBPS_WGET_url_lines(m4_if(,,input_urls))[
     ; do \
       $][(WGET) \
         '\''-O'\'' \
