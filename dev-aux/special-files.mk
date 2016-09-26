@@ -39,6 +39,7 @@ all:
 	$(GENERATE) 'build-aux/ps-dist.am'
 	$(GENERATE) 'build-aux/sh-form.sh'
 	$(GENERATE) 'build-aux/texinfo.css'
+	$(GENERATE) 'build-aux/xml.am'
 	$(GENERATE) 'dev-aux/CC0-1.0-commit.txt'
 	$(GENERATE) 'dev-aux/CC0-1.0-file.txt'
 	$(GENERATE) 'dev-aux/Makefile.am.vim'
