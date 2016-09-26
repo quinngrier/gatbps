@@ -242,6 +242,28 @@ m4_pushdef(
     [[
       ]m4_bpatsubst([[$1]], ['], ['\\''])[ \]dnl
 GATBPS_WGET_url_lines(m4_shift($@))])])[dnl
+]m4_ifdef(
+  [GATBPS_WGET_hash_checks],
+  [gatbps_fatal([
+    GATBPS_WGET_hash_checks is already defined
+  ])])[dnl
+]m4_define(
+  [GATBPS_WGET_hash_checks],
+  [m4_if(
+    [$1],
+    [],
+    [],
+    [[
+      $][(OPENSSL) \
+        '\''dgst'\'' \
+        '\''-non-fips-allow'\'' \
+        '\''-]m4_bregexp([$1], [[^:]*], [[\&]])['\'' \
+        <]output_file['\''.tmp'\'' \
+      | $][(GREP) \
+        '\'']m4_bregexp([$1], [:\(.*\)], [[\1]])['\'' \
+        >'\''/dev/null'\'' \
+      || '\''continue'\''; \]dnl
+GATBPS_WGET_hash_checks(m4_shift($@))])])[dnl
 [
 
 GATBPS_WGET_RULES="$][{GATBPS_WGET_RULES}"'
@@ -271,19 +293,7 @@ GATBPS_WGET_url_lines(m4_if(,,input_urls))[
         '\''--'\'' \
         "$][$][{url}" \
       || '\''continue'\''; \]dnl
-m4_foreach_w(
-  [pair],
-  [$3],
-  [[
-      $][(OPENSSL) \
-        '\''dgst'\'' \
-        '\''-non-fips-allow'\'' \
-        '\''-]m4_bregexp(pair, [[^:]*], [[\&]])['\'' \
-        <]output_file['\''.tmp'\'' \
-      | $][(GREP) \
-        '\'']m4_bregexp(pair, [:\(.*\)], [[\1]])['\'' \
-        >'\''/dev/null'\'' \
-      || '\''continue'\''; \]])[
+GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
       success='\''yes'\''; \
       '\''break'\''; \
     done; \
