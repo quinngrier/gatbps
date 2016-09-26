@@ -175,7 +175,6 @@ GATBPS_WGET_RULES="$][{GATBPS_WGET_RULES}"'
 ;
 	$][(AM@&t@_V_at)'\''rm'\'' \
   '\''-f'\'' \
-  '\''-r'\'' \
   '\''./'\'']output_file[ \
   '\''./'\'']output_file['\''.tmp'\'' \
 ;
@@ -230,7 +229,6 @@ m4_foreach_w(
     *) \
       '\''rm'\'' \
         '\''-f'\'' \
-        '\''-r'\'' \
         '\''./'\'']output_file[ \
         '\''./'\'']output_file['\''.tmp'\'' \
       ; \
@@ -245,7 +243,6 @@ m4_foreach_w(
 clean-]output_file[:
 	-'\''rm'\'' \
   '\''-f'\'' \
-  '\''-r'\'' \
   '\''./'\'']output_file[ \
   '\''./'\'']output_file['\''.tmp'\'' \
 ;
