@@ -179,6 +179,9 @@ m4_pushdef(
   [input_urls],
   m4_bpatsubst([[[$2]]], ['], ['\\'']))[]dnl
 m4_pushdef(
+  [file_hashes],
+  m4_dquote(list_3))[]dnl
+m4_pushdef(
   [clean_target],
   m4_if(
     [$4],
@@ -276,6 +279,7 @@ clean-]output_file[:
 '
 ]dnl
 m4_popdef([clean_target])[]dnl
+m4_popdef([file_hashes])[]dnl
 m4_popdef([input_urls])[]dnl
 m4_popdef([output_file])[]dnl
 m4_popdef([list_3])[]dnl
