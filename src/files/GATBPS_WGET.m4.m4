@@ -48,12 +48,12 @@ m4_pushdef(
   m4_bpatsubst([[[$2]]], [^\(..\)[
 	 ]+], [\1]))[]dnl
 ]m4_ifdef(
-  [GATBPS_WGET_check_2],
+  [GATBPS_WGET_check_2_count],
   [gatbps_fatal([
-    GATBPS_WGET_check_2 is already defined
+    GATBPS_WGET_check_2_count is already defined
   ])])[dnl
 ]m4_define(
-  [GATBPS_WGET_check_2],
+  [GATBPS_WGET_check_2_count],
   [m4_if(
     [$#],
     [1],
@@ -66,7 +66,12 @@ m4_pushdef(
         the second argument must contain at least one subargument that
         is not empty
       ])])])])[dnl
-GATBPS_WGET_check_2(m4_if(,,list_2))[]dnl
+GATBPS_WGET_check_2_count(m4_if(,,list_2))[]dnl
+]m4_ifdef(
+  [GATBPS_WGET_check_2],
+  [gatbps_fatal([
+    GATBPS_WGET_check_2 is already defined
+  ])])[dnl
 ]m4_define(
   [GATBPS_WGET_check_2],
   [m4_if(
