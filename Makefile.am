@@ -25,6 +25,7 @@ EXTRA_DIST += $(html_dist_dst)
 EXTRA_DIST += $(pdf_dist_dst)
 EXTRA_DIST += $(plaintext_dist_dst)
 EXTRA_DIST += $(ps_dist_dst)
+EXTRA_DIST += $(xml_dist_dst)
 EXTRA_DIST += AUTHORS
 EXTRA_DIST += CC0-1.0.txt
 EXTRA_DIST += COPYING
@@ -161,6 +162,16 @@ ps_dist_src += doc/gatbps.ps
 xml_dep =
 xml_dep += $(doc_gatbps_TEXINFOS)
 
+xml_dist_dep =
+xml_dist_dep += $(doc_gatbps_TEXINFOS)
+xml_dist_dep += doc/gatbps.texi
+
+xml_dist_dst =
+xml_dist_dst += doc/gatbps-$(PACKAGE_VERSION)-intermediate.xml
+
+xml_dist_src =
+xml_dist_src += doc/gatbps-intermediate.xml
+
 xml_dst =
 xml_dst += doc/gatbps-intermediate.xml
 
@@ -190,6 +201,7 @@ include $(srcdir)/build-aux/pdf-dist.am
 include $(srcdir)/build-aux/plaintext-dist.am
 include $(srcdir)/build-aux/plaintext.am
 include $(srcdir)/build-aux/ps-dist.am
+include $(srcdir)/build-aux/xml-dist.am
 include $(srcdir)/build-aux/xml.am
 
 ## end_includes
