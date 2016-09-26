@@ -158,6 +158,15 @@ ps_dist_dst += doc/gatbps-$(PACKAGE_VERSION).ps
 ps_dist_src =
 ps_dist_src += doc/gatbps.ps
 
+xml_dep =
+xml_dep += $(doc_gatbps_TEXINFOS)
+
+xml_dst =
+xml_dst += doc/gatbps-intermediate.xml
+
+xml_src =
+xml_src += doc/gatbps.texi
+
 ## end_variables
 
 ## begin_rules
@@ -181,6 +190,7 @@ include $(srcdir)/build-aux/pdf-dist.am
 include $(srcdir)/build-aux/plaintext-dist.am
 include $(srcdir)/build-aux/plaintext.am
 include $(srcdir)/build-aux/ps-dist.am
+include $(srcdir)/build-aux/xml.am
 
 ## end_includes
 
