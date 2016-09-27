@@ -4,8 +4,9 @@
 @noindent
 For each
 operand@tie{}@w{@i{X}}
-for which generation
-is enabled, the file
+for which generation is enabled
+(@pxref{@w{@t{gatbps}} Operands}),
+the file
 @w{@i{X}}
 is generated and the ten files
 @w{@i{X}@t{.@:tmp0}}
