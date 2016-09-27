@@ -605,7 +605,7 @@ messages to standard error.
 For each
 operand\~\c
 .nohy "\fIX\fR"
-for which generation is enabled (see the OPERANDS section), the
+for which generation is enabled (see the OPERANDS section), the output
 file\~\c
 .nohy "\fIX\fR"
 is attempted to be generated, and the ten files

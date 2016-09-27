@@ -6,7 +6,7 @@ For each
 operand@tie{}@w{@i{X}}
 for which generation is enabled
 (@pxref{@w{@t{gatbps}} Operands}),
-the
+the output
 file@tie{}@w{@i{X}}
 is attempted to be generated, and the ten files
 @w{@i{X}@t{.@:tmp0}}
