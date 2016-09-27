@@ -615,8 +615,9 @@ are reserved for temporary use.
 The generation
 of\~\c
 .nohy "\fIX\fR"
-begins by verifying that each temporary file either definitely exists as
-a regular file or definitely does not exist.
+begins by attempting to delete each temporary file with the
+.nohy "\fBrm\ -f\fR"
+command.
 If this fails, then no further action is taken and the generation
 of\~\c
 .nohy "\fIX\fR"

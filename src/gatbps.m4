@@ -2636,32 +2636,11 @@ EOF1
       while ':'; do # generation
 
         for i in '0' '1' '2' '3' '4' '5' '6' '7' '8' '9'; do
-          if 'mkdir' "${safe_1}"'.tmp'"${i}" 2>'/dev/null'; then
-            'rmdir' "${safe_1}"'.tmp'"${i}"
-            case "${?}" in
-              '0')
-              ;;
-              *)
-                'cat' >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}rmdir${fR2} failed while deleting: ${fB2}${1}.tmp${i}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-                exit_status='1'
-                'break' '2' # generation
-              ;;
-            esac
-          elif test '-f' "${safe_1}"'.tmp'"${i}"; then
-            :
-          elif test '-d' "${safe_1}"'.tmp'"${i}"; then
-            'cat' >&2 <<EOF1
-${fy2}gatbps:${fR2} file must not be a directory: ${fB2}${1}.tmp${i}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-            exit_status='1'
-            'break' '2' # generation
+          if 'rm' '-f' "${safe_1}"'.tmp'"${i}"; then
+            ':'
           else
             'cat' >&2 <<EOF1
-${fy2}gatbps:${fR2} file must not be nonregular: ${fB2}${1}.tmp${i}${fR2}
+${fy2}gatbps:${fR2} ${fB2}rm${fR2} failed while deleting: ${fB2}${1}.tmp${i}${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
