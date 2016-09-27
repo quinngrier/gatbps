@@ -619,10 +619,8 @@ numerical order with individual
 commands.
 If any of these commands fails, then generation stops and processing
 continues to the next phase.
-Otherwise, some of them may
-be used during generation and
-all of them are deleted after
-generation succeeds or fails.
+Otherwise, the output file is attempted to be generated, during which
+time the temporary files are used in an unspecified manner@.
 If generation fails, then
 .nohy "\fIX\fR"
 is not necessarily deleted.
