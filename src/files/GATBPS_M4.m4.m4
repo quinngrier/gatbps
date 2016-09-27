@@ -54,7 +54,7 @@ m4_if(
       "distclean", "maintainer-clean", or "mostlyclean"
     ])])])[]dnl
 m4_pushdef(
-  [target_sh],
+  [output_file],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
 [
 
@@ -64,28 +64,28 @@ m4_pushdef(
 
 GATBPS_M4_RULES="$][{GATBPS_M4_RULES}"'
 
-]target_sh[.m4out: ]target_sh[.m4out.d
+]output_file[.m4out: ]output_file[.m4out.d
 
-]target_sh[.m4out.d:
+]output_file[.m4out.d:
 
-.PHONY: clean-]target_sh[.m4out
+.PHONY: clean-]output_file[.m4out
 
-clean-]target_sh[.m4out:
+clean-]output_file[.m4out:
 	-'\''rm'\'' \
   '\''-f'\'' \
-  '\''./'\'']target_sh['\''.m4out'\'' \
-  '\''./'\'']target_sh['\''.m4out.d'\'' \
-  '\''./'\'']target_sh['\''.m4out.d.tmp'\'' \
-  '\''./'\'']target_sh['\''.m4out.tmp'\'' \
+  '\''./'\'']output_file['\''.m4out'\'' \
+  '\''./'\'']output_file['\''.m4out.d'\'' \
+  '\''./'\'']output_file['\''.m4out.d.tmp'\'' \
+  '\''./'\'']output_file['\''.m4out.tmp'\'' \
 ;
 
-]m4_if([$2], [], [[mostlyclean]], [[$2]])[-local: clean-]target_sh[.m4out
+]m4_if([$2], [], [[mostlyclean]], [[$2]])[-local: clean-]output_file[.m4out
 
-'"$][{SOFT_INCLUDE}"' ]target_sh[.m4out.d
+'"$][{SOFT_INCLUDE}"' ]output_file[.m4out.d
 
 '
 ]dnl
-m4_popdef([target_sh])[]dnl
+m4_popdef([output_file])[]dnl
 [
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
