@@ -608,11 +608,11 @@ operand\~\c
 for which generation is enabled (see the OPERANDS section), the
 file\~\c
 .nohy "\fIX\fR"
-is generated and the ten files
+is attempted to be generated, and the ten files
 .nohy "\fIX\fB.tmp0\fR"
 through
 .nohy "\fIX\fB.tmp9\fR"
-are reserved for temporary use.
+are reserved for temporary use during this process.
 The generation
 of\~\c
 .nohy "\fIX\fR"

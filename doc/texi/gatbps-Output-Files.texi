@@ -8,11 +8,11 @@ for which generation is enabled
 (@pxref{@w{@t{gatbps}} Operands}),
 the
 file@tie{}@w{@i{X}}
-is generated and the ten files
+is attempted to be generated, and the ten files
 @w{@i{X}@t{.@:tmp0}}
 through
 @w{@i{X}@t{.@:tmp9}}
-are reserved for temporary use@.
+are reserved for temporary use during this process@.
 The generation
 of@tie{}@w{@i{X}}
 begins by attempting to delete each temporary file with the
