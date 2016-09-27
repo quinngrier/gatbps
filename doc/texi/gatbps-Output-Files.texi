@@ -13,10 +13,8 @@ is attempted to be generated, and the ten files
 through
 @w{@i{X}@t{.@:tmp9}}
 are reserved for temporary use during this process@.
-The generation
-of@tie{}@w{@i{X}}
-begins by attempting to delete the temporary files in numerical order
-with individual
+Generation begins by attempting to delete the temporary files in
+numerical order with individual
 @w{@t{rm -f}}
 commands@.
 If this fails, then no further action is taken and the generation
