@@ -2631,7 +2631,7 @@ EOF1
       safe_tmp8="${safe_1}.tmp8"
       safe_tmp9="${safe_1}.tmp9"
 
-      delete_tmp='no'
+      delete_temporary_files_after_generation='no'
 
       while ':'; do # generation
 
@@ -2648,7 +2648,7 @@ EOF1
           fi
         done
 
-        delete_tmp='yes'
+        delete_temporary_files_after_generation='yes'
 
         if test '!' '-d' "${safe_1}"; then
           :
@@ -3361,7 +3361,7 @@ EOF1
 
       done # generation
 
-      case "${delete_tmp}" in
+      case "${delete_temporary_files_after_generation}" in
         'yes')
           for i in '0' '1' '2' '3' '4' '5' '6' '7' '8' '9'; do
             if rm '-f' "${safe_1}"'.tmp'"${i}"; then
