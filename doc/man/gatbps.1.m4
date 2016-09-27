@@ -621,6 +621,7 @@ If any of these commands fails, then generation stops and processing
 continues to the next phase.
 Otherwise, the output file is attempted to be generated, during which
 time the temporary files are used in an unspecified manner.
+If this fails, then the state of the output file is unspecified.
 If generation fails, then
 .nohy "\fIX\fR"
 is not necessarily deleted.
