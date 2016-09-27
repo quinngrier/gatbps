@@ -12,7 +12,7 @@ is attempted to be generated, and the ten files
 @w{@i{X}@t{.@:tmp0}}
 through
 @w{@i{X}@t{.@:tmp9}}
-are reserved for temporary use during this process@.
+are reserved for temporary use during this phase@.
 Generation begins by attempting to delete the temporary files in
 numerical order with individual
 @w{@t{rm -f}}
