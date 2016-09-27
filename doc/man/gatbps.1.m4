@@ -614,7 +614,7 @@ through
 .nohy "\fIX\fB.tmp9\fR"
 are reserved for temporary use.
 Generation begins by attempting to delete all of the temporary files.
-If this fails, then generation stops.
+If this fails, then generation ends.
 Otherwise, the output file is attempted to be generated.
 If this fails, then the state of the output file is unspecified.
 Regardless of whether this fails, generation ends by attempting to
