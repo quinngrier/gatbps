@@ -1,6 +1,7 @@
 @node @w{@t{gatbps}} Output Files
 @chapter @w{@t{gatbps}} Output Files
 
+@noindent
 For each
 operand@tie{}@w{@i{X}}
 for which generation
