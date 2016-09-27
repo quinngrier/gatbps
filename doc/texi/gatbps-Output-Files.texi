@@ -1,8 +1,8 @@
 @node @w{@t{gatbps}} Output Files
 @chapter @w{@t{gatbps}} Output Files
 
-For each operand
-@w{@i{X}}
+For each
+operand@tie{}@w{@i{X}}
 for which generation
 is enabled, the file
 @w{@i{X}}

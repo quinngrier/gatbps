@@ -602,7 +602,8 @@ may also write their own
 messages to standard error.
 .SH "OUTPUT FILES"
 .LP
-For each operand
+For each
+operand\~\c
 .nohy "\fIX\fR"
 for which generation
 is enabled, the file
