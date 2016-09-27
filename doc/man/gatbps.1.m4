@@ -616,9 +616,10 @@ are reserved for temporary use during this process.
 The generation
 of\~\c
 .nohy "\fIX\fR"
-begins by attempting to delete each temporary file with the
+begins by attempting to delete the temporary files in numerical order
+with individual
 .nohy "\fBrm\ -f\fR"
-command.
+commands.
 If this fails, then no further action is taken and the generation
 of\~\c
 .nohy "\fIX\fR"

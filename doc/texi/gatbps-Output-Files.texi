@@ -15,9 +15,10 @@ through
 are reserved for temporary use during this process@.
 The generation
 of@tie{}@w{@i{X}}
-begins by attempting to delete each temporary file with the
+begins by attempting to delete the temporary files in numerical order
+with individual
 @w{@t{rm -f}}
-command@.
+commands@.
 If this fails, then no further action is taken and the generation
 of@tie{}@w{@i{X}}
 fails@.
