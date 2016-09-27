@@ -22,9 +22,8 @@ continues to the next phase@.
 Otherwise, the output file is attempted to be generated, during which
 time the temporary files are used in an unspecified manner@.
 If this fails, then the state of the output file is unspecified@.
-If generation fails, then
-@w{@i{X}}
-is not necessarily deleted@.
+Regardless of whether this fails, the temporary files are attempted to
+be deleted again@.
 If the program is
 terminated by a signal, then
 no files are necessarily deleted@.
