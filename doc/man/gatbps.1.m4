@@ -613,16 +613,12 @@ is attempted to be generated, during which time the ten files
 through
 .nohy "\fIX\fB.tmp9\fR"
 are reserved for temporary use.
-Generation begins by attempting to delete the temporary files in
-numerical order with individual
-.nohy "\fBrm\ -f\fR"
-commands.
-If any of these commands fails, then generation stops and processing
-continues to the next phase.
+Generation begins by attempting to delete all of the temporary files.
+If this fails, then generation stops.
 Otherwise, the output file is attempted to be generated.
 If this fails, then the state of the output file is unspecified.
 Regardless of whether this fails, generation ends by attempting to
-delete all of the temporary files.
+delete all of the temporary files again.
 If the program is terminated by a signal during generation, then the
 state of the output file and the temporary files is unspecified.
 .SH "PLAIN FILES"

@@ -2631,7 +2631,7 @@ EOF1
       safe_tmp8="${safe_1}.tmp8"
       safe_tmp9="${safe_1}.tmp9"
 
-      delete_temporary_files_after_generation='no'
+      successfully_deleted_all_temporary_files='yes'
 
       while ':'; do # generation
 
@@ -2641,14 +2641,20 @@ EOF1
           else
             'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}rm${fR2} failed while deleting: ${fB2}${1}.tmp${i}${fR2}
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
-            'break' '2' # generation
+            successfully_deleted_all_temporary_files='no'
           fi
         done
 
-        delete_temporary_files_after_generation='yes'
+        case "${successfully_deleted_all_temporary_files}" in
+          'no')
+            'cat' >&2 <<EOF1
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
+EOF1
+            'break' # generation
+          ;;
+        esac
 
         if test '!' '-d' "${safe_1}"; then
           :
@@ -3361,17 +3367,29 @@ EOF1
 
       done # generation
 
-      case "${delete_temporary_files_after_generation}" in
+      case "${successfully_deleted_all_temporary_files}" in
         'yes')
+
           for i in '0' '1' '2' '3' '4' '5' '6' '7' '8' '9'; do
             if rm '-f' "${safe_1}"'.tmp'"${i}"; then
               :
             else
               'cat' >&2 <<EOF1
-${fc2}gatbps.${fR2} ${fB2}rm${fR2} failed while deleting: ${fB2}${1}.tmp${i}${fR2}
+${fy2}gatbps:${fR2} ${fB2}rm${fR2} failed while deleting: ${fB2}${1}.tmp${i}${fR2}
 EOF1
+              exit_status='1'
+              successfully_deleted_all_temporary_files='no'
             fi
           done
+
+          case "${successfully_deleted_all_temporary_files}" in
+            'no')
+              'cat' >&2 <<EOF1
+${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
+EOF1
+            ;;
+          esac
+
         ;;
       esac
 
