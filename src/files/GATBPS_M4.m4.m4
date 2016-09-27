@@ -73,7 +73,6 @@ GATBPS_M4_RULES="$][{GATBPS_M4_RULES}"'
 clean-]target_sh[.m4out:
 	-'\''rm'\'' \
   '\''-f'\'' \
-  '\''-r'\'' \
   '\''./'\'']target_sh['\''.m4out'\'' \
   '\''./'\'']target_sh['\''.m4out.d'\'' \
   '\''./'\'']target_sh['\''.m4out.d.tmp'\'' \
