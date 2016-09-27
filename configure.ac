@@ -310,7 +310,7 @@ AC_SUBST([TEXI2DVIFLAGS])
 
 ]GATBPS_CP(
   [bin/gatbps],
-  [src/gatbps],
+  ['src/gatbps'],
   [executable],
   [
     [src/gatbps],
