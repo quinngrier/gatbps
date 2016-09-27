@@ -24,9 +24,8 @@ time the temporary files are used in an unspecified manner@.
 If this fails, then the state of the output file is unspecified@.
 Regardless of whether this fails, the temporary files are attempted to
 be deleted again@.
-If the program is
-terminated by a signal, then
-no files are necessarily deleted@.
+If the program is terminated by a signal, then the state of the output
+file and the temporary files is unspecified@.
 @ifxml
 @ifnotxml
 @c
