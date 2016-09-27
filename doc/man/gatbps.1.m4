@@ -608,19 +608,18 @@ operand\~\c
 for which generation is enabled (see the OPERANDS section), the output
 file\~\c
 .nohy "\fIX\fR"
-is attempted to be generated, and the ten files
+is attempted to be generated, during which time the ten files
 .nohy "\fIX\fB.tmp0\fR"
 through
 .nohy "\fIX\fB.tmp9\fR"
-are reserved for temporary use during this phase.
+are reserved for temporary use.
 Generation begins by attempting to delete the temporary files in
 numerical order with individual
 .nohy "\fBrm\ -f\fR"
 commands.
 If any of these commands fails, then generation stops and processing
 continues to the next phase.
-Otherwise, the output file is attempted to be generated, during which
-time the temporary files are used in an unspecified manner.
+Otherwise, the output file is attempted to be generated.
 If this fails, then the state of the output file is unspecified.
 Regardless of whether this fails, generation ends by attempting to
 delete all of the temporary files.

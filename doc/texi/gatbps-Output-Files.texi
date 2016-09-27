@@ -8,19 +8,18 @@ for which generation is enabled
 (@pxref{@w{@t{gatbps}} Operands}),
 the output
 file@tie{}@w{@i{X}}
-is attempted to be generated, and the ten files
+is attempted to be generated, during which time the ten files
 @w{@i{X}@t{.@:tmp0}}
 through
 @w{@i{X}@t{.@:tmp9}}
-are reserved for temporary use during this phase@.
+are reserved for temporary use@.
 Generation begins by attempting to delete the temporary files in
 numerical order with individual
 @w{@t{rm -f}}
 commands@.
 If any of these commands fails, then generation stops and processing
 continues to the next phase@.
-Otherwise, the output file is attempted to be generated, during which
-time the temporary files are used in an unspecified manner@.
+Otherwise, the output file is attempted to be generated@.
 If this fails, then the state of the output file is unspecified@.
 Regardless of whether this fails, generation ends by attempting to
 delete all of the temporary files@.
