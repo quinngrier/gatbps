@@ -22,8 +22,8 @@ continues to the next phase@.
 Otherwise, the output file is attempted to be generated, during which
 time the temporary files are used in an unspecified manner@.
 If this fails, then the state of the output file is unspecified@.
-Regardless of whether this fails, the temporary files are attempted to
-be deleted again@.
+Regardless of whether this fails, generation ends by attempting to
+delete all of the temporary files@.
 If the program is terminated by a signal, then the state of the output
 file and the temporary files is unspecified@.
 @ifxml
