@@ -617,10 +617,8 @@ Generation begins by attempting to delete the temporary files in
 numerical order with individual
 .nohy "\fBrm\ -f\fR"
 commands.
-If this fails, then no further action is taken and the generation
-of\~\c
-.nohy "\fIX\fR"
-fails.
+If any of these commands fails, then generation stops and processing
+continues to the next phase.
 Otherwise, some of them may
 be used during generation and
 all of them are deleted after
