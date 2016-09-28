@@ -88,7 +88,8 @@ m4_pushdef(
       [--VERBATIM--] "$1"], [
         each non-last subargument must contain at least one character
         that is not a space, tab, or newline character
-      ])])[]GATBPS_DOCKER_check_3(m4_shift($@))])])[dnl
+      ])],
+      [GATBPS_DOCKER_check_3(m4_shift($@))])])])[dnl
 GATBPS_DOCKER_check_3(m4_if(,,list_3))[]dnl
 m4_pushdef(
   [list_4],
@@ -124,7 +125,8 @@ m4_pushdef(
       [--VERBATIM--] "$1"], [
         each non-last subargument must contain at least one character
         that is not a space, tab, or newline character
-      ])])[]GATBPS_DOCKER_check_4(m4_shift($@))])])[dnl
+      ])],
+      [GATBPS_DOCKER_check_4(m4_shift($@))])])])[dnl
 GATBPS_DOCKER_check_4(m4_if(,,list_4))[]dnl
 m4_case(
   [$5],
@@ -173,7 +175,8 @@ m4_pushdef(
       [--VERBATIM--] "$1"], [
         each non-last subargument must contain at least one character
         that is not a space, tab, or newline character
-      ])])[]GATBPS_DOCKER_check_6(m4_shift($@))])])[dnl
+      ])],
+      [GATBPS_DOCKER_check_6(m4_shift($@))])])])[dnl
 GATBPS_DOCKER_check_6(m4_if(,,list_6))[]dnl
 m4_pushdef(
   [output_file],

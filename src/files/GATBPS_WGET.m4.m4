@@ -93,7 +93,8 @@ m4_if(
       [--VERBATIM--] "$1"], [
         each non-last subargument must contain at least one character
         that is not a space, tab, or newline character
-      ])])[]GATBPS_WGET_check_2(m4_shift($@))])])[dnl
+      ])],
+      [GATBPS_WGET_check_2(m4_shift($@))])])])[dnl
 GATBPS_WGET_check_2(m4_if(,,list_2))[]dnl
 m4_pushdef(
   [list_3],
