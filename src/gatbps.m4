@@ -644,6 +644,7 @@ EOF1
           'set' "${prefix}"'GATBPS_CHECK_LIB.m4' "${@}"
           'set' "${prefix}"'GATBPS_CHECK_HEADER.m4' "${@}"
           'set' "${prefix}"'GATBPS_CHECK_COMPILE.m4' "${@}"
+          'set' "${prefix}"'GATBPS_CHECK_CLASSPATH_SEPARATOR.m4' "${@}"
           'set' "${prefix}"'GATBPS_CHECK_CFLAG.m4' "${@}"
           'set' "${prefix}"'GATBPS_CHECK_BASIC.m4' "${@}"
           'set' "${prefix}"'GATBPS_CACHE_CHECK.m4' "${@}"
@@ -1047,6 +1048,8 @@ EOF1
 |%}help_code({%|GATBPS_CHECK_BASIC.m4|%}){%|
 
 |%}help_code({%|GATBPS_CHECK_CFLAG.m4|%}){%|
+
+|%}help_code({%|GATBPS_CHECK_CLASSPATH_SEPARATOR.m4|%}){%|
 
 |%}help_code({%|GATBPS_CHECK_COMPILE.m4|%}){%|
 
@@ -2699,6 +2702,8 @@ EOF1
 
 |%}generation_code({%|GATBPS_CHECK_CFLAG.m4|%}){%|
 
+|%}generation_code({%|GATBPS_CHECK_CLASSPATH_SEPARATOR.m4|%}){%|
+
 |%}generation_code({%|GATBPS_CHECK_COMPILE.m4|%}){%|
 
 |%}generation_code({%|GATBPS_CHECK_HEADER.m4|%}){%|
@@ -3465,6 +3470,13 @@ EOF1
   {%|GATBPS_CHECK_CFLAG.m4|%},
   {%|
             'set' 'x' "${prefix}"'GATBPS_CHECK_BASIC.m4' "${@}"; 'shift'
+            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|GATBPS_CHECK_CLASSPATH_SEPARATOR.m4|%},
+  {%|
+            'set' 'x' "${prefix}"'GATBPS_CACHE_CHECK.m4' "${@}"; 'shift'
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
