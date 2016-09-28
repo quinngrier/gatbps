@@ -3385,7 +3385,7 @@ EOF1
           case "${successfully_deleted_all_temporary_files}" in
             'no')
               'cat' >&2 <<EOF1
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} cleanup failed: ${fB2}${1}${fR2}
 EOF1
             ;;
           esac
