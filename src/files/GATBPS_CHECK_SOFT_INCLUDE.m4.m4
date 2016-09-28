@@ -59,9 +59,9 @@ EOF
           '0')
           ;;
           *)
-            ]AC_MSG_ERROR(
-[[cat failed]]dnl
-, [[1]])[
+            ]GATBPS_MSG_ERROR([
+              cat failed
+            ])[
           ;;
         esac
 
@@ -70,9 +70,9 @@ EOF
           '0')
           ;;
           *)
-            ]AC_MSG_ERROR(
-[[rm failed]]dnl
-, [[1]])[
+            ]GATBPS_MSG_ERROR([
+              rm failed
+            ])[
           ;;
         esac
 
@@ -89,9 +89,9 @@ EOF
               '0')
               ;;
               *)
-                ]AC_MSG_ERROR(
-[[cat failed]]dnl
-, [[1]])[
+                ]GATBPS_MSG_ERROR([
+                  cat failed
+                ])[
               ;;
             esac
 
@@ -103,9 +103,9 @@ EOF
               '0')
               ;;
               *)
-                ]AC_MSG_ERROR(
-[[cat failed]]dnl
-, [[1]])[
+                ]GATBPS_MSG_ERROR([
+                  cat failed
+                ])[
               ;;
             esac
 
@@ -134,9 +134,9 @@ EOF
           '0')
           ;;
           *)
-            ]AC_MSG_ERROR(
-[[cat failed]]dnl
-, [[1]])[
+            ]GATBPS_MSG_ERROR([
+              cat failed
+            ])[
           ;;
         esac
 
@@ -145,9 +145,9 @@ EOF
           '0')
           ;;
           *)
-            ]AC_MSG_ERROR(
-[[rm failed]]dnl
-, [[1]])[
+            ]GATBPS_MSG_ERROR([
+              rm failed
+            ])[
           ;;
         esac
 
@@ -164,9 +164,9 @@ EOF
               '0')
               ;;
               *)
-                ]AC_MSG_ERROR(
-[[cat failed]]dnl
-, [[1]])[
+                ]GATBPS_MSG_ERROR([
+                  cat failed
+                ])[
               ;;
             esac
 
@@ -178,9 +178,9 @@ EOF
               '0')
               ;;
               *)
-                ]AC_MSG_ERROR(
-[[cat failed]]dnl
-, [[1]])[
+                ]GATBPS_MSG_ERROR([
+                  cat failed
+                ])[
               ;;
             esac
 
@@ -206,9 +206,9 @@ EOF
 
 case "$][{SOFT_INCLUDE+x}" in
   ?*)
-    ]AC_MSG_ERROR(
-[[\$][{SOFT_INCLUDE} is already set]]dnl
-, [[1]])[
+    ]GATBPS_MSG_ERROR([
+      \${SOFT_INCLUDE} is already set
+    ])[
   ;;
 esac
 SOFT_INCLUDE="$][{gatbps_cv_SOFT_INCLUDE}"
@@ -219,9 +219,9 @@ SOFT_INCLUDE="$][{gatbps_cv_SOFT_INCLUDE}"
 
 case "$][{GATBPS_CHECK_SOFT_INCLUDE_have+x}" in
   ?*)
-    ]AC_MSG_ERROR(
-[[\$][{GATBPS_CHECK_SOFT_INCLUDE_have} is already set]]dnl
-, [[1]])[
+    ]GATBPS_MSG_ERROR(
+      \${GATBPS_CHECK_SOFT_INCLUDE_have} is already set
+    ])[
   ;;
 esac
 case "$][{SOFT_INCLUDE}" in
