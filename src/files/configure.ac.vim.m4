@@ -54,6 +54,34 @@ function s:FormatAutoconfFile()
     let n1 = search(s1, 'W')
   endwhile
 
+  let s1 = '\m^\]dnl begin_requirements\n\[$'
+  let s2 = '\m^\]dnl end_requirements\n\[$'
+  call cursor(1, 1)
+  let n1 = search(s1, 'cW')
+  while n1 != 0
+    call cursor(n1, 1)
+    let n2 = search(s2, 'W')
+    if n2 == 0
+      break
+    endif
+    call cursor(n1, 1)
+    if search(section_marker, 'W') == n2
+      exec n1 . '+1,' . n2 . 'g/\m^$/d'
+      exec n1 . '+1s/\m$/\r/'
+      call cursor(n1, 1)
+      let n2 = search(s2, 'W')
+      exec n1 . '+2,' . n2 . '-1s/\m\]/\b]/eg'
+      exec n1 . '+2,' . n2 . '-1sort u'
+      exec n1 . '+2,' . n2 . '-1s/\m\b\]/]/eg'
+      call cursor(n1, 1)
+      let n2 = search(s2, 'W')
+      exec n2 . 's/\m^/\r/'
+      let affected_search_history = 1
+    endif
+    call cursor(n1, 1)
+    let n1 = search(s1, 'W')
+  endwhile
+
   let s1 = '\m^\]dnl begin_targets\n\[$'
   let s2 = '\m^\]dnl end_targets\n\[$'
   call cursor(1, 1)
