@@ -136,7 +136,7 @@ m4_if(
     invalid third argument to GATBPS_DEFINE_DATE:
   [--VERBATIM--] "$3"], [
     the third argument must be a proleptic Gregorian date in YYYY-MM-DD
-    form where the year may be preceded by a "+" character and may have
+    form, but the year may be preceded by a "+" character and may have
     any number of digits, including leading zeros
   ])])[]dnl
 m4_define(
@@ -179,7 +179,7 @@ m4_if(
     invalid third argument to GATBPS_DEFINE_DATE:
   [--VERBATIM--] "$3"], [
     the third argument must be a proleptic Gregorian date in YYYY-MM-DD
-    form where the year may be preceded by a "+" character and may have
+    form, but the year may be preceded by a "+" character and may have
     any number of digits, including leading zeros
   ])])[]dnl
 m4_define(
@@ -223,7 +223,7 @@ m4_define(
   [["]]m4_dquote($1$2)[["]],
   [
     Define to a character string literal that contains the appropriate
-    proleptic Gregorian date in YYYY-MM-DD form where the year may be
+    proleptic Gregorian date in YYYY-MM-DD form, but the year may be
     preceded by a "+" character and may have any number of digits,
     including leading zeros.
   ])[
