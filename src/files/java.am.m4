@@ -15,8 +15,6 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 ## begin_variables
 
-CLASSPATH_SEPARATOR = ':'
-
 GATBPS_V_JAR = $(GATBPS_V_JAR_@AM_V@)
 
 GATBPS_V_JAR_ = $(GATBPS_V_JAR_@AM_DEFAULT_V@)
