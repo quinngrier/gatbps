@@ -613,7 +613,10 @@ is attempted to be generated, during which time the ten files
 through
 .nohy "\fIX\fB.tmp9\fR"
 are reserved for temporary use.
-Generation begins by attempting to delete all of the temporary files.
+Generation begins by attempting to delete all of the temporary files
+with the
+.nohy "\fBrm\ \-f\fR"
+command.
 If this fails, then generation ends.
 Otherwise, the output file is attempted to be generated.
 If this fails, then the state of the output file is unspecified, and
