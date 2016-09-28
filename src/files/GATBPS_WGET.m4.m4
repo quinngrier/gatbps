@@ -54,19 +54,16 @@ m4_pushdef(
   ])])[dnl
 ]m4_define(
   [GATBPS_WGET_check_2_count],
-  [m4_if(
-    [$#],
-    [1],
-    [m4_if(
-      [$1],
-      [],
-      [gatbps_fatal([
-        invalid second argument to GATBPS_WGET
-      [--VERBATIM--] "$1"], [
-        the second argument must contain at least one subargument that
-        is not empty
-      ])])])])[dnl
-GATBPS_WGET_check_2_count(m4_if(,,list_2))[]dnl
+  [m4_if([$#], [1], [m4_if([$1], [], [0], [1])], [1])])[dnl
+m4_if(
+  GATBPS_WGET_check_2_count(m4_if(,,list_2)),
+  [0],
+  [gatbps_fatal([
+    invalid second argument to GATBPS_WGET:
+  [--VERBATIM--] "$2"], [
+    the second argument must contain at least one subargument that
+    is not empty
+  ])])[]dnl
 ]m4_ifdef(
   [GATBPS_WGET_check_2],
   [gatbps_fatal([
