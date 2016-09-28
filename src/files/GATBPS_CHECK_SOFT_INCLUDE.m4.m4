@@ -50,8 +50,8 @@ m4_if(
     case "$][{gatbps_cv_SOFT_INCLUDE}" in
       '#')
 
-        'cat' >'conftest1.mk' <<'EOF'
--include conftest2.mk
+        'cat' >'conftest-GATBPS_CHECK_SOFT_INCLUDE-1.mk' <<'EOF'
+-include conftest-GATBPS_CHECK_SOFT_INCLUDE-2.mk
 1:
 	'exit' '0'
 EOF
@@ -65,7 +65,7 @@ EOF
           ;;
         esac
 
-        'rm' '-f' 'conftest2.mk'
+        'rm' '-f' 'conftest-GATBPS_CHECK_SOFT_INCLUDE-2.mk'
         case "$][{?}" in
           '0')
           ;;
@@ -76,12 +76,12 @@ EOF
           ;;
         esac
 
-        'make' '-f' 'conftest1.mk' >'/dev/null' 2>&1
+        'make' '-f' 'conftest-GATBPS_CHECK_SOFT_INCLUDE-1.mk' >'/dev/null' 2>&1
         case "$][{?}" in
           '0')
 
-            'cat' >'conftest1.mk' <<'EOF'
--include conftest2.mk
+            'cat' >'conftest-GATBPS_CHECK_SOFT_INCLUDE-1.mk' <<'EOF'
+-include conftest-GATBPS_CHECK_SOFT_INCLUDE-2.mk
 1:
 	'exit' '1'
 EOF
@@ -95,7 +95,7 @@ EOF
               ;;
             esac
 
-            'cat' >'conftest2.mk' <<'EOF'
+            'cat' >'conftest-GATBPS_CHECK_SOFT_INCLUDE-2.mk' <<'EOF'
 2:
 	'exit' '0'
 EOF
@@ -109,7 +109,7 @@ EOF
               ;;
             esac
 
-            'make' '-f' 'conftest1.mk' >'/dev/null' 2>&1
+            'make' '-f' 'conftest-GATBPS_CHECK_SOFT_INCLUDE-1.mk' >'/dev/null' 2>&1
             case "$][{?}" in
               '0')
                 gatbps_cv_SOFT_INCLUDE='-include'
@@ -125,8 +125,8 @@ EOF
     case "$][{gatbps_cv_SOFT_INCLUDE}" in
       '#')
 
-        'cat' >'conftest1.mk' <<'EOF'
-sinclude conftest2.mk
+        'cat' >'conftest-GATBPS_CHECK_SOFT_INCLUDE-1.mk' <<'EOF'
+sinclude conftest-GATBPS_CHECK_SOFT_INCLUDE-2.mk
 1:
 	'exit' '0'
 EOF
@@ -140,7 +140,7 @@ EOF
           ;;
         esac
 
-        'rm' '-f' 'conftest2.mk'
+        'rm' '-f' 'conftest-GATBPS_CHECK_SOFT_INCLUDE-2.mk'
         case "$][{?}" in
           '0')
           ;;
@@ -151,12 +151,12 @@ EOF
           ;;
         esac
 
-        'make' '-f' 'conftest1.mk' >'/dev/null' 2>&1
+        'make' '-f' 'conftest-GATBPS_CHECK_SOFT_INCLUDE-1.mk' >'/dev/null' 2>&1
         case "$][{?}" in
           '0')
 
-            'cat' >'conftest1.mk' <<'EOF'
-sinclude conftest2.mk
+            'cat' >'conftest-GATBPS_CHECK_SOFT_INCLUDE-1.mk' <<'EOF'
+sinclude conftest-GATBPS_CHECK_SOFT_INCLUDE-2.mk
 1:
 	'exit' '1'
 EOF
@@ -170,7 +170,7 @@ EOF
               ;;
             esac
 
-            'cat' >'conftest2.mk' <<'EOF'
+            'cat' >'conftest-GATBPS_CHECK_SOFT_INCLUDE-2.mk' <<'EOF'
 2:
 	'exit' '0'
 EOF
@@ -184,7 +184,7 @@ EOF
               ;;
             esac
 
-            'make' '-f' 'conftest1.mk' >'/dev/null' 2>&1
+            'make' '-f' 'conftest-GATBPS_CHECK_SOFT_INCLUDE-1.mk' >'/dev/null' 2>&1
             case "$][{?}" in
               '0')
                 gatbps_cv_SOFT_INCLUDE='sinclude'
@@ -199,8 +199,8 @@ EOF
 
     'readonly' 'gatbps_cv_SOFT_INCLUDE'
 
-    'rm' '-f' 'conftest1.mk'
-    'rm' '-f' 'conftest2.mk'
+    'rm' '-f' 'conftest-GATBPS_CHECK_SOFT_INCLUDE-1.mk'
+    'rm' '-f' 'conftest-GATBPS_CHECK_SOFT_INCLUDE-2.mk'
 
   :;}]])[
 
