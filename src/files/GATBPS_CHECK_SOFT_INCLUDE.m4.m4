@@ -207,7 +207,7 @@ EOF
 case "$][{SOFT_INCLUDE+x}" in
   ?*)
     ]GATBPS_MSG_ERROR([
-      \${SOFT_INCLUDE} is already set
+      \$][{SOFT_INCLUDE} is already set
     ])[
   ;;
 esac
@@ -220,7 +220,7 @@ SOFT_INCLUDE="$][{gatbps_cv_SOFT_INCLUDE}"
 case "$][{GATBPS_CHECK_SOFT_INCLUDE_have+x}" in
   ?*)
     ]GATBPS_MSG_ERROR(
-      \${GATBPS_CHECK_SOFT_INCLUDE_have} is already set
+      \$][{GATBPS_CHECK_SOFT_INCLUDE_have} is already set
     ])[
   ;;
 esac
