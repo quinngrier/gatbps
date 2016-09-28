@@ -232,16 +232,16 @@ java-]gatbps_x[:
     x='\'''\''; \
     x="$][$][{x}"'\''./'\''; \
     x="$][$][{x}"$][(java_]gatbps_y[_sourcepath); \
-    x="$][$][{x}"'\'':'\''; \
+    x="$][$][{x}"$][(CLASSPATH_SEPARATOR); \
     x="$][$][{x}"$][(srcdir)'\''/'\''$][(java_]gatbps_y[_sourcepath); \
     case '\'''\''$][(CLASSPATH) in \
       ?*) \
-        x="$][$][{x}"'\'':'\''$][(CLASSPATH); \
+        x="$][$][{x}"$][(CLASSPATH_SEPARATOR)$][(CLASSPATH); \
       ;; \
     esac; \
     case '\'''\''$][(java_]gatbps_y[_CLASSPATH) in \
       ?*) \
-        x="$][$][{x}"'\'':'\''$][(java_]gatbps_y[_CLASSPATH); \
+        x="$][$][{x}"$][(CLASSPATH_SEPARATOR)$][(java_]gatbps_y[_CLASSPATH); \
       ;; \
     esac; \
     '\''sh'\'' \

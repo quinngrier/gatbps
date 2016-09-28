@@ -15,6 +15,8 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 ## begin_variables
 
+CLASSPATH_SEPARATOR = ':'
+
 GATBPS_V_JAR = $(GATBPS_V_JAR_@AM_V@)
 
 GATBPS_V_JAR_ = $(GATBPS_V_JAR_@AM_DEFAULT_V@)
@@ -165,7 +167,7 @@ SUFFIXES += .java
   $(GATBPS_RECURSIVE_SOURCEPATH) \
   '-implicit:none' \
   '-sourcepath' \
-  $(GATBPS_RECURSIVE_SOURCEPATH)':'$(srcdir)'/'$(GATBPS_RECURSIVE_SOURCEPATH) \
+  $(GATBPS_RECURSIVE_SOURCEPATH)$(CLASSPATH_SEPARATOR)$(srcdir)'/'$(GATBPS_RECURSIVE_SOURCEPATH) \
   $(GATBPS_RECURSIVE_JAVACFLAGS) \
   $(JAVACFLAGS) \
   $< \
@@ -272,16 +274,16 @@ java-main:
     x=''; \
     x="$${x}"'./'; \
     x="$${x}"$(java_sourcepath); \
-    x="$${x}"':'; \
+    x="$${x}"$(CLASSPATH_SEPARATOR); \
     x="$${x}"$(srcdir)'/'$(java_sourcepath); \
     case ''$(CLASSPATH) in \
       ?*) \
-        x="$${x}"':'$(CLASSPATH); \
+        x="$${x}"$(CLASSPATH_SEPARATOR)$(CLASSPATH); \
       ;; \
     esac; \
     case ''$(java_CLASSPATH) in \
       ?*) \
-        x="$${x}"':'$(java_CLASSPATH); \
+        x="$${x}"$(CLASSPATH_SEPARATOR)$(java_CLASSPATH); \
       ;; \
     esac; \
     'sh' \
