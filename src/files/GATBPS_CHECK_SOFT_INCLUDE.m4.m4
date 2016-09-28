@@ -219,7 +219,7 @@ SOFT_INCLUDE="$][{gatbps_cv_SOFT_INCLUDE}"
 
 case "$][{GATBPS_CHECK_SOFT_INCLUDE_have+x}" in
   ?*)
-    ]GATBPS_MSG_ERROR(
+    ]GATBPS_MSG_ERROR([
       \$][{GATBPS_CHECK_SOFT_INCLUDE_have} is already set
     ])[
   ;;
