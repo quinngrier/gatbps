@@ -1,0 +1,247 @@
+@node Macros for Mathematical Symbols
+@chapter Macros for Mathematical Symbols
+
+The following table lists the
+macros that have no parameters,
+which insert individual symbols@.
+Along with each macro
+is its corresponding @TeX{} syntax,
+the Unicode character that it inserts by default,
+and the ASCII alternative that it inserts if the
+@w{@t{insertascii}}
+flag is set at its point of inclusion@.
+If this manual
+is translated to
+@TeX{} or without the
+@w{@t{insertascii}}
+flag set,
+then the table also
+shows the symbol of each macro@.
+
+@quotation
+@ifnottex
+@ifset insertascii
+@set HideSymbols
+@end ifset
+@end ifnottex
+@ifset HideSymbols
+@include mtvskiptop.texi
+@multitable {@t{\longleftrightarrow}} {@t{@@lldarrow@{@}}} {Unicode} {@t{floor(}}
+@c )
+@headitem @TeX{} @tab Macro @tab Unicode @tab ASCII
+@item @t{'} @tab @t{@@prm@{@}} @tab U+2032 @tab @t{'}
+@sfindex @w{@t{prm.@:texi}}
+@tmindex @w{@t{@@prm}}
+@item @t{-} @tab @t{@@msign@{@}} @tab U+2212 @tab @t{-}
+@sfindex @w{@t{msign.@:texi}}
+@tmindex @w{@t{@@msign}}
+@item @t{/} @tab @t{@@dslash@{@}} @tab U+2215 @tab @t{/}
+@sfindex @w{@t{dslash.@:texi}}
+@tmindex @w{@t{@@dslash}}
+@item @t{\cdot} @tab @t{@@mdot@{@}} @tab U+22C5 @tab @t{*}
+@sfindex @w{@t{mdot.@:texi}}
+@tmindex @w{@t{@@mdot}}
+@item @t{\cdots} @tab @t{@@mdots@{@}} @tab U+22EF @tab @t{.@:.@:.@:}
+@sfindex @w{@t{mdots.@:texi}}
+@tmindex @w{@t{@@mdots}}
+@item @t{\ge} @tab @t{@@gequ@{@}} @tab U+2265 @tab @t{>=}
+@sfindex @w{@t{gequ.@:texi}}
+@tmindex @w{@t{@@gequ}}
+@item @t{\lceil} @tab @t{@@lcei@{@}} @tab U+2308 @tab @t{ceil(}
+@c )
+@sfindex @w{@t{lcei.@:texi}}
+@tmindex @w{@t{@@lcei}}
+@item @t{\ldots} @tab @t{@@bdots@{@}} @tab U+2026 @tab @t{.@:.@:.@:}
+@sfindex @w{@t{bdots.@:texi}}
+@tmindex @w{@t{@@bdots}}
+@item @t{\le} @tab @t{@@lequ@{@}} @tab U+2264 @tab @t{<=}
+@sfindex @w{@t{lequ.@:texi}}
+@tmindex @w{@t{@@lequ}}
+@item @t{\lfloor} @tab @t{@@lflo@{@}} @tab U+230A @tab @t{floor(}
+@c )
+@sfindex @w{@t{lflo.@:texi}}
+@tmindex @w{@t{@@lflo}}
+@item @t{\ne} @tab @t{@@nequ@{@}} @tab U+2260 @tab @t{!=}
+@sfindex @w{@t{nequ.@:texi}}
+@tmindex @w{@t{@@nequ}}
+@c (
+@item @t{\rceil} @tab @t{@@rcei@{@}} @tab U+2309 @tab @t{)}
+@sfindex @w{@t{rcei.@:texi}}
+@tmindex @w{@t{@@rcei}}
+@c (
+@item @t{\rfloor} @tab @t{@@rflo@{@}} @tab U+230B @tab @t{)}
+@sfindex @w{@t{rflo.@:texi}}
+@tmindex @w{@t{@@rflo}}
+@item @t{\rightarrow} @tab @t{@@rarrow@{@}} @tab U+2192 @tab @t{->}
+@sfindex @w{@t{rarrow.@:texi}}
+@tmindex @w{@t{@@rarrow}}
+@end multitable
+@include mtvskipbot.texi
+@end ifset
+@ifclear HideSymbols
+@include mtvskiptop.texi
+@multitable {@t{\longleftrightarrow}} {@t{@@lldarrow@{@}}} {Unicode} {@t{floor(}} {Symbol}
+@c )
+@headitem @TeX{} @tab Macro @tab Unicode @tab ASCII @tab Symbol
+@item @t{'} @tab @t{@@prm@{@}} @tab U+2032 @tab @t{'}
+@sfindex @w{@t{prm.@:texi}}
+@tmindex @w{@t{@@prm}}
+@tab
+@tex
+$'$
+@end tex
+@ifnottex
+@prm{}
+@end ifnottex
+@item @t{-} @tab @t{@@msign@{@}} @tab U+2212 @tab @t{-}
+@sfindex @w{@t{msign.@:texi}}
+@tmindex @w{@t{@@msign}}
+@tab
+@tex
+$-$
+@end tex
+@ifnottex
+@msign{}
+@end ifnottex
+@item @t{/} @tab @t{@@dslash@{@}} @tab U+2215 @tab @t{/}
+@sfindex @w{@t{dslash.@:texi}}
+@tmindex @w{@t{@@dslash}}
+@tab
+@tex
+$/$
+@end tex
+@ifnottex
+@dslash{}
+@end ifnottex
+@item @t{\cdot} @tab @t{@@mdot@{@}} @tab U+22C5 @tab @t{*}
+@sfindex @w{@t{mdot.@:texi}}
+@tmindex @w{@t{@@mdot}}
+@tab
+@tex
+$\cdot$
+@end tex
+@ifnottex
+@mdot{}
+@end ifnottex
+@item @t{\cdots} @tab @t{@@mdots@{@}} @tab U+22EF @tab @t{.@:.@:.@:}
+@sfindex @w{@t{mdots.@:texi}}
+@tmindex @w{@t{@@mdots}}
+@tab
+@tex
+$\cdots$
+@end tex
+@ifnottex
+@mdots{}
+@end ifnottex
+@item @t{\ge} @tab @t{@@gequ@{@}} @tab U+2265 @tab @t{>=}
+@sfindex @w{@t{gequ.@:texi}}
+@tmindex @w{@t{@@gequ}}
+@tab
+@tex
+$\ge$
+@end tex
+@ifnottex
+@gequ{}
+@end ifnottex
+@item @t{\lceil} @tab @t{@@lcei@{@}} @tab U+2308 @tab @t{ceil(}
+@c )
+@sfindex @w{@t{lcei.@:texi}}
+@tmindex @w{@t{@@lcei}}
+@tab
+@tex
+$\lceil$
+@end tex
+@ifnottex
+@lcei{}
+@end ifnottex
+@item @t{\ldots} @tab @t{@@bdots@{@}} @tab U+2026 @tab @t{.@:.@:.@:}
+@sfindex @w{@t{bdots.@:texi}}
+@tmindex @w{@t{@@bdots}}
+@tab
+@tex
+$\ldots$
+@end tex
+@ifnottex
+@bdots{}
+@end ifnottex
+@item @t{\le} @tab @t{@@lequ@{@}} @tab U+2264 @tab @t{<=}
+@sfindex @w{@t{lequ.@:texi}}
+@tmindex @w{@t{@@lequ}}
+@tab
+@tex
+$\le$
+@end tex
+@ifnottex
+@lequ{}
+@end ifnottex
+@item @t{\lfloor} @tab @t{@@lflo@{@}} @tab U+230A @tab @t{floor(}
+@c )
+@sfindex @w{@t{lflo.@:texi}}
+@tmindex @w{@t{@@lflo}}
+@tab
+@tex
+$\lfloor$
+@end tex
+@ifnottex
+@lflo{}
+@end ifnottex
+@item @t{\ne} @tab @t{@@nequ@{@}} @tab U+2260 @tab @t{!=}
+@sfindex @w{@t{nequ.@:texi}}
+@tmindex @w{@t{@@nequ}}
+@tab
+@tex
+$\ne$
+@end tex
+@ifnottex
+@nequ{}
+@end ifnottex
+@c (
+@item @t{\rceil} @tab @t{@@rcei@{@}} @tab U+2309 @tab @t{)}
+@sfindex @w{@t{rcei.@:texi}}
+@tmindex @w{@t{@@rcei}}
+@tab
+@tex
+$\rceil$
+@end tex
+@ifnottex
+@rcei{}
+@end ifnottex
+@c (
+@item @t{\rfloor} @tab @t{@@rflo@{@}} @tab U+230B @tab @t{)}
+@sfindex @w{@t{rflo.@:texi}}
+@tmindex @w{@t{@@rflo}}
+@tab
+@tex
+$\rfloor$
+@end tex
+@ifnottex
+@rflo{}
+@end ifnottex
+@item @t{\rightarrow} @tab @t{@@rarrow@{@}} @tab U+2192 @tab @t{->}
+@sfindex @w{@t{rarrow.@:texi}}
+@tmindex @w{@t{@@rarrow}}
+@tab
+@tex
+$\rightarrow$
+@end tex
+@ifnottex
+@rarrow{}
+@end ifnottex
+@end multitable
+@include mtvskipbot.texi
+@end ifclear
+@end quotation
+
+@ifxml
+@ifnotxml
+@c
+@c The authors of this file have waived all copyright and
+@c related or neighboring rights to the extent permitted by
+@c law as described by the CC0 1.0 Universal Public Domain
+@c Dedication. You should have received a copy of the full
+@c dedication along with this file, typically as a file
+@c named <CC0-1.0.txt>. If not, it may be available at
+@c <https://creativecommons.org/publicdomain/zero/1.0/>.
+@c
+@end ifnotxml
+@end ifxml
