@@ -232,7 +232,6 @@ $\rightarrow$
 @include mtvskipbot.texi
 @end ifclear
 @end quotation
-
 @ifxml
 @ifnotxml
 @c
