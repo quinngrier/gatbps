@@ -1,6 +1,7 @@
 @node Macros for Mathematical Symbols
 @chapter Macros for Mathematical Symbols
 
+@noindent
 The following table lists the
 macros that have no parameters,
 which insert individual symbols@.
