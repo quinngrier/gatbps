@@ -114,12 +114,12 @@ clean-gatbps_output:
 
 ]m4_if([$2], [], [[distclean]], [[$2]])[-local: clean-]gatbps_output[
 
-]
+]gatbps_output[: ]gatbps_prereq[
+	$][(MKDIR_P) '\''./'\''$][(@D)
+	echo @PACKAGE_NAME@ >$][@
+	cd $][(top_builddir) && $][(SHELL) ./config.status $][@]gatbps_suffix['
 
-gatbps_output: gatbps_prereq
-	$[](MKDIR_P) '\''./'\''$[](@D)
-	echo @PACKAGE_NAME@ >$[]@
-	cd $[](top_builddir) && $[](SHELL) ./config.status $[]@gatbps_suffix'
+]
 
 case "$[]{GATBPS_CONFIG_FILE_RULES}" in
   ?*)
