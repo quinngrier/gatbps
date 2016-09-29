@@ -122,7 +122,13 @@ clean-gatbps_output:
   '\''-f'\'' \
   '\''./'\'']gatbps_output[ \
 ;
-	cd $][(top_builddir) && $][(SHELL) ./config.status $][@]gatbps_suffix['
+	$][(SHELL) \
+  '\''-'\'' \
+  '\''./config.status'\'' \
+  ]gatbps_output[]gatbps_suffix[ \
+;
+
+'
 
 ]
 
