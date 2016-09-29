@@ -286,7 +286,7 @@ GATBPS_WGET_RULES="$][{GATBPS_WGET_RULES}"'
 ;
 	$][(AM@&t@_V_at){ \
   ( \
-    success='\''no'\''; \
+    downloaded_and_verified='\''no'\''; \
     for url in \]dnl
 GATBPS_WGET_url_lines(m4_if(,,input_urls))[
     ; do \
@@ -297,11 +297,11 @@ GATBPS_WGET_url_lines(m4_if(,,input_urls))[
         "$][$][{url}" \
       || '\''continue'\''; \]dnl
 GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
-      success='\''yes'\''; \
+      downloaded_and_verified='\''yes'\''; \
       '\''break'\''; \
     done; \
-    '\''readonly'\'' '\''success'\''; \
-    case "$][$][{success}" in \
+    '\''readonly'\'' '\''downloaded_and_verified'\''; \
+    case "$][$][{downloaded_and_verified}" in \
       '\''no'\'') \
         '\''exit'\'' '\''1'\''; \
       ;; \
