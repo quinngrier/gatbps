@@ -221,6 +221,7 @@ $\rightarrow$
 @end multitable
 @include mtvskipbot.texi
 @end ifclear
+@clear HideSymbols
 @end quotation
 @ifxml
 @ifnotxml
