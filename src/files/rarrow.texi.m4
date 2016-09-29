@@ -12,14 +12,14 @@ header_comment({%|@ifxml
 @c Special file: rarrow.texi
 @c
 @c The rarrow.texi special file defines the @rarrow{} Texinfo macro,
-@c which is used to imitate the mathematical notation of TeX in the
-@c other output formats:
+@c which can be used to imitate the mathematical notation of TeX in the
+@c other output formats. For example:
 @c
 @c       @tex
 @c       $P \rightarrow Q$
 @c       @end tex
 @c       @ifnottex
-@c       @i{P} @rarrow{} @i{Q}
+@c       @w{@i{P} @rarrow{} @i{Q}}
 @c       @end ifnottex
 @c
 @c For more information, see the GATBPS manual.

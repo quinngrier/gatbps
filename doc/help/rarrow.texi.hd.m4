@@ -6,14 +6,14 @@ rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 {%|Special file: ${fB1}rarrow.texi${fR1}
 
 The ${fB1}rarrow.texi${fR1} special file defines the ${fB1}@rarrow{}${fR1} Texinfo macro, which
-is used to imitate the mathematical notation of TeX in the other output
-formats:
+can be used to imitate the mathematical notation of TeX in the other
+output formats. For example:
 
       @tex
       \$P \\rightarrow Q\$
       @end tex
       @ifnottex
-      @i{P} @rarrow{} @i{Q}
+      @w{@i{P} @rarrow{} @i{Q}}
       @end ifnottex
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.|%}dnl

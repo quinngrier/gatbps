@@ -1290,10 +1290,9 @@ The
 .nohy "\fBrarrow.texi\fR"
 special file defines the
 .nohy "\fB@rarrow{}\fR"
-Texinfo macro,
-which can be used to
-imitate the mathematical
-notation of TeX in the other output formats:
+Texinfo macro, which can be used to imitate the mathematical notation of
+TeX in the other output formats.
+For example:
 .RS
 .IP
 .nf
@@ -1301,7 +1300,7 @@ notation of TeX in the other output formats:
 $P\ \erightarrow\ Q$
 @end\ tex
 @ifnottex
-@i{P}\ @rarrow{}\ @i{Q}
+@w{@i{P}\ @rarrow{}\ @i{Q}}
 @end\ ifnottex
 .fi
 .RE
