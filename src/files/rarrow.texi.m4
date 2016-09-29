@@ -5,6 +5,7 @@ rules_code({%|src/files/rarrow.texi.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
+include({%|src/tools/math_symbol.m4|%}){%||%}dnl
 header_comment({%|@ifxml
 @ifnotxml
 @c|%}, {%|@c|%}){%|
@@ -26,109 +27,11 @@ header_comment({%|@ifxml
 @c
 @end ifnotxml
 @end ifxml
-@ifclear rarrowtexi
-@set rarrowtexi
-@ifclear insertascii
-@ifdocbook
-@ifset txicommandconditionals
-@ifcommanddefined inlineraw
-@macro rarrow{}
-@inlineraw{docbook, &#x2192;}
-@end macro
-@end ifcommanddefined
-@ifcommandnotdefined inlineraw
-@macro rarrow{}
-→
-@end macro
-@end ifcommandnotdefined
-@end ifset
-@ifclear txicommandconditionals
-@macro rarrow{}
-→
-@end macro
-@end ifclear
-@end ifdocbook
-@ifhtml
-@ifset txicommandconditionals
-@ifcommanddefined inlineraw
-@macro rarrow{}
-@inlineraw{html, &#x2192;}
-@end macro
-@end ifcommanddefined
-@ifcommandnotdefined inlineraw
-@macro rarrow{}
-→
-@end macro
-@end ifcommandnotdefined
-@end ifset
-@ifclear txicommandconditionals
-@macro rarrow{}
-→
-@end macro
-@end ifclear
-@end ifhtml
-@ifinfo
-@ifnotplaintext
-@macro rarrow{}
-→
-@end macro
-@end ifnotplaintext
-@end ifinfo
-@ifplaintext
-@macro rarrow{}
-→
-@end macro
-@end ifplaintext
-@ifxml
-@ifset txicommandconditionals
-@ifcommanddefined inlineraw
-@macro rarrow{}
-@inlineraw{xml, &#x2192;}
-@end macro
-@end ifcommanddefined
-@ifcommandnotdefined inlineraw
-@macro rarrow{}
-→
-@end macro
-@end ifcommandnotdefined
-@end ifset
-@ifclear txicommandconditionals
-@macro rarrow{}
-→
-@end macro
-@end ifclear
-@end ifxml
-@end ifclear
-@ifset insertascii
-@ifdocbook
-@macro rarrow{}
-->
-@end macro
-@end ifdocbook
-@ifhtml
-@macro rarrow{}
-->
-@end macro
-@end ifhtml
-@ifinfo
-@ifnotplaintext
-@macro rarrow{}
-->
-@end macro
-@end ifnotplaintext
-@end ifinfo
-@ifplaintext
-@macro rarrow{}
-->
-@end macro
-@end ifplaintext
-@ifxml
-@macro rarrow{}
-->
-@end macro
-@end ifxml
-@end ifset
-@end ifclear
+|%}math_symbol(
+  {%|rarrow|%},
+  {%|&#x2192;|%},
+  {%|→|%},
+  {%|->|%}){%|
 |%}footer_comment({%|@ifxml
 @ifnotxml
 @c|%}, {%|@c|%}, {%|@c
