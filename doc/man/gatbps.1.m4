@@ -610,7 +610,7 @@ file\~\c
 .nohy "\fIX\fR"
 is attempted to be generated, and the ten files
 .nohy "\fIX\fB.tmp0\fR"
-through
+to\~\c
 .nohy "\fIX\fB.tmp9\fR"
 are reserved for temporary use during this process.
 Generation begins by attempting to delete all of the temporary files
