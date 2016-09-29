@@ -1009,7 +1009,7 @@ AC_SUBST([TEXI2DVIFLAGS])
 
 ]AC_OUTPUT[
 
-]dnl
+]
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by
