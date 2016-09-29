@@ -28,7 +28,6 @@ shows the symbol of each macro@.
 @ifset HideSymbols
 @include mtvskiptop.texi
 @multitable {@t{\longleftrightarrow}} {@t{@@lldarrow@{@}}} {Unicode} {@t{floor(}}
-@c )
 @headitem @TeX{} @tab Macro @tab Unicode @tab ASCII
 @item @t{'} @tab @t{@@prm@{@}} @tab U+2032 @tab @t{'}
 @sfindex @w{@t{prm.@:texi}}
@@ -49,7 +48,6 @@ shows the symbol of each macro@.
 @sfindex @w{@t{gequ.@:texi}}
 @tmindex @w{@t{@@gequ}}
 @item @t{\lceil} @tab @t{@@lcei@{@}} @tab U+2308 @tab @t{ceil(}
-@c )
 @sfindex @w{@t{lcei.@:texi}}
 @tmindex @w{@t{@@lcei}}
 @item @t{\ldots} @tab @t{@@bdots@{@}} @tab U+2026 @tab @t{.@:.@:.@:}
@@ -59,17 +57,14 @@ shows the symbol of each macro@.
 @sfindex @w{@t{lequ.@:texi}}
 @tmindex @w{@t{@@lequ}}
 @item @t{\lfloor} @tab @t{@@lflo@{@}} @tab U+230A @tab @t{floor(}
-@c )
 @sfindex @w{@t{lflo.@:texi}}
 @tmindex @w{@t{@@lflo}}
 @item @t{\ne} @tab @t{@@nequ@{@}} @tab U+2260 @tab @t{!=}
 @sfindex @w{@t{nequ.@:texi}}
 @tmindex @w{@t{@@nequ}}
-@c (
 @item @t{\rceil} @tab @t{@@rcei@{@}} @tab U+2309 @tab @t{)}
 @sfindex @w{@t{rcei.@:texi}}
 @tmindex @w{@t{@@rcei}}
-@c (
 @item @t{\rfloor} @tab @t{@@rflo@{@}} @tab U+230B @tab @t{)}
 @sfindex @w{@t{rflo.@:texi}}
 @tmindex @w{@t{@@rflo}}
@@ -82,7 +77,6 @@ shows the symbol of each macro@.
 @ifclear HideSymbols
 @include mtvskiptop.texi
 @multitable {@t{\longleftrightarrow}} {@t{@@lldarrow@{@}}} {Unicode} {@t{floor(}} {Symbol}
-@c )
 @headitem @TeX{} @tab Macro @tab Unicode @tab ASCII @tab Symbol
 @item @t{'} @tab @t{@@prm@{@}} @tab U+2032 @tab @t{'}
 @sfindex @w{@t{prm.@:texi}}
@@ -145,7 +139,6 @@ $\ge$
 @gequ{}
 @end ifnottex
 @item @t{\lceil} @tab @t{@@lcei@{@}} @tab U+2308 @tab @t{ceil(}
-@c )
 @sfindex @w{@t{lcei.@:texi}}
 @tmindex @w{@t{@@lcei}}
 @tab
@@ -176,7 +169,6 @@ $\le$
 @lequ{}
 @end ifnottex
 @item @t{\lfloor} @tab @t{@@lflo@{@}} @tab U+230A @tab @t{floor(}
-@c )
 @sfindex @w{@t{lflo.@:texi}}
 @tmindex @w{@t{@@lflo}}
 @tab
@@ -196,7 +188,6 @@ $\ne$
 @ifnottex
 @nequ{}
 @end ifnottex
-@c (
 @item @t{\rceil} @tab @t{@@rcei@{@}} @tab U+2309 @tab @t{)}
 @sfindex @w{@t{rcei.@:texi}}
 @tmindex @w{@t{@@rcei}}
@@ -207,7 +198,6 @@ $\rceil$
 @ifnottex
 @rcei{}
 @end ifnottex
-@c (
 @item @t{\rfloor} @tab @t{@@rflo@{@}} @tab U+230B @tab @t{)}
 @sfindex @w{@t{rflo.@:texi}}
 @tmindex @w{@t{@@rflo}}
