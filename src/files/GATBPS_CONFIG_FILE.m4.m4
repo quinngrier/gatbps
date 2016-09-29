@@ -116,7 +116,10 @@ clean-gatbps_output:
 
 ]gatbps_output[: ]gatbps_prereq[
 	$][(MKDIR_P) '\''./'\''$][(@D)
-	echo @PACKAGE_NAME@ >$][@
+	'\''rm'\'' \
+  '\''-f'\'' \
+  '\''./'\'']gatbps_output[ \
+;
 	cd $][(top_builddir) && $][(SHELL) ./config.status $][@]gatbps_suffix['
 
 ]
