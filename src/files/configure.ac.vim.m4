@@ -54,8 +54,8 @@ function s:FormatAutoconfFile()
     let n1 = search(s1, 'W')
   endwhile
 
-  let s1 = '\m^\]dnl begin_requirements\n\[$'
-  let s2 = '\m^\]dnl end_requirements\n\[$'
+  let s1 = '\m^\]dnl begin_prerequisites\n\[$'
+  let s2 = '\m^\]dnl end_prerequisites\n\[$'
   call cursor(1, 1)
   let n1 = search(s1, 'cW')
   while n1 != 0
