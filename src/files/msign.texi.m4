@@ -27,13 +27,12 @@ header_comment({%|@ifxml
 @c
 @end ifnotxml
 @end ifxml
-|%}dnl
-math_symbol(
+|%}math_symbol(
   {%|msign|%},
   {%|&#x2212;|%},
   {%|−|%},
-  {%|-|%})
-footer_comment({%|@ifxml
+  {%|-|%}){%|
+|%}footer_comment({%|@ifxml
 @ifnotxml
 @c|%}, {%|@c|%}, {%|@c
 @end ifnotxml
