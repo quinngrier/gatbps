@@ -115,7 +115,9 @@ clean-gatbps_output:
 ]m4_if([$2], [], [[distclean]], [[$2]])[-local: clean-]gatbps_output[
 
 ]gatbps_output[: ]gatbps_prereq[
-	$][(MKDIR_P) '\''./'\''$][(@D)
+	$][(MKDIR_P) \
+  '\''./'\''$][(@D) \
+;
 	'\''rm'\'' \
   '\''-f'\'' \
   '\''./'\'']gatbps_output[ \
