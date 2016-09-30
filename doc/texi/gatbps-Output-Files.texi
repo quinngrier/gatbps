@@ -12,8 +12,8 @@ is attempted to be generated, and the ten files
 @w{@i{X}@t{.@:tmp0}}
 to@tie{}@w{@i{X}@t{.@:tmp9}}
 are reserved for temporary use during this process@.
-Generation begins by attempting to delete the temporary files with
-individual
+Generation begins by attempting to delete the output file and the
+temporary files with individual
 @w{@t{rm -f}}
 commands@.
 If at least one of these commands fails, then generation ends@.

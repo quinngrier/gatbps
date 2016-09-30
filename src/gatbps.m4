@@ -2638,6 +2638,19 @@ EOF1
 
       while ':'; do # generation
 
+        'rm' '-f' "${safe_1}"
+        case "${?}" in
+          '0')
+          ;;
+          *)
+            'cat' >&2 <<EOF1
+${fy2}gatbps:${fR2} ${fB2}rm${fR2} failed while deleting: ${fB2}${1}${fR2}
+EOF1
+            exit_status='1'
+            successfully_deleted_all_temporary_files='no'
+          ;;
+        esac
+
         for i in '0' '1' '2' '3' '4' '5' '6' '7' '8' '9'; do
           if 'rm' '-f' "${safe_1}"'.tmp'"${i}"; then
             ':'
@@ -2658,17 +2671,6 @@ EOF1
             'break' # generation
           ;;
         esac
-
-        if test '!' '-d' "${safe_1}"; then
-          :
-        else
-          'cat' >&2 <<EOF1
-${fy2}gatbps:${fR2} each operand must not be a directory
-${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
-EOF1
-          exit_status='1'
-          'break'
-        fi
 
         case "${plain},${1}" in
 
