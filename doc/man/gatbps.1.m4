@@ -617,7 +617,7 @@ Generation begins by attempting to delete the temporary files with
 individual
 .nohy "\fBrm\ \-f\fR"
 commands.
-If this fails, then generation ends.
+If any of these commands fails, then generation ends.
 Otherwise, the output file is attempted to be generated.
 If this fails, then the state of the output file is unspecified, and
 regardless of whether this fails, generation ends by attempting to
