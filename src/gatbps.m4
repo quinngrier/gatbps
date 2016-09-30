@@ -2652,15 +2652,18 @@ EOF1
         esac
 
         for i in '0' '1' '2' '3' '4' '5' '6' '7' '8' '9'; do
-          if 'rm' '-f' "${safe_1}"'.tmp'"${i}"; then
-            ':'
-          else
-            'cat' >&2 <<EOF1
+          'rm' '-f' "${safe_1}"'.tmp'"${i}"
+          case "${?}" in
+            '0')
+            ;;
+            *)
+              'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}rm${fR2} failed while deleting: ${fB2}${1}.tmp${i}${fR2}
 EOF1
-            exit_status='1'
-            successfully_deleted_files='no'
-          fi
+              exit_status='1'
+              successfully_deleted_files='no'
+            ;;
+          esac
         done
 
         case "${successfully_deleted_files}" in
@@ -3378,15 +3381,18 @@ EOF1
         'yes')
 
           for i in '0' '1' '2' '3' '4' '5' '6' '7' '8' '9'; do
-            if 'rm' '-f' "${safe_1}"'.tmp'"${i}"; then
-              ':'
-            else
-              'cat' >&2 <<EOF1
+            'rm' '-f' "${safe_1}"'.tmp'"${i}"
+            case "${?}" in
+              '0')
+              ;;
+              *)
+                'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} ${fB2}rm${fR2} failed while deleting: ${fB2}${1}.tmp${i}${fR2}
 EOF1
-              exit_status='1'
-              successfully_deleted_files='no'
-            fi
+                exit_status='1'
+                successfully_deleted_files='no'
+              ;;
+            esac
           done
 
           case "${successfully_deleted_files}" in
