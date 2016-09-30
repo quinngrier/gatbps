@@ -44,7 +44,9 @@ m4_if(
   [EXE_CFLAGS],
   [
     extra flags to use with the C compiler when compiling object files
-    that will be statically linked into executable files
+    that will be statically linked into executable files. The typical
+    use case is to set EXE_CFLAGS='-fPIE' and EXE_LDFLAGS='-pie' to
+    create position-independent executable (PIE) files.
   ])[
 
 :;}]])[]dnl
