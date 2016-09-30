@@ -2644,7 +2644,7 @@ EOF1
           ;;
           *)
             'cat' >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}rm${fR2} failed while deleting: ${fB2}${1}${fR2}
+${fy2}gatbps:${fR2} ${fB2}rm -f${fR2} failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
             successfully_deleted_files='no'
@@ -2658,7 +2658,7 @@ EOF1
             ;;
             *)
               'cat' >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}rm${fR2} failed while deleting: ${fB2}${1}.tmp${i}${fR2}
+${fy2}gatbps:${fR2} ${fB2}rm -f${fR2} failed: ${fB2}${1}.tmp${i}${fR2}
 EOF1
               exit_status='1'
               successfully_deleted_files='no'
@@ -3387,7 +3387,7 @@ EOF1
               ;;
               *)
                 'cat' >&2 <<EOF1
-${fy2}gatbps:${fR2} ${fB2}rm${fR2} failed while deleting: ${fB2}${1}.tmp${i}${fR2}
+${fy2}gatbps:${fR2} ${fB2}rm -f${fR2} failed: ${fB2}${1}.tmp${i}${fR2}
 EOF1
                 exit_status='1'
                 successfully_deleted_files='no'
