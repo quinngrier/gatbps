@@ -2634,7 +2634,7 @@ EOF1
       safe_tmp8="${safe_1}.tmp8"
       safe_tmp9="${safe_1}.tmp9"
 
-      successfully_deleted_all_temporary_files='yes'
+      successfully_deleted_files='yes'
 
       while ':'; do # generation
 
@@ -2647,7 +2647,7 @@ EOF1
 ${fy2}gatbps:${fR2} ${fB2}rm${fR2} failed while deleting: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
-            successfully_deleted_all_temporary_files='no'
+            successfully_deleted_files='no'
           ;;
         esac
 
@@ -2659,11 +2659,11 @@ EOF1
 ${fy2}gatbps:${fR2} ${fB2}rm${fR2} failed while deleting: ${fB2}${1}.tmp${i}${fR2}
 EOF1
             exit_status='1'
-            successfully_deleted_all_temporary_files='no'
+            successfully_deleted_files='no'
           fi
         done
 
-        case "${successfully_deleted_all_temporary_files}" in
+        case "${successfully_deleted_files}" in
           'no')
             'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
@@ -3374,7 +3374,7 @@ EOF1
 
       done # generation
 
-      case "${successfully_deleted_all_temporary_files}" in
+      case "${successfully_deleted_files}" in
         'yes')
 
           for i in '0' '1' '2' '3' '4' '5' '6' '7' '8' '9'; do
@@ -3385,11 +3385,11 @@ EOF1
 ${fy2}gatbps:${fR2} ${fB2}rm${fR2} failed while deleting: ${fB2}${1}.tmp${i}${fR2}
 EOF1
               exit_status='1'
-              successfully_deleted_all_temporary_files='no'
+              successfully_deleted_files='no'
             fi
           done
 
-          case "${successfully_deleted_all_temporary_files}" in
+          case "${successfully_deleted_files}" in
             'no')
               'cat' >&2 <<EOF1
 ${fy2}gatbps:${fR2} cleanup failed: ${fB2}${1}${fR2}
