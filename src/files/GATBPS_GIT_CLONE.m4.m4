@@ -177,34 +177,34 @@ GATBPS_GIT_CLONE_url_lines(m4_if(,,input_urls))[
         '\''exit'\'' '\''1'\''; \
       ;; \
     esac; \
-    $][(GIT) \
-      '\''remote'\'' \
-      '\''remove'\'' \
-      '\''origin'\'' \
-    || '\''exit'\'' "$][$][{?}"; \
-    '\''set'\'' '\'''\'' \]dnl
+    ( \
+      '\''cd'\'' \
+        '\''./'\'']output_directory['\''.tmp'\'' \
+      || '\''exit'\'' "$][$][{?}"; \
+      $][(GIT) \
+        '\''remote'\'' \
+        '\''remove'\'' \
+        '\''origin'\'' \
+      || '\''exit'\'' "$][$][{?}"; \
+      '\''set'\'' '\'''\'' \]dnl
 GATBPS_GIT_CLONE_url_lines(m4_if(,,input_urls))[
-    ; \
-    while '\'':'\''; do \
-      '\''shift'\''; \
-      case "$][$][{#}" in \
-        '\''0'\'') \
-          '\''break'\''; \
-        ;; \
-      esac; \
-      ( \
-        '\''cd'\'' \
-          '\''./'\'']output_directory['\''.tmp'\'' \
-        || '\''exit'\'' "$][$][{?}"; \
+      ; \
+      while '\'':'\''; do \
+        '\''shift'\''; \
+        case "$][$][{#}" in \
+          '\''0'\'') \
+            '\''break'\''; \
+          ;; \
+        esac; \
         $][(GIT) \
           '\''remote'\'' \
           '\''add'\'' \
           '\''remote'\''"$][$][{#}" \
           "$][$][{1}" \
         || '\''exit'\'' "$][$][{?}"; \
-        '\''exit'\'' '\''0'\''; \
-      :;) || '\''exit'\'' "$${?}"; \
-    done; \
+      done; \
+      '\''exit'\'' '\''0'\''; \
+    :;) || '\''exit'\'' "$${?}"; \
     '\''mv'\'' \
       '\''./'\'']output_directory['\''.tmp'\'' \
       '\''./'\'']output_directory[ \
