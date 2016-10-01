@@ -20,7 +20,7 @@ GATBPS_V_JAVADOC = $(GATBPS_V_JAVADOC_@AM_V@)
 
 GATBPS_V_JAVADOC_ = $(GATBPS_V_JAVADOC_@AM_DEFAULT_V@)
 
-GATBPS_V_JAVADOC_0 = @'sh' \
+GATBPS_V_JAVADOC_0 = @$(SHELL) \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \

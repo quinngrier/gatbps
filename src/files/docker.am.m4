@@ -18,7 +18,7 @@ GATBPS_V_DOCKER = $(GATBPS_V_DOCKER_@AM_V@)
 
 GATBPS_V_DOCKER_ = $(GATBPS_V_DOCKER_@AM_DEFAULT_V@)
 
-GATBPS_V_DOCKER_0 = @'sh' \
+GATBPS_V_DOCKER_0 = @$(SHELL) \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \

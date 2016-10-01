@@ -18,7 +18,7 @@ GATBPS_V_M4 = $(GATBPS_V_M4_@AM_V@)
 
 GATBPS_V_M4_ = $(GATBPS_V_M4_@AM_DEFAULT_V@)
 
-GATBPS_V_M4_0 = @'sh' \
+GATBPS_V_M4_0 = @$(SHELL) \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \

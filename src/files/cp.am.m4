@@ -18,7 +18,7 @@ GATBPS_V_CP = $(GATBPS_V_CP_@AM_V@)
 
 GATBPS_V_CP_ = $(GATBPS_V_CP_@AM_DEFAULT_V@)
 
-GATBPS_V_CP_0 = @'sh' \
+GATBPS_V_CP_0 = @$(SHELL) \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \

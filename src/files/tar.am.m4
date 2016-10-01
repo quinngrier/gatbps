@@ -18,7 +18,7 @@ GATBPS_V_TAR = $(GATBPS_V_TAR_@AM_V@)
 
 GATBPS_V_TAR_ = $(GATBPS_V_TAR_@AM_DEFAULT_V@)
 
-GATBPS_V_TAR_0 = @'sh' \
+GATBPS_V_TAR_0 = @$(SHELL) \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \
@@ -32,7 +32,7 @@ GATBPS_V_UNTAR = $(GATBPS_V_UNTAR_@AM_V@)
 
 GATBPS_V_UNTAR_ = $(GATBPS_V_UNTAR_@AM_DEFAULT_V@)
 
-GATBPS_V_UNTAR_0 = @'sh' \
+GATBPS_V_UNTAR_0 = @$(SHELL) \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \

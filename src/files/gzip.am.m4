@@ -18,7 +18,7 @@ GATBPS_V_GUNZIP = $(GATBPS_V_GUNZIP_@AM_V@)
 
 GATBPS_V_GUNZIP_ = $(GATBPS_V_GUNZIP_@AM_DEFAULT_V@)
 
-GATBPS_V_GUNZIP_0 = @'sh' \
+GATBPS_V_GUNZIP_0 = @$(SHELL) \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \
@@ -32,7 +32,7 @@ GATBPS_V_GZIP = $(GATBPS_V_GZIP_@AM_V@)
 
 GATBPS_V_GZIP_ = $(GATBPS_V_GZIP_@AM_DEFAULT_V@)
 
-GATBPS_V_GZIP_0 = @'sh' \
+GATBPS_V_GZIP_0 = @$(SHELL) \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \

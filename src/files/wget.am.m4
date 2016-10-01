@@ -18,7 +18,7 @@ GATBPS_V_WGET = $(GATBPS_V_WGET_@AM_V@)
 
 GATBPS_V_WGET_ = $(GATBPS_V_WGET_@AM_DEFAULT_V@)
 
-GATBPS_V_WGET_0 = @'sh' \
+GATBPS_V_WGET_0 = @$(SHELL) \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \

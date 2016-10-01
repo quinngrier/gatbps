@@ -18,7 +18,7 @@ GATBPS_V_UNXZ = $(GATBPS_V_UNXZ_@AM_V@)
 
 GATBPS_V_UNXZ_ = $(GATBPS_V_UNXZ_@AM_DEFAULT_V@)
 
-GATBPS_V_UNXZ_0 = @'sh' \
+GATBPS_V_UNXZ_0 = @$(SHELL) \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \
@@ -32,7 +32,7 @@ GATBPS_V_XZ = $(GATBPS_V_XZ_@AM_V@)
 
 GATBPS_V_XZ_ = $(GATBPS_V_XZ_@AM_DEFAULT_V@)
 
-GATBPS_V_XZ_0 = @'sh' \
+GATBPS_V_XZ_0 = @$(SHELL) \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \

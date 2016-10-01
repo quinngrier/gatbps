@@ -19,7 +19,7 @@ GATBPS_V_JAR = $(GATBPS_V_JAR_@AM_V@)
 
 GATBPS_V_JAR_ = $(GATBPS_V_JAR_@AM_DEFAULT_V@)
 
-GATBPS_V_JAR_0 = @'sh' \
+GATBPS_V_JAR_0 = @$(SHELL) \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \
@@ -33,7 +33,7 @@ GATBPS_V_JAVAC = $(GATBPS_V_JAVAC_@AM_V@)
 
 GATBPS_V_JAVAC_ = $(GATBPS_V_JAVAC_@AM_DEFAULT_V@)
 
-GATBPS_V_JAVAC_0 = @'sh' \
+GATBPS_V_JAVAC_0 = @$(SHELL) \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \
