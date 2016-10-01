@@ -48,14 +48,44 @@ m4_if(
     the first argument must contain at least one character that is not a
     space, tab, or newline character
   ])])[]dnl
-m4_if(
-  m4_bregexp([$2], [[^
-	 ]]),
-  [-1],
+m4_pushdef(
+  [list_2],
+  m4_bpatsubst([[[$2]]], [^\(..\)[
+	 ]+], [\1]))[]dnl
+]m4_ifdef(
+  [GATBPS_GIT_CLONE_check_2],
   [gatbps_fatal([
-    GATBPS_GIT_CLONE requires its second argument to contain at least
-    one character that is not a space, tab, or newline character
-  ])])[]dnl
+    GATBPS_GIT_CLONE_check_2 is already defined
+  ])])[dnl
+]m4_define(
+  [GATBPS_GIT_CLONE_check_2],
+  [m4_if(
+    [$#],
+    [1],
+    [m4_if(
+      m4_bregexp([$1], [^[
+	 ]+$]),
+      [0],
+      [gatbps_fatal([
+        invalid last subargument of the second GATBPS_GIT_CLONE
+        argument:
+      [--VERBATIM--] "$1"], [
+        the last subargument must either be empty or contain at least
+        one character that is not a space, tab, or newline character
+      ])])],
+    [m4_if(
+      m4_bregexp([$1], [[^
+	 ]]),
+      [-1],
+      [gatbps_fatal([
+        invalid non-last subargument of the second GATBPS_GIT_CLONE
+        argument:
+      [--VERBATIM--] "$1"], [
+        each non-last subargument must contain at least one character
+        that is not a space, tab, or newline character
+      ])],
+      [GATBPS_GIT_CLONE_check_2(m4_shift($@))])])])[dnl
+GATBPS_GIT_CLONE_check_2(m4_if(,,list_2))[]dnl
 m4_case(
   [$3],
   [], [],
@@ -146,6 +176,7 @@ clean-]output_directory[:
 m4_popdef([clean_target])[]dnl
 m4_popdef([source_sh])[]dnl
 m4_popdef([output_directory])[]dnl
+m4_popdef([list_2])[]dnl
 [
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
