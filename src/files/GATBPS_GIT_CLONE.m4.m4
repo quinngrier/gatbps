@@ -166,7 +166,7 @@ GATBPS_GIT_CLONE_url_lines(m4_if(,,input_urls))[
         '\''clone'\'' \
         '\''--'\'' \
         "$][$][{url}" \
-        ]output_directory['\''.tmp'\'' \
+        '\''./'\'']output_directory['\''.tmp'\'' \
       || '\''continue'\''; \
       cloned='\''yes'\''; \
       '\''break'\''; \
@@ -194,7 +194,7 @@ GATBPS_GIT_CLONE_url_lines(m4_if(,,input_urls))[
       esac; \
       ( \
         '\''cd'\'' \
-          ]output_directory['\''.tmp'\'' \
+          '\''./'\'']output_directory['\''.tmp'\'' \
         || '\''exit'\'' "$][$][{?}"; \
         $][(GIT) \
           '\''remote'\'' \
