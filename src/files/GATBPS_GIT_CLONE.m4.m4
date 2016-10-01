@@ -70,7 +70,7 @@ m4_if(
       "distclean", "maintainer-clean", or "mostlyclean"
     ])])])[]dnl
 m4_pushdef(
-  [target_sh],
+  [output_directory],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
 m4_pushdef(
   [source_sh],
@@ -86,7 +86,7 @@ m4_pushdef(
 
 GATBPS_GIT_CLONE_RULES="$][{GATBPS_GIT_CLONE_RULES}"'
 
-]target_sh[:
+]output_directory[:
 	$][(AM@&t@_V_at)|%}contains_at_least_one_word_sh(
   {%|MKDIR_P|%}){%||%}dnl
 {%|
@@ -97,36 +97,36 @@ GATBPS_GIT_CLONE_RULES="$][{GATBPS_GIT_CLONE_RULES}"'
 	$][(AM@&t@_V_at)'\''rm'\'' \
   '\''-f'\'' \
   '\''-r'\'' \
-  '\''./'\'']target_sh['\''.tmp'\'' \
+  '\''./'\'']output_directory['\''.tmp'\'' \
 ;
 	$][(AM@&t@_V_at)$][(GIT) \
   '\''clone'\'' \
   '\''--'\'' \
   ]source_sh[ \
-  ]target_sh['\''.tmp'\'' \
+  ]output_directory['\''.tmp'\'' \
 ;
 	$][(AM@&t@_V_at)'\''mv'\'' \
-  '\''./'\'']target_sh['\''.tmp'\'' \
-  '\''./'\'']target_sh[ \
+  '\''./'\'']output_directory['\''.tmp'\'' \
+  '\''./'\'']output_directory[ \
 ;
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
-.PHONY: clean-]target_sh[
+.PHONY: clean-]output_directory[
 
-clean-]target_sh[:
+clean-]output_directory[:
 	-'\''rm'\'' \
   '\''-f'\'' \
   '\''-r'\'' \
-  '\''./'\'']target_sh[ \
+  '\''./'\'']output_directory[ \
 ;
 
-]clean_target[-local: clean-]target_sh[
+]clean_target[-local: clean-]output_directory[
 
 '
 ]dnl
 m4_popdef([clean_target])[]dnl
 m4_popdef([source_sh])[]dnl
-m4_popdef([target_sh])[]dnl
+m4_popdef([output_directory])[]dnl
 [
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
