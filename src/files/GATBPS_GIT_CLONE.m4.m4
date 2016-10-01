@@ -100,6 +100,24 @@ GATBPS_GIT_CLONE_RULES="$][{GATBPS_GIT_CLONE_RULES}"'
   '\''./'\'']output_directory[ \
   '\''./'\'']output_directory['\''.tmp'\'' \
 ;
+	$][(AM@&t@_V_at){ \
+  ( \
+  :;); \
+  x="$][$][{?}"; \
+  case "$][$][{x}" in \
+    '\''0'\'') \
+    ;; \
+    *) \
+      '\''rm'\'' \
+        '\''-f'\'' \
+        '\''-r'\'' \
+        '\''./'\'']output_directory[ \
+        '\''./'\'']output_directory['\''.tmp'\'' \
+      ; \
+    ;; \
+  esac; \
+  '\''exit'\'' "$][$][{x}"; \
+:;}
 	$][(AM@&t@_V_at)$][(GIT) \
   '\''clone'\'' \
   '\''--'\'' \
