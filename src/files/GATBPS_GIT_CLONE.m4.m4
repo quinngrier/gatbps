@@ -160,7 +160,7 @@ GATBPS_GIT_CLONE_RULES="$][{GATBPS_GIT_CLONE_RULES}"'
 ;
 	$][(AM@&t@_V_at){ \
   ( \
-    cloned='\''no'\''; \
+    clone_succeeded='\''no'\''; \
     first_iteration='\''yes'\''; \
     for url in '\'''\'' \]dnl
 GATBPS_GIT_CLONE_url_lines(m4_if(,,input_urls))[
@@ -182,11 +182,11 @@ GATBPS_GIT_CLONE_url_lines(m4_if(,,input_urls))[
         "$][$][{url}" \
         '\''./'\'']output_directory['\''.tmp'\'' \
       || '\''continue'\''; \
-      cloned='\''yes'\''; \
+      clone_succeeded='\''yes'\''; \
       '\''break'\''; \
     done; \
-    '\''readonly'\'' '\''cloned'\''; \
-    case "$][$][{cloned}" in \
+    '\''readonly'\'' '\''clone_succeeded'\''; \
+    case "$][$][{clone_succeeded}" in \
       '\''no'\'') \
         '\''exit'\'' '\''1'\''; \
       ;; \
