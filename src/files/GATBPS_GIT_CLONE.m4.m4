@@ -104,7 +104,7 @@ m4_pushdef(
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
 m4_pushdef(
   [input_urls],
-  m4_bpatsubst([[[$2]]], ['], ['\\'']))[]dnl
+  m4_dquote(list_2))[]dnl
 m4_pushdef(
   [clean_target],
   m4_if(
