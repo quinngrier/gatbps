@@ -44,9 +44,9 @@ m4_if(
   [EXE_LDFLAGS],
   [
     extra flags to use with the linker when linking executable files.
-    The typical use case is to set EXE_CFLAGS='-fPIE' and
-    EXE_LDFLAGS='-pie' to create position-independent executable (PIE)
-    files.
+    For example, you might use EXE_CFLAGS='-fPIE', EXE_CXXFLAGS='-fPIE',
+    and EXE_LDFLAGS='-pie' to build position-independent executable
+    (PIE) files.
   ])[
 
 :;}]])[]dnl
