@@ -199,7 +199,7 @@ GATBPS_GIT_CLONE_url_lines(m4_if(,,input_urls))[
         $][(GIT) \
           '\''remote'\'' \
           '\''add'\'' \
-          '\''remote'\''"$][$][{#}" \
+          '\''r'\''"$][$][{#}" \
           "$][$][{1}" \
         || '\''exit'\'' "$][$][{?}"; \
       done; \
