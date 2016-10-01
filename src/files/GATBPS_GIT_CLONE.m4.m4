@@ -75,6 +75,13 @@ m4_pushdef(
 m4_pushdef(
   [source_sh],
   m4_bpatsubst([[[$2]]], ['], ['\\'']))[]dnl
+m4_pushdef(
+  [clean_target],
+  m4_if(
+    [$3],
+    [],
+    [[[clean]]],
+    [[[$3]]]))[]dnl
 [
 
 GATBPS_GIT_CLONE_RULES="$][{GATBPS_GIT_CLONE_RULES}"'
@@ -113,10 +120,11 @@ clean-]target_sh[:
   '\''./'\'']target_sh[ \
 ;
 
-]m4_if([$3], [], [[clean]], [[$3]])[-local: clean-]target_sh[
+]clean_target[-local: clean-]target_sh[
 
 '
 ]dnl
+m4_popdef([clean_target])[]dnl
 m4_popdef([source_sh])[]dnl
 m4_popdef([target_sh])[]dnl
 [
