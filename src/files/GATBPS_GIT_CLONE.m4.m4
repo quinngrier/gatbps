@@ -168,6 +168,7 @@ GATBPS_GIT_CLONE_url_lines(m4_if(,,input_urls))[
       case "$][$][{first_iteration}" in \
         '\''yes'\'') \
           first_iteration='\''no'\''; \
+          '\''readonly'\'' '\''first_iteration'\''; \
           '\''continue'\''; \
         ;; \
       esac; \
