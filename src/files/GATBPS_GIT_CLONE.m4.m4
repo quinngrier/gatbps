@@ -97,6 +97,7 @@ GATBPS_GIT_CLONE_RULES="$][{GATBPS_GIT_CLONE_RULES}"'
 	$][(AM@&t@_V_at)'\''rm'\'' \
   '\''-f'\'' \
   '\''-r'\'' \
+  '\''./'\'']output_directory[ \
   '\''./'\'']output_directory['\''.tmp'\'' \
 ;
 	$][(AM@&t@_V_at)$][(GIT) \
