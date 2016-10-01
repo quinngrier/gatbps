@@ -56,19 +56,19 @@ m4_if(
     GATBPS_GIT_CLONE requires its second argument to contain at least
     one character that is not a space, tab, or newline character
   ])])[]dnl
-m4_if(
-  m4_eval([$# >= 3]),
-  [1],
-  [m4_case(
-    [$3],
-    [clean], [],
-    [distclean], [],
-    [maintainer-clean], [],
-    [mostlyclean], [],
-    [gatbps_fatal([
-      GATBPS_GIT_CLONE requires its third argument to be either "clean",
-      "distclean", "maintainer-clean", or "mostlyclean"
-    ])])])[]dnl
+m4_case(
+  [$3],
+  [], [],
+  [clean], [],
+  [distclean], [],
+  [maintainer-clean], [],
+  [mostlyclean], [],
+  [gatbps_fatal([
+    invalid third argument to GATBPS_GIT_CLONE:
+  [--VERBATIM--] "$3"], [
+    the third argument must be either empty, "clean", "distclean",
+    "maintainer-clean", or "mostlyclean"
+  ])])[]dnl
 m4_pushdef(
   [output_directory],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
