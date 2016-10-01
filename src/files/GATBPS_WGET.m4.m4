@@ -270,9 +270,16 @@ GATBPS_WGET_RULES="$][{GATBPS_WGET_RULES}"'
 	$][(AM@&t@_V_at){ \
   ( \
     downloaded_and_verified='\''no'\''; \
-    for url in \]dnl
+    first_iteration='\''yes'\''; \
+    for url in '\'''\'' \]dnl
 GATBPS_WGET_url_lines(m4_if(,,input_urls))[
     ; do \
+      case "$][$][{first_iteration}" in \
+        '\''yes'\'') \
+          first_iteration='\''no'\''; \
+          '\''continue'\''; \
+        ;; \
+      esac; \
       $][(WGET) \
         '\''-O'\'' \
         ]output_file['\''.tmp'\'' \
