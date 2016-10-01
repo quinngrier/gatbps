@@ -205,6 +205,10 @@ GATBPS_GIT_CLONE_url_lines(m4_if(,,input_urls))[
         '\''exit'\'' '\''0'\''; \
       :;) || '\''exit'\'' "$${?}"; \
     done; \
+    '\''mv'\'' \
+      '\''./'\'']output_directory['\''.tmp'\'' \
+      '\''./'\'']output_directory[ \
+    || '\''exit'\'' "$][$][{?}"; \
     '\''exit'\'' '\''0'\''; \
   :;); \
   x="$][$][{?}"; \
@@ -222,10 +226,6 @@ GATBPS_GIT_CLONE_url_lines(m4_if(,,input_urls))[
   esac; \
   '\''exit'\'' "$][$][{x}"; \
 :;}
-	$][(AM@&t@_V_at)'\''mv'\'' \
-  '\''./'\'']output_directory['\''.tmp'\'' \
-  '\''./'\'']output_directory[ \
-;
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
 .PHONY: clean-]output_directory[
