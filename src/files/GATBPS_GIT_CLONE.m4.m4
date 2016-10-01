@@ -112,6 +112,20 @@ m4_pushdef(
     [],
     [[[clean]]],
     [[[$3]]]))[]dnl
+]m4_ifdef(
+  [GATBPS_GIT_CLONE_url_lines],
+  [gatbps_fatal([
+    GATBPS_GIT_CLONE_url_lines is already defined
+  ])])[dnl
+]m4_define(
+  [GATBPS_GIT_CLONE_url_lines],
+  [m4_if(
+    [$1],
+    [],
+    [],
+    [[
+      ]m4_bpatsubst([[$1]], ['], ['\\''])[ \]dnl
+GATBPS_GIT_CLONE_url_lines(m4_shift($@))])])[dnl
 [
 
 GATBPS_GIT_CLONE_RULES="$][{GATBPS_GIT_CLONE_RULES}"'
@@ -132,6 +146,37 @@ GATBPS_GIT_CLONE_RULES="$][{GATBPS_GIT_CLONE_RULES}"'
 ;
 	$][(AM@&t@_V_at){ \
   ( \
+    cloned='\''no'\''; \
+    first_iteration='\''yes'\''; \
+    for url in '\'''\'' \]dnl
+GATBPS_GIT_CLONE_url_lines(m4_if(,,input_urls))[
+    ; do \
+      case "$][$][{first_iteration}" in \
+        '\''yes'\'') \
+          first_iteration='\''no'\''; \
+          '\''continue'\''; \
+        ;; \
+      esac; \
+      '\''rm'\'' \
+        '\''-f'\'' \
+        '\''-r'\'' \
+        '\''./'\'']output_directory['\''.tmp'\'' \
+      || '\''exit'\'' "$][$][{?}"; \
+      $][(GIT) \
+        '\''clone'\'' \
+        '\''--'\'' \
+        "$][$][{url}" \
+        ]output_directory['\''.tmp'\'' \
+      || '\''continue'\''; \
+      cloned='\''yes'\''; \
+      '\''break'\''; \
+    done; \
+    '\''readonly'\'' '\''cloned'\''; \
+    case "$][$][{cloned}" in \
+      '\''no'\'') \
+        '\''exit'\'' '\''1'\''; \
+      ;; \
+    esac; \
   :;); \
   x="$][$][{?}"; \
   case "$][$][{x}" in \
@@ -148,12 +193,6 @@ GATBPS_GIT_CLONE_RULES="$][{GATBPS_GIT_CLONE_RULES}"'
   esac; \
   '\''exit'\'' "$][$][{x}"; \
 :;}
-	$][(AM@&t@_V_at)$][(GIT) \
-  '\''clone'\'' \
-  '\''--'\'' \
-  ]input_urls[ \
-  ]output_directory['\''.tmp'\'' \
-;
 	$][(AM@&t@_V_at)'\''mv'\'' \
   '\''./'\'']output_directory['\''.tmp'\'' \
   '\''./'\'']output_directory[ \
