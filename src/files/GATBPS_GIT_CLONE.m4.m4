@@ -103,7 +103,7 @@ m4_pushdef(
   [output_directory],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
 m4_pushdef(
-  [source_sh],
+  [input_urls],
   m4_bpatsubst([[[$2]]], ['], ['\\'']))[]dnl
 m4_pushdef(
   [clean_target],
@@ -151,7 +151,7 @@ GATBPS_GIT_CLONE_RULES="$][{GATBPS_GIT_CLONE_RULES}"'
 	$][(AM@&t@_V_at)$][(GIT) \
   '\''clone'\'' \
   '\''--'\'' \
-  ]source_sh[ \
+  ]input_urls[ \
   ]output_directory['\''.tmp'\'' \
 ;
 	$][(AM@&t@_V_at)'\''mv'\'' \
@@ -174,7 +174,7 @@ clean-]output_directory[:
 '
 ]dnl
 m4_popdef([clean_target])[]dnl
-m4_popdef([source_sh])[]dnl
+m4_popdef([input_urls])[]dnl
 m4_popdef([output_directory])[]dnl
 m4_popdef([list_2])[]dnl
 [
