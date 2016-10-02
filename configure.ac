@@ -443,6 +443,10 @@ AC_SUBST([TEXI2DVIFLAGS])
   [mostlyclean])[
 
 ]GATBPS_M4(
+  [src/files/GATBPS_CONFIG_LATER_RULES.am],
+  [mostlyclean])[
+
+]GATBPS_M4(
   [src/files/GATBPS_CP.m4],
   [mostlyclean])[
 

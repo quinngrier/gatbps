@@ -634,6 +634,7 @@ EOF1
           'set' "${prefix}"'GATBPS_CP_SUBST.m4' "${@}"
           'set' "${prefix}"'GATBPS_CP_RULES.am' "${@}"
           'set' "${prefix}"'GATBPS_CP.m4' "${@}"
+          'set' "${prefix}"'GATBPS_CONFIG_LATER_RULES.am' "${@}"
           'set' "${prefix}"'GATBPS_CONFIG_FILE_SUBST.m4' "${@}"
           'set' "${prefix}"'GATBPS_CONFIG_FILE_RULES.am' "${@}"
           'set' "${prefix}"'GATBPS_CONFIG_FILE.m4' "${@}"
@@ -1073,6 +1074,8 @@ EOF1
 |%}help_code({%|GATBPS_CONFIG_FILE_RULES.am|%}){%|
 
 |%}help_code({%|GATBPS_CONFIG_FILE_SUBST.m4|%}){%|
+
+|%}help_code({%|GATBPS_CONFIG_LATER_RULES.am|%}){%|
 
 |%}help_code({%|GATBPS_CP.m4|%}){%|
 
@@ -2734,6 +2737,8 @@ EOF1
 
 |%}generation_code({%|GATBPS_CONFIG_FILE_SUBST.m4|%}){%|
 
+|%}generation_code({%|GATBPS_CONFIG_LATER_RULES.am|%}){%|
+
 |%}generation_code({%|GATBPS_CP.m4|%}){%|
 
 |%}generation_code({%|GATBPS_CP_RULES.am|%}){%|
@@ -3566,6 +3571,12 @@ EOF1
 
 |%}recursion_code(
   {%|GATBPS_CONFIG_FILE_SUBST.m4|%},
+  {%|
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|GATBPS_CONFIG_LATER_RULES.am|%},
   {%|
             'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
