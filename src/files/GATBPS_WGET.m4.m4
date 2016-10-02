@@ -304,8 +304,8 @@ GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
     || '\''exit'\'' "$][$][{?}"; \
     '\''exit'\'' '\''0'\''; \
   :;); \
-  x="$][$][{?}"; \
-  case "$][$][{x}" in \
+  exit_status="$][$][{?}"; \
+  case "$][$][{exit_status}" in \
     '\''0'\'') \
     ;; \
     *) \
@@ -316,7 +316,7 @@ GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
       ; \
     ;; \
   esac; \
-  '\''exit'\'' "$][$][{x}"; \
+  '\''exit'\'' "$][$][{exit_status}"; \
 :;}
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
