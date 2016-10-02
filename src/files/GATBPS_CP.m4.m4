@@ -323,8 +323,8 @@ m4_case(
     || '\''exit'\'' "$][$][{?}"; \
     '\''exit'\'' '\''0'\''; \
   :;); \
-  x="$][$][{?}"; \
-  case "$][$][{x}" in \
+  exit_status="$][$][{?}"; \
+  case "$][$][{exit_status}" in \
     '\''0'\'') \
     ;; \
     *) \
@@ -344,7 +344,7 @@ m4_case(
       ; \
     ;; \
   esac; \
-  '\''exit'\'' "$][$][{x}"; \
+  '\''exit'\'' "$][$][{exit_status}"; \
 :;}
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
