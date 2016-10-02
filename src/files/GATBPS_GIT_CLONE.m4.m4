@@ -23,13 +23,14 @@ PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 AC_DEFUN([GATBPS_GIT_CLONE], [[{
 
 #
-# The block that contains this comment is the expansion of the
-# GATBPS_GIT_CLONE macro for]dnl
-m4_if(
-  m4_eval(m4_len([ $1.])[ > 44]),
-  [1],
-  [[
-#]])[ $1.
+]m4_text_wrap(
+  [
+    The block that contains this comment is the expansion of the
+    GATBPS_GIT_CLONE macro for the $1 target.
+  ],
+  [# ],
+  [# ],
+  [72])[
 #]dnl
 m4_if(
   m4_eval([$# < 2 || $# > 3]),
