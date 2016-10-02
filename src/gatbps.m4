@@ -550,7 +550,7 @@ EOF1
           'set' "${prefix}"'docbook-dist.am' "${@}"
           'set' "${prefix}"'cp.am' "${@}"
           'set' "${prefix}"'contents.texi' "${@}"
-          'set' "${prefix}"'configure.ac.vim' "${@}"
+          'set' "${prefix}"'format.ac.vim' "${@}"
           'set' "${prefix}"'bothcontents.texi' "${@}"
           'set' "${prefix}"'bdots.texi' "${@}"
           'set' "${prefix}"'awk-form.sh' "${@}"
@@ -1240,7 +1240,7 @@ EOF1
 
 |%}help_code({%|bothcontents.texi|%}){%|
 
-|%}help_code({%|configure.ac.vim|%}){%|
+|%}help_code({%|format.ac.vim|%}){%|
 
 |%}help_code({%|contents.texi|%}){%|
 
@@ -2900,7 +2900,7 @@ EOF1
 
 |%}generation_code({%|bothcontents.texi|%}){%|
 
-|%}generation_code({%|configure.ac.vim|%}){%|
+|%}generation_code({%|format.ac.vim|%}){%|
 
 |%}generation_code({%|contents.texi|%}){%|
 
@@ -4136,7 +4136,7 @@ EOF1
 |%}){%|
 
 |%}recursion_code(
-  {%|configure.ac.vim|%},
+  {%|format.ac.vim|%},
   {%|
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
