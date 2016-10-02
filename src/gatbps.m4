@@ -540,6 +540,8 @@ EOF1
           'set' "${prefix}"'gatbps_notice.m4' "${@}"
           'set' "${prefix}"'gatbps_fatal.m4' "${@}"
           'set' "${prefix}"'gatbps.am' "${@}"
+          'set' "${prefix}"'format.am.vim' "${@}"
+          'set' "${prefix}"'format.ac.vim' "${@}"
           'set' "${prefix}"'echo.sh' "${@}"
           'set' "${prefix}"'dvi-dist.am' "${@}"
           'set' "${prefix}"'dslash.texi' "${@}"
@@ -550,7 +552,6 @@ EOF1
           'set' "${prefix}"'docbook-dist.am' "${@}"
           'set' "${prefix}"'cp.am' "${@}"
           'set' "${prefix}"'contents.texi' "${@}"
-          'set' "${prefix}"'format.ac.vim' "${@}"
           'set' "${prefix}"'bothcontents.texi' "${@}"
           'set' "${prefix}"'bdots.texi' "${@}"
           'set' "${prefix}"'awk-form.sh' "${@}"
@@ -561,7 +562,6 @@ EOF1
           'set' "${prefix}"'PACKAGE_STRING.df.in' "${@}"
           'set' "${prefix}"'PACKAGEVERSION.texi.in' "${@}"
           'set' "${prefix}"'PACKAGEDATE.texi.in' "${@}"
-          'set' "${prefix}"'format.am.vim' "${@}"
           'set' "${prefix}"'INPUT_FILTER.sh.in' "${@}"
           'set' "${prefix}"'GATBPS_XZ_SUBST.m4' "${@}"
           'set' "${prefix}"'GATBPS_XZ_RULES.am' "${@}"
@@ -1218,8 +1218,6 @@ EOF1
 
 |%}help_code({%|INPUT_FILTER.sh.in|%}){%|
 
-|%}help_code({%|format.am.vim|%}){%|
-
 |%}help_code({%|PACKAGEDATE.texi.in|%}){%|
 
 |%}help_code({%|PACKAGEVERSION.texi.in|%}){%|
@@ -1240,8 +1238,6 @@ EOF1
 
 |%}help_code({%|bothcontents.texi|%}){%|
 
-|%}help_code({%|format.ac.vim|%}){%|
-
 |%}help_code({%|contents.texi|%}){%|
 
 |%}help_code({%|cp.am|%}){%|
@@ -1261,6 +1257,10 @@ EOF1
 |%}help_code({%|dvi-dist.am|%}){%|
 
 |%}help_code({%|echo.sh|%}){%|
+
+|%}help_code({%|format.ac.vim|%}){%|
+
+|%}help_code({%|format.am.vim|%}){%|
 
 |%}help_code({%|gatbps.am|%}){%|
 
@@ -2878,8 +2878,6 @@ EOF1
 
 |%}generation_code({%|INPUT_FILTER.sh.in|%}){%|
 
-|%}generation_code({%|format.am.vim|%}){%|
-
 |%}generation_code({%|PACKAGEDATE.texi.in|%}){%|
 
 |%}generation_code({%|PACKAGEVERSION.texi.in|%}){%|
@@ -2900,8 +2898,6 @@ EOF1
 
 |%}generation_code({%|bothcontents.texi|%}){%|
 
-|%}generation_code({%|format.ac.vim|%}){%|
-
 |%}generation_code({%|contents.texi|%}){%|
 
 |%}generation_code({%|cp.am|%}){%|
@@ -2921,6 +2917,10 @@ EOF1
 |%}generation_code({%|dvi-dist.am|%}){%|
 
 |%}generation_code({%|echo.sh|%}){%|
+
+|%}generation_code({%|format.ac.vim|%}){%|
+
+|%}generation_code({%|format.am.vim|%}){%|
 
 |%}generation_code({%|gatbps.am|%}){%|
 
@@ -4070,12 +4070,6 @@ EOF1
 |%}){%|
 
 |%}recursion_code(
-  {%|format.am.vim|%},
-  {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
   {%|PACKAGEDATE.texi.in|%},
   {%|
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
@@ -4131,12 +4125,6 @@ EOF1
 
 |%}recursion_code(
   {%|bothcontents.texi|%},
-  {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|format.ac.vim|%},
   {%|
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
@@ -4202,6 +4190,18 @@ EOF1
 
 |%}recursion_code(
   {%|echo.sh|%},
+  {%|
+            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|format.ac.vim|%},
+  {%|
+            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|format.am.vim|%},
   {%|
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
