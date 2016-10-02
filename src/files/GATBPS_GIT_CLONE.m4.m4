@@ -184,6 +184,7 @@ GATBPS_GIT_CLONE_url_lines(m4_if(,,input_urls))[
         '\''./'\'']output_directory['\''.tmp'\'' \
       || '\''continue'\''; \
       clone_succeeded='\''yes'\''; \
+      '\''readonly'\'' '\''clone_succeeded'\''; \
       '\''break'\''; \
     done; \
     '\''readonly'\'' '\''clone_succeeded'\''; \
