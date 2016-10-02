@@ -228,6 +228,7 @@ GATBPS_GIT_CLONE_set_lines(m4_if(,,input_urls))[
     '\''exit'\'' '\''0'\''; \
   :;); \
   exit_status="$][$][{?}"; \
+  '\''readonly'\'' '\''exit_status'\''; \
   case "$][$][{exit_status}" in \
     '\''0'\'') \
     ;; \
