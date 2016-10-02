@@ -731,10 +731,6 @@ AC_SUBST([TEXI2DVIFLAGS])
   [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/format.am.vim],
-  [mostlyclean])[
-
-]GATBPS_M4(
   [src/files/PACKAGEDATE.texi.in],
   [mostlyclean])[
 
@@ -775,10 +771,6 @@ AC_SUBST([TEXI2DVIFLAGS])
   [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/format.ac.vim],
-  [mostlyclean])[
-
-]GATBPS_M4(
   [src/files/contents.texi],
   [mostlyclean])[
 
@@ -816,6 +808,14 @@ AC_SUBST([TEXI2DVIFLAGS])
 
 ]GATBPS_M4(
   [src/files/echo.sh],
+  [mostlyclean])[
+
+]GATBPS_M4(
+  [src/files/format.ac.vim],
+  [mostlyclean])[
+
+]GATBPS_M4(
+  [src/files/format.am.vim],
   [mostlyclean])[
 
 ]GATBPS_M4(
