@@ -64,7 +64,7 @@ on@tie{}@w{@value{PACKAGEDATE}}@.
 @menu
 * Copyright Information::
 * Introduction::
-* Building and Installation::
+* Building and Installing::
 * Invoking @w{@t{gatbps}}::
 * Plain Files::
 * Copyright Texts::
@@ -95,7 +95,7 @@ on@tie{}@w{@value{PACKAGEDATE}}@.
 
 @include Introduction.texi
 
-@include Building-and-Installation.texi
+@include Building-and-Installing.texi
 
 @include Invoking-gatbps.texi
 
