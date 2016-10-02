@@ -34,12 +34,6 @@ AC_DEFUN([GATBPS_CP], [[{
   [72])[
 #]dnl
 m4_if(
-  m4_eval(m4_len([ $1.])[ > 61]),
-  [1],
-  [[
-#]])[ $1.
-#]dnl
-m4_if(
   m4_eval([$# < 2 || $# > 6]),
   [1],
   [gatbps_fatal([
