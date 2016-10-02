@@ -92,7 +92,7 @@ m4_if(
       one character that is not a space, tab, or newline character
     ])])])[]dnl
 m4_pushdef(
-  [target_sh],
+  [output_file],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
 m4_pushdef(
   [source_sh],
@@ -110,7 +110,7 @@ m4_pushdef(
 
 GATBPS_GIT_ARCHIVE_RULES="$][{GATBPS_GIT_ARCHIVE_RULES}"'
 
-]target_sh[: ]m4_if([$6], [], [source_sh], [leaf_prerequisites])[
+]output_file[: ]m4_if([$6], [], [source_sh], [leaf_prerequisites])[
 	$][(AM@&t@_V_at)|%}contains_at_least_one_word_sh(
   {%|MKDIR_P|%}){%||%}dnl
 {%|
@@ -126,8 +126,8 @@ m4_if([$6], [], [], [[
 	$][(AM@&t@_V_at)'\''rm'\'' \
   '\''-f'\'' \
   '\''-r'\'' \
-  '\''./'\'']target_sh[ \
-  '\''./'\'']target_sh['\''.tmp'\'' \
+  '\''./'\'']output_file[ \
+  '\''./'\'']output_file['\''.tmp'\'' \
 ;
 	$][(AM@&t@_V_at){ \
   x=]source_sh[; \
@@ -178,11 +178,11 @@ m4_if([$6], [], [], [[
       || '\''exit'\'' "$][$][{?}"; \
       '\''exit'\'' '\''0'\''; \
     :;) \
-      >'\''./'\'']target_sh['\''.tmp'\'' \
+      >'\''./'\'']output_file['\''.tmp'\'' \
     || '\''exit'\'' "$][$][{?}"; \
     '\''mv'\'' \
-      '\''./'\'']target_sh['\''.tmp'\'' \
-      '\''./'\'']target_sh[ \
+      '\''./'\'']output_file['\''.tmp'\'' \
+      '\''./'\'']output_file[ \
     || '\''exit'\'' "$][$][{?}"; \
     '\''exit'\'' '\''0'\''; \
   :;); \
@@ -194,8 +194,8 @@ m4_if([$6], [], [], [[
       '\''rm'\'' \
         '\''-f'\'' \
         '\''-r'\'' \
-        '\''./'\'']target_sh[ \
-        '\''./'\'']target_sh['\''.tmp'\'' \
+        '\''./'\'']output_file[ \
+        '\''./'\'']output_file['\''.tmp'\'' \
       ; \
     ;; \
   esac; \
@@ -203,15 +203,15 @@ m4_if([$6], [], [], [[
 :;}
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
-.PHONY: clean-]target_sh[
+.PHONY: clean-]output_file[
 
-clean-]target_sh[:
+clean-]output_file[:
 	-'\''rm'\'' \
   '\''-f'\'' \
-  '\''./'\'']target_sh[ \
+  '\''./'\'']output_file[ \
 ;
 
-]m4_if([$5], [], [[clean]], [[$5]])[-local: clean-]target_sh[
+]m4_if([$5], [], [[clean]], [[$5]])[-local: clean-]output_file[
 
 '
 ]dnl
@@ -219,7 +219,7 @@ m4_popdef([leaf_prerequisites])[]dnl
 m4_popdef([prefix_sh])[]dnl
 m4_popdef([tree_sh])[]dnl
 m4_popdef([source_sh])[]dnl
-m4_popdef([target_sh])[]dnl
+m4_popdef([output_file])[]dnl
 [
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
