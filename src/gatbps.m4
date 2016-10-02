@@ -561,7 +561,7 @@ EOF1
           'set' "${prefix}"'PACKAGE_STRING.df.in' "${@}"
           'set' "${prefix}"'PACKAGEVERSION.texi.in' "${@}"
           'set' "${prefix}"'PACKAGEDATE.texi.in' "${@}"
-          'set' "${prefix}"'Makefile.am.vim' "${@}"
+          'set' "${prefix}"'format.am.vim' "${@}"
           'set' "${prefix}"'INPUT_FILTER.sh.in' "${@}"
           'set' "${prefix}"'GATBPS_XZ_SUBST.m4' "${@}"
           'set' "${prefix}"'GATBPS_XZ_RULES.am' "${@}"
@@ -1218,7 +1218,7 @@ EOF1
 
 |%}help_code({%|INPUT_FILTER.sh.in|%}){%|
 
-|%}help_code({%|Makefile.am.vim|%}){%|
+|%}help_code({%|format.am.vim|%}){%|
 
 |%}help_code({%|PACKAGEDATE.texi.in|%}){%|
 
@@ -2878,7 +2878,7 @@ EOF1
 
 |%}generation_code({%|INPUT_FILTER.sh.in|%}){%|
 
-|%}generation_code({%|Makefile.am.vim|%}){%|
+|%}generation_code({%|format.am.vim|%}){%|
 
 |%}generation_code({%|PACKAGEDATE.texi.in|%}){%|
 
@@ -4070,7 +4070,7 @@ EOF1
 |%}){%|
 
 |%}recursion_code(
-  {%|Makefile.am.vim|%},
+  {%|format.am.vim|%},
   {%|
             'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|

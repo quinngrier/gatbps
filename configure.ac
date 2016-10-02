@@ -731,7 +731,7 @@ AC_SUBST([TEXI2DVIFLAGS])
   [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/Makefile.am.vim],
+  [src/files/format.am.vim],
   [mostlyclean])[
 
 ]GATBPS_M4(
