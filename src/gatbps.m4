@@ -347,42 +347,42 @@ esac
 
 case "${TEXI2ANY+x}" in
   ?*)
-    'set' 'x' '--texi2any='"${TEXI2ANY}" "${@}"
+    'set' '' '--texi2any='"${TEXI2ANY}" "${@}"
     'shift'
   ;;
 esac
 
 case "${STYLE_STDOUT+x}" in
   ?*)
-    'set' 'x' '--style-stdout='"${STYLE_STDOUT}" "${@}"
+    'set' '' '--style-stdout='"${STYLE_STDOUT}" "${@}"
     'shift'
   ;;
 esac
 
 case "${STYLE_STDERR+x}" in
   ?*)
-    'set' 'x' '--style-stderr='"${STYLE_STDERR}" "${@}"
+    'set' '' '--style-stderr='"${STYLE_STDERR}" "${@}"
     'shift'
   ;;
 esac
 
 case "${STYLE+x}" in
   ?*)
-    'set' 'x' '--style='"${STYLE}" "${@}"
+    'set' '' '--style='"${STYLE}" "${@}"
     'shift'
   ;;
 esac
 
 case "${SED+x}" in
   ?*)
-    'set' 'x' '--sed='"${SED}" "${@}"
+    'set' '' '--sed='"${SED}" "${@}"
     'shift'
   ;;
 esac
 
 case "${AWK+x}" in
   ?*)
-    'set' 'x' '--awk='"${AWK}" "${@}"
+    'set' '' '--awk='"${AWK}" "${@}"
     'shift'
   ;;
 esac
@@ -411,7 +411,7 @@ ferror1='no'
 
 path_args=''
 
-'set' 'x' "${@}"
+'set' '' "${@}"
 
 while ':'; do
 
@@ -3423,1092 +3423,1092 @@ EOF1
 |%}recursion_code(
   {%|CC0-1.0-AC-COPYRIGHT.ac|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|CC0-1.0-appendix.texi|%},
   {%|
-            'set' 'x' "${prefix}"'indent.texi' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'indent.texi' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|DATE.sh|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_ARG_ENABLE.m4|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_ARG_ENABLE_BOOL.m4|%},
   {%|
-            'set' 'x' "${prefix}"'GATBPS_CHECK_VARS.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'GATBPS_ARG_ENABLE.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_CHECK_VARS.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_ARG_ENABLE.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_ARG_WITH.m4|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_ARG_WITH_BOOL.m4|%},
   {%|
-            'set' 'x' "${prefix}"'GATBPS_CHECK_VARS.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'GATBPS_ARG_WITH.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_CHECK_VARS.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_ARG_WITH.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_CACHE_CHECK.m4|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_CHECK_BASIC.m4|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_CHECK_CFLAG.m4|%},
   {%|
-            'set' 'x' "${prefix}"'GATBPS_CHECK_BASIC.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_CHECK_BASIC.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_CHECK_CLASSPATH_SEPARATOR.m4|%},
   {%|
-            'set' 'x' "${prefix}"'GATBPS_CACHE_CHECK.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_CACHE_CHECK.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_CHECK_COMPILE.m4|%},
   {%|
-            'set' 'x' "${prefix}"'GATBPS_CHECK_BASIC.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_CHECK_BASIC.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_CHECK_HEADER.m4|%},
   {%|
-            'set' 'x' "${prefix}"'GATBPS_CHECK_COMPILE.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_CHECK_COMPILE.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_CHECK_LIB.m4|%},
   {%|
-            'set' 'x' "${prefix}"'GATBPS_CHECK_BASIC.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_CHECK_BASIC.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_CHECK_LINK.m4|%},
   {%|
-            'set' 'x' "${prefix}"'GATBPS_CHECK_BASIC.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_CHECK_BASIC.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_CHECK_RUN.m4|%},
   {%|
-            'set' 'x' "${prefix}"'GATBPS_CHECK_BASIC.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_CHECK_BASIC.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_CHECK_SHEBANG_LINE.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_CHECK_SOFT_INCLUDE.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'GATBPS_CHECK_VARS.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'GATBPS_CACHE_CHECK.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_CHECK_VARS.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_CACHE_CHECK.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_CHECK_VARS.m4|%},
   {%|
-            'set' 'x' "${prefix}"'GATBPS_CHECK_BASIC.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_CHECK_BASIC.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_CONFIG_FILE.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_CONFIG_FILE_RULES.am|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_CONFIG_FILE_SUBST.m4|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_CP.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'cp.am' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'GATBPS_RECIPE_MARKER.am' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'GATBPS_PROG_MKDIR_P.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'cp.am' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_RECIPE_MARKER.am' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_PROG_MKDIR_P.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_CP_RULES.am|%},
   {%|
-            'set' 'x' "${prefix}"'cp.am' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'cp.am' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_CP_SUBST.m4|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_DEFINE_AT.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_DEFINE_CLASSPATH.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_DEFINE_DATE.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'GATBPS_MSG_ERROR.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_MSG_ERROR.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_DEFINE_DOCKER_BUILD_FLAGS.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_DEFINE_EXE_CFLAGS.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_DEFINE_EXE_CXXFLAGS.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_DEFINE_EXE_LDFLAGS.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_DEFINE_HARD_INCLUDE.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_DEFINE_JARFLAGS.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_DEFINE_JAVACFLAGS.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_DEFINE_JAVADOCFLAGS.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_DEFINE_VERSION.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_DEFINE_docbookdir.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'GATBPS_MSG_ERROR.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_MSG_ERROR.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_DEFINE_enable_SHEBANG_LINES.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'GATBPS_ARG_ENABLE_BOOL.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_ARG_ENABLE_BOOL.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_DEFINE_javadir.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'GATBPS_MSG_ERROR.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_MSG_ERROR.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_DEFINE_javadocdir.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'GATBPS_MSG_ERROR.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_MSG_ERROR.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_DEFINE_plaintextdir.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'GATBPS_MSG_ERROR.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_MSG_ERROR.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_DEFINE_xmldir.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'GATBPS_MSG_ERROR.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_MSG_ERROR.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_DOCKER.m4|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_DOCKER_RULES.am|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_DOCKER_SUBST.m4|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_GIT_ARCHIVE.m4|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_GIT_ARCHIVE_RULES.am|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_GIT_ARCHIVE_SUBST.m4|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_GIT_CLONE.m4|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_GIT_CLONE_RULES.am|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_GIT_CLONE_SUBST.m4|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_JAVA.m4|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_JAVA_RULES.am|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_JAVA_SUBST.m4|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_M4.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'GATBPS_CP.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'GATBPS_CHECK_SOFT_INCLUDE.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_CP.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_CHECK_SOFT_INCLUDE.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_M4_RULES.am|%},
   {%|
-            'set' 'x' "${prefix}"'GATBPS_M4_SUBST.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_M4_SUBST.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_M4_SUBST.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_MSG_ERROR.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_MSG_FAILURE.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_MSG_NOTICE.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_MSG_WARN.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_PROG_AWK.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_PROG_DOCKER.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_PROG_DOXYGEN.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_PROG_GATBPS.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_PROG_GIT.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_PROG_GREP.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_PROG_GZIP.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_PROG_JAR.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_PROG_JAVAC.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'GATBPS_DEFINE_JAVACFLAGS.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'GATBPS_DEFINE_CLASSPATH.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_DEFINE_JAVACFLAGS.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_DEFINE_CLASSPATH.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_PROG_JAVADOC.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_PROG_JDEPS.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_PROG_M4.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_PROG_MAKEINFO.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_PROG_MKDIR_P.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_PROG_OPENSSL.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_PROG_SED.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_PROG_TAR.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_PROG_TEXI2ANY.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_PROG_WGET.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_PROG_XZ.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_RECIPE_MARKER.am|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_TAR.m4|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_TAR_RULES.am|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_TAR_SUBST.m4|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_V_PAD.am|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_WGET.m4|%},
   {%|
-            'set' 'x' "${prefix}"'wget.am' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'GATBPS_PROG_WGET.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'GATBPS_PROG_OPENSSL.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'GATBPS_PROG_MKDIR_P.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'GATBPS_PROG_GREP.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'wget.am' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_PROG_WGET.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_PROG_OPENSSL.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_PROG_MKDIR_P.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_PROG_GREP.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_WGET_RULES.am|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_WGET_SUBST.m4|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_XZ.m4|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_XZ_RULES.am|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|GATBPS_XZ_SUBST.m4|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|INPUT_FILTER.sh.in|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|PACKAGEDATE.texi.in|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|PACKAGEVERSION.texi.in|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|PACKAGE_STRING.df.in|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|PACKAGE_VERSION.df.in|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|TEST_EXIT.h|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|VERSION.sh|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|VERSION_LTCUR.sh|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|awk-form.sh|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|bdots.texi|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|bothcontents.texi|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|contents.texi|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|cp.am|%},
   {%|
-            'set' 'x' "${prefix}"'echo.sh' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'echo.sh' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|docbook-dist.am|%},
   {%|
-            'set' 'x' "${prefix}"'cp.am' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'cp.am' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|docbook.am|%},
   {%|
-            'set' 'x' "${prefix}"'sh-form.sh' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'sh-form.sh' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|docker.am|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|doxygen-dist.am|%},
   {%|
-            'set' 'x' "${prefix}"'cp.am' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'cp.am' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|doxygen.am|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|dslash.texi|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|dvi-dist.am|%},
   {%|
-            'set' 'x' "${prefix}"'cp.am' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'cp.am' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|echo.sh|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|format.ac.vim|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|format.am.vim|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|gatbps.am|%},
   {%|
-            'set' 'x' "${prefix}"'echo.sh' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'GATBPS_V_PAD.am' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'echo.sh' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_V_PAD.am' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|gatbps_fatal.m4|%},
   {%|
-            'set' 'x' "${prefix}"'gatbps_notice.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'gatbps_notice.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|gatbps_notice.m4|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|gequ.texi|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|git.am|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|gzip.am|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|html-dist.am|%},
   {%|
-            'set' 'x' "${prefix}"'cp.am' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'cp.am' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|indent.texi|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|ipez.texi|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|java-dist.am|%},
   {%|
-            'set' 'x' "${prefix}"'cp.am' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'cp.am' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|java.am|%},
   {%|
-            'set' 'x' "${prefix}"'sh-form.sh' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'echo.sh' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'sh-form.sh' "${@}"; 'shift'
+            'set' '' "${prefix}"'echo.sh' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|javadoc-dist.am|%},
   {%|
-            'set' 'x' "${prefix}"'cp.am' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'cp.am' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|javadoc.am|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|lcei.texi|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|lequ.texi|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|lflo.texi|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|m4.am|%},
   {%|
-            'set' 'x' "${prefix}"'echo.sh' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'GATBPS_V_PAD.am' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'GATBPS_RECIPE_MARKER.am' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'GATBPS_PROG_MKDIR_P.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'GATBPS_PROG_M4.m4' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'echo.sh' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_V_PAD.am' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_RECIPE_MARKER.am' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_PROG_MKDIR_P.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_PROG_M4.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|math.texi|%},
   {%|
-            'set' 'x' "${prefix}"'sps.texi' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'sbs.texi' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'rflo.texi' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'rcei.texi' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'rarrow.texi' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'prm.texi' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'nequ.texi' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'msign.texi' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'mdots.texi' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'mdot.texi' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'lflo.texi' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'lequ.texi' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'lcei.texi' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'gequ.texi' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'dslash.texi' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'bdots.texi' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'sps.texi' "${@}"; 'shift'
+            'set' '' "${prefix}"'sbs.texi' "${@}"; 'shift'
+            'set' '' "${prefix}"'rflo.texi' "${@}"; 'shift'
+            'set' '' "${prefix}"'rcei.texi' "${@}"; 'shift'
+            'set' '' "${prefix}"'rarrow.texi' "${@}"; 'shift'
+            'set' '' "${prefix}"'prm.texi' "${@}"; 'shift'
+            'set' '' "${prefix}"'nequ.texi' "${@}"; 'shift'
+            'set' '' "${prefix}"'msign.texi' "${@}"; 'shift'
+            'set' '' "${prefix}"'mdots.texi' "${@}"; 'shift'
+            'set' '' "${prefix}"'mdot.texi' "${@}"; 'shift'
+            'set' '' "${prefix}"'lflo.texi' "${@}"; 'shift'
+            'set' '' "${prefix}"'lequ.texi' "${@}"; 'shift'
+            'set' '' "${prefix}"'lcei.texi' "${@}"; 'shift'
+            'set' '' "${prefix}"'gequ.texi' "${@}"; 'shift'
+            'set' '' "${prefix}"'dslash.texi' "${@}"; 'shift'
+            'set' '' "${prefix}"'bdots.texi' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|mdot.texi|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|mdots.texi|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|msign.texi|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|mtvskipbot.texi|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|mtvskiptop.texi|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|nequ.texi|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|pdf-dist.am|%},
   {%|
-            'set' 'x' "${prefix}"'cp.am' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'cp.am' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|plaintext-dist.am|%},
   {%|
-            'set' 'x' "${prefix}"'cp.am' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'cp.am' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|plaintext.am|%},
   {%|
-            'set' 'x' "${prefix}"'sh-form.sh' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'sh-form.sh' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|prm.texi|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|ps-dist.am|%},
   {%|
-            'set' 'x' "${prefix}"'cp.am' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'cp.am' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|rarrow.texi|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|rcei.texi|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|rflo.texi|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|rules_code.m4|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|sbs.texi|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|sh-form.sh|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|shortcontents.texi|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|sps.texi|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|tar.am|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|texi-form.sh|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|texinfo.css|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|troff-form.sh|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|wget.am|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|xml-dist.am|%},
   {%|
-            'set' 'x' "${prefix}"'cp.am' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'cp.am' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|xml.am|%},
   {%|
-            'set' 'x' "${prefix}"'sh-form.sh' "${@}"; 'shift'
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'sh-form.sh' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
   {%|xz.am|%},
   {%|
-            'set' 'x' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
         esac
