@@ -227,8 +227,8 @@ GATBPS_GIT_CLONE_set_lines(m4_if(,,input_urls))[
     || '\''exit'\'' "$][$][{?}"; \
     '\''exit'\'' '\''0'\''; \
   :;); \
-  x="$][$][{?}"; \
-  case "$][$][{x}" in \
+  exit_status="$][$][{?}"; \
+  case "$][$][{exit_status}" in \
     '\''0'\'') \
     ;; \
     *) \
@@ -240,7 +240,7 @@ GATBPS_GIT_CLONE_set_lines(m4_if(,,input_urls))[
       ; \
     ;; \
   esac; \
-  '\''exit'\'' "$][$][{x}"; \
+  '\''exit'\'' "$][$][{exit_status}"; \
 :;}
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
