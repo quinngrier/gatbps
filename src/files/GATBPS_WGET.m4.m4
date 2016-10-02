@@ -289,6 +289,7 @@ GATBPS_WGET_url_lines(m4_if(,,input_urls))[
       || '\''continue'\''; \]dnl
 GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
       download_succeeded='\''yes'\''; \
+      '\''readonly'\'' '\''download_succeeded'\''; \
       '\''break'\''; \
     done; \
     '\''readonly'\'' '\''download_succeeded'\''; \
