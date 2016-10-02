@@ -305,6 +305,7 @@ GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
     '\''exit'\'' '\''0'\''; \
   :;); \
   exit_status="$][$][{?}"; \
+  '\''readonly'\'' '\''exit_status'\''; \
   case "$][$][{exit_status}" in \
     '\''0'\'') \
     ;; \
