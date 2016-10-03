@@ -68,7 +68,7 @@ on@tie{}@w{@value{PACKAGEDATE}}@.
 * Invoking @w{@t{gatbps}}::
 * Plain Files::
 * Copyright Texts::
-* Mathematical Notation in Texinfo::
+* Writing Mathematical Notation in Texinfo::
 * Timestamp Preservation during Autoconf Instantiation::
 * Using the Autotools to Process M4::
 * Formatting Autoconf Files::
@@ -103,7 +103,7 @@ on@tie{}@w{@value{PACKAGEDATE}}@.
 
 @include Copyright-Texts.texi
 
-@include Mathematical-Notation-in-Texinfo.texi
+@include Writing-Mathematical-Notation-in-Texinfo.texi
 
 @include Timestamp-Preservation-during-Autoconf-Instantiation.texi
 

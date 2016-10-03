@@ -626,7 +626,7 @@ If the program is terminated by a signal during generation, then the
 state of the output file and the temporary files is unspecified.
 .SH "PLAIN FILES"
 .SH "COPYRIGHT TEXTS"
-.SH "MATHEMATICAL NOTATION IN TEXINFO"
+.SH "WRITING MATHEMATICAL NOTATION IN TEXINFO"
 .LP
 GATBPS provides a set of special files to support an alternative
 approach to writing mathematical notation in Texinfo.
@@ -1030,7 +1030,8 @@ $1,\ \eldots,\ n$
 .fi
 .RE
 .IP
-For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
+For more information, see the WRITING MATHEMATICAL NOTATION IN TEXINFO
+section.
 .TP
 .nohy "\fBdslash.texi\fR"
 .IPEZ
@@ -1054,7 +1055,8 @@ $x\ /\ y$
 .fi
 .RE
 .IP
-For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
+For more information, see the WRITING MATHEMATICAL NOTATION IN TEXINFO
+section.
 .TP
 .nohy "\fBgequ.texi\fR"
 .IPEZ
@@ -1078,7 +1080,8 @@ $x\ \ege\ y$
 .fi
 .RE
 .IP
-For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
+For more information, see the WRITING MATHEMATICAL NOTATION IN TEXINFO
+section.
 .TP
 .nohy "\fBlcei.texi\fR"
 .IPEZ
@@ -1102,7 +1105,8 @@ $\elceil\ x\ \erceil$
 .fi
 .RE
 .IP
-For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
+For more information, see the WRITING MATHEMATICAL NOTATION IN TEXINFO
+section.
 .TP
 .nohy "\fBlequ.texi\fR"
 .IPEZ
@@ -1126,7 +1130,8 @@ $x\ \ele\ y$
 .fi
 .RE
 .IP
-For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
+For more information, see the WRITING MATHEMATICAL NOTATION IN TEXINFO
+section.
 .TP
 .nohy "\fBlflo.texi\fR"
 .IPEZ
@@ -1150,7 +1155,8 @@ $\elfloor\ x\ \erfloor$
 .fi
 .RE
 .IP
-For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
+For more information, see the WRITING MATHEMATICAL NOTATION IN TEXINFO
+section.
 .TP
 .nohy "\fBmath.texi\fR"
 .IPEZ
@@ -1162,7 +1168,8 @@ that defines a macro for imitating
 the mathematical notation of TeX in
 the other output formats.
 .IP
-For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
+For more information, see the WRITING MATHEMATICAL NOTATION IN TEXINFO
+section.
 .TP
 .nohy "\fBmdot.texi\fR"
 .IPEZ
@@ -1186,7 +1193,8 @@ $x\ \ecdot\ y$
 .fi
 .RE
 .IP
-For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
+For more information, see the WRITING MATHEMATICAL NOTATION IN TEXINFO
+section.
 .TP
 .nohy "\fBmdots.texi\fR"
 .IPEZ
@@ -1210,7 +1218,8 @@ $1\ +\ \ecdots\ +\ n$
 .fi
 .RE
 .IP
-For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
+For more information, see the WRITING MATHEMATICAL NOTATION IN TEXINFO
+section.
 .TP
 .nohy "\fBmsign.texi\fR"
 .IPEZ
@@ -1234,7 +1243,8 @@ $x\ \-\ y$
 .fi
 .RE
 .IP
-For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
+For more information, see the WRITING MATHEMATICAL NOTATION IN TEXINFO
+section.
 .TP
 .nohy "\fBnequ.texi\fR"
 .IPEZ
@@ -1258,7 +1268,8 @@ $x\ \ene\ y$
 .fi
 .RE
 .IP
-For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
+For more information, see the WRITING MATHEMATICAL NOTATION IN TEXINFO
+section.
 .TP
 .nohy "\fBprm.texi\fR"
 .IPEZ
@@ -1282,7 +1293,8 @@ $x'$
 .fi
 .RE
 .IP
-For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
+For more information, see the WRITING MATHEMATICAL NOTATION IN TEXINFO
+section.
 .TP
 .nohy "\fBrarrow.texi\fR"
 .IPEZ
@@ -1305,7 +1317,8 @@ $P\ \erightarrow\ Q$
 .fi
 .RE
 .IP
-For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
+For more information, see the WRITING MATHEMATICAL NOTATION IN TEXINFO
+section.
 .TP
 .nohy "\fBrcei.texi\fR"
 .IPEZ
@@ -1329,7 +1342,8 @@ $\elceil\ x\ \erceil$
 .fi
 .RE
 .IP
-For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
+For more information, see the WRITING MATHEMATICAL NOTATION IN TEXINFO
+section.
 .TP
 .nohy "\fBrflo.texi\fR"
 .IPEZ
@@ -1353,7 +1367,8 @@ $\elfloor\ x\ \erfloor$
 .fi
 .RE
 .IP
-For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
+For more information, see the WRITING MATHEMATICAL NOTATION IN TEXINFO
+section.
 .TP
 .nohy "\fBsbs.texi\fR"
 .IPEZ
@@ -1385,7 +1400,8 @@ $x_{y\ +\ z_w}$
 .fi
 .RE
 .IP
-For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
+For more information, see the WRITING MATHEMATICAL NOTATION IN TEXINFO
+section.
 .TP
 .nohy "\fBsh\-form.sh\fR"
 .IPEZ
@@ -1429,7 +1445,8 @@ $x^{y\ +\ z^w}$
 .fi
 .RE
 .IP
-For more information, see the MATHEMATICAL NOTATION IN TEXINFO section.
+For more information, see the WRITING MATHEMATICAL NOTATION IN TEXINFO
+section.
 .TP
 .nohy "\fBtexinfo.css\fR"
 .IPEZ

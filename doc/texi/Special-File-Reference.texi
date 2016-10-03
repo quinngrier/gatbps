@@ -162,7 +162,7 @@ $1, \ldots, n$
 @end example
 
 For more information,
-@pxref{Mathematical Notation in Texinfo}@.
+@pxref{Writing Mathematical Notation in Texinfo}@.
 
 @sfindex @w{@t{dslash.@:texi}}
 @tmindex @w{@t{@@dslash}}
@@ -187,7 +187,7 @@ $x / y$
 @end example
 
 For more information,
-@pxref{Mathematical Notation in Texinfo}@.
+@pxref{Writing Mathematical Notation in Texinfo}@.
 
 @sfindex @w{@t{gequ.@:texi}}
 @tmindex @w{@t{@@gequ}}
@@ -212,7 +212,7 @@ $x \ge y$
 @end example
 
 For more information,
-@pxref{Mathematical Notation in Texinfo}@.
+@pxref{Writing Mathematical Notation in Texinfo}@.
 
 @sfindex @w{@t{lcei.@:texi}}
 @tmindex @w{@t{@@lcei}}
@@ -237,7 +237,7 @@ $\lceil x \rceil$
 @end example
 
 For more information,
-@pxref{Mathematical Notation in Texinfo}@.
+@pxref{Writing Mathematical Notation in Texinfo}@.
 
 @sfindex @w{@t{lequ.@:texi}}
 @tmindex @w{@t{@@lequ}}
@@ -262,7 +262,7 @@ $x \le y$
 @end example
 
 For more information,
-@pxref{Mathematical Notation in Texinfo}@.
+@pxref{Writing Mathematical Notation in Texinfo}@.
 
 @sfindex @w{@t{lflo.@:texi}}
 @tmindex @w{@t{@@lflo}}
@@ -287,7 +287,7 @@ $\lfloor x \rfloor$
 @end example
 
 For more information,
-@pxref{Mathematical Notation in Texinfo}@.
+@pxref{Writing Mathematical Notation in Texinfo}@.
 
 @sfindex @w{@t{math.@:texi}}
 @item @w{@t{math.@:texi}}
@@ -301,7 +301,7 @@ the mathematical notation of @TeX{} in
 the other output formats@.
 
 For more information,
-@pxref{Mathematical Notation in Texinfo}@.
+@pxref{Writing Mathematical Notation in Texinfo}@.
 
 @sfindex @w{@t{mdot.@:texi}}
 @tmindex @w{@t{@@mdot}}
@@ -326,7 +326,7 @@ $x \cdot y$
 @end example
 
 For more information,
-@pxref{Mathematical Notation in Texinfo}@.
+@pxref{Writing Mathematical Notation in Texinfo}@.
 
 @sfindex @w{@t{mdots.@:texi}}
 @tmindex @w{@t{@@mdots}}
@@ -351,7 +351,7 @@ $1 + \cdots + n$
 @end example
 
 For more information,
-@pxref{Mathematical Notation in Texinfo}@.
+@pxref{Writing Mathematical Notation in Texinfo}@.
 
 @sfindex @w{@t{msign.@:texi}}
 @tmindex @w{@t{@@msign}}
@@ -376,7 +376,7 @@ $x - y$
 @end example
 
 For more information,
-@pxref{Mathematical Notation in Texinfo}@.
+@pxref{Writing Mathematical Notation in Texinfo}@.
 
 @sfindex @w{@t{nequ.@:texi}}
 @tmindex @w{@t{@@nequ}}
@@ -401,7 +401,7 @@ $x \ne y$
 @end example
 
 For more information,
-@pxref{Mathematical Notation in Texinfo}@.
+@pxref{Writing Mathematical Notation in Texinfo}@.
 
 @sfindex @w{@t{prm.@:texi}}
 @tmindex @w{@t{@@prm}}
@@ -426,7 +426,7 @@ $x'$
 @end example
 
 For more information,
-@pxref{Mathematical Notation in Texinfo}@.
+@pxref{Writing Mathematical Notation in Texinfo}@.
 
 @sfindex @w{@t{rarrow.@:texi}}
 @tmindex @w{@t{@@rarrow}}
@@ -451,7 +451,7 @@ $P \rightarrow Q$
 @end example
 
 For more information,
-@pxref{Mathematical Notation in Texinfo}@.
+@pxref{Writing Mathematical Notation in Texinfo}@.
 
 @sfindex @w{@t{rcei.@:texi}}
 @tmindex @w{@t{@@rcei}}
@@ -476,7 +476,7 @@ $\lceil x \rceil$
 @end example
 
 For more information,
-@pxref{Mathematical Notation in Texinfo}@.
+@pxref{Writing Mathematical Notation in Texinfo}@.
 
 @sfindex @w{@t{rflo.@:texi}}
 @tmindex @w{@t{@@rflo}}
@@ -501,7 +501,7 @@ $\lfloor x \rfloor$
 @end example
 
 For more information,
-@pxref{Mathematical Notation in Texinfo}@.
+@pxref{Writing Mathematical Notation in Texinfo}@.
 
 @sfindex @w{@t{sbs.@:texi}}
 @tmindex @w{@t{@@sbs}}
@@ -534,7 +534,7 @@ $x_@{y + z_w@}$
 @end example
 
 For more information,
-@pxref{Mathematical Notation in Texinfo}@.
+@pxref{Writing Mathematical Notation in Texinfo}@.
 
 @sfindex @w{@t{sh-form.@:sh}}
 @item @w{@t{sh-form.@:sh}}
@@ -578,7 +578,7 @@ $x^@{y + z^w@}$
 @end example
 
 For more information,
-@pxref{Mathematical Notation in Texinfo}@.
+@pxref{Writing Mathematical Notation in Texinfo}@.
 
 @sfindex @w{@t{texinfo.@:css}}
 @item @w{@t{texinfo.@:css}}

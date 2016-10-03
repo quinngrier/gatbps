@@ -1,5 +1,5 @@
-@node Mathematical Notation in Texinfo
-@chapter Mathematical Notation in Texinfo
+@node Writing Mathematical Notation in Texinfo
+@chapter Writing Mathematical Notation in Texinfo
 
 @noindent
 GATBPS provides a set of special files to support an alternative
