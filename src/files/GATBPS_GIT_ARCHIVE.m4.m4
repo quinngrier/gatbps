@@ -104,6 +104,13 @@ m4_pushdef(
   [prefix_sh],
   m4_bpatsubst([[[$4]]], ['], ['\\'']))[]dnl
 m4_pushdef(
+  [clean_target],
+  m4_if(
+    [$5],
+    [],
+    [[[clean]]],
+    [[[$5]]]))[]dnl
+m4_pushdef(
   [leaf_prerequisites],
   m4_bpatsubst([[[$6]]], ['], ['\\'']))[]dnl
 [
@@ -211,11 +218,12 @@ clean-]output_file[:
   '\''./'\'']output_file[ \
 ;
 
-]m4_if([$5], [], [[clean]], [[$5]])[-local: clean-]output_file[
+]clean_target[-local: clean-]output_file[
 
 '
 ]dnl
 m4_popdef([leaf_prerequisites])[]dnl
+m4_popdef([clean_target])[]dnl
 m4_popdef([prefix_sh])[]dnl
 m4_popdef([tree_sh])[]dnl
 m4_popdef([source_sh])[]dnl
