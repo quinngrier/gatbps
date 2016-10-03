@@ -1,5 +1,5 @@
-@node Using the Autotools to Clone Git Repositories
-@chapter Using the Autotools to Clone Git Repositories
+@node Cloning Git Repositories with the Autotools
+@chapter Cloning Git Repositories with the Autotools
 
 @ifxml
 @ifnotxml
