@@ -84,7 +84,7 @@ m4_pushdef(
   [output_file],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
 m4_pushdef(
-  [source_sh],
+  [input_directory],
   m4_bpatsubst([[[$2]]], ['], ['\\'']))[]dnl
 m4_pushdef(
   [tree_sh],
@@ -103,7 +103,7 @@ m4_pushdef(
 
 GATBPS_GIT_ARCHIVE_RULES="$][{GATBPS_GIT_ARCHIVE_RULES}"'
 
-]output_file[: ]source_sh[
+]output_file[: ]input_directory[
 	$][(AM@&t@_V_at)|%}contains_at_least_one_word_sh(
   {%|MKDIR_P|%}){%||%}dnl
 {%|
@@ -118,7 +118,7 @@ GATBPS_GIT_ARCHIVE_RULES="$][{GATBPS_GIT_ARCHIVE_RULES}"'
   '\''./'\'']output_file['\''.tmp'\'' \
 ;
 	$][(AM@&t@_V_at){ \
-  x=]source_sh[; \
+  x=]input_directory[; \
   if '\''test'\'' '\''-d'\'' "$][$][{x}"; then \
     d='\''.'\''; \
   else \
@@ -206,7 +206,7 @@ clean-]output_file[:
 m4_popdef([clean_target])[]dnl
 m4_popdef([prefix_sh])[]dnl
 m4_popdef([tree_sh])[]dnl
-m4_popdef([source_sh])[]dnl
+m4_popdef([input_directory])[]dnl
 m4_popdef([output_file])[]dnl
 [
 :;}]])[]dnl
