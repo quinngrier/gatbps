@@ -67,19 +67,19 @@ m4_if(
     GATBPS_GIT_ARCHIVE requires its fourth argument to contain at least
     one character that is not a space, tab, or newline character
   ])])[]dnl
-m4_if(
-  m4_eval([$# >= 5]),
-  [1],
-  [m4_case(
-    [$5],
-    [clean], [],
-    [distclean], [],
-    [maintainer-clean], [],
-    [mostlyclean], [],
-    [gatbps_fatal([
-      GATBPS_GIT_ARCHIVE requires its fourth argument to be either
-      "clean", "distclean", "maintainer-clean", or "mostlyclean"
-    ])])])[]dnl
+m4_case(
+  [$5],
+  [], [],
+  [clean], [],
+  [distclean], [],
+  [maintainer-clean], [],
+  [mostlyclean], [],
+  [gatbps_fatal([
+    invalid fifth argument to GATBPS_GIT_ARCHIVE:
+  [--VERBATIM--] "$5"], [
+    the fifth argument must be either empty, "clean", "distclean",
+    "maintainer-clean", or "mostlyclean"
+  ])])[]dnl
 m4_if(
   m4_eval([$# >= 6]),
   [1],
