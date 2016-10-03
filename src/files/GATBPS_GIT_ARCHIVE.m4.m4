@@ -33,10 +33,10 @@ AC_DEFUN([GATBPS_GIT_ARCHIVE], [[{
   [72])[
 #]dnl
 m4_if(
-  m4_eval([$# < 4 || $# > 6]),
+  m4_eval([$# < 4 || $# > 5]),
   [1],
   [gatbps_fatal([
-    GATBPS_GIT_ARCHIVE requires 4 to 6 arguments
+    GATBPS_GIT_ARCHIVE requires 4 to 5 arguments
     ($# ]m4_if([$#], [1], [[was]], [[were]])[ given)
   ])])[]dnl
 m4_if(
@@ -80,17 +80,6 @@ m4_case(
     the fifth argument must be either empty, "clean", "distclean",
     "maintainer-clean", or "mostlyclean"
   ])])[]dnl
-m4_if(
-  m4_eval([$# >= 6]),
-  [1],
-  [m4_if(
-    m4_bregexp([$6], [[^
-	 ]]),
-    [-1],
-    [gatbps_fatal([
-      GATBPS_GIT_ARCHIVE requires its fifth argument to contain at least
-      one character that is not a space, tab, or newline character
-    ])])])[]dnl
 m4_pushdef(
   [output_file],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
@@ -110,23 +99,15 @@ m4_pushdef(
     [],
     [[[clean]]],
     [[[$5]]]))[]dnl
-m4_pushdef(
-  [leaf_prerequisites],
-  m4_bpatsubst([[[$6]]], ['], ['\\'']))[]dnl
 [
 
 GATBPS_GIT_ARCHIVE_RULES="$][{GATBPS_GIT_ARCHIVE_RULES}"'
 
-]output_file[: ]m4_if([$6], [], [source_sh], [leaf_prerequisites])[
+]output_file[: ]source_sh[
 	$][(AM@&t@_V_at)|%}contains_at_least_one_word_sh(
   {%|MKDIR_P|%}){%||%}dnl
 {%|
-	$][(GATBPS_V_GIT_ARCHIVE)$][(GATBPS_RECIPE_MARKER_TOP)]dnl
-m4_if([$6], [], [], [[
-	$][(AM@&t@_V_at)$][(MAKE) \
-  $][(AM@&t@_MAKEFLAGS) \
-  ]source_sh[ \
-;]])[
+	$][(GATBPS_V_GIT_ARCHIVE)$][(GATBPS_RECIPE_MARKER_TOP)
 	$][(AM@&t@_V_at)$][(MKDIR_P) \
   '\''./'\''$][(@D) \
 ;
@@ -222,7 +203,6 @@ clean-]output_file[:
 
 '
 ]dnl
-m4_popdef([leaf_prerequisites])[]dnl
 m4_popdef([clean_target])[]dnl
 m4_popdef([prefix_sh])[]dnl
 m4_popdef([tree_sh])[]dnl
