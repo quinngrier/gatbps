@@ -1,6 +1,16 @@
 @node Cloning Git Repositories with the Autotools
 @chapter Cloning Git Repositories with the Autotools
 
+@example
+GATBPS_GIT_CLONE(
+  [gatbps.git],
+  [
+    [git://git.code.sf.net/p/quinngrier/gatbps],
+    [https://bitbucket.org/quinngrier/gatbps.git],
+    [https://github.com/quinngrier/gatbps.git],
+    [https://gitlab.com/quinngrier/gatbps.git],
+  ])
+@end example
 @ifxml
 @ifnotxml
 @c
