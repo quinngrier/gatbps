@@ -180,6 +180,7 @@ GATBPS_GIT_CLONE_url_lines(m4_if(,,input_urls))[
       || '\''exit'\'' "$][$][{?}"; \
       $][(GIT) \
         '\''clone'\'' \
+        '\''--bare'\'' \
         '\''--'\'' \
         "$][$][{url}" \
         '\''./'\'']output_directory['\''.tmp'\'' \
@@ -197,11 +198,6 @@ GATBPS_GIT_CLONE_url_lines(m4_if(,,input_urls))[
     ( \
       '\''cd'\'' \
         '\''./'\'']output_directory['\''.tmp'\'' \
-      || '\''exit'\'' "$][$][{?}"; \
-      $][(GIT) \
-        '\''remote'\'' \
-        '\''remove'\'' \
-        '\''origin'\'' \
       || '\''exit'\'' "$][$][{?}"; \
       '\''set'\'' '\'''\'' \]dnl
 GATBPS_GIT_CLONE_set_lines(m4_if(,,input_urls))[
