@@ -54,7 +54,7 @@ m4_if(
 	 ]]),
   [-1],
   [gatbps_fatal([
-    invalid second argument to GATBPS_CP:
+    invalid second argument to GATBPS_GIT_ARCHIVE:
   [--VERBATIM--] "$2"], [
     the second argument must contain at least one character that is not
     a space, tab, or newline character
