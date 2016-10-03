@@ -90,7 +90,7 @@ m4_pushdef(
   [tree_sh],
   m4_bpatsubst([[[$3]]], ['], ['\\'']))[]dnl
 m4_pushdef(
-  [prefix_sh],
+  [archive_prefix],
   m4_bpatsubst([[[$4]]], ['], ['\\'']))[]dnl
 m4_pushdef(
   [clean_target],
@@ -161,7 +161,7 @@ GATBPS_GIT_ARCHIVE_RULES="$][{GATBPS_GIT_ARCHIVE_RULES}"'
       $][(GIT) \
         '\''archive'\'' \
         '\''--format=tar'\'' \
-        '\''--prefix='\'']prefix_sh['\''/'\'' \
+        '\''--prefix='\'']archive_prefix['\''/'\'' \
         ]tree_sh['\''^{tree}'\'' \
       || '\''exit'\'' "$][$][{?}"; \
       '\''exit'\'' '\''0'\''; \
@@ -204,7 +204,7 @@ clean-]output_file[:
 '
 ]dnl
 m4_popdef([clean_target])[]dnl
-m4_popdef([prefix_sh])[]dnl
+m4_popdef([archive_prefix])[]dnl
 m4_popdef([tree_sh])[]dnl
 m4_popdef([input_directory])[]dnl
 m4_popdef([output_file])[]dnl
