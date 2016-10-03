@@ -220,6 +220,10 @@ GATBPS_GIT_CLONE_set_lines(m4_if(,,input_urls))[
           "$][$][{1}" \
         || '\''exit'\'' "$][$][{?}"; \
       done; \
+      $][(GIT) \
+        '\''remote'\'' \
+        '\''update'\'' \
+      ; \
       '\''exit'\'' '\''0'\''; \
     :;) || '\''exit'\'' "$${?}"; \
     '\''mv'\'' \
