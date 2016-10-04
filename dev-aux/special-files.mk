@@ -55,6 +55,7 @@ all:
 	$(GENERATE) 'doc/texi/gequ.texi'
 	$(GENERATE) 'doc/texi/indent.texi'
 	$(GENERATE) 'doc/texi/ipez.texi'
+	$(GENERATE) 'doc/texi/larrow.texi'
 	$(GENERATE) 'doc/texi/lcei.texi'
 	$(GENERATE) 'doc/texi/lequ.texi'
 	$(GENERATE) 'doc/texi/lflo.texi'
