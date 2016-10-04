@@ -540,6 +540,7 @@ EOF1
           'set' "${prefix}"'gatbps_notice.m4' "${@}"
           'set' "${prefix}"'gatbps_fatal.m4' "${@}"
           'set' "${prefix}"'gatbps.am' "${@}"
+          'set' "${prefix}"'format.java.vim' "${@}"
           'set' "${prefix}"'format.c.vim' "${@}"
           'set' "${prefix}"'format.am.vim' "${@}"
           'set' "${prefix}"'format.ac.vim' "${@}"
@@ -1270,6 +1271,8 @@ EOF1
 |%}help_code({%|format.am.vim|%}){%|
 
 |%}help_code({%|format.c.vim|%}){%|
+
+|%}help_code({%|format.java.vim|%}){%|
 
 |%}help_code({%|gatbps.am|%}){%|
 
@@ -2937,6 +2940,8 @@ EOF1
 
 |%}generation_code({%|format.c.vim|%}){%|
 
+|%}generation_code({%|format.java.vim|%}){%|
+
 |%}generation_code({%|gatbps.am|%}){%|
 
 |%}generation_code({%|gatbps_fatal.m4|%}){%|
@@ -4235,6 +4240,12 @@ EOF1
 
 |%}recursion_code(
   {%|format.c.vim|%},
+  {%|
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|format.java.vim|%},
   {%|
             'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
