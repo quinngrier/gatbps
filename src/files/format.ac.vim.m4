@@ -44,9 +44,9 @@ function s:FormatAutoconfFile()
       let n2 = search(s2, 'W')
       exec n1 . '+2,' . n2 . '-1s/\m\]/\b]/eg'
       exec n1 . '+2,' . n2 . '-1sort u'
-      exec n1 . '+2,' . n2 . '-1s/\m\b\]/]/eg'
       call cursor(n1, 1)
       let n2 = search(s2, 'W')
+      exec n1 . '+2,' . n2 . '-1s/\m\b\]/]/eg'
       exec n2 . 's/\m^/\r/'
       let affected_search_history = 1
     endif
@@ -72,9 +72,9 @@ function s:FormatAutoconfFile()
       let n2 = search(s2, 'W')
       exec n1 . '+2,' . n2 . '-1s/\m\]/\b]/eg'
       exec n1 . '+2,' . n2 . '-1sort u'
-      exec n1 . '+2,' . n2 . '-1s/\m\b\]/]/eg'
       call cursor(n1, 1)
       let n2 = search(s2, 'W')
+      exec n1 . '+2,' . n2 . '-1s/\m\b\]/]/eg'
       exec n2 . 's/\m^/\r/'
       let affected_search_history = 1
     endif
@@ -113,9 +113,9 @@ function s:FormatAutoconfFile()
         let n2 = search(s2, 'W')
         exec n1 . '+2,' . n2 . '-1s/\m\]/\b]/eg'
         exec n1 . '+2,' . n2 . '-1sort u'
-        exec n1 . '+2,' . n2 . '-1s/\m\b\]/]/eg'
         call cursor(n1, 1)
         let n2 = search(s2, 'W')
+        exec n1 . '+2,' . n2 . '-1s/\m\b\]/]/eg'
         exec n1 . '+2,' . n2 . '-1s/\m\b/\r/eg'
         let affected_search_history = 1
       endif
