@@ -827,6 +827,10 @@ AC_SUBST([TEXI2DVIFLAGS])
   [mostlyclean])[
 
 ]GATBPS_M4(
+  [src/files/format.c.vim],
+  [mostlyclean])[
+
+]GATBPS_M4(
   [src/files/gatbps.am],
   [mostlyclean])[
 
