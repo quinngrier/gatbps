@@ -60,6 +60,10 @@ span.indent-immediately-following-paragraph + p {
   text-indent: 1.50em;
 }
 
+tt {
+  white-space: pre-wrap;
+}
+
 /*
  * If you are reading this comment in an HTML file, then the CSS file
  * that originally held this comment has been copied into this HTML file
