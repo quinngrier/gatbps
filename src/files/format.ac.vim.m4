@@ -42,11 +42,11 @@ function s:FormatAutoconfFile()
       exec n1 . '+1s/\m$/\r/'
       call cursor(n1, 1)
       let n2 = search(s2, 'W')
-      exec n1 . '+2,' . n2 . '-1s/\m\]/\b]/eg'
+      exec n1 . '+2,' . n2 . '-1s/\m\]/ ]/eg'
       exec n1 . '+2,' . n2 . '-1sort u'
       call cursor(n1, 1)
       let n2 = search(s2, 'W')
-      exec n1 . '+2,' . n2 . '-1s/\m\b\]/]/eg'
+      exec n1 . '+2,' . n2 . '-1s/\m \]/]/eg'
       exec n2 . 's/\m^/\r/'
       let affected_search_history = 1
     endif
@@ -70,11 +70,11 @@ function s:FormatAutoconfFile()
       exec n1 . '+1s/\m$/\r/'
       call cursor(n1, 1)
       let n2 = search(s2, 'W')
-      exec n1 . '+2,' . n2 . '-1s/\m\]/\b]/eg'
+      exec n1 . '+2,' . n2 . '-1s/\m\]/ ]/eg'
       exec n1 . '+2,' . n2 . '-1sort u'
       call cursor(n1, 1)
       let n2 = search(s2, 'W')
-      exec n1 . '+2,' . n2 . '-1s/\m\b\]/]/eg'
+      exec n1 . '+2,' . n2 . '-1s/\m \]/]/eg'
       exec n2 . 's/\m^/\r/'
       let affected_search_history = 1
     endif
