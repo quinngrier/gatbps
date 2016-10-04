@@ -89,7 +89,7 @@ shows the symbol of each macro@.
 $'$
 @end tex
 @ifnottex
-@prm{}
+@w{@prm{}}
 @end ifnottex
 @item @t{-} @tab @t{@@msign@{@}} @tab U+2212 @tab @t{-}
 @sfindex @w{@t{msign.@:texi}}
@@ -99,7 +99,7 @@ $'$
 $-$
 @end tex
 @ifnottex
-@msign{}
+@w{@msign{}}
 @end ifnottex
 @item @t{/} @tab @t{@@dslash@{@}} @tab U+2215 @tab @t{/}
 @sfindex @w{@t{dslash.@:texi}}
@@ -109,7 +109,7 @@ $-$
 $/$
 @end tex
 @ifnottex
-@dslash{}
+@w{@dslash{}}
 @end ifnottex
 @item @t{\cdot} @tab @t{@@mdot@{@}} @tab U+22C5 @tab @t{*}
 @sfindex @w{@t{mdot.@:texi}}
@@ -119,7 +119,7 @@ $/$
 $\cdot$
 @end tex
 @ifnottex
-@mdot{}
+@w{@mdot{}}
 @end ifnottex
 @item @t{\cdots} @tab @t{@@mdots@{@}} @tab U+22EF @tab @t{.@:.@:.@:}
 @sfindex @w{@t{mdots.@:texi}}
@@ -129,7 +129,7 @@ $\cdot$
 $\cdots$
 @end tex
 @ifnottex
-@mdots{}
+@w{@mdots{}}
 @end ifnottex
 @item @t{\ge} @tab @t{@@gequ@{@}} @tab U+2265 @tab @t{>=}
 @sfindex @w{@t{gequ.@:texi}}
@@ -139,7 +139,7 @@ $\cdots$
 $\ge$
 @end tex
 @ifnottex
-@gequ{}
+@w{@gequ{}}
 @end ifnottex
 @item @t{\leftarrow} @tab @t{@@larrow@{@}} @tab U+2190 @tab @t{<-}
 @sfindex @w{@t{larrow.@:texi}}
@@ -149,7 +149,7 @@ $\ge$
 $\leftarrow$
 @end tex
 @ifnottex
-@larrow{}
+@w{@larrow{}}
 @end ifnottex
 @item @t{\lceil} @tab @t{@@lcei@{@}} @tab U+2308 @tab @t{ceil(}
 @sfindex @w{@t{lcei.@:texi}}
@@ -159,7 +159,7 @@ $\leftarrow$
 $\lceil$
 @end tex
 @ifnottex
-@lcei{}
+@w{@lcei{}}
 @end ifnottex
 @item @t{\ldots} @tab @t{@@bdots@{@}} @tab U+2026 @tab @t{.@:.@:.@:}
 @sfindex @w{@t{bdots.@:texi}}
@@ -169,7 +169,7 @@ $\lceil$
 $\ldots$
 @end tex
 @ifnottex
-@bdots{}
+@w{@bdots{}}
 @end ifnottex
 @item @t{\le} @tab @t{@@lequ@{@}} @tab U+2264 @tab @t{<=}
 @sfindex @w{@t{lequ.@:texi}}
@@ -179,7 +179,7 @@ $\ldots$
 $\le$
 @end tex
 @ifnottex
-@lequ{}
+@w{@lequ{}}
 @end ifnottex
 @item @t{\lfloor} @tab @t{@@lflo@{@}} @tab U+230A @tab @t{floor(}
 @sfindex @w{@t{lflo.@:texi}}
@@ -189,7 +189,7 @@ $\le$
 $\lfloor$
 @end tex
 @ifnottex
-@lflo{}
+@w{@lflo{}}
 @end ifnottex
 @item @t{\ne} @tab @t{@@nequ@{@}} @tab U+2260 @tab @t{!=}
 @sfindex @w{@t{nequ.@:texi}}
@@ -199,7 +199,7 @@ $\lfloor$
 $\ne$
 @end tex
 @ifnottex
-@nequ{}
+@w{@nequ{}}
 @end ifnottex
 @item @t{\rceil} @tab @t{@@rcei@{@}} @tab U+2309 @tab @t{)}
 @sfindex @w{@t{rcei.@:texi}}
@@ -209,7 +209,7 @@ $\ne$
 $\rceil$
 @end tex
 @ifnottex
-@rcei{}
+@w{@rcei{}}
 @end ifnottex
 @item @t{\rfloor} @tab @t{@@rflo@{@}} @tab U+230B @tab @t{)}
 @sfindex @w{@t{rflo.@:texi}}
@@ -219,7 +219,7 @@ $\rceil$
 $\rfloor$
 @end tex
 @ifnottex
-@rflo{}
+@w{@rflo{}}
 @end ifnottex
 @item @t{\rightarrow} @tab @t{@@rarrow@{@}} @tab U+2192 @tab @t{->}
 @sfindex @w{@t{rarrow.@:texi}}
@@ -229,7 +229,7 @@ $\rfloor$
 $\rightarrow$
 @end tex
 @ifnottex
-@rarrow{}
+@w{@rarrow{}}
 @end ifnottex
 @end multitable
 @include mtvskipbot.texi
