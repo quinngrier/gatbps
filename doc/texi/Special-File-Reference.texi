@@ -214,6 +214,31 @@ $x \ge y$
 For more information,
 @pxref{Writing Mathematical Notation in Texinfo}@.
 
+@sfindex @w{@t{larrow.@:texi}}
+@tmindex @w{@t{@@larrow}}
+@item @w{@t{larrow.@:texi}}
+@include ipez.texi
+The
+@w{@t{larrow.@:texi}}
+special file defines the
+@w{@t{@@larrow@{@}}}
+Texinfo macro, which can be used to imitate the mathematical notation of
+@TeX{}
+in the other output formats@.
+For example:
+
+@example
+@@tex
+$P \leftarrow Q$
+@@end tex
+@@ifnottex
+@@w@{@@i@{P@} @@larrow@{@} @@i@{Q@}@}
+@@end ifnottex
+@end example
+
+For more information,
+@pxref{Writing Mathematical Notation in Texinfo}@.
+
 @sfindex @w{@t{lcei.@:texi}}
 @tmindex @w{@t{@@lcei}}
 @item @w{@t{lcei.@:texi}}

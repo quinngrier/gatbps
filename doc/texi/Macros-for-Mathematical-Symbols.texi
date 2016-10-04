@@ -47,6 +47,9 @@ shows the symbol of each macro@.
 @item @t{\ge} @tab @t{@@gequ@{@}} @tab U+2265 @tab @t{>=}
 @sfindex @w{@t{gequ.@:texi}}
 @tmindex @w{@t{@@gequ}}
+@item @t{\leftarrow} @tab @t{@@larrow@{@}} @tab U+2190 @tab @t{<-}
+@sfindex @w{@t{larrow.@:texi}}
+@tmindex @w{@t{@@larrow}}
 @item @t{\lceil} @tab @t{@@lcei@{@}} @tab U+2308 @tab @t{ceil(}
 @sfindex @w{@t{lcei.@:texi}}
 @tmindex @w{@t{@@lcei}}
@@ -137,6 +140,16 @@ $\ge$
 @end tex
 @ifnottex
 @gequ{}
+@end ifnottex
+@item @t{\leftarrow} @tab @t{@@larrow@{@}} @tab U+2190 @tab @t{<-}
+@sfindex @w{@t{larrow.@:texi}}
+@tmindex @w{@t{@@larrow}}
+@tab
+@tex
+$\leftarrow$
+@end tex
+@ifnottex
+@larrow{}
 @end ifnottex
 @item @t{\lceil} @tab @t{@@lcei@{@}} @tab U+2308 @tab @t{ceil(}
 @sfindex @w{@t{lcei.@:texi}}
