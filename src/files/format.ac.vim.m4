@@ -102,7 +102,7 @@ function s:FormatAutoconfFile()
         call cursor(n1, 1)
         let n2 = search(s2, 'W')
         exec n1 . '+2,' . n2 . '-1g/\m./s/\m$/\b/'
-        exec n1 . '+2,' . n2 . '-2g/\m^\n./.+1,/\m^$/-1j!'
+        exec n1 . '+2,' . n2 . '-2g/\m^\n./.+1;/\m^$/-1j!'
         call cursor(n1, 1)
         let n2 = search(s2, 'W')
         exec n1 . '+2,' . n2 . '-1g/\m^$/d'

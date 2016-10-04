@@ -72,14 +72,14 @@ function s:FormatAutomakeFile()
         call cursor(n1, 1)
         let n2 = search(s2, 'W')
         exec n1 . '+1,' . n2 . '-1g/\m\\$/s/\m$/\b/'
-        exec n1 . '+1,' . n2 . '-1g/\m\\\b$/.,/\m\%(\\\b\)\@<!$/j!'
+        exec n1 . '+1,' . n2 . '-1g/\m\\\b$/.;/\m\%(\\\b\)\@<!$/j!'
         call cursor(n1, 1)
         let n2 = search(s2, 'W')
-        exec n1 . '+1,' . n2 . '-1g/\m\%(^[^\t][^\b#]*:.*\)\@<!\n[^\t][^\b#]*:/.+1,/\m\%(^[^\t][^\b#]*:.*\)\@<!$/-1sort u'
+        exec n1 . '+1,' . n2 . '-1g/\m\%(^[^\t][^\b#]*:.*\)\@<!\n[^\t][^\b#]*:/.+1;/\m\%(^[^\t][^\b#]*:.*\)\@<!$/-1sort u'
         call cursor(n1, 1)
         let n2 = search(s2, 'W')
         exec n1 . '+1,' . n2 . '-1g/\m./s/\m$/\b/'
-        exec n1 . '+1,' . n2 . '-2g/\m^\n./.+1,/\m^$/-1j!'
+        exec n1 . '+1,' . n2 . '-2g/\m^\n./.+1;/\m^$/-1j!'
         call cursor(n1, 1)
         let n2 = search(s2, 'W')
         exec n1 . '+1,' . n2 . '-1g/\m^$/d'
@@ -121,14 +121,14 @@ function s:FormatAutomakeFile()
         call cursor(n1, 1)
         let n2 = search(s2, 'W')
         exec n1 . '+1,' . n2 . '-1g/\m\\$/s/\m$/\b/'
-        exec n1 . '+1,' . n2 . '-1g/\m\\\b$/.,/\m\%(\\\b\)\@<!$/j!'
+        exec n1 . '+1,' . n2 . '-1g/\m\\\b$/.;/\m\%(\\\b\)\@<!$/j!'
         call cursor(n1, 1)
         let n2 = search(s2, 'W')
-        exec n1 . '+1,' . n2 . '-1g/\m\%(^[^\b#=]*+=.*\)\@<!\n[^\b#=]*+=/.+1,/\m\%(^[^\b#=]*+=.*\)\@<!$/-1sort u'
+        exec n1 . '+1,' . n2 . '-1g/\m\%(^[^\b#=]*+=.*\)\@<!\n[^\b#=]*+=/.+1;/\m\%(^[^\b#=]*+=.*\)\@<!$/-1sort u'
         call cursor(n1, 1)
         let n2 = search(s2, 'W')
         exec n1 . '+1,' . n2 . '-1g/\m./s/\m$/\b/'
-        exec n1 . '+1,' . n2 . '-2g/\m^\n./.+1,/\m^$/-1j!'
+        exec n1 . '+1,' . n2 . '-2g/\m^\n./.+1;/\m^$/-1j!'
         call cursor(n1, 1)
         let n2 = search(s2, 'W')
         exec n1 . '+1,' . n2 . '-1g/\m^$/d'
