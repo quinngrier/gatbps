@@ -40,9 +40,23 @@ m4_if(
   ])])[]dnl
 [
 
+case "$][{AT+x}" in
+  ?*)
+    ]GATBPS_MSG_ERROR([
+      \$][{AT} is already set
+    ])[
+  ;;
+esac
 AT='@'
 'readonly' 'AT'
 
+case "$][{AT_LATER+x}" in
+  ?*)
+    ]GATBPS_MSG_ERROR([
+      \$][{AT_LATER} is already set
+    ])[
+  ;;
+esac
 AT_LATER='@AT@'
 'readonly' 'AT_LATER'
 
