@@ -47,9 +47,6 @@ shows the symbol of each macro@.
 @item @t{\ge} @tab @t{@@gequ@{@}} @tab U+2265 @tab @t{>=}
 @sfindex @w{@t{gequ.@:texi}}
 @tmindex @w{@t{@@gequ}}
-@item @t{\leftarrow} @tab @t{@@larrow@{@}} @tab U+2190 @tab @t{<-}
-@sfindex @w{@t{larrow.@:texi}}
-@tmindex @w{@t{@@larrow}}
 @item @t{\lceil} @tab @t{@@lcei@{@}} @tab U+2308 @tab @t{ceil(}
 @sfindex @w{@t{lcei.@:texi}}
 @tmindex @w{@t{@@lcei}}
@@ -59,6 +56,9 @@ shows the symbol of each macro@.
 @item @t{\le} @tab @t{@@lequ@{@}} @tab U+2264 @tab @t{<=}
 @sfindex @w{@t{lequ.@:texi}}
 @tmindex @w{@t{@@lequ}}
+@item @t{\leftarrow} @tab @t{@@larrow@{@}} @tab U+2190 @tab @t{<-}
+@sfindex @w{@t{larrow.@:texi}}
+@tmindex @w{@t{@@larrow}}
 @item @t{\lfloor} @tab @t{@@lflo@{@}} @tab U+230A @tab @t{floor(}
 @sfindex @w{@t{lflo.@:texi}}
 @tmindex @w{@t{@@lflo}}
@@ -141,16 +141,6 @@ $\ge$
 @ifnottex
 @w{@gequ{}}
 @end ifnottex
-@item @t{\leftarrow} @tab @t{@@larrow@{@}} @tab U+2190 @tab @t{<-}
-@sfindex @w{@t{larrow.@:texi}}
-@tmindex @w{@t{@@larrow}}
-@tab
-@tex
-$\leftarrow$
-@end tex
-@ifnottex
-@w{@larrow{}}
-@end ifnottex
 @item @t{\lceil} @tab @t{@@lcei@{@}} @tab U+2308 @tab @t{ceil(}
 @sfindex @w{@t{lcei.@:texi}}
 @tmindex @w{@t{@@lcei}}
@@ -180,6 +170,16 @@ $\le$
 @end tex
 @ifnottex
 @w{@lequ{}}
+@end ifnottex
+@item @t{\leftarrow} @tab @t{@@larrow@{@}} @tab U+2190 @tab @t{<-}
+@sfindex @w{@t{larrow.@:texi}}
+@tmindex @w{@t{@@larrow}}
+@tab
+@tex
+$\leftarrow$
+@end tex
+@ifnottex
+@w{@larrow{}}
 @end ifnottex
 @item @t{\lfloor} @tab @t{@@lflo@{@}} @tab U+230A @tab @t{floor(}
 @sfindex @w{@t{lflo.@:texi}}
