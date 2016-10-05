@@ -56,7 +56,7 @@ m4_if(
 case "$][{CLASSPATH_SEPARATOR+x}" in
   ?*)
     ]GATBPS_MSG_ERROR([
-      \${CLASSPATH_SEPARATOR} is already set
+      \$][{CLASSPATH_SEPARATOR} is already set
     ])[
   ;;
 esac
