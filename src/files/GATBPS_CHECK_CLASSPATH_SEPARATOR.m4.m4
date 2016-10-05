@@ -63,7 +63,19 @@ esac
 CLASSPATH_SEPARATOR="$][{gatbps_cv_CLASSPATH_SEPARATOR}"
 'readonly' 'CLASSPATH_SEPARATOR'
 
+case "$][{CLASSPATH_SEPARATOR_LATER+x}" in
+  ?*)
+    ]GATBPS_MSG_ERROR([
+      \$][{CLASSPATH_SEPARATOR_LATER} is already set
+    ])[
+  ;;
+esac
+CLASSPATH_SEPARATOR_LATER="$][{CLASSPATH_SEPARATOR}"
+'readonly' 'CLASSPATH_SEPARATOR_LATER'
+
 ]AC_SUBST([CLASSPATH_SEPARATOR])[
+
+]AC_SUBST([CLASSPATH_SEPARATOR_LATER])[
 
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
