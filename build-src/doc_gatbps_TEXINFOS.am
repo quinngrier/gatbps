@@ -1,6 +1,5 @@
 ## begin_variables
 
-doc_gatbps_TEXINFOS += build-aux/texinfo.css
 doc_gatbps_TEXINFOS += doc/texi/AWKDEFAULTTEXI.texi
 doc_gatbps_TEXINFOS += doc/texi/Automatic-Dependency-Tracking-for-M4-Code.texi
 doc_gatbps_TEXINFOS += doc/texi/Build-System-Initialization.texi
@@ -79,6 +78,7 @@ doc_gatbps_TEXINFOS += doc/texi/rcei.texi
 doc_gatbps_TEXINFOS += doc/texi/rflo.texi
 doc_gatbps_TEXINFOS += doc/texi/sbs.texi
 doc_gatbps_TEXINFOS += doc/texi/sps.texi
+doc_gatbps_TEXINFOS += doc/texi/texinfo.css
 
 ## end_variables
 
