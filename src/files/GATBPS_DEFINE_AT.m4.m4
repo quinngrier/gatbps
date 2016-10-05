@@ -41,6 +41,7 @@ m4_if(
 [
 
 AT='@'
+'readonly' 'AT'
 
 ]AC_SUBST([AT])[
 ]AM_SUBST_NOTMAKE([AT])[
