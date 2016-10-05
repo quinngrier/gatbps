@@ -767,16 +767,12 @@ TeX Macro Unicode ASCII
 \ecdots @mdots{} U+22EF ...
 \ege @gequ{} U+2265 >=
 \elceil @lcei{} U+2308 ceil(
-.\" )
 \eldots @bdots{} U+2026 ...
 \ele @lequ{} U+2264 <=
 \eleftarrow @larrow{} U+2190 <\-
 \elfloor @lflo{} U+230A floor(
-.\" )
 \ene @nequ{} U+2260 !=
-.\" (
 \erceil @rcei{} U+2309 )
-.\" (
 \erfloor @rflo{} U+230B )
 \erightarrow @rarrow{} U+2192 \->
 .TE
