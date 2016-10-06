@@ -11,6 +11,7 @@ ifelse(
   eval({%|$# < 0 || $# > 0|%}),
   {%|1|%},
   {%|errprint(
+{%|m4: error: |%}dnl
 {%|use_the_c_locale requires exactly 0 arguments|%}dnl
 {%| ($# |%}dnl
 ifelse(
