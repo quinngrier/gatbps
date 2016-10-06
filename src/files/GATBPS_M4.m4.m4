@@ -68,8 +68,11 @@ GATBPS_M4_RULES="$][{GATBPS_M4_RULES}"'
 
 #
 # The following rule causes the .d file to be treated as up-to-date if
-# it does not exist. Here is the relevant quote from the description of
-# the make utility in the 2001 edition of the POSIX standard:
+# it does not exist. This causes the .m4out file to be remade when the
+# .d file does not exist, which generates the .d file as a side-effect.
+#
+# Here is the relevant part of the description of the make utility in
+# the 2001 edition of the POSIX standard:
 #
 #       After make has ensured that all of the prerequisites of a
 #       target are up-to-date and if the target is out-of-date,
@@ -77,7 +80,7 @@ GATBPS_M4_RULES="$][{GATBPS_M4_RULES}"'
 #       executed. If there are no commands listed for the target,
 #       the target shall be treated as up-to-date.
 #
-# Here is the relevant quote from the GNU make 3.81 manual:
+# Here is the relevant part of the GNU make 3.81 manual:
 #
 #       If a rule has no prerequisites or commands, and the target
 #       of the rule is a nonexistent file, then make imagines this
