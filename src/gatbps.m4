@@ -13,20 +13,10 @@ include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/generation_code.m4|%}){%||%}dnl
 include({%|src/tools/help_code.m4|%}){%||%}dnl
 include({%|src/tools/recursion_code.m4|%}){%||%}dnl
+include({%|src/tools/use_the_c_locale.m4|%}){%||%}dnl
 SHEBANG_LINE{%|#! /bin/sh -
 
-#
-# With LC_ALL=C, locale-aware programs use the C locale instead of the
-# current locale. This is generally the best approach for code that is
-# not deliberately designed to work in other locales, as other locales
-# may have surprising behavior. The locale affects many programs, like
-# awk, grep, sed, and this shell instance itself. For more information,
-# see the C standard, the POSIX standard, and the GNU C Library manual.
-#
-
-LC_ALL='C'
-'export' 'LC_ALL'
-'readonly' 'LC_ALL'
+|%}use_the_c_locale{%|
 
 #
 # The nl variable holds a newline character. It can be used where a

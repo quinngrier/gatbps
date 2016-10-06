@@ -5,6 +5,7 @@ rules_code({%|src/files/INPUT_FILTER.sh.in.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
+include({%|src/tools/use_the_c_locale.m4|%}){%||%}dnl
 header_comment({%|#|%}, {%|#|%}){%|
 #
 # Special file: INPUT_FILTER.sh.in
@@ -12,18 +13,7 @@ header_comment({%|#|%}, {%|#|%}){%|
 # For more information, see the GATBPS manual.
 #
 
-#
-# With LC_ALL=C, locale-aware programs use the C locale instead of the
-# current locale. This is generally the best approach for code that is
-# not deliberately designed to work in other locales, as other locales
-# may have surprising behavior. The locale affects many programs, like
-# awk, grep, sed, and this shell instance itself. For more information,
-# see the C standard, the POSIX standard, and the GNU C Library manual.
-#
-
-LC_ALL='C'
-'export' 'LC_ALL'
-'readonly' 'LC_ALL'
+|%}use_the_c_locale{%|
 
 @AWK@ '
   BEGIN {
