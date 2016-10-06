@@ -62,6 +62,9 @@ shows the symbol of each macro@.
 @item @t{\lfloor} @tab @t{@@lflo@{@}} @tab U+230A @tab @t{floor(}
 @sfindex @w{@t{lflo.@:texi}}
 @tmindex @w{@t{@@lflo}}
+@item @t{\longleftarrow} @tab @t{@@llarrow@{@}} @tab U+27F5 @tab @t{<-@w{-}}
+@sfindex @w{@t{llarrow.@:texi}}
+@tmindex @w{@t{@@llarrow}}
 @item @t{\ne} @tab @t{@@nequ@{@}} @tab U+2260 @tab @t{!=}
 @sfindex @w{@t{nequ.@:texi}}
 @tmindex @w{@t{@@nequ}}
@@ -190,6 +193,16 @@ $\lfloor$
 @end tex
 @ifnottex
 @w{@lflo{}}
+@end ifnottex
+@item @t{\longleftarrow} @tab @t{@@llarrow@{@}} @tab U+27F5 @tab @t{<-@w{-}}
+@sfindex @w{@t{llarrow.@:texi}}
+@tmindex @w{@t{@@llarrow}}
+@tab
+@tex
+$\longleftarrow$
+@end tex
+@ifnottex
+@w{@llarrow{}}
 @end ifnottex
 @item @t{\ne} @tab @t{@@nequ@{@}} @tab U+2260 @tab @t{!=}
 @sfindex @w{@t{nequ.@:texi}}

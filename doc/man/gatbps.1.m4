@@ -771,6 +771,7 @@ TeX Macro Unicode ASCII
 \ele @lequ{} U+2264 <=
 \eleftarrow @larrow{} U+2190 <\-
 \elfloor @lflo{} U+230A floor(
+\elongleftarrow @llarrow{} U+27F5 <\-\-
 \ene @nequ{} U+2260 !=
 \erceil @rcei{} U+2309 )
 \erfloor @rflo{} U+230B )
@@ -1172,6 +1173,30 @@ $\elfloor\ x\ \erfloor$
 @end\ tex
 @ifnottex
 @lflo{}@i{x}@rflo{}
+@end\ ifnottex
+.fi
+.RE
+.IP
+For more information, see the WRITING MATHEMATICAL NOTATION IN TEXINFO
+section.
+.TP
+.nohy "\fBllarrow.texi\fR"
+.IPEZ
+The
+.nohy "\fBllarrow.texi\fR"
+special file defines the
+.nohy "\fB@llarrow{}\fR"
+Texinfo macro, which can be used to imitate the mathematical notation of
+TeX in the other output formats.
+For example:
+.RS
+.IP
+.nf
+@tex
+$P\ \elongleftarrow\ Q$
+@end\ tex
+@ifnottex
+@w{@i{P}\ @llarrow{}\ @i{Q}}
 @end\ ifnottex
 .fi
 .RE
