@@ -20,9 +20,8 @@ header_comment({%|#|%}, {%|#|%}){%|
 #
 # With LC_ALL=C, locale-aware programs use the C locale instead of the
 # current locale. This is generally the best approach for code that is
-# not deliberately designed to work in other locales. The C locale has
-# predictable behavior and is compatible with UTF-8. Other locales may
-# have surprising behavior. This affects many important programs, like
+# not deliberately designed to work in other locales, as other locales
+# may have surprising behavior. The locale affects many programs, like
 # awk, grep, sed, and this shell instance itself. For more information,
 # see the C standard, the POSIX standard, and the GNU C Library manual.
 #
