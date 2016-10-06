@@ -65,6 +65,7 @@ doc_gatbps_TEXINFOS += doc/texi/larrow.texi
 doc_gatbps_TEXINFOS += doc/texi/lcei.texi
 doc_gatbps_TEXINFOS += doc/texi/lequ.texi
 doc_gatbps_TEXINFOS += doc/texi/lflo.texi
+doc_gatbps_TEXINFOS += doc/texi/llarrow.texi
 doc_gatbps_TEXINFOS += doc/texi/math.texi
 doc_gatbps_TEXINFOS += doc/texi/mdot.texi
 doc_gatbps_TEXINFOS += doc/texi/mdots.texi
