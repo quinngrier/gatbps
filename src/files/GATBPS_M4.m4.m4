@@ -66,6 +66,24 @@ GATBPS_M4_RULES="$][{GATBPS_M4_RULES}"'
 
 ]output_file[.m4out: ]output_file[.m4out.d
 
+#
+# The following rule causes the .d file to be treated as up-to-date if
+# it does not exist. Here is the relevant quote from the description of
+# the make utility in the 2001 edition of the POSIX standard:
+#
+#       After make has ensured that all of the prerequisites of a
+#       target are up-to-date and if the target is out-of-date,
+#       the commands associated with the target entry shall be
+#       executed. If there are no commands listed for the target,
+#       the target shall be treated as up-to-date.
+#
+# Here is the relevant quote from the manual for GNU make 3.81:
+#
+#       If a rule has no prerequisites or commands, and the target
+#       of the rule is a nonexistent file, then make imagines this
+#       target to have been updated whenever its rule is run.
+#
+
 ]output_file[.m4out.d:
 
 .PHONY: clean-]output_file[.m4out
