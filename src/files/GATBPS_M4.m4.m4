@@ -77,7 +77,7 @@ GATBPS_M4_RULES="$][{GATBPS_M4_RULES}"'
 #       executed. If there are no commands listed for the target,
 #       the target shall be treated as up-to-date.
 #
-# Here is the relevant quote from the manual for GNU make 3.81:
+# Here is the relevant quote from the GNU make 3.81 manual:
 #
 #       If a rule has no prerequisites or commands, and the target
 #       of the rule is a nonexistent file, then make imagines this
