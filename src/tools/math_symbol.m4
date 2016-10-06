@@ -18,13 +18,13 @@ ifdef(
 @end ifcommanddefined
 @ifcommandnotdefined inlineraw
 @macro $1{}
-$3
+@w{$3}
 @end macro
 @end ifcommandnotdefined
 @end ifset
 @ifclear txicommandconditionals
 @macro $1{}
-$3
+@w{$3}
 @end macro
 @end ifclear
 @end ifdocbook
@@ -37,26 +37,26 @@ $3
 @end ifcommanddefined
 @ifcommandnotdefined inlineraw
 @macro $1{}
-$3
+@w{$3}
 @end macro
 @end ifcommandnotdefined
 @end ifset
 @ifclear txicommandconditionals
 @macro $1{}
-$3
+@w{$3}
 @end macro
 @end ifclear
 @end ifhtml
 @ifinfo
 @ifnotplaintext
 @macro $1{}
-$3
+@w{$3}
 @end macro
 @end ifnotplaintext
 @end ifinfo
 @ifplaintext
 @macro $1{}
-$3
+@w{$3}
 @end macro
 @end ifplaintext
 @ifxml
@@ -68,13 +68,13 @@ $3
 @end ifcommanddefined
 @ifcommandnotdefined inlineraw
 @macro $1{}
-$3
+@w{$3}
 @end macro
 @end ifcommandnotdefined
 @end ifset
 @ifclear txicommandconditionals
 @macro $1{}
-$3
+@w{$3}
 @end macro
 @end ifclear
 @end ifxml
@@ -82,29 +82,29 @@ $3
 @ifset insertascii
 @ifdocbook
 @macro $1{}
-$4
+@w{$4}
 @end macro
 @end ifdocbook
 @ifhtml
 @macro $1{}
-$4
+@w{$4}
 @end macro
 @end ifhtml
 @ifinfo
 @ifnotplaintext
 @macro $1{}
-$4
+@w{$4}
 @end macro
 @end ifnotplaintext
 @end ifinfo
 @ifplaintext
 @macro $1{}
-$4
+@w{$4}
 @end macro
 @end ifplaintext
 @ifxml
 @macro $1{}
-$4
+@w{$4}
 @end macro
 @end ifxml
 @end ifset
