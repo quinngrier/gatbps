@@ -5,15 +5,15 @@ rules_code({%|doc/help/prm.texi.hd.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 {%|Special file: ${fB1}prm.texi${fR1}
 
-The ${fB1}prm.texi${fR1} special file defines the ${fB1}@prm{}${fR1} Texinfo macro, which is
+The ${fB1}prm.texi${fR1} special file defines the ${fB1}@prm{}${fR1} Texinfo macro, which can be
 used to imitate the mathematical notation of TeX in the other output
-formats:
+formats. For example:
 
       @tex
       \$x'\$
       @end tex
       @ifnottex
-      @i{x}@prm{}
+      @w{@i{x}@prm{}}
       @end ifnottex
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.|%}dnl

@@ -1323,10 +1323,9 @@ The
 .nohy "\fBprm.texi\fR"
 special file defines the
 .nohy "\fB@prm{}\fR"
-Texinfo macro,
-which can be used to
-imitate the mathematical
-notation of TeX in the other output formats:
+Texinfo macro, which can be used to imitate the mathematical notation of
+TeX in the other output formats.
+For example:
 .RS
 .IP
 .nf
@@ -1334,7 +1333,7 @@ notation of TeX in the other output formats:
 $x'$
 @end\ tex
 @ifnottex
-@i{x}@prm{}
+@w{@i{x}@prm{}}
 @end\ ifnottex
 .fi
 .RE
