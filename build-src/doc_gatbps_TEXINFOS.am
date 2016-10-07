@@ -42,8 +42,10 @@ doc_gatbps_TEXINFOS += doc/texi/Writing-Mathematical-Expressions-Twice.texi
 doc_gatbps_TEXINFOS += doc/texi/Writing-Mathematical-Notation-in-Texinfo.texi
 doc_gatbps_TEXINFOS += doc/texi/Writing-Mathematical-Symbols.texi
 doc_gatbps_TEXINFOS += doc/texi/XXXX-XX-XX-GATBPS-0-1-0.texi
+doc_gatbps_TEXINFOS += doc/texi/barrow.texi
 doc_gatbps_TEXINFOS += doc/texi/bdots.texi
 doc_gatbps_TEXINFOS += doc/texi/bothcontents.texi
+doc_gatbps_TEXINFOS += doc/texi/dprm.texi
 doc_gatbps_TEXINFOS += doc/texi/dslash.texi
 doc_gatbps_TEXINFOS += doc/texi/gatbps-Asynchronous-Events.texi
 doc_gatbps_TEXINFOS += doc/texi/gatbps-Consequences-of-Errors.texi
@@ -74,12 +76,14 @@ doc_gatbps_TEXINFOS += doc/texi/mtvskipbot.texi
 doc_gatbps_TEXINFOS += doc/texi/mtvskiptop.texi
 doc_gatbps_TEXINFOS += doc/texi/nequ.texi
 doc_gatbps_TEXINFOS += doc/texi/prm.texi
+doc_gatbps_TEXINFOS += doc/texi/qprm.texi
 doc_gatbps_TEXINFOS += doc/texi/rarrow.texi
 doc_gatbps_TEXINFOS += doc/texi/rcei.texi
 doc_gatbps_TEXINFOS += doc/texi/rflo.texi
 doc_gatbps_TEXINFOS += doc/texi/sbs.texi
 doc_gatbps_TEXINFOS += doc/texi/sps.texi
 doc_gatbps_TEXINFOS += doc/texi/texinfo.css
+doc_gatbps_TEXINFOS += doc/texi/tprm.texi
 
 ## end_variables
 
