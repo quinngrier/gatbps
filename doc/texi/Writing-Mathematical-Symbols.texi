@@ -1,5 +1,5 @@
-@node Macros for Mathematical Symbols
-@chapter Macros for Mathematical Symbols
+@node Writing Mathematical Symbols
+@chapter Writing Mathematical Symbols
 
 @noindent
 The following table lists the

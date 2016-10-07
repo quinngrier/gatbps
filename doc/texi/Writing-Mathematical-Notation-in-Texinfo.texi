@@ -9,13 +9,13 @@ including ASCII plain text@.
 
 @menu
 * Writing Mathematical Expressions Twice::
-* Macros for Mathematical Symbols::
+* Writing Mathematical Symbols::
 @end menu
 
 @lowersections
 @include Writing-Mathematical-Expressions-Twice.texi
 
-@include Macros-for-Mathematical-Symbols.texi
+@include Writing-Mathematical-Symbols.texi
 @raisesections
 @ifxml
 @ifnotxml
