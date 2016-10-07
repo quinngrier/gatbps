@@ -67,6 +67,7 @@ all:
 	$(GENERATE) 'doc/texi/mtvskiptop.texi'
 	$(GENERATE) 'doc/texi/nequ.texi'
 	$(GENERATE) 'doc/texi/prm.texi'
+	$(GENERATE) 'doc/texi/qprm.texi'
 	$(GENERATE) 'doc/texi/rarrow.texi'
 	$(GENERATE) 'doc/texi/rcei.texi'
 	$(GENERATE) 'doc/texi/rflo.texi'
