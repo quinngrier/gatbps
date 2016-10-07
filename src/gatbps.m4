@@ -550,6 +550,7 @@ EOF1
           'set' "${prefix}"'contents.texi' "${@}"
           'set' "${prefix}"'bothcontents.texi' "${@}"
           'set' "${prefix}"'bdots.texi' "${@}"
+          'set' "${prefix}"'barrow.texi' "${@}"
           'set' "${prefix}"'awk-form.sh' "${@}"
           'set' "${prefix}"'VERSION_LTCUR.sh' "${@}"
           'set' "${prefix}"'VERSION.sh' "${@}"
@@ -1235,6 +1236,8 @@ EOF1
 |%}help_code({%|VERSION_LTCUR.sh|%}){%|
 
 |%}help_code({%|awk-form.sh|%}){%|
+
+|%}help_code({%|barrow.texi|%}){%|
 
 |%}help_code({%|bdots.texi|%}){%|
 
@@ -2914,6 +2917,8 @@ EOF1
 
 |%}generation_code({%|awk-form.sh|%}){%|
 
+|%}generation_code({%|barrow.texi|%}){%|
+
 |%}generation_code({%|bdots.texi|%}){%|
 
 |%}generation_code({%|bothcontents.texi|%}){%|
@@ -4164,6 +4169,12 @@ EOF1
 |%}){%|
 
 |%}recursion_code(
+  {%|barrow.texi|%},
+  {%|
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
   {%|bdots.texi|%},
   {%|
             'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
@@ -4421,6 +4432,7 @@ EOF1
             'set' '' "${prefix}"'dslash.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'dprm.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'bdots.texi' "${@}"; 'shift'
+            'set' '' "${prefix}"'barrow.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 

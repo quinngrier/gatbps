@@ -107,6 +107,12 @@ shows the symbol of each macro@.
 @tab @t{@@larrow@{@}}
 @tab U+2190
 @tab @t{<-}
+@item @t{\leftrightarrow}
+@sfindex @w{@t{barrow.@:texi}}
+@tmindex @w{@t{@@barrow}}
+@tab @t{@@barrow@{@}}
+@tab U+2194
+@tab @t{<->}
 @item @t{\lfloor}
 @sfindex @w{@t{lflo.@:texi}}
 @tmindex @w{@t{@@lflo}}
@@ -318,6 +324,19 @@ $\leftarrow$
 @end tex
 @ifnottex
 @w{@larrow{}}
+@end ifnottex
+@item @t{\leftrightarrow}
+@sfindex @w{@t{barrow.@:texi}}
+@tmindex @w{@t{@@barrow}}
+@tab @t{@@barrow@{@}}
+@tab U+2194
+@tab @t{<->}
+@tab
+@tex
+$\leftrightarrow$
+@end tex
+@ifnottex
+@w{@barrow{}}
 @end ifnottex
 @item @t{\lfloor}
 @sfindex @w{@t{lflo.@:texi}}

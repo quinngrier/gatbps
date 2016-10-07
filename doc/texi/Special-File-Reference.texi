@@ -139,6 +139,31 @@ respectively@.
 These are the exit status values used by GNU Automake for a test suite
 with no test protocol@.
 
+@sfindex @w{@t{barrow.@:texi}}
+@tmindex @w{@t{@@barrow}}
+@item @w{@t{barrow.@:texi}}
+@include ipez.texi
+The
+@w{@t{barrow.@:texi}}
+special file defines the
+@w{@t{@@barrow@{@}}}
+Texinfo macro, which can be used to imitate the mathematical notation of
+@TeX{}
+in the other output formats@.
+For example:
+
+@example
+@@tex
+$P \leftrightarrow Q$
+@@end tex
+@@ifnottex
+@@w@{@@i@{P@} @@barrow@{@} @@i@{Q@}@}
+@@end ifnottex
+@end example
+
+For more information,
+@pxref{Writing Mathematical Notation in Texinfo}@.
+
 @sfindex @w{@t{bdots.@:texi}}
 @tmindex @w{@t{@@bdots}}
 @item @w{@t{bdots.@:texi}}

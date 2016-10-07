@@ -773,6 +773,7 @@ TeX Macro Unicode ASCII
 \eldots @bdots{} U+2026 ...
 \ele @lequ{} U+2264 <=
 \eleftarrow @larrow{} U+2190 <\-
+\eleftrightarrow @barrow{} U+2194 <\->
 \elfloor @lflo{} U+230A floor(
 \elongleftarrow @llarrow{} U+27F5 <\-\-
 \ene @nequ{} U+2260 !=
@@ -1008,6 +1009,30 @@ and
 respectively.
 These are the exit status values used by GNU Automake for a test suite
 with no test protocol.
+.TP
+.nohy "\fBbarrow.texi\fR"
+.IPEZ
+The
+.nohy "\fBbarrow.texi\fR"
+special file defines the
+.nohy "\fB@barrow{}\fR"
+Texinfo macro, which can be used to imitate the mathematical notation of
+TeX in the other output formats.
+For example:
+.RS
+.IP
+.nf
+@tex
+$P\ \eleftrightarrow\ Q$
+@end\ tex
+@ifnottex
+@w{@i{P}\ @barrow{}\ @i{Q}}
+@end\ ifnottex
+.fi
+.RE
+.IP
+For more information, see the WRITING MATHEMATICAL NOTATION IN TEXINFO
+section.
 .TP
 .nohy "\fBbdots.texi\fR"
 .IPEZ

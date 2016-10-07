@@ -771,6 +771,10 @@ AC_SUBST([TEXI2DVIFLAGS])
   [mostlyclean])[
 
 ]GATBPS_M4(
+  [src/files/barrow.texi],
+  [mostlyclean])[
+
+]GATBPS_M4(
   [src/files/bdots.texi],
   [mostlyclean])[
 
