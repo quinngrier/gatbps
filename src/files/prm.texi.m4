@@ -26,109 +26,11 @@ header_comment({%|@ifxml
 @c
 @end ifnotxml
 @end ifxml
-@ifclear prmtexi
-@set prmtexi
-@ifclear insertascii
-@ifdocbook
-@ifset txicommandconditionals
-@ifcommanddefined inlineraw
-@macro prm{}
-@inlineraw{docbook, &#x2032;}
-@end macro
-@end ifcommanddefined
-@ifcommandnotdefined inlineraw
-@macro prm{}
-′
-@end macro
-@end ifcommandnotdefined
-@end ifset
-@ifclear txicommandconditionals
-@macro prm{}
-′
-@end macro
-@end ifclear
-@end ifdocbook
-@ifhtml
-@ifset txicommandconditionals
-@ifcommanddefined inlineraw
-@macro prm{}
-@inlineraw{html, &#x2032;}
-@end macro
-@end ifcommanddefined
-@ifcommandnotdefined inlineraw
-@macro prm{}
-′
-@end macro
-@end ifcommandnotdefined
-@end ifset
-@ifclear txicommandconditionals
-@macro prm{}
-′
-@end macro
-@end ifclear
-@end ifhtml
-@ifinfo
-@ifnotplaintext
-@macro prm{}
-′
-@end macro
-@end ifnotplaintext
-@end ifinfo
-@ifplaintext
-@macro prm{}
-′
-@end macro
-@end ifplaintext
-@ifxml
-@ifset txicommandconditionals
-@ifcommanddefined inlineraw
-@macro prm{}
-@inlineraw{xml, &#x2032;}
-@end macro
-@end ifcommanddefined
-@ifcommandnotdefined inlineraw
-@macro prm{}
-′
-@end macro
-@end ifcommandnotdefined
-@end ifset
-@ifclear txicommandconditionals
-@macro prm{}
-′
-@end macro
-@end ifclear
-@end ifxml
-@end ifclear
-@ifset insertascii
-@ifdocbook
-@macro prm{}
-'
-@end macro
-@end ifdocbook
-@ifhtml
-@macro prm{}
-'
-@end macro
-@end ifhtml
-@ifinfo
-@ifnotplaintext
-@macro prm{}
-'
-@end macro
-@end ifnotplaintext
-@end ifinfo
-@ifplaintext
-@macro prm{}
-'
-@end macro
-@end ifplaintext
-@ifxml
-@macro prm{}
-'
-@end macro
-@end ifxml
-@end ifset
-@end ifclear
+|%}math_symbol(
+  {%|prm|%},
+  {%|&#x2032;|%},
+  {%|′|%},
+  {%|'|%}){%|
 |%}footer_comment({%|@ifxml
 @ifnotxml
 @c|%}, {%|@c|%}, {%|@c
