@@ -489,6 +489,7 @@ EOF1
           'set' "${prefix}"'xml-dist.am' "${@}"
           'set' "${prefix}"'wget.am' "${@}"
           'set' "${prefix}"'troff-form.sh' "${@}"
+          'set' "${prefix}"'tprm.texi' "${@}"
           'set' "${prefix}"'texinfo.css' "${@}"
           'set' "${prefix}"'texi-form.sh' "${@}"
           'set' "${prefix}"'tar.am' "${@}"
@@ -1351,6 +1352,8 @@ EOF1
 |%}help_code({%|texi-form.sh|%}){%|
 
 |%}help_code({%|texinfo.css|%}){%|
+
+|%}help_code({%|tprm.texi|%}){%|
 
 |%}help_code({%|troff-form.sh|%}){%|
 
@@ -3026,6 +3029,8 @@ EOF1
 
 |%}generation_code({%|texinfo.css|%}){%|
 
+|%}generation_code({%|tprm.texi|%}){%|
+
 |%}generation_code({%|troff-form.sh|%}){%|
 
 |%}generation_code({%|wget.am|%}){%|
@@ -4390,6 +4395,7 @@ EOF1
 |%}recursion_code(
   {%|math.texi|%},
   {%|
+            'set' '' "${prefix}"'tprm.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'sps.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'sbs.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'rflo.texi' "${@}"; 'shift'
@@ -4544,6 +4550,12 @@ EOF1
 
 |%}recursion_code(
   {%|texinfo.css|%},
+  {%|
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|tprm.texi|%},
   {%|
             'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|

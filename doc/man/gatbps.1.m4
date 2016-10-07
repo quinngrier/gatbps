@@ -762,6 +762,7 @@ l l l l .
 TeX Macro Unicode ASCII
 ' @prm{} U+2032 '
 '' @dprm{} U+2033 ''
+''' @tprm{} U+2034 '''
 \- @msign{} U+2212 \-
 / @dslash{} U+2215 /
 \ecdot @mdot{} U+22C5 *
@@ -1531,6 +1532,30 @@ It can be copied into the HTML output by using the
 option of the
 .nohy "\fBtexi2any\fR"
 program.
+.TP
+.nohy "\fBtprm.texi\fR"
+.IPEZ
+The
+.nohy "\fBtprm.texi\fR"
+special file defines the
+.nohy "\fB@tprm{}\fR"
+Texinfo macro, which can be used to imitate the mathematical notation of
+TeX in the other output formats.
+For example:
+.RS
+.IP
+.nf
+@tex
+$x'''$
+@end\ tex
+@ifnottex
+@w{@i{x}@tprm{}}
+@end\ ifnottex
+.fi
+.RE
+.IP
+For more information, see the WRITING MATHEMATICAL NOTATION IN TEXINFO
+section.
 .SH "EXIT STATUS"
 .LP
 Exit status zero means success, and any other exit status means failure.

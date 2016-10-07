@@ -669,6 +669,31 @@ It can be copied into the HTML output by using the
 option of the
 @w{@t{texi2any}}
 program@.
+
+@sfindex @w{@t{tprm.@:texi}}
+@tmindex @w{@t{@@tprm}}
+@item @w{@t{tprm.@:texi}}
+@include ipez.texi
+The
+@w{@t{tprm.@:texi}}
+special file defines the
+@w{@t{@@tprm@{@}}}
+Texinfo macro, which can be used to imitate the mathematical notation of
+@TeX{}
+in the other output formats@.
+For example:
+
+@example
+@@tex
+$x'@w{'}'$
+@@end tex
+@@ifnottex
+@@w@{@@i@{x@}@@tprm@{@}@}
+@@end ifnottex
+@end example
+
+For more information,
+@pxref{Writing Mathematical Notation in Texinfo}@.
 @end table
 @ifxml
 @ifnotxml

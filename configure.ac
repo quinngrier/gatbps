@@ -1007,6 +1007,10 @@ AC_SUBST([TEXI2DVIFLAGS])
   [mostlyclean])[
 
 ]GATBPS_M4(
+  [src/files/tprm.texi],
+  [mostlyclean])[
+
+]GATBPS_M4(
   [src/files/troff-form.sh],
   [mostlyclean])[
 
