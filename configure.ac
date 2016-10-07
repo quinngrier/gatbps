@@ -807,6 +807,10 @@ AC_SUBST([TEXI2DVIFLAGS])
   [mostlyclean])[
 
 ]GATBPS_M4(
+  [src/files/dprm.texi],
+  [mostlyclean])[
+
+]GATBPS_M4(
   [src/files/dslash.texi],
   [mostlyclean])[
 

@@ -35,6 +35,12 @@ shows the symbol of each macro@.
 @tab @t{@@prm@{@}}
 @tab U+2032
 @tab @t{'}
+@item @t{'@w{'}}
+@sfindex @w{@t{dprm.@:texi}}
+@tmindex @w{@t{@@dprm}}
+@tab @t{@@dprm@{@}}
+@tab U+2033
+@tab @t{'@w{'}}
 @item @t{-}
 @sfindex @w{@t{msign.@:texi}}
 @tmindex @w{@t{@@msign}}
@@ -144,6 +150,19 @@ $'$
 @end tex
 @ifnottex
 @w{@prm{}}
+@end ifnottex
+@item @t{'@w{'}}
+@sfindex @w{@t{dprm.@:texi}}
+@tmindex @w{@t{@@dprm}}
+@tab @t{@@dprm@{@}}
+@tab U+2033
+@tab @t{'@w{'}}
+@tab
+@tex
+$''$
+@end tex
+@ifnottex
+@w{@dprm{}}
 @end ifnottex
 @item @t{-}
 @sfindex @w{@t{msign.@:texi}}

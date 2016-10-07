@@ -761,6 +761,7 @@ tab( );
 l l l l .
 TeX Macro Unicode ASCII
 ' @prm{} U+2032 '
+'' @dprm{} U+2033 ''
 \- @msign{} U+2212 \-
 / @dslash{} U+2215 /
 \ecdot @mdot{} U+22C5 *
@@ -1024,6 +1025,30 @@ $1,\ \eldots,\ n$
 @end\ tex
 @ifnottex
 1,\ @bdots{},\ @i{n}
+@end\ ifnottex
+.fi
+.RE
+.IP
+For more information, see the WRITING MATHEMATICAL NOTATION IN TEXINFO
+section.
+.TP
+.nohy "\fBdprm.texi\fR"
+.IPEZ
+The
+.nohy "\fBdprm.texi\fR"
+special file defines the
+.nohy "\fB@dprm{}\fR"
+Texinfo macro, which can be used to imitate the mathematical notation of
+TeX in the other output formats.
+For example:
+.RS
+.IP
+.nf
+@tex
+$x''$
+@end\ tex
+@ifnottex
+@w{@i{x}@dprm{}}
 @end\ ifnottex
 .fi
 .RE

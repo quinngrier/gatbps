@@ -538,6 +538,7 @@ EOF1
           'set' "${prefix}"'echo.sh' "${@}"
           'set' "${prefix}"'dvi-dist.am' "${@}"
           'set' "${prefix}"'dslash.texi' "${@}"
+          'set' "${prefix}"'dprm.texi' "${@}"
           'set' "${prefix}"'doxygen.am' "${@}"
           'set' "${prefix}"'doxygen-dist.am' "${@}"
           'set' "${prefix}"'docker.am' "${@}"
@@ -1250,6 +1251,8 @@ EOF1
 |%}help_code({%|doxygen-dist.am|%}){%|
 
 |%}help_code({%|doxygen.am|%}){%|
+
+|%}help_code({%|dprm.texi|%}){%|
 
 |%}help_code({%|dslash.texi|%}){%|
 
@@ -2923,6 +2926,8 @@ EOF1
 
 |%}generation_code({%|doxygen.am|%}){%|
 
+|%}generation_code({%|dprm.texi|%}){%|
+
 |%}generation_code({%|dslash.texi|%}){%|
 
 |%}generation_code({%|dvi-dist.am|%}){%|
@@ -4207,6 +4212,12 @@ EOF1
 |%}){%|
 
 |%}recursion_code(
+  {%|dprm.texi|%},
+  {%|
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
   {%|dslash.texi|%},
   {%|
             'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
@@ -4396,6 +4407,7 @@ EOF1
             'set' '' "${prefix}"'larrow.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'gequ.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'dslash.texi' "${@}"; 'shift'
+            'set' '' "${prefix}"'dprm.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'bdots.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
