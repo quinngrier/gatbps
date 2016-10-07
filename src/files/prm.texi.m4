@@ -5,6 +5,7 @@ rules_code({%|src/files/prm.texi.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
+include({%|src/tools/math_symbol.m4|%}){%||%}dnl
 header_comment({%|@ifxml
 @ifnotxml
 @c|%}, {%|@c|%}){%|
