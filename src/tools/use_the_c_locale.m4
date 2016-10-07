@@ -17,7 +17,7 @@ ifelse(
 ifelse({%|$#|%}, {%|1|%}, {%|{%|was|%}|%}, {%|{%|were|%}|%}){%||%}dnl
 {%| given)|%}dnl
 {%|
-|%})m4exit({%|1|%})|%}){%||%}dnl
+|%}){%||%}m4exit({%|1|%})|%}){%||%}dnl
 {%|#
 # With LC_ALL=C, locale-aware programs use the C locale instead of the
 # current locale. This is generally the best approach for code that is
