@@ -73,6 +73,7 @@ all:
 	$(GENERATE) 'doc/texi/sbs.texi'
 	$(GENERATE) 'doc/texi/sps.texi'
 	$(GENERATE) 'doc/texi/texinfo.css'
+	$(GENERATE) 'doc/texi/tprm.texi'
 	$(GENERATE) 'gh-pages/CC0-1.0.txt'
 	$(GENERATE) 'gh-pages/dev-aux/CC0-1.0-commit.txt'
 	$(GENERATE) 'm4/GATBPS_ARG_ENABLE.m4'
