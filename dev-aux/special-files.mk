@@ -50,6 +50,7 @@ all:
 	$(GENERATE) 'doc/texi/PACKAGEVERSION.texi.in'
 	$(GENERATE) 'doc/texi/bdots.texi'
 	$(GENERATE) 'doc/texi/bothcontents.texi'
+	$(GENERATE) 'doc/texi/dprm.texi'
 	$(GENERATE) 'doc/texi/dslash.texi'
 	$(GENERATE) 'doc/texi/gequ.texi'
 	$(GENERATE) 'doc/texi/indent.texi'
