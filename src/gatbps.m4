@@ -501,6 +501,7 @@ EOF1
           'set' "${prefix}"'rflo.texi' "${@}"
           'set' "${prefix}"'rcei.texi' "${@}"
           'set' "${prefix}"'rarrow.texi' "${@}"
+          'set' "${prefix}"'qprm.texi' "${@}"
           'set' "${prefix}"'ps-dist.am' "${@}"
           'set' "${prefix}"'prm.texi' "${@}"
           'set' "${prefix}"'plaintext.am' "${@}"
@@ -1330,6 +1331,8 @@ EOF1
 |%}help_code({%|prm.texi|%}){%|
 
 |%}help_code({%|ps-dist.am|%}){%|
+
+|%}help_code({%|qprm.texi|%}){%|
 
 |%}help_code({%|rarrow.texi|%}){%|
 
@@ -3007,6 +3010,8 @@ EOF1
 
 |%}generation_code({%|ps-dist.am|%}){%|
 
+|%}generation_code({%|qprm.texi|%}){%|
+
 |%}generation_code({%|rarrow.texi|%}){%|
 
 |%}generation_code({%|rcei.texi|%}){%|
@@ -4401,6 +4406,7 @@ EOF1
             'set' '' "${prefix}"'rflo.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'rcei.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'rarrow.texi' "${@}"; 'shift'
+            'set' '' "${prefix}"'qprm.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'prm.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'nequ.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'msign.texi' "${@}"; 'shift'
@@ -4485,6 +4491,12 @@ EOF1
   {%|ps-dist.am|%},
   {%|
             'set' '' "${prefix}"'cp.am' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|qprm.texi|%},
+  {%|
             'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
