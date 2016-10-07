@@ -14,11 +14,7 @@ ifelse(
 {%|m4: error: |%}dnl
 {%|use_the_c_locale requires exactly 0 arguments|%}dnl
 {%| ($# |%}dnl
-ifelse(
-  {%|$#|%},
-  {%|1|%},
-  {%|{%|was|%}|%},
-  {%|{%|were|%}|%}){%||%}dnl
+ifelse({%|$#|%}, {%|1|%}, {%|{%|was|%}|%}, {%|{%|were|%}|%}){%||%}dnl
 {%| given)|%}dnl
 {%|
 |%})m4exit({%|1|%})|%}){%||%}dnl
