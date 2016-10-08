@@ -26,7 +26,7 @@ symbol of each macro@.
 @end ifnottex
 @ifset HideSymbolColumn
 @include mtvskiptop.texi
-@multitable {@t{\longleftrightarrow}} {@t{@@lldarrow}} {Unicode} {@t{floor(}}
+@multitable {@t{\Longleftrightarrow}} {@t{@@lldarrow}} {Unicode} {@t{floor(}}
 @headitem @TeX{} @tab Macro @tab Unicode @tab ASCII
 @item @w{@t{'}}
 @sfindex @w{@t{prm.@:texi}}
@@ -201,7 +201,7 @@ symbol of each macro@.
 @end ifset
 @ifclear HideSymbolColumn
 @include mtvskiptop.texi
-@multitable {@t{\longleftrightarrow}} {@t{@@lldarrow}} {Unicode} {@t{floor(}} {Symbol}
+@multitable {@t{\Longleftrightarrow}} {@t{@@lldarrow}} {Unicode} {@t{floor(}} {Symbol}
 @headitem @TeX{} @tab Macro @tab Unicode @tab ASCII @tab Symbol
 @item @w{@t{'}}
 @sfindex @w{@t{prm.@:texi}}
