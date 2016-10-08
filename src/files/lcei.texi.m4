@@ -11,9 +11,9 @@ header_comment({%|@ifxml
 @c
 @c Special file: lcei.texi
 @c
-@c The lcei.texi special file defines the @lcei{} Texinfo macro, which
-@c is used to imitate the mathematical notation of TeX in the other
-@c output formats:
+@c The lcei.texi special file defines the @lcei Texinfo macro, which is
+@c used to imitate the mathematical notation of TeX in the other output
+@c formats:
 @c
 @c       @tex
 @c       $\lceil x \rceil$

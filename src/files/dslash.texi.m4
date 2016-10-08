@@ -11,9 +11,9 @@ header_comment({%|@ifxml
 @c
 @c Special file: dslash.texi
 @c
-@c The dslash.texi special file defines the @dslash{} Texinfo macro,
-@c which is used to imitate the mathematical notation of TeX in the
-@c other output formats:
+@c The dslash.texi special file defines the @dslash Texinfo macro, which
+@c is used to imitate the mathematical notation of TeX in the other
+@c output formats:
 @c
 @c       @tex
 @c       $x / y$

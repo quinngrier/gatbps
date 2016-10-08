@@ -5,7 +5,7 @@ rules_code({%|doc/help/rflo.texi.hd.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 {%|Special file: ${fB1}rflo.texi${fR1}
 
-The ${fB1}rflo.texi${fR1} special file defines the ${fB1}@rflo{}${fR1} Texinfo macro, which is
+The ${fB1}rflo.texi${fR1} special file defines the ${fB1}@rflo${fR1} Texinfo macro, which is
 used to imitate the mathematical notation of TeX in the other output
 formats:
 

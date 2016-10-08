@@ -11,9 +11,9 @@ header_comment({%|@ifxml
 @c
 @c Special file: rflo.texi
 @c
-@c The rflo.texi special file defines the @rflo{} Texinfo macro, which
-@c is used to imitate the mathematical notation of TeX in the other
-@c output formats:
+@c The rflo.texi special file defines the @rflo Texinfo macro, which is
+@c used to imitate the mathematical notation of TeX in the other output
+@c formats:
 @c
 @c       @tex
 @c       $\lfloor x \rfloor$

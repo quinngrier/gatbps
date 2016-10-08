@@ -12,9 +12,9 @@ header_comment({%|@ifxml
 @c
 @c Special file: barrow.texi
 @c
-@c The barrow.texi special file defines the @barrow{} Texinfo macro,
-@c which can be used to imitate the mathematical notation of TeX in the
-@c other output formats. For example:
+@c The barrow.texi special file defines the @barrow Texinfo macro, which
+@c can be used to imitate the mathematical notation of TeX in the other
+@c output formats. For example:
 @c
 @c       @tex
 @c       $P \leftrightarrow Q$

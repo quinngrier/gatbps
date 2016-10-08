@@ -12,7 +12,7 @@ header_comment({%|@ifxml
 @c
 @c Special file: prm.texi
 @c
-@c The prm.texi special file defines the @prm{} Texinfo macro, which can
+@c The prm.texi special file defines the @prm Texinfo macro, which can
 @c be used to imitate the mathematical notation of TeX in the other
 @c output formats. For example:
 @c

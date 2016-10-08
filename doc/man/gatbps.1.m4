@@ -1015,7 +1015,7 @@ with no test protocol.
 The
 .nohy "\fBbarrow.texi\fR"
 special file defines the
-.nohy "\fB@barrow{}\fR"
+.nohy "\fB@barrow\fR"
 Texinfo macro, which can be used to imitate the mathematical notation of
 TeX in the other output formats.
 For example:
@@ -1039,7 +1039,7 @@ section.
 The
 .nohy "\fBbdots.texi\fR"
 special file defines the
-.nohy "\fB@bdots{}\fR"
+.nohy "\fB@bdots\fR"
 Texinfo macro,
 which can be used to
 imitate the mathematical
@@ -1064,7 +1064,7 @@ section.
 The
 .nohy "\fBdprm.texi\fR"
 special file defines the
-.nohy "\fB@dprm{}\fR"
+.nohy "\fB@dprm\fR"
 Texinfo macro, which can be used to imitate the mathematical notation of
 TeX in the other output formats.
 For example:
@@ -1088,7 +1088,7 @@ section.
 The
 .nohy "\fBdslash.texi\fR"
 special file defines the
-.nohy "\fB@dslash{}\fR"
+.nohy "\fB@dslash\fR"
 Texinfo macro,
 which can be used to
 imitate the mathematical
@@ -1113,7 +1113,7 @@ section.
 The
 .nohy "\fBgequ.texi\fR"
 special file defines the
-.nohy "\fB@gequ{}\fR"
+.nohy "\fB@gequ\fR"
 Texinfo macro,
 which can be used to
 imitate the mathematical
@@ -1138,7 +1138,7 @@ section.
 The
 .nohy "\fBlarrow.texi\fR"
 special file defines the
-.nohy "\fB@larrow{}\fR"
+.nohy "\fB@larrow\fR"
 Texinfo macro, which can be used to imitate the mathematical notation of
 TeX in the other output formats.
 For example:
@@ -1162,7 +1162,7 @@ section.
 The
 .nohy "\fBlcei.texi\fR"
 special file defines the
-.nohy "\fB@lcei{}\fR"
+.nohy "\fB@lcei\fR"
 Texinfo macro,
 which can be used to
 imitate the mathematical
@@ -1187,7 +1187,7 @@ section.
 The
 .nohy "\fBlequ.texi\fR"
 special file defines the
-.nohy "\fB@lequ{}\fR"
+.nohy "\fB@lequ\fR"
 Texinfo macro,
 which can be used to
 imitate the mathematical
@@ -1212,7 +1212,7 @@ section.
 The
 .nohy "\fBlflo.texi\fR"
 special file defines the
-.nohy "\fB@lflo{}\fR"
+.nohy "\fB@lflo\fR"
 Texinfo macro,
 which can be used to
 imitate the mathematical
@@ -1237,7 +1237,7 @@ section.
 The
 .nohy "\fBllarrow.texi\fR"
 special file defines the
-.nohy "\fB@llarrow{}\fR"
+.nohy "\fB@llarrow\fR"
 Texinfo macro, which can be used to imitate the mathematical notation of
 TeX in the other output formats.
 For example:
@@ -1274,7 +1274,7 @@ section.
 The
 .nohy "\fBmdot.texi\fR"
 special file defines the
-.nohy "\fB@mdot{}\fR"
+.nohy "\fB@mdot\fR"
 Texinfo macro,
 which can be used to
 imitate the mathematical
@@ -1299,7 +1299,7 @@ section.
 The
 .nohy "\fBmdots.texi\fR"
 special file defines the
-.nohy "\fB@mdots{}\fR"
+.nohy "\fB@mdots\fR"
 Texinfo macro,
 which can be used to
 imitate the mathematical
@@ -1324,7 +1324,7 @@ section.
 The
 .nohy "\fBmsign.texi\fR"
 special file defines the
-.nohy "\fB@msign{}\fR"
+.nohy "\fB@msign\fR"
 Texinfo macro,
 which can be used to
 imitate the mathematical
@@ -1349,7 +1349,7 @@ section.
 The
 .nohy "\fBnequ.texi\fR"
 special file defines the
-.nohy "\fB@nequ{}\fR"
+.nohy "\fB@nequ\fR"
 Texinfo macro,
 which can be used to
 imitate the mathematical
@@ -1374,7 +1374,7 @@ section.
 The
 .nohy "\fBprm.texi\fR"
 special file defines the
-.nohy "\fB@prm{}\fR"
+.nohy "\fB@prm\fR"
 Texinfo macro, which can be used to imitate the mathematical notation of
 TeX in the other output formats.
 For example:
@@ -1398,7 +1398,7 @@ section.
 The
 .nohy "\fBqprm.texi\fR"
 special file defines the
-.nohy "\fB@qprm{}\fR"
+.nohy "\fB@qprm\fR"
 Texinfo macro, which can be used to imitate the mathematical notation of
 TeX in the other output formats.
 For example:
@@ -1422,7 +1422,7 @@ section.
 The
 .nohy "\fBrarrow.texi\fR"
 special file defines the
-.nohy "\fB@rarrow{}\fR"
+.nohy "\fB@rarrow\fR"
 Texinfo macro, which can be used to imitate the mathematical notation of
 TeX in the other output formats.
 For example:
@@ -1446,7 +1446,7 @@ section.
 The
 .nohy "\fBrcei.texi\fR"
 special file defines the
-.nohy "\fB@rcei{}\fR"
+.nohy "\fB@rcei\fR"
 Texinfo macro,
 which can be used to
 imitate the mathematical
@@ -1471,7 +1471,7 @@ section.
 The
 .nohy "\fBrflo.texi\fR"
 special file defines the
-.nohy "\fB@rflo{}\fR"
+.nohy "\fB@rflo\fR"
 Texinfo macro,
 which can be used to
 imitate the mathematical
@@ -1588,7 +1588,7 @@ program.
 The
 .nohy "\fBtprm.texi\fR"
 special file defines the
-.nohy "\fB@tprm{}\fR"
+.nohy "\fB@tprm\fR"
 Texinfo macro, which can be used to imitate the mathematical notation of
 TeX in the other output formats.
 For example:

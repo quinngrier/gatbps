@@ -27,126 +27,126 @@ shows the symbol of each macro@.
 @end ifnottex
 @ifset HideSymbols
 @include mtvskiptop.texi
-@multitable {@t{\longleftrightarrow}} {@t{@@lldarrow@{@}}} {Unicode} {@t{floor(}}
+@multitable {@t{\longleftrightarrow}} {@t{@@lldarrow}} {Unicode} {@t{floor(}}
 @headitem @TeX{} @tab Macro @tab Unicode @tab ASCII
 @item @w{@t{'}}
 @sfindex @w{@t{prm.@:texi}}
 @tmindex @w{@t{@@prm}}
-@tab @w{@t{@@prm@{@}}}
+@tab @w{@t{@@prm}}
 @tab @w{U+2032}
 @tab @w{@t{'}}
 @item @w{@t{'@w{'}}}
 @sfindex @w{@t{dprm.@:texi}}
 @tmindex @w{@t{@@dprm}}
-@tab @w{@t{@@dprm@{@}}}
+@tab @w{@t{@@dprm}}
 @tab @w{U+2033}
 @tab @w{@t{'@w{'}}}
 @item @w{@t{'@w{'}'}}
 @sfindex @w{@t{tprm.@:texi}}
 @tmindex @w{@t{@@tprm}}
-@tab @w{@t{@@tprm@{@}}}
+@tab @w{@t{@@tprm}}
 @tab @w{U+2034}
 @tab @w{@t{'@w{'}'}}
 @item @w{@t{'@w{'}'@w{'}}}
 @sfindex @w{@t{qprm.@:texi}}
 @tmindex @w{@t{@@qprm}}
-@tab @w{@t{@@qprm@{@}}}
+@tab @w{@t{@@qprm}}
 @tab @w{U+2057}
 @tab @w{@t{'@w{'}'@w{'}}}
 @item @w{@t{-}}
 @sfindex @w{@t{msign.@:texi}}
 @tmindex @w{@t{@@msign}}
-@tab @w{@t{@@msign@{@}}}
+@tab @w{@t{@@msign}}
 @tab @w{U+2212}
 @tab @w{@t{-}}
 @item @w{@t{/}}
 @sfindex @w{@t{dslash.@:texi}}
 @tmindex @w{@t{@@dslash}}
-@tab @w{@t{@@dslash@{@}}}
+@tab @w{@t{@@dslash}}
 @tab @w{U+2215}
 @tab @w{@t{/}}
 @item @w{@t{\cdot}}
 @sfindex @w{@t{mdot.@:texi}}
 @tmindex @w{@t{@@mdot}}
-@tab @w{@t{@@mdot@{@}}}
+@tab @w{@t{@@mdot}}
 @tab @w{U+22C5}
 @tab @w{@t{*}}
 @item @w{@t{\cdots}}
 @sfindex @w{@t{mdots.@:texi}}
 @tmindex @w{@t{@@mdots}}
-@tab @w{@t{@@mdots@{@}}}
+@tab @w{@t{@@mdots}}
 @tab @w{U+22EF}
 @tab @w{@t{.@:.@:.@:}}
 @item @w{@t{\ge}}
 @sfindex @w{@t{gequ.@:texi}}
 @tmindex @w{@t{@@gequ}}
-@tab @w{@t{@@gequ@{@}}}
+@tab @w{@t{@@gequ}}
 @tab @w{U+2265}
 @tab @w{@t{>=}}
 @item @w{@t{\lceil}}
 @sfindex @w{@t{lcei.@:texi}}
 @tmindex @w{@t{@@lcei}}
-@tab @w{@t{@@lcei@{@}}}
+@tab @w{@t{@@lcei}}
 @tab @w{U+2308}
 @tab @w{@t{ceil(}}
 @item @w{@t{\ldots}}
 @sfindex @w{@t{bdots.@:texi}}
 @tmindex @w{@t{@@bdots}}
-@tab @w{@t{@@bdots@{@}}}
+@tab @w{@t{@@bdots}}
 @tab @w{U+2026}
 @tab @w{@t{.@:.@:.@:}}
 @item @w{@t{\le}}
 @sfindex @w{@t{lequ.@:texi}}
 @tmindex @w{@t{@@lequ}}
-@tab @w{@t{@@lequ@{@}}}
+@tab @w{@t{@@lequ}}
 @tab @w{U+2264}
 @tab @w{@t{<=}}
 @item @w{@t{\leftarrow}}
 @sfindex @w{@t{larrow.@:texi}}
 @tmindex @w{@t{@@larrow}}
-@tab @w{@t{@@larrow@{@}}}
+@tab @w{@t{@@larrow}}
 @tab @w{U+2190}
 @tab @w{@t{<-}}
 @item @w{@t{\leftrightarrow}}
 @sfindex @w{@t{barrow.@:texi}}
 @tmindex @w{@t{@@barrow}}
-@tab @w{@t{@@barrow@{@}}}
+@tab @w{@t{@@barrow}}
 @tab @w{U+2194}
 @tab @w{@t{<->}}
 @item @w{@t{\lfloor}}
 @sfindex @w{@t{lflo.@:texi}}
 @tmindex @w{@t{@@lflo}}
-@tab @w{@t{@@lflo@{@}}}
+@tab @w{@t{@@lflo}}
 @tab @w{U+230A}
 @tab @w{@t{floor(}}
 @item @w{@t{\longleftarrow}}
 @sfindex @w{@t{llarrow.@:texi}}
 @tmindex @w{@t{@@llarrow}}
-@tab @w{@t{@@llarrow@{@}}}
+@tab @w{@t{@@llarrow}}
 @tab @w{U+27F5}
 @tab @w{@t{<-@w{-}}}
 @item @w{@t{\ne}}
 @sfindex @w{@t{nequ.@:texi}}
 @tmindex @w{@t{@@nequ}}
-@tab @w{@t{@@nequ@{@}}}
+@tab @w{@t{@@nequ}}
 @tab @w{U+2260}
 @tab @w{@t{!=}}
 @item @w{@t{\rceil}}
 @sfindex @w{@t{rcei.@:texi}}
 @tmindex @w{@t{@@rcei}}
-@tab @w{@t{@@rcei@{@}}}
+@tab @w{@t{@@rcei}}
 @tab @w{U+2309}
 @tab @w{@t{)}}
 @item @w{@t{\rfloor}}
 @sfindex @w{@t{rflo.@:texi}}
 @tmindex @w{@t{@@rflo}}
-@tab @w{@t{@@rflo@{@}}}
+@tab @w{@t{@@rflo}}
 @tab @w{U+230B}
 @tab @w{@t{)}}
 @item @w{@t{\rightarrow}}
 @sfindex @w{@t{rarrow.@:texi}}
 @tmindex @w{@t{@@rarrow}}
-@tab @w{@t{@@rarrow@{@}}}
+@tab @w{@t{@@rarrow}}
 @tab @w{U+2192}
 @tab @w{@t{->}}
 @end multitable
@@ -154,12 +154,12 @@ shows the symbol of each macro@.
 @end ifset
 @ifclear HideSymbols
 @include mtvskiptop.texi
-@multitable {@t{\longleftrightarrow}} {@t{@@lldarrow@{@}}} {Unicode} {@t{floor(}} {Symbol}
+@multitable {@t{\longleftrightarrow}} {@t{@@lldarrow}} {Unicode} {@t{floor(}} {Symbol}
 @headitem @TeX{} @tab Macro @tab Unicode @tab ASCII @tab Symbol
 @item @w{@t{'}}
 @sfindex @w{@t{prm.@:texi}}
 @tmindex @w{@t{@@prm}}
-@tab @w{@t{@@prm@{@}}}
+@tab @w{@t{@@prm}}
 @tab @w{U+2032}
 @tab @w{@t{'}}
 @tab
@@ -172,7 +172,7 @@ $'$
 @item @w{@t{'@w{'}}}
 @sfindex @w{@t{dprm.@:texi}}
 @tmindex @w{@t{@@dprm}}
-@tab @w{@t{@@dprm@{@}}}
+@tab @w{@t{@@dprm}}
 @tab @w{U+2033}
 @tab @w{@t{'@w{'}}}
 @tab
@@ -185,7 +185,7 @@ $''$
 @item @w{@t{'@w{'}'}}
 @sfindex @w{@t{tprm.@:texi}}
 @tmindex @w{@t{@@tprm}}
-@tab @w{@t{@@tprm@{@}}}
+@tab @w{@t{@@tprm}}
 @tab @w{U+2034}
 @tab @w{@t{'@w{'}'}}
 @tab
@@ -198,7 +198,7 @@ $'''$
 @item @w{@t{'@w{'}'@w{'}}}
 @sfindex @w{@t{qprm.@:texi}}
 @tmindex @w{@t{@@qprm}}
-@tab @w{@t{@@qprm@{@}}}
+@tab @w{@t{@@qprm}}
 @tab @w{U+2057}
 @tab @w{@t{'@w{'}'@w{'}}}
 @tab
@@ -211,7 +211,7 @@ $''''$
 @item @w{@t{-}}
 @sfindex @w{@t{msign.@:texi}}
 @tmindex @w{@t{@@msign}}
-@tab @w{@t{@@msign@{@}}}
+@tab @w{@t{@@msign}}
 @tab @w{U+2212}
 @tab @w{@t{-}}
 @tab
@@ -224,7 +224,7 @@ $-$
 @item @w{@t{/}}
 @sfindex @w{@t{dslash.@:texi}}
 @tmindex @w{@t{@@dslash}}
-@tab @w{@t{@@dslash@{@}}}
+@tab @w{@t{@@dslash}}
 @tab @w{U+2215}
 @tab @w{@t{/}}
 @tab
@@ -237,7 +237,7 @@ $/$
 @item @w{@t{\cdot}}
 @sfindex @w{@t{mdot.@:texi}}
 @tmindex @w{@t{@@mdot}}
-@tab @w{@t{@@mdot@{@}}}
+@tab @w{@t{@@mdot}}
 @tab @w{U+22C5}
 @tab @w{@t{*}}
 @tab
@@ -250,7 +250,7 @@ $\cdot$
 @item @w{@t{\cdots}}
 @sfindex @w{@t{mdots.@:texi}}
 @tmindex @w{@t{@@mdots}}
-@tab @w{@t{@@mdots@{@}}}
+@tab @w{@t{@@mdots}}
 @tab @w{U+22EF}
 @tab @w{@t{.@:.@:.@:}}
 @tab
@@ -263,7 +263,7 @@ $\cdots$
 @item @w{@t{\ge}}
 @sfindex @w{@t{gequ.@:texi}}
 @tmindex @w{@t{@@gequ}}
-@tab @w{@t{@@gequ@{@}}}
+@tab @w{@t{@@gequ}}
 @tab @w{U+2265}
 @tab @w{@t{>=}}
 @tab
@@ -276,7 +276,7 @@ $\ge$
 @item @w{@t{\lceil}}
 @sfindex @w{@t{lcei.@:texi}}
 @tmindex @w{@t{@@lcei}}
-@tab @w{@t{@@lcei@{@}}}
+@tab @w{@t{@@lcei}}
 @tab @w{U+2308}
 @tab @w{@t{ceil(}}
 @tab
@@ -289,7 +289,7 @@ $\lceil$
 @item @w{@t{\ldots}}
 @sfindex @w{@t{bdots.@:texi}}
 @tmindex @w{@t{@@bdots}}
-@tab @w{@t{@@bdots@{@}}}
+@tab @w{@t{@@bdots}}
 @tab @w{U+2026}
 @tab @w{@t{.@:.@:.@:}}
 @tab
@@ -302,7 +302,7 @@ $\ldots$
 @item @w{@t{\le}}
 @sfindex @w{@t{lequ.@:texi}}
 @tmindex @w{@t{@@lequ}}
-@tab @w{@t{@@lequ@{@}}}
+@tab @w{@t{@@lequ}}
 @tab @w{U+2264}
 @tab @w{@t{<=}}
 @tab
@@ -315,7 +315,7 @@ $\le$
 @item @w{@t{\leftarrow}}
 @sfindex @w{@t{larrow.@:texi}}
 @tmindex @w{@t{@@larrow}}
-@tab @w{@t{@@larrow@{@}}}
+@tab @w{@t{@@larrow}}
 @tab @w{U+2190}
 @tab @w{@t{<-}}
 @tab
@@ -328,7 +328,7 @@ $\leftarrow$
 @item @w{@t{\leftrightarrow}}
 @sfindex @w{@t{barrow.@:texi}}
 @tmindex @w{@t{@@barrow}}
-@tab @w{@t{@@barrow@{@}}}
+@tab @w{@t{@@barrow}}
 @tab @w{U+2194}
 @tab @w{@t{<->}}
 @tab
@@ -341,7 +341,7 @@ $\leftrightarrow$
 @item @w{@t{\lfloor}}
 @sfindex @w{@t{lflo.@:texi}}
 @tmindex @w{@t{@@lflo}}
-@tab @w{@t{@@lflo@{@}}}
+@tab @w{@t{@@lflo}}
 @tab @w{U+230A}
 @tab @w{@t{floor(}}
 @tab
@@ -354,7 +354,7 @@ $\lfloor$
 @item @w{@t{\longleftarrow}}
 @sfindex @w{@t{llarrow.@:texi}}
 @tmindex @w{@t{@@llarrow}}
-@tab @w{@t{@@llarrow@{@}}}
+@tab @w{@t{@@llarrow}}
 @tab @w{U+27F5}
 @tab @w{@t{<-@w{-}}}
 @tab
@@ -367,7 +367,7 @@ $\longleftarrow$
 @item @w{@t{\ne}}
 @sfindex @w{@t{nequ.@:texi}}
 @tmindex @w{@t{@@nequ}}
-@tab @w{@t{@@nequ@{@}}}
+@tab @w{@t{@@nequ}}
 @tab @w{U+2260}
 @tab @w{@t{!=}}
 @tab
@@ -380,7 +380,7 @@ $\ne$
 @item @w{@t{\rceil}}
 @sfindex @w{@t{rcei.@:texi}}
 @tmindex @w{@t{@@rcei}}
-@tab @w{@t{@@rcei@{@}}}
+@tab @w{@t{@@rcei}}
 @tab @w{U+2309}
 @tab @w{@t{)}}
 @tab
@@ -393,7 +393,7 @@ $\rceil$
 @item @w{@t{\rfloor}}
 @sfindex @w{@t{rflo.@:texi}}
 @tmindex @w{@t{@@rflo}}
-@tab @w{@t{@@rflo@{@}}}
+@tab @w{@t{@@rflo}}
 @tab @w{U+230B}
 @tab @w{@t{)}}
 @tab
@@ -406,7 +406,7 @@ $\rfloor$
 @item @w{@t{\rightarrow}}
 @sfindex @w{@t{rarrow.@:texi}}
 @tmindex @w{@t{@@rarrow}}
-@tab @w{@t{@@rarrow@{@}}}
+@tab @w{@t{@@rarrow}}
 @tab @w{U+2192}
 @tab @w{@t{->}}
 @tab

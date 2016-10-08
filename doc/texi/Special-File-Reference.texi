@@ -146,7 +146,7 @@ with no test protocol@.
 The
 @w{@t{barrow.@:texi}}
 special file defines the
-@w{@t{@@barrow@{@}}}
+@w{@t{@@barrow}}
 Texinfo macro, which can be used to imitate the mathematical notation of
 @TeX{}
 in the other output formats@.
@@ -171,7 +171,7 @@ For more information,
 The
 @w{@t{bdots.@:texi}}
 special file defines the
-@w{@t{@@bdots@{@}}}
+@w{@t{@@bdots}}
 Texinfo macro,
 which can be used to
 imitate the mathematical
@@ -196,7 +196,7 @@ For more information,
 The
 @w{@t{dprm.@:texi}}
 special file defines the
-@w{@t{@@dprm@{@}}}
+@w{@t{@@dprm}}
 Texinfo macro, which can be used to imitate the mathematical notation of
 @TeX{}
 in the other output formats@.
@@ -221,7 +221,7 @@ For more information,
 The
 @w{@t{dslash.@:texi}}
 special file defines the
-@w{@t{@@dslash@{@}}}
+@w{@t{@@dslash}}
 Texinfo macro,
 which can be used to
 imitate the mathematical
@@ -246,7 +246,7 @@ For more information,
 The
 @w{@t{gequ.@:texi}}
 special file defines the
-@w{@t{@@gequ@{@}}}
+@w{@t{@@gequ}}
 Texinfo macro,
 which can be used to
 imitate the mathematical
@@ -271,7 +271,7 @@ For more information,
 The
 @w{@t{larrow.@:texi}}
 special file defines the
-@w{@t{@@larrow@{@}}}
+@w{@t{@@larrow}}
 Texinfo macro, which can be used to imitate the mathematical notation of
 @TeX{}
 in the other output formats@.
@@ -296,7 +296,7 @@ For more information,
 The
 @w{@t{lcei.@:texi}}
 special file defines the
-@w{@t{@@lcei@{@}}}
+@w{@t{@@lcei}}
 Texinfo macro,
 which can be used to
 imitate the mathematical
@@ -321,7 +321,7 @@ For more information,
 The
 @w{@t{lequ.@:texi}}
 special file defines the
-@w{@t{@@lequ@{@}}}
+@w{@t{@@lequ}}
 Texinfo macro,
 which can be used to
 imitate the mathematical
@@ -346,7 +346,7 @@ For more information,
 The
 @w{@t{lflo.@:texi}}
 special file defines the
-@w{@t{@@lflo@{@}}}
+@w{@t{@@lflo}}
 Texinfo macro,
 which can be used to
 imitate the mathematical
@@ -371,7 +371,7 @@ For more information,
 The
 @w{@t{llarrow.@:texi}}
 special file defines the
-@w{@t{@@llarrow@{@}}}
+@w{@t{@@llarrow}}
 Texinfo macro, which can be used to imitate the mathematical notation of
 @TeX{}
 in the other output formats@.
@@ -410,7 +410,7 @@ For more information,
 The
 @w{@t{mdot.@:texi}}
 special file defines the
-@w{@t{@@mdot@{@}}}
+@w{@t{@@mdot}}
 Texinfo macro,
 which can be used to
 imitate the mathematical
@@ -435,7 +435,7 @@ For more information,
 The
 @w{@t{mdots.@:texi}}
 special file defines the
-@w{@t{@@mdots@{@}}}
+@w{@t{@@mdots}}
 Texinfo macro,
 which can be used to
 imitate the mathematical
@@ -460,7 +460,7 @@ For more information,
 The
 @w{@t{msign.@:texi}}
 special file defines the
-@w{@t{@@msign@{@}}}
+@w{@t{@@msign}}
 Texinfo macro,
 which can be used to
 imitate the mathematical
@@ -485,7 +485,7 @@ For more information,
 The
 @w{@t{nequ.@:texi}}
 special file defines the
-@w{@t{@@nequ@{@}}}
+@w{@t{@@nequ}}
 Texinfo macro,
 which can be used to
 imitate the mathematical
@@ -510,7 +510,7 @@ For more information,
 The
 @w{@t{prm.@:texi}}
 special file defines the
-@w{@t{@@prm@{@}}}
+@w{@t{@@prm}}
 Texinfo macro, which can be used to imitate the mathematical notation of
 @TeX{}
 in the other output formats@.
@@ -535,7 +535,7 @@ For more information,
 The
 @w{@t{qprm.@:texi}}
 special file defines the
-@w{@t{@@qprm@{@}}}
+@w{@t{@@qprm}}
 Texinfo macro, which can be used to imitate the mathematical notation of
 @TeX{}
 in the other output formats@.
@@ -560,7 +560,7 @@ For more information,
 The
 @w{@t{rarrow.@:texi}}
 special file defines the
-@w{@t{@@rarrow@{@}}}
+@w{@t{@@rarrow}}
 Texinfo macro, which can be used to imitate the mathematical notation of
 @TeX{}
 in the other output formats@.
@@ -585,7 +585,7 @@ For more information,
 The
 @w{@t{rcei.@:texi}}
 special file defines the
-@w{@t{@@rcei@{@}}}
+@w{@t{@@rcei}}
 Texinfo macro,
 which can be used to
 imitate the mathematical
@@ -610,7 +610,7 @@ For more information,
 The
 @w{@t{rflo.@:texi}}
 special file defines the
-@w{@t{@@rflo@{@}}}
+@w{@t{@@rflo}}
 Texinfo macro,
 which can be used to
 imitate the mathematical
@@ -727,7 +727,7 @@ program@.
 The
 @w{@t{tprm.@:texi}}
 special file defines the
-@w{@t{@@tprm@{@}}}
+@w{@t{@@tprm}}
 Texinfo macro, which can be used to imitate the mathematical notation of
 @TeX{}
 in the other output formats@.

@@ -12,9 +12,9 @@ header_comment({%|@ifxml
 @c
 @c Special file: rarrow.texi
 @c
-@c The rarrow.texi special file defines the @rarrow{} Texinfo macro,
-@c which can be used to imitate the mathematical notation of TeX in the
-@c other output formats. For example:
+@c The rarrow.texi special file defines the @rarrow Texinfo macro, which
+@c can be used to imitate the mathematical notation of TeX in the other
+@c output formats. For example:
 @c
 @c       @tex
 @c       $P \rightarrow Q$

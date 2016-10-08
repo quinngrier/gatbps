@@ -12,8 +12,8 @@ header_comment({%|@ifxml
 @c
 @c Special file: dprm.texi
 @c
-@c The dprm.texi special file defines the @dprm{} Texinfo macro, which
-@c can be used to imitate the mathematical notation of TeX in the other
+@c The dprm.texi special file defines the @dprm Texinfo macro, which can
+@c be used to imitate the mathematical notation of TeX in the other
 @c output formats. For example:
 @c
 @c       @tex

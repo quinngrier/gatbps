@@ -12,7 +12,7 @@ header_comment({%|@ifxml
 @c
 @c Special file: llarrow.texi
 @c
-@c The llarrow.texi special file defines the @llarrow{} Texinfo macro,
+@c The llarrow.texi special file defines the @llarrow Texinfo macro,
 @c which can be used to imitate the mathematical notation of TeX in the
 @c other output formats. For example:
 @c
