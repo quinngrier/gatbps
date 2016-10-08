@@ -76,6 +76,12 @@ symbol of each macro@.
 @tab @w{@t{@@bdarrow}}
 @tab @w{U+21D4}
 @tab @w{@t{<=>}}
+@item @w{@t{\Longleftarrow}}
+@sfindex @w{@t{lldarrow.@:texi}}
+@tmindex @w{@t{@@lldarrow}}
+@tab @w{@t{@@lldarrow}}
+@tab @w{U+27F8}
+@tab @w{@t{<==}}
 @item @w{@t{\Rightarrow}}
 @sfindex @w{@t{rdarrow.@:texi}}
 @tmindex @w{@t{@@rdarrow}}
@@ -288,6 +294,19 @@ $\Leftrightarrow$
 @end tex
 @ifnottex
 @w{@bdarrow{}}
+@end ifnottex
+@item @w{@t{\Longleftarrow}}
+@sfindex @w{@t{lldarrow.@:texi}}
+@tmindex @w{@t{@@lldarrow}}
+@tab @w{@t{@@lldarrow}}
+@tab @w{U+27F8}
+@tab @w{@t{<==}}
+@tab
+@tex
+$\Longleftarrow$
+@end tex
+@ifnottex
+@w{@lldarrow{}}
 @end ifnottex
 @item @w{@t{\Rightarrow}}
 @sfindex @w{@t{rdarrow.@:texi}}
