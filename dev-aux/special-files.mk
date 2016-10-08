@@ -61,6 +61,7 @@ all:
 	$(GENERATE) 'doc/texi/lequ.texi'
 	$(GENERATE) 'doc/texi/lflo.texi'
 	$(GENERATE) 'doc/texi/llarrow.texi'
+	$(GENERATE) 'doc/texi/lrarrow.texi'
 	$(GENERATE) 'doc/texi/math.texi'
 	$(GENERATE) 'doc/texi/mdot.texi'
 	$(GENERATE) 'doc/texi/mdots.texi'
