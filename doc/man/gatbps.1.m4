@@ -766,6 +766,7 @@ TeX Macro Unicode ASCII
 '''' @qprm{} U+2057 ''''
 \- @msign{} U+2212 \-
 / @dslash{} U+2215 /
+\eLeftarrow @ldarrow{} U+21D0 <=
 \ecdot @mdot{} U+22C5 *
 \ecdots @mdots{} U+22EF ...
 \ege @gequ{} U+2265 >=
@@ -1201,6 +1202,30 @@ $\elceil\ x\ \erceil$
 @end\ tex
 @ifnottex
 @lcei{}@i{x}@rcei{}
+@end\ ifnottex
+.fi
+.RE
+.IP
+For more information, see the WRITING MATHEMATICAL NOTATION IN TEXINFO
+section.
+.TP
+.nohy "\fBldarrow.texi\fR"
+.IPEZ
+The
+.nohy "\fBldarrow.texi\fR"
+special file defines the
+.nohy "\fB@ldarrow\fR"
+Texinfo macro, which can be used to imitate the mathematical notation of
+TeX in the other output formats.
+For example:
+.RS
+.IP
+.nf
+@tex
+$P\ \eLeftarrow\ Q$
+@end\ tex
+@ifnottex
+@w{@i{P}\ @ldarrow{}\ @i{Q}}
 @end\ ifnottex
 .fi
 .RE

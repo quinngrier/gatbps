@@ -339,6 +339,31 @@ $\lceil x \rceil$
 For more information,
 @pxref{Writing Mathematical Notation in Texinfo}@.
 
+@sfindex @w{@t{ldarrow.@:texi}}
+@tmindex @w{@t{@@ldarrow}}
+@item @w{@t{ldarrow.@:texi}}
+@include ipez.texi
+The
+@w{@t{ldarrow.@:texi}}
+special file defines the
+@w{@t{@@ldarrow}}
+Texinfo macro, which can be used to imitate the mathematical notation of
+@TeX{}
+in the other output formats@.
+For example:
+
+@example
+@@tex
+$P \Leftarrow Q$
+@@end tex
+@@ifnottex
+@@w@{@@i@{P@} @@ldarrow@{@} @@i@{Q@}@}
+@@end ifnottex
+@end example
+
+For more information,
+@pxref{Writing Mathematical Notation in Texinfo}@.
+
 @sfindex @w{@t{lequ.@:texi}}
 @tmindex @w{@t{@@lequ}}
 @item @w{@t{lequ.@:texi}}

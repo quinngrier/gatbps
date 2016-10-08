@@ -519,6 +519,7 @@ EOF1
           'set' "${prefix}"'llarrow.texi' "${@}"
           'set' "${prefix}"'lflo.texi' "${@}"
           'set' "${prefix}"'lequ.texi' "${@}"
+          'set' "${prefix}"'ldarrow.texi' "${@}"
           'set' "${prefix}"'lcei.texi' "${@}"
           'set' "${prefix}"'lbarrow.texi' "${@}"
           'set' "${prefix}"'larrow.texi' "${@}"
@@ -1306,6 +1307,8 @@ EOF1
 |%}help_code({%|lbarrow.texi|%}){%|
 
 |%}help_code({%|lcei.texi|%}){%|
+
+|%}help_code({%|ldarrow.texi|%}){%|
 
 |%}help_code({%|lequ.texi|%}){%|
 
@@ -2991,6 +2994,8 @@ EOF1
 
 |%}generation_code({%|lcei.texi|%}){%|
 
+|%}generation_code({%|ldarrow.texi|%}){%|
+
 |%}generation_code({%|lequ.texi|%}){%|
 
 |%}generation_code({%|lflo.texi|%}){%|
@@ -4396,6 +4401,12 @@ EOF1
 |%}){%|
 
 |%}recursion_code(
+  {%|ldarrow.texi|%},
+  {%|
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
   {%|lequ.texi|%},
   {%|
             'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
@@ -4449,6 +4460,7 @@ EOF1
             'set' '' "${prefix}"'llarrow.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'lflo.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'lequ.texi' "${@}"; 'shift'
+            'set' '' "${prefix}"'ldarrow.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'lcei.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'lbarrow.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'larrow.texi' "${@}"; 'shift'
