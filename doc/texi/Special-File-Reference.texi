@@ -289,6 +289,31 @@ $P \leftarrow Q$
 For more information,
 @pxref{Writing Mathematical Notation in Texinfo}@.
 
+@sfindex @w{@t{lbarrow.@:texi}}
+@tmindex @w{@t{@@lbarrow}}
+@item @w{@t{lbarrow.@:texi}}
+@include ipez.texi
+The
+@w{@t{lbarrow.@:texi}}
+special file defines the
+@w{@t{@@lbarrow}}
+Texinfo macro, which can be used to imitate the mathematical notation of
+@TeX{}
+in the other output formats@.
+For example:
+
+@example
+@@tex
+$P \longleftrightarrow Q$
+@@end tex
+@@ifnottex
+@@w@{@@i@{P@} @@lbarrow@{@} @@i@{Q@}@}
+@@end ifnottex
+@end example
+
+For more information,
+@pxref{Writing Mathematical Notation in Texinfo}@.
+
 @sfindex @w{@t{lcei.@:texi}}
 @tmindex @w{@t{@@lcei}}
 @item @w{@t{lcei.@:texi}}
