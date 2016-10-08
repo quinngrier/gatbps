@@ -49,6 +49,7 @@ all:
 	$(GENERATE) 'doc/texi/PACKAGEDATE.texi.in'
 	$(GENERATE) 'doc/texi/PACKAGEVERSION.texi.in'
 	$(GENERATE) 'doc/texi/barrow.texi'
+	$(GENERATE) 'doc/texi/bdarrow.texi'
 	$(GENERATE) 'doc/texi/bdots.texi'
 	$(GENERATE) 'doc/texi/bothcontents.texi'
 	$(GENERATE) 'doc/texi/dprm.texi'
