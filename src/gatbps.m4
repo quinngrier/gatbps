@@ -532,6 +532,7 @@ EOF1
           'set' "${prefix}"'java.am' "${@}"
           'set' "${prefix}"'java-dist.am' "${@}"
           'set' "${prefix}"'ipez.texi' "${@}"
+          'set' "${prefix}"'insertmathjax.texi' "${@}"
           'set' "${prefix}"'indent.texi' "${@}"
           'set' "${prefix}"'html-dist.am' "${@}"
           'set' "${prefix}"'gzip.am' "${@}"
@@ -1298,6 +1299,8 @@ EOF1
 |%}help_code({%|html-dist.am|%}){%|
 
 |%}help_code({%|indent.texi|%}){%|
+
+|%}help_code({%|insertmathjax.texi|%}){%|
 
 |%}help_code({%|ipez.texi|%}){%|
 
@@ -2995,6 +2998,8 @@ EOF1
 
 |%}generation_code({%|indent.texi|%}){%|
 
+|%}generation_code({%|insertmathjax.texi|%}){%|
+
 |%}generation_code({%|ipez.texi|%}){%|
 
 |%}generation_code({%|java-dist.am|%}){%|
@@ -4375,6 +4380,12 @@ EOF1
 
 |%}recursion_code(
   {%|indent.texi|%},
+  {%|
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|insertmathjax.texi|%},
   {%|
             'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
