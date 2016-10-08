@@ -991,6 +991,10 @@ AC_SUBST([TEXI2DVIFLAGS])
   [mostlyclean])[
 
 ]GATBPS_M4(
+  [src/files/rdarrow.texi],
+  [mostlyclean])[
+
+]GATBPS_M4(
   [src/files/rflo.texi],
   [mostlyclean])[
 

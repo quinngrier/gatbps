@@ -499,6 +499,7 @@ EOF1
           'set' "${prefix}"'sbs.texi' "${@}"
           'set' "${prefix}"'rules_code.m4' "${@}"
           'set' "${prefix}"'rflo.texi' "${@}"
+          'set' "${prefix}"'rdarrow.texi' "${@}"
           'set' "${prefix}"'rcei.texi' "${@}"
           'set' "${prefix}"'rarrow.texi' "${@}"
           'set' "${prefix}"'qprm.texi' "${@}"
@@ -1349,6 +1350,8 @@ EOF1
 |%}help_code({%|rarrow.texi|%}){%|
 
 |%}help_code({%|rcei.texi|%}){%|
+
+|%}help_code({%|rdarrow.texi|%}){%|
 
 |%}help_code({%|rflo.texi|%}){%|
 
@@ -3036,6 +3039,8 @@ EOF1
 
 |%}generation_code({%|rcei.texi|%}){%|
 
+|%}generation_code({%|rdarrow.texi|%}){%|
+
 |%}generation_code({%|rflo.texi|%}){%|
 
 |%}generation_code({%|rules_code.m4|%}){%|
@@ -4448,6 +4453,7 @@ EOF1
             'set' '' "${prefix}"'sps.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'sbs.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'rflo.texi' "${@}"; 'shift'
+            'set' '' "${prefix}"'rdarrow.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'rcei.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'rarrow.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'qprm.texi' "${@}"; 'shift'
@@ -4556,6 +4562,12 @@ EOF1
 
 |%}recursion_code(
   {%|rcei.texi|%},
+  {%|
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|rdarrow.texi|%},
   {%|
             'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
