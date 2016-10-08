@@ -22,10 +22,10 @@ shows the symbol of each macro@.
 @quotation
 @ifnottex
 @ifset insertascii
-@set HideSymbols
+@set HideSymbolColumn
 @end ifset
 @end ifnottex
-@ifset HideSymbols
+@ifset HideSymbolColumn
 @include mtvskiptop.texi
 @multitable {@t{\longleftrightarrow}} {@t{@@lldarrow}} {Unicode} {@t{floor(}}
 @headitem @TeX{} @tab Macro @tab Unicode @tab ASCII
@@ -152,7 +152,7 @@ shows the symbol of each macro@.
 @end multitable
 @include mtvskipbot.texi
 @end ifset
-@ifclear HideSymbols
+@ifclear HideSymbolColumn
 @include mtvskiptop.texi
 @multitable {@t{\longleftrightarrow}} {@t{@@lldarrow}} {Unicode} {@t{floor(}} {Symbol}
 @headitem @TeX{} @tab Macro @tab Unicode @tab ASCII @tab Symbol
@@ -419,7 +419,7 @@ $\rightarrow$
 @end multitable
 @include mtvskipbot.texi
 @end ifclear
-@clear HideSymbols
+@clear HideSymbolColumn
 @end quotation
 @ifxml
 @ifnotxml
