@@ -1,51 +1,37 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|src/files/math.texi.m4|%}){%||%}dnl
+rules_code({%|src/files/bdarrow.texi.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
+include({%|src/tools/math_symbol.m4|%}){%||%}dnl
 header_comment({%|@ifxml
 @ifnotxml
 @c|%}, {%|@c|%}){%|
 @c
-@c Special file: math.texi
+@c Special file: bdarrow.texi
 @c
-@c The math.texi special file is a Texinfo file that includes every
-@c special file that defines a macro for imitating the mathematical
-@c notation of TeX in the other output formats.
+@c The bdarrow.texi special file defines the @bdarrow Texinfo macro,
+@c which can be used to imitate the mathematical notation of TeX in the
+@c other output formats. For example:
+@c
+@c       @tex
+@c       $P \Leftrightarrow Q$
+@c       @end tex
+@c       @ifnottex
+@c       @w{@i{P} @bdarrow{} @i{Q}}
+@c       @end ifnottex
 @c
 @c For more information, see the GATBPS manual.
 @c
 @end ifnotxml
 @end ifxml
-@include barrow.texi
-@include bdarrow.texi
-@include bdots.texi
-@include dprm.texi
-@include dslash.texi
-@include gequ.texi
-@include larrow.texi
-@include lbarrow.texi
-@include lcei.texi
-@include ldarrow.texi
-@include lequ.texi
-@include lflo.texi
-@include llarrow.texi
-@include lrarrow.texi
-@include mdot.texi
-@include mdots.texi
-@include msign.texi
-@include nequ.texi
-@include prm.texi
-@include qprm.texi
-@include rarrow.texi
-@include rcei.texi
-@include rdarrow.texi
-@include rflo.texi
-@include sbs.texi
-@include sps.texi
-@include tprm.texi
+|%}math_symbol(
+  {%|bdarrow|%},
+  {%|&#x21D4;|%},
+  {%|⇔|%},
+  {%|<=>|%}){%|
 |%}footer_comment({%|@ifxml
 @ifnotxml
 @c|%}, {%|@c|%}, {%|@c
