@@ -11,13 +11,12 @@ the Unicode character that it inserts by default,
 and the ASCII alternative that it inserts if the
 @w{@t{insertascii}}
 flag is set at its point of inclusion@.
-If this manual
-is translated to
-@TeX{} or without the
+If this manual is translated to
+@TeX{}
+or without the
 @w{@t{insertascii}}
-flag set,
-then the table also
-shows the symbol of each macro@.
+flag set, then the table will also include a column that shows the
+symbol of each macro@.
 
 @quotation
 @ifnottex
