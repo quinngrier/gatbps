@@ -75,6 +75,7 @@ all:
 	$(GENERATE) 'doc/texi/qprm.texi'
 	$(GENERATE) 'doc/texi/rarrow.texi'
 	$(GENERATE) 'doc/texi/rcei.texi'
+	$(GENERATE) 'doc/texi/rdarrow.texi'
 	$(GENERATE) 'doc/texi/rflo.texi'
 	$(GENERATE) 'doc/texi/sbs.texi'
 	$(GENERATE) 'doc/texi/sps.texi'
