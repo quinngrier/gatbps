@@ -59,6 +59,7 @@ all:
 	$(GENERATE) 'doc/texi/ipez.texi'
 	$(GENERATE) 'doc/texi/larrow.texi'
 	$(GENERATE) 'doc/texi/lbarrow.texi'
+	$(GENERATE) 'doc/texi/lbdarrow.texi'
 	$(GENERATE) 'doc/texi/lcei.texi'
 	$(GENERATE) 'doc/texi/ldarrow.texi'
 	$(GENERATE) 'doc/texi/lequ.texi'
