@@ -879,6 +879,10 @@ AC_SUBST([TEXI2DVIFLAGS])
   [mostlyclean])[
 
 ]GATBPS_M4(
+  [src/files/insertascii.texi],
+  [mostlyclean])[
+
+]GATBPS_M4(
   [src/files/insertmathjax.texi],
   [mostlyclean])[
 
