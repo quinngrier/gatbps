@@ -25,6 +25,7 @@ header_comment({%|@ifxml
 @include dprm.texi
 @include dslash.texi
 @include gequ.texi
+@include insertmathjax.texi
 @include larrow.texi
 @include lbarrow.texi
 @include lbdarrow.texi

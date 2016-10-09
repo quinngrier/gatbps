@@ -4528,6 +4528,7 @@ EOF1
             'set' '' "${prefix}"'lbdarrow.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'lbarrow.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'larrow.texi' "${@}"; 'shift'
+            'set' '' "${prefix}"'insertmathjax.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'gequ.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'dslash.texi' "${@}"; 'shift'
             'set' '' "${prefix}"'dprm.texi' "${@}"; 'shift'
