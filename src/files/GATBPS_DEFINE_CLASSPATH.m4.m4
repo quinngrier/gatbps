@@ -52,7 +52,15 @@ esac
 ]AC_ARG_VAR(
   [CLASSPATH],
   [
-    Java compiler class path
+    the class path to use with all Java tools that use a class path
+    (default: CLASSPATH=''\''.'\''').
+    This must be either empty or a shell word, and it is best to
+    maximally quote the shell word to prevent surprising behavior.
+    For example, you might use CLASSPATH=''\''/usr/share/java/*'\''' to
+    search for classes and resources in all JAR files one level below
+    the /usr/share/java directory.
+    If you were to use CLASSPATH='/usr/share/java/*', then the shell
+    would perform pattern matching, which is probably not what you want.
   ])[
 
 :;}]])[]dnl
