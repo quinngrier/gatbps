@@ -40,6 +40,8 @@ m4_if(
   ])])[]dnl
 [
 
+'readonly' 'DOCKER_BUILD_FLAGS'
+
 ]AC_ARG_VAR(
   [DOCKER_BUILD_FLAGS],
   [
