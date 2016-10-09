@@ -40,6 +40,15 @@ m4_if(
   ])])[]dnl
 [
 
+case "$][{CLASSPATH+x}" in
+  ?*)
+  ;;
+  *)
+    CLASSPATH=''\''.'\'''
+  ;;
+esac
+'readonly' 'CLASSPATH'
+
 ]AC_ARG_VAR(
   [CLASSPATH],
   [
