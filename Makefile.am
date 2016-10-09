@@ -168,13 +168,13 @@ xml_dist_dep += $(doc_gatbps_TEXINFOS)
 xml_dist_dep += doc/gatbps.texi
 
 xml_dist_dst =
-xml_dist_dst += doc/gatbps-$(PACKAGE_VERSION)-intermediate.xml
+xml_dist_dst += doc/gatbps-$(PACKAGE_VERSION).xml
 
 xml_dist_src =
-xml_dist_src += doc/gatbps-intermediate.xml
+xml_dist_src += doc/gatbps.xml
 
 xml_dst =
-xml_dst += doc/gatbps-intermediate.xml
+xml_dst += doc/gatbps.xml
 
 xml_src =
 xml_src += doc/gatbps.texi
