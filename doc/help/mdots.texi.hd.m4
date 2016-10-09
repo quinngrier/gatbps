@@ -13,7 +13,7 @@ formats. For example:
       \$1 + \\cdots + n\$
       @end tex
       @ifnottex
-      1 + @mdots{} + @i{n}
+      @w{1 + @mdots{} + @i{n}}
       @end ifnottex
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.|%}dnl

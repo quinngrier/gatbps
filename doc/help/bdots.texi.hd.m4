@@ -13,7 +13,7 @@ formats. For example:
       \$1, \\ldots, n\$
       @end tex
       @ifnottex
-      1, @bdots{}, @i{n}
+      @w{1@comma{} @bdots{}@comma{} @i{n}}
       @end ifnottex
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.|%}dnl

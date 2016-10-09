@@ -19,7 +19,7 @@ header_comment({%|@ifxml
 @c       $x \cdot y$
 @c       @end tex
 @c       @ifnottex
-@c       @i{x} @mdot{} @i{y}
+@c       @w{@i{x} @mdot{} @i{y}}
 @c       @end ifnottex
 @c
 @c For more information, see the GATBPS manual.

@@ -13,7 +13,7 @@ formats. For example:
       \$\\lceil x \\rceil\$
       @end tex
       @ifnottex
-      @lcei{}@i{x}@rcei{}
+      @w{@lcei{}@i{x}@rcei{}}
       @end ifnottex
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.|%}dnl

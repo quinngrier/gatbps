@@ -20,7 +20,7 @@ header_comment({%|@ifxml
 @c       $x - y$
 @c       @end tex
 @c       @ifnottex
-@c       @i{x} @msign{} @i{y}
+@c       @w{@i{x} @msign{} @i{y}}
 @c       @end ifnottex
 @c
 @c For more information, see the GATBPS manual.

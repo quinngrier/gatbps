@@ -13,7 +13,7 @@ formats. For example:
       \$\\lfloor x \\rfloor\$
       @end tex
       @ifnottex
-      @lflo{}@i{x}@rflo{}
+      @w{@lflo{}@i{x}@rflo{}}
       @end ifnottex
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.|%}dnl

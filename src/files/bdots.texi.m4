@@ -19,7 +19,7 @@ header_comment({%|@ifxml
 @c       $1, \ldots, n$
 @c       @end tex
 @c       @ifnottex
-@c       1, @bdots{}, @i{n}
+@c       @w{1@comma{} @bdots{}@comma{} @i{n}}
 @c       @end ifnottex
 @c
 @c For more information, see the GATBPS manual.

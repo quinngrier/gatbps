@@ -22,7 +22,7 @@ header_comment({%|@ifxml
 @c       $x_{y + z_w}$
 @c       @end tex
 @c       @ifnottex
-@c       @i{x}@sbs{(,@i{y} + @i{z}@sbs{,@i{w},},)}
+@c       @w{@i{x}@sbs{(,@i{y} + @i{z}@sbs{,@i{w},},)}}
 @c       @end ifnottex
 @c
 @c For more information, see the GATBPS manual.

@@ -15,7 +15,7 @@ the mathematical notation of TeX in the other output formats:
       \$x_{y + z_w}\$
       @end tex
       @ifnottex
-      @i{x}@sbs{(,@i{y} + @i{z}@sbs{,@i{w},},)}
+      @w{@i{x}@sbs{(,@i{y} + @i{z}@sbs{,@i{w},},)}}
       @end ifnottex
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.|%}dnl

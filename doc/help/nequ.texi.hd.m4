@@ -13,7 +13,7 @@ formats. For example:
       \$x \\ne y\$
       @end tex
       @ifnottex
-      @i{x} @nequ{} @i{y}
+      @w{@i{x} @nequ{} @i{y}}
       @end ifnottex
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.|%}dnl

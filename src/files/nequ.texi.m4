@@ -19,7 +19,7 @@ header_comment({%|@ifxml
 @c       $x \ne y$
 @c       @end tex
 @c       @ifnottex
-@c       @i{x} @nequ{} @i{y}
+@c       @w{@i{x} @nequ{} @i{y}}
 @c       @end ifnottex
 @c
 @c For more information, see the GATBPS manual.

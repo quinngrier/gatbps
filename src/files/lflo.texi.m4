@@ -19,7 +19,7 @@ header_comment({%|@ifxml
 @c       $\lfloor x \rfloor$
 @c       @end tex
 @c       @ifnottex
-@c       @lflo{}@i{x}@rflo{}
+@c       @w{@lflo{}@i{x}@rflo{}}
 @c       @end ifnottex
 @c
 @c For more information, see the GATBPS manual.

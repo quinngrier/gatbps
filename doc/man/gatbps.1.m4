@@ -1082,7 +1082,7 @@ For example:
 $1,\ \eldots,\ n$
 @end\ tex
 @ifnottex
-1,\ @bdots{},\ @i{n}
+@w{1@comma{}\ @bdots{}@comma{}\ @i{n}}
 @end\ ifnottex
 .fi
 .RE
@@ -1130,7 +1130,7 @@ For example:
 $x\ /\ y$
 @end\ tex
 @ifnottex
-@i{x}\ @dslash{}\ @i{y}
+@w{@i{x}\ @dslash{}\ @i{y}}
 @end\ ifnottex
 .fi
 .RE
@@ -1154,7 +1154,7 @@ For example:
 $x\ \ege\ y$
 @end\ tex
 @ifnottex
-@i{x}\ @gequ{}\ @i{y}
+@w{@i{x}\ @gequ{}\ @i{y}}
 @end\ ifnottex
 .fi
 .RE
@@ -1250,7 +1250,7 @@ For example:
 $\elceil\ x\ \erceil$
 @end\ tex
 @ifnottex
-@lcei{}@i{x}@rcei{}
+@w{@lcei{}@i{x}@rcei{}}
 @end\ ifnottex
 .fi
 .RE
@@ -1298,7 +1298,7 @@ For example:
 $x\ \ele\ y$
 @end\ tex
 @ifnottex
-@i{x}\ @lequ{}\ @i{y}
+@w{@i{x}\ @lequ{}\ @i{y}}
 @end\ ifnottex
 .fi
 .RE
@@ -1322,7 +1322,7 @@ For example:
 $\elfloor\ x\ \erfloor$
 @end\ tex
 @ifnottex
-@lflo{}@i{x}@rflo{}
+@w{@lflo{}@i{x}@rflo{}}
 @end\ ifnottex
 .fi
 .RE
@@ -1455,7 +1455,7 @@ For example:
 $x\ \ecdot\ y$
 @end\ tex
 @ifnottex
-@i{x}\ @mdot{}\ @i{y}
+@w{@i{x}\ @mdot{}\ @i{y}}
 @end\ ifnottex
 .fi
 .RE
@@ -1479,7 +1479,7 @@ For example:
 $1\ +\ \ecdots\ +\ n$
 @end\ tex
 @ifnottex
-1\ +\ @mdots{}\ +\ @i{n}
+@w{1\ +\ @mdots{}\ +\ @i{n}}
 @end\ ifnottex
 .fi
 .RE
@@ -1503,7 +1503,7 @@ For example:
 $x\ \-\ y$
 @end\ tex
 @ifnottex
-@i{x}\ @msign{}\ @i{y}
+@w{@i{x}\ @msign{}\ @i{y}}
 @end\ ifnottex
 .fi
 .RE
@@ -1527,7 +1527,7 @@ For example:
 $x\ \ene\ y$
 @end\ tex
 @ifnottex
-@i{x}\ @nequ{}\ @i{y}
+@w{@i{x}\ @nequ{}\ @i{y}}
 @end\ ifnottex
 .fi
 .RE
@@ -1623,7 +1623,7 @@ For example:
 $\elceil\ x\ \erceil$
 @end\ tex
 @ifnottex
-@lcei{}@i{x}@rcei{}
+@w{@lcei{}@i{x}@rcei{}}
 @end\ ifnottex
 .fi
 .RE
@@ -1671,7 +1671,7 @@ For example:
 $\elfloor\ x\ \erfloor$
 @end\ tex
 @ifnottex
-@lflo{}@i{x}@rflo{}
+@w{@lflo{}@i{x}@rflo{}}
 @end\ ifnottex
 .fi
 .RE
@@ -1704,7 +1704,7 @@ notation of TeX in the other output formats:
 $x_{y\ +\ z_w}$
 @end\ tex
 @ifnottex
-@i{x}@sbs{(,@i{y}\ +\ @i{z}@sbs{,@i{w},},)}
+@w{@i{x}@sbs{(,@i{y}\ +\ @i{z}@sbs{,@i{w},},)}}
 @end\ ifnottex
 .fi
 .RE
@@ -1749,7 +1749,7 @@ notation of TeX in the other output formats:
 $x^{y\ +\ z^w}$
 @end\ tex
 @ifnottex
-@i{x}@sps{(,@i{y}\ +\ @i{z}@sps{,@i{w},},)}
+@w{@i{x}@sps{(,@i{y}\ +\ @i{z}@sps{,@i{w},},)}}
 @end\ ifnottex
 .fi
 .RE

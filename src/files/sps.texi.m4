@@ -22,7 +22,7 @@ header_comment({%|@ifxml
 @c       $x^{y + z^w}$
 @c       @end tex
 @c       @ifnottex
-@c       @i{x}@sps{(,@i{y} + @i{z}@sps{,@i{w},},)}
+@c       @w{@i{x}@sps{(,@i{y} + @i{z}@sps{,@i{w},},)}}
 @c       @end ifnottex
 @c
 @c For more information, see the GATBPS manual.

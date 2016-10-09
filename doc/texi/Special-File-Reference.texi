@@ -207,7 +207,7 @@ For example:
 $1, \ldots, n$
 @@end tex
 @@ifnottex
-1, @@bdots@{@}, @@i@{n@}
+@@w@{1@@comma@{@} @@bdots@{@}@@comma@{@} @@i@{n@}@}
 @@end ifnottex
 @end example
 
@@ -257,7 +257,7 @@ For example:
 $x / y$
 @@end tex
 @@ifnottex
-@@i@{x@} @@dslash@{@} @@i@{y@}
+@@w@{@@i@{x@} @@dslash@{@} @@i@{y@}@}
 @@end ifnottex
 @end example
 
@@ -282,7 +282,7 @@ For example:
 $x \ge y$
 @@end tex
 @@ifnottex
-@@i@{x@} @@gequ@{@} @@i@{y@}
+@@w@{@@i@{x@} @@gequ@{@} @@i@{y@}@}
 @@end ifnottex
 @end example
 
@@ -382,7 +382,7 @@ For example:
 $\lceil x \rceil$
 @@end tex
 @@ifnottex
-@@lcei@{@}@@i@{x@}@@rcei@{@}
+@@w@{@@lcei@{@}@@i@{x@}@@rcei@{@}@}
 @@end ifnottex
 @end example
 
@@ -432,7 +432,7 @@ For example:
 $x \le y$
 @@end tex
 @@ifnottex
-@@i@{x@} @@lequ@{@} @@i@{y@}
+@@w@{@@i@{x@} @@lequ@{@} @@i@{y@}@}
 @@end ifnottex
 @end example
 
@@ -457,7 +457,7 @@ For example:
 $\lfloor x \rfloor$
 @@end tex
 @@ifnottex
-@@lflo@{@}@@i@{x@}@@rflo@{@}
+@@w@{@@lflo@{@}@@i@{x@}@@rflo@{@}@}
 @@end ifnottex
 @end example
 
@@ -596,7 +596,7 @@ For example:
 $x \cdot y$
 @@end tex
 @@ifnottex
-@@i@{x@} @@mdot@{@} @@i@{y@}
+@@w@{@@i@{x@} @@mdot@{@} @@i@{y@}@}
 @@end ifnottex
 @end example
 
@@ -621,7 +621,7 @@ For example:
 $1 + \cdots + n$
 @@end tex
 @@ifnottex
-1 + @@mdots@{@} + @@i@{n@}
+@@w@{1 + @@mdots@{@} + @@i@{n@}@}
 @@end ifnottex
 @end example
 
@@ -646,7 +646,7 @@ For example:
 $x - y$
 @@end tex
 @@ifnottex
-@@i@{x@} @@msign@{@} @@i@{y@}
+@@w@{@@i@{x@} @@msign@{@} @@i@{y@}@}
 @@end ifnottex
 @end example
 
@@ -671,7 +671,7 @@ For example:
 $x \ne y$
 @@end tex
 @@ifnottex
-@@i@{x@} @@nequ@{@} @@i@{y@}
+@@w@{@@i@{x@} @@nequ@{@} @@i@{y@}@}
 @@end ifnottex
 @end example
 
@@ -771,7 +771,7 @@ For example:
 $\lceil x \rceil$
 @@end tex
 @@ifnottex
-@@lcei@{@}@@i@{x@}@@rcei@{@}
+@@w@{@@lcei@{@}@@i@{x@}@@rcei@{@}@}
 @@end ifnottex
 @end example
 
@@ -821,7 +821,7 @@ For example:
 $\lfloor x \rfloor$
 @@end tex
 @@ifnottex
-@@lflo@{@}@@i@{x@}@@rflo@{@}
+@@w@{@@lflo@{@}@@i@{x@}@@rflo@{@}@}
 @@end ifnottex
 @end example
 
@@ -854,7 +854,7 @@ notation of @TeX{} in the other output formats:
 $x_@{y + z_w@}$
 @@end tex
 @@ifnottex
-@@i@{x@}@@sbs@{(,@@i@{y@} + @@i@{z@}@@sbs@{,@@i@{w@},@},)@}
+@@w@{@@i@{x@}@@sbs@{(,@@i@{y@} + @@i@{z@}@@sbs@{,@@i@{w@},@},)@}@}
 @@end ifnottex
 @end example
 
@@ -898,7 +898,7 @@ notation of @TeX{} in the other output formats:
 $x^@{y + z^w@}$
 @@end tex
 @@ifnottex
-@@i@{x@}@@sps@{(,@@i@{y@} + @@i@{z@}@@sps@{,@@i@{w@},@},)@}
+@@w@{@@i@{x@}@@sps@{(,@@i@{y@} + @@i@{z@}@@sps@{,@@i@{w@},@},)@}@}
 @@end ifnottex
 @end example
 

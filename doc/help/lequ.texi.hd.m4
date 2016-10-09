@@ -13,7 +13,7 @@ formats. For example:
       \$x \\le y\$
       @end tex
       @ifnottex
-      @i{x} @lequ{} @i{y}
+      @w{@i{x} @lequ{} @i{y}}
       @end ifnottex
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.|%}dnl

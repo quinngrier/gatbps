@@ -19,7 +19,7 @@ header_comment({%|@ifxml
 @c       $\lceil x \rceil$
 @c       @end tex
 @c       @ifnottex
-@c       @lcei{}@i{x}@rcei{}
+@c       @w{@lcei{}@i{x}@rcei{}}
 @c       @end ifnottex
 @c
 @c For more information, see the GATBPS manual.
