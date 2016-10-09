@@ -60,7 +60,8 @@ esac
     search for classes and resources in all JAR files one level below
     the /usr/share/java directory.
     If you were to use CLASSPATH='/usr/share/java/*', then the shell
-    would perform pattern matching, which is probably not what you want.
+    would perform pattern matching in certain situations, which is
+    probably not what you want.
   ])[
 
 :;}]])[]dnl
