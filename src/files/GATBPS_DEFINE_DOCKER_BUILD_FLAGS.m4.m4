@@ -43,7 +43,10 @@ m4_if(
 ]AC_ARG_VAR(
   [DOCKER_BUILD_FLAGS],
   [
-    flags to use with docker build
+    flags to use with Docker build commands (default:
+    DOCKER_BUILD_FLAGS='').
+    For example, you might use DOCKER_BUILD_FLAGS='--no-cache' to
+    disable the image cache.
   ])[
 
 :;}]])[]dnl
