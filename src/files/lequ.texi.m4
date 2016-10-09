@@ -11,9 +11,9 @@ header_comment({%|@ifxml
 @c
 @c Special file: lequ.texi
 @c
-@c The lequ.texi special file defines the @lequ Texinfo macro, which is
-@c used to imitate the mathematical notation of TeX in the other output
-@c formats:
+@c The lequ.texi special file defines the @lequ Texinfo macro, which can
+@c be used to imitate the mathematical notation of TeX in the other
+@c output formats. For example:
 @c
 @c       @tex
 @c       $x \le y$

@@ -11,9 +11,9 @@ header_comment({%|@ifxml
 @c
 @c Special file: gequ.texi
 @c
-@c The gequ.texi special file defines the @gequ Texinfo macro, which is
-@c used to imitate the mathematical notation of TeX in the other output
-@c formats:
+@c The gequ.texi special file defines the @gequ Texinfo macro, which can
+@c be used to imitate the mathematical notation of TeX in the other
+@c output formats. For example:
 @c
 @c       @tex
 @c       $x \ge y$

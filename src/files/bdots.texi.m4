@@ -12,8 +12,8 @@ header_comment({%|@ifxml
 @c Special file: bdots.texi
 @c
 @c The bdots.texi special file defines the @bdots Texinfo macro, which
-@c is used to imitate the mathematical notation of TeX in the other
-@c output formats:
+@c can be used to imitate the mathematical notation of TeX in the other
+@c output formats. For example:
 @c
 @c       @tex
 @c       $1, \ldots, n$

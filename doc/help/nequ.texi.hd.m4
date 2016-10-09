@@ -5,9 +5,9 @@ rules_code({%|doc/help/nequ.texi.hd.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 {%|Special file: ${fB1}nequ.texi${fR1}
 
-The ${fB1}nequ.texi${fR1} special file defines the ${fB1}@nequ${fR1} Texinfo macro, which is
+The ${fB1}nequ.texi${fR1} special file defines the ${fB1}@nequ${fR1} Texinfo macro, which can be
 used to imitate the mathematical notation of TeX in the other output
-formats:
+formats. For example:
 
       @tex
       \$x \\ne y\$

@@ -12,8 +12,8 @@ header_comment({%|@ifxml
 @c Special file: mdots.texi
 @c
 @c The mdots.texi special file defines the @mdots Texinfo macro, which
-@c is used to imitate the mathematical notation of TeX in the other
-@c output formats:
+@c can be used to imitate the mathematical notation of TeX in the other
+@c output formats. For example:
 @c
 @c       @tex
 @c       $1 + \cdots + n$

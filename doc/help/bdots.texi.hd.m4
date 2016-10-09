@@ -5,9 +5,9 @@ rules_code({%|doc/help/bdots.texi.hd.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 {%|Special file: ${fB1}bdots.texi${fR1}
 
-The ${fB1}bdots.texi${fR1} special file defines the ${fB1}@bdots${fR1} Texinfo macro, which is
-used to imitate the mathematical notation of TeX in the other output
-formats:
+The ${fB1}bdots.texi${fR1} special file defines the ${fB1}@bdots${fR1} Texinfo macro, which can
+be used to imitate the mathematical notation of TeX in the other output
+formats. For example:
 
       @tex
       \$1, \\ldots, n\$

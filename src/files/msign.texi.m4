@@ -14,7 +14,7 @@ header_comment({%|@ifxml
 @c
 @c The msign.texi special file defines the @msign Texinfo macro, which
 @c can be used to imitate the mathematical notation of TeX in the other
-@c output formats:
+@c output formats. For example:
 @c
 @c       @tex
 @c       $x - y$

@@ -1072,10 +1072,9 @@ The
 .nohy "\fBbdots.texi\fR"
 special file defines the
 .nohy "\fB@bdots\fR"
-Texinfo macro,
-which can be used to
-imitate the mathematical
-notation of TeX in the other output formats:
+Texinfo macro, which can be used to imitate the mathematical notation of
+TeX in the other output formats.
+For example:
 .RS
 .IP
 .nf
@@ -1121,10 +1120,9 @@ The
 .nohy "\fBdslash.texi\fR"
 special file defines the
 .nohy "\fB@dslash\fR"
-Texinfo macro,
-which can be used to
-imitate the mathematical
-notation of TeX in the other output formats:
+Texinfo macro, which can be used to imitate the mathematical notation of
+TeX in the other output formats.
+For example:
 .RS
 .IP
 .nf
@@ -1146,10 +1144,9 @@ The
 .nohy "\fBgequ.texi\fR"
 special file defines the
 .nohy "\fB@gequ\fR"
-Texinfo macro,
-which can be used to
-imitate the mathematical
-notation of TeX in the other output formats:
+Texinfo macro, which can be used to imitate the mathematical notation of
+TeX in the other output formats.
+For example:
 .RS
 .IP
 .nf
@@ -1243,10 +1240,9 @@ The
 .nohy "\fBlcei.texi\fR"
 special file defines the
 .nohy "\fB@lcei\fR"
-Texinfo macro,
-which can be used to
-imitate the mathematical
-notation of TeX in the other output formats:
+Texinfo macro, which can be used to imitate the mathematical notation of
+TeX in the other output formats.
+For example:
 .RS
 .IP
 .nf
@@ -1292,10 +1288,9 @@ The
 .nohy "\fBlequ.texi\fR"
 special file defines the
 .nohy "\fB@lequ\fR"
-Texinfo macro,
-which can be used to
-imitate the mathematical
-notation of TeX in the other output formats:
+Texinfo macro, which can be used to imitate the mathematical notation of
+TeX in the other output formats.
+For example:
 .RS
 .IP
 .nf
@@ -1317,10 +1312,9 @@ The
 .nohy "\fBlflo.texi\fR"
 special file defines the
 .nohy "\fB@lflo\fR"
-Texinfo macro,
-which can be used to
-imitate the mathematical
-notation of TeX in the other output formats:
+Texinfo macro, which can be used to imitate the mathematical notation of
+TeX in the other output formats.
+For example:
 .RS
 .IP
 .nf
@@ -1451,10 +1445,9 @@ The
 .nohy "\fBmdot.texi\fR"
 special file defines the
 .nohy "\fB@mdot\fR"
-Texinfo macro,
-which can be used to
-imitate the mathematical
-notation of TeX in the other output formats:
+Texinfo macro, which can be used to imitate the mathematical notation of
+TeX in the other output formats.
+For example:
 .RS
 .IP
 .nf
@@ -1476,10 +1469,9 @@ The
 .nohy "\fBmdots.texi\fR"
 special file defines the
 .nohy "\fB@mdots\fR"
-Texinfo macro,
-which can be used to
-imitate the mathematical
-notation of TeX in the other output formats:
+Texinfo macro, which can be used to imitate the mathematical notation of
+TeX in the other output formats.
+For example:
 .RS
 .IP
 .nf
@@ -1501,10 +1493,9 @@ The
 .nohy "\fBmsign.texi\fR"
 special file defines the
 .nohy "\fB@msign\fR"
-Texinfo macro,
-which can be used to
-imitate the mathematical
-notation of TeX in the other output formats:
+Texinfo macro, which can be used to imitate the mathematical notation of
+TeX in the other output formats.
+For example:
 .RS
 .IP
 .nf
@@ -1526,10 +1517,9 @@ The
 .nohy "\fBnequ.texi\fR"
 special file defines the
 .nohy "\fB@nequ\fR"
-Texinfo macro,
-which can be used to
-imitate the mathematical
-notation of TeX in the other output formats:
+Texinfo macro, which can be used to imitate the mathematical notation of
+TeX in the other output formats.
+For example:
 .RS
 .IP
 .nf
@@ -1623,10 +1613,9 @@ The
 .nohy "\fBrcei.texi\fR"
 special file defines the
 .nohy "\fB@rcei\fR"
-Texinfo macro,
-which can be used to
-imitate the mathematical
-notation of TeX in the other output formats:
+Texinfo macro, which can be used to imitate the mathematical notation of
+TeX in the other output formats.
+For example:
 .RS
 .IP
 .nf
@@ -1672,10 +1661,9 @@ The
 .nohy "\fBrflo.texi\fR"
 special file defines the
 .nohy "\fB@rflo\fR"
-Texinfo macro,
-which can be used to
-imitate the mathematical
-notation of TeX in the other output formats:
+Texinfo macro, which can be used to imitate the mathematical notation of
+TeX in the other output formats.
+For example:
 .RS
 .IP
 .nf
