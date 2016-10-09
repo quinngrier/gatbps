@@ -56,6 +56,7 @@ all:
 	$(GENERATE) 'doc/texi/dslash.texi'
 	$(GENERATE) 'doc/texi/gequ.texi'
 	$(GENERATE) 'doc/texi/indent.texi'
+	$(GENERATE) 'doc/texi/insertascii.texi'
 	$(GENERATE) 'doc/texi/ipez.texi'
 	$(GENERATE) 'doc/texi/larrow.texi'
 	$(GENERATE) 'doc/texi/lbarrow.texi'
