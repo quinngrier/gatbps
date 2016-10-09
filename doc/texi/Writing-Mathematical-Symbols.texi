@@ -15,7 +15,7 @@ If this manual is translated to
 @TeX{}
 or without the
 @w{@t{insertascii}}
-flag set, then the table will also include a column that shows the
+flag set, then the table will include an extra column that shows the
 symbol of each macro@.
 
 @quotation
