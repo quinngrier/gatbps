@@ -617,9 +617,9 @@ EOF1
           'set' "${prefix}"'GATBPS_GIT_ARCHIVE_SUBST.m4' "${@}"
           'set' "${prefix}"'GATBPS_GIT_ARCHIVE_RULES.am' "${@}"
           'set' "${prefix}"'GATBPS_GIT_ARCHIVE.m4' "${@}"
-          'set' "${prefix}"'GATBPS_DOCKER_SUBST.m4' "${@}"
-          'set' "${prefix}"'GATBPS_DOCKER_RULES.am' "${@}"
-          'set' "${prefix}"'GATBPS_DOCKER.m4' "${@}"
+          'set' "${prefix}"'GATBPS_DOCKER_BUILD_SUBST.m4' "${@}"
+          'set' "${prefix}"'GATBPS_DOCKER_BUILD_RULES.am' "${@}"
+          'set' "${prefix}"'GATBPS_DOCKER_BUILD.m4' "${@}"
           'set' "${prefix}"'GATBPS_DEFINE_xmldir.m4' "${@}"
           'set' "${prefix}"'GATBPS_DEFINE_plaintextdir.m4' "${@}"
           'set' "${prefix}"'GATBPS_DEFINE_javadocdir.m4' "${@}"
@@ -1129,11 +1129,11 @@ EOF1
 
 |%}help_code({%|GATBPS_DEFINE_xmldir.m4|%}){%|
 
-|%}help_code({%|GATBPS_DOCKER.m4|%}){%|
+|%}help_code({%|GATBPS_DOCKER_BUILD.m4|%}){%|
 
-|%}help_code({%|GATBPS_DOCKER_RULES.am|%}){%|
+|%}help_code({%|GATBPS_DOCKER_BUILD_RULES.am|%}){%|
 
-|%}help_code({%|GATBPS_DOCKER_SUBST.m4|%}){%|
+|%}help_code({%|GATBPS_DOCKER_BUILD_SUBST.m4|%}){%|
 
 |%}help_code({%|GATBPS_GIT_ARCHIVE.m4|%}){%|
 
@@ -2829,11 +2829,11 @@ EOF1
 
 |%}generation_code({%|GATBPS_DEFINE_xmldir.m4|%}){%|
 
-|%}generation_code({%|GATBPS_DOCKER.m4|%}){%|
+|%}generation_code({%|GATBPS_DOCKER_BUILD.m4|%}){%|
 
-|%}generation_code({%|GATBPS_DOCKER_RULES.am|%}){%|
+|%}generation_code({%|GATBPS_DOCKER_BUILD_RULES.am|%}){%|
 
-|%}generation_code({%|GATBPS_DOCKER_SUBST.m4|%}){%|
+|%}generation_code({%|GATBPS_DOCKER_BUILD_SUBST.m4|%}){%|
 
 |%}generation_code({%|GATBPS_GIT_ARCHIVE.m4|%}){%|
 
@@ -3828,19 +3828,19 @@ EOF1
 |%}){%|
 
 |%}recursion_code(
-  {%|GATBPS_DOCKER.m4|%},
+  {%|GATBPS_DOCKER_BUILD.m4|%},
   {%|
             'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
-  {%|GATBPS_DOCKER_RULES.am|%},
+  {%|GATBPS_DOCKER_BUILD_RULES.am|%},
   {%|
             'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
 |%}recursion_code(
-  {%|GATBPS_DOCKER_SUBST.m4|%},
+  {%|GATBPS_DOCKER_BUILD_SUBST.m4|%},
   {%|
             'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|

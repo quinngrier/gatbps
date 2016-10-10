@@ -535,15 +535,15 @@ AC_SUBST([TEXI2DVIFLAGS])
   [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_DOCKER.m4],
+  [src/files/GATBPS_DOCKER_BUILD.m4],
   [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_DOCKER_RULES.am],
+  [src/files/GATBPS_DOCKER_BUILD_RULES.am],
   [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_DOCKER_SUBST.m4],
+  [src/files/GATBPS_DOCKER_BUILD_SUBST.m4],
   [mostlyclean])[
 
 ]GATBPS_M4(

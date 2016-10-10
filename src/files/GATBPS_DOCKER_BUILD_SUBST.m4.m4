@@ -1,7 +1,7 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|src/files/GATBPS_DOCKER_SUBST.m4.m4|%}){%||%}dnl
+rules_code({%|src/files/GATBPS_DOCKER_BUILD_SUBST.m4.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/PACKAGE_DATE_DAY_ZPAD.m4|%}){%||%}dnl
 include({%|src/tools/PACKAGE_DATE_MONTH_ZPAD.m4|%}){%||%}dnl
@@ -10,7 +10,7 @@ include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
 header_comment({%|dnl|%}, {%|dnl|%}){%|
 dnl
-dnl Special file: GATBPS_DOCKER_SUBST.m4
+dnl Special file: GATBPS_DOCKER_BUILD_SUBST.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
@@ -19,29 +19,29 @@ PACKAGE_DATE_YEAR{%||%}dnl
 PACKAGE_DATE_MONTH_ZPAD{%||%}dnl
 PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 {%|
-AC_DEFUN([GATBPS_DOCKER_SUBST], [[{
+AC_DEFUN([GATBPS_DOCKER_BUILD_SUBST], [[{
 
 #
 # The block that contains this comment is the expansion of the
-# GATBPS_DOCKER_SUBST macro.
+# GATBPS_DOCKER_BUILD_SUBST macro.
 #]dnl
 m4_ifdef(
-  [GATBPS_DOCKER_SUBST_HAS_BEEN_CALLED],
+  [GATBPS_DOCKER_BUILD_SUBST_HAS_BEEN_CALLED],
   [gatbps_fatal([
-    GATBPS_DOCKER_SUBST has already been called
+    GATBPS_DOCKER_BUILD_SUBST has already been called
   ])],
-  [m4_define([GATBPS_DOCKER_SUBST_HAS_BEEN_CALLED])])[]dnl
+  [m4_define([GATBPS_DOCKER_BUILD_SUBST_HAS_BEEN_CALLED])])[]dnl
 m4_if(
   m4_eval([$# < 0 || $# > 0]),
   [1],
   [gatbps_fatal([
-    GATBPS_DOCKER_SUBST requires exactly 0 arguments
+    GATBPS_DOCKER_BUILD_SUBST requires exactly 0 arguments
     ($# ]m4_if([$#], [1], [[was]], [[were]])[ given)
   ])])[]dnl
 [
 
-]AC_SUBST([GATBPS_DOCKER_RULES])[
-]AM_SUBST_NOTMAKE([GATBPS_DOCKER_RULES])[
+]AC_SUBST([GATBPS_DOCKER_BUILD_RULES])[
+]AM_SUBST_NOTMAKE([GATBPS_DOCKER_BUILD_RULES])[
 
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})

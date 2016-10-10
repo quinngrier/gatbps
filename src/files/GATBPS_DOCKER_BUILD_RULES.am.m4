@@ -1,19 +1,19 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|src/files/GATBPS_DOCKER_RULES.am.m4|%}){%||%}dnl
+rules_code({%|src/files/GATBPS_DOCKER_BUILD_RULES.am.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
 include({%|src/tools/substitution_comment_plural.m4|%}){%||%}dnl
 header_comment({%|##|%}, {%|##|%}){%|
 ##
-## Special file: GATBPS_DOCKER_RULES.am
+## Special file: GATBPS_DOCKER_BUILD_RULES.am
 ##
 ## For more information, see the GATBPS manual.
 ##
 
-@GATBPS_DOCKER_RULES@
+@GATBPS_DOCKER_BUILD_RULES@
 
 |%}substitution_comment_plural{%|
 
