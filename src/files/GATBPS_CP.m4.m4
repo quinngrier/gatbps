@@ -34,10 +34,10 @@ AC_DEFUN([GATBPS_CP], [[{
   [72])[
 #]dnl
 m4_if(
-  m4_eval([$# < 2 || $# > 6]),
+  m4_eval([$# < 2 || $# > 5]),
   [1],
   [gatbps_fatal([
-    GATBPS_CP requires 2 to 6 arguments
+    GATBPS_CP requires 2 to 5 arguments
     ($# ]m4_if([$#], [1], [[was]], [[were]])[ given)
   ])])[]dnl
 m4_if(
@@ -73,66 +73,30 @@ m4_case(
     the third argument must be either empty, "directory", "executable",
     "file", or "file_or_directory"
   ])])[]dnl
-m4_pushdef(
-  [list_4],
-  m4_bpatsubst([[[$4]]], [^\(..\)[
-	 ]+], [\1]))[]dnl
-]m4_ifdef(
-  [GATBPS_CP_check_4],
-  [gatbps_fatal([
-    GATBPS_CP_check_4 is already defined
-  ])])[dnl
-]m4_define(
-  [GATBPS_CP_check_4],
-  [m4_if(
-    [$#],
-    [1],
-    [m4_if(
-      m4_bregexp([$1], [^[
-	 ]+$]),
-      [0],
-      [gatbps_fatal([
-        invalid last subargument of the fourth GATBPS_CP argument:
-      [--VERBATIM--] "$1"], [
-        the last subargument must either be empty or contain at least
-        one character that is not a space, tab, or newline character
-      ])])],
-    [m4_if(
-      m4_bregexp([$1], [[^
-	 ]]),
-      [-1],
-      [gatbps_fatal([
-        invalid non-last subargument of the fourth GATBPS_CP argument:
-      [--VERBATIM--] "$1"], [
-        each non-last subargument must contain at least one character
-        that is not a space, tab, or newline character
-      ])],
-      [GATBPS_CP_check_4(m4_shift($@))])])])[dnl
-GATBPS_CP_check_4(m4_if(,,list_4))[]dnl
 m4_case(
-  [$5],
+  [$4],
   [], [],
   [clean], [],
   [distclean], [],
   [maintainer-clean], [],
   [mostlyclean], [],
   [gatbps_fatal([
-    invalid fifth argument to GATBPS_CP:
-  [--VERBATIM--] "$5"], [
-    the fifth argument must be either empty, "clean", "distclean",
+    invalid fourth argument to GATBPS_CP:
+  [--VERBATIM--] "$4"], [
+    the fourth argument must be either empty, "clean", "distclean",
     "maintainer-clean", or "mostlyclean"
   ])])[]dnl
 m4_pushdef(
-  [list_6],
-  m4_bpatsubst([[[$6]]], [^\(..\)[
+  [list_5],
+  m4_bpatsubst([[[$5]]], [^\(..\)[
 	 ]+], [\1]))[]dnl
 ]m4_ifdef(
-  [GATBPS_CP_check_6],
+  [GATBPS_CP_check_5],
   [gatbps_fatal([
-    GATBPS_CP_check_6 is already defined
+    GATBPS_CP_check_5 is already defined
   ])])[dnl
 ]m4_define(
-  [GATBPS_CP_check_6],
+  [GATBPS_CP_check_5],
   [m4_if(
     [$#],
     [1],
@@ -141,7 +105,7 @@ m4_pushdef(
 	 ]+$]),
       [0],
       [gatbps_fatal([
-        invalid last subargument of the sixth GATBPS_CP argument:
+        invalid last subargument of the fifth GATBPS_CP argument:
       [--VERBATIM--] "$1"], [
         the last subargument must either be empty or contain at least
         one character that is not a space, tab, or newline character
@@ -151,13 +115,13 @@ m4_pushdef(
 	 ]]),
       [-1],
       [gatbps_fatal([
-        invalid non-last subargument of the sixth GATBPS_CP argument:
+        invalid non-last subargument of the fifth GATBPS_CP argument:
       [--VERBATIM--] "$1"], [
         each non-last subargument must contain at least one character
         that is not a space, tab, or newline character
       ])],
-      [GATBPS_CP_check_6(m4_shift($@))])])])[dnl
-GATBPS_CP_check_6(m4_if(,,list_6))[]dnl
+      [GATBPS_CP_check_5(m4_shift($@))])])])[dnl
+GATBPS_CP_check_5(m4_if(,,list_5))[]dnl
 m4_pushdef(
   [output_file_or_directory],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
@@ -173,21 +137,17 @@ m4_pushdef(
     [[[$3]]]))[]dnl
 m4_pushdef(
   [child_prerequisites],
-  m4_if(
-    list_4,
-    [],
-    [[[[$2]]]],
-    [m4_dquote(list_4)]))[]dnl
+  [[[$2]]])[]dnl
 m4_pushdef(
   [clean_target],
   m4_if(
-    [$5],
+    [$4],
     [],
     [[[mostlyclean]]],
-    [[[$5]]]))[]dnl
+    [[[$4]]]))[]dnl
 m4_pushdef(
   [leaf_prerequisites],
-  m4_dquote(list_6))[]dnl
+  m4_dquote(list_5))[]dnl
 m4_pushdef(
   [rule_prerequisites],
   m4_if(
@@ -379,8 +339,7 @@ m4_popdef([child_prerequisites])[]dnl
 m4_popdef([input_mode])[]dnl
 m4_popdef([input_file_or_directory])[]dnl
 m4_popdef([output_file_or_directory])[]dnl
-m4_popdef([list_6])[]dnl
-m4_popdef([list_4])[]dnl
+m4_popdef([list_5])[]dnl
 [
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
