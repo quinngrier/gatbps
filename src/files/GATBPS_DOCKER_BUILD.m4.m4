@@ -233,19 +233,19 @@ m4_pushdef(
 m4_bpatsubst([[$1]], ['], ['\\''])[]dnl
 GATBPS_DOCKER_BUILD_rule_lines(m4_shift($@))])])[dnl
 ]m4_ifdef(
-  [GATBPS_DOCKER_BUILD_make_lines],
+  [GATBPS_DOCKER_BUILD_word_lines_2],
   [gatbps_fatal([
-    GATBPS_DOCKER_BUILD_make_lines is already defined
+    GATBPS_DOCKER_BUILD_word_lines_2 is already defined
   ])])[dnl
 ]m4_define(
-  [GATBPS_DOCKER_BUILD_make_lines],
+  [GATBPS_DOCKER_BUILD_word_lines_2],
   [m4_if(
     [$1],
     [],
     [],
     [[
   ]m4_bpatsubst([[$1]], ['], ['\\''])[ \]dnl
-GATBPS_DOCKER_BUILD_make_lines(m4_shift($@))])])[dnl
+GATBPS_DOCKER_BUILD_word_lines_2(m4_shift($@))])])[dnl
 ]m4_ifdef(
   [GATBPS_DOCKER_BUILD_loop_lines],
   [gatbps_fatal([
@@ -300,7 +300,7 @@ m4_if(
   [[
 	$][(AM@&t@_V_at)$][(MAKE) \
   $][(AM@&t@_MAKEFLAGS) \]dnl
-GATBPS_DOCKER_BUILD_make_lines(m4_if(,,child_prerequisites))[
+GATBPS_DOCKER_BUILD_word_lines_2(m4_if(,,child_prerequisites))[
 ;]])[
 	$][(GATBPS_V_DOCKER)$][(GATBPS_RECIPE_MARKER_TOP)
 	$][(AM@&t@_V_at)|%}contains_at_least_one_word_sh(
