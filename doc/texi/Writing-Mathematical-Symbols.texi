@@ -10,7 +10,7 @@ is its corresponding @TeX{} syntax,
 the Unicode character that it inserts by default,
 and the ASCII alternative that it inserts if the
 @w{@t{insertascii}}
-flag is set at its point of inclusion@.
+flag was set at its point of inclusion@.
 If this manual is translated to
 @TeX{}
 or without the
