@@ -274,20 +274,6 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_shift($@))])])[dnl
     [[
       '\''--tag='\'']m4_bpatsubst([[$1]], ['], ['\\''])[ \]dnl
 GATBPS_DOCKER_BUILD_build_lines(m4_shift($@))])])[dnl
-]m4_ifdef(
-  [GATBPS_DOCKER_BUILD_save_lines],
-  [gatbps_fatal([
-    GATBPS_DOCKER_BUILD_save_lines is already defined
-  ])])[dnl
-]m4_define(
-  [GATBPS_DOCKER_BUILD_save_lines],
-  [m4_if(
-    [$1],
-    [],
-    [],
-    [[
-      ]m4_bpatsubst([[$1]], ['], ['\\''])[ \]dnl
-GATBPS_DOCKER_BUILD_save_lines(m4_shift($@))])])[dnl
 [
 
 GATBPS_DOCKER_BUILD_RULES="$][{GATBPS_DOCKER_BUILD_RULES}"'
@@ -421,7 +407,7 @@ GATBPS_DOCKER_BUILD_build_lines(m4_if(,,image_names))[
     $][(DOCKER) \
       '\''save'\'' \
       "$][$][{hash}" \]dnl
-GATBPS_DOCKER_BUILD_save_lines(m4_if(,,image_names))[
+GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
       >'\''./'\'']output_file['\''.tmp'\'' \
     || '\''exit'\'' "$][$][{?}"; \
     '\''mv'\'' \
