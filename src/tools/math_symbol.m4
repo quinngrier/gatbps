@@ -47,18 +47,6 @@ ifdef(
 @end macro
 @end ifclear
 @end ifhtml
-@ifinfo
-@ifnotplaintext
-@macro $1{}
-@w{$3}
-@end macro
-@end ifnotplaintext
-@end ifinfo
-@ifplaintext
-@macro $1{}
-@w{$3}
-@end macro
-@end ifplaintext
 @ifxml
 @ifset txicommandconditionals
 @ifcommanddefined inlineraw
@@ -78,35 +66,24 @@ ifdef(
 @end macro
 @end ifclear
 @end ifxml
+@ifnotdocbook
+@ifnothtml
+@ifnottex
+@ifnotxml
+@macro $1{}
+@w{$3}
+@end macro
+@end ifnotxml
+@end ifnottex
+@end ifnothtml
+@end ifnotdocbook
 @end ifclear
 @ifset insertascii
-@ifdocbook
+@ifnottex
 @macro $1{}
 @w{$4}
 @end macro
-@end ifdocbook
-@ifhtml
-@macro $1{}
-@w{$4}
-@end macro
-@end ifhtml
-@ifinfo
-@ifnotplaintext
-@macro $1{}
-@w{$4}
-@end macro
-@end ifnotplaintext
-@end ifinfo
-@ifplaintext
-@macro $1{}
-@w{$4}
-@end macro
-@end ifplaintext
-@ifxml
-@macro $1{}
-@w{$4}
-@end macro
-@end ifxml
+@end ifnottex
 @end ifset
 @end ifclear|%}|%})|%}){%||%}dnl
 dnl
