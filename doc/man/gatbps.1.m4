@@ -745,6 +745,7 @@ The macros automatically
 detect older versions of
 Texinfo, in which case they
 insert UTF-8 characters instead.
+.SH "WRITING MATHEMATICAL SYMBOLS"
 .LP
 The following table lists the
 macros that have no parameters,
