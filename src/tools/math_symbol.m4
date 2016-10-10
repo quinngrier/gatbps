@@ -8,6 +8,13 @@ ifdef(
     {%|math_symbol|%},
     {%|{%|@ifclear $1texi
 @set $1texi
+@ifset insertascii
+@ifnottex
+@macro $1{}
+@w{$4}
+@end macro
+@end ifnottex
+@end ifset
 @ifclear insertascii
 @ifdocbook
 @ifset txicommandconditionals
@@ -78,13 +85,6 @@ ifdef(
 @end ifnothtml
 @end ifnotdocbook
 @end ifclear
-@ifset insertascii
-@ifnottex
-@macro $1{}
-@w{$4}
-@end macro
-@end ifnottex
-@end ifset
 @end ifclear|%}|%})|%}){%||%}dnl
 dnl
 dnl The authors of this file have waived all copyright and
