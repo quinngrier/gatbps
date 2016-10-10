@@ -114,19 +114,19 @@ m4_pushdef(
     [[[clean]]],
     [[[$3]]]))[]dnl
 ]m4_ifdef(
-  [GATBPS_GIT_CLONE_url_lines],
+  [GATBPS_GIT_CLONE_word_lines_6],
   [gatbps_fatal([
-    GATBPS_GIT_CLONE_url_lines is already defined
+    GATBPS_GIT_CLONE_word_lines_6 is already defined
   ])])[dnl
 ]m4_define(
-  [GATBPS_GIT_CLONE_url_lines],
+  [GATBPS_GIT_CLONE_word_lines_6],
   [m4_if(
     [$1],
     [],
     [],
     [[
       ]m4_bpatsubst([[$1]], ['], ['\\''])[ \]dnl
-GATBPS_GIT_CLONE_url_lines(m4_shift($@))])])[dnl
+GATBPS_GIT_CLONE_word_lines_6(m4_shift($@))])])[dnl
 ]m4_ifdef(
   [GATBPS_GIT_CLONE_set_lines],
   [gatbps_fatal([
@@ -164,7 +164,7 @@ GATBPS_GIT_CLONE_RULES="$][{GATBPS_GIT_CLONE_RULES}"'
     clone_succeeded='\''no'\''; \
     first_iteration='\''yes'\''; \
     for url in '\'''\'' \]dnl
-GATBPS_GIT_CLONE_url_lines(m4_if(,,input_urls))[
+GATBPS_GIT_CLONE_word_lines_6(m4_if(,,input_urls))[
     ; do \
       case "$][$][{first_iteration}" in \
         '\''yes'\'') \
