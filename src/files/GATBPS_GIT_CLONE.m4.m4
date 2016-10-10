@@ -128,19 +128,19 @@ m4_pushdef(
       ]m4_bpatsubst([[$1]], ['], ['\\''])[ \]dnl
 GATBPS_GIT_CLONE_word_lines_6(m4_shift($@))])])[dnl
 ]m4_ifdef(
-  [GATBPS_GIT_CLONE_set_lines],
+  [GATBPS_GIT_CLONE_word_lines_8],
   [gatbps_fatal([
-    GATBPS_GIT_CLONE_set_lines is already defined
+    GATBPS_GIT_CLONE_word_lines_8 is already defined
   ])])[dnl
 ]m4_define(
-  [GATBPS_GIT_CLONE_set_lines],
+  [GATBPS_GIT_CLONE_word_lines_8],
   [m4_if(
     [$1],
     [],
     [],
     [[
         ]m4_bpatsubst([[$1]], ['], ['\\''])[ \]dnl
-GATBPS_GIT_CLONE_set_lines(m4_shift($@))])])[dnl
+GATBPS_GIT_CLONE_word_lines_8(m4_shift($@))])])[dnl
 [
 
 GATBPS_GIT_CLONE_RULES="$][{GATBPS_GIT_CLONE_RULES}"'
@@ -205,7 +205,7 @@ GATBPS_GIT_CLONE_word_lines_6(m4_if(,,input_urls))[
         '\''origin'\'' \
       || '\''exit'\'' "$][$][{?}"; \
       '\''set'\'' '\'''\'' \]dnl
-GATBPS_GIT_CLONE_set_lines(m4_if(,,input_urls))[
+GATBPS_GIT_CLONE_word_lines_8(m4_if(,,input_urls))[
       ; \
       while '\'':'\''; do \
         '\''shift'\''; \
