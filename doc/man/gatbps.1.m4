@@ -754,7 +754,7 @@ Along with each macro is its corresponding TeX syntax, the Unicode
 character that it inserts by default, and the ASCII alternative that it
 inserts if the
 .nohy "\fBinsertascii\fR"
-flag was set at its point of inclusion.
+flag was set at its first point of inclusion.
 .IP
 .TS
 tab( );

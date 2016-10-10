@@ -10,7 +10,7 @@ Along with each macro is its corresponding
 syntax, the Unicode character that it inserts by default, and the ASCII
 alternative that it inserts if the
 @w{@t{insertascii}}
-flag was set at its point of inclusion@.
+flag was set at its first point of inclusion@.
 If this manual is translated to
 @TeX{}
 or without the
