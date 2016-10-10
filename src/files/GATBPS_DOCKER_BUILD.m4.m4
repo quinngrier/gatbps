@@ -247,19 +247,19 @@ GATBPS_DOCKER_BUILD_rule_lines(m4_shift($@))])])[dnl
   ]m4_bpatsubst([[$1]], ['], ['\\''])[ \]dnl
 GATBPS_DOCKER_BUILD_word_lines_2(m4_shift($@))])])[dnl
 ]m4_ifdef(
-  [GATBPS_DOCKER_BUILD_loop_lines],
+  [GATBPS_DOCKER_BUILD_word_lines_6],
   [gatbps_fatal([
-    GATBPS_DOCKER_BUILD_loop_lines is already defined
+    GATBPS_DOCKER_BUILD_word_lines_6 is already defined
   ])])[dnl
 ]m4_define(
-  [GATBPS_DOCKER_BUILD_loop_lines],
+  [GATBPS_DOCKER_BUILD_word_lines_6],
   [m4_if(
     [$1],
     [],
     [],
     [[
       ]m4_bpatsubst([[$1]], ['], ['\\''])[ \]dnl
-GATBPS_DOCKER_BUILD_loop_lines(m4_shift($@))])])[dnl
+GATBPS_DOCKER_BUILD_word_lines_6(m4_shift($@))])])[dnl
 ]m4_ifdef(
   [GATBPS_DOCKER_BUILD_build_lines],
   [gatbps_fatal([
@@ -325,7 +325,7 @@ GATBPS_DOCKER_BUILD_word_lines_2(m4_if(,,child_prerequisites))[
     context='\'''\''; \
     first_iteration='\''yes'\''; \
     for x in '\'''\'' \]dnl
-GATBPS_DOCKER_BUILD_loop_lines(m4_if(,,child_prerequisites))[
+GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
     ; do \
       case "$][$][{first_iteration}" in \
         '\''yes'\'') \
