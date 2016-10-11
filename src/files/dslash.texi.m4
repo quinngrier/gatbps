@@ -5,6 +5,7 @@ rules_code({%|src/files/dslash.texi.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
+include({%|src/tools/math_symbol.m4|%}){%||%}dnl
 header_comment({%|@ifxml
 @ifnotxml
 @c|%}, {%|@c|%}){%|
@@ -26,109 +27,11 @@ header_comment({%|@ifxml
 @c
 @end ifnotxml
 @end ifxml
-@ifclear dslashtexi
-@set dslashtexi
-@ifclear insertascii
-@ifdocbook
-@ifset txicommandconditionals
-@ifcommanddefined inlineraw
-@macro dslash{}
-@inlineraw{docbook, &#x2215;}
-@end macro
-@end ifcommanddefined
-@ifcommandnotdefined inlineraw
-@macro dslash{}
-∕
-@end macro
-@end ifcommandnotdefined
-@end ifset
-@ifclear txicommandconditionals
-@macro dslash{}
-∕
-@end macro
-@end ifclear
-@end ifdocbook
-@ifhtml
-@ifset txicommandconditionals
-@ifcommanddefined inlineraw
-@macro dslash{}
-@inlineraw{html, &#x2215;}
-@end macro
-@end ifcommanddefined
-@ifcommandnotdefined inlineraw
-@macro dslash{}
-∕
-@end macro
-@end ifcommandnotdefined
-@end ifset
-@ifclear txicommandconditionals
-@macro dslash{}
-∕
-@end macro
-@end ifclear
-@end ifhtml
-@ifinfo
-@ifnotplaintext
-@macro dslash{}
-∕
-@end macro
-@end ifnotplaintext
-@end ifinfo
-@ifplaintext
-@macro dslash{}
-∕
-@end macro
-@end ifplaintext
-@ifxml
-@ifset txicommandconditionals
-@ifcommanddefined inlineraw
-@macro dslash{}
-@inlineraw{xml, &#x2215;}
-@end macro
-@end ifcommanddefined
-@ifcommandnotdefined inlineraw
-@macro dslash{}
-∕
-@end macro
-@end ifcommandnotdefined
-@end ifset
-@ifclear txicommandconditionals
-@macro dslash{}
-∕
-@end macro
-@end ifclear
-@end ifxml
-@end ifclear
-@ifset insertascii
-@ifdocbook
-@macro dslash{}
-/
-@end macro
-@end ifdocbook
-@ifhtml
-@macro dslash{}
-/
-@end macro
-@end ifhtml
-@ifinfo
-@ifnotplaintext
-@macro dslash{}
-/
-@end macro
-@end ifnotplaintext
-@end ifinfo
-@ifplaintext
-@macro dslash{}
-/
-@end macro
-@end ifplaintext
-@ifxml
-@macro dslash{}
-/
-@end macro
-@end ifxml
-@end ifset
-@end ifclear
+|%}math_symbol(
+  {%|dslash|%},
+  {%|&#x2215;|%},
+  {%|∕|%},
+  {%|/|%}){%|
 |%}footer_comment({%|@ifxml
 @ifnotxml
 @c|%}, {%|@c|%}, {%|@c

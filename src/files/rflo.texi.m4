@@ -5,6 +5,7 @@ rules_code({%|src/files/rflo.texi.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
+include({%|src/tools/math_symbol.m4|%}){%||%}dnl
 header_comment({%|@ifxml
 @ifnotxml
 @c|%}, {%|@c|%}){%|
@@ -26,114 +27,11 @@ header_comment({%|@ifxml
 @c
 @end ifnotxml
 @end ifxml
-@ifclear rflotexi
-@set rflotexi
-@ifclear insertascii
-@ifdocbook
-@ifset txicommandconditionals
-@ifcommanddefined inlineraw
-@macro rflo{}
-@inlineraw{docbook, &#x230B;}
-@end macro
-@end ifcommanddefined
-@ifcommandnotdefined inlineraw
-@macro rflo{}
-⌋
-@end macro
-@end ifcommandnotdefined
-@end ifset
-@ifclear txicommandconditionals
-@macro rflo{}
-⌋
-@end macro
-@end ifclear
-@end ifdocbook
-@ifhtml
-@ifset txicommandconditionals
-@ifcommanddefined inlineraw
-@macro rflo{}
-@inlineraw{html, &#x230B;}
-@end macro
-@end ifcommanddefined
-@ifcommandnotdefined inlineraw
-@macro rflo{}
-⌋
-@end macro
-@end ifcommandnotdefined
-@end ifset
-@ifclear txicommandconditionals
-@macro rflo{}
-⌋
-@end macro
-@end ifclear
-@end ifhtml
-@ifinfo
-@ifnotplaintext
-@macro rflo{}
-⌋
-@end macro
-@end ifnotplaintext
-@end ifinfo
-@ifplaintext
-@macro rflo{}
-⌋
-@end macro
-@end ifplaintext
-@ifxml
-@ifset txicommandconditionals
-@ifcommanddefined inlineraw
-@macro rflo{}
-@inlineraw{xml, &#x230B;}
-@end macro
-@end ifcommanddefined
-@ifcommandnotdefined inlineraw
-@macro rflo{}
-⌋
-@end macro
-@end ifcommandnotdefined
-@end ifset
-@ifclear txicommandconditionals
-@macro rflo{}
-⌋
-@end macro
-@end ifclear
-@end ifxml
-@end ifclear
-@ifset insertascii
-@ifdocbook
-@c (
-@macro rflo{}
-)
-@end macro
-@end ifdocbook
-@ifhtml
-@c (
-@macro rflo{}
-)
-@end macro
-@end ifhtml
-@ifinfo
-@ifnotplaintext
-@c (
-@macro rflo{}
-)
-@end macro
-@end ifnotplaintext
-@end ifinfo
-@ifplaintext
-@c (
-@macro rflo{}
-)
-@end macro
-@end ifplaintext
-@ifxml
-@c (
-@macro rflo{}
-)
-@end macro
-@end ifxml
-@end ifset
-@end ifclear
+|%}math_symbol(
+  {%|rflo|%},
+  {%|&#x230B;|%},
+  {%|⌋|%},
+  {%|)|%}){%|
 |%}footer_comment({%|@ifxml
 @ifnotxml
 @c|%}, {%|@c|%}, {%|@c

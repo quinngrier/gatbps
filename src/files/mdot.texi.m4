@@ -5,6 +5,7 @@ rules_code({%|src/files/mdot.texi.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
+include({%|src/tools/math_symbol.m4|%}){%||%}dnl
 header_comment({%|@ifxml
 @ifnotxml
 @c|%}, {%|@c|%}){%|
@@ -26,109 +27,11 @@ header_comment({%|@ifxml
 @c
 @end ifnotxml
 @end ifxml
-@ifclear mdottexi
-@set mdottexi
-@ifclear insertascii
-@ifdocbook
-@ifset txicommandconditionals
-@ifcommanddefined inlineraw
-@macro mdot{}
-@inlineraw{docbook, &#x22C5;}
-@end macro
-@end ifcommanddefined
-@ifcommandnotdefined inlineraw
-@macro mdot{}
-⋅
-@end macro
-@end ifcommandnotdefined
-@end ifset
-@ifclear txicommandconditionals
-@macro mdot{}
-⋅
-@end macro
-@end ifclear
-@end ifdocbook
-@ifhtml
-@ifset txicommandconditionals
-@ifcommanddefined inlineraw
-@macro mdot{}
-@inlineraw{html, &#x22C5;}
-@end macro
-@end ifcommanddefined
-@ifcommandnotdefined inlineraw
-@macro mdot{}
-⋅
-@end macro
-@end ifcommandnotdefined
-@end ifset
-@ifclear txicommandconditionals
-@macro mdot{}
-⋅
-@end macro
-@end ifclear
-@end ifhtml
-@ifinfo
-@ifnotplaintext
-@macro mdot{}
-⋅
-@end macro
-@end ifnotplaintext
-@end ifinfo
-@ifplaintext
-@macro mdot{}
-⋅
-@end macro
-@end ifplaintext
-@ifxml
-@ifset txicommandconditionals
-@ifcommanddefined inlineraw
-@macro mdot{}
-@inlineraw{xml, &#x22C5;}
-@end macro
-@end ifcommanddefined
-@ifcommandnotdefined inlineraw
-@macro mdot{}
-⋅
-@end macro
-@end ifcommandnotdefined
-@end ifset
-@ifclear txicommandconditionals
-@macro mdot{}
-⋅
-@end macro
-@end ifclear
-@end ifxml
-@end ifclear
-@ifset insertascii
-@ifdocbook
-@macro mdot{}
-*
-@end macro
-@end ifdocbook
-@ifhtml
-@macro mdot{}
-*
-@end macro
-@end ifhtml
-@ifinfo
-@ifnotplaintext
-@macro mdot{}
-*
-@end macro
-@end ifnotplaintext
-@end ifinfo
-@ifplaintext
-@macro mdot{}
-*
-@end macro
-@end ifplaintext
-@ifxml
-@macro mdot{}
-*
-@end macro
-@end ifxml
-@end ifset
-@end ifclear
+|%}math_symbol(
+  {%|mdot|%},
+  {%|&#x22C5;|%},
+  {%|⋅|%},
+  {%|*|%}){%|
 |%}footer_comment({%|@ifxml
 @ifnotxml
 @c|%}, {%|@c|%}, {%|@c

@@ -5,6 +5,7 @@ rules_code({%|src/files/bdots.texi.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
+include({%|src/tools/math_symbol.m4|%}){%||%}dnl
 header_comment({%|@ifxml
 @ifnotxml
 @c|%}, {%|@c|%}){%|
@@ -26,109 +27,11 @@ header_comment({%|@ifxml
 @c
 @end ifnotxml
 @end ifxml
-@ifclear bdotstexi
-@set bdotstexi
-@ifclear insertascii
-@ifdocbook
-@ifset txicommandconditionals
-@ifcommanddefined inlineraw
-@macro bdots{}
-@inlineraw{docbook, &#x2026;}
-@end macro
-@end ifcommanddefined
-@ifcommandnotdefined inlineraw
-@macro bdots{}
-…
-@end macro
-@end ifcommandnotdefined
-@end ifset
-@ifclear txicommandconditionals
-@macro bdots{}
-…
-@end macro
-@end ifclear
-@end ifdocbook
-@ifhtml
-@ifset txicommandconditionals
-@ifcommanddefined inlineraw
-@macro bdots{}
-@inlineraw{html, &#x2026;}
-@end macro
-@end ifcommanddefined
-@ifcommandnotdefined inlineraw
-@macro bdots{}
-…
-@end macro
-@end ifcommandnotdefined
-@end ifset
-@ifclear txicommandconditionals
-@macro bdots{}
-…
-@end macro
-@end ifclear
-@end ifhtml
-@ifinfo
-@ifnotplaintext
-@macro bdots{}
-…
-@end macro
-@end ifnotplaintext
-@end ifinfo
-@ifplaintext
-@macro bdots{}
-…
-@end macro
-@end ifplaintext
-@ifxml
-@ifset txicommandconditionals
-@ifcommanddefined inlineraw
-@macro bdots{}
-@inlineraw{xml, &#x2026;}
-@end macro
-@end ifcommanddefined
-@ifcommandnotdefined inlineraw
-@macro bdots{}
-…
-@end macro
-@end ifcommandnotdefined
-@end ifset
-@ifclear txicommandconditionals
-@macro bdots{}
-…
-@end macro
-@end ifclear
-@end ifxml
-@end ifclear
-@ifset insertascii
-@ifdocbook
-@macro bdots{}
-.@:.@:.@:
-@end macro
-@end ifdocbook
-@ifhtml
-@macro bdots{}
-.@:.@:.@:
-@end macro
-@end ifhtml
-@ifinfo
-@ifnotplaintext
-@macro bdots{}
-.@:.@:.@:
-@end macro
-@end ifnotplaintext
-@end ifinfo
-@ifplaintext
-@macro bdots{}
-.@:.@:.@:
-@end macro
-@end ifplaintext
-@ifxml
-@macro bdots{}
-.@:.@:.@:
-@end macro
-@end ifxml
-@end ifset
-@end ifclear
+|%}math_symbol(
+  {%|bdots|%},
+  {%|&#x2026;|%},
+  {%|…|%},
+  {%|.@:.@:.@:|%}){%|
 |%}footer_comment({%|@ifxml
 @ifnotxml
 @c|%}, {%|@c|%}, {%|@c

@@ -5,6 +5,7 @@ rules_code({%|src/files/gequ.texi.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
+include({%|src/tools/math_symbol.m4|%}){%||%}dnl
 header_comment({%|@ifxml
 @ifnotxml
 @c|%}, {%|@c|%}){%|
@@ -26,109 +27,11 @@ header_comment({%|@ifxml
 @c
 @end ifnotxml
 @end ifxml
-@ifclear gequtexi
-@set gequtexi
-@ifclear insertascii
-@ifdocbook
-@ifset txicommandconditionals
-@ifcommanddefined inlineraw
-@macro gequ{}
-@inlineraw{docbook, &#x2265;}
-@end macro
-@end ifcommanddefined
-@ifcommandnotdefined inlineraw
-@macro gequ{}
-≥
-@end macro
-@end ifcommandnotdefined
-@end ifset
-@ifclear txicommandconditionals
-@macro gequ{}
-≥
-@end macro
-@end ifclear
-@end ifdocbook
-@ifhtml
-@ifset txicommandconditionals
-@ifcommanddefined inlineraw
-@macro gequ{}
-@inlineraw{html, &#x2265;}
-@end macro
-@end ifcommanddefined
-@ifcommandnotdefined inlineraw
-@macro gequ{}
-≥
-@end macro
-@end ifcommandnotdefined
-@end ifset
-@ifclear txicommandconditionals
-@macro gequ{}
-≥
-@end macro
-@end ifclear
-@end ifhtml
-@ifinfo
-@ifnotplaintext
-@macro gequ{}
-≥
-@end macro
-@end ifnotplaintext
-@end ifinfo
-@ifplaintext
-@macro gequ{}
-≥
-@end macro
-@end ifplaintext
-@ifxml
-@ifset txicommandconditionals
-@ifcommanddefined inlineraw
-@macro gequ{}
-@inlineraw{xml, &#x2265;}
-@end macro
-@end ifcommanddefined
-@ifcommandnotdefined inlineraw
-@macro gequ{}
-≥
-@end macro
-@end ifcommandnotdefined
-@end ifset
-@ifclear txicommandconditionals
-@macro gequ{}
-≥
-@end macro
-@end ifclear
-@end ifxml
-@end ifclear
-@ifset insertascii
-@ifdocbook
-@macro gequ{}
->=
-@end macro
-@end ifdocbook
-@ifhtml
-@macro gequ{}
->=
-@end macro
-@end ifhtml
-@ifinfo
-@ifnotplaintext
-@macro gequ{}
->=
-@end macro
-@end ifnotplaintext
-@end ifinfo
-@ifplaintext
-@macro gequ{}
->=
-@end macro
-@end ifplaintext
-@ifxml
-@macro gequ{}
->=
-@end macro
-@end ifxml
-@end ifset
-@end ifclear
+|%}math_symbol(
+  {%|gequ|%},
+  {%|&#x2265;|%},
+  {%|≥|%},
+  {%|>=|%}){%|
 |%}footer_comment({%|@ifxml
 @ifnotxml
 @c|%}, {%|@c|%}, {%|@c

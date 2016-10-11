@@ -5,6 +5,7 @@ rules_code({%|src/files/lflo.texi.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
+include({%|src/tools/math_symbol.m4|%}){%||%}dnl
 header_comment({%|@ifxml
 @ifnotxml
 @c|%}, {%|@c|%}){%|
@@ -26,114 +27,11 @@ header_comment({%|@ifxml
 @c
 @end ifnotxml
 @end ifxml
-@ifclear lflotexi
-@set lflotexi
-@ifclear insertascii
-@ifdocbook
-@ifset txicommandconditionals
-@ifcommanddefined inlineraw
-@macro lflo{}
-@inlineraw{docbook, &#x230A;}
-@end macro
-@end ifcommanddefined
-@ifcommandnotdefined inlineraw
-@macro lflo{}
-⌊
-@end macro
-@end ifcommandnotdefined
-@end ifset
-@ifclear txicommandconditionals
-@macro lflo{}
-⌊
-@end macro
-@end ifclear
-@end ifdocbook
-@ifhtml
-@ifset txicommandconditionals
-@ifcommanddefined inlineraw
-@macro lflo{}
-@inlineraw{html, &#x230A;}
-@end macro
-@end ifcommanddefined
-@ifcommandnotdefined inlineraw
-@macro lflo{}
-⌊
-@end macro
-@end ifcommandnotdefined
-@end ifset
-@ifclear txicommandconditionals
-@macro lflo{}
-⌊
-@end macro
-@end ifclear
-@end ifhtml
-@ifinfo
-@ifnotplaintext
-@macro lflo{}
-⌊
-@end macro
-@end ifnotplaintext
-@end ifinfo
-@ifplaintext
-@macro lflo{}
-⌊
-@end macro
-@end ifplaintext
-@ifxml
-@ifset txicommandconditionals
-@ifcommanddefined inlineraw
-@macro lflo{}
-@inlineraw{xml, &#x230A;}
-@end macro
-@end ifcommanddefined
-@ifcommandnotdefined inlineraw
-@macro lflo{}
-⌊
-@end macro
-@end ifcommandnotdefined
-@end ifset
-@ifclear txicommandconditionals
-@macro lflo{}
-⌊
-@end macro
-@end ifclear
-@end ifxml
-@end ifclear
-@ifset insertascii
-@ifdocbook
-@macro lflo{}
-floor(
-@end macro
-@c )
-@end ifdocbook
-@ifhtml
-@macro lflo{}
-floor(
-@end macro
-@c )
-@end ifhtml
-@ifinfo
-@ifnotplaintext
-@macro lflo{}
-floor(
-@end macro
-@c )
-@end ifnotplaintext
-@end ifinfo
-@ifplaintext
-@macro lflo{}
-floor(
-@end macro
-@c )
-@end ifplaintext
-@ifxml
-@macro lflo{}
-floor(
-@end macro
-@c )
-@end ifxml
-@end ifset
-@end ifclear
+|%}math_symbol(
+  {%|lflo|%},
+  {%|&#x230A;|%},
+  {%|⌊|%},
+  {%|floor(|%}){%|
 |%}footer_comment({%|@ifxml
 @ifnotxml
 @c|%}, {%|@c|%}, {%|@c
