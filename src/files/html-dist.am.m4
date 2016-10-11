@@ -40,13 +40,13 @@ $(html_dist_dst): $(html_dist_dep)
   $(html_dist_src) \
 ;
 	$(GATBPS_V_CP)$(GATBPS_RECIPE_MARKER_TOP)
-	@$(MKDIR_P) \
-  './'$(@D) \
-;
 	@'rm' \
   '-f' \
   '-r' \
   './'$(html_dist_dst) \
+;
+	@$(MKDIR_P) \
+  './'$(@D) \
 ;
 	$(AM_V_at){ \
   if \

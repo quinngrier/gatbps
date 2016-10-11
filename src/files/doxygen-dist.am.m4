@@ -40,13 +40,13 @@ $(doxygen_dist_dst): $(doxygen_dist_dep)
   $(doxygen_dist_src) \
 ;
 	$(GATBPS_V_CP)$(GATBPS_RECIPE_MARKER_TOP)
-	@$(MKDIR_P) \
-  './'$(@D) \
-;
 	@'rm' \
   '-f' \
   '-r' \
   './'$(doxygen_dist_dst) \
+;
+	@$(MKDIR_P) \
+  './'$(@D) \
 ;
 	$(AM_V_at){ \
   if 'test' '-d' $(doxygen_dist_src); then \
