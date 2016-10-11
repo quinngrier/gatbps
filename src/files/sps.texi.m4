@@ -69,18 +69,6 @@ header_comment({%|@ifxml
 @end rmacro
 @end ifclear
 @end ifhtml
-@ifinfo
-@ifnotplaintext
-@rmacro sps{L, S, R}
-^\L\\S\\R\
-@end rmacro
-@end ifnotplaintext
-@end ifinfo
-@ifplaintext
-@rmacro sps{L, S, R}
-^\L\\S\\R\
-@end rmacro
-@end ifplaintext
 @ifxml
 @ifset txicommandconditionals
 @ifcommanddefined inlineraw
@@ -100,6 +88,17 @@ header_comment({%|@ifxml
 @end rmacro
 @end ifclear
 @end ifxml
+@ifnotdocbook
+@ifnothtml
+@ifnottex
+@ifnotxml
+@rmacro sps{L, S, R}
+^\L\\S\\R\
+@end rmacro
+@end ifnotxml
+@end ifnottex
+@end ifnothtml
+@end ifnotdocbook
 @end ifclear
 |%}footer_comment({%|@ifxml
 @ifnotxml
