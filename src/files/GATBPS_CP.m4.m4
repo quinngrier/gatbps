@@ -205,9 +205,6 @@ GATBPS_CP_make_lines(m4_if(,,child_prerequisites))[
 	$][(AM@&t@_V_at)|%}contains_exactly_one_word_sh(
   {%|srcdir|%}){%||%}dnl
 {%|
-	$][(AM@&t@_V_at)$][(MKDIR_P) \
-  '\''./'\''$][(@D) \
-;
 	$][(AM@&t@_V_at)'\''rm'\'' \
   '\''-f'\'' \]dnl
 m4_case(
@@ -221,6 +218,9 @@ m4_case(
 [
   '\''./'\'']output_file_or_directory[ \
   '\''./'\'']output_file_or_directory['\''.tmp'\'' \
+;
+	$][(AM@&t@_V_at)$][(MKDIR_P) \
+  '\''./'\''$][(@D) \
 ;
 	$][(AM@&t@_V_at){ \
   ( \
