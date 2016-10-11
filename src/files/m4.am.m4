@@ -37,7 +37,7 @@ SUFFIXES += .m4out
 
 .m4.m4out:
 	$(GATBPS_V_M4)$(GATBPS_RECIPE_MARKER_TOP)
-	$(AM_V_at)$(MKDIR_P) \
+	@$(MKDIR_P) \
   './'$(@D) \
 ;
 	$(AM_V_at)'rm' \

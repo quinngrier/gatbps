@@ -40,7 +40,7 @@ $(plaintext_dist_dst): $(plaintext_dist_dep)
   $(plaintext_dist_src) \
 ;
 	$(GATBPS_V_CP)$(GATBPS_RECIPE_MARKER_TOP)
-	$(AM_V_at)$(MKDIR_P) \
+	@$(MKDIR_P) \
   './'$(@D) \
 ;
 	$(AM_V_at){ \
