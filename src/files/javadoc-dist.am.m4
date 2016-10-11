@@ -43,7 +43,7 @@ $(javadoc_dist_dst): $(javadoc_dist_dep)
 	@$(MKDIR_P) \
   './'$(@D) \
 ;
-	$(AM_V_at)'rm' \
+	@'rm' \
   '-f' \
   '-r' \
   './'$(javadoc_dist_dst) \

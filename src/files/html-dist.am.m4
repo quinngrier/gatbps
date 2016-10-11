@@ -43,7 +43,7 @@ $(html_dist_dst): $(html_dist_dep)
 	@$(MKDIR_P) \
   './'$(@D) \
 ;
-	$(AM_V_at)'rm' \
+	@'rm' \
   '-f' \
   '-r' \
   './'$(html_dist_dst) \

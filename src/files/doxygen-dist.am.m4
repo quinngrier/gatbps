@@ -43,7 +43,7 @@ $(doxygen_dist_dst): $(doxygen_dist_dep)
 	@$(MKDIR_P) \
   './'$(@D) \
 ;
-	$(AM_V_at)'rm' \
+	@'rm' \
   '-f' \
   '-r' \
   './'$(doxygen_dist_dst) \
