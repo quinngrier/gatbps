@@ -17,6 +17,9 @@ header_comment({%|"|%}, {%|"|%}){%|
 " used search pattern or the redo command. For more information, see
 " :help function-search-undo in Vim.
 "
+" It's also convenient that a function automatically deletes its local
+" variables when it ends. For more information, see :help :unlet in Vim.
+"
 
 function s:FormatJavaFile()
 
