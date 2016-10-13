@@ -553,6 +553,10 @@ AC_SUBST([TEXI2DVIFLAGS])
   [mostlyclean])[
 
 ]GATBPS_M4(
+  [src/files/GATBPS_GIT_BUNDLE_RULES.am],
+  [mostlyclean])[
+
+]GATBPS_M4(
   [src/files/GATBPS_GIT_BUNDLE_SUBST.m4],
   [mostlyclean])[
 
