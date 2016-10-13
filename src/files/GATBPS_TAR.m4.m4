@@ -133,6 +133,13 @@ m4_pushdef(
   [child_prerequisites],
   [[[$2]]])[]dnl
 m4_pushdef(
+  [clean_target],
+  m4_if(
+    [$4],
+    [],
+    [[[mostlyclean]]],
+    [[[$4]]]))[]dnl
+m4_pushdef(
   [leaf_prerequisites],
   m4_dquote(list_5))[]dnl
 m4_pushdef(
@@ -262,12 +269,13 @@ clean-]output_file[:
   '\''./'\'']output_file[ \
 ;
 
-]m4_if([$4], [], [[mostlyclean]], [[$4]])[-local: clean-]output_file[
+]clean_target[-local: clean-]output_file[
 
 '
 ]dnl
 m4_popdef([rule_prerequisites])[]dnl
 m4_popdef([leaf_prerequisites])[]dnl
+m4_popdef([clean_target])[]dnl
 m4_popdef([child_prerequisites])[]dnl
 m4_popdef([input_mode])[]dnl
 m4_popdef([input_directory])[]dnl
