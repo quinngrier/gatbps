@@ -1,12 +1,18 @@
-@node Using the Autotools to Process M4
-@chapter Using the Autotools to Process M4
+@node Formatting Automake Files
+@chapter Formatting Automake Files
 
 @menu
-* Automatic Dependency Tracking for M4 Code::
+* Formatting Automake Include Sections::
+* Formatting Automake Rule Sections::
+* Formatting Automake Variable Sections::
 @end menu
 
 @lowersections
-@include Automatic-Dependency-Tracking-for-M4-Code.texi
+@include gatbps/Formatting-Automake-Include-Sections.texi
+
+@include gatbps/Formatting-Automake-Rule-Sections.texi
+
+@include gatbps/Formatting-Automake-Variable-Sections.texi
 @raisesections
 @ifxml
 @ifnotxml

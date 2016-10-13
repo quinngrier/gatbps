@@ -22,31 +22,31 @@ in the same way as its man page@.
 @end menu
 
 @lowersections
-@include gatbps-Synopsis.texi
+@include gatbps/gatbps-Synopsis.texi
 
-@include gatbps-Description.texi
+@include gatbps/gatbps-Description.texi
 
-@include gatbps-Options.texi
+@include gatbps/gatbps-Options.texi
 
-@include gatbps-Operands.texi
+@include gatbps/gatbps-Operands.texi
 
-@include gatbps-Standard-Input.texi
+@include gatbps/gatbps-Standard-Input.texi
 
-@include gatbps-Input-Files.texi
+@include gatbps/gatbps-Input-Files.texi
 
-@include gatbps-Environment-Variables.texi
+@include gatbps/gatbps-Environment-Variables.texi
 
-@include gatbps-Asynchronous-Events.texi
+@include gatbps/gatbps-Asynchronous-Events.texi
 
-@include gatbps-Standard-Output.texi
+@include gatbps/gatbps-Standard-Output.texi
 
-@include gatbps-Standard-Error.texi
+@include gatbps/gatbps-Standard-Error.texi
 
-@include gatbps-Output-Files.texi
+@include gatbps/gatbps-Output-Files.texi
 
-@include gatbps-Exit-Status.texi
+@include gatbps/gatbps-Exit-Status.texi
 
-@include gatbps-Consequences-of-Errors.texi
+@include gatbps/gatbps-Consequences-of-Errors.texi
 @raisesections
 @ifxml
 @ifnotxml

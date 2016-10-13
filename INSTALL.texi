@@ -1,4 +1,4 @@
-@include Building-and-Installing.texi
+@include gatbps/Building-and-Installing.texi
 @ifxml
 @ifnotxml
 @c

@@ -91,49 +91,49 @@ on@tie{}@w{@value{PACKAGEDATE}}@.
 @end menu
 @end ifnottex
 
-@include Copyright-Information.texi
+@include gatbps/Copyright-Information.texi
 
-@include Introduction.texi
+@include gatbps/Introduction.texi
 
-@include Building-and-Installing.texi
+@include gatbps/Building-and-Installing.texi
 
-@include Invoking-gatbps.texi
+@include gatbps/Invoking-gatbps.texi
 
-@include Plain-Files.texi
+@include gatbps/Plain-Files.texi
 
-@include Copyright-Texts.texi
+@include gatbps/Copyright-Texts.texi
 
-@include Writing-Mathematical-Notation-in-Texinfo.texi
+@include gatbps/Writing-Mathematical-Notation-in-Texinfo.texi
 
-@include Timestamp-Preservation-during-Autoconf-Instantiation.texi
+@include gatbps/Timestamp-Preservation-during-Autoconf-Instantiation.texi
 
-@include Using-the-Autotools-to-Process-M4.texi
+@include gatbps/Using-the-Autotools-to-Process-M4.texi
 
-@include Formatting-Autoconf-Files.texi
+@include gatbps/Formatting-Autoconf-Files.texi
 
-@include Formatting-Automake-Files.texi
+@include gatbps/Formatting-Automake-Files.texi
 
-@include Using-the-Autotools-to-Compile-Java.texi
+@include gatbps/Using-the-Autotools-to-Compile-Java.texi
 
-@include Using-the-Autotools-to-Generate-Javadoc.texi
+@include gatbps/Using-the-Autotools-to-Generate-Javadoc.texi
 
-@include Cloning-Git-Repositories-with-the-Autotools.texi
+@include gatbps/Cloning-Git-Repositories-with-the-Autotools.texi
 
-@include Using-the-Autotools-to-Create-Git-Archives.texi
+@include gatbps/Using-the-Autotools-to-Create-Git-Archives.texi
 
-@include Using-the-Autotools-to-Build-Docker-Images.texi
+@include gatbps/Using-the-Autotools-to-Build-Docker-Images.texi
 
-@include Invoking-awk-form-sh.texi
+@include gatbps/Invoking-awk-form-sh.texi
 
-@include Invoking-sh-form-sh.texi
+@include gatbps/Invoking-sh-form-sh.texi
 
-@include Invoking-texi-form-sh.texi
+@include gatbps/Invoking-texi-form-sh.texi
 
-@include Invoking-troff-form-sh.texi
+@include gatbps/Invoking-troff-form-sh.texi
 
-@include Special-File-Reference.texi
+@include gatbps/Special-File-Reference.texi
 
-@include Release-Notes.texi
+@include gatbps/Release-Notes.texi
 
 @include CC0-1.0-appendix.texi
 

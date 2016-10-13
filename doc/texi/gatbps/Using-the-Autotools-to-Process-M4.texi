@@ -1,19 +1,12 @@
-@ifset fullmanual
-@node Release Notes
-@unnumbered Release Notes
-@end ifset
-@ifclear fullmanual
-@unnumbered Release Notes
-@end ifclear
+@node Using the Autotools to Process M4
+@chapter Using the Autotools to Process M4
 
-@ifset fullmanual
 @menu
-* @w{XXXX-XX-XX}@tie{}--- GATBPS@tie{}@w{0-1-0}::
+* Automatic Dependency Tracking for M4 Code::
 @end menu
 
-@end ifset
 @lowersections
-@include XXXX-XX-XX-GATBPS-0-1-0.texi
+@include gatbps/Automatic-Dependency-Tracking-for-M4-Code.texi
 @raisesections
 @ifxml
 @ifnotxml

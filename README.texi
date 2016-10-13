@@ -1,4 +1,4 @@
-@include Introduction.texi
+@include gatbps/Introduction.texi
 @ifxml
 @ifnotxml
 @c

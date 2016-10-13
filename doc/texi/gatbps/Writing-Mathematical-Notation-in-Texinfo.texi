@@ -13,9 +13,9 @@ including ASCII plain text@.
 @end menu
 
 @lowersections
-@include Writing-Mathematical-Expressions-Twice.texi
+@include gatbps/Writing-Mathematical-Expressions-Twice.texi
 
-@include Writing-Mathematical-Symbols.texi
+@include gatbps/Writing-Mathematical-Symbols.texi
 @raisesections
 @ifxml
 @ifnotxml

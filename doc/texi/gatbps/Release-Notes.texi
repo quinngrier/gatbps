@@ -1,18 +1,19 @@
-@node Formatting Automake Files
-@chapter Formatting Automake Files
+@ifset fullmanual
+@node Release Notes
+@unnumbered Release Notes
+@end ifset
+@ifclear fullmanual
+@unnumbered Release Notes
+@end ifclear
 
+@ifset fullmanual
 @menu
-* Formatting Automake Include Sections::
-* Formatting Automake Rule Sections::
-* Formatting Automake Variable Sections::
+* @w{XXXX-XX-XX}@tie{}--- GATBPS@tie{}@w{0-1-0}::
 @end menu
 
+@end ifset
 @lowersections
-@include Formatting-Automake-Include-Sections.texi
-
-@include Formatting-Automake-Rule-Sections.texi
-
-@include Formatting-Automake-Variable-Sections.texi
+@include gatbps/XXXX-XX-XX-GATBPS-0-1-0.texi
 @raisesections
 @ifxml
 @ifnotxml

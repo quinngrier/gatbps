@@ -1,4 +1,4 @@
-@include Release-Notes.texi
+@include gatbps/Release-Notes.texi
 @ifxml
 @ifnotxml
 @c

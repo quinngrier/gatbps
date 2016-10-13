@@ -19,17 +19,17 @@ GATBPS uses the GNU build system for building and installation@.
 @end menu
 
 @lowersections
-@include Package-Formats.texi
+@include gatbps/Package-Formats.texi
 
-@include Build-System-Initialization.texi
+@include gatbps/Build-System-Initialization.texi
 
-@include Required-Packages.texi
+@include gatbps/Required-Packages.texi
 
-@include Configuration.texi
+@include gatbps/Configuration.texi
 
-@include Building.texi
+@include gatbps/Building.texi
 
-@include Installation.texi
+@include gatbps/Installation.texi
 @raisesections
 @ifxml
 @ifnotxml
