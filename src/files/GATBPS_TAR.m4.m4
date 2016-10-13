@@ -33,10 +33,10 @@ AC_DEFUN([GATBPS_TAR], [[{
   [72])[
 #]dnl
 m4_if(
-  m4_eval([$# < 2 || $# > 6]),
+  m4_eval([$# < 2 || $# > 5]),
   [1],
   [gatbps_fatal([
-    GATBPS_TAR requires 2 to 6 arguments
+    GATBPS_TAR requires 2 to 5 arguments
     ($# ]m4_if([$#], [1], [[was]], [[were]])[ given)
   ])])[]dnl
 m4_if(
@@ -67,47 +67,11 @@ m4_if(
       GATBPS_TAR requires its third argument to be either empty,
       "directory_contents", or "directory_itself"
     ])])])[]dnl
-m4_pushdef(
-  [list_4],
-  m4_bpatsubst([[[$4]]], [^\(..\)[
-	 ]+], [\1]))[]dnl
-]m4_ifdef(
-  [GATBPS_TAR_check_4],
-  [gatbps_fatal([
-    GATBPS_TAR_check_4 is already defined
-  ])])[dnl
-]m4_define(
-  [GATBPS_TAR_check_4],
-  [m4_if(
-    [$#],
-    [1],
-    [m4_if(
-      m4_bregexp([$1], [^[
-	 ]+$]),
-      [0],
-      [gatbps_fatal([
-        invalid last subargument of the fourth GATBPS_TAR argument:
-      [--VERBATIM--] "$1"], [
-        the last subargument must either be empty or contain at least
-        one character that is not a space, tab, or newline character
-      ])])],
-    [m4_if(
-      m4_bregexp([$1], [[^
-	 ]]),
-      [-1],
-      [gatbps_fatal([
-        invalid non-last subargument of the fourth GATBPS_TAR argument:
-      [--VERBATIM--] "$1"], [
-        each non-last subargument must contain at least one character
-        that is not a space, tab, or newline character
-      ])],
-      [GATBPS_TAR_check_4(m4_shift($@))])])])[dnl
-GATBPS_TAR_check_4(m4_if(,,list_4))[]dnl
 m4_if(
-  m4_eval([$# >= 5]),
+  m4_eval([$# >= 4]),
   [1],
   [m4_case(
-    [$5],
+    [$4],
     [clean], [],
     [distclean], [],
     [maintainer-clean], [],
@@ -117,16 +81,16 @@ m4_if(
       "distclean", "maintainer-clean", or "mostlyclean"
     ])])])[]dnl
 m4_pushdef(
-  [list_6],
-  m4_bpatsubst([[[$6]]], [^\(..\)[
+  [list_5],
+  m4_bpatsubst([[[$5]]], [^\(..\)[
 	 ]+], [\1]))[]dnl
 ]m4_ifdef(
-  [GATBPS_TAR_check_6],
+  [GATBPS_TAR_check_5],
   [gatbps_fatal([
-    GATBPS_TAR_check_6 is already defined
+    GATBPS_TAR_check_5 is already defined
   ])])[dnl
 ]m4_define(
-  [GATBPS_TAR_check_6],
+  [GATBPS_TAR_check_5],
   [m4_if(
     [$#],
     [1],
@@ -135,7 +99,7 @@ m4_pushdef(
 	 ]+$]),
       [0],
       [gatbps_fatal([
-        invalid last subargument of the sixth GATBPS_TAR argument:
+        invalid last subargument of the fifth GATBPS_TAR argument:
       [--VERBATIM--] "$1"], [
         the last subargument must either be empty or contain at least
         one character that is not a space, tab, or newline character
@@ -145,13 +109,13 @@ m4_pushdef(
 	 ]]),
       [-1],
       [gatbps_fatal([
-        invalid non-last subargument of the sixth GATBPS_TAR argument:
+        invalid non-last subargument of the fifth GATBPS_TAR argument:
       [--VERBATIM--] "$1"], [
         each non-last subargument must contain at least one character
         that is not a space, tab, or newline character
       ])],
-      [GATBPS_TAR_check_6(m4_shift($@))])])])[dnl
-GATBPS_TAR_check_6(m4_if(,,list_6))[]dnl
+      [GATBPS_TAR_check_5(m4_shift($@))])])])[dnl
+GATBPS_TAR_check_5(m4_if(,,list_5))[]dnl
 m4_pushdef(
   [output_file],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
@@ -167,14 +131,10 @@ m4_pushdef(
     [[[$3]]]))[]dnl
 m4_pushdef(
   [child_prerequisites],
-  m4_if(
-    list_4,
-    [],
-    [[[[$2]]]],
-    [m4_dquote(list_4)]))[]dnl
+  [[[$2]]])[]dnl
 m4_pushdef(
   [leaf_prerequisites],
-  m4_dquote(list_6))[]dnl
+  m4_dquote(list_5))[]dnl
 m4_pushdef(
   [rule_prerequisites],
   m4_if(
@@ -302,7 +262,7 @@ clean-]output_file[:
   '\''./'\'']output_file[ \
 ;
 
-]m4_if([$5], [], [[mostlyclean]], [[$5]])[-local: clean-]output_file[
+]m4_if([$4], [], [[mostlyclean]], [[$4]])[-local: clean-]output_file[
 
 '
 ]dnl
