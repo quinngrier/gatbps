@@ -272,6 +272,7 @@ m4_popdef([child_prerequisites])[]dnl
 m4_popdef([input_mode])[]dnl
 m4_popdef([input_directory])[]dnl
 m4_popdef([output_file])[]dnl
+m4_popdef([list_5])[]dnl
 [
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
