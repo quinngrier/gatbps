@@ -119,6 +119,7 @@ all:
 	$(GENERATE) 'm4/GATBPS_PROG_TEXI2ANY.m4'
 	$(GENERATE) 'm4/gatbps_fatal.m4'
 	$(GENERATE) 'm4/gatbps_notice.m4'
+	$(GENERATE) 'm4/gatbps_rule_word_error.m4'
 	$(GENERATE) 'src/tools/rules_code.m4'
 
 ## end_rules
