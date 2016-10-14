@@ -3,8 +3,10 @@
 
 @noindent
 The Info directory entries for the manual follow the standard formatting
-conventions, which include starting program descriptions on the 49th
-column and other descriptions on the 33rd column@.
+conventions, which include starting program descriptions on the
+49th@tie{}column
+and other descriptions on the
+33rd@tie{}column@.
 However, installation reformats the entries by default, which may move
 some of the program descriptions to the 33rd column@.
 This can be prevented by setting the
