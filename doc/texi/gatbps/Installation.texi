@@ -12,12 +12,12 @@ However, the
 program reformats the entries by default, which may move some of the
 program descriptions to the
 33rd@tie{}column@.
-This can be prevented by setting the
+You can prevent this by setting the
 @w{@t{INSTALL_INFO_NO_INDENT}}
 environment variable to any value during the
 @w{@t{make install}}
 command@.
-For example, the following command might be used:
+For example, you might use the following command:
 
 @example
 sudo INSTALL_INFO_NO_INDENT=yes make install
