@@ -539,6 +539,7 @@ EOF1
           'set' "${prefix}"'gzip.am' "${@}"
           'set' "${prefix}"'git.am' "${@}"
           'set' "${prefix}"'gequ.texi' "${@}"
+          'set' "${prefix}"'gatbps_rule_word_error.m4' "${@}"
           'set' "${prefix}"'gatbps_notice.m4' "${@}"
           'set' "${prefix}"'gatbps_fatal.m4' "${@}"
           'set' "${prefix}"'gatbps.am' "${@}"
@@ -1296,6 +1297,8 @@ EOF1
 |%}help_code({%|gatbps_fatal.m4|%}){%|
 
 |%}help_code({%|gatbps_notice.m4|%}){%|
+
+|%}help_code({%|gatbps_rule_word_error.m4|%}){%|
 
 |%}help_code({%|gequ.texi|%}){%|
 
@@ -3001,6 +3004,8 @@ EOF1
 
 |%}generation_code({%|gatbps_notice.m4|%}){%|
 
+|%}generation_code({%|gatbps_rule_word_error.m4|%}){%|
+
 |%}generation_code({%|gequ.texi|%}){%|
 
 |%}generation_code({%|git.am|%}){%|
@@ -4376,6 +4381,12 @@ EOF1
 
 |%}recursion_code(
   {%|gatbps_notice.m4|%},
+  {%|
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|gatbps_rule_word_error.m4|%},
   {%|
             'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
