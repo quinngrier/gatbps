@@ -7,8 +7,10 @@ conventions, which include starting program descriptions on the
 49th@tie{}column
 and other descriptions on the
 33rd@tie{}column@.
-However, installation reformats the entries by default, which may move
-some of the program descriptions to the
+However, the
+@w{@t{install-info}}
+program reformats the entries by default, which may move some of the
+program descriptions to the
 33rd@tie{}column@.
 This can be prevented by setting the
 @w{@t{INSTALL_INFO_NO_INDENT}}
