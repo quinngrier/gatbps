@@ -1,13 +1,13 @@
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|src/tools/substitution_comment_singular.m4|%}){%||%}dnl
+rules_code({%|src/tools/rule_substitution_comment_singular.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/PACKAGE_DATE.m4|%}){%||%}dnl
 include({%|src/tools/PACKAGE_VERSION.m4|%}){%||%}dnl
 ifdef(
-  {%|substitution_comment_singular|%},
+  {%|rule_substitution_comment_singular|%},
   {%||%},
   {%|define(
-    {%|substitution_comment_singular|%},
+    {%|rule_substitution_comment_singular|%},
     {%|{%|##
 ## The above substitution adds prerequisites to the below target, but
 ## Automake cannot see them because substitution occurs after Automake
