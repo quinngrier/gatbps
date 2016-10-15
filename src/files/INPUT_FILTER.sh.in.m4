@@ -41,6 +41,7 @@ header_comment({%|#|%}, {%|#|%}){%|
       }
       in_javadoc_code_block = 1
     } else if (in_javadoc_code_block) {
+      gsub(/&amp;/, "&", $0)
       if ($0 ~ /<\/pre><\/blockquote>$/) {
         sub(/<\/pre><\/blockquote>$/, "", $0)
         $0 = $0 "@AT@endcode"
