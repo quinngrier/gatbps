@@ -43,28 +43,30 @@ header_comment({%|#|%}, {%|#|%}){%|
           $0 = $0 x[i]
         }
       }
-    } else if ($0 ~ /<!--code.*--><blockquote><pre>$/) {
-      n = split($0, x, /<!--/)
-      i = 0
-      $0 = ""
-      while (i != n) {
-        ++i
-        if (i == n) {
-          x[i] = "@AT@" x[i]
-          sub(/-->.*/, "", x[i])
-        } else if (i != 1) {
-          $0 = $0 "<!--"
+    } else {
+      if ($0 ~ /<!--code.*--><blockquote><pre>$/) {
+        n = split($0, x, /<!--/)
+        i = 0
+        $0 = ""
+        while (i != n) {
+          ++i
+          if (i == n) {
+            x[i] = "@AT@" x[i]
+            sub(/-->.*/, "", x[i])
+          } else if (i != 1) {
+            $0 = $0 "<!--"
+          }
+          $0 = $0 x[i]
         }
-        $0 = $0 x[i]
+        in_javadoc_code_block = 1
+      } else if ($0 ~ / @AT@see ["<]/) {
+      } else if ($0 ~ / @AT@see /) {
+        sub(/ @AT@see /, " @AT@see <code>", $0)
+        $0 = $0 "</code>"
+      } else if ($0 ~ / @AT@throws /) {
+        sub(/ @AT@throws /, " @AT@throws <code>", $0)
+        $0 = $0 "</code>"
       }
-      in_javadoc_code_block = 1
-    } else if ($0 ~ / @AT@see ["<]/) {
-    } else if ($0 ~ / @AT@see /) {
-      sub(/ @AT@see /, " @AT@see <code>", $0)
-      $0 = $0 "</code>"
-    } else if ($0 ~ / @AT@throws /) {
-      sub(/ @AT@throws /, " @AT@throws <code>", $0)
-      $0 = $0 "</code>"
     }
     print $0
   }
