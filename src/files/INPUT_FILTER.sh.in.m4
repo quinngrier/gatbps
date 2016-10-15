@@ -41,10 +41,7 @@ header_comment({%|#|%}, {%|#|%}){%|
           $0 = $0 x[i]
         }
       }
-    } else if (0 ||
-      $0 ~ /<!--code--><blockquote><pre>$/ ||
-      $0 ~ /<!--code{.*}--><blockquote><pre>$/ ||
-    0) {
+    } else if ($0 ~ /<!--code.*--><blockquote><pre>$/) {
       n = split($0, x, /<!--/)
       i = 0
       $0 = ""
