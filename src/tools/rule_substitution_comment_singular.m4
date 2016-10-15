@@ -9,12 +9,12 @@ ifdef(
   {%|define(
     {%|rule_substitution_comment_singular|%},
     {%|{%|##
-## The above substitution adds prerequisites to the below target, but
-## Automake cannot see them because substitution occurs after Automake
-## runs. If the below line were omitted and the target did not appear
-## elsewhere, then Automake might not add it as a prerequisite to the
-## corresponding non-local target, disconnecting the non-local target
-## from the new prerequisites. This is why the below line is included.
+## The substitution above may add prerequisites to the target below, but
+## Automake cannot see this because substitution runs after Automake. If
+## Automake does not see the target at all, then it will not add it as a
+## prerequisite to the corresponding non-local target, which leaves any
+## new prerequisites disconnected. The rule below is included to ensure
+## that Automake sees the target.
 ##|%}|%})|%}){%||%}dnl
 dnl
 dnl The authors of this file have waived all copyright and
