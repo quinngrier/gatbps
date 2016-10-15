@@ -44,6 +44,7 @@ header_comment({%|#|%}, {%|#|%}){%|
         }
       }
     } else {
+      gsub(/&#64;/, "@AT@@AT@", $0)
       if ($0 ~ /<!--code.*--><blockquote><pre>$/) {
         n = split($0, x, /<!--/)
         i = 0
