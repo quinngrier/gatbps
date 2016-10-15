@@ -26,7 +26,7 @@ header_comment({%|#|%}, {%|#|%}){%|
       gsub(/&lt;/, "<", $0)
       gsub(/&gt;/, ">", $0)
       gsub(/&#64;/, "@AT@", $0)
-      gsub(/&amp;/, "&", $0)
+      gsub(/&amp;/, "\\&", $0)
       if ($0 ~ /<\/pre><\/blockquote>$/) {
         sub(/<\/pre><\/blockquote>$/, "", $0)
         $0 = $0 "@AT@endcode"
