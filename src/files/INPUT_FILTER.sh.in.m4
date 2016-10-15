@@ -24,6 +24,7 @@ header_comment({%|#|%}, {%|#|%}){%|
     gsub(/<code><!--::-->/, "<code>::", $0)
     if (in_javadoc_code_block) {
       gsub(/&amp;/, "&", $0)
+      gsub(/&lt;/, "<", $0)
       gsub(/&#64;/, "@AT@", $0)
       if ($0 ~ /<\/pre><\/blockquote>$/) {
         sub(/<\/pre><\/blockquote>$/, "", $0)
