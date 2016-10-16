@@ -20,6 +20,13 @@ PACKAGE_DATE_MONTH_ZPAD{%||%}dnl
 PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 {%|
 AC_DEFUN([gatbps_rule_word_error], [dnl
+m4_ifndef(
+  [gatbps_fatal],
+  [dnl
+m4_errprintn(m4_location[: error: gatbps_fatal is not defined])[]dnl
+m4_fatal([this probably means that you forgot to add ]dnl
+[gatbps_fatal.m4 to your Autoconf macros])[]dnl
+])[]dnl
 m4_if(
   m4_eval([$# < 1 || $# > 1]),
   [1],
