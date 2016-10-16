@@ -11,10 +11,10 @@ ifdef(
     {%|{%|##
 ## The substitution above may add prerequisites to some of the targets
 ## below, but Automake cannot see this because substitution runs after
-## Automake. If Automake does not see the targets at all, then it will
-## not add them as prerequisites to the corresponding non-local targets,
-## which leaves any new prerequisites disconnected. The rules below are
-## included to ensure that Automake sees the targets.
+## Automake. If Automake were to not see the targets anywhere, then it
+## might not add them as prerequisites to the corresponding non-local
+## targets, which would leave any new prerequisites disconnected. The
+## rules below are included to ensure that Automake sees the targets.
 ##|%}|%})|%}){%||%}dnl
 dnl
 dnl The authors of this file have waived all copyright and
