@@ -4194,6 +4194,8 @@ EOF1
 |%}recursion_code(
   {%|INPUT_FILTER.sh.in|%},
   {%|
+            'set' '' "${prefix}"'GATBPS_PROG_AWK.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_DEFINE_AT.m4' "${@}"; 'shift'
             'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
