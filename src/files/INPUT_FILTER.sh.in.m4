@@ -55,6 +55,9 @@ header_comment({%|#|%}, {%|#|%}){%|
       gsub(/&commat;/, "@AT@@AT@", $0)
       gsub(/&#0*64;/, "@AT@@AT@", $0)
       gsub(/&#[Xx]0*40;/, "@AT@@AT@", $0)
+      gsub(/&bsol;/, "@AT@\\", $0)
+      gsub(/&#0*92;/, "@AT@\\", $0)
+      gsub(/&#[Xx]0*5[Cc];/, "@AT@\\", $0)
       if ($0 ~ /<!--code.*--><blockquote><pre>$/) {
         n = split($0, x, /<!--/)
         i = 0
