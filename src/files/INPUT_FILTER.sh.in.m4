@@ -24,9 +24,17 @@ header_comment({%|#|%}, {%|#|%}){%|
     gsub(/<code><!--::-->/, "<code>::", $0)
     if (in_javadoc_code_block) {
       gsub(/&lt;/, "<", $0)
+      gsub(/&#0*60;/, "<", $0)
+      gsub(/&#[Xx]0*3[Cc];/, "<", $0)
       gsub(/&gt;/, ">", $0)
-      gsub(/&#64;/, "@AT@", $0)
-      gsub(/&amp;/, "\\&", $0)
+      gsub(/&#0*62;/, ">", $0)
+      gsub(/&#[Xx]0*3[Ee];/, ">", $0)
+      gsub(/&commat;/, "@AT@", $0)
+      gsub(/&#0*64;/, "@AT@", $0)
+      gsub(/&#[Xx]0*40;/, "@AT@", $0)
+      gsub(/&amp;/, "\\&#x0026;", $0)
+      gsub(/&#0*38;/, "\\&#x0026;", $0)
+      gsub(/&#[Xx]0*26;/, "\\&", $0)
       if ($0 ~ /<\/pre><\/blockquote>$/) {
         sub(/<\/pre><\/blockquote>$/, "", $0)
         $0 = $0 "@AT@endcode"
@@ -44,7 +52,9 @@ header_comment({%|#|%}, {%|#|%}){%|
         }
       }
     } else {
-      gsub(/&#64;/, "@AT@@AT@", $0)
+      gsub(/&commat;/, "@AT@@AT@", $0)
+      gsub(/&#0*64;/, "@AT@@AT@", $0)
+      gsub(/&#[Xx]0*40;/, "@AT@@AT@", $0)
       if ($0 ~ /<!--code.*--><blockquote><pre>$/) {
         n = split($0, x, /<!--/)
         i = 0
