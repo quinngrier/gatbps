@@ -20,6 +20,13 @@ PACKAGE_DATE_MONTH_ZPAD{%||%}dnl
 PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 {%|
 AC_DEFUN([gatbps_rule_word_error], [dnl
+m4_if(
+  m4_eval([$# < 1 || $# > 1]),
+  [1],
+  [gatbps_fatal([
+    gatbps_rule_word_error requires exactly 1 argument
+    ($# ]m4_if([$#], [1], [[was]], [[were]])[ given)
+  ])])[]dnl
 ])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
 dnl
