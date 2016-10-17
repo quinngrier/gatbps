@@ -45,17 +45,6 @@ header_comment({%|#|%}, {%|#|%}){%|
         sub(/<\/pre><\/blockquote>$/, "", $0)
         $0 = $0 "@AT@endcode"
         in_javadoc_code_block = 0
-      } else {
-        n = split($0, x, /{@AT@literal/)
-        i = 0
-        $0 = ""
-        while (i != n) {
-          ++i
-          if (i != 1) {
-            sub(/}/, "", x[i])
-          }
-          $0 = $0 x[i]
-        }
       }
     } else {
       gsub(/&commat;/, "@AT@@AT@", $0)
