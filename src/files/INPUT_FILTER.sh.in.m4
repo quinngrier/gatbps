@@ -64,28 +64,9 @@ header_comment({%|#|%}, {%|#|%}){%|
       gsub(/&bsol;/, "@AT@\\", $0)
       gsub(/&#0*92;/, "@AT@\\", $0)
       gsub(/&#[Xx]0*5[Cc];/, "@AT@\\", $0)
-      if ($0 ~ /<!--code.*--><blockquote><pre>$/) {
-        n = split($0, x, /<!--code/)
-        i = 0
-        $0 = ""
-        while (i != n) {
-          ++i
-          if (i == n) {
-            sub(/--><blockquote><pre>$/, "", x[i])
-          }
-          if (i == 2) {
-            $0 = $0 "@AT@code"
-          } else if (i != 1) {
-            $0 = $0 "<!--code"
-          }
-          $0 = $0 x[i]
-        }
-        if ($0 ~ /^[	 ]*\*\**@AT@code/) {
-          sub(/@AT@code/, " &", $0)
-        }
-        if ($0 ~ /^[	 ]*\/\/\/*[\/!]@AT@code/) {
-          sub(/@AT@code/, " &", $0)
-        }
+      if ($0 ~ /^[	 ]*\*<!--code.*--><blockquote><pre>$/) {
+        sub(/<!--/, " @AT@", $0)
+        sub(/--><blockquote><pre>$/, "", $0)
         in_javadoc_code_block = 1
       } else if ($0 ~ / @AT@see ["<]/) {
       } else if ($0 ~ / @AT@see /) {
