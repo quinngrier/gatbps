@@ -36,9 +36,8 @@ header_comment({%|#|%}, {%|#|%}){%|
       gsub(/&amp;/, "\\&#x0026;", $0)
       gsub(/&#0*38;/, "\\&#x0026;", $0)
       gsub(/&#[Xx]0*26;/, "\\&", $0)
-      if ($0 ~ /<\/pre><\/blockquote>$/) {
-        sub(/<\/pre><\/blockquote>$/, "", $0)
-        $0 = $0 "@AT@endcode"
+      if ($0 ~ /^[	 ]*\* <\/pre><\/blockquote>$/) {
+        sub(/<\/pre><\/blockquote>$/, "@AT@endcode", $0)
         in_javadoc_code_block = 0
       }
     } else {
