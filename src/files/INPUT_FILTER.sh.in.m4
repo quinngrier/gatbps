@@ -44,6 +44,12 @@ header_comment({%|#|%}, {%|#|%}){%|
         in_javadoc_code_block = 0
       }
     } else {
+      gsub(/&#0*38;/, "\\&amp;", $0)
+      gsub(/&#[Xx]0*26;/, "\\&amp;", $0)
+      gsub(/&#0*60;/, "\\&lt;", $0)
+      gsub(/&#[Xx]0*3[Cc];/, "\\&lt;", $0)
+      gsub(/&#0*62;/, "\\&gt;", $0)
+      gsub(/&#[Xx]0*3[Ee];/, "\\&gt;", $0)
       gsub(/&commat;/, "@AT@@AT@", $0)
       gsub(/&#0*64;/, "@AT@@AT@", $0)
       gsub(/&#[Xx]0*40;/, "@AT@@AT@", $0)
