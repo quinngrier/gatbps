@@ -32,6 +32,15 @@ m4_location[: error: ]dnl
   [$1_check_prerequisites],
   [dnl|%}dnl
 autoconf_prerequisites_helper(shift($@)){%|])[dnl
+]m4_ifndef(
+  [gatbps_check_autoconf_prerequisites],
+  [m4_define(
+    [gatbps_check_autoconf_prerequisites],
+    [$1_check_prerequisites[]dnl])],
+  [m4_define(
+    [gatbps_check_autoconf_prerequisites],
+    m4_defn([gatbps_check_autoconf_prerequisites])[
+$1_check_prerequisites[]dnl])])[dnl
 $1_check_prerequisites[]dnl|%}dnl
 |%})|%}){%||%}dnl
 dnl
