@@ -52,13 +52,13 @@ m4_fatal(
 gatbps_notice_check_prerequisites[]dnl
 ])[dnl
 ]m4_ifndef(
-  [gatbps_check_autoconf_prerequisites],
+  [gatbps_check_for_missing_autoconf_macros],
   [m4_define(
-    [gatbps_check_autoconf_prerequisites],
+    [gatbps_check_for_missing_autoconf_macros],
     [gatbps_fatal_check_prerequisites[]dnl])],
   [m4_define(
-    [gatbps_check_autoconf_prerequisites],
-    m4_defn([gatbps_check_autoconf_prerequisites])[
+    [gatbps_check_for_missing_autoconf_macros],
+    m4_defn([gatbps_check_for_missing_autoconf_macros])[
 gatbps_fatal_check_prerequisites[]dnl])])[dnl
 gatbps_fatal_check_prerequisites[]dnl
 m4_if(
