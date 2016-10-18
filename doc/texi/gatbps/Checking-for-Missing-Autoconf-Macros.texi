@@ -1,5 +1,17 @@
 @node Checking for Missing Autoconf Macros
 @chapter Checking for Missing Autoconf Macros
+
+@noindent
+GATBPS provides a number of special files that define Autoconf macros,
+with each file defining exactly one macro@.
+There are several ways that you can include the files in your
+@w{@t{configure.@:ac}}
+file, but the intended way is by using
+@w{@t{aclocal}}
+program@.
+Some of the macros need to use others, but it is easy to forget to
+include one of the files@.
+GATBPS provides a system that can catch such mistakes at Autoconf time@.
 @ifxml
 @ifnotxml
 @c
