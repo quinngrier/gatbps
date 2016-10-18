@@ -9,6 +9,8 @@
   [[gatbps]],
   [[https://www.quinngrier.com/gatbps]])[
 
+]gatbps_check_autoconf_prerequisites[
+
 ]GATBPS_DEFINE_VERSION(
   [AC_],
   [PACKAGE_VERSION])[
