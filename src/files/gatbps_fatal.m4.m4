@@ -6,6 +6,7 @@ rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/PACKAGE_DATE_DAY_ZPAD.m4|%}){%||%}dnl
 include({%|src/tools/PACKAGE_DATE_MONTH_ZPAD.m4|%}){%||%}dnl
 include({%|src/tools/PACKAGE_DATE_YEAR.m4|%}){%||%}dnl
+include({%|src/tools/autoconf_prerequisites.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
 header_comment({%|dnl|%}, {%|dnl|%}){%|
@@ -20,13 +21,9 @@ PACKAGE_DATE_MONTH_ZPAD{%||%}dnl
 PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 {%|
 AC_DEFUN([gatbps_fatal], [dnl
-m4_ifndef(
-  [gatbps_notice],
-  [dnl
-m4_errprintn(m4_location[: error: gatbps_notice is not defined])[]dnl
-m4_fatal([this probably means that you forgot to add ]dnl
-[gatbps_notice.m4 to your Autoconf macros])[]dnl
-])[]dnl
+|%}autoconf_prerequisites(
+  {%|gatbps_fatal|%},
+  {%|gatbps_notice|%}){%|
 m4_if(
   m4_eval([$# <= 1]),
   [1],
