@@ -17,39 +17,39 @@ header_comment({%|#|%}, {%|#|%}){%|
 
 @AWK@ '
   BEGIN {
-    in_javadoc_code_block = 0
+    in_javadoc_code_block = 0;
   }
   {
-    gsub(/<code><!--#-->/, "<code>#", $0)
-    gsub(/<code><!--::-->/, "<code>::", $0)
+    gsub(/<code><!--#-->/, "<code>#", $0);
+    gsub(/<code><!--::-->/, "<code>::", $0);
     if (in_javadoc_code_block) {
-      sub(/^[	 ]*\*/, "& ", $0)
-      gsub(/&lt;/, "<", $0)
-      gsub(/&gt;/, ">", $0)
-      gsub(/&#64;/, "@AT@", $0)
-      gsub(/&#92;/, "\\", $0)
-      gsub(/&amp;/, "\\&", $0)
+      sub(/^[	 ]*\*/, "& ", $0);
+      gsub(/&lt;/, "<", $0);
+      gsub(/&gt;/, ">", $0);
+      gsub(/&#64;/, "@AT@", $0);
+      gsub(/&#92;/, "\\", $0);
+      gsub(/&amp;/, "\\&", $0);
       if ($0 ~ /^[	 ]*\* <\/pre><\/blockquote>$/) {
-        sub(/<\/pre><\/blockquote>$/, "@AT@endcode", $0)
-        in_javadoc_code_block = 0
+        sub(/<\/pre><\/blockquote>$/, "@AT@endcode", $0);
+        in_javadoc_code_block = 0;
       }
     } else {
-      gsub(/&#64;/, "@AT@@AT@", $0)
-      gsub(/&#92;/, "@AT@\\", $0)
+      gsub(/&#64;/, "@AT@@AT@", $0);
+      gsub(/&#92;/, "@AT@\\", $0);
       if ($0 ~ /^[	 ]*\*<!--code.*--><blockquote><pre>$/) {
-        sub(/<!--/, " @AT@", $0)
-        sub(/--><blockquote><pre>$/, "", $0)
-        in_javadoc_code_block = 1
+        sub(/<!--/, " @AT@", $0);
+        sub(/--><blockquote><pre>$/, "", $0);
+        in_javadoc_code_block = 1;
       } else if ($0 ~ / @AT@see ["<]/) {
       } else if ($0 ~ / @AT@see /) {
-        sub(/ @AT@see /, " @AT@see <code>", $0)
-        $0 = $0 "</code>"
+        sub(/ @AT@see /, " @AT@see <code>", $0);
+        $0 = $0 "</code>";
       } else if ($0 ~ / @AT@throws /) {
-        sub(/ @AT@throws /, " @AT@throws <code>", $0)
-        $0 = $0 "</code>"
+        sub(/ @AT@throws /, " @AT@throws <code>", $0);
+        $0 = $0 "</code>";
       }
     }
-    print $0
+    print $0;
   }
 ' <"${1}"
 
