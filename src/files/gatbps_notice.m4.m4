@@ -26,7 +26,8 @@ AC_DEFUN([gatbps_notice], [dnl
 m4_if(
   m4_eval([$# <= 1]),
   [1],
-  [m4_errprintn(m4_location[: ]dnl
+  [m4_errprintn(
+m4_location[: ]dnl
 m4_normalize(m4_bpatsubst([[$1]], [\[--VERBATIM--\]\(.\|
 \)*\(.\)], [\2]))[]dnl
 m4_bregexp([[$1]], [\(\[\)--VERBATIM--\]\(\(.\|
