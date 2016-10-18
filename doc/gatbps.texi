@@ -71,6 +71,7 @@ on@tie{}@w{@value{PACKAGEDATE}}@.
 * Writing Mathematical Notation in Texinfo::
 * Timestamp Preservation during Autoconf Instantiation::
 * Using the Autotools to Process M4::
+* Checking for Missing Autoconf Macros::
 * Formatting Autoconf Files::
 * Formatting Automake Files::
 * Using the Autotools to Compile Java::
@@ -108,6 +109,8 @@ on@tie{}@w{@value{PACKAGEDATE}}@.
 @include gatbps/Timestamp-Preservation-during-Autoconf-Instantiation.texi
 
 @include gatbps/Using-the-Autotools-to-Process-M4.texi
+
+@include gatbps/Checking-for-Missing-Autoconf-Macros.texi
 
 @include gatbps/Formatting-Autoconf-Files.texi
 
