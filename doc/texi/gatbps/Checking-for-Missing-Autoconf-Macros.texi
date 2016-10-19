@@ -2,15 +2,21 @@
 @chapter Checking for Missing Autoconf Macros
 
 @noindent
-GATBPS provides a number of special files that define Autoconf macros,
-with each file defining exactly one macro@.
-There are several ways that you can include the files in your
-@w{@t{configure.@:ac}}
-file, but the intended way is by using the
+GATBPS provides a number of special files that define Autoconf macros@.
+The files follow the
 @w{@t{aclocal}}
-program@.
-Some of the macros need to use others, but it is easy to forget to
-include one of the files@.
+conventions so that they are easy to use@.
+Each file defines a main macro and zero or more helper macros that are
+intended to be used only by the main macro@.
+You can selectively use only the files that you need, but some main
+macros need others, so you must remember to include those files too@.
+You can list these dependencies with the
+@w{@t{-@w{-}dry-run}}
+and
+@w{@t{-@w{-}recursive}}
+options of the
+@w{@t{gatbps}}
+program, but it is still easy to forget some of them@.
 GATBPS provides a system that can catch such mistakes at Autoconf time@.
 @ifxml
 @ifnotxml
