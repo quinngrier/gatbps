@@ -9,7 +9,7 @@
   [[gatbps]],
   [[https://www.quinngrier.com/gatbps]])[
 
-]gatbps_check_for_missing_autoconf_macros[
+]gatbps_check_for_missing_gatbps_macros[
 
 ]GATBPS_DEFINE_VERSION(
   [AC_],
