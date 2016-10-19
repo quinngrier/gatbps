@@ -1,48 +1,59 @@
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|src/tools/autoconf_prerequisites.m4|%}){%||%}dnl
+rules_code({%|src/tools/autoconf_boundary_helper.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
-include({%|src/tools/autoconf_prerequisites_helper.m4|%}){%||%}dnl
 ifdef(
-  {%|autoconf_prerequisites|%},
+  {%|autoconf_boundary_helper|%},
   {%||%},
   {%|define(
-    {%|autoconf_prerequisites|%},
+    {%|autoconf_boundary_helper|%},
     {%|dnl
 ifelse(
   eval({%|$# < 1|%}),
   {%|1|%},
   {%|errprint(
 {%|m4: error: |%}dnl
-{%|autoconf_prerequisites requires at least 1 argument|%}dnl
+{%|autoconf_boundary_helper requires at least 1 argument|%}dnl
 {%| ($# |%}dnl
 ifelse({%|$#|%}, {%|1|%}, {%|{%|was|%}|%}, {%|{%|were|%}|%}){%||%}dnl
 {%| given)|%}dnl
 {%|
 |%}){%||%}m4exit({%|1|%})|%}){%||%}dnl
-{%|]m4_ifdef(
+ifelse(
+  {%|$1|%},
+  {%||%},
+  {%|
+|%},
+  {%|dnl
+{%|
+m4_ifndef(
+  [$1],
+  [dnl
+m4_errprintn(
+m4_location[: error: ]dnl
+[$1 ]dnl
+[is not defined]dnl
+)[]dnl
+m4_fatal(
+[this probably means that you forgot to add ]dnl
+[$1.m4 ]dnl
+[to your Autoconf macros]dnl
+)[]dnl
+])[]dnl
+m4_ifndef(
   [$1_check_prerequisites],
   [dnl
-m4_fatal(
+m4_errprintn(
 m4_location[: error: ]dnl
 [$1_check_prerequisites ]dnl
-[is already defined]dnl
+[is not defined]dnl
 )[]dnl
-])[dnl
-]m4_define(
-  [$1_check_prerequisites],
-  [dnl|%}dnl
-autoconf_prerequisites_helper(shift($@)){%|])[dnl
-]m4_ifndef(
-  [gatbps_check_for_missing_gatbps_macros],
-  [m4_define(
-    [gatbps_check_for_missing_gatbps_macros],
-    [$1_check_prerequisites[]dnl])],
-  [m4_define(
-    [gatbps_check_for_missing_gatbps_macros],
-    m4_defn([gatbps_check_for_missing_gatbps_macros])[
-$1_check_prerequisites[]dnl])])[dnl
+m4_fatal(
+[this means that there is a bug in GATBPS]dnl
+)[]dnl
+])[]dnl
 $1_check_prerequisites[]dnl|%}dnl
-|%})|%}){%||%}dnl
+autoconf_boundary_helper(shift($@)){%||%}dnl
+|%})|%})|%}){%||%}dnl
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by

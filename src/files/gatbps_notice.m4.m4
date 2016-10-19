@@ -6,7 +6,7 @@ rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/PACKAGE_DATE_DAY_ZPAD.m4|%}){%||%}dnl
 include({%|src/tools/PACKAGE_DATE_MONTH_ZPAD.m4|%}){%||%}dnl
 include({%|src/tools/PACKAGE_DATE_YEAR.m4|%}){%||%}dnl
-include({%|src/tools/autoconf_prerequisites.m4|%}){%||%}dnl
+include({%|src/tools/autoconf_boundary.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
 header_comment({%|dnl|%}, {%|dnl|%}){%|
@@ -21,7 +21,7 @@ PACKAGE_DATE_MONTH_ZPAD{%||%}dnl
 PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 {%|
 AC_DEFUN([gatbps_notice], [dnl
-|%}autoconf_prerequisites(
+|%}autoconf_boundary(
   {%|gatbps_notice|%}){%|
 m4_if(
   m4_eval([$# <= 1]),
