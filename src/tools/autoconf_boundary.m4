@@ -19,9 +19,7 @@ ifelse({%|$#|%}, {%|1|%}, {%|{%|was|%}|%}, {%|{%|were|%}|%}){%||%}dnl
 {%| given)|%}dnl
 {%|
 |%}){%||%}m4exit({%|1|%})|%}){%||%}dnl
-{%|AC_DEFUN(
-  [$1_check_prerequisites],
-  [dnl|%}dnl
+{%|AC_DEFUN([$1_check_prerequisites], [dnl|%}dnl
 autoconf_boundary_helper(shift($@)){%|]dnl
 m4_ifndef(
   [gatbps_check_for_missing_gatbps_macros],
