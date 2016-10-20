@@ -20,9 +20,10 @@ PACKAGE_DATE_YEAR{%||%}dnl
 PACKAGE_DATE_MONTH_ZPAD{%||%}dnl
 PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 {%|
-AC_DEFUN([gatbps_notice], [dnl
 |%}autoconf_boundary(
   {%|gatbps_notice|%}){%|
+AC_DEFUN([gatbps_notice], [dnl
+gatbps_notice_check_prerequisites[]dnl
 m4_if(
   m4_eval([$# <= 1]),
   [1],

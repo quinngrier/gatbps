@@ -19,20 +19,11 @@ ifelse({%|$#|%}, {%|1|%}, {%|{%|was|%}|%}, {%|{%|were|%}|%}){%||%}dnl
 {%| given)|%}dnl
 {%|
 |%}){%||%}m4exit({%|1|%})|%}){%||%}dnl
-{%|]m4_ifdef(
-  [$1_check_prerequisites],
-  [dnl
-m4_fatal(
-m4_location[: error: ]dnl
-[$1_check_prerequisites ]dnl
-[is already defined]dnl
-)[]dnl
-])[dnl
-]m4_define(
+{%|AC_DEFUN(
   [$1_check_prerequisites],
   [dnl|%}dnl
-autoconf_boundary_helper(shift($@)){%|])[dnl
-]m4_ifndef(
+autoconf_boundary_helper(shift($@)){%|]dnl
+m4_ifndef(
   [gatbps_check_for_missing_gatbps_macros],
   [m4_define(
     [gatbps_check_for_missing_gatbps_macros],
@@ -40,8 +31,8 @@ autoconf_boundary_helper(shift($@)){%|])[dnl
   [m4_define(
     [gatbps_check_for_missing_gatbps_macros],
     m4_defn([gatbps_check_for_missing_gatbps_macros])[
-$1_check_prerequisites[]dnl])])[dnl
-$1_check_prerequisites[]dnl|%}dnl
+$1_check_prerequisites[]dnl])])[]dnl
+)[]dnl|%}dnl
 |%})|%}){%||%}dnl
 dnl
 dnl The authors of this file have waived all copyright and
