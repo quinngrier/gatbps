@@ -34,6 +34,7 @@ m4_if(
   [[
 #]])[ ($1)$2.
 #]dnl
+GATBPS_DEFINE_DATE_check_prerequisites[]dnl
 m4_if(
   m4_eval([$# < 2 || $# > 3]),
   [1],
