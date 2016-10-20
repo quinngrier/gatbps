@@ -9,7 +9,8 @@ conventions so that they are easy to use@.
 Each file defines a main macro and zero or more helper macros that are
 intended to be used only by the main macro@.
 You can selectively use only the files that you need, but some main
-macros need others, so you must remember to include those files too@.
+macros depend on other main macros, so you must remember to include
+those files too@.
 You can list these dependencies with the
 @w{@t{-@w{-}dry-run}}
 and
