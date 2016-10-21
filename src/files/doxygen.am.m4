@@ -27,7 +27,7 @@ SUFFIXES += .dfv
 .PHONY: doxygen-main
 
 .am_dfv_INPUT.dfv:
-	$(AM_V_GEN)':'
+	$(AM_V_GEN)$(GATBPS_RECIPE_MARKER_TOP)
 	$(AM_V_at){ \
   $(SED) \
     's/+=[	 ]*/&VPATH:/;/+=/s/^[^+]*/INPUT /' \
@@ -36,9 +36,10 @@ SUFFIXES += .dfv
   || 'exit' "$${?}"; \
   'exit' '0'; \
 :;}
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
 .dfv.df:
-	$(AM_V_GEN)':'
+	$(AM_V_GEN)$(GATBPS_RECIPE_MARKER_TOP)
 	$(AM_V_at){ \
   $(SED) \
     's/VPATH://' \
@@ -47,6 +48,7 @@ SUFFIXES += .dfv
   || 'exit' "$${?}"; \
   'exit' '0'; \
 :;}
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
 clean-doxygen-main:
 	-{ \

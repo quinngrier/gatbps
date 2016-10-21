@@ -4314,6 +4314,7 @@ EOF1
 |%}recursion_code(
   {%|doxygen.am|%},
   {%|
+            'set' '' "${prefix}"'GATBPS_RECIPE_MARKER.am' "${@}"; 'shift'
             'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
