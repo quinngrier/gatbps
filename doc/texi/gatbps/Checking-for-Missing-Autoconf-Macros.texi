@@ -17,7 +17,7 @@ and
 @w{@t{-@w{-}recursive}}
 options of the
 @w{@t{gatbps}}
-program, but it is still easy to forget some of them@.
+program, but it is still easy to make mistakes@.
 
 @include indent.texi
 Missing macros usually result in Autoconf copying the unexpanded macro
