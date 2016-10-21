@@ -24,7 +24,8 @@ Missing macros usually result in Autoconf copying the unexpanded macro
 calls to the
 @w{@t{configure}}
 script and succeeding without warnings, as Autoconf does not know that
-you were expecting the macros to be defined@.
+you were expecting the macros to be defined and therefore does not see
+the problem@.
 Sometimes the resulting
 @w{@t{configure}}
 script will fail with an error message that helps you find the problem@.
