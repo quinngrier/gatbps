@@ -19,7 +19,7 @@ options of the
 program, but it is still easy to make mistakes@.
 
 @include indent.texi
-Missing macros usually result in Autoconf copying the unexpanded macro
+Missing macros normally result in Autoconf copying the unexpanded macro
 calls to the
 @w{@t{configure}}
 script and succeeding without warnings, as Autoconf does not know that
