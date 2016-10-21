@@ -22,6 +22,20 @@ GATBPS_AM_DFV_INPUT_SCRIPT = '{ \
   } \
 }'
 
+GATBPS_DFV_TO_DF_SCRIPT = '{ \
+  if ($$0 ~ /VPATH:/) { \
+    if (split($$0, x, /VPATH:/) == 2) { \
+      y = x[2]; \
+      gsub(/'\''/, "'\''\\'\'''\''", y); \
+      if (system("'\''test'\'' '\''-r'\'' '\''" y "'\''") == 0) { \
+        print x[1] x[2]; \
+      } else { \
+        print x[1] "$${srcdir}/" x[2]; \
+      } \
+    } \
+  } \
+}'
+
 SUFFIXES += .am_dfv_INPUT
 SUFFIXES += .df
 SUFFIXES += .dfv
