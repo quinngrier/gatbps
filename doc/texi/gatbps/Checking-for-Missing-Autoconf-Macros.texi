@@ -25,9 +25,10 @@ calls to the
 script and succeeding without warnings, as Autoconf does not know that
 you were expecting the macros to be defined and therefore does not see
 the problem@.
-Sometimes the resulting
+However, depending on the exact text of the unexpanded macro calls, the
+resulting
 @w{@t{configure}}
-script will fail with an error message that helps you find the problem@.
+script may fail with an error message that helps you find the problem@.
 For example, consider the following
 @w{@t{configure.@:ac}}
 file:
