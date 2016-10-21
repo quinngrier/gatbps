@@ -18,6 +18,40 @@ and
 options of the
 @w{@t{gatbps}}
 program, but it is still easy to forget some of them@.
+
+@include indent.texi
+Missing macros usually result in Autoconf copying the unexpanded macro
+calls to the
+@w{@t{configure}}
+script and succeeding without warnings, as Autoconf does not know that
+you were expecting the macros to be defined@.
+Sometimes the resulting
+@w{@t{configure}}
+script will fail with an error message that helps you find the problem@.
+For example, consider the following
+@w{@t{configure.@:ac}}
+file:
+
+@example
+AC_INIT([foo], [1.0])
+bar([baz])
+AC_OUTPUT
+@end example
+
+@noindent
+Because the
+@w{@t{bar}}
+macro is not defined, the resulting
+@w{@t{configure}}
+script will contain a
+``@w{@t{bar(baz)}}''@tie{}line
+and will probably fail with an error message like this:
+
+@example
+./configure: line 1664: syntax error near unexpected token `baz'
+./configure: line 1664: `bar(baz)'
+@end example
+
 GATBPS provides a system that can catch such mistakes at Autoconf time@.
 @ifxml
 @ifnotxml
