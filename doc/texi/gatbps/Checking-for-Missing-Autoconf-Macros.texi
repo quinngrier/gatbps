@@ -44,9 +44,9 @@ Because the
 @w{@t{bar}}
 macro is not defined, the resulting
 @w{@t{configure}}
-script will contain a
-``@w{@t{bar(baz)}}''@tie{}line
-and will probably fail with an error message like this:
+script will contain a line that contains
+exactly@tie{}``@w{@t{bar(baz)}}'',
+so the script will probably fail with an error message like this:
 
 @example
 ./configure: line 1664: syntax error near unexpected token `baz'
