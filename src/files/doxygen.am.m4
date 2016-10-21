@@ -14,6 +14,8 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 ## begin_variables
 
+GATBPS_AM_DFV_INPUT_SCRIPT = 's/+=[	 ]*/&VPATH:/;/+=/s/^[^+]*/INPUT /'
+
 SUFFIXES += .am_dfv_INPUT
 SUFFIXES += .df
 SUFFIXES += .dfv
@@ -30,7 +32,7 @@ SUFFIXES += .dfv
 	$(AM_V_GEN)$(GATBPS_RECIPE_MARKER_TOP)
 	$(AM_V_at){ \
   $(SED) \
-    's/+=[	 ]*/&VPATH:/;/+=/s/^[^+]*/INPUT /' \
+    $(GATBPS_AM_DFV_INPUT_SCRIPT) \
     <$< \
     >$@ \
   || 'exit' "$${?}"; \
