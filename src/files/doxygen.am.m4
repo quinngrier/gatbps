@@ -14,7 +14,7 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 ## begin_variables
 
-GATBPS_AM_DFV_INPUT_SCRIPT = '{ \
+GATBPS_AM_DFV_INPUT_TO_DFV_SCRIPT = '{ \
   if ($$0 ~ /+=/) { \
     sub(/+=[	 ]*/, "+= VPATH:"); \
     sub(/^[^+]*/, "INPUT "); \
@@ -52,7 +52,7 @@ SUFFIXES += .dfv
 	$(AM_V_GEN)$(GATBPS_RECIPE_MARKER_TOP)
 	$(AM_V_at){ \
   $(AWK) \
-    $(GATBPS_AM_DFV_INPUT_SCRIPT) \
+    $(GATBPS_AM_DFV_INPUT_TO_DFV_SCRIPT) \
     <$< \
     >$@ \
   || 'exit' "$${?}"; \
