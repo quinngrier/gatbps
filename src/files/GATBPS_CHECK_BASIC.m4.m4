@@ -54,7 +54,7 @@ m4_bregexp([[$1]], [\(\[\)--DETAILS--\]\(\(.\|
   [{
 
     gatbps_list=''
-    { ':'m4_foreach_w(
+    {m4_foreach_w(
       [gatbps_var],
       [$4],
       [
@@ -79,7 +79,7 @@ m4_bregexp([[$1]], [\(\[\)--DETAILS--\]\(\(.\|
           ;;
         esac
       :;}])
-    }
+    :;}
 
     case "$[]{gatbps_list}" in
       *'=no'*|*'=0'*)
