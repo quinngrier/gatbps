@@ -19,16 +19,16 @@ PACKAGE_DATE_YEAR{%||%}dnl
 PACKAGE_DATE_MONTH_ZPAD{%||%}dnl
 PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 {%|
-AC_DEFUN([GATBPS_CHECK_HEADER], [{
+AC_DEFUN([GATBPS_CHECK_HEADER], [[{
 
-GATBPS_CHECK_COMPILE(
+]GATBPS_CHECK_COMPILE(
   [$1],
   [$2],
   [$3],
   [],
-  [$4])
+  [$4])[
 
-:;}])[]dnl
+:;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
 dnl
 dnl The authors of this file have waived all copyright and

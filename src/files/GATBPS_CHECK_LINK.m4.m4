@@ -19,9 +19,9 @@ PACKAGE_DATE_YEAR{%||%}dnl
 PACKAGE_DATE_MONTH_ZPAD{%||%}dnl
 PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 {%|
-AC_DEFUN([GATBPS_CHECK_LINK], [{
+AC_DEFUN([GATBPS_CHECK_LINK], [[{
 
-GATBPS_CHECK_BASIC(
+]GATBPS_CHECK_BASIC(
   [$1],
   [$2],
   [{ :
@@ -30,9 +30,9 @@ GATBPS_CHECK_BASIC(
       [gatbps_cv_$2='yes'],
       [gatbps_cv_$2='no'])
   }],
-  [$5])
+  [$5])[
 
-:;}])[]dnl
+:;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
 dnl
 dnl The authors of this file have waived all copyright and
