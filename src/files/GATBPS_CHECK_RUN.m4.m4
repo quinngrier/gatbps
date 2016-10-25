@@ -24,13 +24,13 @@ AC_DEFUN([GATBPS_CHECK_RUN], [[{
 ]GATBPS_CHECK_BASIC(
   [$1],
   [$2],
-  [{ :
+  [{
     AC_RUN_IFELSE(
       [AC_LANG_PROGRAM([$3], [$4])],
       [gatbps_cv_$2='yes'],
       [gatbps_cv_$2='no'],
       [gatbps_cv_$2="$[]{$5}"])
-  }],
+  :;}],
   [$6])[
 
 :;}]])[]dnl

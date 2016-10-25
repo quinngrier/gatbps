@@ -62,7 +62,7 @@ m4_pushdef(
 
 ]AC_CONFIG_FILES(
   gatbps_output[]gatbps_suffix[]gatbps_inputs,
-  [{ :
+  [{
     gatbps_dst=']gatbps_output['
     gatbps_aux="$[]{srcdir}/$[]{gatbps_dst}"
     case "$[]{gatbps_dst}" in
@@ -102,7 +102,7 @@ m4_pushdef(
       esac
       $4
     fi
-  }],
+  :;}],
   [$5])
 
 gatbps_new_rules='.PHONY: clean-gatbps_output

@@ -24,9 +24,9 @@ AC_DEFUN([GATBPS_CHECK_VARS], [[{
 ]GATBPS_CHECK_BASIC(
   [$1],
   [$2],
-  [{ :
+  [{
     gatbps_cv_$2='yes'
-  }],
+  :;}],
   [$3])[
 
 :;}]])[]dnl
