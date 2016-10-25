@@ -21,12 +21,12 @@ PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 {%|
 AC_DEFUN([GATBPS_CHECK_HEADER], [{
 
-  GATBPS_CHECK_COMPILE(
-    [$1],
-    [$2],
-    [$3],
-    [],
-    [$4])
+GATBPS_CHECK_COMPILE(
+  [$1],
+  [$2],
+  [$3],
+  [],
+  [$4])
 
 :;}])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})

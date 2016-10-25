@@ -21,16 +21,16 @@ PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 {%|
 AC_DEFUN([GATBPS_CHECK_LINK], [{
 
-  GATBPS_CHECK_BASIC(
-    [$1],
-    [$2],
-    [{ :
-      AC_LINK_IFELSE(
-        [AC_LANG_PROGRAM([$3], [$4])],
-        [gatbps_cv_$2='yes'],
-        [gatbps_cv_$2='no'])
-    }],
-    [$5])
+GATBPS_CHECK_BASIC(
+  [$1],
+  [$2],
+  [{ :
+    AC_LINK_IFELSE(
+      [AC_LANG_PROGRAM([$3], [$4])],
+      [gatbps_cv_$2='yes'],
+      [gatbps_cv_$2='no'])
+  }],
+  [$5])
 
 :;}])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})

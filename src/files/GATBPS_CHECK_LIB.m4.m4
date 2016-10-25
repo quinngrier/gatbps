@@ -21,21 +21,21 @@ PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 {%|
 AC_DEFUN([GATBPS_CHECK_LIB], [{
 
-  GATBPS_CHECK_BASIC(
-    [$1],
-    [$2],
-    [{ :
-      gatbps_save_LIBS="$[]{LIBS}"
-      LIBS='$3'" $[]{LIBS}"
-      AC_LANG_PUSH([C])
-      AC_LINK_IFELSE(
-        [AC_LANG_PROGRAM([], [])],
-        [gatbps_cv_$2='yes'],
-        [gatbps_cv_$2='no'])
-      AC_LANG_POP([C])
-      LIBS="$[]{gatbps_save_LIBS}"
-    }],
-    [$4])
+GATBPS_CHECK_BASIC(
+  [$1],
+  [$2],
+  [{ :
+    gatbps_save_LIBS="$[]{LIBS}"
+    LIBS='$3'" $[]{LIBS}"
+    AC_LANG_PUSH([C])
+    AC_LINK_IFELSE(
+      [AC_LANG_PROGRAM([], [])],
+      [gatbps_cv_$2='yes'],
+      [gatbps_cv_$2='no'])
+    AC_LANG_POP([C])
+    LIBS="$[]{gatbps_save_LIBS}"
+  }],
+  [$4])
 
 :;}])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
