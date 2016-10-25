@@ -28,13 +28,13 @@ m4_pushdef(
 AC_ARG_WITH(
   [$1],
   [$2],
-  [{ ':'
+  [{
     ]gatbps_x[_was_given='yes'
-  }],
-  [{ ':'
+  :;}],
+  [{
     ]gatbps_x[_was_given='no'
     ]gatbps_x[='$3'
-  }])
+  :;}])
 
 m4_popdef([gatbps_x])
 

@@ -51,14 +51,14 @@ m4_bregexp([[$1]], [\(\[\)--DETAILS--\]\(\(.\|
   [for ]m4_bpatsubst([[$1]], [\[--DETAILS--\]\(.\|
 \)*\(.\)], [\2]),
   [$2],
-  [{ ':'
+  [{
 
     gatbps_list=''
     { ':'m4_foreach_w(
       [gatbps_var],
       [$4],
       [
-      { ':'
+      {
         case "$[]{gatbps_var}" in
           'yes'|'no'|'1'|'0')
           ;;
@@ -78,7 +78,7 @@ m4_bregexp([[$1]], [\(\[\)--DETAILS--\]\(\(.\|
             gatbps_list='  gatbps_var='"$[]{gatbps_var}"
           ;;
         esac
-      }])
+      :;}])
     }
 
     case "$[]{gatbps_list}" in
@@ -90,7 +90,7 @@ m4_bregexp([[$1]], [\(\[\)--DETAILS--\]\(\(.\|
       ;;
     esac
 
-  }])
+  :;}])
 
 #
 # The above AC_CACHE_CHECK code should have set the cache variable to
