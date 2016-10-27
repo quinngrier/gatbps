@@ -32,7 +32,8 @@ AC_DEFUN([GATBPS_ARG_WITH_ENUM], [[{
 
 ]m4_pushdef(
   [gatbps_x],
-  [with_]m4_bpatsubst([$3], [[^0-9A-Z_a-z]], [_]))[
+  [with_]m4_bpatsubst([$3], [[^0-9A-Z_a-z]], [_]))[]dnl
+[
 
 ]GATBPS_ARG_ENABLE(
   [$3],
