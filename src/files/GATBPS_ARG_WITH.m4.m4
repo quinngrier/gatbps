@@ -19,13 +19,14 @@ PACKAGE_DATE_YEAR{%||%}dnl
 PACKAGE_DATE_MONTH_ZPAD{%||%}dnl
 PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 {%|
-AC_DEFUN([GATBPS_ARG_WITH], [{
+AC_DEFUN([GATBPS_ARG_WITH], [[{
 
-m4_pushdef(
+]m4_pushdef(
   [gatbps_x],
-  with_[]m4_bpatsubst([$1], [[^0-9A-Z_a-z]], [_]))
+  with_[]m4_bpatsubst([$1], [[^0-9A-Z_a-z]], [_]))[]dnl
+[
 
-AC_ARG_WITH(
+]AC_ARG_WITH(
   [$1],
   [$2],
   [{
@@ -34,11 +35,11 @@ AC_ARG_WITH(
   [{
     ]gatbps_x[_was_given='no'
     ]gatbps_x[='$3'
-  :;}])
+  :;}])[
 
-m4_popdef([gatbps_x])
+]m4_popdef([gatbps_x])[
 
-:;}])[]dnl
+:;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
 dnl
 dnl The authors of this file have waived all copyright and
