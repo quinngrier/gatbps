@@ -49,7 +49,7 @@ AC_DEFUN([GATBPS_ARG_WITH_ENUM], [[{
   [with_]m4_bpatsubst([$3], [[^0-9A-Z_a-z]], [_]))[]dnl
 [
 
-]GATBPS_ARG_ENABLE(
+]GATBPS_ARG_WITH(
   [$3],
   m4_dquote([
 ]AS_HELP_STRING([--with-$3 omitted], [same as --with-$3=$4])[
