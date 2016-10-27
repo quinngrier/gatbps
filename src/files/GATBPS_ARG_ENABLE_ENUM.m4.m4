@@ -51,11 +51,11 @@ AC_DEFUN([GATBPS_ARG_ENABLE_ENUM], [[{
 
 ]GATBPS_ARG_ENABLE(
   [$3],
-  [
+  m4_dquote([
 ]AS_HELP_STRING([--enable-$3 omitted], [same as --enable-$3=$4])[
 ]AS_HELP_STRING([--enable-$3], [same as --enable-$3=yes])[
 ]AS_HELP_STRING([--disable-$3], [same as --enable-$3=no])[]dnl
-GATBPS_ARG_ENABLE_ENUM_foo2([--enable-$3], $5),
+GATBPS_ARG_ENABLE_ENUM_foo2([--enable-$3], $5)),
   [$4])[
 
 case "$][{]gatbps_x[}" in]dnl
