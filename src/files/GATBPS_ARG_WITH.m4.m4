@@ -27,7 +27,7 @@ AC_DEFUN([GATBPS_ARG_WITH], [[{
 [
 
 ]AC_ARG_WITH(
-  [$1],
+  [[$1]],
   [$2],
   [{
     ]gatbps_x[_was_given='yes'
