@@ -19,16 +19,24 @@ PACKAGE_DATE_YEAR{%||%}dnl
 PACKAGE_DATE_MONTH_ZPAD{%||%}dnl
 PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 {%|
-AC_DEFUN([GATBPS_ARG_WITH_ENUM_foo1], [[
+AC_DEFUN([GATBPS_ARG_WITH_ENUM_foo1], [dnl
+m4_if(
+  m4_eval([$# >= 2]),
+  [1],
+  [[
   '$1')
-  ;;]dnl
+  ;;]])[]dnl
 m4_if(
   m4_eval([$# >= 4]),
   [1],
   [GATBPS_ARG_WITH_ENUM_foo1(m4_shift2($@))])[]dnl
 ])[]dnl
-AC_DEFUN([GATBPS_ARG_WITH_ENUM_foo2], [[
-]AS_HELP_STRING([$1=$2], [$3])[]dnl
+AC_DEFUN([GATBPS_ARG_WITH_ENUM_foo2], [dnl
+m4_if(
+  m4_eval([$# >= 3]),
+  [1],
+  [[
+]AS_HELP_STRING([$1=$2], [$3])])[]dnl
 m4_if(
   m4_eval([$# >= 5]),
   [1],
