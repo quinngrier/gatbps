@@ -661,6 +661,7 @@ EOF1
           'set' "${prefix}"'GATBPS_CHECK_CFLAG.m4' "${@}"
           'set' "${prefix}"'GATBPS_CHECK_BASIC.m4' "${@}"
           'set' "${prefix}"'GATBPS_CACHE_CHECK.m4' "${@}"
+          'set' "${prefix}"'GATBPS_ARG_WITH_ENUM.m4' "${@}"
           'set' "${prefix}"'GATBPS_ARG_WITH_BOOL.m4' "${@}"
           'set' "${prefix}"'GATBPS_ARG_WITH.m4' "${@}"
           'set' "${prefix}"'GATBPS_ARG_ENABLE_ENUM.m4' "${@}"
@@ -1058,6 +1059,8 @@ EOF1
 |%}help_code({%|GATBPS_ARG_WITH.m4|%}){%|
 
 |%}help_code({%|GATBPS_ARG_WITH_BOOL.m4|%}){%|
+
+|%}help_code({%|GATBPS_ARG_WITH_ENUM.m4|%}){%|
 
 |%}help_code({%|GATBPS_CACHE_CHECK.m4|%}){%|
 
@@ -2767,6 +2770,8 @@ EOF1
 
 |%}generation_code({%|GATBPS_ARG_WITH_BOOL.m4|%}){%|
 
+|%}generation_code({%|GATBPS_ARG_WITH_ENUM.m4|%}){%|
+
 |%}generation_code({%|GATBPS_CACHE_CHECK.m4|%}){%|
 
 |%}generation_code({%|GATBPS_CHECK_BASIC.m4|%}){%|
@@ -3579,6 +3584,12 @@ EOF1
   {%|
             'set' '' "${prefix}"'GATBPS_CHECK_VARS.m4' "${@}"; 'shift'
             'set' '' "${prefix}"'GATBPS_ARG_WITH.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
+|%}){%|
+
+|%}recursion_code(
+  {%|GATBPS_ARG_WITH_ENUM.m4|%},
+  {%|
             'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%|
 
