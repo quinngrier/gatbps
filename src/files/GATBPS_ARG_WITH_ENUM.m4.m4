@@ -22,11 +22,19 @@ PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 AC_DEFUN([GATBPS_ARG_WITH_ENUM_foo1], [[
   '$1')
   ;;]dnl
-m4_if([$#], [2], [], [GATBPS_ARG_WITH_ENUM_foo1(m4_shift2($@))])[]dnl
+m4_if(
+  [$#],
+  [2],
+  [],
+  [GATBPS_ARG_WITH_ENUM_foo1(m4_shift2($@))])[]dnl
 ])[]dnl
 AC_DEFUN([GATBPS_ARG_WITH_ENUM_foo2], [[
 ]AS_HELP_STRING([$1=$2], [$3])[]dnl
-m4_if([$#], [3], [], [GATBPS_ARG_WITH_ENUM_foo2([$1], m4_shift3($@))])[]dnl
+m4_if(
+  [$#],
+  [3],
+  [],
+  [GATBPS_ARG_WITH_ENUM_foo2([$1], m4_shift3($@))])[]dnl
 ])[]dnl
 AC_DEFUN([GATBPS_ARG_WITH_ENUM], [[{
 
