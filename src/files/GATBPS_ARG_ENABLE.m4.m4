@@ -28,7 +28,7 @@ AC_DEFUN([GATBPS_ARG_ENABLE], [[{
 
 ]AC_ARG_ENABLE(
   [[$1]],
-  [$2],
+  [[$2]],
   [{
     ]gatbps_x[_was_given='yes'
   :;}],
