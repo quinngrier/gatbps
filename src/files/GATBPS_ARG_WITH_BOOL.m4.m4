@@ -19,13 +19,14 @@ PACKAGE_DATE_YEAR{%||%}dnl
 PACKAGE_DATE_MONTH_ZPAD{%||%}dnl
 PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 {%|
-AC_DEFUN([GATBPS_ARG_WITH_BOOL], [{
+AC_DEFUN([GATBPS_ARG_WITH_BOOL], [[{
 
-m4_pushdef(
+]m4_pushdef(
   [gatbps_x],
-  [with_]m4_bpatsubst([$3], [[^0-9A-Z_a-z]], [_]))
+  [with_]m4_bpatsubst([$3], [[^0-9A-Z_a-z]], [_]))[]dnl
+[
 
-GATBPS_ARG_WITH(
+]GATBPS_ARG_WITH(
   [$3],
   [
 AS_HELP_STRING([--with-$3 omitted], [same as --with-$3=$4])
