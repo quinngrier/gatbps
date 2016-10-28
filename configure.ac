@@ -35,9 +35,9 @@
   nostdinc
   subdir-objects
   tar-ustar
-])
+])[
 
-DEFINE_ALL
+]DEFINE_ALL
 
 AC_MSG_CHECKING([which --awk value to use by default])
 AC_ARG_ENABLE(
