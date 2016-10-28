@@ -36,7 +36,9 @@ m4_if(
   m4_eval([$# >= 3]),
   [1],
   [[
-]AS_HELP_STRING([$1=$2], [$3])])[]dnl
+]AS_HELP_STRING(
+  [$1=$2],
+  [$3])])[]dnl
 m4_if(
   m4_eval([$# >= 5]),
   [1],
@@ -52,9 +54,15 @@ AC_DEFUN([GATBPS_ARG_WITH_ENUM], [[{
 ]GATBPS_ARG_WITH(
   [$3],
   [
-]AS_HELP_STRING([--with-$3 omitted], [same as --with-$3=$4])[
-]AS_HELP_STRING([--with-$3], [same as --with-$3=yes])[
-]AS_HELP_STRING([--without-$3], [same as --with-$3=no])[]dnl
+]AS_HELP_STRING(
+  [--with-$3 omitted],
+  [same as --with-$3=$4])[
+]AS_HELP_STRING(
+  [--with-$3],
+  [same as --with-$3=yes])[
+]AS_HELP_STRING(
+  [--without-$3],
+  [same as --with-$3=no])[]dnl
 GATBPS_ARG_WITH_ENUM_foo2([--with-$3], $5),
   [$4])[
 
