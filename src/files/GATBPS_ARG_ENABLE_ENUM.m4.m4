@@ -51,7 +51,7 @@ AC_DEFUN([GATBPS_ARG_ENABLE_ENUM], [[{
 
 ]GATBPS_ARG_ENABLE(
   [$3],
-  [dnl
+  [
 ]AS_HELP_STRING([--enable-$3 omitted], [same as --enable-$3=$4])[
 ]AS_HELP_STRING([--enable-$3], [same as --enable-$3=yes])[
 ]AS_HELP_STRING([--disable-$3], [same as --enable-$3=no])[]dnl
