@@ -66,9 +66,11 @@ SUFFIXES += .dfv
 
 $(doxygen_dst): $(doxygen_dep)
 $(doxygen_dst): $(doxygen_src)
+	$(GATBPS_V_DOXYGEN)$(GATBPS_RECIPE_MARKER_TOP)
 	rm -f $(doxygen_dfv_df)
 	$(MAKE) $(doxygen_dfv_df)
 	srcdir=$(srcdir) $(DOXYGEN) $(doxygen_src)
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
 .PHONY: $(doxygen_dst)
 .PHONY: clean-doxygen-main
