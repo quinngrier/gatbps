@@ -42,6 +42,20 @@ GATBPS_DFV_TO_DF_SCRIPT = ' \
   } \
 '
 
+GATBPS_V_DOXYGEN = $(GATBPS_V_DOXYGEN_@AM_V@)
+
+GATBPS_V_DOXYGEN_ = $(GATBPS_V_DOXYGEN_@AM_DEFAULT_V@)
+
+GATBPS_V_DOXYGEN_0 = @$(SHELL) \
+  '-' \
+  $(srcdir)'/build-aux/echo.sh' \
+  '--' \
+  $(GATBPS_V_PAD_LEFT)'DOXYGEN'$(GATBPS_V_PAD_RIGHT_7) \
+  $@ \
+|| 'exit' '1';
+
+GATBPS_V_DOXYGEN_1 =
+
 SUFFIXES += .am_dfv_INPUT
 SUFFIXES += .df
 SUFFIXES += .dfv
