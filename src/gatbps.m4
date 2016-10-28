@@ -12,7 +12,6 @@ include({%|src/tools/TEXI2ANY_DEFAULT_SH.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/generation_code.m4|%}){%||%}dnl
 include({%|src/tools/help_code.m4|%}){%||%}dnl
-include({%|src/tools/recursion_code.m4|%}){%||%}dnl
 include({%|src/tools/use_the_c_locale.m4|%}){%||%}dnl
 SHEBANG_LINE{%|#! /bin/sh -
 
@@ -3534,1265 +3533,749 @@ EOF1
       while ':'; do # recursion
         case "${1}" in
 
-|%}recursion_code(
-  {%|CC0-1.0-AC-COPYRIGHT.ac|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|CC0-1.0-appendix.texi|%},
-  {%|
-            'set' '' "${prefix}"'indent.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|DATE.sh|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_ARG_ENABLE.m4|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_ARG_ENABLE_BOOL.m4|%},
-  {%|
-            'set' '' "${prefix}"'GATBPS_CHECK_VARS.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_ARG_ENABLE.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_ARG_ENABLE_ENUM.m4|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_ARG_WITH.m4|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_ARG_WITH_BOOL.m4|%},
-  {%|
-            'set' '' "${prefix}"'GATBPS_CHECK_VARS.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_ARG_WITH.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_ARG_WITH_ENUM.m4|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_CACHE_CHECK.m4|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_CHECK_BASIC.m4|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_CHECK_CFLAG.m4|%},
-  {%|
-            'set' '' "${prefix}"'GATBPS_CHECK_BASIC.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_CHECK_CLASSPATH_SEPARATOR.m4|%},
-  {%|
-            'set' '' "${prefix}"'GATBPS_CACHE_CHECK.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_CHECK_COMPILE.m4|%},
-  {%|
-            'set' '' "${prefix}"'GATBPS_CHECK_BASIC.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_CHECK_HEADER.m4|%},
-  {%|
-            'set' '' "${prefix}"'GATBPS_CHECK_COMPILE.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_CHECK_LIB.m4|%},
-  {%|
-            'set' '' "${prefix}"'GATBPS_CHECK_BASIC.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_CHECK_LINK.m4|%},
-  {%|
-            'set' '' "${prefix}"'GATBPS_CHECK_BASIC.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_CHECK_RUN.m4|%},
-  {%|
-            'set' '' "${prefix}"'GATBPS_CHECK_BASIC.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_CHECK_SHEBANG_LINE.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_CHECK_SOFT_INCLUDE.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_CHECK_VARS.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_CACHE_CHECK.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_CHECK_VARS.m4|%},
-  {%|
-            'set' '' "${prefix}"'GATBPS_CHECK_BASIC.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_CONFIG_FILE.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_CONFIG_FILE_RULES.am|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_CONFIG_FILE_SUBST.m4|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_CONFIG_LATER_RULES.am|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_CONFIG_LATER_SUBST.m4|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_CP.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'cp.am' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_RECIPE_MARKER.am' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_PROG_MKDIR_P.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_CP_RULES.am|%},
-  {%|
-            'set' '' "${prefix}"'cp.am' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_CP_SUBST.m4|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_DEFINE_AT.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_DEFINE_CLASSPATH.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_DEFINE_DATE.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_MSG_ERROR.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_DEFINE_DOCKER_BUILD_FLAGS.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_DEFINE_EXE_CFLAGS.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_DEFINE_EXE_CXXFLAGS.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_DEFINE_EXE_LDFLAGS.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_DEFINE_HARD_INCLUDE.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_DEFINE_JARFLAGS.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_DEFINE_JAVACFLAGS.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_DEFINE_JAVADOCFLAGS.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_DEFINE_VERSION.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_DEFINE_docbookdir.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_MSG_ERROR.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_DEFINE_enable_SHEBANG_LINES.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_ARG_ENABLE_BOOL.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_DEFINE_javadir.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_MSG_ERROR.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_DEFINE_javadocdir.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_MSG_ERROR.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_DEFINE_plaintextdir.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_MSG_ERROR.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_DEFINE_xmldir.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_MSG_ERROR.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_DOCKER_BUILD.m4|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_DOCKER_BUILD_RULES.am|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_DOCKER_BUILD_SUBST.m4|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_GIT_ARCHIVE.m4|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_GIT_ARCHIVE_RULES.am|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_GIT_ARCHIVE_SUBST.m4|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_GIT_BUNDLE_RULES.am|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_GIT_BUNDLE_SUBST.m4|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_GIT_CLONE.m4|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_GIT_CLONE_RULES.am|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_GIT_CLONE_SUBST.m4|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_JAVA.m4|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_JAVA_RULES.am|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_JAVA_SUBST.m4|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_M4.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_CP.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_CHECK_SOFT_INCLUDE.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_M4_RULES.am|%},
-  {%|
-            'set' '' "${prefix}"'GATBPS_M4_SUBST.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_M4_SUBST.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_MSG_ERROR.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_MSG_FAILURE.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_MSG_NOTICE.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_MSG_WARN.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_PROG_AWK.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_PROG_DOCKER.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_PROG_DOXYGEN.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_PROG_GATBPS.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_PROG_GIT.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_PROG_GREP.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_PROG_GZIP.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_PROG_JAR.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_PROG_JAVAC.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_DEFINE_JAVACFLAGS.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_DEFINE_CLASSPATH.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_PROG_JAVADOC.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_PROG_JDEPS.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_PROG_M4.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_PROG_MAKEINFO.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_PROG_MKDIR_P.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_PROG_OPENSSL.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_PROG_SED.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_PROG_TAR.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_PROG_TEXI2ANY.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_PROG_WGET.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_PROG_XZ.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_RECIPE_MARKER.am|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_TAR.m4|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_TAR_RULES.am|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_TAR_SUBST.m4|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_V_PAD.am|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_WGET.m4|%},
-  {%|
-            'set' '' "${prefix}"'wget.am' "${@}"; 'shift'
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_PROG_WGET.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_PROG_OPENSSL.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_PROG_MKDIR_P.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_PROG_GREP.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_WGET_RULES.am|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_WGET_SUBST.m4|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_XZ.m4|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_XZ_RULES.am|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|GATBPS_XZ_SUBST.m4|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|INPUT_FILTER.sh.in|%},
-  {%|
-            'set' '' "${prefix}"'GATBPS_PROG_AWK.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_DEFINE_AT.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|PACKAGEDATE.texi.in|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|PACKAGEVERSION.texi.in|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|PACKAGE_STRING.df.in|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|PACKAGE_VERSION.df.in|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|TEST_EXIT.h|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|VERSION.sh|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|VERSION_LTCUR.sh|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|awk-form.sh|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|barrow.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|bdarrow.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|bdots.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|bothcontents.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|contents.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|cp.am|%},
-  {%|
-            'set' '' "${prefix}"'echo.sh' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|docbook-dist.am|%},
-  {%|
-            'set' '' "${prefix}"'cp.am' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|docbook.am|%},
-  {%|
-            'set' '' "${prefix}"'sh-form.sh' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|docker.am|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|doxygen-dist.am|%},
-  {%|
-            'set' '' "${prefix}"'cp.am' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|doxygen.am|%},
-  {%|
-            'set' '' "${prefix}"'GATBPS_RECIPE_MARKER.am' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|dprm.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|dslash.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|dvi-dist.am|%},
-  {%|
-            'set' '' "${prefix}"'cp.am' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|echo.sh|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|format.ac.vim|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|format.am.vim|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|format.c.vim|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|format.java.vim|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|gatbps.am|%},
-  {%|
-            'set' '' "${prefix}"'echo.sh' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_V_PAD.am' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|gatbps_fatal.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_notice.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|gatbps_notice.m4|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|gatbps_rule_word_error.m4|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|gequ.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|git.am|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|gzip.am|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|html-dist.am|%},
-  {%|
-            'set' '' "${prefix}"'cp.am' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|indent.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|insertascii.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|insertmathjax.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|ipez.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|java-dist.am|%},
-  {%|
-            'set' '' "${prefix}"'cp.am' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|java.am|%},
-  {%|
-            'set' '' "${prefix}"'sh-form.sh' "${@}"; 'shift'
-            'set' '' "${prefix}"'echo.sh' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|javadoc-dist.am|%},
-  {%|
-            'set' '' "${prefix}"'cp.am' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|javadoc.am|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|larrow.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|lbarrow.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|lbdarrow.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|lcei.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|ldarrow.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|lequ.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|lflo.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|llarrow.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|lldarrow.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|lrarrow.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|lrdarrow.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|m4.am|%},
-  {%|
-            'set' '' "${prefix}"'echo.sh' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_V_PAD.am' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_RECIPE_MARKER.am' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_PROG_MKDIR_P.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_PROG_M4.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|math.texi|%},
-  {%|
-            'set' '' "${prefix}"'tprm.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'sps.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'sbs.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'rflo.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'rdarrow.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'rcei.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'rarrow.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'qprm.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'prm.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'nequ.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'msign.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'mdots.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'mdot.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'lrdarrow.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'lrarrow.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'lldarrow.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'llarrow.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'lflo.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'lequ.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'ldarrow.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'lcei.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'lbdarrow.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'lbarrow.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'larrow.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'insertmathjax.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'insertascii.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'gequ.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'dslash.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'dprm.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'bdots.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'bdarrow.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'barrow.texi' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|mdot.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|mdots.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|msign.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|mtvskipbot.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|mtvskiptop.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|nequ.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|pdf-dist.am|%},
-  {%|
-            'set' '' "${prefix}"'cp.am' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|plaintext-dist.am|%},
-  {%|
-            'set' '' "${prefix}"'cp.am' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|plaintext.am|%},
-  {%|
-            'set' '' "${prefix}"'sh-form.sh' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|prm.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|ps-dist.am|%},
-  {%|
-            'set' '' "${prefix}"'cp.am' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|qprm.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|rarrow.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|rcei.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|rdarrow.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|rflo.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|rules_code.m4|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|sbs.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|sh-form.sh|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|shortcontents.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|sps.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|tar.am|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|texi-form.sh|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|texinfo.css|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|tprm.texi|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|troff-form.sh|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|wget.am|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|xml-dist.am|%},
-  {%|
-            'set' '' "${prefix}"'cp.am' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|xml.am|%},
-  {%|
-            'set' '' "${prefix}"'sh-form.sh' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
-
-|%}recursion_code(
-  {%|xz.am|%},
-  {%|
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%|
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/CC0-1.0-AC-COPYRIGHT.ac.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/CC0-1.0-appendix.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/DATE.sh.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_ARG_ENABLE.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_ARG_ENABLE_BOOL.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_ARG_ENABLE_ENUM.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_ARG_WITH.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_ARG_WITH_BOOL.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_ARG_WITH_ENUM.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_CACHE_CHECK.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_CHECK_BASIC.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_CHECK_CFLAG.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_CHECK_CLASSPATH_SEPARATOR.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_CHECK_COMPILE.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_CHECK_HEADER.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_CHECK_LIB.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_CHECK_LINK.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_CHECK_RUN.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_CHECK_SHEBANG_LINE.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_CHECK_SOFT_INCLUDE.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_CHECK_VARS.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_CONFIG_FILE.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_CONFIG_FILE_RULES.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_CONFIG_FILE_SUBST.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_CONFIG_LATER_RULES.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_CONFIG_LATER_SUBST.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_CP.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_CP_RULES.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_CP_SUBST.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_DEFINE_AT.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_DEFINE_CLASSPATH.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_DEFINE_DATE.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_DEFINE_DOCKER_BUILD_FLAGS.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_DEFINE_EXE_CFLAGS.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_DEFINE_EXE_CXXFLAGS.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_DEFINE_EXE_LDFLAGS.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_DEFINE_HARD_INCLUDE.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_DEFINE_JARFLAGS.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_DEFINE_JAVACFLAGS.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_DEFINE_JAVADOCFLAGS.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_DEFINE_VERSION.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_DEFINE_docbookdir.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_DEFINE_enable_SHEBANG_LINES.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_DEFINE_javadir.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_DEFINE_javadocdir.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_DEFINE_plaintextdir.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_DEFINE_xmldir.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_DOCKER_BUILD.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_DOCKER_BUILD_RULES.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_DOCKER_BUILD_SUBST.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_GIT_ARCHIVE.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_GIT_ARCHIVE_RULES.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_GIT_ARCHIVE_SUBST.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_GIT_BUNDLE_RULES.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_GIT_BUNDLE_SUBST.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_GIT_CLONE.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_GIT_CLONE_RULES.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_GIT_CLONE_SUBST.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_JAVA.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_JAVA_RULES.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_JAVA_SUBST.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_M4.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_M4_RULES.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_M4_SUBST.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_MSG_ERROR.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_MSG_FAILURE.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_MSG_NOTICE.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_MSG_WARN.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_PROG_AWK.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_PROG_DOCKER.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_PROG_DOXYGEN.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_PROG_GATBPS.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_PROG_GIT.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_PROG_GREP.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_PROG_GZIP.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_PROG_JAR.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_PROG_JAVAC.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_PROG_JAVADOC.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_PROG_JDEPS.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_PROG_M4.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_PROG_MAKEINFO.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_PROG_MKDIR_P.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_PROG_OPENSSL.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_PROG_SED.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_PROG_TAR.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_PROG_TEXI2ANY.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_PROG_WGET.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_PROG_XZ.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_RECIPE_MARKER.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_TAR.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_TAR_RULES.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_TAR_SUBST.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_V_PAD.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_WGET.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_WGET_RULES.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_WGET_SUBST.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_XZ.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_XZ_RULES.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_XZ_SUBST.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/INPUT_FILTER.sh.in.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/PACKAGEDATE.texi.in.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/PACKAGEVERSION.texi.in.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/PACKAGE_STRING.df.in.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/PACKAGE_VERSION.df.in.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/TEST_EXIT.h.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/VERSION.sh.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/VERSION_LTCUR.sh.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/awk-form.sh.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/barrow.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/bdarrow.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/bdots.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/bothcontents.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/contents.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/cp.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/docbook-dist.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/docbook.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/docker.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/doxygen-dist.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/doxygen.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/dprm.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/dslash.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/dvi-dist.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/echo.sh.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/format.ac.vim.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/format.am.vim.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/format.c.vim.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/format.java.vim.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/gatbps.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/gatbps_fatal.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/gatbps_notice.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/gatbps_rule_word_error.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/gequ.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/git.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/gzip.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/html-dist.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/indent.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/insertascii.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/insertmathjax.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/ipez.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/java-dist.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/java.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/javadoc-dist.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/javadoc.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/larrow.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/lbarrow.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/lbdarrow.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/lcei.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/ldarrow.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/lequ.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/lflo.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/llarrow.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/lldarrow.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/lrarrow.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/lrdarrow.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/m4.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/math.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/mdot.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/mdots.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/msign.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/mtvskipbot.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/mtvskiptop.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/nequ.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/pdf-dist.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/plaintext-dist.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/plaintext.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/prm.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/ps-dist.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/qprm.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/rarrow.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/rcei.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/rdarrow.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/rflo.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/rules_code.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/sbs.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/sh-form.sh.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/shortcontents.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/sps.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/tar.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/texi-form.sh.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/texinfo.css.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/tprm.texi.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/troff-form.sh.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/wget.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/xml-dist.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/xml.am.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/xz.am.rc.m4'){%|
 
         esac
         break # recursion
