@@ -162,17 +162,9 @@ GATBPS_GIT_CLONE_RULES="$][{GATBPS_GIT_CLONE_RULES}"'
 	$][(AM@&t@_V_at){ \
   ( \
     clone_succeeded='\''no'\''; \
-    first_iteration='\''yes'\''; \
-    for url in '\'''\'' \]dnl
+    for url in $${prevent_an_empty_for_loop_list} \]dnl
 GATBPS_GIT_CLONE_word_lines_6(m4_if(,,input_urls))[
     ; do \
-      case "$][$][{first_iteration}" in \
-        '\''yes'\'') \
-          first_iteration='\''no'\''; \
-          '\''readonly'\'' '\''first_iteration'\''; \
-          '\''continue'\''; \
-        ;; \
-      esac; \
       '\''rm'\'' \
         '\''-f'\'' \
         '\''-r'\'' \

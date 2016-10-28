@@ -309,16 +309,9 @@ GATBPS_DOCKER_BUILD_word_lines_2(m4_if(,,child_prerequisites))[
   ( \
     merge='\''no'\''; \
     context='\'''\''; \
-    first_iteration='\''yes'\''; \
-    for x in '\'''\'' \]dnl
+    for x in $${prevent_an_empty_for_loop_list} \]dnl
 GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
     ; do \
-      case "$][$][{first_iteration}" in \
-        '\''yes'\'') \
-          first_iteration='\''no'\''; \
-          '\''continue'\''; \
-        ;; \
-      esac; \
       if '\''test'\'' '\''-r'\'' "$][$][{x}"; then \
         '\''test'\'' \
           '\''-f'\'' \
