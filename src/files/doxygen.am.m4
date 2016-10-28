@@ -36,7 +36,7 @@ GATBPS_DFV_TO_DF_SCRIPT = ' \
       if (system("'\''test'\'' '\''-r'\'' '\''" y "'\''") == 0) { \
         print x[1] x[2]; \
       } else { \
-        print x[1] "$${srcdir}/" x[2]; \
+        print x[1] "$$(srcdir)/" x[2]; \
       } \
     } \
   } \
