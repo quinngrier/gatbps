@@ -50,6 +50,13 @@ SUFFIXES += .dfv
 
 ## begin_rules
 
+$(doxygen_dst): $(doxygen_dep)
+$(doxygen_dst): $(doxygen_src)
+	rm -f $(doxygen_dfv_df)
+	$(MAKE) $(doxygen_dfv_df)
+	srcdir=$(srcdir) $(DOXYGEN) $(doxygen_src)
+
+.PHONY: $(doxygen_dst)
 .PHONY: clean-doxygen-main
 .PHONY: doxygen
 .PHONY: doxygen-main
