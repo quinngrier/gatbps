@@ -69,8 +69,8 @@ SUFFIXES += .dfv
 .dfv.df:
 	$(AM_V_GEN)$(GATBPS_RECIPE_MARKER_TOP)
 	$(AM_V_at){ \
-  $(SED) \
-    's/VPATH://' \
+  $(AWK) \
+    $(GATBPS_DFV_TO_DF_SCRIPT) \
     <$< \
     >$@ \
   || 'exit' "$${?}"; \
