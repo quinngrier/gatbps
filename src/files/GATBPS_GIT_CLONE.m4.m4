@@ -172,7 +172,6 @@ GATBPS_GIT_CLONE_word_lines_6(m4_if(,,input_urls))[
       || '\''exit'\'' "$][$][{?}"; \
       $][(GIT) \
         '\''clone'\'' \
-        '\''--bare'\'' \
         '\''--'\'' \
         "$][$][{url}" \
         '\''./'\'']output_directory['\''.tmp'\'' \
