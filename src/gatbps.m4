@@ -616,6 +616,7 @@ EOF1
           'set' "${prefix}"'GATBPS_GIT_CLONE.m4' "${@}"
           'set' "${prefix}"'GATBPS_GIT_BUNDLE_SUBST.m4' "${@}"
           'set' "${prefix}"'GATBPS_GIT_BUNDLE_RULES.am' "${@}"
+          'set' "${prefix}"'GATBPS_GIT_BUNDLE.m4' "${@}"
           'set' "${prefix}"'GATBPS_GIT_ARCHIVE_SUBST.m4' "${@}"
           'set' "${prefix}"'GATBPS_GIT_ARCHIVE_RULES.am' "${@}"
           'set' "${prefix}"'GATBPS_GIT_ARCHIVE.m4' "${@}"
@@ -1148,6 +1149,8 @@ EOF1
 |%}help_code({%|GATBPS_GIT_ARCHIVE_RULES.am|%}){%|
 
 |%}help_code({%|GATBPS_GIT_ARCHIVE_SUBST.m4|%}){%|
+
+|%}help_code({%|GATBPS_GIT_BUNDLE.m4|%}){%|
 
 |%}help_code({%|GATBPS_GIT_BUNDLE_RULES.am|%}){%|
 
@@ -2859,6 +2862,8 @@ EOF1
 
 |%}generation_code({%|GATBPS_GIT_ARCHIVE_SUBST.m4|%}){%|
 
+|%}generation_code({%|GATBPS_GIT_BUNDLE.m4|%}){%|
+
 |%}generation_code({%|GATBPS_GIT_BUNDLE_RULES.am|%}){%|
 
 |%}generation_code({%|GATBPS_GIT_BUNDLE_SUBST.m4|%}){%|
@@ -3744,6 +3749,10 @@ include(`src/recursion/GATBPS_GIT_ARCHIVE_RULES.am.rc.m4'){%|
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
 include(`src/recursion/GATBPS_GIT_ARCHIVE_SUBST.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_GIT_BUNDLE.m4.rc.m4'){%|
 
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
