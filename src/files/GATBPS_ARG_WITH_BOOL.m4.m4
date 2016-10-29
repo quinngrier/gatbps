@@ -43,7 +43,7 @@ AC_DEFUN([GATBPS_ARG_WITH_BOOL], [[{
   [$5])[
 ]AS_HELP_STRING(
   [--with-$3=no],
-  [$6])],
+  [$6]),
   [$4])
 
 case "$[]{gatbps_x}" in
