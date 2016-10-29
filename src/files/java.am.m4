@@ -39,7 +39,7 @@ GATBPS_V_JAVAC_0 = @$(SHELL) \
   '--' \
   $(GATBPS_V_PAD_LEFT)'JAVAC'$(GATBPS_V_PAD_RIGHT_5) \
   $@ \
-;
+|| 'exit' '1';
 
 GATBPS_V_JAVAC_1 =
 
