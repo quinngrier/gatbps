@@ -44,9 +44,7 @@ SUFFIXES += .m4out
   './'$@'.d.tmp' \
   './'$@'.tmp' \
 ;
-	@$(MKDIR_P) \
-  './'$(@D) \
-;
+	@$(MKDIR_P) './'$(@D)
 	$(AM_V_at){ \
   ( \
     $(M4) \

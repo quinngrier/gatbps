@@ -40,9 +40,7 @@ $(pdf_dist_dst): $(pdf_dist_dep)
   $(pdf_dist_src) \
 ;
 	$(GATBPS_V_CP)$(GATBPS_RECIPE_MARKER_TOP)
-	@$(MKDIR_P) \
-  './'$(@D) \
-;
+	@$(MKDIR_P) './'$(@D)
 	$(AM_V_at){ \
   if 'test' '-f' $(pdf_dist_src); then \
     d='.'; \

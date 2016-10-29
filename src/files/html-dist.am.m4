@@ -45,9 +45,7 @@ $(html_dist_dst): $(html_dist_dep)
   '-r' \
   './'$(html_dist_dst) \
 ;
-	@$(MKDIR_P) \
-  './'$(@D) \
-;
+	@$(MKDIR_P) './'$(@D)
 	$(AM_V_at){ \
   if \
     'test' '-f' $(html_dist_src) || \
