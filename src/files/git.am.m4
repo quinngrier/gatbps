@@ -50,7 +50,7 @@ GATBPS_V_GIT_CLONE_0 = @$(SHELL) \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \
-  $(GATBPS_V_PAD_LEFT)'CLONE'$(GATBPS_V_PAD_RIGHT_5) \
+  $(GATBPS_V_PAD_LEFT)'GIT CLONE'$(GATBPS_V_PAD_RIGHT_9) \
   $@ \
 || 'exit' "$${?}";
 
