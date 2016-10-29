@@ -10,6 +10,7 @@ recursion_code(
             'set' '' "${prefix}"'echo.sh' "${@}"; 'shift'
             'set' '' "${prefix}"'GATBPS_V_PAD.am' "${@}"; 'shift'
             'set' '' "${prefix}"'GATBPS_RECIPE_MARKER.am' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_PROG_MKDIR_P.m4' "${@}"; 'shift'
             'set' '' "${prefix}"'GATBPS_PROG_DOXYGEN.m4' "${@}"; 'shift'
             'set' '' "${prefix}"'GATBPS_PROG_AWK.m4' "${@}"; 'shift'
             'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'

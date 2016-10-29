@@ -67,6 +67,9 @@ SUFFIXES += .dfv
 $(doxygen_dst): $(doxygen_dep)
 $(doxygen_dst): $(doxygen_src)
 	$(GATBPS_V_DOXYGEN)$(GATBPS_RECIPE_MARKER_TOP)
+	@$(MKDIR_P) \
+  './'$(@D) \
+;
 	rm -f $(doxygen_dfv_df)
 	$(MAKE) $(doxygen_dfv_df)
 	srcdir=$(srcdir) $(DOXYGEN) $(doxygen_src)
@@ -79,6 +82,9 @@ $(doxygen_dst): $(doxygen_src)
 
 .am_dfv_INPUT.dfv:
 	$(AM_V_GEN)$(GATBPS_RECIPE_MARKER_TOP)
+	@$(MKDIR_P) \
+  './'$(@D) \
+;
 	$(AM_V_at){ \
   $(AWK) \
     $(GATBPS_AM_DFV_INPUT_TO_DFV_SCRIPT) \
@@ -91,6 +97,9 @@ $(doxygen_dst): $(doxygen_src)
 
 .dfv.df:
 	$(AM_V_GEN)$(GATBPS_RECIPE_MARKER_TOP)
+	@$(MKDIR_P) \
+  './'$(@D) \
+;
 	$(AM_V_at){ \
   $(AWK) \
     $(GATBPS_DFV_TO_DF_SCRIPT) \
