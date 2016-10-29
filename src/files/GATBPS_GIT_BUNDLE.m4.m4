@@ -162,12 +162,14 @@ GATBPS_GIT_BUNDLE_RULES="$][{GATBPS_GIT_BUNDLE_RULES}"'
       $][(GIT) \
         '\''bundle'\'' \
         '\''create'\'' \
-        '\''./'\'']output_file['\''.tmp'\'' \
+        '\''-'\'' \
         '\''HEAD'\'' \
         '\''--tags'\'' \
       || '\''exit'\'' "$][$][{?}"; \
       '\''exit'\'' '\''0'\''; \
-    :;) || '\''exit'\'' "$][$][{?}"; \
+    :;) \
+      >'\''./'\'']output_file['\''.tmp'\'' \
+    || '\''exit'\'' "$][$][{?}"; \
     '\''mv'\'' \
       '\''./'\'']output_file['\''.tmp'\'' \
       '\''./'\'']output_file[ \
