@@ -22,7 +22,7 @@ GATBPS_V_GIT_ARCHIVE_0 = @$(SHELL) \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \
-  $(GATBPS_V_PAD_LEFT)'ARCHIVE'$(GATBPS_V_PAD_RIGHT_7) \
+  $(GATBPS_V_PAD_LEFT)'GIT ARCHIVE'$(GATBPS_V_PAD_RIGHT_11) \
   $@ \
 || 'exit' "$${?}";
 
