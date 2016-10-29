@@ -7,6 +7,8 @@ include({%|src/tools/recursion_code.m4|%}){%||%}dnl
 recursion_code(
   {%|git.am|%},
   {%|
+            'set' '' "${prefix}"'echo.sh' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_V_PAD.am' "${@}"; 'shift'
             'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%||%}dnl
 dnl
