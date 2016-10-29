@@ -24,7 +24,7 @@ GATBPS_V_TAR_0 = @$(SHELL) \
   '--' \
   $(GATBPS_V_PAD_LEFT)'TAR'$(GATBPS_V_PAD_RIGHT_3) \
   $@ \
-|| 'exit' '1';
+|| 'exit' "$${?}";
 
 GATBPS_V_TAR_1 =
 
@@ -38,7 +38,7 @@ GATBPS_V_UNTAR_0 = @$(SHELL) \
   '--' \
   $(GATBPS_V_PAD_LEFT)'UNTAR'$(GATBPS_V_PAD_RIGHT_5) \
   $@ \
-|| 'exit' '1';
+|| 'exit' "$${?}";
 
 GATBPS_V_UNTAR_1 =
 

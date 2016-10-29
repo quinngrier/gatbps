@@ -24,7 +24,7 @@ GATBPS_V_GIT_CLONE_0 = @$(SHELL) \
   '--' \
   $(GATBPS_V_PAD_LEFT)'CLONE'$(GATBPS_V_PAD_RIGHT_5) \
   $@ \
-|| 'exit' '1';
+|| 'exit' "$${?}";
 
 GATBPS_V_GIT_CLONE_1 =
 
@@ -38,7 +38,7 @@ GATBPS_V_GIT_ARCHIVE_0 = @$(SHELL) \
   '--' \
   $(GATBPS_V_PAD_LEFT)'ARCHIVE'$(GATBPS_V_PAD_RIGHT_7) \
   $@ \
-|| 'exit' '1';
+|| 'exit' "$${?}";
 
 GATBPS_V_GIT_ARCHIVE_1 =
 

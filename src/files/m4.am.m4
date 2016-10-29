@@ -24,7 +24,7 @@ GATBPS_V_M4_0 = @$(SHELL) \
   '--' \
   $(GATBPS_V_PAD_LEFT)'M4'$(GATBPS_V_PAD_RIGHT_2) \
   $@ \
-|| 'exit' '1';
+|| 'exit' "$${?}";
 
 GATBPS_V_M4_1 =
 
