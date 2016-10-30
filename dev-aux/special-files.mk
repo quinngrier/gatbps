@@ -8,6 +8,8 @@ GATBPSFLAGS =
 
 GENERATE = $(GATBPS) $(GATBPSFLAGS) '--'
 
+MKDIR_P = 'mkdir' '-p'
+
 ## end_variables
 
 ## begin_rules
@@ -121,6 +123,7 @@ GENERATE = $(GATBPS) $(GATBPSFLAGS) '--'
 .PHONY: src/tools/rules_code.m4
 
 CC0-1.0.txt:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 all: CC0-1.0.txt
@@ -231,318 +234,423 @@ all: m4/gatbps_rule_word_error.m4
 all: src/tools/rules_code.m4
 
 build-aux/CC0-1.0-AC-COPYRIGHT.ac:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 build-aux/CC0-1.0-AM-COPYRIGHT.am:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 build-aux/DATE.sh:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 build-aux/GATBPS_CONFIG_FILE_RULES.am:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 build-aux/GATBPS_CP_RULES.am:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 build-aux/GATBPS_M4_RULES.am:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 build-aux/GATBPS_RECIPE_MARKER.am:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 build-aux/GATBPS_V_PAD.am:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 build-aux/VERSION.sh:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 build-aux/VERSION_LTCUR.sh:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 build-aux/cp.am:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 build-aux/docbook-dist.am:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 build-aux/docbook.am:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 build-aux/dvi-dist.am:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 build-aux/echo.sh:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 build-aux/html-dist.am:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 build-aux/m4.am:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 build-aux/pdf-dist.am:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 build-aux/plaintext-dist.am:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 build-aux/plaintext.am:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 build-aux/ps-dist.am:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 build-aux/sh-form.sh:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 build-aux/xml-dist.am:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 build-aux/xml.am:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 dev-aux/CC0-1.0-commit.txt:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 dev-aux/CC0-1.0-file.txt:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 dev-aux/format.ac.vim:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 dev-aux/format.am.vim:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/CC0-1.0-appendix.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/CC0-1.0-copying.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/PACKAGEDATE.texi.in:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/PACKAGEVERSION.texi.in:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/barrow.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/bdarrow.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/bdots.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/bothcontents.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/dprm.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/dslash.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/gequ.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/indent.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/insertascii.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/insertmathjax.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/ipez.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/larrow.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/lbarrow.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/lbdarrow.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/lcei.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/ldarrow.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/lequ.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/lflo.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/llarrow.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/lldarrow.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/lrarrow.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/lrdarrow.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/math.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/mdot.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/mdots.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/msign.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/mtvskipbot.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/mtvskiptop.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/nequ.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/prm.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/qprm.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/rarrow.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/rcei.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/rdarrow.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/rflo.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/sbs.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/sps.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/texinfo.css:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 doc/texi/tprm.texi:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 gh-pages/CC0-1.0.txt:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 gh-pages/dev-aux/CC0-1.0-commit.txt:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/GATBPS_ARG_ENABLE.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/GATBPS_ARG_ENABLE_BOOL.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/GATBPS_CACHE_CHECK.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/GATBPS_CHECK_BASIC.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/GATBPS_CHECK_SHEBANG_LINE.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/GATBPS_CHECK_SOFT_INCLUDE.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/GATBPS_CHECK_VARS.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/GATBPS_CONFIG_FILE.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/GATBPS_CONFIG_FILE_SUBST.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/GATBPS_CP.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/GATBPS_CP_SUBST.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/GATBPS_DEFINE_AT.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/GATBPS_DEFINE_DATE.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/GATBPS_DEFINE_VERSION.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/GATBPS_DEFINE_docbookdir.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/GATBPS_DEFINE_enable_SHEBANG_LINES.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/GATBPS_DEFINE_plaintextdir.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/GATBPS_DEFINE_xmldir.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/GATBPS_M4.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/GATBPS_M4_SUBST.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/GATBPS_MSG_ERROR.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/GATBPS_MSG_NOTICE.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/GATBPS_PROG_AWK.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/GATBPS_PROG_M4.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/GATBPS_PROG_MAKEINFO.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/GATBPS_PROG_MKDIR_P.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/GATBPS_PROG_SED.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/GATBPS_PROG_TEXI2ANY.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/gatbps_fatal.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/gatbps_notice.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 m4/gatbps_rule_word_error.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 src/tools/rules_code.m4:
+	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) $@
 
 ## end_rules
