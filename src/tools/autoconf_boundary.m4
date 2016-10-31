@@ -25,7 +25,9 @@ m4_ifndef(
   [gatbps_check_for_missing_gatbps_macros],
   [m4_define(
     [gatbps_check_for_missing_gatbps_macros],
-    [$1_check_prerequisites[]dnl
+    [dnl
+[# gatbps_check_for_missing_gatbps_macros]dnl
+$1_check_prerequisites[]dnl
 ])],
   [m4_define(
     [gatbps_check_for_missing_gatbps_macros],
