@@ -7,7 +7,7 @@ include({%|src/tools/recursion_code.m4|%}){%||%}dnl
 recursion_code(
   {%|GATBPS_MSG_WARN.m4|%},
   {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
+            'set' '' "${prefix}"'GATBPS_MSG_NOTICE.m4' "${@}"; 'shift'
             'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
 |%}){%||%}dnl
 dnl
