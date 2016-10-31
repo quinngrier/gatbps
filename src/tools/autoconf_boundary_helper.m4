@@ -33,9 +33,8 @@ m4_location[: error: ]dnl
 [is not defined]dnl
 )[]dnl
 m4_fatal(
-[this probably means that you forgot to add ]dnl
-[$1.m4 ]dnl
-[to your Autoconf macros]dnl
+[did you forget ]dnl
+[$1.m4?]dnl
 )[]dnl
 ])[]dnl
 m4_ifndef(
