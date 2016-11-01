@@ -6,12 +6,11 @@ rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/recursion_code.m4|%}){%||%}dnl
 recursion_code(
   {%|GATBPS_M4.m4|%},
-  {%|
-            'set' '' "${prefix}"'gatbps_fatal.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_CP.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_CHECK_SOFT_INCLUDE.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%||%}dnl
+  {%|gatbps_fatal.m4|%},
+  {%|GATBPS_CP.m4|%},
+  {%|GATBPS_CHECK_SOFT_INCLUDE.m4|%},
+  {%|CC0-1.0.txt|%},
+  {%||%}){%||%}dnl
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by

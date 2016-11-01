@@ -6,11 +6,10 @@ rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/recursion_code.m4|%}){%||%}dnl
 recursion_code(
   {%|INPUT_FILTER.sh.in|%},
-  {%|
-            'set' '' "${prefix}"'GATBPS_PROG_AWK.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'GATBPS_DEFINE_AT.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%||%}dnl
+  {%|GATBPS_PROG_AWK.m4|%},
+  {%|GATBPS_DEFINE_AT.m4|%},
+  {%|CC0-1.0.txt|%},
+  {%||%}){%||%}dnl
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by

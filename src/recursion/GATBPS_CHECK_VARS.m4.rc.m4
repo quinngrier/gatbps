@@ -6,10 +6,9 @@ rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/recursion_code.m4|%}){%||%}dnl
 recursion_code(
   {%|GATBPS_CHECK_VARS.m4|%},
-  {%|
-            'set' '' "${prefix}"'GATBPS_CHECK_BASIC.m4' "${@}"; 'shift'
-            'set' '' "${prefix}"'CC0-1.0.txt' "${@}"; 'shift'
-|%}){%||%}dnl
+  {%|GATBPS_CHECK_BASIC.m4|%},
+  {%|CC0-1.0.txt|%},
+  {%||%}){%||%}dnl
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by

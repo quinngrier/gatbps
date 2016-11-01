@@ -1,6 +1,7 @@
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
 rules_code({%|src/tools/recursion_code.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
+include({%|src/tools/recursion_code_helper.m4|%}){%||%}dnl
 ifdef(
   {%|recursion_code|%},
   {%||%},
@@ -40,7 +41,7 @@ EOF1
             esac
 
             'shift'
-$2
+|%}recursion_code_helper(shift($@)){%|
             'set' '' "$|%}{%|{@}"
 
           ;;|%}|%})|%}){%||%}dnl
