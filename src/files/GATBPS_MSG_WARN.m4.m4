@@ -20,9 +20,12 @@ PACKAGE_DATE_YEAR{%||%}dnl
 PACKAGE_DATE_MONTH_ZPAD{%||%}dnl
 PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 {%|
-|%}autoconf_boundary(
+|%}dnl
+autoconf_boundary(
   {%|GATBPS_MSG_WARN|%},
-  {%|GATBPS_MSG_NOTICE|%}){%|
+  {%|GATBPS_MSG_NOTICE|%},
+  {%||%}){%||%}dnl
+{%|
 AC_DEFUN([GATBPS_MSG_WARN], [[{
 
 #

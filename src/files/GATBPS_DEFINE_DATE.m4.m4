@@ -20,9 +20,12 @@ PACKAGE_DATE_YEAR{%||%}dnl
 PACKAGE_DATE_MONTH_ZPAD{%||%}dnl
 PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 {%|
-|%}autoconf_boundary(
+|%}dnl
+autoconf_boundary(
   {%|GATBPS_DEFINE_DATE|%},
-  {%|gatbps_fatal|%}){%|
+  {%|gatbps_fatal|%},
+  {%||%}){%||%}dnl
+{%|
 AC_DEFUN([GATBPS_DEFINE_DATE], [[{
 
 #
