@@ -331,6 +331,7 @@ m4_case(
 ]clean_target[-local: clean-]output_file_or_directory[
 
 '
+
 ]dnl
 m4_popdef([rule_prerequisites])[]dnl
 m4_popdef([leaf_prerequisites])[]dnl
@@ -340,8 +341,7 @@ m4_popdef([input_mode])[]dnl
 m4_popdef([input_file_or_directory])[]dnl
 m4_popdef([output_file_or_directory])[]dnl
 m4_popdef([list_5])[]dnl
-[
-:;}]])[]dnl
+[:;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
 dnl
 dnl The authors of this file have waived all copyright and

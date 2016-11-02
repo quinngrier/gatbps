@@ -250,13 +250,13 @@ clean-]output_directory[:
 ]clean_target[-local: clean-]output_directory[
 
 '
+
 ]dnl
 m4_popdef([clean_target])[]dnl
 m4_popdef([input_urls])[]dnl
 m4_popdef([output_directory])[]dnl
 m4_popdef([list_2])[]dnl
-[
-:;}]])[]dnl
+[:;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
 dnl
 dnl The authors of this file have waived all copyright and

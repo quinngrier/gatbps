@@ -142,12 +142,12 @@ clean-]target_sh[:
 ]m4_if([$3], [], [[mostlyclean]], [[$3]])[-local: clean-]target_sh[
 
 '
+
 ]dnl
 m4_popdef([leaf_prerequisites])[]dnl
 m4_popdef([source_sh])[]dnl
 m4_popdef([target_sh])[]dnl
-[
-:;}]])[]dnl
+[:;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
 dnl
 dnl The authors of this file have waived all copyright and

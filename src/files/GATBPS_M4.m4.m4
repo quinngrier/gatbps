@@ -105,10 +105,10 @@ clean-]output_file[.m4out:
 '"$][{SOFT_INCLUDE}"' ]output_file[.m4out.d
 
 '
+
 ]dnl
 m4_popdef([output_file])[]dnl
-[
-:;}]])[]dnl
+[:;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
 dnl
 dnl The authors of this file have waived all copyright and

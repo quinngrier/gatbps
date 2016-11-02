@@ -158,11 +158,11 @@ AM_CONDITIONAL([$2], [( ':'
     ;;
   esac
 )])[
+
 ]dnl
 m4_popdef([macro_description])[]dnl
 m4_popdef([noun_phrase])[]dnl
-[
-:;}]])[]dnl
+[:;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
 dnl
 dnl The authors of this file have waived all copyright and

@@ -202,14 +202,14 @@ clean-]output_file[:
 ]clean_target[-local: clean-]output_file[
 
 '
+
 ]dnl
 m4_popdef([clean_target])[]dnl
 m4_popdef([archive_prefix])[]dnl
 m4_popdef([tree_sh])[]dnl
 m4_popdef([input_directory])[]dnl
 m4_popdef([output_file])[]dnl
-[
-:;}]])[]dnl
+[:;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
 dnl
 dnl The authors of this file have waived all copyright and
