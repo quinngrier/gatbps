@@ -105,9 +105,7 @@ GATBPS_GIT_BUNDLE_RULES="$][{GATBPS_GIT_BUNDLE_RULES}"'
   {%|MKDIR_P|%}){%||%}dnl
 {%|
 	$][(GATBPS_V_GIT_BUNDLE)$][(GATBPS_RECIPE_MARKER_TOP)
-	@$][(MKDIR_P) \
-  '\''./'\''$][(@D) \
-;
+	@$][(MKDIR_P) '\''./'\''$][(@D)
 	$][(AM@&t@_V_at)'\''rm'\'' \
   '\''-f'\'' \
   '\''-r'\'' \

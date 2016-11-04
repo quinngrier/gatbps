@@ -265,9 +265,7 @@ GATBPS_WGET_RULES="$][{GATBPS_WGET_RULES}"'
 	$][(AM@&t@_V_at)|%}contains_at_least_one_word_sh(
   {%|MKDIR_P|%}){%||%}dnl
 {%|
-	@$][(MKDIR_P) \
-  '\''./'\''$][(@D) \
-;
+	@$][(MKDIR_P) '\''./'\''$][(@D)
 	$][(AM@&t@_V_at)'\''rm'\'' \
   '\''-f'\'' \
   '\''./'\'']output_file[ \
