@@ -125,6 +125,8 @@ clean-doxygen-main:
   'exit' '0'; \
 :;}
 
+clean-local: clean-doxygen
+
 doxygen: doxygen-main
 
 doxygen-main: $(doxygen_dst)
