@@ -64,18 +64,21 @@ SUFFIXES += .dfv
 
 ## begin_rules
 
+$(doxygen_dfv) doxygen-prevent-empty-target-list: doxygen-always-make
+
 $(doxygen_dst): $(doxygen_dep)
+$(doxygen_dst): $(doxygen_dfv)
 $(doxygen_dst): $(doxygen_src)
 	$(GATBPS_V_DOXYGEN)$(GATBPS_RECIPE_MARKER_TOP)
 	@$(MKDIR_P) './'$(@D)
-	rm -f $(doxygen_dfv)
-	$(MAKE) $(doxygen_dfv)
 	srcdir=$(srcdir) $(DOXYGEN) $(doxygen_src)
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
-.PHONY: $(doxygen_dst)
+$(doxygen_src): doxygen-always-make
+
 .PHONY: clean-doxygen-main
 .PHONY: doxygen
+.PHONY: doxygen-always-make
 .PHONY: doxygen-main
 
 .am_df_INPUT.df:
