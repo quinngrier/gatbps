@@ -14,7 +14,7 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 ## begin_variables
 
-GATBPS_AM_DFV_INPUT_TO_DFV_SCRIPT = ' \
+GATBPS_AM_DF_INPUT_TO_DF_SCRIPT = ' \
   { \
     if ($$0 ~ /+=/) { \
       sub(/+=[	 ]*/, "+= VPATH:"); \
@@ -24,7 +24,7 @@ GATBPS_AM_DFV_INPUT_TO_DFV_SCRIPT = ' \
   } \
 '
 
-GATBPS_DFV_TO_DF_SCRIPT = ' \
+GATBPS_DF_TO_DFV_SCRIPT = ' \
   { \
     if ($$0 ~ /VPATH:/) { \
       n = split($$0, x, /VPATH:/); \
@@ -56,7 +56,7 @@ GATBPS_V_DOXYGEN_0 = @$(SHELL) \
 
 GATBPS_V_DOXYGEN_1 =
 
-SUFFIXES += .am_dfv_INPUT
+SUFFIXES += .am_df_INPUT
 SUFFIXES += .df
 SUFFIXES += .dfv
 
@@ -78,12 +78,12 @@ $(doxygen_dst): $(doxygen_src)
 .PHONY: doxygen
 .PHONY: doxygen-main
 
-.am_dfv_INPUT.dfv:
+.am_df_INPUT.df:
 	$(AM_V_GEN)$(GATBPS_RECIPE_MARKER_TOP)
 	@$(MKDIR_P) './'$(@D)
 	$(AM_V_at){ \
   $(AWK) \
-    $(GATBPS_AM_DFV_INPUT_TO_DFV_SCRIPT) \
+    $(GATBPS_AM_DF_INPUT_TO_DF_SCRIPT) \
     <$< \
     >$@ \
   || 'exit' "$${?}"; \
@@ -91,12 +91,12 @@ $(doxygen_dst): $(doxygen_src)
 :;}
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
-.dfv.df:
+.df.dfv:
 	$(AM_V_GEN)$(GATBPS_RECIPE_MARKER_TOP)
 	@$(MKDIR_P) './'$(@D)
 	$(AM_V_at){ \
   $(AWK) \
-    $(GATBPS_DFV_TO_DF_SCRIPT) \
+    $(GATBPS_DF_TO_DFV_SCRIPT) \
     <$< \
     >$@ \
   || 'exit' "$${?}"; \
