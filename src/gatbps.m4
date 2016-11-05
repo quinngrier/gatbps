@@ -577,6 +577,7 @@ EOF1
           'set' "${prefix}"'GATBPS_WGET_RULES.am' "${@}"
           'set' "${prefix}"'GATBPS_WGET.m4' "${@}"
           'set' "${prefix}"'GATBPS_V_PAD.am' "${@}"
+          'set' "${prefix}"'GATBPS_VPATH_SEARCH.am' "${@}"
           'set' "${prefix}"'GATBPS_TAR_SUBST.m4' "${@}"
           'set' "${prefix}"'GATBPS_TAR_RULES.am' "${@}"
           'set' "${prefix}"'GATBPS_TAR.m4' "${@}"
@@ -1229,6 +1230,8 @@ EOF1
 |%}help_code({%|GATBPS_TAR_RULES.am|%}){%|
 
 |%}help_code({%|GATBPS_TAR_SUBST.m4|%}){%|
+
+|%}help_code({%|GATBPS_VPATH_SEARCH.am|%}){%|
 
 |%}help_code({%|GATBPS_V_PAD.am|%}){%|
 
@@ -2942,6 +2945,8 @@ EOF1
 
 |%}generation_code({%|GATBPS_TAR_SUBST.m4|%}){%|
 
+|%}generation_code({%|GATBPS_VPATH_SEARCH.am|%}){%|
+
 |%}generation_code({%|GATBPS_V_PAD.am|%}){%|
 
 |%}generation_code({%|GATBPS_WGET.m4|%}){%|
@@ -3909,6 +3914,10 @@ include(`src/recursion/GATBPS_TAR_RULES.am.rc.m4'){%|
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
 include(`src/recursion/GATBPS_TAR_SUBST.m4.rc.m4'){%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_VPATH_SEARCH.am.rc.m4'){%|
 
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl

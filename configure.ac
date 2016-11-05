@@ -723,6 +723,10 @@ AC_SUBST([TEXI2DVIFLAGS])
   [mostlyclean])[
 
 ]GATBPS_M4(
+  [src/files/GATBPS_VPATH_SEARCH.am],
+  [mostlyclean])[
+
+]GATBPS_M4(
   [src/files/GATBPS_V_PAD.am],
   [mostlyclean])[
 
