@@ -17,7 +17,7 @@ header_comment({%|##|%}, {%|##|%}){%|
 GATBPS_AM_DF_INPUT_TO_DF_SCRIPT = ' \
   { \
     if ($$0 ~ /+=/) { \
-      sub(/+=[	 ]*/, "+= VPATH:"); \
+      sub(/+=[	 ]*/, "+= VPATH_SEARCH:"); \
       sub(/^[^+]*/, "INPUT "); \
       print $$0; \
     } \
@@ -26,10 +26,10 @@ GATBPS_AM_DF_INPUT_TO_DF_SCRIPT = ' \
 
 GATBPS_DF_TO_DFV_SCRIPT = ' \
   { \
-    if ($$0 ~ /VPATH:/) { \
-      n = split($$0, x, /VPATH:/); \
+    if ($$0 ~ /VPATH_SEARCH:/) { \
+      n = split($$0, x, /VPATH_SEARCH:/); \
       for (i = 2; i != n; ++i) { \
-        x[2] = x[2] "VPATH:" x[i + 1]; \
+        x[2] = x[2] "VPATH_SEARCH:" x[i + 1]; \
       } \
       y = x[2]; \
       gsub(/'\''/, "'\''\\'\'''\''", y); \
