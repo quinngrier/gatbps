@@ -34,11 +34,12 @@ GATBPS_DF_TO_DFV_SCRIPT = ' \
       y = x[2]; \
       gsub(/'\''/, "'\''\\'\'''\''", y); \
       if (system("'\''test'\'' '\''-r'\'' '\''" y "'\''") == 0) { \
-        print x[1] x[2]; \
+        $$0 = x[1] x[2]; \
       } else { \
-        print x[1] "$$(srcdir)/" x[2]; \
+        $$0 = x[1] "$$(srcdir)/" x[2]; \
       } \
     } \
+    print $$0; \
   } \
 '
 
