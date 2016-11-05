@@ -77,6 +77,7 @@ $(doxygen_dst): $(doxygen_src)
 
 $(doxygen_src): doxygen-always-make
 
+.PHONY: clean-doxygen
 .PHONY: clean-doxygen-main
 .PHONY: doxygen
 .PHONY: doxygen-always-make
@@ -107,6 +108,8 @@ $(doxygen_src): doxygen-always-make
   'exit' '0'; \
 :;}
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+
+clean-doxygen: clean-doxygen-main
 
 clean-doxygen-main:
 	-{ \
