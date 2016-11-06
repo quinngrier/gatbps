@@ -41,7 +41,7 @@ function s:FormatJavaFile()
     endif
     call cursor(n1, 1)
     if search(section_marker, 'W') == n2
-      exec n1 . ',' . n2 . 'g/\m^$/d'
+      exec n1 . ',' . n2 . 'g/\m^$/d _'
       exec n1 . 's/\m$/\r/'
       call cursor(n1, 1)
       let n2 = search(s2, 'W')

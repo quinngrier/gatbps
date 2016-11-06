@@ -41,7 +41,7 @@ function s:FormatAutomakeFile()
     endif
     call cursor(n1, 1)
     if search(section_marker, 'W') == n2
-      exec n1 . ',' . n2 . 'g/\m^$/d'
+      exec n1 . ',' . n2 . 'g/\m^$/d _'
       exec n1 . 's/\m$/\r/'
       call cursor(n1, 1)
       let n2 = search(s2, 'W')
@@ -85,7 +85,7 @@ function s:FormatAutomakeFile()
         exec n1 . '+1,' . n2 . '-2g/\m^\n./.+1;/\m^$/-1j!'
         call cursor(n1, 1)
         let n2 = search(s2, 'W')
-        exec n1 . '+1,' . n2 . '-1g/\m^$/d'
+        exec n1 . '+1,' . n2 . '-1g/\m^$/d _'
         call cursor(n1, 1)
         let n2 = search(s2, 'W')
         exec n1 . 's/\m$/\r/'
@@ -134,7 +134,7 @@ function s:FormatAutomakeFile()
         exec n1 . '+1,' . n2 . '-2g/\m^\n./.+1;/\m^$/-1j!'
         call cursor(n1, 1)
         let n2 = search(s2, 'W')
-        exec n1 . '+1,' . n2 . '-1g/\m^$/d'
+        exec n1 . '+1,' . n2 . '-1g/\m^$/d _'
         call cursor(n1, 1)
         let n2 = search(s2, 'W')
         exec n1 . 's/\m$/\r/'

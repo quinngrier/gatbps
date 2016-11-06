@@ -41,7 +41,7 @@ function s:FormatAutoconfFile()
     endif
     call cursor(n1, 1)
     if search(section_marker, 'W') == n2
-      exec n1 . '+1,' . n2 . 'g/\m^$/d'
+      exec n1 . '+1,' . n2 . 'g/\m^$/d _'
       exec n1 . '+1s/\m$/\r/'
       call cursor(n1, 1)
       let n2 = search(s2, 'W')
@@ -69,7 +69,7 @@ function s:FormatAutoconfFile()
     endif
     call cursor(n1, 1)
     if search(section_marker, 'W') == n2
-      exec n1 . '+1,' . n2 . 'g/\m^$/d'
+      exec n1 . '+1,' . n2 . 'g/\m^$/d _'
       exec n1 . '+1s/\m$/\r/'
       call cursor(n1, 1)
       let n2 = search(s2, 'W')
@@ -108,7 +108,7 @@ function s:FormatAutoconfFile()
         exec n1 . '+2,' . n2 . '-2g/\m^\n./.+1;/\m^$/-1j!'
         call cursor(n1, 1)
         let n2 = search(s2, 'W')
-        exec n1 . '+2,' . n2 . '-1g/\m^$/d'
+        exec n1 . '+2,' . n2 . '-1g/\m^$/d _'
         call cursor(n1, 1)
         let n2 = search(s2, 'W')
         exec n1 . '+1s/\m$/\r/'
