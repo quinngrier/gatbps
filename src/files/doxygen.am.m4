@@ -65,7 +65,7 @@ SUFFIXES += .dfv
 
 ## begin_rules
 
-$(doxygen_dfv) doxygen.dummy1.main: doxygen-always-make
+$(doxygen_dfv) doxygen.dummy1.main: doxygen.phony.main
 
 $(doxygen_dst): $(doxygen_dep)
 $(doxygen_dst): $(doxygen_dfv)
@@ -75,13 +75,13 @@ $(doxygen_dst): $(doxygen_src)
 	srcdir=$(srcdir) $(DOXYGEN) $(doxygen_src)
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
-$(doxygen_src): doxygen-always-make
+$(doxygen_src): doxygen.phony.main
 
 .PHONY: clean-doxygen
 .PHONY: clean-doxygen-main
 .PHONY: doxygen
-.PHONY: doxygen-always-make
 .PHONY: doxygen-main
+.PHONY: doxygen.phony.main
 
 .am_df_INPUT.df:
 	$(AM_V_GEN)$(GATBPS_RECIPE_MARKER_TOP)
