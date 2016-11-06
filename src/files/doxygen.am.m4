@@ -75,7 +75,7 @@ $(doxygen_dst) doxygen.dummy-2.main: $(doxygen_src)
 	srcdir=$(srcdir) $(DOXYGEN) $(doxygen_src)
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
-$(doxygen_src): doxygen.phony.main
+$(doxygen_src) doxygen.dummy-3.main: doxygen.phony.main
 
 .PHONY: clean-doxygen
 .PHONY: clean-doxygen-main
