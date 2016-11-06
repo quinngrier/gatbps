@@ -65,7 +65,7 @@ SUFFIXES += .dfv
 
 ## begin_rules
 
-$(doxygen_dfv) doxygen.dummy1.main: doxygen.phony.main
+$(doxygen_dfv) doxygen.dummy-1.main: doxygen.phony.main
 
 $(doxygen_dst): $(doxygen_dep)
 $(doxygen_dst): $(doxygen_dfv)
