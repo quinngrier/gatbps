@@ -65,7 +65,7 @@ SUFFIXES += .dfv
 
 ## begin_rules
 
-$(doxygen_dfv) doxygen-prevent-empty-target-list: doxygen-always-make
+$(doxygen_dfv) doxygen.dummy1.main: doxygen-always-make
 
 $(doxygen_dst): $(doxygen_dep)
 $(doxygen_dst): $(doxygen_dfv)
