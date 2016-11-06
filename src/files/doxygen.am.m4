@@ -67,9 +67,9 @@ SUFFIXES += .dfv
 
 $(doxygen_dfv) doxygen.dummy-1.main: doxygen.phony.main
 
-$(doxygen_dst): $(doxygen_dep)
-$(doxygen_dst): $(doxygen_dfv)
-$(doxygen_dst): $(doxygen_src)
+$(doxygen_dst) doxygen.dummy-2.main: $(doxygen_dep)
+$(doxygen_dst) doxygen.dummy-2.main: $(doxygen_dfv)
+$(doxygen_dst) doxygen.dummy-2.main: $(doxygen_src)
 	$(GATBPS_V_DOXYGEN)$(GATBPS_RECIPE_MARKER_TOP)
 	@$(MKDIR_P) './'$(@D)
 	srcdir=$(srcdir) $(DOXYGEN) $(doxygen_src)
