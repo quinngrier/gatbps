@@ -78,7 +78,34 @@ $(doxygen_dst) doxygen.dummy-2.main: $(doxygen_src)
   './'$(doxygen_dst)'.tmp' \
 ;
 	@$(MKDIR_P) './'$(@D)
-	srcdir=$(srcdir) $(DOXYGEN) './'$(doxygen_src)
+	$(AM_V_at){ \
+  ( \
+    srcdir=$(srcdir) \
+    $(DOXYGEN) \
+      './'$(doxygen_src) \
+    || 'exit' "$${?}"; \
+    'mv' \
+      './'$(doxygen_dst)'.tmp' \
+      './'$(doxygen_dst) \
+    || 'exit' "$${?}"; \
+    'exit' '0'; \
+  :;); \
+  exit_status="$${?}"; \
+  'readonly' 'exit_status'; \
+  case "$${exit_status}" in \
+    '0') \
+    ;; \
+    *) \
+      'rm' \
+        '-f' \
+        '-r' \
+        './'$(doxygen_dst) \
+        './'$(doxygen_dst)'.tmp' \
+      ; \
+    ;; \
+  esac; \
+  'exit' "$${exit_status}"; \
+:;}
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
 $(doxygen_src) doxygen.dummy-3.main: doxygen.force.main
