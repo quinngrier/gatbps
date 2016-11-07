@@ -28,12 +28,12 @@ header_comment({%|#|%}, {%|#|%}){%|
         sub(/<\/pre><\/blockquote>$/, "@AT@endcode", $0);
         in_javadoc_code_block = 0;
       } else {
+        gsub(/<b><\/b>/, "", $0);
         gsub(/&lt;/, "<", $0);
         gsub(/&gt;/, ">", $0);
         gsub(/&#64;/, "@AT@", $0);
         gsub(/&#92;/, "\\", $0);
         gsub(/&amp;/, "\\&", $0);
-        gsub(/<b><\/b>/, "", $0);
       }
     } else {
       gsub(/&#64;/, "@AT@@AT@", $0);
