@@ -34,11 +34,9 @@ GATBPS_DF_TO_DFV_SCRIPT = ' \
         line_tail = line_tail "VPATH_SEARCH:" line_parts[i + 1]; \
       } \
       if (line_tail ~ /^".*"$$/) { \
-        sub(/^"/, "", line_tail); \
-        sub(/"$$/, "", line_tail); \
         raw_path = ""; \
         in_escape = 0; \
-        for (i = 0; i != length(line_tail); ++i) { \
+        for (i = 1; i != length(line_tail) - 1; ++i) { \
           c = substr(line_tail, i + 1, 1); \
           if (in_escape) { \
             if (c == "\"") { \
