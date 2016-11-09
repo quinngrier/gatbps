@@ -56,6 +56,14 @@ GATBPS_DF_TO_DFV_SCRIPT = ' \
         if (in_escape) { \
           raw_line_tail = raw_line_tail "\\"; \
         } \
+        if (raw_line_tail ~ /^\$$(SHELL) /) { \
+          shell_command = 1; \
+          raw_path = raw_line_tail; \
+          sub(/^\$$(SHELL) /, "", raw_path); \
+        } else { \
+          shell_command = 0; \
+          raw_path = raw_line_tail; \
+        } \
       } \
       y = raw_line_tail; \
       gsub(/'\''/, "'\''\\'\'''\''", y); \
