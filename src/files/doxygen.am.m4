@@ -34,12 +34,10 @@ GATBPS_DF_TO_DFV_SCRIPT = ' \
       if (x[2] ~ /^".*"$$/) { \
         sub(/^"/, "", x[2]); \
         sub(/"$$/, "", x[2]); \
-        i = 0; \
         y = ""; \
         escaping = 0; \
-        while (i != length(x[2])) { \
-          ++i; \
-          c = substr(x[2], i, 1); \
+        for (i = 0; i != length(x[2]); ++i) { \
+          c = substr(x[2], i + 1, 1); \
           if (escaping) { \
             if (c == "\"") { \
               y = y "\""; \
