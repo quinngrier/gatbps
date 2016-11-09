@@ -28,6 +28,7 @@ GATBPS_DF_TO_DFV_SCRIPT = ' \
   { \
     if ($$0 ~ /VPATH_SEARCH:/) { \
       n = split($$0, x, /VPATH_SEARCH:/); \
+      line_head = x[1]; \
       raw_path = x[2]; \
       for (i = 2; i != n; ++i) { \
         raw_path = raw_path "VPATH_SEARCH:" x[i + 1]; \
@@ -64,9 +65,9 @@ GATBPS_DF_TO_DFV_SCRIPT = ' \
       gsub(/\\/, "\\\\", raw_path); \
       gsub(/"/, "\\\"", raw_path); \
       if (system("'\''test'\'' '\''-r'\'' '\''" y "'\''") == 0) { \
-        $$0 = x[1] "\"" raw_path "\""; \
+        $$0 = line_head "\"" raw_path "\""; \
       } else { \
-        $$0 = x[1] "\"$$(srcdir)/" raw_path "\""; \
+        $$0 = line_head "\"$$(srcdir)/" raw_path "\""; \
       } \
     } \
     print $$0; \
