@@ -37,10 +37,10 @@ GATBPS_DF_TO_DFV_SCRIPT = ' \
         sub(/^"/, "", line_tail); \
         sub(/"$$/, "", line_tail); \
         raw_path = ""; \
-        escaping = 0; \
+        in_escape = 0; \
         for (i = 0; i != length(line_tail); ++i) { \
           c = substr(line_tail, i + 1, 1); \
-          if (escaping) { \
+          if (in_escape) { \
             if (c == "\"") { \
               raw_path = raw_path "\""; \
             } else if (c == "\\") { \
@@ -48,14 +48,14 @@ GATBPS_DF_TO_DFV_SCRIPT = ' \
             } else { \
               raw_path = raw_path "\\" c; \
             } \
-            escaping = 0; \
+            in_escape = 0; \
           } else if (c == "\\") { \
-            escaping = 1; \
+            in_escape = 1; \
           } else { \
             raw_path = raw_path c; \
           } \
         } \
-        if (escaping) { \
+        if (in_escape) { \
           raw_path = raw_path "\\"; \
         } \
       } \
