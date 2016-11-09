@@ -28,16 +28,17 @@ GATBPS_DF_TO_DFV_SCRIPT = ' \
   { \
     if ($$0 ~ /VPATH_SEARCH:/) { \
       n = split($$0, x, /VPATH_SEARCH:/); \
+      raw_path = x[2]; \
       for (i = 2; i != n; ++i) { \
-        x[2] = x[2] "VPATH_SEARCH:" x[i + 1]; \
+        raw_path = raw_path "VPATH_SEARCH:" x[i + 1]; \
       } \
-      if (x[2] ~ /^".*"$$/) { \
-        sub(/^"/, "", x[2]); \
-        sub(/"$$/, "", x[2]); \
+      if (raw_path ~ /^".*"$$/) { \
+        sub(/^"/, "", raw_path); \
+        sub(/"$$/, "", raw_path); \
         y = ""; \
         escaping = 0; \
-        for (i = 0; i != length(x[2]); ++i) { \
-          c = substr(x[2], i + 1, 1); \
+        for (i = 0; i != length(raw_path); ++i) { \
+          c = substr(raw_path, i + 1, 1); \
           if (escaping) { \
             if (c == "\"") { \
               y = y "\""; \
@@ -56,16 +57,16 @@ GATBPS_DF_TO_DFV_SCRIPT = ' \
         if (escaping) { \
           y = y "\\"; \
         } \
-        x[2] = y; \
+        raw_path = y; \
       } \
-      y = x[2]; \
+      y = raw_path; \
       gsub(/'\''/, "'\''\\'\'''\''", y); \
-      gsub(/\\/, "\\\\", x[2]); \
-      gsub(/"/, "\\\"", x[2]); \
+      gsub(/\\/, "\\\\", raw_path); \
+      gsub(/"/, "\\\"", raw_path); \
       if (system("'\''test'\'' '\''-r'\'' '\''" y "'\''") == 0) { \
-        $$0 = x[1] "\"" x[2] "\""; \
+        $$0 = x[1] "\"" raw_path "\""; \
       } else { \
-        $$0 = x[1] "\"$$(srcdir)/" x[2] "\""; \
+        $$0 = x[1] "\"$$(srcdir)/" raw_path "\""; \
       } \
     } \
     print $$0; \
