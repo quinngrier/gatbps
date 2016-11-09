@@ -34,37 +34,37 @@ GATBPS_DF_TO_DFV_SCRIPT = ' \
         line_tail = line_tail "VPATH_SEARCH:" line_parts[i + 1]; \
       } \
       if (line_tail ~ /^".*"$$/) { \
-        raw_path = ""; \
+        raw_line_tail = ""; \
         in_escape = 0; \
         for (i = 1; i != length(line_tail) - 1; ++i) { \
           c = substr(line_tail, i + 1, 1); \
           if (in_escape) { \
             if (c == "\"") { \
-              raw_path = raw_path "\""; \
+              raw_line_tail = raw_line_tail "\""; \
             } else if (c == "\\") { \
-              raw_path = raw_path "\\"; \
+              raw_line_tail = raw_line_tail "\\"; \
             } else { \
-              raw_path = raw_path "\\" c; \
+              raw_line_tail = raw_line_tail "\\" c; \
             } \
             in_escape = 0; \
           } else if (c == "\\") { \
             in_escape = 1; \
           } else { \
-            raw_path = raw_path c; \
+            raw_line_tail = raw_line_tail c; \
           } \
         } \
         if (in_escape) { \
-          raw_path = raw_path "\\"; \
+          raw_line_tail = raw_line_tail "\\"; \
         } \
       } \
-      y = raw_path; \
+      y = raw_line_tail; \
       gsub(/'\''/, "'\''\\'\'''\''", y); \
-      gsub(/\\/, "\\\\", raw_path); \
-      gsub(/"/, "\\\"", raw_path); \
+      gsub(/\\/, "\\\\", raw_line_tail); \
+      gsub(/"/, "\\\"", raw_line_tail); \
       if (system("'\''test'\'' '\''-r'\'' '\''" y "'\''") == 0) { \
-        $$0 = line_head "\"" raw_path "\""; \
+        $$0 = line_head "\"" raw_line_tail "\""; \
       } else { \
-        $$0 = line_head "\"$$(srcdir)/" raw_path "\""; \
+        $$0 = line_head "\"$$(srcdir)/" raw_line_tail "\""; \
       } \
     } \
     print $$0; \
