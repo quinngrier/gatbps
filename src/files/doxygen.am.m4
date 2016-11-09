@@ -34,10 +34,35 @@ GATBPS_DF_TO_DFV_SCRIPT = ' \
       if (x[2] ~ /^".*"$$/) { \
         sub(/^"/, "", x[2]); \
         sub(/"$$/, "", x[2]); \
-        gsub(/\\"/, "\"", x[2]); \
+        i = 0; \
+        y = ""; \
+        escaping = 0; \
+        while (i != length(x[2])) { \
+          ++i; \
+          c = substr(x[2], i, 1); \
+          if (escaping) { \
+            if (c == "\"") { \
+              y = y "\""; \
+            } else if (c == "\\") { \
+              y = y "\\"; \
+            } else { \
+              y = y "\\" c; \
+            } \
+            escaping = 0; \
+          } else if (c == "\\") { \
+            escaping = 1; \
+          } else { \
+            y = y c; \
+          } \
+        } \
+        if (escaping) { \
+          y = y "\\"; \
+        } \
+        x[2] = y; \
       } \
       y = x[2]; \
       gsub(/'\''/, "'\''\\'\'''\''", y); \
+      gsub(/\\/, "\\\\", x[2]); \
       gsub(/"/, "\\\"", x[2]); \
       if (system("'\''test'\'' '\''-r'\'' '\''" y "'\''") == 0) { \
         $$0 = x[1] "\"" x[2] "\""; \
