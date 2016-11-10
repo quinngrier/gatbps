@@ -67,9 +67,8 @@ GATBPS_DF_TO_DFV_SCRIPT = ' \
       } \
       shell_quoted_path = raw_path; \
       gsub(/'\''/, "'\''\\'\'''\''", shell_quoted_path); \
-      shell_quoted_path = "'\''" shell_quoted_path "'\''"; \
       test_command = "'\''test'\'' '\''-r'\'' "; \
-      test_command = test_command shell_quoted_path; \
+      test_command = test_command "'\''" shell_quoted_path "'\''"; \
       if (system(test_command) == 0) { \
         path_prefix = ""; \
       } else { \
@@ -84,9 +83,13 @@ GATBPS_DF_TO_DFV_SCRIPT = ' \
       gsub(/"/, "\\\"", doxygen_quoted_path); \
       $$0 = line_head "\""; \
       if (is_shell_command) { \
-        $$0 = $$0 "$$(SHELL) '\''-'\'' "; \
+        $$0 = $$0 "$$(SHELL) '\''-'\'' '\''"; \
       } \
-      $$0 = $$0 path_prefix doxygen_quoted_path "\""; \
+      $$0 = $$0 path_prefix doxygen_quoted_path; \
+      if (is_shell_command) { \
+        $$0 = $$0 "'\''"; \
+      } \
+      $$0 = $$0 "\""; \
     } \
     print $$0; \
   } \
