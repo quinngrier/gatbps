@@ -76,17 +76,17 @@ GATBPS_DF_TO_DFV_SCRIPT = ' \
         path_prefix = "$$(srcdir)/"; \
       } \
       if (is_shell_command) { \
-        doxygen_path = shell_quoted_path; \
+        doxygen_quoted_path = shell_quoted_path; \
       } else { \
-        doxygen_path = raw_path; \
+        doxygen_quoted_path = raw_path; \
       } \
-      gsub(/\\/, "\\\\", doxygen_path); \
-      gsub(/"/, "\\\"", doxygen_path); \
+      gsub(/\\/, "\\\\", doxygen_quoted_path); \
+      gsub(/"/, "\\\"", doxygen_quoted_path); \
       $$0 = line_head "\""; \
       if (is_shell_command) { \
         $$0 = $$0 "$$(SHELL) '\''-'\'' "; \
       } \
-      $$0 = $$0 path_prefix doxygen_path "\""; \
+      $$0 = $$0 path_prefix doxygen_quoted_path "\""; \
     } \
     print $$0; \
   } \
