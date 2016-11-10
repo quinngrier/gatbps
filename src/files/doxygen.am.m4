@@ -139,7 +139,7 @@ $(doxygen_dst) doxygen.dummy-2.main: $(doxygen_src)
       $(SHELL) \
       >'doxygen-main.tmp' \
     || 'exit' "$${?}"; \
-    SHELL=` \
+    SHELL_sh=` \
       'cat' 'doxygen-main.tmp' \
     ` || 'exit' "$${?}"; \
     'sh' \
@@ -149,11 +149,11 @@ $(doxygen_dst) doxygen.dummy-2.main: $(doxygen_src)
       $(srcdir) \
       >'doxygen-main.tmp' \
     || 'exit' "$${?}"; \
-    srcdir=` \
+    srcdir_sh=` \
       'cat' 'doxygen-main.tmp' \
     ` || 'exit' "$${?}"; \
-    SHELL="$${SHELL}" \
-    srcdir="$${srcdir}" \
+    SHELL="$${SHELL_sh}" \
+    srcdir="$${srcdir_sh}" \
     $(DOXYGEN) \
       './'$(doxygen_src) \
     || 'exit' "$${?}"; \
