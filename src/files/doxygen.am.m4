@@ -64,6 +64,9 @@ GATBPS_DF_TO_DFV_SCRIPT = ' \
           is_shell_command = 0; \
           raw_path = raw_line_tail; \
         } \
+      } else { \
+        is_shell_command = 0; \
+        raw_path = line_tail; \
       } \
       shell_quoted_path = raw_path; \
       gsub(/'\''/, "'\''\\'\'''\''", shell_quoted_path); \
