@@ -146,19 +146,8 @@ $(doxygen_dst) doxygen.dummy-2.main: $(doxygen_src)
       'cat' 'doxygen-main.tmp' \
     ` || 'exit' "$${?}"; \
     'readonly' 'SHELL_sh'; \
-    'sh' \
-      '-' \
-      $(srcdir)'/build-aux/sh-form.sh' \
-      '--' \
-      $(srcdir) \
-      >'doxygen-main.tmp' \
-    || 'exit' "$${?}"; \
-    srcdir_sh=` \
-      'cat' 'doxygen-main.tmp' \
-    ` || 'exit' "$${?}"; \
-    'readonly' 'srcdir_sh'; \
     SHELL="$${SHELL_sh}" \
-    srcdir="$${srcdir_sh}" \
+    srcdir=$(srcdir) \
     $(DOXYGEN) \
       './'$(doxygen_src) \
     || 'exit' "$${?}"; \
