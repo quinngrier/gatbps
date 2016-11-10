@@ -116,6 +116,7 @@ $(doxygen_dst) doxygen.dummy-2.main: $(doxygen_src)
 	@$(MKDIR_P) './'$(@D)
 	$(AM_V_at){ \
   ( \
+    SHELL=$(SHELL) \
     srcdir=$(srcdir) \
     $(DOXYGEN) \
       './'$(doxygen_src) \
