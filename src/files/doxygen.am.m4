@@ -165,6 +165,10 @@ $(doxygen_dst) doxygen.dummy-2.main: $(doxygen_src)
   :;); \
   exit_status="$${?}"; \
   'readonly' 'exit_status'; \
+  'rm' \
+    '-f' \
+    'doxygen-main.tmp' \
+  ; \
   case "$${exit_status}" in \
     '0') \
     ;; \
