@@ -68,7 +68,9 @@ GATBPS_DF_TO_DFV_SCRIPT = ' \
       shell_quoted_path = raw_path; \
       gsub(/'\''/, "'\''\\'\'''\''", shell_quoted_path); \
       shell_quoted_path = "'\''" shell_quoted_path "'\''"; \
-      if (system("'\''test'\'' '\''-r'\'' " shell_quoted_path) == 0) { \
+      test_command = "'\''test'\'' '\''-r'\'' "; \
+      test_command = test_command shell_quoted_path; \
+      if (system(test_command) == 0) { \
         path_prefix = ""; \
       } else { \
         path_prefix = "$$(srcdir)/"; \
