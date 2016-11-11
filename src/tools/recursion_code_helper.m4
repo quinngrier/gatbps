@@ -24,7 +24,15 @@ ifelse(
   {%|{%|
 |%}|%},
   {%|{%|
-            'set' '' "$|%}{%|{prefix}"'$1' "$|%}{%|{@}"; 'shift'|%}dnl
+            case "$|%}{%|{#}" in
+              '0')
+                'set' '' "$|%}{%|{prefix}"'$1'
+              ;;
+              *)
+                'set' '' "$|%}{%|{prefix}"'$1' "$|%}{%|{@}"
+              ;;
+            esac
+            'shift'|%}dnl
 recursion_code_helper(shift($@)){%||%}dnl
 |%})|%})|%}){%||%}dnl
 dnl
