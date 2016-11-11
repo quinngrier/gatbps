@@ -284,35 +284,70 @@ esac
 
 case "${STYLE_STDOUT+x}" in
   ?*)
-    'set' '' '--style-stdout='"${STYLE_STDOUT}" "${@}"
+    case "${#}" in
+      '0')
+        'set' '' '--style-stdout='"${STYLE_STDOUT}"
+      ;;
+      *)
+        'set' '' '--style-stdout='"${STYLE_STDOUT}" "${@}"
+      ;;
+    esac
     'shift'
   ;;
 esac
 
 case "${STYLE_STDERR+x}" in
   ?*)
-    'set' '' '--style-stderr='"${STYLE_STDERR}" "${@}"
+    case "${#}" in
+      '0')
+        'set' '' '--style-stderr='"${STYLE_STDERR}"
+      ;;
+      *)
+        'set' '' '--style-stderr='"${STYLE_STDERR}" "${@}"
+      ;;
+    esac
     'shift'
   ;;
 esac
 
 case "${STYLE+x}" in
   ?*)
-    'set' '' '--style='"${STYLE}" "${@}"
+    case "${#}" in
+      '0')
+        'set' '' '--style='"${STYLE}"
+      ;;
+      *)
+        'set' '' '--style='"${STYLE}" "${@}"
+      ;;
+    esac
     'shift'
   ;;
 esac
 
 case "${SED+x}" in
   ?*)
-    'set' '' '--sed='"${SED}" "${@}"
+    case "${#}" in
+      '0')
+        'set' '' '--sed='"${SED}"
+      ;;
+      *)
+        'set' '' '--sed='"${SED}" "${@}"
+      ;;
+    esac
     'shift'
   ;;
 esac
 
 case "${AWK+x}" in
   ?*)
-    'set' '' '--awk='"${AWK}" "${@}"
+    case "${#}" in
+      '0')
+        'set' '' '--awk='"${AWK}"
+      ;;
+      *)
+        'set' '' '--awk='"${AWK}" "${@}"
+      ;;
+    esac
     'shift'
   ;;
 esac
@@ -328,7 +363,14 @@ keep='no'
 first_item='yes'
 the_output=''
 
-'set' '' "${@}"
+case "${#}" in
+  '0')
+    'set' ''
+  ;;
+  *)
+    'set' '' "${@}"
+  ;;
+esac
 
 while ':'; do
 
