@@ -40,7 +40,7 @@ $(javadoc_dist_dst): $(javadoc_dist_dep)
   $(javadoc_dist_src) \
 ;
 	$(GATBPS_V_CP)$(GATBPS_RECIPE_MARKER_TOP)
-	@'rm' \
+	$(AM_V_at)'rm' \
   '-f' \
   '-r' \
   './'$(javadoc_dist_dst) \

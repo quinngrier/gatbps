@@ -40,7 +40,7 @@ $(html_dist_dst): $(html_dist_dep)
   $(html_dist_src) \
 ;
 	$(GATBPS_V_CP)$(GATBPS_RECIPE_MARKER_TOP)
-	@'rm' \
+	$(AM_V_at)'rm' \
   '-f' \
   '-r' \
   './'$(html_dist_dst) \

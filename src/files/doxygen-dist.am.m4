@@ -40,7 +40,7 @@ $(doxygen_dist_dst): $(doxygen_dist_dep)
   $(doxygen_dist_src) \
 ;
 	$(GATBPS_V_CP)$(GATBPS_RECIPE_MARKER_TOP)
-	@'rm' \
+	$(AM_V_at)'rm' \
   '-f' \
   '-r' \
   './'$(doxygen_dist_dst) \
