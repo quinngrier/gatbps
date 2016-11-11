@@ -40,7 +40,7 @@ $(docbook_dist_dst): $(docbook_dist_dep)
   $(docbook_dist_src) \
 ;
 	$(GATBPS_V_CP)$(GATBPS_RECIPE_MARKER_TOP)
-	@$(MKDIR_P) './'$(@D)
+	$(AM_V_at)$(MKDIR_P) './'$(@D)
 	$(AM_V_at){ \
   if 'test' '-f' $(docbook_dist_src); then \
     d='.'; \

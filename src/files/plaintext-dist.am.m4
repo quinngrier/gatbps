@@ -40,7 +40,7 @@ $(plaintext_dist_dst): $(plaintext_dist_dep)
   $(plaintext_dist_src) \
 ;
 	$(GATBPS_V_CP)$(GATBPS_RECIPE_MARKER_TOP)
-	@$(MKDIR_P) './'$(@D)
+	$(AM_V_at)$(MKDIR_P) './'$(@D)
 	$(AM_V_at){ \
   if 'test' '-f' $(plaintext_dist_src); then \
     d='.'; \

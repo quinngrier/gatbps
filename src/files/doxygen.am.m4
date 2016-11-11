@@ -132,7 +132,7 @@ $(doxygen_dst) doxygen.dummy-2.main: $(doxygen_src)
   './'$(doxygen_dst) \
   './'$(doxygen_dst)'.tmp' \
 ;
-	@$(MKDIR_P) './'$(@D)
+	$(AM_V_at)$(MKDIR_P) './'$(@D)
 	$(AM_V_at){ \
   ( \
     'sh' \
@@ -189,7 +189,7 @@ $(doxygen_src) doxygen.dummy-3.main: doxygen.force.main
 
 .am_df_INPUT.df:
 	$(AM_V_GEN)$(GATBPS_RECIPE_MARKER_TOP)
-	@$(MKDIR_P) './'$(@D)
+	$(AM_V_at)$(MKDIR_P) './'$(@D)
 	$(AM_V_at){ \
   $(AWK) \
     $(GATBPS_AM_DF_INPUT_TO_DF_SCRIPT) \
@@ -202,7 +202,7 @@ $(doxygen_src) doxygen.dummy-3.main: doxygen.force.main
 
 .df.dfv:
 	$(AM_V_GEN)$(GATBPS_RECIPE_MARKER_TOP)
-	@$(MKDIR_P) './'$(@D)
+	$(AM_V_at)$(MKDIR_P) './'$(@D)
 	$(AM_V_at){ \
   $(AWK) \
     $(GATBPS_DF_TO_DFV_SCRIPT) \
