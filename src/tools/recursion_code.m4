@@ -42,7 +42,14 @@ EOF1
 
             'shift'
 |%}recursion_code_helper(shift($@)){%|
-            'set' '' "$|%}{%|{@}"
+            case "$|%}{%|{#}" in
+              '0')
+                'set' ''
+              ;;
+              *)
+                'set' '' "$|%}{%|{@}"
+              ;;
+            esac
 
           ;;|%}|%})|%}){%||%}dnl
 dnl
