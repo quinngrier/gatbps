@@ -45,7 +45,9 @@ $(doxygen_dist_dst): $(doxygen_dist_dep)
   '-r' \
   './'$(doxygen_dist_dst) \
 ;
-	$(AM_V_at)$(MKDIR_P) './'$(@D)
+	$(AM_V_at)$(MKDIR_P) \
+  './'$(@D) \
+;
 	$(AM_V_at){ \
   if 'test' '-d' $(doxygen_dist_src); then \
     d='.'; \

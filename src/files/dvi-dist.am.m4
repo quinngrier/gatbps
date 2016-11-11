@@ -40,7 +40,9 @@ $(dvi_dist_dst): $(dvi_dist_dep)
   $(dvi_dist_src) \
 ;
 	$(GATBPS_V_CP)$(GATBPS_RECIPE_MARKER_TOP)
-	$(AM_V_at)$(MKDIR_P) './'$(@D)
+	$(AM_V_at)$(MKDIR_P) \
+  './'$(@D) \
+;
 	$(AM_V_at){ \
   if 'test' '-f' $(dvi_dist_src); then \
     d='.'; \

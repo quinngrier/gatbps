@@ -40,7 +40,9 @@ $(java_dist_dst): $(java_dist_dep)
   $(java_dist_src) \
 ;
 	$(GATBPS_V_CP)$(GATBPS_RECIPE_MARKER_TOP)
-	$(AM_V_at)$(MKDIR_P) './'$(@D)
+	$(AM_V_at)$(MKDIR_P) \
+  './'$(@D) \
+;
 	$(AM_V_at){ \
   if 'test' '-f' $(java_dist_src); then \
     d='.'; \
