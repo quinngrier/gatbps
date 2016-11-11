@@ -108,7 +108,9 @@ GATBPS_GIT_ARCHIVE_RULES="$][{GATBPS_GIT_ARCHIVE_RULES}"'
   {%|MKDIR_P|%}){%||%}dnl
 {%|
 	$][(GATBPS_V_GIT_ARCHIVE)$][(GATBPS_RECIPE_MARKER_TOP)
-	$][(AM@&t@_V_at)$][(MKDIR_P) '\''./'\''$][(@D)
+	$][(AM@&t@_V_at)$][(MKDIR_P) \
+  '\''./'\''$][(@D) \
+;
 	$][(AM@&t@_V_at)'\''rm'\'' \
   '\''-f'\'' \
   '\''-r'\'' \

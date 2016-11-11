@@ -219,7 +219,9 @@ m4_case(
   '\''./'\'']output_file_or_directory[ \
   '\''./'\'']output_file_or_directory['\''.tmp'\'' \
 ;
-	$][(AM@&t@_V_at)$][(MKDIR_P) '\''./'\''$][(@D)
+	$][(AM@&t@_V_at)$][(MKDIR_P) \
+  '\''./'\''$][(@D) \
+;
 	$][(AM@&t@_V_at){ \
   ( \
     x=]input_file_or_directory[; \

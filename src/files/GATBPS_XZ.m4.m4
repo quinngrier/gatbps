@@ -102,7 +102,9 @@ m4_if([$4], [], [], [[
   $][(AM@&t@_MAKEFLAGS) \
   ]source_sh[ \
 ;]])[
-	$][(AM@&t@_V_at)$][(MKDIR_P) '\''./'\''$][(@D)
+	$][(AM@&t@_V_at)$][(MKDIR_P) \
+  '\''./'\''$][(@D) \
+;
 	$][(AM@&t@_V_at){ \
   x=]source_sh[; \
   if '\''test'\'' '\''-f'\'' "$][$][{x}"; then \
