@@ -292,8 +292,8 @@ java-main:
       "$${x}" \
       >'java-main.tmp' \
     || 'exit' "$${?}"; \
-    classpath=`'cat' \
-      'java-main.tmp' \
+    classpath=` \
+      'cat' 'java-main.tmp' \
     ` || 'exit' "$${?}"; \
     x='x'; \
     for y in $(java_JAVACFLAGS); do \
@@ -318,8 +318,8 @@ java-main:
         || 'exit' "$${?}"; \
       ;; \
     esac; \
-    javacflags=`'cat' \
-      'java-main.tmp' \
+    javacflags=` \
+      'cat' 'java-main.tmp' \
     ` || 'exit' "$${?}"; \
     'sh' \
       '-' \
@@ -328,8 +328,8 @@ java-main:
       './'$(java_sourcepath) \
       >'java-main.tmp' \
     || 'exit' "$${?}"; \
-    sourcepath=`'cat' \
-      'java-main.tmp' \
+    sourcepath=` \
+      'cat' 'java-main.tmp' \
     ` || 'exit' "$${?}"; \
     $(MAKE) \
       $(AM_MAKEFLAGS) \
