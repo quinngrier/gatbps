@@ -6,6 +6,8 @@ rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/recursion_code.m4|%}){%||%}dnl
 recursion_code(
   {%|GATBPS_JAVA.m4|%},
+  {%|GATBPS_RECIPE_MARKER.am|%},
+  {%|GATBPS_PROG_MKDIR_P.m4|%},
   {%|CC0-1.0.txt|%},
   {%||%}){%||%}dnl
 dnl
