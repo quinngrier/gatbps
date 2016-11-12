@@ -16,7 +16,7 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 ## begin_rules
 
-$(java_dist_dst): $(java_dist_dep)
+$(java_dist_dst): java-main
 	$(AM_V_at)|%}contains_exactly_one_word(
   {%|java_dist_dst|%}){%||%}dnl
 {%|
