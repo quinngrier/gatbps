@@ -37,7 +37,7 @@ GATBPS_JAVA_RULES="$][{GATBPS_JAVA_RULES}"'
 ./$][(java_]gatbps_y[_dst): $][(java_]gatbps_y[_dep)
 ./$][(java_]gatbps_y[_dst): $][(java_]gatbps_y[_extra)
 ./$][(java_]gatbps_y[_dst): $][(java_]gatbps_y[_src)
-	$][(GATBPS_V_JAR)'\'':'\''
+	$][(GATBPS_V_JAR)$][(GATBPS_RECIPE_MARKER_TOP)
 	$][(AM@&t@_V_at){ \
   ( \
     '\''rm'\'' \
@@ -127,6 +127,7 @@ GATBPS_JAVA_RULES="$][{GATBPS_JAVA_RULES}"'
   ; \
   '\''exit'\'' "$][$][{x}"; \
 :;}
+	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
 .PHONY: clean-java-]gatbps_x[
 .PHONY: install-java-]gatbps_x[

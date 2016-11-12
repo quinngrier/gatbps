@@ -53,7 +53,7 @@ SUFFIXES += .java
 ./$(java_dst): $(java_dep)
 ./$(java_dst): $(java_extra)
 ./$(java_dst): $(java_src)
-	$(GATBPS_V_JAR)':'
+	$(GATBPS_V_JAR)$(GATBPS_RECIPE_MARKER_TOP)
 	$(AM_V_at){ \
   ( \
     'rm' \
@@ -143,6 +143,7 @@ SUFFIXES += .java
   ; \
   'exit' "$${x}"; \
 :;}
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
 .PHONY: clean-java
 .PHONY: clean-java-main
