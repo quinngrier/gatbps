@@ -34,9 +34,90 @@ m4_pushdef([gatbps_x], [$1])
 
 GATBPS_JAVA_RULES="$][{GATBPS_JAVA_RULES}"'
 
-./$][(java_]gatbps_y[_dst): $][(java_]gatbps_y[_dep)
-./$][(java_]gatbps_y[_dst): $][(java_]gatbps_y[_extra)
-./$][(java_]gatbps_y[_dst): $][(java_]gatbps_y[_src)
+./$][(java_]gatbps_y[_dst):
+	$][(AM@&t@_V_at){ \
+  ( \
+    x='\'''\''; \
+    x="$][$][{x}"'\''./'\''; \
+    x="$][$][{x}"$][(java_]gatbps_y[_sourcepath); \
+    x="$][$][{x}"$][(CLASSPATH_SEPARATOR); \
+    x="$][$][{x}"$][(srcdir)'\''/'\''$][(java_]gatbps_y[_sourcepath); \
+    case '\'''\''$][(CLASSPATH) in \
+      ?*) \
+        x="$][$][{x}"$][(CLASSPATH_SEPARATOR)$][(CLASSPATH); \
+      ;; \
+    esac; \
+    case '\'''\''$][(java_]gatbps_y[_CLASSPATH) in \
+      ?*) \
+        x="$][$][{x}"$][(CLASSPATH_SEPARATOR)$][(java_]gatbps_y[_CLASSPATH); \
+      ;; \
+    esac; \
+    '\''sh'\'' \
+      '\''-'\'' \
+      $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
+      '\''--'\'' \
+      "$][$][{x}" \
+      >'\''java-]gatbps_x[.tmp'\'' \
+    || '\''exit'\'' "$][$][{?}"; \
+    classpath=` \
+      '\''cat'\'' '\''java-]gatbps_x[.tmp'\'' \
+    ` || '\''exit'\'' "$][$][{?}"; \
+    x='\''x'\''; \
+    for y in $][(java_]gatbps_y[_JAVACFLAGS); do \
+      '\''sh'\'' \
+        '\''-'\'' \
+        $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
+        '\''--'\'' \
+        $][(java_]gatbps_y[_JAVACFLAGS) \
+        >'\''java-]gatbps_x[.tmp'\'' \
+      || '\''exit'\'' "$][$][{?}"; \
+      x='\'''\''; \
+      '\''break'\''; \
+    done; \
+    case "$][$][{x}" in \
+      ?*) \
+        '\''sh'\'' \
+          '\''-'\'' \
+          $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
+          '\''--'\'' \
+          $][(GATBPS_JAVACFLAGS) \
+          >'\''java-]gatbps_x[.tmp'\'' \
+        || '\''exit'\'' "$][$][{?}"; \
+      ;; \
+    esac; \
+    javacflags=` \
+      '\''cat'\'' '\''java-]gatbps_x[.tmp'\'' \
+    ` || '\''exit'\'' "$][$][{?}"; \
+    '\''sh'\'' \
+      '\''-'\'' \
+      $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
+      '\''--'\'' \
+      '\''./'\''$][(java_]gatbps_y[_sourcepath) \
+      >'\''java-]gatbps_x[.tmp'\'' \
+    || '\''exit'\'' "$][$][{?}"; \
+    sourcepath=` \
+      '\''cat'\'' '\''java-]gatbps_x[.tmp'\'' \
+    ` || '\''exit'\'' "$][$][{?}"; \
+    $][(MAKE) \
+      $][(AM@&t@_MAKEFLAGS) \
+      '\''GATBPS_RECURSIVE_CLASSPATH='\''"$][$][{classpath}" \
+      '\''GATBPS_RECURSIVE_JAVACFLAGS='\''"$][$][{javacflags}" \
+      '\''GATBPS_RECURSIVE_SOURCEPATH='\''"$][$][{sourcepath}" \
+      '\''./'\''$][(java_]gatbps_y[_dst_link) \
+    || '\''exit'\'' "$][$][{?}"; \
+    '\''exit'\'' '\''0'\''; \
+  :;); \
+  x="$][$][{?}"; \
+  '\''rm'\'' \
+    '\''-f'\'' \
+    '\''java-]gatbps_x[.tmp'\'' \
+  ; \
+  '\''exit'\'' "$][$][{x}"; \
+:;}
+
+./$][(java_]gatbps_y[_dst_link): $][(java_]gatbps_y[_dep)
+./$][(java_]gatbps_y[_dst_link): $][(java_]gatbps_y[_extra)
+./$][(java_]gatbps_y[_dst_link): $][(java_]gatbps_y[_src)
 	$][(GATBPS_V_JAR)$][(GATBPS_RECIPE_MARKER_TOP)
 	$][(AM@&t@_V_at){ \
   ( \
@@ -129,6 +210,7 @@ GATBPS_JAVA_RULES="$][{GATBPS_JAVA_RULES}"'
 :;}
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
+.PHONY: ./$][(java_]gatbps_y[_dst)
 .PHONY: clean-java-]gatbps_x[
 .PHONY: install-java-]gatbps_x[
 .PHONY: java-]gatbps_x[
@@ -227,86 +309,7 @@ install-java-]gatbps_x[: java-]gatbps_x[
 
 java: java-]gatbps_x[
 
-java-]gatbps_x[:
-	$][(AM@&t@_V_at){ \
-  ( \
-    x='\'''\''; \
-    x="$][$][{x}"'\''./'\''; \
-    x="$][$][{x}"$][(java_]gatbps_y[_sourcepath); \
-    x="$][$][{x}"$][(CLASSPATH_SEPARATOR); \
-    x="$][$][{x}"$][(srcdir)'\''/'\''$][(java_]gatbps_y[_sourcepath); \
-    case '\'''\''$][(CLASSPATH) in \
-      ?*) \
-        x="$][$][{x}"$][(CLASSPATH_SEPARATOR)$][(CLASSPATH); \
-      ;; \
-    esac; \
-    case '\'''\''$][(java_]gatbps_y[_CLASSPATH) in \
-      ?*) \
-        x="$][$][{x}"$][(CLASSPATH_SEPARATOR)$][(java_]gatbps_y[_CLASSPATH); \
-      ;; \
-    esac; \
-    '\''sh'\'' \
-      '\''-'\'' \
-      $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
-      '\''--'\'' \
-      "$][$][{x}" \
-      >'\''java-]gatbps_x[.tmp'\'' \
-    || '\''exit'\'' "$][$][{?}"; \
-    classpath=` \
-      '\''cat'\'' '\''java-]gatbps_x[.tmp'\'' \
-    ` || '\''exit'\'' "$][$][{?}"; \
-    x='\''x'\''; \
-    for y in $][(java_]gatbps_y[_JAVACFLAGS); do \
-      '\''sh'\'' \
-        '\''-'\'' \
-        $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
-        '\''--'\'' \
-        $][(java_]gatbps_y[_JAVACFLAGS) \
-        >'\''java-]gatbps_x[.tmp'\'' \
-      || '\''exit'\'' "$][$][{?}"; \
-      x='\'''\''; \
-      '\''break'\''; \
-    done; \
-    case "$][$][{x}" in \
-      ?*) \
-        '\''sh'\'' \
-          '\''-'\'' \
-          $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
-          '\''--'\'' \
-          $][(GATBPS_JAVACFLAGS) \
-          >'\''java-]gatbps_x[.tmp'\'' \
-        || '\''exit'\'' "$][$][{?}"; \
-      ;; \
-    esac; \
-    javacflags=` \
-      '\''cat'\'' '\''java-]gatbps_x[.tmp'\'' \
-    ` || '\''exit'\'' "$][$][{?}"; \
-    '\''sh'\'' \
-      '\''-'\'' \
-      $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
-      '\''--'\'' \
-      '\''./'\''$][(java_]gatbps_y[_sourcepath) \
-      >'\''java-]gatbps_x[.tmp'\'' \
-    || '\''exit'\'' "$][$][{?}"; \
-    sourcepath=` \
-      '\''cat'\'' '\''java-]gatbps_x[.tmp'\'' \
-    ` || '\''exit'\'' "$][$][{?}"; \
-    $][(MAKE) \
-      $][(AM@&t@_MAKEFLAGS) \
-      '\''GATBPS_RECURSIVE_CLASSPATH='\''"$][$][{classpath}" \
-      '\''GATBPS_RECURSIVE_JAVACFLAGS='\''"$][$][{javacflags}" \
-      '\''GATBPS_RECURSIVE_SOURCEPATH='\''"$][$][{sourcepath}" \
-      '\''./'\''$][(java_]gatbps_y[_dst) \
-    || '\''exit'\'' "$][$][{?}"; \
-    '\''exit'\'' '\''0'\''; \
-  :;); \
-  x="$][$][{?}"; \
-  '\''rm'\'' \
-    '\''-f'\'' \
-    '\''java-]gatbps_x[.tmp'\'' \
-  ; \
-  '\''exit'\'' "$][$][{x}"; \
-:;}
+java-]gatbps_x[: ./$][(java_]gatbps_y[_dst)
 
 uninstall-java: uninstall-java-]gatbps_x[
 

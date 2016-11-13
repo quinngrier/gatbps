@@ -50,9 +50,90 @@ SUFFIXES += .java
 
 ## begin_rules
 
-./$(java_dst): $(java_dep)
-./$(java_dst): $(java_extra)
-./$(java_dst): $(java_src)
+./$(java_dst):
+	$(AM_V_at){ \
+  ( \
+    x=''; \
+    x="$${x}"'./'; \
+    x="$${x}"$(java_sourcepath); \
+    x="$${x}"$(CLASSPATH_SEPARATOR); \
+    x="$${x}"$(srcdir)'/'$(java_sourcepath); \
+    case ''$(CLASSPATH) in \
+      ?*) \
+        x="$${x}"$(CLASSPATH_SEPARATOR)$(CLASSPATH); \
+      ;; \
+    esac; \
+    case ''$(java_CLASSPATH) in \
+      ?*) \
+        x="$${x}"$(CLASSPATH_SEPARATOR)$(java_CLASSPATH); \
+      ;; \
+    esac; \
+    'sh' \
+      '-' \
+      $(srcdir)'/build-aux/sh-form.sh' \
+      '--' \
+      "$${x}" \
+      >'java-main.tmp' \
+    || 'exit' "$${?}"; \
+    classpath=` \
+      'cat' 'java-main.tmp' \
+    ` || 'exit' "$${?}"; \
+    x='x'; \
+    for y in $(java_JAVACFLAGS); do \
+      'sh' \
+        '-' \
+        $(srcdir)'/build-aux/sh-form.sh' \
+        '--' \
+        $(java_JAVACFLAGS) \
+        >'java-main.tmp' \
+      || 'exit' "$${?}"; \
+      x=''; \
+      'break'; \
+    done; \
+    case "$${x}" in \
+      ?*) \
+        'sh' \
+          '-' \
+          $(srcdir)'/build-aux/sh-form.sh' \
+          '--' \
+          $(GATBPS_JAVACFLAGS) \
+          >'java-main.tmp' \
+        || 'exit' "$${?}"; \
+      ;; \
+    esac; \
+    javacflags=` \
+      'cat' 'java-main.tmp' \
+    ` || 'exit' "$${?}"; \
+    'sh' \
+      '-' \
+      $(srcdir)'/build-aux/sh-form.sh' \
+      '--' \
+      './'$(java_sourcepath) \
+      >'java-main.tmp' \
+    || 'exit' "$${?}"; \
+    sourcepath=` \
+      'cat' 'java-main.tmp' \
+    ` || 'exit' "$${?}"; \
+    $(MAKE) \
+      $(AM_MAKEFLAGS) \
+      'GATBPS_RECURSIVE_CLASSPATH='"$${classpath}" \
+      'GATBPS_RECURSIVE_JAVACFLAGS='"$${javacflags}" \
+      'GATBPS_RECURSIVE_SOURCEPATH='"$${sourcepath}" \
+      './'$(java_dst_link) \
+    || 'exit' "$${?}"; \
+    'exit' '0'; \
+  :;); \
+  x="$${?}"; \
+  'rm' \
+    '-f' \
+    'java-main.tmp' \
+  ; \
+  'exit' "$${x}"; \
+:;}
+
+./$(java_dst_link): $(java_dep)
+./$(java_dst_link): $(java_extra)
+./$(java_dst_link): $(java_src)
 	$(GATBPS_V_JAR)$(GATBPS_RECIPE_MARKER_TOP)
 	$(AM_V_at){ \
   ( \
@@ -145,6 +226,7 @@ SUFFIXES += .java
 :;}
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
+.PHONY: ./$(java_dst)
 .PHONY: clean-java
 .PHONY: clean-java-main
 .PHONY: install-java
@@ -267,86 +349,7 @@ install-java-main: java-main
 
 java: java-main
 
-java-main:
-	$(AM_V_at){ \
-  ( \
-    x=''; \
-    x="$${x}"'./'; \
-    x="$${x}"$(java_sourcepath); \
-    x="$${x}"$(CLASSPATH_SEPARATOR); \
-    x="$${x}"$(srcdir)'/'$(java_sourcepath); \
-    case ''$(CLASSPATH) in \
-      ?*) \
-        x="$${x}"$(CLASSPATH_SEPARATOR)$(CLASSPATH); \
-      ;; \
-    esac; \
-    case ''$(java_CLASSPATH) in \
-      ?*) \
-        x="$${x}"$(CLASSPATH_SEPARATOR)$(java_CLASSPATH); \
-      ;; \
-    esac; \
-    'sh' \
-      '-' \
-      $(srcdir)'/build-aux/sh-form.sh' \
-      '--' \
-      "$${x}" \
-      >'java-main.tmp' \
-    || 'exit' "$${?}"; \
-    classpath=` \
-      'cat' 'java-main.tmp' \
-    ` || 'exit' "$${?}"; \
-    x='x'; \
-    for y in $(java_JAVACFLAGS); do \
-      'sh' \
-        '-' \
-        $(srcdir)'/build-aux/sh-form.sh' \
-        '--' \
-        $(java_JAVACFLAGS) \
-        >'java-main.tmp' \
-      || 'exit' "$${?}"; \
-      x=''; \
-      'break'; \
-    done; \
-    case "$${x}" in \
-      ?*) \
-        'sh' \
-          '-' \
-          $(srcdir)'/build-aux/sh-form.sh' \
-          '--' \
-          $(GATBPS_JAVACFLAGS) \
-          >'java-main.tmp' \
-        || 'exit' "$${?}"; \
-      ;; \
-    esac; \
-    javacflags=` \
-      'cat' 'java-main.tmp' \
-    ` || 'exit' "$${?}"; \
-    'sh' \
-      '-' \
-      $(srcdir)'/build-aux/sh-form.sh' \
-      '--' \
-      './'$(java_sourcepath) \
-      >'java-main.tmp' \
-    || 'exit' "$${?}"; \
-    sourcepath=` \
-      'cat' 'java-main.tmp' \
-    ` || 'exit' "$${?}"; \
-    $(MAKE) \
-      $(AM_MAKEFLAGS) \
-      'GATBPS_RECURSIVE_CLASSPATH='"$${classpath}" \
-      'GATBPS_RECURSIVE_JAVACFLAGS='"$${javacflags}" \
-      'GATBPS_RECURSIVE_SOURCEPATH='"$${sourcepath}" \
-      './'$(java_dst) \
-    || 'exit' "$${?}"; \
-    'exit' '0'; \
-  :;); \
-  x="$${?}"; \
-  'rm' \
-    '-f' \
-    'java-main.tmp' \
-  ; \
-  'exit' "$${x}"; \
-:;}
+java-main: ./$(java_dst)
 
 uninstall-java: uninstall-java-main
 
