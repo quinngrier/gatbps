@@ -148,11 +148,13 @@ $(doxygen_dst) doxygen.dummy-2.main: $(doxygen_src)
       'cat' 'doxygen-main.tmp' \
     ` || 'exit' "$${?}"; \
     'readonly' 'SHELL_sh'; \
-    SHELL="$${SHELL_sh}" \
-    srcdir=$(srcdir) \
-    $(DOXYGEN) \
-      './'$(doxygen_src) \
-    || 'exit' "$${?}"; \
+    { \
+      SHELL="$${SHELL_sh}" \
+      srcdir=$(srcdir) \
+      $(DOXYGEN) \
+        './'$(doxygen_src) \
+      ; \
+    } || 'exit' "$${?}"; \
     'mv' \
       './'$(doxygen_dst)'.tmp' \
       './'$(doxygen_dst) \
