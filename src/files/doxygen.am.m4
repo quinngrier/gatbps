@@ -121,7 +121,7 @@ SUFFIXES += .dfv
 ## begin_rules
 
 $(doxygen_dfv) doxygen.dummy-1.main: $(doxygen_dep)
-$(doxygen_dfv) doxygen.dummy-1.main: doxygen.force.main
+$(doxygen_dfv) doxygen.dummy-1.main: doxygen.FORCE.main
 
 $(doxygen_dst) doxygen.dummy-2.main: $(doxygen_dep)
 $(doxygen_dst) doxygen.dummy-2.main: $(doxygen_dfv)
@@ -185,13 +185,13 @@ $(doxygen_dst) doxygen.dummy-2.main: $(doxygen_src)
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
 $(doxygen_src) doxygen.dummy-3.main: $(doxygen_dep)
-$(doxygen_src) doxygen.dummy-3.main: doxygen.force.main
+$(doxygen_src) doxygen.dummy-3.main: doxygen.FORCE.main
 
 .PHONY: clean-doxygen
 .PHONY: clean-doxygen-main
 .PHONY: doxygen
 .PHONY: doxygen-main
-.PHONY: doxygen.force.main
+.PHONY: doxygen.FORCE.main
 
 .am_df_INPUT.df:
 	$(AM_V_GEN)$(GATBPS_RECIPE_MARKER_TOP)
@@ -224,9 +224,9 @@ $(doxygen_src) doxygen.dummy-3.main: doxygen.force.main
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
 clean-doxygen: clean-doxygen-main
-clean-doxygen: doxygen.force.main
+clean-doxygen: doxygen.FORCE.main
 
-clean-doxygen-main: doxygen.force.main
+clean-doxygen-main: doxygen.FORCE.main
 	-{ \
   case ''$(doxygen_dst) in \
     ?*) \
@@ -243,12 +243,12 @@ clean-doxygen-main: doxygen.force.main
 clean-local: clean-doxygen
 
 doxygen: doxygen-main
-doxygen: doxygen.force.main
+doxygen: doxygen.FORCE.main
 
 doxygen-main: $(doxygen_dst)
-doxygen-main: doxygen.force.main
+doxygen-main: doxygen.FORCE.main
 
-doxygen.force.main:
+doxygen.FORCE.main:
 
 ## end_rules
 
