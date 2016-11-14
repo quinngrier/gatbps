@@ -124,7 +124,7 @@ files = \
 ## begin_rules
 
 $(files): FORCE
-	@$(MKDIR_P) './'$(@D)
+	$(MKDIR_P) './'$(@D)
 	$(GENERATE) './'$@
 
 .PHONY: $(files)
