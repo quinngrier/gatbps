@@ -127,7 +127,6 @@ $(files): FORCE
 	$(MKDIR_P) './'$(@D)
 	$(GENERATE) './'$@
 
-.PHONY: $(files)
 .PHONY: FORCE
 .PHONY: all
 
