@@ -123,14 +123,18 @@ files = \
 
 ## begin_rules
 
-$(files):
+$(files): FORCE
 	@$(MKDIR_P) './'$(@D)
 	$(GENERATE) './'$@
 
 .PHONY: $(files)
+.PHONY: FORCE
 .PHONY: all
 
+FORCE:
+
 all: $(files)
+all: FORCE
 
 ## end_rules
 
