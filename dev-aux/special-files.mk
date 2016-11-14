@@ -131,6 +131,8 @@ $(files): FORCE
 .PHONY: FORCE
 .PHONY: all
 
+.SUFFIXES:
+
 FORCE:
 
 all: $(files)
