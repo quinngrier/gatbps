@@ -194,8 +194,6 @@ $(doxygen_dst) doxygen.DUMMY_2.main: $(doxygen_src)
 $(doxygen_src) doxygen.DUMMY_3.main: $(doxygen_dep)
 $(doxygen_src) doxygen.DUMMY_3.main: doxygen.FORCE.main
 
-.PHONY: $(doxygen_dfv)
-.PHONY: $(doxygen_src)
 .PHONY: clean-doxygen
 .PHONY: clean-doxygen-main
 .PHONY: doxygen
