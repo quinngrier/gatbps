@@ -51,6 +51,7 @@ SUFFIXES += .java
 ## begin_rules
 
 ./$(java_dst):
+	$(GATBPS_V_JAR)$(GATBPS_RECIPE_MARKER_TOP)
 	$(AM_V_at){ \
   ( \
     x=''; \
@@ -130,11 +131,12 @@ SUFFIXES += .java
   ; \
   'exit' "$${x}"; \
 :;}
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
 ./$(java_dst_link): $(java_dep)
 ./$(java_dst_link): $(java_extra)
 ./$(java_dst_link): $(java_src)
-	$(GATBPS_V_JAR)$(GATBPS_RECIPE_MARKER_TOP)
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
 	$(AM_V_at){ \
   ( \
     'rm' \

@@ -35,6 +35,7 @@ m4_pushdef([gatbps_x], [$1])
 GATBPS_JAVA_RULES="$][{GATBPS_JAVA_RULES}"'
 
 ./$][(java_]gatbps_y[_dst):
+	$][(GATBPS_V_JAR)$][(GATBPS_RECIPE_MARKER_TOP)
 	$][(AM@&t@_V_at){ \
   ( \
     x='\'''\''; \
@@ -114,11 +115,12 @@ GATBPS_JAVA_RULES="$][{GATBPS_JAVA_RULES}"'
   ; \
   '\''exit'\'' "$][$][{x}"; \
 :;}
+	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
 ./$][(java_]gatbps_y[_dst_link): $][(java_]gatbps_y[_dep)
 ./$][(java_]gatbps_y[_dst_link): $][(java_]gatbps_y[_extra)
 ./$][(java_]gatbps_y[_dst_link): $][(java_]gatbps_y[_src)
-	$][(GATBPS_V_JAR)$][(GATBPS_RECIPE_MARKER_TOP)
+	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_TOP)
 	$][(AM@&t@_V_at){ \
   ( \
     '\''rm'\'' \
