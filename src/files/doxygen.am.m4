@@ -120,6 +120,7 @@ SUFFIXES += .dfv
 
 ## begin_rules
 
+$(doxygen_dfv) doxygen.dummy-1.main: $(doxygen_dep)
 $(doxygen_dfv) doxygen.dummy-1.main: doxygen.force.main
 
 $(doxygen_dst) doxygen.dummy-2.main: $(doxygen_dep)
