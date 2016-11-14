@@ -224,8 +224,9 @@ $(doxygen_src) doxygen.dummy-3.main: doxygen.force.main
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
 clean-doxygen: clean-doxygen-main
+clean-doxygen: doxygen.force.main
 
-clean-doxygen-main:
+clean-doxygen-main: doxygen.force.main
 	-{ \
   case ''$(doxygen_dst) in \
     ?*) \
@@ -242,8 +243,12 @@ clean-doxygen-main:
 clean-local: clean-doxygen
 
 doxygen: doxygen-main
+doxygen: doxygen.force.main
 
 doxygen-main: $(doxygen_dst)
+doxygen-main: doxygen.force.main
+
+doxygen.force.main:
 
 ## end_rules
 
