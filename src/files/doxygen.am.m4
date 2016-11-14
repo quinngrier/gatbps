@@ -204,16 +204,41 @@ $(doxygen_src) doxygen.DUMMY_3.main: doxygen.FORCE.main
 
 .am_df_INPUT.df:
 	$(AM_V_GEN)$(GATBPS_RECIPE_MARKER_TOP)
+	$(AM_V_at)'rm' \
+  '-f' \
+  './'$@ \
+  './'$@'.tmp' \
+;
 	$(AM_V_at)$(MKDIR_P) \
   './'$(@D) \
 ;
 	$(AM_V_at){ \
-  $(AWK) \
-    $(GATBPS_AM_DF_INPUT_TO_DF_SCRIPT) \
-    <$< \
-    >$@ \
-  || 'exit' "$${?}"; \
-  'exit' '0'; \
+  ( \
+    $(AWK) \
+      $(GATBPS_AM_DF_INPUT_TO_DF_SCRIPT) \
+      <$< \
+      >'./'$@'.tmp' \
+    || 'exit' "$${?}"; \
+    'mv' \
+      './'$@'.tmp' \
+      './'$@ \
+    || 'exit' "$${?}"; \
+    'exit' '0'; \
+  :;); \
+  exit_status="$${?}"; \
+  'readonly' 'exit_status'; \
+  case "$${exit_status}" in \
+    '0') \
+    ;; \
+    *) \
+      'rm' \
+      '-f' \
+      './'$@ \
+      './'$@'.tmp' \
+      ; \
+    ;; \
+  esac; \
+  'exit' "$${exit_status}"; \
 :;}
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
