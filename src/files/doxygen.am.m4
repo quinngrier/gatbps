@@ -120,12 +120,12 @@ SUFFIXES += .dfv
 
 ## begin_rules
 
-$(doxygen_dfv) doxygen.dummy-1.main: $(doxygen_dep)
-$(doxygen_dfv) doxygen.dummy-1.main: doxygen.FORCE.main
+$(doxygen_dfv) doxygen.DUMMY_1.main: $(doxygen_dep)
+$(doxygen_dfv) doxygen.DUMMY_1.main: doxygen.FORCE.main
 
-$(doxygen_dst) doxygen.dummy-2.main: $(doxygen_dep)
-$(doxygen_dst) doxygen.dummy-2.main: $(doxygen_dfv)
-$(doxygen_dst) doxygen.dummy-2.main: $(doxygen_src)
+$(doxygen_dst) doxygen.DUMMY_2.main: $(doxygen_dep)
+$(doxygen_dst) doxygen.DUMMY_2.main: $(doxygen_dfv)
+$(doxygen_dst) doxygen.DUMMY_2.main: $(doxygen_src)
 	$(GATBPS_V_DOXYGEN)$(GATBPS_RECIPE_MARKER_TOP)
 	$(AM_V_at)'rm' \
   '-f' \
@@ -184,8 +184,8 @@ $(doxygen_dst) doxygen.dummy-2.main: $(doxygen_src)
 :;}
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
-$(doxygen_src) doxygen.dummy-3.main: $(doxygen_dep)
-$(doxygen_src) doxygen.dummy-3.main: doxygen.FORCE.main
+$(doxygen_src) doxygen.DUMMY_3.main: $(doxygen_dep)
+$(doxygen_src) doxygen.DUMMY_3.main: doxygen.FORCE.main
 
 .PHONY: $(doxygen_dfv)
 .PHONY: $(doxygen_src)
