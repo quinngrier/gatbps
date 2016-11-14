@@ -184,6 +184,7 @@ $(doxygen_dst) doxygen.dummy-2.main: $(doxygen_src)
 :;}
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
+$(doxygen_src) doxygen.dummy-3.main: $(doxygen_dep)
 $(doxygen_src) doxygen.dummy-3.main: doxygen.force.main
 
 .PHONY: clean-doxygen
