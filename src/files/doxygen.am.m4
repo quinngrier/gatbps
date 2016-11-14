@@ -149,11 +149,18 @@ $(doxygen_dst) doxygen.DUMMY_2.main: $(doxygen_src)
       'cat' 'doxygen-main.tmp' \
     ` || 'exit' "$${?}"; \
     'readonly' 'SHELL_sh'; \
+    doxygen_src=$(doxygen_src); \
+    $(GATBPS_VPATH_SEARCH_TOP) \
+      "$${doxygen_src}" \
+    $(GATBPS_VPATH_SEARCH_BOT); \
+    d=$(GATBPS_VPATH_SEARCH_RESULT); \
+    doxygen_src="$${d}"'/'"$${doxygen_src}"; \
+    'readonly' 'doxygen_src'; \
     { \
       SHELL="$${SHELL_sh}" \
       srcdir=$(srcdir) \
       $(DOXYGEN) \
-        './'$(doxygen_src) \
+        "$${doxygen_src}" \
       ; \
     } || 'exit' "$${?}"; \
     'mv' \
