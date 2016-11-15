@@ -34,9 +34,9 @@ m4_pushdef([gatbps_x], [$1])
 
 GATBPS_JAVA_RULES="$][{GATBPS_JAVA_RULES}"'
 
-./$][(java_]gatbps_y[_dst) java.DUMMY_1.]gatbps_x[: $][(java_]gatbps_y[_dep)
-./$][(java_]gatbps_y[_dst) java.DUMMY_1.]gatbps_x[: $][(java_]gatbps_y[_extra)
-./$][(java_]gatbps_y[_dst) java.DUMMY_1.]gatbps_x[: $][(javadoc_]gatbps_y[_src)
+$][(java_]gatbps_y[_dst) java.DUMMY_1.]gatbps_x[: $][(java_]gatbps_y[_dep)
+$][(java_]gatbps_y[_dst) java.DUMMY_1.]gatbps_x[: $][(java_]gatbps_y[_extra)
+$][(java_]gatbps_y[_dst) java.DUMMY_1.]gatbps_x[: $][(javadoc_]gatbps_y[_src)
 	$][(GATBPS_V_JAR)$][(GATBPS_RECIPE_MARKER_TOP)
 	$][(AM@&t@_V_at){ \
   ( \
@@ -313,7 +313,7 @@ install-java-]gatbps_x[: java.FORCE
 
 java: java-]gatbps_x[
 
-java-]gatbps_x[: ./$][(java_]gatbps_y[_dst)
+java-]gatbps_x[: $][(java_]gatbps_y[_dst)
 java-]gatbps_x[: java.FORCE
 
 uninstall-java: uninstall-java-]gatbps_x[
