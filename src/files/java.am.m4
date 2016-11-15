@@ -50,7 +50,9 @@ SUFFIXES += .java
 
 ## begin_rules
 
-./$(java_dst):
+./$(java_dst): $(java_dep)
+./$(java_dst): $(java_extra)
+./$(java_dst): $(javadoc_src)
 	$(GATBPS_V_JAR)$(GATBPS_RECIPE_MARKER_TOP)
 	$(AM_V_at){ \
   ( \
@@ -228,7 +230,6 @@ SUFFIXES += .java
 :;}
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
-.PHONY: ./$(java_dst)
 .PHONY: clean-java
 .PHONY: clean-java-main
 .PHONY: install-java

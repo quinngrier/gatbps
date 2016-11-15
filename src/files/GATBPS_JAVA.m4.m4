@@ -34,7 +34,9 @@ m4_pushdef([gatbps_x], [$1])
 
 GATBPS_JAVA_RULES="$][{GATBPS_JAVA_RULES}"'
 
-./$][(java_]gatbps_y[_dst):
+./$][(java_]gatbps_y[_dst): $][(java_]gatbps_y[_dep)
+./$][(java_]gatbps_y[_dst): $][(java_]gatbps_y[_extra)
+./$][(java_]gatbps_y[_dst): $][(javadoc_]gatbps_y[_src)
 	$][(GATBPS_V_JAR)$][(GATBPS_RECIPE_MARKER_TOP)
 	$][(AM@&t@_V_at){ \
   ( \
@@ -212,7 +214,6 @@ GATBPS_JAVA_RULES="$][{GATBPS_JAVA_RULES}"'
 :;}
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
-.PHONY: ./$][(java_]gatbps_y[_dst)
 .PHONY: clean-java-]gatbps_x[
 .PHONY: install-java-]gatbps_x[
 .PHONY: java-]gatbps_x[
