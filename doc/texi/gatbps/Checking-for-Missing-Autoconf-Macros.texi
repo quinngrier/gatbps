@@ -54,6 +54,26 @@ so the script will probably fail with an error message like this:
 @end example
 
 GATBPS provides a system that can catch such mistakes at Autoconf time@.
+
+Add the following line to your
+@w{@t{configure.@:ac}}
+file just after calling the
+@w{@t{AC_INIT}}
+macro:
+
+@example
+gatbps_check_for_missing_gatbps_macros || exit $?
+@end example
+
+If you have not included any GATBPS macros or not called any that you
+have included, then Autoconf will succeed and the
+@w{@t{configure}}
+script will fail with a message like this:
+
+@example
+./configure: line 1664:
+gatbps_check_for_missing_gatbps_macros: command not found
+@end example
 @ifxml
 @ifnotxml
 @c
