@@ -230,9 +230,9 @@ $(doxygen_src) doxygen.DUMMY_3.main: doxygen.FORCE.main
     ;; \
     *) \
       'rm' \
-      '-f' \
-      './'$@ \
-      './'$@'.tmp' \
+        '-f' \
+        './'$@ \
+        './'$@'.tmp' \
       ; \
     ;; \
   esac; \
@@ -270,9 +270,9 @@ $(doxygen_src) doxygen.DUMMY_3.main: doxygen.FORCE.main
     ;; \
     *) \
       'rm' \
-      '-f' \
-      './'$@ \
-      './'$@'.tmp' \
+        '-f' \
+        './'$@ \
+        './'$@'.tmp' \
       ; \
     ;; \
   esac; \
