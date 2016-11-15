@@ -40,8 +40,10 @@ EOF1
               ;;
             esac
 
-            'shift'
-|%}recursion_code_helper(shift($@)){%|
+            'shift'|%}dnl
+recursion_code_helper(shift($@)){%||%}dnl
+{%|
+
             case "$|%}{%|{#}" in
               '0')
                 'set' ''
