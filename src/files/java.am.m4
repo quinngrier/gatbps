@@ -50,9 +50,9 @@ SUFFIXES += .java
 
 ## begin_rules
 
-./$(java_dst): $(java_dep)
-./$(java_dst): $(java_extra)
-./$(java_dst): $(javadoc_src)
+./$(java_dst) java.DUMMY_1.main: $(java_dep)
+./$(java_dst) java.DUMMY_1.main: $(java_extra)
+./$(java_dst) java.DUMMY_1.main: $(javadoc_src)
 	$(GATBPS_V_JAR)$(GATBPS_RECIPE_MARKER_TOP)
 	$(AM_V_at){ \
   ( \
@@ -135,9 +135,9 @@ SUFFIXES += .java
 :;}
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
-./$(java_dst_link): $(java_dep)
-./$(java_dst_link): $(java_extra)
-./$(java_dst_link): $(java_src)
+./$(java_dst_link) java.DUMMY_2.main: $(java_dep)
+./$(java_dst_link) java.DUMMY_2.main: $(java_extra)
+./$(java_dst_link) java.DUMMY_2.main: $(java_src)
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
 	$(AM_V_at){ \
   ( \
