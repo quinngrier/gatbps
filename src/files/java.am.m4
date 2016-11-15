@@ -236,6 +236,7 @@ SUFFIXES += .java
 .PHONY: install-java-main
 .PHONY: java
 .PHONY: java-main
+.PHONY: java.FORCE
 .PHONY: uninstall-java
 .PHONY: uninstall-java-main
 
@@ -258,8 +259,9 @@ SUFFIXES += .java
 ;
 
 clean-java: clean-java-main
+clean-java: java.FORCE
 
-clean-java-main:
+clean-java-main: java.FORCE
 	-{ \
   for x in \
     $(java_dst) \
@@ -277,8 +279,10 @@ clean-java-main:
 clean-local: clean-java
 
 install-java: install-java-main
+install-java: java.FORCE
 
 install-java-main: java-main
+install-java-main: java.FORCE
 	@$(NORMAL_INSTALL)
 	$(AM_V_at)|%}contains_exactly_one_word(
   {%|java_dst|%}){%||%}dnl
@@ -351,12 +355,17 @@ install-java-main: java-main
 :;}
 
 java: java-main
+java: java.FORCE
 
 java-main: ./$(java_dst)
+java-main: java.FORCE
 
+java.FORCE:
+
+uninstall-java: java.FORCE
 uninstall-java: uninstall-java-main
 
-uninstall-java-main:
+uninstall-java-main: java.FORCE
 	@$(NORMAL_UNINSTALL)
 	$(AM_V_at)|%}contains_exactly_one_word(
   {%|java_dst|%}){%||%}dnl

@@ -221,7 +221,7 @@ GATBPS_JAVA_RULES="$][{GATBPS_JAVA_RULES}"'
 
 clean-java: clean-java-]gatbps_x[
 
-clean-java-]gatbps_x[:
+clean-java-]gatbps_x[: java.FORCE
 	-{ \
   for x in \
     $][(java_]gatbps_y[_dst) \
@@ -239,6 +239,7 @@ clean-java-]gatbps_x[:
 install-java: install-java-]gatbps_x[
 
 install-java-]gatbps_x[: java-]gatbps_x[
+install-java-]gatbps_x[: java.FORCE
 	@$][(NORMAL_INSTALL)
 	$][(AM@&t@_V_at)|%}contains_exactly_one_word_sh(
   {%|java_]gatbps_y[_dst|%}){%||%}dnl
@@ -313,10 +314,11 @@ install-java-]gatbps_x[: java-]gatbps_x[
 java: java-]gatbps_x[
 
 java-]gatbps_x[: ./$][(java_]gatbps_y[_dst)
+java-]gatbps_x[: java.FORCE
 
 uninstall-java: uninstall-java-]gatbps_x[
 
-uninstall-java-]gatbps_x[:
+uninstall-java-]gatbps_x[: java.FORCE
 	@$][(NORMAL_UNINSTALL)
 	$][(AM@&t@_V_at)|%}contains_exactly_one_word_sh(
   {%|java_]gatbps_y[_dst|%}){%||%}dnl
