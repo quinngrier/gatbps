@@ -74,7 +74,7 @@ script will fail with a message like this:
 
 @example
 AC_DEFUN([foo_check_macros], [dnl
-gatbps_autoconf_boundary(
+gatbps_check_macros_code(
   [bar],
   [])[]dnl
 ])[]dnl

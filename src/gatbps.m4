@@ -589,7 +589,7 @@ EOF1
           'set' "${prefix}"'gatbps_rule_word_error.m4' "${@}"
           'set' "${prefix}"'gatbps_notice.m4' "${@}"
           'set' "${prefix}"'gatbps_fatal.m4' "${@}"
-          'set' "${prefix}"'gatbps_autoconf_boundary.m4' "${@}"
+          'set' "${prefix}"'gatbps_check_macros_code.m4' "${@}"
           'set' "${prefix}"'gatbps.am' "${@}"
           'set' "${prefix}"'format.java.vim' "${@}"
           'set' "${prefix}"'format.c.vim' "${@}"
@@ -1367,7 +1367,7 @@ EOF1
 
 |%}help_code({%|gatbps.am|%}){%|
 
-|%}help_code({%|gatbps_autoconf_boundary.m4|%}){%|
+|%}help_code({%|gatbps_check_macros_code.m4|%}){%|
 
 |%}help_code({%|gatbps_fatal.m4|%}){%|
 
@@ -3091,7 +3091,7 @@ EOF1
 
 |%}generation_code({%|gatbps.am|%}){%|
 
-|%}generation_code({%|gatbps_autoconf_boundary.m4|%}){%|
+|%}generation_code({%|gatbps_check_macros_code.m4|%}){%|
 
 |%}generation_code({%|gatbps_fatal.m4|%}){%|
 
@@ -4289,7 +4289,7 @@ include(`src/recursion/gatbps.am.rc.m4'){%||%}dnl
 
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/gatbps_autoconf_boundary.m4.rc.m4'){%||%}dnl
+include(`src/recursion/gatbps_check_macros_code.m4.rc.m4'){%||%}dnl
 {%|
 
 |%}dnl

@@ -1,11 +1,13 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|doc/help/gatbps_autoconf_boundary.m4.hd.m4|%}){%||%}dnl
+rules_code({%|src/recursion/gatbps_check_macros_code.m4.rc.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
-{%|Special file: ${fB1}gatbps_autoconf_boundary.m4${fR1}
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.|%}dnl
+include({%|src/tools/recursion_code.m4|%}){%||%}dnl
+recursion_code(
+  {%|gatbps_check_macros_code.m4|%},
+  {%|CC0-1.0.txt|%},
+  {%||%}){%||%}dnl
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by

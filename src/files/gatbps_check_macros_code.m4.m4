@@ -1,7 +1,7 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|src/files/gatbps_autoconf_boundary.m4.m4|%}){%||%}dnl
+rules_code({%|src/files/gatbps_check_macros_code.m4.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/PACKAGE_DATE_DAY_ZPAD.m4|%}){%||%}dnl
 include({%|src/tools/PACKAGE_DATE_MONTH_ZPAD.m4|%}){%||%}dnl
@@ -11,7 +11,7 @@ include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
 header_comment({%|dnl|%}, {%|dnl|%}){%|
 dnl
-dnl Special file: gatbps_autoconf_boundary.m4
+dnl Special file: gatbps_check_macros_code.m4
 dnl
 dnl For more information, see the GATBPS manual.
 dnl
@@ -22,11 +22,11 @@ PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 {%|
 |%}dnl
 autoconf_boundary(
-  {%|gatbps_autoconf_boundary|%},
+  {%|gatbps_check_macros_code|%},
   {%||%}){%||%}dnl
 {%|
-AC_DEFUN([gatbps_autoconf_boundary], [dnl
-gatbps_autoconf_boundary_check_macros[]dnl
+AC_DEFUN([gatbps_check_macros_code], [dnl
+gatbps_check_macros_code_check_macros[]dnl
 m4_if(
   [$1],
   [],
@@ -74,7 +74,7 @@ m4_fatal(
 )[]dnl
 ])[]dnl
 $1_check_macros[]dnl
-gatbps_autoconf_boundary(m4_shift($@))[]dnl
+gatbps_check_macros_code(m4_shift($@))[]dnl
 ])[]dnl
 ])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})

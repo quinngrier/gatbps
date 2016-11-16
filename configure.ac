@@ -887,7 +887,7 @@ AC_SUBST([TEXI2DVIFLAGS])
   [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/gatbps_autoconf_boundary.m4],
+  [src/files/gatbps_check_macros_code.m4],
   [mostlyclean])[
 
 ]GATBPS_M4(
