@@ -71,6 +71,18 @@ script will fail with a message like this:
 @example
 ./configure: line 1664: gatbps_check_macros: command not found
 @end example
+
+@example
+AC_DEFUN([foo_check_macros], [dnl
+gatbps_autoconf_boundary(
+  [bar],
+  [])[]dnl
+])[]dnl
+AC_DEFUN([foo], [dnl
+foo_check_macros[]dnl
+...
+])[]dnl
+@end example
 @ifxml
 @ifnotxml
 @c
