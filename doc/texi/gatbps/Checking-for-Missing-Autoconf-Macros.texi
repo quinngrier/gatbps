@@ -60,7 +60,7 @@ file just after calling the
 macro:
 
 @example
-gatbps_check_for_missing_gatbps_macros || exit $?
+gatbps_check_macros || exit $?
 @end example
 
 If you have not included any GATBPS macros or not called any that you
@@ -70,7 +70,7 @@ script will fail with a message like this:
 
 @example
 ./configure: line 1664:
-gatbps_check_for_missing_gatbps_macros: command not found
+gatbps_check_macros: command not found
 @end example
 @ifxml
 @ifnotxml
