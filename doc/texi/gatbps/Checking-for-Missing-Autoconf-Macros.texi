@@ -3,14 +3,12 @@
 
 @noindent
 GATBPS provides a number of special files that define Autoconf macros@.
-In accordance with the conventions of the
-@w{@t{aclocal}}
-program, each file defines a main macro and zero or more helper macros
-that are used by the main macro@.
+Each file defines one main macro and zero or more helper macros that
+help implement the main macro@.
 You can selectively include only the files that you need, but some main
 macros depend on other main macros, so you must remember to include the
 files for those macros too@.
-You can list these dependencies with the
+You can list the dependencies with the
 @w{@t{-@w{-}dry-run}}
 and
 @w{@t{-@w{-}recursive}}
