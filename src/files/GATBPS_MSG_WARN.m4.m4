@@ -32,7 +32,7 @@ AC_DEFUN([GATBPS_MSG_WARN], [[{
 # The block that contains this comment is an expansion of the
 # GATBPS_MSG_WARN macro.
 #]dnl
-GATBPS_MSG_WARN_check_prerequisites[]dnl
+GATBPS_MSG_WARN_check_macros[]dnl
 [
 
 ]m4_if(

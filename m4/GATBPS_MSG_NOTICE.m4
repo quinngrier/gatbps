@@ -10,7 +10,7 @@ dnl
 dnl For more information, see the GATBPS manual.
 dnl
 #serial 20161111
-AC_DEFUN([GATBPS_MSG_NOTICE_check_prerequisites], [dnl
+AC_DEFUN([GATBPS_MSG_NOTICE_check_macros], [dnl
 ]dnl
 m4_ifndef(
   [gatbps_check_macros],
@@ -18,13 +18,13 @@ m4_ifndef(
     [gatbps_check_macros],
     [dnl
 [# gatbps_check_macros]dnl
-GATBPS_MSG_NOTICE_check_prerequisites[]dnl
+GATBPS_MSG_NOTICE_check_macros[]dnl
 ])],
   [m4_define(
     [gatbps_check_macros],
     [dnl
 ]m4_defn([gatbps_check_macros])[dnl
-GATBPS_MSG_NOTICE_check_prerequisites[]dnl
+GATBPS_MSG_NOTICE_check_macros[]dnl
 ])])[]dnl
 )[]dnl
 AC_DEFUN([GATBPS_MSG_NOTICE], [[{
@@ -33,7 +33,7 @@ AC_DEFUN([GATBPS_MSG_NOTICE], [[{
 # The block that contains this comment is an expansion of the
 # GATBPS_MSG_NOTICE macro.
 #]dnl
-GATBPS_MSG_NOTICE_check_prerequisites[]dnl
+GATBPS_MSG_NOTICE_check_macros[]dnl
 [
 
 ]m4_if(

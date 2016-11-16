@@ -38,18 +38,18 @@ m4_fatal(
 )[]dnl
 ])[]dnl
 m4_ifndef(
-  [$1_check_prerequisites],
+  [$1_check_macros],
   [dnl
 m4_errprintn(
 m4_location[: error: ]dnl
-[$1_check_prerequisites ]dnl
+[$1_check_macros ]dnl
 [is not defined]dnl
 )[]dnl
 m4_fatal(
 [this means that there is a bug in GATBPS]dnl
 )[]dnl
 ])[]dnl
-$1_check_prerequisites[]dnl|%}dnl
+$1_check_macros[]dnl|%}dnl
 autoconf_boundary_helper(shift($@)){%||%}dnl
 |%})|%})|%}){%||%}dnl
 dnl

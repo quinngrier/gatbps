@@ -31,7 +31,7 @@ AC_DEFUN([GATBPS_MSG_NOTICE], [[{
 # The block that contains this comment is an expansion of the
 # GATBPS_MSG_NOTICE macro.
 #]dnl
-GATBPS_MSG_NOTICE_check_prerequisites[]dnl
+GATBPS_MSG_NOTICE_check_macros[]dnl
 [
 
 ]m4_if(

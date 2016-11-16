@@ -10,7 +10,7 @@ dnl
 dnl For more information, see the GATBPS manual.
 dnl
 #serial 20161111
-AC_DEFUN([GATBPS_DEFINE_DATE_check_prerequisites], [dnl
+AC_DEFUN([GATBPS_DEFINE_DATE_check_macros], [dnl
 m4_ifndef(
   [gatbps_fatal],
   [dnl
@@ -25,18 +25,18 @@ m4_fatal(
 )[]dnl
 ])[]dnl
 m4_ifndef(
-  [gatbps_fatal_check_prerequisites],
+  [gatbps_fatal_check_macros],
   [dnl
 m4_errprintn(
 m4_location[: error: ]dnl
-[gatbps_fatal_check_prerequisites ]dnl
+[gatbps_fatal_check_macros ]dnl
 [is not defined]dnl
 )[]dnl
 m4_fatal(
 [this means that there is a bug in GATBPS]dnl
 )[]dnl
 ])[]dnl
-gatbps_fatal_check_prerequisites[]dnl
+gatbps_fatal_check_macros[]dnl
 ]dnl
 m4_ifndef(
   [gatbps_check_macros],
@@ -44,13 +44,13 @@ m4_ifndef(
     [gatbps_check_macros],
     [dnl
 [# gatbps_check_macros]dnl
-GATBPS_DEFINE_DATE_check_prerequisites[]dnl
+GATBPS_DEFINE_DATE_check_macros[]dnl
 ])],
   [m4_define(
     [gatbps_check_macros],
     [dnl
 ]m4_defn([gatbps_check_macros])[dnl
-GATBPS_DEFINE_DATE_check_prerequisites[]dnl
+GATBPS_DEFINE_DATE_check_macros[]dnl
 ])])[]dnl
 )[]dnl
 AC_DEFUN([GATBPS_DEFINE_DATE], [[{
@@ -64,7 +64,7 @@ m4_if(
   [[
 #]])[ ($1)$2.
 #]dnl
-GATBPS_DEFINE_DATE_check_prerequisites[]dnl
+GATBPS_DEFINE_DATE_check_macros[]dnl
 m4_if(
   m4_eval([$# < 2 || $# > 3]),
   [1],

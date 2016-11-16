@@ -19,7 +19,7 @@ ifelse({%|$#|%}, {%|1|%}, {%|{%|was|%}|%}, {%|{%|were|%}|%}){%||%}dnl
 {%| given)|%}dnl
 {%|
 |%}){%||%}m4exit({%|1|%})|%}){%||%}dnl
-{%|AC_DEFUN([$1_check_prerequisites], [dnl|%}dnl
+{%|AC_DEFUN([$1_check_macros], [dnl|%}dnl
 autoconf_boundary_helper(shift($@)){%|]dnl
 m4_ifndef(
   [gatbps_check_macros],
@@ -27,13 +27,13 @@ m4_ifndef(
     [gatbps_check_macros],
     [dnl
 [# gatbps_check_macros]dnl
-$1_check_prerequisites[]dnl
+$1_check_macros[]dnl
 ])],
   [m4_define(
     [gatbps_check_macros],
     [dnl
 ]m4_defn([gatbps_check_macros])[dnl
-$1_check_prerequisites[]dnl
+$1_check_macros[]dnl
 ])])[]dnl
 )[]dnl|%}dnl
 |%})|%}){%||%}dnl

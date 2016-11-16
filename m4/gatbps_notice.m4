@@ -10,7 +10,7 @@ dnl
 dnl For more information, see the GATBPS manual.
 dnl
 #serial 20161111
-AC_DEFUN([gatbps_notice_check_prerequisites], [dnl
+AC_DEFUN([gatbps_notice_check_macros], [dnl
 ]dnl
 m4_ifndef(
   [gatbps_check_macros],
@@ -18,17 +18,17 @@ m4_ifndef(
     [gatbps_check_macros],
     [dnl
 [# gatbps_check_macros]dnl
-gatbps_notice_check_prerequisites[]dnl
+gatbps_notice_check_macros[]dnl
 ])],
   [m4_define(
     [gatbps_check_macros],
     [dnl
 ]m4_defn([gatbps_check_macros])[dnl
-gatbps_notice_check_prerequisites[]dnl
+gatbps_notice_check_macros[]dnl
 ])])[]dnl
 )[]dnl
 AC_DEFUN([gatbps_notice], [dnl
-gatbps_notice_check_prerequisites[]dnl
+gatbps_notice_check_macros[]dnl
 m4_if(
   m4_eval([$# <= 1]),
   [1],

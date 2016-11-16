@@ -27,7 +27,7 @@ autoconf_boundary(
   {%||%}){%||%}dnl
 {%|
 AC_DEFUN([gatbps_fatal], [dnl
-gatbps_fatal_check_prerequisites[]dnl
+gatbps_fatal_check_macros[]dnl
 m4_if(
   m4_eval([$# <= 1]),
   [1],
