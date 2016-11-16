@@ -69,13 +69,13 @@ docbook_dist_dep += $(doc_gatbps_TEXINFOS)
 docbook_dist_dep += doc/gatbps.texi
 
 docbook_dist_dst =
-docbook_dist_dst += doc/gatbps-$(PACKAGE_VERSION).dbk
+docbook_dist_dst += doc/gatbps-$(PACKAGE_VERSION)-docbook.xml
 
 docbook_dist_src =
-docbook_dist_src += doc/gatbps.dbk
+docbook_dist_src += doc/gatbps-docbook.xml
 
 docbook_dst =
-docbook_dst += doc/gatbps.dbk
+docbook_dst += doc/gatbps-docbook.xml
 
 docbook_src =
 docbook_src += doc/gatbps.texi
