@@ -36,22 +36,7 @@ gatbps_check_macros_code_check_macros[]dnl
 m4_if(
   [$1],
   [],
-  [dnl
-m4_ifndef(
-  [gatbps_check_macros],
-  [m4_define(
-    [gatbps_check_macros],
-    [dnl
-[# gatbps_check_macros]dnl
-$1_check_macros[]dnl
-])],
-  [m4_define(
-    [gatbps_check_macros],
-    [dnl
-]m4_defn([gatbps_check_macros])[dnl
-$1_check_macros[]dnl
-])])[]dnl
-],
+  [],
   [dnl
 m4_ifndef(
   [$1],
