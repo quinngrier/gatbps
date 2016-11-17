@@ -531,6 +531,7 @@ EOF1
           esac
 
           shift
+
           'set' "${prefix}"'xz.am' "${@}"
           'set' "${prefix}"'xml.am' "${@}"
           'set' "${prefix}"'xml-dist.am' "${@}"
@@ -729,7 +730,6 @@ EOF1
           'set' "${prefix}"'CC0-1.0-appendix.texi' "${@}"
           'set' "${prefix}"'CC0-1.0-AM-COPYRIGHT.am' "${@}"
           'set' "${prefix}"'CC0-1.0-AC-COPYRIGHT.ac' "${@}"
-
 
           set 'x' "${@}"
 
