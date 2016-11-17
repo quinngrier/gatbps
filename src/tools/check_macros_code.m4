@@ -1,18 +1,18 @@
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|src/tools/autoconf_boundary_helper.m4|%}){%||%}dnl
+rules_code({%|src/tools/check_macros_code.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 ifdef(
-  {%|autoconf_boundary_helper|%},
+  {%|check_macros_code|%},
   {%||%},
   {%|define(
-    {%|autoconf_boundary_helper|%},
+    {%|check_macros_code|%},
     {%|dnl
 ifelse(
   eval({%|$# < 1|%}),
   {%|1|%},
   {%|errprint(
 {%|m4: error: |%}dnl
-{%|autoconf_boundary_helper requires at least 1 argument|%}dnl
+{%|check_macros_code requires at least 1 argument|%}dnl
 {%| ($# |%}dnl
 ifelse({%|$#|%}, {%|1|%}, {%|{%|was|%}|%}, {%|{%|were|%}|%}){%||%}dnl
 {%| given)|%}dnl
@@ -50,7 +50,7 @@ m4_fatal(
 )[]dnl
 ])[]dnl
 $1_check_macros[]dnl|%}dnl
-autoconf_boundary_helper(shift($@)){%||%}dnl
+check_macros_code(shift($@)){%||%}dnl
 |%})|%})|%}){%||%}dnl
 dnl
 dnl The authors of this file have waived all copyright and
