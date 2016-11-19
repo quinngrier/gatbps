@@ -281,20 +281,22 @@ GATBPS_WGET_url_lines(m4_if(,,input_urls))[
     ; do \
       case "$][$][{url_or_path}" in \
         *'\''://'\''*) \
+          url="$][$][{url_or_path}"; \
           $][(WGET) \
             '\''-O'\'' \
             '\''./'\'']output_file['\''.tmp'\'' \
             '\''--'\'' \
-            "$][$][{url_or_path}" \
+            "$][$][{url}" \
           || '\''continue'\''; \
         ;; \
         *) \
-          case "$][$][{url_or_path}" in \
+          path="$][$][{url_or_path}"; \
+          case "$][$][{path}" in \
             '\''/'\''*) \
-              safe_path="$][$][{url_or_path}"; \
+              safe_path="$][$][{path}"; \
             ;; \
             *) \
-              safe_path='\''./'\''"$][$][{url_or_path}"; \
+              safe_path='\''./'\''"$][$][{path}"; \
             ;; \
           esac; \
           'cp' \
