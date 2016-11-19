@@ -903,6 +903,10 @@ AC_SUBST([TEXI2DVIFLAGS])
   [mostlyclean])[
 
 ]GATBPS_M4(
+  [src/files/gen-reconfigure.sh],
+  [mostlyclean])[
+
+]GATBPS_M4(
   [src/files/gequ.texi],
   [mostlyclean])[
 
