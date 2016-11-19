@@ -10,7 +10,8 @@ ifdef(
 ifelse(
   eval({%|$# < 1|%}),
   {%|1|%},
-  {%|errprint(
+  {%|dnl
+errprint(
 {%|m4: error: |%}dnl
 {%|recursion_code_helper requires at least 1 argument|%}dnl
 {%| ($# |%}dnl

@@ -17,7 +17,8 @@ ifelse(
   {%|$#|%}, {%|7|%}, {%||%},
   {%|$#|%}, {%|8|%}, {%||%},
   {%|$#|%}, {%|9|%}, {%||%},
-  {%|errprint(
+  {%|dnl
+errprint(
 {%|m4: error: |%}dnl
 {%|contains_at_least_one_word_sh requires exactly 1, 2, 3, 4, 5, |%}dnl
 {%|6, 7, 8, or 9 arguments|%}dnl
