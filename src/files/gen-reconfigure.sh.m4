@@ -20,9 +20,9 @@ case "${gen_reconfigure}" in
   'no')
   ;;
   *)
-    ]GATBPS_MSG_NOTICE([
-      reconfiguring for code generation
-    ])[
+    'echo' \
+      'configure: reconfiguring for code generation' \
+    || 'exit' "${?}"
     case "${#}" in
       '0')
         'sh' \

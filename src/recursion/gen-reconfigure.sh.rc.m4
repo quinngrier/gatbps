@@ -7,7 +7,6 @@ include({%|src/tools/recursion_code.m4|%}){%||%}dnl
 recursion_code(
   {%|gen-reconfigure.sh|%},
   {%|sh-form.sh|%},
-  {%|GATBPS_MSG_NOTICE.m4|%},
   {%|CC0-1.0.txt|%},
   {%||%}){%||%}dnl
 dnl
