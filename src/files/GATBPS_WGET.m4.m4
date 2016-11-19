@@ -291,14 +291,14 @@ GATBPS_WGET_url_lines(m4_if(,,input_urls))[
         *) \
           case "$][$][{url}" in \
             '\''/'\''*) \
-              safe_url="$][$][{url}"; \
+              safe_path="$][$][{url}"; \
             ;; \
             *) \
-              safe_url='\''./'\''"$][$][{url}"; \
+              safe_path='\''./'\''"$][$][{url}"; \
             ;; \
           esac; \
           'cp' \
-            "$][$][{safe_url}" \
+            "$][$][{safe_path}" \
             '\''./'\'']output_file['\''.tmp'\'' \
           || '\''continue'\''; \
         ;; \
