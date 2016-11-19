@@ -279,12 +279,30 @@ GATBPS_WGET_RULES="$][{GATBPS_WGET_RULES}"'
     for url in $${prevent_an_empty_for_loop_list} \]dnl
 GATBPS_WGET_url_lines(m4_if(,,input_urls))[
     ; do \
-      $][(WGET) \
-        '\''-O'\'' \
-        ]output_file['\''.tmp'\'' \
-        '\''--'\'' \
-        "$][$][{url}" \
-      || '\''continue'\''; \]dnl
+      case "$][$][{url}" in \
+        *'\''://'\''*) \
+          $][(WGET) \
+            '\''-O'\'' \
+            ]output_file['\''.tmp'\'' \
+            '\''--'\'' \
+            "$][$][{url}" \
+          || '\''continue'\''; \
+        ;; \
+        *) \
+          case "$][$][{url}" in \
+            '\''/'\''*) \
+              safe_url="$][$][{url}"; \
+            ;; \
+            *) \
+              safe_url='\''./'\''"$][$][{url}"; \
+            ;; \
+          esac; \
+          'cp' \
+            "$][$][{safe_url}" \
+            '\''./'\'']output_file['\''.tmp'\'' \
+          || '\''continue'\''; \
+        ;; \
+      esac; \]dnl
 GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
       download_succeeded='\''yes'\''; \
       '\''readonly'\'' '\''download_succeeded'\''; \
