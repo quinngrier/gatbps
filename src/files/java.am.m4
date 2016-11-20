@@ -82,7 +82,9 @@ $(java_dst) java.DUMMY_1.main: $(javadoc_src)
       'cat' 'java-main.tmp' \
     ` || 'exit' "$${?}"; \
     x='x'; \
-    for y in $(java_JAVACFLAGS); do \
+    for y in $${prevent_an_empty_word_list} \
+      $(java_JAVACFLAGS) \
+    ; do \
       'sh' \
         '-' \
         $(srcdir)'/build-aux/sh-form.sh' \
