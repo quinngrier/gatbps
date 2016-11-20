@@ -261,6 +261,19 @@ $(java_dst) java.DUMMY_1.main: $(javadoc_src)
   $(JAVACFLAGS) \
   $< \
 ;
+	$(AM_V_at){ \
+  ( \
+    for if_not_blank in $${prevent_an_empty_word_list} \
+      $(JDEPS) \
+    ; do \
+      'break'; \
+    done; \
+    'exit' '0'; \
+  :;); \
+  exit_status="$${?}"; \
+  'readonly' 'exit_status'; \
+  'exit' "$${exit_status}"; \
+:;}
 
 clean-java: clean-java-main
 clean-java: java.FORCE
