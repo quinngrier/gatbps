@@ -178,7 +178,9 @@ $][(java_]gatbps_y[_dst) java.DUMMY_1.]gatbps_x[: $][(javadoc_]gatbps_y[_src)
       '\''exit'\'' '\''0'\''; \
     :;) || '\''exit'\'' "$][$][{?}"; \
     x='\''x'\''; \
-    for y in $][(java_]gatbps_y[_JARFLAGS); do \
+    for y in $][$][{prevent_an_empty_word_list} \
+      $][(java_]gatbps_y[_JARFLAGS) \
+    ; do \
       $][(JAR) \
         '\''cf'\'' \
         '\''./'\''$][(java_]gatbps_y[_dst) \

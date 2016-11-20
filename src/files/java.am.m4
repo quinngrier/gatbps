@@ -194,7 +194,9 @@ $(java_dst) java.DUMMY_1.main: $(javadoc_src)
       'exit' '0'; \
     :;) || 'exit' "$${?}"; \
     x='x'; \
-    for y in $(java_JARFLAGS); do \
+    for y in $${prevent_an_empty_word_list} \
+      $(java_JARFLAGS) \
+    ; do \
       $(JAR) \
         'cf' \
         './'$(java_dst) \
