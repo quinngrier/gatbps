@@ -266,6 +266,13 @@ $(java_dst) java.DUMMY_1.main: $(javadoc_src)
     for if_not_blank in $${prevent_an_empty_word_list} \
       $(JDEPS) \
     ; do \
+      $(JDEPS) \
+        '-filter:none' \
+        '-package' \
+        $(GATBPS_RECURSIVE_PACKAGE) \
+        '-verbose:class' \
+        './'$@ \
+      || 'exit' "$${?}"; \
       'break'; \
     done; \
     'exit' '0'; \
