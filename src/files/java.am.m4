@@ -124,6 +124,7 @@ $(java_dst) java.DUMMY_1.main: $(javadoc_src)
       $(AM_MAKEFLAGS) \
       'GATBPS_RECURSIVE_CLASSPATH='"$${classpath}" \
       'GATBPS_RECURSIVE_JAVACFLAGS='"$${javacflags}" \
+      'GATBPS_RECURSIVE_PACKAGE=$(java_package)' \
       'GATBPS_RECURSIVE_SOURCEPATH='"$${sourcepath}" \
       'java.recursive.main' \
     || 'exit' "$${?}"; \

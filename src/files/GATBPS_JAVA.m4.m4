@@ -108,6 +108,7 @@ $][(java_]gatbps_y[_dst) java.DUMMY_1.]gatbps_x[: $][(javadoc_]gatbps_y[_src)
       $][(AM@&t@_MAKEFLAGS) \
       '\''GATBPS_RECURSIVE_CLASSPATH='\''"$][$][{classpath}" \
       '\''GATBPS_RECURSIVE_JAVACFLAGS='\''"$][$][{javacflags}" \
+      '\''GATBPS_RECURSIVE_PACKAGE=$][(java_]gatbps_y[_package)'\'' \
       '\''GATBPS_RECURSIVE_SOURCEPATH='\''"$][$][{sourcepath}" \
       '\''java.recursive.]gatbps_x['\'' \
     || '\''exit'\'' "$][$][{?}"; \
