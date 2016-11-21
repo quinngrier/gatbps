@@ -309,9 +309,9 @@ GATBPS_DOCKER_BUILD_word_lines_2(m4_if(,,child_prerequisites))[
   ( \
     merge='\''no'\''; \
     context='\'''\''; \
-    for x in \
-      $][$][{prevent_an_empty_word_list} \]dnl
+    for x in \]dnl
 GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
+      $][$][{prevent_an_empty_word_list} \
     ; do \
       if '\''test'\'' '\''-r'\'' "$][$][{x}"; then \
         '\''test'\'' \

@@ -276,9 +276,9 @@ GATBPS_WGET_RULES="$][{GATBPS_WGET_RULES}"'
 	$][(AM@&t@_V_at){ \
   ( \
     download_succeeded='\''no'\''; \
-    for url_or_path in \
-      $][$][{prevent_an_empty_word_list} \]dnl
+    for url_or_path in \]dnl
 GATBPS_WGET_url_lines(m4_if(,,input_urls))[
+      $][$][{prevent_an_empty_word_list} \
     ; do \
       case "$][$][{url_or_path}" in \
         *'\''://'\''*) \

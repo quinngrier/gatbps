@@ -67,8 +67,8 @@ $][(java_]gatbps_y[_dst) java.DUMMY_1.]gatbps_x[: $][(javadoc_]gatbps_y[_src)
     ` || '\''exit'\'' "$][$][{?}"; \
     x='\''x'\''; \
     for y in \
-      $][$][{prevent_an_empty_word_list} \
       $][(java_]gatbps_y[_JAVACFLAGS) \
+      $][$][{prevent_an_empty_word_list} \
     ; do \
       '\''sh'\'' \
         '\''-'\'' \
@@ -180,8 +180,8 @@ $][(java_]gatbps_y[_dst) java.DUMMY_1.]gatbps_x[: $][(javadoc_]gatbps_y[_src)
     :;) || '\''exit'\'' "$][$][{?}"; \
     x='\''x'\''; \
     for y in \
-      $][$][{prevent_an_empty_word_list} \
       $][(java_]gatbps_y[_JARFLAGS) \
+      $][$][{prevent_an_empty_word_list} \
     ; do \
       $][(JAR) \
         '\''cf'\'' \

@@ -83,8 +83,8 @@ $(java_dst) java.DUMMY_1.main: $(javadoc_src)
     ` || 'exit' "$${?}"; \
     x='x'; \
     for y in \
-      $${prevent_an_empty_word_list} \
       $(java_JAVACFLAGS) \
+      $${prevent_an_empty_word_list} \
     ; do \
       'sh' \
         '-' \
@@ -196,8 +196,8 @@ $(java_dst) java.DUMMY_1.main: $(javadoc_src)
     :;) || 'exit' "$${?}"; \
     x='x'; \
     for y in \
-      $${prevent_an_empty_word_list} \
       $(java_JARFLAGS) \
+      $${prevent_an_empty_word_list} \
     ; do \
       $(JAR) \
         'cf' \
@@ -266,8 +266,8 @@ $(java_dst) java.DUMMY_1.main: $(javadoc_src)
 	$(AM_V_at){ \
   ( \
     for if_not_blank in \
-      $${prevent_an_empty_word_list} \
       $(JDEPS) \
+      $${prevent_an_empty_word_list} \
     ; do \
       $(JDEPS) \
         '-filter:none' \

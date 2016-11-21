@@ -162,9 +162,9 @@ GATBPS_GIT_CLONE_RULES="$][{GATBPS_GIT_CLONE_RULES}"'
 	$][(AM@&t@_V_at){ \
   ( \
     clone_succeeded='\''no'\''; \
-    for url in \
-      $][$][{prevent_an_empty_word_list} \]dnl
+    for url in \]dnl
 GATBPS_GIT_CLONE_word_lines_6(m4_if(,,input_urls))[
+      $][$][{prevent_an_empty_word_list} \
     ; do \
       '\''rm'\'' \
         '\''-f'\'' \
