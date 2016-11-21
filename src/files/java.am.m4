@@ -82,7 +82,8 @@ $(java_dst) java.DUMMY_1.main: $(javadoc_src)
       'cat' 'java-main.tmp' \
     ` || 'exit' "$${?}"; \
     x='x'; \
-    for y in $${prevent_an_empty_word_list} \
+    for y in \
+      $${prevent_an_empty_word_list} \
       $(java_JAVACFLAGS) \
     ; do \
       'sh' \
@@ -194,7 +195,8 @@ $(java_dst) java.DUMMY_1.main: $(javadoc_src)
       'exit' '0'; \
     :;) || 'exit' "$${?}"; \
     x='x'; \
-    for y in $${prevent_an_empty_word_list} \
+    for y in \
+      $${prevent_an_empty_word_list} \
       $(java_JARFLAGS) \
     ; do \
       $(JAR) \
@@ -263,7 +265,8 @@ $(java_dst) java.DUMMY_1.main: $(javadoc_src)
 ;
 	$(AM_V_at){ \
   ( \
-    for if_not_blank in $${prevent_an_empty_word_list} \
+    for if_not_blank in \
+      $${prevent_an_empty_word_list} \
       $(JDEPS) \
     ; do \
       $(JDEPS) \
