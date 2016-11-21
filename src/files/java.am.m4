@@ -50,9 +50,9 @@ SUFFIXES += .java
 
 ## begin_rules
 
-$(java_dst) java.DUMMY_1.main: $(java_dep)
-$(java_dst) java.DUMMY_1.main: $(java_extra)
-$(java_dst) java.DUMMY_1.main: $(javadoc_src)
+$(java_dst) java.dummy_1.main: $(java_dep)
+$(java_dst) java.dummy_1.main: $(java_extra)
+$(java_dst) java.dummy_1.main: $(javadoc_src)
 	$(GATBPS_V_JAR)$(GATBPS_RECIPE_MARKER_TOP)
 	$(AM_V_at){ \
   ( \
