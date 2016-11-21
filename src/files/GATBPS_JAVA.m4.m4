@@ -109,7 +109,7 @@ $][(java_]gatbps_y[_dst) java.DUMMY_1.]gatbps_x[: $][(javadoc_]gatbps_y[_src)
       '\''GATBPS_RECURSIVE_CLASSPATH='\''"$][$][{classpath}" \
       '\''GATBPS_RECURSIVE_JAVACFLAGS='\''"$][$][{javacflags}" \
       '\''GATBPS_RECURSIVE_SOURCEPATH='\''"$][$][{sourcepath}" \
-      '\''./'\''$][(java_]gatbps_y[_dst_link) \
+      '\''java.recursive.]gatbps_x['\'' \
     || '\''exit'\'' "$][$][{?}"; \
     '\''exit'\'' '\''0'\''; \
   :;); \
@@ -122,107 +122,10 @@ $][(java_]gatbps_y[_dst) java.DUMMY_1.]gatbps_x[: $][(javadoc_]gatbps_y[_src)
 :;}
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
-./$][(java_]gatbps_y[_dst_link) java.DUMMY_2.]gatbps_x[: $][(java_]gatbps_y[_dep)
-./$][(java_]gatbps_y[_dst_link) java.DUMMY_2.]gatbps_x[: $][(java_]gatbps_y[_extra)
-./$][(java_]gatbps_y[_dst_link) java.DUMMY_2.]gatbps_x[: $][(java_]gatbps_y[_src)
-	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_TOP)
-	$][(AM@&t@_V_at){ \
-  ( \
-    '\''rm'\'' \
-      '\''-f'\'' \
-      '\''-r'\'' \
-      '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp'\'' \
-    || '\''exit'\'' "$][$][{?}"; \
-    $][(MKDIR_P) \
-      '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x'\'' \
-    || '\''exit'\'' "$][$][{?}"; \
-    c='\''cf'\''; \
-    for x in \
-      $][(java_]gatbps_y[_extra) \
-      $][(java_]gatbps_y[_nested) \
-      $][(java_]gatbps_y[_src) \
-    ; do \
-      case "$][$][{x}" in \
-        *'\''*'\''*) \
-          continue; \
-        ;; \
-      esac; \
-      if '\''test'\'' '\''-f'\'' "$][$][{x}"; then \
-        d='\''.'\''; \
-      else \
-        d=$][(srcdir); \
-        case "$][$][{d}" in \
-          '\''/'\''*) \
-          ;; \
-          *) \
-            d='\''./'\''"$][$][{d}"; \
-          ;; \
-        esac; \
-      fi; \
-      $][(JAR) \
-        "$][$][{c}" \
-        '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x.jar'\'' \
-        '\''-C'\'' \
-        "$][$][{d}" \
-        '\''./'\''"$][$][{x}" \
-      || '\''exit'\'' "$][$][{?}"; \
-      c='\''uf'\''; \
-    done; \
-    ( \
-      '\''cd'\'' \
-        '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x'\'' \
-      || '\''exit'\'' "$][$][{?}"; \
-      $][(JAR) \
-        '\''xf'\'' \
-        '\''../x.jar'\'' \
-      || '\''exit'\'' "$][$][{?}"; \
-      '\''exit'\'' '\''0'\''; \
-    :;) || '\''exit'\'' "$][$][{?}"; \
-    x='\''x'\''; \
-    for if_not_blank in \
-      $][(java_]gatbps_y[_JARFLAGS) \
-      $][$][{prevent_an_empty_word_list} \
-    ; do \
-      $][(JAR) \
-        '\''cf'\'' \
-        '\''./'\''$][(java_]gatbps_y[_dst) \
-        '\''-C'\'' \
-        '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x/'\''$][(GATBPS_RECURSIVE_SOURCEPATH) \
-        $][(java_]gatbps_y[_JARFLAGS) \
-        $][(JARFLAGS) \
-        '\''.'\'' \
-      || '\''exit'\'' "$][$][{?}"; \
-      x='\'''\''; \
-      '\''break'\''; \
-    done; \
-    case "$][$][{x}" in \
-      ?*) \
-        $][(JAR) \
-          '\''cf'\'' \
-          '\''./'\''$][(java_]gatbps_y[_dst) \
-          '\''-C'\'' \
-          '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x/'\''$][(GATBPS_RECURSIVE_SOURCEPATH) \
-          $][(GATBPS_JARFLAGS) \
-          $][(JARFLAGS) \
-          '\''.'\'' \
-        || '\''exit'\'' "$][$][{?}"; \
-      ;; \
-    esac; \
-    '\''exit'\'' '\''0'\''; \
-  :;); \
-  x="$][$][{?}"; \
-  '\''rm'\'' \
-    '\''-f'\'' \
-    '\''-r'\'' \
-    '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp'\'' \
-  ; \
-  '\''exit'\'' "$][$][{x}"; \
-:;}
-	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
-
 .PHONY: clean-java-]gatbps_x[
 .PHONY: install-java-]gatbps_x[
 .PHONY: java-]gatbps_x[
+.PHONY: java.recursive.]gatbps_x[
 .PHONY: uninstall-java-]gatbps_x[
 
 clean-java: clean-java-]gatbps_x[
@@ -321,6 +224,103 @@ java: java-]gatbps_x[
 
 java-]gatbps_x[: $][(java_]gatbps_y[_dst)
 java-]gatbps_x[: java.FORCE
+
+java.recursive.]gatbps_x[: $][(java_]gatbps_y[_src)
+java.recursive.]gatbps_x[: java.FORCE
+	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_TOP)
+	$][(AM@&t@_V_at){ \
+  ( \
+    '\''rm'\'' \
+      '\''-f'\'' \
+      '\''-r'\'' \
+      '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp'\'' \
+    || '\''exit'\'' "$][$][{?}"; \
+    $][(MKDIR_P) \
+      '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x'\'' \
+    || '\''exit'\'' "$][$][{?}"; \
+    c='\''cf'\''; \
+    for x in \
+      $][(java_]gatbps_y[_extra) \
+      $][(java_]gatbps_y[_nested) \
+      $][(java_]gatbps_y[_src) \
+    ; do \
+      case "$][$][{x}" in \
+        *'\''*'\''*) \
+          continue; \
+        ;; \
+      esac; \
+      if '\''test'\'' '\''-f'\'' "$][$][{x}"; then \
+        d='\''.'\''; \
+      else \
+        d=$][(srcdir); \
+        case "$][$][{d}" in \
+          '\''/'\''*) \
+          ;; \
+          *) \
+            d='\''./'\''"$][$][{d}"; \
+          ;; \
+        esac; \
+      fi; \
+      $][(JAR) \
+        "$][$][{c}" \
+        '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x.jar'\'' \
+        '\''-C'\'' \
+        "$][$][{d}" \
+        '\''./'\''"$][$][{x}" \
+      || '\''exit'\'' "$][$][{?}"; \
+      c='\''uf'\''; \
+    done; \
+    ( \
+      '\''cd'\'' \
+        '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x'\'' \
+      || '\''exit'\'' "$][$][{?}"; \
+      $][(JAR) \
+        '\''xf'\'' \
+        '\''../x.jar'\'' \
+      || '\''exit'\'' "$][$][{?}"; \
+      '\''exit'\'' '\''0'\''; \
+    :;) || '\''exit'\'' "$][$][{?}"; \
+    x='\''x'\''; \
+    for if_not_blank in \
+      $][(java_]gatbps_y[_JARFLAGS) \
+      $][$][{prevent_an_empty_word_list} \
+    ; do \
+      $][(JAR) \
+        '\''cf'\'' \
+        '\''./'\''$][(java_]gatbps_y[_dst) \
+        '\''-C'\'' \
+        '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x/'\''$][(GATBPS_RECURSIVE_SOURCEPATH) \
+        $][(java_]gatbps_y[_JARFLAGS) \
+        $][(JARFLAGS) \
+        '\''.'\'' \
+      || '\''exit'\'' "$][$][{?}"; \
+      x='\'''\''; \
+      '\''break'\''; \
+    done; \
+    case "$][$][{x}" in \
+      ?*) \
+        $][(JAR) \
+          '\''cf'\'' \
+          '\''./'\''$][(java_]gatbps_y[_dst) \
+          '\''-C'\'' \
+          '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x/'\''$][(GATBPS_RECURSIVE_SOURCEPATH) \
+          $][(GATBPS_JARFLAGS) \
+          $][(JARFLAGS) \
+          '\''.'\'' \
+        || '\''exit'\'' "$][$][{?}"; \
+      ;; \
+    esac; \
+    '\''exit'\'' '\''0'\''; \
+  :;); \
+  x="$][$][{?}"; \
+  '\''rm'\'' \
+    '\''-f'\'' \
+    '\''-r'\'' \
+    '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp'\'' \
+  ; \
+  '\''exit'\'' "$][$][{x}"; \
+:;}
+	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
 uninstall-java: uninstall-java-]gatbps_x[
 
