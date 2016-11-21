@@ -47,6 +47,18 @@ SUFFIXES += .class
 SUFFIXES += .java
 
 gatbps_jdeps_to_rules = ' \
+  { \
+    if ($$1 == "->" && $$2 !~ /\$$/) { \
+      rule = "$@"; \
+      rule = rule ": "; \
+      rule = rule "'"$${gatbps_recursive_sourcepath}"'"; \
+      rule = rule "/"; \
+      gsub(/\./, "/", $$2); \
+      rule = rule $$2; \
+      rule = rule ".java"; \
+      print rule; \
+    } \
+  } \
 '
 
 ## end_variables
