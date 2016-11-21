@@ -6,6 +6,7 @@ rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/PACKAGE_DATE_DAY_ZPAD.m4|%}){%||%}dnl
 include({%|src/tools/PACKAGE_DATE_MONTH_ZPAD.m4|%}){%||%}dnl
 include({%|src/tools/PACKAGE_DATE_YEAR.m4|%}){%||%}dnl
+include({%|src/tools/check_macros_code.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
 header_comment({%|dnl|%}, {%|dnl|%}){%|
@@ -19,14 +20,19 @@ PACKAGE_DATE_YEAR{%||%}dnl
 PACKAGE_DATE_MONTH_ZPAD{%||%}dnl
 PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 {%|
+AC_DEFUN([gatbps_rule_word_error_check_macros], [dnl|%}dnl
+check_macros_code(
+  {%|gatbps_fatal|%},
+  {%||%}){%||%}dnl
+{%|]m4_define(
+  [gatbps_check_macros],
+  m4_ifndef(
+    [gatbps_check_macros],
+    [[[# gatbps_check_macros]]],
+    [m4_defn([gatbps_check_macros])])[]dnl
+[[]gatbps_rule_word_error_check_macros]dnl
+))[]dnl
 AC_DEFUN([gatbps_rule_word_error], [dnl
-m4_ifndef(
-  [gatbps_fatal],
-  [dnl
-m4_errprintn(m4_location[: error: gatbps_fatal is not defined])[]dnl
-m4_fatal([this probably means that you forgot to add ]dnl
-[gatbps_fatal.m4 to your Autoconf macros])[]dnl
-])[]dnl
 m4_if(
   m4_eval([$# < 1 || $# > 1]),
   [1],
