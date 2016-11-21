@@ -179,6 +179,7 @@ $(java_dst) java.dummy_1.main: $(javadoc_src)
         $(gatbps_recursive_package) \
         '-verbose:class' \
         './'$@ \
+        >'./'$@'.d.tmp-jdeps' \
       || 'exit' "$${?}"; \
       'break'; \
     done; \
@@ -186,6 +187,10 @@ $(java_dst) java.dummy_1.main: $(javadoc_src)
   :;); \
   exit_status="$${?}"; \
   'readonly' 'exit_status'; \
+  'rm' \
+    '-f' \
+    './'$@'.d.tmp-jdeps' \
+  ; \
   'exit' "$${exit_status}"; \
 :;}
 
