@@ -117,7 +117,8 @@ files = \
   m4/gatbps_fatal.m4 \
   m4/gatbps_notice.m4 \
   m4/gatbps_rule_word_error.m4 \
-  src/tools/rules_code.m4
+  src/tools/rules_code.m4 \
+  $(PREVENT_A_BLANK_LINE)
 
 ## end_variables
 
