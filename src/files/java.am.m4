@@ -46,6 +46,9 @@ GATBPS_V_JAVAC_1 =
 SUFFIXES += .class
 SUFFIXES += .java
 
+gatbps_jdeps_to_rules = ' \
+'
+
 ## end_variables
 
 ## begin_rules
@@ -181,6 +184,15 @@ $(java_dst) java.dummy_1.main: $(javadoc_src)
         './'$@ \
         >'./'$@'.d.tmp-jdeps' \
       || 'exit' "$${?}"; \
+      $(AWK) \
+        $(gatbps_jdeps_to_rules) \
+        <'./'$@'.d.tmp-jdeps' \
+        >'./'$@'.d.tmp' \
+      || 'exit' "$${?}"; \
+      'mv' \
+        './'$@'.d.tmp' \
+        './'$@'.d' \
+      || 'exit' "$${?}"; \
       'break'; \
     done; \
     'exit' '0'; \
@@ -191,6 +203,17 @@ $(java_dst) java.dummy_1.main: $(javadoc_src)
     '-f' \
     './'$@'.d.tmp-jdeps' \
   ; \
+  case "$${exit_status}" in \
+    '0') \
+    ;; \
+    *) \
+      'rm' \
+        '-f' \
+        './'$@'.d' \
+        './'$@'.d.tmp' \
+      ; \
+    ;; \
+  esac; \
   'exit' "$${exit_status}"; \
 :;}
 
