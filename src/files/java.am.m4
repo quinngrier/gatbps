@@ -82,7 +82,7 @@ $(java_dst) java.DUMMY_1.main: $(javadoc_src)
       'cat' 'java-main.tmp' \
     ` || 'exit' "$${?}"; \
     x='x'; \
-    for y in \
+    for if_not_blank in \
       $(java_JAVACFLAGS) \
       $${prevent_an_empty_word_list} \
     ; do \
@@ -195,7 +195,7 @@ $(java_dst) java.DUMMY_1.main: $(javadoc_src)
       'exit' '0'; \
     :;) || 'exit' "$${?}"; \
     x='x'; \
-    for y in \
+    for if_not_blank in \
       $(java_JARFLAGS) \
       $${prevent_an_empty_word_list} \
     ; do \
