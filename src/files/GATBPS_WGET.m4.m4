@@ -276,13 +276,12 @@ GATBPS_WGET_RULES="$][{GATBPS_WGET_RULES}"'
 	$][(AM@&t@_V_at){ \
   ( \
     download_succeeded='\''no'\''; \
-    for url_or_path in \]dnl
+    for url in \]dnl
 GATBPS_WGET_url_lines(m4_if(,,input_urls))[
       $][$][{prevent_an_empty_word_list} \
     ; do \
-      case "$][$][{url_or_path}" in \
+      case "$][$][{url}" in \
         *'\''://'\''*) \
-          url="$][$][{url_or_path}"; \
           $][(WGET) \
             '\''-O'\'' \
             '\''./'\'']output_file['\''.tmp'\'' \
@@ -291,17 +290,16 @@ GATBPS_WGET_url_lines(m4_if(,,input_urls))[
           || '\''continue'\''; \
         ;; \
         *) \
-          path="$][$][{url_or_path}"; \
-          case "$][$][{path}" in \
+          case "$][$][{url}" in \
             '\''/'\''*) \
-              safe_path="$][$][{path}"; \
+              safe_url="$][$][{url}"; \
             ;; \
             *) \
-              safe_path='\''./'\''"$][$][{path}"; \
+              safe_url='\''./'\''"$][$][{url}"; \
             ;; \
           esac; \
           'cp' \
-            "$][$][{safe_path}" \
+            "$][$][{safe_url}" \
             '\''./'\'']output_file['\''.tmp'\'' \
           || '\''continue'\''; \
         ;; \
