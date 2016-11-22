@@ -51,7 +51,7 @@ gatbps_jdeps_to_rules = ' \
     if ($$1 == "->" && $$2 !~ /\$$/) { \
       rule = "$@"; \
       rule = rule ": "; \
-      rule = rule "'"$${gatbps_recursive_sourcepath}"'"; \
+      rule = rule "'$(gatbps_recursive_sourcepath)'"; \
       rule = rule "/"; \
       gsub(/\./, "/", $$2); \
       rule = rule $$2; \
