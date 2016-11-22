@@ -27,10 +27,10 @@ GATBPS_AM_DF_INPUT_TO_DF_SCRIPT = ' \
 GATBPS_DF_TO_DFV_SCRIPT = ' \
   { \
     if ($$0 ~ /VPATH_SEARCH:/) { \
-      n = split($$0, line_parts, /VPATH_SEARCH:/); \
+      line_parts_count = split($$0, line_parts, /VPATH_SEARCH:/); \
       line_head = line_parts[1]; \
       line_tail = line_parts[2]; \
-      for (i = 2; i != n; ++i) { \
+      for (i = 2; i != line_parts_count; ++i) { \
         line_tail = line_tail "VPATH_SEARCH:" line_parts[i + 1]; \
       } \
       if (line_tail ~ /^".*"$$/) { \
