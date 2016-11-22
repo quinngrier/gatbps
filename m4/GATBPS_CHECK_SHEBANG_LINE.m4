@@ -23,7 +23,7 @@ m4_ifdef(
   ])],
   [m4_define([GATBPS_CHECK_SHEBANG_LINE_HAS_BEEN_CALLED])])[]dnl
 m4_if(
-  m4_eval([$# < 0 || $# > 0]),
+  m4_eval([$# != 0]),
   [1],
   [gatbps_fatal([
     GATBPS_CHECK_SHEBANG_LINE requires exactly 0 arguments

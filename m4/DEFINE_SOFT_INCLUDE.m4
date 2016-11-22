@@ -11,7 +11,7 @@ m4_ifdef(
   ])],
   [m4_define([DEFINE_SOFT_INCLUDE_HAS_BEEN_CALLED])])[]dnl
 m4_if(
-  m4_eval([$# < 0 || $# > 0]),
+  m4_eval([$# != 0]),
   [1],
   [gatbps_fatal([
     DEFINE_SOFT_INCLUDE requires exactly 0 arguments

@@ -34,7 +34,7 @@ check_macros_code(
 ))[]dnl
 AC_DEFUN([gatbps_rule_word_error], [dnl
 m4_if(
-  m4_eval([$# < 1 || $# > 1]),
+  m4_eval([$# != 1]),
   [1],
   [gatbps_fatal([
     gatbps_rule_word_error requires exactly 1 argument

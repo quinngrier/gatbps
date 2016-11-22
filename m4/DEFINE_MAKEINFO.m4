@@ -11,7 +11,7 @@ m4_ifdef(
   ])],
   [m4_define([DEFINE_MAKEINFO_HAS_BEEN_CALLED])])[]dnl
 m4_if(
-  m4_eval([$# < 0 || $# > 0]),
+  m4_eval([$# != 0]),
   [1],
   [gatbps_fatal([
     DEFINE_MAKEINFO requires exactly 0 arguments

@@ -19,7 +19,7 @@ m4_fatal([this probably means that you forgot to add ]dnl
 [gatbps_fatal.m4 to your Autoconf macros])[]dnl
 ])[]dnl
 m4_if(
-  m4_eval([$# < 1 || $# > 1]),
+  m4_eval([$# != 1]),
   [1],
   [gatbps_fatal([
     gatbps_rule_word_error requires exactly 1 argument

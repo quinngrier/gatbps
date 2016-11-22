@@ -32,7 +32,7 @@ m4_ifdef(
   ])],
   [m4_define([GATBPS_DEFINE_javadir_HAS_BEEN_CALLED])])[]dnl
 m4_if(
-  m4_eval([$# < 0 || $# > 0]),
+  m4_eval([$# != 0]),
   [1],
   [gatbps_fatal([
     GATBPS_DEFINE_javadir requires exactly 0 arguments
