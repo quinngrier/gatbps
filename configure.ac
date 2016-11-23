@@ -799,7 +799,7 @@ AC_SUBST([TEXI2DVIFLAGS])
   [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/VERSION_LTCUR.sh],
+  [src/files/VERSION_LIBTOOL_C.sh],
   [mostlyclean])[
 
 ]GATBPS_M4(
