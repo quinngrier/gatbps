@@ -74,9 +74,9 @@ m4_ifdef(
     $1$2_PATCH is already defined
   ])])[]dnl
 m4_ifdef(
-  [$1$2_LTREV],
+  [$1$2_LIBTOOL_R],
   [gatbps_fatal([
-    $1$2_LTREV is already defined
+    $1$2_LIBTOOL_R is already defined
   ])])[]dnl
 m4_ifdef(
   [$1$2_LTAGE],
@@ -111,7 +111,7 @@ m4_define(
     [[[]]],
     [m4_bregexp($1$2, [^[^0-9]*[0-9]+[^0-9]+[0-9]+[^0-9]+0*\([0-9]+\)], [[[\1]]])]))[]dnl
 m4_define(
-  [$1$2_LTREV],
+  [$1$2_LIBTOOL_R],
   m4_dquote($1$2_PATCH))[]dnl
 m4_define(
   [$1$2_LTAGE],
