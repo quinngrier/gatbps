@@ -22,6 +22,7 @@ PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 {%|
 AC_DEFUN([GATBPS_DEFINE_DATE_check_macros], [dnl|%}dnl
 check_macros_code(
+  {%|GATBPS_MSG_ERROR|%},
   {%|gatbps_fatal|%},
   {%||%}){%||%}dnl
 {%|]m4_define(
