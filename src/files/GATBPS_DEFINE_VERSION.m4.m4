@@ -56,15 +56,19 @@ m4_if(
   m4_bregexp([$1], [^[A-Z_a-z][0-9A-Z_a-z]*$]),
   [-1],
   [gatbps_fatal([
-    GATBPS_DEFINE_VERSION requires its first argument to match the
-    following regular expression: ^[A-Z_a-z][0-9A-Z_a-z]*$
+    invalid first argument to GATBPS_DEFINE_VERSION:
+  [--VERBATIM--] "$1"], [
+    the first argument must match the following regular expression:
+    ^[A-Z_a-z][0-9A-Z_a-z]*$
   ])])[]dnl
 m4_if(
   m4_bregexp([$2], [^[A-Z_a-z][0-9A-Z_a-z]*$]),
   [-1],
   [gatbps_fatal([
-    GATBPS_DEFINE_VERSION requires its second argument to match the
-    following regular expression: ^[A-Z_a-z][0-9A-Z_a-z]*$
+    invalid second argument to GATBPS_DEFINE_VERSION:
+  [--VERBATIM--] "$2"], [
+    the second argument must match the following regular expression:
+    ^[A-Z_a-z][0-9A-Z_a-z]*$
   ])])[]dnl
 m4_if(
   [$#],
