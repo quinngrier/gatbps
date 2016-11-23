@@ -92,6 +92,11 @@ m4_ifdef(
   [gatbps_fatal([
     $1$2_LIBTOOL_A is already defined
   ])])[]dnl
+m4_ifdef(
+  [$1$2_RPM_V],
+  [gatbps_fatal([
+    $1$2_RPM_V is already defined
+  ])])[]dnl
 m4_if(
   [$#],
   [3],
@@ -125,7 +130,33 @@ m4_define(
 m4_define(
   [$1$2_LIBTOOL_A],
   m4_dquote($1$2_MINOR))[]dnl
+m4_define(
+  [$1$2_RPM_V],
+  m4_dquote($1$2_MAJOR[.]$1$2_MINOR[.]$1$2_PATCH))[]dnl
 [
+
+]AC_DEFINE(
+  [[$2_RPM_V]],
+  m4_dquote(["]$1$2_RPM_V["]),
+  [
+    Define to a character string literal that contains the RPM version
+    number of $2. This is the initial X.Y.Z portion of $2. For example,
+    if $2 were "1.2.3" or "1.2.3-foo", then $2_RPM should be "1.2.3".
+  ])[
+
+case "$][{$2_RPM_V+x}" in
+  ?*)
+    ]GATBPS_MSG_ERROR([
+      \$][{$2_RPM_V} is already set
+    ])[
+  ;;
+esac
+
+$2_RPM_V=']$1$2_RPM_V['
+
+'readonly' '$2_RPM_V'
+
+]AC_SUBST([$2_RPM_V])[
 
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
