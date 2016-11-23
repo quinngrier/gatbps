@@ -114,8 +114,8 @@ m4_ifdef(
     $1$2_RPM_V is already defined
   ])])[]dnl
 m4_if(
-  [$#],
-  [3],
+  m4_eval([$# >= 3]),
+  [1],
   [m4_define(
     [$1$2],
     [[$3]])])[]dnl
