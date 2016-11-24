@@ -58,8 +58,8 @@ m4_if(
   [gatbps_fatal([
     invalid first argument to GATBPS_DEFINE_DATE:
   [--VERBATIM--] "$1"], [
-    the first argument must match the following regular expression:
-    ^[A-Z_a-z][0-9A-Z_a-z]*$
+    the first argument must be an M4 macro name, that is, it must match
+    the following regular expression: ^[A-Z_a-z][0-9A-Z_a-z]*$
   ])])[]dnl
 m4_if(
   m4_bregexp([$2], [^[A-Z_a-z][0-9A-Z_a-z]*$]),
@@ -67,8 +67,9 @@ m4_if(
   [gatbps_fatal([
     invalid second argument to GATBPS_DEFINE_DATE:
   [--VERBATIM--] "$2"], [
-    the second argument must match the following regular expression:
-    ^[A-Z_a-z][0-9A-Z_a-z]*$
+    the second argument must be simultaneously a shell variable name and
+    an M4 macro name, that is, it must match the following regular
+    expression: ^[A-Z_a-z][0-9A-Z_a-z]*$
   ])])[]dnl
 m4_if(
   m4_eval([$# >= 3]),
