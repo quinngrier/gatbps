@@ -145,8 +145,14 @@ fc2='' # stderr style: cyan
 awk='awk'
 git='git'
 
-if "${git}" 'ls-files' '--error-unmatch' \
-            '--' "${0}" >'/dev/null' 2>&1; then
+if "${git}" \
+  'ls-files' \
+  '--error-unmatch' \
+  '--' \
+  "${0}" \
+  1>'/dev/null' \
+  2>'/dev/null' \
+; then
 
   "${git}" 'tag' >"${0}.tmp"
   case "${?}" in
