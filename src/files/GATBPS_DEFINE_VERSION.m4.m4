@@ -142,6 +142,13 @@ m4_define(
     [[[]]],
     [m4_bregexp($1$2, [^[^0-9]*[0-9]+[^0-9]+[0-9]+[^0-9]+0*\([0-9]+\)], [[[\1]]])]))[]dnl
 m4_define(
+  [$1$2_GIT],
+  m4_dquote(m4_if(
+    m4_bregexp($1$2, [-]),
+    [-1],
+    [[v]$1$2],
+    [[u]m4_bpatsubst(m4_dquote($1$2), [+g], [-g])])))[]dnl
+m4_define(
   [$1$2_LIBTOOL_R],
   m4_dquote($1$2_PATCH))[]dnl
 m4_define(
@@ -153,6 +160,12 @@ m4_define(
 [
 
 ]AC_DEFINE(
+  [[$2_GIT]],
+  m4_dquote(["]$1$2_GIT["]),
+  [
+  ])[
+
+]AC_DEFINE(
   [[$2_RPM_V]],
   m4_dquote(["]$1$2_RPM_V["]),
   [
@@ -160,6 +173,14 @@ m4_define(
     number of $2. This is the initial X.Y.Z portion of $2. For example,
     if $2 were "1.2.3" or "1.2.3-foo", then $2_RPM should be "1.2.3".
   ])[
+
+case "$][{$2_GIT+x}" in
+  ?*)
+    ]GATBPS_MSG_ERROR([
+      \$][{$2_GIT} is already set
+    ])[
+  ;;
+esac
 
 case "$][{$2_RPM_V+x}" in
   ?*)
@@ -169,10 +190,13 @@ case "$][{$2_RPM_V+x}" in
   ;;
 esac
 
+$2_GIT=']$1$2_GIT['
 $2_RPM_V=']$1$2_RPM_V['
 
+'readonly' '$2_GIT'
 'readonly' '$2_RPM_V'
 
+]AC_SUBST([$2_GIT])[
 ]AC_SUBST([$2_RPM_V])[
 
 :;}]])[]dnl
