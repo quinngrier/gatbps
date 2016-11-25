@@ -100,6 +100,11 @@ m4_ifdef(
     $1$2_PATCH is already defined
   ])])[]dnl
 m4_ifdef(
+  [$1$2_GIT],
+  [gatbps_fatal([
+    $1$2_GIT is already defined
+  ])])[]dnl
+m4_ifdef(
   [$1$2_LIBTOOL_R],
   [gatbps_fatal([
     $1$2_LIBTOOL_R is already defined
@@ -110,9 +115,19 @@ m4_ifdef(
     $1$2_LIBTOOL_A is already defined
   ])])[]dnl
 m4_ifdef(
+  [$1$2_RPM_R],
+  [gatbps_fatal([
+    $1$2_RPM_R is already defined
+  ])])[]dnl
+m4_ifdef(
   [$1$2_RPM_V],
   [gatbps_fatal([
     $1$2_RPM_V is already defined
+  ])])[]dnl
+m4_ifdef(
+  [$1$2_RPM_VR],
+  [gatbps_fatal([
+    $1$2_RPM_VR is already defined
   ])])[]dnl
 m4_if(
   m4_eval([$# >= 3]),
