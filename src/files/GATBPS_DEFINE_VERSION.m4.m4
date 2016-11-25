@@ -164,6 +164,9 @@ m4_define(
 m4_define(
   [$1$2_RPM_V],
   m4_dquote($1$2_MAJOR[.]$1$2_MINOR[.]$1$2_PATCH))[]dnl
+m4_define(
+  [$1$2_RPM_VR],
+  m4_dquote($1$2_RPM_V[-]$1$2_RPM_R))[]dnl
 [
 
 ]AC_DEFINE(
@@ -181,6 +184,15 @@ m4_define(
 ]AC_DEFINE(
   [[$2_RPM_V]],
   m4_dquote(["]$1$2_RPM_V["]),
+  [
+    Define to a character string literal that contains the RPM version
+    number of $2. This is the initial X.Y.Z portion of $2. For example,
+    if $2 were "1.2.3" or "1.2.3-foo", then $2_RPM should be "1.2.3".
+  ])[
+
+]AC_DEFINE(
+  [[$2_RPM_VR]],
+  m4_dquote(["]$1$2_RPM_VR["]),
   [
     Define to a character string literal that contains the RPM version
     number of $2. This is the initial X.Y.Z portion of $2. For example,
@@ -211,17 +223,28 @@ case "$][{$2_RPM_V+x}" in
   ;;
 esac
 
+case "$][{$2_RPM_VR+x}" in
+  ?*)
+    ]GATBPS_MSG_ERROR([
+      \$][{$2_RPM_VR} is already set
+    ])[
+  ;;
+esac
+
 $2_GIT=']$1$2_GIT['
 $2_RPM_R=']$1$2_RPM_R['
 $2_RPM_V=']$1$2_RPM_V['
+$2_RPM_VR=']$1$2_RPM_VR['
 
 'readonly' '$2_GIT'
 'readonly' '$2_RPM_R'
 'readonly' '$2_RPM_V'
+'readonly' '$2_RPM_VR'
 
 ]AC_SUBST([$2_GIT])[
 ]AC_SUBST([$2_RPM_R])[
 ]AC_SUBST([$2_RPM_V])[
+]AC_SUBST([$2_RPM_VR])[
 
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
