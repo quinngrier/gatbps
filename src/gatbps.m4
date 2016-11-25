@@ -613,7 +613,6 @@ EOF1
           'set' "${prefix}"'bdarrow.texi' "${@}"
           'set' "${prefix}"'barrow.texi' "${@}"
           'set' "${prefix}"'awk-form.sh' "${@}"
-          'set' "${prefix}"'VERSION_RPM_R.sh' "${@}"
           'set' "${prefix}"'VERSION_LIBTOOL_C.sh' "${@}"
           'set' "${prefix}"'VERSION.sh' "${@}"
           'set' "${prefix}"'TEST_EXIT.h' "${@}"
@@ -1332,8 +1331,6 @@ EOF1
 |%}help_code({%|VERSION.sh|%}){%|
 
 |%}help_code({%|VERSION_LIBTOOL_C.sh|%}){%|
-
-|%}help_code({%|VERSION_RPM_R.sh|%}){%|
 
 |%}help_code({%|awk-form.sh|%}){%|
 
@@ -3065,8 +3062,6 @@ EOF1
 
 |%}generation_code({%|VERSION_LIBTOOL_C.sh|%}){%|
 
-|%}generation_code({%|VERSION_RPM_R.sh|%}){%|
-
 |%}generation_code({%|awk-form.sh|%}){%|
 
 |%}generation_code({%|barrow.texi|%}){%|
@@ -4210,11 +4205,6 @@ include(`src/recursion/VERSION.sh.rc.m4'){%||%}dnl
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
 include(`src/recursion/VERSION_LIBTOOL_C.sh.rc.m4'){%||%}dnl
-{%|
-
-|%}dnl
-changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/VERSION_RPM_R.sh.rc.m4'){%||%}dnl
 {%|
 
 |%}dnl

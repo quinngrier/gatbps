@@ -811,10 +811,6 @@ AC_SUBST([TEXI2DVIFLAGS])
   [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/VERSION_RPM_R.sh],
-  [mostlyclean])[
-
-]GATBPS_M4(
   [src/files/awk-form.sh],
   [mostlyclean])[
 
