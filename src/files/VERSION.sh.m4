@@ -47,7 +47,7 @@ if git ls-files --error-unmatch "${0}" >/dev/null 2>&1; then
   v_description=`
     git \
       'describe' \
-      '--exact-match' \
+      '--first-parent' \
       '--match' \
       'v[0-9]*' \
       '--tags' \
@@ -62,19 +62,7 @@ if git ls-files --error-unmatch "${0}" >/dev/null 2>&1; then
   esac
   'readonly' 'v_description'
   case "${v_description}" in
-    ?*)
-      sed 's/^v//' <<EOF2
-${v_description}
-EOF2
-      case "${?}" in
-        '0')
-        ;;
-        *)
-          'exit' '1'
-        ;;
-      esac
-    ;;
-    *)
+    *'-'*)
       u_description=`
         git \
           'describe' \
@@ -97,6 +85,18 @@ EOF2
         s/-g/+g/
       ' <<EOF2
 ${u_description}
+EOF2
+      case "${?}" in
+        '0')
+        ;;
+        *)
+          'exit' '1'
+        ;;
+      esac
+    ;;
+    *)
+      sed 's/^v//' <<EOF2
+${v_description}
 EOF2
       case "${?}" in
         '0')
