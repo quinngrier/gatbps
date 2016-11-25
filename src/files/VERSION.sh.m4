@@ -33,6 +33,15 @@ header_comment({%|#|%}, {%|#|%}){%|
 
 |%}use_the_c_locale{%|
 
+#
+# The nl variable holds a newline character. It can be used where a
+# literal newline character might be awkward.
+#
+
+nl='
+'
+'readonly' 'nl'
+
 set -e
 trap 'rm -f VERSION.tmp' EXIT
 if git ls-files --error-unmatch "${0}" >/dev/null 2>&1; then
