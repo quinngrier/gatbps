@@ -43,11 +43,70 @@ nl='
 'readonly' 'nl'
 
 set -e
-trap 'rm -f VERSION.tmp' EXIT
 if git ls-files --error-unmatch "${0}" >/dev/null 2>&1; then
-  git describe --always --match='v[0-9]*' --tags >VERSION.tmp
-  x=$(sed s/^v// VERSION.tmp)
-  echo "$x"
+  v_description=`
+    git \
+      'describe' \
+      '--exact-match' \
+      '--match' \
+      'v[0-9]*' \
+      '--tags' \
+    ;
+  `
+  case "${?}" in
+    '0')
+    ;;
+    *)
+      'exit' '1'
+    ;;
+  esac
+  'readonly' 'v_description'
+  case "${v_description}" in
+    ?*)
+      sed 's/^v//' <<EOF2
+${v_description}
+EOF2
+      case "${?}" in
+        '0')
+        ;;
+        *)
+          'exit' '1'
+        ;;
+      esac
+    ;;
+    *)
+      u_description=`
+        git \
+          'describe' \
+          '--first-parent' \
+          '--match' \
+          'u[0-9]*' \
+          '--tags' \
+        ;
+      `
+      case "${?}" in
+        '0')
+        ;;
+        *)
+          'exit' '1'
+        ;;
+      esac
+      'readonly' 'u_description'
+      sed '
+        s/^u//
+        s/-g/+g/
+      ' <<EOF2
+${u_description}
+EOF2
+      case "${?}" in
+        '0')
+        ;;
+        *)
+          'exit' '1'
+        ;;
+      esac
+    ;;
+  esac
 elif test -f VERSION; then
   cat VERSION
 else
