@@ -211,7 +211,7 @@ m4_if(
   ])])[]dnl
 m4_define(
   [$1$2_TROFF],
-  m4_dquote(m4_bpatsubsts($1$2, [-], [\\-])))[]dnl
+  m4_dquote(m4_bpatsubst(m4_dquote($1$2), [-], [\\-])))[]dnl
 m4_define(
   [$1$2_MONTH_NAME],
   m4_if(
