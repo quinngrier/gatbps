@@ -286,7 +286,7 @@ m4_define(
 
 ]AC_DEFINE(
   [[$2_TROFF]],
-  m4_dquote(["]m4_bpatsubsts($1$2_TROFF, [\\], [\\\\])["]),
+  m4_dquote(["]m4_bpatsubst(m4_dquote($1$2_TROFF), [\\], [\\\\])["]),
   [
     Define to the same character string literal as $2 but with each "-"
     character preceded by a "\" character.
