@@ -155,6 +155,13 @@ m4_define(
   [$1$2_LIBTOOL_A],
   m4_dquote($1$2_MINOR))[]dnl
 m4_define(
+  [$1$2_RPM_R],
+  m4_dquote(m4_if(
+    m4_bregexp($1$2, [-]),
+    [-1],
+    [1],
+    [m4_bpatsubsts($1$2, [[0-9].*-], [0.], [\+], [.])])))[]dnl
+m4_define(
   [$1$2_RPM_V],
   m4_dquote($1$2_MAJOR[.]$1$2_MINOR[.]$1$2_PATCH))[]dnl
 [
@@ -162,6 +169,12 @@ m4_define(
 ]AC_DEFINE(
   [[$2_GIT]],
   m4_dquote(["]$1$2_GIT["]),
+  [
+  ])[
+
+]AC_DEFINE(
+  [[$2_RPM_R]],
+  m4_dquote(["]$1$2_RPM_R["]),
   [
   ])[
 
@@ -182,6 +195,14 @@ case "$][{$2_GIT+x}" in
   ;;
 esac
 
+case "$][{$2_RPM_R+x}" in
+  ?*)
+    ]GATBPS_MSG_ERROR([
+      \$][{$2_RPM_R} is already set
+    ])[
+  ;;
+esac
+
 case "$][{$2_RPM_V+x}" in
   ?*)
     ]GATBPS_MSG_ERROR([
@@ -191,12 +212,15 @@ case "$][{$2_RPM_V+x}" in
 esac
 
 $2_GIT=']$1$2_GIT['
+$2_RPM_R=']$1$2_RPM_R['
 $2_RPM_V=']$1$2_RPM_V['
 
 'readonly' '$2_GIT'
+'readonly' '$2_RPM_R'
 'readonly' '$2_RPM_V'
 
 ]AC_SUBST([$2_GIT])[
+]AC_SUBST([$2_RPM_R])[
 ]AC_SUBST([$2_RPM_V])[
 
 :;}]])[]dnl
