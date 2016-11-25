@@ -159,8 +159,8 @@ m4_define(
   m4_dquote(m4_if(
     m4_bregexp($1$2, [-]),
     [-1],
-    [1],
-    [m4_bpatsubsts($1$2, [[0-9].*-], [0.], [\+], [.])])))[]dnl
+    [[1]],
+    [m4_bpatsubsts(m4_dquote($1$2), [[0-9].*-], [0.], [\+], [.])])))[]dnl
 m4_define(
   [$1$2_RPM_V],
   m4_dquote($1$2_MAJOR[.]$1$2_MINOR[.]$1$2_PATCH))[]dnl
