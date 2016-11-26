@@ -158,11 +158,12 @@ m4_define(
     [m4_bregexp($1$2, [^[^0-9]*[0-9]+[^0-9]+[0-9]+[^0-9]+0*\([0-9]+\)], [[[\1]]])]))[]dnl
 m4_define(
   [$1$2_GIT],
-  m4_dquote(m4_if(
-    m4_bregexp($1$2, [-]),
-    [-1],
-    [[v]$1$2],
-    [[u]m4_bpatsubst(m4_dquote($1$2), [\+], [-])])))[]dnl
+  m4_dquote(
+    m4_if(
+      m4_bregexp($1$2, [-]),
+      [-1],
+      [[v]$1$2],
+      [[u]m4_bpatsubst(m4_dquote($1$2), [\+], [-])])))[]dnl
 m4_define(
   [$1$2_LIBTOOL_R],
   m4_dquote($1$2_PATCH))[]dnl
