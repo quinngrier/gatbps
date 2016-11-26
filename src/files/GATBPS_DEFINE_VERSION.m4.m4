@@ -194,6 +194,13 @@ m4_define(
   [[$2_RPM_R]],
   m4_dquote(["]$1$2_RPM_R["]),
   [
+    Define to a character string literal that contains the RPM release
+    number of $2. If $2 does not contain a "-" character, then this
+    should be "1". Otherwise, this should be "0." followed by the text
+    after the "-" character, and the "+" character should be changed to
+    a "." character. For example, if $2 were "0.1.0", then this should
+    be "1", and if $2 were "0.1.0-4927+g88a52bb", then this should be
+    "0.4927.g88a52bb".
   ])[
 
 ]AC_DEFINE(
