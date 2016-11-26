@@ -202,7 +202,8 @@ m4_define(
   [
     Define to a character string literal that contains the RPM version
     number of $2. This is the initial X.Y.Z portion of $2. For example,
-    if $2 were "1.2.3" or "1.2.3-foo", then $2_RPM should be "1.2.3".
+    if $2 were "0.1.0" or "0.1.0-4927+g88a52bb", then $2_RPM should be
+    "0.1.0".
   ])[
 
 ]AC_DEFINE(
