@@ -209,9 +209,10 @@ m4_define(
   [[$2_RPM_VR]],
   m4_dquote(["]$1$2_RPM_VR["]),
   [
-    Define to a character string literal that contains the RPM version
-    number of $2. This is the initial X.Y.Z portion of $2. For example,
-    if $2 were "1.2.3" or "1.2.3-foo", then $2_RPM should be "1.2.3".
+    Define to a character string literal that contains $2_RPM_V, then a
+    "-" character, then $2_RPM_R. For example, if $2_RPM_V were "0.1.0"
+    and $2_RPM_R were "0.4927.g88a52bb", then $2_RPM_VR should be
+    "0.1.0-0.4927.g88a52bb".
   ])[
 
 case "$][{$2_GIT+x}" in
