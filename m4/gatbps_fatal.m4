@@ -42,9 +42,9 @@ gatbps_notice_check_macros[]dnl
   m4_ifndef(
     [gatbps_check_macros],
     [[[# gatbps_check_macros]]],
-    [m4_defn([gatbps_check_macros])])[]dnl
-[[]gatbps_fatal_check_macros]dnl
-))[]dnl
+    [m4_defn([gatbps_check_macros])])[dnl
+gatbps_fatal_check_macros[]dnl
+]))[]dnl
 AC_DEFUN([gatbps_fatal], [dnl
 gatbps_fatal_check_macros[]dnl
 m4_if(
