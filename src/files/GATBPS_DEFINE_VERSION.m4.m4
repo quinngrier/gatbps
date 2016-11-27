@@ -100,6 +100,11 @@ m4_ifdef(
     $1$2_PATCH is already defined
   ])])[]dnl
 m4_ifdef(
+  [$1$2_DOCKER],
+  [gatbps_fatal([
+    $1$2_DOCKER is already defined
+  ])])[]dnl
+m4_ifdef(
   [$1$2_GIT],
   [gatbps_fatal([
     $1$2_GIT is already defined
@@ -157,6 +162,9 @@ m4_define(
     [[[]]],
     [m4_bregexp($1$2, [^[^0-9]*[0-9]+[^0-9]+[0-9]+[^0-9]+0*\([0-9]+\)], [[[\1]]])]))[]dnl
 m4_define(
+  [$1$2_DOCKER],
+  m4_dquote(m4_bpatsubst(m4_dquote($1$2), [\+.*\(.\)], [\1])))[]dnl
+m4_define(
   [$1$2_GIT],
   m4_dquote(
     m4_if(
@@ -190,6 +198,12 @@ m4_define(
   [$1$2_RPM_VR],
   m4_dquote($1$2_RPM_V[-]$1$2_RPM_R))[]dnl
 [
+
+]AC_DEFINE(
+  [[$2_DOCKER]],
+  m4_dquote(["]$1$2_DOCKER["]),
+  [
+  ])[
 
 ]AC_DEFINE(
   [[$2_GIT]],
@@ -231,6 +245,14 @@ m4_define(
     be "0.1.0-0.4927.g88a52bb".
   ])[
 
+case "$][{$2_DOCKER+x}" in
+  ?*)
+    ]GATBPS_MSG_ERROR([
+      \$][{$2_DOCKER} is already set
+    ])[
+  ;;
+esac
+
 case "$][{$2_GIT+x}" in
   ?*)
     ]GATBPS_MSG_ERROR([
@@ -263,16 +285,19 @@ case "$][{$2_RPM_VR+x}" in
   ;;
 esac
 
+$2_DOCKER=']$1$2_DOCKER['
 $2_GIT=']$1$2_GIT['
 $2_RPM_R=']$1$2_RPM_R['
 $2_RPM_V=']$1$2_RPM_V['
 $2_RPM_VR=']$1$2_RPM_VR['
 
+'readonly' '$2_DOCKER'
 'readonly' '$2_GIT'
 'readonly' '$2_RPM_R'
 'readonly' '$2_RPM_V'
 'readonly' '$2_RPM_VR'
 
+]AC_SUBST([$2_DOCKER])[
 ]AC_SUBST([$2_GIT])[
 ]AC_SUBST([$2_RPM_R])[
 ]AC_SUBST([$2_RPM_V])[
