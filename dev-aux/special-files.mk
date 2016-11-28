@@ -20,6 +20,7 @@ files = \
   build-aux/GATBPS_M4_RULES.am \
   build-aux/GATBPS_RECIPE_MARKER.am \
   build-aux/GATBPS_VPATH_SEARCH.am \
+  build-aux/GATBPS_V_NOP.am \
   build-aux/GATBPS_V_PAD.am \
   build-aux/VERSION.sh \
   build-aux/VERSION_LIBTOOL_C.sh \
