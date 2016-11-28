@@ -68,7 +68,7 @@ gatbps_jdeps_to_rules = ' \
 $(java_dst) java.dummy_1.main: $(java_dep)
 $(java_dst) java.dummy_1.main: $(java_extra)
 $(java_dst) java.dummy_1.main: $(javadoc_src)
-	$(GATBPS_V_JAR)$(GATBPS_RECIPE_MARKER_TOP)
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
 	$(AM_V_at){ \
   ( \
     x=''; \
@@ -336,6 +336,7 @@ java.FORCE:
 java.recursive.main: $(java_src)
 java.recursive.main: java.FORCE
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(GATBPS_V_JAR)$(GATBPS_V_NOP)
 	$(AM_V_at){ \
   ( \
     'rm' \
