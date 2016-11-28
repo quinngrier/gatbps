@@ -16,7 +16,7 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 GATBPS_RECIPE_MARKER = : recipe
 
-GATBPS_RECIPE_MARKER_BOT = $(GATBPS_RECIPE_MARKER): end: $@
+GATBPS_RECIPE_MARKER_BOT = $(GATBPS_RECIPE_MARKER): finished: $@
 
 GATBPS_RECIPE_MARKER_TOP = $(GATBPS_RECIPE_MARKER): begin: $@
 
