@@ -17,6 +17,7 @@ header_comment({%|##|%}, {%|##|%}){%|
 ## begin_rules
 
 $(docbook_dist_dst): $(docbook_dist_dep)
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
 	$(AM_V_at)|%}contains_exactly_one_word(
   {%|docbook_dist_dst|%}){%||%}dnl
 {%|
@@ -39,7 +40,7 @@ $(docbook_dist_dst): $(docbook_dist_dep)
   $(AM_MAKEFLAGS) \
   $(docbook_dist_src) \
 ;
-	$(GATBPS_V_CP)$(GATBPS_RECIPE_MARKER_TOP)
+	$(GATBPS_V_CP)$(GATBPS_V_NOP)
 	$(AM_V_at)$(MKDIR_P) \
   './'$(@D) \
 ;
