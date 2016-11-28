@@ -205,7 +205,7 @@ GATBPS_CP_make_lines(m4_if(,,child_prerequisites))[
 	$][(AM@&t@_V_at)|%}contains_exactly_one_word_sh(
   {%|srcdir|%}){%||%}dnl
 {%|
-	@'\''rm'\'' \
+	$][(AM@&t@_V_at)'\''rm'\'' \
   '\''-f'\'' \]dnl
 m4_case(
   input_mode,
