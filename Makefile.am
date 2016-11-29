@@ -55,8 +55,6 @@ TEXI2DVI += 'texi2dvi' $(AM_TEXI2DVIFLAGS) $(TEXI2DVIFLAGS)
 bin_SCRIPTS =
 bin_SCRIPTS += bin/gatbps
 
-include $(srcdir)/build-src/bin/gatbps.am
-
 doc_gatbps_TEXINFOS =
 include $(srcdir)/build-src/doc_gatbps_TEXINFOS.am
 
@@ -205,6 +203,7 @@ include $(srcdir)/build-aux/plaintext.am
 include $(srcdir)/build-aux/ps-dist.am
 include $(srcdir)/build-aux/xml-dist.am
 include $(srcdir)/build-aux/xml.am
+include $(srcdir)/build-src/bin/gatbps.am
 
 ## end_includes
 
