@@ -68,8 +68,8 @@ m4_if(
     invalid second argument to GATBPS_DEFINE_VERSION:
   [--VERBATIM--] "$2"], [
     the second argument must be simultaneously a shell variable name and
-    an M4 macro name, that is, it must match the following regular
-    expression: ^[A-Z_a-z][0-9A-Z_a-z]*$
+    a trailing substring of an M4 macro name, that is, it must match the
+    following regular expression: ^[A-Z_a-z][0-9A-Z_a-z]*$
   ])])[]dnl
 m4_if(
   m4_eval([$# >= 3]),
