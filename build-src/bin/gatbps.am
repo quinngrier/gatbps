@@ -1,5 +1,6 @@
 ## begin_variables
 
+bin_gatbps_src =
 bin_gatbps_src += doc/help/CC0-1.0-AC-COPYRIGHT.ac.hd.m4
 bin_gatbps_src += doc/help/CC0-1.0-AM-COPYRIGHT.am.hd.m4
 bin_gatbps_src += doc/help/CC0-1.0-appendix.texi.hd.m4
