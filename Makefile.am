@@ -53,7 +53,6 @@ TEXI2DVI =
 TEXI2DVI += 'texi2dvi' $(AM_TEXI2DVIFLAGS) $(TEXI2DVIFLAGS)
 
 bin_SCRIPTS =
-bin_SCRIPTS += bin/gatbps
 
 doc_gatbps_TEXINFOS =
 include $(srcdir)/build-src/doc_gatbps_TEXINFOS.am
