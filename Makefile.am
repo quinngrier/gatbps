@@ -56,7 +56,7 @@ bin_SCRIPTS =
 bin_SCRIPTS += bin/gatbps
 
 bin_gatbps_src =
-include $(srcdir)/build-src/bin_gatbps_src.am
+include $(srcdir)/build-src/bin/gatbps.am
 
 doc_gatbps_TEXINFOS =
 include $(srcdir)/build-src/doc_gatbps_TEXINFOS.am
