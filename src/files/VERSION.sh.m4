@@ -42,7 +42,6 @@ nl='
 '
 'readonly' 'nl'
 
-set -e
 if git ls-files --error-unmatch "${0}" >/dev/null 2>&1; then
   v_description=`
     git \
@@ -109,6 +108,13 @@ EOF2
   esac
 elif test -f VERSION; then
   cat VERSION
+  case "${?}" in
+    '0')
+    ;;
+    *)
+      'exit' '1'
+    ;;
+  esac
 else
   echo 'VERSION.sh: not in repository and VERSION not found' >&2
   exit 1
