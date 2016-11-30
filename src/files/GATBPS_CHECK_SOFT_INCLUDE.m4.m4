@@ -204,7 +204,7 @@ EOF
 
   :;}]])[
 
-case "$][{SOFT_INCLUDE+x}" in
+case "$][{SOFT_INCLUDE+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
       \$][{SOFT_INCLUDE} is already set
@@ -217,7 +217,7 @@ SOFT_INCLUDE="$][{gatbps_cv_SOFT_INCLUDE}"
 ]AC_SUBST([SOFT_INCLUDE])[
 ]AM_SUBST_NOTMAKE([SOFT_INCLUDE])[
 
-case "$][{GATBPS_CHECK_SOFT_INCLUDE_have+x}" in
+case "$][{GATBPS_CHECK_SOFT_INCLUDE_have+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
       \$][{GATBPS_CHECK_SOFT_INCLUDE_have} is already set

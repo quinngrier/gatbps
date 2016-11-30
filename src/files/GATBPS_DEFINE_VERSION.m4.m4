@@ -245,7 +245,7 @@ m4_define(
     be "0.1.0-0.4927.g88a52bb".
   ])[
 
-case "$][{$2_DOCKER+x}" in
+case "$][{$2_DOCKER+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
       \$][{$2_DOCKER} is already set
@@ -253,7 +253,7 @@ case "$][{$2_DOCKER+x}" in
   ;;
 esac
 
-case "$][{$2_GIT+x}" in
+case "$][{$2_GIT+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
       \$][{$2_GIT} is already set
@@ -261,7 +261,7 @@ case "$][{$2_GIT+x}" in
   ;;
 esac
 
-case "$][{$2_RPM_R+x}" in
+case "$][{$2_RPM_R+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
       \$][{$2_RPM_R} is already set
@@ -269,7 +269,7 @@ case "$][{$2_RPM_R+x}" in
   ;;
 esac
 
-case "$][{$2_RPM_V+x}" in
+case "$][{$2_RPM_V+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
       \$][{$2_RPM_V} is already set
@@ -277,7 +277,7 @@ case "$][{$2_RPM_V+x}" in
   ;;
 esac
 
-case "$][{$2_RPM_VR+x}" in
+case "$][{$2_RPM_VR+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
       \$][{$2_RPM_VR} is already set

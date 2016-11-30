@@ -72,7 +72,7 @@ m4_bregexp([[$1]], [\(\[\)--VERBATIM--\]\(\(.\|
 
     $2_was_cached='no'
 
-    case "$][{gatbps_cv_$2+x}" in
+    case "$][{gatbps_cv_$2+is_set}" in
       ?*)
         ]AC_MSG_ERROR(
 [[\$][{gatbps_cv_$2} is already set]]dnl

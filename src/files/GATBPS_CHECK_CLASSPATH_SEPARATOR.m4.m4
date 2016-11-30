@@ -53,7 +53,7 @@ m4_if(
 
   :;}]])[
 
-case "$][{CLASSPATH_SEPARATOR+x}" in
+case "$][{CLASSPATH_SEPARATOR+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
       \$][{CLASSPATH_SEPARATOR} is already set
@@ -63,7 +63,7 @@ esac
 CLASSPATH_SEPARATOR="$][{gatbps_cv_CLASSPATH_SEPARATOR}"
 'readonly' 'CLASSPATH_SEPARATOR'
 
-case "$][{CLASSPATH_SEPARATOR_LATER+x}" in
+case "$][{CLASSPATH_SEPARATOR_LATER+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
       \$][{CLASSPATH_SEPARATOR_LATER} is already set

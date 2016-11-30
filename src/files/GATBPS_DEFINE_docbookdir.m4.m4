@@ -40,7 +40,7 @@ m4_if(
   ])])[]dnl
 [
 
-case "$][{docbookdir+x}" in
+case "$][{docbookdir+is_set}" in
   ?*)
     case "$][{docbookdir}" in
       *'/')

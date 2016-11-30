@@ -40,7 +40,7 @@ m4_if(
   ])])[]dnl
 [
 
-case "$][{javadir+x}" in
+case "$][{javadir+is_set}" in
   ?*)
     case "$][{javadir}" in
       *'/')

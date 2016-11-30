@@ -333,7 +333,7 @@ m4_define(
     long. Note that none are necessary if $2_YEAR is larger than 999.
   ])[
 
-case "$][{$2+x}" in
+case "$][{$2+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
       \$][{$2} is already set
@@ -341,7 +341,7 @@ case "$][{$2+x}" in
   ;;
 esac
 
-case "$][{$2_YEAR+x}" in
+case "$][{$2_YEAR+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
       \$][{$2_YEAR} is already set
@@ -349,7 +349,7 @@ case "$][{$2_YEAR+x}" in
   ;;
 esac
 
-case "$][{$2_MONTH+x}" in
+case "$][{$2_MONTH+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
       \$][{$2_MONTH} is already set
@@ -357,7 +357,7 @@ case "$][{$2_MONTH+x}" in
   ;;
 esac
 
-case "$][{$2_DAY+x}" in
+case "$][{$2_DAY+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
       \$][{$2_DAY} is already set
@@ -365,7 +365,7 @@ case "$][{$2_DAY+x}" in
   ;;
 esac
 
-case "$][{$2_IS_LEAP_YEAR+x}" in
+case "$][{$2_IS_LEAP_YEAR+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
       \$][{$2_IS_LEAP_YEAR} is already set
@@ -373,7 +373,7 @@ case "$][{$2_IS_LEAP_YEAR+x}" in
   ;;
 esac
 
-case "$][{$2_TROFF+x}" in
+case "$][{$2_TROFF+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
       \$][{$2_TROFF} is already set
@@ -381,7 +381,7 @@ case "$][{$2_TROFF+x}" in
   ;;
 esac
 
-case "$][{$2_MONTH_NAME+x}" in
+case "$][{$2_MONTH_NAME+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
       \$][{$2_MONTH_NAME} is already set
@@ -389,7 +389,7 @@ case "$][{$2_MONTH_NAME+x}" in
   ;;
 esac
 
-case "$][{$2_MONTH_ABBR+x}" in
+case "$][{$2_MONTH_ABBR+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
       \$][{$2_MONTH_ABBR} is already set
@@ -397,7 +397,7 @@ case "$][{$2_MONTH_ABBR+x}" in
   ;;
 esac
 
-case "$][{$2_YEAR_ZPAD+x}" in
+case "$][{$2_YEAR_ZPAD+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
       \$][{$2_YEAR_ZPAD} is already set
@@ -405,7 +405,7 @@ case "$][{$2_YEAR_ZPAD+x}" in
   ;;
 esac
 
-case "$][{$2_MONTH_ZPAD+x}" in
+case "$][{$2_MONTH_ZPAD+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
       \$][{$2_MONTH_ZPAD} is already set
@@ -413,7 +413,7 @@ case "$][{$2_MONTH_ZPAD+x}" in
   ;;
 esac
 
-case "$][{$2_DAY_ZPAD+x}" in
+case "$][{$2_DAY_ZPAD+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
       \$][{$2_DAY_ZPAD} is already set

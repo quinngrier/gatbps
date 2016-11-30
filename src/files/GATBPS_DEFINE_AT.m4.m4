@@ -40,7 +40,7 @@ m4_if(
   ])])[]dnl
 [
 
-case "$][{AT+x}" in
+case "$][{AT+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
       \$][{AT} is already set
@@ -50,7 +50,7 @@ esac
 AT='@'
 'readonly' 'AT'
 
-case "$][{AT_LATER+x}" in
+case "$][{AT_LATER+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
       \$][{AT_LATER} is already set

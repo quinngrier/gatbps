@@ -52,7 +52,7 @@ m4_if(
     interpval
   ])[
 
-case "$][{SHEBANG_LINE+x}" in
+case "$][{SHEBANG_LINE+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
       \$][{SHEBANG_LINE} is already set

@@ -40,7 +40,7 @@ m4_if(
   ])])[]dnl
 [
 
-case "$][{CLASSPATH+x}" in
+case "$][{CLASSPATH+is_set}" in
   ?*)
   ;;
   *)

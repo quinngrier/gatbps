@@ -282,7 +282,7 @@ esac
 # described by the man page for this program.
 #
 
-case "${STYLE_STDOUT+x}" in
+case "${STYLE_STDOUT+is_set}" in
   ?*)
     case "${#}" in
       '0')
@@ -296,7 +296,7 @@ case "${STYLE_STDOUT+x}" in
   ;;
 esac
 
-case "${STYLE_STDERR+x}" in
+case "${STYLE_STDERR+is_set}" in
   ?*)
     case "${#}" in
       '0')
@@ -310,7 +310,7 @@ case "${STYLE_STDERR+x}" in
   ;;
 esac
 
-case "${STYLE+x}" in
+case "${STYLE+is_set}" in
   ?*)
     case "${#}" in
       '0')
@@ -324,7 +324,7 @@ case "${STYLE+x}" in
   ;;
 esac
 
-case "${SED+x}" in
+case "${SED+is_set}" in
   ?*)
     case "${#}" in
       '0')
@@ -338,7 +338,7 @@ case "${SED+x}" in
   ;;
 esac
 
-case "${AWK+x}" in
+case "${AWK+is_set}" in
   ?*)
     case "${#}" in
       '0')

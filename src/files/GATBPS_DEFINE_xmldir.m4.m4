@@ -40,7 +40,7 @@ m4_if(
   ])])[]dnl
 [
 
-case "$][{xmldir+x}" in
+case "$][{xmldir+is_set}" in
   ?*)
     case "$][{xmldir}" in
       *'/')

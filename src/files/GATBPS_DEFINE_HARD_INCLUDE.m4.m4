@@ -40,7 +40,7 @@ m4_if(
   ])])[]dnl
 [
 
-case "$][{HARD_INCLUDE+x}" in
+case "$][{HARD_INCLUDE+is_set}" in
   ?*)
     ]AC_MSG_ERROR(
 [[\$][{HARD_INCLUDE} is already set]]dnl
