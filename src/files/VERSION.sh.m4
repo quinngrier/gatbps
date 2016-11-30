@@ -94,7 +94,9 @@ EOF2
       esac
     ;;
     *)
-      sed 's/^v//' <<EOF2
+      sed '
+        s/^v//
+      ' <<EOF2
 ${v_description}
 EOF2
       case "${?}" in
