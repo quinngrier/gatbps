@@ -79,6 +79,36 @@ if git ls-files --error-unmatch "${0}" >/dev/null 2>&1; then
         ;;
       esac
       'readonly' 'u_description'
+      grep \
+        '^u[0-9][0-9]*\.[0-9][0-9]*\.[0-9][0-9]*$' \
+      <<EOF2
+${u_description}
+EOF2
+      case "${?}" in
+        '0')
+        ;;
+        '1')
+          'exit' '1'
+        ;;
+        *)
+          'exit' '1'
+        ;;
+      esac
+      grep \
+        '[u.]0[0-9]' \
+      <<EOF2
+${u_description}
+EOF2
+      case "${?}" in
+        '0')
+          'exit' '1'
+        ;;
+        '1')
+        ;;
+        *)
+          'exit' '1'
+        ;;
+      esac
       sed '
         s/^u//
         s/-g/+g/
