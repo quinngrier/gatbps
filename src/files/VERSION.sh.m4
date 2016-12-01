@@ -47,8 +47,7 @@ if git ls-files --error-unmatch "${0}" >/dev/null 2>&1; then
     git \
       'describe' \
       '--first-parent' \
-      '--match' \
-      'v[0-9]*.[0-9]*.[0-9]*' \
+      '--match=v[0-9]*.[0-9]*.[0-9]*' \
       '--tags' \
     ;
   `
@@ -67,8 +66,7 @@ if git ls-files --error-unmatch "${0}" >/dev/null 2>&1; then
           'describe' \
           '--first-parent' \
           '--long' \
-          '--match' \
-          'u[0-9]*.[0-9]*.[0-9]*' \
+          '--match=u[0-9]*.[0-9]*.[0-9]*' \
           '--tags' \
         ;
       `
