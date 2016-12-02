@@ -63,6 +63,7 @@ if git ls-files --error-unmatch "${0}" >/dev/null 2>&1; then
     *'-'*)
       grep \
         '^v[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}-[0-9]\{1,\}-g[0-9a-f]\{7,\}$' \
+        1>'/dev/null' \
       <<EOF2
 ${v_description}
 EOF2
@@ -80,6 +81,7 @@ EOF2
     *)
       grep \
         '^v[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}$' \
+        1>'/dev/null' \
       <<EOF2
 ${v_description}
 EOF2
@@ -97,6 +99,7 @@ EOF2
   esac
   grep \
     '^v0[0-9]' \
+    1>'/dev/null' \
   <<EOF2
 ${v_description}
 EOF2
@@ -112,6 +115,7 @@ EOF2
   esac
   grep \
     '^v.*[-.]0[0-9]' \
+    1>'/dev/null' \
   <<EOF2
 ${v_description}
 EOF2
@@ -146,6 +150,7 @@ EOF2
       'readonly' 'u_description'
       grep \
         '^u[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}-[0-9]\{1,\}-g[0-9a-f]\{7,\}$' \
+        1>'/dev/null' \
       <<EOF2
 ${u_description}
 EOF2
@@ -161,6 +166,7 @@ EOF2
       esac
       grep \
         '^u0[0-9]' \
+        1>'/dev/null' \
       <<EOF2
 ${u_description}
 EOF2
@@ -176,6 +182,7 @@ EOF2
       esac
       grep \
         '^u.*[-.]0[0-9]' \
+        1>'/dev/null' \
       <<EOF2
 ${u_description}
 EOF2
