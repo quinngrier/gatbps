@@ -52,6 +52,27 @@ m4_if(
     the command to use to run texi2dvi
   ])[
 
+TEXI2DVI_EXE_SH=`
+  'sh' \
+    '-' \
+    "$][{srcdir}"'/build-aux/sh-form.sh' \
+    '--' \
+    $][{TEXI2DVI_EXE} \
+  ;
+`
+case "$][{?}" in
+  '0')
+  ;;
+  *)
+    ]GATBPS_MSG_ERROR([
+      sh-form.sh failed
+    ])[
+  ;;
+esac
+'readonly' 'TEXI2DVI_EXE_SH'
+
+]AC_SUBST([TEXI2DVI_EXE_SH])[
+
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
 dnl
