@@ -6,6 +6,7 @@ rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/PACKAGE_DATE_DAY_ZPAD.m4|%}){%||%}dnl
 include({%|src/tools/PACKAGE_DATE_MONTH_ZPAD.m4|%}){%||%}dnl
 include({%|src/tools/PACKAGE_DATE_YEAR.m4|%}){%||%}dnl
+include({%|src/tools/check_macros_code.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
 header_comment({%|dnl|%}, {%|dnl|%}){%|
@@ -19,6 +20,18 @@ PACKAGE_DATE_YEAR{%||%}dnl
 PACKAGE_DATE_MONTH_ZPAD{%||%}dnl
 PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 {%|
+AC_DEFUN([GATBPS_PROG_JAVAC_check_macros], [dnl|%}dnl
+check_macros_code(
+  {%|gatbps_fatal|%},
+  {%||%}){%||%}dnl
+{%|]m4_define(
+  [gatbps_check_macros],
+  m4_ifndef(
+    [gatbps_check_macros],
+    [[[# gatbps_check_macros]]],
+    [m4_defn([gatbps_check_macros])])[dnl
+GATBPS_PROG_JAVAC_check_macros[]dnl
+]))[]dnl
 AC_DEFUN([GATBPS_PROG_JAVAC], [[{
 
 #
