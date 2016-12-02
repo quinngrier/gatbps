@@ -61,6 +61,72 @@ if git ls-files --error-unmatch "${0}" >/dev/null 2>&1; then
   'readonly' 'v_description'
   case "${v_description}" in
     *'-'*)
+      grep \
+        '^v[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}-[0-9]\{1,\}-g[0-9a-f]\{7,\}$' \
+      <<EOF2
+${v_description}
+EOF2
+      case "${?}" in
+        '0')
+        ;;
+        '1')
+          'exit' '1'
+        ;;
+        *)
+          'exit' '1'
+        ;;
+      esac
+    ;;
+    *)
+      grep \
+        '^v[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}$' \
+      <<EOF2
+${v_description}
+EOF2
+      case "${?}" in
+        '0')
+        ;;
+        '1')
+          'exit' '1'
+        ;;
+        *)
+          'exit' '1'
+        ;;
+      esac
+    ;;
+  esac
+  grep \
+    '^v0[0-9]' \
+  <<EOF2
+${v_description}
+EOF2
+  case "${?}" in
+    '0')
+      'exit' '1'
+    ;;
+    '1')
+    ;;
+    *)
+      'exit' '1'
+    ;;
+  esac
+  grep \
+    '^v.*[-.]0[0-9]' \
+  <<EOF2
+${v_description}
+EOF2
+  case "${?}" in
+    '0')
+      'exit' '1'
+    ;;
+    '1')
+    ;;
+    *)
+      'exit' '1'
+    ;;
+  esac
+  case "${v_description}" in
+    *'-'*)
       u_description=`
         git \
           'describe' \
