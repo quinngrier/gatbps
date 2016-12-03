@@ -110,7 +110,7 @@ install-docbook-main: docbook-main
       if $(AM_V_P); then \
         ':'; \
       else \
-        'sh' \
+        $(SHELL) \
           '-' \
           $(srcdir)'/build-aux/sh-form.sh' \
           '--' \
@@ -137,7 +137,7 @@ install-docbook-main: docbook-main
       if $(AM_V_P); then \
         ':'; \
       else \
-        'sh' \
+        $(SHELL) \
           '-' \
           $(srcdir)'/build-aux/sh-form.sh' \
           '--' \
@@ -181,7 +181,7 @@ uninstall-docbook-main:
           >'uninstall-docbook-main.tmp' \
         || 'exit' "$${?}"; \
         x=$(srcdir); \
-        x=`'sh' \
+        x=`$(SHELL) \
           '-' \
           "$${x}"'/build-aux/sh-form.sh' \
           '--stdin' \
@@ -199,7 +199,7 @@ uninstall-docbook-main:
         if $(AM_V_P); then \
           ':'; \
         else \
-          'sh' \
+          $(SHELL) \
             '-' \
             $(srcdir)'/build-aux/sh-form.sh' \
             '--' \

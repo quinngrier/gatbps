@@ -57,7 +57,7 @@ $(doxygen_dist_dst): $(doxygen_dist_dep)
     if 'test' '-d' "$${d}"'/'$(doxygen_dist_src); then \
       ':'; \
     else \
-      'sh' \
+      $(SHELL) \
         '-' \
         $(srcdir)'/build-aux/echo.sh' \
         'error: missing prerequisite:' \

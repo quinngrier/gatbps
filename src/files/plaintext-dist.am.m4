@@ -52,7 +52,7 @@ $(plaintext_dist_dst): $(plaintext_dist_dep)
     if 'test' '-f' "$${d}"'/'$(plaintext_dist_src); then \
       ':'; \
     else \
-      'sh' \
+      $(SHELL) \
         '-' \
         $(srcdir)'/build-aux/echo.sh' \
         'error: missing prerequisite:' \

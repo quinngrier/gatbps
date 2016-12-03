@@ -56,7 +56,7 @@ $(javadoc_dst): $(javadoc_src_nodist)
   ( \
     x='x'; \
     for y in $(javadoc_JAVADOCFLAGS); do \
-      'sh' \
+      $(SHELL) \
         '-' \
         $(srcdir)'/build-aux/sh-form.sh' \
         '--' \
@@ -72,7 +72,7 @@ $(javadoc_dst): $(javadoc_src_nodist)
     done; \
     case "$${x}" in \
       ?*) \
-        'sh' \
+        $(SHELL) \
           '-' \
           $(srcdir)'/build-aux/sh-form.sh' \
           '--' \
@@ -96,7 +96,7 @@ $(javadoc_dst): $(javadoc_src_nodist)
       else \
         d=$(srcdir); \
       fi; \
-      'sh' \
+      $(SHELL) \
         '-' \
         $(srcdir)'/build-aux/sh-form.sh' \
         '--' \
@@ -113,7 +113,7 @@ $(javadoc_dst): $(javadoc_src_nodist)
       ';' \
       >>'javadoc-main.tmp2' \
     || 'exit' "$${?}"; \
-    'sh' \
+    $(SHELL) \
       '-' \
       'javadoc-main.tmp2' \
     || 'exit' "$${?}"; \
@@ -184,7 +184,7 @@ install-javadoc-main: javadoc-main
       if $(AM_V_P); then \
         ':'; \
       else \
-        'sh' \
+        $(SHELL) \
           '-' \
           $(srcdir)'/build-aux/sh-form.sh' \
           '--' \
@@ -211,7 +211,7 @@ install-javadoc-main: javadoc-main
       if $(AM_V_P); then \
         ':'; \
       else \
-        'sh' \
+        $(SHELL) \
           '-' \
           $(srcdir)'/build-aux/sh-form.sh' \
           '--' \
@@ -229,7 +229,7 @@ install-javadoc-main: javadoc-main
       if $(AM_V_P); then \
         ':'; \
       else \
-        'sh' \
+        $(SHELL) \
           '-' \
           $(srcdir)'/build-aux/sh-form.sh' \
           '--' \
@@ -279,7 +279,7 @@ uninstall-javadoc-main:
           >'uninstall-javadoc-main.tmp' \
         || 'exit' "$${?}"; \
         x=$(srcdir); \
-        x=`'sh' \
+        x=`$(SHELL) \
           '-' \
           "$${x}"'/build-aux/sh-form.sh' \
           '--stdin' \
@@ -297,7 +297,7 @@ uninstall-javadoc-main:
         if $(AM_V_P); then \
           ':'; \
         else \
-          'sh' \
+          $(SHELL) \
             '-' \
             $(srcdir)'/build-aux/sh-form.sh' \
             '--' \

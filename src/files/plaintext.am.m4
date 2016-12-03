@@ -106,7 +106,7 @@ install-plaintext-main: plaintext-main
       if $(AM_V_P); then \
         ':'; \
       else \
-        'sh' \
+        $(SHELL) \
           '-' \
           $(srcdir)'/build-aux/sh-form.sh' \
           '--' \
@@ -133,7 +133,7 @@ install-plaintext-main: plaintext-main
       if $(AM_V_P); then \
         ':'; \
       else \
-        'sh' \
+        $(SHELL) \
           '-' \
           $(srcdir)'/build-aux/sh-form.sh' \
           '--' \
@@ -181,7 +181,7 @@ uninstall-plaintext-main:
           >'uninstall-plaintext-main.tmp' \
         || 'exit' "$${?}"; \
         x=$(srcdir); \
-        x=`'sh' \
+        x=`$(SHELL) \
           '-' \
           "$${x}"'/build-aux/sh-form.sh' \
           '--stdin' \
@@ -199,7 +199,7 @@ uninstall-plaintext-main:
         if $(AM_V_P); then \
           ':'; \
         else \
-          'sh' \
+          $(SHELL) \
             '-' \
             $(srcdir)'/build-aux/sh-form.sh' \
             '--' \

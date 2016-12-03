@@ -52,7 +52,7 @@ $(pdf_dist_dst): $(pdf_dist_dep)
     if 'test' '-f' "$${d}"'/'$(pdf_dist_src); then \
       ':'; \
     else \
-      'sh' \
+      $(SHELL) \
         '-' \
         $(srcdir)'/build-aux/echo.sh' \
         'error: missing prerequisite:' \

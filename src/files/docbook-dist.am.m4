@@ -52,7 +52,7 @@ $(docbook_dist_dst): $(docbook_dist_dep)
     if 'test' '-f' "$${d}"'/'$(docbook_dist_src); then \
       ':'; \
     else \
-      'sh' \
+      $(SHELL) \
         '-' \
         $(srcdir)'/build-aux/echo.sh' \
         'error: missing prerequisite:' \

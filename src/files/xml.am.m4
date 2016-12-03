@@ -106,7 +106,7 @@ install-xml-main: xml-main
       if $(AM_V_P); then \
         ':'; \
       else \
-        'sh' \
+        $(SHELL) \
           '-' \
           $(srcdir)'/build-aux/sh-form.sh' \
           '--' \
@@ -133,7 +133,7 @@ install-xml-main: xml-main
       if $(AM_V_P); then \
         ':'; \
       else \
-        'sh' \
+        $(SHELL) \
           '-' \
           $(srcdir)'/build-aux/sh-form.sh' \
           '--' \
@@ -177,7 +177,7 @@ uninstall-xml-main:
           >'uninstall-xml-main.tmp' \
         || 'exit' "$${?}"; \
         x=$(srcdir); \
-        x=`'sh' \
+        x=`$(SHELL) \
           '-' \
           "$${x}"'/build-aux/sh-form.sh' \
           '--stdin' \
@@ -195,7 +195,7 @@ uninstall-xml-main:
         if $(AM_V_P); then \
           ':'; \
         else \
-          'sh' \
+          $(SHELL) \
             '-' \
             $(srcdir)'/build-aux/sh-form.sh' \
             '--' \

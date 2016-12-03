@@ -138,7 +138,7 @@ $(doxygen_dst) doxygen.dummy_2.main: $(doxygen_src)
 ;
 	$(AM_V_at){ \
   ( \
-    'sh' \
+    $(SHELL) \
       '-' \
       $(srcdir)'/build-aux/sh-form.sh' \
       '--' \

@@ -63,7 +63,7 @@ $(html_dist_dst): $(html_dist_dep)
     ; then \
       ':'; \
     else \
-      'sh' \
+      $(SHELL) \
         '-' \
         $(srcdir)'/build-aux/echo.sh' \
         'error: missing prerequisite:' \
