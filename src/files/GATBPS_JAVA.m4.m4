@@ -350,11 +350,13 @@ uninstall-java-]gatbps_x[: java.FORCE
           >'\''uninstall-java-]gatbps_x[.tmp'\'' \
         || '\''exit'\'' "$][$][{?}"; \
         x=$][(srcdir); \
-        x=`$][(SHELL) \
-          '\''-'\'' \
-          "$][$][{x}"'\''/build-aux/sh-form.sh'\'' \
-          '\''--stdin'\'' \
-          <'\''uninstall-java-]gatbps_x[.tmp'\'' \
+        x=` \
+          $][(SHELL) \
+            '\''-'\'' \
+            "$][$][{x}"'\''/build-aux/sh-form.sh'\'' \
+            '\''--stdin'\'' \
+            <'\''uninstall-java-]gatbps_x[.tmp'\'' \
+          ; \
         ` || '\''exit'\'' "$][$][{?}"; \
         '\''eval'\'' '\''x='\''"$][$][{x}"; \
         x=$][(DESTDIR)$][(javadir)'\''/'\''"$][$][{x}"; \

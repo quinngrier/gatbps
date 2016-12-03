@@ -177,11 +177,13 @@ uninstall-xml-main:
           >'uninstall-xml-main.tmp' \
         || 'exit' "$${?}"; \
         x=$(srcdir); \
-        x=`$(SHELL) \
-          '-' \
-          "$${x}"'/build-aux/sh-form.sh' \
-          '--stdin' \
-          <'uninstall-xml-main.tmp' \
+        x=` \
+          $(SHELL) \
+            '-' \
+            "$${x}"'/build-aux/sh-form.sh' \
+            '--stdin' \
+            <'uninstall-xml-main.tmp' \
+          ; \
         ` || 'exit' "$${?}"; \
         'eval' 'x='"$${x}"; \
         x=$(DESTDIR)$(xmldir)'/'"$${x}"; \

@@ -279,11 +279,13 @@ uninstall-javadoc-main:
           >'uninstall-javadoc-main.tmp' \
         || 'exit' "$${?}"; \
         x=$(srcdir); \
-        x=`$(SHELL) \
-          '-' \
-          "$${x}"'/build-aux/sh-form.sh' \
-          '--stdin' \
-          <'uninstall-javadoc-main.tmp' \
+        x=` \
+          $(SHELL) \
+            '-' \
+            "$${x}"'/build-aux/sh-form.sh' \
+            '--stdin' \
+            <'uninstall-javadoc-main.tmp' \
+          ; \
         ` || 'exit' "$${?}"; \
         'eval' 'x='"$${x}"; \
         x=$(DESTDIR)$(javadocdir)'/'"$${x}"; \

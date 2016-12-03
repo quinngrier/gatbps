@@ -392,10 +392,12 @@ GATBPS_DOCKER_BUILD_tag_lines(m4_if(,,image_names))[
       $][(DOCKER_BUILD_FLAGS) \
       "$][$][{context}" \
     || '\''exit'\'' "$][$][{?}"; \
-    hash=`$][(DOCKER) \
-      '\''images'\'' \
-      '\''--quiet'\'' \
-      '\''tmp'\''"$][$][{$][$][}" \
+    hash=` \
+      $][(DOCKER) \
+        '\''images'\'' \
+        '\''--quiet'\'' \
+        '\''tmp'\''"$][$][{$][$][}" \
+      ; \
     ` || '\''exit'\'' "$][$][{?}"; \
     '\''readonly'\'' '\''hash'\''; \
     $][(DOCKER) \

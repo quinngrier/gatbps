@@ -181,11 +181,13 @@ uninstall-docbook-main:
           >'uninstall-docbook-main.tmp' \
         || 'exit' "$${?}"; \
         x=$(srcdir); \
-        x=`$(SHELL) \
-          '-' \
-          "$${x}"'/build-aux/sh-form.sh' \
-          '--stdin' \
-          <'uninstall-docbook-main.tmp' \
+        x=` \
+          $(SHELL) \
+            '-' \
+            "$${x}"'/build-aux/sh-form.sh' \
+            '--stdin' \
+            <'uninstall-docbook-main.tmp' \
+          ; \
         ` || 'exit' "$${?}"; \
         'eval' 'x='"$${x}"; \
         x=$(DESTDIR)$(docbookdir)'/'"$${x}"; \

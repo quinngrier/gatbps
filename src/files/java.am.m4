@@ -458,11 +458,13 @@ uninstall-java-main: java.FORCE
           >'uninstall-java-main.tmp' \
         || 'exit' "$${?}"; \
         x=$(srcdir); \
-        x=`$(SHELL) \
-          '-' \
-          "$${x}"'/build-aux/sh-form.sh' \
-          '--stdin' \
-          <'uninstall-java-main.tmp' \
+        x=` \
+          $(SHELL) \
+            '-' \
+            "$${x}"'/build-aux/sh-form.sh' \
+            '--stdin' \
+            <'uninstall-java-main.tmp' \
+          ; \
         ` || 'exit' "$${?}"; \
         'eval' 'x='"$${x}"; \
         x=$(DESTDIR)$(javadir)'/'"$${x}"; \
