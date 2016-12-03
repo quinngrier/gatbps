@@ -55,7 +55,7 @@ $][(java_]gatbps_y[_dst) java.dummy_1.]gatbps_x[: $][(javadoc_]gatbps_y[_src)
         x="$][$][{x}"$][(CLASSPATH_SEPARATOR)$][(java_]gatbps_y[_CLASSPATH); \
       ;; \
     esac; \
-    '\''sh'\'' \
+    $][(SHELL) \
       '\''-'\'' \
       $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
       '\''--'\'' \
@@ -70,7 +70,7 @@ $][(java_]gatbps_y[_dst) java.dummy_1.]gatbps_x[: $][(javadoc_]gatbps_y[_src)
       $][(java_]gatbps_y[_JAVACFLAGS) \
       $][$][{prevent_an_empty_word_list} \
     ; do \
-      '\''sh'\'' \
+      $][(SHELL) \
         '\''-'\'' \
         $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
         '\''--'\'' \
@@ -82,7 +82,7 @@ $][(java_]gatbps_y[_dst) java.dummy_1.]gatbps_x[: $][(javadoc_]gatbps_y[_src)
     done; \
     case "$][$][{x}" in \
       ?*) \
-        '\''sh'\'' \
+        $][(SHELL) \
           '\''-'\'' \
           $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
           '\''--'\'' \
@@ -94,7 +94,7 @@ $][(java_]gatbps_y[_dst) java.dummy_1.]gatbps_x[: $][(javadoc_]gatbps_y[_src)
     javacflags=` \
       '\''cat'\'' '\''java-]gatbps_x[.tmp'\'' \
     ` || '\''exit'\'' "$][$][{?}"; \
-    '\''sh'\'' \
+    $][(SHELL) \
       '\''-'\'' \
       $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
       '\''--'\'' \
@@ -176,7 +176,7 @@ install-java-]gatbps_x[: java.FORCE
       if $][(AM@&t@_V_P); then \
         '\'':'\''; \
       else \
-        '\''sh'\'' \
+        $][(SHELL) \
           '\''-'\'' \
           $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
           '\''--'\'' \
@@ -203,7 +203,7 @@ install-java-]gatbps_x[: java.FORCE
       if $][(AM@&t@_V_P); then \
         '\'':'\''; \
       else \
-        '\''sh'\'' \
+        $][(SHELL) \
           '\''-'\'' \
           $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
           '\''--'\'' \
@@ -350,7 +350,7 @@ uninstall-java-]gatbps_x[: java.FORCE
           >'\''uninstall-java-]gatbps_x[.tmp'\'' \
         || '\''exit'\'' "$][$][{?}"; \
         x=$][(srcdir); \
-        x=`'\''sh'\'' \
+        x=`$][(SHELL) \
           '\''-'\'' \
           "$][$][{x}"'\''/build-aux/sh-form.sh'\'' \
           '\''--stdin'\'' \
@@ -368,7 +368,7 @@ uninstall-java-]gatbps_x[: java.FORCE
         if $][(AM@&t@_V_P); then \
           '\'':'\''; \
         else \
-          '\''sh'\'' \
+          $][(SHELL) \
             '\''-'\'' \
             $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
             '\''--'\'' \

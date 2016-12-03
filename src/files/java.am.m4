@@ -86,7 +86,7 @@ $(java_dst) java.dummy_1.main: $(javadoc_src)
         x="$${x}"$(CLASSPATH_SEPARATOR)$(java_CLASSPATH); \
       ;; \
     esac; \
-    'sh' \
+    $(SHELL) \
       '-' \
       $(srcdir)'/build-aux/sh-form.sh' \
       '--' \
@@ -101,7 +101,7 @@ $(java_dst) java.dummy_1.main: $(javadoc_src)
       $(java_JAVACFLAGS) \
       $${prevent_an_empty_word_list} \
     ; do \
-      'sh' \
+      $(SHELL) \
         '-' \
         $(srcdir)'/build-aux/sh-form.sh' \
         '--' \
@@ -113,7 +113,7 @@ $(java_dst) java.dummy_1.main: $(javadoc_src)
     done; \
     case "$${x}" in \
       ?*) \
-        'sh' \
+        $(SHELL) \
           '-' \
           $(srcdir)'/build-aux/sh-form.sh' \
           '--' \
@@ -125,7 +125,7 @@ $(java_dst) java.dummy_1.main: $(javadoc_src)
     javacflags=` \
       'cat' 'java-main.tmp' \
     ` || 'exit' "$${?}"; \
-    'sh' \
+    $(SHELL) \
       '-' \
       $(srcdir)'/build-aux/sh-form.sh' \
       '--' \
@@ -280,7 +280,7 @@ install-java-main: java.FORCE
       if $(AM_V_P); then \
         ':'; \
       else \
-        'sh' \
+        $(SHELL) \
           '-' \
           $(srcdir)'/build-aux/sh-form.sh' \
           '--' \
@@ -307,7 +307,7 @@ install-java-main: java.FORCE
       if $(AM_V_P); then \
         ':'; \
       else \
-        'sh' \
+        $(SHELL) \
           '-' \
           $(srcdir)'/build-aux/sh-form.sh' \
           '--' \
@@ -458,7 +458,7 @@ uninstall-java-main: java.FORCE
           >'uninstall-java-main.tmp' \
         || 'exit' "$${?}"; \
         x=$(srcdir); \
-        x=`'sh' \
+        x=`$(SHELL) \
           '-' \
           "$${x}"'/build-aux/sh-form.sh' \
           '--stdin' \
@@ -476,7 +476,7 @@ uninstall-java-main: java.FORCE
         if $(AM_V_P); then \
           ':'; \
         else \
-          'sh' \
+          $(SHELL) \
             '-' \
             $(srcdir)'/build-aux/sh-form.sh' \
             '--' \
