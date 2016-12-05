@@ -303,7 +303,7 @@ GATBPS_DOCKER_BUILD_word_lines_2(m4_if(,,child_prerequisites))[
   '\''-r'\'' \
   '\''./'\'']output_file[ \
   '\''./'\'']output_file['\''.tmp'\'' \
-  '\''build-tmp/GATBPS_DOCKER_BUILD/'\'']input_directory[ \
+  '\''GATBPS_DOCKER_BUILD/'\'']input_directory[ \
 ;
 	$][(AM@&t@_V_at){ \
   ( \
@@ -364,7 +364,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
     '\''readonly'\'' '\''merge'\''; \
     case "$][$][{merge}" in \
       '\''yes'\'') \
-        context='\''build-tmp/GATBPS_DOCKER_BUILD/'\'']input_directory[; \
+        context='\''GATBPS_DOCKER_BUILD/'\'']input_directory[; \
         '\''readonly'\'' '\''context'\''; \
         $][(MKDIR_P) \
           "$][$][{context}" \
@@ -416,7 +416,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
   '\''rm'\'' \
     '\''-f'\'' \
     '\''-r'\'' \
-    '\''build-tmp/GATBPS_DOCKER_BUILD/'\'']input_directory[ \
+    '\''GATBPS_DOCKER_BUILD/'\'']input_directory[ \
   ; \
   case "$][$][{x}" in \
     '\''0'\'') \
@@ -442,7 +442,7 @@ clean-]output_file[:
   '\''-r'\'' \
   '\''./'\'']output_file[ \
   '\''./'\'']output_file['\''.tmp'\'' \
-  '\''build-tmp/GATBPS_DOCKER_BUILD/'\'']input_directory[ \
+  '\''GATBPS_DOCKER_BUILD/'\'']input_directory[ \
 ;
 
 ]clean_target[-local: clean-]output_file[
