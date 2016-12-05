@@ -170,7 +170,7 @@ case "$][{GATBPS_CONFIG_LATER_SCRIPT+is_set}" in
   ?*)
   ;;
   *)
-    GATBPS_CONFIG_LATER_SCRIPT='s'\''[@]bindir[@]'\''$(bindir)'\''g'
+    GATBPS_CONFIG_LATER_SCRIPT=''\''s'\''\'\'''\''[@]bindir[@]'\''\'\'''\''$(bindir)'\''\'\'''\''g'\'''
   ;;
 esac
 
