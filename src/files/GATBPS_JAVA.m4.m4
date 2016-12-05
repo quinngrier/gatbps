@@ -106,10 +106,10 @@ $][(java_]gatbps_y[_dst) java.dummy_1.]gatbps_x[: $][(javadoc_]gatbps_y[_src)
     ` || '\''exit'\'' "$][$][{?}"; \
     $][(MAKE) \
       $][(AM@&t@_MAKEFLAGS) \
-      '\''gatbps_recursive_classpath='\''"$][$][{classpath}" \
-      '\''gatbps_recursive_javacflags='\''"$][$][{javacflags}" \
-      '\''gatbps_recursive_package=$][(java_]gatbps_y[_package)'\'' \
-      '\''gatbps_recursive_sourcepath='\''"$][$][{sourcepath}" \
+      '\''GATBPS_RECURSIVE_CLASSPATH='\''"$][$][{classpath}" \
+      '\''GATBPS_RECURSIVE_JAVACFLAGS='\''"$][$][{javacflags}" \
+      '\''GATBPS_RECURSIVE_PACKAGE=$][(java_]gatbps_y[_package)'\'' \
+      '\''GATBPS_RECURSIVE_SOURCEPATH='\''"$][$][{sourcepath}" \
       '\''java.recursive.]gatbps_x['\'' \
     || '\''exit'\'' "$][$][{?}"; \
     '\''exit'\'' '\''0'\''; \
@@ -291,7 +291,7 @@ java.recursive.]gatbps_x[: java.FORCE
         '\''cf'\'' \
         '\''./'\''$][(java_]gatbps_y[_dst) \
         '\''-C'\'' \
-        '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x/'\''$][(gatbps_recursive_sourcepath) \
+        '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x/'\''$][(GATBPS_RECURSIVE_SOURCEPATH) \
         $][(java_]gatbps_y[_JARFLAGS) \
         $][(JARFLAGS) \
         '\''.'\'' \
@@ -305,7 +305,7 @@ java.recursive.]gatbps_x[: java.FORCE
           '\''cf'\'' \
           '\''./'\''$][(java_]gatbps_y[_dst) \
           '\''-C'\'' \
-          '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x/'\''$][(gatbps_recursive_sourcepath) \
+          '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x/'\''$][(GATBPS_RECURSIVE_SOURCEPATH) \
           $][(GATBPS_JARFLAGS) \
           $][(JARFLAGS) \
           '\''.'\'' \

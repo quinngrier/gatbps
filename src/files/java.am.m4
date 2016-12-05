@@ -51,7 +51,7 @@ gatbps_jdeps_to_rules = ' \
     if ($$1 == "->" && $$2 !~ /\$$/) { \
       rule = "$@"; \
       rule = rule ": "; \
-      rule = rule "'$(gatbps_recursive_sourcepath)'"; \
+      rule = rule "'$(GATBPS_RECURSIVE_SOURCEPATH)'"; \
       rule = rule "/"; \
       gsub(/\./, "/", $$2); \
       rule = rule $$2; \
@@ -137,10 +137,10 @@ $(java_dst) java.dummy_1.main: $(javadoc_src)
     ` || 'exit' "$${?}"; \
     $(MAKE) \
       $(AM_MAKEFLAGS) \
-      'gatbps_recursive_classpath='"$${classpath}" \
-      'gatbps_recursive_javacflags='"$${javacflags}" \
-      'gatbps_recursive_package=$(java_package)' \
-      'gatbps_recursive_sourcepath='"$${sourcepath}" \
+      'GATBPS_RECURSIVE_CLASSPATH='"$${classpath}" \
+      'GATBPS_RECURSIVE_JAVACFLAGS='"$${javacflags}" \
+      'GATBPS_RECURSIVE_PACKAGE=$(java_package)' \
+      'GATBPS_RECURSIVE_SOURCEPATH='"$${sourcepath}" \
       'java.recursive.main' \
     || 'exit' "$${?}"; \
     'exit' '0'; \
@@ -167,18 +167,18 @@ $(java_dst) java.dummy_1.main: $(javadoc_src)
 
 .java.class:
 	$(GATBPS_V_JAVAC)$(MKDIR_P) \
-  $(gatbps_recursive_sourcepath) \
+  $(GATBPS_RECURSIVE_SOURCEPATH) \
 ;
 	$(AM_V_at)$(JAVAC) \
   '-Xprefer:source' \
   '-classpath' \
-  $(gatbps_recursive_classpath) \
+  $(GATBPS_RECURSIVE_CLASSPATH) \
   '-d' \
-  $(gatbps_recursive_sourcepath) \
+  $(GATBPS_RECURSIVE_SOURCEPATH) \
   '-implicit:none' \
   '-sourcepath' \
-  $(gatbps_recursive_sourcepath)$(CLASSPATH_SEPARATOR)$(srcdir)'/'$(gatbps_recursive_sourcepath) \
-  $(gatbps_recursive_javacflags) \
+  $(GATBPS_RECURSIVE_SOURCEPATH)$(CLASSPATH_SEPARATOR)$(srcdir)'/'$(GATBPS_RECURSIVE_SOURCEPATH) \
+  $(GATBPS_RECURSIVE_JAVACFLAGS) \
   $(JAVACFLAGS) \
   $< \
 ;
@@ -191,7 +191,7 @@ $(java_dst) java.dummy_1.main: $(javadoc_src)
       $(JDEPS) \
         '-filter:none' \
         '-package' \
-        $(gatbps_recursive_package) \
+        $(GATBPS_RECURSIVE_PACKAGE) \
         '-verbose:class' \
         './'$@ \
         >'./'$@'.d.tmp-jdeps' \
@@ -398,7 +398,7 @@ java.recursive.main: java.FORCE
         'cf' \
         './'$(java_dst) \
         '-C' \
-        './'$(java_dst)'.tmp/x/'$(gatbps_recursive_sourcepath) \
+        './'$(java_dst)'.tmp/x/'$(GATBPS_RECURSIVE_SOURCEPATH) \
         $(java_JARFLAGS) \
         $(JARFLAGS) \
         '.' \
@@ -412,7 +412,7 @@ java.recursive.main: java.FORCE
           'cf' \
           './'$(java_dst) \
           '-C' \
-          './'$(java_dst)'.tmp/x/'$(gatbps_recursive_sourcepath) \
+          './'$(java_dst)'.tmp/x/'$(GATBPS_RECURSIVE_SOURCEPATH) \
           $(GATBPS_JARFLAGS) \
           $(JARFLAGS) \
           '.' \
