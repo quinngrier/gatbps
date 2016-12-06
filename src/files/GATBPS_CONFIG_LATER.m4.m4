@@ -177,6 +177,24 @@ case "$][{GATBPS_CONFIG_LATER_SCRIPT+is_set}" in
   *)
     GATBPS_CONFIG_LATER_SCRIPT=''\''s/x/x/'\'''
     ]GATBPS_CONFIG_LATER_ADD_1([bindir])[
+    ]GATBPS_CONFIG_LATER_ADD_1([datadir])[
+    ]GATBPS_CONFIG_LATER_ADD_1([datarootdir])[
+    ]GATBPS_CONFIG_LATER_ADD_1([docdir])[
+    ]GATBPS_CONFIG_LATER_ADD_1([dvidir])[
+    ]GATBPS_CONFIG_LATER_ADD_1([htmldir])[
+    ]GATBPS_CONFIG_LATER_ADD_1([includedir])[
+    ]GATBPS_CONFIG_LATER_ADD_1([infodir])[
+    ]GATBPS_CONFIG_LATER_ADD_1([libdir])[
+    ]GATBPS_CONFIG_LATER_ADD_1([libexecdir])[
+    ]GATBPS_CONFIG_LATER_ADD_1([localedir])[
+    ]GATBPS_CONFIG_LATER_ADD_1([localstatedir])[
+    ]GATBPS_CONFIG_LATER_ADD_1([mandir])[
+    ]GATBPS_CONFIG_LATER_ADD_1([oldincludedir])[
+    ]GATBPS_CONFIG_LATER_ADD_1([pdfdir])[
+    ]GATBPS_CONFIG_LATER_ADD_1([psdir])[
+    ]GATBPS_CONFIG_LATER_ADD_1([sbindir])[
+    ]GATBPS_CONFIG_LATER_ADD_1([sharedstatedir])[
+    ]GATBPS_CONFIG_LATER_ADD_1([sysconfdir])[
   ;;
 esac
 
