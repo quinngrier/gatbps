@@ -202,7 +202,7 @@ include $(srcdir)/build-aux/plaintext.am
 include $(srcdir)/build-aux/ps-dist.am
 include $(srcdir)/build-aux/xml-dist.am
 include $(srcdir)/build-aux/xml.am
-include $(srcdir)/build-src/bin/gatbps.am
+include $(srcdir)/bin/gatbps.am
 
 ## end_includes
 
