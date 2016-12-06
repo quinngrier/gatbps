@@ -184,6 +184,7 @@ case "$][{GATBPS_CONFIG_LATER_SCRIPT+is_set}" in
     ]GATBPS_CONFIG_LATER_ADD_1([htmldir])[
     ]GATBPS_CONFIG_LATER_ADD_1([includedir])[
     ]GATBPS_CONFIG_LATER_ADD_1([infodir])[
+    ]GATBPS_CONFIG_LATER_ADD_1([javadir])[
     ]GATBPS_CONFIG_LATER_ADD_1([libdir])[
     ]GATBPS_CONFIG_LATER_ADD_1([libexecdir])[
     ]GATBPS_CONFIG_LATER_ADD_1([localedir])[
