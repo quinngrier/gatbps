@@ -111,14 +111,14 @@ m4_ifdef(
     $1$2_GIT is already defined
   ])])[]dnl
 m4_ifdef(
-  [$1$2_LIBTOOL_R],
-  [gatbps_fatal([
-    $1$2_LIBTOOL_R is already defined
-  ])])[]dnl
-m4_ifdef(
   [$1$2_LIBTOOL_A],
   [gatbps_fatal([
     $1$2_LIBTOOL_A is already defined
+  ])])[]dnl
+m4_ifdef(
+  [$1$2_LIBTOOL_R],
+  [gatbps_fatal([
+    $1$2_LIBTOOL_R is already defined
   ])])[]dnl
 m4_ifdef(
   [$1$2_RPM_R],
@@ -174,11 +174,11 @@ m4_define(
       [[v]$1$2],
       [[u]m4_bpatsubst(m4_dquote($1$2), [\+], [-])])))[]dnl
 m4_define(
-  [$1$2_LIBTOOL_R],
-  m4_dquote($1$2_PATCH))[]dnl
-m4_define(
   [$1$2_LIBTOOL_A],
   m4_dquote($1$2_MINOR))[]dnl
+m4_define(
+  [$1$2_LIBTOOL_R],
+  m4_dquote($1$2_PATCH))[]dnl
 m4_define(
   [$1$2_RPM_R],
   m4_dquote(
