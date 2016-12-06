@@ -21,6 +21,11 @@ PACKAGE_DATE_YEAR{%||%}dnl
 PACKAGE_DATE_MONTH_ZPAD{%||%}dnl
 PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 {%|
+AC_DEFUN([GATBPS_CONFIG_LATER_ADD_1], [dnl
+[GATBPS_CONFIG_LATER_SCRIPT=]dnl
+["$][{GATBPS_CONFIG_LATER_SCRIPT}"]dnl
+[''\'';s'\''\'\'''\''[@]$1[@]'\''\'\'''\''$][($1)'\''\'\'''\''g'\''']dnl
+])[]dnl
 AC_DEFUN([GATBPS_CONFIG_LATER], [[{
 
 #
@@ -170,7 +175,8 @@ case "$][{GATBPS_CONFIG_LATER_SCRIPT+is_set}" in
   ?*)
   ;;
   *)
-    GATBPS_CONFIG_LATER_SCRIPT=''\''s'\''\'\'''\''[@]bindir[@]'\''\'\'''\''$(bindir)'\''\'\'''\''g'\'''
+    GATBPS_CONFIG_LATER_SCRIPT=''\''s/x/x/'\'''
+    ]GATBPS_CONFIG_LATER_ADD_1([bindir])[
   ;;
 esac
 
