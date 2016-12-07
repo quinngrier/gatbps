@@ -192,6 +192,10 @@ case "$][{GATBPS_CONFIG_LATER_SCRIPT+is_set}" in
     ]GATBPS_CONFIG_LATER_ADD_1([mandir])[
     ]GATBPS_CONFIG_LATER_ADD_1([oldincludedir])[
     ]GATBPS_CONFIG_LATER_ADD_1([pdfdir])[
+    ]GATBPS_CONFIG_LATER_ADD_1([pkgdatadir])[
+    ]GATBPS_CONFIG_LATER_ADD_1([pkgincludedir])[
+    ]GATBPS_CONFIG_LATER_ADD_1([pkglibdir])[
+    ]GATBPS_CONFIG_LATER_ADD_1([pkglibexecdir])[
     ]GATBPS_CONFIG_LATER_ADD_1([psdir])[
     ]GATBPS_CONFIG_LATER_ADD_1([sbindir])[
     ]GATBPS_CONFIG_LATER_ADD_1([sharedstatedir])[
