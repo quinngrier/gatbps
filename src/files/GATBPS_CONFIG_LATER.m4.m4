@@ -195,6 +195,7 @@ case "$][{GATBPS_CONFIG_LATER_SCRIPT+is_set}" in
     ]GATBPS_CONFIG_LATER_ADD_1([psdir])[
     ]GATBPS_CONFIG_LATER_ADD_1([sbindir])[
     ]GATBPS_CONFIG_LATER_ADD_1([sharedstatedir])[
+    ]GATBPS_CONFIG_LATER_ADD_1([srcdir])[
     ]GATBPS_CONFIG_LATER_ADD_1([sysconfdir])[
   ;;
 esac
