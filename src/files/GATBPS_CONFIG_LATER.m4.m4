@@ -24,7 +24,7 @@ PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 AC_DEFUN([GATBPS_CONFIG_LATER_ADD_1], [dnl
 [GATBPS_CONFIG_LATER_SCRIPT=]dnl
 ["$][{GATBPS_CONFIG_LATER_SCRIPT}"]dnl
-[''\'';s'\''\'\'''\''[@]$1[@]'\''\'\'''\''$][($1)'\''\'\'''\''g'\''']dnl
+[''\'';s'\''\'\'''\''[@]$1[@]'\''\'\'''\''$2'\''\'\'''\''g'\''']dnl
 ])[]dnl
 AC_DEFUN([GATBPS_CONFIG_LATER], [[{
 
@@ -176,31 +176,31 @@ case "$][{GATBPS_CONFIG_LATER_SCRIPT+is_set}" in
   ;;
   *)
     GATBPS_CONFIG_LATER_SCRIPT=''\''s/x/x/'\'''
-    ]GATBPS_CONFIG_LATER_ADD_1([bindir])[
-    ]GATBPS_CONFIG_LATER_ADD_1([datadir])[
-    ]GATBPS_CONFIG_LATER_ADD_1([datarootdir])[
-    ]GATBPS_CONFIG_LATER_ADD_1([docdir])[
-    ]GATBPS_CONFIG_LATER_ADD_1([dvidir])[
-    ]GATBPS_CONFIG_LATER_ADD_1([htmldir])[
-    ]GATBPS_CONFIG_LATER_ADD_1([includedir])[
-    ]GATBPS_CONFIG_LATER_ADD_1([infodir])[
-    ]GATBPS_CONFIG_LATER_ADD_1([javadir])[
-    ]GATBPS_CONFIG_LATER_ADD_1([libdir])[
-    ]GATBPS_CONFIG_LATER_ADD_1([libexecdir])[
-    ]GATBPS_CONFIG_LATER_ADD_1([localedir])[
-    ]GATBPS_CONFIG_LATER_ADD_1([localstatedir])[
-    ]GATBPS_CONFIG_LATER_ADD_1([mandir])[
-    ]GATBPS_CONFIG_LATER_ADD_1([oldincludedir])[
-    ]GATBPS_CONFIG_LATER_ADD_1([pdfdir])[
-    ]GATBPS_CONFIG_LATER_ADD_1([pkgdatadir])[
-    ]GATBPS_CONFIG_LATER_ADD_1([pkgincludedir])[
-    ]GATBPS_CONFIG_LATER_ADD_1([pkglibdir])[
-    ]GATBPS_CONFIG_LATER_ADD_1([pkglibexecdir])[
-    ]GATBPS_CONFIG_LATER_ADD_1([psdir])[
-    ]GATBPS_CONFIG_LATER_ADD_1([sbindir])[
-    ]GATBPS_CONFIG_LATER_ADD_1([sharedstatedir])[
-    ]GATBPS_CONFIG_LATER_ADD_1([srcdir])[
-    ]GATBPS_CONFIG_LATER_ADD_1([sysconfdir])[
+    ]GATBPS_CONFIG_LATER_ADD_1([bindir], [$][(bindir)])[
+    ]GATBPS_CONFIG_LATER_ADD_1([datadir], [$][(datadir)])[
+    ]GATBPS_CONFIG_LATER_ADD_1([datarootdir], [$][(datarootdir)])[
+    ]GATBPS_CONFIG_LATER_ADD_1([docdir], [$][(docdir)])[
+    ]GATBPS_CONFIG_LATER_ADD_1([dvidir], [$][(dvidir)])[
+    ]GATBPS_CONFIG_LATER_ADD_1([htmldir], [$][(htmldir)])[
+    ]GATBPS_CONFIG_LATER_ADD_1([includedir], [$][(includedir)])[
+    ]GATBPS_CONFIG_LATER_ADD_1([infodir], [$][(infodir)])[
+    ]GATBPS_CONFIG_LATER_ADD_1([javadir], [$][(javadir)])[
+    ]GATBPS_CONFIG_LATER_ADD_1([libdir], [$][(libdir)])[
+    ]GATBPS_CONFIG_LATER_ADD_1([libexecdir], [$][(libexecdir)])[
+    ]GATBPS_CONFIG_LATER_ADD_1([localedir], [$][(localedir)])[
+    ]GATBPS_CONFIG_LATER_ADD_1([localstatedir], [$][(localstatedir)])[
+    ]GATBPS_CONFIG_LATER_ADD_1([mandir], [$][(mandir)])[
+    ]GATBPS_CONFIG_LATER_ADD_1([oldincludedir], [$][(oldincludedir)])[
+    ]GATBPS_CONFIG_LATER_ADD_1([pdfdir], [$][(pdfdir)])[
+    ]GATBPS_CONFIG_LATER_ADD_1([pkgdatadir], [$][(pkgdatadir)])[
+    ]GATBPS_CONFIG_LATER_ADD_1([pkgincludedir], [$][(pkgincludedir)])[
+    ]GATBPS_CONFIG_LATER_ADD_1([pkglibdir], [$][(pkglibdir)])[
+    ]GATBPS_CONFIG_LATER_ADD_1([pkglibexecdir], [$][(pkglibexecdir)])[
+    ]GATBPS_CONFIG_LATER_ADD_1([psdir], [$][(psdir)])[
+    ]GATBPS_CONFIG_LATER_ADD_1([sbindir], [$][(sbindir)])[
+    ]GATBPS_CONFIG_LATER_ADD_1([sharedstatedir], [$][(sharedstatedir)])[
+    ]GATBPS_CONFIG_LATER_ADD_1([srcdir], [$][(srcdir)])[
+    ]GATBPS_CONFIG_LATER_ADD_1([sysconfdir], [$][(sysconfdir)])[
   ;;
 esac
 
