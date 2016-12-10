@@ -57,6 +57,16 @@ m4_if(
 
 ]AC_REQUIRE([AC_PROG_CC])[
 
+]AC_DEFINE_UNQUOTED(
+  [[CEXEEXT]],
+  [["${EXEEXT}"]],
+  [
+    Define to a character string literal that contains the suffix that
+    the C compiler adds to executable files. For example, on Unix-like
+    systems this should usually be "", and on Windows systems this
+    should usually be ".exe".
+  ])[
+
 case "$][{EXEEXT_LATER+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
