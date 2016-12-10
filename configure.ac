@@ -251,22 +251,27 @@ AM_SUBST_NOTMAKE([TEXI2ANY_DEFAULT_TROFF])
 
 ]GATBPS_CONFIG_FILE(
   [doc/texi/AWKDEFAULTTEXI.texi],
+  [doc/texi/AWKDEFAULTTEXI.texi.in],
   [maintainer-clean])[
 
 ]GATBPS_CONFIG_FILE(
   [doc/texi/PACKAGEDATE.texi],
+  [doc/texi/PACKAGEDATE.texi.in],
   [maintainer-clean])[
 
 ]GATBPS_CONFIG_FILE(
   [doc/texi/PACKAGEVERSION.texi],
+  [doc/texi/PACKAGEVERSION.texi.in],
   [maintainer-clean])[
 
 ]GATBPS_CONFIG_FILE(
   [doc/texi/SEDDEFAULTTEXI.texi],
+  [doc/texi/SEDDEFAULTTEXI.texi.in],
   [maintainer-clean])[
 
 ]GATBPS_CONFIG_FILE(
   [doc/texi/TEXIANYDEFAULTTEXI.texi],
+  [doc/texi/TEXIANYDEFAULTTEXI.texi.in],
   [maintainer-clean])[
 
 ]GATBPS_CONFIG_FILE(
