@@ -47,18 +47,18 @@ m4_pushdef(
   [gatbps_output],
   [$1])[]dnl
 m4_pushdef(
-  [gatbps_inputs],
+  [input_file],
   [$2])[]dnl
 m4_pushdef(
-  [gatbps_inputs],
-  m4_ifval(gatbps_inputs, [gatbps_inputs], [gatbps_output.in]))[]dnl
+  [input_file],
+  m4_ifval(input_file, [input_file], [gatbps_output.in]))[]dnl
 m4_pushdef(
   [gatbps_suffix],
   m4_if(m4_eval([$# < 4]), [1], [.out], [$4]))[]dnl
 [
 
 ]AC_CONFIG_FILES(
-  gatbps_output[]gatbps_suffix[:]gatbps_inputs,
+  gatbps_output[]gatbps_suffix[:]input_file,
   [{
     gatbps_dst=']gatbps_output['
     gatbps_aux="$[]{srcdir}/$[]{gatbps_dst}"
@@ -111,7 +111,7 @@ clean-gatbps_output:
 
 ]m4_if([$3], [], [[distclean]], [[$3]])[-local: clean-]gatbps_output[
 
-]gatbps_output[: ]gatbps_inputs[
+]gatbps_output[: ]input_file[
 	$][(MKDIR_P) \
   '\''./'\''$][(@D) \
 ;
@@ -141,8 +141,8 @@ $[]{gatbps_new_rules}"
 esac
 
 m4_popdef([gatbps_suffix])[]dnl
-m4_popdef([gatbps_inputs])[]dnl
-m4_popdef([gatbps_inputs])[]dnl
+m4_popdef([input_file])[]dnl
+m4_popdef([input_file])[]dnl
 m4_popdef([gatbps_output])[]dnl
 [:;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
