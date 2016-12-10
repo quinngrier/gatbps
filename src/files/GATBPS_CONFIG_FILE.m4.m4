@@ -26,42 +26,39 @@ AC_DEFUN([GATBPS_CONFIG_FILE], [[{
 # GATBPS_CONFIG_FILE macro.
 #]dnl
 m4_if(
-  m4_eval([$# < 1 || $# > 5]),
+  m4_eval([$# < 1 || $# > 6]),
   [1],
   [gatbps_fatal([
-    GATBPS_CONFIG_FILE requires 1 to 5 arguments
+    GATBPS_CONFIG_FILE requires 1 to 6 arguments
     ($# ]m4_if([$#], [1], [[was]], [[were]])[ given)
   ])])[]dnl
 m4_if(
-  m4_eval([$# >= 2]),
+  m4_eval([$# >= 3]),
   [1],
   [m4_case(
-    [$2],
+    [$3],
     [distclean], [],
     [maintainer-clean], [],
     [gatbps_fatal([
-      GATBPS_CONFIG_FILE requires its second argument to be either
+      GATBPS_CONFIG_FILE requires its third argument to be either
       "distclean" or "maintainer-clean"
     ])])])[]dnl
 m4_pushdef(
   [gatbps_output],
-  m4_bpatsubst([$1], [:.*]))[]dnl
+  [$1])[]dnl
 m4_pushdef(
   [gatbps_inputs],
-  m4_bpatsubst([$1], [^[^:]*]))[]dnl
+  [$2])[]dnl
 m4_pushdef(
   [gatbps_inputs],
-  m4_ifval(gatbps_inputs, [gatbps_inputs], [:gatbps_output.in]))[]dnl
+  m4_ifval(gatbps_inputs, [gatbps_inputs], [gatbps_output.in]))[]dnl
 m4_pushdef(
   [gatbps_suffix],
-  m4_if(m4_eval([$# < 3]), [1], [.out], [$3]))[]dnl
-m4_pushdef(
-  [gatbps_prereq],
-  m4_bpatsubst(gatbps_inputs, [:], [ ]))[]dnl
+  m4_if(m4_eval([$# < 4]), [1], [.out], [$4]))[]dnl
 [
 
 ]AC_CONFIG_FILES(
-  gatbps_output[]gatbps_suffix[]gatbps_inputs,
+  gatbps_output[]gatbps_suffix[:]gatbps_inputs,
   [{
     gatbps_dst=']gatbps_output['
     gatbps_aux="$[]{srcdir}/$[]{gatbps_dst}"
@@ -100,10 +97,10 @@ m4_pushdef(
           exit 1
         ;;
       esac
-      $4
+      $5
     fi
   :;}],
-  [$5])
+  [$6])
 
 gatbps_new_rules='.PHONY: clean-gatbps_output
 
@@ -112,9 +109,9 @@ clean-gatbps_output:
 
 [
 
-]m4_if([$2], [], [[distclean]], [[$2]])[-local: clean-]gatbps_output[
+]m4_if([$3], [], [[distclean]], [[$3]])[-local: clean-]gatbps_output[
 
-]gatbps_output[: ]gatbps_prereq[
+]gatbps_output[: ]gatbps_inputs[
 	$][(MKDIR_P) \
   '\''./'\''$][(@D) \
 ;
@@ -143,7 +140,6 @@ $[]{gatbps_new_rules}"
   ;;
 esac
 
-m4_popdef([gatbps_prereq])[]dnl
 m4_popdef([gatbps_suffix])[]dnl
 m4_popdef([gatbps_inputs])[]dnl
 m4_popdef([gatbps_inputs])[]dnl
