@@ -61,9 +61,9 @@ AT_LATER='@AT@'
 'readonly' 'AT_LATER'
 
 ]AC_SUBST([AT])[
-]AM_SUBST_NOTMAKE([AT])[
-
 ]AC_SUBST([AT_LATER])[
+
+]AM_SUBST_NOTMAKE([AT])[
 ]AM_SUBST_NOTMAKE([AT_LATER])[
 
 :;}]])[]dnl
