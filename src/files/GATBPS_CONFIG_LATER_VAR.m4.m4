@@ -22,7 +22,7 @@ PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 AC_DEFUN([GATBPS_CONFIG_LATER_ADD], [dnl
 [GATBPS_CONFIG_LATER_SCRIPT=]dnl
 ["$][{GATBPS_CONFIG_LATER_SCRIPT}"]dnl
-[''\'';s'\''\'\'''\''[@]$1[@]'\''\'\'''\''$2'\''\'\'''\''g'\''']dnl
+[''\'';s'\''\'\'''\''{@}$1{@}'\''\'\'''\''$2'\''\'\'''\''g'\''']dnl
 ])[]dnl
 AC_DEFUN([GATBPS_CONFIG_LATER_VAR], [[{
 
@@ -49,7 +49,7 @@ case "$][{GATBPS_CONFIG_LATER_SCRIPT+is_set}" in
   ?*)
   ;;
   *)
-    GATBPS_CONFIG_LATER_SCRIPT=''\''s/x/x/'\'''
+    GATBPS_CONFIG_LATER_SCRIPT=''\''s/@\([A-Z_a-z][0-9A-Z_a-z]*\)@/{@}\1{@}/g'\'''
     ]GATBPS_CONFIG_LATER_ADD([bindir], [$][(bindir)])[
     ]GATBPS_CONFIG_LATER_ADD([datadir], [$][(datadir)])[
     ]GATBPS_CONFIG_LATER_ADD([datarootdir], [$][(datarootdir)])[
