@@ -50,6 +50,7 @@ case "$][{GATBPS_CONFIG_LATER_SCRIPT+is_set}" in
   ;;
   *)
     GATBPS_CONFIG_LATER_SCRIPT=''\''s/@\([A-Z_a-z][0-9A-Z_a-z]*\)@/{@}\1{@}/g'\'''
+    ]GATBPS_CONFIG_LATER_ADD([AT], [@])[
     ]GATBPS_CONFIG_LATER_ADD([bindir], [$][(bindir)])[
     ]GATBPS_CONFIG_LATER_ADD([datadir], [$][(datadir)])[
     ]GATBPS_CONFIG_LATER_ADD([datarootdir], [$][(datarootdir)])[
@@ -75,7 +76,6 @@ case "$][{GATBPS_CONFIG_LATER_SCRIPT+is_set}" in
     ]GATBPS_CONFIG_LATER_ADD([sharedstatedir], [$][(sharedstatedir)])[
     ]GATBPS_CONFIG_LATER_ADD([srcdir], [$][(srcdir)])[
     ]GATBPS_CONFIG_LATER_ADD([sysconfdir], [$][(sysconfdir)])[
-    ]GATBPS_CONFIG_LATER_ADD([AT], [@])[
   ;;
 esac
 
