@@ -47,7 +47,6 @@ m4_if(
 
 case "$][{GATBPS_CONFIG_LATER_SCRIPT+is_set}" in
   ?*)
-    ]GATBPS_CONFIG_LATER_ADD([$1], [$][($1)])[
   ;;
   *)
     GATBPS_CONFIG_LATER_SCRIPT=''\''s/x/x/'\'''
@@ -79,6 +78,8 @@ case "$][{GATBPS_CONFIG_LATER_SCRIPT+is_set}" in
     ]GATBPS_CONFIG_LATER_ADD([AT], [@])[
   ;;
 esac
+
+]GATBPS_CONFIG_LATER_ADD([$1], [$][($1)])[
 
 ]dnl
 [:;}]])[]dnl
