@@ -1,9 +1,9 @@
 @ifset fullmanual
-@node Building and Installing
-@chapter Building and Installing
+@node Building and Installation
+@chapter Building and Installation
 @end ifset
 @ifclear fullmanual
-@unnumbered Building and Installing
+@unnumbered Building and Installation
 @end ifclear
 
 @noindent
