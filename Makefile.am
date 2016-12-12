@@ -181,6 +181,12 @@ xml_src += doc/gatbps.texi
 ## begin_includes
 
 include $(srcdir)/bin/gatbps.am
+include $(srcdir)/doc/gatbps.am
+
+## end_includes
+
+## begin_includes
+
 include $(srcdir)/build-aux/GATBPS_CONFIG_FILE_RULES.am
 include $(srcdir)/build-aux/GATBPS_CP_RULES.am
 include $(srcdir)/build-aux/GATBPS_M4_RULES.am
@@ -200,7 +206,6 @@ include $(srcdir)/build-aux/plaintext.am
 include $(srcdir)/build-aux/ps-dist.am
 include $(srcdir)/build-aux/xml-dist.am
 include $(srcdir)/build-aux/xml.am
-include $(srcdir)/doc/gatbps.am
 
 ## end_includes
 
