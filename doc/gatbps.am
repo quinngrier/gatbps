@@ -1,5 +1,6 @@
 ## begin_variables
 
+doc_gatbps_TEXINFOS =
 doc_gatbps_TEXINFOS += doc/texi/AWKDEFAULTTEXI.texi
 doc_gatbps_TEXINFOS += doc/texi/CC0-1.0-appendix.texi
 doc_gatbps_TEXINFOS += doc/texi/CC0-1.0-copying.texi
