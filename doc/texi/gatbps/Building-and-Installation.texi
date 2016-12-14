@@ -6,30 +6,12 @@
 @unnumbered Building and Installation
 @end ifclear
 
-@noindent
-GATBPS uses the GNU build system for building and installation@.
-
 @menu
-* Package Formats::
-* Build System Initialization::
-* Required Packages::
-* Configuration::
-* Building::
-* Installation::
+* Basic Packages::
 @end menu
 
 @lowersections
-@include gatbps/Package-Formats.texi
-
-@include gatbps/Build-System-Initialization.texi
-
-@include gatbps/Required-Packages.texi
-
-@include gatbps/Configuration.texi
-
-@include gatbps/Building.texi
-
-@include gatbps/Installation.texi
+@include gatbps/Basic-Packages.texi
 @raisesections
 @ifxml
 @ifnotxml

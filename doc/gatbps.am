@@ -15,6 +15,7 @@ doc_gatbps_TEXINFOS += doc/texi/bothcontents.texi
 doc_gatbps_TEXINFOS += doc/texi/dprm.texi
 doc_gatbps_TEXINFOS += doc/texi/dslash.texi
 doc_gatbps_TEXINFOS += doc/texi/gatbps/Automatic-Dependency-Tracking-for-M4-Code.texi
+doc_gatbps_TEXINFOS += doc/texi/gatbps/Basic-Packages.texi
 doc_gatbps_TEXINFOS += doc/texi/gatbps/Build-System-Initialization.texi
 doc_gatbps_TEXINFOS += doc/texi/gatbps/Building-and-Installation.texi
 doc_gatbps_TEXINFOS += doc/texi/gatbps/Building.texi
