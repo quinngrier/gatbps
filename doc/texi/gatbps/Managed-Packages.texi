@@ -1,21 +1,12 @@
-@ifset fullmanual
-@node Building and Installation
-@chapter Building and Installation
-@end ifset
-@ifclear fullmanual
-@unnumbered Building and Installation
-@end ifclear
+@node Managed Packages
+@chapter Managed Packages
 
-@menu
-* Basic Packages::
-* Managed Packages::
-@end menu
-
-@lowersections
-@include gatbps/Basic-Packages.texi
-
-@include gatbps/Managed-Packages.texi
-@raisesections
+@cindex managed packages
+@cindex packages, managed
+@noindent
+GATBPS is available in various types of
+@i{managed packages},
+which can be used with various package managers on various systems@.
 @ifxml
 @ifnotxml
 @c

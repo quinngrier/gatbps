@@ -37,6 +37,7 @@ doc_gatbps_TEXINFOS += doc/texi/gatbps/Invoking-sh-form-sh.texi
 doc_gatbps_TEXINFOS += doc/texi/gatbps/Invoking-texi-form-sh.texi
 doc_gatbps_TEXINFOS += doc/texi/gatbps/Invoking-troff-form-sh.texi
 doc_gatbps_TEXINFOS += doc/texi/gatbps/Basic-Package-Types.texi
+doc_gatbps_TEXINFOS += doc/texi/gatbps/Managed-Packages.texi
 doc_gatbps_TEXINFOS += doc/texi/gatbps/Plain-Files.texi
 doc_gatbps_TEXINFOS += doc/texi/gatbps/Release-Notes.texi
 doc_gatbps_TEXINFOS += doc/texi/gatbps/Required-Packages.texi
