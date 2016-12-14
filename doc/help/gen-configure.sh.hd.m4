@@ -1,14 +1,11 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|src/recursion/gen-reconfigure.sh.rc.m4|%}){%||%}dnl
+rules_code({%|doc/help/gen-configure.sh.hd.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
-include({%|src/tools/recursion_code.m4|%}){%||%}dnl
-recursion_code(
-  {%|gen-reconfigure.sh|%},
-  {%|sh-form.sh|%},
-  {%|CC0-1.0.txt|%},
-  {%||%}){%||%}dnl
+{%|Special file: ${fB1}gen-configure.sh${fR1}
+
+Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.|%}dnl
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by

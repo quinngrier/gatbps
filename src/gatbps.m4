@@ -587,7 +587,7 @@ EOF1
           'set' "${prefix}"'gzip.am' "${@}"
           'set' "${prefix}"'git.am' "${@}"
           'set' "${prefix}"'gequ.texi' "${@}"
-          'set' "${prefix}"'gen-reconfigure.sh' "${@}"
+          'set' "${prefix}"'gen-configure.sh' "${@}"
           'set' "${prefix}"'gatbps_rule_word_error.m4' "${@}"
           'set' "${prefix}"'gatbps_notice.m4' "${@}"
           'set' "${prefix}"'gatbps_fatal.m4' "${@}"
@@ -1400,7 +1400,7 @@ EOF1
 
 |%}help_code({%|gatbps_rule_word_error.m4|%}){%|
 
-|%}help_code({%|gen-reconfigure.sh|%}){%|
+|%}help_code({%|gen-configure.sh|%}){%|
 
 |%}help_code({%|gequ.texi|%}){%|
 
@@ -3142,7 +3142,7 @@ EOF1
 
 |%}generation_code({%|gatbps_rule_word_error.m4|%}){%|
 
-|%}generation_code({%|gen-reconfigure.sh|%}){%|
+|%}generation_code({%|gen-configure.sh|%}){%|
 
 |%}generation_code({%|gequ.texi|%}){%|
 
@@ -4394,7 +4394,7 @@ include(`src/recursion/gatbps_rule_word_error.m4.rc.m4'){%||%}dnl
 
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/gen-reconfigure.sh.rc.m4'){%||%}dnl
+include(`src/recursion/gen-configure.sh.rc.m4'){%||%}dnl
 {%|
 
 |%}dnl
