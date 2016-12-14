@@ -1,5 +1,5 @@
-@node Package Formats
-@chapter Package Formats
+@node Basic Package Types
+@chapter Basic Package Types
 
 @noindent
 GATBPS is available in three different package formats: as a copy of the

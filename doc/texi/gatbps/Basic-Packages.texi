@@ -9,7 +9,7 @@ GATBPS is available in three types of
 which form the foundation of building and installation@.
 
 @menu
-* Package Formats::
+* Basic Package Types::
 * Build System Initialization::
 * Required Packages::
 * Configuration::
@@ -18,7 +18,7 @@ which form the foundation of building and installation@.
 @end menu
 
 @lowersections
-@include gatbps/Package-Formats.texi
+@include gatbps/Basic-Package-Types.texi
 
 @include gatbps/Build-System-Initialization.texi
 
