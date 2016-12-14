@@ -54,6 +54,7 @@ case "$][{GATBPS_CONFIG_LATER_SCRIPT+is_set}" in
     ]GATBPS_CONFIG_LATER_ADD([abs_builddir], [$][(abs_builddir)])[
     ]GATBPS_CONFIG_LATER_ADD([abs_srcdir], [$][(abs_srcdir)])[
     ]GATBPS_CONFIG_LATER_ADD([bindir], [$][(bindir)])[
+    ]GATBPS_CONFIG_LATER_ADD([builddir], [$][(builddir)])[
     ]GATBPS_CONFIG_LATER_ADD([datadir], [$][(datadir)])[
     ]GATBPS_CONFIG_LATER_ADD([datarootdir], [$][(datarootdir)])[
     ]GATBPS_CONFIG_LATER_ADD([docdir], [$][(docdir)])[
