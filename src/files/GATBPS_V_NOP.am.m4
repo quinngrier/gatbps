@@ -14,7 +14,7 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 ## begin_variables
 
-GATBPS_V_NOP = @- 0<'/dev/null' 1>'/dev/null' 2>'/dev/null' || ':'
+GATBPS_V_NOP = @-':' 0<'/dev/null' 1>'/dev/null' 2>'/dev/null' || ':'
 
 ## end_variables
 
