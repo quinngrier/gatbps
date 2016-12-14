@@ -29,6 +29,20 @@ GATBPS_V_JAR_0 = @$(SHELL) \
 
 GATBPS_V_JAR_1 =
 
+GATBPS_V_JAR_SPECIAL = $(GATBPS_V_JAR_SPECIAL_@AM_V@)
+
+GATBPS_V_JAR_SPECIAL_ = $(GATBPS_V_JAR_SPECIAL_@AM_DEFAULT_V@)
+
+GATBPS_V_JAR_SPECIAL_0 = @$(SHELL) \
+  '-' \
+  $(srcdir)'/build-aux/echo.sh' \
+  '--' \
+  $(GATBPS_V_PAD_LEFT)'JAR'$(GATBPS_V_PAD_RIGHT_3) \
+  $(@D) \
+|| 'exit' "$${?}";
+
+GATBPS_V_JAR_SPECIAL_1 =
+
 GATBPS_V_JAVAC = $(GATBPS_V_JAVAC_@AM_V@)
 
 GATBPS_V_JAVAC_ = $(GATBPS_V_JAVAC_@AM_DEFAULT_V@)
@@ -141,7 +155,7 @@ $(java_dst) java.dummy_1.main: $(javadoc_src)
       'GATBPS_RECURSIVE_JAVACFLAGS='"$${javacflags}" \
       'GATBPS_RECURSIVE_PACKAGE=$(java_package)' \
       'GATBPS_RECURSIVE_SOURCEPATH='"$${sourcepath}" \
-      'java.recursive.main' \
+      './'$(java_dst)'/recursive' \
     || 'exit' "$${?}"; \
     'exit' '0'; \
   :;); \
@@ -154,6 +168,105 @@ $(java_dst) java.dummy_1.main: $(javadoc_src)
 :;}
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
+./$(java_dst)/recursive: $(java_src)
+./$(java_dst)/recursive: java.FORCE
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(GATBPS_V_JAR_SPECIAL)$(GATBPS_V_NOP)
+	$(AM_V_at){ \
+  ( \
+    'rm' \
+      '-f' \
+      '-r' \
+      './'$(java_dst)'.tmp' \
+    || 'exit' "$${?}"; \
+    $(MKDIR_P) \
+      './'$(java_dst)'.tmp/x' \
+    || 'exit' "$${?}"; \
+    c='cf'; \
+    for x in \
+      $(java_extra) \
+      $(java_nested) \
+      $(java_src) \
+    ; do \
+      case "$${x}" in \
+        *'*'*) \
+          continue; \
+        ;; \
+      esac; \
+      if 'test' '-f' "$${x}"; then \
+        d='.'; \
+      else \
+        d=$(srcdir); \
+        case "$${d}" in \
+          '/'*) \
+          ;; \
+          *) \
+            d='./'"$${d}"; \
+          ;; \
+        esac; \
+      fi; \
+      $(JAR) \
+        "$${c}" \
+        './'$(java_dst)'.tmp/x.jar' \
+        '-C' \
+        "$${d}" \
+        './'"$${x}" \
+      || 'exit' "$${?}"; \
+      c='uf'; \
+    done; \
+    ( \
+      'cd' \
+        './'$(java_dst)'.tmp/x' \
+      || 'exit' "$${?}"; \
+      $(JAR) \
+        'xf' \
+        '../x.jar' \
+      || 'exit' "$${?}"; \
+      'exit' '0'; \
+    :;) || 'exit' "$${?}"; \
+    x='x'; \
+    for if_not_blank in \
+      $(java_JARFLAGS) \
+      $${prevent_an_empty_word_list} \
+    ; do \
+      $(JAR) \
+        'cf' \
+        './'$(java_dst) \
+        '-C' \
+        './'$(java_dst)'.tmp/x/'$(GATBPS_RECURSIVE_SOURCEPATH) \
+        $(java_JARFLAGS) \
+        $(JARFLAGS) \
+        '.' \
+      || 'exit' "$${?}"; \
+      x=''; \
+      'break'; \
+    done; \
+    case "$${x}" in \
+      ?*) \
+        $(JAR) \
+          'cf' \
+          './'$(java_dst) \
+          '-C' \
+          './'$(java_dst)'.tmp/x/'$(GATBPS_RECURSIVE_SOURCEPATH) \
+          $(GATBPS_JARFLAGS) \
+          $(JARFLAGS) \
+          '.' \
+        || 'exit' "$${?}"; \
+      ;; \
+    esac; \
+    'exit' '0'; \
+  :;); \
+  x="$${?}"; \
+  'rm' \
+    '-f' \
+    '-r' \
+    './'$(java_dst)'.tmp' \
+  ; \
+  'exit' "$${x}"; \
+:;}
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+
+.PHONY: ./$(java_dst)/recursive
 .PHONY: clean-java
 .PHONY: clean-java-main
 .PHONY: install-java
@@ -161,7 +274,6 @@ $(java_dst) java.dummy_1.main: $(javadoc_src)
 .PHONY: java
 .PHONY: java-main
 .PHONY: java.FORCE
-.PHONY: java.recursive.main
 .PHONY: uninstall-java
 .PHONY: uninstall-java-main
 
@@ -332,104 +444,6 @@ java-main: $(java_dst)
 java-main: java.FORCE
 
 java.FORCE:
-
-java.recursive.main: $(java_src)
-java.recursive.main: java.FORCE
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
-	$(GATBPS_V_JAR)$(GATBPS_V_NOP)
-	$(AM_V_at){ \
-  ( \
-    'rm' \
-      '-f' \
-      '-r' \
-      './'$(java_dst)'.tmp' \
-    || 'exit' "$${?}"; \
-    $(MKDIR_P) \
-      './'$(java_dst)'.tmp/x' \
-    || 'exit' "$${?}"; \
-    c='cf'; \
-    for x in \
-      $(java_extra) \
-      $(java_nested) \
-      $(java_src) \
-    ; do \
-      case "$${x}" in \
-        *'*'*) \
-          continue; \
-        ;; \
-      esac; \
-      if 'test' '-f' "$${x}"; then \
-        d='.'; \
-      else \
-        d=$(srcdir); \
-        case "$${d}" in \
-          '/'*) \
-          ;; \
-          *) \
-            d='./'"$${d}"; \
-          ;; \
-        esac; \
-      fi; \
-      $(JAR) \
-        "$${c}" \
-        './'$(java_dst)'.tmp/x.jar' \
-        '-C' \
-        "$${d}" \
-        './'"$${x}" \
-      || 'exit' "$${?}"; \
-      c='uf'; \
-    done; \
-    ( \
-      'cd' \
-        './'$(java_dst)'.tmp/x' \
-      || 'exit' "$${?}"; \
-      $(JAR) \
-        'xf' \
-        '../x.jar' \
-      || 'exit' "$${?}"; \
-      'exit' '0'; \
-    :;) || 'exit' "$${?}"; \
-    x='x'; \
-    for if_not_blank in \
-      $(java_JARFLAGS) \
-      $${prevent_an_empty_word_list} \
-    ; do \
-      $(JAR) \
-        'cf' \
-        './'$(java_dst) \
-        '-C' \
-        './'$(java_dst)'.tmp/x/'$(GATBPS_RECURSIVE_SOURCEPATH) \
-        $(java_JARFLAGS) \
-        $(JARFLAGS) \
-        '.' \
-      || 'exit' "$${?}"; \
-      x=''; \
-      'break'; \
-    done; \
-    case "$${x}" in \
-      ?*) \
-        $(JAR) \
-          'cf' \
-          './'$(java_dst) \
-          '-C' \
-          './'$(java_dst)'.tmp/x/'$(GATBPS_RECURSIVE_SOURCEPATH) \
-          $(GATBPS_JARFLAGS) \
-          $(JARFLAGS) \
-          '.' \
-        || 'exit' "$${?}"; \
-      ;; \
-    esac; \
-    'exit' '0'; \
-  :;); \
-  x="$${?}"; \
-  'rm' \
-    '-f' \
-    '-r' \
-    './'$(java_dst)'.tmp' \
-  ; \
-  'exit' "$${x}"; \
-:;}
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
 uninstall-java: java.FORCE
 uninstall-java: uninstall-java-main
