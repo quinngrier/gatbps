@@ -182,11 +182,12 @@ m4_if(
   [],
   [],
   [[
+	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_TOP)
 	$][(AM@&t@_V_at)$][(MAKE) \
   $][(AM@&t@_MAKEFLAGS) \]dnl
 GATBPS_CONFIG_LATER_make_lines(m4_if(,,child_prerequisites))[
 ;]])[
-	$][(AM@&t@_V_GEN)$][(GATBPS_RECIPE_MARKER_TOP)
+	$][(GATBPS_V_CONFIG_LATER)$][(GATBPS_V_NOP)
 	$][(AM@&t@_V_at)|%}contains_at_least_one_word_sh(
   {%|MKDIR_P|%}){%||%}dnl
 {%|
