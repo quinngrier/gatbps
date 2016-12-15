@@ -14,7 +14,13 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 ## begin_variables
 
-GATBPS_V_NOP = @-':' 0<'/dev/null' 1>'/dev/null' 2>'/dev/null' || ':'
+GATBPS_V_NOP = $(GATBPS_V_NOP_@AM_V@)
+
+GATBPS_V_NOP_ = $(GATBPS_V_NOP_@AM_DEFAULT_V@)
+
+GATBPS_V_NOP_0 =
+
+GATBPS_V_NOP_1 = @-':'
 
 ## end_variables
 
