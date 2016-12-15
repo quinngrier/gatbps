@@ -126,7 +126,7 @@ $][(java_]gatbps_y[_dst) java.dummy_1.]gatbps_x[: $][(javadoc_]gatbps_y[_src)
 ./$][(java_]gatbps_y[_dst)/recursive: $][(java_]gatbps_y[_src)
 ./$][(java_]gatbps_y[_dst)/recursive: java.FORCE
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_TOP)
-	$][(GATBPS_V_JAR_SPECIAL)$][(GATBPS_V_NOP)
+	$][(GATBPS_V_JAR_RECURSIVE)$][(GATBPS_V_NOP)
 	$][(AM@&t@_V_at){ \
   ( \
     '\''rm'\'' \

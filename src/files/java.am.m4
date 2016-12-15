@@ -29,11 +29,11 @@ GATBPS_V_JAR_0 = @$(SHELL) \
 
 GATBPS_V_JAR_1 =
 
-GATBPS_V_JAR_SPECIAL = $(GATBPS_V_JAR_SPECIAL_@AM_V@)
+GATBPS_V_JAR_RECURSIVE = $(GATBPS_V_JAR_RECURSIVE_@AM_V@)
 
-GATBPS_V_JAR_SPECIAL_ = $(GATBPS_V_JAR_SPECIAL_@AM_DEFAULT_V@)
+GATBPS_V_JAR_RECURSIVE_ = $(GATBPS_V_JAR_RECURSIVE_@AM_DEFAULT_V@)
 
-GATBPS_V_JAR_SPECIAL_0 = @$(SHELL) \
+GATBPS_V_JAR_RECURSIVE_0 = @$(SHELL) \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \
@@ -41,7 +41,7 @@ GATBPS_V_JAR_SPECIAL_0 = @$(SHELL) \
   $(@D) \
 || 'exit' "$${?}";
 
-GATBPS_V_JAR_SPECIAL_1 =
+GATBPS_V_JAR_RECURSIVE_1 =
 
 GATBPS_V_JAVAC = $(GATBPS_V_JAVAC_@AM_V@)
 
@@ -171,7 +171,7 @@ $(java_dst) java.dummy_1.main: $(javadoc_src)
 ./$(java_dst)/recursive: $(java_src)
 ./$(java_dst)/recursive: java.FORCE
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
-	$(GATBPS_V_JAR_SPECIAL)$(GATBPS_V_NOP)
+	$(GATBPS_V_JAR_RECURSIVE)$(GATBPS_V_NOP)
 	$(AM_V_at){ \
   ( \
     'rm' \
