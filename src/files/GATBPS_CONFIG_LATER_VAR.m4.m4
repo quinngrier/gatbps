@@ -49,8 +49,8 @@ case "$][{GATBPS_CONFIG_LATER_SCRIPT+is_set}" in
   ?*)
   ;;
   *)
-    GATBPS_CONFIG_LATER_SCRIPT=''\''s/@\([A-Z_a-z][0-9A-Z_a-z]*\)@/{@}\1{@}/g'\'''
-    ]GATBPS_CONFIG_LATER_ADD([AT], [@])[
+    GATBPS_CONFIG_LATER_SCRIPT=]dnl
+[''\''s'\''\'\'''\''{@}AT{@}'\''\'\'''\''@'\''\'\'''\''g'\'''
     ]GATBPS_CONFIG_LATER_ADD([abs_builddir], [$][(abs_builddir)])[
     ]GATBPS_CONFIG_LATER_ADD([abs_srcdir], [$][(abs_srcdir)])[
     ]GATBPS_CONFIG_LATER_ADD([bindir], [$][(bindir)])[

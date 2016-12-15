@@ -57,7 +57,7 @@ case "$][{AT_LATER+is_set}" in
     ])[
   ;;
 esac
-AT_LATER='@AT@'
+AT_LATER='{@}AT{@}'
 'readonly' 'AT_LATER'
 
 ]AC_SUBST([AT])[
