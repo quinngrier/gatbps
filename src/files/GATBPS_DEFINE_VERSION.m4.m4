@@ -206,7 +206,7 @@ m4_define(
   [
     Define to a character string literal that contains the Docker
     version number of $2. If $2 does not contain a "-" character, then
-    this should be $2. Otherwise, it should be the text up to but not
+    this should be $2. Otherwise, this should be the text up to but not
     including the "+" character. For example, if $2 were "0.1.0", then
     this should be "0.1.0", and if $2 were "0.1.0-4927+g88a52bb", then
     this should be "0.1.0-4927".
@@ -237,9 +237,9 @@ m4_define(
   [
     Define to a character string literal that contains the RPM version
     number of $2. If $2 does not contain a "-" character, then this
-    should be the same as $2. Otherwise, it should be the text up to but
-    not including the "-" character. For example, if $2 were "0.1.0" or
-    "0.1.0-4927+g88a52bb", then this should be "0.1.0".
+    should be the same as $2. Otherwise, this should be the text up to
+    but not including the "-" character. For example, if $2 were "0.1.0"
+    or "0.1.0-4927+g88a52bb", then this should be "0.1.0".
   ])[
 
 ]AC_DEFINE(
