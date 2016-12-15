@@ -43,7 +43,7 @@ m4_if(
 ]AC_SUBST([GATBPS_CONFIG_LATER_RULES])[
 ]AM_SUBST_NOTMAKE([GATBPS_CONFIG_LATER_RULES])[
 
-]AC_SUBST([GATBPS_CONFIG_LATER_SCRIPT])[
+]AC_SUBST([GATBPS_CONFIG_LATER_SCRIPT_MID])[
 
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})

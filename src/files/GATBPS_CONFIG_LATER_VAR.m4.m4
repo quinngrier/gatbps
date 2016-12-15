@@ -20,9 +20,13 @@ PACKAGE_DATE_MONTH_ZPAD{%||%}dnl
 PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 {%|
 AC_DEFUN([GATBPS_CONFIG_LATER_ADD], [dnl
-[GATBPS_CONFIG_LATER_SCRIPT=]dnl
-["$][{GATBPS_CONFIG_LATER_SCRIPT}"]dnl
-[''\'';s'\''\'\'''\''{@}$1{@}'\''\'\'''\''$2'\''\'\'''\''g'\''']dnl
+[GATBPS_CONFIG_LATER_SCRIPT_MID=]dnl
+["$][{GATBPS_CONFIG_LATER_SCRIPT_MID}"]dnl
+[''\'' ]dnl
+[} else if (line_parts[i + 1] == "$1") { ]dnl
+[$][$][0 = $][$][0 "$2"; ]dnl
+[replaced_previous_line_part = 1; ]dnl
+['\''']dnl
 ])[]dnl
 AC_DEFUN([GATBPS_CONFIG_LATER_VAR], [[{
 
@@ -45,12 +49,11 @@ m4_if(
   ])])[]dnl
 [
 
-case "$][{GATBPS_CONFIG_LATER_SCRIPT+is_set}" in
+case "$][{GATBPS_CONFIG_LATER_SCRIPT_MID+is_set}" in
   ?*)
   ;;
   *)
-    GATBPS_CONFIG_LATER_SCRIPT=]dnl
-[''\''s'\''\'\'''\''{@}AT{@}'\''\'\'''\''@'\''\'\'''\''g'\'''
+    ]GATBPS_CONFIG_LATER_ADD([AT], [@])[
     ]GATBPS_CONFIG_LATER_ADD([abs_builddir], [$][(abs_builddir)])[
     ]GATBPS_CONFIG_LATER_ADD([abs_srcdir], [$][(abs_srcdir)])[
     ]GATBPS_CONFIG_LATER_ADD([bindir], [$][(bindir)])[
