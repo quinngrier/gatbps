@@ -24,7 +24,7 @@ AC_DEFUN([GATBPS_CONFIG_LATER_ADD], [dnl
 ["$][{GATBPS_CONFIG_LATER_SCRIPT_MID}"]dnl
 [''\'' ]dnl
 [} else if (line_parts[i + 1] == "$1") { ]dnl
-[$][$][0 = $][$][0 "$2"; ]dnl
+[line = line "$2"; ]dnl
 [replaced_previous_line_part = 1; ]dnl
 ['\''']dnl
 ])[]dnl

@@ -17,26 +17,27 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 GATBPS_CONFIG_LATER_SCRIPT_BOT = ' \
       } else { \
-        $$0 = $$0 "{@}" line_parts[i + 1]; \
+        line = line "{@}" line_parts[i + 1]; \
         replaced_previous_line_part = 0; \
       } \
     } \
-    print $$0; \
+    print line; \
   } \
 '
 
 GATBPS_CONFIG_LATER_SCRIPT_TOP = ' \
   { \
-    line_parts_count = split($$0, line_parts, /{@}/); \
+    line = $$0; \
+    line_parts_count = split(line, line_parts, /{@}/); \
     for (i = 0; i != line_parts_count; ++i) { \
       if (i == 0) { \
-        $$0 = line_parts[i + 1]; \
+        line = line_parts[i + 1]; \
         replaced_previous_line_part = 0; \
       } else if (replaced_previous_line_part) { \
-        $$0 = $$0 line_parts[i + 1]; \
+        line = line line_parts[i + 1]; \
         replaced_previous_line_part = 0; \
       } else if (i == line_parts_count - 1) { \
-        $$0 = $$0 "{@}" line_parts[i + 1]; \
+        line = line "{@}" line_parts[i + 1]; \
         replaced_previous_line_part = 0; \
 '
 
