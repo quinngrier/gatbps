@@ -34,10 +34,10 @@ AC_DEFUN([GATBPS_CONFIG_LATER], [[{
   [72])[
 #]dnl
 m4_if(
-  m4_eval([$# < 2 || $# > 4]),
+  m4_eval([$# < 1 || $# > 4]),
   [1],
   [gatbps_fatal([
-    GATBPS_CONFIG_LATER requires 2 to 4 arguments
+    GATBPS_CONFIG_LATER requires 1 to 4 arguments
     ($# ]m4_if([$#], [1], [[was]], [[were]])[ given)
   ])])[]dnl
 m4_if(
@@ -51,15 +51,19 @@ m4_if(
     space, tab, or newline character
   ])])[]dnl
 m4_if(
-  m4_bregexp([$2], [[^
+  [$2],
+  [],
+  [],
+  [m4_if(
+    m4_bregexp([$2], [[^
 	 ]]),
-  [-1],
-  [gatbps_fatal([
-    invalid second argument to GATBPS_CONFIG_LATER:
-  [--VERBATIM--] "$2"], [
-    the second argument must contain at least one character that is not
-    a space, tab, or newline character
-  ])])[]dnl
+    [-1],
+    [gatbps_fatal([
+      invalid second argument to GATBPS_CONFIG_LATER:
+    [--VERBATIM--] "$2"], [
+      the second argument must contain at least one character that is
+      not a space, tab, or newline character
+    ])])])[]dnl
 m4_case(
   [$3],
   [], [],
@@ -114,10 +118,18 @@ m4_pushdef(
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
 m4_pushdef(
   [input_file],
-  m4_bpatsubst([[[$2]]], ['], ['\\'']))[]dnl
+  m4_if(
+    [$2],
+    [],
+    [m4_bpatsubst([[[$1.im]]], ['], ['\\''])],
+    [m4_bpatsubst([[[$2]]], ['], ['\\''])]))[]dnl
 m4_pushdef(
   [child_prerequisites],
-  [[[$2]]])[]dnl
+  m4_if(
+    [$2],
+    [],
+    [[[[$1.im]]]],
+    [[[[$2]]]]))[]dnl
 m4_pushdef(
   [clean_target],
   m4_if(
