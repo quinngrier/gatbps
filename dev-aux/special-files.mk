@@ -16,6 +16,7 @@ files = \
   build-aux/CC0-1.0-AM-COPYRIGHT.am \
   build-aux/DATE.sh \
   build-aux/GATBPS_CONFIG_FILE_RULES.am \
+  build-aux/GATBPS_CONFIG_LATER_RULES.am \
   build-aux/GATBPS_CP_RULES.am \
   build-aux/GATBPS_M4_RULES.am \
   build-aux/GATBPS_RECIPE_MARKER.am \
