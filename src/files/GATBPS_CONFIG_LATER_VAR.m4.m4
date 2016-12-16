@@ -41,12 +41,19 @@ AC_DEFUN([GATBPS_CONFIG_LATER_VAR], [[{
   [72])[
 #]dnl
 m4_if(
-  m4_eval([$# != 1]),
+  m4_eval([$# < 1 || $# > 2]),
   [1],
   [gatbps_fatal([
-    GATBPS_CONFIG_LATER_VAR requires exactly 1 argument
+    GATBPS_CONFIG_LATER_VAR requires 1 to 2 arguments
     ($# ]m4_if([$#], [1], [[was]], [[were]])[ given)
   ])])[]dnl
+m4_pushdef(
+  [variable_value],
+  m4_if(
+    m4_eval([$# >= 2]),
+    [1],
+    [[[$2]]],
+    [[[$][($1)]]]))[]dnl
 [
 
 case "$][{GATBPS_CONFIG_LATER_SCRIPT_MID+is_set}" in
@@ -85,9 +92,10 @@ case "$][{GATBPS_CONFIG_LATER_SCRIPT_MID+is_set}" in
   ;;
 esac
 
-]GATBPS_CONFIG_LATER_ADD([$1], [$][($1)])[
+]GATBPS_CONFIG_LATER_ADD([$1], variable_value)[
 
 ]dnl
+m4_popdef([variable_value])[]dnl
 [:;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
 dnl
