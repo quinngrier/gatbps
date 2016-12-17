@@ -70,7 +70,23 @@ case "$][{CLASSPATH_SEPARATOR_LATER+is_set}" in
     ])[
   ;;
 esac
-CLASSPATH_SEPARATOR_LATER="$][{CLASSPATH_SEPARATOR}"
+CLASSPATH_SEPARATOR_LATER=`
+  'sed' \
+    's/@/{@}AT{@}/g' \
+    0<<EOF2 \
+  ;
+$][{CLASSPATH_SEPARATOR}
+EOF2
+`
+case "$][{?}" in
+  '0')
+  ;;
+  *)
+    ]GATBPS_MSG_ERROR([
+      sed failed
+    ])[
+  ;;
+esac
 'readonly' 'CLASSPATH_SEPARATOR_LATER'
 
 ]AC_SUBST([CLASSPATH_SEPARATOR])[
