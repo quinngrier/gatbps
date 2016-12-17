@@ -337,10 +337,10 @@ case "${TEXI2ANY+is_set}" in
   ?*)
     case "${#}" in
       '0')
-        'set' '' '--texi2any='"${TEXI2ANY}"
+        'set' 'dummy' '--texi2any='"${TEXI2ANY}"
       ;;
       *)
-        'set' '' '--texi2any='"${TEXI2ANY}" "${@}"
+        'set' 'dummy' '--texi2any='"${TEXI2ANY}" "${@}"
       ;;
     esac
     'shift'
@@ -351,10 +351,10 @@ case "${STYLE_STDOUT+is_set}" in
   ?*)
     case "${#}" in
       '0')
-        'set' '' '--style-stdout='"${STYLE_STDOUT}"
+        'set' 'dummy' '--style-stdout='"${STYLE_STDOUT}"
       ;;
       *)
-        'set' '' '--style-stdout='"${STYLE_STDOUT}" "${@}"
+        'set' 'dummy' '--style-stdout='"${STYLE_STDOUT}" "${@}"
       ;;
     esac
     'shift'
@@ -365,10 +365,10 @@ case "${STYLE_STDERR+is_set}" in
   ?*)
     case "${#}" in
       '0')
-        'set' '' '--style-stderr='"${STYLE_STDERR}"
+        'set' 'dummy' '--style-stderr='"${STYLE_STDERR}"
       ;;
       *)
-        'set' '' '--style-stderr='"${STYLE_STDERR}" "${@}"
+        'set' 'dummy' '--style-stderr='"${STYLE_STDERR}" "${@}"
       ;;
     esac
     'shift'
@@ -379,10 +379,10 @@ case "${STYLE+is_set}" in
   ?*)
     case "${#}" in
       '0')
-        'set' '' '--style='"${STYLE}"
+        'set' 'dummy' '--style='"${STYLE}"
       ;;
       *)
-        'set' '' '--style='"${STYLE}" "${@}"
+        'set' 'dummy' '--style='"${STYLE}" "${@}"
       ;;
     esac
     'shift'
@@ -393,10 +393,10 @@ case "${SED+is_set}" in
   ?*)
     case "${#}" in
       '0')
-        'set' '' '--sed='"${SED}"
+        'set' 'dummy' '--sed='"${SED}"
       ;;
       *)
-        'set' '' '--sed='"${SED}" "${@}"
+        'set' 'dummy' '--sed='"${SED}" "${@}"
       ;;
     esac
     'shift'
@@ -407,10 +407,10 @@ case "${AWK+is_set}" in
   ?*)
     case "${#}" in
       '0')
-        'set' '' '--awk='"${AWK}"
+        'set' 'dummy' '--awk='"${AWK}"
       ;;
       *)
-        'set' '' '--awk='"${AWK}" "${@}"
+        'set' 'dummy' '--awk='"${AWK}" "${@}"
       ;;
     esac
     'shift'
@@ -443,10 +443,10 @@ path_args=''
 
 case "${#}" in
   '0')
-    'set' ''
+    'set' 'dummy'
   ;;
   *)
-    'set' '' "${@}"
+    'set' 'dummy' "${@}"
   ;;
 esac
 

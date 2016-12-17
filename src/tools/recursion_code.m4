@@ -46,10 +46,10 @@ recursion_code_helper(shift($@)){%||%}dnl
 
             case "$|%}{%|{#}" in
               '0')
-                'set' ''
+                'set' 'dummy'
               ;;
               *)
-                'set' '' "$|%}{%|{@}"
+                'set' 'dummy' "$|%}{%|{@}"
               ;;
             esac
 

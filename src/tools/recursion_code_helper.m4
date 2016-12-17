@@ -28,10 +28,10 @@ ifelse(
 
             case "$|%}{%|{#}" in
               '0')
-                'set' '' "$|%}{%|{prefix}"'$1'
+                'set' 'dummy' "$|%}{%|{prefix}"'$1'
               ;;
               *)
-                'set' '' "$|%}{%|{prefix}"'$1' "$|%}{%|{@}"
+                'set' 'dummy' "$|%}{%|{prefix}"'$1' "$|%}{%|{@}"
               ;;
             esac
             'shift'|%}dnl
