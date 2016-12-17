@@ -1,6 +1,6 @@
 ## begin_variables
 
-bin_SCRIPTS += bin/gatbps
+bin_SCRIPTS += bin/gatbps$(EXEEXT)
 
 bin_gatbps_src =
 bin_gatbps_src += doc/help/CC0-1.0-AC-COPYRIGHT.ac.hd.m4
@@ -418,7 +418,7 @@ bin_gatbps_src += src/files/wget.am.m4
 bin_gatbps_src += src/files/xml-dist.am.m4
 bin_gatbps_src += src/files/xml.am.m4
 bin_gatbps_src += src/files/xz.am.m4
-bin_gatbps_src += src/gatbps.m4
+bin_gatbps_src += src/gatbps.sh.m4
 bin_gatbps_src += src/recursion/CC0-1.0-AC-COPYRIGHT.ac.rc.m4
 bin_gatbps_src += src/recursion/CC0-1.0-appendix.texi.rc.m4
 bin_gatbps_src += src/recursion/DATE.sh.rc.m4

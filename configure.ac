@@ -37,7 +37,18 @@
   tar-ustar
 ])[
 
-]DEFINE_ALL
+]DEFINE_ALL[
+
+]dnl begin_includes
+[
+
+]m4_include([bin/gatbps.ac])[
+]m4_include([src/gatbps.sh.ac])[
+
+]dnl end_includes
+[
+
+]
 
 AC_MSG_CHECKING([which --awk value to use by default])
 AC_ARG_ENABLE(
@@ -312,14 +323,6 @@ AM_SUBST_NOTMAKE([TEXI2ANY_DEFAULT_TROFF])
 
 ]GATBPS_CONFIG_FILE(
   [src/tools/TEXI2ANY_DEFAULT_TROFF.m4])[
-
-]GATBPS_CP(
-  [bin/gatbps],
-  [src/gatbps],
-  [executable],
-  [mostlyclean],
-  [
-  ])[
 
 ]GATBPS_CP(
   [gh-pages/$(html_dist_dst)],
@@ -1159,10 +1162,6 @@ AM_SUBST_NOTMAKE([TEXI2ANY_DEFAULT_TROFF])
 
 ]GATBPS_M4(
   [src/files/xz.am],
-  [mostlyclean])[
-
-]GATBPS_M4(
-  [src/gatbps],
   [mostlyclean])[
 
 ]dnl end_targets

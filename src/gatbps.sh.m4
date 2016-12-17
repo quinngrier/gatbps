@@ -1,7 +1,7 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|src/gatbps.m4|%}){%||%}dnl
+rules_code({%|src/gatbps.sh.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/AWK_DEFAULT_SH.m4|%}){%||%}dnl
 include({%|src/tools/PACKAGE_DATE.m4|%}){%||%}dnl
