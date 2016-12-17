@@ -75,9 +75,10 @@ case "$][{EXEEXT_LATER+is_set}" in
   ;;
 esac
 EXEEXT_LATER=`
-  'sed' '
-    s/@/{@}AT{@}/g
-  ' <<EOF2
+  'sed' \
+    's/@/{@}AT{@}/g' \
+    0<<EOF2 \
+  ;
 $][{EXEEXT}
 EOF2
 `
