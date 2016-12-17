@@ -42,17 +42,17 @@ m4_if(
 
 ]GATBPS_ARG_ENABLE_BOOL(
   [
-    permission to enable shebang lines in executable scripts
+    permission to enable shebang lines
   ],
   [enable_SHEBANG_LINES],
   [shebang-lines],
   [yes],
   [
-    enable shebang lines in executable scripts if $][{cross_compiling}
-    is not "no" or if shebang lines are supported on the build machine
+    enable shebang lines if and only if $][{cross_compiling} is not "no"
+    or shebang lines are supported on the build machine (default)
   ],
   [
-    disable shebang lines in executable scripts
+    disable shebang lines
   ])[
 
 :;}]])[]dnl
