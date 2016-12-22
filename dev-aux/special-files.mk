@@ -125,7 +125,7 @@ files = \
   m4/gatbps_notice.m4 \
   m4/gatbps_rule_word_error.m4 \
   src/tools/rules_code.m4 \
-  $(prevent_a_blank_line)
+$(prevent_a_blank_line)
 
 ## end_variables
 

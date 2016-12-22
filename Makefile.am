@@ -5,7 +5,7 @@ AM_MAKEINFOFLAGS = \
   'doc/texi' \
   '-I' \
   $(srcdir)'/doc/texi' \
-  $(prevent_a_blank_line)
+$(prevent_a_blank_line)
 
 AM_MAKEINFOHTMLFLAGS =
 AM_MAKEINFOHTMLFLAGS += $(AM_MAKEINFOFLAGS)
