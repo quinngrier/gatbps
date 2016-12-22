@@ -1,7 +1,11 @@
 ## begin_variables
 
-AM_MAKEINFOFLAGS =
-AM_MAKEINFOFLAGS += '-I' 'doc/texi' '-I' $(srcdir)'/doc/texi'
+AM_MAKEINFOFLAGS = \
+  '-I' \
+  'doc/texi' \
+  '-I' \
+  $(srcdir)'/doc/texi' \
+  $(prevent_a_blank_line)
 
 AM_MAKEINFOHTMLFLAGS =
 AM_MAKEINFOHTMLFLAGS += $(AM_MAKEINFOFLAGS)
