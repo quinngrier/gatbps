@@ -249,7 +249,10 @@ m4_define(
   m4_dquote(["]$1$2_GIT_TEXI["]),
   [
     Define to the same character string literal as $2_GIT but with each
-    "." character replaced with the string ".@:".
+    "." character replaced with the string ".@:". For example, if $2_GIT
+    were "v0.1.0", then this should be "v0.@:1.@:0", and if $2_GIT were
+    "u0.1.0-4927-g88a52bb", then this should be
+    "u0.@:1.@:0-4927-g88a52bb".
   ])[
 
 ]AC_DEFINE(
