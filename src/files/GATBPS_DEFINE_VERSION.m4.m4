@@ -116,6 +116,11 @@ m4_ifdef(
     $1$2_GIT is already defined
   ])])[]dnl
 m4_ifdef(
+  [$1$2_GIT_TEXI],
+  [gatbps_fatal([
+    $1$2_GIT_TEXI is already defined
+  ])])[]dnl
+m4_ifdef(
   [$1$2_LIBTOOL_A],
   [gatbps_fatal([
     $1$2_LIBTOOL_A is already defined
@@ -182,6 +187,9 @@ m4_define(
       [[v]$1$2],
       [[u]m4_bpatsubst(m4_dquote($1$2), [\+], [-])])))[]dnl
 m4_define(
+  [$1$2_GIT_TEXI],
+  m4_dquote(m4_bpatsubst(m4_dquote($1$2_GIT), [\.], [.@:])))[]dnl
+m4_define(
   [$1$2_LIBTOOL_A],
   m4_dquote($1$2_MINOR))[]dnl
 m4_define(
@@ -232,6 +240,14 @@ m4_define(
   [[$2_GIT]],
   m4_dquote(["]$1$2_GIT["]),
   [
+  ])[
+
+]AC_DEFINE(
+  [[$2_GIT_TEXI]],
+  m4_dquote(["]$1$2_GIT_TEXI["]),
+  [
+    Define to the same character string literal as $2_GIT but with each
+    "." character replaced with the string ".@:".
   ])[
 
 ]AC_DEFINE(
@@ -292,6 +308,14 @@ case "$][{$2_GIT+is_set}" in
   ;;
 esac
 
+case "$][{$2_GIT_TEXI+is_set}" in
+  ?*)
+    ]GATBPS_MSG_ERROR([
+      \$][{$2_GIT_TEXI} is already set
+    ])[
+  ;;
+esac
+
 case "$][{$2_RPM_R+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
@@ -319,6 +343,7 @@ esac
 $2_DOCKER=']$1$2_DOCKER['
 $2_DOCKER_TEXI=']$1$2_DOCKER_TEXI['
 $2_GIT=']$1$2_GIT['
+$2_GIT_TEXI=']$1$2_GIT_TEXI['
 $2_RPM_R=']$1$2_RPM_R['
 $2_RPM_V=']$1$2_RPM_V['
 $2_RPM_VR=']$1$2_RPM_VR['
@@ -326,6 +351,7 @@ $2_RPM_VR=']$1$2_RPM_VR['
 'readonly' '$2_DOCKER'
 'readonly' '$2_DOCKER_TEXI'
 'readonly' '$2_GIT'
+'readonly' '$2_GIT_TEXI'
 'readonly' '$2_RPM_R'
 'readonly' '$2_RPM_V'
 'readonly' '$2_RPM_VR'
@@ -333,6 +359,7 @@ $2_RPM_VR=']$1$2_RPM_VR['
 ]AC_SUBST([$2_DOCKER])[
 ]AC_SUBST([$2_DOCKER_TEXI])[
 ]AC_SUBST([$2_GIT])[
+]AC_SUBST([$2_GIT_TEXI])[
 ]AC_SUBST([$2_RPM_R])[
 ]AC_SUBST([$2_RPM_V])[
 ]AC_SUBST([$2_RPM_VR])[
