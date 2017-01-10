@@ -266,6 +266,13 @@ m4_define(
   [[$2_GIT]],
   m4_dquote(["]$1$2_GIT["]),
   [
+    Define to a character string literal that contains the Git
+    description of $2. If $2 does not contain a "-" character, then this
+    should be a "v" character followed by $2. Otherwise, this should be
+    a "u" character followed by $2, and the "+" character should be
+    replaced with a "-" character. For example, if $2 were "0.1.0", then
+    this should be "v0.1.0", and if $2 were "0.1.0-4927+g88a52bb", then
+    this should be "u0.1.0-4927-g88a52bb".
   ])[
 
 ]AC_DEFINE(
