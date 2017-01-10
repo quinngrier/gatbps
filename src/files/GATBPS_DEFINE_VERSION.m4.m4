@@ -257,9 +257,9 @@ m4_define(
   m4_dquote(["]$1$2_DOCKER_TEXI["]),
   [
     Define to the same character string literal as $2_DOCKER but with
-    each "." character replaced with the string ".@:". For example, if
-    $2_DOCKER were "0.1.0", then this should be "0.@:1.@:0", and if
-    $2_DOCKER were "0.1.0-4927", then this should be "0.@:1.@:0-4927".
+    each "." character replaced with ".@:". For example, if $2_DOCKER
+    were "0.1.0", then this should be "0.@:1.@:0", and if $2_DOCKER were
+    "0.1.0-4927", then this should be "0.@:1.@:0-4927".
   ])[
 
 ]AC_DEFINE(
@@ -273,8 +273,8 @@ m4_define(
   m4_dquote(["]$1$2_GIT_TEXI["]),
   [
     Define to the same character string literal as $2_GIT but with each
-    "." character replaced with the string ".@:". For example, if $2_GIT
-    were "v0.1.0", then this should be "v0.@:1.@:0", and if $2_GIT were
+    "." character replaced with ".@:". For example, if $2_GIT were
+    "v0.1.0", then this should be "v0.@:1.@:0", and if $2_GIT were
     "u0.1.0-4927-g88a52bb", then this should be
     "u0.@:1.@:0-4927-g88a52bb".
   ])[
@@ -297,8 +297,8 @@ m4_define(
   m4_dquote(["]$1$2_RPM_R_TEXI["]),
   [
     Define to the same character string literal as $2_RPM_R but with
-    each "." character replaced with the string ".@:". For example, if
-    $2_RPM_R were "1", then this should be "1", and if $2_RPM_R were
+    each "." character replaced with ".@:". For example, if $2_RPM_R
+    were "1", then this should be "1", and if $2_RPM_R were
     "0.4927.g88a52bb", then this should be "0.@:4927.@:g88a52bb".
   ])[
 
@@ -328,8 +328,8 @@ m4_define(
   m4_dquote(["]$1$2_RPM_VR_TEXI["]),
   [
     Define to the same character string literal as $2_RPM_VR but with
-    each "." character replaced with the string ".@:". For example, if
-    $2_RPM_VR were "0.1.0-0.4927.g88a52bb", then this should be
+    each "." character replaced with ".@:". For example, if $2_RPM_VR
+    were "0.1.0-0.4927.g88a52bb", then this should be
     "0.@:1.@:0-0.@:4927.@:g88a52bb".
   ])[
 
@@ -338,8 +338,8 @@ m4_define(
   m4_dquote(["]$1$2_RPM_V_TEXI["]),
   [
     Define to the same character string literal as $2_RPM_V but with
-    each "." character replaced with the string ".@:". For example, if
-    $2_RPM_V were "0.1.0", then this should be "0.@:1.@:0".
+    each "." character replaced with ".@:". For example, if $2_RPM_V
+    were "0.1.0", then this should be "0.@:1.@:0".
   ])[
 
 case "$][{$2_DOCKER+is_set}" in
