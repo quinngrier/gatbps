@@ -16,6 +16,7 @@ header_comment({%|@ifxml
 @end ifnotxml
 @end ifxml
 @set PACKAGEVERSION @PACKAGE_VERSION@
+@set PACKAGEVERSIONMAJOR @PACKAGE_VERSION_MAJOR@
 |%}footer_comment({%|@ifxml
 @ifnotxml
 @c|%}, {%|@c|%}, {%|@c
