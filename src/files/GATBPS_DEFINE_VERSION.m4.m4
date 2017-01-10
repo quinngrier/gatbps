@@ -233,7 +233,9 @@ m4_define(
   m4_dquote(["]$1$2_DOCKER_TEXI["]),
   [
     Define to the same character string literal as $2_DOCKER but with
-    each "." character replaced with the string ".@:".
+    each "." character replaced with the string ".@:". For example, if
+    $2_DOCKER were "0.1.0", then this should be "0.@:1.@:0", and if
+    $2_DOCKER were "0.1.0-4927", then this should be "0.@:1.@:0-4927".
   ])[
 
 ]AC_DEFINE(
