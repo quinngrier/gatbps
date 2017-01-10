@@ -86,11 +86,6 @@ m4_if(
       $1$2 is not defined
     ])])])[]dnl
 m4_ifdef(
-  [$1$2_MINOR],
-  [gatbps_fatal([
-    $1$2_MINOR is already defined
-  ])])[]dnl
-m4_ifdef(
   [$1$2_PATCH],
   [gatbps_fatal([
     $1$2_PATCH is already defined
@@ -129,6 +124,11 @@ m4_ifdef(
   [$1$2_MAJOR],
   [gatbps_fatal([
     $1$2_MAJOR is already defined
+  ])])[]dnl
+m4_ifdef(
+  [$1$2_MINOR],
+  [gatbps_fatal([
+    $1$2_MINOR is already defined
   ])])[]dnl
 m4_ifdef(
   [$1$2_RPM_R],
@@ -172,13 +172,6 @@ m4_if(
     [$1$2],
     [[$3]])])[]dnl
 m4_define(
-  [$1$2_MINOR],
-  m4_if(
-    m4_bregexp($1$2, [^[^0-9]*[0-9]+[^0-9]+[0-9]+]),
-    [-1],
-    [[[]]],
-    [m4_bregexp($1$2, [^[^0-9]*[0-9]+[^0-9]+0*\([0-9]+\)], [[[\1]]])]))[]dnl
-m4_define(
   [$1$2_PATCH],
   m4_if(
     m4_bregexp($1$2, [^[^0-9]*[0-9]+[^0-9]+[0-9]+[^0-9]+[0-9]+]),
@@ -209,6 +202,13 @@ m4_define(
     [-1],
     [[[]]],
     [m4_bregexp($1$2, [^[^0-9]*0*\([0-9]+\)], [[[\1]]])]))[]dnl
+m4_define(
+  [$1$2_MINOR],
+  m4_if(
+    m4_bregexp($1$2, [^[^0-9]*[0-9]+[^0-9]+[0-9]+]),
+    [-1],
+    [[[]]],
+    [m4_bregexp($1$2, [^[^0-9]*[0-9]+[^0-9]+0*\([0-9]+\)], [[[\1]]])]))[]dnl
 m4_define(
   [$1$2_LIBTOOL_A],
   m4_dquote($1$2_MINOR))[]dnl
@@ -297,6 +297,12 @@ m4_define(
 ]AC_DEFINE(
   [[$2_MAJOR]],
   m4_dquote(["]$1$2_MAJOR["]),
+  [
+  ])[
+
+]AC_DEFINE(
+  [[$2_MINOR]],
+  m4_dquote(["]$1$2_MINOR["]),
   [
   ])[
 
@@ -413,6 +419,14 @@ case "$][{$2_MAJOR+is_set}" in
   ;;
 esac
 
+case "$][{$2_MINOR+is_set}" in
+  ?*)
+    ]GATBPS_MSG_ERROR([
+      \$][{$2_MINOR} is already set
+    ])[
+  ;;
+esac
+
 case "$][{$2_RPM_R+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
@@ -474,6 +488,7 @@ $2_DOCKER_TEXI=']$1$2_DOCKER_TEXI['
 $2_GIT=']$1$2_GIT['
 $2_GIT_TEXI=']$1$2_GIT_TEXI['
 $2_MAJOR=']$1$2_MAJOR['
+$2_MINOR=']$1$2_MINOR['
 $2_RPM_R=']$1$2_RPM_R['
 $2_RPM_R_TEXI=']$1$2_RPM_R_TEXI['
 $2_RPM_V=']$1$2_RPM_V['
@@ -487,6 +502,7 @@ $2_TEXI=']$1$2_TEXI['
 'readonly' '$2_GIT'
 'readonly' '$2_GIT_TEXI'
 'readonly' '$2_MAJOR'
+'readonly' '$2_MINOR'
 'readonly' '$2_RPM_R'
 'readonly' '$2_RPM_R_TEXI'
 'readonly' '$2_RPM_V'
@@ -500,6 +516,7 @@ $2_TEXI=']$1$2_TEXI['
 ]AC_SUBST([$2_GIT])[
 ]AC_SUBST([$2_GIT_TEXI])[
 ]AC_SUBST([$2_MAJOR])[
+]AC_SUBST([$2_MINOR])[
 ]AC_SUBST([$2_RPM_R])[
 ]AC_SUBST([$2_RPM_R_TEXI])[
 ]AC_SUBST([$2_RPM_V])[
