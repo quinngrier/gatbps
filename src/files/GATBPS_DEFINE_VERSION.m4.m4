@@ -106,6 +106,11 @@ m4_ifdef(
     $1$2_DOCKER is already defined
   ])])[]dnl
 m4_ifdef(
+  [$1$2_DOCKER_TEXI],
+  [gatbps_fatal([
+    $1$2_DOCKER_TEXI is already defined
+  ])])[]dnl
+m4_ifdef(
   [$1$2_GIT],
   [gatbps_fatal([
     $1$2_GIT is already defined
@@ -166,6 +171,9 @@ m4_define(
   [$1$2_DOCKER],
   m4_dquote(m4_bpatsubst(m4_dquote($1$2), [\+.*\(.\)], [\1])))[]dnl
 m4_define(
+  [$1$2_DOCKER_TEXI],
+  m4_dquote(m4_bpatsubst(m4_dquote($1$2_DOCKER), [\.], [.@:])))[]dnl
+m4_define(
   [$1$2_GIT],
   m4_dquote(
     m4_if(
@@ -210,6 +218,14 @@ m4_define(
     including the "+" character. For example, if $2 were "0.1.0", then
     this should be "0.1.0", and if $2 were "0.1.0-4927+g88a52bb", then
     this should be "0.1.0-4927".
+  ])[
+
+]AC_DEFINE(
+  [[$2_DOCKER_TEXI]],
+  m4_dquote(["]$1$2_DOCKER_TEXI["]),
+  [
+    Define to the same character string literal as $2_DOCKER but with
+    each "." character replaced with the string ".@:".
   ])[
 
 ]AC_DEFINE(
@@ -260,6 +276,14 @@ case "$][{$2_DOCKER+is_set}" in
   ;;
 esac
 
+case "$][{$2_DOCKER_TEXI+is_set}" in
+  ?*)
+    ]GATBPS_MSG_ERROR([
+      \$][{$2_DOCKER_TEXI} is already set
+    ])[
+  ;;
+esac
+
 case "$][{$2_GIT+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
@@ -293,18 +317,21 @@ case "$][{$2_RPM_VR+is_set}" in
 esac
 
 $2_DOCKER=']$1$2_DOCKER['
+$2_DOCKER_TEXI=']$1$2_DOCKER_TEXI['
 $2_GIT=']$1$2_GIT['
 $2_RPM_R=']$1$2_RPM_R['
 $2_RPM_V=']$1$2_RPM_V['
 $2_RPM_VR=']$1$2_RPM_VR['
 
 'readonly' '$2_DOCKER'
+'readonly' '$2_DOCKER_TEXI'
 'readonly' '$2_GIT'
 'readonly' '$2_RPM_R'
 'readonly' '$2_RPM_V'
 'readonly' '$2_RPM_VR'
 
 ]AC_SUBST([$2_DOCKER])[
+]AC_SUBST([$2_DOCKER_TEXI])[
 ]AC_SUBST([$2_GIT])[
 ]AC_SUBST([$2_RPM_R])[
 ]AC_SUBST([$2_RPM_V])[
