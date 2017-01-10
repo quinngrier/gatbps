@@ -160,6 +160,11 @@ m4_ifdef(
   [gatbps_fatal([
     $1$2_RPM_V_TEXI is already defined
   ])])[]dnl
+m4_ifdef(
+  [$1$2_TEXI],
+  [gatbps_fatal([
+    $1$2_TEXI is already defined
+  ])])[]dnl
 m4_if(
   m4_eval([$# >= 3]),
   [1],
@@ -238,6 +243,9 @@ m4_define(
 m4_define(
   [$1$2_RPM_V_TEXI],
   m4_dquote(m4_bpatsubst(m4_dquote($1$2_RPM_V), [\.], [.@:])))[]dnl
+m4_define(
+  [$1$2_TEXI],
+  m4_dquote(m4_bpatsubst(m4_dquote($1$2), [\.], [.@:])))[]dnl
 [
 
 ]AC_DEFINE(
@@ -349,6 +357,16 @@ m4_define(
     were "0.1.0", then this should be "0.@:1.@:0".
   ])[
 
+]AC_DEFINE(
+  [[$2_TEXI]],
+  m4_dquote(["]$1$2_TEXI["]),
+  [
+    Define to the same character string literal as $2 but with each "."
+    character replaced with ".@:". For example, if $2 were "0.1.0", then
+    this should be "0.@:1.@:0", and if $2 were "0.1.0-4927+g88a52bb",
+    then this should be "0.@:1.@:0-4927+g88a52bb".
+  ])[
+
 case "$][{$2_DOCKER+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
@@ -429,6 +447,14 @@ case "$][{$2_RPM_V_TEXI+is_set}" in
   ;;
 esac
 
+case "$][{$2_TEXI+is_set}" in
+  ?*)
+    ]GATBPS_MSG_ERROR([
+      \$][{$2_TEXI} is already set
+    ])[
+  ;;
+esac
+
 $2_DOCKER=']$1$2_DOCKER['
 $2_DOCKER_TEXI=']$1$2_DOCKER_TEXI['
 $2_GIT=']$1$2_GIT['
@@ -439,6 +465,7 @@ $2_RPM_V=']$1$2_RPM_V['
 $2_RPM_VR=']$1$2_RPM_VR['
 $2_RPM_VR_TEXI=']$1$2_RPM_VR_TEXI['
 $2_RPM_V_TEXI=']$1$2_RPM_V_TEXI['
+$2_TEXI=']$1$2_TEXI['
 
 'readonly' '$2_DOCKER'
 'readonly' '$2_DOCKER_TEXI'
@@ -450,6 +477,7 @@ $2_RPM_V_TEXI=']$1$2_RPM_V_TEXI['
 'readonly' '$2_RPM_VR'
 'readonly' '$2_RPM_VR_TEXI'
 'readonly' '$2_RPM_V_TEXI'
+'readonly' '$2_TEXI'
 
 ]AC_SUBST([$2_DOCKER])[
 ]AC_SUBST([$2_DOCKER_TEXI])[
@@ -461,6 +489,7 @@ $2_RPM_V_TEXI=']$1$2_RPM_V_TEXI['
 ]AC_SUBST([$2_RPM_VR])[
 ]AC_SUBST([$2_RPM_VR_TEXI])[
 ]AC_SUBST([$2_RPM_V_TEXI])[
+]AC_SUBST([$2_TEXI])[
 
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
