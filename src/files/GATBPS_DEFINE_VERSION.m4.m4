@@ -301,6 +301,12 @@ m4_define(
   ])[
 
 ]AC_DEFINE(
+  [[$2_LIBTOOL_R]],
+  m4_dquote(["]$1$2_LIBTOOL_R["]),
+  [
+  ])[
+
+]AC_DEFINE(
   [[$2_MAJOR]],
   m4_dquote(["]$1$2_MAJOR["]),
   [
@@ -431,6 +437,14 @@ case "$][{$2_LIBTOOL_A+is_set}" in
   ;;
 esac
 
+case "$][{$2_LIBTOOL_R+is_set}" in
+  ?*)
+    ]GATBPS_MSG_ERROR([
+      \$][{$2_LIBTOOL_R} is already set
+    ])[
+  ;;
+esac
+
 case "$][{$2_MAJOR+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
@@ -516,6 +530,7 @@ $2_DOCKER_TEXI=']$1$2_DOCKER_TEXI['
 $2_GIT=']$1$2_GIT['
 $2_GIT_TEXI=']$1$2_GIT_TEXI['
 $2_LIBTOOL_A=']$1$2_LIBTOOL_A['
+$2_LIBTOOL_R=']$1$2_LIBTOOL_R['
 $2_MAJOR=']$1$2_MAJOR['
 $2_MINOR=']$1$2_MINOR['
 $2_PATCH=']$1$2_PATCH['
@@ -532,6 +547,7 @@ $2_TEXI=']$1$2_TEXI['
 'readonly' '$2_GIT'
 'readonly' '$2_GIT_TEXI'
 'readonly' '$2_LIBTOOL_A'
+'readonly' '$2_LIBTOOL_R'
 'readonly' '$2_MAJOR'
 'readonly' '$2_MINOR'
 'readonly' '$2_PATCH'
@@ -548,6 +564,7 @@ $2_TEXI=']$1$2_TEXI['
 ]AC_SUBST([$2_GIT])[
 ]AC_SUBST([$2_GIT_TEXI])[
 ]AC_SUBST([$2_LIBTOOL_A])[
+]AC_SUBST([$2_LIBTOOL_R])[
 ]AC_SUBST([$2_MAJOR])[
 ]AC_SUBST([$2_MINOR])[
 ]AC_SUBST([$2_PATCH])[
