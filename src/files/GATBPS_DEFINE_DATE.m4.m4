@@ -57,7 +57,7 @@ m4_if(
   m4_bregexp([$1], [^[A-Z_a-z][0-9A-Z_a-z]*$]),
   [-1],
   [gatbps_fatal([
-    invalid first argument to GATBPS_DEFINE_DATE:
+    invalid first argument for GATBPS_DEFINE_DATE:
   [--VERBATIM--] "$1"], [
     the first argument must be an M4 macro name, that is, it must match
     the following regular expression: ^[A-Z_a-z][0-9A-Z_a-z]*$
@@ -66,7 +66,7 @@ m4_if(
   m4_bregexp([$2], [^[A-Z_a-z][0-9A-Z_a-z]*$]),
   [-1],
   [gatbps_fatal([
-    invalid second argument to GATBPS_DEFINE_DATE:
+    invalid second argument for GATBPS_DEFINE_DATE:
   [--VERBATIM--] "$2"], [
     the second argument must be simultaneously a shell variable name and
     a trailing substring of an M4 macro name, that is, it must match the
@@ -153,7 +153,7 @@ m4_if(
     m4_eval([$# >= 3]),
     [1],
     [gatbps_fatal([
-      invalid third argument to GATBPS_DEFINE_DATE:
+      invalid third argument for GATBPS_DEFINE_DATE:
     [--VERBATIM--] "$3"], [
       the third argument must be a proleptic Gregorian date in
       YYYY-MM-DD form, where the year may be preceded by a "+" character
@@ -231,7 +231,7 @@ m4_if(
   ]),
   [0],
   [gatbps_fatal([
-    invalid third argument to GATBPS_DEFINE_DATE:
+    invalid third argument for GATBPS_DEFINE_DATE:
   [--VERBATIM--] "$3"], [
     the third argument must be a proleptic Gregorian date in YYYY-MM-DD
     form, where the year may be preceded by a "+" character and may have
