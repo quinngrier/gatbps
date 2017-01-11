@@ -171,6 +171,24 @@ m4_if(
   [m4_define(
     [$1$2],
     [[$3]])])[]dnl
+m4_if(
+  m4_bregexp($1$2, [^[0-9][0-9]*\.[0-9][0-9]*\.[0-9][0-9]*\(\+g[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]*\)?]),
+  [-1],
+  [m4_if(
+    m4_eval([$# < 3]),
+    [1],
+    [gatbps_fatal([
+      invalid $1$2 value for GATBPS_DEFINE_VERSION:
+    [--VERBATIM--] "]$1$2["], [
+      the $1$2 value must be an X.Y.Z version number optionally followed
+      by "+g" and at least 7 lowercase hexadecimal digits
+    ])],
+    [gatbps_fatal([
+      invalid third argument for GATBPS_DEFINE_VERSION:
+    [--VERBATIM--] "$3"], [
+      the third argument must be an X.Y.Z version number optionally
+      followed by "+g" and at least 7 lowercase hexadecimal digits
+    ])])])[]dnl
 m4_define(
   [$1$2_DOCKER],
   m4_dquote(m4_bpatsubst(m4_dquote($1$2), [\+.*\(.\)], [\1])))[]dnl
