@@ -9,6 +9,8 @@
 @noindent
 All parts of GATBPS are original work except for some of the copyright
 texts@.
+
+@include indent.texi
 The authors of the original work have waived all copyright and related
 or neighboring rights to the extent permitted by law as described by the
 Creative Commons Zero
@@ -27,6 +29,8 @@ file, typically as a file named
 If not, it may be available at
 @url{https://creativecommons.org/publicdomain/zero/1.0/}@.
 @end ifclear
+
+@include indent.texi
 For the copyright information concerning the copyright texts,
 @ifset fullmanual
 @pxref{Copyright Texts}@.
