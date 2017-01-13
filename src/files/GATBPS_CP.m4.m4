@@ -45,7 +45,7 @@ m4_if(
 	 ]]),
   [-1],
   [gatbps_fatal([
-    invalid first argument to GATBPS_CP:
+    invalid first argument for GATBPS_CP:
   [--VERBATIM--] "$1"], [
     the first argument must contain at least one character that is not a
     space, tab, or newline character
@@ -55,7 +55,7 @@ m4_if(
 	 ]]),
   [-1],
   [gatbps_fatal([
-    invalid second argument to GATBPS_CP:
+    invalid second argument for GATBPS_CP:
   [--VERBATIM--] "$2"], [
     the second argument must contain at least one character that is not
     a space, tab, or newline character
@@ -68,7 +68,7 @@ m4_case(
   [file], [],
   [file_or_directory], [],
   [gatbps_fatal([
-    invalid third argument to GATBPS_CP:
+    invalid third argument for GATBPS_CP:
   [--VERBATIM--] "$3"], [
     the third argument must be either empty, "directory", "executable",
     "file", or "file_or_directory"
@@ -81,7 +81,7 @@ m4_case(
   [maintainer-clean], [],
   [mostlyclean], [],
   [gatbps_fatal([
-    invalid fourth argument to GATBPS_CP:
+    invalid fourth argument for GATBPS_CP:
   [--VERBATIM--] "$4"], [
     the fourth argument must be either empty, "clean", "distclean",
     "maintainer-clean", or "mostlyclean"

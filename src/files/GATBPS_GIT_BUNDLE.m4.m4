@@ -44,7 +44,7 @@ m4_if(
 	 ]]),
   [-1],
   [gatbps_fatal([
-    invalid first argument to GATBPS_GIT_BUNDLE:
+    invalid first argument for GATBPS_GIT_BUNDLE:
   [--VERBATIM--] "$1"], [
     the first argument must contain at least one character that is not a
     space, tab, or newline character
@@ -54,7 +54,7 @@ m4_if(
 	 ]]),
   [-1],
   [gatbps_fatal([
-    invalid second argument to GATBPS_GIT_BUNDLE:
+    invalid second argument for GATBPS_GIT_BUNDLE:
   [--VERBATIM--] "$2"], [
     the second argument must contain at least one character that is not
     a space, tab, or newline character
@@ -75,7 +75,7 @@ m4_case(
   [maintainer-clean], [],
   [mostlyclean], [],
   [gatbps_fatal([
-    invalid fourth argument to GATBPS_GIT_BUNDLE:
+    invalid fourth argument for GATBPS_GIT_BUNDLE:
   [--VERBATIM--] "$4"], [
     the fourth argument must be either empty, "clean", "distclean",
     "maintainer-clean", or "mostlyclean"

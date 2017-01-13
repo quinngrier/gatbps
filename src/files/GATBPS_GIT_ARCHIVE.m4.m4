@@ -44,7 +44,7 @@ m4_if(
 	 ]]),
   [-1],
   [gatbps_fatal([
-    invalid first argument to GATBPS_GIT_ARCHIVE:
+    invalid first argument for GATBPS_GIT_ARCHIVE:
   [--VERBATIM--] "$1"], [
     the first argument must contain at least one character that is not a
     space, tab, or newline character
@@ -54,7 +54,7 @@ m4_if(
 	 ]]),
   [-1],
   [gatbps_fatal([
-    invalid second argument to GATBPS_GIT_ARCHIVE:
+    invalid second argument for GATBPS_GIT_ARCHIVE:
   [--VERBATIM--] "$2"], [
     the second argument must contain at least one character that is not
     a space, tab, or newline character
@@ -75,7 +75,7 @@ m4_case(
   [maintainer-clean], [],
   [mostlyclean], [],
   [gatbps_fatal([
-    invalid fifth argument to GATBPS_GIT_ARCHIVE:
+    invalid fifth argument for GATBPS_GIT_ARCHIVE:
   [--VERBATIM--] "$5"], [
     the fifth argument must be either empty, "clean", "distclean",
     "maintainer-clean", or "mostlyclean"

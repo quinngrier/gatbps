@@ -44,7 +44,7 @@ m4_if(
 	 ]]),
   [-1],
   [gatbps_fatal([
-    invalid first argument to GATBPS_GIT_CLONE:
+    invalid first argument for GATBPS_GIT_CLONE:
   [--VERBATIM--] "$1"], [
     the first argument must contain at least one character that is not a
     space, tab, or newline character
@@ -95,7 +95,7 @@ m4_case(
   [maintainer-clean], [],
   [mostlyclean], [],
   [gatbps_fatal([
-    invalid third argument to GATBPS_GIT_CLONE:
+    invalid third argument for GATBPS_GIT_CLONE:
   [--VERBATIM--] "$3"], [
     the third argument must be either empty, "clean", "distclean",
     "maintainer-clean", or "mostlyclean"
