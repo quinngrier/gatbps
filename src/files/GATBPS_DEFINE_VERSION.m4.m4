@@ -216,11 +216,7 @@ m4_define(
   m4_dquote(m4_bpatsubst(m4_dquote($1$2_GIT), [\.], [.@:])))[]dnl
 m4_define(
   [$1$2_MAJOR],
-  m4_if(
-    m4_bregexp($1$2, [^[^0-9]*[0-9]+]),
-    [-1],
-    [[[]]],
-    [m4_bregexp($1$2, [^[^0-9]*0*\([0-9]+\)], [[[\1]]])]))[]dnl
+  m4_bregexp($1$2, [\([0-9]+\)], [[[\1]]]))[]dnl
 m4_define(
   [$1$2_MINOR],
   m4_if(
