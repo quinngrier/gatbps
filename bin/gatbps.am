@@ -1,5 +1,7 @@
 ## begin_variables
 
+EXTRA_DIST += $(bin_gatbps_src)
+
 bin_SCRIPTS += bin/gatbps$(EXEEXT)
 
 bin_gatbps_src =
@@ -636,6 +638,21 @@ bin_gatbps_src += src/tools/rule_substitution_comment_plural.m4
 bin_gatbps_src += src/tools/rule_substitution_comment_singular.m4
 bin_gatbps_src += src/tools/rules_code.m4
 bin_gatbps_src += src/tools/use_the_c_locale.m4
+
+nodist_bin_gatbps_src =
+nodist_bin_gatbps_src += src/tools/AWK_DEFAULT_SH.m4
+nodist_bin_gatbps_src += src/tools/AWK_DEFAULT_TROFF.m4
+nodist_bin_gatbps_src += src/tools/PACKAGE_DATE.m4
+nodist_bin_gatbps_src += src/tools/PACKAGE_DATE_DAY_ZPAD.m4
+nodist_bin_gatbps_src += src/tools/PACKAGE_DATE_MONTH_ZPAD.m4
+nodist_bin_gatbps_src += src/tools/PACKAGE_DATE_TROFF.m4
+nodist_bin_gatbps_src += src/tools/PACKAGE_DATE_YEAR.m4
+nodist_bin_gatbps_src += src/tools/PACKAGE_VERSION.m4
+nodist_bin_gatbps_src += src/tools/SED_DEFAULT_SH.m4
+nodist_bin_gatbps_src += src/tools/SED_DEFAULT_TROFF.m4
+nodist_bin_gatbps_src += src/tools/SHEBANG_LINE.m4
+nodist_bin_gatbps_src += src/tools/TEXI2ANY_DEFAULT_SH.m4
+nodist_bin_gatbps_src += src/tools/TEXI2ANY_DEFAULT_TROFF.m4
 
 ## end_variables
 

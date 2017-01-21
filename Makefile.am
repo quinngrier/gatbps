@@ -22,7 +22,6 @@ CLEANFILES =
 DISTCLEANFILES =
 
 EXTRA_DIST =
-EXTRA_DIST += $(bin_gatbps_src)
 EXTRA_DIST += $(docbook_dist_dst)
 EXTRA_DIST += $(dvi_dist_dst)
 EXTRA_DIST += $(html_dist_dst)
@@ -62,21 +61,6 @@ info_TEXINFOS =
 
 man_MANS =
 man_MANS += doc/man/gatbps.1
-
-nodist_bin_gatbps_src =
-nodist_bin_gatbps_src += src/tools/AWK_DEFAULT_SH.m4
-nodist_bin_gatbps_src += src/tools/AWK_DEFAULT_TROFF.m4
-nodist_bin_gatbps_src += src/tools/PACKAGE_DATE.m4
-nodist_bin_gatbps_src += src/tools/PACKAGE_DATE_DAY_ZPAD.m4
-nodist_bin_gatbps_src += src/tools/PACKAGE_DATE_MONTH_ZPAD.m4
-nodist_bin_gatbps_src += src/tools/PACKAGE_DATE_TROFF.m4
-nodist_bin_gatbps_src += src/tools/PACKAGE_DATE_YEAR.m4
-nodist_bin_gatbps_src += src/tools/PACKAGE_VERSION.m4
-nodist_bin_gatbps_src += src/tools/SED_DEFAULT_SH.m4
-nodist_bin_gatbps_src += src/tools/SED_DEFAULT_TROFF.m4
-nodist_bin_gatbps_src += src/tools/SHEBANG_LINE.m4
-nodist_bin_gatbps_src += src/tools/TEXI2ANY_DEFAULT_SH.m4
-nodist_bin_gatbps_src += src/tools/TEXI2ANY_DEFAULT_TROFF.m4
 
 pkgsysconfdir = $(sysconfdir)/$(PACKAGE_TARNAME)
 
