@@ -78,6 +78,8 @@ nodist_bin_gatbps_src += src/tools/SHEBANG_LINE.m4
 nodist_bin_gatbps_src += src/tools/TEXI2ANY_DEFAULT_SH.m4
 nodist_bin_gatbps_src += src/tools/TEXI2ANY_DEFAULT_TROFF.m4
 
+pkgsysconfdir = $(sysconfdir)/$(PACKAGE_TARNAME)
+
 ## end_variables
 
 ## begin_rules
