@@ -181,19 +181,19 @@ m4_if(
 ),
   [-1],
   [m4_if(
-    m4_eval([$# < 3]),
+    m4_eval([$# >= 3]),
     [1],
-    [gatbps_fatal([
-      invalid $1$2 value for GATBPS_DEFINE_VERSION:
-    [--VERBATIM--] "]$1$2["], [
-      the $1$2 value must be an X.Y.Z version number or an X.Y.Z-W
-      version number followed by "+g" and 7 or more lowercase
-      hexadecimal digits
-    ])],
     [gatbps_fatal([
       invalid third argument for GATBPS_DEFINE_VERSION:
     [--VERBATIM--] "$3"], [
       the third argument must be an X.Y.Z version number or an X.Y.Z-W
+      version number followed by "+g" and 7 or more lowercase
+      hexadecimal digits
+    ])],
+    [gatbps_fatal([
+      invalid $1$2 value for GATBPS_DEFINE_VERSION:
+    [--VERBATIM--] "]$1$2["], [
+      the $1$2 value must be an X.Y.Z version number or an X.Y.Z-W
       version number followed by "+g" and 7 or more lowercase
       hexadecimal digits
     ])])])[]dnl
