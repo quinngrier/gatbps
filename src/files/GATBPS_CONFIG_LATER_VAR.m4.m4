@@ -84,6 +84,7 @@ case "$][{GATBPS_CONFIG_LATER_SCRIPT_MID+is_set}" in
     ]GATBPS_CONFIG_LATER_ADD([pkgincludedir], [$][(pkgincludedir)])[
     ]GATBPS_CONFIG_LATER_ADD([pkglibdir], [$][(pkglibdir)])[
     ]GATBPS_CONFIG_LATER_ADD([pkglibexecdir], [$][(pkglibexecdir)])[
+    ]GATBPS_CONFIG_LATER_ADD([pkgsysconfdir], [$][(pkgsysconfdir)])[
     ]GATBPS_CONFIG_LATER_ADD([psdir], [$][(psdir)])[
     ]GATBPS_CONFIG_LATER_ADD([sbindir], [$][(sbindir)])[
     ]GATBPS_CONFIG_LATER_ADD([sharedstatedir], [$][(sharedstatedir)])[
