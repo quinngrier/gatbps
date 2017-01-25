@@ -15,14 +15,14 @@ header_comment({%|#|%}, {%|#|%}){%|
 # For more information, see the GATBPS manual.
 #
 
-'readonly' 'gen_configure'
+'readonly' 'gen_configure';
 case "${gen_configure}" in
   'no')
   ;;
   *)
     'echo' \
       'configure: configuring for code generation' \
-    || 'exit' "${?}"
+    || 'exit' "${?}";
     'sh' \
       '-' \
       "${srcdir}"'/../build-aux/sh-form.sh' \
@@ -34,7 +34,7 @@ case "${gen_configure}" in
       'sh' \
       '-' \
       "${0}" \
-    || 'exit' "${?}"
+    || 'exit' "${?}";
     'env' \
       '-i' \
       'PATH='"${PATH}" \
@@ -43,9 +43,9 @@ case "${gen_configure}" in
       '-' \
       "${0}" \
     ;
-    'exit' "${?}"
+    'exit' "${?}";
   ;;
-esac
+esac;
 
 |%}footer_comment({%|#|%}, {%|#|%}, {%|#|%})
 dnl
