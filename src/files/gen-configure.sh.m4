@@ -21,7 +21,7 @@ case "${gen_configure}" in
   ;;
   *)
     'echo' \
-      'configure: configuring for code generation' \
+      'configure: preparing for code generation' \
     || 'exit' "${?}";
     'sh' \
       '-' \
