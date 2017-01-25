@@ -23,56 +23,27 @@ case "${gen_configure}" in
     'echo' \
       'configure: configuring for code generation' \
     || 'exit' "${?}"
-    case "${#}" in
-      '0')
-        'sh' \
-          '-' \
-          "${srcdir}"'/../build-aux/sh-form.sh' \
-          '--' \
-          'env' \
-          '-i' \
-          'PATH='"${PATH}" \
-          'gen_configure=no' \
-          'sh' \
-          '-' \
-          "${0}" \
-        || 'exit' "${?}"
-        'env' \
-          '-i' \
-          'PATH='"${PATH}" \
-          'gen_configure=no' \
-          'sh' \
-          '-' \
-          "${0}" \
-        ;
-        'exit' "${?}"
-      ;;
-      *)
-        'sh' \
-          '-' \
-          "${srcdir}"'/../build-aux/sh-form.sh' \
-          '--' \
-          'env' \
-          '-i' \
-          'PATH='"${PATH}" \
-          'gen_configure=no' \
-          'sh' \
-          '-' \
-          "${0}" \
-          "${@}" \
-        || 'exit' "${?}"
-        'env' \
-          '-i' \
-          'PATH='"${PATH}" \
-          'gen_configure=no' \
-          'sh' \
-          '-' \
-          "${0}" \
-          "${@}" \
-        ;
-        'exit' "${?}"
-      ;;
-    esac
+    'sh' \
+      '-' \
+      "${srcdir}"'/../build-aux/sh-form.sh' \
+      '--' \
+      'env' \
+      '-i' \
+      'PATH='"${PATH}" \
+      'gen_configure=no' \
+      'sh' \
+      '-' \
+      "${0}" \
+    || 'exit' "${?}"
+    'env' \
+      '-i' \
+      'PATH='"${PATH}" \
+      'gen_configure=no' \
+      'sh' \
+      '-' \
+      "${0}" \
+    ;
+    'exit' "${?}"
   ;;
 esac
 
