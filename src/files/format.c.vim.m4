@@ -52,7 +52,7 @@ function s:FormatCFile()
       let n2 = search(s2, 'W')
       exec n1 . '+1,' . n2 . '-1s/\m >/>/eg'
       exec n1 . '+1,' . n2 . '-1s/\m "/"/eg'
-      exec n2 . 's/\m^/\r/'
+      exec n2 . '-1s/\m.$/&\r/e'
       let affected_search_history = 1
     endif
     call cursor(n1, 1)
