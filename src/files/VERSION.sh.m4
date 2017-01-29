@@ -205,6 +205,58 @@ EOF2
           'exit' '1'
         ;;
       esac
+      v_tag=`
+        git \
+          'describe' \
+          '--abbrev=0' \
+          '--candidates=1' \
+          '--first-parent' \
+          '--match=v[0-9]*.[0-9]*.[0-9]*' \
+          '--tags' \
+        ;
+      `
+      case "${?}" in
+        '0')
+        ;;
+        *)
+          'exit' '1'
+        ;;
+      esac
+      'readonly' 'v_tag'
+      u_tag=`
+        git \
+          'describe' \
+          '--abbrev=0' \
+          '--candidates=1' \
+          '--first-parent' \
+          '--match=u[0-9]*.[0-9]*.[0-9]*' \
+          '--tags' \
+        ;
+      `
+      case "${?}" in
+        '0')
+        ;;
+        *)
+          'exit' '1'
+        ;;
+      esac
+      'readonly' 'u_tag'
+      git \
+        'merge-base' \
+        '--is-ancestor' \
+        "${v_tag}" \
+        "${u_tag}" \
+      ;
+      case "${?}" in
+        '0')
+        ;;
+        '1')
+          'exit' '1'
+        ;;
+        *)
+          'exit' '1'
+        ;;
+      esac
       sed '
         s/^u//
         s/-g/+g/
