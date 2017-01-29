@@ -47,7 +47,9 @@ AC_DEFUN([GATBPS_ARG_ENABLE_BOOL], [[{
   [$4])
 
 case "$[]{gatbps_x}" in
-  'yes'|'no')
+  'yes')
+  ;;
+  'no')
   ;;
   *)
     AC_MSG_ERROR([invalid --enable-$3 value: $[]{]gatbps_x[}], [1])
