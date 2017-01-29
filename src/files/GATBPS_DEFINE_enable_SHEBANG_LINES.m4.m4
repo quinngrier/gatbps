@@ -48,11 +48,12 @@ m4_if(
   [shebang-lines],
   [yes],
   [
-    enable shebang lines if and only if $][{cross_compiling} is not "no"
-    or shebang lines are supported on the build machine (default)
+    add shebang lines to executable scripts if and only if
+    $][{cross_compiling} is not "no" or shebang lines are supported on
+    the build machine
   ],
   [
-    disable shebang lines
+    do not add shebang lines to executable scripts
   ])[
 
 :;}]])[]dnl
