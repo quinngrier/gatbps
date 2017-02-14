@@ -79,9 +79,7 @@ gatbps_jdeps_to_rules = ' \
 
 ## begin_rules
 
-$(java_dst) java.dummy_1.main: $(java_dep)
-$(java_dst) java.dummy_1.main: $(java_extra)
-$(java_dst) java.dummy_1.main: $(javadoc_src)
+$(java_dst) java.dummy_1.main: java.FORCE
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
 	$(AM_V_at){ \
   ( \
@@ -168,8 +166,10 @@ $(java_dst) java.dummy_1.main: $(javadoc_src)
 :;}
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
+./$(java_dst)/recursive: $(java_dep)
+./$(java_dst)/recursive: $(java_extra)
 ./$(java_dst)/recursive: $(java_src)
-./$(java_dst)/recursive: java.FORCE
+./$(java_dst)/recursive: $(javadoc_src)
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
 	$(GATBPS_V_JAR_RECURSIVE)$(GATBPS_V_NOP)
 	$(AM_V_at){ \

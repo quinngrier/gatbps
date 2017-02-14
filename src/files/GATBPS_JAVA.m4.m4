@@ -34,9 +34,7 @@ m4_pushdef([gatbps_x], [$1])
 
 GATBPS_JAVA_RULES="$][{GATBPS_JAVA_RULES}"'
 
-$][(java_]gatbps_y[_dst) java.dummy_1.]gatbps_x[: $][(java_]gatbps_y[_dep)
-$][(java_]gatbps_y[_dst) java.dummy_1.]gatbps_x[: $][(java_]gatbps_y[_extra)
-$][(java_]gatbps_y[_dst) java.dummy_1.]gatbps_x[: $][(javadoc_]gatbps_y[_src)
+$][(java_]gatbps_y[_dst) java.dummy_1.]gatbps_x[: java.FORCE
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_TOP)
 	$][(AM@&t@_V_at){ \
   ( \
@@ -123,8 +121,10 @@ $][(java_]gatbps_y[_dst) java.dummy_1.]gatbps_x[: $][(javadoc_]gatbps_y[_src)
 :;}
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
+./$][(java_]gatbps_y[_dst)/recursive: $][(java_]gatbps_y[_dep)
+./$][(java_]gatbps_y[_dst)/recursive: $][(java_]gatbps_y[_extra)
 ./$][(java_]gatbps_y[_dst)/recursive: $][(java_]gatbps_y[_src)
-./$][(java_]gatbps_y[_dst)/recursive: java.FORCE
+./$][(java_]gatbps_y[_dst)/recursive: $][(javadoc_]gatbps_y[_src)
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_TOP)
 	$][(GATBPS_V_JAR_RECURSIVE)$][(GATBPS_V_NOP)
 	$][(AM@&t@_V_at){ \
