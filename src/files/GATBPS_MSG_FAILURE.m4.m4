@@ -45,12 +45,12 @@ GATBPS_MSG_FAILURE_check_macros[]dnl
 ]m4_if(
   m4_eval([$# <= 1]),
   [1],
-  [AC_MSG_FAILURE([[]dnl
+  [AC_MSG_FAILURE(m4_dquote(
 m4_normalize(m4_bpatsubst([[$1]], [\[--VERBATIM--\]\(.\|
 \)*\(.\)], [\2]))[]dnl
 m4_bregexp([[$1]], [\(\[\)--VERBATIM--\]\(\(.\|
 \)*\)], [\1\2])[]dnl
-], [[1]])],
+), [[1]])],
   [GATBPS_MSG_NOTICE([error: $1])[
 
 ]GATBPS_MSG_FAILURE(m4_shift($@))])[
