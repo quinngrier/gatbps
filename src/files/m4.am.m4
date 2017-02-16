@@ -36,7 +36,8 @@ SUFFIXES += .m4out
 ## begin_rules
 
 .m4.m4out:
-	$(GATBPS_V_M4)$(GATBPS_RECIPE_MARKER_TOP)
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(GATBPS_V_M4)$(GATBPS_V_NOP)
 	$(AM_V_at)'rm' \
   '-f' \
   './'$@ \

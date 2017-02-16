@@ -126,7 +126,8 @@ $(doxygen_dfv) doxygen.dummy_1.main: doxygen.FORCE
 $(doxygen_dst) doxygen.dummy_2.main: $(doxygen_dep)
 $(doxygen_dst) doxygen.dummy_2.main: $(doxygen_dfv)
 $(doxygen_dst) doxygen.dummy_2.main: $(doxygen_src)
-	$(GATBPS_V_DOXYGEN)$(GATBPS_RECIPE_MARKER_TOP)
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(GATBPS_V_DOXYGEN)$(GATBPS_V_NOP)
 	$(AM_V_at)'rm' \
   '-f' \
   '-r' \
