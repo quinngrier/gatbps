@@ -57,7 +57,7 @@ $(java_dist_dst): $(java_dist_dep)
         $(srcdir)'/build-aux/echo.sh' \
         'error: missing prerequisite:' \
         '"'$(java_dist_src)'"' \
-        >&2 \
+        1>&2 \
       ; \
       'exit' '1'; \
     fi; \

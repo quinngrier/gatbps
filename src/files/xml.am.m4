@@ -174,7 +174,7 @@ uninstall-xml-main:
           'X/'$(xml_dst) \
           ':' \
           'X.*/\(.*\)' \
-          >'uninstall-xml-main.tmp' \
+          1>'uninstall-xml-main.tmp' \
         || 'exit' "$${?}"; \
         x=$(srcdir); \
         x=` \

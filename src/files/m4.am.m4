@@ -56,7 +56,7 @@ SUFFIXES += .m4out
       '-D' \
       'make_rules' \
       0<$< \
-      >$@'.d.tmp' \
+      1>$@'.d.tmp' \
     || 'exit' "$${?}"; \
     'mv' \
       './'$@'.d.tmp' \
@@ -66,7 +66,7 @@ SUFFIXES += .m4out
       $(GATBPS_M4FLAGS) \
       $(M4FLAGS) \
       0<$< \
-      >$@'.tmp' \
+      1>$@'.tmp' \
     || 'exit' "$${?}"; \
     'mv' \
       './'$@'.tmp' \

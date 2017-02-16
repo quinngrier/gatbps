@@ -144,7 +144,7 @@ $(doxygen_dst) doxygen.dummy_2.main: $(doxygen_src)
       $(srcdir)'/build-aux/sh-form.sh' \
       '--' \
       $(SHELL) \
-      >'doxygen-main.tmp' \
+      1>'doxygen-main.tmp' \
     || 'exit' "$${?}"; \
     SHELL_sh=` \
       'cat' 'doxygen-main.tmp' \
@@ -216,7 +216,7 @@ $(doxygen_src) doxygen.dummy_3.main: doxygen.FORCE
     $(AWK) \
       $(GATBPS_AM_DF_INPUT_TO_DF_SCRIPT) \
       0<$< \
-      >'./'$@'.tmp' \
+      1>'./'$@'.tmp' \
     || 'exit' "$${?}"; \
     'mv' \
       './'$@'.tmp' \
@@ -256,7 +256,7 @@ $(doxygen_src) doxygen.dummy_3.main: doxygen.FORCE
     $(AWK) \
       $(GATBPS_DF_TO_DFV_SCRIPT) \
       0<$< \
-      >'./'$@'.tmp' \
+      1>'./'$@'.tmp' \
     || 'exit' "$${?}"; \
     'mv' \
       './'$@'.tmp' \

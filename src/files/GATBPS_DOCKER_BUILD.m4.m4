@@ -404,7 +404,7 @@ GATBPS_DOCKER_BUILD_tag_lines(m4_if(,,image_names))[
       '\''save'\'' \
       "$][$][{hash}" \]dnl
 GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
-      >'\''./'\'']output_file['\''.tmp'\'' \
+      1>'\''./'\'']output_file['\''.tmp'\'' \
     || '\''exit'\'' "$][$][{?}"; \
     '\''mv'\'' \
       '\''./'\'']output_file['\''.tmp'\'' \

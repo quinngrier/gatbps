@@ -253,7 +253,7 @@ GATBPS_WGET_url_lines(m4_shift($@))])])[dnl
         0<'\''./'\'']output_file['\''.tmp'\'' \
       | $][(GREP) \
         '\'']m4_bregexp([$1], [:\(.*\)], [[\1]])['\'' \
-        >'\''/dev/null'\'' \
+        1>'\''/dev/null'\'' \
       || '\''continue'\''; \]dnl
 GATBPS_WGET_hash_checks(m4_shift($@))])])[dnl
 [

@@ -58,7 +58,7 @@ $][(java_]gatbps_y[_dst) java.dummy_1.]gatbps_x[: java.FORCE
       $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
       '\''--'\'' \
       "$][$][{x}" \
-      >'\''java-]gatbps_x[.tmp'\'' \
+      1>'\''java-]gatbps_x[.tmp'\'' \
     || '\''exit'\'' "$][$][{?}"; \
     classpath=` \
       '\''cat'\'' '\''java-]gatbps_x[.tmp'\'' \
@@ -73,7 +73,7 @@ $][(java_]gatbps_y[_dst) java.dummy_1.]gatbps_x[: java.FORCE
         $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
         '\''--'\'' \
         $][(java_]gatbps_y[_JAVACFLAGS) \
-        >'\''java-]gatbps_x[.tmp'\'' \
+        1>'\''java-]gatbps_x[.tmp'\'' \
       || '\''exit'\'' "$][$][{?}"; \
       x='\'''\''; \
       '\''break'\''; \
@@ -85,7 +85,7 @@ $][(java_]gatbps_y[_dst) java.dummy_1.]gatbps_x[: java.FORCE
           $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
           '\''--'\'' \
           $][(GATBPS_JAVACFLAGS) \
-          >'\''java-]gatbps_x[.tmp'\'' \
+          1>'\''java-]gatbps_x[.tmp'\'' \
         || '\''exit'\'' "$][$][{?}"; \
       ;; \
     esac; \
@@ -97,7 +97,7 @@ $][(java_]gatbps_y[_dst) java.dummy_1.]gatbps_x[: java.FORCE
       $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
       '\''--'\'' \
       '\''./'\''$][(java_]gatbps_y[_sourcepath) \
-      >'\''java-]gatbps_x[.tmp'\'' \
+      1>'\''java-]gatbps_x[.tmp'\'' \
     || '\''exit'\'' "$][$][{?}"; \
     sourcepath=` \
       '\''cat'\'' '\''java-]gatbps_x[.tmp'\'' \
@@ -347,7 +347,7 @@ uninstall-java-]gatbps_x[: java.FORCE
           '\''X/'\''$][(java_]gatbps_y[_dst) \
           '\'':'\'' \
           '\''X.*/\(.*\)'\'' \
-          >'\''uninstall-java-]gatbps_x[.tmp'\'' \
+          1>'\''uninstall-java-]gatbps_x[.tmp'\'' \
         || '\''exit'\'' "$][$][{?}"; \
         x=$][(srcdir); \
         x=` \

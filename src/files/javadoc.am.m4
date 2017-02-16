@@ -65,7 +65,7 @@ $(javadoc_dst): $(javadoc_src_nodist)
         $(javadoc_dst) \
         $(javadoc_JAVADOCFLAGS) \
         $(JAVADOCFLAGS) \
-        >'javadoc-main.tmp1' \
+        1>'javadoc-main.tmp1' \
       || 'exit' "$${?}"; \
       x=''; \
       'break'; \
@@ -81,14 +81,14 @@ $(javadoc_dst): $(javadoc_src_nodist)
           $(javadoc_dst) \
           $(GATBPS_JAVADOCFLAGS) \
           $(JAVADOCFLAGS) \
-          >'javadoc-main.tmp1' \
+          1>'javadoc-main.tmp1' \
         || 'exit' "$${?}"; \
       ;; \
     esac; \
     $(SED) \
       '$$s/$$/ \\/' \
       0<'javadoc-main.tmp1' \
-      >'javadoc-main.tmp2' \
+      1>'javadoc-main.tmp2' \
     || 'exit' "$${?}"; \
     for x in $(javadoc_src) $(javadoc_src_nodist); do \
       if 'test' '-f' "$${x}"; then \
@@ -101,17 +101,17 @@ $(javadoc_dst): $(javadoc_src_nodist)
         $(srcdir)'/build-aux/sh-form.sh' \
         '--' \
         "$${d}"'/'"$${x}" \
-        >'javadoc-main.tmp1' \
+        1>'javadoc-main.tmp1' \
       || 'exit' "$${?}"; \
       $(SED) \
         '$$s/$$/ \\/' \
         0<'javadoc-main.tmp1' \
-        >>'javadoc-main.tmp2' \
+        1>>'javadoc-main.tmp2' \
       || 'exit' "$${?}"; \
     done; \
     'echo' \
       ';' \
-      >>'javadoc-main.tmp2' \
+      1>>'javadoc-main.tmp2' \
     || 'exit' "$${?}"; \
     $(SHELL) \
       '-' \
@@ -276,7 +276,7 @@ uninstall-javadoc-main:
           'X/'$(javadoc_dst) \
           ':' \
           'X.*/\(.*\)' \
-          >'uninstall-javadoc-main.tmp' \
+          1>'uninstall-javadoc-main.tmp' \
         || 'exit' "$${?}"; \
         x=$(srcdir); \
         x=` \

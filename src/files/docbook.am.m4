@@ -178,7 +178,7 @@ uninstall-docbook-main:
           'X/'$(docbook_dst) \
           ':' \
           'X.*/\(.*\)' \
-          >'uninstall-docbook-main.tmp' \
+          1>'uninstall-docbook-main.tmp' \
         || 'exit' "$${?}"; \
         x=$(srcdir); \
         x=` \

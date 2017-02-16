@@ -57,7 +57,7 @@ $(xml_dist_dst): $(xml_dist_dep)
         $(srcdir)'/build-aux/echo.sh' \
         'error: missing prerequisite:' \
         '"'$(xml_dist_src)'"' \
-        >&2 \
+        1>&2 \
       ; \
       'exit' '1'; \
     fi; \

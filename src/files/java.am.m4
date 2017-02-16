@@ -103,7 +103,7 @@ $(java_dst) java.dummy_1.main: java.FORCE
       $(srcdir)'/build-aux/sh-form.sh' \
       '--' \
       "$${x}" \
-      >'java-main.tmp' \
+      1>'java-main.tmp' \
     || 'exit' "$${?}"; \
     classpath=` \
       'cat' 'java-main.tmp' \
@@ -118,7 +118,7 @@ $(java_dst) java.dummy_1.main: java.FORCE
         $(srcdir)'/build-aux/sh-form.sh' \
         '--' \
         $(java_JAVACFLAGS) \
-        >'java-main.tmp' \
+        1>'java-main.tmp' \
       || 'exit' "$${?}"; \
       x=''; \
       'break'; \
@@ -130,7 +130,7 @@ $(java_dst) java.dummy_1.main: java.FORCE
           $(srcdir)'/build-aux/sh-form.sh' \
           '--' \
           $(GATBPS_JAVACFLAGS) \
-          >'java-main.tmp' \
+          1>'java-main.tmp' \
         || 'exit' "$${?}"; \
       ;; \
     esac; \
@@ -142,7 +142,7 @@ $(java_dst) java.dummy_1.main: java.FORCE
       $(srcdir)'/build-aux/sh-form.sh' \
       '--' \
       './'$(java_sourcepath) \
-      >'java-main.tmp' \
+      1>'java-main.tmp' \
     || 'exit' "$${?}"; \
     sourcepath=` \
       'cat' 'java-main.tmp' \
@@ -306,12 +306,12 @@ $(java_dst) java.dummy_1.main: java.FORCE
         $(GATBPS_RECURSIVE_PACKAGE) \
         '-verbose:class' \
         './'$@ \
-        >'./'$@'.d.tmp-jdeps' \
+        1>'./'$@'.d.tmp-jdeps' \
       || 'exit' "$${?}"; \
       $(AWK) \
         $(gatbps_jdeps_to_rules) \
         0<'./'$@'.d.tmp-jdeps' \
-        >'./'$@'.d.tmp' \
+        1>'./'$@'.d.tmp' \
       || 'exit' "$${?}"; \
       'mv' \
         './'$@'.d.tmp' \
@@ -469,7 +469,7 @@ uninstall-java-main: java.FORCE
           'X/'$(java_dst) \
           ':' \
           'X.*/\(.*\)' \
-          >'uninstall-java-main.tmp' \
+          1>'uninstall-java-main.tmp' \
         || 'exit' "$${?}"; \
         x=$(srcdir); \
         x=` \

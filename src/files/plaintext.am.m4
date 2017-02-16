@@ -178,7 +178,7 @@ uninstall-plaintext-main:
           'X/'$(plaintext_dst) \
           ':' \
           'X.*/\(.*\)' \
-          >'uninstall-plaintext-main.tmp' \
+          1>'uninstall-plaintext-main.tmp' \
         || 'exit' "$${?}"; \
         x=$(srcdir); \
         x=` \

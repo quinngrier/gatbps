@@ -57,7 +57,7 @@ $(docbook_dist_dst): $(docbook_dist_dep)
         $(srcdir)'/build-aux/echo.sh' \
         'error: missing prerequisite:' \
         '"'$(docbook_dist_src)'"' \
-        >&2 \
+        1>&2 \
       ; \
       'exit' '1'; \
     fi; \
