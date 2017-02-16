@@ -310,7 +310,7 @@ $(java_dst) java.dummy_1.main: java.FORCE
       || 'exit' "$${?}"; \
       $(AWK) \
         $(gatbps_jdeps_to_rules) \
-        <'./'$@'.d.tmp-jdeps' \
+        0<'./'$@'.d.tmp-jdeps' \
         >'./'$@'.d.tmp' \
       || 'exit' "$${?}"; \
       'mv' \
@@ -477,7 +477,7 @@ uninstall-java-main: java.FORCE
             '-' \
             "$${x}"'/build-aux/sh-form.sh' \
             '--stdin' \
-            <'uninstall-java-main.tmp' \
+            0<'uninstall-java-main.tmp' \
           ; \
         ` || 'exit' "$${?}"; \
         'eval' 'x='"$${x}"; \

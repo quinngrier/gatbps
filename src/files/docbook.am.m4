@@ -186,7 +186,7 @@ uninstall-docbook-main:
             '-' \
             "$${x}"'/build-aux/sh-form.sh' \
             '--stdin' \
-            <'uninstall-docbook-main.tmp' \
+            0<'uninstall-docbook-main.tmp' \
           ; \
         ` || 'exit' "$${?}"; \
         'eval' 'x='"$${x}"; \

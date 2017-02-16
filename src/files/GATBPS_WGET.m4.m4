@@ -250,7 +250,7 @@ GATBPS_WGET_url_lines(m4_shift($@))])])[dnl
         '\''dgst'\'' \
         '\''-non-fips-allow'\'' \
         '\''-]m4_bregexp([$1], [[^:]*], [[\&]])['\'' \
-        <'\''./'\'']output_file['\''.tmp'\'' \
+        0<'\''./'\'']output_file['\''.tmp'\'' \
       | $][(GREP) \
         '\'']m4_bregexp([$1], [:\(.*\)], [[\1]])['\'' \
         >'\''/dev/null'\'' \

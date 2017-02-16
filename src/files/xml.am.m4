@@ -182,7 +182,7 @@ uninstall-xml-main:
             '-' \
             "$${x}"'/build-aux/sh-form.sh' \
             '--stdin' \
-            <'uninstall-xml-main.tmp' \
+            0<'uninstall-xml-main.tmp' \
           ; \
         ` || 'exit' "$${?}"; \
         'eval' 'x='"$${x}"; \

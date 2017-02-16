@@ -186,7 +186,7 @@ uninstall-plaintext-main:
             '-' \
             "$${x}"'/build-aux/sh-form.sh' \
             '--stdin' \
-            <'uninstall-plaintext-main.tmp' \
+            0<'uninstall-plaintext-main.tmp' \
           ; \
         ` || 'exit' "$${?}"; \
         'eval' 'x='"$${x}"; \

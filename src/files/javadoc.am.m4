@@ -87,7 +87,7 @@ $(javadoc_dst): $(javadoc_src_nodist)
     esac; \
     $(SED) \
       '$$s/$$/ \\/' \
-      <'javadoc-main.tmp1' \
+      0<'javadoc-main.tmp1' \
       >'javadoc-main.tmp2' \
     || 'exit' "$${?}"; \
     for x in $(javadoc_src) $(javadoc_src_nodist); do \
@@ -105,7 +105,7 @@ $(javadoc_dst): $(javadoc_src_nodist)
       || 'exit' "$${?}"; \
       $(SED) \
         '$$s/$$/ \\/' \
-        <'javadoc-main.tmp1' \
+        0<'javadoc-main.tmp1' \
         >>'javadoc-main.tmp2' \
       || 'exit' "$${?}"; \
     done; \
@@ -284,7 +284,7 @@ uninstall-javadoc-main:
             '-' \
             "$${x}"'/build-aux/sh-form.sh' \
             '--stdin' \
-            <'uninstall-javadoc-main.tmp' \
+            0<'uninstall-javadoc-main.tmp' \
           ; \
         ` || 'exit' "$${?}"; \
         'eval' 'x='"$${x}"; \

@@ -167,7 +167,7 @@ fc2='' # stderr style: cyan
 #           ; do
 #             if 'eval' \
 #               "${x}"' '\'''\''' \
-#               <'/dev/null' \
+#               0<'/dev/null' \
 #               >'/dev/null' \
 #               2>&1 \
 #             ; then
@@ -193,7 +193,7 @@ fc2='' # stderr style: cyan
 #           ; do
 #             if 'eval' \
 #               "${x}"' '\'''\''' \
-#               <'/dev/null' \
+#               0<'/dev/null' \
 #               >'/dev/null' \
 #               2>&1 \
 #             ; then
@@ -219,7 +219,7 @@ fc2='' # stderr style: cyan
 #           ; do
 #             if 'eval' \
 #               "${x}"' '\''--version'\''' \
-#               <'/dev/null' \
+#               0<'/dev/null' \
 #               >'/dev/null' \
 #               2>&1 \
 #             ; then
@@ -262,7 +262,7 @@ case "${awk}" in
         ; do
           if 'eval' \
             "${x}"' '\'''\''' \
-            <'/dev/null' \
+            0<'/dev/null' \
             >'/dev/null' \
             2>&1 \
           ; then
@@ -288,7 +288,7 @@ case "${sed}" in
         ; do
           if 'eval' \
             "${x}"' '\'''\''' \
-            <'/dev/null' \
+            0<'/dev/null' \
             >'/dev/null' \
             2>&1 \
           ; then
@@ -314,7 +314,7 @@ case "${texi2any}" in
         ; do
           if 'eval' \
             "${x}"' '\''--version'\''' \
-            <'/dev/null' \
+            0<'/dev/null' \
             >'/dev/null' \
             2>&1 \
           ; then
@@ -917,7 +917,7 @@ EOF1
                   ; do
                     if 'eval' \
                       "${x}"' '\'''\''' \
-                      <'/dev/null' \
+                      0<'/dev/null' \
                       >'/dev/null' \
                       2>&1 \
                     ; then
@@ -2146,7 +2146,7 @@ EOF1
                   ; do
                     if 'eval' \
                       "${x}"' '\'''\''' \
-                      <'/dev/null' \
+                      0<'/dev/null' \
                       >'/dev/null' \
                       2>&1 \
                     ; then
@@ -2430,7 +2430,7 @@ EOF1
                   ; do
                     if 'eval' \
                       "${x}"' '\''--version'\''' \
-                      <'/dev/null' \
+                      0<'/dev/null' \
                       >'/dev/null' \
                       2>&1 \
                     ; then

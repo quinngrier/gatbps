@@ -215,7 +215,7 @@ $(doxygen_src) doxygen.dummy_3.main: doxygen.FORCE
   ( \
     $(AWK) \
       $(GATBPS_AM_DF_INPUT_TO_DF_SCRIPT) \
-      <$< \
+      0<$< \
       >'./'$@'.tmp' \
     || 'exit' "$${?}"; \
     'mv' \
@@ -255,7 +255,7 @@ $(doxygen_src) doxygen.dummy_3.main: doxygen.FORCE
   ( \
     $(AWK) \
       $(GATBPS_DF_TO_DFV_SCRIPT) \
-      <$< \
+      0<$< \
       >'./'$@'.tmp' \
     || 'exit' "$${?}"; \
     'mv' \
