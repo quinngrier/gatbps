@@ -165,6 +165,7 @@ $(doxygen_dst) doxygen.dummy_2.main: $(doxygen_src)
       ; \
     } || 'exit' "$${?}"; \
     'mv' \
+      '-f' \
       './'$(doxygen_dst)'.tmp' \
       './'$(doxygen_dst) \
     || 'exit' "$${?}"; \
@@ -219,6 +220,7 @@ $(doxygen_src) doxygen.dummy_3.main: doxygen.FORCE
       1>'./'$@'.tmp' \
     || 'exit' "$${?}"; \
     'mv' \
+      '-f' \
       './'$@'.tmp' \
       './'$@ \
     || 'exit' "$${?}"; \
@@ -259,6 +261,7 @@ $(doxygen_src) doxygen.dummy_3.main: doxygen.FORCE
       1>'./'$@'.tmp' \
     || 'exit' "$${?}"; \
     'mv' \
+      '-f' \
       './'$@'.tmp' \
       './'$@ \
     || 'exit' "$${?}"; \

@@ -171,6 +171,7 @@ GATBPS_GIT_BUNDLE_RULES="$][{GATBPS_GIT_BUNDLE_RULES}"'
       1>'\''./'\'']output_file['\''.tmp'\'' \
     || '\''exit'\'' "$][$][{?}"; \
     '\''mv'\'' \
+      '\''-f'\'' \
       '\''./'\'']output_file['\''.tmp'\'' \
       '\''./'\'']output_file[ \
     || '\''exit'\'' "$][$][{?}"; \

@@ -229,6 +229,7 @@ GATBPS_CONFIG_LATER_make_lines(m4_if(,,child_prerequisites))[
       1>'\''./'\'']output_file['\''.tmp'\'' \
     || '\''exit'\'' "$][$][{?}"; \
     '\''mv'\'' \
+      '\''-f'\'' \
       '\''./'\'']output_file['\''.tmp'\'' \
       '\''./'\'']output_file[ \
     || '\''exit'\'' "$][$][{?}"; \

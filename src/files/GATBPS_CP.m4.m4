@@ -279,6 +279,7 @@ m4_case(
     || '\''exit'\'' "$][$][{?}"; \]])[]dnl
 [
     '\''mv'\'' \
+      '\''-f'\'' \
       '\''./'\'']output_file_or_directory['\''.tmp'\'' \
       '\''./'\'']output_file_or_directory[ \
     || '\''exit'\'' "$][$][{?}"; \

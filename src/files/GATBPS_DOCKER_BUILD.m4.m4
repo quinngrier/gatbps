@@ -407,6 +407,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
       1>'\''./'\'']output_file['\''.tmp'\'' \
     || '\''exit'\'' "$][$][{?}"; \
     '\''mv'\'' \
+      '\''-f'\'' \
       '\''./'\'']output_file['\''.tmp'\'' \
       '\''./'\'']output_file[ \
     || '\''exit'\'' "$][$][{?}"; \

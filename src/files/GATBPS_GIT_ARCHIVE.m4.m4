@@ -169,6 +169,7 @@ GATBPS_GIT_ARCHIVE_RULES="$][{GATBPS_GIT_ARCHIVE_RULES}"'
       1>'\''./'\'']output_file['\''.tmp'\'' \
     || '\''exit'\'' "$][$][{?}"; \
     '\''mv'\'' \
+      '\''-f'\'' \
       '\''./'\'']output_file['\''.tmp'\'' \
       '\''./'\'']output_file[ \
     || '\''exit'\'' "$][$][{?}"; \

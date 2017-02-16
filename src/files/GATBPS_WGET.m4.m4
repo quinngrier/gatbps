@@ -316,6 +316,7 @@ GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
       ;; \
     esac; \
     '\''mv'\'' \
+      '\''-f'\'' \
       '\''./'\'']output_file['\''.tmp'\'' \
       '\''./'\'']output_file[ \
     || '\''exit'\'' "$][$][{?}"; \

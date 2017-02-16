@@ -314,6 +314,7 @@ $(java_dst) java.dummy_1.main: java.FORCE
         1>'./'$@'.d.tmp' \
       || 'exit' "$${?}"; \
       'mv' \
+        '-f' \
         './'$@'.d.tmp' \
         './'$@'.d' \
       || 'exit' "$${?}"; \
