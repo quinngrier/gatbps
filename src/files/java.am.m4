@@ -318,6 +318,9 @@ $(java_dst) java.dummy_1.main: java.FORCE
         './'$@'.d.tmp' \
         './'$@'.d' \
       || 'exit' "$${?}"; \
+      'touch' \
+        './'$@ \
+      || 'exit' "$${?}"; \
       'break'; \
     done; \
     'exit' '0'; \
