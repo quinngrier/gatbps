@@ -68,7 +68,7 @@ GATBPS_M4_RULES="$][{GATBPS_M4_RULES}"'
 
 #
 # The following rule causes the .d file to be treated as up-to-date if
-# it does not exist. This causes the .m4out file to be remade when the
+# it does not exist. This causes the output file to be remade when the
 # .d file does not exist, which generates the .d file as a side-effect.
 #
 # Here is the relevant part of the description of the make utility in
