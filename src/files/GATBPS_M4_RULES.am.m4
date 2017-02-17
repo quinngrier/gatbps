@@ -5,6 +5,7 @@ rules_code({%|src/files/GATBPS_M4_RULES.am.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
+include({%|src/tools/rule_substitution_comment_plural.m4|%}){%||%}dnl
 header_comment({%|##|%}, {%|##|%}){%|
 ##
 ## Special file: GATBPS_M4_RULES.am
@@ -13,6 +14,13 @@ header_comment({%|##|%}, {%|##|%}){%|
 ##
 
 @GATBPS_M4_RULES@
+
+|%}rule_substitution_comment_plural{%|
+
+clean-local:
+distclean-local:
+maintainer-clean-local:
+mostlyclean-local:
 
 |%}footer_comment({%|##|%}, {%|##|%}, {%|##|%})
 dnl
