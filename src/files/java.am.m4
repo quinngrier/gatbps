@@ -15,6 +15,10 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 ## begin_variables
 
+GATBPS_INNER_JAR_SUFFIX = /inner
+
+GATBPS_OUTER_JAR_SUFFIX =
+
 GATBPS_V_JAR = $(GATBPS_V_JAR_@AM_V@)
 
 GATBPS_V_JAR_ = $(GATBPS_V_JAR_@AM_DEFAULT_V@)
@@ -79,7 +83,7 @@ gatbps_jdeps_to_rules = ' \
 
 ## begin_rules
 
-$(java_dst) java.dummy_1.main: java.FORCE
+$(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
 	$(AM_V_at){ \
   ( \
@@ -150,10 +154,12 @@ $(java_dst) java.dummy_1.main: java.FORCE
     $(MAKE) \
       $(AM_MAKEFLAGS) \
       'GATBPS_INNER_CLASSPATH='"$${classpath}" \
+      'GATBPS_INNER_JAR_SUFFIX=' \
       'GATBPS_INNER_JAVACFLAGS='"$${javacflags}" \
       'GATBPS_INNER_PACKAGE=$(java_package)' \
       'GATBPS_INNER_SOURCEPATH='"$${sourcepath}" \
-      './'$(java_dst)'/recursive' \
+      'GATBPS_OUTER_JAR_SUFFIX=/outer' \
+      './'$(java_dst) \
     || 'exit' "$${?}"; \
     'exit' '0'; \
   :;); \
@@ -166,10 +172,10 @@ $(java_dst) java.dummy_1.main: java.FORCE
 :;}
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
-./$(java_dst)/recursive: $(java_dep)
-./$(java_dst)/recursive: $(java_extra)
-./$(java_dst)/recursive: $(java_src)
-./$(java_dst)/recursive: $(javadoc_src)
+./$(java_dst)$(GATBPS_INNER_JAR_SUFFIX): $(java_dep)
+./$(java_dst)$(GATBPS_INNER_JAR_SUFFIX): $(java_extra)
+./$(java_dst)$(GATBPS_INNER_JAR_SUFFIX): $(java_src)
+./$(java_dst)$(GATBPS_INNER_JAR_SUFFIX): $(javadoc_src)
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
 	$(GATBPS_V_JAR_RECURSIVE)$(GATBPS_V_NOP)
 	$(AM_V_at){ \
@@ -266,7 +272,6 @@ $(java_dst) java.dummy_1.main: java.FORCE
 :;}
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
-.PHONY: ./$(java_dst)/recursive
 .PHONY: clean-java
 .PHONY: clean-java-main
 .PHONY: install-java
