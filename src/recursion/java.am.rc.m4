@@ -12,6 +12,15 @@ recursion_code(
   {%|GATBPS_V_NOP.am|%},
   {%|GATBPS_RECIPE_MARKER.am|%},
   {%|GATBPS_PROG_MKDIR_P.m4|%},
+  {%|GATBPS_PROG_JDEPS.m4|%},
+  {%|GATBPS_PROG_JAVAC.m4|%},
+  {%|GATBPS_PROG_JAR.m4|%},
+  {%|GATBPS_PROG_AWK.m4|%},
+  {%|GATBPS_DEFINE_javadir.m4|%},
+  {%|GATBPS_DEFINE_JAVACFLAGS.m4|%},
+  {%|GATBPS_DEFINE_JARFLAGS.m4|%},
+  {%|GATBPS_DEFINE_CLASSPATH.m4|%},
+  {%|GATBPS_CHECK_CLASSPATH_SEPARATOR.m4|%},
   {%|CC0-1.0.txt|%},
   {%||%}){%||%}dnl
 dnl
