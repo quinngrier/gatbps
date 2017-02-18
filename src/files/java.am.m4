@@ -65,7 +65,7 @@ gatbps_jdeps_to_rules = ' \
     if ($$1 == "->" && $$2 !~ /\$$/) { \
       rule = "$@"; \
       rule = rule ": "; \
-      rule = rule "'$(GATBPS_RECURSIVE_SOURCEPATH)'"; \
+      rule = rule "'$(GATBPS_INNER_SOURCEPATH)'"; \
       rule = rule "/"; \
       gsub(/\./, "/", $$2); \
       rule = rule $$2; \
@@ -149,10 +149,10 @@ $(java_dst) java.dummy_1.main: java.FORCE
     ` || 'exit' "$${?}"; \
     $(MAKE) \
       $(AM_MAKEFLAGS) \
-      'GATBPS_RECURSIVE_CLASSPATH='"$${classpath}" \
-      'GATBPS_RECURSIVE_JAVACFLAGS='"$${javacflags}" \
-      'GATBPS_RECURSIVE_PACKAGE=$(java_package)' \
-      'GATBPS_RECURSIVE_SOURCEPATH='"$${sourcepath}" \
+      'GATBPS_INNER_CLASSPATH='"$${classpath}" \
+      'GATBPS_INNER_JAVACFLAGS='"$${javacflags}" \
+      'GATBPS_INNER_PACKAGE=$(java_package)' \
+      'GATBPS_INNER_SOURCEPATH='"$${sourcepath}" \
       './'$(java_dst)'/recursive' \
     || 'exit' "$${?}"; \
     'exit' '0'; \
@@ -233,7 +233,7 @@ $(java_dst) java.dummy_1.main: java.FORCE
         'cf' \
         './'$(java_dst) \
         '-C' \
-        './'$(java_dst)'.tmp/x/'$(GATBPS_RECURSIVE_SOURCEPATH) \
+        './'$(java_dst)'.tmp/x/'$(GATBPS_INNER_SOURCEPATH) \
         $(java_JARFLAGS) \
         $(JARFLAGS) \
         '.' \
@@ -247,7 +247,7 @@ $(java_dst) java.dummy_1.main: java.FORCE
           'cf' \
           './'$(java_dst) \
           '-C' \
-          './'$(java_dst)'.tmp/x/'$(GATBPS_RECURSIVE_SOURCEPATH) \
+          './'$(java_dst)'.tmp/x/'$(GATBPS_INNER_SOURCEPATH) \
           $(GATBPS_JARFLAGS) \
           $(JARFLAGS) \
           '.' \
@@ -279,18 +279,18 @@ $(java_dst) java.dummy_1.main: java.FORCE
 
 .java.class:
 	$(GATBPS_V_JAVAC)$(MKDIR_P) \
-  $(GATBPS_RECURSIVE_SOURCEPATH) \
+  $(GATBPS_INNER_SOURCEPATH) \
 ;
 	$(AM_V_at)$(JAVAC) \
   '-Xprefer:source' \
   '-classpath' \
-  $(GATBPS_RECURSIVE_CLASSPATH) \
+  $(GATBPS_INNER_CLASSPATH) \
   '-d' \
-  $(GATBPS_RECURSIVE_SOURCEPATH) \
+  $(GATBPS_INNER_SOURCEPATH) \
   '-implicit:none' \
   '-sourcepath' \
-  $(GATBPS_RECURSIVE_SOURCEPATH)$(CLASSPATH_SEPARATOR)$(srcdir)'/'$(GATBPS_RECURSIVE_SOURCEPATH) \
-  $(GATBPS_RECURSIVE_JAVACFLAGS) \
+  $(GATBPS_INNER_SOURCEPATH)$(CLASSPATH_SEPARATOR)$(srcdir)'/'$(GATBPS_INNER_SOURCEPATH) \
+  $(GATBPS_INNER_JAVACFLAGS) \
   $(JAVACFLAGS) \
   $< \
 ;
@@ -303,7 +303,7 @@ $(java_dst) java.dummy_1.main: java.FORCE
       $(JDEPS) \
         '-filter:none' \
         '-package' \
-        $(GATBPS_RECURSIVE_PACKAGE) \
+        $(GATBPS_INNER_PACKAGE) \
         '-verbose:class' \
         './'$@ \
         1>'./'$@'.d.tmp-jdeps' \
