@@ -298,11 +298,11 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
         '-verbose:class' \
         './'$@ \
         0<'/dev/null' \
-        1>'./'$@'.d.tmp-jdeps' \
+        1>'./'$@'.d.tmp1' \
       || 'exit' "$${?}"; \
       $(AWK) \
         $(gatbps_jdeps_to_rules) \
-        0<'./'$@'.d.tmp-jdeps' \
+        0<'./'$@'.d.tmp1' \
         1>'./'$@'.d.tmp' \
       || 'exit' "$${?}"; \
       'mv' \
@@ -322,7 +322,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
   'readonly' 'exit_status'; \
   'rm' \
     '-f' \
-    './'$@'.d.tmp-jdeps' \
+    './'$@'.d.tmp1' \
   ; \
   case "$${exit_status}" in \
     '0') \
