@@ -297,6 +297,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
         $(GATBPS_INNER_PACKAGE) \
         '-verbose:class' \
         './'$@ \
+        0<'/dev/null' \
         1>'./'$@'.d.tmp-jdeps' \
       || 'exit' "$${?}"; \
       $(AWK) \
