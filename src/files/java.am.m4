@@ -303,11 +303,11 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
       $(AWK) \
         $(gatbps_jdeps_to_rules) \
         0<'./'$@'.d.tmp1' \
-        1>'./'$@'.d.tmp' \
+        1>'./'$@'.d.tmp2' \
       || 'exit' "$${?}"; \
       'mv' \
         '-f' \
-        './'$@'.d.tmp' \
+        './'$@'.d.tmp2' \
         './'$@'.d' \
       || 'exit' "$${?}"; \
       'touch' \
@@ -331,7 +331,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
       'rm' \
         '-f' \
         './'$@'.d' \
-        './'$@'.d.tmp' \
+        './'$@'.d.tmp2' \
       ; \
     ;; \
   esac; \
