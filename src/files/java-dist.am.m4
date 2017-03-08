@@ -28,7 +28,7 @@ $(java_dist_dst): $(java_dist_dep)
   {%|MAKE|%}){%||%}dnl
 {%|
 	$(AM_V_at)|%}contains_exactly_one_word(
-  {%|java_dist_src|%}){%||%}dnl
+  {%|java_dst|%}){%||%}dnl
 {%|
 	$(AM_V_at)|%}contains_at_least_one_word(
   {%|MKDIR_P|%}){%||%}dnl
@@ -38,25 +38,25 @@ $(java_dist_dst): $(java_dist_dep)
 {%|
 	$(AM_V_at)$(MAKE) \
   $(AM_MAKEFLAGS) \
-  $(java_dist_src) \
+  $(java_dst) \
 ;
 	$(GATBPS_V_CP)$(GATBPS_V_NOP)
 	$(AM_V_at)$(MKDIR_P) \
   './'$(@D) \
 ;
 	$(AM_V_at){ \
-  if 'test' '-f' $(java_dist_src); then \
+  if 'test' '-f' $(java_dst); then \
     d='.'; \
   else \
     d=$(srcdir); \
-    if 'test' '-f' "$${d}"'/'$(java_dist_src); then \
+    if 'test' '-f' "$${d}"'/'$(java_dst); then \
       ':'; \
     else \
       $(SHELL) \
         '-' \
         $(srcdir)'/build-aux/echo.sh' \
         'error: missing prerequisite:' \
-        '"'$(java_dist_src)'"' \
+        '"'$(java_dst)'"' \
         1>&2 \
       ; \
       'exit' '1'; \
@@ -70,7 +70,7 @@ $(java_dist_dst): $(java_dist_dep)
     esac; \
   fi; \
   'cp' \
-    "$${d}"'/'$(java_dist_src) \
+    "$${d}"'/'$(java_dst) \
     './'$(java_dist_dst) \
   || 'exit' "$${?}"; \
   'exit' '0'; \
