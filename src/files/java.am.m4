@@ -288,39 +288,48 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 ;
 	$(AM_V_at){ \
   ( \
-    'touch' \
-      './'$@'.d' \
-      0<'/dev/null' \
-    || 'exit' "$${?}"; \
+    have_jdeps='no'; \
     for if_not_blank in \
       $(JDEPS) \
       $${prevent_an_empty_word_list} \
     ; do \
-      $(JDEPS) \
-        '-filter:none' \
-        '-package' \
-        $(GATBPS_INNER_PACKAGE) \
-        '-verbose:class' \
-        './'$@ \
-        0<'/dev/null' \
-        1>'./'$@'.d.tmp1' \
-      || 'exit' "$${?}"; \
-      $(AWK) \
-        $(gatbps_jdeps_to_rules) \
-        0<'./'$@'.d.tmp1' \
-        1>'./'$@'.d.tmp2' \
-      || 'exit' "$${?}"; \
-      'mv' \
-        '-f' \
-        './'$@'.d.tmp2' \
-        './'$@'.d' \
-      || 'exit' "$${?}"; \
-      'touch' \
-        './'$@ \
-        0<'/dev/null' \
-      || 'exit' "$${?}"; \
-      'break'; \
+      have_jdeps='yes'; \
     done; \
+    'readonly' 'have_jdeps'; \
+    case "$${have_jdeps}" in \
+      'yes') \
+        $(JDEPS) \
+          '-filter:none' \
+          '-package' \
+          $(GATBPS_INNER_PACKAGE) \
+          '-verbose:class' \
+          './'$@ \
+          0<'/dev/null' \
+          1>'./'$@'.d.tmp1' \
+        || 'exit' "$${?}"; \
+        $(AWK) \
+          $(gatbps_jdeps_to_rules) \
+          0<'./'$@'.d.tmp1' \
+          1>'./'$@'.d.tmp2' \
+        || 'exit' "$${?}"; \
+        'mv' \
+          '-f' \
+          './'$@'.d.tmp2' \
+          './'$@'.d' \
+        || 'exit' "$${?}"; \
+        'touch' \
+          './'$@ \
+          0<'/dev/null' \
+        || 'exit' "$${?}"; \
+        'break'; \
+      ;; \
+      'no') \
+        'touch' \
+          './'$@'.d' \
+          0<'/dev/null' \
+        || 'exit' "$${?}"; \
+      ;; \
+    esac; \
     'exit' '0'; \
   :;); \
   exit_status="$${?}"; \
