@@ -312,6 +312,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
       || 'exit' "$${?}"; \
       'touch' \
         './'$@ \
+        0<'/dev/null' \
       || 'exit' "$${?}"; \
       'break'; \
     done; \
