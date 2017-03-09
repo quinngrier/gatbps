@@ -294,6 +294,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
       $${prevent_an_empty_word_list} \
     ; do \
       have_jdeps='yes'; \
+      'break'; \
     done; \
     'readonly' 'have_jdeps'; \
     case "$${have_jdeps}" in \
@@ -321,7 +322,6 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
           './'$@ \
           0<'/dev/null' \
         || 'exit' "$${?}"; \
-        'break'; \
       ;; \
       'no') \
         'touch' \
