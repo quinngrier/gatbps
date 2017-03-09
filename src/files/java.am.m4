@@ -17,6 +17,21 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 GATBPS_INNER_JAR_SUFFIX = /inner
 
+GATBPS_JDEPS_TO_RULES_SCRIPT = ' \
+  { \
+    if ($$1 == "->" && $$2 !~ /\$$/) { \
+      rule = "$@"; \
+      rule = rule ": "; \
+      rule = rule "'$(GATBPS_INNER_SOURCEPATH)'"; \
+      rule = rule "/"; \
+      gsub(/\./, "/", $$2); \
+      rule = rule $$2; \
+      rule = rule ".java"; \
+      print rule; \
+    } \
+  } \
+'
+
 GATBPS_OUTER_JAR_SUFFIX =
 
 GATBPS_V_JAR = $(GATBPS_V_JAR_@AM_V@)
@@ -49,21 +64,6 @@ GATBPS_V_JAVAC_1 =
 
 SUFFIXES += .class
 SUFFIXES += .java
-
-gatbps_jdeps_to_rules = ' \
-  { \
-    if ($$1 == "->" && $$2 !~ /\$$/) { \
-      rule = "$@"; \
-      rule = rule ": "; \
-      rule = rule "'$(GATBPS_INNER_SOURCEPATH)'"; \
-      rule = rule "/"; \
-      gsub(/\./, "/", $$2); \
-      rule = rule $$2; \
-      rule = rule ".java"; \
-      print rule; \
-    } \
-  } \
-'
 
 ## end_variables
 
@@ -309,7 +309,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
           1>'./'$@'.d.tmp1' \
         || 'exit' "$${?}"; \
         $(AWK) \
-          $(gatbps_jdeps_to_rules) \
+          $(GATBPS_JDEPS_TO_RULES_SCRIPT) \
           0<'./'$@'.d.tmp1' \
           1>'./'$@'.d.tmp2' \
         || 'exit' "$${?}"; \
