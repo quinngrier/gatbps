@@ -24,6 +24,7 @@ GATBPS_V_UNXZ_0 = @$(SHELL) \
   '--' \
   $(GATBPS_V_PAD_LEFT)'UNXZ'$(GATBPS_V_PAD_RIGHT_4) \
   $@ \
+  0<'/dev/null' \
 || 'exit' "$${?}";
 
 GATBPS_V_UNXZ_1 =
@@ -38,6 +39,7 @@ GATBPS_V_XZ_0 = @$(SHELL) \
   '--' \
   $(GATBPS_V_PAD_LEFT)'XZ'$(GATBPS_V_PAD_RIGHT_2) \
   $@ \
+  0<'/dev/null' \
 || 'exit' "$${?}";
 
 GATBPS_V_XZ_1 =

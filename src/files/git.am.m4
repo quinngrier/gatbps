@@ -24,6 +24,7 @@ GATBPS_V_GIT_ARCHIVE_0 = @$(SHELL) \
   '--' \
   $(GATBPS_V_PAD_LEFT)'GIT ARCHIVE'$(GATBPS_V_PAD_RIGHT_11) \
   $@ \
+  0<'/dev/null' \
 || 'exit' "$${?}";
 
 GATBPS_V_GIT_ARCHIVE_1 =
@@ -38,6 +39,7 @@ GATBPS_V_GIT_BUNDLE_0 = @$(SHELL) \
   '--' \
   $(GATBPS_V_PAD_LEFT)'GIT BUNDLE'$(GATBPS_V_PAD_RIGHT_10) \
   $@ \
+  0<'/dev/null' \
 || 'exit' "$${?}";
 
 GATBPS_V_GIT_BUNDLE_1 =
@@ -52,6 +54,7 @@ GATBPS_V_GIT_CLONE_0 = @$(SHELL) \
   '--' \
   $(GATBPS_V_PAD_LEFT)'GIT CLONE'$(GATBPS_V_PAD_RIGHT_9) \
   $@ \
+  0<'/dev/null' \
 || 'exit' "$${?}";
 
 GATBPS_V_GIT_CLONE_1 =

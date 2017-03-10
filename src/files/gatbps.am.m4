@@ -24,6 +24,7 @@ GATBPS_V_GATBPS_0 = @$(SHELL) \
   '--' \
   $(GATBPS_V_PAD_LEFT)'GATBPS'$(GATBPS_V_PAD_RIGHT_6) \
   $@ \
+  0<'/dev/null' \
 || 'exit' "$${?}";
 
 GATBPS_V_GATBPS_1 =

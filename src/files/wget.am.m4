@@ -24,6 +24,7 @@ GATBPS_V_WGET_0 = @$(SHELL) \
   '--' \
   $(GATBPS_V_PAD_LEFT)'WGET'$(GATBPS_V_PAD_RIGHT_4) \
   $@ \
+  0<'/dev/null' \
 || 'exit' "$${?}";
 
 GATBPS_V_WGET_1 =
