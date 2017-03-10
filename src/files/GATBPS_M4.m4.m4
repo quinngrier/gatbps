@@ -89,6 +89,8 @@ GATBPS_M4_RULES="$][{GATBPS_M4_RULES}"'
 
 ]output_file[.m4out.d:
 
+.PRECIOUS: ]output_file[.m4out.d
+
 .PHONY: clean-]output_file[.m4out
 
 clean-]output_file[.m4out:

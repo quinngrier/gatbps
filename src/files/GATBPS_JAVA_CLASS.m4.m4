@@ -87,6 +87,8 @@ GATBPS_JAVA_CLASS_RULES="$][{GATBPS_JAVA_CLASS_RULES}"'
 
 ]output_file[.d:
 
+.PRECIOUS: ]output_file[.d
+
 .PHONY: clean-]output_file[
 
 clean-]output_file[:
