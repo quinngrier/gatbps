@@ -324,6 +324,15 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
         || 'exit' "$${?}"; \
       ;; \
       'no') \
+        $(SHELL) \
+          '-' \
+          $(srcdir)'/build-aux/echo.sh' \
+          '--' \
+          'warning: automatic dependency' \
+          'tracking is not available for Java' \
+          0<'/dev/null' \
+          1>&2 \
+        || 'exit' "$${?}"; \
         'touch' \
           './'$@'.d' \
           0<'/dev/null' \
