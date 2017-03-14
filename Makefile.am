@@ -53,8 +53,11 @@ MOSTLYCLEANFILES =
 
 SUFFIXES =
 
-TEXI2DVI =
-TEXI2DVI += 'texi2dvi' $(AM_TEXI2DVIFLAGS) $(TEXI2DVIFLAGS)
+TEXI2DVI = \
+  'texi2dvi' \
+  $(AM_TEXI2DVIFLAGS) \
+  $(TEXI2DVIFLAGS) \
+$(prevent_a_blank_line)
 
 bin_SCRIPTS =
 
