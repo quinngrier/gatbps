@@ -14,8 +14,9 @@ AM_MAKEINFOHTMLFLAGS += '--no-headers'
 AM_MAKEINFOHTMLFLAGS += '--no-split'
 AM_MAKEINFOHTMLFLAGS += '--set-customization-variable' 'TOP_NODE_UP=Top'
 
-AM_TEXI2DVIFLAGS =
-AM_TEXI2DVIFLAGS += $(AM_MAKEINFOFLAGS)
+AM_TEXI2DVIFLAGS = \
+  $(AM_MAKEINFOFLAGS) \
+$(prevent_a_blank_line)
 
 CLEANFILES =
 
