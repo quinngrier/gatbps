@@ -112,14 +112,14 @@ clean-gatbps_output:
 ]m4_if([$3], [], [[distclean]], [[$3]])[-local: clean-]gatbps_output[
 
 ]gatbps_output[: ]input_file[
-	$][(MKDIR_P) \
+	$][(AM@&t@_V_at)$][(MKDIR_P) \
   '\''./'\''$][(@D) \
 ;
-	'\''rm'\'' \
+	$][(AM@&t@_V_at)'\''rm'\'' \
   '\''-f'\'' \
   '\''./'\'']gatbps_output[ \
 ;
-	$][(SHELL) \
+	$][(AM@&t@_V_at)$][(SHELL) \
   '\''-'\'' \
   '\''./config.status'\'' \
   ]gatbps_output[]gatbps_suffix[ \
