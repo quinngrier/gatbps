@@ -113,12 +113,12 @@ clean-gatbps_output:
 
 ]gatbps_output[: ]input_file[
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_TOP)
-	$][(AM@&t@_V_at)$][(MKDIR_P) \
-  '\''./'\''$][(@D) \
-;
 	$][(AM@&t@_V_at)'\''rm'\'' \
   '\''-f'\'' \
   '\''./'\'']gatbps_output[ \
+;
+	$][(AM@&t@_V_at)$][(MKDIR_P) \
+  '\''./'\''$][(@D) \
 ;
 	$][(AM@&t@_V_at)$][(SHELL) \
   '\''-'\'' \
