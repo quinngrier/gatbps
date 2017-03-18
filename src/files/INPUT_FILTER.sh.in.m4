@@ -20,6 +20,7 @@ header_comment({%|#|%}, {%|#|%}){%|
     in_javadoc_code_block = 0;
   }
   {
+    gsub(/final\/\*imp\*\//, "", $0);
     gsub(/<code><!--#-->/, "<code>#", $0);
     gsub(/<code><!--::-->/, "<code>::", $0);
     if (in_javadoc_code_block) {
