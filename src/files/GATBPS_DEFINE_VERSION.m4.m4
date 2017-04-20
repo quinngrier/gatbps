@@ -208,6 +208,12 @@ m4_if(
       hexadecimal digits
     ])])])[]dnl
 m4_define(
+  [$1$2_DEB_V],
+  m4_dquote(m4_bpatsubst(m4_dquote($1$2), [-], [~])))[]dnl
+m4_define(
+  [$1$2_DEB_V_TEXI],
+  m4_dquote(m4_bpatsubst(m4_dquote($1$2_DEB_V), [\.], [.@:])))[]dnl
+m4_define(
   [$1$2_DOCKER],
   m4_dquote(m4_bpatsubst(m4_dquote($1$2), [\+.*\(.\)], [\1])))[]dnl
 m4_define(
@@ -236,12 +242,6 @@ m4_define(
 m4_define(
   [$1$2_PATCH],
   m4_bregexp($1$2, [[0-9]+\.[0-9]+\.\([0-9]+\)], [[[\1]]]))[]dnl
-m4_define(
-  [$1$2_DEB_V],
-  m4_dquote(m4_bpatsubst(m4_dquote($1$2), [-], [~])))[]dnl
-m4_define(
-  [$1$2_DEB_V_TEXI],
-  m4_dquote(m4_bpatsubst(m4_dquote($1$2_DEB_V), [\.], [.@:])))[]dnl
 m4_define(
   [$1$2_LIBTOOL_R],
   m4_dquote($1$2_PATCH))[]dnl
