@@ -91,6 +91,11 @@ m4_ifdef(
     $1$2_DEB_V is already defined
   ])])[]dnl
 m4_ifdef(
+  [$1$2_DEB_V_TEXI],
+  [gatbps_fatal([
+    $1$2_DEB_V_TEXI is already defined
+  ])])[]dnl
+m4_ifdef(
   [$1$2_DOCKER],
   [gatbps_fatal([
     $1$2_DOCKER is already defined
@@ -235,6 +240,9 @@ m4_define(
   [$1$2_DEB_V],
   m4_dquote($1$2_MAJOR[.]$1$2_MINOR[.]$1$2_PATCH))[]dnl
 m4_define(
+  [$1$2_DEB_V_TEXI],
+  m4_dquote(m4_bpatsubst(m4_dquote($1$2_DEB_V), [\.], [.@:])))[]dnl
+m4_define(
   [$1$2_LIBTOOL_R],
   m4_dquote($1$2_PATCH))[]dnl
 m4_define(
@@ -279,6 +287,15 @@ m4_define(
     this should be $2. Otherwise, this should be the text up to but not
     including the "-" character. For example, if $2 were "0.1.0" or
     "0.1.0-4927+g88a52bb", then this should be "0.1.0".
+  ])[
+
+]AC_DEFINE(
+  [[$2_DEB_V_TEXI]],
+  m4_dquote(["]$1$2_DEB_V_TEXI["]),
+  [
+    Define to the same character string literal as $2_DEB_V but with
+    each "." character replaced with ".@:". For example, if $2_DEB_V
+    were "0.1.0", then this should be "0.@:1.@:0".
   ])[
 
 ]AC_DEFINE(
@@ -438,6 +455,14 @@ case "$][{$2_DEB_V+is_set}" in
   ;;
 esac
 
+case "$][{$2_DEB_V_TEXI+is_set}" in
+  ?*)
+    ]GATBPS_MSG_ERROR([
+      \$][{$2_DEB_V_TEXI} is already set
+    ])[
+  ;;
+esac
+
 case "$][{$2_DOCKER+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
@@ -567,6 +592,7 @@ case "$][{$2_TEXI+is_set}" in
 esac
 
 $2_DEB_V=']$1$2_DEB_V['
+$2_DEB_V_TEXI=']$1$2_DEB_V_TEXI['
 $2_DOCKER=']$1$2_DOCKER['
 $2_DOCKER_TEXI=']$1$2_DOCKER_TEXI['
 $2_GIT=']$1$2_GIT['
@@ -585,6 +611,7 @@ $2_RPM_V_TEXI=']$1$2_RPM_V_TEXI['
 $2_TEXI=']$1$2_TEXI['
 
 'readonly' '$2_DEB_V'
+'readonly' '$2_DEB_V_TEXI'
 'readonly' '$2_DOCKER'
 'readonly' '$2_DOCKER_TEXI'
 'readonly' '$2_GIT'
@@ -603,6 +630,7 @@ $2_TEXI=']$1$2_TEXI['
 'readonly' '$2_TEXI'
 
 ]AC_SUBST([$2_DEB_V])[
+]AC_SUBST([$2_DEB_V_TEXI])[
 ]AC_SUBST([$2_DOCKER])[
 ]AC_SUBST([$2_DOCKER_TEXI])[
 ]AC_SUBST([$2_GIT])[
