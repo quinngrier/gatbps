@@ -453,7 +453,7 @@ case "$][{$2_DEB_V+is_set}" in
       \$][{$2_DEB_V} is already set
     ])[
   ;;
-esac
+esac;
 
 case "$][{$2_DEB_V_TEXI+is_set}" in
   ?*)
@@ -461,7 +461,7 @@ case "$][{$2_DEB_V_TEXI+is_set}" in
       \$][{$2_DEB_V_TEXI} is already set
     ])[
   ;;
-esac
+esac;
 
 case "$][{$2_DOCKER+is_set}" in
   ?*)
@@ -469,7 +469,7 @@ case "$][{$2_DOCKER+is_set}" in
       \$][{$2_DOCKER} is already set
     ])[
   ;;
-esac
+esac;
 
 case "$][{$2_DOCKER_TEXI+is_set}" in
   ?*)
@@ -477,7 +477,7 @@ case "$][{$2_DOCKER_TEXI+is_set}" in
       \$][{$2_DOCKER_TEXI} is already set
     ])[
   ;;
-esac
+esac;
 
 case "$][{$2_GIT+is_set}" in
   ?*)
@@ -485,7 +485,7 @@ case "$][{$2_GIT+is_set}" in
       \$][{$2_GIT} is already set
     ])[
   ;;
-esac
+esac;
 
 case "$][{$2_GIT_TEXI+is_set}" in
   ?*)
@@ -493,7 +493,7 @@ case "$][{$2_GIT_TEXI+is_set}" in
       \$][{$2_GIT_TEXI} is already set
     ])[
   ;;
-esac
+esac;
 
 case "$][{$2_LIBTOOL_A+is_set}" in
   ?*)
@@ -501,7 +501,7 @@ case "$][{$2_LIBTOOL_A+is_set}" in
       \$][{$2_LIBTOOL_A} is already set
     ])[
   ;;
-esac
+esac;
 
 case "$][{$2_LIBTOOL_R+is_set}" in
   ?*)
@@ -509,7 +509,7 @@ case "$][{$2_LIBTOOL_R+is_set}" in
       \$][{$2_LIBTOOL_R} is already set
     ])[
   ;;
-esac
+esac;
 
 case "$][{$2_MAJOR+is_set}" in
   ?*)
@@ -517,7 +517,7 @@ case "$][{$2_MAJOR+is_set}" in
       \$][{$2_MAJOR} is already set
     ])[
   ;;
-esac
+esac;
 
 case "$][{$2_MINOR+is_set}" in
   ?*)
@@ -525,7 +525,7 @@ case "$][{$2_MINOR+is_set}" in
       \$][{$2_MINOR} is already set
     ])[
   ;;
-esac
+esac;
 
 case "$][{$2_PATCH+is_set}" in
   ?*)
@@ -533,7 +533,7 @@ case "$][{$2_PATCH+is_set}" in
       \$][{$2_PATCH} is already set
     ])[
   ;;
-esac
+esac;
 
 case "$][{$2_RPM_R+is_set}" in
   ?*)
@@ -541,7 +541,7 @@ case "$][{$2_RPM_R+is_set}" in
       \$][{$2_RPM_R} is already set
     ])[
   ;;
-esac
+esac;
 
 case "$][{$2_RPM_R_TEXI+is_set}" in
   ?*)
@@ -549,7 +549,7 @@ case "$][{$2_RPM_R_TEXI+is_set}" in
       \$][{$2_RPM_R_TEXI} is already set
     ])[
   ;;
-esac
+esac;
 
 case "$][{$2_RPM_V+is_set}" in
   ?*)
@@ -557,7 +557,7 @@ case "$][{$2_RPM_V+is_set}" in
       \$][{$2_RPM_V} is already set
     ])[
   ;;
-esac
+esac;
 
 case "$][{$2_RPM_VR+is_set}" in
   ?*)
@@ -565,7 +565,7 @@ case "$][{$2_RPM_VR+is_set}" in
       \$][{$2_RPM_VR} is already set
     ])[
   ;;
-esac
+esac;
 
 case "$][{$2_RPM_VR_TEXI+is_set}" in
   ?*)
@@ -573,7 +573,7 @@ case "$][{$2_RPM_VR_TEXI+is_set}" in
       \$][{$2_RPM_VR_TEXI} is already set
     ])[
   ;;
-esac
+esac;
 
 case "$][{$2_RPM_V_TEXI+is_set}" in
   ?*)
@@ -581,7 +581,7 @@ case "$][{$2_RPM_V_TEXI+is_set}" in
       \$][{$2_RPM_V_TEXI} is already set
     ])[
   ;;
-esac
+esac;
 
 case "$][{$2_TEXI+is_set}" in
   ?*)
@@ -589,45 +589,45 @@ case "$][{$2_TEXI+is_set}" in
       \$][{$2_TEXI} is already set
     ])[
   ;;
-esac
+esac;
 
-$2_DEB_V=']$1$2_DEB_V['
-$2_DEB_V_TEXI=']$1$2_DEB_V_TEXI['
-$2_DOCKER=']$1$2_DOCKER['
-$2_DOCKER_TEXI=']$1$2_DOCKER_TEXI['
-$2_GIT=']$1$2_GIT['
-$2_GIT_TEXI=']$1$2_GIT_TEXI['
-$2_LIBTOOL_A=']$1$2_LIBTOOL_A['
-$2_LIBTOOL_R=']$1$2_LIBTOOL_R['
-$2_MAJOR=']$1$2_MAJOR['
-$2_MINOR=']$1$2_MINOR['
-$2_PATCH=']$1$2_PATCH['
-$2_RPM_R=']$1$2_RPM_R['
-$2_RPM_R_TEXI=']$1$2_RPM_R_TEXI['
-$2_RPM_V=']$1$2_RPM_V['
-$2_RPM_VR=']$1$2_RPM_VR['
-$2_RPM_VR_TEXI=']$1$2_RPM_VR_TEXI['
-$2_RPM_V_TEXI=']$1$2_RPM_V_TEXI['
-$2_TEXI=']$1$2_TEXI['
+$2_DEB_V=']$1$2_DEB_V[';
+$2_DEB_V_TEXI=']$1$2_DEB_V_TEXI[';
+$2_DOCKER=']$1$2_DOCKER[';
+$2_DOCKER_TEXI=']$1$2_DOCKER_TEXI[';
+$2_GIT=']$1$2_GIT[';
+$2_GIT_TEXI=']$1$2_GIT_TEXI[';
+$2_LIBTOOL_A=']$1$2_LIBTOOL_A[';
+$2_LIBTOOL_R=']$1$2_LIBTOOL_R[';
+$2_MAJOR=']$1$2_MAJOR[';
+$2_MINOR=']$1$2_MINOR[';
+$2_PATCH=']$1$2_PATCH[';
+$2_RPM_R=']$1$2_RPM_R[';
+$2_RPM_R_TEXI=']$1$2_RPM_R_TEXI[';
+$2_RPM_V=']$1$2_RPM_V[';
+$2_RPM_VR=']$1$2_RPM_VR[';
+$2_RPM_VR_TEXI=']$1$2_RPM_VR_TEXI[';
+$2_RPM_V_TEXI=']$1$2_RPM_V_TEXI[';
+$2_TEXI=']$1$2_TEXI[';
 
-'readonly' '$2_DEB_V'
-'readonly' '$2_DEB_V_TEXI'
-'readonly' '$2_DOCKER'
-'readonly' '$2_DOCKER_TEXI'
-'readonly' '$2_GIT'
-'readonly' '$2_GIT_TEXI'
-'readonly' '$2_LIBTOOL_A'
-'readonly' '$2_LIBTOOL_R'
-'readonly' '$2_MAJOR'
-'readonly' '$2_MINOR'
-'readonly' '$2_PATCH'
-'readonly' '$2_RPM_R'
-'readonly' '$2_RPM_R_TEXI'
-'readonly' '$2_RPM_V'
-'readonly' '$2_RPM_VR'
-'readonly' '$2_RPM_VR_TEXI'
-'readonly' '$2_RPM_V_TEXI'
-'readonly' '$2_TEXI'
+'readonly' '$2_DEB_V';
+'readonly' '$2_DEB_V_TEXI';
+'readonly' '$2_DOCKER';
+'readonly' '$2_DOCKER_TEXI';
+'readonly' '$2_GIT';
+'readonly' '$2_GIT_TEXI';
+'readonly' '$2_LIBTOOL_A';
+'readonly' '$2_LIBTOOL_R';
+'readonly' '$2_MAJOR';
+'readonly' '$2_MINOR';
+'readonly' '$2_PATCH';
+'readonly' '$2_RPM_R';
+'readonly' '$2_RPM_R_TEXI';
+'readonly' '$2_RPM_V';
+'readonly' '$2_RPM_VR';
+'readonly' '$2_RPM_VR_TEXI';
+'readonly' '$2_RPM_V_TEXI';
+'readonly' '$2_TEXI';
 
 ]AC_SUBST([$2_DEB_V])[
 ]AC_SUBST([$2_DEB_V_TEXI])[
