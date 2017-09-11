@@ -28,7 +28,7 @@ GATBPS_CONFIG_LATER_SCRIPT_BOT = ' \
 GATBPS_CONFIG_LATER_SCRIPT_TOP = ' \
   { \
     line = $$0; \
-    line_parts_count = split(line, line_parts, /{@}/); \
+    line_parts_count = split(line, line_parts, /\{@\}/); \
     for (i = 0; i != line_parts_count; ++i) { \
       if (i == 0) { \
         line = line_parts[i + 1]; \
