@@ -13,6 +13,24 @@ header_comment({%|##|%}, {%|##|%}){%|
 ## For more information, see the GATBPS manual.
 ##
 
+## begin_variables
+
+GATBPS_V_CONFIG_FILE = $(GATBPS_V_CONFIG_FILE_@AM_V@)
+
+GATBPS_V_CONFIG_FILE_ = $(GATBPS_V_CONFIG_FILE_@AM_DEFAULT_V@)
+
+GATBPS_V_CONFIG_FILE_0 = @$(SHELL) \
+  '-' \
+  $(srcdir)'/build-aux/echo.sh' \
+  '--' \
+  $(GATBPS_V_PAD_LEFT)'SUBST.IN'$(GATBPS_V_PAD_RIGHT_8) \
+  $@ \
+|| 'exit' "$${?}";
+
+GATBPS_V_CONFIG_FILE_1 =
+
+## end_variables
+
 @GATBPS_CONFIG_FILE_RULES@
 
 |%}rule_substitution_comment_plural{%|
