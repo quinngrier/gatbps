@@ -6,8 +6,8 @@ rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/recursion_code.m4|%}){%||%}dnl
 recursion_code(
   {%|GATBPS_CONFIG_LATER_RULES.am|%},
-  {%|CC0-1.0.txt|%},
   {%|GATBPS_V_NOP.am|%},
+  {%|CC0-1.0.txt|%},
   {%||%}){%||%}dnl
 dnl
 dnl The authors of this file have waived all copyright and
