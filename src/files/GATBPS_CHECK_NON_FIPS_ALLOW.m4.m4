@@ -71,6 +71,16 @@ m4_if(
     'readonly' 'gatbps_cv_HAVE_NON_FIPS_ALLOW';
   :;}]])[
 
+case "$][{HAVE_NON_FIPS_ALLOW}" in
+  '1')
+    NON_FIPS_ALLOW='-non-fips-allow';
+  *)
+    NON_FIPS_ALLOW='';
+  ;;
+esac;
+'readonly' 'NON_FIPS_ALLOW';
+]AC_SUBST([NON_FIPS_ALLOW])[
+
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
 dnl
