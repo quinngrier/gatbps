@@ -51,7 +51,7 @@ GATBPS_V_CONFIG_LATER_0 = @$(SHELL) \
   '-' \
   $(srcdir)'/build-aux/echo.sh' \
   '--' \
-  $(GATBPS_V_PAD_LEFT)'SUBST.IM'$(GATBPS_V_PAD_RIGHT_8) \
+  $(GATBPS_V_PAD_LEFT)'SUBST_IM'$(GATBPS_V_PAD_RIGHT_8) \
   $@ \
   0<'/dev/null' \
 || 'exit' "$${?}";
