@@ -74,6 +74,7 @@ m4_if(
 case "$][{HAVE_NON_FIPS_ALLOW}" in
   '1')
     NON_FIPS_ALLOW='-non-fips-allow';
+  ;;
   *)
     NON_FIPS_ALLOW='';
   ;;
