@@ -719,7 +719,6 @@ EOF1
           'set' "${prefix}"'GATBPS_CHECK_SOFT_INCLUDE.m4' "${@}"
           'set' "${prefix}"'GATBPS_CHECK_SHEBANG_LINE.m4' "${@}"
           'set' "${prefix}"'GATBPS_CHECK_RUN.m4' "${@}"
-          'set' "${prefix}"'GATBPS_CHECK_NON_FIPS_ALLOW.m4' "${@}"
           'set' "${prefix}"'GATBPS_CHECK_LINK.m4' "${@}"
           'set' "${prefix}"'GATBPS_CHECK_LIB.m4' "${@}"
           'set' "${prefix}"'GATBPS_CHECK_HEADER.m4' "${@}"
@@ -1147,8 +1146,6 @@ EOF1
 |%}help_code({%|GATBPS_CHECK_LIB.m4|%}){%|
 
 |%}help_code({%|GATBPS_CHECK_LINK.m4|%}){%|
-
-|%}help_code({%|GATBPS_CHECK_NON_FIPS_ALLOW.m4|%}){%|
 
 |%}help_code({%|GATBPS_CHECK_RUN.m4|%}){%|
 
@@ -2898,8 +2895,6 @@ EOF1
 
 |%}generation_code({%|GATBPS_CHECK_LINK.m4|%}){%|
 
-|%}generation_code({%|GATBPS_CHECK_NON_FIPS_ALLOW.m4|%}){%|
-
 |%}generation_code({%|GATBPS_CHECK_RUN.m4|%}){%|
 
 |%}generation_code({%|GATBPS_CHECK_SHEBANG_LINE.m4|%}){%|
@@ -3770,11 +3765,6 @@ include(`src/recursion/GATBPS_CHECK_LIB.m4.rc.m4'){%||%}dnl
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
 include(`src/recursion/GATBPS_CHECK_LINK.m4.rc.m4'){%||%}dnl
-{%|
-
-|%}dnl
-changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/GATBPS_CHECK_NON_FIPS_ALLOW.m4.rc.m4'){%||%}dnl
 {%|
 
 |%}dnl

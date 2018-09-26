@@ -249,7 +249,7 @@ GATBPS_WGET_url_lines(m4_shift($@))])])[dnl
       $][(OPENSSL) \
         '\''dgst'\'' \
         '\''-]m4_bregexp([$1], [[^:]*], [[\&]])['\'' \
-        $][(NON_FIPS_ALLOW) \
+        $][(GATBPS_NON_FIPS_ALLOW) \
         0<'\''./'\'']output_file['\''.tmp'\'' \
       | $][(GREP) \
         '\'']m4_bregexp([$1], [:\(.*\)], [[\1]])['\'' \
