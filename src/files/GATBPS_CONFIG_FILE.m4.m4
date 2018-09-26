@@ -89,17 +89,23 @@ m4_pushdef(
       AC_MSG_NOTICE([skipping $[]{gatbps_dst}])
     else
       AC_MSG_NOTICE([updating $[]{gatbps_dst}])
-      cp "$[]{gatbps_safe_src}" "$[]{gatbps_safe_dst}"
-      case "$[]{?}" in
+[
+      'cp' \
+        "$][{gatbps_safe_src}" \
+        "$][{gatbps_safe_dst}" \
+        0<'/dev/null' \
+      ;
+      gatbps_s="$][{?}"; \
+      case "$][{gatbps_s}" in
         '0')
         ;;
         *)
-          exit 1
+          'exit' "$][{gatbps_s}";
         ;;
-      esac
-      $5
-    fi
-  :;}],
+      esac;
+      ]$5[
+    fi;
+  :;}]],
   [$6])
 
 gatbps_new_rules='.PHONY: clean-gatbps_output
