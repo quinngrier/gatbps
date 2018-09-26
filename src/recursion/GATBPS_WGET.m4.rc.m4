@@ -12,6 +12,7 @@ recursion_code(
   {%|GATBPS_PROG_OPENSSL.m4|%},
   {%|GATBPS_PROG_MKDIR_P.m4|%},
   {%|GATBPS_PROG_GREP.m4|%},
+  {%|GATBPS_CHECK_NON_FIPS_ALLOW.m4|%},
   {%|CC0-1.0.txt|%},
   {%||%}){%||%}dnl
 dnl
