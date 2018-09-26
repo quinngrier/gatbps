@@ -429,6 +429,10 @@ AM_SUBST_NOTMAKE([TEXI2ANY_DEFAULT_TROFF])
   [mostlyclean])[
 
 ]GATBPS_M4(
+  [src/files/GATBPS_CHECK_NON_FIPS_ALLOW.m4],
+  [mostlyclean])[
+
+]GATBPS_M4(
   [src/files/GATBPS_CHECK_RUN.m4],
   [mostlyclean])[
 
