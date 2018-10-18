@@ -649,6 +649,7 @@ EOF1
           'set' "${prefix}"'GATBPS_PROG_JDEPS.m4' "${@}"
           'set' "${prefix}"'GATBPS_PROG_JAVADOC.m4' "${@}"
           'set' "${prefix}"'GATBPS_PROG_JAVAC.m4' "${@}"
+          'set' "${prefix}"'GATBPS_PROG_JAVA.m4' "${@}"
           'set' "${prefix}"'GATBPS_PROG_JAR.m4' "${@}"
           'set' "${prefix}"'GATBPS_PROG_GZIP.m4' "${@}"
           'set' "${prefix}"'GATBPS_PROG_GREP.m4' "${@}"
@@ -1286,6 +1287,8 @@ EOF1
 |%}help_code({%|GATBPS_PROG_GZIP.m4|%}){%|
 
 |%}help_code({%|GATBPS_PROG_JAR.m4|%}){%|
+
+|%}help_code({%|GATBPS_PROG_JAVA.m4|%}){%|
 
 |%}help_code({%|GATBPS_PROG_JAVAC.m4|%}){%|
 
@@ -3035,6 +3038,8 @@ EOF1
 
 |%}generation_code({%|GATBPS_PROG_JAR.m4|%}){%|
 
+|%}generation_code({%|GATBPS_PROG_JAVA.m4|%}){%|
+
 |%}generation_code({%|GATBPS_PROG_JAVAC.m4|%}){%|
 
 |%}generation_code({%|GATBPS_PROG_JAVADOC.m4|%}){%|
@@ -4115,6 +4120,11 @@ include(`src/recursion/GATBPS_PROG_GZIP.m4.rc.m4'){%||%}dnl
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
 include(`src/recursion/GATBPS_PROG_JAR.m4.rc.m4'){%||%}dnl
+{%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_PROG_JAVA.m4.rc.m4'){%||%}dnl
 {%|
 
 |%}dnl
