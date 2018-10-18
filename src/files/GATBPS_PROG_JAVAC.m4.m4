@@ -67,6 +67,15 @@ m4_if(
     the command to use to run javac
   ])[
 
+]AC_DEFINE_UNQUOTED(
+  [[JAVAC]],
+  [["${JAVAC}"]],
+  [
+    Define to a character string literal that contains the command used
+    to run javac, or to an empty character string literal if javac is
+    not available
+  ])[
+
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
 dnl
