@@ -76,6 +76,17 @@ m4_if(
     not available
   ])[
 
+]AM_CONDITIONAL(
+  [HAVE_JAVAC],
+  [[(
+    case "$][{JAVAC+is_set}" in
+      ?*)
+        'exit' '0';
+      ;;
+    esac;
+    'exit' '1';
+  :;)]])[
+
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
 dnl
