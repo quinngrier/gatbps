@@ -75,6 +75,17 @@ m4_if(
     available
   ])[
 
+]AM_CONDITIONAL(
+  [HAVE_JAVA],
+  [[(
+    case "$][{JAVA+is_set}" in
+      ?*)
+        'exit' '0';
+      ;;
+    esac;
+    'exit' '1';
+  :;)]])[
+
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
 dnl
