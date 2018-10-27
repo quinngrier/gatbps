@@ -23,11 +23,27 @@ esac;
 CLASSPATH='{@}abs_builddir{@}/lib/*'"${CLASSPATH}";
 'readonly' 'CLASSPATH';
 
+class_name=`
+  'basename' \
+    "${0}" \
+    '.sh' \
+    0<'/dev/null' \
+  ;
+`
+case "${?}" in
+  '0')
+    ;;
+  *)
+    'exit' '99';
+  ;;
+esac;
+'readonly' 'class_name';
+
 'eval' '
   '\''@JAVA_LATER@'\'' \
     '\''-classpath'\'' \
     "${CLASSPATH}" \
-    '\''tests.'"${2}"\'' \
+    '\''tests.'"${class_name}"\'' \
     "${@AT_LATER@}" \
   ;
 ';
