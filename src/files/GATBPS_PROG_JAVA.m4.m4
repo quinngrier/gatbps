@@ -60,6 +60,34 @@ m4_if(
   [JAVA],
   [java])[
 
+case "$][{JAVA_LATER+is_set}" in
+  ?*)
+    ]GATBPS_MSG_ERROR([
+      \$][{JAVA_LATER} is already set
+    ])[
+  ;;
+esac
+JAVA_LATER=`
+  'sed' \
+    's/@/{@}AT{@}/g' \
+    0<<EOF2 \
+  ;
+$][{JAVA}
+EOF2
+`
+case "$][{?}" in
+  '0')
+  ;;
+  *)
+    ]GATBPS_MSG_ERROR([
+      sed failed
+    ])[
+  ;;
+esac
+'readonly' 'JAVA_LATER'
+]AC_SUBST([JAVA_LATER])[
+]AM_SUBST_NOTMAKE([JAVA_LATER])[
+
 ]AC_ARG_VAR(
   [JAVA],
   [
