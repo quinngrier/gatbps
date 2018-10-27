@@ -1005,6 +1005,10 @@ AM_SUBST_NOTMAKE([TEXI2ANY_DEFAULT_TROFF])
   [mostlyclean])[
 
 ]GATBPS_M4(
+  [src/files/java-test-wrapper.sh.im.in],
+  [mostlyclean])[
+
+]GATBPS_M4(
   [src/files/java.am],
   [mostlyclean])[
 

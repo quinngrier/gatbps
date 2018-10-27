@@ -578,6 +578,7 @@ EOF1
           'set' "${prefix}"'javadoc.am' "${@}"
           'set' "${prefix}"'javadoc-dist.am' "${@}"
           'set' "${prefix}"'java.am' "${@}"
+          'set' "${prefix}"'java-test-wrapper.sh.im.in' "${@}"
           'set' "${prefix}"'java-test-wrapper.c' "${@}"
           'set' "${prefix}"'java-dist.am' "${@}"
           'set' "${prefix}"'ipez.texi' "${@}"
@@ -1437,6 +1438,8 @@ EOF1
 |%}help_code({%|java-dist.am|%}){%|
 
 |%}help_code({%|java-test-wrapper.c|%}){%|
+
+|%}help_code({%|java-test-wrapper.sh.im.in|%}){%|
 
 |%}help_code({%|java.am|%}){%|
 
@@ -3192,6 +3195,8 @@ EOF1
 
 |%}generation_code({%|java-test-wrapper.c|%}){%|
 
+|%}generation_code({%|java-test-wrapper.sh.im.in|%}){%|
+
 |%}generation_code({%|java.am|%}){%|
 
 |%}generation_code({%|javadoc-dist.am|%}){%|
@@ -4500,6 +4505,11 @@ include(`src/recursion/java-dist.am.rc.m4'){%||%}dnl
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
 include(`src/recursion/java-test-wrapper.c.rc.m4'){%||%}dnl
+{%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/java-test-wrapper.sh.im.in.rc.m4'){%||%}dnl
 {%|
 
 |%}dnl
