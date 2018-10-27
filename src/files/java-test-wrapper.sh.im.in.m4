@@ -39,14 +39,11 @@ case "${?}" in
 esac;
 'readonly' 'class_name';
 
-'eval' '
-  '\''@JAVA_LATER@'\'' \
-    '\''-classpath'\'' \
-    "${CLASSPATH}" \
-    '\''tests.'"${class_name}"\'' \
-    "${@AT_LATER@}" \
-  ;
-';
+'@JAVA_LATER@' \
+  '-classpath' \
+  "${CLASSPATH}" \
+  'tests.'"${class_name}" \
+;
 'exit' "${?}";
 
 |%}footer_comment({%|#|%}, {%|#|%}, {%|#|%})
