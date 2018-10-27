@@ -24,7 +24,7 @@ CLASSPATH='{@}abs_builddir{@}/lib/*'"${CLASSPATH}";
 'readonly' 'CLASSPATH';
 
 'eval' '
-  '\'"${1}"\'' \
+  '\''@JAVA_LATER@'\'' \
     '\''-classpath'\'' \
     "${CLASSPATH}" \
     '\''tests.'"${2}"\'' \
