@@ -66,7 +66,7 @@ case "$][{JAVA_LATER+is_set}" in
       \$][{JAVA_LATER} is already set
     ])[
   ;;
-esac
+esac;
 JAVA_LATER=`
   'sed' \
     's/@/{@}AT{@}/g' \
@@ -74,7 +74,7 @@ JAVA_LATER=`
   ;
 $][{JAVA}
 EOF2
-`
+`;
 case "$][{?}" in
   '0')
   ;;
@@ -83,8 +83,8 @@ case "$][{?}" in
       sed failed
     ])[
   ;;
-esac
-'readonly' 'JAVA_LATER'
+esac;
+'readonly' 'JAVA_LATER';
 ]AC_SUBST([JAVA_LATER])[
 ]AM_SUBST_NOTMAKE([JAVA_LATER])[
 
