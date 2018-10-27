@@ -849,6 +849,10 @@ AM_SUBST_NOTMAKE([TEXI2ANY_DEFAULT_TROFF])
   [mostlyclean])[
 
 ]GATBPS_M4(
+  [src/files/TestExit.java],
+  [mostlyclean])[
+
+]GATBPS_M4(
   [src/files/VERSION.sh],
   [mostlyclean])[
 

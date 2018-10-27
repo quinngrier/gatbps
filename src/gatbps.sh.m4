@@ -615,6 +615,7 @@ EOF1
           'set' "${prefix}"'awk-form.sh' "${@}"
           'set' "${prefix}"'VERSION_LIBTOOL_C.sh' "${@}"
           'set' "${prefix}"'VERSION.sh' "${@}"
+          'set' "${prefix}"'TestExit.java' "${@}"
           'set' "${prefix}"'TEST_EXIT.h' "${@}"
           'set' "${prefix}"'PACKAGE_VERSION.df.in' "${@}"
           'set' "${prefix}"'PACKAGE_STRING.df.in' "${@}"
@@ -1357,6 +1358,8 @@ EOF1
 |%}help_code({%|PACKAGE_VERSION.df.in|%}){%|
 
 |%}help_code({%|TEST_EXIT.h|%}){%|
+
+|%}help_code({%|TestExit.java|%}){%|
 
 |%}help_code({%|VERSION.sh|%}){%|
 
@@ -3108,6 +3111,8 @@ EOF1
 
 |%}generation_code({%|TEST_EXIT.h|%}){%|
 
+|%}generation_code({%|TestExit.java|%}){%|
+
 |%}generation_code({%|VERSION.sh|%}){%|
 
 |%}generation_code({%|VERSION_LIBTOOL_C.sh|%}){%|
@@ -4295,6 +4300,11 @@ include(`src/recursion/PACKAGE_VERSION.df.in.rc.m4'){%||%}dnl
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
 include(`src/recursion/TEST_EXIT.h.rc.m4'){%||%}dnl
+{%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/TestExit.java.rc.m4'){%||%}dnl
 {%|
 
 |%}dnl
