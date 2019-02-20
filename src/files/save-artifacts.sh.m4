@@ -530,6 +530,81 @@ EOF2
 
         ;;
 
+        '--git')
+
+          case "${#}" in
+            '1')
+              'cat' >&2 <<EOF2
+${fr2}save-artifacts.sh!${fR2} ${fB2}--git${fR2} requires a value
+${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
+EOF2
+              'exit' '1'
+            ;;
+          esac
+
+          x="${2}"
+          shift
+          shift
+          set 'x' "--git=${x}" "${@}"
+
+          'continue'
+
+        ;;
+
+        '--git='*)
+
+          x=`'eval' "${sed}"' "
+            s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
+            1s/^--git=/git='\\''/
+            \\$s/\\$/'\\''/
+          "' <<EOF2
+${1}
+EOF2
+`
+          case "${?}" in
+            '0')
+            ;;
+            *)
+              'cat' >&2 <<EOF2
+${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
+${fr2}save-artifacts.sh!${fR2}   1. a here-document
+${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
+EOF2
+              'exit' '1'
+            ;;
+          esac
+          'eval' "${x}"
+
+          case "${git}" in
+            'auto')
+              case "${git_auto}" in
+                ?*)
+                  ':';
+                ;;
+                *)
+                  git_auto=''\''git'\''';
+                  for x in \
+                  ; do
+                    if 'eval' \
+                      "${x}"' '\''--version'\''' \
+                      0<'/dev/null' \
+                      1>'/dev/null' \
+                      2>'/dev/null' \
+                    ; then
+                      git_auto="${x}";
+                      'break';
+                    fi;
+                  done;
+                ;;
+              esac;
+              git="${git_auto}";
+            ;;
+          esac;
+
+          'continue'
+
+        ;;
+
         '--sed')
 
           case "${#}" in
