@@ -530,6 +530,81 @@ EOF2
 
         ;;
 
+        '--sed')
+
+          case "${#}" in
+            '1')
+              'cat' >&2 <<EOF2
+${fr2}save-artifacts.sh!${fR2} ${fB2}--sed${fR2} requires a value
+${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
+EOF2
+              'exit' '1'
+            ;;
+          esac
+
+          x="${2}"
+          shift
+          shift
+          set 'x' "--sed=${x}" "${@}"
+
+          'continue'
+
+        ;;
+
+        '--sed='*)
+
+          x=`'eval' "${sed}"' "
+            s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
+            1s/^--sed=/sed='\\''/
+            \\$s/\\$/'\\''/
+          "' <<EOF2
+${1}
+EOF2
+`
+          case "${?}" in
+            '0')
+            ;;
+            *)
+              'cat' >&2 <<EOF2
+${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
+${fr2}save-artifacts.sh!${fR2}   1. a here-document
+${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
+EOF2
+              'exit' '1'
+            ;;
+          esac
+          'eval' "${x}"
+
+          case "${sed}" in
+            'auto')
+              case "${sed_auto}" in
+                ?*)
+                ;;
+                *)
+                  sed_auto=''\''sed'\'''
+                  for x in \
+                    ''\''gsed'\''' \
+                  ; do
+                    if 'eval' \
+                      "${x}"' '\'''\''' \
+                      0<'/dev/null' \
+                      1>'/dev/null' \
+                      2>&1 \
+                    ; then
+                      sed_auto="${x}"
+                      'break'
+                    fi
+                  done
+                ;;
+              esac
+              sed="${sed_auto}"
+            ;;
+          esac
+
+          'continue'
+
+        ;;
+
       esac
 
     ;;
