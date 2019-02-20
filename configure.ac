@@ -1141,6 +1141,10 @@ AM_SUBST_NOTMAKE([TEXI2ANY_DEFAULT_TROFF])
   [mostlyclean])[
 
 ]GATBPS_M4(
+  [src/files/save-artifacts.sh],
+  [mostlyclean])[
+
+]GATBPS_M4(
   [src/files/sbs.texi],
   [mostlyclean])[
 
