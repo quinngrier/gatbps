@@ -453,6 +453,83 @@ EOF2
 
         ;;
 
+        '--awk')
+
+          case "${#}" in
+            '1')
+              'cat' >&2 <<EOF2
+${fr2}save-artifacts.sh!${fR2} ${fB2}--awk${fR2} requires a value
+${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
+EOF2
+              'exit' '1'
+            ;;
+          esac
+
+          x="${2}"
+          shift
+          shift
+          set 'x' "--awk=${x}" "${@}"
+
+          'continue'
+
+        ;;
+
+        '--awk='*)
+
+          x=`'eval' "${sed}"' "
+            s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
+            1s/^--awk=/awk='\\''/
+            \\$s/\\$/'\\''/
+          "' <<EOF2
+${1}
+EOF2
+`
+          case "${?}" in
+            '0')
+            ;;
+            *)
+              'cat' >&2 <<EOF2
+${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
+${fr2}save-artifacts.sh!${fR2}   1. a here-document
+${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
+EOF2
+              'exit' '1'
+            ;;
+          esac
+          'eval' "${x}"
+
+          case "${awk}" in
+            'auto')
+              case "${awk_auto}" in
+                ?*)
+                ;;
+                *)
+                  awk_auto=''\''awk'\'''
+                  for x in \
+                    ''\''gawk'\''' \
+                    ''\''mawk'\''' \
+                    ''\''nawk'\''' \
+                  ; do
+                    if 'eval' \
+                      "${x}"' '\'''\''' \
+                      0<'/dev/null' \
+                      1>'/dev/null' \
+                      2>&1 \
+                    ; then
+                      awk_auto="${x}"
+                      'break'
+                    fi
+                  done
+                ;;
+              esac
+              awk="${awk_auto}"
+            ;;
+          esac
+
+          'continue'
+
+        ;;
+
       esac
 
     ;;
