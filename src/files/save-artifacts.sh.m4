@@ -248,11 +248,35 @@ fc2='' # stderr style: cyan
 #         ;;
 #       esac
 #
+# For the sshpass program:
+#
+#       case "${sshpass_auto}" in
+#         ?*)
+#           ':';
+#         ;;
+#         *)
+#           sshpass_auto=''\''sshpass'\''';
+#           for x in \
+#           ; do
+#             if 'eval' \
+#               "${x}"' '\''-V'\''' \
+#               0<'/dev/null' \
+#               1>'/dev/null' \
+#               2>'/dev/null' \
+#             ; then
+#               sshpass_auto="${x}";
+#               'break';
+#             fi;
+#           done;
+#         ;;
+#       esac;
+#
 
 awk_auto=''
 git_auto=''
 gpg_auto=''
 sed_auto=''
+sshpass_auto=''
 
 #
 # For each program P of interest, the P variable holds the command that
@@ -267,6 +291,7 @@ awk='auto'
 git='auto'
 gpg='auto'
 sed='auto'
+sshpass='auto'
 
 case "${awk}" in
   'auto')
@@ -374,6 +399,32 @@ case "${sed}" in
   ;;
 esac
 
+case "${sshpass}" in
+  'auto')
+    case "${sshpass_auto}" in
+      ?*)
+        ':';
+      ;;
+      *)
+        sshpass_auto=''\''sshpass'\''';
+        for x in \
+        ; do
+          if 'eval' \
+            "${x}"' '\''-V'\''' \
+            0<'/dev/null' \
+            1>'/dev/null' \
+            2>'/dev/null' \
+          ; then
+            sshpass_auto="${x}";
+            'break';
+          fi;
+        done;
+      ;;
+    esac;
+    sshpass="${sshpass_auto}";
+  ;;
+esac;
+
 #
 # The following code translates environment variables to arguments as
 # described by the man page for this program.
@@ -420,6 +471,20 @@ case "${STYLE+is_set}" in
     'shift'
   ;;
 esac
+
+case "${SSHPASS+is_set}" in
+  ?*)
+    case "${#}" in
+      '0')
+        'set' 'dummy' '--sshpass='"${SSHPASS}";
+      ;;
+      *)
+        'set' 'dummy' '--sshpass='"${SSHPASS}" "${@}";
+      ;;
+    esac;
+    'shift';
+  ;;
+esac;
 
 case "${SED+is_set}" in
   ?*)
@@ -815,6 +880,81 @@ EOF2
               sed="${sed_auto}"
             ;;
           esac
+
+          'continue'
+
+        ;;
+
+        '--sshpass')
+
+          case "${#}" in
+            '1')
+              'cat' >&2 <<EOF2
+${fr2}save-artifacts.sh!${fR2} ${fB2}--sshpass${fR2} requires a value
+${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
+EOF2
+              'exit' '1'
+            ;;
+          esac
+
+          x="${2}"
+          shift
+          shift
+          set 'x' "--sshpass=${x}" "${@}"
+
+          'continue'
+
+        ;;
+
+        '--sshpass='*)
+
+          x=`'eval' "${sed}"' "
+            s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
+            1s/^--sshpass=/sshpass='\\''/
+            \\$s/\\$/'\\''/
+          "' <<EOF2
+${1}
+EOF2
+`
+          case "${?}" in
+            '0')
+            ;;
+            *)
+              'cat' >&2 <<EOF2
+${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
+${fr2}save-artifacts.sh!${fR2}   1. a here-document
+${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
+EOF2
+              'exit' '1'
+            ;;
+          esac
+          'eval' "${x}"
+
+          case "${sshpass}" in
+            'auto')
+              case "${sshpass_auto}" in
+                ?*)
+                  ':';
+                ;;
+                *)
+                  sshpass_auto=''\''sshpass'\''';
+                  for x in \
+                  ; do
+                    if 'eval' \
+                      "${x}"' '\''-V'\''' \
+                      0<'/dev/null' \
+                      1>'/dev/null' \
+                      2>'/dev/null' \
+                    ; then
+                      sshpass_auto="${x}";
+                      'break';
+                    fi;
+                  done;
+                ;;
+              esac;
+              sshpass="${sshpass_auto}";
+            ;;
+          esac;
 
           'continue'
 
