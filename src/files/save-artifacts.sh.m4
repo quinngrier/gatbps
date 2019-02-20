@@ -199,6 +199,29 @@ fc2='' # stderr style: cyan
 #         ;;
 #       esac;
 #
+# For the gpg program:
+#
+#       case "${gpg_auto}" in
+#         ?*)
+#           ':';
+#         ;;
+#         *)
+#           gpg_auto=''\''gpg'\''';
+#           for x in \
+#           ; do
+#             if 'eval' \
+#               "${x}"' '\''--version'\''' \
+#               0<'/dev/null' \
+#               1>'/dev/null' \
+#               2>'/dev/null' \
+#             ; then
+#               gpg_auto="${x}";
+#               'break';
+#             fi;
+#           done;
+#         ;;
+#       esac;
+#
 # For the sed program:
 #
 #       case "${sed_auto}" in
@@ -228,6 +251,7 @@ fc2='' # stderr style: cyan
 
 awk_auto=''
 git_auto=''
+gpg_auto=''
 sed_auto=''
 
 #
@@ -241,6 +265,7 @@ sed_auto=''
 
 awk='auto'
 git='auto'
+gpg='auto'
 sed='auto'
 
 case "${awk}" in
@@ -294,6 +319,32 @@ case "${git}" in
       ;;
     esac;
     git="${git_auto}";
+  ;;
+esac;
+
+case "${gpg}" in
+  'auto')
+    case "${gpg_auto}" in
+      ?*)
+        ':';
+      ;;
+      *)
+        gpg_auto=''\''gpg'\''';
+        for x in \
+        ; do
+          if 'eval' \
+            "${x}"' '\''--version'\''' \
+            0<'/dev/null' \
+            1>'/dev/null' \
+            2>'/dev/null' \
+          ; then
+            gpg_auto="${x}";
+            'break';
+          fi;
+        done;
+      ;;
+    esac;
+    gpg="${gpg_auto}";
   ;;
 esac;
 
@@ -383,6 +434,20 @@ case "${SED+is_set}" in
     'shift'
   ;;
 esac
+
+case "${GPG+is_set}" in
+  ?*)
+    case "${#}" in
+      '0')
+        'set' 'dummy' '--gpg='"${GPG}";
+      ;;
+      *)
+        'set' 'dummy' '--gpg='"${GPG}" "${@}";
+      ;;
+    esac;
+    'shift';
+  ;;
+esac;
 
 case "${GIT+is_set}" in
   ?*)
@@ -598,6 +663,81 @@ EOF2
                 ;;
               esac;
               git="${git_auto}";
+            ;;
+          esac;
+
+          'continue'
+
+        ;;
+
+        '--gpg')
+
+          case "${#}" in
+            '1')
+              'cat' >&2 <<EOF2
+${fr2}save-artifacts.sh!${fR2} ${fB2}--gpg${fR2} requires a value
+${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
+EOF2
+              'exit' '1'
+            ;;
+          esac
+
+          x="${2}"
+          shift
+          shift
+          set 'x' "--gpg=${x}" "${@}"
+
+          'continue'
+
+        ;;
+
+        '--gpg='*)
+
+          x=`'eval' "${sed}"' "
+            s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
+            1s/^--gpg=/gpg='\\''/
+            \\$s/\\$/'\\''/
+          "' <<EOF2
+${1}
+EOF2
+`
+          case "${?}" in
+            '0')
+            ;;
+            *)
+              'cat' >&2 <<EOF2
+${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
+${fr2}save-artifacts.sh!${fR2}   1. a here-document
+${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
+EOF2
+              'exit' '1'
+            ;;
+          esac
+          'eval' "${x}"
+
+          case "${gpg}" in
+            'auto')
+              case "${gpg_auto}" in
+                ?*)
+                  ':';
+                ;;
+                *)
+                  gpg_auto=''\''gpg'\''';
+                  for x in \
+                  ; do
+                    if 'eval' \
+                      "${x}"' '\''--version'\''' \
+                      0<'/dev/null' \
+                      1>'/dev/null' \
+                      2>'/dev/null' \
+                    ; then
+                      gpg_auto="${x}";
+                      'break';
+                    fi;
+                  done;
+                ;;
+              esac;
+              gpg="${gpg_auto}";
             ;;
           esac;
 
