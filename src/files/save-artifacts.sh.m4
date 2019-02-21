@@ -542,6 +542,8 @@ case "${AWK+is_set}" in
   ;;
 esac
 
+gpg_secret_key_file='gpg-secret-key-file.asc'
+
 case "${#}" in
   '0')
     'set' 'dummy'
@@ -805,6 +807,55 @@ EOF2
               gpg="${gpg_auto}";
             ;;
           esac;
+
+          'continue'
+
+        ;;
+
+        '--gpg-secret-key-file')
+
+          case "${#}" in
+            '1')
+              'cat' >&2 <<EOF2
+${fr2}save-artifacts.sh!${fR2} ${fB2}--gpg-secret-key-file${fR2} requires a value
+${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
+EOF2
+              'exit' '1'
+            ;;
+          esac
+
+          x="${2}"
+          shift
+          shift
+          set 'x' "--gpg-secret-key-file=${x}" "${@}"
+
+          'continue'
+
+        ;;
+
+        '--gpg-secret-key-file='*)
+
+          x=`'eval' "${sed}"' "
+            s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
+            1s/^--gpg-secret-key-file=/gpg_secret_key_file='\\''/
+            \\$s/\\$/'\\''/
+          "' <<EOF2
+${1}
+EOF2
+`
+          case "${?}" in
+            '0')
+            ;;
+            *)
+              'cat' >&2 <<EOF2
+${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
+${fr2}save-artifacts.sh!${fR2}   1. a here-document
+${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
+EOF2
+              'exit' '1'
+            ;;
+          esac
+          'eval' "${x}"
 
           'continue'
 
