@@ -542,8 +542,8 @@ case "${AWK+is_set}" in
   ;;
 esac
 
-gpg_passphrase_file='gpg-passphrase-file.asc'
-gpg_secret_key_file='gpg-secret-key-file.asc'
+gpg_passphrase_file='gpg-passphrase-file'
+gpg_secret_key_file='gpg-secret-key-file'
 
 case "${#}" in
   '0')
