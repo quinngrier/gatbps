@@ -544,6 +544,7 @@ esac
 
 gpg_passphrase_file='gpg-passphrase-file'
 gpg_secret_key_file='gpg-secret-key-file'
+ssh_secret_key_file='ssh-secret-key-file'
 
 case "${#}" in
   '0')
@@ -981,6 +982,55 @@ EOF2
               sed="${sed_auto}"
             ;;
           esac
+
+          'continue'
+
+        ;;
+
+        '--ssh-secret-key-file')
+
+          case "${#}" in
+            '1')
+              'cat' >&2 <<EOF2
+${fr2}save-artifacts.sh!${fR2} ${fB2}--ssh-secret-key-file${fR2} requires a value
+${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
+EOF2
+              'exit' '1'
+            ;;
+          esac
+
+          x="${2}"
+          shift
+          shift
+          set 'x' "--ssh-secret-key-file=${x}" "${@}"
+
+          'continue'
+
+        ;;
+
+        '--ssh-secret-key-file='*)
+
+          x=`'eval' "${sed}"' "
+            s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
+            1s/^--ssh-secret-key-file=/ssh_secret_key_file='\\''/
+            \\$s/\\$/'\\''/
+          "' <<EOF2
+${1}
+EOF2
+`
+          case "${?}" in
+            '0')
+            ;;
+            *)
+              'cat' >&2 <<EOF2
+${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
+${fr2}save-artifacts.sh!${fR2}   1. a here-document
+${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
+EOF2
+              'exit' '1'
+            ;;
+          esac
+          'eval' "${x}"
 
           'continue'
 
