@@ -549,6 +549,7 @@ gpg_secret_key_file='gpg-secret-key-file'
 ssh_passphrase_file='ssh-passphrase-file'
 ssh_secret_key_file='ssh-secret-key-file'
 
+exit_status='0';
 gpg_import_attempted='no';
 gpg_import_succeeded='no';
 safe_gpg_import_directory='gpg-import-directory';
@@ -1333,6 +1334,20 @@ EOF2
         'continue';
       fi;
 
+      'rm' '-f' '-r' "${safe_gpg_import_directory}";
+      case "${?}" in
+        '0')
+          ':';
+        ;;
+        *)
+          'cat' >&2 <<EOF2
+${fr2}save-artifacts.sh!${fR2} ${fB2}rm -f -r${fR2} failed: ${fB2}${safe_gpg_import_directory}${fR2}
+EOF2
+          exit_status='1';
+          'continue';
+        ;;
+      esac;
+
     ;;
   esac;
 
@@ -1344,7 +1359,7 @@ EOF2
 
 done
 
-'exit' '0';
+'exit' "${exit_status}";
 
 |%}footer_comment({%|#|%}, {%|#|%}, {%|#|%})
 dnl
