@@ -554,6 +554,7 @@ gpg_import_succeeded='no';
 safe_gpg_import_directory='gpg-import-directory';
 safe_gpg_passphrase_file='gpg-passphrase-file';
 safe_gpg_secret_key_file='gpg-secret-key-file';
+safe_ssh_passphrase_file='ssh-passphrase-file';
 
 case "${#}" in
   '0')
@@ -1168,6 +1169,15 @@ EOF2
             ;;
           esac
           'eval' "${x}"
+
+          case "${ssh_passphrase_file}" in
+            '/'*)
+              safe_ssh_passphrase_file="${ssh_passphrase_file}";
+            ;;
+            *)
+              safe_ssh_passphrase_file="./${ssh_passphrase_file}";
+            ;;
+          esac;
 
           'continue'
 
