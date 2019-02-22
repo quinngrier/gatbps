@@ -1401,7 +1401,7 @@ EOF2
         "${safe_gpg_import_directory}" \
         '\''--fingerprint'\'' \
         0<'\''/dev/null'\'' \
-        1>"${safe_gpg_import_directory}"'\''/fingerprint'\'' \
+        1>"${safe_gpg_import_directory}"'\''/tmp'\'' \
       ;';
       case "${?}" in
         '0')
@@ -1426,7 +1426,7 @@ EOF2
               p
             }
           '\'' \
-          0<"${safe_gpg_import_directory}"'\''/fingerprint'\'' \
+          0<"${safe_gpg_import_directory}"'\''/tmp'\'' \
         ;';
       `
       case "${?}" in
@@ -1436,7 +1436,7 @@ EOF2
         *)
           'cat' >&2 <<EOF2
 ${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fr2}save-artifacts.sh!${fR2}   1. ${fB2}${safe_gpg_import_directory}/fingerprint${fR2}
+${fr2}save-artifacts.sh!${fR2}   1. ${fB2}${safe_gpg_import_directory}/tmp${fR2}
 ${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
 EOF2
           exit_status='1';
