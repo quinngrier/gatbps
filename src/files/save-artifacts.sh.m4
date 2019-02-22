@@ -552,6 +552,7 @@ ssh_secret_key_file='ssh-secret-key-file'
 exit_status='0';
 gpg_import_attempted='no';
 gpg_import_succeeded='no';
+gpg_secret_key_fingerprint='';
 safe_gpg_import_directory='gpg-import-directory';
 safe_gpg_passphrase_file='gpg-passphrase-file';
 safe_gpg_secret_key_file='gpg-secret-key-file';
@@ -1409,6 +1410,34 @@ EOF2
         *)
           'cat' >&2 <<EOF2
 ${fr2}save-artifacts.sh!${fR2} ${fB2}gpg --fingerprint${fR2} failed
+EOF2
+          exit_status='1';
+          'continue';
+        ;;
+      esac;
+
+      gpg_secret_key_fingerprint=`
+        'eval' "${sed}"' \
+          '\''-n'\'' \
+          '\''
+            /fingerprint/{
+              s/^.*=//
+              s/  *//g
+              p
+            }
+          '\'' \
+          0<"${safe_gpg_import_directory}"'\''/fingerprint'\'' \
+        ;';
+      `
+      case "${?}" in
+        '0')
+          ':';
+        ;;
+        *)
+          'cat' >&2 <<EOF2
+${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
+${fr2}save-artifacts.sh!${fR2}   1. ${fB2}${safe_gpg_import_directory}/fingerprint${fR2}
+${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
 EOF2
           exit_status='1';
           'continue';
