@@ -1348,6 +1348,20 @@ EOF2
         ;;
       esac;
 
+      'mkdir' '-p' "${safe_gpg_import_directory}";
+      case "${?}" in
+        '0')
+          ':';
+        ;;
+        *)
+          'cat' >&2 <<EOF2
+${fr2}save-artifacts.sh!${fR2} ${fB2}mkdir -p${fR2} failed: ${fB2}${safe_gpg_import_directory}${fR2}
+EOF2
+          exit_status='1';
+          'continue';
+        ;;
+      esac;
+
     ;;
   esac;
 
