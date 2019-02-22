@@ -1327,7 +1327,7 @@ EOF2
 
       gpg_import_attempted='yes';
 
-      if 'test' '-f' "${gpg_secret_key_file}"; then
+      if 'test' '-f' "${safe_gpg_secret_key_file}"; then
         ':';
       else
         'continue';
