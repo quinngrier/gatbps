@@ -548,6 +548,9 @@ gpg_secret_key_file='gpg-secret-key-file'
 ssh_passphrase_file='ssh-passphrase-file'
 ssh_secret_key_file='ssh-secret-key-file'
 
+gpg_import_attempted='no';
+gpg_import_succeeded='no';
+
 case "${#}" in
   '0')
     'set' 'dummy'
@@ -959,6 +962,9 @@ EOF2
           esac
           'eval' "${x}"
 
+          gpg_import_attempted='no';
+          gpg_import_succeeded='no';
+
           'continue'
 
         ;;
@@ -1215,6 +1221,26 @@ EOF2
 
     ;;
   esac
+
+  case "${gpg_import_attempted}" in
+    'no')
+
+      gpg_import_attempted='yes';
+
+      if 'test' '-f' "${gpg_secret_key_file}"; then
+        ':';
+      else
+        'continue';
+      fi;
+
+    ;;
+  esac;
+
+  case "${gpg_import_succeeded}" in
+    'no')
+      'continue';
+    ;;
+  esac;
 
 done
 
