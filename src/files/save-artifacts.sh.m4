@@ -1362,6 +1362,20 @@ EOF2
         ;;
       esac;
 
+      'chmod' '700' "${safe_gpg_import_directory}";
+      case "${?}" in
+        '0')
+          ':';
+        ;;
+        *)
+          'cat' >&2 <<EOF2
+${fr2}save-artifacts.sh!${fR2} ${fB2}chmod 700${fR2} failed: ${fB2}${safe_gpg_import_directory}${fR2}
+EOF2
+          exit_status='1';
+          'continue';
+        ;;
+      esac;
+
     ;;
   esac;
 
