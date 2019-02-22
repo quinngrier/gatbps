@@ -553,6 +553,7 @@ gpg_import_attempted='no';
 gpg_import_succeeded='no';
 safe_gpg_import_directory='gpg-import-directory';
 safe_gpg_passphrase_file='gpg-passphrase-file';
+safe_gpg_secret_key_file='gpg-secret-key-file';
 
 case "${#}" in
   '0')
@@ -1031,6 +1032,15 @@ EOF2
             ;;
           esac
           'eval' "${x}"
+
+          case "${gpg_secret_key_file}" in
+            '/'*)
+              safe_gpg_secret_key_file="${gpg_secret_key_file}";
+            ;;
+            *)
+              safe_gpg_secret_key_file="./${gpg_secret_key_file}";
+            ;;
+          esac;
 
           gpg_import_attempted='no';
           gpg_import_succeeded='no';
