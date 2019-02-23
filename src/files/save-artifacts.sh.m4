@@ -879,7 +879,7 @@ EOF2
               safe_git_clone_directory="${git_clone_directory}";
             ;;
             *)
-              safe_git_clone_directory="./${git_clone_directory}";
+              safe_git_clone_directory='./'"${git_clone_directory}";
             ;;
           esac;
 
@@ -986,7 +986,7 @@ EOF2
               safe_gpg_import_directory="${gpg_import_directory}";
             ;;
             *)
-              safe_gpg_import_directory="./${gpg_import_directory}";
+              safe_gpg_import_directory='./'"${gpg_import_directory}";
             ;;
           esac;
 
@@ -1044,7 +1044,7 @@ EOF2
               safe_gpg_passphrase_file="${gpg_passphrase_file}";
             ;;
             *)
-              safe_gpg_passphrase_file="./${gpg_passphrase_file}";
+              safe_gpg_passphrase_file='./'"${gpg_passphrase_file}";
             ;;
           esac;
 
@@ -1102,7 +1102,7 @@ EOF2
               safe_gpg_secret_key_file="${gpg_secret_key_file}";
             ;;
             *)
-              safe_gpg_secret_key_file="./${gpg_secret_key_file}";
+              safe_gpg_secret_key_file='./'"${gpg_secret_key_file}";
             ;;
           esac;
 
@@ -1238,7 +1238,7 @@ EOF2
               safe_ssh_passphrase_file="${ssh_passphrase_file}";
             ;;
             *)
-              safe_ssh_passphrase_file="./${ssh_passphrase_file}";
+              safe_ssh_passphrase_file='./'"${ssh_passphrase_file}";
             ;;
           esac;
 
@@ -1296,7 +1296,7 @@ EOF2
               safe_ssh_secret_key_file="${ssh_secret_key_file}";
             ;;
             *)
-              safe_ssh_secret_key_file="./${ssh_secret_key_file}";
+              safe_ssh_secret_key_file='./'"${ssh_secret_key_file}";
             ;;
           esac;
 

@@ -526,7 +526,7 @@ EOF1
             '/'*)
             ;;
             *)
-              prefix="./${prefix}"
+              prefix='./'"${prefix}"
             ;;
           esac
 
@@ -2795,7 +2795,7 @@ EOF1
           safe_1="${1}"
         ;;
         *)
-          safe_1="./${1}"
+          safe_1='./'"${1}"
         ;;
       esac
 
