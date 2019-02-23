@@ -1792,9 +1792,16 @@ EOF2
     ;;
   esac;
 
-  version=`
+  year=`
     'eval' '
-      '"${version_command}"'
+      '"${sed}"' \
+        '\''
+          s/^\(....\).*/\1/
+        '\'' \
+        0<<EOF2 \
+      ;
+${date}
+EOF2
     ';
   `;
   s="${?}";
@@ -1812,16 +1819,9 @@ EOF2
     ;;
   esac;
 
-  year=`
+  version=`
     'eval' '
-      '"${sed}"' \
-        '\''
-          s/^\(....\).*/\1/
-        '\'' \
-        0<<EOF2 \
-      ;
-${date}
-EOF2
+      '"${version_command}"'
     ';
   `;
   s="${?}";
