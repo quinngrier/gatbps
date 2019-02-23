@@ -1401,13 +1401,16 @@ EOF2
         "${safe_gpg_import_directory}" \
         0<'/dev/null' \
       ;
-      case "${?}" in
+      s="${?}";
+      case "${s}" in
         '0')
           ':';
         ;;
         *)
           'cat' >&2 <<EOF2
-${fr2}save-artifacts.sh!${fR2} ${fB2}rm -f -r${fR2} failed: ${fB2}${safe_gpg_import_directory}${fR2}
+${fr2}save-artifacts.sh!${fR2} ${fB2}rm${fR2} failed while deleting:
+${fr2}save-artifacts.sh!${fR2}   1. ${fB2}${gpg_import_directory}${fR2}
+${fr2}save-artifacts.sh!${fR2} exit status: ${fB2}${s}${fR2}
 EOF2
           exit_status='1';
           'continue';
