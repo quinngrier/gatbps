@@ -1730,6 +1730,33 @@ EOF2
     ;;
   esac;
 
+  year=`
+    'eval' '
+      '"${sed}"' \
+        '\''
+          s/^\(....\).*/\1/
+        '\'' \
+        0<<EOF2 \
+      ;
+${date}
+EOF2
+    ';
+  `;
+  s="${?}";
+  case "${s}" in
+    '0')
+      ':';
+    ;;
+    *)
+      'cat' 0<<EOF2 1>&2;
+${fy2}save-artifacts.sh:${fR2} ${fB2}${version_command}${fR2} failed
+${fy2}save-artifacts.sh:${fR2} exit status: ${fB2}${s}${fR2}
+EOF2
+      exit_status='1';
+      'continue';
+    ;;
+  esac;
+
 done
 
 'exit' "${exit_status}";
