@@ -1464,6 +1464,8 @@ EOF2
         ;;
       esac;
 
+      gpg_import_succeeded='yes';
+
     ;;
   esac;
 
