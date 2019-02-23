@@ -1581,13 +1581,15 @@ EOF2
         "${safe_gpg_import_directory}" \
         0<'/dev/null' \
       ;
-      case "${?}" in
+      s="${?}";
+      case "${s}" in
         '0')
           ':';
         ;;
         *)
           'cat' 0<<EOF2 1>&2;
 ${fy2}save-artifacts.sh:${fR2} ${fB2}mkdir -p${fR2} failed: ${fB2}${safe_gpg_import_directory}${fR2}
+${fy2}save-artifacts.sh:${fR2} exit status: ${fB2}${s}${fR2}
 EOF2
           exit_status='1';
           'continue';
