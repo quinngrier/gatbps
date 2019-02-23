@@ -1354,7 +1354,11 @@ EOF2
         ;;
       esac;
 
-      'mkdir' '-p' "${safe_gpg_import_directory}";
+      'mkdir' \
+        '-p' \
+        "${safe_gpg_import_directory}" \
+        0<'/dev/null' \
+      ;
       case "${?}" in
         '0')
           ':';
