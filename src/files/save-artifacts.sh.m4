@@ -1905,6 +1905,26 @@ EOF2
     ;;
   esac;
 
+  'mkdir' \
+    '-p' \
+    "${safe_target_directory}" \
+    0<'/dev/null' \
+  ;
+  s="${?}";
+  case "${s}" in
+    '0')
+      ':';
+    ;;
+    *)
+      'cat' 0<<EOF2 1>&2;
+${fy2}save-artifacts.sh:${fR2} ${fB2}mkdir -p${fR2} failed: ${fB2}${safe_target_directory}${fR2}
+${fy2}save-artifacts.sh:${fR2} exit status: ${fB2}${s}${fR2}
+EOF2
+      exit_status='1';
+      'continue';
+    ;;
+  esac;
+
 done
 
 'exit' "${exit_status}";
