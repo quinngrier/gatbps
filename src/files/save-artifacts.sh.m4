@@ -1847,16 +1847,16 @@ EOF2
     ;;
   esac;
 
-  safe_target_file="${safe_git_clone_directory}";
-  safe_target_file="${safe_target_file}"'/'"${year}";
-  safe_target_file="${safe_target_file}"'/'"${date}";
-  safe_target_file="${safe_target_file}"'-'"${version}";
-  safe_target_file="${safe_target_file}"'/'"${prefix}";
-  safe_target_file="${safe_target_file}${basename_1}";
+  safe_target="${safe_git_clone_directory}";
+  safe_target="${safe_target}"'/'"${year}";
+  safe_target="${safe_target}"'/'"${date}";
+  safe_target="${safe_target}"'-'"${version}";
+  safe_target="${safe_target}"'/'"${prefix}";
+  safe_target="${safe_target}${basename_1}";
 
   target_directory=`
     'dirname' \
-      "${safe_target_file}" \
+      "${safe_target}" \
     ;
   `;
   s="${?}";
@@ -1885,7 +1885,29 @@ EOF2
 
   'test' \
     '-f' \
-    "${safe_target_file}" \
+    "${safe_target}" \
+  ;
+  s="${?}";
+  case "${s}" in
+    '0')
+      'continue';
+    ;;
+    '1')
+      ':';
+    ;;
+    *)
+      'cat' 0<<EOF2 1>&2;
+${fy2}save-artifacts.sh:${fR2} ${fB2}test${fR2} failed
+${fy2}save-artifacts.sh:${fR2} exit status: ${fB2}${s}${fR2}
+EOF2
+      exit_status='1';
+      'continue';
+    ;;
+  esac;
+
+  'test' \
+    '-d' \
+    "${safe_target}" \
   ;
   s="${?}";
   case "${s}" in
