@@ -1408,9 +1408,9 @@ EOF2
         ;;
         *)
           'cat' >&2 <<EOF2
-${fr2}save-artifacts.sh!${fR2} ${fB2}rm${fR2} failed while deleting:
-${fr2}save-artifacts.sh!${fR2}   1. ${fB2}${gpg_import_directory}${fR2}
-${fr2}save-artifacts.sh!${fR2} exit status: ${fB2}${s}${fR2}
+${fy2}save-artifacts.sh:${fR2} ${fB2}rm${fR2} failed while deleting:
+${fy2}save-artifacts.sh:${fR2}   1. ${fB2}${gpg_import_directory}${fR2}
+${fy2}save-artifacts.sh:${fR2} exit status: ${fB2}${s}${fR2}
 EOF2
           exit_status='1';
           'continue';
@@ -1428,7 +1428,7 @@ EOF2
         ;;
         *)
           'cat' >&2 <<EOF2
-${fr2}save-artifacts.sh!${fR2} ${fB2}mkdir -p${fR2} failed: ${fB2}${safe_gpg_import_directory}${fR2}
+${fy2}save-artifacts.sh:${fR2} ${fB2}mkdir -p${fR2} failed: ${fB2}${safe_gpg_import_directory}${fR2}
 EOF2
           exit_status='1';
           'continue';
@@ -1446,7 +1446,7 @@ EOF2
         ;;
         *)
           'cat' >&2 <<EOF2
-${fr2}save-artifacts.sh!${fR2} ${fB2}chmod 700${fR2} failed: ${fB2}${safe_gpg_import_directory}${fR2}
+${fy2}save-artifacts.sh:${fR2} ${fB2}chmod 700${fR2} failed: ${fB2}${safe_gpg_import_directory}${fR2}
 EOF2
           exit_status='1';
           'continue';
@@ -1468,7 +1468,7 @@ EOF2
         ;;
         *)
           'cat' >&2 <<EOF2
-${fr2}save-artifacts.sh!${fR2} ${fB2}gpg --import${fR2} failed
+${fy2}save-artifacts.sh:${fR2} ${fB2}gpg --import${fR2} failed
 EOF2
           exit_status='1';
           'continue';
@@ -1490,7 +1490,7 @@ EOF2
         ;;
         *)
           'cat' >&2 <<EOF2
-${fr2}save-artifacts.sh!${fR2} ${fB2}gpg --fingerprint${fR2} failed
+${fy2}save-artifacts.sh:${fR2} ${fB2}gpg --fingerprint${fR2} failed
 EOF2
           exit_status='1';
           'continue';
@@ -1518,9 +1518,9 @@ EOF2
         ;;
         *)
           'cat' >&2 <<EOF2
-${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fr2}save-artifacts.sh!${fR2}   1. ${fB2}${safe_gpg_import_directory}/tmp${fR2}
-${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
+${fy2}save-artifacts.sh:${fR2} ${fB2}${sed}${fR2} failed while reading from:
+${fy2}save-artifacts.sh:${fR2}   1. ${fB2}${safe_gpg_import_directory}/tmp${fR2}
+${fy2}save-artifacts.sh:${fR2} and writing to: a command substitution
 EOF2
           exit_status='1';
           'continue';
