@@ -474,7 +474,7 @@ while ':'; do
 
         '--='*)
 
-          'cat' >&2 <<EOF1
+          'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}--${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
@@ -504,7 +504,7 @@ EOF1
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
@@ -776,7 +776,7 @@ EOF1
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
@@ -813,7 +813,7 @@ EOF1
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
@@ -850,7 +850,7 @@ EOF1
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
@@ -870,7 +870,7 @@ EOF1
 
           case "${#}" in
             '1')
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}--awk${fR2} requires a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
@@ -901,7 +901,7 @@ EOF1
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
@@ -952,7 +952,7 @@ EOF1
 
         '--boundary='*)
 
-          'cat' >&2 <<EOF1
+          'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}--boundary${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
@@ -982,7 +982,7 @@ EOF1
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
@@ -1007,7 +1007,7 @@ EOF1
 
         '--dry-run='*)
 
-          'cat' >&2 <<EOF1
+          'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}--dry-run${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
@@ -1037,7 +1037,7 @@ EOF1
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
@@ -1075,7 +1075,7 @@ EOF1
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: standard output
@@ -1093,14 +1093,14 @@ EOF1
           case "${1}" in
 
             '--help=')
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}--help${fR2} values must not be empty
 EOF1
               'exit' '1'
             ;;
 
             '--help='*'/')
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}--help${fR2} values must not end with slashes
 EOF1
               'exit' '1'
@@ -1567,7 +1567,7 @@ EOF1
                 '0')
                 ;;
                 *)
-                  'cat' >&2 <<EOF1
+                  'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}${awk}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: standard output
@@ -1594,7 +1594,7 @@ include(`doc/man/gatbps.1.m4'){%||%}dnl
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: standard output
@@ -1609,7 +1609,7 @@ EOF1
 
         '--man='*)
 
-          'cat' >&2 <<EOF1
+          'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}--man${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
@@ -1626,7 +1626,7 @@ EOF1
 
         '--no-dry-run='*)
 
-          'cat' >&2 <<EOF1
+          'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}--no-dry-run${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
@@ -1656,7 +1656,7 @@ EOF1
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
@@ -1681,7 +1681,7 @@ EOF1
 
         '--no-plain='*)
 
-          'cat' >&2 <<EOF1
+          'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}--no-plain${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
@@ -1711,7 +1711,7 @@ EOF1
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
@@ -1736,7 +1736,7 @@ EOF1
 
         '--no-print0='*)
 
-          'cat' >&2 <<EOF1
+          'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}--no-print0${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
@@ -1766,7 +1766,7 @@ EOF1
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
@@ -1791,7 +1791,7 @@ EOF1
 
         '--no-recursive='*)
 
-          'cat' >&2 <<EOF1
+          'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}--no-recursive${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
@@ -1821,7 +1821,7 @@ EOF1
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
@@ -1847,7 +1847,7 @@ EOF1
 
         '--no-unicode='*)
 
-          'cat' >&2 <<EOF1
+          'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}--no-unicode${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
@@ -1877,7 +1877,7 @@ EOF1
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
@@ -1902,7 +1902,7 @@ EOF1
 
         '--no-verbose='*)
 
-          'cat' >&2 <<EOF1
+          'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}--no-verbose${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
@@ -1932,7 +1932,7 @@ EOF1
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
@@ -1957,7 +1957,7 @@ EOF1
 
         '--plain='*)
 
-          'cat' >&2 <<EOF1
+          'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}--plain${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
@@ -1987,7 +1987,7 @@ EOF1
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
@@ -2012,7 +2012,7 @@ EOF1
 
         '--print0='*)
 
-          'cat' >&2 <<EOF1
+          'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}--print0${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
@@ -2042,7 +2042,7 @@ EOF1
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
@@ -2067,7 +2067,7 @@ EOF1
 
         '--recursive='*)
 
-          'cat' >&2 <<EOF1
+          'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}--recursive${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
@@ -2097,7 +2097,7 @@ EOF1
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
@@ -2117,7 +2117,7 @@ EOF1
 
           case "${#}" in
             '1')
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}--sed${fR2} requires a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
@@ -2148,7 +2148,7 @@ EOF1
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
@@ -2214,7 +2214,7 @@ EOF1
 
         '--style='*)
 
-          'cat' >&2 <<EOF1
+          'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} invalid ${fB2}--style${fR2} value
 EOF1
           'exit' '1'
@@ -2302,7 +2302,7 @@ EOF1
 
         '--style-stderr='*)
 
-          'cat' >&2 <<EOF1
+          'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} invalid ${fB2}--style-stderr${fR2} value
 EOF1
           'exit' '1'
@@ -2390,7 +2390,7 @@ EOF1
 
         '--style-stdout='*)
 
-          'cat' >&2 <<EOF1
+          'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} invalid ${fB2}--style-stdout${fR2} value
 EOF1
           'exit' '1'
@@ -2401,7 +2401,7 @@ EOF1
 
           case "${#}" in
             '1')
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}--texi2any${fR2} requires a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
@@ -2432,7 +2432,7 @@ EOF1
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
@@ -2482,7 +2482,7 @@ EOF1
 
         '--unicode='*)
 
-          'cat' >&2 <<EOF1
+          'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}--unicode${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
@@ -2512,7 +2512,7 @@ EOF1
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
@@ -2537,7 +2537,7 @@ EOF1
 
         '--verbose='*)
 
-          'cat' >&2 <<EOF1
+          'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}--verbose${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
@@ -2567,7 +2567,7 @@ EOF1
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
@@ -2600,7 +2600,7 @@ EOF1
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: standard output
@@ -2615,7 +2615,7 @@ EOF1
 
         '--version='*)
 
-          'cat' >&2 <<EOF1
+          'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}--version${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
@@ -2647,7 +2647,7 @@ EOF1
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}${awk}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: standard error
@@ -2660,7 +2660,7 @@ EOF1
 
         '--'*|'-'?)
 
-          'cat' >&2 <<EOF1
+          'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} unknown option: ${fB2}${1}${fR2}
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
@@ -2684,7 +2684,7 @@ EOF1
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}${awk}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: standard error
@@ -2704,7 +2704,7 @@ EOF1
     ?*)
     ;;
     *)
-      'cat' >&2 <<EOF1
+      'cat' 0<<EOF1 1>&2;
 ${fy2}gatbps:${fR2} operands must not be empty
 ${fy2}gatbps:${fR2} operand failed
 EOF1
@@ -2715,7 +2715,7 @@ EOF1
 
   case "${1}" in
     *'/')
-      'cat' >&2 <<EOF1
+      'cat' 0<<EOF1 1>&2;
 ${fy2}gatbps:${fR2} operands must not end with slashes
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
@@ -2749,7 +2749,7 @@ EOF1
                 '0')
                 ;;
                 *)
-                  'cat' >&2 <<EOF1
+                  'cat' 0<<EOF1 1>&2;
 ${fy2}gatbps:${fR2} ${fB2}${awk}${fR2} failed while reading from:
 ${fy2}gatbps:${fR2}   1. a here-document
 ${fy2}gatbps:${fR2} and writing to: standard output
@@ -2769,7 +2769,7 @@ EOF1
                 '0')
                 ;;
                 *)
-                  'cat' >&2 <<EOF1
+                  'cat' 0<<EOF1 1>&2;
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
 ${fy2}gatbps:${fR2}   1. a here-document
 ${fy2}gatbps:${fR2} and writing to: standard output
@@ -2830,7 +2830,7 @@ EOF1
           '0')
           ;;
           *)
-            'cat' >&2 <<EOF1
+            'cat' 0<<EOF1 1>&2;
 ${fy2}gatbps:${fR2} ${fB2}rm -f${fR2} failed: ${fB2}${1}${fR2}
 EOF1
             exit_status='1'
@@ -2844,7 +2844,7 @@ EOF1
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fy2}gatbps:${fR2} ${fB2}rm -f${fR2} failed: ${fB2}${1}.tmp${i}${fR2}
 EOF1
               exit_status='1'
@@ -2855,7 +2855,7 @@ EOF1
 
         case "${successfully_deleted_files}" in
           'no')
-            'cat' >&2 <<EOF1
+            'cat' 0<<EOF1 1>&2;
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
             'break' # generation
@@ -3301,7 +3301,7 @@ EOF1
               if test '!' '-d' "${safe_1}.top"; then
                 :
               else
-                'cat' >&2 <<EOF1
+                'cat' 0<<EOF1 1>&2;
 ${fy2}gatbps:${fR2} file must not be a directory: ${fB2}${1}.top${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
@@ -3321,7 +3321,7 @@ EOF1
                 '0')
                 ;;
                 *)
-                  'cat' >&2 <<EOF1
+                  'cat' 0<<EOF1 1>&2;
 ${fy2}gatbps:${fR2} ${fB2}${awk}${fR2} failed while reading from:
 ${fy2}gatbps:${fR2}   1. ${fB2}${1}.top${fR2}
 ${fy2}gatbps:${fR2} and writing to: ${fB2}${tmp0}${fR2}
@@ -3337,7 +3337,7 @@ EOF1
               if test '!' '-d' "${safe_1}.top.texi"; then
                 :
               else
-                'cat' >&2 <<EOF1
+                'cat' 0<<EOF1 1>&2;
 ${fy2}gatbps:${fR2} file must not be a directory: ${fB2}${1}.top.texi${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
@@ -3365,7 +3365,7 @@ EOF1
                 '0')
                 ;;
                 *)
-                  'cat' >&2 <<EOF1
+                  'cat' 0<<EOF1 1>&2;
 ${fy2}gatbps:${fR2} ${fB2}${awk}${fR2} failed while reading from:
 ${fy2}gatbps:${fR2}   1. ${fB2}${1}.top.texi${fR2}
 ${fy2}gatbps:${fR2} and writing to: ${fB2}${tmp1}${fR2}
@@ -3387,7 +3387,7 @@ EOF1
                 '0')
                 ;;
                 *)
-                  'cat' >&2 <<EOF1
+                  'cat' 0<<EOF1 1>&2;
 ${fy2}gatbps:${fR2} ${fB2}${texi2any}${fR2} failed while reading from: ${fB2}${tmp1}${fR2}
 ${fy2}gatbps:${fR2} and writing to: ${fB2}${tmp0}${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
@@ -3402,7 +3402,7 @@ EOF1
                 '0')
                 ;;
                 *)
-                  'cat' >&2 <<EOF1
+                  'cat' 0<<EOF1 1>&2;
 ${fy2}gatbps:${fR2} ${fB2}echo${fR2} failed while writing to: ${fB2}${tmp0}${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
@@ -3418,7 +3418,7 @@ EOF1
                 '0')
                 ;;
                 *)
-                  'cat' >&2 <<EOF1
+                  'cat' 0<<EOF1 1>&2;
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
 ${fy2}gatbps:${fR2}   1. ${fB2}/dev/null${fR2}
 ${fy2}gatbps:${fR2} and writing to: ${fB2}${tmp0}${fR2}
@@ -3435,7 +3435,7 @@ EOF1
               if test '!' '-d' "${safe_1}.texi"; then
                 :
               else
-                'cat' >&2 <<EOF1
+                'cat' 0<<EOF1 1>&2;
 ${fy2}gatbps:${fR2} file must not be a directory: ${fB2}${1}.texi${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
@@ -3443,7 +3443,7 @@ EOF1
                 'break'
               fi
             else
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fy2}gatbps:${fR2} file must exist: ${fB2}${1}.texi${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
@@ -3471,7 +3471,7 @@ EOF1
               '0')
               ;;
               *)
-                'cat' >&2 <<EOF1
+                'cat' 0<<EOF1 1>&2;
 ${fy2}gatbps:${fR2} ${fB2}${awk}${fR2} failed while reading from:
 ${fy2}gatbps:${fR2}   1. ${fB2}${1}.texi${fR2}
 ${fy2}gatbps:${fR2} and writing to: ${fB2}${tmp2}${fR2}
@@ -3493,7 +3493,7 @@ EOF1
               '0')
               ;;
               *)
-                'cat' >&2 <<EOF1
+                'cat' 0<<EOF1 1>&2;
 ${fy2}gatbps:${fR2} ${fB2}${texi2any}${fR2} failed while reading from: ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fR2} and writing to: ${fB2}${tmp1}${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
@@ -3508,7 +3508,7 @@ EOF1
               if test '!' '-d' "${safe_1}.bot"; then
                 :
               else
-                'cat' >&2 <<EOF1
+                'cat' 0<<EOF1 1>&2;
 ${fy2}gatbps:${fR2} file must not be a directory: ${fB2}${1}.bot${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
@@ -3528,7 +3528,7 @@ EOF1
                 '0')
                 ;;
                 *)
-                  'cat' >&2 <<EOF1
+                  'cat' 0<<EOF1 1>&2;
 ${fy2}gatbps:${fR2} ${fB2}${awk}${fR2} failed while reading from:
 ${fy2}gatbps:${fR2}   1. ${fB2}${1}.bot${fR2}
 ${fy2}gatbps:${fR2} and writing to: ${fB2}${tmp2}${fR2}
@@ -3544,7 +3544,7 @@ EOF1
               if test '!' '-d' "${safe_1}.bot.texi"; then
                 :
               else
-                'cat' >&2 <<EOF1
+                'cat' 0<<EOF1 1>&2;
 ${fy2}gatbps:${fR2} file must not be a directory: ${fB2}${1}.bot.texi${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
@@ -3557,7 +3557,7 @@ EOF1
                 '0')
                 ;;
                 *)
-                  'cat' >&2 <<EOF1
+                  'cat' 0<<EOF1 1>&2;
 ${fy2}gatbps:${fR2} ${fB2}echo${fR2} failed while writing to: ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
 EOF1
@@ -3586,7 +3586,7 @@ EOF1
                 '0')
                 ;;
                 *)
-                  'cat' >&2 <<EOF1
+                  'cat' 0<<EOF1 1>&2;
 ${fy2}gatbps:${fR2} ${fB2}${awk}${fR2} failed while reading from:
 ${fy2}gatbps:${fR2}   1. ${fB2}${1}.bot.texi${fR2}
 ${fy2}gatbps:${fR2} and writing to: ${fB2}${tmp3}${fR2}
@@ -3608,7 +3608,7 @@ EOF1
                 '0')
                 ;;
                 *)
-                  'cat' >&2 <<EOF1
+                  'cat' 0<<EOF1 1>&2;
 ${fy2}gatbps:${fR2} ${fB2}${texi2any}${fR2} failed while reading from: ${fB2}${tmp3}${fR2}
 ${fy2}gatbps:${fR2} and writing to: ${fB2}${tmp2}${fR2}
 ${fy2}gatbps:${fR2} generation failed: ${fB2}${1}${fR2}
@@ -3625,7 +3625,7 @@ EOF1
                 '0')
                 ;;
                 *)
-                  'cat' >&2 <<EOF1
+                  'cat' 0<<EOF1 1>&2;
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
 ${fy2}gatbps:${fR2}   1. ${fB2}/dev/null${fR2}
 ${fy2}gatbps:${fR2} and writing to: ${fB2}${tmp2}${fR2}
@@ -3643,7 +3643,7 @@ EOF1
               '0')
               ;;
               *)
-                'cat' >&2 <<EOF1
+                'cat' 0<<EOF1 1>&2;
 ${fy2}gatbps:${fR2} ${fB2}cat${fR2} failed while reading from:
 ${fy2}gatbps:${fR2}   1. ${fB2}${tmp0}${fR2}
 ${fy2}gatbps:${fR2}   2. ${fB2}${tmp1}${fR2}
@@ -3673,7 +3673,7 @@ EOF1
               '0')
               ;;
               *)
-                'cat' >&2 <<EOF1
+                'cat' 0<<EOF1 1>&2;
 ${fy2}gatbps:${fR2} ${fB2}rm -f${fR2} failed: ${fB2}${1}.tmp${i}${fR2}
 EOF1
                 exit_status='1'
@@ -3684,7 +3684,7 @@ EOF1
 
           case "${successfully_deleted_files}" in
             'no')
-              'cat' >&2 <<EOF1
+              'cat' 0<<EOF1 1>&2;
 ${fy2}gatbps:${fR2} cleanup failed: ${fB2}${1}${fR2}
 EOF1
             ;;

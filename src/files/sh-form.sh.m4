@@ -396,7 +396,7 @@ while ':'; do
 
         '--='*)
 
-          'cat' >&2 <<EOF2
+          'cat' 0<<EOF2 1>&2;
 ${fr2}sh-form.sh!${fR2} ${fB2}--${fR2} forbids a value
 ${fr2}sh-form.sh!${fR2} try ${fB2}sh sh-form.sh --help${fR2} for more information
 EOF2
@@ -408,7 +408,7 @@ EOF2
 
           case "${#}" in
             '1')
-              'cat' >&2 <<EOF2
+              'cat' 0<<EOF2 1>&2;
 ${fr2}sh-form.sh!${fR2} ${fB2}--awk${fR2} requires a value
 ${fr2}sh-form.sh!${fR2} try ${fB2}sh sh-form.sh --help${fR2} for more information
 EOF2
@@ -439,7 +439,7 @@ EOF2
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF2
+              'cat' 0<<EOF2 1>&2;
 ${fr2}sh-form.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}sh-form.sh!${fR2}   1. a here-document
 ${fr2}sh-form.sh!${fR2} and writing to: a command substitution
@@ -490,7 +490,7 @@ EOF2
 
         '--keep='*)
 
-          'cat' >&2 <<EOF2
+          'cat' 0<<EOF2 1>&2;
 ${fr2}sh-form.sh!${fR2} ${fB2}--keep${fR2} forbids a value
 ${fr2}sh-form.sh!${fR2} try ${fB2}sh sh-form.sh --help${fR2} for more information
 EOF2
@@ -520,7 +520,7 @@ EOF2
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF2
+              'cat' 0<<EOF2 1>&2;
 ${fr2}sh-form.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}sh-form.sh!${fR2}   1. a here-document
 ${fr2}sh-form.sh!${fR2} and writing to: a command substitution
@@ -573,7 +573,7 @@ EOF2
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF2
+              'cat' 0<<EOF2 1>&2;
 ${fr2}sh-form.sh!${fR2} ${fB2}cat${fR2} failed while reading from:
 ${fr2}sh-form.sh!${fR2}   1. a here-document
 ${fr2}sh-form.sh!${fR2} and writing to: standard output
@@ -588,7 +588,7 @@ EOF2
 
         '--man='*)
 
-          'cat' >&2 <<EOF2
+          'cat' 0<<EOF2 1>&2;
 ${fr2}sh-form.sh!${fR2} ${fB2}--man${fR2} forbids a value
 ${fr2}sh-form.sh!${fR2} try ${fB2}sh sh-form.sh --help${fR2} for more information
 EOF2
@@ -600,7 +600,7 @@ EOF2
 
           case "${#}" in
             '1')
-              'cat' >&2 <<EOF2
+              'cat' 0<<EOF2 1>&2;
 ${fr2}sh-form.sh!${fR2} ${fB2}--sed${fR2} requires a value
 ${fr2}sh-form.sh!${fR2} try ${fB2}sh sh-form.sh --help${fR2} for more information
 EOF2
@@ -631,7 +631,7 @@ EOF2
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF2
+              'cat' 0<<EOF2 1>&2;
 ${fr2}sh-form.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}sh-form.sh!${fR2}   1. a here-document
 ${fr2}sh-form.sh!${fR2} and writing to: a command substitution
@@ -679,7 +679,7 @@ case "${?}" in
   '0')
   ;;
   *)
-    'cat' >&2 <<EOF2
+    'cat' 0<<EOF2 1>&2;
 ${fr2}sh-form.sh!${fR2} ${fB2}cat${fR2} failed while reading from:
 ${fr2}sh-form.sh!${fR2}   1. standard input
 ${fr2}sh-form.sh!${fR2} and writing to: a command substitution
@@ -692,7 +692,7 @@ case "${?}" in
   '0')
   ;;
   *)
-    'cat' >&2 <<EOF2
+    'cat' 0<<EOF2 1>&2;
 ${fr2}sh-form.sh!${fR2} ${fB2}echo${fR2} failed while writing to: a command substitution
 EOF2
     'exit' '1'
@@ -731,7 +731,7 @@ EOF2
           '0')
           ;;
           *)
-            'cat' >&2 <<EOF2
+            'cat' 0<<EOF2 1>&2;
 ${fr2}sh-form.sh!${fR2} ${fB2}${awk}${fR2} failed while reading from:
 ${fr2}sh-form.sh!${fR2}   1. a here-document
 ${fr2}sh-form.sh!${fR2} and writing to: a command substitution
@@ -762,7 +762,7 @@ case "${?}" in
   '0')
   ;;
   *)
-    'cat' >&2 <<EOF2
+    'cat' 0<<EOF2 1>&2;
 ${fr2}sh-form.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}sh-form.sh!${fR2}   1. a here-document
 ${fr2}sh-form.sh!${fR2} and writing to: a command substitution
@@ -803,7 +803,7 @@ esac
 
         '--style='*)
 
-          'cat' >&2 <<EOF2
+          'cat' 0<<EOF2 1>&2;
 ${fr2}sh-form.sh!${fR2} invalid ${fB2}--style${fR2} value
 EOF2
           'exit' '1'
@@ -891,7 +891,7 @@ EOF2
 
         '--style-stderr='*)
 
-          'cat' >&2 <<EOF2
+          'cat' 0<<EOF2 1>&2;
 ${fr2}sh-form.sh!${fR2} invalid ${fB2}--style-stderr${fR2} value
 EOF2
           'exit' '1'
@@ -979,7 +979,7 @@ EOF2
 
         '--style-stdout='*)
 
-          'cat' >&2 <<EOF2
+          'cat' 0<<EOF2 1>&2;
 ${fr2}sh-form.sh!${fR2} invalid ${fB2}--style-stdout${fR2} value
 EOF2
           'exit' '1'
@@ -1010,7 +1010,7 @@ EOF2
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF2
+              'cat' 0<<EOF2 1>&2;
 ${fr2}sh-form.sh!${fR2} ${fB2}${awk}${fR2} failed while reading from:
 ${fr2}sh-form.sh!${fR2}   1. a here-document
 ${fr2}sh-form.sh!${fR2} and writing to: standard error
@@ -1023,7 +1023,7 @@ EOF2
 
         '--'*|'-'?)
 
-          'cat' >&2 <<EOF2
+          'cat' 0<<EOF2 1>&2;
 ${fr2}sh-form.sh!${fR2} unknown option: ${fB2}${1}${fR2}
 ${fr2}sh-form.sh!${fR2} try ${fB2}sh sh-form.sh --help${fR2} for more information
 EOF2
@@ -1047,7 +1047,7 @@ EOF2
             '0')
             ;;
             *)
-              'cat' >&2 <<EOF2
+              'cat' 0<<EOF2 1>&2;
 ${fr2}sh-form.sh!${fR2} ${fB2}${awk}${fR2} failed while reading from:
 ${fr2}sh-form.sh!${fR2}   1. a here-document
 ${fr2}sh-form.sh!${fR2} and writing to: standard error
@@ -1081,7 +1081,7 @@ EOF2
     '0')
     ;;
     *)
-      'cat' >&2 <<EOF2
+      'cat' 0<<EOF2 1>&2;
 ${fr2}sh-form.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}sh-form.sh!${fR2}   1. a here-document
 ${fr2}sh-form.sh!${fR2} and writing to: a command substitution
@@ -1101,7 +1101,7 @@ EOF2
     '0')
     ;;
     *)
-      'cat' >&2 <<EOF2
+      'cat' 0<<EOF2 1>&2;
 ${fr2}sh-form.sh!${fR2} ${fB2}cat${fR2} failed while reading from:
 ${fr2}sh-form.sh!${fR2}   1. a here-document
 ${fr2}sh-form.sh!${fR2} and writing to: standard output

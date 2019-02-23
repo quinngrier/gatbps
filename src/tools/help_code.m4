@@ -15,7 +15,7 @@ EOF1
                 '0')
                 ;;
                 *)
-                  'cat' >&2 <<EOF1
+                  'cat' 0<<EOF1 1>&2;
 $|%}{%|{fr2}gatbps!$|%}{%|{fR2} $|%}{%|{fB2}cat$|%}{%|{fR2} failed while reading from:
 $|%}{%|{fr2}gatbps!$|%}{%|{fR2}   1. a here-document
 $|%}{%|{fr2}gatbps!$|%}{%|{fR2} and writing to: standard output

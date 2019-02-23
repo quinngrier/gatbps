@@ -26,7 +26,7 @@ EOF1
                   '0')
                   ;;
                   *)
-                    'cat' >&2 <<EOF1
+                    'cat' 0<<EOF1 1>&2;
 $|%}{%|{fy2}gatbps:$|%}{%|{fR2} $|%}{%|{fB2}$|%}{%|{sed}$|%}{%|{fR2} failed while reading from:
 $|%}{%|{fy2}gatbps:$|%}{%|{fR2}   1. a here-document
 $|%}{%|{fy2}gatbps:$|%}{%|{fR2} and writing to: a command substitution

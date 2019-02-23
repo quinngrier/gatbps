@@ -159,7 +159,7 @@ if "${git}" \
     '0')
     ;;
     *)
-      'cat' >&2 <<EOF2
+      'cat' 0<<EOF2 1>&2;
 ${fr2}VERSION_LIBTOOL_C.sh!${fR2} ${fB2}${git}${fR2} failed while writing to: ${fB2}${0}.tmp${fR2}
 EOF2
       'exit' '1'
@@ -191,7 +191,7 @@ EOF2
     '0')
     ;;
     *)
-      'cat' >&2 <<EOF2
+      'cat' 0<<EOF2 1>&2;
 ${fr2}VERSION_LIBTOOL_C.sh!${fR2} ${fB2}${awk}${fR2} failed while reading from:
 ${fr2}VERSION_LIBTOOL_C.sh!${fR2}   1. ${fB2}${0}.tmp${fR2}
 ${fr2}VERSION_LIBTOOL_C.sh!${fR2} and writing to: a command substitution
@@ -207,7 +207,7 @@ elif test '-f' 'VERSION_LIBTOOL_C'; then
     '0')
     ;;
     *)
-      'cat' >&2 <<EOF2
+      'cat' 0<<EOF2 1>&2;
 ${fr2}VERSION_LIBTOOL_C.sh!${fR2} ${fB2}cat${fR2} failed while reading from:
 ${fr2}VERSION_LIBTOOL_C.sh!${fR2}   1. ${fB2}VERSION_LIBTOOL_C${fR2}
 ${fr2}VERSION_LIBTOOL_C.sh!${fR2} and writing to: standard output
@@ -218,7 +218,7 @@ EOF2
 
 else
 
-  'cat' >&2 <<EOF2
+  'cat' 0<<EOF2 1>&2;
 ${fr2}VERSION_LIBTOOL_C.sh!${fR2} not in repository and ${fB2}VERSION_LIBTOOL_C${fR2} not found
 EOF2
   'exit' '1'

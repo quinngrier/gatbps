@@ -15,7 +15,7 @@ include(`src/files/$1.m4'){%||%}dnl
               '0')
               ;;
               *)
-                'cat' >&2 <<EOF1
+                'cat' 0<<EOF1 1>&2;
 $|%}{%|{fy2}gatbps:$|%}{%|{fR2} $|%}{%|{fB2}cat$|%}{%|{fR2} failed while reading from:
 $|%}{%|{fy2}gatbps:$|%}{%|{fR2}   1. a here-document
 $|%}{%|{fy2}gatbps:$|%}{%|{fR2} and writing to: $|%}{%|{fB2}$|%}{%|{1}$|%}{%|{fR2}

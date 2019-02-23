@@ -383,7 +383,7 @@ while ':'; do
 
         '--='*)
 
-          'cat' >&2 <<EOF2
+          'cat' 0<<EOF2 1>&2;
 ${fr2}echo.sh!${fR2} ${fB2}--${fR2} forbids a value
 ${fr2}echo.sh!${fR2} try ${fB2}sh echo.sh --help${fR2} for more information
 EOF2
@@ -413,7 +413,7 @@ case "${?}" in
   '0')
   ;;
   *)
-    'cat' >&2 <<EOF2
+    'cat' 0<<EOF2 1>&2;
 ${fr2}echo.sh!${fR2} ${fB2}cat${fR2} failed while reading from:
 ${fr2}echo.sh!${fR2}   1. a here-document
 ${fr2}echo.sh!${fR2} and writing to: standard output
