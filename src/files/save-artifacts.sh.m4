@@ -1335,7 +1335,12 @@ EOF2
         'continue';
       fi;
 
-      'rm' '-f' '-r' "${safe_gpg_import_directory}";
+      'rm' \
+        '-f' \
+        '-r' \
+        "${safe_gpg_import_directory}" \
+        0<'/dev/null' \
+      ;
       case "${?}" in
         '0')
           ':';
