@@ -1881,6 +1881,28 @@ EOF2
     ;;
   esac;
 
+  'test' \
+    '-f' \
+    "${safe_target_file}" \
+  ;
+  s="${?}";
+  case "${s}" in
+    '0')
+      'continue';
+    ;;
+    '1')
+      ':';
+    ;;
+    *)
+      'cat' 0<<EOF2 1>&2;
+${fy2}save-artifacts.sh:${fR2} ${fB2}test${fR2} failed
+${fy2}save-artifacts.sh:${fR2} exit status: ${fB2}${s}${fR2}
+EOF2
+      exit_status='1';
+      'continue';
+    ;;
+  esac;
+
 done
 
 'exit' "${exit_status}";
