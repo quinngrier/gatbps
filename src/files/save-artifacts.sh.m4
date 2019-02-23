@@ -543,7 +543,7 @@ case "${AWK+is_set}" in
 esac
 
 git_clone_directory='git-clone-directory'
-git_url='git-url'
+git_clone_url='git-clone-url'
 gpg_import_directory='gpg-import-directory'
 gpg_passphrase_file='gpg-passphrase-file'
 gpg_secret_key_file='gpg-secret-key-file'
@@ -887,12 +887,12 @@ EOF2
 
         ;;
 
-        '--git-url')
+        '--git-clone-url')
 
           case "${#}" in
             '1')
               'cat' 0<<EOF2 1>&2;
-${fr2}save-artifacts.sh!${fR2} ${fB2}--git-url${fR2} requires a value
+${fr2}save-artifacts.sh!${fR2} ${fB2}--git-clone-url${fR2} requires a value
 ${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
 EOF2
               'exit' '1'
@@ -902,17 +902,17 @@ EOF2
           x="${2}"
           shift
           shift
-          set 'x' "--git-url=${x}" "${@}"
+          set 'x' "--git-clone-url=${x}" "${@}"
 
           'continue'
 
         ;;
 
-        '--git-url='*)
+        '--git-clone-url='*)
 
           x=`'eval' "${sed}"' "
             s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
-            1s/^--git-url=/git_url='\\''/
+            1s/^--git-clone-url=/git_clone_url='\\''/
             \\$s/\\$/'\\''/
           "' <<EOF2
 ${1}
@@ -1567,7 +1567,7 @@ EOF2
     '"${git}"' \
       '\''clone'\'' \
       '\''--'\'' \
-      "${git_url}" \
+      "${git_clone_url}" \
       "${safe_git_clone_directory}" \
       0<'\''/dev/null'\'' \
     ;
@@ -1580,7 +1580,7 @@ EOF2
     *)
       'cat' 0<<EOF2 1>&2;
 ${fy2}save-artifacts.sh:${fR2} ${fB2}git clone${fR2} failed while cloning:
-${fy2}save-artifacts.sh:${fR2}   ${fB2}${git_url}${fR2}
+${fy2}save-artifacts.sh:${fR2}   ${fB2}${git_clone_url}${fR2}
 ${fy2}save-artifacts.sh:${fR2} into:
 ${fy2}save-artifacts.sh:${fR2}   ${fB2}${git_clone_directory}${fR2}
 ${fy2}save-artifacts.sh:${fR2} exit status: ${fB2}${s}${fR2}
