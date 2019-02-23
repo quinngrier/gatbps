@@ -1427,8 +1427,8 @@ EOF2
             }
           '\'' \
           0<"${safe_gpg_import_directory}"'\''/tmp'\'' \
-        ;';
-      `
+        '
+      `;
       case "${?}" in
         '0')
           ':';
