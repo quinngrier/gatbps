@@ -554,6 +554,8 @@ ssh_secret_key_file='ssh-secret-key-file'
 version_command=''\''sh'\'' '\''build-aux/VERSION.sh'\''';
 
 exit_status='0';
+git_clone_attempted='no';
+git_clone_succeeded='no';
 gpg_import_attempted='no';
 gpg_import_succeeded='no';
 gpg_secret_key_fingerprint='';
@@ -983,6 +985,9 @@ EOF2
             ;;
           esac
           'eval' "${x}"
+
+          git_clone_attempted='no';
+          git_clone_succeeded='no';
 
           'continue'
 
@@ -1721,32 +1726,48 @@ EOF2
     ;;
   esac;
 
-  'eval' '
-    GIT_SSH_COMMAND='\''"${sshpass}" -f"${ssh_secret_key_file}" ssh'\'' \
-    ssh_secret_key_file="${ssh_secret_key_file}" \
-    sshpass="${sshpass}" \
-    '"${git}"' \
-      '\''clone'\'' \
-      '\''--'\'' \
-      "${git_clone_url}" \
-      "${safe_git_clone_directory}" \
-      0<'\''/dev/null'\'' \
-    ;
-  ';
-  s="${?}";
-  case "${s}" in
-    '0')
-      ':';
-    ;;
-    *)
-      'cat' 0<<EOF2 1>&2;
+  case "${git_clone_attempted}" in
+    'no')
+
+      git_clone_attempted='yes';
+
+      'eval' '
+        GIT_SSH_COMMAND='\''"${sshpass}" -f"${ssh_secret_key_file}" ssh'\'' \
+        ssh_secret_key_file="${ssh_secret_key_file}" \
+        sshpass="${sshpass}" \
+        '"${git}"' \
+          '\''clone'\'' \
+          '\''--'\'' \
+          "${git_clone_url}" \
+          "${safe_git_clone_directory}" \
+          0<'\''/dev/null'\'' \
+        ;
+      ';
+      s="${?}";
+      case "${s}" in
+        '0')
+          ':';
+        ;;
+        *)
+          'cat' 0<<EOF2 1>&2;
 ${fy2}save-artifacts.sh:${fR2} ${fB2}git clone${fR2} failed while cloning:
 ${fy2}save-artifacts.sh:${fR2}   ${fB2}${git_clone_url}${fR2}
 ${fy2}save-artifacts.sh:${fR2} into:
 ${fy2}save-artifacts.sh:${fR2}   ${fB2}${git_clone_directory}${fR2}
 ${fy2}save-artifacts.sh:${fR2} exit status: ${fB2}${s}${fR2}
 EOF2
-      exit_status='1';
+          exit_status='1';
+          'continue';
+        ;;
+      esac;
+
+      git_clone_succeeded='yes';
+
+    ;;
+  esac;
+
+  case "${git_clone_succeeded}" in
+    'no')
       'continue';
     ;;
   esac;
