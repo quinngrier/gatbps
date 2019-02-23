@@ -1816,6 +1816,71 @@ EOF2
     ;;
   esac;
 
+  case "${1}" in
+    '/'*)
+      safe_1="${1}";
+    ;;
+    *)
+      safe_1='./'"${1}";
+    ;;
+  esac;
+
+  basename_1=`
+    'basename' \
+      "${safe_1}" \
+    ;
+  `;
+  s="${?}";
+  case "${s}" in
+    '0')
+      ':';
+    ;;
+    *)
+      'cat' 0<<EOF2 1>&2;
+${fy2}save-artifacts.sh:${fR2} ${fB2}basename${fR2} failed
+${fy2}save-artifacts.sh:${fR2} exit status: ${fB2}${s}${fR2}
+EOF2
+      exit_status='1';
+      'continue';
+    ;;
+  esac;
+
+  safe_target_file="${safe_git_clone_directory}";
+  safe_target_file="${safe_target_file}"'/'"${year}";
+  safe_target_file="${safe_target_file}"'/'"${date}";
+  safe_target_file="${safe_target_file}"'-'"${version}";
+  safe_target_file="${safe_target_file}"'/'"${prefix}";
+  safe_target_file="${safe_target_file}${basename_1}";
+
+  target_directory=`
+    'dirname' \
+      "${safe_target_file}" \
+    ;
+  `;
+  s="${?}";
+  case "${s}" in
+    '0')
+      ':';
+    ;;
+    *)
+      'cat' 0<<EOF2 1>&2;
+${fy2}save-artifacts.sh:${fR2} ${fB2}dirname${fR2} failed
+${fy2}save-artifacts.sh:${fR2} exit status: ${fB2}${s}${fR2}
+EOF2
+      exit_status='1';
+      'continue';
+    ;;
+  esac;
+
+  case "${target_directory}" in
+    '/'*)
+      safe_target_directory="${target_directory}";
+    ;;
+    *)
+      safe_target_directory='./'"${target_directory}";
+    ;;
+  esac;
+
 done
 
 'exit' "${exit_status}";
