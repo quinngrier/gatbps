@@ -1372,7 +1372,11 @@ EOF2
         ;;
       esac;
 
-      'chmod' '700' "${safe_gpg_import_directory}";
+      'chmod' \
+        '700' \
+        "${safe_gpg_import_directory}" \
+        0<'/dev/null' \
+      ;
       case "${?}" in
         '0')
           ':';
@@ -1386,12 +1390,15 @@ EOF2
         ;;
       esac;
 
-      'eval' "${gpg}"' \
-        '\''--homedir'\'' \
-        "${safe_gpg_import_directory}" \
-        '\''--import'\'' \
-        "${safe_gpg_secret_key_file}" \
-      ;';
+      'eval' \
+        "${gpg}"' \
+          '\''--homedir'\'' \
+          "${safe_gpg_import_directory}" \
+          '\''--import'\'' \
+          "${safe_gpg_secret_key_file}" \
+          0<'\''/dev/null'\'' \
+        ;' \
+      ;
       case "${?}" in
         '0')
           ':';
@@ -1405,13 +1412,15 @@ EOF2
         ;;
       esac;
 
-      'eval' "${gpg}"' \
-        '\''--homedir'\'' \
-        "${safe_gpg_import_directory}" \
-        '\''--fingerprint'\'' \
-        0<'\''/dev/null'\'' \
-        1>"${safe_gpg_import_directory}"'\''/tmp'\'' \
-      ;';
+      'eval' \
+        "${gpg}"' \
+          '\''--homedir'\'' \
+          "${safe_gpg_import_directory}" \
+          '\''--fingerprint'\'' \
+          0<'\''/dev/null'\'' \
+          1>"${safe_gpg_import_directory}"'\''/tmp'\'' \
+        ;' \
+      ;
       case "${?}" in
         '0')
           ':';
@@ -1426,17 +1435,19 @@ EOF2
       esac;
 
       gpg_secret_key_fingerprint=`
-        'eval' "${sed}"' \
-          '\''-n'\'' \
-          '\''
-            /fingerprint/{
-              s/^.*=//
-              s/  *//g
-              p
-            }
-          '\'' \
-          0<"${safe_gpg_import_directory}"'\''/tmp'\'' \
-        '
+        'eval' \
+          "${sed}"' \
+            '\''-n'\'' \
+            '\''
+              /fingerprint/{
+                s/^.*=//
+                s/  *//g
+                p
+              }
+            '\'' \
+            0<"${safe_gpg_import_directory}"'\''/tmp'\'' \
+          ;' \
+        ;
       `;
       case "${?}" in
         '0')
