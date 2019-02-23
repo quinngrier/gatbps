@@ -1538,6 +1538,28 @@ EOF2
     ;;
   esac;
 
+  'rm' \
+    '-f' \
+    '-r' \
+    "${safe_git_clone_directory}" \
+    0<'/dev/null' \
+  ;
+  s="${?}";
+  case "${s}" in
+    '0')
+      ':';
+    ;;
+    *)
+      'cat' 0<<EOF2 1>&2;
+${fy2}save-artifacts.sh:${fR2} ${fB2}rm${fR2} failed while deleting:
+${fy2}save-artifacts.sh:${fR2}   1. ${fB2}${git_clone_directory}${fR2}
+${fy2}save-artifacts.sh:${fR2} exit status: ${fB2}${s}${fR2}
+EOF2
+      exit_status='1';
+      'continue';
+    ;;
+  esac;
+
 done
 
 'exit' "${exit_status}";
