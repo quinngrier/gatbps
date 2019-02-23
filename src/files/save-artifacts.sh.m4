@@ -542,6 +542,7 @@ case "${AWK+is_set}" in
   ;;
 esac
 
+git_clone_directory='git-clone-directory'
 git_url='git-url'
 gpg_import_directory='gpg-import-directory'
 gpg_passphrase_file='gpg-passphrase-file'
@@ -553,6 +554,7 @@ exit_status='0';
 gpg_import_attempted='no';
 gpg_import_succeeded='no';
 gpg_secret_key_fingerprint='';
+safe_git_clone_directory='git-clone-directory'
 safe_gpg_import_directory='gpg-import-directory';
 safe_gpg_passphrase_file='gpg-passphrase-file';
 safe_gpg_secret_key_file='gpg-secret-key-file';
@@ -820,6 +822,64 @@ EOF2
                 ;;
               esac;
               gpg="${gpg_auto}";
+            ;;
+          esac;
+
+          'continue'
+
+        ;;
+
+        '--git-clone-directory')
+
+          case "${#}" in
+            '1')
+              'cat' >&2 <<EOF2
+${fr2}save-artifacts.sh!${fR2} ${fB2}--git-clone-directory${fR2} requires a value
+${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
+EOF2
+              'exit' '1'
+            ;;
+          esac
+
+          x="${2}"
+          shift
+          shift
+          set 'x' "--git-clone-directory=${x}" "${@}"
+
+          'continue'
+
+        ;;
+
+        '--git-clone-directory='*)
+
+          x=`'eval' "${sed}"' "
+            s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
+            1s/^--git-clone-directory=/git_clone_directory='\\''/
+            \\$s/\\$/'\\''/
+          "' <<EOF2
+${1}
+EOF2
+`
+          case "${?}" in
+            '0')
+            ;;
+            *)
+              'cat' >&2 <<EOF2
+${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
+${fr2}save-artifacts.sh!${fR2}   1. a here-document
+${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
+EOF2
+              'exit' '1'
+            ;;
+          esac
+          'eval' "${x}"
+
+          case "${git_clone_directory}" in
+            '/'*)
+              safe_git_clone_directory="${git_clone_directory}";
+            ;;
+            *)
+              safe_git_clone_directory="./${git_clone_directory}";
             ;;
           esac;
 
