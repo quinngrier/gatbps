@@ -567,6 +567,8 @@ safe_gpg_passphrase_file='gpg-passphrase-file';
 safe_gpg_secret_key_file='gpg-secret-key-file';
 safe_ssh_passphrase_file='ssh-passphrase-file';
 safe_ssh_secret_key_file='ssh-secret-key-file';
+version_command_attempted='no';
+version_command_succeeded='no';
 
 case "${#}" in
   '0')
@@ -1544,6 +1546,9 @@ EOF2
           esac
           'eval' "${x}"
 
+          version_command_attempted='no';
+          version_command_succeeded='no';
+
           'continue'
 
         ;;
@@ -1842,22 +1847,38 @@ EOF2
     ;;
   esac;
 
-  version=`
-    'eval' '
-      '"${version_command}"'
-    ';
-  `;
-  s="${?}";
-  case "${s}" in
-    '0')
-      ':';
-    ;;
-    *)
-      'cat' 0<<EOF2 1>&2;
+  case "${version_command_attempted}" in
+    'no')
+
+      version_command_attempted='yes';
+
+      version=`
+        'eval' '
+          '"${version_command}"'
+        ';
+      `;
+      s="${?}";
+      case "${s}" in
+        '0')
+          ':';
+        ;;
+        *)
+          'cat' 0<<EOF2 1>&2;
 ${fy2}save-artifacts.sh:${fR2} ${fB2}${version_command}${fR2} failed
 ${fy2}save-artifacts.sh:${fR2} exit status: ${fB2}${s}${fR2}
 EOF2
-      exit_status='1';
+          exit_status='1';
+          'continue';
+        ;;
+      esac;
+
+      version_command_succeeded='yes';
+
+    ;;
+  esac;
+
+  case "${version_command_succeeded}" in
+    'no')
       'continue';
     ;;
   esac;
