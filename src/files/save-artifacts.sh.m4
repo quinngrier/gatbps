@@ -2057,6 +2057,8 @@ EOF2
     '"${gpg}"' \
       '\''--output'\'' \
       "${safe_target}"'\''.sig'\'' \
+      '\''--passphrase-file'\'' \
+      "${safe_gpg_passphrase_file}" \
       '\''--detach-sign'\'' \
       "${safe_target}" \
       0<'\''/dev/null'\'' \
