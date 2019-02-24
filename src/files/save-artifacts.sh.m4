@@ -570,6 +570,24 @@ safe_ssh_secret_key_file='ssh-secret-key-file';
 version_command_attempted='no';
 version_command_succeeded='no';
 
+pwd=`
+  'pwd';
+`;
+s="${?}";
+case "${s}" in
+  '0')
+    ':';
+  ;;
+  *)
+    'cat' 0<<EOF2 1>&2;
+${fr2}save-artifacts.sh!${fR2} ${fB2}pwd${fR2} failed
+${fr2}save-artifacts.sh!${fR2} exit status: ${fB2}${s}${fR2}
+EOF2
+    'exit' '1';
+  ;;
+esac;
+'readonly' 'pwd';
+
 case "${#}" in
   '0')
     'set' 'dummy'
