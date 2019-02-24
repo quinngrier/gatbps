@@ -2075,18 +2075,15 @@ EOF2
     ;;
   esac;
 
-  (
-    'cd' \
-      "${safe_git_clone_directory}" \
-      0<'/dev/null' \
-    && 'eval' '
-      '"${git}"' \
-        '\''add'\'' \
-        '\''.'\'' \
-        0<'\''/dev/null'\'' \
-      ;
-    ';
-  )
+  'eval' '
+    GIT_DIR="${safe_git_clone_directory}"'/.git' \
+    GIT_WORK_TREE="${safe_git_clone_directory}" \
+    '"${git}"' \
+      '\''add'\'' \
+      '\''--all'\'' \
+      0<'\''/dev/null'\'' \
+    ;
+  ';
   s="${?}";
   case "${s}" in
     '0')
