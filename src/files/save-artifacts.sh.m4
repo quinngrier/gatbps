@@ -2074,6 +2074,32 @@ EOF2
     ;;
   esac;
 
+  (
+    'cd' \
+      "${safe_git_clone_directory}" \
+      0<'/dev/null' \
+    && 'eval' '
+      '"${git}"' \
+        '\''add'\'' \
+        '\''.'\'' \
+        0<'\''/dev/null'\'' \
+      ;
+    ';
+  )
+  s="${?}";
+  case "${s}" in
+    '0')
+      ':';
+    ;;
+    *)
+      'cat' 0<<EOF2 1>&2;
+${fy2}save-artifacts.sh:${fR2} ${fB2}git add${fR2} failed
+EOF2
+      exit_status='1';
+      'continue';
+    ;;
+  esac;
+
 done
 
 'exit' "${exit_status}";
