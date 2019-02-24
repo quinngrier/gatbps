@@ -1630,9 +1630,8 @@ EOF2
       esac;
 
       'eval' '
+        GNUPGHOME="${safe_gpg_import_directory}" \
         '"${gpg}"' \
-          '\''--homedir'\'' \
-          "${safe_gpg_import_directory}" \
           '\''--import'\'' \
           "${safe_gpg_secret_key_file}" \
           0<'\''/dev/null'\'' \
@@ -1652,9 +1651,8 @@ EOF2
       esac;
 
       'eval' '
+        GNUPGHOME="${safe_gpg_import_directory}" \
         '"${gpg}"' \
-          '\''--homedir'\'' \
-          "${safe_gpg_import_directory}" \
           '\''--fingerprint'\'' \
           0<'\''/dev/null'\'' \
           1>"${safe_gpg_import_directory}"'\''/tmp'\'' \
@@ -2034,9 +2032,8 @@ EOF2
   esac;
 
   'eval' '
+    GNUPGHOME="${safe_gpg_import_directory}" \
     '"${gpg}"' \
-      '\''--homedir'\'' \
-      "${safe_gpg_import_directory}" \
       '\''--output'\'' \
       "${safe_target}"'\''.sig'\'' \
       '\''--passphrase-file'\'' \
