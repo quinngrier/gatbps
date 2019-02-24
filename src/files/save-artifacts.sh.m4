@@ -1910,12 +1910,13 @@ EOF2
     ;;
   esac;
 
-  safe_target="${safe_git_clone_directory}";
-  safe_target="${safe_target}"'/'"${year}";
-  safe_target="${safe_target}"'/'"${date}";
-  safe_target="${safe_target}"'-'"${version}";
-  safe_target="${safe_target}"'/'"${prefix}";
-  safe_target="${safe_target}${basename_1}";
+  relative_dst="${year}";
+  relative_dst="${relative_dst}"'/'"${date}";
+  relative_dst="${relative_dst}"'-'"${version}";
+  relative_dst="${relative_dst}"'/'"${prefix}";
+  relative_dst="${relative_dst}${basename_1}";
+
+  safe_target="${safe_git_clone_directory}"'/'"${relative_dst}";
 
   target_directory=`
     'dirname' \
@@ -2094,6 +2095,34 @@ EOF2
     *)
       'cat' 0<<EOF2 1>&2;
 ${fy2}save-artifacts.sh:${fR2} ${fB2}git add${fR2} failed
+EOF2
+      exit_status='1';
+      'continue';
+    ;;
+  esac;
+
+  (
+    'cd' \
+      "${safe_git_clone_directory}" \
+      0<'/dev/null' \
+    && 'eval' '
+      GNUPGHOME="${safe_gpg_import_directory}" \
+      '"${git}"' \
+        '\''commit'\'' \
+        '\''--gpg-sign=0x'\''"${gpg_secret_key_fingerprint}" \
+        '\''--message=Add '\''"${relative_dst}" \
+        0<'\''/dev/null'\'' \
+      ;
+    ';
+  )
+  s="${?}";
+  case "${s}" in
+    '0')
+      ':';
+    ;;
+    *)
+      'cat' 0<<EOF2 1>&2;
+${fy2}save-artifacts.sh:${fR2} ${fB2}git commit${fR2} failed
 EOF2
       exit_status='1';
       'continue';
