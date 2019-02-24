@@ -2031,13 +2031,31 @@ EOF2
     ;;
   esac;
 
+  'cat' \
+    0<<EOF2 \
+    1>"${safe_gpg_import_directory}"'/gpg.conf' \
+  ;
+passphrase-file ${safe_gpg_passphrase_file}
+EOF2
+  s="${?}";
+  case "${s}" in
+    '0')
+      ':';
+    ;;
+    *)
+      'cat' 0<<EOF2 1>&2;
+${fy2}save-artifacts.sh:${fR2} ${fB2}cat${fR2} failed
+EOF2
+      exit_status='1';
+      'continue';
+    ;;
+  esac;
+
   'eval' '
     GNUPGHOME="${safe_gpg_import_directory}" \
     '"${gpg}"' \
       '\''--output'\'' \
       "${safe_target}"'\''.sig'\'' \
-      '\''--passphrase-file'\'' \
-      "${safe_gpg_passphrase_file}" \
       '\''--detach-sign'\'' \
       "${safe_target}" \
       0<'\''/dev/null'\'' \
