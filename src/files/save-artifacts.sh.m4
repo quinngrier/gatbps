@@ -553,6 +553,8 @@ ssh_passphrase_file='ssh-passphrase-file'
 ssh_secret_key_file='ssh-secret-key-file'
 version_command=''\''sh'\'' '\''build-aux/VERSION.sh'\''';
 
+date_command_attempted='no';
+date_command_succeeded='no';
 exit_status='0';
 git_clone_attempted='no';
 git_clone_succeeded='no';
@@ -728,6 +730,9 @@ EOF2
             ;;
           esac
           'eval' "${x}"
+
+          date_command_attempted='no';
+          date_command_succeeded='no';
 
           'continue'
 
@@ -1772,49 +1777,65 @@ EOF2
     ;;
   esac;
 
-  date=`
-    'eval' '
-      '"${date_command}"'
-    ';
-  `;
-  s="${?}";
-  case "${s}" in
-    '0')
-      ':';
-    ;;
-    *)
-      'cat' 0<<EOF2 1>&2;
+  case "${date_command_attempted}" in
+    'no')
+
+      date_command_attempted='yes';
+
+      date=`
+        'eval' '
+          '"${date_command}"'
+        ';
+      `;
+      s="${?}";
+      case "${s}" in
+        '0')
+          ':';
+        ;;
+        *)
+          'cat' 0<<EOF2 1>&2;
 ${fy2}save-artifacts.sh:${fR2} ${fB2}${date_command}${fR2} failed
 ${fy2}save-artifacts.sh:${fR2} exit status: ${fB2}${s}${fR2}
 EOF2
-      exit_status='1';
-      'continue';
-    ;;
-  esac;
+          exit_status='1';
+          'continue';
+        ;;
+      esac;
 
-  year=`
-    'eval' '
-      '"${sed}"' \
-        '\''
-          s/^\(....\).*/\1/
-        '\'' \
-        0<<EOF2 \
-      ;
+      year=`
+        'eval' '
+          '"${sed}"' \
+            '\''
+              s/^\(....\).*/\1/
+            '\'' \
+            0<<EOF2 \
+          ;
 ${date}
 EOF2
-    ';
-  `;
-  s="${?}";
-  case "${s}" in
-    '0')
-      ':';
-    ;;
-    *)
-      'cat' 0<<EOF2 1>&2;
+        ';
+      `;
+      s="${?}";
+      case "${s}" in
+        '0')
+          ':';
+        ;;
+        *)
+          'cat' 0<<EOF2 1>&2;
 ${fy2}save-artifacts.sh:${fR2} ${fB2}${version_command}${fR2} failed
 ${fy2}save-artifacts.sh:${fR2} exit status: ${fB2}${s}${fR2}
 EOF2
-      exit_status='1';
+          exit_status='1';
+          'continue';
+        ;;
+      esac;
+
+      date_command_succeeded='yes';
+
+    ;;
+  esac;
+
+  case "${date_command_succeeded}" in
+    'no')
       'continue';
     ;;
   esac;
