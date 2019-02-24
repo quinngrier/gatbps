@@ -2033,6 +2033,32 @@ EOF2
     ;;
   esac;
 
+  'eval' '
+    '"${gpg}"' \
+      '\''--homedir'\'' \
+      "${safe_gpg_import_directory}" \
+      '\''--output'\'' \
+      "${safe_target}"'\''.sig'\'' \
+      '\''--passphrase-file'\'' \
+      "${safe_gpg_passphrase_file}" \
+      '\''--detach-sign'\'' \
+      "${safe_target}" \
+      0<'\''/dev/null'\'' \
+    ;
+  ';
+  case "${?}" in
+    '0')
+      ':';
+    ;;
+    *)
+      'cat' 0<<EOF2 1>&2;
+${fy2}save-artifacts.sh:${fR2} ${fB2}gpg --detach-sign${fR2} failed
+EOF2
+      exit_status='1';
+      'continue';
+    ;;
+  esac;
+
 done
 
 'exit' "${exit_status}";
