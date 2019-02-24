@@ -1821,7 +1821,9 @@ EOF2
         ;;
         *)
           'cat' 0<<EOF2 1>&2;
-${fy2}save-artifacts.sh:${fR2} ${fB2}${version_command}${fR2} failed
+${fy2}save-artifacts.sh:${fR2} ${fB2}${sed}${fR2} failed while reading from:
+${fy2}save-artifacts.sh:${fR2}   1. a here-document
+${fy2}save-artifacts.sh:${fR2} and writing to: a command substitution
 ${fy2}save-artifacts.sh:${fR2} exit status: ${fB2}${s}${fR2}
 EOF2
           exit_status='1';
