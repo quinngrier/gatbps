@@ -542,34 +542,6 @@ case "${AWK+is_set}" in
   ;;
 esac
 
-date_command=''\''sh'\'' '\''build-aux/DATE.sh'\''';
-git_clone_directory='git-clone-directory'
-git_clone_url='git-clone-url'
-gpg_import_directory='gpg-import-directory'
-gpg_passphrase_file='gpg-passphrase-file'
-gpg_secret_key_file='gpg-secret-key-file'
-prefix='';
-ssh_passphrase_file='ssh-passphrase-file'
-ssh_secret_key_file='ssh-secret-key-file'
-version_command=''\''sh'\'' '\''build-aux/VERSION.sh'\''';
-
-date_command_attempted='no';
-date_command_succeeded='no';
-exit_status='0';
-git_clone_attempted='no';
-git_clone_succeeded='no';
-gpg_import_attempted='no';
-gpg_import_succeeded='no';
-gpg_secret_key_fingerprint='';
-safe_git_clone_directory='git-clone-directory'
-safe_gpg_import_directory='gpg-import-directory';
-safe_gpg_passphrase_file='gpg-passphrase-file';
-safe_gpg_secret_key_file='gpg-secret-key-file';
-safe_ssh_passphrase_file='ssh-passphrase-file';
-safe_ssh_secret_key_file='ssh-secret-key-file';
-version_command_attempted='no';
-version_command_succeeded='no';
-
 pwd=`
   'pwd';
 `;
@@ -587,6 +559,36 @@ EOF2
   ;;
 esac;
 'readonly' 'pwd';
+
+date_command=''\''sh'\'' '\''build-aux/DATE.sh'\''';
+git_clone_directory='git-clone-directory'
+git_clone_url='git-clone-url'
+gpg_import_directory='gpg-import-directory'
+gpg_passphrase_file='gpg-passphrase-file'
+gpg_secret_key_file='gpg-secret-key-file'
+prefix='';
+ssh_passphrase_file='ssh-passphrase-file'
+ssh_secret_key_file='ssh-secret-key-file'
+version_command=''\''sh'\'' '\''build-aux/VERSION.sh'\''';
+
+absolute_gpg_import_directory="${pwd}"'/gpg-import-directory';
+absolute_gpg_passphrase_file="${pwd}"'/gpg-passphrase-file';
+date_command_attempted='no';
+date_command_succeeded='no';
+exit_status='0';
+git_clone_attempted='no';
+git_clone_succeeded='no';
+gpg_import_attempted='no';
+gpg_import_succeeded='no';
+gpg_secret_key_fingerprint='';
+safe_git_clone_directory='git-clone-directory'
+safe_gpg_import_directory='gpg-import-directory';
+safe_gpg_passphrase_file='gpg-passphrase-file';
+safe_gpg_secret_key_file='gpg-secret-key-file';
+safe_ssh_passphrase_file='ssh-passphrase-file';
+safe_ssh_secret_key_file='ssh-secret-key-file';
+version_command_attempted='no';
+version_command_succeeded='no';
 
 case "${#}" in
   '0')
