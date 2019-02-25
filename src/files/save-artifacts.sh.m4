@@ -1979,6 +1979,7 @@ EOF2
   basename_1=`
     'basename' \
       "${safe_1}" \
+      0<'/dev/null' \
     ;
   `;
   s="${?}";
@@ -2007,6 +2008,7 @@ EOF2
   target_directory=`
     'dirname' \
       "${safe_target}" \
+      0<'/dev/null' \
     ;
   `;
   s="${?}";
