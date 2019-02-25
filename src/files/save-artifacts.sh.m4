@@ -1997,13 +1997,13 @@ EOF2
     ;;
   esac;
 
-  relative_dst="${year}";
-  relative_dst="${relative_dst}"'/'"${date}";
-  relative_dst="${relative_dst}"'-'"${version}";
-  relative_dst="${relative_dst}"'/'"${prefix}";
-  relative_dst="${relative_dst}${basename_1}";
+  relative_target="${year}";
+  relative_target="${relative_target}"'/'"${date}";
+  relative_target="${relative_target}"'-'"${version}";
+  relative_target="${relative_target}"'/'"${prefix}";
+  relative_target="${relative_target}${basename_1}";
 
-  safe_target="${safe_git_clone_directory}"'/'"${relative_dst}";
+  safe_target="${safe_git_clone_directory}"'/'"${relative_target}";
 
   target_directory=`
     'dirname' \
@@ -2217,7 +2217,7 @@ EOF2
       '"${git}"' \
         '\''commit'\'' \
         '\''--gpg-sign=0x'\''"${gpg_secret_key_fingerprint}" \
-        '\''--message=Add '\''"${relative_dst}" \
+        '\''--message=Add '\''"${relative_target}" \
         0<'\''/dev/null'\'' \
       ;
     ';
