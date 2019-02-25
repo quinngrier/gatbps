@@ -563,6 +563,7 @@ esac;
 date_command=''\''sh'\'' '\''build-aux/DATE.sh'\''';
 git_clone_directory='git-clone-directory'
 git_clone_url='git-clone-url'
+git_push_retries='9';
 gpg_import_directory='gpg-import-directory'
 gpg_passphrase_file='gpg-passphrase-file'
 gpg_secret_key_file='gpg-secret-key-file'
@@ -1015,6 +1016,67 @@ EOF2
 
           git_clone_attempted='no';
           git_clone_succeeded='no';
+
+          'continue'
+
+        ;;
+
+        '--git-push-retries')
+
+          case "${#}" in
+            '1')
+              'cat' 0<<EOF2 1>&2;
+${fr2}save-artifacts.sh!${fR2} ${fB2}--git-push-retries${fR2} requires a value
+${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
+EOF2
+              'exit' '1'
+            ;;
+          esac
+
+          x="${2}"
+          shift
+          shift
+          set 'x' "--git-push-retries=${x}" "${@}"
+
+          'continue'
+
+        ;;
+
+        '--git-push-retries='*)
+
+          x=`'eval' "${sed}"' "
+            s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
+            1s/^--git-push-retries=/git_push_retries='\\''/
+            \\$s/\\$/'\\''/
+          "' <<EOF2
+${1}
+EOF2
+`
+          case "${?}" in
+            '0')
+            ;;
+            *)
+              'cat' 0<<EOF2 1>&2;
+${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
+${fr2}save-artifacts.sh!${fR2}   1. a here-document
+${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
+EOF2
+              'exit' '1'
+            ;;
+          esac
+          'eval' "${x}"
+
+          case "${git_push_retries}" in
+            [0-9]|[1-9][0-9])
+              ':';
+            ;;
+            *)
+              'cat' 0<<EOF2 1>&2;
+${fr2}save-artifacts.sh!${fR2} invalid ${fB2}--git_push_retries${fR2} value: ${fB2}${git_push_retries}${fR2}
+EOF2
+              'exit' '1';
+            ;;
+          esac;
 
           'continue'
 
