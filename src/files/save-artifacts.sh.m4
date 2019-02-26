@@ -2056,14 +2056,21 @@ EOF2
     ;;
   esac;
 
-  relative_target="${root_prefix}";
-  relative_target="${relative_target}${year}";
-  relative_target="${relative_target}"'/'"${date}";
-  relative_target="${relative_target}"'-'"${version}";
-  relative_target="${relative_target}"'/'"${leaf_prefix}";
-  relative_target="${relative_target}${basename_1}";
+  relative_target='';
+  relative_target="${relative_target}""${root_prefix}";
+  relative_target="${relative_target}""${year}";
+  relative_target="${relative_target}"'/';
+  relative_target="${relative_target}""${date}";
+  relative_target="${relative_target}"'-';
+  relative_target="${relative_target}""${version}";
+  relative_target="${relative_target}"'/';
+  relative_target="${relative_target}""${leaf_prefix}";
+  relative_target="${relative_target}""${basename_1}";
 
-  safe_target="${safe_git_clone_directory}"'/'"${relative_target}";
+  safe_target='';
+  safe_target="${safe_target}""${safe_git_clone_directory}";
+  safe_target="${safe_target}"'/';
+  safe_target="${safe_target}""${relative_target}";
 
   target_directory=`
     'dirname' \
