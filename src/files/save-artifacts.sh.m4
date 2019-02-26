@@ -2434,6 +2434,29 @@ EOF2
 
   while ':'; do
 
+    'eval' '
+      GIT_DIR="${safe_git_clone_directory}"'/.git' \
+      GIT_SSH_COMMAND='\''"${sshpass}" -f"${absolute_ssh_passphrase_file}" ssh -i "${absolute_ssh_secret_key_file}"'\'' \
+      GIT_WORK_TREE="${safe_git_clone_directory}" \
+      absolute_ssh_passphrase_file="${absolute_ssh_passphrase_file}" \
+      absolute_ssh_secret_key_file="${absolute_ssh_secret_key_file}" \
+      sshpass="${sshpass}" \
+      '"${git}"' \
+        '\''push'\'' \
+        '\''origin'\'' \
+        '\''master:master'\'' \
+        0<'\''/dev/null'\'' \
+      ;
+    ';
+    s="${?}";
+    case "${s}" in
+      '0')
+        'break';
+      ;;
+    esac;
+
+    retries=$((${retries} + 1));
+
     'test' \
       "${retries}" \
       '-lt' \
@@ -2459,27 +2482,6 @@ ${fy2}save-artifacts.sh:${fR2} exit status: ${fB2}${s}${fR2}
 EOF2
         exit_status='1';
         'continue' '2';
-      ;;
-    esac;
-
-    'eval' '
-      GIT_DIR="${safe_git_clone_directory}"'/.git' \
-      GIT_SSH_COMMAND='\''"${sshpass}" -f"${absolute_ssh_passphrase_file}" ssh -i "${absolute_ssh_secret_key_file}"'\'' \
-      GIT_WORK_TREE="${safe_git_clone_directory}" \
-      absolute_ssh_passphrase_file="${absolute_ssh_passphrase_file}" \
-      absolute_ssh_secret_key_file="${absolute_ssh_secret_key_file}" \
-      sshpass="${sshpass}" \
-      '"${git}"' \
-        '\''push'\'' \
-        '\''origin'\'' \
-        '\''master:master'\'' \
-        0<'\''/dev/null'\'' \
-      ;
-    ';
-    s="${?}";
-    case "${s}" in
-      '0')
-        'break';
       ;;
     esac;
 
@@ -2515,8 +2517,6 @@ EOF2
         'continue' '2';
       ;;
     esac;
-
-    retries=$((${retries} + 1));
 
   done;
 
