@@ -1714,6 +1714,78 @@ EOF2
 
         ;;
 
+        '--'*'='*)
+
+          'eval' "${awk}"' '\''
+            {
+              if (NR != 1) {
+                name = name "\n"
+              }
+              done = sub(/=.*/, "", $0)
+              name = name $0
+              if (done) {
+                exit
+              }
+            }
+            END {
+              printf "'\''"${fr2}"'\''save-artifacts.sh!'\''"${fR2}"'\'' unknown option: '\''"${fB2}"'\''%s'\''"${fR2}"'\''\n", name
+              printf "'\''"${fr2}"'\''save-artifacts.sh!'\''"${fR2}"'\'' try '\''"${fB2}"'\''save-artifacts.sh --help'\''"${fR2}"'\'' for more information\n"
+            }
+          '\''' >&2 <<EOF2
+${1}
+EOF2
+          case "${?}" in
+            '0')
+            ;;
+            *)
+              'cat' 0<<EOF2 1>&2;
+${fr2}save-artifacts.sh!${fR2} ${fB2}${awk}${fR2} failed while reading from:
+${fr2}save-artifacts.sh!${fR2}   1. a here-document
+${fr2}save-artifacts.sh!${fR2} and writing to: standard error
+EOF2
+            ;;
+          esac
+          'exit' '1'
+
+        ;;
+
+        '--'*|'-'?)
+
+          'cat' 0<<EOF2 1>&2;
+${fr2}save-artifacts.sh!${fR2} unknown option: ${fB2}${1}${fR2}
+${fr2}save-artifacts.sh!${fR2} try ${fB2}save-artifacts.sh --help${fR2} for more information
+EOF2
+          'exit' '1'
+
+        ;;
+
+        '-'?*)
+
+          'eval' "${awk}"' '\''
+            {
+              name = substr($0 "\n", 1, 2)
+              printf "'\''"${fr2}"'\''save-artifacts.sh!'\''"${fR2}"'\'' unknown option: '\''"${fB2}"'\''%s'\''"${fR2}"'\''\n", name
+              printf "'\''"${fr2}"'\''save-artifacts.sh!'\''"${fR2}"'\'' try '\''"${fB2}"'\''save-artifacts.sh --help'\''"${fR2}"'\'' for more information\n"
+              exit
+            }
+          '\''' >&2 <<EOF2
+${1}
+EOF2
+          case "${?}" in
+            '0')
+            ;;
+            *)
+              'cat' 0<<EOF2 1>&2;
+${fr2}save-artifacts.sh!${fR2} ${fB2}${awk}${fR2} failed while reading from:
+${fr2}save-artifacts.sh!${fR2}   1. a here-document
+${fr2}save-artifacts.sh!${fR2} and writing to: standard error
+EOF2
+            ;;
+          esac
+          'exit' '1'
+
+        ;;
+
       esac
 
     ;;
