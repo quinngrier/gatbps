@@ -568,6 +568,7 @@ gpg_import_directory='gpg-import-directory'
 gpg_passphrase_file='gpg-passphrase-file'
 gpg_secret_key_file='gpg-secret-key-file'
 leaf_prefix='';
+root_prefix='';
 ssh_passphrase_file='ssh-passphrase-file'
 ssh_secret_key_file='ssh-secret-key-file'
 version_command=''\''sh'\'' '\''build-aux/VERSION.sh'\''';
@@ -1321,6 +1322,64 @@ EOF2
 
         ;;
 
+        '--root-prefix')
+
+          case "${#}" in
+            '1')
+              'cat' 0<<EOF2 1>&2;
+${fr2}save-artifacts.sh!${fR2} ${fB2}--root-prefix${fR2} requires a value
+${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
+EOF2
+              'exit' '1'
+            ;;
+          esac
+
+          x="${2}"
+          shift
+          shift
+          set 'x' "--root-prefix=${x}" "${@}"
+
+          'continue'
+
+        ;;
+
+        '--root-prefix='*)
+
+          x=`'eval' "${sed}"' "
+            s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
+            1s/^--root-prefix=/root_prefix='\\''/
+            \\$s/\\$/'\\''/
+          "' <<EOF2
+${1}
+EOF2
+`
+          case "${?}" in
+            '0')
+            ;;
+            *)
+              'cat' 0<<EOF2 1>&2;
+${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
+${fr2}save-artifacts.sh!${fR2}   1. a here-document
+${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
+EOF2
+              'exit' '1'
+            ;;
+          esac
+          'eval' "${x}"
+
+          case "${root_prefix}" in
+            '../'*|*'/../')
+              'cat' 0<<EOF2 1>&2;
+${fr2}save-artifacts.sh!${fR2} invalid ${fB2}--root-prefix${fR2} value: ${fB2}${root_prefix}${fR2}
+EOF2
+              'exit' '1';
+            ;;
+          esac;
+
+          'continue'
+
+        ;;
+
         '--sed')
 
           case "${#}" in
@@ -1997,7 +2056,8 @@ EOF2
     ;;
   esac;
 
-  relative_target="${year}";
+  relative_target="${root_prefix}";
+  relative_target="${relative_target}${year}";
   relative_target="${relative_target}"'/'"${date}";
   relative_target="${relative_target}"'-'"${version}";
   relative_target="${relative_target}"'/'"${leaf_prefix}";
