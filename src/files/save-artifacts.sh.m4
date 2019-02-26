@@ -2236,6 +2236,88 @@ EOF2
     ;;
   esac;
 
+  retries='-1';
+
+  while ':'; do
+
+    'test' \
+      "${retries}" \
+      '-lt' \
+      "${git_push_retries}" \
+      0<'/dev/null' \
+    ;
+    s="${?}";
+    case "${s}" in
+      '0')
+        ':';
+      ;;
+      '1')
+        'cat' 0<<EOF2 1>&2;
+${fy2}save-artifacts.sh:${fR2} ran out of retries
+EOF2
+        exit_status='1';
+        'continue' '2';
+      ;;
+      *)
+        'cat' 0<<EOF2 1>&2;
+${fy2}save-artifacts.sh:${fR2} ${fB2}test${fR2} failed
+${fy2}save-artifacts.sh:${fR2} exit status: ${fB2}${s}${fR2}
+EOF2
+        exit_status='1';
+        'continue' '2';
+      ;;
+    esac;
+
+    'eval' '
+      GIT_DIR="${safe_git_clone_directory}"'/.git' \
+      GIT_WORK_TREE="${safe_git_clone_directory}" \
+      '"${git}"' \
+        '\''push'\'' \
+        '\''origin'\'' \
+        '\''master:master'\'' \
+        0<'\''/dev/null'\'' \
+      ;
+    ';
+    s="${?}";
+    case "${s}" in
+      '0')
+        'break';
+      ;;
+    esac;
+
+    'sleep' \
+      '5' \
+      0<'/dev/null' \
+    ;
+
+    'eval' '
+      GIT_DIR="${safe_git_clone_directory}"'/.git' \
+      GIT_WORK_TREE="${safe_git_clone_directory}" \
+      '"${git}"' \
+        '\''pull'\'' \
+        '\''origin'\'' \
+        '\''master'\'' \
+        0<'\''/dev/null'\'' \
+      ;
+    ';
+    s="${?}";
+    case "${s}" in
+      '0')
+        ':';
+      ;;
+      *)
+        'cat' 0<<EOF2 1>&2;
+${fy2}save-artifacts.sh:${fR2} ${fB2}git pull${fR2} failed
+EOF2
+        exit_status='1';
+        'continue' '2';
+      ;;
+    esac;
+
+    retries=$((${retries} + 1));
+
+  done;
+
 done
 
 'exit' "${exit_status}";
