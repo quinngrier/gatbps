@@ -2028,16 +2028,16 @@ EOF2
 
   case "${1}" in
     '/'*)
-      safe_1="${1}";
+      safe_src="${1}";
     ;;
     *)
-      safe_1='./'"${1}";
+      safe_src='./'"${1}";
     ;;
   esac;
 
-  basename_1=`
+  basename_src=`
     'basename' \
-      "${safe_1}" \
+      "${safe_src}" \
       0<'/dev/null' \
     ;
   `;
@@ -2056,25 +2056,25 @@ EOF2
     ;;
   esac;
 
-  relative_target='';
-  relative_target="${relative_target}""${root_prefix}";
-  relative_target="${relative_target}""${year}";
-  relative_target="${relative_target}"'/';
-  relative_target="${relative_target}""${date}";
-  relative_target="${relative_target}"'-';
-  relative_target="${relative_target}""${version}";
-  relative_target="${relative_target}"'/';
-  relative_target="${relative_target}""${leaf_prefix}";
-  relative_target="${relative_target}""${basename_1}";
+  relative_dst='';
+  relative_dst="${relative_dst}""${root_prefix}";
+  relative_dst="${relative_dst}""${year}";
+  relative_dst="${relative_dst}"'/';
+  relative_dst="${relative_dst}""${date}";
+  relative_dst="${relative_dst}"'-';
+  relative_dst="${relative_dst}""${version}";
+  relative_dst="${relative_dst}"'/';
+  relative_dst="${relative_dst}""${leaf_prefix}";
+  relative_dst="${relative_dst}""${basename_src}";
 
-  safe_target='';
-  safe_target="${safe_target}""${safe_git_clone_directory}";
-  safe_target="${safe_target}"'/';
-  safe_target="${safe_target}""${relative_target}";
+  safe_dst='';
+  safe_dst="${safe_dst}""${safe_git_clone_directory}";
+  safe_dst="${safe_dst}"'/';
+  safe_dst="${safe_dst}""${relative_dst}";
 
-  target_directory=`
+  dst_directory=`
     'dirname' \
-      "${safe_target}" \
+      "${safe_dst}" \
       0<'/dev/null' \
     ;
   `;
@@ -2093,18 +2093,18 @@ EOF2
     ;;
   esac;
 
-  case "${target_directory}" in
+  case "${dst_directory}" in
     '/'*)
-      safe_target_directory="${target_directory}";
+      safe_dst_directory="${dst_directory}";
     ;;
     *)
-      safe_target_directory='./'"${target_directory}";
+      safe_dst_directory='./'"${dst_directory}";
     ;;
   esac;
 
   'test' \
     '-f' \
-    "${safe_target}" \
+    "${safe_dst}" \
   ;
   s="${?}";
   case "${s}" in
@@ -2126,7 +2126,7 @@ EOF2
 
   'test' \
     '-d' \
-    "${safe_target}" \
+    "${safe_dst}" \
   ;
   s="${?}";
   case "${s}" in
@@ -2148,7 +2148,7 @@ EOF2
 
   'mkdir' \
     '-p' \
-    "${safe_target_directory}" \
+    "${safe_dst_directory}" \
     0<'/dev/null' \
   ;
   s="${?}";
@@ -2158,7 +2158,7 @@ EOF2
     ;;
     *)
       'cat' 0<<EOF2 1>&2;
-${fy2}save-artifacts.sh:${fR2} ${fB2}mkdir -p${fR2} failed: ${fB2}${safe_target_directory}${fR2}
+${fy2}save-artifacts.sh:${fR2} ${fB2}mkdir -p${fR2} failed: ${fB2}${safe_dst_directory}${fR2}
 ${fy2}save-artifacts.sh:${fR2} exit status: ${fB2}${s}${fR2}
 EOF2
       exit_status='1';
@@ -2168,8 +2168,8 @@ EOF2
 
   'cp' \
     '-R' \
-    "${safe_1}" \
-    "${safe_target}" \
+    "${safe_src}" \
+    "${safe_dst}" \
     0<'/dev/null' \
   ;
   s="${?}";
@@ -2191,11 +2191,11 @@ EOF2
     GNUPGHOME="${safe_gpg_import_directory}" \
     '"${gpg}"' \
       '\''--output'\'' \
-      "${safe_target}"'\''.sig'\'' \
+      "${safe_dst}"'\''.sig'\'' \
       '\''--passphrase-file'\'' \
       "${safe_gpg_passphrase_file}" \
       '\''--detach-sign'\'' \
-      "${safe_target}" \
+      "${safe_dst}" \
       0<'\''/dev/null'\'' \
     ;
   ';
@@ -2284,7 +2284,7 @@ EOF2
       '"${git}"' \
         '\''commit'\'' \
         '\''--gpg-sign=0x'\''"${gpg_secret_key_fingerprint}" \
-        '\''--message=Add '\''"${relative_target}" \
+        '\''--message=Add '\''"${relative_dst}" \
         0<'\''/dev/null'\'' \
       ;
     ';
