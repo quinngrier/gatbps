@@ -567,7 +567,7 @@ git_push_retries='9';
 gpg_import_directory='gpg-import-directory'
 gpg_passphrase_file='gpg-passphrase-file'
 gpg_secret_key_file='gpg-secret-key-file'
-prefix='';
+leaf_prefix='';
 ssh_passphrase_file='ssh-passphrase-file'
 ssh_secret_key_file='ssh-secret-key-file'
 version_command=''\''sh'\'' '\''build-aux/VERSION.sh'\''';
@@ -1263,12 +1263,12 @@ EOF2
 
         ;;
 
-        '--prefix')
+        '--leaf-prefix')
 
           case "${#}" in
             '1')
               'cat' 0<<EOF2 1>&2;
-${fr2}save-artifacts.sh!${fR2} ${fB2}--prefix${fR2} requires a value
+${fr2}save-artifacts.sh!${fR2} ${fB2}--leaf-prefix${fR2} requires a value
 ${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
 EOF2
               'exit' '1'
@@ -1278,17 +1278,17 @@ EOF2
           x="${2}"
           shift
           shift
-          set 'x' "--prefix=${x}" "${@}"
+          set 'x' "--leaf-prefix=${x}" "${@}"
 
           'continue'
 
         ;;
 
-        '--prefix='*)
+        '--leaf-prefix='*)
 
           x=`'eval' "${sed}"' "
             s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
-            1s/^--prefix=/prefix='\\''/
+            1s/^--leaf-prefix=/leaf_prefix='\\''/
             \\$s/\\$/'\\''/
           "' <<EOF2
 ${1}
@@ -1308,10 +1308,10 @@ EOF2
           esac
           'eval' "${x}"
 
-          case "${prefix}" in
+          case "${leaf_prefix}" in
             '../'*|*'/../')
               'cat' 0<<EOF2 1>&2;
-${fr2}save-artifacts.sh!${fR2} invalid ${fB2}--prefix${fR2} value: ${fB2}${prefix}${fR2}
+${fr2}save-artifacts.sh!${fR2} invalid ${fB2}--leaf-prefix${fR2} value: ${fB2}${leaf_prefix}${fR2}
 EOF2
               'exit' '1';
             ;;
@@ -2000,7 +2000,7 @@ EOF2
   relative_target="${year}";
   relative_target="${relative_target}"'/'"${date}";
   relative_target="${relative_target}"'-'"${version}";
-  relative_target="${relative_target}"'/'"${prefix}";
+  relative_target="${relative_target}"'/'"${leaf_prefix}";
   relative_target="${relative_target}${basename_1}";
 
   safe_target="${safe_git_clone_directory}"'/'"${relative_target}";
