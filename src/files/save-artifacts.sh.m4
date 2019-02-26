@@ -1141,6 +1141,9 @@ EOF2
             ;;
           esac;
 
+          gpg_import_attempted='no';
+          gpg_import_succeeded='no';
+
           'continue'
 
         ;;
