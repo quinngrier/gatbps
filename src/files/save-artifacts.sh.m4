@@ -575,6 +575,8 @@ version_command=''\''sh'\'' '\''build-aux/VERSION.sh'\''';
 
 absolute_gpg_import_directory="${pwd}"'/gpg-import-directory';
 absolute_gpg_passphrase_file="${pwd}"'/gpg-passphrase-file';
+absolute_ssh_passphrase_file="${pwd}"'/ssh-passphrase-file';
+absolute_ssh_secret_key_file="${pwd}"'/ssh-secret-key-file';
 date_command_attempted='no';
 date_command_succeeded='no';
 exit_status='0';
@@ -1502,9 +1504,11 @@ EOF2
 
           case "${ssh_passphrase_file}" in
             '/'*)
+              absolute_ssh_passphrase_file="${ssh_passphrase_file}";
               safe_ssh_passphrase_file="${ssh_passphrase_file}";
             ;;
             *)
+              absolute_ssh_passphrase_file="${pwd}"'/'"${ssh_passphrase_file}";
               safe_ssh_passphrase_file='./'"${ssh_passphrase_file}";
             ;;
           esac;
@@ -1560,9 +1564,11 @@ EOF2
 
           case "${ssh_secret_key_file}" in
             '/'*)
+              absolute_ssh_secret_key_file="${ssh_secret_key_file}";
               safe_ssh_secret_key_file="${ssh_secret_key_file}";
             ;;
             *)
+              absolute_ssh_secret_key_file="${pwd}"'/'"${ssh_secret_key_file}";
               safe_ssh_secret_key_file='./'"${ssh_secret_key_file}";
             ;;
           esac;
@@ -1885,7 +1891,8 @@ EOF2
       git_clone_attempted='yes';
 
       'eval' '
-        GIT_SSH_COMMAND='\''"${sshpass}" -f"${ssh_secret_key_file}" ssh'\'' \
+        GIT_SSH_COMMAND='\''"${sshpass}" -f"${ssh_passphrase_file}" ssh -i "${ssh_secret_key_file}"'\'' \
+        ssh_passphrase_file="${ssh_passphrase_file}" \
         ssh_secret_key_file="${ssh_secret_key_file}" \
         sshpass="${sshpass}" \
         '"${git}"' \
@@ -2337,7 +2344,11 @@ EOF2
 
     'eval' '
       GIT_DIR="${safe_git_clone_directory}"'/.git' \
+      GIT_SSH_COMMAND='\''"${sshpass}" -f"${absolute_ssh_passphrase_file}" ssh -i "${absolute_ssh_secret_key_file}"'\'' \
       GIT_WORK_TREE="${safe_git_clone_directory}" \
+      absolute_ssh_passphrase_file="${absolute_ssh_passphrase_file}" \
+      absolute_ssh_secret_key_file="${absolute_ssh_secret_key_file}" \
+      sshpass="${sshpass}" \
       '"${git}"' \
         '\''push'\'' \
         '\''origin'\'' \
@@ -2359,7 +2370,11 @@ EOF2
 
     'eval' '
       GIT_DIR="${safe_git_clone_directory}"'/.git' \
+      GIT_SSH_COMMAND='\''"${sshpass}" -f"${absolute_ssh_passphrase_file}" ssh -i "${absolute_ssh_secret_key_file}"'\'' \
       GIT_WORK_TREE="${safe_git_clone_directory}" \
+      absolute_ssh_passphrase_file="${absolute_ssh_passphrase_file}" \
+      absolute_ssh_secret_key_file="${absolute_ssh_secret_key_file}" \
+      sshpass="${sshpass}" \
       '"${git}"' \
         '\''pull'\'' \
         '\''origin'\'' \
