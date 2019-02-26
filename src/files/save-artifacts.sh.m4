@@ -2299,6 +2299,7 @@ EOF2
   'eval' '
     GNUPGHOME="${safe_gpg_import_directory}" \
     '"${gpg}"' \
+      '\''--no-options'\'' \
       '\''--output'\'' \
       "${safe_dst}"'\''.sig'\'' \
       '\''--passphrase-file'\'' \
