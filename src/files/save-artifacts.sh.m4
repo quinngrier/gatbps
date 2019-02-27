@@ -561,8 +561,6 @@ esac;
 'readonly' 'pwd';
 
 date_command=''\''sh'\'' '\''build-aux/DATE.sh'\''';
-git_clone_directory='git-clone-directory'
-gpg_import_directory='gpg-import-directory'
 gpg_passphrase_file='gpg-passphrase-file'
 gpg_secret_key_file='gpg-secret-key-file'
 leaf_prefix='';
@@ -571,9 +569,10 @@ repository='repository'
 root_prefix='';
 ssh_passphrase_file='ssh-passphrase-file'
 ssh_secret_key_file='ssh-secret-key-file'
+temporary_directory='temporary-directory'
 version_command=''\''sh'\'' '\''build-aux/VERSION.sh'\''';
 
-absolute_gpg_import_directory="${pwd}"'/gpg-import-directory';
+absolute_gpg_import_directory="${pwd}"'/temporary-directory/gpg';
 absolute_gpg_passphrase_file="${pwd}"'/gpg-passphrase-file';
 absolute_ssh_passphrase_file="${pwd}"'/ssh-passphrase-file';
 absolute_ssh_secret_key_file="${pwd}"'/ssh-secret-key-file';
@@ -581,14 +580,16 @@ date_command_attempted='no';
 date_command_succeeded='no';
 exit_status='0';
 git_clone_attempted='no';
+git_clone_directory='temporary-directory/git';
 git_clone_succeeded='no';
 gpg_import_attempted='no';
+gpg_import_directory='temporary-directory/gpg';
 gpg_import_succeeded='no';
 gpg_passphrase_link_attempted='no';
 gpg_passphrase_link_succeeded='no';
 gpg_secret_key_fingerprint='';
-safe_git_clone_directory='git-clone-directory'
-safe_gpg_import_directory='gpg-import-directory';
+safe_git_clone_directory='temporary-directory/git';
+safe_gpg_import_directory='temporary-directory/gpg';
 safe_gpg_passphrase_file='gpg-passphrase-file';
 safe_gpg_secret_key_file='gpg-secret-key-file';
 safe_ssh_passphrase_file='ssh-passphrase-file';
@@ -911,127 +912,6 @@ EOF2
               gpg="${gpg_auto}";
             ;;
           esac;
-
-          'continue'
-
-        ;;
-
-        '--git-clone-directory')
-
-          case "${#}" in
-            '1')
-              'cat' 0<<EOF2 1>&2;
-${fr2}save-artifacts.sh!${fR2} ${fB2}--git-clone-directory${fR2} requires a value
-${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
-EOF2
-              'exit' '1'
-            ;;
-          esac
-
-          x="${2}"
-          shift
-          shift
-          set 'x' "--git-clone-directory=${x}" "${@}"
-
-          'continue'
-
-        ;;
-
-        '--git-clone-directory='*)
-
-          x=`'eval' "${sed}"' "
-            s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
-            1s/^--git-clone-directory=/git_clone_directory='\\''/
-            \\$s/\\$/'\\''/
-          "' <<EOF2
-${1}
-EOF2
-`
-          case "${?}" in
-            '0')
-            ;;
-            *)
-              'cat' 0<<EOF2 1>&2;
-${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fr2}save-artifacts.sh!${fR2}   1. a here-document
-${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
-EOF2
-              'exit' '1'
-            ;;
-          esac
-          'eval' "${x}"
-
-          case "${git_clone_directory}" in
-            '/'*)
-              safe_git_clone_directory="${git_clone_directory}";
-            ;;
-            *)
-              safe_git_clone_directory='./'"${git_clone_directory}";
-            ;;
-          esac;
-
-          'continue'
-
-        ;;
-
-        '--gpg-import-directory')
-
-          case "${#}" in
-            '1')
-              'cat' 0<<EOF2 1>&2;
-${fr2}save-artifacts.sh!${fR2} ${fB2}--gpg-import-directory${fR2} requires a value
-${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
-EOF2
-              'exit' '1'
-            ;;
-          esac
-
-          x="${2}"
-          shift
-          shift
-          set 'x' "--gpg-import-directory=${x}" "${@}"
-
-          'continue'
-
-        ;;
-
-        '--gpg-import-directory='*)
-
-          x=`'eval' "${sed}"' "
-            s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
-            1s/^--gpg-import-directory=/gpg_import_directory='\\''/
-            \\$s/\\$/'\\''/
-          "' <<EOF2
-${1}
-EOF2
-`
-          case "${?}" in
-            '0')
-            ;;
-            *)
-              'cat' 0<<EOF2 1>&2;
-${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fr2}save-artifacts.sh!${fR2}   1. a here-document
-${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
-EOF2
-              'exit' '1'
-            ;;
-          esac
-          'eval' "${x}"
-
-          case "${gpg_import_directory}" in
-            '/'*)
-              absolute_gpg_import_directory="${gpg_import_directory}";
-              safe_gpg_import_directory="${gpg_import_directory}";
-            ;;
-            *)
-              absolute_gpg_import_directory="${pwd}"'/'"${gpg_import_directory}";
-              safe_gpg_import_directory='./'"${gpg_import_directory}";
-            ;;
-          esac;
-
-          gpg_import_attempted='no';
-          gpg_import_succeeded='no';
 
           'continue'
 
@@ -1657,6 +1537,83 @@ EOF2
               sshpass="${sshpass_auto}";
             ;;
           esac;
+
+          'continue'
+
+        ;;
+
+        '--temporary-directory')
+
+          case "${#}" in
+            '1')
+              'cat' 0<<EOF2 1>&2;
+${fr2}save-artifacts.sh!${fR2} ${fB2}--temporary-directory${fR2} requires a value
+${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
+EOF2
+              'exit' '1'
+            ;;
+          esac
+
+          x="${2}"
+          shift
+          shift
+          set 'x' "--temporary-directory=${x}" "${@}"
+
+          'continue'
+
+        ;;
+
+        '--temporary-directory='*)
+
+          x=`'eval' "${sed}"' "
+            s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
+            1s/^--temporary-directory=/temporary_directory='\\''/
+            \\$s/\\$/'\\''/
+          "' <<EOF2
+${1}
+EOF2
+`
+          case "${?}" in
+            '0')
+            ;;
+            *)
+              'cat' 0<<EOF2 1>&2;
+${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
+${fr2}save-artifacts.sh!${fR2}   1. a here-document
+${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
+EOF2
+              'exit' '1'
+            ;;
+          esac
+          'eval' "${x}"
+
+          git_clone_directory="${temporary_directory}"'/git';
+          gpg_import_directory="${temporary_directory}"'/gpg';
+
+          case "${git_clone_directory}" in
+            '/'*)
+              safe_git_clone_directory="${git_clone_directory}";
+            ;;
+            *)
+              safe_git_clone_directory='./'"${git_clone_directory}";
+            ;;
+          esac;
+
+          case "${gpg_import_directory}" in
+            '/'*)
+              absolute_gpg_import_directory="${gpg_import_directory}";
+              safe_gpg_import_directory="${gpg_import_directory}";
+            ;;
+            *)
+              absolute_gpg_import_directory="${pwd}"'/'"${gpg_import_directory}";
+              safe_gpg_import_directory='./'"${gpg_import_directory}";
+            ;;
+          esac;
+
+          git_clone_attempted='no';
+          git_clone_succeeded='no';
+          gpg_import_attempted='no';
+          gpg_import_succeeded='no';
 
           'continue'
 
