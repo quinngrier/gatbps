@@ -589,6 +589,8 @@ gpg_import_attempted='no';
 gpg_import_directory='temporary-directory/gpg_import';
 gpg_import_succeeded='no';
 gpg_secret_key_fingerprint='';
+gpg_wrapper_attempted='no';
+gpg_wrapper_succeeded='no';
 safe_git_clone_directory='temporary-directory/git_clone';
 safe_gpg_import_directory='temporary-directory/gpg_import';
 safe_gpg_passphrase_file='gpg-passphrase-file';
@@ -914,6 +916,9 @@ EOF2
               gpg="${gpg_auto}";
             ;;
           esac;
+
+          gpg_wrapper_attempted='no';
+          gpg_wrapper_succeeded='no';
 
           'continue'
 
@@ -1673,6 +1678,8 @@ EOF2
           git_clone_succeeded='no';
           gpg_import_attempted='no';
           gpg_import_succeeded='no';
+          gpg_wrapper_attempted='no';
+          gpg_wrapper_succeeded='no';
 
           'continue'
 
@@ -2070,6 +2077,61 @@ EOF2
     ;;
   esac;
 
+  case "${gpg_wrapper_attempted}" in
+    'no')
+
+      gpg_wrapper_attempted='yes';
+
+      'cat' \
+        0<<EOF2 \
+        1>"${safe_temporary_directory}"'/gpg_wrapper' \
+      ;
+#! /bin/sh -
+${gpg} "\${@}";
+EOF2
+      s="${?}";
+      case "${s}" in
+        '0')
+          ':';
+        ;;
+        *)
+          'cat' 0<<EOF2 1>&2;
+${fy2}save-artifacts.sh:${fR2} ${fB2}cat${fR2} failed
+EOF2
+          exit_status='1';
+          'continue';
+        ;;
+      esac;
+
+      'chmod' \
+        '+x' \
+        "${safe_temporary_directory}"'/gpg_wrapper' \
+        0<'/dev/null' \
+      ;
+      case "${?}" in
+        '0')
+          ':';
+        ;;
+        *)
+          'cat' 0<<EOF2 1>&2;
+${fy2}save-artifacts.sh:${fR2} ${fB2}chmod${fR2} failed
+EOF2
+          exit_status='1';
+          'continue';
+        ;;
+      esac;
+
+      gpg_wrapper_succeeded='yes';
+
+    ;;
+  esac;
+
+  case "${gpg_wrapper_succeeded}" in
+    'no')
+      'continue';
+    ;;
+  esac;
+
   case "${date_command_attempted}" in
     'no')
 
@@ -2407,6 +2469,8 @@ EOF2
     && 'eval' '
       GNUPGHOME="${absolute_gpg_import_directory}" \
       '"${git}"' \
+        '\''-c'\'' \
+        '\''gpg.program='\''"${absolute_temporary_directory}"'\''/gpg_wrapper'\'' \
         '\''commit'\'' \
         '\''--gpg-sign=0x'\''"${gpg_secret_key_fingerprint}" \
         '\''--message=Add '\''"${relative_dst}" \
