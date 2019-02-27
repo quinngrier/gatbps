@@ -208,6 +208,7 @@ fc2='' # stderr style: cyan
 #         *)
 #           gpg_auto=''\''gpg'\''';
 #           for x in \
+#             ''\''gpg1'\''' \
 #           ; do
 #             if 'eval' \
 #               "${x}"' '\''--version'\''' \
@@ -356,6 +357,7 @@ case "${gpg}" in
       *)
         gpg_auto=''\''gpg'\''';
         for x in \
+          ''\''gpg1'\''' \
         ; do
           if 'eval' \
             "${x}"' '\''--version'\''' \
@@ -894,6 +896,7 @@ EOF2
                 *)
                   gpg_auto=''\''gpg'\''';
                   for x in \
+                    ''\''gpg1'\''' \
                   ; do
                     if 'eval' \
                       "${x}"' '\''--version'\''' \
