@@ -562,11 +562,11 @@ esac;
 
 date_command=''\''sh'\'' '\''build-aux/DATE.sh'\''';
 git_clone_directory='git-clone-directory'
-git_push_attempts='10';
 gpg_import_directory='gpg-import-directory'
 gpg_passphrase_file='gpg-passphrase-file'
 gpg_secret_key_file='gpg-secret-key-file'
 leaf_prefix='';
+push_attempts='10';
 repository='repository'
 root_prefix='';
 ssh_passphrase_file='ssh-passphrase-file'
@@ -974,67 +974,6 @@ EOF2
 
         ;;
 
-        '--git-push-attempts')
-
-          case "${#}" in
-            '1')
-              'cat' 0<<EOF2 1>&2;
-${fr2}save-artifacts.sh!${fR2} ${fB2}--git-push-attempts${fR2} requires a value
-${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
-EOF2
-              'exit' '1'
-            ;;
-          esac
-
-          x="${2}"
-          shift
-          shift
-          set 'x' "--git-push-attempts=${x}" "${@}"
-
-          'continue'
-
-        ;;
-
-        '--git-push-attempts='*)
-
-          x=`'eval' "${sed}"' "
-            s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
-            1s/^--git-push-attempts=/git_push_attempts='\\''/
-            \\$s/\\$/'\\''/
-          "' <<EOF2
-${1}
-EOF2
-`
-          case "${?}" in
-            '0')
-            ;;
-            *)
-              'cat' 0<<EOF2 1>&2;
-${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fr2}save-artifacts.sh!${fR2}   1. a here-document
-${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
-EOF2
-              'exit' '1'
-            ;;
-          esac
-          'eval' "${x}"
-
-          case "${git_push_attempts}" in
-            [1-9]|[1-9][0-9])
-              ':';
-            ;;
-            *)
-              'cat' 0<<EOF2 1>&2;
-${fr2}save-artifacts.sh!${fR2} invalid ${fB2}--git_push_attempts${fR2} value: ${fB2}${git_push_attempts}${fR2}
-EOF2
-              'exit' '1';
-            ;;
-          esac;
-
-          'continue'
-
-        ;;
-
         '--gpg-import-directory')
 
           case "${#}" in
@@ -1271,6 +1210,67 @@ EOF2
             '../'*|*'/../')
               'cat' 0<<EOF2 1>&2;
 ${fr2}save-artifacts.sh!${fR2} invalid ${fB2}--leaf-prefix${fR2} value: ${fB2}${leaf_prefix}${fR2}
+EOF2
+              'exit' '1';
+            ;;
+          esac;
+
+          'continue'
+
+        ;;
+
+        '--push-attempts')
+
+          case "${#}" in
+            '1')
+              'cat' 0<<EOF2 1>&2;
+${fr2}save-artifacts.sh!${fR2} ${fB2}--push-attempts${fR2} requires a value
+${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
+EOF2
+              'exit' '1'
+            ;;
+          esac
+
+          x="${2}"
+          shift
+          shift
+          set 'x' "--push-attempts=${x}" "${@}"
+
+          'continue'
+
+        ;;
+
+        '--push-attempts='*)
+
+          x=`'eval' "${sed}"' "
+            s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
+            1s/^--push-attempts=/push_attempts='\\''/
+            \\$s/\\$/'\\''/
+          "' <<EOF2
+${1}
+EOF2
+`
+          case "${?}" in
+            '0')
+            ;;
+            *)
+              'cat' 0<<EOF2 1>&2;
+${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
+${fr2}save-artifacts.sh!${fR2}   1. a here-document
+${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
+EOF2
+              'exit' '1'
+            ;;
+          esac
+          'eval' "${x}"
+
+          case "${push_attempts}" in
+            [1-9]|[1-9][0-9])
+              ':';
+            ;;
+            *)
+              'cat' 0<<EOF2 1>&2;
+${fr2}save-artifacts.sh!${fR2} invalid ${fB2}--push-attempts${fR2} value: ${fB2}${push_attempts}${fR2}
 EOF2
               'exit' '1';
             ;;
@@ -2460,7 +2460,7 @@ EOF2
     'test' \
       "${attempt_index}" \
       '-lt' \
-      "${git_push_attempts}" \
+      "${push_attempts}" \
       0<'/dev/null' \
     ;
     s="${?}";
