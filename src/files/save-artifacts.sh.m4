@@ -562,7 +562,7 @@ esac;
 
 date_command=''\''sh'\'' '\''build-aux/DATE.sh'\''';
 git_clone_directory='git-clone-directory'
-git_push_retries='9';
+git_push_attempts='10';
 gpg_import_directory='gpg-import-directory'
 gpg_passphrase_file='gpg-passphrase-file'
 gpg_secret_key_file='gpg-secret-key-file'
@@ -974,12 +974,12 @@ EOF2
 
         ;;
 
-        '--git-push-retries')
+        '--git-push-attempts')
 
           case "${#}" in
             '1')
               'cat' 0<<EOF2 1>&2;
-${fr2}save-artifacts.sh!${fR2} ${fB2}--git-push-retries${fR2} requires a value
+${fr2}save-artifacts.sh!${fR2} ${fB2}--git-push-attempts${fR2} requires a value
 ${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
 EOF2
               'exit' '1'
@@ -989,17 +989,17 @@ EOF2
           x="${2}"
           shift
           shift
-          set 'x' "--git-push-retries=${x}" "${@}"
+          set 'x' "--git-push-attempts=${x}" "${@}"
 
           'continue'
 
         ;;
 
-        '--git-push-retries='*)
+        '--git-push-attempts='*)
 
           x=`'eval' "${sed}"' "
             s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
-            1s/^--git-push-retries=/git_push_retries='\\''/
+            1s/^--git-push-attempts=/git_push_attempts='\\''/
             \\$s/\\$/'\\''/
           "' <<EOF2
 ${1}
@@ -1019,13 +1019,13 @@ EOF2
           esac
           'eval' "${x}"
 
-          case "${git_push_retries}" in
-            [0-9]|[1-9][0-9])
+          case "${git_push_attempts}" in
+            [1-9]|[1-9][0-9])
               ':';
             ;;
             *)
               'cat' 0<<EOF2 1>&2;
-${fr2}save-artifacts.sh!${fR2} invalid ${fB2}--git_push_retries${fR2} value: ${fB2}${git_push_retries}${fR2}
+${fr2}save-artifacts.sh!${fR2} invalid ${fB2}--git_push_attempts${fR2} value: ${fB2}${git_push_attempts}${fR2}
 EOF2
               'exit' '1';
             ;;
@@ -2430,7 +2430,7 @@ EOF2
     ;;
   esac;
 
-  retries='-1';
+  attempt_index='0';
 
   while ':'; do
 
@@ -2455,12 +2455,12 @@ EOF2
       ;;
     esac;
 
-    retries=$((${retries} + 1));
+    attempt_index=$((${attempt_index} + 1));
 
     'test' \
-      "${retries}" \
+      "${attempt_index}" \
       '-lt' \
-      "${git_push_retries}" \
+      "${git_push_attempts}" \
       0<'/dev/null' \
     ;
     s="${?}";
@@ -2470,7 +2470,7 @@ EOF2
       ;;
       '1')
         'cat' 0<<EOF2 1>&2;
-${fy2}save-artifacts.sh:${fR2} ran out of retries
+${fy2}save-artifacts.sh:${fR2} ran out of attempts
 EOF2
         exit_status='1';
         'continue' '2';
