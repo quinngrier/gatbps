@@ -1746,11 +1746,28 @@ EOF2
 
       gpg_import_attempted='yes';
 
-      if 'test' '-f' "${safe_gpg_secret_key_file}"; then
-        ':';
-      else
-        'continue';
-      fi;
+      'test' \
+        '-f' \
+        "${safe_gpg_secret_key_file}" \
+        0<'/dev/null' \
+      ;
+      s="${?}";
+      case "${s}" in
+        '0')
+          ':';
+        ;;
+        '1')
+          'continue';
+        ;;
+        *)
+          'cat' 0<<EOF2 1>&2;
+${fy2}save-artifacts.sh:${fR2} ${fB2}test${fR2} failed
+${fy2}save-artifacts.sh:${fR2} exit status: ${fB2}${s}${fR2}
+EOF2
+          exit_status='1';
+          'continue';
+        ;;
+      esac;
 
       'rm' \
         '-f' \
