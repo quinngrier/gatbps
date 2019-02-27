@@ -585,8 +585,6 @@ git_clone_succeeded='no';
 gpg_import_attempted='no';
 gpg_import_directory='temporary-directory/gpg';
 gpg_import_succeeded='no';
-gpg_passphrase_link_attempted='no';
-gpg_passphrase_link_succeeded='no';
 gpg_secret_key_fingerprint='';
 safe_git_clone_directory='temporary-directory/git';
 safe_gpg_import_directory='temporary-directory/gpg';
@@ -973,9 +971,6 @@ EOF2
             ;;
           esac;
 
-          gpg_passphrase_link_attempted='no';
-          gpg_passphrase_link_succeeded='no';
-
           'continue'
 
         ;;
@@ -1207,8 +1202,6 @@ EOF2
 
           git_clone_attempted='no';
           git_clone_succeeded='no';
-          gpg_passphrase_link_attempted='no';
-          gpg_passphrase_link_succeeded='no';
 
           'continue'
 
@@ -2279,6 +2272,27 @@ EOF2
     ;;
   esac;
 
+  'rm' \
+    '-f' \
+    "${safe_git_clone_directory}"'/gpg-passphrase-file' \
+    0<'/dev/null' \
+  ;
+  s="${?}";
+  case "${s}" in
+    '0')
+      ':';
+    ;;
+    *)
+      'cat' 0<<EOF2 1>&2;
+${fy2}save-artifacts.sh:${fR2} ${fB2}rm${fR2} failed while deleting:
+${fy2}save-artifacts.sh:${fR2}   1. ${fB2}${git_clone_directory}/gpg-passphrase-file${fR2}
+${fy2}save-artifacts.sh:${fR2} exit status: ${fB2}${s}${fR2}
+EOF2
+      exit_status='1';
+      'continue';
+    ;;
+  esac;
+
   'eval' '
     GIT_DIR="${safe_git_clone_directory}"'/.git' \
     GIT_WORK_TREE="${safe_git_clone_directory}" \
@@ -2302,59 +2316,22 @@ EOF2
     ;;
   esac;
 
-  case "${gpg_passphrase_link_attempted}" in
-    'no')
-
-      gpg_passphrase_link_attempted='yes';
-
-      'rm' \
-        '-f' \
-        "${safe_git_clone_directory}"'/gpg-passphrase-file' \
-        0<'/dev/null' \
-      ;
-      s="${?}";
-      case "${s}" in
-        '0')
-          ':';
-        ;;
-        *)
-          'cat' 0<<EOF2 1>&2;
-${fy2}save-artifacts.sh:${fR2} ${fB2}rm${fR2} failed while deleting:
-${fy2}save-artifacts.sh:${fR2}   1. ${fB2}${git_clone_directory}/gpg-passphrase-file${fR2}
-${fy2}save-artifacts.sh:${fR2} exit status: ${fB2}${s}${fR2}
-EOF2
-          exit_status='1';
-          'continue';
-        ;;
-      esac;
-
-      'ln' \
-        '-s' \
-        "${absolute_gpg_passphrase_file}" \
-        "${safe_git_clone_directory}"'/gpg-passphrase-file' \
-        0<'/dev/null' \
-      ;
-      s="${?}";
-      case "${s}" in
-        '0')
-          ':';
-        ;;
-        *)
-          'cat' 0<<EOF2 1>&2;
+  'ln' \
+    '-s' \
+    "${absolute_gpg_passphrase_file}" \
+    "${safe_git_clone_directory}"'/gpg-passphrase-file' \
+    0<'/dev/null' \
+  ;
+  s="${?}";
+  case "${s}" in
+    '0')
+      ':';
+    ;;
+    *)
+      'cat' 0<<EOF2 1>&2;
 ${fy2}save-artifacts.sh:${fR2} ${fB2}ln${fR2} failed
 EOF2
-          exit_status='1';
-          'continue';
-        ;;
-      esac;
-
-      gpg_passphrase_link_succeeded='yes';
-
-    ;;
-  esac;
-
-  case "${gpg_passphrase_link_succeeded}" in
-    'no')
+      exit_status='1';
       'continue';
     ;;
   esac;
