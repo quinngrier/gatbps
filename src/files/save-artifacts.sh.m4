@@ -575,7 +575,7 @@ sshpass_prompt='assphrase';
 temporary_directory='temporary-directory';
 version_command=''\''sh'\'' '\''build-aux/VERSION.sh'\''';
 
-absolute_gpg_import_directory="${pwd}"'/temporary-directory/gpg';
+absolute_gpg_import_directory="${pwd}"'/temporary-directory/gpg_import';
 absolute_gpg_passphrase_file="${pwd}"'/gpg-passphrase-file';
 absolute_ssh_passphrase_file="${pwd}"'/ssh-passphrase-file';
 absolute_ssh_secret_key_file="${pwd}"'/ssh-secret-key-file';
@@ -583,14 +583,14 @@ date_command_attempted='no';
 date_command_succeeded='no';
 exit_status='0';
 git_clone_attempted='no';
-git_clone_directory='temporary-directory/git';
+git_clone_directory='temporary-directory/git_clone';
 git_clone_succeeded='no';
 gpg_import_attempted='no';
-gpg_import_directory='temporary-directory/gpg';
+gpg_import_directory='temporary-directory/gpg_import';
 gpg_import_succeeded='no';
 gpg_secret_key_fingerprint='';
-safe_git_clone_directory='temporary-directory/git';
-safe_gpg_import_directory='temporary-directory/gpg';
+safe_git_clone_directory='temporary-directory/git_clone';
+safe_gpg_import_directory='temporary-directory/gpg_import';
 safe_gpg_passphrase_file='gpg-passphrase-file';
 safe_gpg_secret_key_file='gpg-secret-key-file';
 safe_ssh_passphrase_file='ssh-passphrase-file';
@@ -1633,8 +1633,8 @@ EOF2
           esac
           'eval' "${x}"
 
-          git_clone_directory="${temporary_directory}"'/git';
-          gpg_import_directory="${temporary_directory}"'/gpg';
+          git_clone_directory="${temporary_directory}"'/git_clone';
+          gpg_import_directory="${temporary_directory}"'/gpg_import';
 
           case "${git_clone_directory}" in
             '/'*)
