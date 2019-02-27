@@ -1636,11 +1636,24 @@ EOF2
           git_clone_directory="${temporary_directory}"'/git_clone';
           gpg_import_directory="${temporary_directory}"'/gpg_import';
 
+          case "${temporary_directory}" in
+            '/'*)
+              absolute_temporary_directory="${temporary_directory}";
+              safe_temporary_directory="${temporary_directory}";
+            ;;
+            *)
+              absolute_temporary_directory="${pwd}"'/'"${temporary_directory}";
+              safe_temporary_directory='./'"${temporary_directory}";
+            ;;
+          esac;
+
           case "${git_clone_directory}" in
             '/'*)
+              absolute_git_clone_directory="${git_clone_directory}";
               safe_git_clone_directory="${git_clone_directory}";
             ;;
             *)
+              absolute_git_clone_directory="${pwd}"'/'"${git_clone_directory}";
               safe_git_clone_directory='./'"${git_clone_directory}";
             ;;
           esac;
