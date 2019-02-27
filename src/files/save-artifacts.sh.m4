@@ -578,6 +578,7 @@ version_command=''\''sh'\'' '\''build-aux/VERSION.sh'\''';
 absolute_git_clone_directory="${pwd}"'/temporary-directory/git_clone';
 absolute_gpg_import_directory="${pwd}"'/temporary-directory/gpg_import';
 absolute_gpg_passphrase_file="${pwd}"'/gpg-passphrase-file';
+absolute_gpg_secret_key_file="${pwd}"'/gpg-secret-key-file';
 absolute_ssh_passphrase_file="${pwd}"'/ssh-passphrase-file';
 absolute_ssh_secret_key_file="${pwd}"'/ssh-secret-key-file';
 absolute_temporary_directory="${pwd}"'/temporary-directory';
@@ -1034,9 +1035,11 @@ EOF2
 
           case "${gpg_secret_key_file}" in
             '/'*)
+              absolute_gpg_secret_key_file="${gpg_secret_key_file}";
               safe_gpg_secret_key_file="${gpg_secret_key_file}";
             ;;
             *)
+              absolute_gpg_secret_key_file="${pwd}"'/'"${gpg_secret_key_file}";
               safe_gpg_secret_key_file='./'"${gpg_secret_key_file}";
             ;;
           esac;
