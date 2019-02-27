@@ -1965,9 +1965,9 @@ EOF2
       esac;
 
       'eval' '
-        GIT_SSH_COMMAND='\''eval '\''\'\'''\''"${sshpass}" -f"${ssh_passphrase_file}" ssh -i "${ssh_secret_key_file}"'\''\'\'''\'''\'' \
-        ssh_passphrase_file="${ssh_passphrase_file}" \
-        ssh_secret_key_file="${ssh_secret_key_file}" \
+        GIT_SSH_COMMAND='\''eval '\''\'\'''\''"${sshpass}" -f"${absolute_ssh_passphrase_file}" ssh -i "${absolute_ssh_secret_key_file}"'\''\'\'''\'''\'' \
+        absolute_ssh_passphrase_file="${absolute_ssh_passphrase_file}" \
+        absolute_ssh_secret_key_file="${absolute_ssh_secret_key_file}" \
         sshpass="${sshpass}" \
         '"${git}"' \
           '\''clone'\'' \
