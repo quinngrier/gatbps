@@ -575,10 +575,12 @@ sshpass_prompt='assphrase';
 temporary_directory='temporary-directory';
 version_command=''\''sh'\'' '\''build-aux/VERSION.sh'\''';
 
+absolute_git_clone_directory="${pwd}"'/temporary-directory/git_clone';
 absolute_gpg_import_directory="${pwd}"'/temporary-directory/gpg_import';
 absolute_gpg_passphrase_file="${pwd}"'/gpg-passphrase-file';
 absolute_ssh_passphrase_file="${pwd}"'/ssh-passphrase-file';
 absolute_ssh_secret_key_file="${pwd}"'/ssh-secret-key-file';
+absolute_temporary_directory="${pwd}"'/temporary-directory';
 date_command_attempted='no';
 date_command_succeeded='no';
 exit_status='0';
@@ -597,6 +599,7 @@ safe_gpg_passphrase_file='gpg-passphrase-file';
 safe_gpg_secret_key_file='gpg-secret-key-file';
 safe_ssh_passphrase_file='ssh-passphrase-file';
 safe_ssh_secret_key_file='ssh-secret-key-file';
+safe_temporary_directory='temporary-directory';
 version_command_attempted='no';
 version_command_succeeded='no';
 
