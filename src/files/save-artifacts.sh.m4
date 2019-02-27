@@ -561,15 +561,15 @@ esac;
 'readonly' 'pwd';
 
 date_command=''\''sh'\'' '\''build-aux/DATE.sh'\''';
-gpg_passphrase_file='gpg-passphrase-file'
-gpg_secret_key_file='gpg-secret-key-file'
+gpg_passphrase_file='gpg-passphrase-file';
+gpg_secret_key_file='gpg-secret-key-file';
 leaf_prefix='';
 push_attempts='10';
-repository='repository'
+repository='repository';
 root_prefix='';
-ssh_passphrase_file='ssh-passphrase-file'
-ssh_secret_key_file='ssh-secret-key-file'
-temporary_directory='temporary-directory'
+ssh_passphrase_file='ssh-passphrase-file';
+ssh_secret_key_file='ssh-secret-key-file';
+temporary_directory='temporary-directory';
 version_command=''\''sh'\'' '\''build-aux/VERSION.sh'\''';
 
 absolute_gpg_import_directory="${pwd}"'/temporary-directory/gpg';
