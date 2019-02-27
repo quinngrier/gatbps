@@ -571,6 +571,7 @@ repository='repository';
 root_prefix='';
 ssh_passphrase_file='ssh-passphrase-file';
 ssh_secret_key_file='ssh-secret-key-file';
+sshpass_prompt='assphrase';
 temporary_directory='temporary-directory';
 version_command=''\''sh'\'' '\''build-aux/VERSION.sh'\''';
 
@@ -1538,6 +1539,55 @@ EOF2
 
         ;;
 
+        '--sshpass-prompt')
+
+          case "${#}" in
+            '1')
+              'cat' 0<<EOF2 1>&2;
+${fr2}save-artifacts.sh!${fR2} ${fB2}--sshpass-prompt${fR2} requires a value
+${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
+EOF2
+              'exit' '1'
+            ;;
+          esac
+
+          x="${2}"
+          shift
+          shift
+          set 'x' "--sshpass-prompt=${x}" "${@}"
+
+          'continue'
+
+        ;;
+
+        '--sshpass-prompt='*)
+
+          x=`'eval' "${sed}"' "
+            s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
+            1s/^--sshpass-prompt=/sshpass_prompt='\\''/
+            \\$s/\\$/'\\''/
+          "' <<EOF2
+${1}
+EOF2
+`
+          case "${?}" in
+            '0')
+            ;;
+            *)
+              'cat' 0<<EOF2 1>&2;
+${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
+${fr2}save-artifacts.sh!${fR2}   1. a here-document
+${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
+EOF2
+              'exit' '1'
+            ;;
+          esac
+          'eval' "${x}"
+
+          'continue'
+
+        ;;
+
         '--temporary-directory')
 
           case "${#}" in
@@ -1965,10 +2015,11 @@ EOF2
       esac;
 
       'eval' '
-        GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -f"${absolute_ssh_passphrase_file}" ssh -i "${absolute_ssh_secret_key_file}"'\''\'\'''\'''\'' \
+        GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${absolute_ssh_passphrase_file}" ssh -i "${absolute_ssh_secret_key_file}"'\''\'\'''\'''\'' \
         absolute_ssh_passphrase_file="${absolute_ssh_passphrase_file}" \
         absolute_ssh_secret_key_file="${absolute_ssh_secret_key_file}" \
         sshpass="${sshpass}" \
+        sshpass_prompt="${sshpass_prompt}" \
         '"${git}"' \
           '\''clone'\'' \
           '\''--'\'' \
@@ -2370,11 +2421,12 @@ EOF2
 
     'eval' '
       GIT_DIR="${safe_git_clone_directory}"'/.git' \
-      GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -f"${absolute_ssh_passphrase_file}" ssh -i "${absolute_ssh_secret_key_file}"'\''\'\'''\'''\'' \
+      GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${absolute_ssh_passphrase_file}" ssh -i "${absolute_ssh_secret_key_file}"'\''\'\'''\'''\'' \
       GIT_WORK_TREE="${safe_git_clone_directory}" \
       absolute_ssh_passphrase_file="${absolute_ssh_passphrase_file}" \
       absolute_ssh_secret_key_file="${absolute_ssh_secret_key_file}" \
       sshpass="${sshpass}" \
+      sshpass_prompt="${sshpass_prompt}" \
       '"${git}"' \
         '\''push'\'' \
         '\''origin'\'' \
@@ -2426,11 +2478,12 @@ EOF2
 
     'eval' '
       GIT_DIR="${safe_git_clone_directory}"'/.git' \
-      GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -f"${absolute_ssh_passphrase_file}" ssh -i "${absolute_ssh_secret_key_file}"'\''\'\'''\'''\'' \
+      GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${absolute_ssh_passphrase_file}" ssh -i "${absolute_ssh_secret_key_file}"'\''\'\'''\'''\'' \
       GIT_WORK_TREE="${safe_git_clone_directory}" \
       absolute_ssh_passphrase_file="${absolute_ssh_passphrase_file}" \
       absolute_ssh_secret_key_file="${absolute_ssh_secret_key_file}" \
       sshpass="${sshpass}" \
+      sshpass_prompt="${sshpass_prompt}" \
       '"${git}"' \
         '\''pull'\'' \
         '\''origin'\'' \
