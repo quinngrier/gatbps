@@ -562,12 +562,12 @@ esac;
 
 date_command=''\''sh'\'' '\''build-aux/DATE.sh'\''';
 git_clone_directory='git-clone-directory'
-git_clone_url='git-clone-url'
 git_push_retries='9';
 gpg_import_directory='gpg-import-directory'
 gpg_passphrase_file='gpg-passphrase-file'
 gpg_secret_key_file='gpg-secret-key-file'
 leaf_prefix='';
+repository='repository'
 root_prefix='';
 ssh_passphrase_file='ssh-passphrase-file'
 ssh_secret_key_file='ssh-secret-key-file'
@@ -974,60 +974,6 @@ EOF2
 
         ;;
 
-        '--git-clone-url')
-
-          case "${#}" in
-            '1')
-              'cat' 0<<EOF2 1>&2;
-${fr2}save-artifacts.sh!${fR2} ${fB2}--git-clone-url${fR2} requires a value
-${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
-EOF2
-              'exit' '1'
-            ;;
-          esac
-
-          x="${2}"
-          shift
-          shift
-          set 'x' "--git-clone-url=${x}" "${@}"
-
-          'continue'
-
-        ;;
-
-        '--git-clone-url='*)
-
-          x=`'eval' "${sed}"' "
-            s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
-            1s/^--git-clone-url=/git_clone_url='\\''/
-            \\$s/\\$/'\\''/
-          "' <<EOF2
-${1}
-EOF2
-`
-          case "${?}" in
-            '0')
-            ;;
-            *)
-              'cat' 0<<EOF2 1>&2;
-${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
-${fr2}save-artifacts.sh!${fR2}   1. a here-document
-${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
-EOF2
-              'exit' '1'
-            ;;
-          esac
-          'eval' "${x}"
-
-          git_clone_attempted='no';
-          git_clone_succeeded='no';
-          gpg_passphrase_link_attempted='no';
-          gpg_passphrase_link_succeeded='no';
-
-          'continue'
-
-        ;;
-
         '--git-push-retries')
 
           case "${#}" in
@@ -1329,6 +1275,60 @@ EOF2
               'exit' '1';
             ;;
           esac;
+
+          'continue'
+
+        ;;
+
+        '--repository')
+
+          case "${#}" in
+            '1')
+              'cat' 0<<EOF2 1>&2;
+${fr2}save-artifacts.sh!${fR2} ${fB2}--repository${fR2} requires a value
+${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
+EOF2
+              'exit' '1'
+            ;;
+          esac
+
+          x="${2}"
+          shift
+          shift
+          set 'x' "--repository=${x}" "${@}"
+
+          'continue'
+
+        ;;
+
+        '--repository='*)
+
+          x=`'eval' "${sed}"' "
+            s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
+            1s/^--repository=/repository='\\''/
+            \\$s/\\$/'\\''/
+          "' <<EOF2
+${1}
+EOF2
+`
+          case "${?}" in
+            '0')
+            ;;
+            *)
+              'cat' 0<<EOF2 1>&2;
+${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
+${fr2}save-artifacts.sh!${fR2}   1. a here-document
+${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
+EOF2
+              'exit' '1'
+            ;;
+          esac
+          'eval' "${x}"
+
+          git_clone_attempted='no';
+          git_clone_succeeded='no';
+          gpg_passphrase_link_attempted='no';
+          gpg_passphrase_link_succeeded='no';
 
           'continue'
 
@@ -2000,7 +2000,7 @@ EOF2
         '"${git}"' \
           '\''clone'\'' \
           '\''--'\'' \
-          "${git_clone_url}" \
+          "${repository}" \
           "${safe_git_clone_directory}" \
           0<'\''/dev/null'\'' \
         ;
@@ -2013,7 +2013,7 @@ EOF2
         *)
           'cat' 0<<EOF2 1>&2;
 ${fy2}save-artifacts.sh:${fR2} ${fB2}git clone${fR2} failed while cloning:
-${fy2}save-artifacts.sh:${fR2}   ${fB2}${git_clone_url}${fR2}
+${fy2}save-artifacts.sh:${fR2}   ${fB2}${repository}${fR2}
 ${fy2}save-artifacts.sh:${fR2} into:
 ${fy2}save-artifacts.sh:${fR2}   ${fB2}${git_clone_directory}${fR2}
 ${fy2}save-artifacts.sh:${fR2} exit status: ${fB2}${s}${fR2}
