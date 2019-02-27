@@ -1832,6 +1832,7 @@ EOF2
       'eval' '
         GNUPGHOME="${safe_gpg_import_directory}" \
         '"${gpg}"' \
+          '\''--batch'\'' \
           '\''--import'\'' \
           "${safe_gpg_secret_key_file}" \
           0<'\''/dev/null'\'' \
@@ -1853,6 +1854,7 @@ EOF2
       'eval' '
         GNUPGHOME="${safe_gpg_import_directory}" \
         '"${gpg}"' \
+          '\''--batch'\'' \
           '\''--fingerprint'\'' \
           0<'\''/dev/null'\'' \
           1>"${safe_gpg_import_directory}"'\''/tmp'\'' \
@@ -2243,6 +2245,7 @@ EOF2
   'eval' '
     GNUPGHOME="${safe_gpg_import_directory}" \
     '"${gpg}"' \
+      '\''--batch'\'' \
       '\''--no-options'\'' \
       '\''--output'\'' \
       "${safe_dst}"'\''.sig'\'' \
