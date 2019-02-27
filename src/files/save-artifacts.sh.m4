@@ -2200,28 +2200,6 @@ EOF2
     ;;
   esac;
 
-  'test' \
-    '-d' \
-    "${safe_dst}" \
-  ;
-  s="${?}";
-  case "${s}" in
-    '0')
-      'continue';
-    ;;
-    '1')
-      ':';
-    ;;
-    *)
-      'cat' 0<<EOF2 1>&2;
-${fy2}save-artifacts.sh:${fR2} ${fB2}test${fR2} failed
-${fy2}save-artifacts.sh:${fR2} exit status: ${fB2}${s}${fR2}
-EOF2
-      exit_status='1';
-      'continue';
-    ;;
-  esac;
-
   'mkdir' \
     '-p' \
     "${safe_dst_directory}" \
@@ -2243,7 +2221,6 @@ EOF2
   esac;
 
   'cp' \
-    '-R' \
     "${safe_src}" \
     "${safe_dst}" \
     0<'/dev/null' \
