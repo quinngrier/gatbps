@@ -2448,7 +2448,7 @@ EOF2
 
   done;
 
-done
+done;
 
 'exit' "${exit_status}";
 
