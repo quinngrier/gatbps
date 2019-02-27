@@ -1965,7 +1965,7 @@ EOF2
       esac;
 
       'eval' '
-        GIT_SSH_COMMAND='\''"${sshpass}" -f"${ssh_passphrase_file}" ssh -i "${ssh_secret_key_file}"'\'' \
+        GIT_SSH_COMMAND='\''eval '\''\'\'''\''"${sshpass}" -f"${ssh_passphrase_file}" ssh -i "${ssh_secret_key_file}"'\''\'\'''\'''\'' \
         ssh_passphrase_file="${ssh_passphrase_file}" \
         ssh_secret_key_file="${ssh_secret_key_file}" \
         sshpass="${sshpass}" \
@@ -2370,7 +2370,7 @@ EOF2
 
     'eval' '
       GIT_DIR="${safe_git_clone_directory}"'/.git' \
-      GIT_SSH_COMMAND='\''"${sshpass}" -f"${absolute_ssh_passphrase_file}" ssh -i "${absolute_ssh_secret_key_file}"'\'' \
+      GIT_SSH_COMMAND='\''eval '\''\'\'''\''"${sshpass}" -f"${absolute_ssh_passphrase_file}" ssh -i "${absolute_ssh_secret_key_file}"'\''\'\'''\'''\'' \
       GIT_WORK_TREE="${safe_git_clone_directory}" \
       absolute_ssh_passphrase_file="${absolute_ssh_passphrase_file}" \
       absolute_ssh_secret_key_file="${absolute_ssh_secret_key_file}" \
@@ -2426,7 +2426,7 @@ EOF2
 
     'eval' '
       GIT_DIR="${safe_git_clone_directory}"'/.git' \
-      GIT_SSH_COMMAND='\''"${sshpass}" -f"${absolute_ssh_passphrase_file}" ssh -i "${absolute_ssh_secret_key_file}"'\'' \
+      GIT_SSH_COMMAND='\''eval '\''\'\'''\''"${sshpass}" -f"${absolute_ssh_passphrase_file}" ssh -i "${absolute_ssh_secret_key_file}"'\''\'\'''\'''\'' \
       GIT_WORK_TREE="${safe_git_clone_directory}" \
       absolute_ssh_passphrase_file="${absolute_ssh_passphrase_file}" \
       absolute_ssh_secret_key_file="${absolute_ssh_secret_key_file}" \
