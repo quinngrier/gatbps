@@ -575,16 +575,16 @@ sshpass_prompt='assphrase';
 temporary_directory='temporary-directory';
 version_command=''\''sh'\'' '\''build-aux/VERSION.sh'\''';
 
-absolute_git_clone_directory="${pwd}"'/temporary-directory/git_clone';
-absolute_gpg_import_directory="${pwd}"'/temporary-directory/gpg_import';
-absolute_gpg_passphrase_file="${pwd}"'/gpg-passphrase-file';
-absolute_gpg_secret_key_file="${pwd}"'/gpg-secret-key-file';
-absolute_ssh_passphrase_file="${pwd}"'/ssh-passphrase-file';
-absolute_ssh_secret_key_file="${pwd}"'/ssh-secret-key-file';
-absolute_temporary_directory="${pwd}"'/temporary-directory';
 date_command_attempted='no';
 date_command_succeeded='no';
 exit_status='0';
+full_git_clone_directory="${pwd}"'/temporary-directory/git_clone';
+full_gpg_import_directory="${pwd}"'/temporary-directory/gpg_import';
+full_gpg_passphrase_file="${pwd}"'/gpg-passphrase-file';
+full_gpg_secret_key_file="${pwd}"'/gpg-secret-key-file';
+full_ssh_passphrase_file="${pwd}"'/ssh-passphrase-file';
+full_ssh_secret_key_file="${pwd}"'/ssh-secret-key-file';
+full_temporary_directory="${pwd}"'/temporary-directory';
 git_clone_attempted='no';
 git_clone_directory='temporary-directory/git_clone';
 git_clone_succeeded='no';
@@ -975,11 +975,11 @@ EOF2
 
           case "${gpg_passphrase_file}" in
             '/'*)
-              absolute_gpg_passphrase_file="${gpg_passphrase_file}";
+              full_gpg_passphrase_file="${gpg_passphrase_file}";
               safe_gpg_passphrase_file="${gpg_passphrase_file}";
             ;;
             *)
-              absolute_gpg_passphrase_file="${pwd}"'/'"${gpg_passphrase_file}";
+              full_gpg_passphrase_file="${pwd}"'/'"${gpg_passphrase_file}";
               safe_gpg_passphrase_file='./'"${gpg_passphrase_file}";
             ;;
           esac;
@@ -1035,11 +1035,11 @@ EOF2
 
           case "${gpg_secret_key_file}" in
             '/'*)
-              absolute_gpg_secret_key_file="${gpg_secret_key_file}";
+              full_gpg_secret_key_file="${gpg_secret_key_file}";
               safe_gpg_secret_key_file="${gpg_secret_key_file}";
             ;;
             *)
-              absolute_gpg_secret_key_file="${pwd}"'/'"${gpg_secret_key_file}";
+              full_gpg_secret_key_file="${pwd}"'/'"${gpg_secret_key_file}";
               safe_gpg_secret_key_file='./'"${gpg_secret_key_file}";
             ;;
           esac;
@@ -1402,11 +1402,11 @@ EOF2
 
           case "${ssh_passphrase_file}" in
             '/'*)
-              absolute_ssh_passphrase_file="${ssh_passphrase_file}";
+              full_ssh_passphrase_file="${ssh_passphrase_file}";
               safe_ssh_passphrase_file="${ssh_passphrase_file}";
             ;;
             *)
-              absolute_ssh_passphrase_file="${pwd}"'/'"${ssh_passphrase_file}";
+              full_ssh_passphrase_file="${pwd}"'/'"${ssh_passphrase_file}";
               safe_ssh_passphrase_file='./'"${ssh_passphrase_file}";
             ;;
           esac;
@@ -1462,11 +1462,11 @@ EOF2
 
           case "${ssh_secret_key_file}" in
             '/'*)
-              absolute_ssh_secret_key_file="${ssh_secret_key_file}";
+              full_ssh_secret_key_file="${ssh_secret_key_file}";
               safe_ssh_secret_key_file="${ssh_secret_key_file}";
             ;;
             *)
-              absolute_ssh_secret_key_file="${pwd}"'/'"${ssh_secret_key_file}";
+              full_ssh_secret_key_file="${pwd}"'/'"${ssh_secret_key_file}";
               safe_ssh_secret_key_file='./'"${ssh_secret_key_file}";
             ;;
           esac;
@@ -1649,33 +1649,33 @@ EOF2
 
           case "${temporary_directory}" in
             '/'*)
-              absolute_temporary_directory="${temporary_directory}";
+              full_temporary_directory="${temporary_directory}";
               safe_temporary_directory="${temporary_directory}";
             ;;
             *)
-              absolute_temporary_directory="${pwd}"'/'"${temporary_directory}";
+              full_temporary_directory="${pwd}"'/'"${temporary_directory}";
               safe_temporary_directory='./'"${temporary_directory}";
             ;;
           esac;
 
           case "${git_clone_directory}" in
             '/'*)
-              absolute_git_clone_directory="${git_clone_directory}";
+              full_git_clone_directory="${git_clone_directory}";
               safe_git_clone_directory="${git_clone_directory}";
             ;;
             *)
-              absolute_git_clone_directory="${pwd}"'/'"${git_clone_directory}";
+              full_git_clone_directory="${pwd}"'/'"${git_clone_directory}";
               safe_git_clone_directory='./'"${git_clone_directory}";
             ;;
           esac;
 
           case "${gpg_import_directory}" in
             '/'*)
-              absolute_gpg_import_directory="${gpg_import_directory}";
+              full_gpg_import_directory="${gpg_import_directory}";
               safe_gpg_import_directory="${gpg_import_directory}";
             ;;
             *)
-              absolute_gpg_import_directory="${pwd}"'/'"${gpg_import_directory}";
+              full_gpg_import_directory="${pwd}"'/'"${gpg_import_directory}";
               safe_gpg_import_directory='./'"${gpg_import_directory}";
             ;;
           esac;
@@ -2041,9 +2041,9 @@ EOF2
       esac;
 
       'eval' '
-        GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${absolute_ssh_passphrase_file}" ssh -i "${absolute_ssh_secret_key_file}"'\''\'\'''\'''\'' \
-        absolute_ssh_passphrase_file="${absolute_ssh_passphrase_file}" \
-        absolute_ssh_secret_key_file="${absolute_ssh_secret_key_file}" \
+        GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${full_ssh_passphrase_file}" ssh -i "${full_ssh_secret_key_file}"'\''\'\'''\'''\'' \
+        full_ssh_passphrase_file="${full_ssh_passphrase_file}" \
+        full_ssh_secret_key_file="${full_ssh_secret_key_file}" \
         sshpass="${sshpass}" \
         sshpass_prompt="${sshpass_prompt}" \
         '"${git}"' \
@@ -2450,7 +2450,7 @@ EOF2
 
   'ln' \
     '-s' \
-    "${absolute_gpg_passphrase_file}" \
+    "${full_gpg_passphrase_file}" \
     "${safe_git_clone_directory}"'/gpg-passphrase-file' \
     0<'/dev/null' \
   ;
@@ -2473,10 +2473,10 @@ EOF2
       "${safe_git_clone_directory}" \
       0<'/dev/null' \
     && 'eval' '
-      GNUPGHOME="${absolute_gpg_import_directory}" \
+      GNUPGHOME="${full_gpg_import_directory}" \
       '"${git}"' \
         '\''-c'\'' \
-        '\''gpg.program='\''"${absolute_temporary_directory}"'\''/gpg_wrapper'\'' \
+        '\''gpg.program='\''"${full_temporary_directory}"'\''/gpg_wrapper'\'' \
         '\''commit'\'' \
         '\''--gpg-sign=0x'\''"${gpg_secret_key_fingerprint}" \
         '\''--message=Add '\''"${relative_dst}" \
@@ -2504,10 +2504,10 @@ EOF2
 
     'eval' '
       GIT_DIR="${safe_git_clone_directory}"'/.git' \
-      GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${absolute_ssh_passphrase_file}" ssh -i "${absolute_ssh_secret_key_file}"'\''\'\'''\'''\'' \
+      GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${full_ssh_passphrase_file}" ssh -i "${full_ssh_secret_key_file}"'\''\'\'''\'''\'' \
       GIT_WORK_TREE="${safe_git_clone_directory}" \
-      absolute_ssh_passphrase_file="${absolute_ssh_passphrase_file}" \
-      absolute_ssh_secret_key_file="${absolute_ssh_secret_key_file}" \
+      full_ssh_passphrase_file="${full_ssh_passphrase_file}" \
+      full_ssh_secret_key_file="${full_ssh_secret_key_file}" \
       sshpass="${sshpass}" \
       sshpass_prompt="${sshpass_prompt}" \
       '"${git}"' \
@@ -2561,10 +2561,10 @@ EOF2
 
     'eval' '
       GIT_DIR="${safe_git_clone_directory}"'/.git' \
-      GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${absolute_ssh_passphrase_file}" ssh -i "${absolute_ssh_secret_key_file}"'\''\'\'''\'''\'' \
+      GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${full_ssh_passphrase_file}" ssh -i "${full_ssh_secret_key_file}"'\''\'\'''\'''\'' \
       GIT_WORK_TREE="${safe_git_clone_directory}" \
-      absolute_ssh_passphrase_file="${absolute_ssh_passphrase_file}" \
-      absolute_ssh_secret_key_file="${absolute_ssh_secret_key_file}" \
+      full_ssh_passphrase_file="${full_ssh_passphrase_file}" \
+      full_ssh_secret_key_file="${full_ssh_secret_key_file}" \
       sshpass="${sshpass}" \
       sshpass_prompt="${sshpass_prompt}" \
       '"${git}"' \
