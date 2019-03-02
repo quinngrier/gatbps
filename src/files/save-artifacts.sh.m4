@@ -562,6 +562,7 @@ EOF2
 esac;
 'readonly' 'pwd';
 
+copy_ssh_secret_key_file='no';
 date_command=''\''sh'\'' '\''build-aux/DATE.sh'\''';
 gpg_passphrase_file='gpg-passphrase-file';
 gpg_secret_key_file='gpg-secret-key-file';
@@ -575,6 +576,8 @@ sshpass_prompt='assphrase';
 temporary_directory='temporary-directory';
 version_command=''\''sh'\'' '\''build-aux/VERSION.sh'\''';
 
+copy_ssh_secret_key_file_attempted='no';
+copy_ssh_secret_key_file_succeeded='no';
 date_command_attempted='no';
 date_command_succeeded='no';
 exit_status='0';
@@ -584,6 +587,7 @@ full_gpg_passphrase_file="${pwd}"'/gpg-passphrase-file';
 full_gpg_secret_key_file="${pwd}"'/gpg-secret-key-file';
 full_ssh_passphrase_file="${pwd}"'/ssh-passphrase-file';
 full_ssh_secret_key_file="${pwd}"'/ssh-secret-key-file';
+full_ssh_secret_key_file_pointer="${pwd}"'/ssh-secret-key-file';
 full_temporary_directory="${pwd}"'/temporary-directory';
 git_clone_attempted='no';
 git_clone_directory='temporary-directory/git_clone';
@@ -719,6 +723,30 @@ EOF2
           esac
 
           'continue'
+
+        ;;
+
+        '--copy-ssh-secret-key-file')
+
+          'shift';
+          'set' 'dummy' '--copy-ssh-secret-key-file=yes' "${@}";
+          'continue';
+
+        ;;
+
+        '--copy-ssh-secret-key-file=yes')
+
+          copy_ssh_secret_key_file='yes';
+          full_ssh_secret_key_file_pointer="${full_temporary_directory}"'/ssh_secret_key';
+          'continue';
+
+        ;;
+
+        '--copy-ssh-secret-key-file='*)
+
+          copy_ssh_secret_key_file='no';
+          full_ssh_secret_key_file_pointer="${full_ssh_secret_key_file}";
+          'continue';
 
         ;;
 
@@ -1471,6 +1499,9 @@ EOF2
             ;;
           esac;
 
+          copy_ssh_secret_key_file_attempted='no';
+          copy_ssh_secret_key_file_succeeded='no';
+
           'continue'
 
         ;;
@@ -1680,6 +1711,8 @@ EOF2
             ;;
           esac;
 
+          copy_ssh_secret_key_file_attempted='no';
+          copy_ssh_secret_key_file_succeeded='no';
           git_clone_attempted='no';
           git_clone_succeeded='no';
           gpg_import_attempted='no';
@@ -2013,6 +2046,65 @@ EOF2
     ;;
   esac;
 
+  case "${copy_ssh_secret_key_file}" in
+    'yes')
+
+      case "${copy_ssh_secret_key_file_attempted}" in
+        'no')
+
+          copy_ssh_secret_key_file_attempted='yes';
+
+          'cp' \
+            "${full_ssh_secret_key_file}" \
+            "${full_ssh_secret_key_file_pointer}" \
+            0<'/dev/null' \
+          ;
+          s="${?}";
+          case "${s}" in
+            '0')
+              ':';
+            ;;
+            *)
+              'cat' 0<<EOF2 1>&2;
+${fy2}save-artifacts.sh:${fR2} ${fB2}cp${fR2} failed
+EOF2
+              exit_status='1';
+              'continue';
+            ;;
+          esac;
+
+          'chmod' \
+            '400' \
+            "${full_ssh_secret_key_file_pointer}" \
+            0<'/dev/null' \
+          ;
+          case "${?}" in
+            '0')
+              ':';
+            ;;
+            *)
+              'cat' 0<<EOF2 1>&2;
+${fy2}save-artifacts.sh:${fR2} ${fB2}chmod${fR2} failed
+EOF2
+              exit_status='1';
+              'continue';
+            ;;
+          esac;
+
+          copy_ssh_secret_key_file_succeeded='yes';
+
+        ;;
+      esac;
+
+      case "${copy_ssh_secret_key_file_succeeded}" in
+        'no')
+          'continue';
+        ;;
+      esac;
+
+    ;;
+  esac;
+
   case "${git_clone_attempted}" in
     'no')
 
@@ -2041,9 +2133,9 @@ EOF2
       esac;
 
       'eval' '
-        GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${full_ssh_passphrase_file}" ssh -i "${full_ssh_secret_key_file}"'\''\'\'''\'''\'' \
+        GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${full_ssh_passphrase_file}" ssh -i "${full_ssh_secret_key_file_pointer}"'\''\'\'''\'''\'' \
         full_ssh_passphrase_file="${full_ssh_passphrase_file}" \
-        full_ssh_secret_key_file="${full_ssh_secret_key_file}" \
+        full_ssh_secret_key_file_pointer="${full_ssh_secret_key_file_pointer}" \
         sshpass="${sshpass}" \
         sshpass_prompt="${sshpass_prompt}" \
         '"${git}"' \
@@ -2504,10 +2596,10 @@ EOF2
 
     'eval' '
       GIT_DIR="${safe_git_clone_directory}"'/.git' \
-      GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${full_ssh_passphrase_file}" ssh -i "${full_ssh_secret_key_file}"'\''\'\'''\'''\'' \
+      GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${full_ssh_passphrase_file}" ssh -i "${full_ssh_secret_key_file_pointer}"'\''\'\'''\'''\'' \
       GIT_WORK_TREE="${safe_git_clone_directory}" \
       full_ssh_passphrase_file="${full_ssh_passphrase_file}" \
-      full_ssh_secret_key_file="${full_ssh_secret_key_file}" \
+      full_ssh_secret_key_file_pointer="${full_ssh_secret_key_file_pointer}" \
       sshpass="${sshpass}" \
       sshpass_prompt="${sshpass_prompt}" \
       '"${git}"' \
@@ -2561,10 +2653,10 @@ EOF2
 
     'eval' '
       GIT_DIR="${safe_git_clone_directory}"'/.git' \
-      GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${full_ssh_passphrase_file}" ssh -i "${full_ssh_secret_key_file}"'\''\'\'''\'''\'' \
+      GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${full_ssh_passphrase_file}" ssh -i "${full_ssh_secret_key_file_pointer}"'\''\'\'''\'''\'' \
       GIT_WORK_TREE="${safe_git_clone_directory}" \
       full_ssh_passphrase_file="${full_ssh_passphrase_file}" \
-      full_ssh_secret_key_file="${full_ssh_secret_key_file}" \
+      full_ssh_secret_key_file_pointer="${full_ssh_secret_key_file_pointer}" \
       sshpass="${sshpass}" \
       sshpass_prompt="${sshpass_prompt}" \
       '"${git}"' \
