@@ -570,6 +570,7 @@ leaf_prefix='';
 push_attempts='10';
 repository='repository';
 root_prefix='';
+ssh_known_hosts_file='';
 ssh_passphrase_file='ssh-passphrase-file';
 ssh_secret_key_file='ssh-secret-key-file';
 sshpass_prompt='assphrase';
@@ -585,6 +586,7 @@ full_git_clone_directory="${pwd}"'/temporary-directory/git_clone';
 full_gpg_import_directory="${pwd}"'/temporary-directory/gpg_import';
 full_gpg_passphrase_file="${pwd}"'/gpg-passphrase-file';
 full_gpg_secret_key_file="${pwd}"'/gpg-secret-key-file';
+full_ssh_known_hosts_file='';
 full_ssh_passphrase_file="${pwd}"'/ssh-passphrase-file';
 full_ssh_secret_key_file="${pwd}"'/ssh-secret-key-file';
 full_ssh_secret_key_file_pointer="${pwd}"'/ssh-secret-key-file';
@@ -1383,6 +1385,67 @@ EOF2
 
         ;;
 
+        '--ssh-known-hosts-file')
+
+          case "${#}" in
+            '1')
+              'cat' 0<<EOF2 1>&2;
+${fr2}save-artifacts.sh!${fR2} ${fB2}--ssh-known-hosts-file${fR2} requires a value
+${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
+EOF2
+              'exit' '1'
+            ;;
+          esac
+
+          x="${2}"
+          shift
+          shift
+          set 'x' "--ssh-known-hosts-file=${x}" "${@}"
+
+          'continue'
+
+        ;;
+
+        '--ssh-known-hosts-file='*)
+
+          x=`'eval' "${sed}"' "
+            s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
+            1s/^--ssh-known-hosts-file=/ssh_known_hosts_file='\\''/
+            \\$s/\\$/'\\''/
+          "' <<EOF2
+${1}
+EOF2
+`
+          case "${?}" in
+            '0')
+            ;;
+            *)
+              'cat' 0<<EOF2 1>&2;
+${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
+${fr2}save-artifacts.sh!${fR2}   1. a here-document
+${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
+EOF2
+              'exit' '1'
+            ;;
+          esac
+          'eval' "${x}"
+
+          case "${ssh_known_hosts_file}" in
+            '')
+              full_ssh_known_hosts_file='';
+            ;;
+            '/'*)
+              full_ssh_known_hosts_file="${ssh_known_hosts_file}";
+            ;;
+            *)
+              full_ssh_known_hosts_file="${pwd}"'/'"${ssh_known_hosts_file}";
+            ;;
+          esac;
+
+          'continue'
+
+        ;;
+
         '--ssh-passphrase-file')
 
           case "${#}" in
@@ -2105,6 +2168,15 @@ EOF2
     ;;
   esac;
 
+  case "${ssh_known_hosts_file}" in
+    '')
+      ssh_known_hosts_argument='StrictHostKeyChecking=no';
+    ;;
+    *)
+      ssh_known_hosts_argument='UserKnownHostsFile='"${full_ssh_known_hosts_file}";
+    ;;
+  esac;
+
   case "${git_clone_attempted}" in
     'no')
 
@@ -2133,7 +2205,7 @@ EOF2
       esac;
 
       'eval' '
-        GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${full_ssh_passphrase_file}" ssh -o StrictHostKeyChecking=no -i "${full_ssh_secret_key_file_pointer}"'\''\'\'''\'''\'' \
+        GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${full_ssh_passphrase_file}" ssh -o "${ssh_known_hosts_argument}" -i "${full_ssh_secret_key_file_pointer}"'\''\'\'''\'''\'' \
         full_ssh_passphrase_file="${full_ssh_passphrase_file}" \
         full_ssh_secret_key_file_pointer="${full_ssh_secret_key_file_pointer}" \
         sshpass="${sshpass}" \
@@ -2596,7 +2668,7 @@ EOF2
 
     'eval' '
       GIT_DIR="${safe_git_clone_directory}"'/.git' \
-      GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${full_ssh_passphrase_file}" ssh -o StrictHostKeyChecking=no -i "${full_ssh_secret_key_file_pointer}"'\''\'\'''\'''\'' \
+      GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${full_ssh_passphrase_file}" ssh -o "${ssh_known_hosts_argument}" -i "${full_ssh_secret_key_file_pointer}"'\''\'\'''\'''\'' \
       GIT_WORK_TREE="${safe_git_clone_directory}" \
       full_ssh_passphrase_file="${full_ssh_passphrase_file}" \
       full_ssh_secret_key_file_pointer="${full_ssh_secret_key_file_pointer}" \
@@ -2653,7 +2725,7 @@ EOF2
 
     'eval' '
       GIT_DIR="${safe_git_clone_directory}"'/.git' \
-      GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${full_ssh_passphrase_file}" ssh -o StrictHostKeyChecking=no -i "${full_ssh_secret_key_file_pointer}"'\''\'\'''\'''\'' \
+      GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${full_ssh_passphrase_file}" ssh -o "${ssh_known_hosts_argument}" -i "${full_ssh_secret_key_file_pointer}"'\''\'\'''\'''\'' \
       GIT_WORK_TREE="${safe_git_clone_directory}" \
       full_ssh_passphrase_file="${full_ssh_passphrase_file}" \
       full_ssh_secret_key_file_pointer="${full_ssh_secret_key_file_pointer}" \
