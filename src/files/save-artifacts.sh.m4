@@ -2308,6 +2308,7 @@ EOF2
         GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${full_ssh_passphrase_file}" ssh -o "${ssh_known_hosts_argument}" -i "${full_ssh_secret_key_file_pointer}"'\''\'\'''\'''\'' \
         full_ssh_passphrase_file="${full_ssh_passphrase_file}" \
         full_ssh_secret_key_file_pointer="${full_ssh_secret_key_file_pointer}" \
+        ssh_known_hosts_argument="${ssh_known_hosts_argument}" \
         sshpass="${sshpass}" \
         sshpass_prompt="${sshpass_prompt}" \
         '"${git}"' \
@@ -2776,6 +2777,7 @@ EOF2
       GIT_WORK_TREE="${safe_git_clone_directory}" \
       full_ssh_passphrase_file="${full_ssh_passphrase_file}" \
       full_ssh_secret_key_file_pointer="${full_ssh_secret_key_file_pointer}" \
+      ssh_known_hosts_argument="${ssh_known_hosts_argument}" \
       sshpass="${sshpass}" \
       sshpass_prompt="${sshpass_prompt}" \
       '"${git}"' \
@@ -2833,6 +2835,7 @@ EOF2
       GIT_WORK_TREE="${safe_git_clone_directory}" \
       full_ssh_passphrase_file="${full_ssh_passphrase_file}" \
       full_ssh_secret_key_file_pointer="${full_ssh_secret_key_file_pointer}" \
+      ssh_known_hosts_argument="${ssh_known_hosts_argument}" \
       sshpass="${sshpass}" \
       sshpass_prompt="${sshpass_prompt}" \
       '"${git}"' \
