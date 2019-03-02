@@ -2108,6 +2108,7 @@ EOF2
         GNUPGHOME="${safe_gpg_import_directory}" \
         '"${gpg}"' \
           '\''--batch'\'' \
+          '\''--no-tty'\'' \
           '\''--import'\'' \
           "${safe_gpg_secret_key_file}" \
           0<'\''/dev/null'\'' \
@@ -2130,6 +2131,7 @@ EOF2
         GNUPGHOME="${safe_gpg_import_directory}" \
         '"${gpg}"' \
           '\''--batch'\'' \
+          '\''--no-tty'\'' \
           '\''--fingerprint'\'' \
           0<'\''/dev/null'\'' \
           1>"${safe_gpg_import_directory}"'\''/tmp'\'' \
@@ -2358,7 +2360,11 @@ EOF2
         1>"${safe_temporary_directory}"'/gpg_wrapper' \
       ;
 #! /bin/sh -
-${gpg} "\${@}";
+${gpg} \\
+  '--batch' \\
+  '--no-tty' \\
+  "\${@}" \\
+;
 EOF2
       s="${?}";
       case "${s}" in
@@ -2647,6 +2653,7 @@ EOF2
     '"${gpg}"' \
       '\''--batch'\'' \
       '\''--no-options'\'' \
+      '\''--no-tty'\'' \
       '\''--output'\'' \
       "${safe_dst}"'\''.sig'\'' \
       '\''--passphrase-file'\'' \
