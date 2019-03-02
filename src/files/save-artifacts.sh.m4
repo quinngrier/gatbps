@@ -564,6 +564,7 @@ esac;
 
 copy_ssh_secret_key_file='no';
 date_command=''\''sh'\'' '\''build-aux/DATE.sh'\''';
+git_committer_name='Archivist';
 gpg_passphrase_file='gpg-passphrase-file';
 gpg_secret_key_file='gpg-secret-key-file';
 leaf_prefix='';
@@ -874,6 +875,55 @@ EOF2
               git="${git_auto}";
             ;;
           esac;
+
+          'continue'
+
+        ;;
+
+        '--git-committer-name')
+
+          case "${#}" in
+            '1')
+              'cat' 0<<EOF2 1>&2;
+${fr2}save-artifacts.sh!${fR2} ${fB2}--git-committer-name${fR2} requires a value
+${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
+EOF2
+              'exit' '1'
+            ;;
+          esac
+
+          x="${2}"
+          shift
+          shift
+          set 'x' "--git-committer-name=${x}" "${@}"
+
+          'continue'
+
+        ;;
+
+        '--git-committer-name='*)
+
+          x=`'eval' "${sed}"' "
+            s/'\\''/'\\''\\\\\\\\'\\'''\\''/g
+            1s/^--git-committer-name=/git_committer_name='\\''/
+            \\$s/\\$/'\\''/
+          "' <<EOF2
+${1}
+EOF2
+`
+          case "${?}" in
+            '0')
+            ;;
+            *)
+              'cat' 0<<EOF2 1>&2;
+${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
+${fr2}save-artifacts.sh!${fR2}   1. a here-document
+${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
+EOF2
+              'exit' '1'
+            ;;
+          esac
+          'eval' "${x}"
 
           'continue'
 
@@ -2641,6 +2691,8 @@ EOF2
       '"${git}"' \
         '\''-c'\'' \
         '\''gpg.program='\''"${full_temporary_directory}"'\''/gpg_wrapper'\'' \
+        '\''-c'\'' \
+        '\''user.name='\''"${git_committer_name}" \
         '\''commit'\'' \
         '\''--gpg-sign=0x'\''"${gpg_secret_key_fingerprint}" \
         '\''--message=Add '\''"${relative_dst}" \
