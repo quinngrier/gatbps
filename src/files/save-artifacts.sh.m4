@@ -2133,7 +2133,7 @@ EOF2
       esac;
 
       'eval' '
-        GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${full_ssh_passphrase_file}" ssh -i "${full_ssh_secret_key_file_pointer}"'\''\'\'''\'''\'' \
+        GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${full_ssh_passphrase_file}" ssh -o StrictHostKeyChecking=no -i "${full_ssh_secret_key_file_pointer}"'\''\'\'''\'''\'' \
         full_ssh_passphrase_file="${full_ssh_passphrase_file}" \
         full_ssh_secret_key_file_pointer="${full_ssh_secret_key_file_pointer}" \
         sshpass="${sshpass}" \
@@ -2596,7 +2596,7 @@ EOF2
 
     'eval' '
       GIT_DIR="${safe_git_clone_directory}"'/.git' \
-      GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${full_ssh_passphrase_file}" ssh -i "${full_ssh_secret_key_file_pointer}"'\''\'\'''\'''\'' \
+      GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${full_ssh_passphrase_file}" ssh -o StrictHostKeyChecking=no -i "${full_ssh_secret_key_file_pointer}"'\''\'\'''\'''\'' \
       GIT_WORK_TREE="${safe_git_clone_directory}" \
       full_ssh_passphrase_file="${full_ssh_passphrase_file}" \
       full_ssh_secret_key_file_pointer="${full_ssh_secret_key_file_pointer}" \
@@ -2653,7 +2653,7 @@ EOF2
 
     'eval' '
       GIT_DIR="${safe_git_clone_directory}"'/.git' \
-      GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${full_ssh_passphrase_file}" ssh -i "${full_ssh_secret_key_file_pointer}"'\''\'\'''\'''\'' \
+      GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${full_ssh_passphrase_file}" ssh -o StrictHostKeyChecking=no -i "${full_ssh_secret_key_file_pointer}"'\''\'\'''\'''\'' \
       GIT_WORK_TREE="${safe_git_clone_directory}" \
       full_ssh_passphrase_file="${full_ssh_passphrase_file}" \
       full_ssh_secret_key_file_pointer="${full_ssh_secret_key_file_pointer}" \
