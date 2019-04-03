@@ -30,8 +30,8 @@ m4exit({%|1|%})|%}){%||%}dnl
 #
 
 LC_ALL=C
-export LC_ALL
-readonly LC_ALL|%}dnl
+readonly LC_ALL
+export LC_ALL|%}dnl
 |%})|%}){%||%}dnl
 dnl
 dnl The authors of this file have waived all copyright and
