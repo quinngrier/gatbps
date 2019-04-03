@@ -29,9 +29,9 @@ m4exit({%|1|%})|%}){%||%}dnl
 # see the C standard, the POSIX standard, and the GNU C Library manual.
 #
 
-LC_ALL='C'
-'export' 'LC_ALL'
-'readonly' 'LC_ALL'|%}dnl
+LC_ALL=C
+export LC_ALL
+readonly LC_ALL|%}dnl
 |%})|%}){%||%}dnl
 dnl
 dnl The authors of this file have waived all copyright and
