@@ -284,7 +284,7 @@ esac
 
 case "${STYLE_STDOUT+is_set}" in
   ?*)
-    case "${#}" in
+    case $# in
       '0')
         'set' 'dummy' '--style-stdout='"${STYLE_STDOUT}"
       ;;
@@ -298,7 +298,7 @@ esac
 
 case "${STYLE_STDERR+is_set}" in
   ?*)
-    case "${#}" in
+    case $# in
       '0')
         'set' 'dummy' '--style-stderr='"${STYLE_STDERR}"
       ;;
@@ -312,7 +312,7 @@ esac
 
 case "${STYLE+is_set}" in
   ?*)
-    case "${#}" in
+    case $# in
       '0')
         'set' 'dummy' '--style='"${STYLE}"
       ;;
@@ -326,7 +326,7 @@ esac
 
 case "${SED+is_set}" in
   ?*)
-    case "${#}" in
+    case $# in
       '0')
         'set' 'dummy' '--sed='"${SED}"
       ;;
@@ -340,7 +340,7 @@ esac
 
 case "${AWK+is_set}" in
   ?*)
-    case "${#}" in
+    case $# in
       '0')
         'set' 'dummy' '--awk='"${AWK}"
       ;;
@@ -363,7 +363,7 @@ keep='no'
 first_item='yes'
 the_output=''
 
-case "${#}" in
+case $# in
   '0')
     'set' 'dummy'
   ;;
@@ -376,7 +376,7 @@ while ':'; do
 
   'shift'
 
-  case "${#}" in
+  case $# in
     '0')
       'break'
     ;;
@@ -406,7 +406,7 @@ EOF2
 
         '--awk')
 
-          case "${#}" in
+          case $# in
             '1')
               'cat' 0<<EOF2 1>&2;
 ${fr2}sh-form.sh!${fR2} ${fB2}--awk${fR2} requires a value
@@ -598,7 +598,7 @@ EOF2
 
         '--sed')
 
-          case "${#}" in
+          case $# in
             '1')
               'cat' 0<<EOF2 1>&2;
 ${fr2}sh-form.sh!${fR2} ${fB2}--sed${fR2} requires a value

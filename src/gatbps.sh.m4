@@ -335,7 +335,7 @@ esac
 
 case "${TEXI2ANY+is_set}" in
   ?*)
-    case "${#}" in
+    case $# in
       '0')
         'set' 'dummy' '--texi2any='"${TEXI2ANY}"
       ;;
@@ -349,7 +349,7 @@ esac
 
 case "${STYLE_STDOUT+is_set}" in
   ?*)
-    case "${#}" in
+    case $# in
       '0')
         'set' 'dummy' '--style-stdout='"${STYLE_STDOUT}"
       ;;
@@ -363,7 +363,7 @@ esac
 
 case "${STYLE_STDERR+is_set}" in
   ?*)
-    case "${#}" in
+    case $# in
       '0')
         'set' 'dummy' '--style-stderr='"${STYLE_STDERR}"
       ;;
@@ -377,7 +377,7 @@ esac
 
 case "${STYLE+is_set}" in
   ?*)
-    case "${#}" in
+    case $# in
       '0')
         'set' 'dummy' '--style='"${STYLE}"
       ;;
@@ -391,7 +391,7 @@ esac
 
 case "${SED+is_set}" in
   ?*)
-    case "${#}" in
+    case $# in
       '0')
         'set' 'dummy' '--sed='"${SED}"
       ;;
@@ -405,7 +405,7 @@ esac
 
 case "${AWK+is_set}" in
   ?*)
-    case "${#}" in
+    case $# in
       '0')
         'set' 'dummy' '--awk='"${AWK}"
       ;;
@@ -441,7 +441,7 @@ ferror1='no'
 
 path_args=''
 
-case "${#}" in
+case $# in
   '0')
     'set' 'dummy'
   ;;
@@ -454,7 +454,7 @@ while ':'; do
 
   'shift'
 
-  case "${#}" in
+  case $# in
     '0')
       'break'
     ;;
@@ -868,7 +868,7 @@ EOF1
 
         '--awk')
 
-          case "${#}" in
+          case $# in
             '1')
               'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}--awk${fR2} requires a value
@@ -2115,7 +2115,7 @@ EOF1
 
         '--sed')
 
-          case "${#}" in
+          case $# in
             '1')
               'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}--sed${fR2} requires a value
@@ -2399,7 +2399,7 @@ EOF1
 
         '--texi2any')
 
-          case "${#}" in
+          case $# in
             '1')
               'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}--texi2any${fR2} requires a value

@@ -279,7 +279,7 @@ esac
 
 case "${STYLE_STDOUT+is_set}" in
   ?*)
-    case "${#}" in
+    case $# in
       '0')
         'set' 'dummy' '--style-stdout='"${STYLE_STDOUT}"
       ;;
@@ -293,7 +293,7 @@ esac
 
 case "${STYLE_STDERR+is_set}" in
   ?*)
-    case "${#}" in
+    case $# in
       '0')
         'set' 'dummy' '--style-stderr='"${STYLE_STDERR}"
       ;;
@@ -307,7 +307,7 @@ esac
 
 case "${STYLE+is_set}" in
   ?*)
-    case "${#}" in
+    case $# in
       '0')
         'set' 'dummy' '--style='"${STYLE}"
       ;;
@@ -321,7 +321,7 @@ esac
 
 case "${SED+is_set}" in
   ?*)
-    case "${#}" in
+    case $# in
       '0')
         'set' 'dummy' '--sed='"${SED}"
       ;;
@@ -335,7 +335,7 @@ esac
 
 case "${AWK+is_set}" in
   ?*)
-    case "${#}" in
+    case $# in
       '0')
         'set' 'dummy' '--awk='"${AWK}"
       ;;
@@ -350,7 +350,7 @@ esac
 first_operand='yes'
 output=''
 
-case "${#}" in
+case $# in
   '0')
     'set' 'dummy'
   ;;
@@ -363,7 +363,7 @@ while ':'; do
 
   'shift'
 
-  case "${#}" in
+  case $# in
     '0')
       'break'
     ;;

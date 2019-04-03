@@ -434,7 +434,7 @@ esac;
 
 case "${STYLE_STDOUT+is_set}" in
   ?*)
-    case "${#}" in
+    case $# in
       '0')
         'set' 'dummy' '--style-stdout='"${STYLE_STDOUT}"
       ;;
@@ -448,7 +448,7 @@ esac
 
 case "${STYLE_STDERR+is_set}" in
   ?*)
-    case "${#}" in
+    case $# in
       '0')
         'set' 'dummy' '--style-stderr='"${STYLE_STDERR}"
       ;;
@@ -462,7 +462,7 @@ esac
 
 case "${STYLE+is_set}" in
   ?*)
-    case "${#}" in
+    case $# in
       '0')
         'set' 'dummy' '--style='"${STYLE}"
       ;;
@@ -476,7 +476,7 @@ esac
 
 case "${SSHPASS+is_set}" in
   ?*)
-    case "${#}" in
+    case $# in
       '0')
         'set' 'dummy' '--sshpass='"${SSHPASS}";
       ;;
@@ -490,7 +490,7 @@ esac;
 
 case "${SED+is_set}" in
   ?*)
-    case "${#}" in
+    case $# in
       '0')
         'set' 'dummy' '--sed='"${SED}"
       ;;
@@ -504,7 +504,7 @@ esac
 
 case "${GPG+is_set}" in
   ?*)
-    case "${#}" in
+    case $# in
       '0')
         'set' 'dummy' '--gpg='"${GPG}";
       ;;
@@ -518,7 +518,7 @@ esac;
 
 case "${GIT+is_set}" in
   ?*)
-    case "${#}" in
+    case $# in
       '0')
         'set' 'dummy' '--git='"${GIT}";
       ;;
@@ -532,7 +532,7 @@ esac;
 
 case "${AWK+is_set}" in
   ?*)
-    case "${#}" in
+    case $# in
       '0')
         'set' 'dummy' '--awk='"${AWK}"
       ;;
@@ -612,7 +612,7 @@ safe_temporary_directory='temporary-directory';
 version_command_attempted='no';
 version_command_succeeded='no';
 
-case "${#}" in
+case $# in
   '0')
     'set' 'dummy'
   ;;
@@ -625,7 +625,7 @@ while ':'; do
 
   'shift'
 
-  case "${#}" in
+  case $# in
     '0')
       'break'
     ;;
@@ -655,7 +655,7 @@ EOF2
 
         '--awk')
 
-          case "${#}" in
+          case $# in
             '1')
               'cat' 0<<EOF2 1>&2;
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--awk${fR2} requires a value
@@ -756,7 +756,7 @@ EOF2
 
         '--date-command')
 
-          case "${#}" in
+          case $# in
             '1')
               'cat' 0<<EOF2 1>&2;
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--date-command${fR2} requires a value
@@ -808,7 +808,7 @@ EOF2
 
         '--git')
 
-          case "${#}" in
+          case $# in
             '1')
               'cat' 0<<EOF2 1>&2;
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--git${fR2} requires a value
@@ -883,7 +883,7 @@ EOF2
 
         '--git-committer-email')
 
-          case "${#}" in
+          case $# in
             '1')
               'cat' 0<<EOF2 1>&2;
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--git-committer-email${fR2} requires a value
@@ -932,7 +932,7 @@ EOF2
 
         '--git-committer-name')
 
-          case "${#}" in
+          case $# in
             '1')
               'cat' 0<<EOF2 1>&2;
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--git-committer-name${fR2} requires a value
@@ -981,7 +981,7 @@ EOF2
 
         '--gpg')
 
-          case "${#}" in
+          case $# in
             '1')
               'cat' 0<<EOF2 1>&2;
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--gpg${fR2} requires a value
@@ -1060,7 +1060,7 @@ EOF2
 
         '--gpg-passphrase-file')
 
-          case "${#}" in
+          case $# in
             '1')
               'cat' 0<<EOF2 1>&2;
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--gpg-passphrase-file${fR2} requires a value
@@ -1120,7 +1120,7 @@ EOF2
 
         '--gpg-secret-key-file')
 
-          case "${#}" in
+          case $# in
             '1')
               'cat' 0<<EOF2 1>&2;
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--gpg-secret-key-file${fR2} requires a value
@@ -1183,7 +1183,7 @@ EOF2
 
         '--leaf-prefix')
 
-          case "${#}" in
+          case $# in
             '1')
               'cat' 0<<EOF2 1>&2;
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--leaf-prefix${fR2} requires a value
@@ -1241,7 +1241,7 @@ EOF2
 
         '--push-attempts')
 
-          case "${#}" in
+          case $# in
             '1')
               'cat' 0<<EOF2 1>&2;
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--push-attempts${fR2} requires a value
@@ -1302,7 +1302,7 @@ EOF2
 
         '--repository')
 
-          case "${#}" in
+          case $# in
             '1')
               'cat' 0<<EOF2 1>&2;
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--repository${fR2} requires a value
@@ -1354,7 +1354,7 @@ EOF2
 
         '--root-prefix')
 
-          case "${#}" in
+          case $# in
             '1')
               'cat' 0<<EOF2 1>&2;
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--root-prefix${fR2} requires a value
@@ -1412,7 +1412,7 @@ EOF2
 
         '--sed')
 
-          case "${#}" in
+          case $# in
             '1')
               'cat' 0<<EOF2 1>&2;
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--sed${fR2} requires a value
@@ -1487,7 +1487,7 @@ EOF2
 
         '--ssh-known-hosts-file')
 
-          case "${#}" in
+          case $# in
             '1')
               'cat' 0<<EOF2 1>&2;
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--ssh-known-hosts-file${fR2} requires a value
@@ -1548,7 +1548,7 @@ EOF2
 
         '--ssh-passphrase-file')
 
-          case "${#}" in
+          case $# in
             '1')
               'cat' 0<<EOF2 1>&2;
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--ssh-passphrase-file${fR2} requires a value
@@ -1608,7 +1608,7 @@ EOF2
 
         '--ssh-secret-key-file')
 
-          case "${#}" in
+          case $# in
             '1')
               'cat' 0<<EOF2 1>&2;
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--ssh-secret-key-file${fR2} requires a value
@@ -1671,7 +1671,7 @@ EOF2
 
         '--sshpass')
 
-          case "${#}" in
+          case $# in
             '1')
               'cat' 0<<EOF2 1>&2;
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--sshpass${fR2} requires a value
@@ -1746,7 +1746,7 @@ EOF2
 
         '--sshpass-prompt')
 
-          case "${#}" in
+          case $# in
             '1')
               'cat' 0<<EOF2 1>&2;
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--sshpass-prompt${fR2} requires a value
@@ -1795,7 +1795,7 @@ EOF2
 
         '--temporary-directory')
 
-          case "${#}" in
+          case $# in
             '1')
               'cat' 0<<EOF2 1>&2;
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--temporary-directory${fR2} requires a value
@@ -1889,7 +1889,7 @@ EOF2
 
         '--version-command')
 
-          case "${#}" in
+          case $# in
             '1')
               'cat' 0<<EOF2 1>&2;
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--version-command${fR2} requires a value
