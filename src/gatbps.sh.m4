@@ -24,7 +24,7 @@ SHEBANG_LINE{%|#! /bin/sh -
 
 nl='
 '
-'readonly' 'nl'
+readonly nl
 
 #
 # The detect_options variable is set to 'yes' if the arguments are being

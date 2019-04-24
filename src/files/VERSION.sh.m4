@@ -40,7 +40,7 @@ header_comment({%|#|%}, {%|#|%}){%|
 
 nl='
 '
-'readonly' 'nl'
+readonly nl
 
 if git ls-files --error-unmatch "${0}" >/dev/null 2>&1; then
   v_description=`
