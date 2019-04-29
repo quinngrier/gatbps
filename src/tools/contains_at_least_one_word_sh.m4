@@ -82,7 +82,7 @@ ifelse(
     $|%}{%|][($9) \|%}|%}){%||%}dnl
 {%|
   ; do \
-    '\''exit'\'' '\''0'\''; \
+    exit '\''0'\''; \
   done; \
   '\''echo'\'' \
     '\''error:'\'' \|%}dnl
@@ -195,7 +195,7 @@ ifelse(
     '\''not set'\'' \
     1>&2 \
   ; \
-  '\''exit'\'' '\''1'\''; \
+  exit '\''1'\''; \
 :;}|%}|%})|%}){%||%}dnl
 dnl
 dnl The authors of this file have waived all copyright and

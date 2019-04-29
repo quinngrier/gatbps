@@ -227,13 +227,13 @@ GATBPS_CONFIG_LATER_make_lines(m4_if(,,child_prerequisites))[
       $][(GATBPS_CONFIG_LATER_SCRIPT) \
       0<"$][$][{x}" \
       1>'\''./'\'']output_file['\''.tmp'\'' \
-    || '\''exit'\'' "$][$][{?}"; \
+    || exit "$][$][{?}"; \
     '\''mv'\'' \
       '\''-f'\'' \
       '\''./'\'']output_file['\''.tmp'\'' \
       '\''./'\'']output_file[ \
-    || '\''exit'\'' "$][$][{?}"; \
-    '\''exit'\'' '\''0'\''; \
+    || exit "$][$][{?}"; \
+    exit '\''0'\''; \
   :;); \
   exit_status="$][$][{?}"; \
   '\''readonly'\'' '\''exit_status'\''; \
@@ -248,7 +248,7 @@ GATBPS_CONFIG_LATER_make_lines(m4_if(,,child_prerequisites))[
       ; \
     ;; \
   esac; \
-  '\''exit'\'' "$][$][{exit_status}"; \
+  exit "$][$][{exit_status}"; \
 :;}
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 

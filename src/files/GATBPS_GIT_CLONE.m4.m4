@@ -170,7 +170,7 @@ GATBPS_GIT_CLONE_word_lines_6(m4_if(,,input_urls))[
         '\''-f'\'' \
         '\''-r'\'' \
         '\''./'\'']output_directory['\''.tmp'\'' \
-      || '\''exit'\'' "$][$][{?}"; \
+      || exit "$][$][{?}"; \
       $][(GIT) \
         '\''clone'\'' \
         '\''--'\'' \
@@ -184,18 +184,18 @@ GATBPS_GIT_CLONE_word_lines_6(m4_if(,,input_urls))[
     '\''readonly'\'' '\''clone_succeeded'\''; \
     case "$][$][{clone_succeeded}" in \
       '\''no'\'') \
-        '\''exit'\'' '\''1'\''; \
+        exit '\''1'\''; \
       ;; \
     esac; \
     ( \
       '\''cd'\'' \
         '\''./'\'']output_directory['\''.tmp'\'' \
-      || '\''exit'\'' "$][$][{?}"; \
+      || exit "$][$][{?}"; \
       $][(GIT) \
         '\''remote'\'' \
         '\''remove'\'' \
         '\''origin'\'' \
-      || '\''exit'\'' "$][$][{?}"; \
+      || exit "$][$][{?}"; \
       '\''set'\'' '\'''\'' \]dnl
 GATBPS_GIT_CLONE_word_lines_8(m4_if(,,input_urls))[
       ; \
@@ -211,16 +211,16 @@ GATBPS_GIT_CLONE_word_lines_8(m4_if(,,input_urls))[
           '\''add'\'' \
           '\''r'\''"$][$][{#}" \
           "$][$][{1}" \
-        || '\''exit'\'' "$][$][{?}"; \
+        || exit "$][$][{?}"; \
       done; \
-      '\''exit'\'' '\''0'\''; \
-    :;) || '\''exit'\'' "$${?}"; \
+      exit '\''0'\''; \
+    :;) || exit "$${?}"; \
     '\''mv'\'' \
       '\''-f'\'' \
       '\''./'\'']output_directory['\''.tmp'\'' \
       '\''./'\'']output_directory[ \
-    || '\''exit'\'' "$][$][{?}"; \
-    '\''exit'\'' '\''0'\''; \
+    || exit "$][$][{?}"; \
+    exit '\''0'\''; \
   :;); \
   exit_status="$][$][{?}"; \
   '\''readonly'\'' '\''exit_status'\''; \
@@ -236,7 +236,7 @@ GATBPS_GIT_CLONE_word_lines_8(m4_if(,,input_urls))[
       ; \
     ;; \
   esac; \
-  '\''exit'\'' "$][$][{exit_status}"; \
+  exit "$][$][{exit_status}"; \
 :;}
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 

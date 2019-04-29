@@ -18,13 +18,13 @@ ifdef(
           '\''contains multiple words'\'' \
           1>&2 \
         ; \
-        '\''exit'\'' '\''1'\''; \
+        exit '\''1'\''; \
       ;; \
     esac; \
   done; \
   case "$|%}{%|][$|%}{%|][{x}" in \
     ?*) \
-      '\''exit'\'' '\''0'\''; \
+      exit '\''0'\''; \
     ;; \
   esac; \
   '\''echo'\'' \
@@ -33,7 +33,7 @@ ifdef(
     '\''is not set'\'' \
     1>&2 \
   ; \
-  '\''exit'\'' '\''1'\''; \
+  exit '\''1'\''; \
 :;}|%}|%})|%}){%||%}dnl
 dnl
 dnl The authors of this file have waived all copyright and

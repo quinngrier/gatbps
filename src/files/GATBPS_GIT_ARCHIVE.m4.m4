@@ -134,7 +134,7 @@ GATBPS_GIT_ARCHIVE_RULES="$][{GATBPS_GIT_ARCHIVE_RULES}"'
   ( \
     '\''cd'\'' \
       "$][$][{d}"'\''/'\''"$][$][{x}" \
-    || '\''exit'\'' "$][$][{?}"; \
+    || exit "$][$][{?}"; \
     $][(GIT) \
       '\''rev-parse'\'' \
       '\''--verify'\'' \
@@ -148,32 +148,32 @@ GATBPS_GIT_ARCHIVE_RULES="$][{GATBPS_GIT_ARCHIVE_RULES}"'
         '\''rev-parse'\'' \
         '\''--verify'\'' \
         ]tree_sh['\''^{tree}'\'' \
-      || '\''exit'\'' "$][$][{?}"; \
-      '\''exit'\'' '\''0'\''; \
-    ) || '\''exit'\'' "$][$][{?}"; \
-    '\''exit'\'' '\''0'\''; \
-  :;) || '\''exit'\'' "$][$][{?}"; \
+      || exit "$][$][{?}"; \
+      exit '\''0'\''; \
+    ) || exit "$][$][{?}"; \
+    exit '\''0'\''; \
+  :;) || exit "$][$][{?}"; \
   ( \
     ( \
       '\''cd'\'' \
         "$][$][{d}"'\''/'\''"$][$][{x}" \
-      || '\''exit'\'' "$][$][{?}"; \
+      || exit "$][$][{?}"; \
       $][(GIT) \
         '\''archive'\'' \
         '\''--format=tar'\'' \
         '\''--prefix='\'']archive_prefix['\''/'\'' \
         ]tree_sh['\''^{tree}'\'' \
-      || '\''exit'\'' "$][$][{?}"; \
-      '\''exit'\'' '\''0'\''; \
+      || exit "$][$][{?}"; \
+      exit '\''0'\''; \
     :;) \
       1>'\''./'\'']output_file['\''.tmp'\'' \
-    || '\''exit'\'' "$][$][{?}"; \
+    || exit "$][$][{?}"; \
     '\''mv'\'' \
       '\''-f'\'' \
       '\''./'\'']output_file['\''.tmp'\'' \
       '\''./'\'']output_file[ \
-    || '\''exit'\'' "$][$][{?}"; \
-    '\''exit'\'' '\''0'\''; \
+    || exit "$][$][{?}"; \
+    exit '\''0'\''; \
   :;); \
   x="$][$][{?}"; \
   case "$][$][{x}" in \
@@ -188,7 +188,7 @@ GATBPS_GIT_ARCHIVE_RULES="$][{GATBPS_GIT_ARCHIVE_RULES}"'
       ; \
     ;; \
   esac; \
-  '\''exit'\'' "$][$][{x}"; \
+  exit "$][$][{x}"; \
 :;}
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 

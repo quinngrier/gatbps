@@ -320,7 +320,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
         || '\''test'\'' \
           '\''-d'\'' \
           "$][$][{x}" \
-        || '\''exit'\'' "$][$][{?}"; \
+        || exit "$][$][{?}"; \
         case "$][$][{merge}" in \
           '\''no'\'') \
             case "$][$][{context}" in \
@@ -343,7 +343,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
         || '\''test'\'' \
           '\''-d'\'' \
           $][(srcdir)'\''/'\''"$][$][{x}" \
-        || '\''exit'\'' "$][$][{?}"; \
+        || exit "$][$][{?}"; \
         case "$][$][{merge}" in \
           '\''no'\'') \
             case "$][$][{context}" in \
@@ -368,17 +368,17 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
         '\''readonly'\'' '\''context'\''; \
         $][(MKDIR_P) \
           "$][$][{context}" \
-        || '\''exit'\'' "$][$][{?}"; \
+        || exit "$][$][{?}"; \
         '\''cp'\'' \
           '\''-R'\'' \
           $][(srcdir)'\''/'\'']input_directory['\''/'\''* \
           "$][$][{context}" \
-        || '\''exit'\'' "$][$][{?}"; \
+        || exit "$][$][{?}"; \
         '\''cp'\'' \
           '\''-R'\'' \
           '\''./'\'']input_directory['\''/'\''* \
           "$][$][{context}" \
-        || '\''exit'\'' "$][$][{?}"; \
+        || exit "$][$][{?}"; \
       ;; \
       '\''no'\'') \
         context="$][$][{context}"'\''/'\'']input_directory[; \
@@ -391,27 +391,27 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
 GATBPS_DOCKER_BUILD_tag_lines(m4_if(,,image_names))[
       $][(DOCKER_BUILD_FLAGS) \
       "$][$][{context}" \
-    || '\''exit'\'' "$][$][{?}"; \
+    || exit "$][$][{?}"; \
     hash=` \
       $][(DOCKER) \
         '\''images'\'' \
         '\''--quiet'\'' \
         '\''tmp'\''"$][$][{$][$][}" \
       ; \
-    ` || '\''exit'\'' "$][$][{?}"; \
+    ` || exit "$][$][{?}"; \
     '\''readonly'\'' '\''hash'\''; \
     $][(DOCKER) \
       '\''save'\'' \
       "$][$][{hash}" \]dnl
 GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
       1>'\''./'\'']output_file['\''.tmp'\'' \
-    || '\''exit'\'' "$][$][{?}"; \
+    || exit "$][$][{?}"; \
     '\''mv'\'' \
       '\''-f'\'' \
       '\''./'\'']output_file['\''.tmp'\'' \
       '\''./'\'']output_file[ \
-    || '\''exit'\'' "$][$][{?}"; \
-    '\''exit'\'' '\''0'\''; \
+    || exit "$][$][{?}"; \
+    exit '\''0'\''; \
   :;); \
   x="$][$][{?}"; \
   '\''rm'\'' \
@@ -431,7 +431,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
       ; \
     ;; \
   esac; \
-  '\''exit'\'' "$][$][{x}"; \
+  exit "$][$][{x}"; \
 :;}
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 

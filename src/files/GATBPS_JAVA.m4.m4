@@ -59,10 +59,10 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
       '\''--'\'' \
       "$][$][{x}" \
       1>'\''java-]gatbps_x[.tmp'\'' \
-    || '\''exit'\'' "$][$][{?}"; \
+    || exit "$][$][{?}"; \
     classpath=` \
       '\''cat'\'' '\''java-]gatbps_x[.tmp'\'' \
-    ` || '\''exit'\'' "$][$][{?}"; \
+    ` || exit "$][$][{?}"; \
     x='\''x'\''; \
     for if_not_blank in \
       $][(java_]gatbps_y[_JAVACFLAGS) \
@@ -74,7 +74,7 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
         '\''--'\'' \
         $][(java_]gatbps_y[_JAVACFLAGS) \
         1>'\''java-]gatbps_x[.tmp'\'' \
-      || '\''exit'\'' "$][$][{?}"; \
+      || exit "$][$][{?}"; \
       x='\'''\''; \
       '\''break'\''; \
     done; \
@@ -86,22 +86,22 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
           '\''--'\'' \
           $][(GATBPS_JAVACFLAGS) \
           1>'\''java-]gatbps_x[.tmp'\'' \
-        || '\''exit'\'' "$][$][{?}"; \
+        || exit "$][$][{?}"; \
       ;; \
     esac; \
     javacflags=` \
       '\''cat'\'' '\''java-]gatbps_x[.tmp'\'' \
-    ` || '\''exit'\'' "$][$][{?}"; \
+    ` || exit "$][$][{?}"; \
     $][(SHELL) \
       '\''-'\'' \
       $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
       '\''--'\'' \
       '\''./'\''$][(java_]gatbps_y[_sourcepath) \
       1>'\''java-]gatbps_x[.tmp'\'' \
-    || '\''exit'\'' "$][$][{?}"; \
+    || exit "$][$][{?}"; \
     sourcepath=` \
       '\''cat'\'' '\''java-]gatbps_x[.tmp'\'' \
-    ` || '\''exit'\'' "$][$][{?}"; \
+    ` || exit "$][$][{?}"; \
     $][(MAKE) \
       $][(AM@&t@_MAKEFLAGS) \
       '\''GATBPS_INNER_CLASSPATH='\''"$][$][{classpath}" \
@@ -111,15 +111,15 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
       '\''GATBPS_INNER_SOURCEPATH='\''"$][$][{sourcepath}" \
       '\''GATBPS_OUTER_JAR_SUFFIX=/outer'\'' \
       '\''./'\''$][(java_]gatbps_y[_dst) \
-    || '\''exit'\'' "$][$][{?}"; \
-    '\''exit'\'' '\''0'\''; \
+    || exit "$][$][{?}"; \
+    exit '\''0'\''; \
   :;); \
   x="$][$][{?}"; \
   '\''rm'\'' \
     '\''-f'\'' \
     '\''java-]gatbps_x[.tmp'\'' \
   ; \
-  '\''exit'\'' "$][$][{x}"; \
+  exit "$][$][{x}"; \
 :;}
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
@@ -135,10 +135,10 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
       '\''-f'\'' \
       '\''-r'\'' \
       '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp'\'' \
-    || '\''exit'\'' "$][$][{?}"; \
+    || exit "$][$][{?}"; \
     $][(MKDIR_P) \
       '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x'\'' \
-    || '\''exit'\'' "$][$][{?}"; \
+    || exit "$][$][{?}"; \
     c='\''cf'\''; \
     for x in \
       $][(java_]gatbps_y[_extra) \
@@ -168,19 +168,19 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
         '\''-C'\'' \
         "$][$][{d}" \
         '\''./'\''"$][$][{x}" \
-      || '\''exit'\'' "$][$][{?}"; \
+      || exit "$][$][{?}"; \
       c='\''uf'\''; \
     done; \
     ( \
       '\''cd'\'' \
         '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x'\'' \
-      || '\''exit'\'' "$][$][{?}"; \
+      || exit "$][$][{?}"; \
       $][(JAR) \
         '\''xf'\'' \
         '\''../x.jar'\'' \
-      || '\''exit'\'' "$][$][{?}"; \
-      '\''exit'\'' '\''0'\''; \
-    :;) || '\''exit'\'' "$][$][{?}"; \
+      || exit "$][$][{?}"; \
+      exit '\''0'\''; \
+    :;) || exit "$][$][{?}"; \
     x='\''x'\''; \
     for if_not_blank in \
       $][(java_]gatbps_y[_JARFLAGS) \
@@ -194,7 +194,7 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
         $][(java_]gatbps_y[_JARFLAGS) \
         $][(JARFLAGS) \
         '\''.'\'' \
-      || '\''exit'\'' "$][$][{?}"; \
+      || exit "$][$][{?}"; \
       x='\'''\''; \
       '\''break'\''; \
     done; \
@@ -208,10 +208,10 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
           $][(GATBPS_JARFLAGS) \
           $][(JARFLAGS) \
           '\''.'\'' \
-        || '\''exit'\'' "$][$][{?}"; \
+        || exit "$][$][{?}"; \
       ;; \
     esac; \
-    '\''exit'\'' '\''0'\''; \
+    exit '\''0'\''; \
   :;); \
   x="$][$][{?}"; \
   '\''rm'\'' \
@@ -219,7 +219,7 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
     '\''-r'\'' \
     '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp'\'' \
   ; \
-  '\''exit'\'' "$][$][{x}"; \
+  exit "$][$][{x}"; \
 :;}
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
@@ -242,7 +242,7 @@ clean-java-]gatbps_x[: java.FORCE
       '\''./'\''"$][$][{x}" \
     ; \
   done; \
-  '\''exit'\'' '\''0'\''; \
+  exit '\''0'\''; \
 :;}
 
 install-java: install-java-]gatbps_x[
@@ -285,7 +285,7 @@ install-java-]gatbps_x[: java.FORCE
       fi; \
       $][(MKDIR_P) \
         "$][$][{d}" \
-      || '\''exit'\'' "$][$][{?}"; \
+      || exit "$][$][{?}"; \
       if '\''test'\'' '\''-f'\'' $][(java_]gatbps_y[_dst); then \
         x='\''.'\''; \
       else \
@@ -314,10 +314,10 @@ install-java-]gatbps_x[: java.FORCE
       $][(INSTALL_DATA) \
         "$][$][{x}" \
         "$][$][{d}" \
-      || '\''exit'\'' "$][$][{?}"; \
+      || exit "$][$][{?}"; \
     ;; \
   esac; \
-  '\''exit'\'' '\''0'\''; \
+  exit '\''0'\''; \
 :;}
 
 java: java-]gatbps_x[
@@ -349,7 +349,7 @@ uninstall-java-]gatbps_x[: java.FORCE
           '\'':'\'' \
           '\''X.*/\(.*\)'\'' \
           1>'\''uninstall-java-]gatbps_x[.tmp'\'' \
-        || '\''exit'\'' "$][$][{?}"; \
+        || exit "$][$][{?}"; \
         x=$][(srcdir); \
         x=` \
           $][(SHELL) \
@@ -358,7 +358,7 @@ uninstall-java-]gatbps_x[: java.FORCE
             '\''--stdin'\'' \
             0<'\''uninstall-java-]gatbps_x[.tmp'\'' \
           ; \
-        ` || '\''exit'\'' "$][$][{?}"; \
+        ` || exit "$][$][{?}"; \
         '\''eval'\'' '\''x='\''"$][$][{x}"; \
         x=$][(DESTDIR)$][(javadir)'\''/'\''"$][$][{x}"; \
         case "$][$][{x}" in \
@@ -384,17 +384,17 @@ uninstall-java-]gatbps_x[: java.FORCE
           '\''-f'\'' \
           "$][$][{x}" \
         ; \
-        '\''exit'\'' '\''0'\''; \
+        exit '\''0'\''; \
       :;); \
       x="$][$][{?}"; \
       '\''rm'\'' \
         '\''-f'\'' \
         '\''uninstall-java-]gatbps_x[.tmp'\'' \
       ; \
-      '\''exit'\'' "$][$][{x}"; \
+      exit "$][$][{x}"; \
     ;; \
   esac; \
-  '\''exit'\'' '\''0'\''; \
+  exit '\''0'\''; \
 :;}
 
 '

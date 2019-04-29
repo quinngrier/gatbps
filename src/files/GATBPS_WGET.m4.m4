@@ -312,19 +312,19 @@ GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
     '\''readonly'\'' '\''download_succeeded'\''; \
     case "$][$][{download_succeeded}" in \
       '\''no'\'') \
-        '\''exit'\'' '\''1'\''; \
+        exit '\''1'\''; \
       ;; \
     esac; \
     '\''touch'\'' \
       '\''./'\'']output_file['\''.tmp'\'' \
       0<'\''/dev/null'\'' \
-    || '\''exit'\'' "$][$][{?}"; \
+    || exit "$][$][{?}"; \
     '\''mv'\'' \
       '\''-f'\'' \
       '\''./'\'']output_file['\''.tmp'\'' \
       '\''./'\'']output_file[ \
-    || '\''exit'\'' "$][$][{?}"; \
-    '\''exit'\'' '\''0'\''; \
+    || exit "$][$][{?}"; \
+    exit '\''0'\''; \
   :;); \
   exit_status="$][$][{?}"; \
   '\''readonly'\'' '\''exit_status'\''; \
@@ -339,7 +339,7 @@ GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
       ; \
     ;; \
   esac; \
-  '\''exit'\'' "$][$][{exit_status}"; \
+  exit "$][$][{exit_status}"; \
 :;}
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
