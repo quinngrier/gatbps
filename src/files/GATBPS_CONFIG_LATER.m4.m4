@@ -227,15 +227,15 @@ GATBPS_CONFIG_LATER_make_lines(m4_if(,,child_prerequisites))[
       $][(GATBPS_CONFIG_LATER_SCRIPT) \
       0<"$][$][{x}" \
       1>'\''./'\'']output_file['\''.tmp'\'' \
-    || exit "$][$][{?}"; \
+    || exit $][$][?; \
     '\''mv'\'' \
       '\''-f'\'' \
       '\''./'\'']output_file['\''.tmp'\'' \
       '\''./'\'']output_file[ \
-    || exit "$][$][{?}"; \
+    || exit $][$][?; \
     exit '\''0'\''; \
   :;); \
-  exit_status="$][$][{?}"; \
+  exit_status=$][$][?; \
   '\''readonly'\'' '\''exit_status'\''; \
   case "$][$][{exit_status}" in \
     '\''0'\'') \

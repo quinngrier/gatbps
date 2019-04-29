@@ -131,7 +131,7 @@ GATBPS_GIT_BUNDLE_RULES="$][{GATBPS_GIT_BUNDLE_RULES}"'
   ( \
     '\''cd'\'' \
       "$][$][{d}"'\''/'\''"$][$][{x}" \
-    || exit "$][$][{?}"; \
+    || exit $][$][?; \
     $][(GIT) \
       rev-parse \
       --verify \
@@ -145,39 +145,39 @@ GATBPS_GIT_BUNDLE_RULES="$][{GATBPS_GIT_BUNDLE_RULES}"'
         rev-parse \
         --verify \
         ]commit_ish['\''^{commit}'\'' \
-      || exit "$][$][{?}"; \
+      || exit $][$][?; \
       exit '\''0'\''; \
-    ) || exit "$][$][{?}"; \
+    ) || exit $][$][?; \
     exit '\''0'\''; \
-  :;) || exit "$][$][{?}"; \
+  :;) || exit $][$][?; \
   ( \
     ( \
       '\''cd'\'' \
         "$][$][{d}"'\''/'\''"$][$][{x}" \
-      || exit "$][$][{?}"; \
+      || exit $][$][?; \
       $][(GIT) \
         '\''checkout'\'' \
         ]commit_ish['\''^{commit}'\'' \
-      || exit "$][$][{?}"; \
+      || exit $][$][?; \
       $][(GIT) \
         '\''bundle'\'' \
         '\''create'\'' \
         '\''-'\'' \
         '\''HEAD'\'' \
         '\''--tags'\'' \
-      || exit "$][$][{?}"; \
+      || exit $][$][?; \
       exit '\''0'\''; \
     :;) \
       1>'\''./'\'']output_file['\''.tmp'\'' \
-    || exit "$][$][{?}"; \
+    || exit $][$][?; \
     '\''mv'\'' \
       '\''-f'\'' \
       '\''./'\'']output_file['\''.tmp'\'' \
       '\''./'\'']output_file[ \
-    || exit "$][$][{?}"; \
+    || exit $][$][?; \
     exit '\''0'\''; \
   :;); \
-  x="$][$][{?}"; \
+  x=$][$][?; \
   case "$][$][{x}" in \
     '\''0'\'') \
     ;; \

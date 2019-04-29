@@ -318,15 +318,15 @@ GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
     '\''touch'\'' \
       '\''./'\'']output_file['\''.tmp'\'' \
       0<'\''/dev/null'\'' \
-    || exit "$][$][{?}"; \
+    || exit $][$][?; \
     '\''mv'\'' \
       '\''-f'\'' \
       '\''./'\'']output_file['\''.tmp'\'' \
       '\''./'\'']output_file[ \
-    || exit "$][$][{?}"; \
+    || exit $][$][?; \
     exit '\''0'\''; \
   :;); \
-  exit_status="$][$][{?}"; \
+  exit_status=$][$][?; \
   '\''readonly'\'' '\''exit_status'\''; \
   case "$][$][{exit_status}" in \
     '\''0'\'') \

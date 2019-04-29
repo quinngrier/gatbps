@@ -218,16 +218,16 @@ input_mode, [directory_contents], [[
   ( \
     '\''cd'\'' \
       "$][$][{d}"'\''/'\''"$][$][{x}" \
-    || exit "$][$][{?}"; \
+    || exit $][$][?; \
     $][(TAR) \
       '\''cf'\'' \
       '\''-'\'' \
       * \
-    || exit "$][$][{?}"; \
+    || exit $][$][?; \
     exit '\''0'\''; \
   :;) \
     1>'\''./'\'']output_file['\''.tmp'\'' \
-  || exit "$][$][{?}"; \
+  || exit $][$][?; \
   exit '\''0'\''; \
 :;}]],
 input_mode, [directory_itself], [gatbps_fatal([not supported yet])[
@@ -252,7 +252,7 @@ input_mode, [directory_itself], [gatbps_fatal([not supported yet])[
     '\''cf'\'' \
     '\''./'\'']output_file['\''.tmp'\'' \
     "$][$][{d}"'\''/'\''"$][$][{x}" \
-  || exit "$][$][{?}"; \
+  || exit $][$][?; \
   exit '\''0'\''; \
 :;}]], [gatbps_fatal([missing case])])[
 	$][(AM@&t@_V_at)'\''mv'\'' \

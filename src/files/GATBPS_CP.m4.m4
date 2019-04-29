@@ -255,7 +255,7 @@ m4_case(
       '\''-d'\'' \
       "$][$][{d}"'\''/'\''"$][$][{x}" \]])[]dnl
 [
-    || exit "$][$][{?}"; \
+    || exit $][$][?; \
     '\''cp'\'' \]dnl
 m4_case(
   input_mode,
@@ -268,7 +268,7 @@ m4_case(
 [
       "$][$][{d}"'\''/'\''"$][$][{x}" \
       '\''./'\'']output_file_or_directory['\''.tmp'\'' \
-    || exit "$][$][{?}"; \]dnl
+    || exit $][$][?; \]dnl
 m4_case(
   input_mode,
   [executable],
@@ -276,16 +276,16 @@ m4_case(
     '\''chmod'\'' \
       '\''a+x'\'' \
       '\''./'\'']output_file_or_directory['\''.tmp'\'' \
-    || exit "$][$][{?}"; \]])[]dnl
+    || exit $][$][?; \]])[]dnl
 [
     '\''mv'\'' \
       '\''-f'\'' \
       '\''./'\'']output_file_or_directory['\''.tmp'\'' \
       '\''./'\'']output_file_or_directory[ \
-    || exit "$][$][{?}"; \
+    || exit $][$][?; \
     exit '\''0'\''; \
   :;); \
-  exit_status="$][$][{?}"; \
+  exit_status=$][$][?; \
   '\''readonly'\'' '\''exit_status'\''; \
   case "$][$][{exit_status}" in \
     '\''0'\'') \
