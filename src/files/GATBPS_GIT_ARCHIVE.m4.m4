@@ -141,7 +141,7 @@ GATBPS_GIT_ARCHIVE_RULES="$][{GATBPS_GIT_ARCHIVE_RULES}"'
       ]tree_sh['\''^{tree}'\'' \
     || ( \
       $][(GIT) \
-        '\''remote'\'' \
+        remote \
         '\''update'\'' \
       ; \
       $][(GIT) \

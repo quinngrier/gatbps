@@ -138,7 +138,7 @@ GATBPS_GIT_BUNDLE_RULES="$][{GATBPS_GIT_BUNDLE_RULES}"'
       ]commit_ish['\''^{commit}'\'' \
     || ( \
       $][(GIT) \
-        '\''remote'\'' \
+        remote \
         '\''update'\'' \
       ; \
       $][(GIT) \

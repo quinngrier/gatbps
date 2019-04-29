@@ -192,7 +192,7 @@ GATBPS_GIT_CLONE_word_lines_6(m4_if(,,input_urls))[
         '\''./'\'']output_directory['\''.tmp'\'' \
       || exit $][$][?; \
       $][(GIT) \
-        '\''remote'\'' \
+        remote \
         '\''remove'\'' \
         '\''origin'\'' \
       || exit $][$][?; \
@@ -207,7 +207,7 @@ GATBPS_GIT_CLONE_word_lines_8(m4_if(,,input_urls))[
           ;; \
         esac; \
         $][(GIT) \
-          '\''remote'\'' \
+          remote \
           '\''add'\'' \
           '\''r'\''"$][$][{#}" \
           "$][$][{1}" \
