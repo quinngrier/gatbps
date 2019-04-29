@@ -197,7 +197,7 @@ GATBPS_TAR_make_lines(m4_if(,,child_prerequisites))[
   {%|MKDIR_P|%}){%||%}dnl
 {%|
 	$][(AM@&t@_V_at)$][(MKDIR_P) \
-  '\''./'\''$][(@D) \
+  ./$][(@D) \
 ;]dnl
 m4_if(
 input_mode, [directory_contents], [[
@@ -211,7 +211,7 @@ input_mode, [directory_contents], [[
       '\''/'\''*) \
       ;; \
       *) \
-        d='\''./'\''"$][$][{d}"; \
+        d=./"$][$][{d}"; \
       ;; \
     esac; \
   fi; \
@@ -226,7 +226,7 @@ input_mode, [directory_contents], [[
     || exit $][$][?; \
     exit '\''0'\''; \
   :;) \
-    1>'\''./'\'']output_file['\''.tmp'\'' \
+    1>./]output_file['\''.tmp'\'' \
   || exit $][$][?; \
   exit '\''0'\''; \
 :;}]],
@@ -244,21 +244,21 @@ input_mode, [directory_itself], [gatbps_fatal([not supported yet])[
       '\''/'\''*) \
       ;; \
       *) \
-        d='\''./'\''"$][$][{d}"; \
+        d=./"$][$][{d}"; \
       ;; \
     esac; \
   fi; \
   $][(TAR) \
     '\''cf'\'' \
-    '\''./'\'']output_file['\''.tmp'\'' \
+    ./]output_file['\''.tmp'\'' \
     "$][$][{d}"'\''/'\''"$][$][{x}" \
   || exit $][$][?; \
   exit '\''0'\''; \
 :;}]], [gatbps_fatal([missing case])])[
 	$][(AM@&t@_V_at)mv \
   -f \
-  '\''./'\'']output_file['\''.tmp'\'' \
-  '\''./'\'']output_file[ \
+  ./]output_file['\''.tmp'\'' \
+  ./]output_file[ \
 ;
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
@@ -267,7 +267,7 @@ input_mode, [directory_itself], [gatbps_fatal([not supported yet])[
 clean-]output_file[:
 	-'\''rm'\'' \
   -f \
-  '\''./'\'']output_file[ \
+  ./]output_file[ \
 ;
 
 ]clean_target[-local: clean-]output_file[

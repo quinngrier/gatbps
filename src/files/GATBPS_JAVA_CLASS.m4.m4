@@ -94,10 +94,10 @@ GATBPS_JAVA_CLASS_RULES="$][{GATBPS_JAVA_CLASS_RULES}"'
 clean-]output_file[:
 	-'\''rm'\'' \
   -f \
-  '\''./'\'']output_file[ \
-  '\''./'\'']output_file['\''.d'\'' \
-  '\''./'\'']output_file['\''.d.tmp'\'' \
-  '\''./'\'']output_file['\''.tmp'\'' \
+  ./]output_file[ \
+  ./]output_file['\''.d'\'' \
+  ./]output_file['\''.d.tmp'\'' \
+  ./]output_file['\''.tmp'\'' \
 ;
 
 ]m4_if([$2], [], [[mostlyclean]], [[$2]])[-local: clean-]output_file[

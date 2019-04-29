@@ -109,13 +109,13 @@ GATBPS_GIT_ARCHIVE_RULES="$][{GATBPS_GIT_ARCHIVE_RULES}"'
 {%|
 	$][(GATBPS_V_GIT_ARCHIVE)$][(GATBPS_RECIPE_MARKER_TOP)
 	$][(AM@&t@_V_at)$][(MKDIR_P) \
-  '\''./'\''$][(@D) \
+  ./$][(@D) \
 ;
 	$][(AM@&t@_V_at)'\''rm'\'' \
   -f \
   '\''-r'\'' \
-  '\''./'\'']output_file[ \
-  '\''./'\'']output_file['\''.tmp'\'' \
+  ./]output_file[ \
+  ./]output_file['\''.tmp'\'' \
 ;
 	$][(AM@&t@_V_at){ \
   x=]input_directory[; \
@@ -127,7 +127,7 @@ GATBPS_GIT_ARCHIVE_RULES="$][{GATBPS_GIT_ARCHIVE_RULES}"'
       '\''/'\''*) \
       ;; \
       *) \
-        d='\''./'\''"$][$][{d}"; \
+        d=./"$][$][{d}"; \
       ;; \
     esac; \
   fi; \
@@ -166,12 +166,12 @@ GATBPS_GIT_ARCHIVE_RULES="$][{GATBPS_GIT_ARCHIVE_RULES}"'
       || exit $][$][?; \
       exit '\''0'\''; \
     :;) \
-      1>'\''./'\'']output_file['\''.tmp'\'' \
+      1>./]output_file['\''.tmp'\'' \
     || exit $][$][?; \
     mv \
       -f \
-      '\''./'\'']output_file['\''.tmp'\'' \
-      '\''./'\'']output_file[ \
+      ./]output_file['\''.tmp'\'' \
+      ./]output_file[ \
     || exit $][$][?; \
     exit '\''0'\''; \
   :;); \
@@ -183,8 +183,8 @@ GATBPS_GIT_ARCHIVE_RULES="$][{GATBPS_GIT_ARCHIVE_RULES}"'
       '\''rm'\'' \
         -f \
         '\''-r'\'' \
-        '\''./'\'']output_file[ \
-        '\''./'\'']output_file['\''.tmp'\'' \
+        ./]output_file[ \
+        ./]output_file['\''.tmp'\'' \
       ; \
     ;; \
   esac; \
@@ -197,7 +197,7 @@ GATBPS_GIT_ARCHIVE_RULES="$][{GATBPS_GIT_ARCHIVE_RULES}"'
 clean-]output_file[:
 	-'\''rm'\'' \
   -f \
-  '\''./'\'']output_file[ \
+  ./]output_file[ \
 ;
 
 ]clean_target[-local: clean-]output_file[

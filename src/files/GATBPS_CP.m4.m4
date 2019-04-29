@@ -216,11 +216,11 @@ m4_case(
   [[
   '\''-r'\'' \]])[]dnl
 [
-  '\''./'\'']output_file_or_directory[ \
-  '\''./'\'']output_file_or_directory['\''.tmp'\'' \
+  ./]output_file_or_directory[ \
+  ./]output_file_or_directory['\''.tmp'\'' \
 ;
 	$][(AM@&t@_V_at)$][(MKDIR_P) \
-  '\''./'\''$][(@D) \
+  ./$][(@D) \
 ;
 	$][(AM@&t@_V_at){ \
   ( \
@@ -233,7 +233,7 @@ m4_case(
         '\''/'\''*) \
         ;; \
         *) \
-          d='\''./'\''"$][$][{d}"; \
+          d=./"$][$][{d}"; \
         ;; \
       esac; \
     fi; \
@@ -267,7 +267,7 @@ m4_case(
       '\''-R'\'' \]])[]dnl
 [
       "$][$][{d}"'\''/'\''"$][$][{x}" \
-      '\''./'\'']output_file_or_directory['\''.tmp'\'' \
+      ./]output_file_or_directory['\''.tmp'\'' \
     || exit $][$][?; \]dnl
 m4_case(
   input_mode,
@@ -275,13 +275,13 @@ m4_case(
   [[
     '\''chmod'\'' \
       '\''a+x'\'' \
-      '\''./'\'']output_file_or_directory['\''.tmp'\'' \
+      ./]output_file_or_directory['\''.tmp'\'' \
     || exit $][$][?; \]])[]dnl
 [
     mv \
       -f \
-      '\''./'\'']output_file_or_directory['\''.tmp'\'' \
-      '\''./'\'']output_file_or_directory[ \
+      ./]output_file_or_directory['\''.tmp'\'' \
+      ./]output_file_or_directory[ \
     || exit $][$][?; \
     exit '\''0'\''; \
   :;); \
@@ -302,8 +302,8 @@ m4_case(
   [[
         '\''-r'\'' \]])[]dnl
 [
-        '\''./'\'']output_file_or_directory[ \
-        '\''./'\'']output_file_or_directory['\''.tmp'\'' \
+        ./]output_file_or_directory[ \
+        ./]output_file_or_directory['\''.tmp'\'' \
       ; \
     ;; \
   esac; \
@@ -325,8 +325,8 @@ m4_case(
   [[
   '\''-r'\'' \]])[]dnl
 [
-  '\''./'\'']output_file_or_directory[ \
-  '\''./'\'']output_file_or_directory['\''.tmp'\'' \
+  ./]output_file_or_directory[ \
+  ./]output_file_or_directory['\''.tmp'\'' \
 ;
 
 ]clean_target[-local: clean-]output_file_or_directory[

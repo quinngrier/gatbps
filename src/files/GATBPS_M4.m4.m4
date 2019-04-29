@@ -96,10 +96,10 @@ GATBPS_M4_RULES="$][{GATBPS_M4_RULES}"'
 clean-]output_file[.m4out:
 	-'\''rm'\'' \
   -f \
-  '\''./'\'']output_file['\''.m4out'\'' \
-  '\''./'\'']output_file['\''.m4out.d'\'' \
-  '\''./'\'']output_file['\''.m4out.d.tmp'\'' \
-  '\''./'\'']output_file['\''.m4out.tmp'\'' \
+  ./]output_file['\''.m4out'\'' \
+  ./]output_file['\''.m4out.d'\'' \
+  ./]output_file['\''.m4out.d.tmp'\'' \
+  ./]output_file['\''.m4out.tmp'\'' \
 ;
 
 ]m4_if([$2], [], [[mostlyclean]], [[$2]])[-local: clean-]output_file[.m4out

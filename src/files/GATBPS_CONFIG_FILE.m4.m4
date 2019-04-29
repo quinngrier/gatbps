@@ -122,10 +122,10 @@ clean-gatbps_output:
 	$][(GATBPS_V_CONFIG_FILE)$][(GATBPS_V_NOP)
 	$][(AM@&t@_V_at)'\''rm'\'' \
   -f \
-  '\''./'\'']gatbps_output[ \
+  ./]gatbps_output[ \
 ;
 	$][(AM@&t@_V_at)$][(MKDIR_P) \
-  '\''./'\''$][(@D) \
+  ./$][(@D) \
 ;
 	$][(AM@&t@_V_at)$][(SHELL) \
   '\''-'\'' \

@@ -39,7 +39,7 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
 	$][(AM@&t@_V_at){ \
   ( \
     x='\'''\''; \
-    x="$][$][{x}"'\''./'\''; \
+    x="$][$][{x}"./; \
     x="$][$][{x}"$][(java_]gatbps_y[_sourcepath); \
     x="$][$][{x}"$][(CLASSPATH_SEPARATOR); \
     x="$][$][{x}"$][(srcdir)'\''/'\''$][(java_]gatbps_y[_sourcepath); \
@@ -96,7 +96,7 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
       '\''-'\'' \
       $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
       '\''--'\'' \
-      '\''./'\''$][(java_]gatbps_y[_sourcepath) \
+      ./$][(java_]gatbps_y[_sourcepath) \
       1>'\''java-]gatbps_x[.tmp'\'' \
     || exit $][$][?; \
     sourcepath=` \
@@ -110,7 +110,7 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
       '\''GATBPS_INNER_PACKAGE=$][(java_]gatbps_y[_package)'\'' \
       '\''GATBPS_INNER_SOURCEPATH='\''"$][$][{sourcepath}" \
       '\''GATBPS_OUTER_JAR_SUFFIX=/outer'\'' \
-      '\''./'\''$][(java_]gatbps_y[_dst) \
+      ./$][(java_]gatbps_y[_dst) \
     || exit $][$][?; \
     exit '\''0'\''; \
   :;); \
@@ -134,10 +134,10 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
     '\''rm'\'' \
       -f \
       '\''-r'\'' \
-      '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp'\'' \
+      ./$][(java_]gatbps_y[_dst)'\''.tmp'\'' \
     || exit $][$][?; \
     $][(MKDIR_P) \
-      '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x'\'' \
+      ./$][(java_]gatbps_y[_dst)'\''.tmp/x'\'' \
     || exit $][$][?; \
     c='\''cf'\''; \
     for x in \
@@ -158,22 +158,22 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
           '\''/'\''*) \
           ;; \
           *) \
-            d='\''./'\''"$][$][{d}"; \
+            d=./"$][$][{d}"; \
           ;; \
         esac; \
       fi; \
       $][(JAR) \
         "$][$][{c}" \
-        '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x.jar'\'' \
+        ./$][(java_]gatbps_y[_dst)'\''.tmp/x.jar'\'' \
         '\''-C'\'' \
         "$][$][{d}" \
-        '\''./'\''"$][$][{x}" \
+        ./"$][$][{x}" \
       || exit $][$][?; \
       c='\''uf'\''; \
     done; \
     ( \
       '\''cd'\'' \
-        '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x'\'' \
+        ./$][(java_]gatbps_y[_dst)'\''.tmp/x'\'' \
       || exit $][$][?; \
       $][(JAR) \
         '\''xf'\'' \
@@ -188,9 +188,9 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
     ; do \
       $][(JAR) \
         '\''cf'\'' \
-        '\''./'\''$][(java_]gatbps_y[_dst) \
+        ./$][(java_]gatbps_y[_dst) \
         '\''-C'\'' \
-        '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x/'\''$][(GATBPS_INNER_SOURCEPATH) \
+        ./$][(java_]gatbps_y[_dst)'\''.tmp/x/'\''$][(GATBPS_INNER_SOURCEPATH) \
         $][(java_]gatbps_y[_JARFLAGS) \
         $][(JARFLAGS) \
         '\''.'\'' \
@@ -202,9 +202,9 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
       ?*) \
         $][(JAR) \
           '\''cf'\'' \
-          '\''./'\''$][(java_]gatbps_y[_dst) \
+          ./$][(java_]gatbps_y[_dst) \
           '\''-C'\'' \
-          '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp/x/'\''$][(GATBPS_INNER_SOURCEPATH) \
+          ./$][(java_]gatbps_y[_dst)'\''.tmp/x/'\''$][(GATBPS_INNER_SOURCEPATH) \
           $][(GATBPS_JARFLAGS) \
           $][(JARFLAGS) \
           '\''.'\'' \
@@ -217,7 +217,7 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
   '\''rm'\'' \
     -f \
     '\''-r'\'' \
-    '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp'\'' \
+    ./$][(java_]gatbps_y[_dst)'\''.tmp'\'' \
   ; \
   exit "$][$][{x}"; \
 :;}
@@ -239,7 +239,7 @@ clean-java-]gatbps_x[: java.FORCE
   ; do \
     '\''rm'\'' \
       -f \
-      '\''./'\''"$][$][{x}" \
+      ./"$][$][{x}" \
     ; \
   done; \
   exit '\''0'\''; \
@@ -269,7 +269,7 @@ install-java-]gatbps_x[: java.FORCE
         '\''/'\''*) \
         ;; \
         *) \
-          d='\''./'\''"$][$][{d}"; \
+          d=./"$][$][{d}"; \
         ;; \
       esac; \
       if $][(AM@&t@_V_P); then \
@@ -294,7 +294,7 @@ install-java-]gatbps_x[: java.FORCE
           '\''/'\''*) \
           ;; \
           *) \
-            x='\''./'\''"$][$][{x}"; \
+            x=./"$][$][{x}"; \
           ;; \
         esac; \
       fi; \
@@ -365,7 +365,7 @@ uninstall-java-]gatbps_x[: java.FORCE
           '\''/'\''*) \
           ;; \
           *) \
-            x='\''./'\''"$][$][{x}"; \
+            x=./"$][$][{x}"; \
           ;; \
         esac; \
         if $][(AM@&t@_V_P); then \

@@ -103,7 +103,7 @@ m4_if([$4], [], [], [[
   ]source_sh[ \
 ;]])[
 	$][(AM@&t@_V_at)$][(MKDIR_P) \
-  '\''./'\''$][(@D) \
+  ./$][(@D) \
 ;
 	$][(AM@&t@_V_at){ \
   x=]source_sh[; \
@@ -115,20 +115,20 @@ m4_if([$4], [], [], [[
       '\''/'\''*) \
       ;; \
       *) \
-        d='\''./'\''"$][$][{d}"; \
+        d=./"$][$][{d}"; \
       ;; \
     esac; \
   fi; \
   $][(XZ) \
     0<"$][$][{d}"'\''/'\''"$][$][{x}" \
-    1>'\''./'\'']target_sh['\''.tmp'\'' \
+    1>./]target_sh['\''.tmp'\'' \
   || exit $][$][?; \
   exit '\''0'\''; \
 :;}
 	$][(AM@&t@_V_at)mv \
   -f \
-  '\''./'\'']target_sh['\''.tmp'\'' \
-  '\''./'\'']target_sh[ \
+  ./]target_sh['\''.tmp'\'' \
+  ./]target_sh[ \
 ;
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
@@ -137,7 +137,7 @@ m4_if([$4], [], [], [[
 clean-]target_sh[:
 	-'\''rm'\'' \
   -f \
-  '\''./'\'']target_sh[ \
+  ./]target_sh[ \
 ;
 
 ]m4_if([$3], [], [[mostlyclean]], [[$3]])[-local: clean-]target_sh[

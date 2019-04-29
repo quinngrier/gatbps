@@ -208,11 +208,11 @@ GATBPS_CONFIG_LATER_make_lines(m4_if(,,child_prerequisites))[
 {%|
 	$][(AM@&t@_V_at)'\''rm'\'' \
   -f \
-  '\''./'\'']output_file[ \
-  '\''./'\'']output_file['\''.tmp'\'' \
+  ./]output_file[ \
+  ./]output_file['\''.tmp'\'' \
 ;
 	$][(AM@&t@_V_at)$][(MKDIR_P) \
-  '\''./'\''$][(@D) \
+  ./$][(@D) \
 ;
 	$][(AM@&t@_V_at){ \
   ( \
@@ -226,12 +226,12 @@ GATBPS_CONFIG_LATER_make_lines(m4_if(,,child_prerequisites))[
     $][(AWK) \
       $][(GATBPS_CONFIG_LATER_SCRIPT) \
       0<"$][$][{x}" \
-      1>'\''./'\'']output_file['\''.tmp'\'' \
+      1>./]output_file['\''.tmp'\'' \
     || exit $][$][?; \
     mv \
       -f \
-      '\''./'\'']output_file['\''.tmp'\'' \
-      '\''./'\'']output_file[ \
+      ./]output_file['\''.tmp'\'' \
+      ./]output_file[ \
     || exit $][$][?; \
     exit '\''0'\''; \
   :;); \
@@ -243,8 +243,8 @@ GATBPS_CONFIG_LATER_make_lines(m4_if(,,child_prerequisites))[
     *) \
       '\''rm'\'' \
         -f \
-        '\''./'\'']output_file[ \
-        '\''./'\'']output_file['\''.tmp'\'' \
+        ./]output_file[ \
+        ./]output_file['\''.tmp'\'' \
       ; \
     ;; \
   esac; \
@@ -257,8 +257,8 @@ GATBPS_CONFIG_LATER_make_lines(m4_if(,,child_prerequisites))[
 clean-]output_file[:
 	-'\''rm'\'' \
   -f \
-  '\''./'\'']output_file[ \
-  '\''./'\'']output_file['\''.tmp'\'' \
+  ./]output_file[ \
+  ./]output_file['\''.tmp'\'' \
 ;
 
 ]clean_target[-local: clean-]output_file[

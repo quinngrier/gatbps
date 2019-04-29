@@ -151,13 +151,13 @@ GATBPS_GIT_CLONE_RULES="$][{GATBPS_GIT_CLONE_RULES}"'
   {%|MKDIR_P|%}){%||%}dnl
 {%|
 	$][(AM@&t@_V_at)$][(MKDIR_P) \
-  '\''./'\''$][(@D) \
+  ./$][(@D) \
 ;
 	$][(AM@&t@_V_at)'\''rm'\'' \
   -f \
   '\''-r'\'' \
-  '\''./'\'']output_directory[ \
-  '\''./'\'']output_directory['\''.tmp'\'' \
+  ./]output_directory[ \
+  ./]output_directory['\''.tmp'\'' \
 ;
 	$][(AM@&t@_V_at){ \
   ( \
@@ -169,13 +169,13 @@ GATBPS_GIT_CLONE_word_lines_6(m4_if(,,input_urls))[
       '\''rm'\'' \
         -f \
         '\''-r'\'' \
-        '\''./'\'']output_directory['\''.tmp'\'' \
+        ./]output_directory['\''.tmp'\'' \
       || exit $][$][?; \
       $][(GIT) \
         '\''clone'\'' \
         '\''--'\'' \
         "$][$][{url}" \
-        '\''./'\'']output_directory['\''.tmp'\'' \
+        ./]output_directory['\''.tmp'\'' \
       || '\''continue'\''; \
       clone_succeeded='\''yes'\''; \
       '\''readonly'\'' '\''clone_succeeded'\''; \
@@ -189,7 +189,7 @@ GATBPS_GIT_CLONE_word_lines_6(m4_if(,,input_urls))[
     esac; \
     ( \
       '\''cd'\'' \
-        '\''./'\'']output_directory['\''.tmp'\'' \
+        ./]output_directory['\''.tmp'\'' \
       || exit $][$][?; \
       $][(GIT) \
         remote \
@@ -217,8 +217,8 @@ GATBPS_GIT_CLONE_word_lines_8(m4_if(,,input_urls))[
     :;) || exit $][$][?; \
     mv \
       -f \
-      '\''./'\'']output_directory['\''.tmp'\'' \
-      '\''./'\'']output_directory[ \
+      ./]output_directory['\''.tmp'\'' \
+      ./]output_directory[ \
     || exit $][$][?; \
     exit '\''0'\''; \
   :;); \
@@ -231,8 +231,8 @@ GATBPS_GIT_CLONE_word_lines_8(m4_if(,,input_urls))[
       '\''rm'\'' \
         -f \
         '\''-r'\'' \
-        '\''./'\'']output_directory[ \
-        '\''./'\'']output_directory['\''.tmp'\'' \
+        ./]output_directory[ \
+        ./]output_directory['\''.tmp'\'' \
       ; \
     ;; \
   esac; \
@@ -246,7 +246,7 @@ clean-]output_directory[:
 	-'\''rm'\'' \
   -f \
   '\''-r'\'' \
-  '\''./'\'']output_directory[ \
+  ./]output_directory[ \
 ;
 
 ]clean_target[-local: clean-]output_directory[

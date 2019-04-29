@@ -250,7 +250,7 @@ GATBPS_WGET_url_lines(m4_shift($@))])])[dnl
         '\''dgst'\'' \
         '\''-]m4_bregexp([$1], [[^:]*], [[\&]])['\'' \
         $][(GATBPS_NON_FIPS_ALLOW) \
-        0<'\''./'\'']output_file['\''.tmp'\'' \
+        0<./]output_file['\''.tmp'\'' \
       | $][(GREP) \
         '\'']m4_bregexp([$1], [:\(.*\)], [[\1]])['\'' \
         1>'\''/dev/null'\'' \
@@ -266,12 +266,12 @@ GATBPS_WGET_RULES="$][{GATBPS_WGET_RULES}"'
   {%|MKDIR_P|%}){%||%}dnl
 {%|
 	$][(AM@&t@_V_at)$][(MKDIR_P) \
-  '\''./'\''$][(@D) \
+  ./$][(@D) \
 ;
 	$][(AM@&t@_V_at)'\''rm'\'' \
   -f \
-  '\''./'\'']output_file[ \
-  '\''./'\'']output_file['\''.tmp'\'' \
+  ./]output_file[ \
+  ./]output_file['\''.tmp'\'' \
 ;
 	$][(AM@&t@_V_at){ \
   ( \
@@ -284,7 +284,7 @@ GATBPS_WGET_url_lines(m4_if(,,input_urls))[
         *'\''://'\''*) \
           $][(WGET) \
             '\''-O'\'' \
-            '\''./'\'']output_file['\''.tmp'\'' \
+            ./]output_file['\''.tmp'\'' \
             '\''--'\'' \
             "$][$][{url}" \
           || '\''continue'\''; \
@@ -295,12 +295,12 @@ GATBPS_WGET_url_lines(m4_if(,,input_urls))[
               safe_url="$][$][{url}"; \
             ;; \
             *) \
-              safe_url='\''./'\''"$][$][{url}"; \
+              safe_url=./"$][$][{url}"; \
             ;; \
           esac; \
           'cp' \
             "$][$][{safe_url}" \
-            '\''./'\'']output_file['\''.tmp'\'' \
+            ./]output_file['\''.tmp'\'' \
           || '\''continue'\''; \
         ;; \
       esac; \]dnl
@@ -316,13 +316,13 @@ GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
       ;; \
     esac; \
     '\''touch'\'' \
-      '\''./'\'']output_file['\''.tmp'\'' \
+      ./]output_file['\''.tmp'\'' \
       0<'\''/dev/null'\'' \
     || exit $][$][?; \
     mv \
       -f \
-      '\''./'\'']output_file['\''.tmp'\'' \
-      '\''./'\'']output_file[ \
+      ./]output_file['\''.tmp'\'' \
+      ./]output_file[ \
     || exit $][$][?; \
     exit '\''0'\''; \
   :;); \
@@ -334,8 +334,8 @@ GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
     *) \
       '\''rm'\'' \
         -f \
-        '\''./'\'']output_file[ \
-        '\''./'\'']output_file['\''.tmp'\'' \
+        ./]output_file[ \
+        ./]output_file['\''.tmp'\'' \
       ; \
     ;; \
   esac; \
@@ -348,8 +348,8 @@ GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
 clean-]output_file[:
 	-'\''rm'\'' \
   -f \
-  '\''./'\'']output_file[ \
-  '\''./'\'']output_file['\''.tmp'\'' \
+  ./]output_file[ \
+  ./]output_file['\''.tmp'\'' \
 ;
 
 ]clean_target[-local: clean-]output_file[
