@@ -134,7 +134,7 @@ GATBPS_GIT_BUNDLE_RULES="$][{GATBPS_GIT_BUNDLE_RULES}"'
     || exit "$][$][{?}"; \
     $][(GIT) \
       rev-parse \
-      '\''--verify'\'' \
+      --verify \
       ]commit_ish['\''^{commit}'\'' \
     || ( \
       $][(GIT) \
@@ -143,7 +143,7 @@ GATBPS_GIT_BUNDLE_RULES="$][{GATBPS_GIT_BUNDLE_RULES}"'
       ; \
       $][(GIT) \
         rev-parse \
-        '\''--verify'\'' \
+        --verify \
         ]commit_ish['\''^{commit}'\'' \
       || exit "$][$][{?}"; \
       exit '\''0'\''; \

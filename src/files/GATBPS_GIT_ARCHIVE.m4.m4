@@ -137,7 +137,7 @@ GATBPS_GIT_ARCHIVE_RULES="$][{GATBPS_GIT_ARCHIVE_RULES}"'
     || exit "$][$][{?}"; \
     $][(GIT) \
       rev-parse \
-      '\''--verify'\'' \
+      --verify \
       ]tree_sh['\''^{tree}'\'' \
     || ( \
       $][(GIT) \
@@ -146,7 +146,7 @@ GATBPS_GIT_ARCHIVE_RULES="$][{GATBPS_GIT_ARCHIVE_RULES}"'
       ; \
       $][(GIT) \
         rev-parse \
-        '\''--verify'\'' \
+        --verify \
         ]tree_sh['\''^{tree}'\'' \
       || exit "$][$][{?}"; \
       exit '\''0'\''; \
