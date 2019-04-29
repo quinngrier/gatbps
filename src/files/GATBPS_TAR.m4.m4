@@ -255,7 +255,7 @@ input_mode, [directory_itself], [gatbps_fatal([not supported yet])[
   || exit $][$][?; \
   exit '\''0'\''; \
 :;}]], [gatbps_fatal([missing case])])[
-	$][(AM@&t@_V_at)'\''mv'\'' \
+	$][(AM@&t@_V_at)mv \
   '\''-f'\'' \
   '\''./'\'']output_file['\''.tmp'\'' \
   '\''./'\'']output_file[ \

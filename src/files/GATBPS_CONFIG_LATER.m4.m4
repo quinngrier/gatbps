@@ -228,7 +228,7 @@ GATBPS_CONFIG_LATER_make_lines(m4_if(,,child_prerequisites))[
       0<"$][$][{x}" \
       1>'\''./'\'']output_file['\''.tmp'\'' \
     || exit $][$][?; \
-    '\''mv'\'' \
+    mv \
       '\''-f'\'' \
       '\''./'\'']output_file['\''.tmp'\'' \
       '\''./'\'']output_file[ \

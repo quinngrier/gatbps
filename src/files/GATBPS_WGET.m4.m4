@@ -319,7 +319,7 @@ GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
       '\''./'\'']output_file['\''.tmp'\'' \
       0<'\''/dev/null'\'' \
     || exit $][$][?; \
-    '\''mv'\'' \
+    mv \
       '\''-f'\'' \
       '\''./'\'']output_file['\''.tmp'\'' \
       '\''./'\'']output_file[ \

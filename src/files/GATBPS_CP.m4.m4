@@ -278,7 +278,7 @@ m4_case(
       '\''./'\'']output_file_or_directory['\''.tmp'\'' \
     || exit $][$][?; \]])[]dnl
 [
-    '\''mv'\'' \
+    mv \
       '\''-f'\'' \
       '\''./'\'']output_file_or_directory['\''.tmp'\'' \
       '\''./'\'']output_file_or_directory[ \

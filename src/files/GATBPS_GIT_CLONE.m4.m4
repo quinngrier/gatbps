@@ -215,7 +215,7 @@ GATBPS_GIT_CLONE_word_lines_8(m4_if(,,input_urls))[
       done; \
       exit '\''0'\''; \
     :;) || exit $][$][?; \
-    '\''mv'\'' \
+    mv \
       '\''-f'\'' \
       '\''./'\'']output_directory['\''.tmp'\'' \
       '\''./'\'']output_directory[ \
