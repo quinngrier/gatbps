@@ -109,7 +109,7 @@ GATBPS_GIT_BUNDLE_RULES="$][{GATBPS_GIT_BUNDLE_RULES}"'
   '\''./'\''$][(@D) \
 ;
 	$][(AM@&t@_V_at)'\''rm'\'' \
-  '\''-f'\'' \
+  -f \
   '\''-r'\'' \
   '\''./'\'']output_file[ \
   '\''./'\'']output_file['\''.tmp'\'' \
@@ -171,7 +171,7 @@ GATBPS_GIT_BUNDLE_RULES="$][{GATBPS_GIT_BUNDLE_RULES}"'
       1>'\''./'\'']output_file['\''.tmp'\'' \
     || exit $][$][?; \
     mv \
-      '\''-f'\'' \
+      -f \
       '\''./'\'']output_file['\''.tmp'\'' \
       '\''./'\'']output_file[ \
     || exit $][$][?; \
@@ -183,7 +183,7 @@ GATBPS_GIT_BUNDLE_RULES="$][{GATBPS_GIT_BUNDLE_RULES}"'
     ;; \
     *) \
       '\''rm'\'' \
-        '\''-f'\'' \
+        -f \
         '\''-r'\'' \
         '\''./'\'']output_file[ \
         '\''./'\'']output_file['\''.tmp'\'' \
@@ -198,7 +198,7 @@ GATBPS_GIT_BUNDLE_RULES="$][{GATBPS_GIT_BUNDLE_RULES}"'
 
 clean-]output_file[:
 	-'\''rm'\'' \
-  '\''-f'\'' \
+  -f \
   '\''./'\'']output_file[ \
 ;
 

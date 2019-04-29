@@ -234,7 +234,7 @@ input_mode, [directory_itself], [gatbps_fatal([not supported yet])[
 	$][(AM@&t@_V_at){ \
   x=]input_directory[; \
   if \
-    '\''test'\'' '\''-f'\'' "$][$][{x}" || \
+    '\''test'\'' -f "$][$][{x}" || \
     '\''test'\'' '\''-d'\'' "$][$][{x}" \
   ; then \
     d='\''.'\''; \
@@ -256,7 +256,7 @@ input_mode, [directory_itself], [gatbps_fatal([not supported yet])[
   exit '\''0'\''; \
 :;}]], [gatbps_fatal([missing case])])[
 	$][(AM@&t@_V_at)mv \
-  '\''-f'\'' \
+  -f \
   '\''./'\'']output_file['\''.tmp'\'' \
   '\''./'\'']output_file[ \
 ;
@@ -266,7 +266,7 @@ input_mode, [directory_itself], [gatbps_fatal([not supported yet])[
 
 clean-]output_file[:
 	-'\''rm'\'' \
-  '\''-f'\'' \
+  -f \
   '\''./'\'']output_file[ \
 ;
 

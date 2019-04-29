@@ -154,7 +154,7 @@ GATBPS_GIT_CLONE_RULES="$][{GATBPS_GIT_CLONE_RULES}"'
   '\''./'\''$][(@D) \
 ;
 	$][(AM@&t@_V_at)'\''rm'\'' \
-  '\''-f'\'' \
+  -f \
   '\''-r'\'' \
   '\''./'\'']output_directory[ \
   '\''./'\'']output_directory['\''.tmp'\'' \
@@ -167,7 +167,7 @@ GATBPS_GIT_CLONE_word_lines_6(m4_if(,,input_urls))[
       $][$][{prevent_an_empty_word_list} \
     ; do \
       '\''rm'\'' \
-        '\''-f'\'' \
+        -f \
         '\''-r'\'' \
         '\''./'\'']output_directory['\''.tmp'\'' \
       || exit $][$][?; \
@@ -216,7 +216,7 @@ GATBPS_GIT_CLONE_word_lines_8(m4_if(,,input_urls))[
       exit '\''0'\''; \
     :;) || exit $][$][?; \
     mv \
-      '\''-f'\'' \
+      -f \
       '\''./'\'']output_directory['\''.tmp'\'' \
       '\''./'\'']output_directory[ \
     || exit $][$][?; \
@@ -229,7 +229,7 @@ GATBPS_GIT_CLONE_word_lines_8(m4_if(,,input_urls))[
     ;; \
     *) \
       '\''rm'\'' \
-        '\''-f'\'' \
+        -f \
         '\''-r'\'' \
         '\''./'\'']output_directory[ \
         '\''./'\'']output_directory['\''.tmp'\'' \
@@ -244,7 +244,7 @@ GATBPS_GIT_CLONE_word_lines_8(m4_if(,,input_urls))[
 
 clean-]output_directory[:
 	-'\''rm'\'' \
-  '\''-f'\'' \
+  -f \
   '\''-r'\'' \
   '\''./'\'']output_directory[ \
 ;

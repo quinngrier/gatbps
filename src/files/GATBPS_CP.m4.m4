@@ -206,7 +206,7 @@ GATBPS_CP_make_lines(m4_if(,,child_prerequisites))[
   {%|srcdir|%}){%||%}dnl
 {%|
 	$][(AM@&t@_V_at)'\''rm'\'' \
-  '\''-f'\'' \]dnl
+  -f \]dnl
 m4_case(
   input_mode,
   [directory],
@@ -244,7 +244,7 @@ m4_case(
   [[
       '\''-d'\'' \]],
   [[
-      '\''-f'\'' \]])[]dnl
+      -f \]])[]dnl
 [
       "$][$][{d}"'\''/'\''"$][$][{x}" \]dnl
 m4_case(
@@ -279,7 +279,7 @@ m4_case(
     || exit $][$][?; \]])[]dnl
 [
     mv \
-      '\''-f'\'' \
+      -f \
       '\''./'\'']output_file_or_directory['\''.tmp'\'' \
       '\''./'\'']output_file_or_directory[ \
     || exit $][$][?; \
@@ -292,7 +292,7 @@ m4_case(
     ;; \
     *) \
       '\''rm'\'' \
-        '\''-f'\'' \]dnl
+        -f \]dnl
 m4_case(
   input_mode,
   [directory],
@@ -315,7 +315,7 @@ m4_case(
 
 clean-]output_file_or_directory[:
 	-'\''rm'\'' \
-  '\''-f'\'' \]dnl
+  -f \]dnl
 m4_case(
   input_mode,
   [directory],

@@ -95,7 +95,7 @@ GATBPS_M4_RULES="$][{GATBPS_M4_RULES}"'
 
 clean-]output_file[.m4out:
 	-'\''rm'\'' \
-  '\''-f'\'' \
+  -f \
   '\''./'\'']output_file['\''.m4out'\'' \
   '\''./'\'']output_file['\''.m4out.d'\'' \
   '\''./'\'']output_file['\''.m4out.d.tmp'\'' \

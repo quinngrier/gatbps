@@ -269,7 +269,7 @@ GATBPS_WGET_RULES="$][{GATBPS_WGET_RULES}"'
   '\''./'\''$][(@D) \
 ;
 	$][(AM@&t@_V_at)'\''rm'\'' \
-  '\''-f'\'' \
+  -f \
   '\''./'\'']output_file[ \
   '\''./'\'']output_file['\''.tmp'\'' \
 ;
@@ -320,7 +320,7 @@ GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
       0<'\''/dev/null'\'' \
     || exit $][$][?; \
     mv \
-      '\''-f'\'' \
+      -f \
       '\''./'\'']output_file['\''.tmp'\'' \
       '\''./'\'']output_file[ \
     || exit $][$][?; \
@@ -333,7 +333,7 @@ GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
     ;; \
     *) \
       '\''rm'\'' \
-        '\''-f'\'' \
+        -f \
         '\''./'\'']output_file[ \
         '\''./'\'']output_file['\''.tmp'\'' \
       ; \
@@ -347,7 +347,7 @@ GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
 
 clean-]output_file[:
 	-'\''rm'\'' \
-  '\''-f'\'' \
+  -f \
   '\''./'\'']output_file[ \
   '\''./'\'']output_file['\''.tmp'\'' \
 ;

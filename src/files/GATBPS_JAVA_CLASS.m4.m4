@@ -93,7 +93,7 @@ GATBPS_JAVA_CLASS_RULES="$][{GATBPS_JAVA_CLASS_RULES}"'
 
 clean-]output_file[:
 	-'\''rm'\'' \
-  '\''-f'\'' \
+  -f \
   '\''./'\'']output_file[ \
   '\''./'\'']output_file['\''.d'\'' \
   '\''./'\'']output_file['\''.d.tmp'\'' \

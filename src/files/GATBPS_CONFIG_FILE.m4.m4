@@ -121,7 +121,7 @@ clean-gatbps_output:
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_TOP)
 	$][(GATBPS_V_CONFIG_FILE)$][(GATBPS_V_NOP)
 	$][(AM@&t@_V_at)'\''rm'\'' \
-  '\''-f'\'' \
+  -f \
   '\''./'\'']gatbps_output[ \
 ;
 	$][(AM@&t@_V_at)$][(MKDIR_P) \

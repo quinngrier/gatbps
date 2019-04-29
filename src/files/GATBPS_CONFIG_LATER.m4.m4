@@ -207,7 +207,7 @@ GATBPS_CONFIG_LATER_make_lines(m4_if(,,child_prerequisites))[
   {%|srcdir|%}){%||%}dnl
 {%|
 	$][(AM@&t@_V_at)'\''rm'\'' \
-  '\''-f'\'' \
+  -f \
   '\''./'\'']output_file[ \
   '\''./'\'']output_file['\''.tmp'\'' \
 ;
@@ -229,7 +229,7 @@ GATBPS_CONFIG_LATER_make_lines(m4_if(,,child_prerequisites))[
       1>'\''./'\'']output_file['\''.tmp'\'' \
     || exit $][$][?; \
     mv \
-      '\''-f'\'' \
+      -f \
       '\''./'\'']output_file['\''.tmp'\'' \
       '\''./'\'']output_file[ \
     || exit $][$][?; \
@@ -242,7 +242,7 @@ GATBPS_CONFIG_LATER_make_lines(m4_if(,,child_prerequisites))[
     ;; \
     *) \
       '\''rm'\'' \
-        '\''-f'\'' \
+        -f \
         '\''./'\'']output_file[ \
         '\''./'\'']output_file['\''.tmp'\'' \
       ; \
@@ -256,7 +256,7 @@ GATBPS_CONFIG_LATER_make_lines(m4_if(,,child_prerequisites))[
 
 clean-]output_file[:
 	-'\''rm'\'' \
-  '\''-f'\'' \
+  -f \
   '\''./'\'']output_file[ \
   '\''./'\'']output_file['\''.tmp'\'' \
 ;

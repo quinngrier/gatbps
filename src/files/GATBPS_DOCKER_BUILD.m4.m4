@@ -299,7 +299,7 @@ GATBPS_DOCKER_BUILD_word_lines_2(m4_if(,,child_prerequisites))[
   '\''./'\''$][(@D) \
 ;
 	$][(AM@&t@_V_at)'\''rm'\'' \
-  '\''-f'\'' \
+  -f \
   '\''-r'\'' \
   '\''./'\'']output_file[ \
   '\''./'\'']output_file['\''.tmp'\'' \
@@ -315,7 +315,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
     ; do \
       if '\''test'\'' '\''-r'\'' "$][$][{x}"; then \
         '\''test'\'' \
-          '\''-f'\'' \
+          -f \
           "$][$][{x}" \
         || '\''test'\'' \
           '\''-d'\'' \
@@ -338,7 +338,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
         esac; \
       else \
         '\''test'\'' \
-          '\''-f'\'' \
+          -f \
           $][(srcdir)'\''/'\''"$][$][{x}" \
         || '\''test'\'' \
           '\''-d'\'' \
@@ -407,7 +407,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
       1>'\''./'\'']output_file['\''.tmp'\'' \
     || exit $][$][?; \
     mv \
-      '\''-f'\'' \
+      -f \
       '\''./'\'']output_file['\''.tmp'\'' \
       '\''./'\'']output_file[ \
     || exit $][$][?; \
@@ -415,7 +415,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
   :;); \
   x=$][$][?; \
   '\''rm'\'' \
-    '\''-f'\'' \
+    -f \
     '\''-r'\'' \
     '\''GATBPS_DOCKER_BUILD/'\'']input_directory[ \
   ; \
@@ -424,7 +424,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
     ;; \
     *) \
       '\''rm'\'' \
-        '\''-f'\'' \
+        -f \
         '\''-r'\'' \
         '\''./'\'']output_file[ \
         '\''./'\'']output_file['\''.tmp'\'' \
@@ -439,7 +439,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
 
 clean-]output_file[:
 	-'\''rm'\'' \
-  '\''-f'\'' \
+  -f \
   '\''-r'\'' \
   '\''./'\'']output_file[ \
   '\''./'\'']output_file['\''.tmp'\'' \

@@ -116,7 +116,7 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
   :;); \
   x=$][$][?; \
   '\''rm'\'' \
-    '\''-f'\'' \
+    -f \
     '\''java-]gatbps_x[.tmp'\'' \
   ; \
   exit "$][$][{x}"; \
@@ -132,7 +132,7 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
 	$][(AM@&t@_V_at){ \
   ( \
     '\''rm'\'' \
-      '\''-f'\'' \
+      -f \
       '\''-r'\'' \
       '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp'\'' \
     || exit $][$][?; \
@@ -150,7 +150,7 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
           continue; \
         ;; \
       esac; \
-      if '\''test'\'' '\''-f'\'' "$][$][{x}"; then \
+      if '\''test'\'' -f "$][$][{x}"; then \
         d='\''.'\''; \
       else \
         d=$][(srcdir); \
@@ -215,7 +215,7 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
   :;); \
   x=$][$][?; \
   '\''rm'\'' \
-    '\''-f'\'' \
+    -f \
     '\''-r'\'' \
     '\''./'\''$][(java_]gatbps_y[_dst)'\''.tmp'\'' \
   ; \
@@ -238,7 +238,7 @@ clean-java-]gatbps_x[: java.FORCE
     $][(java_]gatbps_y[_src) \
   ; do \
     '\''rm'\'' \
-      '\''-f'\'' \
+      -f \
       '\''./'\''"$][$][{x}" \
     ; \
   done; \
@@ -286,7 +286,7 @@ install-java-]gatbps_x[: java.FORCE
       $][(MKDIR_P) \
         "$][$][{d}" \
       || exit $][$][?; \
-      if '\''test'\'' '\''-f'\'' $][(java_]gatbps_y[_dst); then \
+      if '\''test'\'' -f $][(java_]gatbps_y[_dst); then \
         x='\''.'\''; \
       else \
         x=$][(srcdir); \
@@ -376,19 +376,19 @@ uninstall-java-]gatbps_x[: java.FORCE
             $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
             '\''--'\'' \
             '\''rm'\'' \
-            '\''-f'\'' \
+            -f \
             "$][$][{x}" \
           ; \
         fi; \
         '\''rm'\'' \
-          '\''-f'\'' \
+          -f \
           "$][$][{x}" \
         ; \
         exit '\''0'\''; \
       :;); \
       x=$][$][?; \
       '\''rm'\'' \
-        '\''-f'\'' \
+        -f \
         '\''uninstall-java-]gatbps_x[.tmp'\'' \
       ; \
       exit "$][$][{x}"; \
