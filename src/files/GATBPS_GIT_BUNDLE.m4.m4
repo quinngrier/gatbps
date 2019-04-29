@@ -133,7 +133,7 @@ GATBPS_GIT_BUNDLE_RULES="$][{GATBPS_GIT_BUNDLE_RULES}"'
       "$][$][{d}"'\''/'\''"$][$][{x}" \
     || exit "$][$][{?}"; \
     $][(GIT) \
-      '\''rev-parse'\'' \
+      rev-parse \
       '\''--verify'\'' \
       ]commit_ish['\''^{commit}'\'' \
     || ( \
@@ -142,7 +142,7 @@ GATBPS_GIT_BUNDLE_RULES="$][{GATBPS_GIT_BUNDLE_RULES}"'
         '\''update'\'' \
       ; \
       $][(GIT) \
-        '\''rev-parse'\'' \
+        rev-parse \
         '\''--verify'\'' \
         ]commit_ish['\''^{commit}'\'' \
       || exit "$][$][{?}"; \
