@@ -2702,7 +2702,7 @@ EOF2
     GIT_WORK_TREE="${safe_git_clone_directory}" \
     '"${git}"' \
       add \
-      '\''--all'\'' \
+      --all \
       0<'\''/dev/null'\'' \
     ;
   ';
