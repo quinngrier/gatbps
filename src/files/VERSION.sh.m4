@@ -43,6 +43,7 @@ nl="
 readonly nl
 
 if git ls-files --error-unmatch "${0}" >/dev/null 2>&1; then
+
   v_description=`
     git \
       describe \
@@ -52,14 +53,17 @@ if git ls-files --error-unmatch "${0}" >/dev/null 2>&1; then
       --tags \
     ;
   `
-  case "${?}" in
-    '0')
+  s=$?
+  readonly v_description
+
+  case $s in
+    0)
     ;;
     *)
-      'exit' '1'
+      exit $s
     ;;
   esac
-  'readonly' 'v_description'
+
   case "${v_description}" in
     *'-'*)
       grep \
