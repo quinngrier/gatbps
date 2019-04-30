@@ -125,7 +125,6 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
 
 ./$][(java_]gatbps_y[_dst)$][(GATBPS_INNER_JAR_SUFFIX): $][(java_]gatbps_y[_dep)
 ./$][(java_]gatbps_y[_dst)$][(GATBPS_INNER_JAR_SUFFIX): $][(java_]gatbps_y[_extra)
-./$][(java_]gatbps_y[_dst)$][(GATBPS_INNER_JAR_SUFFIX): $][(java_]gatbps_y[_src)
 ./$][(java_]gatbps_y[_dst)$][(GATBPS_INNER_JAR_SUFFIX): $][(javadoc_]gatbps_y[_src)
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_TOP)
 	$][(GATBPS_V_JAR)$][(GATBPS_V_NOP)

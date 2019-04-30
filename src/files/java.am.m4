@@ -162,7 +162,6 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 
 ./$(java_dst)$(GATBPS_INNER_JAR_SUFFIX): $(java_dep)
 ./$(java_dst)$(GATBPS_INNER_JAR_SUFFIX): $(java_extra)
-./$(java_dst)$(GATBPS_INNER_JAR_SUFFIX): $(java_src)
 ./$(java_dst)$(GATBPS_INNER_JAR_SUFFIX): $(javadoc_src)
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
 	$(GATBPS_V_JAR)$(GATBPS_V_NOP)
