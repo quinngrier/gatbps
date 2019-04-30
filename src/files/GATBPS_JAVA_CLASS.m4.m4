@@ -54,7 +54,7 @@ m4_if(
       "distclean", "maintainer-clean", or "mostlyclean"
     ])])])[]dnl
 m4_pushdef(
-  [output_file],
+  [dst],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
 [
 
@@ -62,7 +62,7 @@ m4_pushdef(
 
 GATBPS_JAVA_CLASS_RULES="$][{GATBPS_JAVA_CLASS_RULES}"'
 
-]output_file[: ]output_file[.d
+]dst[: ]dst[.d
 
 #
 # The following rule causes the .d file to be treated as up-to-date if
@@ -85,29 +85,29 @@ GATBPS_JAVA_CLASS_RULES="$][{GATBPS_JAVA_CLASS_RULES}"'
 #       target to have been updated whenever its rule is run.
 #
 
-]output_file[.d:
+]dst[.d:
 
-.PRECIOUS: ]output_file[.d
+.PRECIOUS: ]dst[.d
 
-.PHONY: clean-]output_file[
+.PHONY: clean-]dst[
 
-clean-]output_file[:
+clean-]dst[:
 	-rm \
   -f \
-  ./]output_file[ \
-  ./]output_file['\''.d'\'' \
-  ./]output_file['\''.d.tmp'\'' \
-  ./]output_file['\''.tmp'\'' \
+  ./]dst[ \
+  ./]dst['\''.d'\'' \
+  ./]dst['\''.d.tmp'\'' \
+  ./]dst['\''.tmp'\'' \
 ;
 
-]m4_if([$2], [], [[mostlyclean]], [[$2]])[-local: clean-]output_file[
+]m4_if([$2], [], [[mostlyclean]], [[$2]])[-local: clean-]dst[
 
-'"$][{SOFT_INCLUDE}"' ]output_file[.d
+'"$][{SOFT_INCLUDE}"' ]dst[.d
 
 '
 
 ]dnl
-m4_popdef([output_file])[]dnl
+m4_popdef([dst])[]dnl
 [:;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
 dnl
