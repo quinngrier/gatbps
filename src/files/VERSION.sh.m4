@@ -290,15 +290,20 @@ EOF2
       esac
     ;;
   esac
+
 elif test -f VERSION; then
+
   cat VERSION
-  case "${?}" in
-    '0')
+  s=$?
+
+  case $s in
+    0)
     ;;
     *)
-      'exit' '1'
+      exit $s
     ;;
   esac
+
 else
   echo 'VERSION.sh: not in repository and VERSION not found' >&2
   exit 1
