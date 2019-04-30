@@ -16,7 +16,9 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 ## begin_rules
 
-$(java_dist_dst): $(java_dst)
+$(java_dist_dst): $(java_dep)
+$(java_dist_dst): $(java_extra)
+$(java_dist_dst): $(javadoc_src)
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
 	$(AM_V_at)|%}contains_exactly_one_word(
   {%|java_dist_dst|%}){%||%}dnl
@@ -34,6 +36,7 @@ $(java_dist_dst): $(java_dst)
 	$(AM_V_at)$(MKDIR_P) \
   './'$(@D) \
 ;
+	$(AM_V_at)$(MAKE) $(AM_MAKEFLAGS) $(java_dst)
 	$(AM_V_at){ \
   if 'test' '-f' $(java_dst); then \
     d='.'; \
