@@ -177,6 +177,11 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
     || 'exit' "$${?}"; \
     c='cf'; \
     for x in \
+      $(java_src) \
+    ; do \
+      $(MAKE) $(AM_MAKEFLAGS) "$$x"; \
+    done; \
+    for x in \
       $(java_extra) \
       $(java_nested) \
       $(java_src) \

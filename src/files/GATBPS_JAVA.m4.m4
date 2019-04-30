@@ -140,6 +140,11 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
     || exit $][$][?; \
     c='\''cf'\''; \
     for x in \
+      $][(java_]gatbps_y[_src) \
+    ; do \
+      $][(MAKE) $][(AM_MAKEFLAGS) "$][$][x"; \
+    done; \
+    for x in \
       $][(java_]gatbps_y[_extra) \
       $][(java_]gatbps_y[_nested) \
       $][(java_]gatbps_y[_src) \
