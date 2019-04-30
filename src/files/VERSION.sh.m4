@@ -45,11 +45,11 @@ readonly nl
 if git ls-files --error-unmatch "${0}" >/dev/null 2>&1; then
   v_description=`
     git \
-      'describe' \
-      '--candidates=1' \
-      '--first-parent' \
-      '--match=v[0-9]*.[0-9]*.[0-9]*' \
-      '--tags' \
+      describe \
+      --candidates=1 \
+      --first-parent \
+      --match="v[0-9]*.[0-9]*.[0-9]*" \
+      --tags \
     ;
   `
   case "${?}" in
