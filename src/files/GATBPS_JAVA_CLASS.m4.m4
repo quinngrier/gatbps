@@ -22,8 +22,8 @@ PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 AC_DEFUN([GATBPS_JAVA_CLASS], [[{
 
 #
-# The block that contains this comment is an expansion of the GATBPS_JAVA_CLASS
-# macro.
+# The block that contains this comment is an expansion of the
+# GATBPS_JAVA_CLASS macro.
 #]dnl
 m4_if(
   m4_eval([$# < 1 || $# > 2]),
