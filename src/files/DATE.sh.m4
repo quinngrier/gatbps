@@ -44,8 +44,20 @@ if git ls-files --error-unmatch "${0}" >/dev/null 2>&1; then
            s/Sep/09/; s/Oct/10/; s/Nov/11/; s/Dec/12/
            s/-\(.\)$/-0\1/' DATE.tmp)
   echo "$x"
+
 elif test -f DATE; then
+
   cat DATE
+  s=$?
+
+  case $s in
+    0)
+    ;;
+    *)
+      exit $s
+    ;;
+  esac
+
 else
   echo 'DATE.sh: not in repository and DATE not found' >&2
   exit 1
