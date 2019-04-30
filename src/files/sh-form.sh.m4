@@ -25,8 +25,8 @@ header_comment({%|#|%}, {%|#|%}){%|
 # literal newline character might be awkward.
 #
 
-nl='
-'
+nl="
+"
 readonly nl
 
 #

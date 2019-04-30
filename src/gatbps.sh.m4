@@ -22,8 +22,8 @@ SHEBANG_LINE{%|#! /bin/sh -
 # literal newline character might be awkward.
 #
 
-nl='
-'
+nl="
+"
 readonly nl
 
 #
