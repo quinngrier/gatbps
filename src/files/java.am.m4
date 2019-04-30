@@ -176,11 +176,35 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
       './'$(java_dst)'.tmp/x' \
     || 'exit' "$${?}"; \
     c='cf'; \
-    for x in \
-      $(java_src) \
-    ; do \
-      $(MAKE) $(AM_MAKEFLAGS) "$$x"; \
+ \
+    : \
+    : Compile the .class files in conservatively sized groups. This \
+    : prevents us from exceeding any command line length limits and \
+    : still lets make -j do some parallelization. \
+    ; \
+ \
+    max=50; \
+    xs=; \
+    n=0; \
+    for x in $(java_src); do \
+      xs="$$xs $$x"; \
+      n=`expr $$n + 1` || exit $$?; \
+      case $$n in \
+        $$max) \
+          $(MAKE) $(AM_MAKEFLAGS) $$xs || exit $$?; \
+          xs=; \
+          n=0; \
+        ;; \
+      esac; \
     done; \
+    case $$n in \
+      0) \
+      ;; \
+      *) \
+        $(MAKE) $(AM_MAKEFLAGS) $$xs || exit $$?; \
+      ;; \
+    esac; \
+ \
     for x in \
       $(java_extra) \
       $(java_nested) \
