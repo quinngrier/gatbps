@@ -92,13 +92,7 @@ GATBPS_JAVA_CLASS_RULES="$][{GATBPS_JAVA_CLASS_RULES}"'
 .PHONY: clean-]dst[
 
 clean-]dst[:
-	-rm \
-  -f \
-  ./]dst[ \
-  ./]dst['\''.d'\'' \
-  ./]dst['\''.d.tmp'\'' \
-  ./]dst['\''.tmp'\'' \
-;
+	-rm -f ]dst[ ]dst[.d ]dst[.d.tmp ]dst[.tmp
 
 ]m4_if([$2], [], [[mostlyclean]], [[$2]])[-local: clean-]dst[
 
