@@ -206,7 +206,7 @@ GATBPS_CONFIG_LATER_make_lines(m4_if(,,child_prerequisites))[
 	$][(AM@&t@_V_at)|%}contains_exactly_one_word_sh(
   {%|srcdir|%}){%||%}dnl
 {%|
-	$][(AM@&t@_V_at)'\''rm'\'' \
+	$][(AM@&t@_V_at)rm \
   -f \
   ./]output_file[ \
   ./]output_file['\''.tmp'\'' \
@@ -241,7 +241,7 @@ GATBPS_CONFIG_LATER_make_lines(m4_if(,,child_prerequisites))[
     '\''0'\'') \
     ;; \
     *) \
-      '\''rm'\'' \
+      rm \
         -f \
         ./]output_file[ \
         ./]output_file['\''.tmp'\'' \
@@ -255,7 +255,7 @@ GATBPS_CONFIG_LATER_make_lines(m4_if(,,child_prerequisites))[
 .PHONY: clean-]output_file[
 
 clean-]output_file[:
-	-'\''rm'\'' \
+	-rm \
   -f \
   ./]output_file[ \
   ./]output_file['\''.tmp'\'' \

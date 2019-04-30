@@ -92,7 +92,7 @@ GATBPS_JAVA_CLASS_RULES="$][{GATBPS_JAVA_CLASS_RULES}"'
 .PHONY: clean-]output_file[
 
 clean-]output_file[:
-	-'\''rm'\'' \
+	-rm \
   -f \
   ./]output_file[ \
   ./]output_file['\''.d'\'' \

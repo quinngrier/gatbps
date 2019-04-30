@@ -108,7 +108,7 @@ GATBPS_GIT_BUNDLE_RULES="$][{GATBPS_GIT_BUNDLE_RULES}"'
 	$][(AM@&t@_V_at)$][(MKDIR_P) \
   ./$][(@D) \
 ;
-	$][(AM@&t@_V_at)'\''rm'\'' \
+	$][(AM@&t@_V_at)rm \
   -f \
   '\''-r'\'' \
   ./]output_file[ \
@@ -182,7 +182,7 @@ GATBPS_GIT_BUNDLE_RULES="$][{GATBPS_GIT_BUNDLE_RULES}"'
     '\''0'\'') \
     ;; \
     *) \
-      '\''rm'\'' \
+      rm \
         -f \
         '\''-r'\'' \
         ./]output_file[ \
@@ -197,7 +197,7 @@ GATBPS_GIT_BUNDLE_RULES="$][{GATBPS_GIT_BUNDLE_RULES}"'
 .PHONY: clean-]output_file[
 
 clean-]output_file[:
-	-'\''rm'\'' \
+	-rm \
   -f \
   ./]output_file[ \
 ;

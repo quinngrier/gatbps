@@ -94,7 +94,7 @@ GATBPS_M4_RULES="$][{GATBPS_M4_RULES}"'
 .PHONY: clean-]output_file[.m4out
 
 clean-]output_file[.m4out:
-	-'\''rm'\'' \
+	-rm \
   -f \
   ./]output_file['\''.m4out'\'' \
   ./]output_file['\''.m4out.d'\'' \

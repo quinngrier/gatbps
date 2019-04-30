@@ -265,7 +265,7 @@ input_mode, [directory_itself], [gatbps_fatal([not supported yet])[
 .PHONY: clean-]output_file[
 
 clean-]output_file[:
-	-'\''rm'\'' \
+	-rm \
   -f \
   ./]output_file[ \
 ;

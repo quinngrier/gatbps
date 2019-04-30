@@ -298,7 +298,7 @@ GATBPS_DOCKER_BUILD_word_lines_2(m4_if(,,child_prerequisites))[
 	$][(AM@&t@_V_at)$][(MKDIR_P) \
   ./$][(@D) \
 ;
-	$][(AM@&t@_V_at)'\''rm'\'' \
+	$][(AM@&t@_V_at)rm \
   -f \
   '\''-r'\'' \
   ./]output_file[ \
@@ -414,7 +414,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
     exit '\''0'\''; \
   :;); \
   x=$][$][?; \
-  '\''rm'\'' \
+  rm \
     -f \
     '\''-r'\'' \
     '\''GATBPS_DOCKER_BUILD/'\'']input_directory[ \
@@ -423,7 +423,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
     '\''0'\'') \
     ;; \
     *) \
-      '\''rm'\'' \
+      rm \
         -f \
         '\''-r'\'' \
         ./]output_file[ \
@@ -438,7 +438,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
 .PHONY: clean-]output_file[
 
 clean-]output_file[:
-	-'\''rm'\'' \
+	-rm \
   -f \
   '\''-r'\'' \
   ./]output_file[ \

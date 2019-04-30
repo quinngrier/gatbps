@@ -135,7 +135,7 @@ m4_if([$4], [], [], [[
 .PHONY: clean-]target_sh[
 
 clean-]target_sh[:
-	-'\''rm'\'' \
+	-rm \
   -f \
   ./]target_sh[ \
 ;

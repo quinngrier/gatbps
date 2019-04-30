@@ -115,7 +115,7 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
     exit '\''0'\''; \
   :;); \
   x=$][$][?; \
-  '\''rm'\'' \
+  rm \
     -f \
     '\''java-]gatbps_x[.tmp'\'' \
   ; \
@@ -130,7 +130,7 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
 	$][(GATBPS_V_JAR)$][(GATBPS_V_NOP)
 	$][(AM@&t@_V_at){ \
   ( \
-    '\''rm'\'' \
+    rm \
       -f \
       '\''-r'\'' \
       ./$][(java_]gatbps_y[_dst)'\''.tmp'\'' \
@@ -242,7 +242,7 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
     exit '\''0'\''; \
   :;); \
   x=$][$][?; \
-  '\''rm'\'' \
+  rm \
     -f \
     '\''-r'\'' \
     ./$][(java_]gatbps_y[_dst)'\''.tmp'\'' \
@@ -265,7 +265,7 @@ clean-java-]gatbps_x[: java.FORCE
     $][(java_]gatbps_y[_nested) \
     $][(java_]gatbps_y[_src) \
   ; do \
-    '\''rm'\'' \
+    rm \
       -f \
       ./"$][$][{x}" \
     ; \
@@ -403,19 +403,19 @@ uninstall-java-]gatbps_x[: java.FORCE
             '\''-'\'' \
             $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
             '\''--'\'' \
-            '\''rm'\'' \
+            rm \
             -f \
             "$][$][{x}" \
           ; \
         fi; \
-        '\''rm'\'' \
+        rm \
           -f \
           "$][$][{x}" \
         ; \
         exit '\''0'\''; \
       :;); \
       x=$][$][?; \
-      '\''rm'\'' \
+      rm \
         -f \
         '\''uninstall-java-]gatbps_x[.tmp'\'' \
       ; \
