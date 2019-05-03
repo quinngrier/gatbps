@@ -2307,7 +2307,13 @@ EOF2
       esac;
 
       'eval' '
-        GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${full_ssh_passphrase_file}" ssh -o "${ssh_known_hosts_argument}" -i "${full_ssh_secret_key_file_pointer}"'\''\'\'''\'''\'' \
+        GIT_SSH_COMMAND='\''eval "$sshpass"'\''\'\'''\'' \
+          -P "$sshpass_prompt" \
+          -f "$full_ssh_passphrase_file" \
+          ssh \
+          -o "$ssh_known_hosts_argument" \
+          -i "$full_ssh_secret_key_file_pointer" \
+        '\''\'\'''\'''\'' \
         full_ssh_passphrase_file="${full_ssh_passphrase_file}" \
         full_ssh_secret_key_file_pointer="${full_ssh_secret_key_file_pointer}" \
         ssh_known_hosts_argument="${ssh_known_hosts_argument}" \
