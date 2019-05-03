@@ -2311,6 +2311,11 @@ EOF2
           -P "$sshpass_prompt" \
           -f "$full_ssh_passphrase_file" \
           ssh \
+          -F /dev/null \
+          -o IdentitiesOnly=yes \
+          -o PasswordAuthentication=no \
+          -o PreferredAuthentications=publickey \
+          -o StrictHostKeyChecking=no \
           -o "$ssh_known_hosts_argument" \
           -i "$full_ssh_secret_key_file_pointer" \
         '\''\'\'''\'''\'' \
