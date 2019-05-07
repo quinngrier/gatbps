@@ -301,14 +301,25 @@ EOF2
 
 elif test -f VERSION; then
 
-  cat VERSION
+  version=`cat VERSION`
   s=$?
+  readonly version
 
   case $s in
     0)
     ;;
     *)
       exit $s
+    ;;
+  esac
+
+  case $version in
+    0.0.0-0+g0000000)
+      cat <<EOF2 >&2
+${fy2}VERSION.sh:$fR2 no repository and VERSION says 0.0.0-0+g0000000
+${fy2}VERSION.sh:$fR2 are you working with a source archive?
+${fy2}VERSION.sh:$fR2 that's generally not a good idea
+EOF2
     ;;
   esac
 
