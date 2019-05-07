@@ -2111,7 +2111,7 @@ EOF2
           '\''--no-tty'\'' \
           '\''--import'\'' \
           "${safe_gpg_secret_key_file}" \
-          0<'\''/dev/null'\'' \
+          0</dev/null \
         ;
       ';
       case "${?}" in
@@ -2133,7 +2133,7 @@ EOF2
           '\''--batch'\'' \
           '\''--no-tty'\'' \
           '\''--fingerprint'\'' \
-          0<'\''/dev/null'\'' \
+          0</dev/null \
           1>"${safe_gpg_import_directory}"'\''/tmp'\'' \
         ;
       ';
@@ -2329,7 +2329,7 @@ EOF2
           '\''--'\'' \
           "${repository}" \
           "${safe_git_clone_directory}" \
-          0<'\''/dev/null'\'' \
+          0</dev/null \
         ;
       ';
       s="${?}";
@@ -2671,7 +2671,7 @@ EOF2
       "${safe_gpg_passphrase_file}" \
       '\''--detach-sign'\'' \
       "${safe_dst}" \
-      0<'\''/dev/null'\'' \
+      0</dev/null \
     ;
   ';
   case "${?}" in
@@ -2714,7 +2714,7 @@ EOF2
     '"${git}"' \
       add \
       --all \
-      0<'\''/dev/null'\'' \
+      0</dev/null \
     ;
   ';
   s="${?}";
@@ -2767,7 +2767,7 @@ EOF2
         '\''commit'\'' \
         '\''--gpg-sign=0x'\''"${gpg_secret_key_fingerprint}" \
         '\''--message=Add '\''"${relative_dst}" \
-        0<'\''/dev/null'\'' \
+        0</dev/null \
       ;
     ';
   )
@@ -2802,7 +2802,7 @@ EOF2
         '\''push'\'' \
         '\''origin'\'' \
         '\''master:master'\'' \
-        0<'\''/dev/null'\'' \
+        0</dev/null \
       ;
     ';
     s="${?}";
@@ -2860,7 +2860,7 @@ EOF2
         '\''pull'\'' \
         '\''origin'\'' \
         '\''master'\'' \
-        0<'\''/dev/null'\'' \
+        0</dev/null \
       ;
     ';
     s="${?}";

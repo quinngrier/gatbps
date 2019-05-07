@@ -253,7 +253,7 @@ GATBPS_WGET_url_lines(m4_shift($@))])])[dnl
         0<./]output_file['\''.tmp'\'' \
       | $][(GREP) \
         '\'']m4_bregexp([$1], [:\(.*\)], [[\1]])['\'' \
-        1>'\''/dev/null'\'' \
+        1>/dev/null \
       || '\''continue'\''; \]dnl
 GATBPS_WGET_hash_checks(m4_shift($@))])])[dnl
 [
@@ -317,7 +317,7 @@ GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
     esac; \
     '\''touch'\'' \
       ./]output_file['\''.tmp'\'' \
-      0<'\''/dev/null'\'' \
+      0</dev/null \
     || exit $][$][?; \
     mv \
       -f \
