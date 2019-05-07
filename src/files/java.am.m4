@@ -44,7 +44,7 @@ GATBPS_V_JAR_0 = @$(SHELL) \
   '--' \
   $(GATBPS_V_PAD_LEFT)'JAR'$(GATBPS_V_PAD_RIGHT_3) \
   $@ \
-  0<'/dev/null' \
+  0</dev/null \
 || 'exit' "$${?}";
 
 GATBPS_V_JAR_1 =
@@ -59,7 +59,7 @@ GATBPS_V_JAVAC_0 = @$(SHELL) \
   '--' \
   $(GATBPS_V_PAD_LEFT)'JAVAC'$(GATBPS_V_PAD_RIGHT_5) \
   $@ \
-  0<'/dev/null' \
+  0</dev/null \
 || 'exit' "$${?}";
 
 GATBPS_V_JAVAC_1 =
@@ -314,7 +314,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
   $(GATBPS_INNER_JAVACFLAGS) \
   $(JAVACFLAGS) \
   $< \
-  0<'/dev/null' \
+  0</dev/null \
 ;
 	$(AM_V_at){ \
   ( \
@@ -335,7 +335,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
           $(GATBPS_INNER_PACKAGE) \
           '-verbose:class' \
           './'$@ \
-          0<'/dev/null' \
+          0</dev/null \
           1>'./'$@'.d.tmp1' \
         || 'exit' "$${?}"; \
         $(AWK) \
@@ -350,7 +350,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
         || 'exit' "$${?}"; \
         'touch' \
           './'$@ \
-          0<'/dev/null' \
+          0</dev/null \
         || 'exit' "$${?}"; \
       ;; \
       'no') \
@@ -360,12 +360,12 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
           '--' \
           'warning: automatic dependency' \
           'tracking is not available for Java' \
-          0<'/dev/null' \
+          0</dev/null \
           1>&2 \
         || 'exit' "$${?}"; \
         'touch' \
           './'$@'.d' \
-          0<'/dev/null' \
+          0</dev/null \
         || 'exit' "$${?}"; \
       ;; \
     esac; \

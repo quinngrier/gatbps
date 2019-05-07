@@ -24,7 +24,7 @@ GATBPS_V_DOCKER_0 = @$(SHELL) \
   '--' \
   $(GATBPS_V_PAD_LEFT)'BUILD'$(GATBPS_V_PAD_RIGHT_5) \
   $@ \
-  0<'/dev/null' \
+  0</dev/null \
 || 'exit' "$${?}";
 
 GATBPS_V_DOCKER_1 =

@@ -167,8 +167,8 @@ fc2='' # stderr style: cyan
 #           ; do
 #             if 'eval' \
 #               "${x}"' '\'''\''' \
-#               0<'/dev/null' \
-#               1>'/dev/null' \
+#               0</dev/null \
+#               1>/dev/null \
 #               2>&1 \
 #             ; then
 #               awk_auto="${x}"
@@ -193,8 +193,8 @@ fc2='' # stderr style: cyan
 #           ; do
 #             if 'eval' \
 #               "${x}"' '\'''\''' \
-#               0<'/dev/null' \
-#               1>'/dev/null' \
+#               0</dev/null \
+#               1>/dev/null \
 #               2>&1 \
 #             ; then
 #               sed_auto="${x}"
@@ -219,8 +219,8 @@ fc2='' # stderr style: cyan
 #           ; do
 #             if 'eval' \
 #               "${x}"' '\''--version'\''' \
-#               0<'/dev/null' \
-#               1>'/dev/null' \
+#               0</dev/null \
+#               1>/dev/null \
 #               2>&1 \
 #             ; then
 #               texi2any_auto="${x}"
@@ -262,8 +262,8 @@ case "${awk}" in
         ; do
           if 'eval' \
             "${x}"' '\'''\''' \
-            0<'/dev/null' \
-            1>'/dev/null' \
+            0</dev/null \
+            1>/dev/null \
             2>&1 \
           ; then
             awk_auto="${x}"
@@ -288,8 +288,8 @@ case "${sed}" in
         ; do
           if 'eval' \
             "${x}"' '\'''\''' \
-            0<'/dev/null' \
-            1>'/dev/null' \
+            0</dev/null \
+            1>/dev/null \
             2>&1 \
           ; then
             sed_auto="${x}"
@@ -314,8 +314,8 @@ case "${texi2any}" in
         ; do
           if 'eval' \
             "${x}"' '\''--version'\''' \
-            0<'/dev/null' \
-            1>'/dev/null' \
+            0</dev/null \
+            1>/dev/null \
             2>&1 \
           ; then
             texi2any_auto="${x}"
@@ -925,8 +925,8 @@ EOF1
                   ; do
                     if 'eval' \
                       "${x}"' '\'''\''' \
-                      0<'/dev/null' \
-                      1>'/dev/null' \
+                      0</dev/null \
+                      1>/dev/null \
                       2>&1 \
                     ; then
                       awk_auto="${x}"
@@ -2170,8 +2170,8 @@ EOF1
                   ; do
                     if 'eval' \
                       "${x}"' '\'''\''' \
-                      0<'/dev/null' \
-                      1>'/dev/null' \
+                      0</dev/null \
+                      1>/dev/null \
                       2>&1 \
                     ; then
                       sed_auto="${x}"
@@ -2454,8 +2454,8 @@ EOF1
                   ; do
                     if 'eval' \
                       "${x}"' '\''--version'\''' \
-                      0<'/dev/null' \
-                      1>'/dev/null' \
+                      0</dev/null \
+                      1>/dev/null \
                       2>&1 \
                     ; then
                       texi2any_auto="${x}"
@@ -3413,7 +3413,7 @@ EOF1
 
             else
 
-              cat '/dev/null' >"${safe_tmp0}"
+              cat /dev/null >"${safe_tmp0}"
               case "${?}" in
                 '0')
                 ;;
@@ -3620,7 +3620,7 @@ EOF1
 
             else
 
-              cat '/dev/null' >"${safe_tmp2}"
+              cat /dev/null >"${safe_tmp2}"
               case "${?}" in
                 '0')
                 ;;

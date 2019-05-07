@@ -25,7 +25,7 @@ GATBPS_V_CONFIG_FILE_0 = @$(SHELL) \
   '--' \
   $(GATBPS_V_PAD_LEFT)'SUBST_IN'$(GATBPS_V_PAD_RIGHT_8) \
   $@ \
-  0<'/dev/null' \
+  0</dev/null \
 || 'exit' "$${?}";
 
 GATBPS_V_CONFIG_FILE_1 =

@@ -26,7 +26,7 @@ GATBPS_V_JAVADOC_0 = @$(SHELL) \
   '--' \
   $(GATBPS_V_PAD_LEFT)'JAVADOC'$(GATBPS_V_PAD_RIGHT_7) \
   $@ \
-  0<'/dev/null' \
+  0</dev/null \
 || 'exit' "$${?}";
 
 GATBPS_V_JAVADOC_1 =

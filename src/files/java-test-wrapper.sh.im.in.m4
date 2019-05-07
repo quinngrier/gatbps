@@ -27,7 +27,7 @@ class_name=`
   'basename' \
     "${0}" \
     '.sh' \
-    0<'/dev/null' \
+    0</dev/null \
   ;
 `
 case "${?}" in

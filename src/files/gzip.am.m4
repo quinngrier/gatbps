@@ -24,7 +24,7 @@ GATBPS_V_GUNZIP_0 = @$(SHELL) \
   '--' \
   $(GATBPS_V_PAD_LEFT)'GUNZIP'$(GATBPS_V_PAD_RIGHT_6) \
   $@ \
-  0<'/dev/null' \
+  0</dev/null \
 || 'exit' "$${?}";
 
 GATBPS_V_GUNZIP_1 =
@@ -39,7 +39,7 @@ GATBPS_V_GZIP_0 = @$(SHELL) \
   '--' \
   $(GATBPS_V_PAD_LEFT)'GZIP'$(GATBPS_V_PAD_RIGHT_4) \
   $@ \
-  0<'/dev/null' \
+  0</dev/null \
 || 'exit' "$${?}";
 
 GATBPS_V_GZIP_1 =

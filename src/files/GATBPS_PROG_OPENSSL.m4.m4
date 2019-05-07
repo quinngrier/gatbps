@@ -74,9 +74,9 @@ m4_if(
           'dgst' \
           '-md5' \
           '-non-fips-allow' \
-          0<'/dev/null' \
-          1>'/dev/null' \
-          2>'/dev/null' \
+          0</dev/null \
+          1>/dev/null \
+          2>/dev/null \
         ;
         case "$][{?}" in
           '0')

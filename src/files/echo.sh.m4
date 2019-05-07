@@ -165,8 +165,8 @@ fc2='' # stderr style: cyan
 #           ; do
 #             if 'eval' \
 #               "${x}"' '\'''\''' \
-#               0<'/dev/null' \
-#               1>'/dev/null' \
+#               0</dev/null \
+#               1>/dev/null \
 #               2>&1 \
 #             ; then
 #               awk_auto="${x}"
@@ -191,8 +191,8 @@ fc2='' # stderr style: cyan
 #           ; do
 #             if 'eval' \
 #               "${x}"' '\'''\''' \
-#               0<'/dev/null' \
-#               1>'/dev/null' \
+#               0</dev/null \
+#               1>/dev/null \
 #               2>&1 \
 #             ; then
 #               sed_auto="${x}"
@@ -232,8 +232,8 @@ case "${awk}" in
         ; do
           if 'eval' \
             "${x}"' '\'''\''' \
-            0<'/dev/null' \
-            1>'/dev/null' \
+            0</dev/null \
+            1>/dev/null \
             2>&1 \
           ; then
             awk_auto="${x}"
@@ -258,8 +258,8 @@ case "${sed}" in
         ; do
           if 'eval' \
             "${x}"' '\'''\''' \
-            0<'/dev/null' \
-            1>'/dev/null' \
+            0</dev/null \
+            1>/dev/null \
             2>&1 \
           ; then
             sed_auto="${x}"

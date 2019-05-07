@@ -165,8 +165,8 @@ fc2='' # stderr style: cyan
 #           ; do
 #             if 'eval' \
 #               "${x}"' '\'''\''' \
-#               0<'/dev/null' \
-#               1>'/dev/null' \
+#               0</dev/null \
+#               1>/dev/null \
 #               2>&1 \
 #             ; then
 #               awk_auto="${x}"
@@ -188,9 +188,9 @@ fc2='' # stderr style: cyan
 #           ; do
 #             if 'eval' \
 #               "${x}"' '\''--version'\''' \
-#               0<'/dev/null' \
-#               1>'/dev/null' \
-#               2>'/dev/null' \
+#               0</dev/null \
+#               1>/dev/null \
+#               2>/dev/null \
 #             ; then
 #               git_auto="${x}";
 #               'break';
@@ -212,9 +212,9 @@ fc2='' # stderr style: cyan
 #           ; do
 #             if 'eval' \
 #               "${x}"' '\''--version'\''' \
-#               0<'/dev/null' \
-#               1>'/dev/null' \
-#               2>'/dev/null' \
+#               0</dev/null \
+#               1>/dev/null \
+#               2>/dev/null \
 #             ; then
 #               gpg_auto="${x}";
 #               'break';
@@ -238,8 +238,8 @@ fc2='' # stderr style: cyan
 #           ; do
 #             if 'eval' \
 #               "${x}"' '\'''\''' \
-#               0<'/dev/null' \
-#               1>'/dev/null' \
+#               0</dev/null \
+#               1>/dev/null \
 #               2>&1 \
 #             ; then
 #               sed_auto="${x}"
@@ -261,9 +261,9 @@ fc2='' # stderr style: cyan
 #           ; do
 #             if 'eval' \
 #               "${x}"' '\''-V'\''' \
-#               0<'/dev/null' \
-#               1>'/dev/null' \
-#               2>'/dev/null' \
+#               0</dev/null \
+#               1>/dev/null \
+#               2>/dev/null \
 #             ; then
 #               sshpass_auto="${x}";
 #               'break';
@@ -308,8 +308,8 @@ case "${awk}" in
         ; do
           if 'eval' \
             "${x}"' '\'''\''' \
-            0<'/dev/null' \
-            1>'/dev/null' \
+            0</dev/null \
+            1>/dev/null \
             2>&1 \
           ; then
             awk_auto="${x}"
@@ -334,9 +334,9 @@ case "${git}" in
         ; do
           if 'eval' \
             "${x}"' '\''--version'\''' \
-            0<'/dev/null' \
-            1>'/dev/null' \
-            2>'/dev/null' \
+            0</dev/null \
+            1>/dev/null \
+            2>/dev/null \
           ; then
             git_auto="${x}";
             'break';
@@ -361,9 +361,9 @@ case "${gpg}" in
         ; do
           if 'eval' \
             "${x}"' '\''--version'\''' \
-            0<'/dev/null' \
-            1>'/dev/null' \
-            2>'/dev/null' \
+            0</dev/null \
+            1>/dev/null \
+            2>/dev/null \
           ; then
             gpg_auto="${x}";
             'break';
@@ -387,8 +387,8 @@ case "${sed}" in
         ; do
           if 'eval' \
             "${x}"' '\'''\''' \
-            0<'/dev/null' \
-            1>'/dev/null' \
+            0</dev/null \
+            1>/dev/null \
             2>&1 \
           ; then
             sed_auto="${x}"
@@ -413,9 +413,9 @@ case "${sshpass}" in
         ; do
           if 'eval' \
             "${x}"' '\''-V'\''' \
-            0<'/dev/null' \
-            1>'/dev/null' \
-            2>'/dev/null' \
+            0</dev/null \
+            1>/dev/null \
+            2>/dev/null \
           ; then
             sshpass_auto="${x}";
             'break';
@@ -712,8 +712,8 @@ EOF2
                   ; do
                     if 'eval' \
                       "${x}"' '\'''\''' \
-                      0<'/dev/null' \
-                      1>'/dev/null' \
+                      0</dev/null \
+                      1>/dev/null \
                       2>&1 \
                     ; then
                       awk_auto="${x}"
@@ -863,9 +863,9 @@ EOF2
                   ; do
                     if 'eval' \
                       "${x}"' '\''--version'\''' \
-                      0<'/dev/null' \
-                      1>'/dev/null' \
-                      2>'/dev/null' \
+                      0</dev/null \
+                      1>/dev/null \
+                      2>/dev/null \
                     ; then
                       git_auto="${x}";
                       'break';
@@ -1037,9 +1037,9 @@ EOF2
                   ; do
                     if 'eval' \
                       "${x}"' '\''--version'\''' \
-                      0<'/dev/null' \
-                      1>'/dev/null' \
-                      2>'/dev/null' \
+                      0</dev/null \
+                      1>/dev/null \
+                      2>/dev/null \
                     ; then
                       gpg_auto="${x}";
                       'break';
@@ -1467,8 +1467,8 @@ EOF2
                   ; do
                     if 'eval' \
                       "${x}"' '\'''\''' \
-                      0<'/dev/null' \
-                      1>'/dev/null' \
+                      0</dev/null \
+                      1>/dev/null \
                       2>&1 \
                     ; then
                       sed_auto="${x}"
@@ -1726,9 +1726,9 @@ EOF2
                   ; do
                     if 'eval' \
                       "${x}"' '\''-V'\''' \
-                      0<'/dev/null' \
-                      1>'/dev/null' \
-                      2>'/dev/null' \
+                      0</dev/null \
+                      1>/dev/null \
+                      2>/dev/null \
                     ; then
                       sshpass_auto="${x}";
                       'break';
@@ -2024,7 +2024,7 @@ EOF2
       'test' \
         '-f' \
         "${safe_gpg_secret_key_file}" \
-        0<'/dev/null' \
+        0</dev/null \
       ;
       s="${?}";
       case "${s}" in
@@ -2048,7 +2048,7 @@ EOF2
         '-f' \
         '-r' \
         "${safe_gpg_import_directory}" \
-        0<'/dev/null' \
+        0</dev/null \
       ;
       s="${?}";
       case "${s}" in
@@ -2069,7 +2069,7 @@ EOF2
       'mkdir' \
         '-p' \
         "${safe_gpg_import_directory}" \
-        0<'/dev/null' \
+        0</dev/null \
       ;
       s="${?}";
       case "${s}" in
@@ -2089,7 +2089,7 @@ EOF2
       'chmod' \
         '700' \
         "${safe_gpg_import_directory}" \
-        0<'/dev/null' \
+        0</dev/null \
       ;
       case "${?}" in
         '0')
@@ -2222,7 +2222,7 @@ EOF2
           'cp' \
             "${full_ssh_secret_key_file}" \
             "${full_ssh_secret_key_file_pointer}" \
-            0<'/dev/null' \
+            0</dev/null \
           ;
           s="${?}";
           case "${s}" in
@@ -2241,7 +2241,7 @@ EOF2
           'chmod' \
             '400' \
             "${full_ssh_secret_key_file_pointer}" \
-            0<'/dev/null' \
+            0</dev/null \
           ;
           case "${?}" in
             '0')
@@ -2288,7 +2288,7 @@ EOF2
         '-f' \
         '-r' \
         "${safe_git_clone_directory}" \
-        0<'/dev/null' \
+        0</dev/null \
       ;
       s="${?}";
       case "${s}" in
@@ -2394,7 +2394,7 @@ EOF2
       'chmod' \
         '+x' \
         "${safe_temporary_directory}"'/gpg_wrapper' \
-        0<'/dev/null' \
+        0</dev/null \
       ;
       case "${?}" in
         '0')
@@ -2533,7 +2533,7 @@ EOF2
   basename_src=`
     'basename' \
       "${safe_src}" \
-      0<'/dev/null' \
+      0</dev/null \
     ;
   `;
   s="${?}";
@@ -2570,7 +2570,7 @@ EOF2
   dst_directory=`
     'dirname' \
       "${safe_dst}" \
-      0<'/dev/null' \
+      0</dev/null \
     ;
   `;
   s="${?}";
@@ -2622,7 +2622,7 @@ EOF2
   'mkdir' \
     '-p' \
     "${safe_dst_directory}" \
-    0<'/dev/null' \
+    0</dev/null \
   ;
   s="${?}";
   case "${s}" in
@@ -2642,7 +2642,7 @@ EOF2
   'cp' \
     "${safe_src}" \
     "${safe_dst}" \
-    0<'/dev/null' \
+    0</dev/null \
   ;
   s="${?}";
   case "${s}" in
@@ -2690,7 +2690,7 @@ EOF2
   'rm' \
     '-f' \
     "${safe_git_clone_directory}"'/gpg-passphrase-file' \
-    0<'/dev/null' \
+    0</dev/null \
   ;
   s="${?}";
   case "${s}" in
@@ -2735,7 +2735,7 @@ EOF2
     '-s' \
     "${full_gpg_passphrase_file}" \
     "${safe_git_clone_directory}"'/gpg-passphrase-file' \
-    0<'/dev/null' \
+    0</dev/null \
   ;
   s="${?}";
   case "${s}" in
@@ -2754,7 +2754,7 @@ EOF2
   (
     'cd' \
       "${safe_git_clone_directory}" \
-      0<'/dev/null' \
+      0</dev/null \
     && 'eval' '
       GNUPGHOME="${full_gpg_import_directory}" \
       '"${git}"' \
@@ -2818,7 +2818,7 @@ EOF2
       "${attempt_index}" \
       '-lt' \
       "${push_attempts}" \
-      0<'/dev/null' \
+      0</dev/null \
     ;
     s="${?}";
     case "${s}" in
@@ -2844,7 +2844,7 @@ EOF2
 
     'sleep' \
       '5' \
-      0<'/dev/null' \
+      0</dev/null \
     ;
 
     'eval' '

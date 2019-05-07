@@ -150,8 +150,8 @@ if "${git}" \
   '--error-unmatch' \
   '--' \
   "${0}" \
-  1>'/dev/null' \
-  2>'/dev/null' \
+  1>/dev/null \
+  2>/dev/null \
 ; then
 
   "${git}" 'tag' >"${0}.tmp"

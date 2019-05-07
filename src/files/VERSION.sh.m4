@@ -77,7 +77,7 @@ EOF2
       grep \
         '^v[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}-[0-9]\{1,\}-g[0-9a-f]\{7,\}$' \
         0<<EOF2 \
-        1>'/dev/null' \
+        1>/dev/null \
       ;
 ${v_description}
 EOF2
@@ -96,7 +96,7 @@ EOF2
       grep \
         '^v[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}$' \
         0<<EOF2 \
-        1>'/dev/null' \
+        1>/dev/null \
       ;
 ${v_description}
 EOF2
@@ -115,7 +115,7 @@ EOF2
   grep \
     '^v0[0-9]' \
     0<<EOF2 \
-    1>'/dev/null' \
+    1>/dev/null \
   ;
 ${v_description}
 EOF2
@@ -132,7 +132,7 @@ EOF2
   grep \
     '^v.*[-.]0[0-9]' \
     0<<EOF2 \
-    1>'/dev/null' \
+    1>/dev/null \
   ;
 ${v_description}
 EOF2
@@ -169,7 +169,7 @@ EOF2
       grep \
         '^u[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}-[0-9]\{1,\}-g[0-9a-f]\{7,\}$' \
         0<<EOF2 \
-        1>'/dev/null' \
+        1>/dev/null \
       ;
 ${u_description}
 EOF2
@@ -186,7 +186,7 @@ EOF2
       grep \
         '^u0[0-9]' \
         0<<EOF2 \
-        1>'/dev/null' \
+        1>/dev/null \
       ;
 ${u_description}
 EOF2
@@ -203,7 +203,7 @@ EOF2
       grep \
         '^u.*[-.]0[0-9]' \
         0<<EOF2 \
-        1>'/dev/null' \
+        1>/dev/null \
       ;
 ${u_description}
 EOF2

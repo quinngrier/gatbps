@@ -53,7 +53,7 @@ GATBPS_V_CONFIG_LATER_0 = @$(SHELL) \
   '--' \
   $(GATBPS_V_PAD_LEFT)'SUBST_IM'$(GATBPS_V_PAD_RIGHT_8) \
   $@ \
-  0<'/dev/null' \
+  0</dev/null \
 || 'exit' "$${?}";
 
 GATBPS_V_CONFIG_LATER_1 =

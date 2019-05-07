@@ -24,7 +24,7 @@ GATBPS_V_TAR_0 = @$(SHELL) \
   '--' \
   $(GATBPS_V_PAD_LEFT)'TAR'$(GATBPS_V_PAD_RIGHT_3) \
   $@ \
-  0<'/dev/null' \
+  0</dev/null \
 || 'exit' "$${?}";
 
 GATBPS_V_TAR_1 =
@@ -39,7 +39,7 @@ GATBPS_V_UNTAR_0 = @$(SHELL) \
   '--' \
   $(GATBPS_V_PAD_LEFT)'UNTAR'$(GATBPS_V_PAD_RIGHT_5) \
   $@ \
-  0<'/dev/null' \
+  0</dev/null \
 || 'exit' "$${?}";
 
 GATBPS_V_UNTAR_1 =

@@ -81,11 +81,11 @@ m4_pushdef(
     gatbps_safe_src="$[]{gatbps_safe_dst}"']gatbps_suffix['
     if test '-f' "$[]{gatbps_safe_dst}" &&
        cmp "$[]{gatbps_safe_dst}" \
-           "$[]{gatbps_safe_src}" >'/dev/null' ||
+           "$[]{gatbps_safe_src}" >/dev/null ||
        test '!' '-f' "$[]{gatbps_safe_dst}" &&
        test '-f' "$[]{gatbps_safe_aux}" &&
        cmp "$[]{gatbps_safe_aux}" \
-           "$[]{gatbps_safe_src}" >'/dev/null'; then
+           "$[]{gatbps_safe_src}" >/dev/null; then
       AC_MSG_NOTICE([skipping $[]{gatbps_dst}])
     else
       AC_MSG_NOTICE([updating $[]{gatbps_dst}])
@@ -93,7 +93,7 @@ m4_pushdef(
       'cp' \
         "$][{gatbps_safe_src}" \
         "$][{gatbps_safe_dst}" \
-        0<'/dev/null' \
+        0</dev/null \
       ;
       gatbps_s="$][{?}"; \
       case "$][{gatbps_s}" in

@@ -108,7 +108,7 @@ GATBPS_V_DOXYGEN_0 = @$(SHELL) \
   '--' \
   $(GATBPS_V_PAD_LEFT)'DOXYGEN'$(GATBPS_V_PAD_RIGHT_7) \
   $@ \
-  0<'/dev/null' \
+  0</dev/null \
 || 'exit' "$${?}";
 
 GATBPS_V_DOXYGEN_1 =
