@@ -59,7 +59,7 @@ $(dvi_dist_dst): $(dvi_dist_dep)
         '"'$(dvi_dist_src)'"' \
         1>&2 \
       ; \
-      'exit' '1'; \
+      exit 1; \
     fi; \
     case "$${d}" in \
       '/'*) \

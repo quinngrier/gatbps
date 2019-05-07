@@ -85,10 +85,10 @@ EOF2
         '0')
         ;;
         '1')
-          'exit' '1'
+          exit 1
         ;;
         *)
-          'exit' '1'
+          exit 1
         ;;
       esac
     ;;
@@ -104,10 +104,10 @@ EOF2
         '0')
         ;;
         '1')
-          'exit' '1'
+          exit 1
         ;;
         *)
-          'exit' '1'
+          exit 1
         ;;
       esac
     ;;
@@ -121,12 +121,12 @@ ${v_description}
 EOF2
   case "${?}" in
     '0')
-      'exit' '1'
+      exit 1
     ;;
     '1')
     ;;
     *)
-      'exit' '1'
+      exit 1
     ;;
   esac
   grep \
@@ -138,12 +138,12 @@ ${v_description}
 EOF2
   case "${?}" in
     '0')
-      'exit' '1'
+      exit 1
     ;;
     '1')
     ;;
     *)
-      'exit' '1'
+      exit 1
     ;;
   esac
   case "${v_description}" in
@@ -162,7 +162,7 @@ EOF2
         '0')
         ;;
         *)
-          'exit' '1'
+          exit 1
         ;;
       esac
       'readonly' 'u_description'
@@ -177,10 +177,10 @@ EOF2
         '0')
         ;;
         '1')
-          'exit' '1'
+          exit 1
         ;;
         *)
-          'exit' '1'
+          exit 1
         ;;
       esac
       grep \
@@ -192,12 +192,12 @@ ${u_description}
 EOF2
       case "${?}" in
         '0')
-          'exit' '1'
+          exit 1
         ;;
         '1')
         ;;
         *)
-          'exit' '1'
+          exit 1
         ;;
       esac
       grep \
@@ -209,12 +209,12 @@ ${u_description}
 EOF2
       case "${?}" in
         '0')
-          'exit' '1'
+          exit 1
         ;;
         '1')
         ;;
         *)
-          'exit' '1'
+          exit 1
         ;;
       esac
       v_tag=`
@@ -231,7 +231,7 @@ EOF2
         '0')
         ;;
         *)
-          'exit' '1'
+          exit 1
         ;;
       esac
       'readonly' 'v_tag'
@@ -249,7 +249,7 @@ EOF2
         '0')
         ;;
         *)
-          'exit' '1'
+          exit 1
         ;;
       esac
       'readonly' 'u_tag'
@@ -263,10 +263,10 @@ EOF2
         '0')
         ;;
         '1')
-          'exit' '1'
+          exit 1
         ;;
         *)
-          'exit' '1'
+          exit 1
         ;;
       esac
       sed '
@@ -279,7 +279,7 @@ EOF2
         '0')
         ;;
         *)
-          'exit' '1'
+          exit 1
         ;;
       esac
     ;;
@@ -293,7 +293,7 @@ EOF2
         '0')
         ;;
         *)
-          'exit' '1'
+          exit 1
         ;;
       esac
     ;;

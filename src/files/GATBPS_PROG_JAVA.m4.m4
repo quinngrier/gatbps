@@ -111,7 +111,7 @@ esac;
         'exit' '0';
       ;;
     esac;
-    'exit' '1';
+    exit 1;
   :;)]])[
 
 :;}]])[]dnl

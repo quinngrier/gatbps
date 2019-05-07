@@ -59,7 +59,7 @@ $(ps_dist_dst): $(ps_dist_dep)
         '"'$(ps_dist_src)'"' \
         1>&2 \
       ; \
-      'exit' '1'; \
+      exit 1; \
     fi; \
     case "$${d}" in \
       '/'*) \

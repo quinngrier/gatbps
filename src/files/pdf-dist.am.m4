@@ -59,7 +59,7 @@ $(pdf_dist_dst): $(pdf_dist_dep)
         '"'$(pdf_dist_src)'"' \
         1>&2 \
       ; \
-      'exit' '1'; \
+      exit 1; \
     fi; \
     case "$${d}" in \
       '/'*) \

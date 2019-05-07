@@ -154,7 +154,7 @@ AM_CONDITIONAL([$2], [( ':'
       'exit' '0'
     ;;
     'no')
-      'exit' '1'
+      exit 1
     ;;
   esac
 )])[

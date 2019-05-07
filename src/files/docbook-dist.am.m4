@@ -59,7 +59,7 @@ $(docbook_dist_dst): $(docbook_dist_dep)
         '"'$(docbook_dist_src)'"' \
         1>&2 \
       ; \
-      'exit' '1'; \
+      exit 1; \
     fi; \
     case "$${d}" in \
       '/'*) \

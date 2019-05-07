@@ -52,7 +52,7 @@ $(java_dist_dst): $(javadoc_src)
         '"'$(java_dst)'"' \
         1>&2 \
       ; \
-      'exit' '1'; \
+      exit 1; \
     fi; \
     case "$${d}" in \
       '/'*) \

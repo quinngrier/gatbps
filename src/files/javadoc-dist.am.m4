@@ -64,7 +64,7 @@ $(javadoc_dist_dst): $(javadoc_dist_dep)
         '"'$(javadoc_dist_src)'"' \
         1>&2 \
       ; \
-      'exit' '1'; \
+      exit 1; \
     fi; \
     case "$${d}" in \
       '/'*) \

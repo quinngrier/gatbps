@@ -83,7 +83,7 @@ EOF
             'cat' >'conftest-GATBPS_CHECK_SOFT_INCLUDE-1.mk' <<'EOF'
 -include conftest-GATBPS_CHECK_SOFT_INCLUDE-2.mk
 1:
-	'exit' '1'
+	exit 1
 EOF
             case "$][{?}" in
               '0')
@@ -158,7 +158,7 @@ EOF
             'cat' >'conftest-GATBPS_CHECK_SOFT_INCLUDE-1.mk' <<'EOF'
 sinclude conftest-GATBPS_CHECK_SOFT_INCLUDE-2.mk
 1:
-	'exit' '1'
+	exit 1
 EOF
             case "$][{?}" in
               '0')

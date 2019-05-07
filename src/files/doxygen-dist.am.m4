@@ -64,7 +64,7 @@ $(doxygen_dist_dst): $(doxygen_dist_dep)
         '"'$(doxygen_dist_src)'"' \
         1>&2 \
       ; \
-      'exit' '1'; \
+      exit 1; \
     fi; \
     case "$${d}" in \
       '/'*) \

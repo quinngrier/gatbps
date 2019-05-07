@@ -70,7 +70,7 @@ $(html_dist_dst): $(html_dist_dep)
         '"'$(html_dist_src)'"' \
         1>&2 \
       ; \
-      'exit' '1'; \
+      exit 1; \
     fi; \
     case "$${d}" in \
       '/'*) \

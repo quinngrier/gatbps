@@ -20,7 +20,7 @@ $|%}{%|{fr2}gatbps!$|%}{%|{fR2} $|%}{%|{fB2}cat$|%}{%|{fR2} failed while reading
 $|%}{%|{fr2}gatbps!$|%}{%|{fR2}   1. a here-document
 $|%}{%|{fr2}gatbps!$|%}{%|{fR2} and writing to: standard output
 EOF1
-                  'exit' '1'
+                  exit 1
                 ;;
               esac
             ;;|%}|%})|%}){%||%}dnl

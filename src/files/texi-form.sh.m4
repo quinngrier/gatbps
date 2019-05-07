@@ -15,7 +15,7 @@ header_comment({%|#|%}, {%|#|%}){%|
 # For more information, see the GATBPS manual.
 #
 
-'exit' '1'
+exit 1
 
 |%}footer_comment({%|#|%}, {%|#|%}, {%|#|%})
 dnl

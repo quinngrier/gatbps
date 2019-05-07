@@ -557,7 +557,7 @@ case "${s}" in
 ${fr2}save-artifacts.sh!${fR2} ${fB2}pwd${fR2} failed
 ${fr2}save-artifacts.sh!${fR2} exit status: ${fB2}${s}${fR2}
 EOF2
-    'exit' '1';
+    exit 1;
   ;;
 esac;
 'readonly' 'pwd';
@@ -649,7 +649,7 @@ while ':'; do
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--${fR2} forbids a value
 ${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
 EOF2
-          'exit' '1'
+          exit 1
 
         ;;
 
@@ -661,7 +661,7 @@ EOF2
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--awk${fR2} requires a value
 ${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
 
@@ -693,7 +693,7 @@ ${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}save-artifacts.sh!${fR2}   1. a here-document
 ${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -762,7 +762,7 @@ EOF2
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--date-command${fR2} requires a value
 ${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
 
@@ -794,7 +794,7 @@ ${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}save-artifacts.sh!${fR2}   1. a here-document
 ${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -814,7 +814,7 @@ EOF2
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--git${fR2} requires a value
 ${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
 
@@ -846,7 +846,7 @@ ${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}save-artifacts.sh!${fR2}   1. a here-document
 ${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -889,7 +889,7 @@ EOF2
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--git-committer-email${fR2} requires a value
 ${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
 
@@ -921,7 +921,7 @@ ${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}save-artifacts.sh!${fR2}   1. a here-document
 ${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -938,7 +938,7 @@ EOF2
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--git-committer-name${fR2} requires a value
 ${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
 
@@ -970,7 +970,7 @@ ${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}save-artifacts.sh!${fR2}   1. a here-document
 ${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -987,7 +987,7 @@ EOF2
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--gpg${fR2} requires a value
 ${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
 
@@ -1019,7 +1019,7 @@ ${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}save-artifacts.sh!${fR2}   1. a here-document
 ${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -1066,7 +1066,7 @@ EOF2
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--gpg-passphrase-file${fR2} requires a value
 ${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
 
@@ -1098,7 +1098,7 @@ ${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}save-artifacts.sh!${fR2}   1. a here-document
 ${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -1126,7 +1126,7 @@ EOF2
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--gpg-secret-key-file${fR2} requires a value
 ${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
 
@@ -1158,7 +1158,7 @@ ${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}save-artifacts.sh!${fR2}   1. a here-document
 ${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -1189,7 +1189,7 @@ EOF2
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--leaf-prefix${fR2} requires a value
 ${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
 
@@ -1221,7 +1221,7 @@ ${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}save-artifacts.sh!${fR2}   1. a here-document
 ${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -1231,7 +1231,7 @@ EOF2
               'cat' 0<<EOF2 1>&2;
 ${fr2}save-artifacts.sh!${fR2} invalid ${fB2}--leaf-prefix${fR2} value: ${fB2}${leaf_prefix}${fR2}
 EOF2
-              'exit' '1';
+              exit 1;
             ;;
           esac;
 
@@ -1247,7 +1247,7 @@ EOF2
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--push-attempts${fR2} requires a value
 ${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
 
@@ -1279,7 +1279,7 @@ ${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}save-artifacts.sh!${fR2}   1. a here-document
 ${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -1292,7 +1292,7 @@ EOF2
               'cat' 0<<EOF2 1>&2;
 ${fr2}save-artifacts.sh!${fR2} invalid ${fB2}--push-attempts${fR2} value: ${fB2}${push_attempts}${fR2}
 EOF2
-              'exit' '1';
+              exit 1;
             ;;
           esac;
 
@@ -1308,7 +1308,7 @@ EOF2
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--repository${fR2} requires a value
 ${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
 
@@ -1340,7 +1340,7 @@ ${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}save-artifacts.sh!${fR2}   1. a here-document
 ${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -1360,7 +1360,7 @@ EOF2
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--root-prefix${fR2} requires a value
 ${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
 
@@ -1392,7 +1392,7 @@ ${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}save-artifacts.sh!${fR2}   1. a here-document
 ${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -1402,7 +1402,7 @@ EOF2
               'cat' 0<<EOF2 1>&2;
 ${fr2}save-artifacts.sh!${fR2} invalid ${fB2}--root-prefix${fR2} value: ${fB2}${root_prefix}${fR2}
 EOF2
-              'exit' '1';
+              exit 1;
             ;;
           esac;
 
@@ -1418,7 +1418,7 @@ EOF2
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--sed${fR2} requires a value
 ${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
 
@@ -1450,7 +1450,7 @@ ${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}save-artifacts.sh!${fR2}   1. a here-document
 ${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -1493,7 +1493,7 @@ EOF2
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--ssh-known-hosts-file${fR2} requires a value
 ${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
 
@@ -1525,7 +1525,7 @@ ${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}save-artifacts.sh!${fR2}   1. a here-document
 ${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -1554,7 +1554,7 @@ EOF2
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--ssh-passphrase-file${fR2} requires a value
 ${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
 
@@ -1586,7 +1586,7 @@ ${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}save-artifacts.sh!${fR2}   1. a here-document
 ${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -1614,7 +1614,7 @@ EOF2
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--ssh-secret-key-file${fR2} requires a value
 ${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
 
@@ -1646,7 +1646,7 @@ ${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}save-artifacts.sh!${fR2}   1. a here-document
 ${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -1677,7 +1677,7 @@ EOF2
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--sshpass${fR2} requires a value
 ${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
 
@@ -1709,7 +1709,7 @@ ${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}save-artifacts.sh!${fR2}   1. a here-document
 ${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -1752,7 +1752,7 @@ EOF2
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--sshpass-prompt${fR2} requires a value
 ${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
 
@@ -1784,7 +1784,7 @@ ${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}save-artifacts.sh!${fR2}   1. a here-document
 ${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -1801,7 +1801,7 @@ EOF2
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--temporary-directory${fR2} requires a value
 ${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
 
@@ -1833,7 +1833,7 @@ ${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}save-artifacts.sh!${fR2}   1. a here-document
 ${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -1895,7 +1895,7 @@ EOF2
 ${fr2}save-artifacts.sh!${fR2} ${fB2}--version-command${fR2} requires a value
 ${fr2}save-artifacts.sh!${fR2} try ${fB2}sh save-artifacts.sh --help${fR2} for more information
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
 
@@ -1927,7 +1927,7 @@ ${fr2}save-artifacts.sh!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}save-artifacts.sh!${fR2}   1. a here-document
 ${fr2}save-artifacts.sh!${fR2} and writing to: a command substitution
 EOF2
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -1970,7 +1970,7 @@ ${fr2}save-artifacts.sh!${fR2} and writing to: standard error
 EOF2
             ;;
           esac
-          'exit' '1'
+          exit 1
 
         ;;
 
@@ -1980,7 +1980,7 @@ EOF2
 ${fr2}save-artifacts.sh!${fR2} unknown option: ${fB2}${1}${fR2}
 ${fr2}save-artifacts.sh!${fR2} try ${fB2}save-artifacts.sh --help${fR2} for more information
 EOF2
-          'exit' '1'
+          exit 1
 
         ;;
 
@@ -2007,7 +2007,7 @@ ${fr2}save-artifacts.sh!${fR2} and writing to: standard error
 EOF2
             ;;
           esac
-          'exit' '1'
+          exit 1
 
         ;;
 

@@ -466,7 +466,7 @@ $2_YEAR_ZPAD=']$1$2_YEAR_ZPAD['
         'exit' '0'
       ;;
     esac
-    'exit' '1'
+    exit 1
   :;)]])[
 
 :;}]])[]dnl

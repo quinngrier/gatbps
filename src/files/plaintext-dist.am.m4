@@ -59,7 +59,7 @@ $(plaintext_dist_dst): $(plaintext_dist_dep)
         '"'$(plaintext_dist_src)'"' \
         1>&2 \
       ; \
-      'exit' '1'; \
+      exit 1; \
     fi; \
     case "$${d}" in \
       '/'*) \

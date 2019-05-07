@@ -478,7 +478,7 @@ while ':'; do
 ${fr2}gatbps!${fR2} ${fB2}--${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
-          'exit' '1'
+          exit 1
 
         ;;
 
@@ -509,7 +509,7 @@ ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
 EOF1
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -781,7 +781,7 @@ ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
 EOF1
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -818,7 +818,7 @@ ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
 EOF1
-              'exit' '1'
+              exit 1
             ;;
           esac
 
@@ -855,7 +855,7 @@ ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
 EOF1
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -874,7 +874,7 @@ EOF1
 ${fr2}gatbps!${fR2} ${fB2}--awk${fR2} requires a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
-              'exit' '1'
+              exit 1
             ;;
           esac
 
@@ -906,7 +906,7 @@ ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
 EOF1
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -956,7 +956,7 @@ EOF1
 ${fr2}gatbps!${fR2} ${fB2}--boundary${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
-          'exit' '1'
+          exit 1
 
         ;;
 
@@ -987,7 +987,7 @@ ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
 EOF1
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -1011,7 +1011,7 @@ EOF1
 ${fr2}gatbps!${fR2} ${fB2}--dry-run${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
-          'exit' '1'
+          exit 1
 
         ;;
 
@@ -1042,7 +1042,7 @@ ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
 EOF1
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -1080,7 +1080,7 @@ ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: standard output
 EOF1
-              'exit' '1'
+              exit 1
             ;;
           esac
 
@@ -1096,14 +1096,14 @@ EOF1
               'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}--help${fR2} values must not be empty
 EOF1
-              'exit' '1'
+              exit 1
             ;;
 
             '--help='*'/')
               'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} ${fB2}--help${fR2} values must not end with slashes
 EOF1
-              'exit' '1'
+              exit 1
             ;;
 
 |%}help_code({%|CC0-1.0-AC-COPYRIGHT.ac|%}){%|
@@ -1572,7 +1572,7 @@ ${fr2}gatbps!${fR2} ${fB2}${awk}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: standard output
 EOF1
-                  'exit' '1'
+                  exit 1
                 ;;
               esac
             ;;
@@ -1599,7 +1599,7 @@ ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: standard output
 EOF1
-              'exit' '1'
+              exit 1
             ;;
           esac
 
@@ -1613,7 +1613,7 @@ EOF1
 ${fr2}gatbps!${fR2} ${fB2}--man${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
-          'exit' '1'
+          exit 1
 
         ;;
 
@@ -1630,7 +1630,7 @@ EOF1
 ${fr2}gatbps!${fR2} ${fB2}--no-dry-run${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
-          'exit' '1'
+          exit 1
 
         ;;
 
@@ -1661,7 +1661,7 @@ ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
 EOF1
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -1685,7 +1685,7 @@ EOF1
 ${fr2}gatbps!${fR2} ${fB2}--no-plain${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
-          'exit' '1'
+          exit 1
 
         ;;
 
@@ -1716,7 +1716,7 @@ ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
 EOF1
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -1740,7 +1740,7 @@ EOF1
 ${fr2}gatbps!${fR2} ${fB2}--no-print0${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
-          'exit' '1'
+          exit 1
 
         ;;
 
@@ -1771,7 +1771,7 @@ ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
 EOF1
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -1795,7 +1795,7 @@ EOF1
 ${fr2}gatbps!${fR2} ${fB2}--no-recursive${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
-          'exit' '1'
+          exit 1
 
         ;;
 
@@ -1826,7 +1826,7 @@ ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
 EOF1
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -1851,7 +1851,7 @@ EOF1
 ${fr2}gatbps!${fR2} ${fB2}--no-unicode${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
-          'exit' '1'
+          exit 1
 
         ;;
 
@@ -1882,7 +1882,7 @@ ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
 EOF1
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -1906,7 +1906,7 @@ EOF1
 ${fr2}gatbps!${fR2} ${fB2}--no-verbose${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
-          'exit' '1'
+          exit 1
 
         ;;
 
@@ -1937,7 +1937,7 @@ ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
 EOF1
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -1961,7 +1961,7 @@ EOF1
 ${fr2}gatbps!${fR2} ${fB2}--plain${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
-          'exit' '1'
+          exit 1
 
         ;;
 
@@ -1992,7 +1992,7 @@ ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
 EOF1
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -2016,7 +2016,7 @@ EOF1
 ${fr2}gatbps!${fR2} ${fB2}--print0${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
-          'exit' '1'
+          exit 1
 
         ;;
 
@@ -2047,7 +2047,7 @@ ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
 EOF1
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -2071,7 +2071,7 @@ EOF1
 ${fr2}gatbps!${fR2} ${fB2}--recursive${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
-          'exit' '1'
+          exit 1
 
         ;;
 
@@ -2102,7 +2102,7 @@ ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
 EOF1
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -2121,7 +2121,7 @@ EOF1
 ${fr2}gatbps!${fR2} ${fB2}--sed${fR2} requires a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
-              'exit' '1'
+              exit 1
             ;;
           esac
 
@@ -2153,7 +2153,7 @@ ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
 EOF1
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -2217,7 +2217,7 @@ EOF1
           'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} invalid ${fB2}--style${fR2} value
 EOF1
-          'exit' '1'
+          exit 1
 
         ;;
 
@@ -2305,7 +2305,7 @@ EOF1
           'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} invalid ${fB2}--style-stderr${fR2} value
 EOF1
-          'exit' '1'
+          exit 1
 
         ;;
 
@@ -2393,7 +2393,7 @@ EOF1
           'cat' 0<<EOF1 1>&2;
 ${fr2}gatbps!${fR2} invalid ${fB2}--style-stdout${fR2} value
 EOF1
-          'exit' '1'
+          exit 1
 
         ;;
 
@@ -2405,7 +2405,7 @@ EOF1
 ${fr2}gatbps!${fR2} ${fB2}--texi2any${fR2} requires a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
-              'exit' '1'
+              exit 1
             ;;
           esac
 
@@ -2437,7 +2437,7 @@ ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
 EOF1
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -2486,7 +2486,7 @@ EOF1
 ${fr2}gatbps!${fR2} ${fB2}--unicode${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
-          'exit' '1'
+          exit 1
 
         ;;
 
@@ -2517,7 +2517,7 @@ ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
 EOF1
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -2541,7 +2541,7 @@ EOF1
 ${fr2}gatbps!${fR2} ${fB2}--verbose${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
-          'exit' '1'
+          exit 1
 
         ;;
 
@@ -2572,7 +2572,7 @@ ${fr2}gatbps!${fR2} ${fB2}${sed}${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: a command substitution
 EOF1
-              'exit' '1'
+              exit 1
             ;;
           esac
           'eval' "${x}"
@@ -2605,7 +2605,7 @@ ${fr2}gatbps!${fR2} ${fB2}cat${fR2} failed while reading from:
 ${fr2}gatbps!${fR2}   1. a here-document
 ${fr2}gatbps!${fR2} and writing to: standard output
 EOF1
-              'exit' '1'
+              exit 1
             ;;
           esac
 
@@ -2619,7 +2619,7 @@ EOF1
 ${fr2}gatbps!${fR2} ${fB2}--version${fR2} forbids a value
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
-          'exit' '1'
+          exit 1
 
         ;;
 
@@ -2654,7 +2654,7 @@ ${fr2}gatbps!${fR2} and writing to: standard error
 EOF1
             ;;
           esac
-          'exit' '1'
+          exit 1
 
         ;;
 
@@ -2664,7 +2664,7 @@ EOF1
 ${fr2}gatbps!${fR2} unknown option: ${fB2}${1}${fR2}
 ${fr2}gatbps!${fR2} try ${fB2}gatbps --help${fR2} for more information
 EOF1
-          'exit' '1'
+          exit 1
 
         ;;
 
@@ -2691,7 +2691,7 @@ ${fr2}gatbps!${fR2} and writing to: standard error
 EOF1
             ;;
           esac
-          'exit' '1'
+          exit 1
 
         ;;
 

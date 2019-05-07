@@ -59,7 +59,7 @@ $(xml_dist_dst): $(xml_dist_dep)
         '"'$(xml_dist_src)'"' \
         1>&2 \
       ; \
-      'exit' '1'; \
+      exit 1; \
     fi; \
     case "$${d}" in \
       '/'*) \
