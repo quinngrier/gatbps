@@ -47,14 +47,25 @@ if git ls-files --error-unmatch "${0}" >/dev/null 2>&1; then
 
 elif test -f DATE; then
 
-  cat DATE
+  date=`cat DATE`
   s=$?
+  readonly date
 
   case $s in
     0)
     ;;
     *)
       exit $s
+    ;;
+  esac
+
+  case $date in
+    1970-01-01)
+      cat <<EOF2 >&2
+${fy2}DATE.sh:$fR2 no repository and DATE says 1970-01-01
+${fy2}DATE.sh:$fR2 are you working with a source archive?
+${fy2}DATE.sh:$fR2 that's generally not a good idea
+EOF2
     ;;
   esac
 
