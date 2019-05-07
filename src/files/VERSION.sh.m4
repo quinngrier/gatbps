@@ -42,6 +42,10 @@ nl="
 "
 readonly nl
 
+v_prefix=v
+
+u_prefix=u
+
 if git ls-files --error-unmatch "$0" >/dev/null 2>&1; then
 
   v_description=`
@@ -60,7 +64,11 @@ if git ls-files --error-unmatch "$0" >/dev/null 2>&1; then
     0)
     ;;
     *)
-      exit $s
+      cat <<EOF2 >&2
+${fr2}VERSION.sh!$fR2 error calculating a $v_prefix* description
+${fr2}VERSION.sh!$fR2 did you forget to create/push some tags?
+EOF2
+      exit 1
     ;;
   esac
 
