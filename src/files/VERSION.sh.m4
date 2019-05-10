@@ -52,7 +52,6 @@ if git ls-files --error-unmatch "$0" >/dev/null 2>&1; then
     git \
       describe \
       --candidates=1 \
-      --first-parent \
       --match="v[0-9]*.[0-9]*.[0-9]*" \
       --tags \
     ;
@@ -152,7 +151,6 @@ EOF2
         git \
           'describe' \
           '--candidates=1' \
-          '--first-parent' \
           '--long' \
           '--match=u[0-9]*.[0-9]*.[0-9]*' \
           '--tags' \
@@ -222,7 +220,6 @@ EOF2
           'describe' \
           '--abbrev=0' \
           '--candidates=1' \
-          '--first-parent' \
           '--match=v[0-9]*.[0-9]*.[0-9]*' \
           '--tags' \
         ;
@@ -240,7 +237,6 @@ EOF2
           'describe' \
           '--abbrev=0' \
           '--candidates=1' \
-          '--first-parent' \
           '--match=u[0-9]*.[0-9]*.[0-9]*' \
           '--tags' \
         ;
