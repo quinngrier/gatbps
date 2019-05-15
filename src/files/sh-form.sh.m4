@@ -5,6 +5,7 @@ rules_code({%|src/files/sh-form.sh.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/PACKAGE_DATE_TROFF.m4|%}){%||%}dnl
 include({%|src/tools/PACKAGE_VERSION.m4|%}){%||%}dnl
+include({%|src/tools/declare_detect_options.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
 include({%|src/tools/use_the_c_locale.m4|%}){%||%}dnl
@@ -29,13 +30,7 @@ nl="
 "
 readonly nl
 
-#
-# The detect_options variable is set to 'yes' if the arguments are being
-# scanned for options, or 'no' if not. It starts off as 'yes' and is set
-# to 'no' upon finding the -- option.
-#
-
-detect_options='yes'
+|%}declare_detect_options{%|
 
 #
 # The style_stdout and style_stderr variables hold the current settings

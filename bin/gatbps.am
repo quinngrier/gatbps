@@ -652,6 +652,7 @@ bin_gatbps_src += src/tools/contains_at_least_one_word.m4
 bin_gatbps_src += src/tools/contains_at_least_one_word_sh.m4
 bin_gatbps_src += src/tools/contains_exactly_one_word.m4
 bin_gatbps_src += src/tools/contains_exactly_one_word_sh.m4
+bin_gatbps_src += src/tools/declare_detect_options.m4
 bin_gatbps_src += src/tools/footer_comment.m4
 bin_gatbps_src += src/tools/generation_code.m4
 bin_gatbps_src += src/tools/header_comment.m4

@@ -9,6 +9,7 @@ include({%|src/tools/PACKAGE_VERSION.m4|%}){%||%}dnl
 include({%|src/tools/SED_DEFAULT_SH.m4|%}){%||%}dnl
 include({%|src/tools/SHEBANG_LINE.m4|%}){%||%}dnl
 include({%|src/tools/TEXI2ANY_DEFAULT_SH.m4|%}){%||%}dnl
+include({%|src/tools/declare_detect_options.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/generation_code.m4|%}){%||%}dnl
 include({%|src/tools/help_code.m4|%}){%||%}dnl
@@ -26,13 +27,7 @@ nl="
 "
 readonly nl
 
-#
-# The detect_options variable is set to 'yes' if the arguments are being
-# scanned for options, or 'no' if not. It starts off as 'yes' and is set
-# to 'no' upon finding the -- option.
-#
-
-detect_options='yes'
+|%}declare_detect_options{%|
 
 #
 # The style_stdout and style_stderr variables hold the current settings
