@@ -283,6 +283,7 @@ GATBPS_WGET_url_lines(m4_if(,,input_urls))[
       case "$][$][{url}" in \
         *'\''://'\''*) \
           $][(WGET) \
+            -q \
             '\''-O'\'' \
             ./]output_file['\''.tmp'\'' \
             '\''--'\'' \
