@@ -43,7 +43,7 @@ m4_if(
 ]AC_ARG_VAR(
   [LIB_LDFLAGS],
   [
-    Extra flags to use with the linker when creating libraries.
+    extra flags to use with the linker when building libraries
   ])[
 
 :;}]])[]dnl

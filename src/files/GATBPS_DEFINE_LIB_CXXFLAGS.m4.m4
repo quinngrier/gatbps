@@ -43,10 +43,9 @@ m4_if(
 ]AC_ARG_VAR(
   [LIB_CXXFLAGS],
   [
-    extra flags to use with the C++ compiler when compiling object files
-    that will be linked into libraries.
-    For example, you might use LIB_CFLAGS='-fPIC' and
-    LIB_CXXFLAGS='-fPIC' to build position-independent shared libraries.
+    extra flags to use with the C++ compiler when building libraries.
+    For example, you might use LIB_CFLAGS="-fPIC" and
+    LIB_CXXFLAGS="-fPIC" to build position independent shared libraries.
   ])[
 
 :;}]])[]dnl

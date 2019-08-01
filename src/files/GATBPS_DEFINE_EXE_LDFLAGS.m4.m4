@@ -43,10 +43,9 @@ m4_if(
 ]AC_ARG_VAR(
   [EXE_LDFLAGS],
   [
-    extra flags to use with the linker when linking executable files.
-    For example, you might use EXE_CFLAGS='-fPIE', EXE_CXXFLAGS='-fPIE',
-    and EXE_LDFLAGS='-pie' to build position-independent executable
-    (PIE) files.
+    extra flags to use with the linker when building executables.
+    For example, you might use EXE_CFLAGS="-fPIE", EXE_CXXFLAGS="-fPIE",
+    and EXE_LDFLAGS="-pie" to build position independent executables.
   ])[
 
 :;}]])[]dnl
