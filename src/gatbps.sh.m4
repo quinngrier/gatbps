@@ -694,6 +694,7 @@ EOF1
           'set' "${prefix}"'GATBPS_DEFINE_docbookdir.m4' "${@}"
           'set' "${prefix}"'GATBPS_DEFINE_VERSION.m4' "${@}"
           'set' "${prefix}"'GATBPS_DEFINE_TEXI2DVIFLAGS.m4' "${@}"
+          'set' "${prefix}"'GATBPS_DEFINE_LIB_LDFLAGS.m4' "${@}"
           'set' "${prefix}"'GATBPS_DEFINE_LIB_CXXFLAGS.m4' "${@}"
           'set' "${prefix}"'GATBPS_DEFINE_LIB_CFLAGS.m4' "${@}"
           'set' "${prefix}"'GATBPS_DEFINE_JAVADOCFLAGS.m4' "${@}"
@@ -1205,6 +1206,8 @@ EOF1
 |%}help_code({%|GATBPS_DEFINE_LIB_CFLAGS.m4|%}){%|
 
 |%}help_code({%|GATBPS_DEFINE_LIB_CXXFLAGS.m4|%}){%|
+
+|%}help_code({%|GATBPS_DEFINE_LIB_LDFLAGS.m4|%}){%|
 
 |%}help_code({%|GATBPS_DEFINE_TEXI2DVIFLAGS.m4|%}){%|
 
@@ -2970,6 +2973,8 @@ EOF1
 
 |%}generation_code({%|GATBPS_DEFINE_LIB_CXXFLAGS.m4|%}){%|
 
+|%}generation_code({%|GATBPS_DEFINE_LIB_LDFLAGS.m4|%}){%|
+
 |%}generation_code({%|GATBPS_DEFINE_TEXI2DVIFLAGS.m4|%}){%|
 
 |%}generation_code({%|GATBPS_DEFINE_VERSION.m4|%}){%|
@@ -3940,6 +3945,11 @@ include(`src/recursion/GATBPS_DEFINE_LIB_CFLAGS.m4.rc.m4'){%||%}dnl
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
 include(`src/recursion/GATBPS_DEFINE_LIB_CXXFLAGS.m4.rc.m4'){%||%}dnl
+{%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/GATBPS_DEFINE_LIB_LDFLAGS.m4.rc.m4'){%||%}dnl
 {%|
 
 |%}dnl
