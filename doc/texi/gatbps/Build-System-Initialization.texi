@@ -10,7 +10,7 @@ To initialize the build system, run the following command after making
 sure that you have the GNU Autotools installed:
 
 @example
-autoreconf -@w{-}install
+./autogen
 @end example
 @ifxml
 @ifnotxml
