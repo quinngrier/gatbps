@@ -537,6 +537,10 @@ AM_SUBST_NOTMAKE([TEXI2ANY_DEFAULT_TROFF])
   [mostlyclean])[
 
 ]GATBPS_M4(
+  [src/files/GATBPS_DEFINE_LIB_CXXFLAGS.m4],
+  [mostlyclean])[
+
+]GATBPS_M4(
   [src/files/GATBPS_DEFINE_TEXI2DVIFLAGS.m4],
   [mostlyclean])[
 
