@@ -19,13 +19,13 @@ GATBPS_V_WGET = $(GATBPS_V_WGET_@AM_V@)
 GATBPS_V_WGET_ = $(GATBPS_V_WGET_@AM_DEFAULT_V@)
 
 GATBPS_V_WGET_0 = @$(SHELL) \
-  '-' \
-  $(srcdir)'/build-aux/echo.sh' \
-  '--' \
-  $(GATBPS_V_PAD_LEFT)'WGET'$(GATBPS_V_PAD_RIGHT_4) \
+  - \
+  $(srcdir)/build-aux/echo.sh \
+  -- \
+  $(GATBPS_V_PAD_LEFT)WGET$(GATBPS_V_PAD_RIGHT_4) \
   $@ \
-  0</dev/null \
-|| 'exit' "$${?}";
+  </dev/null \
+|| exit $$?;
 
 GATBPS_V_WGET_1 =
 
