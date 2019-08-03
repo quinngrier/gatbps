@@ -307,10 +307,10 @@ GATBPS_WGET_url_lines(m4_if(,,input_urls))[
       esac; \]dnl
 GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
       download_succeeded='\''yes'\''; \
-      '\''readonly'\'' '\''download_succeeded'\''; \
+      readonly '\''download_succeeded'\''; \
       '\''break'\''; \
     done; \
-    '\''readonly'\'' '\''download_succeeded'\''; \
+    readonly '\''download_succeeded'\''; \
     case "$][$][{download_succeeded}" in \
       '\''no'\'') \
         exit '\''1'\''; \
@@ -328,7 +328,7 @@ GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
     exit '\''0'\''; \
   :;); \
   exit_status=$][$][?; \
-  '\''readonly'\'' '\''exit_status'\''; \
+  readonly '\''exit_status'\''; \
   case "$][$][{exit_status}" in \
     '\''0'\'') \
     ;; \

@@ -328,7 +328,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
               ;; \
               ?*) \
                 merge='\''yes'\''; \
-                '\''readonly'\'' '\''merge'\''; \
+                readonly '\''merge'\''; \
               ;; \
               *) \
                 context='\''.'\''; \
@@ -351,7 +351,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
               ;; \
               ?*) \
                 merge='\''yes'\''; \
-                '\''readonly'\'' '\''merge'\''; \
+                readonly '\''merge'\''; \
               ;; \
               *) \
                 context=$][(srcdir); \
@@ -361,11 +361,11 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
         esac; \
       fi; \
     done; \
-    '\''readonly'\'' '\''merge'\''; \
+    readonly '\''merge'\''; \
     case "$][$][{merge}" in \
       '\''yes'\'') \
         context='\''GATBPS_DOCKER_BUILD/'\'']input_directory[; \
-        '\''readonly'\'' '\''context'\''; \
+        readonly '\''context'\''; \
         $][(MKDIR_P) \
           "$][$][{context}" \
         || exit $][$][?; \
@@ -382,7 +382,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
       ;; \
       '\''no'\'') \
         context="$][$][{context}"'\''/'\'']input_directory[; \
-        '\''readonly'\'' '\''context'\''; \
+        readonly '\''context'\''; \
       ;; \
     esac; \
     $][(DOCKER) \
@@ -399,7 +399,7 @@ GATBPS_DOCKER_BUILD_tag_lines(m4_if(,,image_names))[
         '\''tmp'\''"$][$][{$][$][}" \
       ; \
     ` || exit $][$][?; \
-    '\''readonly'\'' '\''hash'\''; \
+    readonly '\''hash'\''; \
     $][(DOCKER) \
       '\''save'\'' \
       "$][$][{hash}" \]dnl

@@ -222,7 +222,7 @@ GATBPS_CONFIG_LATER_make_lines(m4_if(,,child_prerequisites))[
     $][(GATBPS_VPATH_SEARCH_BOT); \
     d=$][(GATBPS_VPATH_SEARCH_RESULT); \
     x="$][$][{d}"'/'"$][$][{x}"; \
-    '\''readonly'\'' '\''x'\''; \
+    readonly '\''x'\''; \
     $][(AWK) \
       $][(GATBPS_CONFIG_LATER_SCRIPT) \
       0<"$][$][{x}" \
@@ -236,7 +236,7 @@ GATBPS_CONFIG_LATER_make_lines(m4_if(,,child_prerequisites))[
     exit '\''0'\''; \
   :;); \
   exit_status=$][$][?; \
-  '\''readonly'\'' '\''exit_status'\''; \
+  readonly '\''exit_status'\''; \
   case "$][$][{exit_status}" in \
     '\''0'\'') \
     ;; \

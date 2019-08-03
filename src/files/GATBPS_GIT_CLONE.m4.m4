@@ -178,10 +178,10 @@ GATBPS_GIT_CLONE_word_lines_6(m4_if(,,input_urls))[
         ./]output_directory['\''.tmp'\'' \
       || '\''continue'\''; \
       clone_succeeded='\''yes'\''; \
-      '\''readonly'\'' '\''clone_succeeded'\''; \
+      readonly '\''clone_succeeded'\''; \
       '\''break'\''; \
     done; \
-    '\''readonly'\'' '\''clone_succeeded'\''; \
+    readonly '\''clone_succeeded'\''; \
     case "$][$][{clone_succeeded}" in \
       '\''no'\'') \
         exit '\''1'\''; \
@@ -223,7 +223,7 @@ GATBPS_GIT_CLONE_word_lines_8(m4_if(,,input_urls))[
     exit '\''0'\''; \
   :;); \
   exit_status=$][$][?; \
-  '\''readonly'\'' '\''exit_status'\''; \
+  readonly '\''exit_status'\''; \
   case "$][$][{exit_status}" in \
     '\''0'\'') \
     ;; \

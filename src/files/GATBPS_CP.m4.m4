@@ -286,7 +286,7 @@ m4_case(
     exit '\''0'\''; \
   :;); \
   exit_status=$][$][?; \
-  '\''readonly'\'' '\''exit_status'\''; \
+  readonly '\''exit_status'\''; \
   case "$][$][{exit_status}" in \
     '\''0'\'') \
     ;; \
