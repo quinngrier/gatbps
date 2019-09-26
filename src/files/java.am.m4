@@ -303,14 +303,14 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
   $(GATBPS_INNER_SOURCEPATH) \
 ;
 	$(AM_V_at)$(JAVAC) \
-  '-Xprefer:source' \
-  '-classpath' \
+  -Xprefer:source \
+  -classpath \
   $(GATBPS_INNER_CLASSPATH) \
-  '-d' \
+  -d \
   $(GATBPS_INNER_SOURCEPATH) \
-  '-implicit:none' \
-  '-sourcepath' \
-  $(GATBPS_INNER_SOURCEPATH)$(CLASSPATH_SEPARATOR)$(srcdir)'/'$(GATBPS_INNER_SOURCEPATH) \
+  -implicit:none \
+  -sourcepath \
+  $(GATBPS_INNER_SOURCEPATH)$(CLASSPATH_SEPARATOR)$(srcdir)/$(GATBPS_INNER_SOURCEPATH) \
   $(GATBPS_INNER_JAVACFLAGS) \
   $(JAVACFLAGS) \
   $< \
