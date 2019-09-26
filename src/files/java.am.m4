@@ -304,7 +304,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 ;
 	$(AM_V_at)$(JAVAC) \
   -Xprefer:source \
-  -classpath \
+  -cp \
   $(GATBPS_INNER_CLASSPATH) \
   -d \
   $(GATBPS_INNER_SOURCEPATH) \
