@@ -314,7 +314,6 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
   $(GATBPS_INNER_JAVACFLAGS) \
   $(JAVACFLAGS) \
   $< \
-  0</dev/null \
 ;
 	$(AM_V_at){ \
   ( \
