@@ -302,19 +302,18 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	$(GATBPS_V_JAVAC)$(MKDIR_P) \
   $(GATBPS_INNER_SOURCEPATH) \
 ;
-	$(AM_V_at)$(JAVAC) \
-  -Xprefer:source \
-  -cp \
-  $(GATBPS_INNER_CLASSPATH) \
-  -d \
-  $(GATBPS_INNER_SOURCEPATH) \
-  -implicit:none \
-  -sourcepath \
-  $(GATBPS_INNER_SOURCEPATH)$(CLASSPATH_SEPARATOR)$(srcdir)/$(GATBPS_INNER_SOURCEPATH) \
-  $(GATBPS_INNER_JAVACFLAGS) \
-  $(JAVACFLAGS) \
-  $< \
-;
+	$(AM_V_at)$(JAVAC) |%}dnl
+{%|-Xprefer:source |%}dnl
+{%|-cp |%}dnl
+{%|$(GATBPS_INNER_CLASSPATH) |%}dnl
+{%|-d |%}dnl
+{%|$(GATBPS_INNER_SOURCEPATH) |%}dnl
+{%|-implicit:none |%}dnl
+{%|-sourcepath |%}dnl
+{%|$(GATBPS_INNER_SOURCEPATH)$(CLASSPATH_SEPARATOR)$(srcdir)/$(GATBPS_INNER_SOURCEPATH) |%}dnl
+{%|$(GATBPS_INNER_JAVACFLAGS) |%}dnl
+{%|$(JAVACFLAGS) |%}dnl
+{%|$<
 	$(AM_V_at){ \
   ( \
     have_jdeps='no'; \
