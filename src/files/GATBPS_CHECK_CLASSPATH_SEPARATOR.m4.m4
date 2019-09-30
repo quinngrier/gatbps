@@ -89,8 +89,44 @@ case "$][{?}" in
 esac
 'readonly' 'CLASSPATH_SEPARATOR_LATER'
 
+case $][{CLASSPATH_SEPARATOR_RAW+is_set} in ?*)
+  ]GATBPS_MSG_ERROR([
+    \$][CLASSPATH_SEPARATOR_RAW is already set
+  ])[
+;; esac
+CLASSPATH_SEPARATOR_RAW=`
+sed "s/'//g" <<EOF2
+$][CLASSPATH_SEPARATOR
+EOF2
+`
+case $][? in 0) ;; *)
+  ]GATBPS_MSG_ERROR([
+    sed failed
+  ])[
+;; esac
+readonly CLASSPATH_SEPARATOR_RAW
+
+case $][{CLASSPATH_SEPARATOR_RAW_LATER+is_set} in ?*)
+  ]GATBPS_MSG_ERROR([
+    \$][CLASSPATH_SEPARATOR_RAW_LATER is already set
+  ])[
+;; esac
+CLASSPATH_SEPARATOR_RAW_LATER=`
+sed 's/@/{@}AT{@}/g' <<EOF2
+$][CLASSPATH_SEPARATOR_RAW
+EOF2
+`
+case $][? in 0) ;; *)
+  ]GATBPS_MSG_ERROR([
+    sed failed
+  ])[
+;; esac
+readonly CLASSPATH_SEPARATOR_RAW_LATER
+
 ]AC_SUBST([CLASSPATH_SEPARATOR])[
 ]AC_SUBST([CLASSPATH_SEPARATOR_LATER])[
+]AC_SUBST([CLASSPATH_SEPARATOR_RAW])[
+]AC_SUBST([CLASSPATH_SEPARATOR_RAW_LATER])[
 
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
