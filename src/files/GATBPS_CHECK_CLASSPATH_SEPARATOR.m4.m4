@@ -43,15 +43,12 @@ m4_if(
 ]AC_REQUIRE([GATBPS_PROG_JAVAC])[
 
 ]GATBPS_CACHE_CHECK(
-  [the Java class path separator],
+  [the Java classpath separator],
   [CLASSPATH_SEPARATOR],
-  [[{
-
-    gatbps_cv_CLASSPATH_SEPARATOR=''\'':'\'''
-
-    'readonly' 'gatbps_cv_CLASSPATH_SEPARATOR'
-
-  :;}]])[
+  [[
+    gatbps_cv_CLASSPATH_SEPARATOR=:
+    readonly gatbps_cv_CLASSPATH_SEPARATOR
+  ]])[
 
 case "$][{CLASSPATH_SEPARATOR+is_set}" in
   ?*)
