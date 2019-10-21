@@ -58,7 +58,10 @@ m4_if(
 
 ]AC_CHECK_PROGS(
   [JAVA],
-  [java])[
+  [
+    java
+  ],
+  [false])[
 
 case "$][{JAVA_LATER+is_set}" in
   ?*)
@@ -106,13 +109,13 @@ esac;
 ]AM_CONDITIONAL(
   [HAVE_JAVA],
   [[(
-    case "$][{JAVA+is_set}" in
-      ?*)
-        'exit' '0';
+    case $][JAVA in
+      false)
+        exit 1
       ;;
-    esac;
-    exit 1;
-  :;)]])[
+    esac
+    exit 0
+  )]])[
 
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})

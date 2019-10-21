@@ -59,7 +59,10 @@ m4_if(
 
 ]AC_CHECK_PROGS(
   [JAVAC],
-  [javac])[
+  [
+    javac
+  ],
+  [false])[
 
 ]AC_ARG_VAR(
   [JAVAC],
@@ -79,13 +82,13 @@ m4_if(
 ]AM_CONDITIONAL(
   [HAVE_JAVAC],
   [[(
-    case "$][{JAVAC+is_set}" in
-      ?*)
-        'exit' '0';
+    case $][JAVAC in
+      false)
+        exit 1
       ;;
-    esac;
-    exit 1;
-  :;)]])[
+    esac
+    exit 0
+  )]])[
 
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
