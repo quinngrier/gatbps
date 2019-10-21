@@ -23,6 +23,7 @@ GATBPS_JDEPS_TO_RULES_SCRIPT = ' \
       gsub(/\./, "/", $$2); \
       java = "'$(GATBPS_INNER_SOURCEPATH)'/" $$2 ".java"; \
       print "$@: " java; \
+      print java ":"; \
     } \
   } \
 '
