@@ -59,8 +59,8 @@ m4_if(
 
 ]AC_CHECK_PROGS(
   [JAVAC],
-  [
-    javac
+  [ \
+    javac \
   ],
   [false])[
 

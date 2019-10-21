@@ -58,8 +58,8 @@ m4_if(
 
 ]AC_CHECK_PROGS(
   [JAVA],
-  [
-    java
+  [ \
+    java \
   ],
   [false])[
 
