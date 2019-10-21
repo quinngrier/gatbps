@@ -20,14 +20,9 @@ GATBPS_INNER_JAR_SUFFIX = /inner
 GATBPS_JDEPS_TO_RULES_SCRIPT = ' \
   { \
     if ($$1 == "->" && $$2 !~ /\$$/) { \
-      rule = "$@"; \
-      rule = rule ": "; \
-      rule = rule "'$(GATBPS_INNER_SOURCEPATH)'"; \
-      rule = rule "/"; \
       gsub(/\./, "/", $$2); \
-      rule = rule $$2; \
-      rule = rule ".java"; \
-      print rule; \
+      java = "'$(GATBPS_INNER_SOURCEPATH)'/" $$2 ".java"; \
+      print "$@: " java; \
     } \
   } \
 '
