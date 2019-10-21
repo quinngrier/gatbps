@@ -38,12 +38,10 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_TOP)
 	$][(AM@&t@_V_at){ \
   ( \
-    x='\'''\''; \
-    x="$][$][{x}"./; \
-    x="$][$][{x}"$][(java_]gatbps_y[_sourcepath); \
-    x="$][$][{x}"$][(CLASSPATH_SEPARATOR); \
-    x="$][$][{x}"$][(srcdir)'\''/'\''$][(java_]gatbps_y[_sourcepath); \
-    case '\'''\''$][(CLASSPATH) in \
+    x=$][(java_]gatbps_y[_sourcepath); \
+    x=$][$][{x}$][(CLASSPATH_SEPARATOR); \
+    x=$][$][{x}$][(srcdir)/$][(java_]gatbps_y[_sourcepath); \
+    case ""$][(CLASSPATH) in \
       ?*) \
         x="$][$][{x}"$][(CLASSPATH_SEPARATOR)$][(CLASSPATH); \
       ;; \

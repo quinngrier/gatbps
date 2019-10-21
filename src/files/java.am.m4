@@ -71,12 +71,10 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
 	$(AM_V_at){ \
   ( \
-    x=''; \
-    x="$${x}"'./'; \
-    x="$${x}"$(java_sourcepath); \
-    x="$${x}"$(CLASSPATH_SEPARATOR); \
-    x="$${x}"$(srcdir)'/'$(java_sourcepath); \
-    case ''$(CLASSPATH) in \
+    x=$(java_sourcepath); \
+    x=$${x}$(CLASSPATH_SEPARATOR); \
+    x=$${x}$(srcdir)/$(java_sourcepath); \
+    case ""$(CLASSPATH) in \
       ?*) \
         x="$${x}"$(CLASSPATH_SEPARATOR)$(CLASSPATH); \
       ;; \
