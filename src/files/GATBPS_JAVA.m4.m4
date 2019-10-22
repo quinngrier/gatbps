@@ -90,23 +90,13 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
     javacflags=` \
       '\''cat'\'' '\''java-]gatbps_x[.tmp'\'' \
     ` || exit $][$][?; \
-    $][(SHELL) \
-      '\''-'\'' \
-      $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
-      '\''--'\'' \
-      ./$][(java_]gatbps_y[_sourcepath) \
-      1>'\''java-]gatbps_x[.tmp'\'' \
-    || exit $][$][?; \
-    sourcepath=` \
-      '\''cat'\'' '\''java-]gatbps_x[.tmp'\'' \
-    ` || exit $][$][?; \
     $][(MAKE) \
       $][(AM@&t@_MAKEFLAGS) \
       '\''GATBPS_INNER_CLASSPATH='\''"$][$][{classpath}" \
       '\''GATBPS_INNER_JAR_SUFFIX='\'' \
       '\''GATBPS_INNER_JAVACFLAGS='\''"$][$][{javacflags}" \
       '\''GATBPS_INNER_PACKAGE=$][(java_]gatbps_y[_package)'\'' \
-      '\''GATBPS_INNER_SOURCEPATH='\''"$][$][{sourcepath}" \
+      GATBPS_INNER_SOURCEPATH=$][(java_]gatbps_y[_sourcepath) \
       '\''GATBPS_OUTER_JAR_SUFFIX=/outer'\'' \
       ./$][(java_]gatbps_y[_dst) \
     || exit $][$][?; \

@@ -123,23 +123,13 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
     javacflags=` \
       'cat' 'java-main.tmp' \
     ` || 'exit' "$${?}"; \
-    $(SHELL) \
-      '-' \
-      $(srcdir)'/build-aux/sh-form.sh' \
-      '--' \
-      './'$(java_sourcepath) \
-      1>'java-main.tmp' \
-    || 'exit' "$${?}"; \
-    sourcepath=` \
-      'cat' 'java-main.tmp' \
-    ` || 'exit' "$${?}"; \
     $(MAKE) \
       $(AM_MAKEFLAGS) \
       'GATBPS_INNER_CLASSPATH='"$${classpath}" \
       'GATBPS_INNER_JAR_SUFFIX=' \
       'GATBPS_INNER_JAVACFLAGS='"$${javacflags}" \
       'GATBPS_INNER_PACKAGE=$(java_package)' \
-      'GATBPS_INNER_SOURCEPATH='"$${sourcepath}" \
+      GATBPS_INNER_SOURCEPATH=$(java_sourcepath) \
       'GATBPS_OUTER_JAR_SUFFIX=/outer' \
       './'$(java_dst) \
     || 'exit' "$${?}"; \
