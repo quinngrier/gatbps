@@ -16,8 +16,8 @@ header_comment({%|##|%}, {%|##|%}){%|
 
 GATBPS_AM_DF_INPUT_TO_DF_SCRIPT = ' \
   { \
-    if ($$0 ~ /+=/) { \
-      sub(/+=[	 ]*/, "+= VPATH_SEARCH:"); \
+    if ($$0 ~ /[+]=/) { \
+      sub(/[+]=[	 ]*/, "+= VPATH_SEARCH:"); \
       sub(/^[^+]*/, "INPUT "); \
       print $$0; \
     } \
