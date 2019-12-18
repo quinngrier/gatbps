@@ -2321,7 +2321,7 @@ EOF2
         sshpass_prompt="${sshpass_prompt}" \
         '"${git}"' \
           '\''clone'\'' \
-          '\''--'\'' \
+          -- \
           "${repository}" \
           "${safe_git_clone_directory}" \
           0</dev/null \

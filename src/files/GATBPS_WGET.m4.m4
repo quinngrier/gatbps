@@ -286,7 +286,7 @@ GATBPS_WGET_url_lines(m4_if(,,input_urls))[
             -q \
             '\''-O'\'' \
             ./]output_file['\''.tmp'\'' \
-            '\''--'\'' \
+            -- \
             "$][$][{url}" \
           || '\''continue'\''; \
         ;; \
