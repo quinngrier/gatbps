@@ -275,20 +275,36 @@ GATBPS_WGET_RULES="$][{GATBPS_WGET_RULES}"'
 ;
 	$][(AM@&t@_V_at){ \
   ( \
+    tmp=$][(TMPEXT); \
+    : $][$][{tmp:=.tmp}; \
+    tmp=$][@$][$][tmp; \
     download_succeeded='\''no'\''; \
     for url in \]dnl
 GATBPS_WGET_url_lines(m4_if(,,input_urls))[
       $][$][{prevent_an_empty_word_list} \
     ; do \
+      headers=; \
+      while :; do \
+        case $][$][url in --header=*\|*) ;; *) break ;; esac; \
+        printf %s\\n "$][$][url" >$][$][tmp || exit; \
+        x=`sed "s/--header=//;s/|.*//" <$][$][tmp` || exit; \
+        case $][$][headers in ?*) headers=$][$][headers\| ;; esac; \
+        eval "headers=\"\$][$][headers--header|$][$][x\""; \
+        url=`sed "s/[^|]*|//" <$][$][tmp` || exit; \
+      done; \
       case "$][$][{url}" in \
         *'\''://'\''*) \
-          $][(WGET) \
-            -q \
-            '\''-O'\'' \
-            ./]output_file['\''.tmp'\'' \
-            -- \
-            "$][$][{url}" \
-          || '\''continue'\''; \
+          ( \
+            IFS=\|; \
+            $][(AM@&t@_V_P) && set -x; \
+            $][(WGET) \
+              -O $][@.tmp \
+              $][$][headers \
+              -q \
+              -- \
+              "$][$][url" \
+            ; \
+          ) || continue; \
         ;; \
         *) \
           case "$][$][{url}" in \
