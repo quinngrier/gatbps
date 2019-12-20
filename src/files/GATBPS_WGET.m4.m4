@@ -275,9 +275,9 @@ GATBPS_WGET_RULES="$][{GATBPS_WGET_RULES}"'
 ;
 	$][(AM@&t@_V_at){ \
   ( \
-    tmp=$][(TMPEXT); \
-    : $][$][{tmp:=.tmp}; \
-    tmp=$][@$][$][tmp; \
+    tmpext=$][(TMPEXT); \
+    : $][$][{tmpext:=.tmp}; \
+    tmp=$][@$][$][tmpext; \
     download_succeeded='\''no'\''; \
     for url in \]dnl
 GATBPS_WGET_url_lines(m4_if(,,input_urls))[
@@ -293,7 +293,7 @@ GATBPS_WGET_url_lines(m4_if(,,input_urls))[
         url=`sed "s/[^|]*|//" <$][$][tmp` || exit; \
       done; \
       case "$][$][{url}" in \
-        *'\''://'\''*) \
+        http://* | https://*) \
           ( \
             IFS=\|; \
             $][(AM@&t@_V_P) && set -x; \
@@ -305,6 +305,28 @@ GATBPS_WGET_url_lines(m4_if(,,input_urls))[
               "$][$][url" \
             ; \
           ) || continue; \
+        ;; \
+        git-archive://*) \
+          printf %s\\n "$][$][url" >$][$][tmp || exit; \
+          url=`sed "s|ssh://||;s/|.*//" <$][$][tmp` || exit; \
+          tree=`sed "s/[^|]*|//;s/|.*//" <$][$][tmp` || exit; \
+          file=`sed "s/.*|//" <$][$][tmp` || exit; \
+          ( \
+            $][(AM@&t@_V_P) && set -x; \
+            $][(GIT) archive \
+              "--remote=$][$][url" \
+              "$][$][tree" \
+              "$][$][file" \
+              >$][$][tmp.2 \
+            ; \
+          ) || continue; \
+          ( \
+            $][(AM@&t@_V_P) && set -x; \
+            cd $][(@D) && $][(TAR) xOf \
+              $][(@F)$][$][tmpext.2 \
+              >$][(@F).tmp \
+            ; \
+          ) || exit; \
         ;; \
         *) \
           case "$][$][{url}" in \
