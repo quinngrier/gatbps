@@ -166,6 +166,7 @@ GATBPS_GIT_CLONE_RULES="$][{GATBPS_GIT_CLONE_RULES}"'
 GATBPS_GIT_CLONE_word_lines_6(m4_if(,,input_urls))[
       $][$][{prevent_an_empty_word_list} \
     ; do \
+      eval url=$][$][url; \
       rm \
         -f \
         '\''-r'\'' \
