@@ -6,7 +6,6 @@ rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/PACKAGE_DATE_DAY_ZPAD.m4|%}){%||%}dnl
 include({%|src/tools/PACKAGE_DATE_MONTH_ZPAD.m4|%}){%||%}dnl
 include({%|src/tools/PACKAGE_DATE_YEAR.m4|%}){%||%}dnl
-include({%|src/tools/contains_at_least_one_word_sh.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
 header_comment({%|dnl|%}, {%|dnl|%}){%|
@@ -262,9 +261,6 @@ GATBPS_WGET_RULES="$][{GATBPS_WGET_RULES}"'
 
 ]output_file[:
 	$][(GATBPS_V_WGET)$][(GATBPS_RECIPE_MARKER_TOP)
-	$][(AM@&t@_V_at)|%}contains_at_least_one_word_sh(
-  {%|MKDIR_P|%}){%||%}dnl
-{%|
 	$][(AM@&t@_V_at)$][(MKDIR_P) \
   ./$][(@D) \
 ;
