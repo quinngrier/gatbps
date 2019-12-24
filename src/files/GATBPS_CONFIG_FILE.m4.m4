@@ -63,25 +63,25 @@ m4_pushdef(
     dst=]]gatbps_output[[
     src=]]gatbps_output[[]]gatbps_suffix[[
     inp=]]input_file[[
-    if test ! -f $][inp; then
-      inp=$][srcdir/$][inp
+    if test ! -f $inp; then
+      inp=$srcdir/$inp
     fi
     if (
       (
-        test -f $][dst
+        test -f $dst
       ) && (
-        (test   -x $][dst && test   -x $][inp) ||
-        (test ! -x $][dst && test ! -x $][inp)
+        (test   -x $dst && test   -x $inp) ||
+        (test ! -x $dst && test ! -x $inp)
       ) && (
-        cmp $][dst $][src >/dev/null
+        cmp $dst $src >/dev/null
       )
     ); then
-      ]AC_MSG_NOTICE([skipping $][dst])[
+      ]AC_MSG_NOTICE([skipping $dst])[
     else
-      ]AC_MSG_NOTICE([updating $][dst])[
-      rm -f $][dst || exit
-      cp $][inp $][dst || exit
-      cat $][src >$][dst || exit
+      ]AC_MSG_NOTICE([updating $dst])[
+      rm -f $dst || exit
+      cp $inp $dst || exit
+      cat $src >$dst || exit
       ]$5[
     fi
   )]],
