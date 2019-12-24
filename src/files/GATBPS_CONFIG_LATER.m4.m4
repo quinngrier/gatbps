@@ -223,6 +223,7 @@ GATBPS_CONFIG_LATER_make_lines(m4_if(,,child_prerequisites))[
     d=$][(GATBPS_VPATH_SEARCH_RESULT); \
     x="$][$][{d}"'/'"$][$][{x}"; \
     readonly '\''x'\''; \
+    cp $][$][x $][@.tmp; \
     $][(AWK) \
       $][(GATBPS_CONFIG_LATER_SCRIPT) \
       0<"$][$][{x}" \
