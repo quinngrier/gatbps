@@ -271,8 +271,7 @@ GATBPS_WGET_RULES="$][{GATBPS_WGET_RULES}"'
 ;
 	$][(AM@&t@_V_at){ \
   ( \
-    tmpext=$][(TMPEXT); \
-    : $][$][{tmpext:=.tmp}; \
+    tmpext=$][(TMPEXT).tmp; \
     tmp=$][@$][$][tmpext; \
     download_succeeded='\''no'\''; \
     for url in \]dnl
