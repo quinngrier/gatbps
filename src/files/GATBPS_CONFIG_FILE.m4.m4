@@ -59,53 +59,32 @@ m4_pushdef(
 
 ]AC_CONFIG_FILES(
   gatbps_output[]gatbps_suffix[:]input_file,
-  [{
-    gatbps_dst=']gatbps_output['
-    gatbps_aux="$[]{srcdir}/$[]{gatbps_dst}"
-    case "$[]{gatbps_dst}" in
-      '/'*)
-        gatbps_safe_dst="$[]{gatbps_dst}"
-      ;;
-      *)
-        gatbps_safe_dst='./'"$[]{gatbps_dst}"
-      ;;
-    esac
-    case "$[]{gatbps_aux}" in
-      '/'*)
-        gatbps_safe_aux="$[]{gatbps_aux}"
-      ;;
-      *)
-        gatbps_safe_aux='./'"$[]{gatbps_aux}"
-      ;;
-    esac
-    gatbps_safe_src="$[]{gatbps_safe_dst}"']gatbps_suffix['
-    if test '-f' "$[]{gatbps_safe_dst}" &&
-       cmp "$[]{gatbps_safe_dst}" \
-           "$[]{gatbps_safe_src}" >/dev/null ||
-       test '!' '-f' "$[]{gatbps_safe_dst}" &&
-       test '-f' "$[]{gatbps_safe_aux}" &&
-       cmp "$[]{gatbps_safe_aux}" \
-           "$[]{gatbps_safe_src}" >/dev/null; then
-      AC_MSG_NOTICE([skipping $[]{gatbps_dst}])
+  [[(
+    dst=]]gatbps_output[[
+    src=]]gatbps_output[[]]gatbps_suffix[[
+    inp=]]input_file[[
+    if test ! -f $][inp; then
+      inp=$][srcdir/$][inp
+    fi
+    if (
+      (
+        test -f $][dst
+      ) && (
+        (test   -x $][dst && test   -x $][inp) ||
+        (test ! -x $][dst && test ! -x $][inp)
+      ) && (
+        cmp $][dst $][src >/dev/null
+      )
+    ); then
+      ]AC_MSG_NOTICE([skipping $][dst])[
     else
-      AC_MSG_NOTICE([updating $[]{gatbps_dst}])
-[
-      'cp' \
-        "$][{gatbps_safe_src}" \
-        "$][{gatbps_safe_dst}" \
-        0</dev/null \
-      ;
-      gatbps_s="$][{?}"; \
-      case "$][{gatbps_s}" in
-        '0')
-        ;;
-        *)
-          'exit' "$][{gatbps_s}";
-        ;;
-      esac;
+      ]AC_MSG_NOTICE([updating $][dst])[
+      rm -f $][dst || exit
+      cp $][inp $][dst || exit
+      cat $][src >$][dst || exit
       ]$5[
-    fi;
-  :;}]],
+    fi
+  )]],
   [$6])
 
 gatbps_new_rules='.PHONY: clean-gatbps_output
