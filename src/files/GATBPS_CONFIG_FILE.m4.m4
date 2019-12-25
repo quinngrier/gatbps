@@ -60,22 +60,27 @@ m4_pushdef(
 ]AC_CONFIG_FILES(
   gatbps_output[]gatbps_suffix[:]input_file,
   [[(
+    tt='case $? in 1) false ;; *) exit ;; esac'
     dst=]]gatbps_output[[
     src=]]gatbps_output[[]]gatbps_suffix[[
     inp=]]input_file[[
-    if test ! -f $inp; then
+    if test ! -f $inp || eval $tt; then
       inp=$srcdir/$inp
     fi
-    if (
-      (
-        test -f $dst
-      ) && (
-        (test   -x $dst && test   -x $inp) ||
-        (test ! -x $dst && test ! -x $inp)
-      ) && (
-        cmp $dst $src >/dev/null
-      )
-    ); then
+    cur=$dst
+    if test ! -f $cur || eval $tt; then
+      cur=$srcdir/$cur
+    fi
+    if {
+      {
+        test -f $cur || eval $tt
+      } && {
+        { test   -x $cur && test   -x $inp || eval $tt; } ||
+        { test ! -x $cur && test ! -x $inp || eval $tt; }
+      } && {
+        cmp $cur $src >/dev/null
+      }
+    }; then
       ]AC_MSG_NOTICE([skipping $dst])[
     else
       ]AC_MSG_NOTICE([updating $dst])[
@@ -84,7 +89,7 @@ m4_pushdef(
       cat $src >$dst || exit
       ]$5[
     fi
-  )]],
+  ) || exit]],
   [$6])
 
 gatbps_new_rules='.PHONY: clean-gatbps_output
