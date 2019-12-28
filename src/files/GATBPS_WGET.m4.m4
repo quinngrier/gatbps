@@ -287,7 +287,7 @@ GATBPS_WGET_url_lines(m4_if(,,input_urls))[
         eval "headers=\"\$][$][headers--header|$][$][x\""; \
         url=`sed "s/[^|]*|//" <$][$][tmp` || exit; \
       done; \
-      case "$][$][{url}" in \
+      case $][$][url in \
         http://* | https://*) \
           ( \
             IFS=\|; \
@@ -296,7 +296,6 @@ GATBPS_WGET_url_lines(m4_if(,,input_urls))[
               -O $][@.tmp \
               $][$][headers \
               -q \
-              -- \
               "$][$][url" \
             ; \
           ) || continue; \
