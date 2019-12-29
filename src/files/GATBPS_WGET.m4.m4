@@ -358,12 +358,12 @@ GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
 	}
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
-.PHONY: clean-]output_file[
+]output_file[/clean: FORCE
+	-rm -fr $][(@D) $][(@D)$][(TMPEXT).tmp*
 
-clean-]output_file[:
-	-rm -fr $][@ $][@$][(TMPEXT).tmp*
+.PHONY: ]output_file[/clean
 
-]clean_target[-local: clean-]output_file[
+]clean_target[-local: ]output_file[/clean
 
 '
 
