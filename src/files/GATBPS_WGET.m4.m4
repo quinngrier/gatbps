@@ -333,9 +333,9 @@ GATBPS_WGET_url_lines(m4_if(,,input_urls))[
 	          cp $][$][url $][$][tmp; \
 	        ) || continue; \
 	      ;; \
-	    esac; \]dnl
+	    esac; \
 	    ( \
-	      $][(AM@&t@_V_P) && set -x; \
+	      $][(AM@&t@_V_P) && set -x; \]dnl
 GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
 	    ); \
 	    download_succeeded=yes; \
@@ -356,7 +356,7 @@ GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
 	  ) || exit; \
 	  ( \
 	    $][(AM@&t@_V_P) && set -x; \
-	    rm -fr $][$][tmp* || :;
+	    rm -fr $][$][tmp* || :; \
 	  ); \
 	}
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
