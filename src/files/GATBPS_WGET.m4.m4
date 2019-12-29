@@ -245,14 +245,14 @@ GATBPS_WGET_url_lines(m4_shift($@))])])[dnl
     [],
     [],
     [[
-      $][(OPENSSL) dgst \
-        -]m4_bregexp([$1], [[^:]*], [[\&]])[ \
-        $][(GATBPS_NON_FIPS_ALLOW) \
-        <$][$][tmp \
-      | $][(GREP) \
-        ]m4_bregexp([$1], [:\(.*\)], [[\1]])[ \
-        >/dev/null \
-      || continue; \]dnl
+	      $][(OPENSSL) dgst \
+	        -]m4_bregexp([$1], [[^:]*], [[\&]])[ \
+	        $][(GATBPS_NON_FIPS_ALLOW) \
+	        <$][$][tmp \
+	      | $][(GREP) \
+	        ]m4_bregexp([$1], [:\(.*\)], [[\1]])[ \
+	        >/dev/null \
+	      || continue; \]dnl
 GATBPS_WGET_hash_checks(m4_shift($@))])])[dnl
 [
 
@@ -262,13 +262,13 @@ GATBPS_WGET_RULES="$][{GATBPS_WGET_RULES}"'
 	$][(GATBPS_V_WGET)$][(GATBPS_RECIPE_MARKER_TOP)
 	$][(AM@&t@_V_at)$][(MKDIR_P) $][(@D)
 	$][(AM@&t@_V_at)rm -fr $][@ $][@$][(TMPEXT).tmp*
-	$][(AM@&t@_V_at){ \
+	@{ \
 	  tmpext=$][(TMPEXT).tmp; \
 	  tmp=$][@$][$][tmpext; \
 	  download_succeeded=no; \
 	  for url in \]dnl
 GATBPS_WGET_url_lines(m4_if(,,input_urls))[
-	    $][$][{prevent_an_empty_word_list} \
+	    $][$][prevent_an_empty_word_list \
 	  ; do \
 	    headers=; \
 	    while :; do \
@@ -321,7 +321,10 @@ GATBPS_WGET_url_lines(m4_if(,,input_urls))[
 	        ) || continue; \
 	      ;; \
 	    esac; \]dnl
+	    ( \
+	      $][(AM@&t@_V_P) && set -x; \
 GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
+	    ); \
 	    download_succeeded=yes; \
 	    break; \
 	  done; \
@@ -330,8 +333,14 @@ GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
 	      exit 1; \
 	    ;; \
 	  esac; \
-	  touch $][$][tmp || exit; \
-	  mv -f $][$][tmp $][@ || exit; \
+	  ( \
+	    $][(AM@&t@_V_P) && set -x; \
+	    touch $][$][tmp; \
+	  ) || exit; \
+	  ( \
+	    $][(AM@&t@_V_P) && set -x; \
+	    mv -f $][$][tmp $][@; \
+	  ) || exit; \
 }
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
