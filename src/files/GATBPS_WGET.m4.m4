@@ -277,9 +277,14 @@ GATBPS_WGET_url_lines(m4_if(,,input_urls))[
 	    case $][$][url in \
 	      http://* | https://*) \
 	        printf %s\\n "$][$][url" >$][$][tmp || exit; \
+	        n=`wc -l <$][$][tmp` || exit; \
 	        url=`sed -n 1p <$][$][tmp` || exit; \
+	        i=1; \
 	        headers=; \
-	        while read r; do \
+	        while :; do \
+	          case $][$][i in $][$][n) break ;; esac; \
+	          i=`expr $][$][i + 1` || exit; \
+	          r=`sed -n $][$][{i}p <$][$][tmp` || exit; \
 	          case $][$][r in \
 	            --header=*) \
 	              printf %s\\n "$][$][r" >$][$][tmp.r || exit; \
@@ -288,7 +293,7 @@ GATBPS_WGET_url_lines(m4_if(,,input_urls))[
 	              headers=$][$][headers$][$][nl$][$][x; \
 	            ;; \
 	          esac; \
-	        done <$][$][tmp || exit; \
+	        done; \
 	        ( \
 	          IFS=$][$][nl; \
 	          $][(AM@&t@_V_P) && set -x; \
