@@ -263,78 +263,76 @@ GATBPS_WGET_RULES="$][{GATBPS_WGET_RULES}"'
 	$][(AM@&t@_V_at)$][(MKDIR_P) $][(@D)
 	$][(AM@&t@_V_at)rm -fr $][@ $][@$][(TMPEXT).tmp*
 	$][(AM@&t@_V_at){ \
-  ( \
-    tmpext=$][(TMPEXT).tmp; \
-    tmp=$][@$][$][tmpext; \
-    download_succeeded=no; \
-    for url in \]dnl
+	  tmpext=$][(TMPEXT).tmp; \
+	  tmp=$][@$][$][tmpext; \
+	  download_succeeded=no; \
+	  for url in \]dnl
 GATBPS_WGET_url_lines(m4_if(,,input_urls))[
-      $][$][{prevent_an_empty_word_list} \
-    ; do \
-      headers=; \
-      while :; do \
-        case $][$][url in --header=*\|*) ;; *) break ;; esac; \
-        printf %s\\n "$][$][url" >$][$][tmp || exit; \
-        x=`sed "s/--header=//;s/|.*//" <$][$][tmp` || exit; \
-        case $][$][headers in ?*) headers=$][$][headers\| ;; esac; \
-        eval "headers=\"\$][$][headers--header|$][$][x\""; \
-        url=`sed "s/[^|]*|//" <$][$][tmp` || exit; \
-      done; \
-      case $][$][url in \
-        http://* | https://*) \
-          ( \
-            IFS=\|; \
-            $][(AM@&t@_V_P) && set -x; \
-            $][(WGET) \
-              -O $][$][tmp \
-              $][$][headers \
-              -q \
-              "$][$][url" \
-            ; \
-          ) || continue; \
-        ;; \
-        git-archive://*) \
-          printf %s\\n "$][$][url" >$][$][tmp || exit; \
-          url=`sed "s|[^/]*//||;s/|.*//" <$][$][tmp` || exit; \
-          tree=`sed "s/[^|]*|//;s/|.*//" <$][$][tmp` || exit; \
-          file=`sed "s/.*|//" <$][$][tmp` || exit; \
-          ( \
-            $][(AM@&t@_V_P) && set -x; \
-            $][(GIT) archive \
-              "--remote=$][$][url" \
-              "$][$][tree" \
-              "$][$][file" \
-              >$][$][tmp.tar \
-            ; \
-          ) || continue; \
-          ( \
-            $][(AM@&t@_V_P) && set -x; \
-            cd $][(@D) && $][(TAR) xOf \
-              $][(@F)$][$][tmpext.tar \
-              >$][(@F)$][$][tmpext \
-            ; \
-          ) || exit; \
-        ;; \
-        *) \
-          ( \
-            $][(AM@&t@_V_P) && set -x; \
-            cp $][$][url $][$][tmp; \
-          ) || continue; \
-        ;; \
-      esac; \]dnl
+	    $][$][{prevent_an_empty_word_list} \
+	  ; do \
+	    headers=; \
+	    while :; do \
+	      case $][$][url in --header=*\|*) ;; *) break ;; esac; \
+	      printf %s\\n "$][$][url" >$][$][tmp || exit; \
+	      x=`sed "s/--header=//;s/|.*//" <$][$][tmp` || exit; \
+	      case $][$][headers in ?*) headers=$][$][headers\| ;; esac; \
+	      eval "headers=\"\$][$][headers--header|$][$][x\""; \
+	      url=`sed "s/[^|]*|//" <$][$][tmp` || exit; \
+	    done; \
+	    case $][$][url in \
+	      http://* | https://*) \
+	        ( \
+	          IFS=\|; \
+	          $][(AM@&t@_V_P) && set -x; \
+	          $][(WGET) \
+	            -O $][$][tmp \
+	            $][$][headers \
+	            -q \
+	            "$][$][url" \
+	          ; \
+	        ) || continue; \
+	      ;; \
+	      git-archive://*) \
+	        printf %s\\n "$][$][url" >$][$][tmp || exit; \
+	        url=`sed "s|[^/]*//||;s/|.*//" <$][$][tmp` || exit; \
+	        tree=`sed "s/[^|]*|//;s/|.*//" <$][$][tmp` || exit; \
+	        file=`sed "s/.*|//" <$][$][tmp` || exit; \
+	        ( \
+	          $][(AM@&t@_V_P) && set -x; \
+	          $][(GIT) archive \
+	            "--remote=$][$][url" \
+	            "$][$][tree" \
+	            "$][$][file" \
+	            >$][$][tmp.tar \
+	          ; \
+	        ) || continue; \
+	        ( \
+	          $][(AM@&t@_V_P) && set -x; \
+	          cd $][(@D) && $][(TAR) xOf \
+	            $][(@F)$][$][tmpext.tar \
+	            >$][(@F)$][$][tmpext \
+	          ; \
+	        ) || exit; \
+	      ;; \
+	      *) \
+	        ( \
+	          $][(AM@&t@_V_P) && set -x; \
+	          cp $][$][url $][$][tmp; \
+	        ) || continue; \
+	      ;; \
+	    esac; \]dnl
 GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
-      download_succeeded=yes; \
-      break; \
-    done; \
-    case $][$][download_succeeded in \
-      no) \
-        exit 1; \
-      ;; \
-    esac; \
-    touch $][$][tmp || exit; \
-    mv -f $][$][tmp $][@ || exit; \
-  ); \
-:;}
+	    download_succeeded=yes; \
+	    break; \
+	  done; \
+	  case $][$][download_succeeded in \
+	    no) \
+	      exit 1; \
+	    ;; \
+	  esac; \
+	  touch $][$][tmp || exit; \
+	  mv -f $][$][tmp $][@ || exit; \
+}
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
 .PHONY: clean-]output_file[
