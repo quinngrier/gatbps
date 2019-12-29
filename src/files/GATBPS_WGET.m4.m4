@@ -354,10 +354,7 @@ GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
 	    $][(AM@&t@_V_P) && set -x; \
 	    mv -f $][$][tmp $][@; \
 	  ) || exit; \
-	  ( \
-	    $][(AM@&t@_V_P) && set -x; \
-	    rm -fr $][$][tmp* || :; \
-	  ); \
+	  rm -fr $][$][tmp* || :; \
 	}
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
