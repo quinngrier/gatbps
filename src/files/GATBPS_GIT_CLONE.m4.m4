@@ -147,9 +147,7 @@ GATBPS_GIT_CLONE_RULES="$][{GATBPS_GIT_CLONE_RULES}"'
 
 ]output_directory[:
 	$][(GATBPS_V_GIT_CLONE)$][(GATBPS_RECIPE_MARKER_TOP)
-	$][(AM@&t@_V_at)$][(MKDIR_P) \
-  ./$][(@D) \
-;
+	$][(AM@&t@_V_at)$][(MKDIR_P) $][(@D)
 	$][(AM@&t@_V_at)rm \
   -f \
   '\''-r'\'' \
@@ -163,15 +161,13 @@ GATBPS_GIT_CLONE_RULES="$][{GATBPS_GIT_CLONE_RULES}"'
 GATBPS_GIT_CLONE_word_lines_6(m4_if(,,input_urls))[
       $][$][{prevent_an_empty_word_list} \
     ; do \
-      eval url=$][$][url; \
+      eval "url=\"$][$][url\""; \
       rm \
         -f \
         '\''-r'\'' \
         ./]output_directory['\''.tmp'\'' \
       || exit $][$][?; \
-      $][(GIT) \
-        '\''clone'\'' \
-        -- \
+      $][(GIT) clone \
         "$][$][{url}" \
         ./]output_directory['\''.tmp'\'' \
       || '\''continue'\''; \
