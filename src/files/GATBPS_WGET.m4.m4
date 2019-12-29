@@ -265,24 +265,32 @@ GATBPS_WGET_RULES="$][{GATBPS_WGET_RULES}"'
 	@{ \
 	  tmp=$][@$][(TMPEXT).tmp; \
 	  tmpF=$][(@F)$][(TMPEXT).tmp; \
+	  printf nl=\"\\n\"\\n >$][$][tmp || exit; \
+	  nl=`cat $][$][tmp` || exit; \
+	  eval "$][$][nl"; \
 	  download_succeeded=no; \
 	  for url in \]dnl
 GATBPS_WGET_url_lines(m4_if(,,input_urls))[
 	    $][$][prevent_an_empty_word_list \
 	  ; do \
-	    headers=; \
-	    while :; do \
-	      case $][$][url in --header=*\|*) ;; *) break ;; esac; \
-	      printf %s\\n "$][$][url" >$][$][tmp || exit; \
-	      x=`sed "s/--header=//;s/|.*//" <$][$][tmp` || exit; \
-	      case $][$][headers in ?*) headers=$][$][headers\| ;; esac; \
-	      eval "headers=\"\$][$][headers--header|$][$][x\""; \
-	      url=`sed "s/[^|]*|//" <$][$][tmp` || exit; \
-	    done; \
+	    eval "url=\"$][$][url\""; \
 	    case $][$][url in \
 	      http://* | https://*) \
+	        printf %s\\n "$][$][url" >$][$][tmp || exit; \
+	        url=`sed -n 1p <$][$][tmp` || exit; \
+	        headers=; \
+	        while read r; do \
+	          case $][$][r in \
+	            --header=*) \
+	              printf %s\\n "$][$][r" >$][$][tmp.r || exit; \
+	              x=`sed s/--header=// <$][$][tmp.r` || exit; \
+	              headers=$][$][headers$][$][nl--header; \
+	              headers=$][$][headers$][$][nl$][$][x; \
+	            ;; \
+	          esac; \
+	        done <$][$][tmp || exit; \
 	        ( \
-	          IFS=\|; \
+	          IFS=$][$][nl; \
 	          $][(AM@&t@_V_P) && set -x; \
 	          $][(WGET) \
 	            -O $][$][tmp \
@@ -294,9 +302,9 @@ GATBPS_WGET_url_lines(m4_if(,,input_urls))[
 	      ;; \
 	      git-archive://*) \
 	        printf %s\\n "$][$][url" >$][$][tmp || exit; \
-	        url=`sed "s|[^/]*//||;s/|.*//" <$][$][tmp` || exit; \
-	        tree=`sed "s/[^|]*|//;s/|.*//" <$][$][tmp` || exit; \
-	        file=`sed "s/.*|//" <$][$][tmp` || exit; \
+	        url=`sed -n 1p <$][$][tmp` || exit; \
+	        tree=`sed -n 2p <$][$][tmp` || exit; \
+	        file=`sed -n 3p <$][$][tmp` || exit; \
 	        ( \
 	          $][(AM@&t@_V_P) && set -x; \
 	          $][(GIT) archive \
