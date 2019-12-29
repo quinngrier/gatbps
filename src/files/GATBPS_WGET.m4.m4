@@ -263,8 +263,8 @@ GATBPS_WGET_RULES="$][{GATBPS_WGET_RULES}"'
 	$][(AM@&t@_V_at)$][(MKDIR_P) $][(@D)
 	$][(AM@&t@_V_at)rm -fr $][@ $][@$][(TMPEXT).tmp*
 	@{ \
-	  tmpext=$][(TMPEXT).tmp; \
-	  tmp=$][@$][$][tmpext; \
+	  tmp=$][@$][(TMPEXT).tmp; \
+	  tmpF=$][(@F)$][(TMPEXT).tmp; \
 	  download_succeeded=no; \
 	  for url in \]dnl
 GATBPS_WGET_url_lines(m4_if(,,input_urls))[
@@ -309,8 +309,8 @@ GATBPS_WGET_url_lines(m4_if(,,input_urls))[
 	        ( \
 	          $][(AM@&t@_V_P) && set -x; \
 	          cd $][(@D) && $][(TAR) xOf \
-	            $][(@F)$][$][tmpext.tar \
-	            >$][(@F)$][$][tmpext \
+	            $][$][tmpF.tar \
+	            >$][$][tmpF \
 	          ; \
 	        ) || exit; \
 	      ;; \
