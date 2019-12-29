@@ -307,7 +307,7 @@ GATBPS_WGET_url_lines(m4_if(,,input_urls))[
 	      ;; \
 	      git-archive://*) \
 	        printf %s\\n "$][$][url" >$][$][tmp || exit; \
-	        url=`sed -n 1p <$][$][tmp` || exit; \
+	        url=`sed -n "1s|[^/]*//||p" <$][$][tmp` || exit; \
 	        tree=`sed -n 2p <$][$][tmp` || exit; \
 	        file=`sed -n 3p <$][$][tmp` || exit; \
 	        ( \
