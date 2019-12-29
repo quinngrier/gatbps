@@ -249,7 +249,7 @@ GATBPS_WGET_url_lines(m4_shift($@))])])[dnl
         '\''dgst'\'' \
         '\''-]m4_bregexp([$1], [[^:]*], [[\&]])['\'' \
         $][(GATBPS_NON_FIPS_ALLOW) \
-        0<./]output_file['\''.tmp'\'' \
+        <$][$][tmp \
       | $][(GREP) \
         '\'']m4_bregexp([$1], [:\(.*\)], [[\1]])['\'' \
         1>/dev/null \
@@ -264,11 +264,7 @@ GATBPS_WGET_RULES="$][{GATBPS_WGET_RULES}"'
 	$][(AM@&t@_V_at)$][(MKDIR_P) \
   ./$][(@D) \
 ;
-	$][(AM@&t@_V_at)rm \
-  -f \
-  ./]output_file[ \
-  ./]output_file['\''.tmp'\'' \
-;
+	$][(AM@&t@_V_at)rm -fr $][@ $][@$][(TMPEXT).tmp*
 	$][(AM@&t@_V_at){ \
   ( \
     tmpext=$][(TMPEXT).tmp; \
@@ -293,7 +289,7 @@ GATBPS_WGET_url_lines(m4_if(,,input_urls))[
             IFS=\|; \
             $][(AM@&t@_V_P) && set -x; \
             $][(WGET) \
-              -O $][@.tmp \
+              -O $][$][tmp \
               $][$][headers \
               -q \
               "$][$][url" \
@@ -311,30 +307,22 @@ GATBPS_WGET_url_lines(m4_if(,,input_urls))[
               "--remote=$][$][url" \
               "$][$][tree" \
               "$][$][file" \
-              >$][$][tmp.2 \
+              >$][$][tmp.tar \
             ; \
           ) || continue; \
           ( \
             $][(AM@&t@_V_P) && set -x; \
             cd $][(@D) && $][(TAR) xOf \
-              $][(@F)$][$][tmpext.2 \
-              >$][(@F).tmp \
+              $][(@F)$][$][tmpext.tar \
+              >$][(@F)$][$][tmpext \
             ; \
           ) || exit; \
         ;; \
         *) \
-          case "$][$][{url}" in \
-            '\''/'\''*) \
-              safe_url="$][$][{url}"; \
-            ;; \
-            *) \
-              safe_url=./"$][$][{url}"; \
-            ;; \
-          esac; \
-          'cp' \
-            "$][$][{safe_url}" \
-            ./]output_file['\''.tmp'\'' \
-          || '\''continue'\''; \
+          ( \
+            $][(AM@&t@_V_P) && set -x; \
+            cp $][$][url $][$][tmp; \
+          ) || continue; \
         ;; \
       esac; \]dnl
 GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
@@ -348,30 +336,12 @@ GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
         exit '\''1'\''; \
       ;; \
     esac; \
-    '\''touch'\'' \
-      ./]output_file['\''.tmp'\'' \
-      0</dev/null \
-    || exit $][$][?; \
-    mv \
-      -f \
-      ./]output_file['\''.tmp'\'' \
-      ./]output_file[ \
-    || exit $][$][?; \
+    touch $][$][tmp || exit; \
+    mv -f $][$][tmp $][@ || exit; \
     exit '\''0'\''; \
   :;); \
   exit_status=$][$][?; \
   readonly '\''exit_status'\''; \
-  case "$][$][{exit_status}" in \
-    '\''0'\'') \
-    ;; \
-    *) \
-      rm \
-        -f \
-        ./]output_file[ \
-        ./]output_file['\''.tmp'\'' \
-      ; \
-    ;; \
-  esac; \
   exit "$][$][{exit_status}"; \
 :;}
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
@@ -379,11 +349,7 @@ GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
 .PHONY: clean-]output_file[
 
 clean-]output_file[:
-	-rm \
-  -f \
-  ./]output_file[ \
-  ./]output_file['\''.tmp'\'' \
-;
+	-rm -fr $][@ $][@$][(TMPEXT).tmp*
 
 ]clean_target[-local: clean-]output_file[
 
