@@ -13,40 +13,19 @@ header_comment({%|#|%}, {%|#|%}){%|
 # For more information, see the GATBPS manual.
 #
 
-#
-# This script (VERSION.sh) helps to create a version string for
-# Autotools by using git describe to get the description of HEAD with
-# respect to tags that begin with "v" and a digit. Add this script to
-# your repository and adjust the following code for your configure.ac
-# and Makefile.am files:
-#
-#   AC_INIT([Example],
-#           m4_esyscmd_s([sh VERSION.sh])m4_assert(m4_sysval == 0))
-#
-#   EXTRA_DIST += $(srcdir)/VERSION
-#   EXTRA_DIST += $(srcdir)/VERSION.sh
-#
-# When running in your repository, the script uses git describe.
-# Elsewhere, the script reads the
-# VERSION file.
-#
-
 |%}use_the_c_locale{%|
 
-#
-# The nl variable holds a newline character. It can be used where a
-# literal newline character might be awkward.
-#
-
-nl="
-"
-readonly nl
+readonly git=${GIT:=git}
+readonly sed=${SED:=sed}
 
 v_prefix=v
-
 u_prefix=u
 
-if git ls-files --error-unmatch "$0" >/dev/null 2>&1; then
+if test -f VERSION; then
+
+  cat VERSION || exit
+
+elif eval "$git"' ls-files --error-unmatch "$0" >/dev/null 2>&1'; then
 
   v_description=`
     git \
@@ -295,33 +274,11 @@ EOF2
     ;;
   esac
 
-elif test -f VERSION; then
-
-  version=`cat VERSION`
-  s=$?
-  readonly version
-
-  case $s in
-    0)
-    ;;
-    *)
-      exit $s
-    ;;
-  esac
-
-  case $version in
-    0.0.0-0+g0000000)
-      cat <<EOF2 >&2
-${fy2}VERSION.sh:$fR2 no repository and VERSION says 0.0.0-0+g0000000
-${fy2}VERSION.sh:$fR2 are you working with a source archive?
-${fy2}VERSION.sh:$fR2 that's generally not a good idea
-EOF2
-    ;;
-  esac
-
 else
-  echo 'VERSION.sh: not in repository and VERSION not found' >&2
+
+  echo "VERSION.sh: no VERSION file and no repository" >&2
   exit 1
+
 fi
 
 |%}footer_comment({%|#|%}, {%|#|%}, {%|#|%})
