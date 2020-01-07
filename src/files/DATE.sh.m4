@@ -13,65 +13,43 @@ header_comment({%|#|%}, {%|#|%}){%|
 # For more information, see the GATBPS manual.
 #
 
-#
-# This script (DATE.sh) helps to create an (AC_)PACKAGE_DATE variable
-# for Autotools by using git log to get the UTC author date of HEAD in
-# YYYY-MM-DD format. Add this script to your repository and adjust the
-# following code for your configure.ac and Makefile.am files:
-#
-#   m4_define([AC_PACKAGE_DATE],
-#             m4_esyscmd_s([sh DATE.sh])m4_assert(m4_sysval == 0))
-#   AC_SUBST([PACKAGE_DATE], 'AC_PACKAGE_DATE')
-#   AC_DEFINE([PACKAGE_DATE], "AC_PACKAGE_DATE")
-#
-#   EXTRA_DIST += $(srcdir)/DATE
-#   EXTRA_DIST += $(srcdir)/DATE.sh
-#
-# When running in your repository, the script uses git log.
-# Elsewhere, the script reads the
-# DATE file.
-#
-
 |%}use_the_c_locale{%|
 
-set -e
-trap 'rm -f DATE.tmp' EXIT
-if git ls-files --error-unmatch "${0}" >/dev/null 2>&1; then
-  TZ=UTC git log -1 --date=local --pretty=%ad >DATE.tmp
-  x=$(sed 's/... \(...\) \(.*\) ..:..:.. \(....\)/\3-\1-\2/
-           s/Jan/01/; s/Feb/02/; s/Mar/03/; s/Apr/04/
-           s/May/05/; s/Jun/06/; s/Jul/07/; s/Aug/08/
-           s/Sep/09/; s/Oct/10/; s/Nov/11/; s/Dec/12/
-           s/-\(.\)$/-0\1/' DATE.tmp)
-  echo "$x"
+readonly git=${GIT:=git}
+readonly sed=${SED:=sed}
 
-elif test -f DATE; then
+if test -f DATE; then
 
-  date=`cat DATE`
-  s=$?
-  readonly date
+  cat DATE || exit
 
-  case $s in
-    0)
-    ;;
-    *)
-      exit $s
-    ;;
-  esac
+elif eval "$git"' ls-files --error-unmatch "$0" >/dev/null 2>&1'; then
 
-  case $date in
-    1970-01-01)
-      cat <<EOF2 >&2
-${fy2}DATE.sh:$fR2 no repository and DATE says 1970-01-01
-${fy2}DATE.sh:$fR2 are you working with a source archive?
-${fy2}DATE.sh:$fR2 that's generally not a good idea
-EOF2
-    ;;
-  esac
+  trap "rm -f DATE" EXIT
+  eval "TZ=UTC $git log -1 --pretty=%ad --date=local >DATE" || exit
+  # example: Sun Dec 29 07:32:33 2019
+  readonly script='
+    s/.* \(.*\) \(.*\) .* \(.*\)/\3-\1-\2/
+    s/-\(.\)$/-0\1/
+    s/Jan/01/
+    s/Feb/02/
+    s/Mar/03/
+    s/Apr/04/
+    s/May/05/
+    s/Jun/06/
+    s/Jul/07/
+    s/Aug/08/
+    s/Sep/09/
+    s/Oct/10/
+    s/Nov/11/
+    s/Dec/12/
+  '
+  eval "$sed"' "$script" DATE' || exit
 
 else
-  echo 'DATE.sh: not in repository and DATE not found' >&2
+
+  echo "DATE.sh: no DATE file and no repository" >&2
   exit 1
+
 fi
 
 |%}footer_comment({%|#|%}, {%|#|%}, {%|#|%})
