@@ -2837,10 +2837,7 @@ EOF2
       ;;
     esac;
 
-    'sleep' \
-      '5' \
-      0</dev/null \
-    ;
+    sleep 5
 
     eval '
       GIT_DIR=$safe_git_clone_directory/.git \
