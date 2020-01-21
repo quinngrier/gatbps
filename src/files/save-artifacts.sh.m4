@@ -2840,21 +2840,22 @@ EOF2
     sleep 5
 
     eval '
-      GIT_DIR=$safe_git_clone_directory/.git \
-      GIT_SSH_COMMAND='\'' \
-        $sshpass \
-          -P "$sshpass_prompt" \
-          -f "$full_ssh_passphrase_file" \
-          ssh \
-          -i "$full_ssh_secret_key_file_pointer" \
-          -o "$ssh_known_hosts_argument" \
-      '\'' \
-      GIT_WORK_TREE=$safe_git_clone_directory \
-      full_ssh_passphrase_file=$full_ssh_passphrase_file \
-      full_ssh_secret_key_file_pointer=$full_ssh_secret_key_file_pointer \
-      ssh_known_hosts_argument=$ssh_known_hosts_argument \
-      sshpass=$sshpass \
-      sshpass_prompt=$sshpass_prompt \
+      \
+        GIT_DIR=$safe_git_clone_directory/.git \
+        GIT_SSH_COMMAND='\'' \
+          $sshpass \
+            -P "$sshpass_prompt" \
+            -f "$full_ssh_passphrase_file" \
+            ssh \
+            -i "$full_ssh_secret_key_file_pointer" \
+            -o "$ssh_known_hosts_argument" \
+        '\'' \
+        GIT_WORK_TREE=$safe_git_clone_directory \
+        full_ssh_passphrase_file=$full_ssh_passphrase_file \
+        full_ssh_secret_key_file_pointer=$full_ssh_secret_key_file_pointer \
+        ssh_known_hosts_argument=$ssh_known_hosts_argument \
+        sshpass=$sshpass \
+        sshpass_prompt=$sshpass_prompt \
       '"$git"' \
         -c "gpg.program=$full_temporary_directory/gpg_wrapper" \
         -c "user.email=$git_committer_email" \
