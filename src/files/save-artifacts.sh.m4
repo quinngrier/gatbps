@@ -2842,35 +2842,32 @@ EOF2
       0</dev/null \
     ;
 
-    'eval' '
-      GIT_DIR="${safe_git_clone_directory}"'/.git' \
-      GIT_SSH_COMMAND='\''eval "${sshpass}"'\''\'\'''\'' -P"${sshpass_prompt}" -f"${full_ssh_passphrase_file}" ssh -o "${ssh_known_hosts_argument}" -i "${full_ssh_secret_key_file_pointer}"'\''\'\'''\'''\'' \
-      GIT_WORK_TREE="${safe_git_clone_directory}" \
-      full_ssh_passphrase_file="${full_ssh_passphrase_file}" \
-      full_ssh_secret_key_file_pointer="${full_ssh_secret_key_file_pointer}" \
-      ssh_known_hosts_argument="${ssh_known_hosts_argument}" \
-      sshpass="${sshpass}" \
-      sshpass_prompt="${sshpass_prompt}" \
-      '"${git}"' \
-        '\''pull'\'' \
-        '\''origin'\'' \
-        '\''master'\'' \
-        0</dev/null \
+    eval '
+      GIT_DIR=$safe_git_clone_directory/.git \
+      GIT_SSH_COMMAND='\'' \
+        $sshpass \
+          -P "$sshpass_prompt" \
+          -f "$full_ssh_passphrase_file" \
+          ssh \
+          -i "$full_ssh_secret_key_file_pointer" \
+          -o "$ssh_known_hosts_argument" \
+      '\'' \
+      GIT_WORK_TREE=$safe_git_clone_directory \
+      full_ssh_passphrase_file=$full_ssh_passphrase_file \
+      full_ssh_secret_key_file_pointer=$full_ssh_secret_key_file_pointer \
+      ssh_known_hosts_argument=$ssh_known_hosts_argument \
+      sshpass=$sshpass \
+      sshpass_prompt=$sshpass_prompt \
+      '"$git"' \
+        -c "gpg.program=$full_temporary_directory/gpg_wrapper" \
+        -c "user.email=$git_committer_email" \
+        -c "user.name=$git_committer_name" \
+        pull --no-edit origin master \
       ;
-    ';
-    s="${?}";
-    case "${s}" in
-      '0')
-        ':';
-      ;;
-      *)
-        'cat' 0<<EOF2 1>&2;
-${fy2}save-artifacts.sh:${fR2} ${fB2}git pull${fR2} failed
-EOF2
-        exit_status='1';
-        'continue' '2';
-      ;;
-    esac;
+    ' || {
+      exit_status=1
+      continue 2
+    }
 
   done;
 
