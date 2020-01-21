@@ -86,14 +86,14 @@ m4_if(
       $1$2 is not defined
     ])])])[]dnl
 m4_ifdef(
-  [$1$2_DEBIAN],
+  [$1$2_DEB],
   [gatbps_fatal([
-    $1$2_DEBIAN is already defined
+    $1$2_DEB is already defined
   ])])[]dnl
 m4_ifdef(
-  [$1$2_DEBIAN_TEXI],
+  [$1$2_DEB_TEXI],
   [gatbps_fatal([
-    $1$2_DEBIAN_TEXI is already defined
+    $1$2_DEB_TEXI is already defined
   ])])[]dnl
 m4_ifdef(
   [$1$2_DOCKER],
@@ -208,11 +208,11 @@ m4_if(
       hexadecimal digits
     ])])])[]dnl
 m4_define(
-  [$1$2_DEBIAN],
+  [$1$2_DEB],
   m4_dquote(m4_bpatsubst(m4_dquote($1$2), [-], [~])))[]dnl
 m4_define(
-  [$1$2_DEBIAN_TEXI],
-  m4_dquote(m4_bpatsubst(m4_dquote($1$2_DEBIAN), [\.], [.@:])))[]dnl
+  [$1$2_DEB_TEXI],
+  m4_dquote(m4_bpatsubst(m4_dquote($1$2_DEB), [\.], [.@:])))[]dnl
 m4_define(
   [$1$2_DOCKER],
   m4_dquote(m4_bpatsubst(m4_dquote($1$2), [\+.*\(.\)], [\1])))[]dnl
@@ -279,8 +279,8 @@ m4_define(
 [
 
 ]AC_DEFINE(
-  [[$2_DEBIAN]],
-  m4_dquote(["]$1$2_DEBIAN["]),
+  [[$2_DEB]],
+  m4_dquote(["]$1$2_DEB["]),
   [
     Define to a character string literal that contains the Debian
     version number of $2. If $2 does not contain a "-" character, then
@@ -291,12 +291,12 @@ m4_define(
   ])[
 
 ]AC_DEFINE(
-  [[$2_DEBIAN_TEXI]],
-  m4_dquote(["]$1$2_DEBIAN_TEXI["]),
+  [[$2_DEB_TEXI]],
+  m4_dquote(["]$1$2_DEB_TEXI["]),
   [
-    Define to the same character string literal as $2_DEBIAN but with
-    each "." character replaced with ".@:". For example, if $2_DEBIAN
-    were "0.1.0", then this should be "0.@:1.@:0".
+    Define to the same character string literal as $2_DEB but with each
+    "." character replaced with ".@:". For example, if $2_DEB were
+    "0.1.0", then this should be "0.@:1.@:0".
   ])[
 
 ]AC_DEFINE(
@@ -448,18 +448,18 @@ m4_define(
     then this should be "0.@:1.@:0-4927+g88a52bb".
   ])[
 
-case "$][{$2_DEBIAN+is_set}" in
+case "$][{$2_DEB+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
-      \$][{$2_DEBIAN} is already set
+      \$][{$2_DEB} is already set
     ])[
   ;;
 esac;
 
-case "$][{$2_DEBIAN_TEXI+is_set}" in
+case "$][{$2_DEB_TEXI+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
-      \$][{$2_DEBIAN_TEXI} is already set
+      \$][{$2_DEB_TEXI} is already set
     ])[
   ;;
 esac;
@@ -592,8 +592,8 @@ case "$][{$2_TEXI+is_set}" in
   ;;
 esac;
 
-$2_DEBIAN=']$1$2_DEBIAN[';
-$2_DEBIAN_TEXI=']$1$2_DEBIAN_TEXI[';
+$2_DEB=']$1$2_DEB[';
+$2_DEB_TEXI=']$1$2_DEB_TEXI[';
 $2_DOCKER=']$1$2_DOCKER[';
 $2_DOCKER_TEXI=']$1$2_DOCKER_TEXI[';
 $2_GIT=']$1$2_GIT[';
@@ -611,8 +611,8 @@ $2_RPM_VR_TEXI=']$1$2_RPM_VR_TEXI[';
 $2_RPM_V_TEXI=']$1$2_RPM_V_TEXI[';
 $2_TEXI=']$1$2_TEXI[';
 
-'readonly' '$2_DEBIAN';
-'readonly' '$2_DEBIAN_TEXI';
+'readonly' '$2_DEB';
+'readonly' '$2_DEB_TEXI';
 'readonly' '$2_DOCKER';
 'readonly' '$2_DOCKER_TEXI';
 'readonly' '$2_GIT';
@@ -630,8 +630,8 @@ $2_TEXI=']$1$2_TEXI[';
 'readonly' '$2_RPM_V_TEXI';
 'readonly' '$2_TEXI';
 
-]AC_SUBST([$2_DEBIAN])[
-]AC_SUBST([$2_DEBIAN_TEXI])[
+]AC_SUBST([$2_DEB])[
+]AC_SUBST([$2_DEB_TEXI])[
 ]AC_SUBST([$2_DOCKER])[
 ]AC_SUBST([$2_DOCKER_TEXI])[
 ]AC_SUBST([$2_GIT])[
