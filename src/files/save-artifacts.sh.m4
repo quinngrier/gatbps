@@ -2866,11 +2866,11 @@ EOF2
       continue 2
     }
 
-  done;
+  done
 
-done;
+done
 
-'exit' "${exit_status}";
+exit $exit_status
 
 |%}footer_comment({%|#|%}, {%|#|%}, {%|#|%})
 dnl
