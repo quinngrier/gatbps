@@ -20,13 +20,14 @@ readonly sed=${SED:=sed}
 
 if test -f DATE; then
 
-  cat DATE || exit
+  date=`cat DATE` || exit
+  readonly date
 
 elif eval "$git" 'ls-files --error-unmatch "$0" >/dev/null 2>&1'; then
 
   # Example: "Sun Dec 29 07:32:33 2019".
-  date=`eval "TZ=UTC $git log -1 --pretty=%ad --date=local"` || exit
-  readonly date
+  d=`eval "TZ=UTC $git log -1 --pretty=%ad --date=local"` || exit
+  readonly d
 
   # Example: "Sun Dec 29 07:32:33 2019" becomes "2019-12-29".
   readonly script='
@@ -46,10 +47,13 @@ elif eval "$git" 'ls-files --error-unmatch "$0" >/dev/null 2>&1'; then
     s/Dec/12/
   '
 
-  eval "$sed" '"$script" <<EOF2
-$date
+  date=`
+    eval "$sed" '"$script" <<EOF2
+$d
 EOF2
-  ' || exit
+    '
+  ` || exit
+  readonly date
 
 else
 
@@ -57,6 +61,21 @@ else
   exit 1
 
 fi
+
+case $date in
+  *[!0-9-]* | *-*-*-*)
+    printf 'DATE.sh: invalid date: %s\n' "$date" >&2
+    exit 1
+  ;;
+  *[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9])
+  ;;
+  *)
+    printf 'DATE.sh: invalid date: %s\n' "$date" >&2
+    exit 1
+  ;;
+esac
+
+printf '%s\n' "$date" || exit
 
 |%}footer_comment({%|#|%}, {%|#|%}, {%|#|%})
 dnl
