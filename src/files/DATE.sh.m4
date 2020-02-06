@@ -24,9 +24,11 @@ if test -f DATE; then
 
 elif eval "$git"' ls-files --error-unmatch "$0" >/dev/null 2>&1'; then
 
-  trap "rm -f DATE" EXIT
-  eval "TZ=UTC $git log -1 --pretty=%ad --date=local >DATE" || exit
-  # example: Sun Dec 29 07:32:33 2019
+  # Example: "Sun Dec 29 07:32:33 2019".
+  date=`eval "TZ=UTC $git log -1 --pretty=%ad --date=local"` || exit
+  readonly date
+
+  # Example: "Sun Dec 29 07:32:33 2019" becomes "2019-12-29".
   readonly script='
     s/.* \(.*\) \(.*\) .* \(.*\)/\3-\1-\2/
     s/-\(.\)$/-0\1/
@@ -43,7 +45,11 @@ elif eval "$git"' ls-files --error-unmatch "$0" >/dev/null 2>&1'; then
     s/Nov/11/
     s/Dec/12/
   '
-  eval "$sed"' "$script" DATE' || exit
+
+  eval "$sed"' "$script" <<EOF2
+$date
+EOF2
+  ' || exit
 
 else
 
