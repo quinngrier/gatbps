@@ -22,7 +22,7 @@ if test -f DATE; then
 
   cat DATE || exit
 
-elif eval "$git"' ls-files --error-unmatch "$0" >/dev/null 2>&1'; then
+elif eval "$git" 'ls-files --error-unmatch "$0" >/dev/null 2>&1'; then
 
   # Example: "Sun Dec 29 07:32:33 2019".
   date=`eval "TZ=UTC $git log -1 --pretty=%ad --date=local"` || exit
@@ -46,7 +46,7 @@ elif eval "$git"' ls-files --error-unmatch "$0" >/dev/null 2>&1'; then
     s/Dec/12/
   '
 
-  eval "$sed"' "$script" <<EOF2
+  eval "$sed" '"$script" <<EOF2
 $date
 EOF2
   ' || exit
