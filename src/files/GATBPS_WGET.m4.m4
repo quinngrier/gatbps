@@ -278,7 +278,7 @@ GATBPS_WGET_url_lines(m4_if(,,input_urls))[
 	      http://* | https://*) \
 	        printf %s\\n "$][$][url" >$][$][tmp || exit; \
 	        url=`sed -n 1p <$][$][tmp` || exit; \
-	        n=`wc -l <$][$][tmp` || exit; \
+	        n=`awk "END { print NR }" <$][$][tmp` || exit; \
 	        i=1; \
 	        headers=; \
 	        while :; do \
