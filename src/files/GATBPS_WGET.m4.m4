@@ -277,18 +277,18 @@ GATBPS_WGET_url_lines(m4_if(,,input_urls))[
 	    case $][$][url in \
 	      http://* | https://*) \
 	        printf %s\\n "$][$][url" >$][$][tmp || exit; \
-	        url=`sed -n 1p <$][$][tmp` || exit; \
-	        n=`awk "END { print NR }" <$][$][tmp` || exit; \
+	        url=`sed -n 1p $][$][tmp` || exit; \
+	        n=`awk "END { print NR }" $][$][tmp` || exit; \
 	        i=1; \
 	        headers=; \
 	        while :; do \
 	          case $][$][i in $][$][n) break ;; esac; \
 	          i=`expr $][$][i + 1` || exit; \
-	          r=`sed -n $][$][{i}p <$][$][tmp` || exit; \
+	          r=`sed -n $][$][{i}p $][$][tmp` || exit; \
 	          case $][$][r in \
 	            --header=*) \
 	              printf %s\\n "$][$][r" >$][$][tmp.r || exit; \
-	              x=`sed s/--header=// <$][$][tmp.r` || exit; \
+	              x=`sed s/--header=// $][$][tmp.r` || exit; \
 	              headers=$][$][headers$][$][nl--header; \
 	              headers=$][$][headers$][$][nl$][$][x; \
 	            ;; \
@@ -307,9 +307,9 @@ GATBPS_WGET_url_lines(m4_if(,,input_urls))[
 	      ;; \
 	      git-archive://*) \
 	        printf %s\\n "$][$][url" >$][$][tmp || exit; \
-	        url=`sed -n "1s|[^/]*//||p" <$][$][tmp` || exit; \
-	        tree=`sed -n 2p <$][$][tmp` || exit; \
-	        file=`sed -n 3p <$][$][tmp` || exit; \
+	        url=`sed -n "1s|[^/]*//||p" $][$][tmp` || exit; \
+	        tree=`sed -n 2p $][$][tmp` || exit; \
+	        file=`sed -n 3p $][$][tmp` || exit; \
 	        ( \
 	          $][(AM@&t@_V_P) && set -x; \
 	          $][(GIT) archive \
