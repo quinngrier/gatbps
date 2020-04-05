@@ -295,13 +295,11 @@ GATBPS_DOCKER_BUILD_word_lines_2(m4_if(,,child_prerequisites))[
 	$][(AM@&t@_V_at)|%}contains_exactly_one_word_sh(
   {%|srcdir|%}){%||%}dnl
 {%|
-	$][(AM@&t@_V_at)rm \
-  -f \
-  -r \
-  ./]output_file[ \
-  ./]output_file[.tmp \
-  '\''GATBPS_DOCKER_BUILD/'\'']input_directory[ \
-;
+	$][(AM@&t@_V_at)rm -f -r]dnl
+[ ./]output_file[]dnl
+[ ./]output_file[.tmp]dnl
+[ GATBPS_DOCKER_BUILD/]input_directory[]dnl
+[
 	$][(AM@&t@_V_at)$][(MKDIR_P) ./$][(@D)
 	$][(AM@&t@_V_at){ \
   ( \
