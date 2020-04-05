@@ -302,7 +302,7 @@ GATBPS_DOCKER_BUILD_word_lines_2(m4_if(,,child_prerequisites))[
   -f \
   -r \
   ./]output_file[ \
-  ./]output_file['\''.tmp'\'' \
+  ./]output_file[.tmp \
   '\''GATBPS_DOCKER_BUILD/'\'']input_directory[ \
 ;
 	$][(AM@&t@_V_at){ \
@@ -313,12 +313,12 @@ GATBPS_DOCKER_BUILD_word_lines_2(m4_if(,,child_prerequisites))[
 GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
       $][$][{prevent_an_empty_word_list} \
     ; do \
-      if '\''test'\'' -r "$][$][{x}"; then \
-        '\''test'\'' \
+      if test -r "$][$][{x}"; then \
+        test \
           -f \
           "$][$][{x}" \
-        || '\''test'\'' \
-          '\''-d'\'' \
+        || test \
+          -d \
           "$][$][{x}" \
         || exit $][$][?; \
         case "$][$][{merge}" in \
@@ -328,7 +328,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
               ;; \
               ?*) \
                 merge=yes; \
-                readonly '\''merge'\''; \
+                readonly merge; \
               ;; \
               *) \
                 context=.; \
@@ -337,11 +337,11 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
           ;; \
         esac; \
       else \
-        '\''test'\'' \
+        test \
           -f \
           $][(srcdir)'\''/'\''"$][$][{x}" \
-        || '\''test'\'' \
-          '\''-d'\'' \
+        || test \
+          -d \
           $][(srcdir)'\''/'\''"$][$][{x}" \
         || exit $][$][?; \
         case "$][$][{merge}" in \
@@ -351,7 +351,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
               ;; \
               ?*) \
                 merge=yes; \
-                readonly '\''merge'\''; \
+                readonly merge; \
               ;; \
               *) \
                 context=$][(srcdir); \
@@ -361,7 +361,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
         esac; \
       fi; \
     done; \
-    readonly '\''merge'\''; \
+    readonly merge; \
     case "$][$][{merge}" in \
       yes) \
         context='\''GATBPS_DOCKER_BUILD/'\'']input_directory[; \
@@ -404,11 +404,11 @@ GATBPS_DOCKER_BUILD_tag_lines(m4_if(,,image_names))[
       save \
       "$][$][{hash}" \]dnl
 GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
-      1>./]output_file['\''.tmp'\'' \
+      1>./]output_file[.tmp \
     || exit $][$][?; \
     mv \
       -f \
-      ./]output_file['\''.tmp'\'' \
+      ./]output_file[.tmp \
       ./]output_file[ \
     || exit $][$][?; \
     exit '\''0'\''; \
@@ -427,7 +427,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
         -f \
         -r \
         ./]output_file[ \
-        ./]output_file['\''.tmp'\'' \
+        ./]output_file[.tmp \
       ; \
     ;; \
   esac; \
