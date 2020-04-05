@@ -295,11 +295,7 @@ GATBPS_DOCKER_BUILD_word_lines_2(m4_if(,,child_prerequisites))[
 	$][(AM@&t@_V_at)|%}contains_exactly_one_word_sh(
   {%|srcdir|%}){%||%}dnl
 {%|
-	$][(AM@&t@_V_at)rm -f -r]dnl
-[ ./$][@]dnl
-[ ./$][@$][(TMPEXT).tmp*]dnl
-[ GATBPS_DOCKER_BUILD/]input_directory[]dnl
-[
+	$][(AM@&t@_V_at)rm -f -r ./$][@ ./$][@$][(TMPEXT).tmp*
 	$][(AM@&t@_V_at)$][(MKDIR_P) ./$][(@D)
 	$][(AM@&t@_V_at){ \
   ( \
@@ -360,7 +356,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
     readonly merge; \
     case "$][$][{merge}" in \
       yes) \
-        context='\''GATBPS_DOCKER_BUILD/'\'']input_directory[; \
+        context=./$][@$][(TMPEXT).tmp.context; \
         readonly '\''context'\''; \
         $][(MKDIR_P) \
           "$][$][{context}" \
@@ -400,23 +396,6 @@ GATBPS_DOCKER_BUILD_tag_lines(m4_if(,,image_names))[
     mv -f ./$][@$][(TMPEXT).tmp ./$][@ || exit; \
   :;); \
   x=$][$][?; \
-  rm \
-    -f \
-    -r \
-    '\''GATBPS_DOCKER_BUILD/'\'']input_directory[ \
-  ; \
-  case "$][$][{x}" in \
-    '\''0'\'') \
-    ;; \
-    *) \
-      rm \
-        -f \
-        -r \
-        ./$][@ \
-        ./$][@$][(TMPEXT).tmp \
-      ; \
-    ;; \
-  esac; \
   exit "$][$][{x}"; \
 :;}
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
@@ -433,16 +412,13 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
 :;}
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
-.PHONY: clean-]output_file[
+.PHONY: ]output_file[/clean
 
-clean-]output_file[: FORCE
-	-rm -f -r]dnl
-[ ./]output_file[]dnl
-[ ./]output_file[.tmp]dnl
-[ GATBPS_DOCKER_BUILD/]input_directory[]dnl
-[
+]output_file[/clean: FORCE
+	-rm -f -r ./$][(@D).image ./$][(@D).image$][(TMPEXT).tmp*
+	-rm -f -r ./$][(@D) ./$][(@D)$][(TMPEXT).tmp*
 
-]clean_target[-local: clean-]output_file[
+]clean_target[-local: ]output_file[/clean
 
 '
 
