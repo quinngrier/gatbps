@@ -307,7 +307,7 @@ GATBPS_DOCKER_BUILD_word_lines_2(m4_if(,,child_prerequisites))[
 ;
 	$][(AM@&t@_V_at){ \
   ( \
-    merge='\''no'\''; \
+    merge=no; \
     context='\'''\''; \
     for x in \]dnl
 GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
@@ -322,16 +322,16 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
           "$][$][{x}" \
         || exit $][$][?; \
         case "$][$][{merge}" in \
-          '\''no'\'') \
+          no) \
             case "$][$][{context}" in \
-              '\''.'\'') \
+              .) \
               ;; \
               ?*) \
-                merge='\''yes'\''; \
+                merge=yes; \
                 readonly '\''merge'\''; \
               ;; \
               *) \
-                context='\''.'\''; \
+                context=.; \
               ;; \
             esac; \
           ;; \
@@ -345,12 +345,12 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
           $][(srcdir)'\''/'\''"$][$][{x}" \
         || exit $][$][?; \
         case "$][$][{merge}" in \
-          '\''no'\'') \
+          no) \
             case "$][$][{context}" in \
               $][(srcdir)) \
               ;; \
               ?*) \
-                merge='\''yes'\''; \
+                merge=yes; \
                 readonly '\''merge'\''; \
               ;; \
               *) \
@@ -363,7 +363,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
     done; \
     readonly '\''merge'\''; \
     case "$][$][{merge}" in \
-      '\''yes'\'') \
+      yes) \
         context='\''GATBPS_DOCKER_BUILD/'\'']input_directory[; \
         readonly '\''context'\''; \
         $][(MKDIR_P) \
@@ -380,7 +380,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
           "$][$][{context}" \
         || exit $][$][?; \
       ;; \
-      '\''no'\'') \
+      no) \
         context="$][$][{context}"'\''/'\'']input_directory[; \
         readonly '\''context'\''; \
       ;; \
