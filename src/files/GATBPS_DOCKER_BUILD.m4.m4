@@ -229,7 +229,7 @@ m4_pushdef(
     [],
     [],
     [[
-]output_file[: ]dnl
+]output_file[.image: ]dnl
 m4_bpatsubst([[$1]], ['], ['\\''])[]dnl
 GATBPS_DOCKER_BUILD_rule_lines(m4_shift($@))])])[dnl
 ]m4_ifdef(
@@ -295,63 +295,55 @@ GATBPS_DOCKER_BUILD_word_lines_2(m4_if(,,child_prerequisites))[
 	$][(AM@&t@_V_at)|%}contains_exactly_one_word_sh(
   {%|srcdir|%}){%||%}dnl
 {%|
-	$][(AM@&t@_V_at)$][(MKDIR_P) \
-  ./$][(@D) \
-;
-	$][(AM@&t@_V_at)rm \
-  -f \
-  '\''-r'\'' \
-  ./]output_file[ \
-  ./]output_file['\''.tmp'\'' \
-  '\''GATBPS_DOCKER_BUILD/'\'']input_directory[ \
-;
+	$][(AM@&t@_V_at)rm -f -r ./$][@ ./$][@$][(TMPEXT).tmp*
+	$][(AM@&t@_V_at)$][(MKDIR_P) ./$][(@D)
 	$][(AM@&t@_V_at){ \
   ( \
-    merge='\''no'\''; \
+    merge=no; \
     context='\'''\''; \
     for x in \]dnl
 GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
       $][$][{prevent_an_empty_word_list} \
     ; do \
-      if '\''test'\'' '\''-r'\'' "$][$][{x}"; then \
-        '\''test'\'' \
+      if test -r "$][$][{x}"; then \
+        test \
           -f \
           "$][$][{x}" \
-        || '\''test'\'' \
-          '\''-d'\'' \
+        || test \
+          -d \
           "$][$][{x}" \
         || exit $][$][?; \
         case "$][$][{merge}" in \
-          '\''no'\'') \
+          no) \
             case "$][$][{context}" in \
-              '\''.'\'') \
+              .) \
               ;; \
               ?*) \
-                merge='\''yes'\''; \
-                readonly '\''merge'\''; \
+                merge=yes; \
+                readonly merge; \
               ;; \
               *) \
-                context='\''.'\''; \
+                context=.; \
               ;; \
             esac; \
           ;; \
         esac; \
       else \
-        '\''test'\'' \
+        test \
           -f \
           $][(srcdir)'\''/'\''"$][$][{x}" \
-        || '\''test'\'' \
-          '\''-d'\'' \
+        || test \
+          -d \
           $][(srcdir)'\''/'\''"$][$][{x}" \
         || exit $][$][?; \
         case "$][$][{merge}" in \
-          '\''no'\'') \
+          no) \
             case "$][$][{context}" in \
               $][(srcdir)) \
               ;; \
               ?*) \
-                merge='\''yes'\''; \
-                readonly '\''merge'\''; \
+                merge=yes; \
+                readonly merge; \
               ;; \
               *) \
                 context=$][(srcdir); \
@@ -361,92 +353,70 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
         esac; \
       fi; \
     done; \
-    readonly '\''merge'\''; \
+    readonly merge; \
     case "$][$][{merge}" in \
-      '\''yes'\'') \
-        context='\''GATBPS_DOCKER_BUILD/'\'']input_directory[; \
+      yes) \
+        context=./$][@$][(TMPEXT).tmp.context; \
         readonly '\''context'\''; \
         $][(MKDIR_P) \
           "$][$][{context}" \
         || exit $][$][?; \
-        '\''cp'\'' \
-          '\''-R'\'' \
+        cp \
+          -R \
           $][(srcdir)'\''/'\'']input_directory['\''/'\''* \
           "$][$][{context}" \
         || exit $][$][?; \
-        '\''cp'\'' \
-          '\''-R'\'' \
+        cp \
+          -R \
           ./]input_directory['\''/'\''* \
           "$][$][{context}" \
         || exit $][$][?; \
       ;; \
-      '\''no'\'') \
+      no) \
         context="$][$][{context}"'\''/'\'']input_directory[; \
         readonly '\''context'\''; \
       ;; \
     esac; \
     $][(DOCKER) \
-      '\''build'\'' \
+      build \
       '\''--tag=tmp'\''"$][$][{$][$][}" \]dnl
 GATBPS_DOCKER_BUILD_tag_lines(m4_if(,,image_names))[
       $][(DOCKER_BUILD_FLAGS) \
       "$][$][{context}" \
     || exit $][$][?; \
-    hash=` \
-      $][(DOCKER) \
-        '\''images'\'' \
-        '\''--quiet'\'' \
-        '\''tmp'\''"$][$][{$][$][}" \
-      ; \
-    ` || exit $][$][?; \
-    readonly '\''hash'\''; \
     $][(DOCKER) \
-      '\''save'\'' \
-      "$][$][{hash}" \]dnl
-GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
-      1>./]output_file['\''.tmp'\'' \
-    || exit $][$][?; \
-    mv \
-      -f \
-      ./]output_file['\''.tmp'\'' \
-      ./]output_file[ \
-    || exit $][$][?; \
-    exit '\''0'\''; \
+      images \
+      --quiet \
+      --no-trunc \
+      tmp$][$][$][$][ \
+      >./$][@$][(TMPEXT).tmp \
+    || exit; \
+    mv -f ./$][@$][(TMPEXT).tmp ./$][@ || exit; \
   :;); \
   x=$][$][?; \
-  rm \
-    -f \
-    '\''-r'\'' \
-    '\''GATBPS_DOCKER_BUILD/'\'']input_directory[ \
-  ; \
-  case "$][$][{x}" in \
-    '\''0'\'') \
-    ;; \
-    *) \
-      rm \
-        -f \
-        '\''-r'\'' \
-        ./]output_file[ \
-        ./]output_file['\''.tmp'\'' \
-      ; \
-    ;; \
-  esac; \
   exit "$][$][{x}"; \
 :;}
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
-.PHONY: clean-]output_file[
+]output_file[: ]output_file[.image
+	$][(GATBPS_V_DOCKER)$][(GATBPS_RECIPE_MARKER_TOP)
+	$][(AM@&t@_V_at){ \
+	  image=`cat ./$][@.image` || exit; \
+	  $][(DOCKER) save "$][$][image" \]dnl
+GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
+	    >./$][@$][(TMPEXT).tmp \
+	  || exit; \
+	  mv -f ./$][@$][(TMPEXT).tmp ./$][@ || exit; \
+:;}
+	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
-clean-]output_file[:
-	-rm \
-  -f \
-  '\''-r'\'' \
-  ./]output_file[ \
-  ./]output_file['\''.tmp'\'' \
-  '\''GATBPS_DOCKER_BUILD/'\'']input_directory[ \
-;
+.PHONY: ]output_file[/clean
 
-]clean_target[-local: clean-]output_file[
+]output_file[/clean: FORCE
+	-rm -f -r ./$][(@D).image ./$][(@D).image$][(TMPEXT).tmp*
+	-rm -f -r ./$][(@D) ./$][(@D)$][(TMPEXT).tmp*
+
+]clean_target[-local: ]output_file[/clean
 
 '
 
