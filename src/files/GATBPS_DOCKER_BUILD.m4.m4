@@ -384,15 +384,13 @@ GATBPS_DOCKER_BUILD_tag_lines(m4_if(,,image_names))[
       $][(DOCKER_BUILD_FLAGS) \
       "$][$][{context}" \
     || exit $][$][?; \
-    hash=` \
-      $][(DOCKER) \
-        images \
-        --quiet \
-        '\''tmp'\''"$][$][{$][$][}" \
-      ; \
-    ` || exit $][$][?; \
-    readonly hash; \
-    printf %s\\n "$][$][hash" >./$][@$][(TMPEXT).tmp || exit; \
+    $][(DOCKER) \
+      images \
+      --quiet \
+      --no-trunc \
+      tmp$][$][$][$][ \
+      >./$][@$][(TMPEXT).tmp \
+    || exit; \
     mv -f ./$][@$][(TMPEXT).tmp ./$][@ || exit; \
   :;); \
   x=$][$][?; \
