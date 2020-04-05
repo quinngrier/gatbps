@@ -229,7 +229,7 @@ m4_pushdef(
     [],
     [],
     [[
-]output_file[: ]dnl
+]output_file[.image: ]dnl
 m4_bpatsubst([[$1]], ['], ['\\''])[]dnl
 GATBPS_DOCKER_BUILD_rule_lines(m4_shift($@))])])[dnl
 ]m4_ifdef(
@@ -296,8 +296,8 @@ GATBPS_DOCKER_BUILD_word_lines_2(m4_if(,,child_prerequisites))[
   {%|srcdir|%}){%||%}dnl
 {%|
 	$][(AM@&t@_V_at)rm -f -r]dnl
-[ ./]output_file[]dnl
-[ ./]output_file[.tmp]dnl
+[ ./$][@]dnl
+[ ./$][@$][(TMPEXT).tmp*]dnl
 [ GATBPS_DOCKER_BUILD/]input_directory[]dnl
 [
 	$][(AM@&t@_V_at)$][(MKDIR_P) ./$][(@D)
@@ -396,18 +396,8 @@ GATBPS_DOCKER_BUILD_tag_lines(m4_if(,,image_names))[
       ; \
     ` || exit $][$][?; \
     readonly hash; \
-    $][(DOCKER) \
-      save \
-      "$][$][{hash}" \]dnl
-GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
-      1>./]output_file[.tmp \
-    || exit $][$][?; \
-    mv \
-      -f \
-      ./]output_file[.tmp \
-      ./]output_file[ \
-    || exit $][$][?; \
-    exit '\''0'\''; \
+    printf %s\\n "$][$][hash" >./$][@$][(TMPEXT).tmp || exit; \
+    mv -f ./$][@$][(TMPEXT).tmp ./$][@ || exit; \
   :;); \
   x=$][$][?; \
   rm \
@@ -422,12 +412,24 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
       rm \
         -f \
         -r \
-        ./]output_file[ \
-        ./]output_file[.tmp \
+        ./$][@ \
+        ./$][@$][(TMPEXT).tmp \
       ; \
     ;; \
   esac; \
   exit "$][$][{x}"; \
+:;}
+	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
+
+]output_file[: ]output_file[.image
+	$][(GATBPS_V_DOCKER)$][(GATBPS_RECIPE_MARKER_TOP)
+	$][(AM@&t@_V_at){ \
+	  image=`cat ./$][@.image` || exit; \
+	  $][(DOCKER) save "$][$][image" \]dnl
+GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
+	    >./$][@$][(TMPEXT).tmp \
+	  || exit; \
+	  mv -f ./$][@$][(TMPEXT).tmp ./$][@ || exit; \
 :;}
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
