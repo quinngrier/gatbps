@@ -300,7 +300,7 @@ GATBPS_DOCKER_BUILD_word_lines_2(m4_if(,,child_prerequisites))[
 ;
 	$][(AM@&t@_V_at)rm \
   -f \
-  '\''-r'\'' \
+  -r \
   ./]output_file[ \
   ./]output_file['\''.tmp'\'' \
   '\''GATBPS_DOCKER_BUILD/'\'']input_directory[ \
@@ -313,7 +313,7 @@ GATBPS_DOCKER_BUILD_word_lines_2(m4_if(,,child_prerequisites))[
 GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
       $][$][{prevent_an_empty_word_list} \
     ; do \
-      if '\''test'\'' '\''-r'\'' "$][$][{x}"; then \
+      if '\''test'\'' -r "$][$][{x}"; then \
         '\''test'\'' \
           -f \
           "$][$][{x}" \
@@ -369,13 +369,13 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
         $][(MKDIR_P) \
           "$][$][{context}" \
         || exit $][$][?; \
-        '\''cp'\'' \
-          '\''-R'\'' \
+        cp \
+          -R \
           $][(srcdir)'\''/'\'']input_directory['\''/'\''* \
           "$][$][{context}" \
         || exit $][$][?; \
-        '\''cp'\'' \
-          '\''-R'\'' \
+        cp \
+          -R \
           ./]input_directory['\''/'\''* \
           "$][$][{context}" \
         || exit $][$][?; \
@@ -386,7 +386,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
       ;; \
     esac; \
     $][(DOCKER) \
-      '\''build'\'' \
+      build \
       '\''--tag=tmp'\''"$][$][{$][$][}" \]dnl
 GATBPS_DOCKER_BUILD_tag_lines(m4_if(,,image_names))[
       $][(DOCKER_BUILD_FLAGS) \
@@ -394,14 +394,14 @@ GATBPS_DOCKER_BUILD_tag_lines(m4_if(,,image_names))[
     || exit $][$][?; \
     hash=` \
       $][(DOCKER) \
-        '\''images'\'' \
-        '\''--quiet'\'' \
+        images \
+        --quiet \
         '\''tmp'\''"$][$][{$][$][}" \
       ; \
     ` || exit $][$][?; \
-    readonly '\''hash'\''; \
+    readonly hash; \
     $][(DOCKER) \
-      '\''save'\'' \
+      save \
       "$][$][{hash}" \]dnl
 GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
       1>./]output_file['\''.tmp'\'' \
@@ -416,7 +416,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
   x=$][$][?; \
   rm \
     -f \
-    '\''-r'\'' \
+    -r \
     '\''GATBPS_DOCKER_BUILD/'\'']input_directory[ \
   ; \
   case "$][$][{x}" in \
@@ -425,7 +425,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
     *) \
       rm \
         -f \
-        '\''-r'\'' \
+        -r \
         ./]output_file[ \
         ./]output_file['\''.tmp'\'' \
       ; \
