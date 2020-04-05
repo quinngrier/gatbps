@@ -437,14 +437,12 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
 
 .PHONY: clean-]output_file[
 
-clean-]output_file[:
-	-rm \
-  -f \
-  '\''-r'\'' \
-  ./]output_file[ \
-  ./]output_file['\''.tmp'\'' \
-  '\''GATBPS_DOCKER_BUILD/'\'']input_directory[ \
-;
+clean-]output_file[: FORCE
+	-rm -f -r]dnl
+[ ./]output_file[]dnl
+[ ./]output_file[.tmp]dnl
+[ GATBPS_DOCKER_BUILD/]input_directory[]dnl
+[
 
 ]clean_target[-local: clean-]output_file[
 
