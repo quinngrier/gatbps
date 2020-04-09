@@ -391,6 +391,7 @@ GATBPS_DOCKER_BUILD_tag_lines(m4_if(,,image_names))[
       tmp$][$][$][$][ \
       >./$][@$][(TMPEXT).tmp \
     || exit; \
+    $][(DOCKER) rmi tmp$][$][$][$][ || exit; \
     mv -f ./$][@$][(TMPEXT).tmp ./$][@ || exit; \
   :;); \
   x=$][$][?; \
