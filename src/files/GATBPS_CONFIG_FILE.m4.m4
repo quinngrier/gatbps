@@ -84,9 +84,10 @@ m4_pushdef(
       ]AC_MSG_NOTICE([skipping $dst])[
     else
       ]AC_MSG_NOTICE([updating $dst])[
-      rm -f $dst || exit
-      cp $inp $dst || exit
-      cat $src >$dst || exit
+      rm -f $dst || exit $?
+      cp $inp $dst || exit $? # inherit any +x
+      chmod +w $dst || exit $? # reverse any -w
+      cat $src >$dst || exit $? # put in content
       ]$5[
     fi
   ) || exit]],
