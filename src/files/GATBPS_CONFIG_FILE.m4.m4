@@ -60,37 +60,42 @@ m4_pushdef(
 ]AC_CONFIG_FILES(
   gatbps_output[]gatbps_suffix[:]input_file,
   [[(
-    tt='case $? in 1) false ;; *) exit ;; esac'
-    dst=]]gatbps_output[[
-    src=]]gatbps_output[[]]gatbps_suffix[[
-    inp=]]input_file[[
-    if test ! -f $inp || eval $tt; then
+    e1='case $? in 1) (exit 1) ;; *) exit $? ;; esac'
+    dst=']]gatbps_output[['
+    src=']]gatbps_output[[]]gatbps_suffix[['
+    inp=']]input_file[['
+    if test ! -f "$inp" || eval "$e1"; then
       inp=$srcdir/$inp
     fi
     cur=$dst
-    if test ! -f $cur || eval $tt; then
+    if test ! -f "$cur" || eval "$e1"; then
       cur=$srcdir/$cur
     fi
+    case $dst in /*) ;; *) dst=./$dst ;; esac
+    case $src in /*) ;; *) src=./$src ;; esac
+    case $inp in /*) ;; *) inp=./$inp ;; esac
+    case $cur in /*) ;; *) cur=./$cur ;; esac
     if {
       {
-        test -f $cur || eval $tt
+        test -f "$cur" || eval "$e1"
       } && {
-        { test   -x $cur && test   -x $inp || eval $tt; } ||
-        { test ! -x $cur && test ! -x $inp || eval $tt; }
+        { test   -x "$cur" && test   -x "$inp" || eval "$e1"; } ||
+        { test ! -x "$cur" && test ! -x "$inp" || eval "$e1"; }
       } && {
-        cmp $cur $src >/dev/null
+        cmp "$cur" "$src" >/dev/null || eval "$e1"
       }
     }; then
       ]AC_MSG_NOTICE([skipping $dst])[
     else
       ]AC_MSG_NOTICE([updating $dst])[
-      rm -f $dst || exit $?
-      cp $inp $dst || exit $? # inherit any +x
-      chmod +w $dst || exit $? # reverse any -w
-      cat $src >$dst || exit $? # put in content
+      rm -f "$dst"       || exit $?
+      cp "$inp" "$dst"   || exit $? # inherit the x permission bit
+      chmod +w "$dst"    || exit $? # always set the w permission bit
+      cat "$src" >"$dst" || exit $? # overwrite with the right content
       ]$5[
     fi
-  ) || exit]],
+    exit 0
+  ) || exit $?]],
   [$6])
 
 gatbps_new_rules='.PHONY: clean-gatbps_output
