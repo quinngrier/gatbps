@@ -71,7 +71,6 @@ m4_pushdef(
     if test ! -f "$cur" || eval "$e1"; then
       cur=$srcdir/$cur
     fi
-    case $dst in /*) ;; *) dst=./$dst ;; esac
     case $src in /*) ;; *) src=./$src ;; esac
     case $inp in /*) ;; *) inp=./$inp ;; esac
     case $cur in /*) ;; *) cur=./$cur ;; esac
@@ -88,6 +87,7 @@ m4_pushdef(
       ]AC_MSG_NOTICE([[skipping $dst]])[
     else
       ]AC_MSG_NOTICE([[updating $dst]])[
+      case $dst in /*) ;; *) dst=./$dst ;; esac
       rm -f "$dst"       || exit $?
       cp "$inp" "$dst"   || exit $? # inherit the x permission bit
       chmod +w "$dst"    || exit $? # always set the w permission bit
