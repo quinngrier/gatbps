@@ -85,9 +85,9 @@ m4_pushdef(
         cmp "$cur" "$src" >/dev/null || eval "$e1"
       }
     }; then
-      ]AC_MSG_NOTICE([skipping $dst])[
+      ]AC_MSG_NOTICE([[skipping $dst]])[
     else
-      ]AC_MSG_NOTICE([updating $dst])[
+      ]AC_MSG_NOTICE([[updating $dst]])[
       rm -f "$dst"       || exit $?
       cp "$inp" "$dst"   || exit $? # inherit the x permission bit
       chmod +w "$dst"    || exit $? # always set the w permission bit
