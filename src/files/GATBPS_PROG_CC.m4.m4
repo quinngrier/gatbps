@@ -56,6 +56,17 @@ m4_if(
 
 ]AC_REQUIRE([AC_PROG_CC])[
 
+]
+dnl AM_PROG_CC_C_O is an obsolescent macro that's sometimes needed by
+dnl older Automake versions. In newer Automake versions, it's included
+dnl as part of AC_PROG_CC. It should be fine to AC_REQUIRE it when it's
+dnl present.
+[
+
+]]m4_ifdef(
+  [AM_PROG_CC_C_O],
+  [[AC_REQUIRE([AM_PROG_CC_C_O])]])[[
+
 :;}]])[]dnl
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
 dnl
