@@ -62,15 +62,15 @@ GATBPS_CHECK_VARS([$1], [$2], gatbps_x)
 
 case $$2_was_cached in
   yes)
-    printf 'note: --enable-$3=$]gatbps_x[ was given but overridden by the cache\n' >&]AS_MESSAGE_LOG_FD[
+    printf 'note: --enable-$3=%s was given but overridden by the cache\n' "$]gatbps_x[" >&]AS_MESSAGE_LOG_FD[
   ;;
   no)
     case $]gatbps_x[_was_given in
       yes)
-        printf 'note: --enable-$3=$]gatbps_x[ was given\n' >&]AS_MESSAGE_LOG_FD[
+        printf 'note: --enable-$3=%s was given\n' "$]gatbps_x[" >&]AS_MESSAGE_LOG_FD[
       ;;
       no)
-        printf 'note: --enable-$3=$]gatbps_x[ was implied\n' >&]AS_MESSAGE_LOG_FD[
+        printf 'note: --enable-$3=%s was implied\n' "$]gatbps_x[" >&]AS_MESSAGE_LOG_FD[
       ;;
     esac
   ;;
