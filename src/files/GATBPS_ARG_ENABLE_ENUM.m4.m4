@@ -80,17 +80,17 @@ esac
     gatbps_cv_$2="$][{]gatbps_x[}"
   :;}]])[
 
-case "$][{$2_was_cached}" in
-  'yes')
-    ]AC_MSG_NOTICE([note: --enable-$3=$[]{]gatbps_x[} was ignored])[
+case $$2_was_cached in
+  yes)
+    printf 'note: --enable-$3=$]gatbps_x[ was given but overridden by the cache\n' >&]AS_MESSAGE_LOG_FD[
   ;;
-  'no')
-    case "$][{]gatbps_x[_was_given}" in
-      'yes')
-        ]AC_MSG_NOTICE([note: --enable-$3=$[]{]gatbps_x[} was given])[
+  no)
+    case $]gatbps_x[_was_given in
+      yes)
+        printf 'note: --enable-$3=$]gatbps_x[ was given\n' >&]AS_MESSAGE_LOG_FD[
       ;;
-      'no')
-        ]AC_MSG_NOTICE([note: --enable-$3=$[]{]gatbps_x[} was implied])[
+      no)
+        printf 'note: --enable-$3=$]gatbps_x[ was implied\n' >&]AS_MESSAGE_LOG_FD[
       ;;
     esac
   ;;
