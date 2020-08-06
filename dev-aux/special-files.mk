@@ -30,6 +30,7 @@ files = \
   build-aux/docbook.am \
   build-aux/dvi-dist.am \
   build-aux/echo.sh \
+  build-aux/gatbps.ac \
   build-aux/html-dist.am \
   build-aux/m4.am \
   build-aux/pdf-dist.am \
