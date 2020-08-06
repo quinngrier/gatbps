@@ -957,6 +957,10 @@ AM_SUBST_NOTMAKE([TEXI2ANY_DEFAULT_TROFF])
   [mostlyclean])[
 
 ]GATBPS_M4(
+  [src/files/gatbps.ac],
+  [mostlyclean])[
+
+]GATBPS_M4(
   [src/files/gatbps.am],
   [mostlyclean])[
 

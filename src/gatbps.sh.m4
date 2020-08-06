@@ -591,6 +591,7 @@ EOF1
           'set' "${prefix}"'gatbps_fatal.m4' "${@}"
           'set' "${prefix}"'gatbps_check_macros_code.m4' "${@}"
           'set' "${prefix}"'gatbps.am' "${@}"
+          'set' "${prefix}"'gatbps.ac' "${@}"
           'set' "${prefix}"'format.java.vim' "${@}"
           'set' "${prefix}"'format.c.vim' "${@}"
           'set' "${prefix}"'format.am.vim' "${@}"
@@ -1414,6 +1415,8 @@ EOF1
 |%}help_code({%|format.c.vim|%}){%|
 
 |%}help_code({%|format.java.vim|%}){%|
+
+|%}help_code({%|gatbps.ac|%}){%|
 
 |%}help_code({%|gatbps.am|%}){%|
 
@@ -3181,6 +3184,8 @@ EOF1
 
 |%}generation_code({%|format.java.vim|%}){%|
 
+|%}generation_code({%|gatbps.ac|%}){%|
+
 |%}generation_code({%|gatbps.am|%}){%|
 
 |%}generation_code({%|gatbps_check_macros_code.m4|%}){%|
@@ -4465,6 +4470,11 @@ include(`src/recursion/format.c.vim.rc.m4'){%||%}dnl
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
 include(`src/recursion/format.java.vim.rc.m4'){%||%}dnl
+{%|
+
+|%}dnl
+changequote({%|`|%}, {%|'|%})`'dnl
+include(`src/recursion/gatbps.ac.rc.m4'){%||%}dnl
 {%|
 
 |%}dnl

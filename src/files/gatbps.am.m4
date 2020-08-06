@@ -12,24 +12,56 @@ header_comment({%|##|%}, {%|##|%}){%|
 ## For more information, see the GATBPS manual.
 ##
 
-## begin_variables
+##----------------------------------------------------------------------
+## Silent rule helpers
+##----------------------------------------------------------------------
 
-GATBPS_V_GATBPS = $(GATBPS_V_GATBPS_@AM_V@)
+|%}
 
-GATBPS_V_GATBPS_ = $(GATBPS_V_GATBPS_@AM_DEFAULT_V@)
+pushdef({%|pad|%}, {%|ifelse($1, 0, , {%|pad(eval($1 - 1)) |%})|%})
+pushdef({%|GATBPS_V_|%}, {%|{%|
+GATBPS_V_$1 = $(GATBPS_V_$1_@AM_V@)
+GATBPS_V_$1_ = $(GATBPS_V_$1_@AM_DEFAULT_V@)
+GATBPS_V_$1_0 = @printf '  %s|%}pad(eval((88888888 - ifelse($#, 1, {%|len({%|$1|%})|%}, {%|len({%|$2|%})|%})) % 8)){%| %s\n' |%}ifelse($#, 1, {%|{%|$1|%}|%}, {%|{%|$2|%}|%}){%| $(@) || :;
+GATBPS_V_$1_1 =
+|%}|%})
 
-GATBPS_V_GATBPS_0 = @$(SHELL) \
-  '-' \
-  $(srcdir)'/build-aux/echo.sh' \
-  '--' \
-  $(GATBPS_V_PAD_LEFT)'GATBPS'$(GATBPS_V_PAD_RIGHT_6) \
-  $@ \
-  0</dev/null \
-|| 'exit' "$${?}";
+GATBPS_V_({%|ASCIIDOCTOR|%})
+GATBPS_V_({%|GATBPS|%})
 
-GATBPS_V_GATBPS_1 =
+popdef({%|GATBPS_V_|%})
+popdef({%|pad|%})
 
-## end_variables
+{%|
+
+##----------------------------------------------------------------------
+## Building man pages from Asciidoctor files
+##----------------------------------------------------------------------
+
+.SUFFIXES: .adoc .1 .2 .3 .4 .5 .6 .7 .8 .9
+
+|%}
+
+pushdef({%|x|%}, {%|{%|
+$1$2:
+	$(GATBPS_V_ASCIIDOCTOR)$(ASCIIDOCTOR) -b manpage -o $(@)$(TMPEXT).tmp $(<) && mv -f $(@)$(TMPEXT).tmp $(@)
+|%}|%})
+
+x({%|.adoc|%}, {%|.1|%})
+x({%|.adoc|%}, {%|.2|%})
+x({%|.adoc|%}, {%|.3|%})
+x({%|.adoc|%}, {%|.4|%})
+x({%|.adoc|%}, {%|.5|%})
+x({%|.adoc|%}, {%|.6|%})
+x({%|.adoc|%}, {%|.7|%})
+x({%|.adoc|%}, {%|.8|%})
+x({%|.adoc|%}, {%|.9|%})
+
+popdef({%|x|%})
+
+{%|
+
+##----------------------------------------------------------------------
 
 |%}footer_comment({%|##|%}, {%|##|%}, {%|##|%})
 dnl
