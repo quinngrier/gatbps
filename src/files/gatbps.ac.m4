@@ -16,14 +16,14 @@ dnl
 
 ]
 
-m4_define([GATBPS_PROG], [
+m4_define([GATBPS_CHECK_PROGS], [
   AC_CHECK_PROGS([$1], [[$2 $3]], [[$2]])
   AC_ARG_VAR([$1], [$2 command])
   AC_DEFINE_UNQUOTED([[$1]], [["$$1"]], [$2 command])
   AM_CONDITIONAL([HAVE_$1], [[command -v "$$1" >/dev/null]])
 ])
 
-GATBPS_PROG([ASCIIDOCTOR], [asciidoctor])
+GATBPS_CHECK_PROGS([ASCIIDOCTOR], [asciidoctor])
 
 [
 
