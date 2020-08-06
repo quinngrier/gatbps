@@ -29,6 +29,41 @@ GATBPS_PROG([ASCIIDOCTOR], [asciidoctor])
 
 #-----------------------------------------------------------------------
 
+]m4_define(
+  [GATBPS_LANG_PROGRAM],
+  [[
+    ]AC_LANG_SOURCE([[
+
+      ]$1[
+
+      #if 0
+
+      #elif __clang__
+
+        __attribute__((__optnone__))
+        static void f() { ]$2[ }
+
+      #elif __GNUC__
+
+        __attribute__((__optimize__(0)))
+        static void f() { ]$2[ }
+
+      #else
+
+        static void f() { ]$2[ }
+
+      #endif
+
+      int main() {
+        f();
+        return 0;
+      }
+
+    ]])[
+  ])[
+
+#-----------------------------------------------------------------------
+
 ]
 
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
