@@ -9,6 +9,8 @@
   [[gatbps]],
   [[https://www.quinngrier.com/gatbps]])[
 
+]m4_include([build-aux/gatbps.ac])[
+
 ]gatbps_check_macros[ || 'exit' "${?}"
 
 ]GATBPS_DEFINE_VERSION(
