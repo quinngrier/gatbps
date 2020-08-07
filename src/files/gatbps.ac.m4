@@ -16,12 +16,41 @@ dnl
 
 ]m4_define(
   [GATBPS_CHECK_PROGS],
-  [[
-    ]AC_CHECK_PROGS($1, [$2[ ]$3], [$2])[
-    ]AC_ARG_VAR($1, $2[ command])[
-    ]AC_DEFINE_UNQUOTED([$1], [["$]$1["]], $2[ command])[
-    ]AM_CONDITIONAL([HAVE_]$1, [[command -v "$]$1[" >/dev/null]])[
-  ]])[
+  [[{ :
+
+    ]
+    dnl In some versions of Autoconf, AC_CHECK_PROGS and AC_ARG_VAR
+    dnl mistakenly check that their first argument is an identifier
+    dnl before expanding it instead of after (or perhaps mistakenly
+    dnl allow it to be expanded at all), so we can't pass [$1]. This
+    dnl temporary definition lets us instead pass $1 to get the same
+    dnl behavior.
+    m4_pushdef(
+      $1,
+      m4_dquote($1))[
+
+    ]AC_CHECK_PROGS(
+      $1,
+      m4_dquote(m4_normalize(m4_expand([$2[ ]$3]))),
+      m4_dquote(m4_normalize(m4_expand([$2]))))[
+
+    ]AC_ARG_VAR(
+      $1,
+      m4_normalize(m4_expand([$2]))[ command])[
+
+    ]AC_DEFINE_UNQUOTED(
+      [$1],
+      [["$]$1["]],
+      m4_normalize(m4_expand([$2]))[ command])[
+
+    ]AM_CONDITIONAL(
+      [HAVE_]$1,
+      [[command -v "$]$1[" >/dev/null]])[
+
+    ]m4_popdef(
+      $1)[
+
+  }]])[
 
 ]GATBPS_CHECK_PROGS(
   [[ASCIIDOCTOR]],
