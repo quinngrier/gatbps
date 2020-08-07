@@ -29,7 +29,7 @@ AC_DEFUN([GATBPS_CHECK_LIB], [[{
     LIBS='$3'" $[]{LIBS}"
     AC_LANG_PUSH([C])
     AC_LINK_IFELSE(
-      [AC_LANG_PROGRAM([], [])],
+      [GATBPS_LANG_PROGRAM([], [])],
       [gatbps_cv_$2='yes'],
       [gatbps_cv_$2='no'])
     AC_LANG_POP([C])
