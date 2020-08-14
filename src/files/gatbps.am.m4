@@ -38,7 +38,7 @@ pushdef([pad], [ifelse($1, 0, , [pad(eval($1 - 1)) ])])
 pushdef([GATBPS_V_], [[
 GATBPS_V_$1 = $(GATBPS_V_$1_@AM_V@)
 GATBPS_V_$1_ = $(GATBPS_V_$1_@AM_DEFAULT_V@)
-GATBPS_V_$1_0 = @printf '  %s]pad(eval((88888888 - ifelse($#, 1, [len([$1])], [len([$2])])) % 8))[ %s\n' ]ifelse($#, 1, [[$1]], [[$2]])[ $(@) || :;
+GATBPS_V_$1_0 = @printf '  %s]pad(eval((88888888 - ifelse($#, 1, [len([$1])], [len([$2])])) % 8))[ %s\n' ]ifelse($#, 1, [[$1]], [[$2]])[ $][@ || :;
 GATBPS_V_$1_1 =
 ]])
 
@@ -58,7 +58,7 @@ popdef([pad])
 
 pushdef([x], [[
 $1$2:
-	$(GATBPS_V_ASCIIDOCTOR)$(ASCIIDOCTOR) -b manpage -o $(@)$(TMPEXT).tmp $(<) && mv -f $(@)$(TMPEXT).tmp $(@)
+	$(GATBPS_V_ASCIIDOCTOR)$(ASCIIDOCTOR) -b manpage -o $][@$(TMPEXT).tmp $< && mv -f $][@$(TMPEXT).tmp $][@
 ]])
 
 x([.adoc], [.1])
