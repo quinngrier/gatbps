@@ -15,37 +15,25 @@ header_comment({%|#|%}, {%|#|%}){%|
 # For more information, see the GATBPS manual.
 #
 
-'readonly' 'gen_configure';
-case "${gen_configure}" in
-  'no')
+case ${GATBPS_GEN_CONFIGURE_BOOTSTRAP-} in
+  '')
+    cat <<'EOF2' || exit $?
+configure: preparing environment for code generation
+EOF2
+
+    xs=GATBPS_GEN_CONFIGURE_BOOTSTRAP=x
+    for x in \
+      PATH \
+      TEMP \
+      TMP \
+    ; do
+      eval 'xs=$xs${'$x'+ '$x'=\"\$'$x'\"}'
+    done
+
+    eval 'env -i '"$xs"' sh - "$0"'
+    exit $?
   ;;
-  *)
-    'echo' \
-      'configure: preparing for code generation' \
-    || 'exit' "${?}";
-    'sh' \
-      '-' \
-      "${srcdir}"'/../build-aux/sh-form.sh' \
-      '--' \
-      'env' \
-      '-i' \
-      'PATH='"${PATH}" \
-      'gen_configure=no' \
-      'sh' \
-      '-' \
-      "${0}" \
-    || 'exit' "${?}";
-    'env' \
-      '-i' \
-      'PATH='"${PATH}" \
-      'gen_configure=no' \
-      'sh' \
-      '-' \
-      "${0}" \
-    ;
-    'exit' "${?}";
-  ;;
-esac;
+esac
 
 |%}footer_comment({%|#|%}, {%|#|%}, {%|#|%})
 dnl
