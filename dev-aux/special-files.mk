@@ -24,7 +24,7 @@ files = \
   build-aux/GATBPS_V_NOP.am \
   build-aux/GATBPS_V_PAD.am \
   build-aux/VERSION.sh \
-  build-aux/VERSION_LIBTOOL_C.sh \
+  build-aux/LTCURRENT.sh \
   build-aux/cp.am \
   build-aux/docbook-dist.am \
   build-aux/docbook.am \

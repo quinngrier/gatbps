@@ -612,7 +612,6 @@ EOF1
           'set' "${prefix}"'bdarrow.texi' "${@}"
           'set' "${prefix}"'barrow.texi' "${@}"
           'set' "${prefix}"'awk-form.sh' "${@}"
-          'set' "${prefix}"'VERSION_LIBTOOL_C.sh' "${@}"
           'set' "${prefix}"'VERSION.sh' "${@}"
           'set' "${prefix}"'TestExit.java' "${@}"
           'set' "${prefix}"'TEST_EXIT.h' "${@}"
@@ -620,6 +619,7 @@ EOF1
           'set' "${prefix}"'PACKAGE_STRING.df.in' "${@}"
           'set' "${prefix}"'PACKAGEVERSION.texi.in' "${@}"
           'set' "${prefix}"'PACKAGEDATE.texi.in' "${@}"
+          'set' "${prefix}"'LTCURRENT.sh' "${@}"
           'set' "${prefix}"'INPUT_FILTER.sh.in' "${@}"
           'set' "${prefix}"'GATBPS_XZ_SUBST.m4' "${@}"
           'set' "${prefix}"'GATBPS_XZ_RULES.am' "${@}"
@@ -1374,7 +1374,7 @@ EOF1
 
 |%}help_code({%|VERSION.sh|%}){%|
 
-|%}help_code({%|VERSION_LIBTOOL_C.sh|%}){%|
+|%}help_code({%|LTCURRENT.sh|%}){%|
 
 |%}help_code({%|awk-form.sh|%}){%|
 
@@ -3142,7 +3142,7 @@ EOF1
 
 |%}generation_code({%|VERSION.sh|%}){%|
 
-|%}generation_code({%|VERSION_LIBTOOL_C.sh|%}){%|
+|%}generation_code({%|LTCURRENT.sh|%}){%|
 
 |%}generation_code({%|awk-form.sh|%}){%|
 
@@ -4369,7 +4369,7 @@ include(`src/recursion/VERSION.sh.rc.m4'){%||%}dnl
 
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/VERSION_LIBTOOL_C.sh.rc.m4'){%||%}dnl
+include(`src/recursion/LTCURRENT.sh.rc.m4'){%||%}dnl
 {%|
 
 |%}dnl
