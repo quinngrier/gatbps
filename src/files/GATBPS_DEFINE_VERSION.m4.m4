@@ -238,7 +238,7 @@ m4_define(
   m4_bregexp($1$2, [[0-9]+\.\([0-9]+\)], [[[\1]]]))[]dnl
 m4_define(
   [$1$2_LIBTOOL_A],
-  m4_dquote($1$2_MINOR))[]dnl
+  m4_dquote(m4_if($1$2_MAJOR, 0, 0, $1$2_MINOR)))[]dnl
 m4_define(
   [$1$2_PATCH],
   m4_bregexp($1$2, [[0-9]+\.[0-9]+\.\([0-9]+\)], [[[\1]]]))[]dnl
@@ -277,6 +277,49 @@ m4_define(
   [$1$2_TEXI],
   m4_dquote(m4_bpatsubst(m4_dquote($1$2), [\.], [.@:])))[]dnl
 [
+
+#-----------------------------------------------------------------------
+# GATBPS: $1$2_LIBTOOL_C
+#-----------------------------------------------------------------------
+
+]m4_ifdef(
+  [$1$2_LIBTOOL_C],
+  [gatbps_fatal([
+    $1$2_LIBTOOL_C is already defined
+  ])])[
+
+]m4_define(
+  [$1$2_LIBTOOL_C],
+  [m4_ifdef(
+    [$1$2_LIBTOOL_C_VALUE],
+    [],
+    [m4_define(
+      [$1$2_LIBTOOL_C_VALUE],
+      m4_esyscmd_s([
+        sh build-aux/LTCURRENT.sh
+      ])m4_if(
+        m4_sysval,
+        [0],
+        [],
+        [m4_fatal([LTCURRENT.sh failed])]))])$1$2_LIBTOOL_C_VALUE])[
+
+]AC_DEFINE(
+  [[$2_LIBTOOL_C]],
+  m4_dquote(["]$1$2_LIBTOOL_C["]),
+  [
+  ])[
+
+if $][{$2_LIBTOOL_C+:} false; then
+  ]GATBPS_MSG_ERROR([
+    \$][{$2_LIBTOOL_C} is already set
+  ])[
+fi
+
+$2_LIBTOOL_C=']$1$2_LIBTOOL_C['
+readonly $2_LIBTOOL_C
+]AC_SUBST([$2_LIBTOOL_A])[
+
+#-----------------------------------------------------------------------
 
 ]AC_DEFINE(
   [[$2_DEB]],
