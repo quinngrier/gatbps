@@ -77,6 +77,28 @@ popdef([x])
 [
 
 #-----------------------------------------------------------------------
+# GATBPS: Standard version cache files
+#-----------------------------------------------------------------------
+
+]
+
+pushdef([x], [[
+$1:
+	$(AM_V_GEN)sh $(srcdir)/build-aux/$1.sh >$][@$(TMPEXT).tmp
+	$(AM_V_at)mv -f $][@$(TMPEXT).tmp $][@
+
+MAINTAINERCLEANFILES += $1
+]])
+
+x([DATE])
+x([LTCURRENT])
+x([VERSION])
+
+popdef([x])
+
+[
+
+#-----------------------------------------------------------------------
 
 ]changequote([{%|], [|%}]){%||%}dnl
 footer_comment({%|##|%}, {%|##|%}, {%|##|%})
