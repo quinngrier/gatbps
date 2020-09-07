@@ -37,20 +37,20 @@ if test -f "$file"; then
 
 elif eval "$git"' ls-files --error-unmatch "$0"' >/dev/null 2>&1; then
 
-  xs=`eval "$git"' tag -l "v[0-9]*.[0-9]*.[0-9]*"'` || exit $?
+  x=`eval "$git"' tag -l "v[0-9]*.[0-9]*.[0-9]*"'` || exit $?
 
-  xs=`eval "$sed"' "s/\\.[^.]*\$//"' <<EOF2
-$xs
+  x=`eval "$sed"' "s/\\.[^.]*\$//"' <<EOF2
+$x
 EOF2
   ` || exit $?
 
-  xs=`eval "$uniq" <<EOF2
-$xs
+  x=`eval "$uniq" <<EOF2
+$x
 EOF2
   ` || exit $?
 
   eval "$awk"' "END { print NR - 1 }"' <<EOF2 || exit $?
-$xs
+$x
 EOF2
 
 else
