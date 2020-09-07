@@ -15,15 +15,17 @@ header_comment({%|#|%}, {%|#|%}){%|
 
 |%}use_the_c_locale{%|
 
-readonly git=${GIT:=git}
-readonly sed=${SED:=sed}
+readonly git=" ${GIT:-git}"
+readonly sed=" ${SED:-sed}"
 
-if test -f DATE; then
+readonly cache_file="${1-DATE}"
 
-  date=`cat DATE` || exit
+if test -f "$cache_file"; then
+
+  date=`cat <"$cache_file"` || exit $?
   readonly date
 
-elif eval "$git" 'ls-files --error-unmatch "$0" >/dev/null 2>&1'; then
+elif eval "$git"' ls-files --error-unmatch "$0"' >/dev/null 2>&1; then
 
   # Example: "Sun Dec 29 07:32:33 2019".
   d=`eval "TZ=UTC $git log -1 --pretty=%ad --date=local"` || exit
@@ -57,7 +59,9 @@ EOF2
 
 else
 
-  echo "DATE.sh: no DATE file and no repository" >&2
+  cat <<EOF2 >&2
+DATE.sh: $cache_file not found and no repository
+EOF2
   exit 1
 
 fi

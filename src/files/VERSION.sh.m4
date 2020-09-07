@@ -15,17 +15,19 @@ header_comment({%|#|%}, {%|#|%}){%|
 
 |%}use_the_c_locale{%|
 
-readonly git=${GIT:=git}
-readonly sed=${SED:=sed}
+readonly git=" ${GIT:-git}"
+readonly sed=" ${SED:-sed}"
+
+readonly cache_file="${1-VERSION}"
 
 v_prefix=v
 u_prefix=u
 
-if test -f VERSION; then
+if test -f "$cache_file"; then
 
-  cat VERSION || exit
+  cat <"$cache_file" || exit $?
 
-elif eval "$git"' ls-files --error-unmatch "$0" >/dev/null 2>&1'; then
+elif eval "$git"' ls-files --error-unmatch "$0"' >/dev/null 2>&1; then
 
   v_description=`
     git \
@@ -276,7 +278,9 @@ EOF2
 
 else
 
-  echo "VERSION.sh: no VERSION file and no repository" >&2
+  cat <<EOF2 >&2
+VERSION.sh: $cache_file not found and no repository
+EOF2
   exit 1
 
 fi

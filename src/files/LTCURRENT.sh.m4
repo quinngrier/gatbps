@@ -16,24 +16,16 @@ header_comment({%|#|%}, {%|#|%}){%|
 
 |%}use_the_c_locale{%|
 
-awk=" ${AWK:-awk}"
-readonly awk
+readonly awk=" ${AWK:-awk}"
+readonly git=" ${GIT:-git}"
+readonly sed=" ${SED:-sed}"
+readonly uniq=" ${UNIQ:-uniq}"
 
-git=" ${GIT:-git}"
-readonly git
+readonly cache_file="${1-LTCURRENT}"
 
-sed=" ${SED:-sed}"
-readonly sed
+if test -f "$cache_file"; then
 
-uniq=" ${UNIQ:-uniq}"
-readonly uniq
-
-file=${1-LTCURRENT}
-readonly file
-
-if test -f "$file"; then
-
-  cat <"$file" || exit $?
+  cat <"$cache_file" || exit $?
 
 elif eval "$git"' ls-files --error-unmatch "$0"' >/dev/null 2>&1; then
 
@@ -56,7 +48,7 @@ EOF2
 else
 
   cat <<EOF2 >&2
-LTCURRENT.sh: no LTCURRENT file and no repository
+LTCURRENT.sh: $cache_file not found and no repository
 EOF2
   exit 1
 
