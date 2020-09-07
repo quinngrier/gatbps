@@ -317,7 +317,7 @@ fi
 
 $2_LIBTOOL_C=']$1$2_LIBTOOL_C['
 readonly $2_LIBTOOL_C
-]AC_SUBST([$2_LIBTOOL_A])[
+]AC_SUBST([$2_LIBTOOL_C])[
 
 #-----------------------------------------------------------------------
 
