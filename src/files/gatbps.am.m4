@@ -58,7 +58,8 @@ popdef([pad])
 
 pushdef([x], [[
 $1$2:
-	$(GATBPS_V_ASCIIDOCTOR)$(ASCIIDOCTOR) -b manpage -o $][@$(TMPEXT).tmp $< && mv -f $][@$(TMPEXT).tmp $][@
+	$(GATBPS_V_ASCIIDOCTOR)$(ASCIIDOCTOR) -b manpage -o $][@$(TMPEXT).tmp $<
+	$(AM_V_at)mv -f $][@$(TMPEXT).tmp $][@
 ]])
 
 x([.adoc], [.1])
