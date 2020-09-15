@@ -21,11 +21,13 @@ readonly git=" ${GIT:-git}"
 readonly sed=" ${SED:-sed}"
 readonly uniq=" ${UNIQ:-uniq}"
 
-readonly cache_file="${1-LTCURRENT}"
+if test -f build-aux/LTCURRENT; then
 
-if test -f "$cache_file"; then
+  cat build-aux/LTCURRENT || exit $?
 
-  cat <"$cache_file" || exit $?
+elif test -f LTCURRENT; then
+
+  cat LTCURRENT || exit $?
 
 elif eval "$git"' ls-files --error-unmatch "$0"' >/dev/null 2>&1; then
 
@@ -48,7 +50,7 @@ EOF2
 else
 
   cat <<EOF2 >&2
-LTCURRENT.sh: $cache_file not found and no repository
+LTCURRENT.sh: no cache file or repository found
 EOF2
   exit 1
 

@@ -18,11 +18,14 @@ header_comment({%|#|%}, {%|#|%}){%|
 readonly git=" ${GIT:-git}"
 readonly sed=" ${SED:-sed}"
 
-readonly cache_file="${1-DATE}"
+if test -f build-aux/DATE; then
 
-if test -f "$cache_file"; then
+  date=`cat build-aux/DATE` || exit $?
+  readonly date
 
-  date=`cat <"$cache_file"` || exit $?
+elif test -f DATE; then
+
+  date=`cat DATE` || exit $?
   readonly date
 
 elif eval "$git"' ls-files --error-unmatch "$0"' >/dev/null 2>&1; then
@@ -60,7 +63,7 @@ EOF2
 else
 
   cat <<EOF2 >&2
-DATE.sh: $cache_file not found and no repository
+DATE.sh: no cache file or repository found
 EOF2
   exit 1
 

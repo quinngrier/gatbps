@@ -18,14 +18,16 @@ header_comment({%|#|%}, {%|#|%}){%|
 readonly git=" ${GIT:-git}"
 readonly sed=" ${SED:-sed}"
 
-readonly cache_file="${1-VERSION}"
-
 v_prefix=v
 u_prefix=u
 
-if test -f "$cache_file"; then
+if test -f build-aux/VERSION; then
 
-  cat <"$cache_file" || exit $?
+  cat build-aux/VERSION || exit $?
+
+elif test -f VERSION; then
+
+  cat VERSION || exit $?
 
 elif eval "$git"' ls-files --error-unmatch "$0"' >/dev/null 2>&1; then
 
@@ -279,7 +281,7 @@ EOF2
 else
 
   cat <<EOF2 >&2
-VERSION.sh: $cache_file not found and no repository
+VERSION.sh: no cache file or repository found
 EOF2
   exit 1
 

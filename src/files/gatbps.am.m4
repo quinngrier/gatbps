@@ -77,18 +77,33 @@ popdef([x])
 [
 
 #-----------------------------------------------------------------------
-# GATBPS: Standard version cache files
+# GATBPS: Version cache files
 #-----------------------------------------------------------------------
 
 ]
 
 pushdef([x], [[
+
 $1:
-	$(AM_V_GEN)sh $(srcdir)/build-aux/$1.sh >$][@$(TMPEXT).tmp
+	$(AM_V_GEN)]ifelse(index([$1], /), -1, , [[$(MKDIR_P) $(@D)
+	$(AM_V_at)]])[sh $(srcdir)/build-aux/]patsubst([[$1]], [\(.\).*/], [\1])[.sh >$][@$(TMPEXT).tmp
 	$(AM_V_at)mv -f $][@$(TMPEXT).tmp $][@
 
 MAINTAINERCLEANFILES += $1
+
 ]])
+
+#
+# Uncluttered locations.
+#
+
+x([build-aux/DATE])
+x([build-aux/LTCURRENT])
+x([build-aux/VERSION])
+
+#
+# Traditional locations.
+#
 
 x([DATE])
 x([LTCURRENT])
