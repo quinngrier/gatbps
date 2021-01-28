@@ -57,7 +57,7 @@ popdef([pad])
 
 ]
 
-GATBPS_ASCIIDOCTOR_COMMON_FLAGS = \
+GATBPS_COMMON_ASCIIDOCTOR_FLAGS = \
   --failure-level=WARN \
   -a attribute-missing=warn \
 $(prevent_an_empty_line)
@@ -69,7 +69,7 @@ $1$2:
 	$(GATBPS_V_ASCIIDOCTOR)$(ASCIIDOCTOR) ]dnl
 [-b html ]dnl
 [-o $][@$(TMPEXT).tmp ]dnl
-[$(GATBPS_ASCIIDOCTOR_COMMON_FLAGS) ]dnl
+[$(GATBPS_COMMON_ASCIIDOCTOR_FLAGS) ]dnl
 [$(AM_ASCIIDOCTOR_FLAGS) ]dnl
 [$(ASCIIDOCTOR_FLAGS) ]dnl
 [$<
@@ -87,7 +87,7 @@ $1$2:
 	$(GATBPS_V_ASCIIDOCTOR)$(ASCIIDOCTOR) ]dnl
 [-b manpage ]dnl
 [-o $][@$(TMPEXT).tmp ]dnl
-[$(GATBPS_ASCIIDOCTOR_COMMON_FLAGS) ]dnl
+[$(GATBPS_COMMON_ASCIIDOCTOR_FLAGS) ]dnl
 [$(AM_ASCIIDOCTOR_FLAGS) ]dnl
 [$(ASCIIDOCTOR_FLAGS) ]dnl
 [$<
@@ -112,7 +112,7 @@ pushdef([x], [[
 $1$2:
 	$(GATBPS_V_ASCIIDOCTOR_PDF)$(ASCIIDOCTOR_PDF) ]dnl
 [-o $][@$(TMPEXT).tmp ]dnl
-[$(GATBPS_ASCIIDOCTOR_COMMON_FLAGS) ]dnl
+[$(GATBPS_COMMON_ASCIIDOCTOR_FLAGS) ]dnl
 [$(AM_ASCIIDOCTOR_PDF_FLAGS) ]dnl
 [$(ASCIIDOCTOR_PDF_FLAGS) ]dnl
 [$<
