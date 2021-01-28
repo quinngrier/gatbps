@@ -43,6 +43,7 @@ GATBPS_V_$1_1 =
 ]])
 
 GATBPS_V_([ASCIIDOCTOR])
+GATBPS_V_([ASCIIDOCTOR_PDF])
 GATBPS_V_([GATBPS])
 
 popdef([GATBPS_V_])
@@ -51,14 +52,45 @@ popdef([pad])
 [
 
 #-----------------------------------------------------------------------
-# GATBPS: Building man pages from Asciidoctor files
+# GATBPS: Asciidoctor rules
 #-----------------------------------------------------------------------
 
 ]
 
+GATBPS_ASCIIDOCTOR_COMMON_FLAGS = \
+  --failure-level=WARN \
+  -a attribute-missing=warn \
+$(prevent_an_empty_line)
+
+# html
+
 pushdef([x], [[
 $1$2:
-	$(GATBPS_V_ASCIIDOCTOR)$(ASCIIDOCTOR) -b manpage -o $][@$(TMPEXT).tmp $<
+	$(GATBPS_V_ASCIIDOCTOR)$(ASCIIDOCTOR) ]dnl
+[-b html ]dnl
+[-o $][@$(TMPEXT).tmp ]dnl
+[$(GATBPS_ASCIIDOCTOR_COMMON_FLAGS) ]dnl
+[$(AM_ASCIIDOCTOR_FLAGS) ]dnl
+[$(ASCIIDOCTOR_FLAGS) ]dnl
+[$<
+	$(AM_V_at)mv -f $][@$(TMPEXT).tmp $][@
+]])
+
+x([.adoc], [.html])
+
+popdef([x])
+
+# manpage
+
+pushdef([x], [[
+$1$2:
+	$(GATBPS_V_ASCIIDOCTOR)$(ASCIIDOCTOR) ]dnl
+[-b manpage ]dnl
+[-o $][@$(TMPEXT).tmp ]dnl
+[$(GATBPS_ASCIIDOCTOR_COMMON_FLAGS) ]dnl
+[$(AM_ASCIIDOCTOR_FLAGS) ]dnl
+[$(ASCIIDOCTOR_FLAGS) ]dnl
+[$<
 	$(AM_V_at)mv -f $][@$(TMPEXT).tmp $][@
 ]])
 
@@ -71,6 +103,23 @@ x([.adoc], [.6])
 x([.adoc], [.7])
 x([.adoc], [.8])
 x([.adoc], [.9])
+
+popdef([x])
+
+# pdf
+
+pushdef([x], [[
+$1$2:
+	$(GATBPS_V_ASCIIDOCTOR_PDF)$(ASCIIDOCTOR_PDF) ]dnl
+[-o $][@$(TMPEXT).tmp ]dnl
+[$(GATBPS_ASCIIDOCTOR_COMMON_FLAGS) ]dnl
+[$(AM_ASCIIDOCTOR_PDF_FLAGS) ]dnl
+[$(ASCIIDOCTOR_PDF_FLAGS) ]dnl
+[$<
+	$(AM_V_at)mv -f $][@$(TMPEXT).tmp $][@
+]])
+
+x([.adoc], [.pdf])
 
 popdef([x])
 
