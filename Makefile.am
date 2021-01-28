@@ -94,6 +94,7 @@ include $(srcdir)/build-aux/cp.am
 include $(srcdir)/build-aux/docbook-dist.am
 include $(srcdir)/build-aux/docbook.am
 include $(srcdir)/build-aux/dvi-dist.am
+include $(srcdir)/build-aux/gatbps.am
 include $(srcdir)/build-aux/html-dist.am
 include $(srcdir)/build-aux/m4.am
 include $(srcdir)/build-aux/pdf-dist.am
