@@ -22,14 +22,15 @@ files = \
   build-aux/GATBPS_RECIPE_MARKER.am \
   build-aux/GATBPS_VPATH_SEARCH.am \
   build-aux/GATBPS_V_PAD.am \
-  build-aux/VERSION.sh \
   build-aux/LTCURRENT.sh \
+  build-aux/VERSION.sh \
   build-aux/cp.am \
   build-aux/docbook-dist.am \
   build-aux/docbook.am \
   build-aux/dvi-dist.am \
   build-aux/echo.sh \
   build-aux/gatbps.ac \
+  build-aux/gatbps.am \
   build-aux/html-dist.am \
   build-aux/m4.am \
   build-aux/pdf-dist.am \
