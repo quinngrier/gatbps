@@ -9,7 +9,6 @@ recursion_code(
   {%|sh-form.sh|%},
   {%|echo.sh|%},
   {%|GATBPS_V_PAD.am|%},
-  {%|GATBPS_V_NOP.am|%},
   {%|GATBPS_VPATH_SEARCH.am|%},
   {%|GATBPS_RECIPE_MARKER.am|%},
   {%|GATBPS_PROG_MKDIR_P.m4|%},

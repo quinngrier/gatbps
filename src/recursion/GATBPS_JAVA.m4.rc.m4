@@ -7,7 +7,6 @@ include({%|src/tools/recursion_code.m4|%}){%||%}dnl
 recursion_code(
   {%|GATBPS_JAVA.m4|%},
   {%|java.am|%},
-  {%|GATBPS_V_NOP.am|%},
   {%|GATBPS_RECIPE_MARKER.am|%},
   {%|GATBPS_PROG_MKDIR_P.m4|%},
   {%|GATBPS_CHECK_CLASSPATH_SEPARATOR.m4|%},

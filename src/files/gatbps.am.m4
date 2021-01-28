@@ -32,6 +32,11 @@ SUFFIXES += .adoc
 # GATBPS: Silent rule helpers
 #-----------------------------------------------------------------------
 
+GATBPS_V_NOP = $(GATBPS_V_NOP_@AM_V@)
+GATBPS_V_NOP_ = $(GATBPS_V_NOP_@AM_DEFAULT_V@)
+GATBPS_V_NOP_0 =
+GATBPS_V_NOP_1 = @-':'
+
 ]
 
 pushdef([pad], [ifelse($1, 0, , [pad(eval($1 - 1)) ])])

@@ -7,7 +7,6 @@ include({%|src/tools/recursion_code.m4|%}){%||%}dnl
 recursion_code(
   {%|docbook-dist.am|%},
   {%|cp.am|%},
-  {%|GATBPS_V_NOP.am|%},
   {%|CC0-1.0.txt|%},
   {%||%}){%||%}dnl
 dnl
