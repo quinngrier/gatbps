@@ -74,6 +74,7 @@ $1$2:
 	$(GATBPS_V_ASCIIDOCTOR)$(ASCIIDOCTOR) ]dnl
 [-b html ]dnl
 [-o $][@$(TMPEXT).tmp ]dnl
+[-r asciidoctor-diagram ]dnl
 [$(GATBPS_COMMON_ASCIIDOCTOR_FLAGS) ]dnl
 [$(AM_ASCIIDOCTOR_FLAGS) ]dnl
 [$(ASCIIDOCTOR_FLAGS) ]dnl
