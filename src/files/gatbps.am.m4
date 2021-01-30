@@ -28,6 +28,31 @@ SUFFIXES += .8
 SUFFIXES += .9
 SUFFIXES += .adoc
 
+##----------------------------------------------------------------------
+## Temporary file suffixes
+##----------------------------------------------------------------------
+##
+## The user can optionally define TMPEXT to a suffix of their choice,
+## such as TMPEXT = .foo, and we will use $(TMPEXT).tmp* as our suffix
+## pattern for temporary files. This way, the pattern defaults to .tmp*
+## if the user doesn't define TMPEXT.
+##
+## We also define TSUF = $(TMPEXT).tmp to make our code easier to read,
+## as this construct is frequently used. The user can also use TSUF in
+## their own code.
+##
+## In general, a recipe should use $@$(TSUF)* as its name pattern for
+## temporary files. For example, if a recipe needs one temporary file
+## then $@$(TSUF) would suffice, if it needs two temporary files then
+## $@$(TSUF)1 and $@$(TSUF)2 would suffice, and so on. Cleanup can be
+## performed with rm -f -r $@$(TSUF)*.
+##
+## Note that if the user defines TMPEXT = .tmp, then TSUF will be
+## .tmp.tmp, which can look suspicious.
+##
+
+TSUF = $(TMPEXT).tmp
+
 #-----------------------------------------------------------------------
 # GATBPS: Silent rule helpers
 #-----------------------------------------------------------------------
@@ -73,13 +98,13 @@ pushdef([x], [[
 $1$2:
 	$(GATBPS_V_ASCIIDOCTOR)$(ASCIIDOCTOR) ]dnl
 [-b html ]dnl
-[-o $][@$(TMPEXT).tmp ]dnl
+[-o $][@$(TSUF) ]dnl
 [-r asciidoctor-diagram ]dnl
 [$(GATBPS_COMMON_ASCIIDOCTOR_FLAGS) ]dnl
 [$(AM_ASCIIDOCTOR_FLAGS) ]dnl
 [$(ASCIIDOCTOR_FLAGS) ]dnl
 [$<
-	$(AM_V_at)mv -f $][@$(TMPEXT).tmp $][@
+	$(AM_V_at)mv -f $][@$(TSUF) $][@
 ]])
 
 x([.adoc], [.html])
@@ -92,12 +117,12 @@ pushdef([x], [[
 $1$2:
 	$(GATBPS_V_ASCIIDOCTOR)$(ASCIIDOCTOR) ]dnl
 [-b manpage ]dnl
-[-o $][@$(TMPEXT).tmp ]dnl
+[-o $][@$(TSUF) ]dnl
 [$(GATBPS_COMMON_ASCIIDOCTOR_FLAGS) ]dnl
 [$(AM_ASCIIDOCTOR_FLAGS) ]dnl
 [$(ASCIIDOCTOR_FLAGS) ]dnl
 [$<
-	$(AM_V_at)mv -f $][@$(TMPEXT).tmp $][@
+	$(AM_V_at)mv -f $][@$(TSUF) $][@
 ]])
 
 x([.adoc], [.1])
@@ -117,12 +142,12 @@ popdef([x])
 pushdef([x], [[
 $1$2:
 	$(GATBPS_V_ASCIIDOCTOR_PDF)$(ASCIIDOCTOR_PDF) ]dnl
-[-o $][@$(TMPEXT).tmp ]dnl
+[-o $][@$(TSUF) ]dnl
 [$(GATBPS_COMMON_ASCIIDOCTOR_FLAGS) ]dnl
 [$(AM_ASCIIDOCTOR_PDF_FLAGS) ]dnl
 [$(ASCIIDOCTOR_PDF_FLAGS) ]dnl
 [$<
-	$(AM_V_at)mv -f $][@$(TMPEXT).tmp $][@
+	$(AM_V_at)mv -f $][@$(TSUF) $][@
 ]])
 
 x([.adoc], [.pdf])
@@ -141,8 +166,8 @@ pushdef([x], [[
 
 $1:
 	$(AM_V_GEN)]ifelse(index([$1], /), -1, , [[$(MKDIR_P) $(@D)
-	$(AM_V_at)]])[sh $(srcdir)/build-aux/]patsubst([[$1]], [\(.\).*/], [\1])[.sh >$][@$(TMPEXT).tmp
-	$(AM_V_at)mv -f $][@$(TMPEXT).tmp $][@
+	$(AM_V_at)]])[sh $(srcdir)/build-aux/]patsubst([[$1]], [\(.\).*/], [\1])[.sh >$][@$(TSUF)
+	$(AM_V_at)mv -f $][@$(TSUF) $][@
 
 MAINTAINERCLEANFILES += $1
 
