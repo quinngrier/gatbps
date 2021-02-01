@@ -34,7 +34,7 @@ SUFFIXES += .adoc
 ##
 ## The user can optionally define TMPEXT to a suffix of their choice,
 ## such as TMPEXT = .foo, and we will use $(TMPEXT).tmp* as our suffix
-## pattern for temporary files. This way, the pattern defaults to .tmp*
+## pattern for temporary files. Note that the pattern defaults to .tmp*
 ## if the user doesn't define TMPEXT.
 ##
 ## We also define TSUF = $(TMPEXT).tmp to make our code easier to read,
