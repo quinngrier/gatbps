@@ -46,7 +46,7 @@ EOF
 
       ]AM_CONDITIONAL(
         [HAVE_]$1,
-        [[! (exit $HAVE_]$1[)]])[
+        [[(case $HAVE_]$1[ in 0) exit 1 ;; *) exit 0 ;; esac)]])[
 
       ]m4_popdef($1)[
 
