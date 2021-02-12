@@ -41,9 +41,12 @@ EOF
         "$$1",
         m4_normalize($2)[ command])[
 
+      command -v "$]$1[" >/dev/null && HAVE_]$1[=1 || HAVE_]$1[=0
+      readonly HAVE_]$1[
+
       ]AM_CONDITIONAL(
         [HAVE_]$1,
-        [[command -v "$]$1[" >/dev/null]])[
+        [[! (exit $HAVE_]$1[)]])[
 
       ]m4_popdef($1)[
 
