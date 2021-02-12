@@ -24,6 +24,13 @@ m4_define(
         m4_dquote(m4_normalize($2 $3)),
         m4_dquote(m4_normalize($2)))[
 
+      ]$1[_LATER=`sed 's/@/{@}AT{@}/g' <<E/O/F
+$]$1[
+E/O/F
+` || exit $?
+      ]AC_SUBST($1[_LATER])[
+      ]AM_SUBST_NOTMAKE($1[_LATER])[
+
       ]AC_ARG_VAR(
         $1,
         m4_normalize($2)[ command])[
