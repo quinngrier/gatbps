@@ -43,15 +43,8 @@ m4_define(
 
   }]])
 
-GATBPS_PROG_([[ASCIIDOCTOR]],
-  [[asciidoctor]],
-  [[
-  ]])
-
-GATBPS_PROG_([[ASCIIDOCTOR_PDF]],
-  [[asciidoctor-pdf]],
-  [[
-  ]])
+GATBPS_PROG_([[ASCIIDOCTOR]], [[asciidoctor]])
+GATBPS_PROG_([[ASCIIDOCTOR_PDF]], [[asciidoctor-pdf]])
 
 GATBPS_PROG_ASCIIDOCTOR
 GATBPS_PROG_ASCIIDOCTOR_PDF
