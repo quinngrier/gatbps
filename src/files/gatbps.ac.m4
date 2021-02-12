@@ -6,11 +6,6 @@ rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
 header_comment({%|dnl|%}, {%|dnl|%}){%|
-dnl
-
-[
-
-]
 
 dnl---------------------------------------------------------------------
 dnl Program checks
@@ -61,11 +56,9 @@ GATBPS_PROG_([[ASCIIDOCTOR_PDF]],
 GATBPS_PROG_ASCIIDOCTOR
 GATBPS_PROG_ASCIIDOCTOR_PDF
 
-[
+dnl---------------------------------------------------------------------
 
-#-----------------------------------------------------------------------
-
-]m4_define(
+m4_define(
   [GATBPS_LANG_PROGRAM],
   [[
     ]AC_LANG_SOURCE([[
@@ -96,21 +89,19 @@ GATBPS_PROG_ASCIIDOCTOR_PDF
       }
 
     ]])[
-  ]])[
+  ]])
 
-#-----------------------------------------------------------------------
+dnl---------------------------------------------------------------------
 
-]m4_define(
+m4_define(
   [GATBPS_SOFT_REQUIRE],
-  [m4_ifdef($1, [AC_REQUIRE($1)])])[
+  [m4_ifdef($1, [AC_REQUIRE($1)])])
 
-]m4_define(
+m4_define(
   [GATBPS_SOFT_VAR_DEP],
-  [m4_ifdef([DEFINE_]$1, [$1])])[
+  [m4_ifdef([DEFINE_]$1, [$1])])
 
-#-----------------------------------------------------------------------
-
-]
+dnl---------------------------------------------------------------------
 
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})
 dnl
