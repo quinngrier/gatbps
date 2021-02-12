@@ -52,6 +52,11 @@ EOF
 
 GATBPS_PROG_([[ASCIIDOCTOR]], [[asciidoctor]])
 GATBPS_PROG_([[ASCIIDOCTOR_PDF]], [[asciidoctor-pdf]])
+GATBPS_PROG_([[JAR]], [[jar]])
+GATBPS_PROG_([[JAVA]], [[java]])
+GATBPS_PROG_([[JAVAC]], [[javac]])
+GATBPS_PROG_([[JAVADOC]], [[javadoc]])
+GATBPS_PROG_([[JDEPS]], [[jdeps]])
 
 GATBPS_PROG_ASCIIDOCTOR
 GATBPS_PROG_ASCIIDOCTOR_PDF
