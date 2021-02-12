@@ -28,6 +28,7 @@ m4_define(
 $]$1[
 EOF
 ` || exit $?
+      readonly ]$1[_LATER
       ]AC_SUBST($1[_LATER])[
       ]AM_SUBST_NOTMAKE($1[_LATER])[
 
