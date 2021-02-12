@@ -10,50 +10,58 @@ dnl
 
 [
 
-#-----------------------------------------------------------------------
-# GATBPS: Program checks
-#-----------------------------------------------------------------------
+]
 
-]m4_define(
-  [GATBPS_CHECK_PROGS],
+dnl---------------------------------------------------------------------
+dnl Program checks
+dnl---------------------------------------------------------------------
+
+m4_define(
+  [GATBPS_PROG_],
   [[{ :
 
-    ]dnl Protect ourselves from double expanding $1.
-    m4_pushdef($1, m4_dquote($1))[
+    ]AC_DEFUN([GATBPS_PROG_]$1, [[{ :
 
-    ]AC_CHECK_PROGS(
-      $1,
-      m4_dquote(m4_normalize($2 $3)),
-      m4_dquote(m4_normalize($2)))[
+      ]m4_pushdef($1, m4_dquote($1))[
 
-    ]AC_ARG_VAR(
-      $1,
-      m4_normalize($2)[ command])[
+      ]AC_CHECK_PROGS(
+        $1,
+        m4_dquote(m4_normalize($2 $3)),
+        m4_dquote(m4_normalize($2)))[
 
-    ]AC_DEFINE_UNQUOTED(
-      $1,
-      "$$1",
-      m4_normalize($2)[ command])[
+      ]AC_ARG_VAR(
+        $1,
+        m4_normalize($2)[ command])[
 
-    ]AM_CONDITIONAL(
-      [HAVE_]$1,
-      [[command -v "$]$1[" >/dev/null]])[
+      ]AC_DEFINE_UNQUOTED(
+        $1,
+        "$$1",
+        m4_normalize($2)[ command])[
 
-    ]m4_popdef($1)[
+      ]AM_CONDITIONAL(
+        [HAVE_]$1,
+        [[command -v "$]$1[" >/dev/null]])[
 
-  }]])[
+      ]m4_popdef($1)[
 
-]GATBPS_CHECK_PROGS(
-  [[ASCIIDOCTOR]],
+    }]])[
+
+  }]])
+
+GATBPS_PROG_([[ASCIIDOCTOR]],
   [[asciidoctor]],
   [[
-  ]])[
+  ]])
 
-]GATBPS_CHECK_PROGS(
-  [[ASCIIDOCTOR_PDF]],
+GATBPS_PROG_([[ASCIIDOCTOR_PDF]],
   [[asciidoctor-pdf]],
   [[
-  ]])[
+  ]])
+
+GATBPS_PROG_ASCIIDOCTOR
+GATBPS_PROG_ASCIIDOCTOR_PDF
+
+[
 
 #-----------------------------------------------------------------------
 
