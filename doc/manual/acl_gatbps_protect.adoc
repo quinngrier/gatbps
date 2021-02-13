@@ -1,4 +1,4 @@
-[[acl_gatbps_protect]]
+[[acl_gatbps_protect,gatbps_protect]]
 = The `gatbps_protect` macro
 
 .Autoconf
