@@ -1,14 +1,17 @@
-[[ac_GATBPS_SOFT_REQUIRE,GATBPS_SOFT_REQUIRE]]
+[[acl_GATBPS_SOFT_REQUIRE,GATBPS_SOFT_REQUIRE]]
 = The `GATBPS_SOFT_REQUIRE` macro
 
 .Autoconf
 [source,subs="normal"]
 ----
-GATBPS_SOFT_REQUIRE(macro)
+GATBPS_SOFT_REQUIRE(<name>)
 ----
 
-The `GATBPS_SOFT_REQUIRE` macro expands to `AC_REQUIRE(macro)` if
-`macro` is defined, or to nothing if not.
+The `GATBPS_SOFT_REQUIRE` macro is the same as the `AC_REQUIRE` macro
+except it has no effect if `<name>` is not defined as a macro.
+
+:fp_name: <name>
+include::acl_first_identifier_adjustment_fragment.adoc[]
 
 //
 // The authors of this file have waived all copyright and
