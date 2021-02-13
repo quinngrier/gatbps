@@ -53,78 +53,76 @@ m4_define([gatbps_unprotect],
     )])])
 
 dnl---------------------------------------------------------------------
-dnl Program checks
+dnl GATBPS_PROG
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_PROG_],
-  [AC_DEFUN([GATBPS_PROG_]$1, [[{ :
+m4_define([GATBPS_PROG],
+  [AC_DEFUN([GATBPS_PROG_][$1], [[{ :
 
     ]gatbps_protect(
-      ]m4_dquote($*)[,
-      ]m4_dquote($1)[[_LATER],
-      [HAVE_]]m4_dquote($1)[)[
+      $@,
+      [$1_LATER],
+      [HAVE_$1])[
 
     ]AC_CHECK_PROGS(
-      ]m4_dquote($1)[,
-      m4_normalize(]m4_dquote($2)[ ]m4_dquote($3)[),
-      m4_normalize(]m4_dquote($2)[))[
+      [$1],
+      m4_normalize([$2 $3]),
+      m4_normalize([$2]))[
 
-    ]]m4_dquote($1)[[_LATER=`sed 's/@/{@}AT{@}/g' <<EOF
-$]]m4_dquote($1)[[
+    $1_LATER=`sed 's/@/{@}AT{@}/g' <<EOF
+$$1
 EOF
 ` || exit $?
-    readonly ]]m4_dquote($1)[[_LATER
+    readonly $1_LATER
 
-    ]AC_SUBST(]m4_dquote($1)[[_LATER])[
-    ]AM_SUBST_NOTMAKE(]m4_dquote($1)[[_LATER])[
+    ]AC_SUBST([$1_LATER])[
+    ]AM_SUBST_NOTMAKE([$1_LATER])[
 
     ]AC_ARG_VAR(
-      ]m4_dquote($1)[,
-      m4_normalize(]m4_dquote($2)[)[ command])[
+      [$1],
+      m4_normalize([$2])[ command])[
 
     ]AC_DEFINE_UNQUOTED(
-      ]m4_dquote($1)[,
-      ["$]]m4_dquote($1)[["],
-      m4_normalize(]m4_dquote($2)[)[ command])[
+      [$1],
+      ["$$1"],
+      m4_normalize([$2])[ command])[
 
-    if command -v "$]]m4_dquote($1)[[" >/dev/null; then
-      HAVE_]]m4_dquote($1)[[=1
+    if command -v "$$1" >/dev/null; then
+      HAVE_$1=1
     else
-      HAVE_]]m4_dquote($1)[[=0
+      HAVE_$1=0
     fi
-    readonly HAVE_]]m4_dquote($1)[[
+    readonly HAVE_$1
 
-    ]AC_SUBST(HAVE_]m4_dquote($1)[)[
+    ]AC_SUBST([HAVE_$1])[
 
     ]AC_DEFINE_UNQUOTED(
-      [HAVE_]]m4_dquote($1)[,
-      [$HAVE_]]m4_dquote($1)[,
-      m4_normalize(]m4_dquote($2)[)[ command availability])[
+      [HAVE_$1],
+      [$HAVE_$1],
+      m4_normalize([$2])[ command availability])[
 
     ]AM_CONDITIONAL(
-      [HAVE_]]m4_dquote($1)[,
-      [[(
-        if (exit $HAVE_]]m4_dquote($1)[[); then
-          exit 1
-        else
-          exit 0
-        fi
-      )]])[
+      [HAVE_$1],
+      [[(if (exit $HAVE_$1); then exit 1; else exit 0; fi)]])[
 
     ]gatbps_unprotect(
-      ]m4_dquote($*)[,
-      ]m4_dquote($1)[[_LATER],
-      [HAVE_]]m4_dquote($1)[)[
+      $@,
+      [$1_LATER],
+      [HAVE_$1])[
 
   }]])])
 
-GATBPS_PROG_([[ASCIIDOCTOR]], [[asciidoctor]])
-GATBPS_PROG_([[ASCIIDOCTOR_PDF]], [[asciidoctor-pdf]])
-GATBPS_PROG_([[JAR]], [[jar]])
-GATBPS_PROG_([[JAVA]], [[java]])
-GATBPS_PROG_([[JAVAC]], [[javac]])
-GATBPS_PROG_([[JAVADOC]], [[javadoc]])
-GATBPS_PROG_([[JDEPS]], [[jdeps]])
+dnl---------------------------------------------------------------------
+
+GATBPS_PROG([ASCIIDOCTOR], [asciidoctor])
+GATBPS_PROG([ASCIIDOCTOR_PDF], [asciidoctor-pdf])
+GATBPS_PROG([JAR], [jar])
+GATBPS_PROG([JAVA], [java])
+GATBPS_PROG([JAVAC], [javac])
+GATBPS_PROG([JAVADOC], [javadoc])
+GATBPS_PROG([JDEPS], [jdeps])
+
+dnl---------------------------------------------------------------------
 
 GATBPS_PROG_ASCIIDOCTOR
 GATBPS_PROG_ASCIIDOCTOR_PDF
