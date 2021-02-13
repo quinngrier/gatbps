@@ -1,0 +1,25 @@
+[[acl_gatbps_protect]]
+= The `gatbps_protect` macro
+
+.Autoconf
+[source,subs="normal"]
+----
+gatbps_protect([<arg>...])
+----
+
+The `gatbps_protect` macro protects every identifier `x` appearing
+anywhere in the arguments from expansion by calling
+`m4_pushdef([x], [[x]])`.
+The identifiers can later be unprotected by calling
+xref:acl_gatbps_unprotect.adoc#acl_gatbps_unprotect[`gatbps_unprotect`]
+with the same arguments.
+
+//
+// The authors of this file have waived all copyright and
+// related or neighboring rights to the extent permitted by
+// law as described by the CC0 1.0 Universal Public Domain
+// Dedication. You should have received a copy of the full
+// dedication along with this file, typically as a file
+// named <CC0-1.0.txt>. If not, it may be available at
+// <https://creativecommons.org/publicdomain/zero/1.0/>.
+//

@@ -8,13 +8,13 @@ include({%|src/tools/header_comment.m4|%}){%||%}dnl
 header_comment({%|dnl|%}, {%|dnl|%}){%|
 
 dnl---------------------------------------------------------------------
+dnl gatbps_protect
+dnl---------------------------------------------------------------------
 
-dnl Protect every M4 identifier x appearing anywhere in $* from
-dnl expansion by calling m4_pushdef([x], [[x]]).
 m4_define([gatbps_protect],
   [m4_if(
     m4_bregexp([$*], [[a-zA-Z_][a-zA-Z_0-9]*]),
-    -1,
+    [-1],
     [],
     [m4_ignore(
       m4_pushdef(
@@ -30,12 +30,14 @@ m4_define([gatbps_protect],
           [[\1]]))
     )])])
 
-dnl Undo the effect of gatbps_protect by calling m4_popdef([x]) for
-dnl every M4 identifier x appearing anywhere in $* in reverse order.
+dnl---------------------------------------------------------------------
+dnl gatbps_unprotect
+dnl---------------------------------------------------------------------
+
 m4_define([gatbps_unprotect],
   [m4_if(
     m4_bregexp([$*], [[a-zA-Z_][a-zA-Z_0-9]*]),
-    -1,
+    [-1],
     [],
     [m4_ignore(
       gatbps_unprotect(
