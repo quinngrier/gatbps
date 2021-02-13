@@ -128,6 +128,37 @@ GATBPS_PROG_ASCIIDOCTOR
 GATBPS_PROG_ASCIIDOCTOR_PDF
 
 dnl---------------------------------------------------------------------
+dnl GATBPS_CHECK
+dnl---------------------------------------------------------------------
+
+dnl TODO
+
+m4_ignore([GATBPS_CHECK], [[{ :
+
+  $2_was_cached=0
+
+  ]AC_CACHE_CHECK(
+    [$1],
+    [$2],
+    [[{ :
+
+      # TODO: use $4 as prerequisites with expr
+
+      $2_was_cached=false
+
+      ]$3[
+
+    }]])[
+
+  if $][{]$2[+:} false; then
+    :
+  else
+    : # TODO: barf, the caller failed to set $2
+  fi
+
+}]])
+
+dnl---------------------------------------------------------------------
 dnl GATBPS_LANG_PROGRAM
 dnl---------------------------------------------------------------------
 
