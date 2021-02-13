@@ -128,39 +128,44 @@ GATBPS_PROG_ASCIIDOCTOR
 GATBPS_PROG_ASCIIDOCTOR_PDF
 
 dnl---------------------------------------------------------------------
+dnl GATBPS_LANG_PROGRAM
+dnl---------------------------------------------------------------------
 
-m4_define(
-  [GATBPS_LANG_PROGRAM],
-  [[
-    ]AC_LANG_SOURCE([[
+m4_define([GATBPS_LANG_PROGRAM],
+  [AC_LANG_CASE([], [([[
+
+    ]])], [C], [AC_LANG_SOURCE([[
 
       ]$1[
-
       #if 0
-
       #elif __clang__
-
         __attribute__((__optnone__))
         static void f() { ]$2[ }
-
       #elif __GNUC__
-
         __attribute__((__optimize__(0)))
         static void f() { ]$2[ }
-
       #else
-
         static void f() { ]$2[ }
-
       #endif
+      int main() { f(); return 0; }
 
-      int main() {
-        f();
-        return 0;
-      }
+    ]])], [C++], [AC_LANG_SOURCE([[
 
-    ]])[
-  ]])
+      ]$1[
+      #if 0
+      #elif __clang__
+        __attribute__((__optnone__))
+        static void f() { ]$2[ }
+      #elif __GNUC__
+        __attribute__((__optimize__(0)))
+        static void f() { ]$2[ }
+      #else
+        static void f() { ]$2[ }
+      #endif
+      int main() { f(); return 0; }
+
+    ]])],
+    [m4_fatal([GATBPS_LANG_PROGRAM does not support ]_AC_LANG)])])
 
 dnl---------------------------------------------------------------------
 dnl GATBPS_SOFT_REQUIRE
