@@ -8,56 +8,113 @@ include({%|src/tools/header_comment.m4|%}){%||%}dnl
 header_comment({%|dnl|%}, {%|dnl|%}){%|
 
 dnl---------------------------------------------------------------------
+
+dnl Protect every M4 identifier x appearing anywhere in $* from
+dnl expansion by calling m4_pushdef([x], [[x]]).
+m4_define([gatbps_protect],
+  [m4_if(
+    m4_bregexp([$*], [[a-zA-Z_][a-zA-Z_0-9]*]),
+    -1,
+    [],
+    [m4_ignore(
+      m4_pushdef(
+        m4_bregexp([$*], [[a-zA-Z_][a-zA-Z_0-9]*], [[\&]]),
+        m4_bregexp([$*], [[a-zA-Z_][a-zA-Z_0-9]*], [[[\&]]]))
+      gatbps_protect(
+        m4_bregexp(
+          m4_bpatsubst(
+            [$*],
+            [[^a-zA-Z_]*\([a-zA-Z_][a-zA-Z_0-9]*\)[^a-zA-Z_]*],
+            [[[\1]]]),
+          [\[[a-zA-Z_][a-zA-Z_0-9]*\]\(.*\)],
+          [[\1]]))
+    )])])
+
+dnl Undo the effect of gatbps_protect by calling m4_popdef([x]) for
+dnl every M4 identifier x appearing anywhere in $* in reverse order.
+m4_define([gatbps_unprotect],
+  [m4_if(
+    m4_bregexp([$*], [[a-zA-Z_][a-zA-Z_0-9]*]),
+    -1,
+    [],
+    [m4_ignore(
+      gatbps_unprotect(
+        m4_bregexp(
+          m4_bpatsubst(
+            [$*],
+            [[^a-zA-Z_]*\([a-zA-Z_][a-zA-Z_0-9]*\)[^a-zA-Z_]*],
+            [[[\1]]]),
+          [\[[a-zA-Z_][a-zA-Z_0-9]*\]\(.*\)],
+          [[\1]]))
+      m4_popdef(
+        m4_bregexp([$*], [[a-zA-Z_][a-zA-Z_0-9]*], [[\&]]))
+    )])])
+
+dnl---------------------------------------------------------------------
 dnl Program checks
 dnl---------------------------------------------------------------------
 
-m4_define(
-  [GATBPS_PROG_],
-  [[{ :
+m4_define([GATBPS_PROG_],
+  [AC_DEFUN([GATBPS_PROG_]$1, [[{ :
 
-    ]AC_DEFUN([GATBPS_PROG_]$1, [[{ :
+    ]gatbps_protect(
+      ]m4_dquote($*)[,
+      ]m4_dquote($1)[[_LATER],
+      [HAVE_]]m4_dquote($1)[)[
 
-      ]m4_pushdef($1, m4_dquote($1))[
+    ]AC_CHECK_PROGS(
+      ]m4_dquote($1)[,
+      m4_normalize(]m4_dquote($2)[ ]m4_dquote($3)[),
+      m4_normalize(]m4_dquote($2)[))[
 
-      ]AC_CHECK_PROGS(
-        $1,
-        m4_dquote(m4_normalize($2 $3)),
-        m4_dquote(m4_normalize($2)))[
-
-      ]$1[_LATER=`sed 's/@/{@}AT{@}/g' <<EOF
-$]$1[
+    ]]m4_dquote($1)[[_LATER=`sed 's/@/{@}AT{@}/g' <<EOF
+$]]m4_dquote($1)[[
 EOF
 ` || exit $?
-      readonly ]$1[_LATER
-      ]AC_SUBST($1[_LATER])[
-      ]AM_SUBST_NOTMAKE($1[_LATER])[
+    readonly ]]m4_dquote($1)[[_LATER
 
-      ]AC_ARG_VAR(
-        $1,
-        m4_normalize($2)[ command])[
+    ]AC_SUBST(]m4_dquote($1)[[_LATER])[
+    ]AM_SUBST_NOTMAKE(]m4_dquote($1)[[_LATER])[
 
-      ]AC_DEFINE_UNQUOTED(
-        $1,
-        "$$1",
-        m4_normalize($2)[ command])[
+    ]AC_ARG_VAR(
+      ]m4_dquote($1)[,
+      m4_normalize(]m4_dquote($2)[)[ command])[
 
-      command -v "$]$1[" >/dev/null && HAVE_]$1[=1 || HAVE_]$1[=0
-      readonly HAVE_]$1[
-      ]AC_SUBST([HAVE_]$1)[
-      ]AC_DEFINE_UNQUOTED(
-        [HAVE_]$1,
-        [$HAVE_]$1,
-        m4_normalize($2)[ command availability])[
+    ]AC_DEFINE_UNQUOTED(
+      ]m4_dquote($1)[,
+      ["$]]m4_dquote($1)[["],
+      m4_normalize(]m4_dquote($2)[)[ command])[
 
-      ]AM_CONDITIONAL(
-        [HAVE_]$1,
-        [[(case $HAVE_]$1[ in 0) exit 1 ;; *) exit 0 ;; esac)]])[
+    if command -v "$]]m4_dquote($1)[[" >/dev/null; then
+      HAVE_]]m4_dquote($1)[[=1
+    else
+      HAVE_]]m4_dquote($1)[[=0
+    fi
+    readonly HAVE_]]m4_dquote($1)[[
 
-      ]m4_popdef($1)[
+    ]AC_SUBST(HAVE_]m4_dquote($1)[)[
 
-    }]])[
+    ]AC_DEFINE_UNQUOTED(
+      [HAVE_]]m4_dquote($1)[,
+      [$HAVE_]]m4_dquote($1)[,
+      m4_normalize(]m4_dquote($2)[)[ command availability])[
 
-  }]])
+    ]AM_CONDITIONAL(
+      [HAVE_]]m4_dquote($1)[,
+      [[(
+        if (exit $HAVE_]]m4_dquote($1)[[); then
+          exit 1
+        else
+          exit 0
+        fi
+      )]])[
+
+    ]gatbps_unprotect(
+      ]m4_dquote($*)[,
+      ]m4_dquote($1)[[_LATER],
+      [HAVE_]]m4_dquote($1)[)[
+
+  }]])])
 
 GATBPS_PROG_([[ASCIIDOCTOR]], [[asciidoctor]])
 GATBPS_PROG_([[ASCIIDOCTOR_PDF]], [[asciidoctor-pdf]])
