@@ -121,6 +121,7 @@ GATBPS_PROG([JAVA], [java])
 GATBPS_PROG([JAVAC], [javac])
 GATBPS_PROG([JAVADOC], [javadoc])
 GATBPS_PROG([JDEPS], [jdeps])
+GATBPS_PROG([XZ], [xz])
 
 dnl---------------------------------------------------------------------
 
