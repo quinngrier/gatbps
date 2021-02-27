@@ -27,6 +27,8 @@ SUFFIXES += .7
 SUFFIXES += .8
 SUFFIXES += .9
 SUFFIXES += .adoc
+SUFFIXES += .class
+SUFFIXES += .java
 
 ##----------------------------------------------------------------------
 ## Temporary file suffixes
@@ -224,9 +226,6 @@ GATBPS_JDEPS_TO_RULES_SCRIPT = ' \
 '
 
 GATBPS_OUTER_JAR_SUFFIX =
-
-SUFFIXES += .class
-SUFFIXES += .java
 
 ## end_variables
 
