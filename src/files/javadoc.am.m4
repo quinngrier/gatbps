@@ -14,25 +14,6 @@ header_comment({%|##|%}, {%|##|%}){%|
 ## For more information, see the GATBPS manual.
 ##
 
-## begin_variables
-
-GATBPS_V_JAVADOC = $(GATBPS_V_JAVADOC_@AM_V@)
-
-GATBPS_V_JAVADOC_ = $(GATBPS_V_JAVADOC_@AM_DEFAULT_V@)
-
-GATBPS_V_JAVADOC_0 = @$(SHELL) \
-  '-' \
-  $(srcdir)'/build-aux/echo.sh' \
-  '--' \
-  $(GATBPS_V_PAD_LEFT)'JAVADOC'$(GATBPS_V_PAD_RIGHT_7) \
-  $@ \
-  0</dev/null \
-|| 'exit' "$${?}";
-
-GATBPS_V_JAVADOC_1 =
-
-## end_variables
-
 ## begin_rules
 
 $(javadoc_dst): $(javadoc_src)
