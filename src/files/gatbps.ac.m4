@@ -169,7 +169,6 @@ m4_define([GATBPS_LANG_PROGRAM],
   [AC_LANG_CASE([], [([[
 
     ]])], [C], [AC_LANG_SOURCE([[
-
       ]$1[
       #if 0
       #elif __clang__
@@ -184,7 +183,6 @@ m4_define([GATBPS_LANG_PROGRAM],
       int main() { f(); return 0; }
 
     ]])], [C++], [AC_LANG_SOURCE([[
-
       ]$1[
       #if 0
       #elif __clang__
