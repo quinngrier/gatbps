@@ -464,17 +464,8 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 [$<
 	$(AM_V_at){ \
 	  ( \
-	    have_jdeps='no'; \
-	    for if_not_blank in \
-	      $(JDEPS) \
-	      $${prevent_an_empty_word_list} \
-	    ; do \
-	      have_jdeps='yes'; \
-	      'break'; \
-	    done; \
-	    'readonly' 'have_jdeps'; \
-	    case "$${have_jdeps}" in \
-	      'yes') \
+	    case $(HAVE_JDEPS) in \
+	      1) \
 	        $(JDEPS) \
 	          '-filter:none' \
 	          -e '$(GATBPS_INNER_PACKAGE)\..*' \
@@ -498,7 +489,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	          0</dev/null \
 	        || 'exit' "$${?}"; \
 	      ;; \
-	      'no') \
+	      0) \
 	        $(SHELL) \
 	          '-' \
 	          $(srcdir)'/build-aux/echo.sh' \
