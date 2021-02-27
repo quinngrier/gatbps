@@ -534,7 +534,6 @@ EOF1
           'set' "${prefix}"'tprm.texi' "${@}"
           'set' "${prefix}"'texinfo.css' "${@}"
           'set' "${prefix}"'texi-form.sh' "${@}"
-          'set' "${prefix}"'tar.am' "${@}"
           'set' "${prefix}"'sps.texi' "${@}"
           'set' "${prefix}"'shortcontents.texi' "${@}"
           'set' "${prefix}"'sh-form.sh' "${@}"
@@ -1496,8 +1495,6 @@ EOF1
 |%}help_code({%|shortcontents.texi|%}){%|
 
 |%}help_code({%|sps.texi|%}){%|
-
-|%}help_code({%|tar.am|%}){%|
 
 |%}help_code({%|texi-form.sh|%}){%|
 
@@ -3243,8 +3240,6 @@ EOF1
 
 |%}generation_code({%|sps.texi|%}){%|
 
-|%}generation_code({%|tar.am|%}){%|
-
 |%}generation_code({%|texi-form.sh|%}){%|
 
 |%}generation_code({%|texinfo.css|%}){%|
@@ -4645,11 +4640,6 @@ include(`src/recursion/shortcontents.texi.rc.m4'){%||%}dnl
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
 include(`src/recursion/sps.texi.rc.m4'){%||%}dnl
-{%|
-
-|%}dnl
-changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/tar.am.rc.m4'){%||%}dnl
 {%|
 
 |%}dnl
