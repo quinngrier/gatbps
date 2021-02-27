@@ -240,7 +240,7 @@ AC_DEFUN([GATBPS_TAR], [[{
 m4_if(
   m4_eval([$# < 2 || $# > 5]),
   [1],
-  [gatbps_fatal([
+  [m4_fatal([
     GATBPS_TAR requires 2 to 5 arguments
     ($# ]m4_if([$#], [1], [[was]], [[were]])[ given)
   ])])[]dnl
@@ -248,7 +248,7 @@ m4_if(
   m4_bregexp([$1], [[^
 	 ]]),
   [-1],
-  [gatbps_fatal([
+  [m4_fatal([
     GATBPS_TAR requires its first argument to contain at least one
     character that is not a space, tab, or newline character
   ])])[]dnl
@@ -256,7 +256,7 @@ m4_if(
   m4_bregexp([$2], [[^
 	 ]]),
   [-1],
-  [gatbps_fatal([
+  [m4_fatal([
     GATBPS_TAR requires its second argument to contain at least one
     character that is not a space, tab, or newline character
   ])])[]dnl
@@ -268,7 +268,7 @@ m4_if(
     [], [],
     [file_or_directory], [],
     [directory_contents], [],
-    [gatbps_fatal([
+    [m4_fatal([
       GATBPS_TAR requires its third argument to be either empty,
       "directory_contents", or "file_or_directory"
     ])])])[]dnl
@@ -281,7 +281,7 @@ m4_if(
     [distclean], [],
     [maintainer-clean], [],
     [mostlyclean], [],
-    [gatbps_fatal([
+    [m4_fatal([
       GATBPS_TAR requires its fourth argument to be either "clean",
       "distclean", "maintainer-clean", or "mostlyclean"
     ])])])[]dnl
@@ -291,7 +291,7 @@ m4_pushdef(
 	 ]+], [\1]))[]dnl
 ]m4_ifdef(
   [GATBPS_TAR_check_5],
-  [gatbps_fatal([
+  [m4_fatal([
     GATBPS_TAR_check_5 is already defined
   ])])[dnl
 ]m4_define(
@@ -303,7 +303,7 @@ m4_pushdef(
       m4_bregexp([$1], [^[
 	 ]+$]),
       [0],
-      [gatbps_fatal([
+      [m4_fatal([
         invalid last subargument of the fifth GATBPS_TAR argument:
       [--VERBATIM--] "$1"], [
         the last subargument must either be empty or contain at least
@@ -313,7 +313,7 @@ m4_pushdef(
       m4_bregexp([$1], [[^
 	 ]]),
       [-1],
-      [gatbps_fatal([
+      [m4_fatal([
         invalid non-last subargument of the fifth GATBPS_TAR argument:
       [--VERBATIM--] "$1"], [
         each non-last subargument must contain at least one character
@@ -356,7 +356,7 @@ m4_pushdef(
     [m4_dquote(leaf_prerequisites)]))[]dnl
 ]m4_ifdef(
   [GATBPS_TAR_rule_lines],
-  [gatbps_fatal([
+  [m4_fatal([
     GATBPS_TAR_rule_lines is already defined
   ])])[dnl
 ]m4_define(
@@ -371,7 +371,7 @@ m4_bpatsubst([[$1]], ['], ['\\''])[]dnl
 GATBPS_TAR_rule_lines(m4_shift($@))])])[dnl
 ]m4_ifdef(
   [GATBPS_TAR_make_lines],
-  [gatbps_fatal([
+  [m4_fatal([
     GATBPS_TAR_make_lines is already defined
   ])])[dnl
 ]m4_define(
@@ -444,7 +444,7 @@ m4_case(input_mode,
   || exit $][$][?; \
   exit '\''0'\''; \
 :;}]],
-[gatbps_fatal([missing case])])[
+[m4_fatal([missing case])])[
 	$(AM@&t@_V_at)mv -f $][@$(TSUF) $][@
 	$(AM@&t@_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
