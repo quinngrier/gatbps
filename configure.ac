@@ -1186,10 +1186,6 @@ AM_SUBST_NOTMAKE([TEXI2ANY_DEFAULT_TROFF])
   [src/files/xml.am],
   [mostlyclean])[
 
-]GATBPS_M4(
-  [src/files/xz.am],
-  [mostlyclean])[
-
 ]dnl end_targets
 [
 

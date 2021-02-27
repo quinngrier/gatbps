@@ -527,7 +527,6 @@ EOF1
 
           shift
 
-          'set' "${prefix}"'xz.am' "${@}"
           'set' "${prefix}"'xml.am' "${@}"
           'set' "${prefix}"'xml-dist.am' "${@}"
           'set' "${prefix}"'wget.am' "${@}"
@@ -1522,8 +1521,6 @@ EOF1
 |%}help_code({%|xml-dist.am|%}){%|
 
 |%}help_code({%|xml.am|%}){%|
-
-|%}help_code({%|xz.am|%}){%|
 
             *)
               'eval' "${awk}"' '\''
@@ -3277,8 +3274,6 @@ EOF1
 
 |%}generation_code({%|xml.am|%}){%|
 
-|%}generation_code({%|xz.am|%}){%|
-
           *)
 
             if test '-e' "${safe_1}.top"; then
@@ -4720,11 +4715,6 @@ include(`src/recursion/xml-dist.am.rc.m4'){%||%}dnl
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
 include(`src/recursion/xml.am.rc.m4'){%||%}dnl
-{%|
-
-|%}dnl
-changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/xz.am.rc.m4'){%||%}dnl
 {%|
 
         esac
