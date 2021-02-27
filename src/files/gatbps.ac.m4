@@ -227,16 +227,7 @@ dnl---------------------------------------------------------------------
 
 AC_DEFUN([GATBPS_TAR], [[{
 
-#
-]m4_text_wrap(
-  [
-    The block that contains this comment is the expansion of the
-    GATBPS_TAR macro for the $1 target.
-  ],
-  [# ],
-  [# ],
-  [72])[
-#]dnl
+]dnl
 m4_if(
   m4_eval([$# < 2 || $# > 5]),
   [1],
