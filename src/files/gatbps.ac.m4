@@ -459,6 +459,9 @@ m4_popdef([output_file])[]dnl
 m4_popdef([list_5])[]dnl
 [:;}]])[]dnl
 
+AC_SUBST([GATBPS_TAR_RULES])
+AM_SUBST_NOTMAKE([GATBPS_TAR_RULES])
+
 dnl---------------------------------------------------------------------
 
 |%}footer_comment({%|dnl|%}, {%|dnl|%}, {%|dnl|%})

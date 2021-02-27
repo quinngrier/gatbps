@@ -56,6 +56,40 @@ SUFFIXES += .java
 TSUF = $(TMPEXT).tmp
 
 ##----------------------------------------------------------------------
+## Local target activation
+##----------------------------------------------------------------------
+##
+## The @FOO@ substitutions in this file sometimes add prerequisites to
+## Automake's *-local targets, but Automake cannot see them because it
+## runs before substitution is performed. If these targets are not used
+## elsewhere in this file or by the user, then Automake may incorrectly
+## assume that they're not being used at all. Listing them here without
+## prerequisites is enough to make Automake do the right thing.
+##
+
+all-local:
+check-local:
+clean-local:
+distclean-local:
+dvi-local:
+html-local:
+info-local:
+install-data-local:
+install-dvi-local:
+install-exec-local:
+install-html-local:
+install-info-local:
+install-pdf-local:
+install-ps-local:
+installcheck-local:
+installdirs-local:
+maintainer-clean-local:
+mostlyclean-local:
+pdf-local:
+ps-local:
+uninstall-local:
+
+##----------------------------------------------------------------------
 ## Silent rule helpers
 ##----------------------------------------------------------------------
 
@@ -699,6 +733,10 @@ uninstall-java-main: java.FORCE
 :;}
 
 ## end_rules
+
+##----------------------------------------------------------------------
+
+@GATBPS_TAR_RULES@
 
 ##----------------------------------------------------------------------
 

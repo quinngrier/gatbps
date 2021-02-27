@@ -763,14 +763,6 @@ AM_SUBST_NOTMAKE([TEXI2ANY_DEFAULT_TROFF])
   [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_TAR_RULES.am],
-  [mostlyclean])[
-
-]GATBPS_M4(
-  [src/files/GATBPS_TAR_SUBST.m4],
-  [mostlyclean])[
-
-]GATBPS_M4(
   [src/files/GATBPS_VPATH_SEARCH.am],
   [mostlyclean])[
 
