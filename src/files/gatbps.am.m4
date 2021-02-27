@@ -504,6 +504,12 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	          0</dev/null \
 	        || 'exit' "$${?}"; \
 	      ;; \
+	      *) \
+	        m='HAVE_JDEPS is missing. Did you forget to call'; \
+	        m=$$m' GATBPS_PROG_JDEPS?'; \
+	        printf '%s\n' "$$m" >&2; \
+	        exit 1; \
+	      ;; \
 	    esac; \
 	    'exit' '0'; \
 	  :;); \
