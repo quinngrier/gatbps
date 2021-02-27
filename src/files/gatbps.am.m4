@@ -463,78 +463,78 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 [$(JAVACFLAGS) ]dnl
 [$<
 	$(AM_V_at){ \
-  ( \
-    have_jdeps='no'; \
-    for if_not_blank in \
-      $(JDEPS) \
-      $${prevent_an_empty_word_list} \
-    ; do \
-      have_jdeps='yes'; \
-      'break'; \
-    done; \
-    'readonly' 'have_jdeps'; \
-    case "$${have_jdeps}" in \
-      'yes') \
-        $(JDEPS) \
-          '-filter:none' \
-          -e '$(GATBPS_INNER_PACKAGE)\..*' \
-          '-verbose:class' \
-          './'$@ \
-          0</dev/null \
-          1>'./'$@'.d.tmp1' \
-        || 'exit' "$${?}"; \
-        $(AWK) \
-          $(GATBPS_JDEPS_TO_RULES_SCRIPT) \
-          0<'./'$@'.d.tmp1' \
-          1>'./'$@'.d.tmp2' \
-        || 'exit' "$${?}"; \
-        'mv' \
-          '-f' \
-          './'$@'.d.tmp2' \
-          './'$@'.d' \
-        || 'exit' "$${?}"; \
-        'touch' \
-          './'$@ \
-          0</dev/null \
-        || 'exit' "$${?}"; \
-      ;; \
-      'no') \
-        $(SHELL) \
-          '-' \
-          $(srcdir)'/build-aux/echo.sh' \
-          '--' \
-          'warning: automatic dependency' \
-          'tracking is not available for Java' \
-          0</dev/null \
-          1>&2 \
-        || 'exit' "$${?}"; \
-        'touch' \
-          './'$@'.d' \
-          0</dev/null \
-        || 'exit' "$${?}"; \
-      ;; \
-    esac; \
-    'exit' '0'; \
-  :;); \
-  exit_status="$${?}"; \
-  'readonly' 'exit_status'; \
-  'rm' \
-    '-f' \
-    './'$@'.d.tmp1' \
-  ; \
-  case "$${exit_status}" in \
-    '0') \
-    ;; \
-    *) \
-      'rm' \
-        '-f' \
-        './'$@'.d' \
-        './'$@'.d.tmp2' \
-      ; \
-    ;; \
-  esac; \
-  'exit' "$${exit_status}"; \
-:;}
+	  ( \
+	    have_jdeps='no'; \
+	    for if_not_blank in \
+	      $(JDEPS) \
+	      $${prevent_an_empty_word_list} \
+	    ; do \
+	      have_jdeps='yes'; \
+	      'break'; \
+	    done; \
+	    'readonly' 'have_jdeps'; \
+	    case "$${have_jdeps}" in \
+	      'yes') \
+	        $(JDEPS) \
+	          '-filter:none' \
+	          -e '$(GATBPS_INNER_PACKAGE)\..*' \
+	          '-verbose:class' \
+	          './'$@ \
+	          0</dev/null \
+	          1>'./'$@'.d.tmp1' \
+	        || 'exit' "$${?}"; \
+	        $(AWK) \
+	          $(GATBPS_JDEPS_TO_RULES_SCRIPT) \
+	          0<'./'$@'.d.tmp1' \
+	          1>'./'$@'.d.tmp2' \
+	        || 'exit' "$${?}"; \
+	        'mv' \
+	          '-f' \
+	          './'$@'.d.tmp2' \
+	          './'$@'.d' \
+	        || 'exit' "$${?}"; \
+	        'touch' \
+	          './'$@ \
+	          0</dev/null \
+	        || 'exit' "$${?}"; \
+	      ;; \
+	      'no') \
+	        $(SHELL) \
+	          '-' \
+	          $(srcdir)'/build-aux/echo.sh' \
+	          '--' \
+	          'warning: automatic dependency' \
+	          'tracking is not available for Java' \
+	          0</dev/null \
+	          1>&2 \
+	        || 'exit' "$${?}"; \
+	        'touch' \
+	          './'$@'.d' \
+	          0</dev/null \
+	        || 'exit' "$${?}"; \
+	      ;; \
+	    esac; \
+	    'exit' '0'; \
+	  :;); \
+	  exit_status="$${?}"; \
+	  'readonly' 'exit_status'; \
+	  'rm' \
+	    '-f' \
+	    './'$@'.d.tmp1' \
+	  ; \
+	  case "$${exit_status}" in \
+	    '0') \
+	    ;; \
+	    *) \
+	      'rm' \
+	        '-f' \
+	        './'$@'.d' \
+	        './'$@'.d.tmp2' \
+	      ; \
+	    ;; \
+	  esac; \
+	  'exit' "$${exit_status}"; \
+	:;}
 
 clean-java: clean-java-main
 clean-java: java.FORCE
