@@ -559,12 +559,6 @@ install-java: java.FORCE
 install-java-main: java-main
 install-java-main: java.FORCE
 	@$(NORMAL_INSTALL)
-	$(AM_V_at)]contains_exactly_one_word(
-  [java_dst])[]dnl
-[
-	$(AM_V_at)]contains_exactly_one_word(
-  [javadir])[]dnl
-[
 	$(AM_V_at){ \
   x='x'; \
   for y in $(java_noinst); do \
@@ -642,12 +636,6 @@ uninstall-java: uninstall-java-main
 
 uninstall-java-main: java.FORCE
 	@$(NORMAL_UNINSTALL)
-	$(AM_V_at)]contains_exactly_one_word(
-  [java_dst])[]dnl
-[
-	$(AM_V_at)]contains_exactly_one_word(
-  [javadir])[]dnl
-[
 	$(AM_V_at){ \
   x='x'; \
   for y in $(java_noinst); do \
