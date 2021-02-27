@@ -9,10 +9,11 @@ gatbps_unprotect([<arg>...])
 
 The `gatbps_unprotect` macro unprotects every identifier `x` appearing
 anywhere in the arguments from expansion by calling `m4_popdef([x])`.
-The identifiers are unprotected in the reverse order of the
-corresponding earlier call to
+Each call should have a corresponding previous call to
 xref:acl_gatbps_protect.adoc#acl_gatbps_protect[`gatbps_protect`]
-with the same arguments.
+with the same arguments in the same order.
+The identifiers are unprotected in the reverse order that they were
+protected.
 
 //
 // The authors of this file have waived all copyright and
