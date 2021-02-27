@@ -4,6 +4,8 @@
 .Autoconf
 [source,subs="normal"]
 ----
+m4_include([gatbps.ac])
+
 GATBPS_SOFT_REQUIRE(<name>)
 ----
 

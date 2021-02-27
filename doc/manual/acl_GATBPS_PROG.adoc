@@ -4,6 +4,8 @@
 .Autoconf
 [source,subs="normal"]
 ----
+m4_include([gatbps.ac])
+
 GATBPS_PROG(<name>, <primary>, [<secondaries>])
 ----
 
