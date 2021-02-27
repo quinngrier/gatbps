@@ -143,14 +143,15 @@ $(prevent_an_empty_line)
 
 pushdef([x], [[
 $1$2:
-	$(GATBPS_V_ASCIIDOCTOR)$(ASCIIDOCTOR) ]dnl
-[-b html ]dnl
-[-o $][@$(TSUF) ]dnl
-[-r asciidoctor-diagram ]dnl
-[$(GATBPS_COMMON_ASCIIDOCTOR_FLAGS) ]dnl
-[$(AM_ASCIIDOCTOR_FLAGS) ]dnl
-[$(ASCIIDOCTOR_FLAGS) ]dnl
-[$<
+	$(GATBPS_V_ASCIIDOCTOR)$(ASCIIDOCTOR) ]m4_normalize([
+	  -b html
+	  -o $][@$(TSUF)
+	  -r asciidoctor-diagram
+	  $(GATBPS_COMMON_ASCIIDOCTOR_FLAGS)
+	  $(AM_ASCIIDOCTOR_FLAGS)
+	  $(ASCIIDOCTOR_FLAGS)
+	  $<
+	])
 	$(AM_V_at)mv -f $][@$(TSUF) $][@
 ]])
 
@@ -162,13 +163,14 @@ popdef([x])
 
 pushdef([x], [[
 $1$2:
-	$(GATBPS_V_ASCIIDOCTOR)$(ASCIIDOCTOR) ]dnl
-[-b manpage ]dnl
-[-o $][@$(TSUF) ]dnl
-[$(GATBPS_COMMON_ASCIIDOCTOR_FLAGS) ]dnl
-[$(AM_ASCIIDOCTOR_FLAGS) ]dnl
-[$(ASCIIDOCTOR_FLAGS) ]dnl
-[$<
+	$(GATBPS_V_ASCIIDOCTOR)$(ASCIIDOCTOR) ]m4_normalize([
+	  -b manpage
+	  -o $][@$(TSUF)
+	  $(GATBPS_COMMON_ASCIIDOCTOR_FLAGS)
+	  $(AM_ASCIIDOCTOR_FLAGS)
+	  $(ASCIIDOCTOR_FLAGS)
+	  $<
+	])
 	$(AM_V_at)mv -f $][@$(TSUF) $][@
 ]])
 
@@ -188,12 +190,13 @@ popdef([x])
 
 pushdef([x], [[
 $1$2:
-	$(GATBPS_V_ASCIIDOCTOR_PDF)$(ASCIIDOCTOR_PDF) ]dnl
-[-o $][@$(TSUF) ]dnl
-[$(GATBPS_COMMON_ASCIIDOCTOR_FLAGS) ]dnl
-[$(AM_ASCIIDOCTOR_PDF_FLAGS) ]dnl
-[$(ASCIIDOCTOR_PDF_FLAGS) ]dnl
-[$<
+	$(GATBPS_V_ASCIIDOCTOR_PDF)$(ASCIIDOCTOR_PDF) ]m4_normalize([
+	  -o $][@$(TSUF)
+	  $(GATBPS_COMMON_ASCIIDOCTOR_FLAGS)
+	  $(AM_ASCIIDOCTOR_PDF_FLAGS)
+	  $(ASCIIDOCTOR_PDF_FLAGS)
+	  $<
+	])
 	$(AM_V_at)mv -f $][@$(TSUF) $][@
 ]])
 
