@@ -581,7 +581,6 @@ EOF1
           'set' "${prefix}"'insertascii.texi' "${@}"
           'set' "${prefix}"'indent.texi' "${@}"
           'set' "${prefix}"'html-dist.am' "${@}"
-          'set' "${prefix}"'gzip.am' "${@}"
           'set' "${prefix}"'git.am' "${@}"
           'set' "${prefix}"'gequ.texi' "${@}"
           'set' "${prefix}"'gen-configure.sh' "${@}"
@@ -1408,8 +1407,6 @@ EOF1
 |%}help_code({%|gequ.texi|%}){%|
 
 |%}help_code({%|git.am|%}){%|
-
-|%}help_code({%|gzip.am|%}){%|
 
 |%}help_code({%|html-dist.am|%}){%|
 
@@ -3159,8 +3156,6 @@ EOF1
 
 |%}generation_code({%|git.am|%}){%|
 
-|%}generation_code({%|gzip.am|%}){%|
-
 |%}generation_code({%|html-dist.am|%}){%|
 
 |%}generation_code({%|indent.texi|%}){%|
@@ -4430,11 +4425,6 @@ include(`src/recursion/gequ.texi.rc.m4'){%||%}dnl
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
 include(`src/recursion/git.am.rc.m4'){%||%}dnl
-{%|
-
-|%}dnl
-changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/gzip.am.rc.m4'){%||%}dnl
 {%|
 
 |%}dnl
