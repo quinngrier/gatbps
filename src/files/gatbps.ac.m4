@@ -266,11 +266,11 @@ m4_if(
   [m4_case(
     [$3],
     [], [],
+    [file_or_directory], [],
     [directory_contents], [],
-    [directory_itself], [],
     [gatbps_fatal([
       GATBPS_TAR requires its third argument to be either empty,
-      "directory_contents", or "directory_itself"
+      "directory_contents", or "file_or_directory"
     ])])])[]dnl
 m4_if(
   m4_eval([$# >= 4]),
@@ -332,7 +332,7 @@ m4_pushdef(
   m4_if(
     [$3],
     [],
-    [[[directory_itself]]],
+    [[[file_or_directory]]],
     [[[$3]]]))[]dnl
 m4_pushdef(
   [child_prerequisites],
@@ -401,11 +401,20 @@ GATBPS_TAR_make_lines(m4_if(,,child_prerequisites))[
 	$][(AM@&t@_V_at)|%}contains_at_least_one_word_sh(
   {%|MKDIR_P|%}){%||%}dnl
 {%|
-	$][(AM@&t@_V_at)$][(MKDIR_P) \
-  ./$][(@D) \
-;]dnl
-m4_if(
-input_mode, [directory_contents], [[
+	$(AM@&t@_V_at)$(MKDIR_P) $(@D)]dnl
+m4_case(input_mode,
+[file_or_directory], [[
+	$(AM@&t@_V_at){ \
+	  x=]input_directory[; \
+	  if test -f $$x || test -d $$x; then \
+	    d=.; \
+	  else \
+	    d=$(srcdir); \
+	  fi; \
+	  b=`basename $$x` || exit $$?; \
+	  (cd $$d/$$x/.. && $(TAR) c $$b) >$][@$(TSUF) || exit $$?; \
+	}]],
+[directory_contents], [[
 	$][(AM@&t@_V_at){ \
   x=]input_directory[; \
   if '\''test'\'' '\''-d'\'' "$][$][{x}"; then \
@@ -431,41 +440,13 @@ input_mode, [directory_contents], [[
     || exit $][$][?; \
     exit '\''0'\''; \
   :;) \
-    1>./]output_file['\''.tmp'\'' \
+    1>./]output_file[$(TSUF) \
   || exit $][$][?; \
   exit '\''0'\''; \
 :;}]],
-input_mode, [directory_itself], [gatbps_fatal([not supported yet])[
-	$][(AM@&t@_V_at){ \
-  x=]input_directory[; \
-  if \
-    '\''test'\'' -f "$][$][{x}" || \
-    '\''test'\'' '\''-d'\'' "$][$][{x}" \
-  ; then \
-    d='\''.'\''; \
-  else \
-    d=$][(srcdir); \
-    case "$][$][{d}" in \
-      '\''/'\''*) \
-      ;; \
-      *) \
-        d=./"$][$][{d}"; \
-      ;; \
-    esac; \
-  fi; \
-  $][(TAR) \
-    '\''cf'\'' \
-    ./]output_file['\''.tmp'\'' \
-    "$][$][{d}"'\''/'\''"$][$][{x}" \
-  || exit $][$][?; \
-  exit '\''0'\''; \
-:;}]], [gatbps_fatal([missing case])])[
-	$][(AM@&t@_V_at)mv \
-  -f \
-  ./]output_file['\''.tmp'\'' \
-  ./]output_file[ \
-;
-	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
+[gatbps_fatal([missing case])])[
+	$(AM@&t@_V_at)mv -f $][@$(TSUF) $][@
+	$(AM@&t@_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
 .PHONY: clean-]output_file[
 
