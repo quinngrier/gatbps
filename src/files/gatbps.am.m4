@@ -77,6 +77,11 @@ GATBPS_V_([ASCIIDOCTOR_PDF], [ASCIIDOCTOR-PDF])
 GATBPS_V_([GATBPS])
 GATBPS_V_([GUNZIP])
 GATBPS_V_([GZIP])
+GATBPS_V_([JAR])
+GATBPS_V_([JAVA])
+GATBPS_V_([JAVAC])
+GATBPS_V_([JAVADOC])
+GATBPS_V_([JDEPS])
 GATBPS_V_([TAR])
 GATBPS_V_([UNTAR])
 GATBPS_V_([UNXZ])
@@ -219,36 +224,6 @@ GATBPS_JDEPS_TO_RULES_SCRIPT = ' \
 '
 
 GATBPS_OUTER_JAR_SUFFIX =
-
-GATBPS_V_JAR = $(GATBPS_V_JAR_@AM_V@)
-
-GATBPS_V_JAR_ = $(GATBPS_V_JAR_@AM_DEFAULT_V@)
-
-GATBPS_V_JAR_0 = @$(SHELL) \
-  '-' \
-  $(srcdir)'/build-aux/echo.sh' \
-  '--' \
-  $(GATBPS_V_PAD_LEFT)'JAR'$(GATBPS_V_PAD_RIGHT_3) \
-  $@ \
-  0</dev/null \
-|| 'exit' "$${?}";
-
-GATBPS_V_JAR_1 =
-
-GATBPS_V_JAVAC = $(GATBPS_V_JAVAC_@AM_V@)
-
-GATBPS_V_JAVAC_ = $(GATBPS_V_JAVAC_@AM_DEFAULT_V@)
-
-GATBPS_V_JAVAC_0 = @$(SHELL) \
-  '-' \
-  $(srcdir)'/build-aux/echo.sh' \
-  '--' \
-  $(GATBPS_V_PAD_LEFT)'JAVAC'$(GATBPS_V_PAD_RIGHT_5) \
-  $@ \
-  0</dev/null \
-|| 'exit' "$${?}";
-
-GATBPS_V_JAVAC_1 =
 
 SUFFIXES += .class
 SUFFIXES += .java
