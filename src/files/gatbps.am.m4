@@ -13,7 +13,14 @@ changequote({%|[|%}, {%|]|%})[
 ## For more information, see the GATBPS manual.
 ##
 
-##----------------------------------------------------------------------
+]dnl--------------------------------------------------------------------
+
+define([gatbps_squish], [bpatsubst([[$1]], [[
+	 ]+], [ ])])[
+
+[
+
+##---------------------------------------------------------------------
 ## Suffix rule suffixes
 ##----------------------------------------------------------------------
 
@@ -143,7 +150,7 @@ $(prevent_an_empty_line)
 
 pushdef([x], [[
 $1$2:
-	$(GATBPS_V_ASCIIDOCTOR)$(ASCIIDOCTOR) ]m4_normalize([
+	$(GATBPS_V_ASCIIDOCTOR)$(ASCIIDOCTOR) ]gatbps_squish([
 	  -b html
 	  -o $][@$(TSUF)
 	  -r asciidoctor-diagram
@@ -163,7 +170,7 @@ popdef([x])
 
 pushdef([x], [[
 $1$2:
-	$(GATBPS_V_ASCIIDOCTOR)$(ASCIIDOCTOR) ]m4_normalize([
+	$(GATBPS_V_ASCIIDOCTOR)$(ASCIIDOCTOR) ]gatbps_squish([
 	  -b manpage
 	  -o $][@$(TSUF)
 	  $(GATBPS_COMMON_ASCIIDOCTOR_FLAGS)
@@ -190,7 +197,7 @@ popdef([x])
 
 pushdef([x], [[
 $1$2:
-	$(GATBPS_V_ASCIIDOCTOR_PDF)$(ASCIIDOCTOR_PDF) ]m4_normalize([
+	$(GATBPS_V_ASCIIDOCTOR_PDF)$(ASCIIDOCTOR_PDF) ]gatbps_squish([
 	  -o $][@$(TSUF)
 	  $(GATBPS_COMMON_ASCIIDOCTOR_FLAGS)
 	  $(AM_ASCIIDOCTOR_PDF_FLAGS)
