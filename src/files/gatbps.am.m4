@@ -15,7 +15,7 @@ changequote({%|[|%}, {%|]|%})[
 
 ]dnl--------------------------------------------------------------------
 
-define([gatbps_squish], [bpatsubst([[$1]], [[
+define([gatbps_squish], [patsubst([[$1]], [[
 	 ]+], [ ])])
 
 [
