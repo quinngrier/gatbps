@@ -158,7 +158,7 @@ $1$2:
 	  $(AM_ASCIIDOCTOR_FLAGS)
 	  $(ASCIIDOCTOR_FLAGS)
 	  $<
-	])
+	])[
 	$(AM_V_at)mv -f $][@$(TSUF) $][@
 ]])
 
@@ -177,7 +177,7 @@ $1$2:
 	  $(AM_ASCIIDOCTOR_FLAGS)
 	  $(ASCIIDOCTOR_FLAGS)
 	  $<
-	])
+	])[
 	$(AM_V_at)mv -f $][@$(TSUF) $][@
 ]])
 
@@ -203,7 +203,7 @@ $1$2:
 	  $(AM_ASCIIDOCTOR_PDF_FLAGS)
 	  $(ASCIIDOCTOR_PDF_FLAGS)
 	  $<
-	])
+	])[
 	$(AM_V_at)mv -f $][@$(TSUF) $][@
 ]])
 
