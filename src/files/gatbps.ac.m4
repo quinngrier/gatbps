@@ -464,7 +464,7 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_XZ
 dnl---------------------------------------------------------------------
 
-AC_DEFUN([GATBPS_XZ], [[{
+AC_DEFUN([GATBPS_XZ], [[{ :
 
   ]
 
@@ -583,7 +583,8 @@ clean-]target_sh[:
 m4_popdef([leaf_prerequisites])[]dnl
 m4_popdef([source_sh])[]dnl
 m4_popdef([target_sh])[]dnl
-[:;}]])[]dnl
+[
+}]])
 
 AC_SUBST([GATBPS_XZ_RULES])
 AM_SUBST_NOTMAKE([GATBPS_XZ_RULES])
