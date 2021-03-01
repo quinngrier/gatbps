@@ -617,9 +617,6 @@ EOF1
           'set' "${prefix}"'PACKAGEDATE.texi.in' "${@}"
           'set' "${prefix}"'LTCURRENT.sh' "${@}"
           'set' "${prefix}"'INPUT_FILTER.sh.in' "${@}"
-          'set' "${prefix}"'GATBPS_XZ_SUBST.m4' "${@}"
-          'set' "${prefix}"'GATBPS_XZ_RULES.am' "${@}"
-          'set' "${prefix}"'GATBPS_XZ.m4' "${@}"
           'set' "${prefix}"'GATBPS_WGET_SUBST.m4' "${@}"
           'set' "${prefix}"'GATBPS_WGET_RULES.am' "${@}"
           'set' "${prefix}"'GATBPS_WGET.m4' "${@}"
@@ -1311,12 +1308,6 @@ EOF1
 |%}help_code({%|GATBPS_WGET_RULES.am|%}){%|
 
 |%}help_code({%|GATBPS_WGET_SUBST.m4|%}){%|
-
-|%}help_code({%|GATBPS_XZ.m4|%}){%|
-
-|%}help_code({%|GATBPS_XZ_RULES.am|%}){%|
-
-|%}help_code({%|GATBPS_XZ_SUBST.m4|%}){%|
 
 |%}help_code({%|INPUT_FILTER.sh.in|%}){%|
 
@@ -3048,12 +3039,6 @@ EOF1
 
 |%}generation_code({%|GATBPS_WGET_SUBST.m4|%}){%|
 
-|%}generation_code({%|GATBPS_XZ.m4|%}){%|
-
-|%}generation_code({%|GATBPS_XZ_RULES.am|%}){%|
-
-|%}generation_code({%|GATBPS_XZ_SUBST.m4|%}){%|
-
 |%}generation_code({%|INPUT_FILTER.sh.in|%}){%|
 
 |%}generation_code({%|PACKAGEDATE.texi.in|%}){%|
@@ -4170,21 +4155,6 @@ include(`src/recursion/GATBPS_WGET_RULES.am.rc.m4'){%||%}dnl
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
 include(`src/recursion/GATBPS_WGET_SUBST.m4.rc.m4'){%||%}dnl
-{%|
-
-|%}dnl
-changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/GATBPS_XZ.m4.rc.m4'){%||%}dnl
-{%|
-
-|%}dnl
-changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/GATBPS_XZ_RULES.am.rc.m4'){%||%}dnl
-{%|
-
-|%}dnl
-changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/GATBPS_XZ_SUBST.m4.rc.m4'){%||%}dnl
 {%|
 
 |%}dnl

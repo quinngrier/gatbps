@@ -783,18 +783,6 @@ AM_SUBST_NOTMAKE([TEXI2ANY_DEFAULT_TROFF])
   [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_XZ.m4],
-  [mostlyclean])[
-
-]GATBPS_M4(
-  [src/files/GATBPS_XZ_RULES.am],
-  [mostlyclean])[
-
-]GATBPS_M4(
-  [src/files/GATBPS_XZ_SUBST.m4],
-  [mostlyclean])[
-
-]GATBPS_M4(
   [src/files/INPUT_FILTER.sh.in],
   [mostlyclean])[
 
