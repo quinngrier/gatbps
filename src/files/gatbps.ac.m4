@@ -435,15 +435,10 @@ m4_case(input_mode,
 	$(AM@&t@_V_at)mv -f $][@$(TSUF) $][@
 	$(AM@&t@_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
-.PHONY: clean-]output_file[
+]output_file[/clean: FORCE
+	-rm -f -r $(@D) $(@D)$(TSUF)*
 
-clean-]output_file[:
-	-rm \
-  -f \
-  ./]output_file[ \
-;
-
-]clean_target[-local: clean-]output_file[
+]clean_target[-local: ]output_file[/clean
 
 '
 
@@ -566,15 +561,10 @@ m4_if([$4], [], [], [[
 ;
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
-.PHONY: clean-]target_sh[
+]target_sh[/clean: FORCE
+	-rm -f -r $(@D) $(@D)$(TSUF)*
 
-clean-]target_sh[:
-	-rm \
-  -f \
-  ./]target_sh[ \
-;
-
-]m4_if([$3], [], [[mostlyclean]], [[$3]])[-local: clean-]target_sh[
+]m4_if([$3], [], [[mostlyclean]], [[$3]])[-local: ]target_sh[/clean
 
 '
 
