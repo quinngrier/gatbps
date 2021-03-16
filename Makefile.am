@@ -87,7 +87,6 @@ include $(srcdir)/build-aux/GATBPS_CONFIG_FILE_RULES.am
 include $(srcdir)/build-aux/GATBPS_CONFIG_LATER_RULES.am
 include $(srcdir)/build-aux/GATBPS_CP_RULES.am
 include $(srcdir)/build-aux/GATBPS_M4_RULES.am
-include $(srcdir)/build-aux/GATBPS_RECIPE_MARKER.am
 include $(srcdir)/build-aux/GATBPS_VPATH_SEARCH.am
 include $(srcdir)/build-aux/GATBPS_V_PAD.am
 include $(srcdir)/build-aux/cp.am
