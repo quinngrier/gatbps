@@ -78,7 +78,7 @@ TSUF = $(TMPEXT).tmp
 ## runs before substitution is performed. If these targets are not used
 ## elsewhere in this file or by the user, then Automake may incorrectly
 ## assume that they're not being used at all. Listing them here without
-## prerequisites is enough to make Automake do the right thing.
+## prerequisites is enough to ensure that Automake does the right thing.
 ##
 
 all-local:
