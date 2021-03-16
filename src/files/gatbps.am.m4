@@ -245,8 +245,8 @@ popdef([x])
 pushdef([x], [[
 
 $1:
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
-	$(AM_V_GEN)$(GATBPS_V_NOP)]dnl
+	$(AM_V_GEN)$(GATBPS_RECIPE_MARKER_TOP)
+	$(AM_V_at)rm -f -r ./$][@ ./$][@$(TSUF)*]dnl
 ifelse(index([$1], [/]), [-1], [], [[
 	$(AM_V_at)$(MKDIR_P) $(@D)]])[
 	$(AM_V_at)sh $(srcdir)/build-aux/]dnl
