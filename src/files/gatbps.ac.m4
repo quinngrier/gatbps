@@ -436,7 +436,7 @@ m4_case(input_mode,
 	$(AM@&t@_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
 ]output_file[/clean: FORCE
-	-rm -f -r $(@D) $(@D)$(TSUF)*
+	-rm -f -r ./$(@D) ./$(@D)$(TSUF)*
 
 ]clean_target[-local: ]output_file[/clean
 
@@ -562,7 +562,7 @@ m4_if([$4], [], [], [[
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
 ]target_sh[/clean: FORCE
-	-rm -f -r $(@D) $(@D)$(TSUF)*
+	-rm -f -r ./$(@D) ./$(@D)$(TSUF)*
 
 ]m4_if([$3], [], [[mostlyclean]], [[$3]])[-local: ]target_sh[/clean
 

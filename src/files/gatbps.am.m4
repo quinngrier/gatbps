@@ -255,7 +255,7 @@ patsubst([[$1]], [\(.\).*/], [\1])[.sh >$][@$(TSUF)
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
 $1/clean: FORCE
-	-rm -f -r $(@D) $(@D)$(TSUF)*
+	-rm -f -r ./$(@D) ./$(@D)$(TSUF)*
 
 maintainer-clean-local: $1/clean
 
