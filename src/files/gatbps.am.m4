@@ -264,11 +264,19 @@ popdef([x])
 pushdef([x], [[
 
 $1:
-	$(AM_V_GEN)]ifelse(index([$1], /), -1, , [[$(MKDIR_P) $(@D)
-	$(AM_V_at)]])[sh $(srcdir)/build-aux/]patsubst([[$1]], [\(.\).*/], [\1])[.sh >$][@$(TSUF)
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(AM_V_GEN)$(GATBPS_V_NOP)]dnl
+ifelse(index([$1], [/]), [-1], [], [[
+	$(AM_V_at)$(MKDIR_P) $(@D)]])[
+	$(AM_V_at)sh $(srcdir)/build-aux/]dnl
+patsubst([[$1]], [\(.\).*/], [\1])[.sh >$][@$(TSUF)
 	$(AM_V_at)mv -f $][@$(TSUF) $][@
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
-MAINTAINERCLEANFILES += $1
+$1/clean: FORCE
+	-rm -f -r $(@D) $(@D)$(TSUF)*
+
+maintainer-clean-local: $1/clean
 
 ]])
 
