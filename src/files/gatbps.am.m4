@@ -45,27 +45,8 @@ SUFFIXES += .class
 SUFFIXES += .java
 
 ##----------------------------------------------------------------------
-## Temporary file suffixes
+## Temporary files
 ##----------------------------------------------------------------------
-##
-## The user can optionally define TMPEXT to a suffix of their choice,
-## such as TMPEXT = .foo, and we will use $(TMPEXT).tmp* as our suffix
-## pattern for temporary files. Note that the pattern defaults to .tmp*
-## if the user doesn't define TMPEXT.
-##
-## We also define TSUF = $(TMPEXT).tmp to make our code easier to read,
-## as this construct is frequently used. The user can also use TSUF in
-## their own code.
-##
-## In general, a recipe should use $@$(TSUF)* as its name pattern for
-## temporary files. For example, if a recipe needs one temporary file
-## then $@$(TSUF) would suffice, if it needs two temporary files then
-## $@$(TSUF)1 and $@$(TSUF)2 would suffice, and so on. Cleanup can be
-## performed with rm -f -r $@$(TSUF)*.
-##
-## Note that if the user defines TMPEXT = .tmp, then TSUF will be
-## .tmp.tmp, which can look suspicious.
-##
 
 TSUF = $(TMPEXT).tmp
 
