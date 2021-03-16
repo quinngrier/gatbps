@@ -125,6 +125,7 @@ GATBPS_V_([JAVAC])
 GATBPS_V_([JAVADOC])
 GATBPS_V_([JAVA_], [JAVA])
 GATBPS_V_([JDEPS])
+GATBPS_V_([MAKE])
 GATBPS_V_([TAR])
 GATBPS_V_([UNTAR])
 GATBPS_V_([UNXZ])
@@ -132,6 +133,33 @@ GATBPS_V_([XZ])
 
 popdef([GATBPS_V_])
 popdef([pad])
+
+[
+
+##----------------------------------------------------------------------
+## Distribution archive rules
+##----------------------------------------------------------------------
+
+]
+
+pushdef([x], [[
+
+$(distdir)$1: $(DISTFILES)
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(GATBPS_V_MAKE)$(MAKE) $(AM_MAKEFLAGS) $2
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+
+]])
+
+x([.shar.gz], [dist-shar])
+x([.tar.Z], [dist-tarZ])
+x([.tar.bz2], [dist-bzip2])
+x([.tar.gz], [dist-gzip])
+x([.tar.lz], [dist-lzip])
+x([.tar.xz], [dist-xz])
+x([.zip], [dist-zip])
+
+popdef([x])
 
 [
 
