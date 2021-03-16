@@ -10,7 +10,6 @@ recursion_code(
   {%|echo.sh|%},
   {%|GATBPS_V_PAD.am|%},
   {%|GATBPS_VPATH_SEARCH.am|%},
-  {%|GATBPS_RECIPE_MARKER.am|%},
   {%|GATBPS_PROG_MKDIR_P.m4|%},
   {%|GATBPS_PROG_DOXYGEN.m4|%},
   {%|GATBPS_PROG_AWK.m4|%},
