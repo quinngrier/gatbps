@@ -23,6 +23,7 @@ EOF2
 
     xs=GATBPS_GEN_CONFIGURE_BOOTSTRAP=x
     for x in \
+      GATBPS_TIMESTAMPS_NORMALIZED \
       PATH \
       TEMP \
       TMP \

@@ -8,6 +8,49 @@ include({%|src/tools/header_comment.m4|%}){%||%}dnl
 header_comment({%|dnl|%}, {%|dnl|%}){%|
 
 dnl---------------------------------------------------------------------
+dnl Timestamp normalization
+dnl---------------------------------------------------------------------
+
+[
+
+#
+# Sometimes the file timestamps from a distribution archive will have
+# been modified, which can cause make to mistakenly think that certain
+# distributed targets are out of date and try to rebuild them. Some of
+# these targets are built with unusual utilities that a user might not
+# have, causing the build to fail. For example, this can happen if the
+# content of a distribution archive is stored in a Git repository, as
+# Git does not store timestamps.
+#
+# We work around this problem by making the first run of the topmost
+# ./configure give all files the same timestamp. To detect the first
+# run, we check if the config.status file does not exist or if it is
+# empty. Emptiness must be checked because an empty config.status file
+# is sometimes used to indicate a dirty working tree before ./configure
+# is ever run.
+#
+
+if $GATBPS_TIMESTAMPS_NORMALIZED test -s config.status; then
+  :
+  ]AC_MSG_NOTICE([[not normalizing timestamps]])[
+else
+  ]AC_MSG_NOTICE([[normalizing timestamps]])[
+  t=`date '+%Y%m%d%H%M.%S'` || exit $?
+  # Try -exec + first and fall back to -exec ; if needed. Note that
+  # -exec + bubbles its error status up to find nicely, whereas for
+  # -exec ; we need to bubble it up ourselves.
+  find . -exec touch -t $t '{}' + -name .git -prune || {
+    f=`find . '(' -exec touch -t $t '{}' ';' \
+                  -o -print ')' -name .git -prune` || exit $?
+    case ${f:+x} in x) exit 1 ;; esac
+  }
+fi
+export GATBPS_TIMESTAMPS_NORMALIZED=:
+readonly GATBPS_TIMESTAMPS_NORMALIZED
+
+]
+
+dnl---------------------------------------------------------------------
 dnl gatbps_protect
 dnl---------------------------------------------------------------------
 
