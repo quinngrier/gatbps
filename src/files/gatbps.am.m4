@@ -261,21 +261,12 @@ maintainer-clean-local: $1/clean
 
 ]])
 
-##
-## Uncluttered locations.
-##
-
-x([build-aux/DATE])
-x([build-aux/LTCURRENT])
-x([build-aux/VERSION])
-
-##
-## Traditional locations.
-##
-
 x([DATE])
 x([LTCURRENT])
 x([VERSION])
+x([build-aux/DATE])
+x([build-aux/LTCURRENT])
+x([build-aux/VERSION])
 
 popdef([x])
 
