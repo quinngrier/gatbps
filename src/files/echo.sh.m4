@@ -355,32 +355,30 @@ while ':'; do
     ;;
   esac
 
-  case "${detect_options}" in
-    'yes')
+  case $detect_options in yes)
 
-      case "${1}" in
+    case $1 in
 
-        '--')
+      --)
 
-          detect_options='no'
-          'continue'
+        detect_options=no
+        continue
 
-        ;;
+      ;;
 
-        '--='*)
+      --=*)
 
-          'cat' 0<<EOF2 1>&2;
+        'cat' 0<<EOF2 1>&2;
 ${fr2}echo.sh!${fR2} ${fB2}--${fR2} forbids a value
 ${fr2}echo.sh!${fR2} try ${fB2}sh echo.sh --help${fR2} for more information
 EOF2
-          exit 1
+        exit 1
 
-        ;;
+      ;;
 
-      esac
+    esac
 
-    ;;
-  esac
+  ;; esac
 
   case "${first_operand}" in
     'no')
