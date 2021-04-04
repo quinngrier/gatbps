@@ -20,7 +20,9 @@ ifelse({%|$#|%}, {%|1|%}, {%|{%|was|%}|%}, {%|{%|were|%}|%}){%||%}dnl
 {%|
 |%}){%||%}dnl errprint
 m4exit({%|1|%})|%}){%||%}dnl
-{%|#
+{%|
+
+#
 # With LC_ALL=C, locale-aware programs use the C locale instead of the
 # current locale. This is generally the best approach for code that is
 # not deliberately designed to work in other locales, as other locales
@@ -31,7 +33,9 @@ m4exit({%|1|%})|%}){%||%}dnl
 
 LC_ALL=C
 readonly LC_ALL
-export LC_ALL|%}dnl
+export LC_ALL
+
+|%}dnl
 |%})|%}){%||%}dnl
 dnl
 dnl The authors of this file have waived all copyright and
