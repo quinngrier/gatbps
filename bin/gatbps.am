@@ -613,12 +613,12 @@ bin_gatbps_src += src/tools/generation_code.m4
 bin_gatbps_src += src/tools/header_comment.m4
 bin_gatbps_src += src/tools/help_code.m4
 bin_gatbps_src += src/tools/math_symbol.m4
+bin_gatbps_src += src/tools/portable_shell_prelude.m4
 bin_gatbps_src += src/tools/recursion_code.m4
 bin_gatbps_src += src/tools/recursion_code_helper.m4
 bin_gatbps_src += src/tools/rule_substitution_comment_plural.m4
 bin_gatbps_src += src/tools/rule_substitution_comment_singular.m4
 bin_gatbps_src += src/tools/rules_code.m4
-bin_gatbps_src += src/tools/use_the_c_locale.m4
 
 nodist_bin_gatbps_src =
 nodist_bin_gatbps_src += src/tools/AWK_DEFAULT_SH.m4

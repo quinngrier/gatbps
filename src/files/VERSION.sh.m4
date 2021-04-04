@@ -5,7 +5,7 @@ rules_code({%|src/files/VERSION.sh.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
-include({%|src/tools/use_the_c_locale.m4|%}){%||%}dnl
+include({%|src/tools/portable_shell_prelude.m4|%}){%||%}dnl
 header_comment({%|#|%}, {%|#|%}){%|
 #
 # Special file: VERSION.sh
@@ -13,7 +13,7 @@ header_comment({%|#|%}, {%|#|%}){%|
 # For more information, see the GATBPS manual.
 #
 
-|%}use_the_c_locale{%|
+|%}portable_shell_prelude{%|
 
 readonly git=" ${GIT:-git}"
 readonly sed=" ${SED:-sed}"

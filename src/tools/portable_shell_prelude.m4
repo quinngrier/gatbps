@@ -1,11 +1,11 @@
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|src/tools/use_the_c_locale.m4|%}){%||%}dnl
+rules_code({%|src/tools/portable_shell_prelude.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 ifdef(
-  {%|use_the_c_locale|%},
+  {%|portable_shell_prelude|%},
   {%||%},
   {%|define(
-    {%|use_the_c_locale|%},
+    {%|portable_shell_prelude|%},
     {%|dnl
 ifelse(
   eval({%|$# < 0 || $# > 0|%}),
@@ -13,7 +13,7 @@ ifelse(
   {%|dnl
 errprint(
 {%|m4: error: |%}dnl
-{%|use_the_c_locale requires exactly 0 arguments|%}dnl
+{%|portable_shell_prelude requires exactly 0 arguments|%}dnl
 {%| ($# |%}dnl
 ifelse({%|$#|%}, {%|1|%}, {%|{%|was|%}|%}, {%|{%|were|%}|%}){%||%}dnl
 {%| given)|%}dnl

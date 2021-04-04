@@ -6,7 +6,7 @@ rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/declare_detect_options.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
-include({%|src/tools/use_the_c_locale.m4|%}){%||%}dnl
+include({%|src/tools/portable_shell_prelude.m4|%}){%||%}dnl
 header_comment({%|#|%}, {%|#|%}){%|
 #
 # Special file: save-artifacts.sh
@@ -14,7 +14,7 @@ header_comment({%|#|%}, {%|#|%}){%|
 # For more information, see the GATBPS manual.
 #
 
-|%}use_the_c_locale{%|
+|%}portable_shell_prelude{%|
 
 |%}declare_detect_options{%|
 
