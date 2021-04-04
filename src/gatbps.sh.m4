@@ -18,15 +18,6 @@ SHEBANG_LINE{%|#! /bin/sh -
 
 |%}use_the_c_locale{%|
 
-#
-# The nl variable holds a newline character. It can be used where a
-# literal newline character might be awkward.
-#
-
-nl="
-"
-readonly nl
-
 |%}declare_detect_options{%|
 
 #

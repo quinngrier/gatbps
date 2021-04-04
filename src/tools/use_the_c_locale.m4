@@ -35,6 +35,14 @@ LC_ALL=C
 readonly LC_ALL
 export LC_ALL
 
+#
+# The nl variable holds a newline character. It can be used where a
+# literal newline character might be awkward.
+#
+
+readonly nl='
+'
+
 |%}dnl
 |%})|%}){%||%}dnl
 dnl
