@@ -3,7 +3,6 @@ changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
 rules_code({%|src/files/echo.sh.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
-include({%|src/tools/declare_detect_options.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
 include({%|src/tools/portable_shell_prelude.m4|%}){%||%}dnl
@@ -15,8 +14,6 @@ header_comment({%|#|%}, {%|#|%}){%|
 #
 
 |%}portable_shell_prelude{%|
-
-|%}declare_detect_options{%|
 
 #
 # The style_stdout and style_stderr variables hold the current settings
@@ -355,30 +352,24 @@ while ':'; do
     ;;
   esac
 
-  case $detect_options in yes)
-
+  if $parse_options; then
     case $1 in
 
       --)
-
-        detect_options=no
+        parse_options=false
         continue
-
       ;;
 
       --=*)
-
-        'cat' 0<<EOF2 1>&2;
+        cat <<EOF2 >&2
 ${fr2}echo.sh!${fR2} ${fB2}--${fR2} forbids a value
 ${fr2}echo.sh!${fR2} try ${fB2}sh echo.sh --help${fR2} for more information
 EOF2
         exit 1
-
       ;;
 
     esac
-
-  ;; esac
+  fi
 
   case "${first_operand}" in
     'no')

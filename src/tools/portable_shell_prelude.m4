@@ -43,6 +43,8 @@ export LC_ALL
 readonly nl='
 '
 
+parse_options=:
+
 |%}dnl
 |%})|%}){%||%}dnl
 dnl
