@@ -52,7 +52,7 @@ readonly quote_script="
 parse_options=:
 
 unknown_option() {
-  case $1 in
+  case $|%}{%|1 in
 
     --*)
       x="
@@ -65,19 +65,19 @@ unknown_option() {
         \$ s/\$/'/
       "
       x=`sed "$x" <<EOF2
-$1
+$|%}{%|1
 EOF2
       ` || exit
       eval x="$x"
       cat <<EOF2 >&2
-$0: unknown option: $x
+$|%}{%|0: unknown option: $x
 EOF2
       exit 1
     ;;
 
     -"$nl"*)
       cat <<EOF2 >&2
-$0: unknown option: -
+$|%}{%|0: unknown option: -
 
 EOF2
       exit 1
@@ -85,11 +85,11 @@ EOF2
 
     -?*)
       option=`head -c 2 <<EOF2
-$1
+$|%}{%|1
 EOF2
       ` || exit
       cat <<EOF2 >&2
-$0: unknown option: $option
+$|%}{%|0: unknown option: $option
 EOF2
       exit 1
     ;;
