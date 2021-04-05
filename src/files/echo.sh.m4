@@ -348,7 +348,7 @@ process_operand() {
     ;;
     1)
       case $1 in
-        *[!./0-9A-Z_a-z-]*)
+        '' | *[!./0-9A-Z_a-z-]*)
           output=$output`eval " $sed"' "$quote_script" <<EOF2
 $1
 EOF2
