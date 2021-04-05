@@ -334,6 +334,41 @@ quoting_level=0
 first_operand=:
 output=
 
+process_operand() {
+
+  if $first_operand; then
+    first_operand=false
+  else
+    output=$output' '
+  fi
+
+  case $quoting_level in
+    -* | 0)
+      output=$output$1
+    ;;
+    1)
+      case $1 in
+        *[!./0-9A-Z_a-z-]*)
+          output=$output`eval " $sed"' "$quote_script" <<EOF2
+$1
+EOF2
+          '` || exit
+        ;;
+        *)
+          output=$output$1
+        ;;
+      esac
+    ;;
+    *)
+      output=$output`eval " $sed"' "$quote_script" <<EOF2
+$1
+EOF2
+      '` || exit
+    ;;
+  esac
+
+}
+
 until (exit ${1+1}0); do
 
   if $parse_options; then
@@ -349,6 +384,26 @@ until (exit ${1+1}0); do
         cat <<EOF2 >&2
 ${fr2}echo.sh!${fR2} ${fB2}--${fR2} forbids a value
 ${fr2}echo.sh!${fR2} try ${fB2}sh echo.sh --help${fR2} for more information
+EOF2
+        exit 1
+      ;;
+
+      #-----------------------------------------------------------------
+      # -, --stdin
+      #-----------------------------------------------------------------
+
+      - | --stdin)
+        x=`cat && echo x` || exit
+        x=${x%x}
+        x=${x%"$nl"}
+        process_operand "$x"
+        shift
+        continue
+      ;;
+
+      --stdin=*)
+        cat <<EOF2 >&2
+${fr2}echo.sh!${fR2} ${fB2}--stdin${fR2} forbids a value
 EOF2
         exit 1
       ;;
@@ -391,36 +446,7 @@ EOF2
     esac
   fi
 
-  if $first_operand; then
-    first_operand=false
-  else
-    output=$output' '
-  fi
-
-  case $quoting_level in
-    -* | 0)
-      output=$output$1
-    ;;
-    1)
-      case $1 in
-        *[!./0-9A-Z_a-z-]*)
-          output=$output`eval " $sed"' "$quote_script" <<EOF2
-$1
-EOF2
-          '` || exit
-        ;;
-        *)
-          output=$output$1
-        ;;
-      esac
-    ;;
-    *)
-      output=$output`eval " $sed"' "$quote_script" <<EOF2
-$1
-EOF2
-      '` || exit
-    ;;
-  esac
+  process_operand "$1"
 
   shift
 
