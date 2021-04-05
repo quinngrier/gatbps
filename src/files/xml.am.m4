@@ -108,7 +108,7 @@ install-xml-main: xml-main
       else \
         $(SHELL) \
           '-' \
-          $(srcdir)'/build-aux/sh-form.sh' \
+          $(srcdir)/build-aux/echo.sh -q \
           '--' \
           $(MKDIR_P) \
           "$${d}" \
@@ -135,7 +135,7 @@ install-xml-main: xml-main
       else \
         $(SHELL) \
           '-' \
-          $(srcdir)'/build-aux/sh-form.sh' \
+          $(srcdir)/build-aux/echo.sh -q \
           '--' \
           $(INSTALL_DATA) \
           "$${x}" \
@@ -170,22 +170,8 @@ uninstall-xml-main:
   case "$${x}" in \
     ?*) \
       ( \
-        'expr' \
-          'X/'$(xml_dst) \
-          ':' \
-          'X.*/\(.*\)' \
-          1>'uninstall-xml-main.tmp' \
-        || 'exit' "$${?}"; \
-        x=$(srcdir); \
-        x=` \
-          $(SHELL) \
-            '-' \
-            "$${x}"'/build-aux/sh-form.sh' \
-            '--stdin' \
-            0<'uninstall-xml-main.tmp' \
-          ; \
-        ` || 'exit' "$${?}"; \
-        'eval' 'x='"$${x}"; \
+        x=$(xml_dst); \
+        x=$${x##*/}; \
         x=$(DESTDIR)$(xmldir)'/'"$${x}"; \
         case "$${x}" in \
           '/'*) \
@@ -199,7 +185,7 @@ uninstall-xml-main:
         else \
           $(SHELL) \
             '-' \
-            $(srcdir)'/build-aux/sh-form.sh' \
+            $(srcdir)/build-aux/echo.sh -q \
             '--' \
             'rm' \
             '-f' \

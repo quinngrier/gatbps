@@ -527,7 +527,6 @@ EOF1
           'set' "${prefix}"'texi-form.sh' "${@}"
           'set' "${prefix}"'sps.texi' "${@}"
           'set' "${prefix}"'shortcontents.texi' "${@}"
-          'set' "${prefix}"'sh-form.sh' "${@}"
           'set' "${prefix}"'sbs.texi' "${@}"
           'set' "${prefix}"'save-artifacts.sh' "${@}"
           'set' "${prefix}"'rules_code.m4' "${@}"
@@ -1456,8 +1455,6 @@ EOF1
 |%}help_code({%|save-artifacts.sh|%}){%|
 
 |%}help_code({%|sbs.texi|%}){%|
-
-|%}help_code({%|sh-form.sh|%}){%|
 
 |%}help_code({%|shortcontents.texi|%}){%|
 
@@ -3185,8 +3182,6 @@ EOF1
 
 |%}generation_code({%|sbs.texi|%}){%|
 
-|%}generation_code({%|sh-form.sh|%}){%|
-
 |%}generation_code({%|shortcontents.texi|%}){%|
 
 |%}generation_code({%|sps.texi|%}){%|
@@ -4536,11 +4531,6 @@ include(`src/recursion/save-artifacts.sh.rc.m4'){%||%}dnl
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
 include(`src/recursion/sbs.texi.rc.m4'){%||%}dnl
-{%|
-
-|%}dnl
-changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/sh-form.sh.rc.m4'){%||%}dnl
 {%|
 
 |%}dnl

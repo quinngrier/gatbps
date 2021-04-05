@@ -108,7 +108,7 @@ install-plaintext-main: plaintext-main
       else \
         $(SHELL) \
           '-' \
-          $(srcdir)'/build-aux/sh-form.sh' \
+          $(srcdir)/build-aux/echo.sh -q \
           '--' \
           $(MKDIR_P) \
           "$${d}" \
@@ -135,7 +135,7 @@ install-plaintext-main: plaintext-main
       else \
         $(SHELL) \
           '-' \
-          $(srcdir)'/build-aux/sh-form.sh' \
+          $(srcdir)/build-aux/echo.sh -q \
           '--' \
           $(INSTALL_DATA) \
           "$${x}" \
@@ -174,22 +174,8 @@ uninstall-plaintext-main:
   case "$${x}" in \
     ?*) \
       ( \
-        'expr' \
-          'X/'$(plaintext_dst) \
-          ':' \
-          'X.*/\(.*\)' \
-          1>'uninstall-plaintext-main.tmp' \
-        || 'exit' "$${?}"; \
-        x=$(srcdir); \
-        x=` \
-          $(SHELL) \
-            '-' \
-            "$${x}"'/build-aux/sh-form.sh' \
-            '--stdin' \
-            0<'uninstall-plaintext-main.tmp' \
-          ; \
-        ` || 'exit' "$${?}"; \
-        'eval' 'x='"$${x}"; \
+        x=$(plaintext_dst); \
+        x=$${x##*/}; \
         x=$(DESTDIR)$(plaintextdir)'/'"$${x}"; \
         case "$${x}" in \
           '/'*) \
@@ -203,7 +189,7 @@ uninstall-plaintext-main:
         else \
           $(SHELL) \
             '-' \
-            $(srcdir)'/build-aux/sh-form.sh' \
+            $(srcdir)/build-aux/echo.sh -q \
             '--' \
             'rm' \
             '-f' \

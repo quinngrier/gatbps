@@ -182,54 +182,21 @@ AS_HELP_STRING(
   :;}])
 AC_MSG_RESULT([${texi2any_default}])
 
-AWK_DEFAULT_SH=`sh "${srcdir}/build-aux/sh-form.sh" \
-  '--awk='"${AWK_SH}" \
-  '--sed='"${SED_SH}" \
-  '--' \
+AWK_DEFAULT_SH=`sh "$srcdir"/build-aux/echo.sh -q -- \
   "${awk_default}"
-`
-case "${?}" in
-  '0')
-    :
-  ;;
-  *)
-    AC_MSG_ERROR([sh-form.sh failed], [1])
-  ;;
-esac
+` || exit
 AC_SUBST([AWK_DEFAULT_SH])
 AM_SUBST_NOTMAKE([AWK_DEFAULT_SH])
 
-SED_DEFAULT_SH=`sh "${srcdir}/build-aux/sh-form.sh" \
-  '--awk='"${AWK_SH}" \
-  '--sed='"${SED_SH}" \
-  '--' \
+SED_DEFAULT_SH=`sh "$srcdir"/build-aux/echo.sh -q -- \
   "${sed_default}"
-`
-case "${?}" in
-  '0')
-    :
-  ;;
-  *)
-    AC_MSG_ERROR([sh-form.sh failed], [1])
-  ;;
-esac
+` || exit
 AC_SUBST([SED_DEFAULT_SH])
 AM_SUBST_NOTMAKE([SED_DEFAULT_SH])
 
-TEXI2ANY_DEFAULT_SH=`sh "${srcdir}/build-aux/sh-form.sh" \
-  '--awk='"${AWK_SH}" \
-  '--sed='"${SED_SH}" \
-  '--' \
+TEXI2ANY_DEFAULT_SH=`sh "$srcdir"/build-aux/echo.sh -q -- \
   "${texi2any_default}"
-`
-case "${?}" in
-  '0')
-    :
-  ;;
-  *)
-    AC_MSG_ERROR([sh-form.sh failed], [1])
-  ;;
-esac
+` || exit
 AC_SUBST([TEXI2ANY_DEFAULT_SH])
 AM_SUBST_NOTMAKE([TEXI2ANY_DEFAULT_SH])
 
@@ -1096,10 +1063,6 @@ AM_SUBST_NOTMAKE([TEXI2ANY_DEFAULT_TROFF])
 
 ]GATBPS_M4(
   [src/files/sbs.texi],
-  [mostlyclean])[
-
-]GATBPS_M4(
-  [src/files/sh-form.sh],
   [mostlyclean])[
 
 ]GATBPS_M4(

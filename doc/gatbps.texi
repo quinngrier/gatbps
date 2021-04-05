@@ -80,7 +80,6 @@ on@tie{}@w{@value{PACKAGEDATE}}@.
 * Using the Autotools to Create Git Archives::
 * Using the Autotools to Build Docker Images::
 * Invoking @w{@t{awk-form-sh}}::
-* Invoking @w{@t{sh-form-sh}}::
 * Invoking @w{@t{texi-form-sh}}::
 * Invoking @w{@t{troff-form-sh}}::
 * Special File Reference::
@@ -127,8 +126,6 @@ on@tie{}@w{@value{PACKAGEDATE}}@.
 @include gatbps/Using-the-Autotools-to-Build-Docker-Images.texi
 
 @include gatbps/Invoking-awk-form-sh.texi
-
-@include gatbps/Invoking-sh-form-sh.texi
 
 @include gatbps/Invoking-texi-form-sh.texi
 

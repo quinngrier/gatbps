@@ -142,7 +142,7 @@ $(doxygen_dst) doxygen.dummy_2.main: $(doxygen_src)
   ( \
     $(SHELL) \
       '-' \
-      $(srcdir)'/build-aux/sh-form.sh' \
+      $(srcdir)/build-aux/echo.sh -q \
       '--' \
       $(SHELL) \
       1>'doxygen-main.tmp' \

@@ -316,7 +316,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
     esac; \
     $(SHELL) \
       '-' \
-      $(srcdir)'/build-aux/sh-form.sh' \
+      $(srcdir)/build-aux/echo.sh -q \
       '--' \
       "$${x}" \
       1>'java-main.tmp' \
@@ -331,7 +331,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
     ; do \
       $(SHELL) \
         '-' \
-        $(srcdir)'/build-aux/sh-form.sh' \
+        $(srcdir)/build-aux/echo.sh -q \
         '--' \
         $(java_JAVACFLAGS) \
         1>'java-main.tmp' \
@@ -343,7 +343,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
       ?*) \
         $(SHELL) \
           '-' \
-          $(srcdir)'/build-aux/sh-form.sh' \
+          $(srcdir)/build-aux/echo.sh -q \
           '--' \
           $(GATBPS_JAVACFLAGS) \
           1>'java-main.tmp' \
@@ -646,7 +646,7 @@ install-java-main: java.FORCE
       else \
         $(SHELL) \
           '-' \
-          $(srcdir)'/build-aux/sh-form.sh' \
+          $(srcdir)/build-aux/echo.sh -q \
           '--' \
           $(MKDIR_P) \
           "$${d}" \
@@ -673,7 +673,7 @@ install-java-main: java.FORCE
       else \
         $(SHELL) \
           '-' \
-          $(srcdir)'/build-aux/sh-form.sh' \
+          $(srcdir)/build-aux/echo.sh -q \
           '--' \
           $(INSTALL_DATA) \
           "$${x}" \
@@ -711,22 +711,8 @@ uninstall-java-main: java.FORCE
   case "$${x}" in \
     ?*) \
       ( \
-        'expr' \
-          'X/'$(java_dst) \
-          ':' \
-          'X.*/\(.*\)' \
-          1>'uninstall-java-main.tmp' \
-        || 'exit' "$${?}"; \
-        x=$(srcdir); \
-        x=` \
-          $(SHELL) \
-            '-' \
-            "$${x}"'/build-aux/sh-form.sh' \
-            '--stdin' \
-            0<'uninstall-java-main.tmp' \
-          ; \
-        ` || 'exit' "$${?}"; \
-        'eval' 'x='"$${x}"; \
+        x=$(java_dst); \
+        x=$${x##*/}; \
         x=$(DESTDIR)$(javadir)'/'"$${x}"; \
         case "$${x}" in \
           '/'*) \
@@ -740,7 +726,7 @@ uninstall-java-main: java.FORCE
         else \
           $(SHELL) \
             '-' \
-            $(srcdir)'/build-aux/sh-form.sh' \
+            $(srcdir)/build-aux/echo.sh -q \
             '--' \
             'rm' \
             '-f' \

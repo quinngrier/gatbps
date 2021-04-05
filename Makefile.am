@@ -42,7 +42,6 @@ EXTRA_DIST += VERSION
 EXTRA_DIST += build-aux/DATE.sh
 EXTRA_DIST += build-aux/VERSION.sh
 EXTRA_DIST += build-aux/echo.sh
-EXTRA_DIST += build-aux/sh-form.sh
 
 GATBPS_M4FLAGS =
 GATBPS_M4FLAGS += '-I' $(srcdir)

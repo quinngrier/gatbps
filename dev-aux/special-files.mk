@@ -36,7 +36,6 @@ files = \
   build-aux/plaintext-dist.am \
   build-aux/plaintext.am \
   build-aux/ps-dist.am \
-  build-aux/sh-form.sh \
   build-aux/xml-dist.am \
   build-aux/xml.am \
   dev-aux/CC0-1.0-commit.txt \

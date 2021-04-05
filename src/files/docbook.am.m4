@@ -112,7 +112,7 @@ install-docbook-main: docbook-main
       else \
         $(SHELL) \
           '-' \
-          $(srcdir)'/build-aux/sh-form.sh' \
+          $(srcdir)/build-aux/echo.sh -q \
           '--' \
           $(MKDIR_P) \
           "$${d}" \
@@ -139,7 +139,7 @@ install-docbook-main: docbook-main
       else \
         $(SHELL) \
           '-' \
-          $(srcdir)'/build-aux/sh-form.sh' \
+          $(srcdir)/build-aux/echo.sh -q \
           '--' \
           $(INSTALL_DATA) \
           "$${x}" \
@@ -174,22 +174,8 @@ uninstall-docbook-main:
   case "$${x}" in \
     ?*) \
       ( \
-        'expr' \
-          'X/'$(docbook_dst) \
-          ':' \
-          'X.*/\(.*\)' \
-          1>'uninstall-docbook-main.tmp' \
-        || 'exit' "$${?}"; \
-        x=$(srcdir); \
-        x=` \
-          $(SHELL) \
-            '-' \
-            "$${x}"'/build-aux/sh-form.sh' \
-            '--stdin' \
-            0<'uninstall-docbook-main.tmp' \
-          ; \
-        ` || 'exit' "$${?}"; \
-        'eval' 'x='"$${x}"; \
+        x=$(docbook_dst); \
+        x=$${x##*/}; \
         x=$(DESTDIR)$(docbookdir)'/'"$${x}"; \
         case "$${x}" in \
           '/'*) \
@@ -203,7 +189,7 @@ uninstall-docbook-main:
         else \
           $(SHELL) \
             '-' \
-            $(srcdir)'/build-aux/sh-form.sh' \
+            $(srcdir)/build-aux/echo.sh -q \
             '--' \
             'rm' \
             '-f' \

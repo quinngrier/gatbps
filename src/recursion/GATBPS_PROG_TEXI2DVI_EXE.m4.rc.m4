@@ -6,7 +6,6 @@ rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/recursion_code.m4|%}){%||%}dnl
 recursion_code(
   {%|GATBPS_PROG_TEXI2DVI_EXE.m4|%},
-  {%|sh-form.sh|%},
   {%|gatbps_fatal.m4|%},
   {%|GATBPS_MSG_ERROR.m4|%},
   {%|GATBPS_DEFINE_TEXI2DVIFLAGS.m4|%},

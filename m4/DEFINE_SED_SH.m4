@@ -23,19 +23,10 @@ m4_if(
 
 SED_SH=`'sh' \
   '-' \
-  "$][{srcdir}"'/build-aux/sh-form.sh' \
+  "$][{srcdir}"/build-aux/echo.sh -q \
   '--' \
   $][{SED} \
-;`
-case "$][{?}" in
-  '0')
-  ;;
-  *)
-    ]GATBPS_MSG_ERROR([
-      sh-form.sh failed
-    ])[
-  ;;
-esac
+;` || exit
 
 :;}]])[]dnl
 dnl

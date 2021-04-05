@@ -34,7 +34,6 @@ doc_gatbps_TEXINFOS += doc/texi/gatbps/Installation.texi
 doc_gatbps_TEXINFOS += doc/texi/gatbps/Introduction.texi
 doc_gatbps_TEXINFOS += doc/texi/gatbps/Invoking-awk-form-sh.texi
 doc_gatbps_TEXINFOS += doc/texi/gatbps/Invoking-gatbps.texi
-doc_gatbps_TEXINFOS += doc/texi/gatbps/Invoking-sh-form-sh.texi
 doc_gatbps_TEXINFOS += doc/texi/gatbps/Invoking-texi-form-sh.texi
 doc_gatbps_TEXINFOS += doc/texi/gatbps/Invoking-troff-form-sh.texi
 doc_gatbps_TEXINFOS += doc/texi/gatbps/Managed-Packages.texi

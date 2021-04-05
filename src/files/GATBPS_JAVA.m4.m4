@@ -53,7 +53,7 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
     esac; \
     $][(SHELL) \
       '\''-'\'' \
-      $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
+      $][(srcdir)/build-aux/echo.sh -q \
       -- \
       "$][$][{x}" \
       1>'\''java-]gatbps_x[.tmp'\'' \
@@ -68,7 +68,7 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
     ; do \
       $][(SHELL) \
         '\''-'\'' \
-        $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
+        $][(srcdir)/build-aux/echo.sh -q \
         -- \
         $][(java_]gatbps_y[_JAVACFLAGS) \
         1>'\''java-]gatbps_x[.tmp'\'' \
@@ -80,7 +80,7 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
       ?*) \
         $][(SHELL) \
           '\''-'\'' \
-          $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
+          $][(srcdir)/build-aux/echo.sh -q \
           -- \
           $][(GATBPS_JAVACFLAGS) \
           1>'\''java-]gatbps_x[.tmp'\'' \
@@ -293,7 +293,7 @@ install-java-]gatbps_x[: java.FORCE
       else \
         $][(SHELL) \
           '\''-'\'' \
-          $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
+          $][(srcdir)/build-aux/echo.sh -q \
           -- \
           $][(MKDIR_P) \
           "$][$][{d}" \
@@ -320,7 +320,7 @@ install-java-]gatbps_x[: java.FORCE
       else \
         $][(SHELL) \
           '\''-'\'' \
-          $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
+          $][(srcdir)/build-aux/echo.sh -q \
           -- \
           $][(INSTALL_DATA) \
           "$][$][{x}" \
@@ -360,22 +360,8 @@ uninstall-java-]gatbps_x[: java.FORCE
   case "$][$][{x}" in \
     ?*) \
       ( \
-        '\''expr'\'' \
-          '\''X/'\''$][(java_]gatbps_y[_dst) \
-          '\'':'\'' \
-          '\''X.*/\(.*\)'\'' \
-          1>'\''uninstall-java-]gatbps_x[.tmp'\'' \
-        || exit $][$][?; \
-        x=$][(srcdir); \
-        x=` \
-          $][(SHELL) \
-            '\''-'\'' \
-            "$][$][{x}"'\''/build-aux/sh-form.sh'\'' \
-            '\''--stdin'\'' \
-            0<'\''uninstall-java-]gatbps_x[.tmp'\'' \
-          ; \
-        ` || exit $][$][?; \
-        '\''eval'\'' '\''x='\''"$][$][{x}"; \
+        x=$][(java_]gatbps_y[_dst); \
+        x=$][$][{x##*/}; \
         x=$][(DESTDIR)$][(javadir)'\''/'\''"$][$][{x}"; \
         case "$][$][{x}" in \
           '\''/'\''*) \
@@ -389,7 +375,7 @@ uninstall-java-]gatbps_x[: java.FORCE
         else \
           $][(SHELL) \
             '\''-'\'' \
-            $][(srcdir)'\''/build-aux/sh-form.sh'\'' \
+            $][(srcdir)/build-aux/echo.sh -q \
             -- \
             rm \
             -f \
