@@ -330,33 +330,18 @@ case "${AWK+is_set}" in
   ;;
 esac
 
-first_operand='yes'
-output=''
+quoting_level=0
+first_operand=:
+output=
 
-case $# in
-  '0')
-    'set' 'dummy'
-  ;;
-  *)
-    'set' 'dummy' "${@}"
-  ;;
-esac
-
-while ':'; do
-
-  'shift'
-
-  case $# in
-    '0')
-      'break'
-    ;;
-  esac
+until (exit ${1+1}0); do
 
   if $parse_options; then
     case $1 in
 
       --)
         parse_options=false
+        shift
         continue
       ;;
 
@@ -368,36 +353,74 @@ EOF2
         exit 1
       ;;
 
+      #-----------------------------------------------------------------
+      # -q, --quote
+      #-----------------------------------------------------------------
+
+      -q | --quote)
+        quoting_level=`expr $quoting_level + 1` || exit
+        shift
+        continue
+      ;;
+
+      -q*)
+        x=-${1#-q}
+        shift
+        set x -q "$x" "$@"
+        shift
+        continue
+      ;;
+
+      --quote=*)
+        cat <<EOF2 >&2
+${fr2}echo.sh!${fR2} ${fB2}--quote${fR2} forbids a value
+EOF2
+        exit 1
+      ;;
+
+      #-----------------------------------------------------------------
+
     esac
   fi
 
-  case "${first_operand}" in
-    'no')
-      output="${output}"' '
+  if $first_operand; then
+    first_operand=false
+  else
+    output=$output' '
+  fi
+
+  case $quoting_level in
+    -* | 0)
+      output=$output$1
+    ;;
+    1)
+      case $1 in
+        *[!./0-9A-Z_a-z-]*)
+          output=$output`eval " $sed"' "$quote_script" <<EOF2
+$1
+EOF2
+          '` || exit
+        ;;
+        *)
+          output=$output$1
+        ;;
+      esac
+    ;;
+    *)
+      output=$output`eval " $sed"' "$quote_script" <<EOF2
+$1
+EOF2
+      '` || exit
     ;;
   esac
-  output="${output}${1}"
-  first_operand='no'
+
+  shift
 
 done
 
-'cat' <<EOF2
-${output}
+cat <<EOF2 || exit
+$output
 EOF2
-case "${?}" in
-  '0')
-  ;;
-  *)
-    'cat' 0<<EOF2 1>&2;
-${fr2}echo.sh!${fR2} ${fB2}cat${fR2} failed while reading from:
-${fr2}echo.sh!${fR2}   1. a here-document
-${fr2}echo.sh!${fR2} and writing to: standard output
-EOF2
-    exit 1
-  ;;
-esac
-
-'exit' '0'
 
 |%}footer_comment({%|#|%}, {%|#|%}, {%|#|%})
 dnl

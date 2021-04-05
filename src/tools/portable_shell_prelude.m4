@@ -43,6 +43,12 @@ export LC_ALL
 readonly nl='
 '
 
+readonly quote_script="
+  s/'/'\\\\''/g
+  1 s/^/'/
+  \$ s/\$/'/
+"
+
 parse_options=:
 
 |%}dnl
