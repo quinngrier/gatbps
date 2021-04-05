@@ -7,7 +7,7 @@ include({%|src/tools/PACKAGE_DATE_TROFF.m4|%}){%||%}dnl
 include({%|src/tools/PACKAGE_VERSION.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
-include({%|src/tools/portable_shell_prelude.m4|%}){%||%}dnl
+include({%|src/tools/sh_prelude.m4|%}){%||%}dnl
 header_comment({%|#|%}, {%|#|%}){%|
 #
 # Special file: gen-configure.sh

@@ -13,10 +13,10 @@ include({%|src/tools/declare_detect_options.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/generation_code.m4|%}){%||%}dnl
 include({%|src/tools/help_code.m4|%}){%||%}dnl
-include({%|src/tools/portable_shell_prelude.m4|%}){%||%}dnl
+include({%|src/tools/sh_prelude.m4|%}){%||%}dnl
 SHEBANG_LINE{%|#! /bin/sh -
 
-|%}portable_shell_prelude{%|
+|%}sh_prelude{%|
 
 |%}declare_detect_options{%|
 

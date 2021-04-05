@@ -1,11 +1,11 @@
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|src/tools/portable_shell_prelude.m4|%}){%||%}dnl
+rules_code({%|src/tools/sh_prelude.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 ifdef(
-  {%|portable_shell_prelude|%},
+  {%|sh_prelude|%},
   {%||%},
   {%|define(
-    {%|portable_shell_prelude|%},
+    {%|sh_prelude|%},
     {%|dnl
 ifelse(
   eval({%|$# < 0 || $# > 0|%}),
@@ -13,7 +13,7 @@ ifelse(
   {%|dnl
 errprint(
 {%|m4: error: |%}dnl
-{%|portable_shell_prelude requires exactly 0 arguments|%}dnl
+{%|sh_prelude requires exactly 0 arguments|%}dnl
 {%| ($# |%}dnl
 ifelse({%|$#|%}, {%|1|%}, {%|{%|was|%}|%}, {%|{%|were|%}|%}){%||%}dnl
 {%| given)|%}dnl
