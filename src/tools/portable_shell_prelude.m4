@@ -51,6 +51,52 @@ readonly quote_script="
 
 parse_options=:
 
+unknown_option() {
+  case $1 in
+
+    --*)
+      x="
+        s/'/'\\\\''/g
+        1 s/^/'/
+        /=/ {
+          s/=.*/'/
+          q
+        }
+        \$ s/\$/'/
+      "
+      x=`sed "$x" <<EOF2
+$1
+EOF2
+      ` || exit
+      eval x="$x"
+      cat <<EOF2 >&2
+$0: unknown option: $x
+EOF2
+      exit 1
+    ;;
+
+    -"$nl"*)
+      cat <<EOF2 >&2
+$0: unknown option: -
+
+EOF2
+      exit 1
+    ;;
+
+    -?*)
+      option=`head -c 2 <<EOF2
+$1
+EOF2
+      ` || exit
+      cat <<EOF2 >&2
+$0: unknown option: $option
+EOF2
+      exit 1
+    ;;
+
+  esac
+}
+
 |%}dnl
 |%})|%}){%||%}dnl
 dnl
