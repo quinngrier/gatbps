@@ -349,7 +349,7 @@ process_operand() {
     1)
       case $1 in
         '' | *[!./0-9A-Z_a-z-]*)
-          output=$output`eval " $sed"' "$quote_script" <<EOF2
+          output=$output`eval " $sed"' "$sh_quote_script" <<EOF2
 $1
 EOF2
           '` || exit
@@ -360,7 +360,7 @@ EOF2
       esac
     ;;
     *)
-      output=$output`eval " $sed"' "$quote_script" <<EOF2
+      output=$output`eval " $sed"' "$sh_quote_script" <<EOF2
 $1
 EOF2
       '` || exit

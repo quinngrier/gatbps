@@ -43,7 +43,7 @@ export LC_ALL
 readonly nl='
 '
 
-readonly quote_script="
+readonly sh_quote_script="
   s/'/'\\\\''/g
   1 s/^/'/
   \$ s/\$/'/
