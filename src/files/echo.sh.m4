@@ -13,6 +13,12 @@ header_comment({%|#|%}, {%|#|%}){%|
 # For more information, see the GATBPS manual.
 #
 
+# TODO: We could support quoting for languages other than sh, like for
+# awk for example, via syntax like sh echo.sh --awk -q. Then we can
+# remove awk-form.sh and any other *-form.sh scripts. Make sure to also
+# support --sh for consistency. And maybe something like -Q to reset
+# quoting_level back to 0.
+
 |%}sh_prelude{%|
 
 #
