@@ -594,18 +594,6 @@ AM_SUBST_NOTMAKE([TEXI2ANY_DEFAULT_TROFF])
   [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_JAVA_CLASS.m4],
-  [mostlyclean])[
-
-]GATBPS_M4(
-  [src/files/GATBPS_JAVA_CLASS_RULES.am],
-  [mostlyclean])[
-
-]GATBPS_M4(
-  [src/files/GATBPS_JAVA_CLASS_SUBST.m4],
-  [mostlyclean])[
-
-]GATBPS_M4(
   [src/files/GATBPS_JAVA_RULES.am],
   [mostlyclean])[
 

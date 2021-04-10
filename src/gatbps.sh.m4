@@ -636,9 +636,6 @@ EOF1
           'set' "${prefix}"'GATBPS_MSG_ERROR.m4' "${@}"
           'set' "${prefix}"'GATBPS_JAVA_SUBST.m4' "${@}"
           'set' "${prefix}"'GATBPS_JAVA_RULES.am' "${@}"
-          'set' "${prefix}"'GATBPS_JAVA_CLASS_SUBST.m4' "${@}"
-          'set' "${prefix}"'GATBPS_JAVA_CLASS_RULES.am' "${@}"
-          'set' "${prefix}"'GATBPS_JAVA_CLASS.m4' "${@}"
           'set' "${prefix}"'GATBPS_JAVA.m4' "${@}"
           'set' "${prefix}"'GATBPS_GIT_CLONE_SUBST.m4' "${@}"
           'set' "${prefix}"'GATBPS_GIT_CLONE_RULES.am' "${@}"
@@ -1213,12 +1210,6 @@ EOF1
 |%}help_code({%|GATBPS_GIT_CLONE_SUBST.m4|%}){%|
 
 |%}help_code({%|GATBPS_JAVA.m4|%}){%|
-
-|%}help_code({%|GATBPS_JAVA_CLASS.m4|%}){%|
-
-|%}help_code({%|GATBPS_JAVA_CLASS_RULES.am|%}){%|
-
-|%}help_code({%|GATBPS_JAVA_CLASS_SUBST.m4|%}){%|
 
 |%}help_code({%|GATBPS_JAVA_RULES.am|%}){%|
 
@@ -2928,12 +2919,6 @@ EOF1
 
 |%}generation_code({%|GATBPS_JAVA.m4|%}){%|
 
-|%}generation_code({%|GATBPS_JAVA_CLASS.m4|%}){%|
-
-|%}generation_code({%|GATBPS_JAVA_CLASS_RULES.am|%}){%|
-
-|%}generation_code({%|GATBPS_JAVA_CLASS_SUBST.m4|%}){%|
-
 |%}generation_code({%|GATBPS_JAVA_RULES.am|%}){%|
 
 |%}generation_code({%|GATBPS_JAVA_SUBST.m4|%}){%|
@@ -3911,21 +3896,6 @@ include(`src/recursion/GATBPS_GIT_CLONE_SUBST.m4.rc.m4'){%||%}dnl
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
 include(`src/recursion/GATBPS_JAVA.m4.rc.m4'){%||%}dnl
-{%|
-
-|%}dnl
-changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/GATBPS_JAVA_CLASS.m4.rc.m4'){%||%}dnl
-{%|
-
-|%}dnl
-changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/GATBPS_JAVA_CLASS_RULES.am.rc.m4'){%||%}dnl
-{%|
-
-|%}dnl
-changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/GATBPS_JAVA_CLASS_SUBST.m4.rc.m4'){%||%}dnl
 {%|
 
 |%}dnl
