@@ -685,7 +685,6 @@ EOF1
           'set' "${prefix}"'GATBPS_CONFIG_FILE_RULES.am' "${@}"
           'set' "${prefix}"'GATBPS_CONFIG_FILE.m4' "${@}"
           'set' "${prefix}"'GATBPS_CHECK_VARS.m4' "${@}"
-          'set' "${prefix}"'GATBPS_CHECK_SOFT_INCLUDE.m4' "${@}"
           'set' "${prefix}"'GATBPS_CHECK_SHEBANG_LINE.m4' "${@}"
           'set' "${prefix}"'GATBPS_CHECK_RUN.m4' "${@}"
           'set' "${prefix}"'GATBPS_CHECK_LINK.m4' "${@}"
@@ -1122,8 +1121,6 @@ EOF1
 |%}help_code({%|GATBPS_CHECK_RUN.m4|%}){%|
 
 |%}help_code({%|GATBPS_CHECK_SHEBANG_LINE.m4|%}){%|
-
-|%}help_code({%|GATBPS_CHECK_SOFT_INCLUDE.m4|%}){%|
 
 |%}help_code({%|GATBPS_CHECK_VARS.m4|%}){%|
 
@@ -2839,8 +2836,6 @@ EOF1
 
 |%}generation_code({%|GATBPS_CHECK_SHEBANG_LINE.m4|%}){%|
 
-|%}generation_code({%|GATBPS_CHECK_SOFT_INCLUDE.m4|%}){%|
-
 |%}generation_code({%|GATBPS_CHECK_VARS.m4|%}){%|
 
 |%}generation_code({%|GATBPS_CONFIG_FILE.m4|%}){%|
@@ -3686,11 +3681,6 @@ include(`src/recursion/GATBPS_CHECK_RUN.m4.rc.m4'){%||%}dnl
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
 include(`src/recursion/GATBPS_CHECK_SHEBANG_LINE.m4.rc.m4'){%||%}dnl
-{%|
-
-|%}dnl
-changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/GATBPS_CHECK_SOFT_INCLUDE.m4.rc.m4'){%||%}dnl
 {%|
 
 |%}dnl
