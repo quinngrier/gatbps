@@ -27,7 +27,8 @@ dnl---------------------------------------------------------------------
 # run, we check if the config.status file does not exist or if it is
 # empty. Emptiness must be checked because an empty config.status file
 # is sometimes used to indicate a dirty working tree before ./configure
-# is ever run.
+# is ever run. To detect the topmost ./configure, we export a variable
+# so that only the topmost ./configure will observe it to be unset.
 #
 
 if $GATBPS_TIMESTAMPS_NORMALIZED test -s config.status; then
