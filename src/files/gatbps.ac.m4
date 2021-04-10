@@ -206,26 +206,26 @@ m4_ignore([GATBPS_CHECK], [[{ :
 }]])
 
 dnl---------------------------------------------------------------------
-dnl GATBPS_CHECK_SOFT_INCLUDE
+dnl GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE
 dnl---------------------------------------------------------------------
 
-AC_DEFUN([GATBPS_CHECK_SOFT_INCLUDE], [[{
+AC_DEFUN([GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE], [[{
 
 #
 # The block that contains this comment is the expansion of the
-# GATBPS_CHECK_SOFT_INCLUDE macro.
+# GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE macro.
 #]dnl
 m4_ifdef(
-  [GATBPS_CHECK_SOFT_INCLUDE_HAS_BEEN_CALLED],
+  [GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE_HAS_BEEN_CALLED],
   [gatbps_fatal([
-    GATBPS_CHECK_SOFT_INCLUDE has already been called
+    GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE has already been called
   ])],
-  [m4_define([GATBPS_CHECK_SOFT_INCLUDE_HAS_BEEN_CALLED])])[]dnl
+  [m4_define([GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE_HAS_BEEN_CALLED])])[]dnl
 m4_if(
   m4_eval([$# != 0]),
   [1],
   [gatbps_fatal([
-    GATBPS_CHECK_SOFT_INCLUDE requires exactly 0 arguments
+    GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE requires exactly 0 arguments
     ($# ]m4_if([$#], [1], [[was]], [[were]])[ given)
   ])])[]dnl
 [
@@ -240,8 +240,8 @@ m4_if(
     case "$][{gatbps_cv_SOFT_INCLUDE}" in
       '#')
 
-        'cat' >'conftest-GATBPS_CHECK_SOFT_INCLUDE-1.mk' <<'EOF'
--include conftest-GATBPS_CHECK_SOFT_INCLUDE-2.mk
+        'cat' >'conftest-GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE-1.mk' <<'EOF'
+-include conftest-GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE-2.mk
 1:
 	'exit' '0'
 EOF
@@ -255,7 +255,7 @@ EOF
           ;;
         esac
 
-        'rm' '-f' 'conftest-GATBPS_CHECK_SOFT_INCLUDE-2.mk'
+        'rm' '-f' 'conftest-GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE-2.mk'
         case "$][{?}" in
           '0')
           ;;
@@ -266,12 +266,12 @@ EOF
           ;;
         esac
 
-        'make' '-f' 'conftest-GATBPS_CHECK_SOFT_INCLUDE-1.mk' >/dev/null 2>&1
+        'make' '-f' 'conftest-GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE-1.mk' >/dev/null 2>&1
         case "$][{?}" in
           '0')
 
-            'cat' >'conftest-GATBPS_CHECK_SOFT_INCLUDE-1.mk' <<'EOF'
--include conftest-GATBPS_CHECK_SOFT_INCLUDE-2.mk
+            'cat' >'conftest-GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE-1.mk' <<'EOF'
+-include conftest-GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE-2.mk
 1:
 	exit 1
 EOF
@@ -285,7 +285,7 @@ EOF
               ;;
             esac
 
-            'cat' >'conftest-GATBPS_CHECK_SOFT_INCLUDE-2.mk' <<'EOF'
+            'cat' >'conftest-GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE-2.mk' <<'EOF'
 2:
 	'exit' '0'
 EOF
@@ -299,7 +299,7 @@ EOF
               ;;
             esac
 
-            'make' '-f' 'conftest-GATBPS_CHECK_SOFT_INCLUDE-1.mk' >/dev/null 2>&1
+            'make' '-f' 'conftest-GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE-1.mk' >/dev/null 2>&1
             case "$][{?}" in
               '0')
                 gatbps_cv_SOFT_INCLUDE='-include'
@@ -315,8 +315,8 @@ EOF
     case "$][{gatbps_cv_SOFT_INCLUDE}" in
       '#')
 
-        'cat' >'conftest-GATBPS_CHECK_SOFT_INCLUDE-1.mk' <<'EOF'
-sinclude conftest-GATBPS_CHECK_SOFT_INCLUDE-2.mk
+        'cat' >'conftest-GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE-1.mk' <<'EOF'
+sinclude conftest-GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE-2.mk
 1:
 	'exit' '0'
 EOF
@@ -330,7 +330,7 @@ EOF
           ;;
         esac
 
-        'rm' '-f' 'conftest-GATBPS_CHECK_SOFT_INCLUDE-2.mk'
+        'rm' '-f' 'conftest-GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE-2.mk'
         case "$][{?}" in
           '0')
           ;;
@@ -341,12 +341,12 @@ EOF
           ;;
         esac
 
-        'make' '-f' 'conftest-GATBPS_CHECK_SOFT_INCLUDE-1.mk' >/dev/null 2>&1
+        'make' '-f' 'conftest-GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE-1.mk' >/dev/null 2>&1
         case "$][{?}" in
           '0')
 
-            'cat' >'conftest-GATBPS_CHECK_SOFT_INCLUDE-1.mk' <<'EOF'
-sinclude conftest-GATBPS_CHECK_SOFT_INCLUDE-2.mk
+            'cat' >'conftest-GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE-1.mk' <<'EOF'
+sinclude conftest-GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE-2.mk
 1:
 	exit 1
 EOF
@@ -360,7 +360,7 @@ EOF
               ;;
             esac
 
-            'cat' >'conftest-GATBPS_CHECK_SOFT_INCLUDE-2.mk' <<'EOF'
+            'cat' >'conftest-GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE-2.mk' <<'EOF'
 2:
 	'exit' '0'
 EOF
@@ -374,7 +374,7 @@ EOF
               ;;
             esac
 
-            'make' '-f' 'conftest-GATBPS_CHECK_SOFT_INCLUDE-1.mk' >/dev/null 2>&1
+            'make' '-f' 'conftest-GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE-1.mk' >/dev/null 2>&1
             case "$][{?}" in
               '0')
                 gatbps_cv_SOFT_INCLUDE='sinclude'
@@ -389,8 +389,8 @@ EOF
 
     'readonly' 'gatbps_cv_SOFT_INCLUDE'
 
-    'rm' '-f' 'conftest-GATBPS_CHECK_SOFT_INCLUDE-1.mk'
-    'rm' '-f' 'conftest-GATBPS_CHECK_SOFT_INCLUDE-2.mk'
+    'rm' '-f' 'conftest-GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE-1.mk'
+    'rm' '-f' 'conftest-GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE-2.mk'
 
   :;}]])[
 
@@ -407,22 +407,22 @@ SOFT_INCLUDE="$][{gatbps_cv_SOFT_INCLUDE}"
 ]AC_SUBST([SOFT_INCLUDE])[
 ]AM_SUBST_NOTMAKE([SOFT_INCLUDE])[
 
-case "$][{GATBPS_CHECK_SOFT_INCLUDE_have+is_set}" in
+case "$][{GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE_have+is_set}" in
   ?*)
     ]GATBPS_MSG_ERROR([
-      \$][{GATBPS_CHECK_SOFT_INCLUDE_have} is already set
+      \$][{GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE_have} is already set
     ])[
   ;;
 esac
 case "$][{SOFT_INCLUDE}" in
   '#')
-    GATBPS_CHECK_SOFT_INCLUDE_have='0'
+    GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE_have='0'
   ;;
   *)
-    GATBPS_CHECK_SOFT_INCLUDE_have='1'
+    GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE_have='1'
   ;;
 esac
-'readonly' 'GATBPS_CHECK_SOFT_INCLUDE_have'
+'readonly' 'GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE_have'
 
 ]GATBPS_CHECK_VARS(
   [
@@ -430,7 +430,7 @@ esac
   ],
   [HAVE_SOFT_INCLUDE],
   [
-    GATBPS_CHECK_SOFT_INCLUDE_have
+    GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE_have
   ])[
 
 :;}]])[]dnl
@@ -441,7 +441,7 @@ dnl---------------------------------------------------------------------
 
 AC_DEFUN([GATBPS_JAVA_CLASS], [{ :
 
-  AC_REQUIRE([GATBPS_CHECK_SOFT_INCLUDE])
+  AC_REQUIRE([GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE])
 
 m4_if(
   m4_eval([$# < 1 || $# > 2]),
@@ -588,7 +588,7 @@ dnl---------------------------------------------------------------------
 
 AC_DEFUN([GATBPS_M4], [{ :
 
-  AC_REQUIRE([GATBPS_CHECK_SOFT_INCLUDE])
+  AC_REQUIRE([GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE])
   AC_REQUIRE([GATBPS_PROG_M4])
 
 m4_if(
