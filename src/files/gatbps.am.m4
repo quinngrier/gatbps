@@ -771,7 +771,7 @@ uninstall-java-main: java.FORCE
 	  $<
 	  >$@$(TSUF)1
 	])[
-	$(AM_V_at)printf '%s:\n' $@ >$@$(TSUF)2
+	$(AM_V_at)printf '%s: %s\n' $@ $< >$@$(TSUF)2
 	$(AM_V_at)$(M4) ]gatbps_squish([
 	  $(GATBPS_M4FLAGS)
 	  $(M4FLAGS)
