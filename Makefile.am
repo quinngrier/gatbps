@@ -85,7 +85,6 @@ include $(srcdir)/doc/gatbps.am
 include $(srcdir)/build-aux/GATBPS_CONFIG_FILE_RULES.am
 include $(srcdir)/build-aux/GATBPS_CONFIG_LATER_RULES.am
 include $(srcdir)/build-aux/GATBPS_CP_RULES.am
-include $(srcdir)/build-aux/GATBPS_M4_RULES.am
 include $(srcdir)/build-aux/GATBPS_VPATH_SEARCH.am
 include $(srcdir)/build-aux/GATBPS_V_PAD.am
 include $(srcdir)/build-aux/cp.am
@@ -94,7 +93,6 @@ include $(srcdir)/build-aux/docbook.am
 include $(srcdir)/build-aux/dvi-dist.am
 include $(srcdir)/build-aux/gatbps.am
 include $(srcdir)/build-aux/html-dist.am
-include $(srcdir)/build-aux/m4.am
 include $(srcdir)/build-aux/pdf-dist.am
 include $(srcdir)/build-aux/plaintext-dist.am
 include $(srcdir)/build-aux/plaintext.am
