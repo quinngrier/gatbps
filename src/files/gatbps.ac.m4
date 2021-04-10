@@ -43,7 +43,7 @@ else
   find . -exec touch -t $t '{}' + -name .git -prune || {
     f=`find . '(' -exec touch -t $t '{}' ';' \
                   -o -print ')' -name .git -prune` || exit $?
-    case ${f:+x} in x) exit 1 ;; esac
+    case $f in ?*) exit 1 ;; esac
   }
 fi
 export GATBPS_TIMESTAMPS_NORMALIZED=:
