@@ -966,10 +966,6 @@ AM_SUBST_NOTMAKE([TEXI2ANY_DEFAULT_TROFF])
   [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/m4.am],
-  [mostlyclean])[
-
-]GATBPS_M4(
   [src/files/math.texi],
   [mostlyclean])[
 
@@ -1091,7 +1087,6 @@ AM_SUBST_NOTMAKE([TEXI2ANY_DEFAULT_TROFF])
 ]GATBPS_CONFIG_FILE_SUBST[
 ]GATBPS_CONFIG_LATER_SUBST[
 ]GATBPS_CP_SUBST[
-]GATBPS_M4_SUBST[
 
 ]AC_CONFIG_FILES([Makefile])[
 
