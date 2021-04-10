@@ -765,22 +765,22 @@ uninstall-java-main: java.FORCE
 	$(AM_V_at)rm -f -r $@ $@$(TSUF)*
 	$(AM_V_at)rm -f -r $@.d
 	$(AM_V_at)$(MKDIR_P) $(@D)
-	$(AM_V_at)$(M4) ]gatbps_squish([
-	  $(GATBPS_M4FLAGS)
-	  $(M4FLAGS)
-	  $<
-	  >$@$(TSUF)1
-	])[
-	$(AM_V_at)printf '%s: %s\n' $@ $< >$@$(TSUF)2
+	$(AM_V_at)printf '%s: %s\n' $@ $< >$@$(TSUF)1
 	$(AM_V_at)$(M4) ]gatbps_squish([
 	  $(GATBPS_M4FLAGS)
 	  $(M4FLAGS)
 	  -D make_rules
 	  $<
-	  >>$@$(TSUF)2
+	  >>$@$(TSUF)1
 	])[
-	$(AM_V_at)mv -f $@$(TSUF)1 $@
-	$(AM_V_at)mv -f $@$(TSUF)2 $@.d
+	$(AM_V_at)$(M4) ]gatbps_squish([
+	  $(GATBPS_M4FLAGS)
+	  $(M4FLAGS)
+	  $<
+	  >$@$(TSUF)2
+	])[
+	$(AM_V_at)mv -f $@$(TSUF)1 $@.d
+	$(AM_V_at)mv -f $@$(TSUF)2 $@
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
 ##----------------------------------------------------------------------
