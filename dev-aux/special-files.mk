@@ -18,7 +18,6 @@ files = \
   build-aux/GATBPS_CONFIG_FILE_RULES.am \
   build-aux/GATBPS_CONFIG_LATER_RULES.am \
   build-aux/GATBPS_CP_RULES.am \
-  build-aux/GATBPS_M4_RULES.am \
   build-aux/GATBPS_VPATH_SEARCH.am \
   build-aux/GATBPS_V_PAD.am \
   build-aux/LTCURRENT.sh \
@@ -31,7 +30,6 @@ files = \
   build-aux/gatbps.ac \
   build-aux/gatbps.am \
   build-aux/html-dist.am \
-  build-aux/m4.am \
   build-aux/pdf-dist.am \
   build-aux/plaintext-dist.am \
   build-aux/plaintext.am \
@@ -110,12 +108,9 @@ files = \
   m4/GATBPS_DEFINE_enable_SHEBANG_LINES.m4 \
   m4/GATBPS_DEFINE_plaintextdir.m4 \
   m4/GATBPS_DEFINE_xmldir.m4 \
-  m4/GATBPS_M4.m4 \
-  m4/GATBPS_M4_SUBST.m4 \
   m4/GATBPS_MSG_ERROR.m4 \
   m4/GATBPS_MSG_NOTICE.m4 \
   m4/GATBPS_PROG_AWK.m4 \
-  m4/GATBPS_PROG_M4.m4 \
   m4/GATBPS_PROG_MAKEINFO.m4 \
   m4/GATBPS_PROG_MKDIR_P.m4 \
   m4/GATBPS_PROG_SED.m4 \

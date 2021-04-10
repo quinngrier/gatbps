@@ -43,6 +43,8 @@ SUFFIXES += .9
 SUFFIXES += .adoc
 SUFFIXES += .class
 SUFFIXES += .java
+SUFFIXES += .m4
+SUFFIXES += .m4out
 
 ##----------------------------------------------------------------------
 ## Temporary files
@@ -120,6 +122,7 @@ GATBPS_V_([JAVAC])
 GATBPS_V_([JAVADOC])
 GATBPS_V_([JAVA_], [JAVA])
 GATBPS_V_([JDEPS])
+GATBPS_V_([M4])
 GATBPS_V_([MAKE])
 GATBPS_V_([TAR])
 GATBPS_V_([UNTAR])
@@ -753,7 +756,71 @@ uninstall-java-main: java.FORCE
 ## end_rules
 
 ##----------------------------------------------------------------------
+## M4 rules
+##----------------------------------------------------------------------
 
+.m4.m4out:
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(GATBPS_V_M4)$(GATBPS_V_NOP)
+	$(AM_V_at)'rm' \
+  '-f' \
+  './'$@ \
+  './'$@'.d' \
+  './'$@'.d.tmp' \
+  './'$@'.tmp' \
+;
+	$(AM_V_at)$(MKDIR_P) \
+  './'$(@D) \
+;
+	$(AM_V_at){ \
+  ( \
+    $(M4) \
+      $(GATBPS_M4FLAGS) \
+      $(M4FLAGS) \
+      '-D' \
+      'make_rules' \
+      0<$< \
+      1>$@'.d.tmp' \
+    || 'exit' "$${?}"; \
+    'mv' \
+      '-f' \
+      './'$@'.d.tmp' \
+      './'$@'.d' \
+    || 'exit' "$${?}"; \
+    $(M4) \
+      $(GATBPS_M4FLAGS) \
+      $(M4FLAGS) \
+      0<$< \
+      1>$@'.tmp' \
+    || 'exit' "$${?}"; \
+    'mv' \
+      '-f' \
+      './'$@'.tmp' \
+      './'$@ \
+    || 'exit' "$${?}"; \
+    'exit' '0'; \
+  :;); \
+  x="$${?}"; \
+  case "$${x}" in \
+    '0') \
+    ;; \
+    *) \
+      'rm' \
+        '-f' \
+        './'$@ \
+        './'$@'.d' \
+        './'$@'.d.tmp' \
+        './'$@'.tmp' \
+      ; \
+    ;; \
+  esac; \
+  'exit' "$${x}"; \
+:;}
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+
+##----------------------------------------------------------------------
+
+@GATBPS_M4_RULES@
 @GATBPS_TAR_RULES@
 @GATBPS_XZ_RULES@
 

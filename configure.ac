@@ -618,18 +618,6 @@ AM_SUBST_NOTMAKE([TEXI2ANY_DEFAULT_TROFF])
   [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_M4.m4],
-  [mostlyclean])[
-
-]GATBPS_M4(
-  [src/files/GATBPS_M4_RULES.am],
-  [mostlyclean])[
-
-]GATBPS_M4(
-  [src/files/GATBPS_M4_SUBST.m4],
-  [mostlyclean])[
-
-]GATBPS_M4(
   [src/files/GATBPS_MSG_ERROR.m4],
   [mostlyclean])[
 
@@ -687,10 +675,6 @@ AM_SUBST_NOTMAKE([TEXI2ANY_DEFAULT_TROFF])
 
 ]GATBPS_M4(
   [src/files/GATBPS_PROG_LN_S.m4],
-  [mostlyclean])[
-
-]GATBPS_M4(
-  [src/files/GATBPS_PROG_M4.m4],
   [mostlyclean])[
 
 ]GATBPS_M4(

@@ -165,6 +165,7 @@ GATBPS_PROG([JAVA], [java])
 GATBPS_PROG([JAVAC], [javac])
 GATBPS_PROG([JAVADOC], [javadoc])
 GATBPS_PROG([JDEPS], [jdeps])
+GATBPS_PROG([M4], [m4])
 GATBPS_PROG([TAR], [tar])
 GATBPS_PROG([XZ], [xz])
 
@@ -261,6 +262,106 @@ dnl---------------------------------------------------------------------
 m4_define(
   [GATBPS_SOFT_VAR_DEP],
   [m4_ifdef([DEFINE_]$1, [$1])])
+
+dnl---------------------------------------------------------------------
+dnl GATBPS_M4
+dnl---------------------------------------------------------------------
+
+AC_DEFUN([GATBPS_M4], [{ :
+
+  AC_REQUIRE([GATBPS_CHECK_SOFT_INCLUDE])
+  AC_REQUIRE([GATBPS_PROG_M4])
+
+m4_if(
+  m4_eval([$# < 1 || $# > 2]),
+  [1],
+  [gatbps_fatal([
+    GATBPS_M4 requires 1 to 2 arguments
+    ($# ]m4_if([$#], [1], [[was]], [[were]])[ given)
+  ])])[]dnl
+m4_if(
+  m4_bregexp([$1], [[^
+	 ]]),
+  [-1],
+  [gatbps_fatal([
+    GATBPS_M4 requires its first argument to contain at least one
+    character that is not a space, tab, or newline character
+  ])])[]dnl
+m4_if(
+  m4_eval([$# >= 2]),
+  [1],
+  [m4_case(
+    [$2],
+    [clean], [],
+    [distclean], [],
+    [maintainer-clean], [],
+    [mostlyclean], [],
+    [gatbps_fatal([
+      GATBPS_M4 requires its second argument to be either "clean",
+      "distclean", "maintainer-clean", or "mostlyclean"
+    ])])])[]dnl
+m4_pushdef(
+  [output_file],
+  m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
+
+  GATBPS_CP([$1], [$1.m4out])
+
+[
+
+GATBPS_M4_RULES="$][{GATBPS_M4_RULES}"'
+
+]output_file[.m4out: ]output_file[.m4out.d
+
+#
+# The following rule causes the .d file to be treated as up-to-date if
+# it does not exist. This causes the output file to be remade when the
+# .d file does not exist, which generates the .d file as a side-effect.
+#
+# Here is the relevant part of the description of the make utility in
+# the 2001 edition of the POSIX standard:
+#
+#       After make has ensured that all of the prerequisites of a
+#       target are up-to-date and if the target is out-of-date,
+#       the commands associated with the target entry shall be
+#       executed. If there are no commands listed for the target,
+#       the target shall be treated as up-to-date.
+#
+# Here is the relevant part of the GNU make 3.81 manual:
+#
+#       If a rule has no prerequisites or commands, and the target
+#       of the rule is a nonexistent file, then make imagines this
+#       target to have been updated whenever its rule is run.
+#
+
+]output_file[.m4out.d:
+
+.PRECIOUS: ]output_file[.m4out.d
+
+.PHONY: clean-]output_file[.m4out
+
+clean-]output_file[.m4out:
+	-rm \
+  -f \
+  ./]output_file['\''.m4out'\'' \
+  ./]output_file['\''.m4out.d'\'' \
+  ./]output_file['\''.m4out.d.tmp'\'' \
+  ./]output_file['\''.m4out.tmp'\'' \
+;
+
+]m4_if([$2], [], [[mostlyclean]], [[$2]])[-local: clean-]output_file[.m4out
+
+'"$][{SOFT_INCLUDE}"' ]output_file[.m4out.d
+
+'
+
+]
+
+  m4_popdef([output_file])
+
+}])
+
+AC_SUBST([GATBPS_M4_RULES])
+AM_SUBST_NOTMAKE([GATBPS_M4_RULES])
 
 dnl---------------------------------------------------------------------
 dnl GATBPS_TAR
