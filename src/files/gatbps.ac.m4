@@ -597,7 +597,8 @@ m4_if(
   [gatbps_fatal([
     GATBPS_M4 requires 1 to 2 arguments
     ($# ]m4_if([$#], [1], [[was]], [[were]])[ given)
-  ])])[]dnl
+  ])])
+
 m4_if(
   m4_bregexp([$1], [[^
 	 ]]),
@@ -605,7 +606,8 @@ m4_if(
   [gatbps_fatal([
     GATBPS_M4 requires its first argument to contain at least one
     character that is not a space, tab, or newline character
-  ])])[]dnl
+  ])])
+
 m4_if(
   m4_eval([$# >= 2]),
   [1],
@@ -618,7 +620,8 @@ m4_if(
     [gatbps_fatal([
       GATBPS_M4 requires its second argument to be either "clean",
       "distclean", "maintainer-clean", or "mostlyclean"
-    ])])])[]dnl
+    ])])])
+
 m4_pushdef(
   [output_file],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
