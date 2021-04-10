@@ -762,60 +762,24 @@ uninstall-java-main: java.FORCE
 .m4.m4out:
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
 	$(GATBPS_V_M4)$(GATBPS_V_NOP)
-	$(AM_V_at)'rm' \
-  '-f' \
-  './'$@ \
-  './'$@'.d' \
-  './'$@'.d.tmp' \
-  './'$@'.tmp' \
-;
-	$(AM_V_at)$(MKDIR_P) \
-  './'$(@D) \
-;
-	$(AM_V_at){ \
-  ( \
-    $(M4) \
-      $(GATBPS_M4FLAGS) \
-      $(M4FLAGS) \
-      '-D' \
-      'make_rules' \
-      0<$< \
-      1>$@'.d.tmp' \
-    || 'exit' "$${?}"; \
-    'mv' \
-      '-f' \
-      './'$@'.d.tmp' \
-      './'$@'.d' \
-    || 'exit' "$${?}"; \
-    $(M4) \
-      $(GATBPS_M4FLAGS) \
-      $(M4FLAGS) \
-      0<$< \
-      1>$@'.tmp' \
-    || 'exit' "$${?}"; \
-    'mv' \
-      '-f' \
-      './'$@'.tmp' \
-      './'$@ \
-    || 'exit' "$${?}"; \
-    'exit' '0'; \
-  :;); \
-  x="$${?}"; \
-  case "$${x}" in \
-    '0') \
-    ;; \
-    *) \
-      'rm' \
-        '-f' \
-        './'$@ \
-        './'$@'.d' \
-        './'$@'.d.tmp' \
-        './'$@'.tmp' \
-      ; \
-    ;; \
-  esac; \
-  'exit' "$${x}"; \
-:;}
+	$(AM_V_at)rm -f -r $@ $@$(TSUF)*
+	$(AM_V_at)rm -f -r $@.d
+	$(AM_V_at)$(MKDIR_P) $(@D)
+	$(AM_V_at)$(M4) ]gatbps_squish([
+	  $(GATBPS_M4FLAGS)
+	  $(M4FLAGS)
+	  $<
+	  >$@$(TSUF)1
+	])[
+	$(AM_V_at)$(M4) ]gatbps_squish([
+	  $(GATBPS_M4FLAGS)
+	  $(M4FLAGS)
+	  -D make_rules
+	  $<
+	  >$@$(TSUF)2
+	])[
+	$(AM_V_at)mv -f $@$(TSUF)1 $@
+	$(AM_V_at)mv -f $@$(TSUF)2 $@.d
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
 ##----------------------------------------------------------------------
