@@ -528,10 +528,12 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	  case '$(HAVE_JDEPS)' in \
 	    1) \
 	      ]ifelse(,,,[
-	        Purposely give jdeps a nonexistent classpath so it
-	        doesn't cause any race conditions with make -j. It
-	        outputs the list of prerequisite classes just fine
-	        without being able to find any other files.
+	        jdeps sometimes gets angry at a fluctuating classpath
+	        file tree during make -j, even if there are no .class
+	        files in the proper locations. Giving it a nonexistent
+	        classpath seems to fix it. It still outputs the list of
+	        prerequisite classes this way, it just omits additional
+	        information about them.
 	      ])[ \
 	      $(JDEPS) ]gatbps_squish([
 	        -cp $@$(TSUF)1
