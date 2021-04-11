@@ -528,18 +528,16 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	  case '$(HAVE_JDEPS)' in \
 	    1) \
 	      ]ifelse(,,,[
-	        We purposely give jdeps an incorrect -cp parameter so it
-	        doesn't try to read other .class files, which would be a
-	        race condition under make -j. All we want is the list of
-	        prerequisite classes for this .class file, which jdeps
-	        seems to output just fine without being able to read
-	        other .class files.
+	        Purposely give jdeps a nonexistent classpath so it
+	        doesn't cause any race conditions with make -j. It
+	        outputs the list of prerequisite classes just fine
+	        without being able to find any other files.
 	      ])[ \
 	      $(JDEPS) ]gatbps_squish([
-	        -cp .
+	        -cp $@$(TSUF)1
 	        -v
 	        $@
-	        >$@$(TSUF)1
+	        >$@$(TSUF)2
 	      ])[ || exit $$?; \
 	      $(AWK) ]gatbps_squish([
 	        '
@@ -558,10 +556,10 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	            }
 	          }
 	        '
-	        <$@$(TSUF)1
-	        >$@$(TSUF)2
+	        <$@$(TSUF)2
+	        >$@$(TSUF)3
 	      ])[ || exit $$?; \
-	      mv -f $@$(TSUF)2 $@.d || exit $$?; \
+	      mv -f $@$(TSUF)3 $@.d || exit $$?; \
 	    ;; \
 	    *) \
 	      >$@.d || exit $$?; \
