@@ -94,13 +94,15 @@ GATBPS_RECIPE_MARKER_TOP = : recipe starting: $@
 GATBPS_RECIPE_MARKER_BOT = : recipe finished: $@
 
 ##----------------------------------------------------------------------
-## Silent rule helpers
+## Verbosity
 ##----------------------------------------------------------------------
+
+GATBPS_at = @
 
 GATBPS_V_NOP = $(GATBPS_V_NOP_@AM_V@)
 GATBPS_V_NOP_ = $(GATBPS_V_NOP_@AM_DEFAULT_V@)
 GATBPS_V_NOP_0 =
-GATBPS_V_NOP_1 = @-:
+GATBPS_V_NOP_1 = $(GATBPS_at)-:
 
 ]
 
@@ -502,7 +504,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 .java.class:
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
 	$(GATBPS_V_JAVAC)$(GATBPS_V_NOP)
-	@{ \
+	$(GATBPS_at){ \
 	  case '$(GATBPS_INNER_CLASSPATH)' in \
 	    '') \
 	      printf '%s\n' ']gatbps_squish([
@@ -512,8 +514,8 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	    ;; \
 	  esac; \
 	}
-	@rm -f -r $@ $@$(TSUF)*
-	@$(MKDIR_P) $(@D)
+	$(GATBPS_at)rm -f -r $@ $@$(TSUF)*
+	$(GATBPS_at)$(MKDIR_P) $(@D)
 	$(AM_V_at)$(JAVAC) ]gatbps_squish([
 	  -Xprefer:source
 	  -cp $(GATBPS_INNER_CLASSPATH)
@@ -524,7 +526,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	  $(JAVACFLAGS)
 	  $<
 	])[
-	@{ \
+	$(GATBPS_at){ \
 	  case '$(HAVE_JDEPS)' in \
 	    1) \
 	      ]ifelse(,,,[
@@ -597,7 +599,7 @@ install-java: java.FORCE
 
 install-java-main: java-main
 install-java-main: java.FORCE
-	@$(NORMAL_INSTALL)
+	$(GATBPS_at)$(NORMAL_INSTALL)
 	$(AM_V_at){ \
   x='x'; \
   for y in $(java_noinst); do \
@@ -674,7 +676,7 @@ uninstall-java: java.FORCE
 uninstall-java: uninstall-java-main
 
 uninstall-java-main: java.FORCE
-	@$(NORMAL_UNINSTALL)
+	$(GATBPS_at)$(NORMAL_UNINSTALL)
 	$(AM_V_at){ \
   x='x'; \
   for y in $(java_noinst); do \
