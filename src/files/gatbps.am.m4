@@ -551,6 +551,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	          {
 	            if ($$1 ~ r && $$3 ~ r) {
 	              x = $$3;
+	              sub(/\$$.*/, "", x);
 	              gsub(/\./, "/", x);
 	              x = "$(GATBPS_INNER_SOURCEPATH)/" x ".java";
 	              print "$@: " x;
