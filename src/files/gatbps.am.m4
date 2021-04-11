@@ -550,8 +550,10 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	            sub(/\$$.*/, "", x);
 	            gsub(/\./, "/", x);
 	            x = "$(GATBPS_INNER_SOURCEPATH)/" x ".java";
-	            print "$@: " x;
-	            print x ":";
+	            if (!seen[x]) {
+	              print "$@: " x;
+	              seen[x] = 1;
+	            }
 	          }
 	        }
 	      ' <$@$(TSUF)2 >$@$(TSUF)3 || exit $$?;
