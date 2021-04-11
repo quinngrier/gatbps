@@ -527,14 +527,14 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	@{ \
 	  case '$(HAVE_JDEPS)' in \
 	    1) \
-	      :]ifelse(,,,[
+	      ]ifelse(,,,[
 	        We purposely give jdeps an incorrect -cp parameter so it
 	        doesn't try to read other .class files, which would be a
 	        race condition under make -j. All we want is the list of
 	        prerequisite classes for this .class file, which jdeps
 	        seems to output just fine without being able to read
 	        other .class files.
-	      ])[; \
+	      ])[ \
 	      $(JDEPS) ]gatbps_squish([
 	        -cp .
 	        -v
