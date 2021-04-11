@@ -516,7 +516,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	}
 	$(GATBPS_at)rm -f -r $@ $@$(TSUF)*
 	$(GATBPS_at)$(MKDIR_P) $(@D)
-	$(AM_V_at)$(JAVAC) ]gatbps_squish([
+	]gatbps_squish([$(AM_V_at)$(JAVAC)
 	  -Xprefer:source
 	  -cp $(GATBPS_INNER_CLASSPATH)
 	  -d $(GATBPS_INNER_SOURCEPATH)
