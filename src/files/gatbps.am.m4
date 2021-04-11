@@ -525,10 +525,10 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	  $(GATBPS_INNER_JAVACFLAGS)
 	  $(JAVACFLAGS)
 	  $<
-	])[
-	$(GATBPS_at){ \
-	  case '$(HAVE_JDEPS)' in \
-	    1) \
+	|| { s=$$?; rm -f -r $@; exit $$s; }])[
+	]gatbps_squish([$(GATBPS_at)(
+	  case '$(HAVE_JDEPS)' in
+	    1)
 	      ]ifelse(,,,[
 	        jdeps sometimes gets angry at a fluctuating classpath
 	        file tree during make -j, even if there are no .class
@@ -536,42 +536,34 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	        classpath seems to fix it. It still outputs the list of
 	        prerequisite classes this way, it just omits additional
 	        information about them.
-	      ])[ \
-	      $(JDEPS) ]gatbps_squish([
-	        -cp $@$(TSUF)1
-	        -v
-	        $@
-	        >$@$(TSUF)2
-	      ])[ || exit $$?; \
-	      $(AWK) ]gatbps_squish([
-	        '
-	          BEGIN {
-	            r = "$(GATBPS_INNER_PACKAGE)";
-	            gsub(/\./, "\\.", r);
-	            r = r "\\..*";
+	      ])[
+	      $(JDEPS) -cp $@$(TSUF)1 -v $@ >$@$(TSUF)2 || exit $$?;
+	      $(AWK) '
+	        BEGIN {
+	          r = "$(GATBPS_INNER_PACKAGE)";
+	          gsub(/\./, "\\.", r);
+	          r = r "\\..*";
+	        }
+	        {
+	          if ($$1 ~ r && $$3 ~ r) {
+	            x = $$3;
+	            sub(/\$$.*/, "", x);
+	            gsub(/\./, "/", x);
+	            x = "$(GATBPS_INNER_SOURCEPATH)/" x ".java";
+	            print "$@: " x;
+	            print x ":";
 	          }
-	          {
-	            if ($$1 ~ r && $$3 ~ r) {
-	              x = $$3;
-	              sub(/\$$.*/, "", x);
-	              gsub(/\./, "/", x);
-	              x = "$(GATBPS_INNER_SOURCEPATH)/" x ".java";
-	              print "$@: " x;
-	              print x ":";
-	            }
-	          }
-	        '
-	        <$@$(TSUF)2
-	        >$@$(TSUF)3
-	      ])[ || exit $$?; \
-	      mv -f $@$(TSUF)3 $@.d || exit $$?; \
-	    ;; \
-	    *) \
-	      >$@.d || exit $$?; \
-	    ;; \
-	  esac; \
-	  touch $@ || exit $$?; \
-	}
+	        }
+	      ' <$@$(TSUF)2 >$@$(TSUF)3 || exit $$?;
+	      rm -f $@$(TSUF)2;
+	      mv -f $@$(TSUF)3 $@.d || exit $$?;
+	    ;;
+	    *)
+	      >$@.d || exit $$?;
+	    ;;
+	  esac;
+	  touch $@ || exit $$?;
+	) || { s=$$?; rm -f -r $@; exit $$s; }])[
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
 clean-java: clean-java-main
