@@ -181,9 +181,9 @@ GATBPS_DISTFILES_$1: FORCE
 
 	    fi;
 
-	    rm -f -r "$$distdir/$x" || exit $$?;
-	    $(MKDIR_P) "$$distdir/$x" || exit $$?;
-	    rm "$$distdir/$x" || exit $$?;
+	    rm -f -r "$$distdir/$$x" || exit $$?;
+	    $(MKDIR_P) "$$distdir/$$x" || exit $$?;
+	    rm "$$distdir/$$x" || exit $$?;
 
 	    if test -r "$$x"; then
 	      d=.;
