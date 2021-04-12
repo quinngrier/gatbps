@@ -140,11 +140,90 @@ popdef([GATBPS_V_])
 popdef([pad])
 
 [
+##----------------------------------------------------------------------
+## Distributed files
+##----------------------------------------------------------------------
+]
 
+pushdef([GATBPS_DISTFILES_n], 10)
+
+pushdef([GATBPS_DISTFILES_i], [[
+GATBPS_DISTFILES_$1: FORCE
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	]gatbps_squish([$(GATBPS_at)(
+
+	  first_iteration=:;
+
+	  for x in $(GATBPS_DISTFILES_$1); do
+
+	    if $$first_iteration; then
+
+	      srcdir='$(srcdir)';
+	      case $$srcdir in
+	        [!/]*)
+	          srcdir=./$$srcdir;
+	        ;;
+	      esac;
+	      readonly srcdir;
+
+	      distdir='$(distdir)';
+	      case $$distdir in
+	        [!/]*)
+	          distdir=./$$distdir;
+	        ;;
+	      esac;
+	      readonly distdir;
+
+	      chmod -R u+w "$$distdir" || exit $$?;
+
+	      first_iteration=false;
+	      readonly first_iteration;
+
+	    fi;
+
+	    rm -f -r "$$distdir/$x" || exit $$?;
+	    $(MKDIR_P) "$$distdir/$x" || exit $$?;
+	    rm "$$distdir/$x" || exit $$?;
+
+	    if test -r "$$x"; then
+	      d=.;
+	    else
+	      d=$$srcdir;
+	    fi;
+
+	    if test -f "$$d/$$x" || test -d "$$d/$$x"; then
+	      cp -L -R -p "$$d/$$x" "$$distdir/$$x" || exit $$?;
+	    else
+	      printf '%s\n'
+	        "$@: error: expected file or directory: $$d/$$x"
+	      >&2;
+	      exit 1;
+	    fi;
+
+	  done;
+
+	)])[
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+
+dist-hook: GATBPS_DISTFILES_$1
+]])
+
+pushdef([GATBPS_DISTFILES_all], [
+  ifelse($1, [], [GATBPS_DISTFILES_all(0)],
+         $1, GATBPS_DISTFILES_n, [],
+         [GATBPS_DISTFILES_i($1)GATBPS_DISTFILES_all(incr($1))])
+])
+
+GATBPS_DISTFILES_all
+
+popdef([GATBPS_DISTFILES_all])
+popdef([GATBPS_DISTFILES_i])
+popdef([GATBPS_DISTFILES_n])
+
+[
 ##----------------------------------------------------------------------
 ## Distribution archive rules
 ##----------------------------------------------------------------------
-
 ]
 
 pushdef([x], [[
