@@ -197,8 +197,9 @@ GATBPS_DISTFILES_$1: FORCE
 	      ;
 	      cp -L -R -p "$$d/$$x" "$$distdir/$$x" || exit $$?;
 	    else
+	      t='$@';
 	      printf '%s\n'
-	        "$@: error: expected file or directory: $$d/$$x"
+	        "$$t: error: expected file or directory: $$d/$$x"
 	      >&2;
 	      exit 1;
 	    fi;
