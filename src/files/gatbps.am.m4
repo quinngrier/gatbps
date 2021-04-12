@@ -148,9 +148,35 @@ popdef([pad])
 
 pushdef([GATBPS_DISTFILES_n], 100)
 
+[
+
+GATBPS_DISTFILES_chmod: FORCE
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(GATBPS_V_FORCE)$(GATBPS_V_NOP)
+	]gatbps_squish([$(GATBPS_at)(
+
+	  distdir='$(distdir)';
+	  case $$distdir in
+	    [!/]*)
+	      distdir=./$$distdir;
+	    ;;
+	  esac;
+	  readonly distdir;
+
+	  $(AM_V_P) && sh build-aux/echo.sh -q --
+	    chmod -R u+w "$$distdir"
+	  ;
+	  chmod -R u+w "$$distdir" || exit $$?;
+
+	)])[
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+
+]
+
 pushdef([GATBPS_DISTFILES_i], [[
 GATBPS_DISTFILES_$1: FORCE
 GATBPS_DISTFILES_$1: $(GATBPS_DISTFILES_$1)
+GATBPS_DISTFILES_$1: GATBPS_DISTFILES_chmod
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
 	$(GATBPS_V_FORCE)$(GATBPS_V_NOP)
 	]gatbps_squish([$(GATBPS_at)(
@@ -176,8 +202,6 @@ GATBPS_DISTFILES_$1: $(GATBPS_DISTFILES_$1)
 	        ;;
 	      esac;
 	      readonly distdir;
-
-	      chmod -R u+w "$$distdir" || exit $$?;
 
 	      first_iteration=false;
 	      readonly first_iteration;
