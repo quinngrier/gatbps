@@ -146,7 +146,7 @@ popdef([pad])
 ##----------------------------------------------------------------------
 ]
 
-pushdef([GATBPS_DISTFILES_n], 10)
+pushdef([GATBPS_DISTFILES_n], 100)
 
 pushdef([GATBPS_DISTFILES_i], [[
 GATBPS_DISTFILES_$1: FORCE
