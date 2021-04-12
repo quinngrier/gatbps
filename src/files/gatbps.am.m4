@@ -192,6 +192,9 @@ GATBPS_DISTFILES_$1: FORCE
 	    fi;
 
 	    if test -f "$$d/$$x" || test -d "$$d/$$x"; then
+	      $(AM_V_P) && sh build-aux/echo.sh -q --
+	        cp -L -R -p "$$d/$$x" "$$distdir/$$x"
+	      ;
 	      cp -L -R -p "$$d/$$x" "$$distdir/$$x" || exit $$?;
 	    else
 	      printf '%s\n'
