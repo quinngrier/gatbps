@@ -53,13 +53,13 @@ SUFFIXES += .m4out
 TSUF = $(TMPEXT).tmp
 
 ##----------------------------------------------------------------------
-## Local target activation
+## Local and hook target activation
 ##----------------------------------------------------------------------
 ##
-## The @FOO@ substitutions in this file sometimes add prerequisites to
-## Automake's *-local targets, but Automake cannot see them because it
-## runs before substitution is performed. If these targets are not used
-## elsewhere in this file or by the user, then Automake may incorrectly
+## The @FOO@ substitutions in this file may add prerequisites to
+## Automake's *-local and *-hook targets, but Automake cannot see this
+## because it runs before substitution occurs. If these targets are not
+## used elsewhere in this file or by the user, Automake may incorrectly
 ## assume that they're not being used at all. Listing them here without
 ## prerequisites is enough to ensure that Automake does the right thing.
 ##
@@ -67,12 +67,16 @@ TSUF = $(TMPEXT).tmp
 all-local:
 check-local:
 clean-local:
+dist-hook:
+distcheck-hook:
 distclean-local:
 dvi-local:
 html-local:
 info-local:
+install-data-hook:
 install-data-local:
 install-dvi-local:
+install-exec-hook:
 install-exec-local:
 install-html-local:
 install-info-local:
@@ -84,6 +88,7 @@ maintainer-clean-local:
 mostlyclean-local:
 pdf-local:
 ps-local:
+uninstall-hook:
 uninstall-local:
 
 ##----------------------------------------------------------------------
