@@ -208,11 +208,10 @@ GATBPS_DISTFILES_$1: FORCE
 dist-hook: GATBPS_DISTFILES_$1
 ]])
 
-pushdef([GATBPS_DISTFILES_all], [
-  ifelse($1, [], [GATBPS_DISTFILES_all(0)],
-         $1, GATBPS_DISTFILES_n, [],
-         [GATBPS_DISTFILES_i($1)GATBPS_DISTFILES_all(incr($1))])
-])
+pushdef([GATBPS_DISTFILES_all],
+  [ifelse($1, [], [GATBPS_DISTFILES_all(0)],
+          $1, GATBPS_DISTFILES_n, [],
+          [GATBPS_DISTFILES_i($1)GATBPS_DISTFILES_all(incr($1))])])
 
 GATBPS_DISTFILES_all
 
