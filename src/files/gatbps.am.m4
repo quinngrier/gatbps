@@ -200,7 +200,7 @@ GATBPS_DISTFILES_$1: $(GATBPS_DISTFILES_$1)
 	      ;
 	      cp -L -R -p "$$d/$$x" "$$distdir/$$x" || exit $$?;
 	    else
-	      t='$@';
+	      t='$][@';
 	      printf '%s\n'
 	        "$$t: error: expected file or directory: $$d/$$x"
 	      >&2;
