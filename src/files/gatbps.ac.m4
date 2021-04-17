@@ -22,31 +22,41 @@ dnl---------------------------------------------------------------------
 # content of a distribution archive is stored in a Git repository, as
 # Git does not store timestamps.
 #
-# We work around this problem by making the first run of the topmost
+# We work around this problem by making the first run of the root
 # ./configure give all files the same timestamp. To detect the first
 # run, we check if the config.status file does not exist or if it is
 # empty. Emptiness must be checked because an empty config.status file
 # is sometimes used to indicate a dirty working tree before ./configure
-# is ever run. To detect the topmost ./configure, we export a variable
-# so that only the topmost ./configure will observe it to be unset.
+# is ever run. To detect the root ./configure, we export a variable so
+# that only the root ./configure will observe it to be unset.
 #
 
-if $GATBPS_TIMESTAMPS_NORMALIZED test -s config.status; then
+if ${GATBPS_TIMESTAMPS_NORMALIZED+:} false; then
   :
-  ]AC_MSG_NOTICE([[not normalizing timestamps]])[
+  ]AC_MSG_NOTICE(
+    [[not normalizing timestamps (non-root ./configure)]])[
+elif test -s config.status; then
+  :
+  ]AC_MSG_NOTICE(
+    [[not normalizing timestamps (nonempty config.status)]])[
 else
   ]AC_MSG_NOTICE([[normalizing timestamps]])[
-  t=`date '+%Y%m%d%H%M.%S'` || exit $?
+  t='touch -t '`date '+%Y%m%d%H%M.%S'`' {}' || exit $?
+  p='( -name /
+    -o -name .bzr
+    -o -name .git
+    -o -name .hg
+    -o -name .svn
+  ) -prune'
   # Try -exec + first and fall back to -exec ; if needed. Note that
   # -exec + bubbles its error status up to find nicely, whereas for
   # -exec ; we need to bubble it up ourselves.
-  find . -exec touch -t $t '{}' + -name .git -prune || {
-    x=`find . '(' -exec touch -t $t '{}' ';' \
-                  -o -print ')' -name .git -prune` || exit $?
+  find . -exec $t + $p || {
+    x=`find . '(' -exec $t ';' -o -print ')' $p` || exit $?
     case $x in ?*) exit 1 ;; esac
   }
 fi
-GATBPS_TIMESTAMPS_NORMALIZED=:
+GATBPS_TIMESTAMPS_NORMALIZED=
 readonly GATBPS_TIMESTAMPS_NORMALIZED
 export GATBPS_TIMESTAMPS_NORMALIZED
 
