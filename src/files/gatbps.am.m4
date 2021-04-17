@@ -618,31 +618,59 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 .java.class:
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
 	$(GATBPS_V_JAVAC)$(GATBPS_V_NOP)
-	$(GATBPS_at){ \
-	  case '$(GATBPS_INNER_CLASSPATH)' in \
-	    '') \
-	      printf '%s\n' ']gatbps_squish([
-	        error: the .java.class rule cannot be used directly
-	      ])[' >&2; \
-	      exit 1; \
-	    ;; \
-	  esac; \
-	}
-	$(GATBPS_at)rm -f -r $@ $@$(TSUF)*
-	$(GATBPS_at)$(MKDIR_P) $(@D)
-	]gatbps_squish([$(AM_V_at)$(JAVAC)
-	  -Xprefer:source
-	  -cp $(GATBPS_INNER_CLASSPATH)
-	  -d $(GATBPS_INNER_SOURCEPATH)
-	  -implicit:none
-	  -sourcepath $(GATBPS_INNER_SOURCEPATH)$(CLASSPATH_SEPARATOR)$(srcdir)/$(GATBPS_INNER_SOURCEPATH)
-	  $(GATBPS_INNER_JAVACFLAGS)
-	  $(JAVACFLAGS)
-	  $<
-	|| { s=$$?; rm -f -r $@; exit $$s; }])[
 	]gatbps_squish([$(GATBPS_at)(
+	  case '$(GATBPS_INNER_CLASSPATH)' in
+	    '')
+	      printf '%s\n' `
+	        `'Makefile: error: '`
+	        `'the .java.class rule cannot be used directly'`
+	      ` >&2;
+	      exit 1;
+	    ;;
+	  esac;
+	  case '$(PARALLEL_JAVAC)' in
+	    ?*)
+	      flags='-Xprefer:source -implicit:none';
+	    ;;
+	    '')
+	      x=`find $@ -newer $<` || exit $$?;
+	      case $$x in
+	        ?*)
+	          printf '%s\n' `
+	            `'Makefile: $@ is implicitly up to date'`
+	          `;
+	          exit 0;
+	        ;;
+	      esac;
+	      flags='';
+	    ;;
+	  esac;
+	  rm -f -r $@ $@.d $@$(TSUF)* || exit $$?;
+	  $(MKDIR_P) $(@D) || exit $$?;
+	  sp='$(GATBPS_INNER_SOURCEPATH)';
+	  sp=$$sp'$(CLASSPATH_SEPARATOR)';
+	  sp=$$sp'$(srcdir)/$(GATBPS_INNER_SOURCEPATH)';
+	  $(AM_V_P) && sh build-aux/echo.sh -q --
+	    $(JAVAC)
+	      -cp $(GATBPS_INNER_CLASSPATH)
+	      -d $(GATBPS_INNER_SOURCEPATH)
+	      -sourcepath $$sp
+	      $$flags
+	      $(GATBPS_INNER_JAVACFLAGS)
+	      $(JAVACFLAGS)
+	      $<
+	  ;
+	  $(JAVAC)
+	    -cp $(GATBPS_INNER_CLASSPATH)
+	    -d $(GATBPS_INNER_SOURCEPATH)
+	    -sourcepath $$sp
+	    $$flags
+	    $(GATBPS_INNER_JAVACFLAGS)
+	    $(JAVACFLAGS)
+	    $<
+	  || exit $$?;
 	  case '$(HAVE_JDEPS)' in
-	    1)
+	    ?*)
 	      ]ifelse(,,,[
 	        jdeps sometimes gets angry at a fluctuating classpath
 	        file tree during make -j, even if there are no .class
@@ -674,12 +702,12 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	      rm -f $@$(TSUF)2;
 	      mv -f $@$(TSUF)3 $@.d || exit $$?;
 	    ;;
-	    *)
+	    '')
 	      >$@.d || exit $$?;
 	    ;;
 	  esac;
 	  touch $@ || exit $$?;
-	) || { s=$$?; rm -f -r $@; exit $$s; }])[
+	) || { s=$$?; rm -f -r $@ $@.d; exit $$s; }])[
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
 clean-java: clean-java-main
