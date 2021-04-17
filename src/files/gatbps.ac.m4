@@ -41,9 +41,9 @@ else
   # -exec + bubbles its error status up to find nicely, whereas for
   # -exec ; we need to bubble it up ourselves.
   find . -exec touch -t $t '{}' + -name .git -prune || {
-    f=`find . '(' -exec touch -t $t '{}' ';' \
+    x=`find . '(' -exec touch -t $t '{}' ';' \
                   -o -print ')' -name .git -prune` || exit $?
-    case $f in ?*) exit 1 ;; esac
+    case $x in ?*) exit 1 ;; esac
   }
 fi
 GATBPS_TIMESTAMPS_NORMALIZED=:
