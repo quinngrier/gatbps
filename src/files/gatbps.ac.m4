@@ -565,7 +565,7 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
     : still lets make -j do some parallelization. \
     ; \
  \
-    case '$(PARALLEL_JAVAC)' in \
+    case '\''$(PARALLEL_JAVAC)'\'' in \
       ?*) \
         max=50; \
       ;; \
