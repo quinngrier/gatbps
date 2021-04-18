@@ -628,10 +628,10 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	]gatbps_squish([$(GATBPS_at)(
 	  case '$(GATBPS_INNER_CLASSPATH)' in
 	    '')
-	      printf '%s\n' `
-	        `'Makefile: error: '`
-	        `'the .java.class rule cannot be used directly'`
-	      ` >&2;
+	      printf '%s\n'
+	        'Makefile: .java.class ($@): error:
+	         this rule cannot be called directly'
+	      >&2;
 	      exit 1;
 	    ;;
 	  esac;
@@ -644,9 +644,10 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	        x=`find $@ -newer $<` || exit $$?;
 	        case $$x in
 	          ?*)
-	            printf '%s\n' `
-	              `'Makefile: $@ is implicitly up to date'`
-	            `;
+	            $(AM_V_P) && printf '%s\n'
+	              'Makefile: .java.class ($@):
+	               target already up to date'
+	            ;
 	            exit 0;
 	          ;;
 	        esac;
