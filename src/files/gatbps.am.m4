@@ -687,7 +687,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	  fi;
 
 	  case '$(HAVE_JDEPS)' in
-	    ?*)
+	    1)
 	      ]ifelse(,,,[
 	        jdeps sometimes gets angry at a fluctuating classpath
 	        file tree during make -j, even if there are no .class
@@ -721,8 +721,15 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	      ' <$@$(TSUF)2 >$@$(TSUF)3 || exit $$?;
 	      rm -f $@$(TSUF)2;
 	    ;;
-	    '')
+	    0)
 	      >$@$(TSUF)3 || exit $$?;
+	    ;;
+	    *)
+	      printf '%s\n'
+	        'Makefile: .java.class ($@): error:
+	         invalid HAVE_JDEPS value: $(HAVE_JDEPS)'
+	      >&2;
+	      exit 1;
 	    ;;
 	  esac;
 	  touch $@ || exit $$?;
