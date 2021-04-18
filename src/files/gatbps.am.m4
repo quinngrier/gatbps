@@ -624,11 +624,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 
 .java.class:
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
-	$(GATBPS_V_JAVAC)$(GATBPS_V_NOP)
-	$(GATBPS_at)rm -f -r $@$(TSUF)*
-	$(GATBPS_at)$(MKDIR_P) $(@D)
 	]gatbps_squish([$(GATBPS_at)(
-
 	  case '$(GATBPS_INNER_CLASSPATH)' in
 	    '')
 	      printf '%s\n'
@@ -638,56 +634,43 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	      exit 1;
 	    ;;
 	  esac;
+	)])[
+	$(GATBPS_V_JAVAC)$(GATBPS_V_NOP)
+	$(GATBPS_V_at)test -f $@ || rm -f -r $@
+	$(GATBPS_V_at)test -f $@.d || rm -f -r $@.d
+	$(GATBPS_V_at)rm -f -r $@$(TSUF)*
+	$(GATBPS_V_at)$(MKDIR_P) $(@D)
+	]gatbps_squish([$(GATBPS_at)(
 
 	  run_javac=:;
-	  run_jdeps=:;
-	  javac_flags='-Xprefer:source -implicit:none';
-
+	  flags='-Xprefer:source -implicit:none';
 	  case '$(PARALLEL_JAVAC)' in
 	    '')
-	      if test -f $@; then
+	      if test -r $@ && test ! -r $@.d; then
 	        x=`find $@ -newer $<` || exit $$?;
 	        case $$x in
 	          ?*)
-	            $(AM_V_P) && printf '%s\n'
-	              'Makefile: .java.class ($@):
-	               $@ is already up to date'
-	            ;
 	            run_javac=false;
 	          ;;
 	        esac;
 	      fi;
-	      if test -f $@.d; then
-	        x=`find $@.d -newer $<` || exit $$?;
-	        case $$x in
-	          ?*)
-	            $(AM_V_P) && printf '%s\n'
-	              'Makefile: .java.class ($@):
-	               $@.d is already up to date'
-	            ;
-	            run_jdeps=false;
-	          ;;
-	        esac;
-	      fi;
-	      javac_flags='';
+	      flags=;
 	    ;;
 	  esac;
-
 	  readonly run_javac;
-	  readonly run_jdeps;
-	  readonly javac_flags;
+	  readonly flags;
 
 	  if $$run_javac; then
-	    rm -f -r $@ || exit $$?;
 	    sp='$(GATBPS_INNER_SOURCEPATH)';
 	    sp=$$sp'$(CLASSPATH_SEPARATOR)';
 	    sp=$$sp'$(srcdir)/$(GATBPS_INNER_SOURCEPATH)';
+	    readonly sp;
 	    $(AM_V_P) && sh build-aux/echo.sh -q --
 	      $(JAVAC)
 	        -cp $(GATBPS_INNER_CLASSPATH)
 	        -d $(GATBPS_INNER_SOURCEPATH)
 	        -sourcepath $$sp
-	        $$javac_flags
+	        $$flags
 	        $(GATBPS_INNER_JAVACFLAGS)
 	        $(JAVACFLAGS)
 	        $<
@@ -696,60 +679,54 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	      -cp $(GATBPS_INNER_CLASSPATH)
 	      -d $(GATBPS_INNER_SOURCEPATH)
 	      -sourcepath $$sp
-	      $$javac_flags
+	      $$flags
 	      $(GATBPS_INNER_JAVACFLAGS)
 	      $(JAVACFLAGS)
 	      $<
 	    || exit $$?;
 	  fi;
 
-	  if $$run_jdeps; then
-	    rm -f -r $@.d || exit $$?;
-	    case '$(HAVE_JDEPS)' in
-	      ?*)
-	        ]ifelse(,,,[
-	          jdeps sometimes gets angry at a fluctuating classpath
-	          file tree during make -j, even if there are no .class
-	          files in the proper locations. Giving it a nonexistent
-	          classpath file tree seems to fix it. It still outputs
-	          the list of prerequisite classes this way, it just
-	          omits additional information about them.
-	        ])[
-	        $(AM_V_P) && sh build-aux/echo.sh -q --
-	          $(JDEPS) -cp $@$(TSUF)1 -v $@
-	        ;
-	        $(JDEPS) -cp $@$(TSUF)1 -v $@ >$@$(TSUF)2 || exit $$?;
-	        $(AWK) '
-	          BEGIN {
-	            r = "$(GATBPS_INNER_PACKAGE)";
-	            gsub(/\./, "\\.", r);
-	            r = r "\\..*";
-	          }
-	          {
-	            if ($$1 ~ r && $$3 ~ r) {
-	              x = $$3;
-	              sub(/\$$.*/, "", x);
-	              gsub(/\./, "/", x);
-	              x = "$(GATBPS_INNER_SOURCEPATH)/" x ".java";
-	              if (!seen[x]) {
-	                print "$@: " x;
-	                seen[x] = 1;
-	              }
+	  case '$(HAVE_JDEPS)' in
+	    ?*)
+	      ]ifelse(,,,[
+	        jdeps sometimes gets angry at a fluctuating classpath
+	        file tree during make -j, even if there are no .class
+	        files in the proper locations. Giving it a nonexistent
+	        classpath seems to fix it. It still outputs the list of
+	        prerequisite classes this way, it just omits additional
+	        information about them.
+	      ])[
+	      $(AM_V_P) && sh build-aux/echo.sh -q --
+	        $(JDEPS) -cp $@$(TSUF)1 -v $@
+	      ;
+	      $(JDEPS) -cp $@$(TSUF)1 -v $@ >$@$(TSUF)2 || exit $$?;
+	      $(AWK) '
+	        BEGIN {
+	          r = "$(GATBPS_INNER_PACKAGE)";
+	          gsub(/\./, "\\.", r);
+	          r = r "\\..*";
+	        }
+	        {
+	          if ($$1 ~ r && $$3 ~ r) {
+	            x = $$3;
+	            sub(/\$$.*/, "", x);
+	            gsub(/\./, "/", x);
+	            x = "$(GATBPS_INNER_SOURCEPATH)/" x ".java";
+	            if (!seen[x]) {
+	              print "$@: " x;
+	              seen[x] = 1;
 	            }
 	          }
-	        ' <$@$(TSUF)2 >$@$(TSUF)3 || exit $$?;
-	        rm -f $@$(TSUF)2;
-	        mv -f $@$(TSUF)3 $@.d || exit $$?;
-	      ;;
-	      '')
-	        $(AM_V_P) && sh build-aux/echo.sh -q --
-	          touch $@.d
-	        ;
-	        touch $@.d || exit $$?;
-	      ;;
-	    esac;
-	    touch $@ || exit $$?;
-	  fi;
+	        }
+	      ' <$@$(TSUF)2 >$@$(TSUF)3 || exit $$?;
+	      rm -f $@$(TSUF)2;
+	    ;;
+	    '')
+	      >$@$(TSUF)3 || exit $$?;
+	    ;;
+	  esac;
+	  touch $@ || exit $$?;
+	  mv -f $@$(TSUF)3 $@.d || exit $$?;
 
 	) || { s=$$?; rm -f -r $@ $@.d; exit $$s; }])[
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
