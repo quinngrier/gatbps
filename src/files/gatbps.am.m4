@@ -640,15 +640,17 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	      flags='-Xprefer:source -implicit:none';
 	    ;;
 	    '')
-	      x=`find $@ -newer $<` || exit $$?;
-	      case $$x in
-	        ?*)
-	          printf '%s\n' `
-	            `'Makefile: $@ is implicitly up to date'`
-	          `;
-	          exit 0;
-	        ;;
-	      esac;
+	      if test -f $@; then
+	        x=`find $@ -newer $<` || exit $$?;
+	        case $$x in
+	          ?*)
+	            printf '%s\n' `
+	              `'Makefile: $@ is implicitly up to date'`
+	            `;
+	            exit 0;
+	          ;;
+	        esac;
+	      fi;
 	      flags='';
 	    ;;
 	  esac;
