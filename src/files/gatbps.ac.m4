@@ -834,6 +834,9 @@ uninstall-java-]gatbps_x[: java.FORCE
 
 :;}])[]dnl
 
+AC_SUBST([GATBPS_JAVA_RULES])
+AM_SUBST_NOTMAKE([GATBPS_JAVA_RULES])
+
 dnl---------------------------------------------------------------------
 dnl GATBPS_JAVA_CLASS
 dnl---------------------------------------------------------------------
