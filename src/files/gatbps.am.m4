@@ -636,10 +636,10 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	  esac;
 	)])[
 	$(GATBPS_V_JAVAC)$(GATBPS_V_NOP)
-	$(GATBPS_V_at)test -f $@ || rm -f -r $@
-	$(GATBPS_V_at)test -f $@.d || rm -f -r $@.d
-	$(GATBPS_V_at)rm -f -r $@$(TSUF)*
-	$(GATBPS_V_at)$(MKDIR_P) $(@D)
+	$(GATBPS_at)test -f $@ || rm -f -r $@
+	$(GATBPS_at)test -f $@.d || rm -f -r $@.d
+	$(GATBPS_at)rm -f -r $@$(TSUF)*
+	$(GATBPS_at)$(MKDIR_P) $(@D)
 	]gatbps_squish([$(GATBPS_at)(
 
 	  run_javac=:;
