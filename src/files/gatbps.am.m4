@@ -697,9 +697,17 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	        information about them.
 	      ])[
 	      $(AM_V_P) && sh build-aux/echo.sh -q --
-	        $(JDEPS) -cp $@$(TSUF)1 -v $@
+	        $(JDEPS)
+	          -cp $@$(TSUF).nonexistent
+	          -v
+	          $@
 	      ;
-	      $(JDEPS) -cp $@$(TSUF)1 -v $@ >$@$(TSUF)2 || exit $$?;
+	      $(JDEPS)
+	        -cp $@$(TSUF).nonexistent
+	        -v
+	        $@
+	        >$@$(TSUF)2
+	      || exit $$?;
 	      $(AWK) '
 	        BEGIN {
 	          r = "$(GATBPS_INNER_PACKAGE)";
