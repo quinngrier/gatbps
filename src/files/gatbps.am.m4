@@ -229,10 +229,9 @@ GATBPS_DISTFILES_$1: GATBPS_DISTFILES_chmod
 	      ;
 	      cp -L -R -p "$$d/$$x" "$$distdir/$$x" || exit $$?;
 	    else
-	      t='$][@';
-	      printf '%s\n'
-	        "$$t: error: expected file or directory: $$d/$$x"
-	      >&2;
+	      m='Makefile: GATBPS_DISTFILES_$1 ($][@): error:';
+	      m=$$m" path must exist as a file or directory: $$d/$$x";
+	      printf '%s\n' "$$m" >&2;
 	      exit 1;
 	    fi;
 
