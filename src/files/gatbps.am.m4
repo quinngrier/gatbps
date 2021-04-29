@@ -208,7 +208,12 @@ GATBPS_DISTFILES_$1: GATBPS_DISTFILES_chmod
 
 	    fi;
 
-	    rm -f -r "$$distdir/$$x" || exit $$?;
+	    if test -r "$$distdir/$$x"; then
+	      m='Makefile: GATBPS_DISTFILES_$1 ($][@): error:';
+	      m=$$m" path walked twice in GATBPS_DISTFILES_*: $$x";
+	      printf '%s\n' "$$m" >&2;
+	      exit 1;
+	    fi;
 	    $(MKDIR_P) "$$distdir/$$x" || exit $$?;
 	    rmdir "$$distdir/$$x" || exit $$?;
 
