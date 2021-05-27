@@ -218,6 +218,25 @@ m4_ignore([GATBPS_CHECK], [[{ :
 }]])
 
 dnl---------------------------------------------------------------------
+dnl GATBPS_CHECK_COMPILE
+dnl---------------------------------------------------------------------
+
+AC_DEFUN([GATBPS_CHECK_COMPILE], [{ :
+
+  GATBPS_CHECK_BASIC(
+    [$1],
+    [$2],
+    [{ :
+      AC_COMPILE_IFELSE(
+        [GATBPS_LANG_PROGRAM([$3], [$4])],
+        [gatbps_cv_$2='yes'],
+        [gatbps_cv_$2='no'])
+    }],
+    [$5])
+
+}])
+
+dnl---------------------------------------------------------------------
 dnl GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE
 dnl---------------------------------------------------------------------
 
