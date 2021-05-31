@@ -568,6 +568,43 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
 	$][(GATBPS_V_JAR)$][(GATBPS_V_NOP)
 	$][(AM@&t@_V_at){ \
   ( \
+\
+    srcdir='\''$(srcdir)'\''; \
+    case $$srcdir in \
+      [!/]*) \
+        srcdir=./$$srcdir; \
+      ;; \
+    esac; \
+    readonly srcdir; \
+\
+    case '\''$(PARALLEL_JAVAC)'\'' in \
+      ?*) parallel=: ;; \
+      "") parallel=false ;; \
+    esac; \
+    readonly parallel; \
+\
+    class_files='\''$(java_]gatbps_y[_src)'\''; \
+    readonly class_files; \
+\
+    if $$parallel; then \
+      :; \
+    else \
+      for a in $$class_files; do \
+        a=./$$a; \
+        if test -f "$$a"; then \
+          b=$$][{a%.class}.java; \
+          if test -f "$$b"; then \
+            c=`find "$$b" -newer "$$a"` || exit $$?; \
+          elif test -f "$$srcdir/$$b"; then \
+            c=`find "$$srcdir/$$b" -newer "$$a"` || exit $$?; \
+          else \
+            c=x; \
+          fi; \
+          case $$c in ?*) rm -f "$$a.d" || exit $$? ;; esac; \
+        fi; \
+      done; \
+    fi; \
+\
     rm \
       -f \
       '\''-r'\'' \
@@ -594,7 +631,7 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
     esac; \
     xs=; \
     n=0; \
-    for x in $][(java_]gatbps_y[_src); do \
+    for x in $$class_files; do \
       xs="$][$][xs $][$][x"; \
       n=`expr $][$][n + 1` || exit $][$][?; \
       case $][$][n in \
