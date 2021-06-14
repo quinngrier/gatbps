@@ -1,0 +1,30 @@
+//
+// The authors of this file have waived all copyright and
+// related or neighboring rights to the extent permitted by
+// law as described by the CC0 1.0 Universal Public Domain
+// Dedication. You should have received a copy of the full
+// dedication along with this file, typically as a file
+// named <CC0-1.0.txt>. If not, it may be available at
+// <https://creativecommons.org/publicdomain/zero/1.0/>.
+//
+
+//----------------------------------------------------------------------
+// Autoconf entities
+//----------------------------------------------------------------------
+//
+// TODO: These can link to quinngrier.github.io/manuals once I have
+// paragraph linking implemented over there.
+//
+
+:acl_AC_CACHE_CHECK: AC_CACHE_CHECK
+
+//----------------------------------------------------------------------
+// GATBPS entities
+//----------------------------------------------------------------------
+
+:acl_GATBPS_ERROR: xref:acl_GATBPS_ERROR.adoc#acl_GATBPS_ERROR[GATBPS_ERROR]
+:acl_GATBPS_BUG: xref:acl_GATBPS_BUG.adoc#acl_GATBPS_BUG[GATBPS_BUG]
+:acl_GATBPS_CHECK: xref:acl_GATBPS_CHECK.adoc#acl_GATBPS_CHECK[GATBPS_CHECK]
+:acl_gatbps_squish: xref:acl_gatbps_squish.adoc#acl_gatbps_squish[gatbps_squish]
+
+//----------------------------------------------------------------------

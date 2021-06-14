@@ -17,4 +17,9 @@ A double pair of `<>` brackets (e.g., `<<foo>>`) indicates that the
 argument is expanded twice: during argument collection for the macro
 call, and again when the result of the call is rescanned for expansion.
 
+Macros are generally named in all capitals if and only if they output
+code to the `configure` script.
+For example, `{acl_GATBPS_ERROR}` outputs code to the `configure`
+script, but `{acl_gatbps_squish}` does not.
+
 //

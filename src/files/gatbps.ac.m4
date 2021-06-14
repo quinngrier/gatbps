@@ -8,6 +8,14 @@ include({%|src/tools/header_comment.m4|%}){%||%}dnl
 header_comment({%|dnl|%}, {%|dnl|%}){%|
 
 dnl---------------------------------------------------------------------
+dnl gatbps_squish
+dnl---------------------------------------------------------------------
+
+m4_define([gatbps_squish], [m4_bpatsubst(m4_bpatsubst(
+m4_bpatsubst([[[[$1]]]], [[
+	 ]+], [ ]), [^\(..\) ], [\1]), [ \(.\)$], [\1])])
+
+dnl---------------------------------------------------------------------
 dnl Timestamp normalization
 dnl---------------------------------------------------------------------
 
@@ -183,6 +191,20 @@ GATBPS_PROG([XZ], [xz])
 
 dnl---------------------------------------------------------------------
 
+m4_define([GATBPS_ERROR], [[{ :
+  ]AC_MSG_ERROR(m4_dquote(gatbps_squish([$1])), 1)[
+}]])
+
+dnl---------------------------------------------------------------------
+
+m4_define([GATBPS_BUG], [[{ :
+  ]GATBPS_ERROR([
+    $1 (this is a bug, please report it to <]AC_PACKAGE_BUGREPORT[>)
+  ])[
+}]])
+
+dnl---------------------------------------------------------------------
+
 GATBPS_PROG_ASCIIDOCTOR
 GATBPS_PROG_ASCIIDOCTOR_PDF
 
@@ -190,30 +212,31 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_CHECK
 dnl---------------------------------------------------------------------
 
-dnl TODO
+m4_define([GATBPS_CHECK], [[{ :
 
-m4_ignore([GATBPS_CHECK], [[{ :
+  unset $2
+  unset $2_was_cached
+  unset g_cv_$2
 
-  $2_was_cached=0
+  $2_was_cached=:
 
   ]AC_CACHE_CHECK(
-    [$1],
-    [$2],
+    [[$1]],
+    [[g_cv_$2]],
     [[{ :
-
-      # TODO: use $4 as prerequisites with expr
-
+      $3
       $2_was_cached=false
-
-      ]$3[
-
     }]])[
 
-  if $][{]$2[+:} false; then
-    :
-  else
-    : # TODO: barf, the caller failed to set $2
+  if $][{g_cv_$2+:} false; then :
+  else :
+    ]GATBPS_BUG([g_cv_$2 is unset])[
   fi
+
+  $2=$g_cv_$2
+
+  readonly $2
+  readonly $2_was_cached
 
 }]])
 
