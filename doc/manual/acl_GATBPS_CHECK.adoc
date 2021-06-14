@@ -30,4 +30,15 @@ completes.
 * `<name>_was_cached` is set to `:` or `false` to indicate whether
 `<name>` was cached.
 
+* If `<name>` is set to `yes` or `no`, the result of the check is
+assumed to be a boolean and all of the following occur:
+
+** `<name>` is adjusted to `1` or `0`.
+
+** `<name>_sh` is set to `:` or `false`.
+
+** `{acl_AC_DEFINE}` is called for `<name>`.
+
+** `{aml_AM_CONDITIONAL}` is called for `<name>`.
+
 //

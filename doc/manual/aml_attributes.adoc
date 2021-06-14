@@ -9,23 +9,17 @@
 //
 
 //----------------------------------------------------------------------
-// Autoconf entities
+// Automake entities
 //----------------------------------------------------------------------
 //
 // TODO: These can link to quinngrier.github.io/manuals once I have
 // paragraph linking implemented over there.
 //
 
-:acl_AC_CACHE_CHECK: AC_CACHE_CHECK
-:acl_AC_DEFINE: AC_DEFINE
+:aml_AM_CONDITIONAL: AM_CONDITIONAL
 
 //----------------------------------------------------------------------
 // GATBPS entities
 //----------------------------------------------------------------------
-
-:acl_GATBPS_ERROR: xref:acl_GATBPS_ERROR.adoc#acl_GATBPS_ERROR[GATBPS_ERROR]
-:acl_GATBPS_BUG: xref:acl_GATBPS_BUG.adoc#acl_GATBPS_BUG[GATBPS_BUG]
-:acl_GATBPS_CHECK: xref:acl_GATBPS_CHECK.adoc#acl_GATBPS_CHECK[GATBPS_CHECK]
-:acl_gatbps_squish: xref:acl_gatbps_squish.adoc#acl_gatbps_squish[gatbps_squish]
 
 //----------------------------------------------------------------------

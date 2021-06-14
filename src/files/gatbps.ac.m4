@@ -219,6 +219,7 @@ dnl---------------------------------------------------------------------
 m4_define([GATBPS_CHECK], [[{ :
 
   unset $2
+  unset $2_sh
   unset $2_was_cached
   unset g_cv_$2
 
@@ -239,7 +240,26 @@ m4_define([GATBPS_CHECK], [[{ :
 
   $2=$g_cv_$2
 
+  case $2 in
+    yes)
+      $2=1
+      $2_sh=:
+      ]AC_DEFINE([[$2]], 1, [Result of checking $1.])[
+    ;;
+    no)
+      $2=0
+      $2_sh=false
+      ]AC_DEFINE([[$2]], 0, [Result of checking $1.])[
+    ;;
+    *)
+      $2_sh=false
+    ;;
+  esac
+
+  ]AM_CONDITIONAL([$2], [[$$2_sh]])[
+
   readonly $2
+  readonly $2_sh
   readonly $2_was_cached
 
 }]])
