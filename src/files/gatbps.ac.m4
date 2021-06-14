@@ -240,7 +240,7 @@ m4_define([GATBPS_CHECK], [[{ :
 
   $2=$g_cv_$2
 
-  case $2 in
+  case $$2 in
     yes)
       $2=1
       $2_sh=:
