@@ -218,49 +218,92 @@ dnl---------------------------------------------------------------------
 
 m4_define([GATBPS_CHECK], [[{ :
 
-  unset $2
-  unset $2_sh
-  unset $2_was_cached
-  unset g_cv_$2
+  ]m4_pushdef(
+    [gat_nobool],
+    m4_eval(m4_bregexp([$2:], [:nobool:]) >= 0))[
 
-  $2_was_cached=:
+  ]m4_pushdef(
+    [gat_bool],
+    m4_eval(m4_bregexp([$2:], [:bool:]) >= 0))[
+
+  ]m4_pushdef(
+    [gat_name],
+    m4_bpatsubst([[[$2]]], [:.*\(..\)$], [\1]))[
+
+  unset ]gat_name[
+  unset ]gat_name[_sh
+  unset ]gat_name[_was_cached
+  unset g_cv_]gat_name[
+
+  ]gat_name[_was_cached=:
 
   ]AC_CACHE_CHECK(
     [[$1]],
-    [[g_cv_$2]],
+    [[g_cv_]gat_name],
     [[{ :
       $3
-      $2_was_cached=false
+      ]gat_name[_was_cached=false
     }]])[
 
-  if $][{g_cv_$2+:} false; then :
-  else :
-    ]GATBPS_BUG([g_cv_$2 is unset])[
+  if $][{g_cv_]gat_name[+:} false; then
+    :
+    ]m4_if(gat_bool, 1, [[
+      case $g_cv_]gat_name[ in
+        yes | no)
+          :
+        ;;
+        *)
+          ]GATBPS_BUG([g_cv_]gat_name[ is set to something
+                       other than yes or no: $g_cv_]gat_name)[
+        ;;
+      esac
+    ]])[
+  else
+    ]GATBPS_BUG([g_cv_]gat_name[ is unset])[
   fi
 
-  $2=$g_cv_$2
+  ]gat_name[=$g_cv_]gat_name[
 
-  case $$2 in
-    yes)
-      $2=1
-      $2_sh=:
-      ]AC_DEFINE([[$2]], 1, [Result of checking $1.])[
-    ;;
-    no)
-      $2=0
-      $2_sh=false
-      ]AC_DEFINE([[$2]], 0, [Result of checking $1.])[
-    ;;
-    *)
-      $2_sh=false
-    ;;
-  esac
+  ]m4_ignore([
+    When boolean detection is enabled, i.e., when :nobool is not present
+    in $2, we must always call AM_CONDITIONAL, even if a boolean is not
+    detected, as the Automake manual states the following:
 
-  ]AM_CONDITIONAL([$2], [[$$2_sh]])[
+          Note that you must arrange for every AM_CONDITIONAL to
+          be invoked every time configure is run. If
+          AM_CONDITIONAL is run conditionally (e.g., in a shell if
+          statement), then the result will confuse automake.
 
-  readonly $2
-  readonly $2_sh
-  readonly $2_was_cached
+    To do this, we simply set ]gat_name[_sh to false if a boolean is not
+    detected.
+  ])[
+
+  ]m4_if(gat_bool[]gat_nobool, 01, [], [[
+    case $]gat_name[ in
+      yes)
+        ]gat_name[=1
+        ]gat_name[_sh=:
+        ]AC_DEFINE([gat_name], 1, [Result of checking $1.])[
+      ;;
+      no)
+        ]gat_name[=0
+        ]gat_name[_sh=false
+        ]AC_DEFINE([gat_name], 0, [Result of checking $1.])[
+      ;;
+      *)
+        ]gat_name[_sh=false
+      ;;
+    esac
+    ]AM_CONDITIONAL(gat_name, [[$]gat_name[_sh]])[
+  ]])[
+
+  readonly ]gat_name[
+  readonly ]gat_name[_sh
+  readonly ]gat_name[_was_cached
+
+  ]m4_popdef([gat_name])[
+  ]m4_popdef([gat_bool])[
+  ]m4_popdef([gat_nobool])[
 
 }]])
 
