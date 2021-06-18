@@ -7,6 +7,26 @@ include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
 header_comment({%|dnl|%}, {%|dnl|%}){%|
 
+m4_ignore([
+  Some versions of Autoconf temporarily unset all variables containing
+  newline characters when outputting the cache, so we avoid making any
+  such variables readonly. Doing so would interfere with Autoconf and
+  possibly break things.
+])
+
+dnl---------------------------------------------------------------------
+
+[
+
+gatbps_nl='
+'
+# Avoid: readonly gatbps_nl
+
+gatbps_standard_IFS=" 	$gatbps_nl"
+# Avoid: readonly gatbps_standard_IFS
+
+]
+
 dnl---------------------------------------------------------------------
 dnl gatbps_squish
 dnl---------------------------------------------------------------------
@@ -224,7 +244,7 @@ m4_define([GATBPS_CHECK], [[{ :
 
   ]m4_pushdef(
     [gat_bool],
-    m4_eval(m4_bregexp([$2:], [:bool:]) >= 0))[
+    m4_if([$4], [], m4_eval(m4_bregexp([$2:], [:bool:]) >= 0), 1))[
 
   ]m4_pushdef(
     [gat_name],
@@ -241,8 +261,64 @@ m4_define([GATBPS_CHECK], [[{ :
     [[$1]],
     [[g_cv_]gat_name],
     [[{ :
-      $3
+
+      ]m4_if([$4], [], [[$3]], [[
+
+        gatbps_old_IFS=$IFS
+        IFS=$gatbps_standard_IFS
+
+        gatbps_p='$4'
+
+        gatbps_xs='s/[!&|()]/ /g'
+        gatbps_xs=`sed "$gatbps_xs" <<EOF2
+$gatbps_p
+EOF2
+        ` || exit $?
+        for gatbps_x in $gatbps_xs; do
+          eval gatbps_y=\$$gatbps_x
+          case $gatbps_y in
+            1 | 0)
+              :
+            ;;
+            *)
+              ]GATBPS_BUG([$gatbps_x is set to something
+                           other than 1 or 0: $gatbps_y])[
+            ;;
+          esac
+        done
+
+        gatbps_x='
+          s/[A-Z_a-z][0-9A-Z_a-z]*/$&/g
+          s/!/ 1 - /g
+          s/&&/\&/g
+          s/||/|/g
+          s/[&|()]/ "&" /g
+        '
+        gatbps_x=`sed "$gatbps_x" <<EOF2
+$gatbps_p
+EOF2
+        ` || exit $?
+        gatbps_x=`eval expr $gatbps_x`
+        gatbps_x=$?
+        case $gatbps_x in
+          0)
+            :
+            $3
+          ;;
+          1)
+            g_cv_]gat_name[=no
+          ;;
+          *)
+            exit $gatbps_x
+          ;;
+        esac
+
+        IFS=$gatbps_old_IFS
+
+      ]])[
+
       ]gat_name[_was_cached=false
+
     }]])[
 
   if $][{g_cv_]gat_name[+:} false; then
