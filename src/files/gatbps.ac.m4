@@ -403,6 +403,55 @@ AC_DEFUN([GATBPS_CHECK_COMPILE], [{ :
 }])
 
 dnl---------------------------------------------------------------------
+dnl GATBPS_CHECK_JAR
+dnl---------------------------------------------------------------------
+dnl
+dnl GATBPS_CHECK_JAR(<file_pattern>, <path_var>, <have_var>)
+dnl
+
+m4_define([GATBPS_CHECK_JAR], [[{ :
+
+  ]GATBPS_CHECK(
+    [for $1 (path)],
+    [$2:nobool],
+    [
+      while :; do
+
+        for gatbps_x in \
+          /usr/local/share/java \
+          /usr/local/java \
+        ; do
+          for gatbps_y in "$gatbps_x"/$1; do
+            if test -f "$gatbps_y"; then
+              g_cv_$2=$gatbps_y
+              break 3
+            fi
+          done
+        done
+
+        g_cv_$2=no
+        break
+
+      done
+    ])[
+
+  ]GATBPS_CHECK(
+    [for $1 (have)],
+    [$3:bool],
+    [
+      case $$2 in
+        no)
+          g_cv_$3=no
+        ;;
+        *)
+          g_cv_$3=yes
+        ;;
+      esac
+    ])[
+
+}]])
+
+dnl---------------------------------------------------------------------
 dnl GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE
 dnl---------------------------------------------------------------------
 
