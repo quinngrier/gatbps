@@ -273,7 +273,7 @@ m4_define([GATBPS_CHECK], [[{ :
 
         gatbps_p='$4'
 
-        gatbps_xs='s/[!&|()]/ /g'
+        gatbps_xs='s/[!&|()10]/ /g'
         gatbps_xs=`sed "$gatbps_xs" <<EOF2
 $gatbps_p
 EOF2
