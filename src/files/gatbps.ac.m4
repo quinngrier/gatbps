@@ -418,7 +418,7 @@ dnl GATBPS_CHECK_JAR(<message>, <jar_names>,
 dnl                  <path_var>, <have_var>, [<condition>])
 dnl
 dnl The second and later JAR names may be patterns.
-dnl The first must be a specific name.
+dnl The first should be a specific default name.
 dnl
 
 m4_define([GATBPS_CHECK_JAR], [[{ :
@@ -433,8 +433,9 @@ m4_define([GATBPS_CHECK_JAR], [[{ :
           /usr/local/share/java \
           /usr/local/java \
         ; do
-          for gatbps_y in \
-            ]m4_map_args_w(GATBPS_SQUISH([$2]), ['], ['], [ ])[ \
+          for gatbps_y in . \
+            ]m4_map_args_sep(['], ['], [ ], m4_unquote(m4_cdr(
+              m4_map_args_w(GATBPS_SQUISH([$2]), [], [], [,]))))[ \
           ; do
             for gatbps_z in $gatbps_x/$gatbps_y; do
               if test -f $gatbps_z; then
@@ -461,14 +462,11 @@ m4_define([GATBPS_CHECK_JAR], [[{ :
     [$1 (have)],
     [$4:bool],
     [
-      case $$3 in
-        no)
-          g_cv_$4=no
-        ;;
-        *)
-          g_cv_$4=yes
-        ;;
-      esac
+      if test -f $$3; then
+        g_cv_$4=yes
+      else
+        g_cv_$4=no
+      fi
     ],
     [$5])[
 
