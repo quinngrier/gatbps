@@ -414,8 +414,11 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_CHECK_JAR
 dnl---------------------------------------------------------------------
 dnl
-dnl GATBPS_CHECK_JAR(<message>, <file_pattern>,
+dnl GATBPS_CHECK_JAR(<message>, <jar_names>,
 dnl                  <path_var>, <have_var>, [<condition>])
+dnl
+dnl The second and later JAR names may be patterns.
+dnl The first must be a specific name.
 dnl
 
 m4_define([GATBPS_CHECK_JAR], [[{ :
@@ -430,19 +433,27 @@ m4_define([GATBPS_CHECK_JAR], [[{ :
           /usr/local/share/java \
           /usr/local/java \
         ; do
-          for gatbps_y in "$gatbps_x"/$2; do
-            if test -f "$gatbps_y"; then
-              g_cv_$3=$gatbps_y
-              break 3
-            fi
+          for gatbps_y in \
+            ]m4_map_args_w(GATBPS_SQUISH([$2]), ['], ['], [ ])[ \
+          ; do
+            for gatbps_z in $gatbps_x/$gatbps_y; do
+              if test -f $gatbps_z; then
+                g_cv_$3=$gatbps_z
+                break 4
+              fi
+            done
           done
         done
 
-        g_cv_$3=no
+        g_cv_$3=/usr/local/share/java/]m4_car(
+          m4_map_args_w(GATBPS_SQUISH([$2]), [], [], [,]))[
         break
 
       done
-    ], [$5])[
+    ],
+    [$5],
+    [/usr/local/share/java/]m4_car(
+      m4_map_args_w(GATBPS_SQUISH([$2]), [], [], [,])))[
 
   ]GATBPS_CONFIG_LATER_VAR([$3])[
 
@@ -458,7 +469,8 @@ m4_define([GATBPS_CHECK_JAR], [[{ :
           g_cv_$4=yes
         ;;
       esac
-    ], [$5])[
+    ],
+    [$5])[
 
 }]])
 
