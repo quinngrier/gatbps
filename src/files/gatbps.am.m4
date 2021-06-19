@@ -957,14 +957,14 @@ uninstall-java-main: java.FORCE
 	  $(GATBPS_M4FLAGS)
 	  $(M4FLAGS)
 	  -D make_rules
-	  -D make_target=$(@D)
+	  -D make_target=$@
 	  $<
 	  >>$@$(TSUF)1
 	])[
 	$(AM_V_at)$(M4) ]GATBPS_SQUISH([
 	  $(GATBPS_M4FLAGS)
 	  $(M4FLAGS)
-	  -D make_target=$(@D)
+	  -D make_target=$@
 	  $<
 	  >$@$(TSUF)2
 	])[
