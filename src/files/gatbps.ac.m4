@@ -443,6 +443,8 @@ m4_define([GATBPS_CHECK_JAR], [[{ :
       done
     ])[
 
+  ]GATBPS_CONFIG_LATER_VAR([$3])[
+
   ]GATBPS_CHECK(
     [$1 (have)],
     [$4:bool],
