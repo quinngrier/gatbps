@@ -60,7 +60,7 @@ is `1` or `0`.
 ** `{aml_AM_CONDITIONAL}` is called for `<name>` using `$<name>_sh`.
 
 * If `:bool` is specified at the end of `<name>`, then the `:notbool`
-specifier is ignored and boolean behavior is obliged: an error will
+specifier is ignored and boolean behavior is enforced: an error will
 occur if `g_cv_<name>` is not set to `yes` or `no`.
 
 * If `<precondition>` is given, it will be interpreted as a boolean
