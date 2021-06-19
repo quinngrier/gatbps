@@ -239,16 +239,20 @@ dnl---------------------------------------------------------------------
 m4_define([GATBPS_CHECK], [[{ :
 
   ]m4_pushdef(
-    [gat_nobool],
-    m4_eval(m4_bregexp([$2:], [:nobool:]) >= 0))[
+    [gat_name],
+    m4_bpatsubst([[[$2]]], [:.*\(..\)$], [\1]))[
 
   ]m4_pushdef(
     [gat_bool],
     m4_if([$4], [], m4_eval(m4_bregexp([$2:], [:bool:]) >= 0), 1))[
 
   ]m4_pushdef(
-    [gat_name],
-    m4_bpatsubst([[[$2]]], [:.*\(..\)$], [\1]))[
+    [gat_notbool],
+    m4_eval(m4_bregexp([$2:], [:notbool:]) >= 0))[
+
+  ]m4_pushdef(
+    [gat_notmake],
+    m4_eval(m4_bregexp([$2:], [:notmake:]) >= 0))[
 
   unset ]gat_name[
   unset ]gat_name[_sh
@@ -340,10 +344,13 @@ EOF2
 
   ]gat_name[=$g_cv_]gat_name[
 
+  ]AC_SUBST(gat_name)[
+  ]m4_if(gat_notmake, 1, [AM_SUBST_NOTMAKE(gat_name)])[
+
   ]m4_ignore([
-    When boolean detection is enabled, i.e., when :nobool is not present
-    in $2, we must always call AM_CONDITIONAL, even if a boolean is not
-    detected, as the Automake manual states the following:
+    When :notbool is not specified, we must always call AM_CONDITIONAL,
+    even if a boolean is not detected, as the Automake manual states the
+    following:
 
           Note that you must arrange for every AM_CONDITIONAL to
           be invoked every time configure is run. If
@@ -354,7 +361,7 @@ EOF2
     detected.
   ])[
 
-  ]m4_if(gat_bool[]gat_nobool, 01, [], [[
+  ]m4_if(gat_bool[]gat_notbool, 01, [], [[
     case $]gat_name[ in
       yes)
         ]gat_name[=1
@@ -377,9 +384,10 @@ EOF2
   readonly ]gat_name[_sh
   readonly ]gat_name[_was_cached
 
-  ]m4_popdef([gat_name])[
+  ]m4_popdef([gat_notmake])[
+  ]m4_popdef([gat_notbool])[
   ]m4_popdef([gat_bool])[
-  ]m4_popdef([gat_nobool])[
+  ]m4_popdef([gat_name])[
 
 }]])
 
@@ -413,7 +421,7 @@ m4_define([GATBPS_CHECK_JAR], [[{ :
 
   ]GATBPS_CHECK(
     [$1 (path)],
-    [$3:nobool],
+    [$3:notbool],
     [
       while :; do
 

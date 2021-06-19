@@ -19,6 +19,7 @@
 :acl_AC_CACHE_CHECK: AC_CACHE_CHECK
 :acl_AC_DEFINE: AC_DEFINE
 :acl_AC_REQUIRE: AC_REQUIRE
+:acl_AC_SUBST: AC_SUBST
 
 //----------------------------------------------------------------------
 // GATBPS entities

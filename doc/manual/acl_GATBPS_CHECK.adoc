@@ -30,11 +30,16 @@ completes.
 * `<name>_was_cached` is set to `:` or `false` to indicate whether
 `<name>` was cached.
 
+* `{acl_AC_SUBST}` is called for `<name>`.
+
 * The end of `<name>` may include zero or more specifiers, each of which
 consists of a `:` character followed by an identifier.
 These specifiers are removed from `<name>` when forming variable names.
 
-* If `:nobool` is specified at the end of `<name>`, then boolean
+* If `:notmake` is specified at the end of `<name>`, then
+`{aml_AM_SUBST_NOTMAKE}` is called for `<name>`.
+
+* If `:notbool` is specified at the end of `<name>`, then boolean
 detection is disabled.
 Otherwise, boolean detection is enabled and all of the following occur:
 
@@ -53,7 +58,7 @@ is `1` or `0`.
 
 ** `{aml_AM_CONDITIONAL}` is called for `<name>` using `$<name>_sh`.
 
-* If `:bool` is specified at the end of `<name>`, then the `:nobool`
+* If `:bool` is specified at the end of `<name>`, then the `:notbool`
 specifier is ignored and boolean behavior is obliged: an error will
 occur if `g_cv_<name>` is not set to `yes` or `no`.
 
