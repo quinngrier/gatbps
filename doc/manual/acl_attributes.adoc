@@ -18,14 +18,16 @@
 
 :acl_AC_CACHE_CHECK: AC_CACHE_CHECK
 :acl_AC_DEFINE: AC_DEFINE
+:acl_AC_REQUIRE: AC_REQUIRE
 
 //----------------------------------------------------------------------
 // GATBPS entities
 //----------------------------------------------------------------------
 
-:acl_GATBPS_ERROR: xref:acl_GATBPS_ERROR.adoc#acl_GATBPS_ERROR[GATBPS_ERROR]
 :acl_GATBPS_BUG: xref:acl_GATBPS_BUG.adoc#acl_GATBPS_BUG[GATBPS_BUG]
 :acl_GATBPS_CHECK: xref:acl_GATBPS_CHECK.adoc#acl_GATBPS_CHECK[GATBPS_CHECK]
+:acl_GATBPS_ERROR: xref:acl_GATBPS_ERROR.adoc#acl_GATBPS_ERROR[GATBPS_ERROR]
+:acl_GATBPS_SOFT_REQUIRE: xref:acl_GATBPS_SOFT_REQUIRE.adoc#acl_GATBPS_SOFT_REQUIRE[GATBPS_SOFT_REQUIRE]
 :acl_gatbps_squish: xref:acl_gatbps_squish.adoc#acl_gatbps_squish[gatbps_squish]
 
 //----------------------------------------------------------------------

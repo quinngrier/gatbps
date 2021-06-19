@@ -1241,13 +1241,10 @@ dnl---------------------------------------------------------------------
 
 m4_define([GATBPS_SOFT_REQUIRE],
   [m4_if(
-    m4_bregexp([$1], [[a-zA-Z_]]),
+    m4_bregexp([$1], [^[a-zA-Z_][a-zA-Z_0-9]*$]),
     [-1],
     [m4_fatal([GATBPS_SOFT_REQUIRE: invalid argument])],
-    [m4_ifdef(
-      m4_bregexp([$1], [[a-zA-Z_][a-zA-Z_0-9]*], [[\&]]),
-      [AC_REQUIRE(
-        m4_bregexp([$1], [[a-zA-Z_][a-zA-Z_0-9]*], [[\&]]))])])])
+    [m4_ifdef([$1], [AC_REQUIRE([$1])])])])
 
 dnl---------------------------------------------------------------------
 
