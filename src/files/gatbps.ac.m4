@@ -1247,10 +1247,23 @@ m4_define([GATBPS_SOFT_REQUIRE],
     [m4_ifdef([$1], [AC_REQUIRE([$1])])])])
 
 dnl---------------------------------------------------------------------
+dnl GATBPS_SOFT_VAR_DEP
+dnl---------------------------------------------------------------------
+dnl
+dnl TODO: This can be removed after GATBPS_CHECK_BASIC is removed
+dnl (GATBPS_CHECK is the new replacement).
+dnl
 
 m4_define(
   [GATBPS_SOFT_VAR_DEP],
   [m4_ifdef([DEFINE_]$1, [$1])])
+
+dnl---------------------------------------------------------------------
+dnl GATBPS_SOFT_VARIABLE
+dnl---------------------------------------------------------------------
+
+m4_define([GATBPS_SOFT_VARIABLE],
+  [m4_ifdef([DEFINE_$1], [[$1]], 1)])
 
 dnl---------------------------------------------------------------------
 dnl GATBPS_M4
