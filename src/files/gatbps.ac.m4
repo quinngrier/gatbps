@@ -244,7 +244,7 @@ m4_define([GATBPS_CHECK], [[{ :
 
   ]m4_pushdef(
     [gat_bool],
-    m4_if([$4], [], m4_eval(m4_bregexp([$2:], [:bool:]) >= 0), 1))[
+    m4_eval(m4_bregexp([$2:], [:bool:]) >= 0))[
 
   ]m4_pushdef(
     [gat_notbool],
@@ -310,7 +310,7 @@ EOF2
             $3
           ;;
           1)
-            g_cv_]gat_name[=no
+            g_cv_]gat_name[=]m4_if([$5], [], [[no]], [[$5]])[
           ;;
           *)
             exit $gatbps_x

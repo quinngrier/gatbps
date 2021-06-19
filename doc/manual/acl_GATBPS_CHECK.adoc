@@ -16,7 +16,8 @@
 ----
 include::acl_include_gatbps_ac_fragment.adoc[]
 
-{acl_GATBPS_CHECK}(<message>, <name>, <code>, [<precondition>])
+{acl_GATBPS_CHECK}(<message>, <name>, <code>,
+             [<precondition>], [<skip_value=no>])
 ----
 
 The `{acl_GATBPS_CHECK}` macro extends the `{acl_AC_CACHE_CHECK}` macro
@@ -62,14 +63,13 @@ is `1` or `0`.
 specifier is ignored and boolean behavior is obliged: an error will
 occur if `g_cv_<name>` is not set to `yes` or `no`.
 
-* If `<precondition>` is given, then the behavior is as if `:bool` was
-specified at the end of `<name>`, and `<precondition>` will be
-interpreted as a boolean expression.
-If the result of `<precondition>` is false, then `g_cv_<name>` will be
-set to `no` instead of executing `<code>` to set it.
-`<precondition>` may use variable names, literal ``1```'s and ``0```'s,
+* If `<precondition>` is given, it will be interpreted as a boolean
+expression.
+If the result of the expression is false, `g_cv_<name>` will be set to
+`<skip_value>` instead of executing `<code>` to set it.
+The expression may use variable names, literal ``1```'s and ``0```'s,
 the `!`, `&&`, and `||` operators, parentheses for precedence, and
 space, tab, and newline characters for separation.
-Each variable should already be set to `1` or `0`.
+Each variable should be set to `1` or `0`.
 
 //
