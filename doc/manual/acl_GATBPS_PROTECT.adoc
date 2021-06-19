@@ -1,19 +1,19 @@
-[[acl_gatbps_protect,gatbps_protect]]
-= The `gatbps_protect` macro
+[[acl_GATBPS_PROTECT,GATBPS_PROTECT]]
+= The `GATBPS_PROTECT` macro
 
 .Autoconf
 [source,subs="normal"]
 ----
 m4_include([gatbps.ac])
 
-gatbps_protect([<arg>...])
+GATBPS_PROTECT([<arg>...])
 ----
 
-The `gatbps_protect` macro protects every identifier `x` appearing
+The `GATBPS_PROTECT` macro protects every identifier `x` appearing
 anywhere in the arguments from expansion by calling
 `m4_pushdef([x], [[x]])`.
 The identifiers can later be unprotected by calling
-xref:acl_gatbps_unprotect.adoc#acl_gatbps_unprotect[`gatbps_unprotect`]
+xref:acl_GATBPS_UNPROTECT.adoc#acl_GATBPS_UNPROTECT[`GATBPS_UNPROTECT`]
 with the same arguments.
 
 //

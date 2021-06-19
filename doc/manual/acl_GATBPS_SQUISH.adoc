@@ -8,15 +8,15 @@
 // <https://creativecommons.org/publicdomain/zero/1.0/>.
 //
 
-[[acl_gatbps_squish]]
-= The `gatbps_squish` macro
+[[acl_GATBPS_SQUISH]]
+= The `GATBPS_SQUISH` macro
 
 .Autoconf
 [source,subs="{subs_source}"]
 ----
 include::acl_include_gatbps_ac_fragment.adoc[]
 
-{acl_gatbps_squish}(<text>)
+{acl_GATBPS_SQUISH}(<text>)
 ----
 
 //

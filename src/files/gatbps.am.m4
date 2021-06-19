@@ -15,7 +15,7 @@ changequote({%|[|%}, {%|]|%})[
 
 ]dnl--------------------------------------------------------------------
 
-define([gatbps_squish], [patsubst(patsubst(
+define([GATBPS_SQUISH], [patsubst(patsubst(
 patsubst([[[[$1]]]], [[
 	 ]+], [ ]), [^\(..\) ], [\1]), [ \(.\)$], [\1])])
 
@@ -155,7 +155,7 @@ pushdef([GATBPS_DISTFILES_n], 100)
 GATBPS_DISTFILES_chmod: FORCE
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
 	$(GATBPS_V_FORCE)$(GATBPS_V_NOP)
-	]gatbps_squish([$(GATBPS_at)(
+	]GATBPS_SQUISH([$(GATBPS_at)(
 
 	  distdir='$(distdir)';
 	  case $$distdir in
@@ -181,7 +181,7 @@ GATBPS_DISTFILES_$1: $(GATBPS_DISTFILES_$1)
 GATBPS_DISTFILES_$1: GATBPS_DISTFILES_chmod
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
 	$(GATBPS_V_FORCE)$(GATBPS_V_NOP)
-	]gatbps_squish([$(GATBPS_at)(
+	]GATBPS_SQUISH([$(GATBPS_at)(
 
 	  first_iteration=:;
 
@@ -298,7 +298,7 @@ $(prevent_an_empty_line)
 
 pushdef([x], [[
 $1$2:
-	$(GATBPS_V_ASCIIDOCTOR)$(ASCIIDOCTOR) ]gatbps_squish([
+	$(GATBPS_V_ASCIIDOCTOR)$(ASCIIDOCTOR) ]GATBPS_SQUISH([
 	  -b html
 	  -o $][@$(TSUF)
 	  -r asciidoctor-diagram
@@ -318,7 +318,7 @@ popdef([x])
 
 pushdef([x], [[
 $1$2:
-	$(GATBPS_V_ASCIIDOCTOR)$(ASCIIDOCTOR) ]gatbps_squish([
+	$(GATBPS_V_ASCIIDOCTOR)$(ASCIIDOCTOR) ]GATBPS_SQUISH([
 	  -b manpage
 	  -o $][@$(TSUF)
 	  $(GATBPS_COMMON_ASCIIDOCTOR_FLAGS)
@@ -345,7 +345,7 @@ popdef([x])
 
 pushdef([x], [[
 $1$2:
-	$(GATBPS_V_ASCIIDOCTOR_PDF)$(ASCIIDOCTOR_PDF) ]gatbps_squish([
+	$(GATBPS_V_ASCIIDOCTOR_PDF)$(ASCIIDOCTOR_PDF) ]GATBPS_SQUISH([
 	  -o $][@$(TSUF)
 	  $(GATBPS_COMMON_ASCIIDOCTOR_FLAGS)
 	  $(AM_ASCIIDOCTOR_PDF_FLAGS)
@@ -667,7 +667,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 
 .java.class:
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
-	]gatbps_squish([$(GATBPS_at)(
+	]GATBPS_SQUISH([$(GATBPS_at)(
 	  case '$(GATBPS_INNER_CLASSPATH)' in
 	    '')
 	      printf '%s\n'
@@ -683,7 +683,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	$(GATBPS_at)test -f $@.d || rm -f -r $@.d
 	$(GATBPS_at)rm -f -r $@$(TSUF)*
 	$(GATBPS_at)$(MKDIR_P) $(@D)
-	]gatbps_squish([$(GATBPS_at)(
+	]GATBPS_SQUISH([$(GATBPS_at)(
 
 	  run_javac=:;
 	  flags='-Xprefer:source -implicit:none';
@@ -953,14 +953,14 @@ uninstall-java-main: java.FORCE
 	$(AM_V_at)rm -f -r $@.d
 	$(AM_V_at)$(MKDIR_P) $(@D)
 	$(AM_V_at)printf '%s: %s\n' $@ $< >$@$(TSUF)1
-	$(AM_V_at)$(M4) ]gatbps_squish([
+	$(AM_V_at)$(M4) ]GATBPS_SQUISH([
 	  $(GATBPS_M4FLAGS)
 	  $(M4FLAGS)
 	  -D make_rules
 	  $<
 	  >>$@$(TSUF)1
 	])[
-	$(AM_V_at)$(M4) ]gatbps_squish([
+	$(AM_V_at)$(M4) ]GATBPS_SQUISH([
 	  $(GATBPS_M4FLAGS)
 	  $(M4FLAGS)
 	  $<

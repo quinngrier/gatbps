@@ -28,10 +28,10 @@ gatbps_standard_IFS=" 	$gatbps_nl"
 ]
 
 dnl---------------------------------------------------------------------
-dnl gatbps_squish
+dnl GATBPS_SQUISH
 dnl---------------------------------------------------------------------
 
-m4_define([gatbps_squish], [m4_bpatsubst(m4_bpatsubst(
+m4_define([GATBPS_SQUISH], [m4_bpatsubst(m4_bpatsubst(
 m4_bpatsubst([[[[$1]]]], [[
 	 ]+], [ ]), [^\(..\) ], [\1]), [ \(.\)$], [\1])])
 
@@ -91,10 +91,10 @@ export GATBPS_TIMESTAMPS_NORMALIZED
 ]
 
 dnl---------------------------------------------------------------------
-dnl gatbps_protect
+dnl GATBPS_PROTECT
 dnl---------------------------------------------------------------------
 
-m4_define([gatbps_protect],
+m4_define([GATBPS_PROTECT],
   [m4_if(
     m4_bregexp([$*], [[a-zA-Z_]]),
     [-1],
@@ -103,7 +103,7 @@ m4_define([gatbps_protect],
       m4_pushdef(
         m4_bregexp([$*], [[a-zA-Z_][a-zA-Z_0-9]*], [[\&]]),
         m4_bregexp([$*], [[a-zA-Z_][a-zA-Z_0-9]*], [[[\&]]]))
-      gatbps_protect(
+      GATBPS_PROTECT(
         m4_bregexp(
           m4_bpatsubst(
             [$*],
@@ -114,16 +114,16 @@ m4_define([gatbps_protect],
     )])])
 
 dnl---------------------------------------------------------------------
-dnl gatbps_unprotect
+dnl GATBPS_UNPROTECT
 dnl---------------------------------------------------------------------
 
-m4_define([gatbps_unprotect],
+m4_define([GATBPS_UNPROTECT],
   [m4_if(
     m4_bregexp([$*], [[a-zA-Z_]]),
     [-1],
     [],
     [m4_ignore(
-      gatbps_unprotect(
+      GATBPS_UNPROTECT(
         m4_bregexp(
           m4_bpatsubst(
             [$*],
@@ -142,7 +142,7 @@ dnl---------------------------------------------------------------------
 m4_define([GATBPS_PROG],
   [AC_DEFUN([GATBPS_PROG_][$1], [[{ :
 
-    ]gatbps_protect(
+    ]GATBPS_PROTECT(
       $@,
       [$1_LATER],
       [HAVE_$1])[
@@ -188,7 +188,7 @@ EOF
       [HAVE_$1],
       [[(if (exit $HAVE_$1); then exit 1; else exit 0; fi)]])[
 
-    ]gatbps_unprotect(
+    ]GATBPS_UNPROTECT(
       $@,
       [$1_LATER],
       [HAVE_$1])[
@@ -214,7 +214,7 @@ dnl GATBPS_ERROR
 dnl---------------------------------------------------------------------
 
 m4_define([GATBPS_ERROR], [[{ :
-  ]AC_MSG_ERROR(m4_dquote(gatbps_squish([$1])), 1)[
+  ]AC_MSG_ERROR(m4_dquote(GATBPS_SQUISH([$1])), 1)[
 }]])
 
 dnl---------------------------------------------------------------------

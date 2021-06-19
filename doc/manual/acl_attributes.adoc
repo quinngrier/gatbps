@@ -28,6 +28,6 @@
 :acl_GATBPS_CHECK: xref:acl_GATBPS_CHECK.adoc#acl_GATBPS_CHECK[GATBPS_CHECK]
 :acl_GATBPS_ERROR: xref:acl_GATBPS_ERROR.adoc#acl_GATBPS_ERROR[GATBPS_ERROR]
 :acl_GATBPS_SOFT_REQUIRE: xref:acl_GATBPS_SOFT_REQUIRE.adoc#acl_GATBPS_SOFT_REQUIRE[GATBPS_SOFT_REQUIRE]
-:acl_gatbps_squish: xref:acl_gatbps_squish.adoc#acl_gatbps_squish[gatbps_squish]
+:acl_GATBPS_SQUISH: xref:acl_GATBPS_SQUISH.adoc#acl_GATBPS_SQUISH[GATBPS_SQUISH]
 
 //----------------------------------------------------------------------
