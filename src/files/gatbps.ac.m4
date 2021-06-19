@@ -414,7 +414,8 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_CHECK_JAR
 dnl---------------------------------------------------------------------
 dnl
-dnl GATBPS_CHECK_JAR(<message>, <file_pattern>, <path_var>, <have_var>)
+dnl GATBPS_CHECK_JAR(<message>, <file_pattern>,
+dnl                  <path_var>, <have_var>, [<condition>])
 dnl
 
 m4_define([GATBPS_CHECK_JAR], [[{ :
@@ -441,7 +442,7 @@ m4_define([GATBPS_CHECK_JAR], [[{ :
         break
 
       done
-    ])[
+    ], [$5])[
 
   ]GATBPS_CONFIG_LATER_VAR([$3])[
 
@@ -457,7 +458,7 @@ m4_define([GATBPS_CHECK_JAR], [[{ :
           g_cv_$4=yes
         ;;
       esac
-    ])[
+    ], [$5])[
 
 }]])
 
