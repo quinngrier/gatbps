@@ -1,0 +1,39 @@
+#
+# The authors of this file have waived all copyright and
+# related or neighboring rights to the extent permitted by
+# law as described by the CC0 1.0 Universal Public Domain
+# Dedication. You should have received a copy of the full
+# dedication along with this file, typically as a file
+# named <CC0-1.0.txt>. If not, it may be available at
+# <https://creativecommons.org/publicdomain/zero/1.0/>.
+#
+
+#-----------------------------------------------------------------------
+
+stages: [stage-1,  stage-2,  stage-3,  stage-4,  stage-5,
+         stage-6,  stage-7,  stage-8,  stage-9,  stage-10,
+         stage-11, stage-12, stage-13, stage-14, stage-15,
+         stage-16, stage-17, stage-18, stage-19, stage-20]
+
+.no-script:
+  image: alpine
+  script: [':']
+  variables: {GIT_STRATEGY: none}
+
+#-----------------------------------------------------------------------
+
+build-pages:
+  artifacts: {paths: [public]}
+  image: alpine
+  script:
+    - build-aux/adock doc/manual/index.adoc
+    - cp -R doc/manual public
+  stage: stage-1
+
+pages:
+  extends: [build-pages, .no-script]
+  needs: [build-pages]
+  rules: [if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH]
+  stage: stage-2
+
+#-----------------------------------------------------------------------

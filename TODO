@@ -1,0 +1,2 @@
+- build-aux/adock needs to be copied from my dotfiles repository via
+  dev-aux/special-files.gmk.
