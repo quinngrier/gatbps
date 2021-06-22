@@ -27,7 +27,7 @@ build-pages:
   image: docker
   services: ['docker:dind']
   script:
-    - build-aux/adock doc/manual/index.adoc
+    - build-aux/adock asciidoctor doc/manual/index.adoc
     - cp -R doc/manual public
   stage: stage-1
 
