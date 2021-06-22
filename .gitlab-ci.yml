@@ -24,7 +24,8 @@ stages: [stage-1,  stage-2,  stage-3,  stage-4,  stage-5,
 
 build-pages:
   artifacts: {paths: [public]}
-  image: alpine
+  image: docker
+  services: [docker:dind]
   script:
     - build-aux/adock doc/manual/index.adoc
     - cp -R doc/manual public
