@@ -8,13 +8,11 @@
 // <https://creativecommons.org/publicdomain/zero/1.0/>.
 //
 
-Macro arguments are notated with a single or double pair of `<>`
-brackets.
-A single pair of `<>` brackets (e.g., `<foo>`) indicates that the
-argument is expanded once: during argument collection for the macro
-call.
-A double pair of `<>` brackets (e.g., `<<foo>>`) indicates that the
-argument is expanded twice: during argument collection for the macro
-call, and again when the result of the call is rescanned for expansion.
+In the description of a macro, each argument is notated with either a
+single or double pair of `<>` brackets.
+A single pair, like `<foo>`, means the macro ensures the argument is
+never expanded during rescanning.
+A double pair, like `++<<foo>>++`, means the macro ensures the argument
+is always expanded during rescanning.
 
 //
