@@ -8,19 +8,18 @@
 // <https://creativecommons.org/publicdomain/zero/1.0/>.
 //
 
-[[acl_GATBPS_SOFT_REQUIRE]]
-= The `GATBPS_SOFT_REQUIRE` macro
+[[acl_GATBPS_SOFT_VARIABLE]]
+= The `GATBPS_SOFT_VARIABLE` macro
 
 .Autoconf
 [source,subs="{subs_source}"]
 ----
 include::acl_include_gatbps_ac_fragment.adoc[]
 
-{acl_GATBPS_SOFT_REQUIRE}(<name>)
+{acl_GATBPS_SOFT_VARIABLE}(<name>)
 ----
 
-The `{acl_GATBPS_SOFT_REQUIRE}` macro is the same as the
-`{acl_AC_REQUIRE}` macro except it has no effect if `<name>` is not
-defined as a macro.
+The `{acl_GATBPS_SOFT_VARIABLE}` macro expands to `[<name>]` if
+`DEFINE_<name>` is defined as a macro, or to `1` if not.
 
 //
