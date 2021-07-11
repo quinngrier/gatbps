@@ -8,11 +8,73 @@
 // <https://creativecommons.org/publicdomain/zero/1.0/>.
 //
 
-In the description of a macro, each argument is notated with either a
-single or double pair of `<>` brackets.
-A single pair, like `<foo>`, means the macro ensures the argument is
-never expanded during rescanning.
-A double pair, like `++<<foo>>++`, means the macro ensures the argument
-is always expanded during rescanning.
+In the description of a macro, each argument is notated with one or more
+pairs of `<>` brackets.
+stem:[n] pairs of `<>` brackets means the argument will be expanded
+exactly stem:[n-1] times during rescanning.
+
+.{empty}
+[example]
+====
+.`configure.ac`
+[source]
+----
+AC_INIT([[example]], 1)
+AM_INIT_AUTOMAKE([foreign])
+
+include::acl_include_gatbps_ac_fragment.adoc[]
+
+m4_pushdef([f1], [[$1]])          dnl would be described as f1(<x>)
+m4_pushdef([f2], [$1])            dnl would be described as f2(<<x>>)
+m4_pushdef([f3], [m4_expand($1)]) dnl would be described as f3(<<<x>>>)
+
+m4_pushdef([x], [y])
+
+[printf '%s\n'] 'f1(x)';       dnl prints y
+[printf '%s\n'] 'f2(x)';       dnl prints y
+[printf '%s\n'] 'f3(x)';       dnl prints y
+
+[printf '%s\n'] 'f1([x])';     dnl prints x
+[printf '%s\n'] 'f2([x])';     dnl prints y
+[printf '%s\n'] 'f3([x])';     dnl prints y
+
+[printf '%s\n'] 'f1([[x]])';   dnl prints [x]
+[printf '%s\n'] 'f2([[x]])';   dnl prints x
+[printf '%s\n'] 'f3([[x]])';   dnl prints y
+
+[printf '%s\n'] 'f1([[[x]]])'; dnl prints [[x]]
+[printf '%s\n'] 'f2([[[x]]])'; dnl prints [x]
+[printf '%s\n'] 'f3([[[x]]])'; dnl prints x
+
+m4_popdef([x])
+
+m4_popdef([f3])
+m4_popdef([f2])
+m4_popdef([f1])
+
+m4_syscmd([>Makefile.am])
+AC_CONFIG_FILES([Makefile])
+AC_OUTPUT
+----
+
+.Output
+----
+$ autoreconf -i -f && ./configure
+...
+y
+y
+y
+x
+y
+y
+[x]
+x
+y
+[[x]]
+[x]
+x
+...
+----
+====
 
 //
