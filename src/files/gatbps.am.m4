@@ -198,19 +198,15 @@ GATBPS_DISTFILES_$1: GATBPS_DISTFILES_chmod
 	    if $$first_iteration; then
 
 	      srcdir='$(srcdir)';
-	      case $$srcdir in
-	        [!/]*)
-	          srcdir=./$$srcdir;
-	        ;;
-	      esac;
+	      case $$srcdir in [!/]*)
+	        srcdir=./$$srcdir;
+	      ;; esac;
 	      readonly srcdir;
 
 	      distdir='$(distdir)';
-	      case $$distdir in
-	        [!/]*)
-	          distdir=./$$distdir;
-	        ;;
-	      esac;
+	      case $$distdir in [!/]*)
+	        distdir=./$$distdir;
+	      ;; esac;
 	      readonly distdir;
 
 	      first_iteration=false;
@@ -224,6 +220,7 @@ GATBPS_DISTFILES_$1: GATBPS_DISTFILES_chmod
 	      printf '%s\n' "$$m" >&2;
 	      exit 1;
 	    fi;
+
 	    $(MKDIR_P) "$$distdir/$$x" || exit $$?;
 	    rmdir "$$distdir/$$x" || exit $$?;
 
