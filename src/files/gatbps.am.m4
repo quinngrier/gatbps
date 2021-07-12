@@ -156,7 +156,7 @@ popdef([pad])
 ##----------------------------------------------------------------------
 ]
 
-pushdef([GATBPS_DISTFILES_n], 100)
+define([GATBPS_DISTFILES_N], 100)
 
 [
 
@@ -252,42 +252,45 @@ dist-hook: GATBPS_DISTFILES_$1
 
 pushdef([GATBPS_DISTFILES_all],
   [ifelse($1, [], [GATBPS_DISTFILES_all(0)],
-          $1, GATBPS_DISTFILES_n, [],
+          $1, GATBPS_DISTFILES_N, [],
           [GATBPS_DISTFILES_i($1)GATBPS_DISTFILES_all(incr($1))])])
 
 GATBPS_DISTFILES_all
 
 popdef([GATBPS_DISTFILES_all])
 popdef([GATBPS_DISTFILES_i])
-popdef([GATBPS_DISTFILES_n])
 
 [
 ##----------------------------------------------------------------------
-## Distribution archive rules
+## Distribution archives
 ##----------------------------------------------------------------------
 ]
 
-pushdef([x], [[
+pushdef([F2],
+  [ifelse(
+    $1, [], [F2(0)],
+    $1, GATBPS_DISTFILES_N, [],
+    [ $(GATBPS_DISTFILES_$1)F2(incr($1))])])
 
-$(distdir)$1: $(DISTFILES)
+pushdef([F1], [[
+$(distdir)$1: $(DISTFILES)]F2[
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
 	$(GATBPS_V_MAKE)$(MAKE) $(AM_MAKEFLAGS) $2
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
-
 ]])
 
-x([.shar.gz], [dist-shar])
-x([.tar.Z], [dist-tarZ])
-x([.tar.bz2], [dist-bzip2])
-x([.tar.gz], [dist-gzip])
-x([.tar.lz], [dist-lzip])
-x([.tar.xz], [dist-xz])
-x([.zip], [dist-zip])
+F1([.shar.gz], [dist-shar])
+F1([.tar.Z], [dist-tarZ])
+F1([.tar.bz2], [dist-bzip2])
+F1([.tar.gz], [dist-gzip])
+F1([.tar.lz], [dist-lzip])
+F1([.tar.xz], [dist-xz])
+F1([.zip], [dist-zip])
 
-popdef([x])
+popdef([F1])
+popdef([F2])
 
 [
-
 ##----------------------------------------------------------------------
 ## Asciidoctor rules
 ##----------------------------------------------------------------------
