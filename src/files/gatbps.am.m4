@@ -20,7 +20,8 @@ dnl---------------------------------------------------------------------
 dnl
 dnl Replaces every maximal sequence of whitespace characters in <text>
 dnl with a single space character, then removes any space character at
-dnl the beginning or end.
+dnl the beginning or end. A whitespace character is defined to be any
+dnl space, tab, or newline character.
 dnl
 
 define([GATBPS_SQUISH], [patsubst(patsubst(
