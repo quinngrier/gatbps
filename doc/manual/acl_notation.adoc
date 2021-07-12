@@ -12,6 +12,9 @@ In the description of a macro, each argument is notated with one or more
 pairs of `<>` brackets.
 stem:[n] pairs of `<>` brackets means the argument will be expanded
 exactly stem:[n-1] times during rescanning.
+Phrased in another way, the argument will be expanded exactly stem:[n]
+times in total, including the expansion performed during argument
+collection.
 
 .{empty}
 [example]
@@ -24,9 +27,9 @@ AM_INIT_AUTOMAKE([foreign])
 
 include::acl_include_gatbps_ac_fragment.adoc[]
 
-m4_pushdef([f1], [[$1]])          dnl would be described as f1(<x>)
-m4_pushdef([f2], [$1])            dnl would be described as f2(<<x>>)
-m4_pushdef([f3], [m4_expand($1)]) dnl would be described as f3(<<<x>>>)
+m4_pushdef([f1], [[$1]])          dnl would be notated as f1(<x>)
+m4_pushdef([f2], [$1])            dnl would be notated as f2(<<x>>)
+m4_pushdef([f3], [m4_expand($1)]) dnl would be notated as f3(<<<x>>>)
 
 m4_pushdef([x], [y])
 
@@ -58,6 +61,7 @@ AC_OUTPUT
 ----
 
 .Output
+[source]
 ----
 $ autoreconf -i -f && ./configure
 ...
