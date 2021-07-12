@@ -13,14 +13,21 @@ changequote({%|[|%}, {%|]|%})[
 ## For more information, see the GATBPS manual.
 ##
 
-]dnl--------------------------------------------------------------------
+]
+dnl---------------------------------------------------------------------
+dnl GATBPS_SQUISH(<text>)
+dnl---------------------------------------------------------------------
+dnl
+dnl Replaces every maximal sequence of whitespace characters in <text>
+dnl with a single space character, then removes any space character at
+dnl the beginning or end.
+dnl
 
 define([GATBPS_SQUISH], [patsubst(patsubst(
 patsubst([[[[$1]]]], [[
 	 ]+], [ ]), [^\(..\) ], [\1]), [ \(.\)$], [\1])])
 
 [
-
 ##----------------------------------------------------------------------
 ## Force targets
 ##----------------------------------------------------------------------
