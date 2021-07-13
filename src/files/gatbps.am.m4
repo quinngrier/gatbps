@@ -262,20 +262,27 @@ GATBPS_DISTFILES_all
 popdef([GATBPS_DISTFILES_all])
 popdef([GATBPS_DISTFILES_i])
 
+pushdef([F1],
+  [ifelse(
+    $1, [], [F1(0)],
+    $1, GATBPS_DISTFILES_N, [],
+    [ [$(GATBPS_DISTFILES_$1)]F1(incr($1))])])
+
+[GATBPS_DISTFILES] = GATBPS_SQUISH([
+  $(DISTFILES)
+  ]F1[
+])
+
+popdef([F1])
+
 [
 ##----------------------------------------------------------------------
 ## Distribution archives
 ##----------------------------------------------------------------------
 ]
 
-pushdef([F2],
-  [ifelse(
-    $1, [], [F2(0)],
-    $1, GATBPS_DISTFILES_N, [],
-    [ $(GATBPS_DISTFILES_$1)F2(incr($1))])])
-
 pushdef([F1], [[
-$(distdir)$1: $(DISTFILES)]F2[
+$(distdir)$1: $(GATBPS_DISTFILES)
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
 	$(GATBPS_V_MAKE)$(MAKE) $(AM_MAKEFLAGS) $2
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
@@ -290,7 +297,6 @@ F1([.tar.xz], [dist-xz])
 F1([.zip], [dist-zip])
 
 popdef([F1])
-popdef([F2])
 
 [
 ##----------------------------------------------------------------------
