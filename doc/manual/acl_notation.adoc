@@ -8,13 +8,13 @@
 // <https://creativecommons.org/publicdomain/zero/1.0/>.
 //
 
-In the description of a macro, each argument is notated with one or more
-pairs of `<>` brackets.
-stem:[n] pairs of `<>` brackets means the argument will be expanded
-exactly stem:[n-1] times during rescanning.
-Phrased in another way, the argument will be expanded exactly stem:[n]
-times in total, including the expansion performed during argument
-collection.
+Macro parameters are generally notated with one or more pairs of `<>`
+brackets, where stem:[n] pairs of brackets means the parameter will be
+expanded exactly stem:[n - 1] times during rescanning after the macro
+call is expanded.
+In other words, the argument written in the call will be expanded
+exactly stem:[n] times: once during argument collection, and
+stem:[n - 1] times during rescanning.
 
 .{empty}
 [example]
