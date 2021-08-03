@@ -706,18 +706,14 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 
 	  run_javac=:;
 	  flags='-Xprefer:source -implicit:none';
-	  case '$(PARALLEL_JAVAC)' in
-	    '')
-	      if test -r $@ && test ! -r $@.d; then
-	        x=`find $@ -newer $<` || exit $$?;
-	        case $$x in
-	          ?*)
-	            run_javac=false;
-	          ;;
-	        esac;
-	      fi;
-	      flags=;
-	    ;;
+	  case '$(PARALLEL_JAVAC)' in '')
+	    if test -r $@ && test ! -r $@.d; then
+	      x=`find $@ -newer $<` || exit $$?;
+	      case $$x in ?*)
+	        run_javac=false;
+	      esac;
+	    fi;
+	    flags=;
 	  esac;
 	  readonly run_javac;
 	  readonly flags;
