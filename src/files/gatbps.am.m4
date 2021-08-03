@@ -723,13 +723,36 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	  readonly flags;
 
 	  if $$run_javac; then
+
+	    cp=$(GATBPS_INNER_CLASSPATH);
 	    sp=$(GATBPS_INNER_SOURCEPATH);
 	    sp=$$sp$(CLASSPATH_SEPARATOR);
 	    sp=$$sp$$srcdir/$(GATBPS_INNER_SOURCEPATH);
+	    case $(CLASSPATH_SEPARATOR) in ';')
+	      for v in cp sp; do
+	        eval xs=\$$$$v;
+	        ys=;
+	        IFS=';';
+	        for x in $$xs; do
+	          case $$x in [!./]*)
+	            x=./$$x;
+	          esac;
+	          x=`cygpath -w -l "$$x"` || exit $$?;
+	          case $$ys in ?*)
+	            ys=$$ys$(CLASSPATH_SEPARATOR);
+	          esac;
+	          ys=$$ys$$x;
+	        done;
+	        unset IFS;
+	        eval $$v=\$$ys;
+	      done;
+	    esac;
+	    readonly cp;
 	    readonly sp;
+
 	    $(AM_V_P) && sh build-aux/echo.sh -q --
 	      $(JAVAC)
-	        -cp $(GATBPS_INNER_CLASSPATH)
+	        -cp "$$cp"
 	        -d $(GATBPS_INNER_SOURCEPATH)
 	        -sourcepath "$$sp"
 	        $$flags
@@ -738,7 +761,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	        $<
 	    ;
 	    $(JAVAC)
-	      -cp $(GATBPS_INNER_CLASSPATH)
+	      -cp "$$cp"
 	      -d $(GATBPS_INNER_SOURCEPATH)
 	      -sourcepath "$$sp"
 	      $$flags
