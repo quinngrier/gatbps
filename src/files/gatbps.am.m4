@@ -776,7 +776,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	      ]ifelse(,,,[
 	        jdeps sometimes gets angry at a fluctuating classpath
 	        file tree during make -j, even if there are no .class
-	        files in the proper locations. Giving it a nonexistent
+	        files that it would care about. Giving it a nonexistent
 	        classpath seems to fix it. It still outputs the list of
 	        prerequisite classes this way, it just omits additional
 	        information about them.
