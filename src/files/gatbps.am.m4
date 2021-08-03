@@ -684,7 +684,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 .java.class:
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
 	]GATBPS_SQUISH([$(GATBPS_at)(
-	  case '$(GATBPS_INNER_CLASSPATH)' in
+	  case $(GATBPS_INNER_CLASSPATH) in
 	    '')
 	      printf '%s\n'
 	        'Makefile: .java.class ($@): error:
