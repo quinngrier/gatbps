@@ -725,7 +725,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	  if $$run_javac; then
 	    sp=$(GATBPS_INNER_SOURCEPATH);
 	    sp=$$sp$(CLASSPATH_SEPARATOR);
-	    sp=$$sp$srcdir/$(GATBPS_INNER_SOURCEPATH);
+	    sp=$$sp$$srcdir/$(GATBPS_INNER_SOURCEPATH);
 	    readonly sp;
 	    $(AM_V_P) && sh build-aux/echo.sh -q --
 	      $(JAVAC)
