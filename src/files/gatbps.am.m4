@@ -701,6 +701,9 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	$(GATBPS_at)$(MKDIR_P) $(@D)
 	]GATBPS_SQUISH([$(GATBPS_at)(
 
+	  srcdir='$(srcdir)';
+	  readonly srcdir;
+
 	  run_javac=:;
 	  flags='-Xprefer:source -implicit:none';
 	  case '$(PARALLEL_JAVAC)' in
@@ -720,15 +723,15 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	  readonly flags;
 
 	  if $$run_javac; then
-	    sp='$(GATBPS_INNER_SOURCEPATH)';
-	    sp=$$sp'$(CLASSPATH_SEPARATOR)';
-	    sp=$$sp'$(srcdir)/$(GATBPS_INNER_SOURCEPATH)';
+	    sp=$(GATBPS_INNER_SOURCEPATH);
+	    sp=$$sp$(CLASSPATH_SEPARATOR);
+	    sp=$$sp$srcdir/$(GATBPS_INNER_SOURCEPATH);
 	    readonly sp;
 	    $(AM_V_P) && sh build-aux/echo.sh -q --
 	      $(JAVAC)
 	        -cp $(GATBPS_INNER_CLASSPATH)
 	        -d $(GATBPS_INNER_SOURCEPATH)
-	        -sourcepath $$sp
+	        -sourcepath "$$sp"
 	        $$flags
 	        $(GATBPS_INNER_JAVACFLAGS)
 	        $(JAVACFLAGS)
@@ -737,7 +740,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	    $(JAVAC)
 	      -cp $(GATBPS_INNER_CLASSPATH)
 	      -d $(GATBPS_INNER_SOURCEPATH)
-	      -sourcepath $$sp
+	      -sourcepath "$$sp"
 	      $$flags
 	      $(GATBPS_INNER_JAVACFLAGS)
 	      $(JAVACFLAGS)
