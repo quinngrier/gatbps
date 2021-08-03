@@ -776,6 +776,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	      $(JAVACFLAGS)
 	      $<
 	    || exit $$?;
+
 	  fi;
 
 	  case '$(HAVE_JDEPS)' in
