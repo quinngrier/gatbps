@@ -739,7 +739,16 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	          ;; [!./]*)
 	            x=./$$x;
 	          esac;
-	          x=`cygpath -w -l "$$x"` || exit $$?;
+	          case $$x in *'*')
+	            IFS=*;
+	            for x in $$x; do
+	              :;
+	            done;
+	            a=*;
+	          ;; *)
+	            a=;
+	          esac;
+	          x=`cygpath -w -l "$$x"`$$a || exit $$?;
 	          case $$ys in ?*)
 	            ys=$$ys$(CLASSPATH_SEPARATOR);
 	          esac;
