@@ -734,7 +734,9 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	        ys=;
 	        IFS=';';
 	        for x in $$xs; do
-	          case $$x in [!./]*)
+	          case $$x in "")
+	            continue;
+	          ;; [!./]*)
 	            x=./$$x;
 	          esac;
 	          x=`cygpath -w -l "$$x"` || exit $$?;
