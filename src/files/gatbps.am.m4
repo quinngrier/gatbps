@@ -24,8 +24,7 @@ dnl the beginning or end. A whitespace character is defined to be any
 dnl space, tab, or newline character.
 dnl
 
-define([GATBPS_SQUISH], [patsubst(patsubst(
-patsubst([[[[$1]]]], [[
+define([GATBPS_SQUISH], [patsubst(patsubst(patsubst([[[[$1]]]], [[
 	 ]+], [ ]), [^\(..\) ], [\1]), [ \(.\)$], [\1])])
 
 [
