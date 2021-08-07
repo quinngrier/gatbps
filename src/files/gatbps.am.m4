@@ -69,13 +69,13 @@ TSUF = $(TMPEXT).tmp
 
 pushdef([F], [[
 GATBPS_$1 =
-GATBPS_$1.dummy $(GATBPS_$1): FORCE
+GATBPS_$1/dummy $(GATBPS_$1): FORCE
 	@]GATBPS_SQUISH([
-	  case '$][@' in *[!./]/clean)
+	  case '$][@' in *[0-9A-Za-z]/clean)
 	    :;
 	  ;; *)
-	    m='Makefile: $$(GATBPS_$1) ($][@): Error:';
-	    m=$$m" Target name must end with [^./]/clean.";
+	    m='Makefile: GATBPS_$1 ($][@): Error:';
+	    m=$$m" Target name must end with [0-9A-Za-z]/clean.";
 	    printf '%s\n' "$$m" >&2;
 	    exit 1;
 	  esac;
