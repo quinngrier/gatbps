@@ -62,6 +62,38 @@ SUFFIXES += .m4out
 TSUF = $(TMPEXT).tmp
 
 ##----------------------------------------------------------------------
+## Cleaning rules
+##----------------------------------------------------------------------
+
+]
+
+pushdef([F], [[
+GATBPS_$1 =
+GATBPS_$1.dummy $(GATBPS_$1): FORCE
+	@]GATBPS_SQUISH([
+	  case '$][@' in *[!./]/clean)
+	    :;
+	  ;; *)
+	    m='Makefile: $$(GATBPS_$1) ($][@): Error:';
+	    m=$$m" Target name must end with [^./]/clean.";
+	    printf '%s\n' "$$m" >&2;
+	    exit 1;
+	  esac;
+	])[
+	-rm -f -r $(@D) $(@D)$(TSUF)*
+$2-local: $(GATBPS_$1)
+]])
+
+F([MOSTLYCLEANFILES], [mostlyclean])
+F([CLEANFILES], [clean])
+F([DISTCLEANFILES], [distclean])
+F([MAINTAINERCLEANFILES], [maintainer-clean])
+
+popdef([F])
+
+[
+
+##----------------------------------------------------------------------
 ## Local and hook target activation
 ##----------------------------------------------------------------------
 ##
