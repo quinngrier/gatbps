@@ -234,20 +234,12 @@ GATBPS_DISTFILES_chmod: FORCE
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
 	$(GATBPS_V_FORCE)$(GATBPS_V_NOP)
 	]GATBPS_SQUISH([$(GATBPS_at)(
-
-	  distdir='$(distdir)';
-	  case $$distdir in
-	    [!/]*)
-	      distdir=./$$distdir;
-	    ;;
-	  esac;
-	  readonly distdir;
-
-	  $(AM_V_P) && sh build-aux/echo.sh -q --
-	    chmod -R u+w "$$distdir"
-	  ;
+	  ]GATBPS_DOT_SLASH([distdir], ['$(distdir)'])[
+	  if $(AM_V_P); then
+	    ]GATBPS_SMART_QUOTE([q_distdir], [$$distdir])[
+	    printf '%s\n' "chmod -R u+w $$q_distdir" || exit $$?;
+	  fi;
 	  chmod -R u+w "$$distdir" || exit $$?;
-
 	)])[
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
