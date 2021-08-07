@@ -293,9 +293,11 @@ GATBPS_DISTFILES_$1: GATBPS_DISTFILES_CHMOD
 	    fi;
 
 	    if test -f "$$d/$$x" || test -d "$$d/$$x"; then
-	      $(AM_V_P) && sh build-aux/echo.sh -q --
-	        cp -L -R -p "$$d/$$x" "$$distdir/$$x"
-	      ;
+	      if $(AM_V_P); then
+	        ]GATBPS_SMART_QUOTE([q1], [$$d/$$x])[
+	        ]GATBPS_SMART_QUOTE([q2], [$$distdir/$$x])[
+	        printf '%s\n' "cp -L -R -p $$q1 $$q2" || exit $$?;
+	      fi;
 	      cp -L -R -p "$$d/$$x" "$$distdir/$$x" || exit $$?;
 	    else
 	      m='Makefile: GATBPS_DISTFILES_$1 ($][@): error:';
