@@ -146,6 +146,7 @@ GATBPS_V_([TAR])
 GATBPS_V_([UNTAR])
 GATBPS_V_([UNXZ])
 GATBPS_V_([XZ])
+GATBPS_V_([ZIP])
 
 popdef([GATBPS_V_])
 popdef([pad])

@@ -208,6 +208,7 @@ GATBPS_PROG([JDEPS], [jdeps])
 GATBPS_PROG([M4], [m4])
 GATBPS_PROG([TAR], [tar])
 GATBPS_PROG([XZ], [xz])
+GATBPS_PROG([ZIP], [zip])
 
 dnl---------------------------------------------------------------------
 dnl GATBPS_ERROR
