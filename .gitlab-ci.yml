@@ -29,6 +29,7 @@ build-pages:
   script:
     - build-aux/adock asciidoctor doc/manual/index.adoc
     - cp -R doc/manual public
+    - cp -R doc/manual public/manual
   stage: stage-1
 
 pages:
