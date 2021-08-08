@@ -151,8 +151,9 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_PROG
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_PROG],
-  [AC_DEFUN([GATBPS_PROG_][$1], [[{ :
+m4_define([GATBPS_PROG], [
+
+  AC_DEFUN([GATBPS_INNER_PROG_][$1], [[{ :
 
     ]GATBPS_PROTECT(
       $@,
@@ -205,7 +206,13 @@ EOF
       [$1_LATER],
       [HAVE_$1])[
 
-  }]])])
+  }]])
+
+  AC_DEFUN([GATBPS_PROG_][$1], [
+    AC_REQUIRE([GATBPS_INNER_PROG_$1])
+  ])
+
+])
 
 dnl---------------------------------------------------------------------
 
