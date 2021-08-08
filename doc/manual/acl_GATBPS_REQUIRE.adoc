@@ -20,6 +20,6 @@ include::acl_include_gatbps_ac_fragment.adoc[]
 ----
 
 The `{acl_GATBPS_REQUIRE}` macro is equivalent to the `{acl_AC_REQUIRE}`
-macro except it is also legal to call it from the top level.
+macro except it can also be called from the top level.
 
 //
