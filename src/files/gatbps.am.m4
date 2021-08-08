@@ -57,15 +57,15 @@ define([GATBPS_SMART_QUOTE], [GATBPS_SQUISH([
         cqDe_y3='EOF';
         cqDe_y4='`';
         cqDe_y=`printf '%s\n' "$$cqDe_y1" "$$cqDe_y2" "$$cqDe_y3" "$$cqDe_y4"` || exit $$?;
-        eval "$1=$$cqDe_y" || exit $$?;
+        eval "cqDe_w=$$cqDe_y" || exit $$?;
       ;; *)
-        $1="'$$cqDe_w'";
+        cqDe_w="'$$cqDe_w'";
       esac;
     esac;
     case $$$1 in ?*)
       $1=$$$1' ';
     esac;
-    $1="$$$1$$cqDe_w";
+    $1=$$$1$$cqDe_w;
   done;
 ])])
 
