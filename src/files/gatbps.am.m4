@@ -43,23 +43,30 @@ dnl GATBPS_SMART_QUOTE(<dst>, <src>)
 dnl---------------------------------------------------------------------
 
 define([GATBPS_SMART_QUOTE], [GATBPS_SQUISH([
-  $1=$2;
-  case $$$1 in *[!./0-9A-Z_a-z-]*)
-    case $$$1 in *\'*)
-      x1='s/'\''/&\\&&/g';
-      x2='1s/^/'\''/';
-      x3='$$s/$$/'\''/';
-      x=`printf '%s\n' "$$x1" "$$x2" "$$x3"` || exit $$?;
-      y1='`sed "$$x" <<EOF';
-      y2='$$$1';
-      y3='EOF';
-      y4='`';
-      y=`printf '%s\n' "$$y1" "$$y2" "$$y3" "$$y4"` || exit $$?;
-      eval "$1=$$y" || exit $$?;
-    ;; *)
-      $1="'$$$1'";
+  $1=;
+  for cqDe_w in ]patsubst([[$2]], [
+], [])[; do
+    case $$cqDe_w in *[!./0-9A-Z_a-z-]*)
+      case $$cqDe_w in *\'*)
+        cqDe_x1='s/'\''/&\\&&/g';
+        cqDe_x2='1s/^/'\''/';
+        cqDe_x3='$$s/$$/'\''/';
+        cqDe_x=`printf '%s\n' "$$cqDe_x1" "$$cqDe_x2" "$$cqDe_x3"` || exit $$?;
+        cqDe_y1='`sed "$$cqDe_x" <<EOF';
+        cqDe_y2='$$cqDe_w';
+        cqDe_y3='EOF';
+        cqDe_y4='`';
+        cqDe_y=`printf '%s\n' "$$cqDe_y1" "$$cqDe_y2" "$$cqDe_y3" "$$cqDe_y4"` || exit $$?;
+        eval "$1=$$cqDe_y" || exit $$?;
+      ;; *)
+        $1="'$$cqDe_w'";
+      esac;
     esac;
-  esac;
+    case $$$1 in ?*)
+      $1=$$$1' ';
+    esac;
+    $1="$$$1$$cqDe_w";
+  done;
 ])])
 
 [
@@ -236,8 +243,10 @@ GATBPS_DISTFILES_CHMOD: FORCE
 	]GATBPS_SQUISH([$(GATBPS_at)(
 	  ]GATBPS_DOT_SLASH([distdir], ['$(distdir)'])[
 	  if $(AM_V_P); then
-	    ]GATBPS_SMART_QUOTE([q_distdir], [$$distdir])[
-	    printf '%s\n' "chmod -R u+w $$q_distdir" || exit $$?;
+	    ]GATBPS_SMART_QUOTE([sq], [
+	      chmod -R u+w "$$distdir"
+	    ])[
+	    printf '%s\n' "$$sq" || exit $$?;
 	  fi;
 	  chmod -R u+w "$$distdir" || exit $$?;
 	)])[
@@ -294,9 +303,10 @@ GATBPS_DISTFILES_$1: GATBPS_DISTFILES_CHMOD
 
 	    if test -f "$$d/$$x" || test -d "$$d/$$x"; then
 	      if $(AM_V_P); then
-	        ]GATBPS_SMART_QUOTE([q1], [$$d/$$x])[
-	        ]GATBPS_SMART_QUOTE([q2], [$$distdir/$$x])[
-	        printf '%s\n' "cp -L -R -p $$q1 $$q2" || exit $$?;
+	        ]GATBPS_SMART_QUOTE([sq], [
+	          cp -L -R -p "$$d/$$x" "$$distdir/$$x"
+	        ])[
+	        printf '%s\n' "$$sq" || exit $$?;
 	      fi;
 	      cp -L -R -p "$$d/$$x" "$$distdir/$$x" || exit $$?;
 	    else
@@ -819,16 +829,19 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	    readonly cp;
 	    readonly sp;
 
-	    $(AM_V_P) && sh build-aux/echo.sh -q --
-	      $(JAVAC)
-	        -cp "$$cp"
-	        -d $(GATBPS_INNER_SOURCEPATH)
-	        -sourcepath "$$sp"
-	        $$flags
-	        $(GATBPS_INNER_JAVACFLAGS)
-	        $(JAVACFLAGS)
-	        $<
-	    ;
+	    if $(AM_V_P); then
+	      ]GATBPS_SMART_QUOTE([sq], [
+	        $(JAVAC)
+	          -cp "$$cp"
+	          -d $(GATBPS_INNER_SOURCEPATH)
+	          -sourcepath "$$sp"
+	          $$flags
+	          $(GATBPS_INNER_JAVACFLAGS)
+	          $(JAVACFLAGS)
+	          $<
+	      ])[
+	      printf '%s\n' "$$sq" || exit $$?;
+	    fi;
 	    $(JAVAC)
 	      -cp "$$cp"
 	      -d $(GATBPS_INNER_SOURCEPATH)
@@ -851,12 +864,18 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	        prerequisite classes this way, it just omits additional
 	        information about them.
 	      ])[
-	      $(AM_V_P) && sh build-aux/echo.sh -q --
-	        $(JDEPS)
-	          -cp $@$(TSUF).nonexistent
-	          -v
-	          $@
-	      ;
+	      if $(AM_V_P); then
+	        ]GATBPS_SMART_QUOTE([sq1], [
+	          $(JDEPS)
+	            -cp $@$(TSUF).nonexistent
+	            -v
+	            $@
+	        ])[
+	        ]GATBPS_SMART_QUOTE([sq2], [
+	          $@$(TSUF)2
+	        ])[
+	        printf '%s\n' "$$sq1 >$$sq2" || exit $$?;
+	      fi;
 	      $(JDEPS)
 	        -cp $@$(TSUF).nonexistent
 	        -v
