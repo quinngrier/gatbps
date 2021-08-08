@@ -25,6 +25,7 @@ include::acl_GATBPS_SOFT_REQUIRE.adoc[]
 include::acl_GATBPS_SOFT_VARIABLE.adoc[]
 include::acl_GATBPS_SQUISH.adoc[]
 include::acl_GATBPS_UNPROTECT.adoc[]
+include::acl_GATBPS_REQUIRE.adoc[]
 include::acl_attributes.adoc[]
 
 :leveloffset: -1

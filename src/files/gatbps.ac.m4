@@ -136,6 +136,18 @@ m4_define([GATBPS_UNPROTECT],
     )])])
 
 dnl---------------------------------------------------------------------
+dnl GATBPS_REQUIRE
+dnl---------------------------------------------------------------------
+
+m4_define([GATBPS_REQUIRE_N], 0)
+
+m4_define([GATBPS_REQUIRE], [
+  AC_DEFUN([GATBPS_REQUIRE_]GATBPS_REQUIRE_N, [AC_REQUIRE([$1])])
+  [GATBPS_REQUIRE_]GATBPS_REQUIRE_N
+  m4_define([GATBPS_REQUIRE_N], m4_incr(GATBPS_REQUIRE_N))
+])
+
+dnl---------------------------------------------------------------------
 dnl GATBPS_PROG
 dnl---------------------------------------------------------------------
 
