@@ -46,7 +46,7 @@ define([GATBPS_SMART_QUOTE], [GATBPS_SQUISH([
   $1=;
   for cqDe_w in ]patsubst([[$2]], [
 ], [])[; do
-    case $$cqDe_w in *[!./0-9A-Z_a-z-]*)
+    case $$cqDe_w in *[!+./0-9:=A-Z_a-z-]*)
       case $$cqDe_w in *\'*)
         cqDe_x1='s/'\''/&\\&&/g';
         cqDe_x2='1s/^/'\''/';
