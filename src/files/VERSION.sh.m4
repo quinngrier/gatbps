@@ -71,7 +71,7 @@ elif eval "$git"' ls-files --error-unmatch "$0"' >/dev/null 2>&1; then
   readonly v_description
 
   x='
-    /^'$v_prefix''$num'\.'$num'\.'$num'(-'$num'-g[0-9a-f]{7,})?$/ {
+    /^'$v_prefix''$num'\.'$num'\.'$num'(-'$num'-g[0-9a-f]+)?$/ {
       sub(/^'$v_prefix'/, "")
       if (/-g/) {
         gsub(/[-.]/, " ")
@@ -141,7 +141,7 @@ EOF2
   readonly u_description
 
   x='
-    /^'$u_prefix''$num'\.'$num'\.'$num'-'$num'-g[0-9a-f]{7,}?$/ {
+    /^'$u_prefix''$num'\.'$num'\.'$num'-'$num'-g[0-9a-f]+?$/ {
       sub(/^'$u_prefix'/, "")
       sub(/-g/, "+g")
       print
