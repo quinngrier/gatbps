@@ -15,273 +15,155 @@ header_comment({%|#|%}, {%|#|%}){%|
 
 |%}sh_prelude{%|
 
-readonly git=" ${GIT:-git}"
-readonly sed=" ${SED:-sed}"
+awk=" ${AWK:-awk}"
+readonly awk
+
+git=" ${GIT:-git}"
+readonly git
+
+num='(0|[1-9][0-9]*)'
+readonly num
 
 v_prefix=v
 u_prefix=u
 
-if test -f build-aux/VERSION; then
+# TODO: v_prefix and u_prefix should be settable via options or
+#       operands. Either --v-prefix and --u-prefix or <v_prefix>
+#       [<u_prefix>] should be good.
 
-  cat build-aux/VERSION || exit $?
+readonly v_prefix
+readonly u_prefix
 
-elif test -f VERSION; then
+case $v_prefix in '' \
+    | *[!-0-9A-Z_a-z]* | [-0-9_]* | *[-_][-_]* | *[-_])
+  printf '%s\n' "Invalid --v-prefix value: $v_prefix" >&2
+  exit 1
+esac
 
-  cat VERSION || exit $?
+case $u_prefix in '' \
+    | *[!-0-9A-Z_a-z]* | [-0-9_]* | *[-_][-_]* | *[-_])
+  printf '%s\n' "Invalid --u-prefix value: $u_prefix" >&2
+  exit 1
+esac
+
+case $v_prefix in v)
+  v_suffix=
+;; *)
+  v_suffix=.$v_prefix
+esac
+readonly v_suffix
+
+if test -f build-aux/VERSION$v_suffix; then
+
+  cat build-aux/VERSION$v_suffix || exit $?
+
+elif test -f VERSION$v_suffix; then
+
+  cat VERSION$v_suffix || exit $?
 
 elif eval "$git"' ls-files --error-unmatch "$0"' >/dev/null 2>&1; then
 
-  v_description=`
-    git \
-      describe \
-      --candidates=1 \
-      --match="v[0-9]*.[0-9]*.[0-9]*" \
-      --tags \
-    ;
-  `
-  s=$?
+  x='describe'
+  x=$x' --candidates=1'
+  x=$x' --match="'$v_prefix'[0-9]*.[0-9]*.[0-9]*"'
+  x=$x' --tags'
+  v_description=`eval "$git $x"` || exit $?
   readonly v_description
 
-  case $s in
-    0)
-    ;;
-    *)
-      cat <<EOF2 >&2
-${fr2}VERSION.sh!$fR2 error calculating a $v_prefix* description
-${fr2}VERSION.sh!$fR2 did you forget to create/push some tags?
+  x='
+    /^'$v_prefix''$num'\.'$num'\.'$num'(-'$num'-g[0-9a-f]{7,})?$/ {
+      sub(/^'$v_prefix'/, "")
+      if (/-g/) {
+        gsub(/[-.]/, " ")
+        $3 = $3 + 1
+        $0 = $1 "." $2 "." $3 "-" $4 "+" $5
+      }
+      print
+    }
+  '
+  v_result=`eval "$awk"' "$x"' <<EOF2
+$v_description
 EOF2
-      exit 1
-    ;;
+  ` || exit $?
+  readonly v_result
+
+  case $v_result in '')
+    printf '%s\n' "$0: Invalid v description: $v_description" >&2
+    exit 1
+  ;; *-*)
+    :
+  ;; *)
+    printf '%s\n' "$v_result" || exit $?
+    exit 0
   esac
 
-  case "${v_description}" in
-    *'-'*)
-      grep \
-        '^v[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}-[0-9]\{1,\}-g[0-9a-f]\{7,\}$' \
-        0<<EOF2 \
-        1>/dev/null \
-      ;
-${v_description}
-EOF2
-      case "${?}" in
-        '0')
-        ;;
-        '1')
-          exit 1
-        ;;
-        *)
-          exit 1
-        ;;
-      esac
-    ;;
-    *)
-      grep \
-        '^v[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}$' \
-        0<<EOF2 \
-        1>/dev/null \
-      ;
-${v_description}
-EOF2
-      case "${?}" in
-        '0')
-        ;;
-        '1')
-          exit 1
-        ;;
-        *)
-          exit 1
-        ;;
-      esac
-    ;;
+  x='describe'
+  x=$x' --always'
+  x=$x' --abbrev=0'
+  x=$x' --candidates=1'
+  x=$x' --match="'$u_prefix'[0-9]*.[0-9]*.[0-9]*"'
+  x=$x' --tags'
+  u_tag=`eval "$git $x"` || exit $?
+  readonly u_tag
+
+  case $u_tag in *.*)
+    :
+  ;; *)
+    printf '%s\n' "$v_result" || exit $?
+    exit 0
   esac
-  grep \
-    '^v0[0-9]' \
-    0<<EOF2 \
-    1>/dev/null \
-  ;
-${v_description}
-EOF2
-  case "${?}" in
-    '0')
-      exit 1
-    ;;
-    '1')
-    ;;
-    *)
-      exit 1
-    ;;
+
+  x='describe'
+  x=$x' --abbrev=0'
+  x=$x' --candidates=1'
+  x=$x' --match="'$v_prefix'[0-9]*.[0-9]*.[0-9]*"'
+  x=$x' --tags'
+  v_tag=`eval "$git $x"` || exit $?
+  readonly v_tag
+
+  eval "$git"' merge-base --is-ancestor "$v_tag" "$u_tag"'
+  s=$?
+  case $s in 0)
+    :
+  ;; 1)
+    printf '%s\n' "$v_result" || exit $?
+    exit 0
+  ;; *)
+    exit $s
   esac
-  grep \
-    '^v.*[-.]0[0-9]' \
-    0<<EOF2 \
-    1>/dev/null \
-  ;
-${v_description}
+
+  x='describe'
+  x=$x' --candidates=1'
+  x=$x' --long'
+  x=$x' --match="'$u_prefix'[0-9]*.[0-9]*.[0-9]*"'
+  x=$x' --tags'
+  u_description=`eval "$git $x"` || exit $?
+  readonly u_description
+
+  x='
+    /^'$u_prefix''$num'\.'$num'\.'$num'-'$num'-g[0-9a-f]{7,}?$/ {
+      sub(/^'$u_prefix'/, "")
+      sub(/-g/, "+g")
+      print
+    }
+  '
+  u_result=`eval "$awk"' "$x"' <<EOF2
+$u_description
 EOF2
-  case "${?}" in
-    '0')
-      exit 1
-    ;;
-    '1')
-    ;;
-    *)
-      exit 1
-    ;;
+  ` || exit $?
+  readonly u_result
+
+  case $u_result in '')
+    printf '%s\n' "$0: Invalid u description: $u_description" >&2
+    exit 1
   esac
-  case "${v_description}" in
-    *'-'*)
-      u_description=`
-        git \
-          'describe' \
-          '--candidates=1' \
-          '--long' \
-          '--match=u[0-9]*.[0-9]*.[0-9]*' \
-          '--tags' \
-        ;
-      `
-      case "${?}" in
-        '0')
-        ;;
-        *)
-          exit 1
-        ;;
-      esac
-      'readonly' 'u_description'
-      grep \
-        '^u[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}-[0-9]\{1,\}-g[0-9a-f]\{7,\}$' \
-        0<<EOF2 \
-        1>/dev/null \
-      ;
-${u_description}
-EOF2
-      case "${?}" in
-        '0')
-        ;;
-        '1')
-          exit 1
-        ;;
-        *)
-          exit 1
-        ;;
-      esac
-      grep \
-        '^u0[0-9]' \
-        0<<EOF2 \
-        1>/dev/null \
-      ;
-${u_description}
-EOF2
-      case "${?}" in
-        '0')
-          exit 1
-        ;;
-        '1')
-        ;;
-        *)
-          exit 1
-        ;;
-      esac
-      grep \
-        '^u.*[-.]0[0-9]' \
-        0<<EOF2 \
-        1>/dev/null \
-      ;
-${u_description}
-EOF2
-      case "${?}" in
-        '0')
-          exit 1
-        ;;
-        '1')
-        ;;
-        *)
-          exit 1
-        ;;
-      esac
-      v_tag=`
-        git \
-          'describe' \
-          '--abbrev=0' \
-          '--candidates=1' \
-          '--match=v[0-9]*.[0-9]*.[0-9]*' \
-          '--tags' \
-        ;
-      `
-      case "${?}" in
-        '0')
-        ;;
-        *)
-          exit 1
-        ;;
-      esac
-      'readonly' 'v_tag'
-      u_tag=`
-        git \
-          'describe' \
-          '--abbrev=0' \
-          '--candidates=1' \
-          '--match=u[0-9]*.[0-9]*.[0-9]*' \
-          '--tags' \
-        ;
-      `
-      case "${?}" in
-        '0')
-        ;;
-        *)
-          exit 1
-        ;;
-      esac
-      'readonly' 'u_tag'
-      git \
-        'merge-base' \
-        '--is-ancestor' \
-        "${v_tag}" \
-        "${u_tag}" \
-      ;
-      case "${?}" in
-        '0')
-        ;;
-        '1')
-          exit 1
-        ;;
-        *)
-          exit 1
-        ;;
-      esac
-      sed '
-        s/^u//
-        s/-g/+g/
-      ' 0<<EOF2
-${u_description}
-EOF2
-      case "${?}" in
-        '0')
-        ;;
-        *)
-          exit 1
-        ;;
-      esac
-    ;;
-    *)
-      sed '
-        s/^v//
-      ' 0<<EOF2
-${v_description}
-EOF2
-      case "${?}" in
-        '0')
-        ;;
-        *)
-          exit 1
-        ;;
-      esac
-    ;;
-  esac
+
+  printf '%s\n' "$u_result" || exit $?
 
 else
 
   cat <<EOF2 >&2
-VERSION.sh: no cache file or repository found
+$0: no cache file or repository found
 EOF2
   exit 1
 
