@@ -27,6 +27,9 @@ readonly num
 v_prefix=v
 u_prefix=u
 
+# TODO: Support a mode where we don't do semver and instead just output
+#       the most recent version number.
+
 # TODO: v_prefix and u_prefix should be settable via options or
 #       operands. Either --v-prefix and --u-prefix or <v_prefix>
 #       [<u_prefix>] should be good.
