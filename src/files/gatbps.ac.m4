@@ -277,7 +277,8 @@ dnl---------------------------------------------------------------------
 
 m4_define([GATBPS_POP_IFS], [[
   case $gatbps_IFS_depth in 1)
-    ]GATBPS_BUG([GATBPS_POP_IFS() was called at depth 0.])[
+    ]GATBPS_BUG([GATBPS_POP_IFS() was called
+                 without a matching GATBPS_PUSH_IFS() call.])[
   esac
   eval gatbps_IFS_unset=\$gatbps_IFS_unset_$gatbps_IFS_depth
   if $gatbps_IFS_unset; then
