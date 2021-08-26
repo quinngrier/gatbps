@@ -298,14 +298,11 @@ EOF2
         ` || exit $?
         for gatbps_x in $gatbps_xs; do
           eval gatbps_y=\$$gatbps_x
-          case $gatbps_y in
-            1 | 0)
-              :
-            ;;
-            *)
-              ]GATBPS_BUG([$gatbps_x is set to something
-                           other than 1 or 0: $gatbps_y])[
-            ;;
+          case $gatbps_y in 1 | 0)
+            :
+          ;; *)
+            ]GATBPS_BUG([$gatbps_x is set to something
+                         other than 1 or 0: $gatbps_y])[
           esac
         done
 
@@ -322,17 +319,13 @@ EOF2
         ` || exit $?
         gatbps_x=`eval expr $gatbps_x`
         gatbps_x=$?
-        case $gatbps_x in
-          0)
-            :
-            $3
-          ;;
-          1)
-            g_cv_]gat_name[=]m4_if([$5], [], [[no]], [[$5]])[
-          ;;
-          *)
-            exit $gatbps_x
-          ;;
+        case $gatbps_x in 0)
+          :
+          $3
+        ;; 1)
+          g_cv_]gat_name[=]m4_if([$5], [], [[no]], [[$5]])[
+        ;; *)
+          exit $gatbps_x
         esac
 
         IFS=$gatbps_old_IFS
@@ -346,14 +339,11 @@ EOF2
   if $][{g_cv_]gat_name[+:} false; then
     :
     ]m4_if(gat_bool, 1, [[
-      case $g_cv_]gat_name[ in
-        yes | no)
-          :
-        ;;
-        *)
-          ]GATBPS_BUG([g_cv_]gat_name[ is set to something
-                       other than yes or no: $g_cv_]gat_name)[
-        ;;
+      case $g_cv_]gat_name[ in yes | no)
+        :
+      ;; *)
+        ]GATBPS_BUG([g_cv_]gat_name[ is set to something
+                     other than yes or no: $g_cv_]gat_name)[
       esac
     ]])[
   else
@@ -380,20 +370,16 @@ EOF2
   ])[
 
   ]m4_if(gat_bool[]gat_notbool, 01, [], [[
-    case $]gat_name[ in
-      yes)
-        ]gat_name[=1
-        ]gat_name[_sh=:
-        ]AC_DEFINE([gat_name], 1, [Result of checking $1.])[
-      ;;
-      no)
-        ]gat_name[=0
-        ]gat_name[_sh=false
-        ]AC_DEFINE([gat_name], 0, [Result of checking $1.])[
-      ;;
-      *)
-        ]gat_name[_sh=false
-      ;;
+    case $]gat_name[ in yes)
+      ]gat_name[=1
+      ]gat_name[_sh=:
+      ]AC_DEFINE([gat_name], 1, [Result of checking $1.])[
+    ;; no)
+      ]gat_name[=0
+      ]gat_name[_sh=false
+      ]AC_DEFINE([gat_name], 0, [Result of checking $1.])[
+    ;; *)
+      ]gat_name[_sh=false
     esac
     ]AM_CONDITIONAL(gat_name, [[$]gat_name[_sh]])[
   ]])[
