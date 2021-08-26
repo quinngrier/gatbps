@@ -29,8 +29,6 @@ gatbps_nl='
 gatbps_default_IFS=" 	$gatbps_nl"
 # Avoid: readonly gatbps_default_IFS
 
-gatbps_IFS_depth=1
-
 ]
 
 dnl---------------------------------------------------------------------
@@ -257,36 +255,54 @@ m4_define([GATBPS_BUG], [[{ :
 }]])
 
 dnl---------------------------------------------------------------------
-dnl GATBPS_PUSH_IFS
+dnl GATBPS_PUSH_VAR
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_PUSH_IFS], [[
-  case $][{IFS+x} in '')
-    eval gatbps_IFS_unset_$gatbps_IFS_depth=:
+m4_define([GATBPS_PUSH_VAR], [[
+  gatbps_d=$][{gatbps_vars_depth_$1-1}
+  case $][{$1+x} in '')
+    eval gatbps_vars_unset_$][{gatbps_d}_$1=:
   ;; *)
-    eval gatbps_IFS_unset_$gatbps_IFS_depth=false
-    eval gatbps_IFS_value_$gatbps_IFS_depth=\$IFS
+    eval gatbps_vars_unset_$][{gatbps_d}_$1=false
+    eval gatbps_vars_value_$][{gatbps_d}_$1=\$$1
   esac
-  gatbps_IFS_depth=`expr $gatbps_IFS_depth + 1` || exit $?
-  IFS=$1
+  gatbps_d=`expr $gatbps_d + 1` || exit $?
+  gatbps_vars_depth_$1=$gatbps_d
+  $1=$2
 ]])
 
 dnl---------------------------------------------------------------------
-dnl GATBPS_POP_IFS
+dnl GATBPS_POP_VAR
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_POP_IFS], [[
-  case $gatbps_IFS_depth in 1)
-    ]GATBPS_BUG([GATBPS_POP_IFS() was called
-                 without a matching GATBPS_PUSH_IFS() call.])[
+m4_define([GATBPS_POP_VAR], [[
+  gatbps_d=$][{gatbps_vars_depth_$1-1}
+  case $gatbps_d in 1)
+    ]GATBPS_BUG([GATBPS_POP_VAR([$1], ...) was called
+                 without a matching GATBPS_PUSH_VAR([$1]) call.])[
   esac
-  gatbps_IFS_depth=`expr $gatbps_IFS_depth - 1` || exit $?
-  eval gatbps_IFS_unset=\$gatbps_IFS_unset_$gatbps_IFS_depth
-  if $gatbps_IFS_unset; then
-    unset IFS
+  gatbps_d=`expr $gatbps_d - 1` || exit $?
+  gatbps_vars_depth_$1=$gatbps_d
+  eval gatbps_u=\$gatbps_vars_unset_$][{gatbps_d}_$1
+  if $gatbps_u; then
+    unset $1
   else
-    eval IFS=\$gatbps_IFS_value_$gatbps_IFS_depth
+    eval $1=\$gatbps_vars_value_$][{gatbps_d}_$1
   fi
+]])
+
+dnl---------------------------------------------------------------------
+dnl GATBPS_KEEP_VAR
+dnl---------------------------------------------------------------------
+
+m4_define([GATBPS_KEEP_VAR], [[
+  gatbps_d=$][{gatbps_vars_depth_$1-1}
+  case $gatbps_d in 1)
+    ]GATBPS_BUG([GATBPS_KEEP_VAR([$1], ...) was called
+                 without a matching GATBPS_PUSH_VAR([$1]) call.])[
+  esac
+  gatbps_d=`expr $gatbps_d - 1` || exit $?
+  gatbps_vars_depth_$1=$gatbps_d
 ]])
 
 dnl---------------------------------------------------------------------
@@ -325,7 +341,7 @@ m4_define([GATBPS_CHECK], [[{ :
 
       ]m4_if([$4], [], [[$3]], [[
 
-        ]GATBPS_PUSH_IFS([$gatbps_default_IFS])[
+        ]GATBPS_PUSH_VAR([IFS], [$gatbps_default_IFS])[
 
         gatbps_p='$4'
 
@@ -366,7 +382,7 @@ gatbps_EOF
           exit $gatbps_x
         esac
 
-        ]GATBPS_POP_IFS()[
+        ]GATBPS_POP_VAR([IFS])[
 
       ]])[
 
