@@ -746,14 +746,10 @@ case "$][{SOFT_INCLUDE}" in
 esac
 'readonly' 'GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE_have'
 
-]GATBPS_CHECK_VARS(
-  [
-    soft makefile include support
-  ],
+]GATBPS_CHECK_EXPR(
+  [for soft makefile include support],
   [HAVE_SOFT_INCLUDE],
-  [
-    GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE_have
-  ])[
+  [GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE_have])[
 
 :;}]])[]dnl
 
