@@ -621,7 +621,6 @@ EOF1
           'set' "${prefix}"'GATBPS_PROG_MAKEINFO.m4' "${@}"
           'set' "${prefix}"'GATBPS_PROG_LN_S.m4' "${@}"
           'set' "${prefix}"'GATBPS_PROG_GREP.m4' "${@}"
-          'set' "${prefix}"'GATBPS_PROG_GIT.m4' "${@}"
           'set' "${prefix}"'GATBPS_PROG_GATBPS.m4' "${@}"
           'set' "${prefix}"'GATBPS_PROG_DOXYGEN.m4' "${@}"
           'set' "${prefix}"'GATBPS_PROG_DOCKER.m4' "${@}"
@@ -1226,8 +1225,6 @@ EOF1
 |%}help_code({%|GATBPS_PROG_DOXYGEN.m4|%}){%|
 
 |%}help_code({%|GATBPS_PROG_GATBPS.m4|%}){%|
-
-|%}help_code({%|GATBPS_PROG_GIT.m4|%}){%|
 
 |%}help_code({%|GATBPS_PROG_GREP.m4|%}){%|
 
@@ -2927,8 +2924,6 @@ EOF1
 
 |%}generation_code({%|GATBPS_PROG_GATBPS.m4|%}){%|
 
-|%}generation_code({%|GATBPS_PROG_GIT.m4|%}){%|
-
 |%}generation_code({%|GATBPS_PROG_GREP.m4|%}){%|
 
 |%}generation_code({%|GATBPS_PROG_LN_S.m4|%}){%|
@@ -3926,11 +3921,6 @@ include(`src/recursion/GATBPS_PROG_DOXYGEN.m4.rc.m4'){%||%}dnl
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
 include(`src/recursion/GATBPS_PROG_GATBPS.m4.rc.m4'){%||%}dnl
-{%|
-
-|%}dnl
-changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/GATBPS_PROG_GIT.m4.rc.m4'){%||%}dnl
 {%|
 
 |%}dnl
