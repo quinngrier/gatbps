@@ -257,31 +257,31 @@ dnl---------------------------------------------------------------------
 m4_define([GATBPS_CHECK], [[{ :
 
   ]m4_pushdef(
-    [gat_name],
+    [gatbps_name],
     m4_bpatsubst([[[$2]]], [:.*\(..\)$], [\1]))[
 
   ]m4_pushdef(
-    [gat_bool],
+    [gatbps_bool],
     m4_eval(m4_bregexp([$2:], [:bool:]) >= 0))[
 
   ]m4_pushdef(
-    [gat_notbool],
+    [gatbps_notbool],
     m4_eval(m4_bregexp([$2:], [:notbool:]) >= 0))[
 
   ]m4_pushdef(
-    [gat_notmake],
+    [gatbps_notmake],
     m4_eval(m4_bregexp([$2:], [:notmake:]) >= 0))[
 
-  unset ]gat_name[
-  unset ]gat_name[_sh
-  unset ]gat_name[_was_cached
-  unset g_cv_]gat_name[
+  unset ]gatbps_name[
+  unset ]gatbps_name[_sh
+  unset ]gatbps_name[_was_cached
+  unset g_cv_]gatbps_name[
 
-  ]gat_name[_was_cached=:
+  ]gatbps_name[_was_cached=:
 
   ]AC_CACHE_CHECK(
     [[$1]],
-    [[g_cv_]gat_name],
+    [[g_cv_]gatbps_name],
     [[{ :
 
       ]m4_if([$4], [], [[$3]], [[
@@ -292,9 +292,9 @@ m4_define([GATBPS_CHECK], [[{ :
         gatbps_p='$4'
 
         gatbps_xs='s/[!&|()10]/ /g'
-        gatbps_xs=`sed "$gatbps_xs" <<EOF2
+        gatbps_xs=`sed "$gatbps_xs" <<gatbps_EOF
 $gatbps_p
-EOF2
+gatbps_EOF
         ` || exit $?
         for gatbps_x in $gatbps_xs; do
           eval gatbps_y=\$$gatbps_x
@@ -313,9 +313,9 @@ EOF2
           s/||/|/g
           s/[&|()]/ "&" /g
         '
-        gatbps_x=`sed "$gatbps_x" <<EOF2
+        gatbps_x=`sed "$gatbps_x" <<gatbps_EOF
 $gatbps_p
-EOF2
+gatbps_EOF
         ` || exit $?
         gatbps_x=`eval expr $gatbps_x`
         gatbps_x=$?
@@ -323,7 +323,7 @@ EOF2
           :
           $3
         ;; 1)
-          g_cv_]gat_name[=]m4_if([$5], [], [[no]], [[$5]])[
+          g_cv_]gatbps_name[=]m4_if([$5], [], [[no]], [[$5]])[
         ;; *)
           exit $gatbps_x
         esac
@@ -332,28 +332,28 @@ EOF2
 
       ]])[
 
-      ]gat_name[_was_cached=false
+      ]gatbps_name[_was_cached=false
 
     }]])[
 
-  if $][{g_cv_]gat_name[+:} false; then
+  if $][{g_cv_]gatbps_name[+:} false; then
     :
-    ]m4_if(gat_bool, 1, [[
-      case $g_cv_]gat_name[ in yes | no)
+    ]m4_if(gatbps_bool, 1, [[
+      case $g_cv_]gatbps_name[ in yes | no)
         :
       ;; *)
-        ]GATBPS_BUG([g_cv_]gat_name[ is set to something
-                     other than yes or no: $g_cv_]gat_name)[
+        ]GATBPS_BUG([g_cv_]gatbps_name[ is set to something
+                     other than yes or no: $g_cv_]gatbps_name)[
       esac
     ]])[
   else
-    ]GATBPS_BUG([g_cv_]gat_name[ is unset])[
+    ]GATBPS_BUG([g_cv_]gatbps_name[ is unset])[
   fi
 
-  ]gat_name[=$g_cv_]gat_name[
+  ]gatbps_name[=$g_cv_]gatbps_name[
 
-  ]AC_SUBST(gat_name)[
-  ]m4_if(gat_notmake, 1, [AM_SUBST_NOTMAKE(gat_name)])[
+  ]AC_SUBST(gatbps_name)[
+  ]m4_if(gatbps_notmake, 1, [AM_SUBST_NOTMAKE(gatbps_name)])[
 
   ]m4_ignore([
     When :notbool is not specified, we must always call AM_CONDITIONAL,
@@ -365,33 +365,33 @@ EOF2
           AM_CONDITIONAL is run conditionally (e.g., in a shell if
           statement), then the result will confuse automake.
 
-    To do this, we simply set ]gat_name[_sh to false if a boolean is not
-    detected.
+    To do this, we simply set ]gatbps_name[_sh to false if a boolean is
+    not detected.
   ])[
 
-  ]m4_if(gat_bool[]gat_notbool, 01, [], [[
-    case $]gat_name[ in yes)
-      ]gat_name[=1
-      ]gat_name[_sh=:
-      ]AC_DEFINE([gat_name], 1, [Result of checking $1.])[
+  ]m4_if(gatbps_bool[]gatbps_notbool, 01, [], [[
+    case $]gatbps_name[ in yes)
+      ]gatbps_name[=1
+      ]gatbps_name[_sh=:
+      ]AC_DEFINE([gatbps_name], 1, [Result of checking $1.])[
     ;; no)
-      ]gat_name[=0
-      ]gat_name[_sh=false
-      ]AC_DEFINE([gat_name], 0, [Result of checking $1.])[
+      ]gatbps_name[=0
+      ]gatbps_name[_sh=false
+      ]AC_DEFINE([gatbps_name], 0, [Result of checking $1.])[
     ;; *)
-      ]gat_name[_sh=false
+      ]gatbps_name[_sh=false
     esac
-    ]AM_CONDITIONAL(gat_name, [[$]gat_name[_sh]])[
+    ]AM_CONDITIONAL(gatbps_name, [[$]gatbps_name[_sh]])[
   ]])[
 
-  readonly ]gat_name[
-  readonly ]gat_name[_sh
-  readonly ]gat_name[_was_cached
+  readonly ]gatbps_name[
+  readonly ]gatbps_name[_sh
+  readonly ]gatbps_name[_was_cached
 
-  ]m4_popdef([gat_notmake])[
-  ]m4_popdef([gat_notbool])[
-  ]m4_popdef([gat_bool])[
-  ]m4_popdef([gat_name])[
+  ]m4_popdef([gatbps_notmake])[
+  ]m4_popdef([gatbps_notbool])[
+  ]m4_popdef([gatbps_bool])[
+  ]m4_popdef([gatbps_name])[
 
 }]])
 
