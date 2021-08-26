@@ -23,9 +23,9 @@ include::acl_include_gatbps_ac_fragment.adoc[]
 The `{acl_GATBPS_CHECK}` macro extends the `{acl_AC_CACHE_CHECK}` macro
 as follows:
 
-* The cache variable is named `g_cv_<name>`.
+* The cache variable is named `gatbps_cv_<name>`.
 
-* `<name>` is set to `$g_cv_<name>` after `{acl_AC_CACHE_CHECK}`
+* `<name>` is set to `$gatbps_cv_<name>` after `{acl_AC_CACHE_CHECK}`
 completes.
 
 * `<name>_was_cached` is set to `:` or `false` to indicate whether
@@ -44,8 +44,8 @@ These specifiers are removed from `<name>` when forming variable names.
 detection is disabled.
 Otherwise, boolean detection is enabled and all of the following occur:
 
-** If `g_cv_<name>` is set to `yes` or `no`, then all of the following
-occur:
+** If `gatbps_cv_<name>` is set to `yes` or `no`, then all of the
+following occur:
 
 *** `<name>` is set to `1` or `0` instead of `yes` or `no`.
 
@@ -54,19 +54,19 @@ is `1` or `0`.
 
 *** `{acl_AC_DEFINE}` is called for `<name>`.
 
-** If `g_cv_<name>` is set to something other than `yes` or `no`, then
-`<name>_sh` is set to `false`.
+** If `gatbps_cv_<name>` is set to something other than `yes` or `no`,
+then `<name>_sh` is set to `false`.
 
 ** `{aml_AM_CONDITIONAL}` is called for `<name>` using `$<name>_sh`.
 
 * If `:bool` is specified at the end of `<name>`, then the `:notbool`
 specifier is ignored and boolean behavior is enforced: an error will
-occur if `g_cv_<name>` is not set to `yes` or `no`.
+occur if `gatbps_cv_<name>` is not set to `yes` or `no`.
 
 * If `<precondition>` is given, it will be interpreted as a boolean
 expression.
-If the result of the expression is false, `g_cv_<name>` will be set to
-`<skip_value>` instead of executing `<code>` to set it.
+If the result of the expression is false, `gatbps_cv_<name>` will be set
+to `<skip_value>` instead of executing `<code>` to set it.
 The expression may use variable names, literal ``1```'s and ``0```'s,
 the `!`, `&&`, and `||` operators, parentheses for precedence, and
 space, tab, and newline characters for separation.

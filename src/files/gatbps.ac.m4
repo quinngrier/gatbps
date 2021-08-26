@@ -275,13 +275,13 @@ m4_define([GATBPS_CHECK], [[{ :
   unset ]gatbps_name[
   unset ]gatbps_name[_sh
   unset ]gatbps_name[_was_cached
-  unset g_cv_]gatbps_name[
+  unset gatbps_cv_]gatbps_name[
 
   ]gatbps_name[_was_cached=:
 
   ]AC_CACHE_CHECK(
     [[$1]],
-    [[g_cv_]gatbps_name],
+    [[gatbps_cv_]gatbps_name],
     [[{ :
 
       ]m4_if([$4], [], [[$3]], [[
@@ -323,7 +323,7 @@ gatbps_EOF
           :
           $3
         ;; 1)
-          g_cv_]gatbps_name[=]m4_if([$5], [], [[no]], [[$5]])[
+          gatbps_cv_]gatbps_name[=]m4_if([$5], [], [[no]], [[$5]])[
         ;; *)
           exit $gatbps_x
         esac
@@ -336,21 +336,21 @@ gatbps_EOF
 
     }]])[
 
-  if $][{g_cv_]gatbps_name[+:} false; then
+  if $][{gatbps_cv_]gatbps_name[+:} false; then
     :
     ]m4_if(gatbps_bool, 1, [[
-      case $g_cv_]gatbps_name[ in yes | no)
+      case $gatbps_cv_]gatbps_name[ in yes | no)
         :
       ;; *)
-        ]GATBPS_BUG([g_cv_]gatbps_name[ is set to something
-                     other than yes or no: $g_cv_]gatbps_name)[
+        ]GATBPS_BUG([gatbps_cv_]gatbps_name[ is set to something
+                     other than yes or no: $gatbps_cv_]gatbps_name)[
       esac
     ]])[
   else
-    ]GATBPS_BUG([g_cv_]gatbps_name[ is unset])[
+    ]GATBPS_BUG([gatbps_cv_]gatbps_name[ is unset])[
   fi
 
-  ]gatbps_name[=$g_cv_]gatbps_name[
+  ]gatbps_name[=$gatbps_cv_]gatbps_name[
 
   ]AC_SUBST(gatbps_name)[
   ]m4_if(gatbps_notmake, 1, [AM_SUBST_NOTMAKE(gatbps_name)])[
@@ -443,14 +443,14 @@ m4_define([GATBPS_CHECK_JAR], [[{ :
           ; do
             for gatbps_z in $gatbps_x/$gatbps_y; do
               if test -f $gatbps_z; then
-                g_cv_$3=$gatbps_z
+                gatbps_cv_$3=$gatbps_z
                 break 4
               fi
             done
           done
         done
 
-        g_cv_$3=/usr/local/share/java/]m4_car(
+        gatbps_cv_$3=/usr/local/share/java/]m4_car(
           m4_map_args_w(GATBPS_SQUISH([$2]), [], [], [,]))[
         break
 
@@ -467,9 +467,9 @@ m4_define([GATBPS_CHECK_JAR], [[{ :
     [$4:bool],
     [
       if test -f $$3; then
-        g_cv_$4=yes
+        gatbps_cv_$4=yes
       else
-        g_cv_$4=no
+        gatbps_cv_$4=no
       fi
     ],
     [$5])[
