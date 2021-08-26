@@ -280,13 +280,13 @@ m4_define([GATBPS_POP_IFS], [[
     ]GATBPS_BUG([GATBPS_POP_IFS() was called
                  without a matching GATBPS_PUSH_IFS() call.])[
   esac
+  gatbps_IFS_depth=`expr $gatbps_IFS_depth - 1` || exit $?
   eval gatbps_IFS_unset=\$gatbps_IFS_unset_$gatbps_IFS_depth
   if $gatbps_IFS_unset; then
     unset IFS
   else
     eval IFS=\$gatbps_IFS_value_$gatbps_IFS_depth
   fi
-  gatbps_IFS_depth=`expr $gatbps_IFS_depth - 1` || exit $?
 ]])
 
 dnl---------------------------------------------------------------------
