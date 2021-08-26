@@ -261,11 +261,11 @@ dnl GATBPS_PUSH_IFS
 dnl---------------------------------------------------------------------
 
 m4_define([GATBPS_PUSH_IFS], [[
-  case $][{IFS+x} in x)
+  case $][{IFS+x} in '')
+    eval gatbps_IFS_unset_$gatbps_IFS_depth=:
+  ;; *)
     eval gatbps_IFS_unset_$gatbps_IFS_depth=false
     eval gatbps_IFS_value_$gatbps_IFS_depth=\$IFS
-  ;; *)
-    eval gatbps_IFS_unset_$gatbps_IFS_depth=:
   esac
   gatbps_IFS_depth=`expr $gatbps_IFS_depth + 1` || exit $?
   IFS=$1
