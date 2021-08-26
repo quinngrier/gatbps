@@ -252,7 +252,7 @@ dnl---------------------------------------------------------------------
 
 m4_define([GATBPS_BUG], [[{ :
   ]GATBPS_ERROR([
-    $1 (this is a bug, please report it to <]AC_PACKAGE_BUGREPORT[>)
+    $1 (This is a bug. Please report it to <]AC_PACKAGE_BUGREPORT[>.)
   ])[
 }]])
 
