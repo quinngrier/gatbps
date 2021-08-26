@@ -360,10 +360,10 @@ gatbps_EOF
     even if a boolean is not detected, as the Automake manual states the
     following:
 
-          Note that you must arrange for every AM_CONDITIONAL to
-          be invoked every time configure is run. If
-          AM_CONDITIONAL is run conditionally (e.g., in a shell if
-          statement), then the result will confuse automake.
+          Note that you must arrange for every AM_CONDITIONAL to be
+          invoked every time configure is run. If AM_CONDITIONAL is
+          run conditionally (e.g., in a shell if statement), then
+          the result will confuse automake.
 
     To do this, we simply set ]gatbps_name[_sh to false if a boolean is
     not detected.
