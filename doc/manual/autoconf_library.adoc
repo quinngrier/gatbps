@@ -17,6 +17,7 @@
 include::acl_notation.adoc[]
 include::acl_GATBPS_BUG.adoc[]
 include::acl_GATBPS_CHECK.adoc[]
+include::acl_GATBPS_CHECK_EXPR.adoc[]
 include::acl_GATBPS_ERROR.adoc[]
 include::acl_GATBPS_LANG_PROGRAM.adoc[]
 include::acl_GATBPS_PROG.adoc[]
