@@ -8,10 +8,14 @@ include({%|src/tools/header_comment.m4|%}){%||%}dnl
 header_comment({%|dnl|%}, {%|dnl|%}){%|
 
 m4_ignore([
+
   Some versions of Autoconf temporarily unset all variables containing
   newline characters when outputting the cache, so we avoid making any
-  such variables readonly. Doing so would interfere with Autoconf and
-  possibly break things.
+  such variables readonly. Doing so could interfere with Autoconf and
+  possibly break things. These spots are notated with comments of the
+  form "Avoid: readonly foo". Also see
+  <https://lists.gnu.org/archive/html/bug-autoconf/2016-08/msg00000.html>.
+
 ])
 
 dnl---------------------------------------------------------------------
