@@ -1348,14 +1348,14 @@ m4_define(
   [m4_ifdef([DEFINE_]$1, [$1])])
 
 dnl---------------------------------------------------------------------
-dnl GATBPS_SOFT_VARIABLE
+dnl GATBPS_SOFT_VAR
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_SOFT_VARIABLE],
+m4_define([GATBPS_SOFT_VAR],
   [m4_if(
     m4_bregexp([$1], [^[a-zA-Z_][a-zA-Z_0-9]*$]),
     -1,
-    [m4_fatal([GATBPS_SOFT_VARIABLE: invalid <name>: $1])],
+    [m4_fatal([GATBPS_SOFT_VAR: invalid <name>: $1])],
     [m4_ifdef([DEFINE_$1], [[$1]], 1)])])
 
 dnl---------------------------------------------------------------------
