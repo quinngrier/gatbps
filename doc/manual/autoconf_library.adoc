@@ -16,6 +16,9 @@
 
 include::acl_notation.adoc[]
 include::acl_GATBPS_BUG.adoc[]
+include::acl_GATBPS_PUSH_VAR.adoc[]
+include::acl_GATBPS_POP_VAR.adoc[]
+include::acl_GATBPS_KEEP_VAR.adoc[]
 include::acl_GATBPS_CHECK.adoc[]
 include::acl_GATBPS_CHECK_EXPR.adoc[]
 include::acl_GATBPS_ERROR.adoc[]
