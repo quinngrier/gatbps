@@ -259,15 +259,15 @@ dnl GATBPS_PUSH_VAR
 dnl---------------------------------------------------------------------
 
 m4_define([GATBPS_PUSH_VAR], [[
-  gatbps_d=$][{gatbps_vars_depth_$1-1}
+  gatbps_d=$][{gatbps_var_depth_$1-1}
   case $][{$1+x} in '')
-    eval gatbps_vars_unset_$][{gatbps_d}_$1=:
+    eval gatbps_var_unset_$][{gatbps_d}_$1=:
   ;; *)
-    eval gatbps_vars_unset_$][{gatbps_d}_$1=false
-    eval gatbps_vars_value_$][{gatbps_d}_$1=\$$1
+    eval gatbps_var_unset_$][{gatbps_d}_$1=false
+    eval gatbps_var_value_$][{gatbps_d}_$1=\$$1
   esac
   gatbps_d=`expr $gatbps_d + 1` || exit $?
-  gatbps_vars_depth_$1=$gatbps_d
+  gatbps_var_depth_$1=$gatbps_d
   $1=$2
 ]])
 
@@ -276,18 +276,18 @@ dnl GATBPS_POP_VAR
 dnl---------------------------------------------------------------------
 
 m4_define([GATBPS_POP_VAR], [[
-  gatbps_d=$][{gatbps_vars_depth_$1-1}
+  gatbps_d=$][{gatbps_var_depth_$1-1}
   case $gatbps_d in 1)
     ]GATBPS_BUG([GATBPS_POP_VAR([$1], ...) was called
                  without a matching GATBPS_PUSH_VAR([$1]) call.])[
   esac
   gatbps_d=`expr $gatbps_d - 1` || exit $?
-  gatbps_vars_depth_$1=$gatbps_d
-  eval gatbps_u=\$gatbps_vars_unset_$][{gatbps_d}_$1
+  gatbps_var_depth_$1=$gatbps_d
+  eval gatbps_u=\$gatbps_var_unset_$][{gatbps_d}_$1
   if $gatbps_u; then
     unset $1
   else
-    eval $1=\$gatbps_vars_value_$][{gatbps_d}_$1
+    eval $1=\$gatbps_var_value_$][{gatbps_d}_$1
   fi
 ]])
 
@@ -296,13 +296,13 @@ dnl GATBPS_KEEP_VAR
 dnl---------------------------------------------------------------------
 
 m4_define([GATBPS_KEEP_VAR], [[
-  gatbps_d=$][{gatbps_vars_depth_$1-1}
+  gatbps_d=$][{gatbps_var_depth_$1-1}
   case $gatbps_d in 1)
     ]GATBPS_BUG([GATBPS_KEEP_VAR([$1], ...) was called
                  without a matching GATBPS_PUSH_VAR([$1]) call.])[
   esac
   gatbps_d=`expr $gatbps_d - 1` || exit $?
-  gatbps_vars_depth_$1=$gatbps_d
+  gatbps_var_depth_$1=$gatbps_d
 ]])
 
 dnl---------------------------------------------------------------------
