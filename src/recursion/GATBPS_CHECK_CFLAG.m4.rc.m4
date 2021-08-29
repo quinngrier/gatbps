@@ -6,7 +6,6 @@ rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/recursion_code.m4|%}){%||%}dnl
 recursion_code(
   {%|GATBPS_CHECK_CFLAG.m4|%},
-  {%|GATBPS_CHECK_BASIC.m4|%},
   {%|CC0-1.0.txt|%},
   {%||%}){%||%}dnl
 dnl

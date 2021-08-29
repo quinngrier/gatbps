@@ -686,7 +686,6 @@ EOF1
           'set' "${prefix}"'GATBPS_CHECK_CXXFLAG.m4' "${@}"
           'set' "${prefix}"'GATBPS_CHECK_CLASSPATH_SEPARATOR.m4' "${@}"
           'set' "${prefix}"'GATBPS_CHECK_CFLAG.m4' "${@}"
-          'set' "${prefix}"'GATBPS_CHECK_BASIC.m4' "${@}"
           'set' "${prefix}"'GATBPS_CACHE_CHECK.m4' "${@}"
           'set' "${prefix}"'GATBPS_ARG_WITH_ENUM.m4' "${@}"
           'set' "${prefix}"'GATBPS_ARG_WITH_BOOL.m4' "${@}"
@@ -1090,8 +1089,6 @@ EOF1
 |%}help_code({%|GATBPS_ARG_WITH_ENUM.m4|%}){%|
 
 |%}help_code({%|GATBPS_CACHE_CHECK.m4|%}){%|
-
-|%}help_code({%|GATBPS_CHECK_BASIC.m4|%}){%|
 
 |%}help_code({%|GATBPS_CHECK_CFLAG.m4|%}){%|
 
@@ -2787,8 +2784,6 @@ EOF1
 
 |%}generation_code({%|GATBPS_CACHE_CHECK.m4|%}){%|
 
-|%}generation_code({%|GATBPS_CHECK_BASIC.m4|%}){%|
-
 |%}generation_code({%|GATBPS_CHECK_CFLAG.m4|%}){%|
 
 |%}generation_code({%|GATBPS_CHECK_CLASSPATH_SEPARATOR.m4|%}){%|
@@ -3581,11 +3576,6 @@ include(`src/recursion/GATBPS_ARG_WITH_ENUM.m4.rc.m4'){%||%}dnl
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
 include(`src/recursion/GATBPS_CACHE_CHECK.m4.rc.m4'){%||%}dnl
-{%|
-
-|%}dnl
-changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/GATBPS_CHECK_BASIC.m4.rc.m4'){%||%}dnl
 {%|
 
 |%}dnl
