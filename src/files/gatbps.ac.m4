@@ -345,7 +345,11 @@ m4_define([GATBPS_CHECK], [[{ :
 
         gatbps_e='$4'
 
-        gatbps_s='s/[!10&|()]/ /g'
+        gatbps_s='
+          s/[!&|()]/ /g
+          s/^[10]/ /g
+          s/[ 	][10]/ /g
+        '
         gatbps_xs=`sed "$gatbps_s" <<gatbps_EOF
 $gatbps_e
 gatbps_EOF
@@ -364,9 +368,7 @@ gatbps_EOF
         done
 
         gatbps_x=$gatbps_e
-        gatbps_s='
-          s/[A-Z_a-z][0-9A-Z_a-z]*/$&/g
-        '
+        gatbps_s='s/[A-Z_a-z][0-9A-Z_a-z]*/$&/g'
         gatbps_x=`sed "$gatbps_s" <<gatbps_EOF
 $gatbps_x
 gatbps_EOF
@@ -384,14 +386,19 @@ gatbps_EOF
 $gatbps_x
 gatbps_EOF
         ` || exit $?
-        case $gatbps_x in *[!10\&\|\(\)=]*)
+        gatbps_s=' \t\n'
+        gatbps_x=`tr -s "$gatbps_s" '   ' <<gatbps_EOF
+$gatbps_x
+gatbps_EOF
+        ` || exit $?
+        case $gatbps_x in *[!10\&\|\(\)= ]*)
             ]GATBPS_BUG([
               GATBPS_CHECK(@<:@]gatbps_name[@:>@): Expression to be
-              given to expr contains a non-[!10&|()=] character:
+              given to expr contains a non-[!10&|()= ] character:
               $gatbps_x
             ])[
         esac
-        expr $gatbps_x
+        expr $gatbps_x >/dev/null
         gatbps_x=$?
         case $gatbps_x in 0)
           :
