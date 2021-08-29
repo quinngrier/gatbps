@@ -397,7 +397,7 @@ gatbps_EOF
           case $gatbps_x in *[!10\&\|\(\)= ]*)
             ]GATBPS_BUG([
               GATBPS_CHECK(@<:@]gatbps_name[@:>@): Expression to be
-              given to expr contains a non-[!10&|()= ] character:
+              given to expr contains a non-[10&|()= ] character:
               $gatbps_x
             ])[
           esac
