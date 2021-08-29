@@ -43,10 +43,8 @@ m4_if(
 ]AC_REQUIRE([AC_SYS_INTERPRETER])[
 ]AC_REQUIRE([GATBPS_DEFINE_enable_SHEBANG_LINES])[
 
-]GATBPS_CHECK_VARS(
-  [
-    shebang line support
-  ],
+]GATBPS_CHECK_EXPR(
+  [for shebang line support],
   [HAVE_SHEBANG_LINE],
   [
     interpval

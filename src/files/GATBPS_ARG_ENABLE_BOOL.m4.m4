@@ -56,7 +56,7 @@ case "$[]{gatbps_x}" in
   ;;
 esac
 
-GATBPS_CHECK_VARS([$1], [$2], gatbps_x)
+GATBPS_CHECK_EXPR([$1], [$2], gatbps_x)
 
 [
 
