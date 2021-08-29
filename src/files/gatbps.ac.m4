@@ -370,6 +370,7 @@ gatbps_EOF
         gatbps_x=`sed "$gatbps_s" <<gatbps_EOF
 $gatbps_x
 gatbps_EOF
+        ` || exit $?
         eval "gatbps_x=\"$gatbps_x\""
         gatbps_s='
           s/yes/1/g
