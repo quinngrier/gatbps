@@ -345,7 +345,7 @@ m4_define([GATBPS_CHECK], [[{ :
 
         gatbps_e='$4'
 
-        gatbps_s='s/[!&|()10]/ /g'
+        gatbps_s='s/[!10&|()]/ /g'
         gatbps_xs=`sed "$gatbps_s" <<gatbps_EOF
 $gatbps_e
 gatbps_EOF
@@ -383,10 +383,10 @@ gatbps_EOF
 $gatbps_x
 gatbps_EOF
         ` || exit $?
-        case $gatbps_x in *[!10=\&\|\(\)]*)
+        case $gatbps_x in *[!10\&\|\(\)=]*)
             ]GATBPS_BUG([
               GATBPS_CHECK(@<:@]gatbps_name[@:>@): Expression to be
-              given to expr contains a non-[!10=&|()] character:
+              given to expr contains a non-[!10&|()=] character:
               $gatbps_x
             ])[
         esac
