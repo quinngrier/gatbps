@@ -343,35 +343,54 @@ m4_define([GATBPS_CHECK], [[{ :
 
         ]GATBPS_PUSH_VAR([IFS], [$gatbps_default_IFS])[
 
-        gatbps_p='$4'
+        gatbps_e='$4'
 
-        gatbps_xs='s/[!&|()10]/ /g'
-        gatbps_xs=`sed "$gatbps_xs" <<gatbps_EOF
-$gatbps_p
+        gatbps_s='s/[!&|()10]/ /g'
+        gatbps_xs=`sed "$gatbps_s" <<gatbps_EOF
+$gatbps_e
 gatbps_EOF
         ` || exit $?
         for gatbps_x in $gatbps_xs; do
           eval gatbps_y=\$$gatbps_x
-          case $gatbps_y in 1 | 0)
+          case $gatbps_y in 1 | 0 | yes | no)
             :
           ;; *)
-            ]GATBPS_BUG([$gatbps_x is set to something
-                         other than 1 or 0: $gatbps_y])[
+            ]GATBPS_BUG([
+              GATBPS_CHECK(@<:@]gatbps_name[@:>@): Expression variable
+              $gatbps_x is set to something other than 1, 0, yes, or no:
+              $gatbps_y
+            ])[
           esac
         done
 
-        gatbps_x='
+        gatbps_x=$gatbps_e
+        gatbps_s='
           s/[A-Z_a-z][0-9A-Z_a-z]*/$&/g
-          s/!/ 1 - /g
+        '
+        gatbps_x=`sed "$gatbps_s" <<gatbps_EOF
+$gatbps_x
+gatbps_EOF
+        eval "gatbps_x=\"$gatbps_x\""
+        gatbps_s='
+          s/yes/1/g
+          s/no/0/g
+          s/!/ 0 = /g
           s/&&/\&/g
           s/||/|/g
-          s/[&|()]/ "&" /g
+          s/[&|()]/ & /g
         '
-        gatbps_x=`sed "$gatbps_x" <<gatbps_EOF
-$gatbps_p
+        gatbps_x=`sed "$gatbps_s" <<gatbps_EOF
+$gatbps_x
 gatbps_EOF
         ` || exit $?
-        gatbps_x=`eval expr $gatbps_x`
+        case $gatbps_x in *[!10=&|()]*)
+            ]GATBPS_BUG([
+              GATBPS_CHECK(@<:@]gatbps_name[@:>@): Expression to be
+              given to expr contains a non-[!10=&|()] character:
+              $gatbps_x
+            ])[
+        esac
+        expr $gatbps_x
         gatbps_x=$?
         case $gatbps_x in 0)
           :
