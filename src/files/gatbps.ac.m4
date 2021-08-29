@@ -383,7 +383,7 @@ gatbps_EOF
 $gatbps_x
 gatbps_EOF
         ` || exit $?
-        case $gatbps_x in *[!10=&|()]*)
+        case $gatbps_x in *[!10=\&\|\(\)]*)
             ]GATBPS_BUG([
               GATBPS_CHECK(@<:@]gatbps_name[@:>@): Expression to be
               given to expr contains a non-[!10=&|()] character:
