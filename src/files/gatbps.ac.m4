@@ -393,14 +393,12 @@ gatbps_EOF
         ` || exit $?
         case $gatbps_x in ' ')
           gatbps_x=0
+        ;; *[!10\&\|\(\)= ]*)
+          ]GATBPS_BUG([
+            GATBPS_CHECK(@<:@]gatbps_name[@:>@): Expression to be given
+            to expr contains a non-[10&|()= ] character: $gatbps_x
+          ])[
         ;; *)
-          case $gatbps_x in *[!10\&\|\(\)= ]*)
-            ]GATBPS_BUG([
-              GATBPS_CHECK(@<:@]gatbps_name[@:>@): Expression to be
-              given to expr contains a non-[10&|()= ] character:
-              $gatbps_x
-            ])[
-          esac
           expr $gatbps_x >/dev/null
           gatbps_x=$?
         esac
