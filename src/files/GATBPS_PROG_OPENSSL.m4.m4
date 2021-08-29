@@ -64,13 +64,13 @@ m4_if(
     the command to use to run openssl
   ])[
 
-]GATBPS_CHECK_BASIC(
+]GATBPS_CHECK(
   [openssl -non-fips-allow],
   [GATBPS_HAVE_NON_FIPS_ALLOW],
-  [[{
+  [{
     case "$][{OPENSSL+is_set}" in
       ?*)
-        "$][{OPENSSL}" \
+        "$OPENSSL" \
           'dgst' \
           '-md5' \
           '-non-fips-allow' \
@@ -78,7 +78,7 @@ m4_if(
           1>/dev/null \
           2>/dev/null \
         ;
-        case "$][{?}" in
+        case "$?" in
           '0')
             gatbps_cv_GATBPS_HAVE_NON_FIPS_ALLOW='yes';
           ;;
@@ -92,7 +92,7 @@ m4_if(
       ;;
     esac;
     'readonly' 'gatbps_cv_GATBPS_HAVE_NON_FIPS_ALLOW';
-  :;}]])[
+  :;}])[
 
 case "$][{GATBPS_HAVE_NON_FIPS_ALLOW}" in
   '1')

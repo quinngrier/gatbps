@@ -21,19 +21,19 @@ PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 {%|
 AC_DEFUN([GATBPS_CHECK_CFLAG], [[{
 
-]GATBPS_CHECK_BASIC(
+]GATBPS_CHECK(
   [$1],
   [$2],
   [{
-    gatbps_save_CFLAGS="$[]{CFLAGS}"
-    CFLAGS="$[]{CFLAGS} "'$3'
-    AC_LANG_PUSH([C])
-    AC_COMPILE_IFELSE(
+    gatbps_save_CFLAGS="$][{CFLAGS}"
+    CFLAGS="$][{CFLAGS} "'$3'
+    ]AC_LANG_PUSH([C])[
+    ]AC_COMPILE_IFELSE(
       [GATBPS_LANG_PROGRAM([], [])],
       [gatbps_cv_$2='yes'],
-      [gatbps_cv_$2='no'])
-    AC_LANG_POP([C])
-    CFLAGS="$[]{gatbps_save_CFLAGS}"
+      [gatbps_cv_$2='no'])[
+    ]AC_LANG_POP([C])[
+    CFLAGS="$][{gatbps_save_CFLAGS}"
   :;}],
   [$4])[
 
