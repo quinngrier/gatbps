@@ -693,7 +693,7 @@ EOF1
           'set' "${prefix}"'GATBPS_ARG_ENABLE_ENUM.m4' "${@}"
           'set' "${prefix}"'GATBPS_ARG_ENABLE_BOOL.m4' "${@}"
           'set' "${prefix}"'GATBPS_ARG_ENABLE.m4' "${@}"
-          'set' "${prefix}"'DATE.sh' "${@}"
+          'set' "${prefix}"'gatbps-gen-date.sh' "${@}"
           'set' "${prefix}"'CC0-1.0.txt' "${@}"
           'set' "${prefix}"'CC0-1.0-file.txt' "${@}"
           'set' "${prefix}"'CC0-1.0-copying.texi' "${@}"
@@ -1074,7 +1074,7 @@ EOF1
 
 |%}help_code({%|CC0-1.0.txt|%}){%|
 
-|%}help_code({%|DATE.sh|%}){%|
+|%}help_code({%|gatbps-gen-date.sh|%}){%|
 
 |%}help_code({%|GATBPS_ARG_ENABLE.m4|%}){%|
 
@@ -2768,7 +2768,7 @@ EOF1
 
 |%}generation_code({%|CC0-1.0.txt|%}){%|
 
-|%}generation_code({%|DATE.sh|%}){%|
+|%}generation_code({%|gatbps-gen-date.sh|%}){%|
 
 |%}generation_code({%|GATBPS_ARG_ENABLE.m4|%}){%|
 
@@ -3540,7 +3540,7 @@ include(`src/recursion/CC0-1.0-appendix.texi.rc.m4'){%||%}dnl
 
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/DATE.sh.rc.m4'){%||%}dnl
+include(`src/recursion/gatbps-gen-date.sh.rc.m4'){%||%}dnl
 {%|
 
 |%}dnl

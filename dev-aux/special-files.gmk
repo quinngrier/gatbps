@@ -14,7 +14,7 @@ files = \
   CC0-1.0.txt \
   build-aux/CC0-1.0-AC-COPYRIGHT.ac \
   build-aux/CC0-1.0-AM-COPYRIGHT.am \
-  build-aux/DATE.sh \
+  build-aux/gatbps-gen-date.sh \
   build-aux/GATBPS_CONFIG_FILE_RULES.am \
   build-aux/GATBPS_CONFIG_LATER_RULES.am \
   build-aux/GATBPS_CP_RULES.am \

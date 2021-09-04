@@ -475,10 +475,10 @@ maintainer-clean-local: $1/clean
 
 ]])
 
-x([DATE])
+x([gatbps-gen-date])
 x([gatbps-gen-libtool-c])
 x([gatbps-gen-version])
-x([build-aux/DATE])
+x([build-aux/gatbps-gen-date])
 x([build-aux/gatbps-gen-libtool-c])
 x([build-aux/gatbps-gen-version])
 

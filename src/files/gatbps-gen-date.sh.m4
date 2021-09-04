@@ -1,14 +1,14 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|src/files/DATE.sh.m4|%}){%||%}dnl
+rules_code({%|src/files/gatbps-gen-date.sh.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
 include({%|src/tools/sh_prelude.m4|%}){%||%}dnl
 header_comment({%|#|%}, {%|#|%}){%|
 #
-# Special file: DATE.sh
+# Special file: gatbps-gen-date.sh
 #
 # For more information, see the GATBPS manual.
 #
@@ -18,14 +18,14 @@ header_comment({%|#|%}, {%|#|%}){%|
 readonly git=" ${GIT:-git}"
 readonly sed=" ${SED:-sed}"
 
-if test -f build-aux/DATE; then
+if test -f build-aux/gatbps-gen-date; then
 
-  date=`cat build-aux/DATE` || exit $?
+  date=`cat build-aux/gatbps-gen-date` || exit $?
   readonly date
 
-elif test -f DATE; then
+elif test -f gatbps-gen-date; then
 
-  date=`cat DATE` || exit $?
+  date=`cat gatbps-gen-date` || exit $?
   readonly date
 
 elif eval "$git"' ls-files --error-unmatch "$0"' >/dev/null 2>&1; then
@@ -63,7 +63,7 @@ EOF2
 else
 
   cat <<EOF2 >&2
-DATE.sh: no cache file or repository found
+gatbps-gen-date.sh: no cache file or repository found
 EOF2
   exit 1
 
@@ -71,13 +71,13 @@ fi
 
 case $date in
   *[!0-9-]* | *-*-*-*)
-    printf 'DATE.sh: invalid date: %s\n' "$date" >&2
+    printf 'gatbps-gen-date.sh: invalid date: %s\n' "$date" >&2
     exit 1
   ;;
   *[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9])
   ;;
   *)
-    printf 'DATE.sh: invalid date: %s\n' "$date" >&2
+    printf 'gatbps-gen-date.sh: invalid date: %s\n' "$date" >&2
     exit 1
   ;;
 esac

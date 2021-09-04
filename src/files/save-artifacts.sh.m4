@@ -549,7 +549,7 @@ esac;
 'readonly' 'pwd';
 
 copy_ssh_secret_key_file='no';
-date_command="sh build-aux/DATE.sh";
+date_command="sh build-aux/gatbps-gen-date.sh";
 git_committer_email='archivist@example.com';
 git_committer_name='Archivist';
 gpg_passphrase_file='gpg-passphrase-file';

@@ -1,11 +1,11 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|src/recursion/DATE.sh.rc.m4|%}){%||%}dnl
+rules_code({%|src/recursion/gatbps-gen-date.sh.rc.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/recursion_code.m4|%}){%||%}dnl
 recursion_code(
-  {%|DATE.sh|%},
+  {%|gatbps-gen-date.sh|%},
   {%|CC0-1.0.txt|%},
   {%||%}){%||%}dnl
 dnl
