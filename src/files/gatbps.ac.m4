@@ -49,6 +49,24 @@ m4_define([GATBPS_NOTICE], [[
 ]])
 
 dnl---------------------------------------------------------------------
+dnl GATBPS_ERROR
+dnl---------------------------------------------------------------------
+
+m4_define([GATBPS_ERROR], [[{ :
+  ]AC_MSG_ERROR(m4_dquote(GATBPS_SQUISH([$1])), 1)[
+}]])
+
+dnl---------------------------------------------------------------------
+dnl GATBPS_BUG
+dnl---------------------------------------------------------------------
+
+m4_define([GATBPS_BUG], [[{ :
+  ]GATBPS_ERROR([
+    $1 (This is a bug. Please report it to <]AC_PACKAGE_BUGREPORT[>.)
+  ])[
+}]])
+
+dnl---------------------------------------------------------------------
 dnl Timestamp normalization
 dnl---------------------------------------------------------------------
 
@@ -244,24 +262,6 @@ GATBPS_PROG([TAR], [tar])
 GATBPS_PROG([UNZIP], [unzip])
 GATBPS_PROG([XZ], [xz])
 GATBPS_PROG([ZIP], [zip])
-
-dnl---------------------------------------------------------------------
-dnl GATBPS_ERROR
-dnl---------------------------------------------------------------------
-
-m4_define([GATBPS_ERROR], [[{ :
-  ]AC_MSG_ERROR(m4_dquote(GATBPS_SQUISH([$1])), 1)[
-}]])
-
-dnl---------------------------------------------------------------------
-dnl GATBPS_BUG
-dnl---------------------------------------------------------------------
-
-m4_define([GATBPS_BUG], [[{ :
-  ]GATBPS_ERROR([
-    $1 (This is a bug. Please report it to <]AC_PACKAGE_BUGREPORT[>.)
-  ])[
-}]])
 
 dnl---------------------------------------------------------------------
 dnl GATBPS_PUSH_VAR
