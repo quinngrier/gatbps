@@ -142,17 +142,6 @@ if ${v_prefix+:} false; then
     ` >&2
     exit 1
   fi
-elif test -f "$0.v_prefix.txt"; then
-  if test -f "$0.u_prefix.txt"; then
-    :
-  else
-    printf '%s\n' `
-      `"$0: $0.u_prefix.txt must exist if $0.v_prefix.txt exists."`
-    ` >&2
-    exit 1
-  fi
-  v_prefix=`cat <"$0.v_prefix.txt"` || exit $?
-  u_prefix=`cat <"$0.u_prefix.txt"` || exit $?
 else
   v_prefix=v
   u_prefix=u
