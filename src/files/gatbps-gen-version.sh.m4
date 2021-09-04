@@ -167,13 +167,9 @@ case $v_prefix in v)
 esac
 readonly v_suffix
 
-if test -f build-aux/gatbps-gen-version$v_suffix; then
+if test -f build-aux/gatbps-gen-version.txt$v_suffix; then
 
-  cat build-aux/gatbps-gen-version$v_suffix || exit $?
-
-elif test -f gatbps-gen-version$v_suffix; then
-
-  cat gatbps-gen-version$v_suffix || exit $?
+  cat build-aux/gatbps-gen-version.txt$v_suffix || exit $?
 
 elif eval "$git"' ls-files --error-unmatch "$0"' >/dev/null 2>&1; then
 

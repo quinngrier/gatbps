@@ -21,13 +21,9 @@ readonly git=" ${GIT:-git}"
 readonly sed=" ${SED:-sed}"
 readonly uniq=" ${UNIQ:-uniq}"
 
-if test -f build-aux/gatbps-gen-libtool-c; then
+if test -f build-aux/gatbps-gen-libtool-c.txt; then
 
-  cat build-aux/gatbps-gen-libtool-c || exit $?
-
-elif test -f gatbps-gen-libtool-c; then
-
-  cat gatbps-gen-libtool-c || exit $?
+  cat build-aux/gatbps-gen-libtool-c.txt || exit $?
 
 elif eval "$git"' ls-files --error-unmatch "$0"' >/dev/null 2>&1; then
 
