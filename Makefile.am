@@ -39,11 +39,11 @@ EXTRA_DIST += NEWS
 EXTRA_DIST += README
 EXTRA_DIST += build-aux/echo.sh
 EXTRA_DIST += build-aux/gatbps-gen-date.sh
-EXTRA_DIST += build-aux/gatbps-gen-date.txt
+EXTRA_DIST += build-aux/gatbps-gen-date.sh.cache
 EXTRA_DIST += build-aux/gatbps-gen-libtool-c.sh
-EXTRA_DIST += build-aux/gatbps-gen-libtool-c.txt
+EXTRA_DIST += build-aux/gatbps-gen-libtool-c.sh.cache
 EXTRA_DIST += build-aux/gatbps-gen-version.sh
-EXTRA_DIST += build-aux/gatbps-gen-version.txt
+EXTRA_DIST += build-aux/gatbps-gen-version.sh.cache
 
 GATBPS_M4FLAGS =
 GATBPS_M4FLAGS += '-I' $(srcdir)
