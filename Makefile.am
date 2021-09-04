@@ -40,6 +40,8 @@ EXTRA_DIST += NEWS
 EXTRA_DIST += README
 EXTRA_DIST += build-aux/DATE.sh
 EXTRA_DIST += build-aux/echo.sh
+EXTRA_DIST += build-aux/gatbps-gen-libtool-c
+EXTRA_DIST += build-aux/gatbps-gen-libtool-c.sh
 EXTRA_DIST += build-aux/gatbps-gen-version
 EXTRA_DIST += build-aux/gatbps-gen-version.sh
 

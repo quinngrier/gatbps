@@ -20,7 +20,7 @@ files = \
   build-aux/GATBPS_CP_RULES.am \
   build-aux/GATBPS_VPATH_SEARCH.am \
   build-aux/GATBPS_V_PAD.am \
-  build-aux/LTCURRENT.sh \
+  build-aux/gatbps-gen-libtool-c.sh \
   build-aux/gatbps-gen-version.sh \
   build-aux/cp.am \
   build-aux/docbook-dist.am \
