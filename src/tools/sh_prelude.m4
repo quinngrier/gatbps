@@ -59,7 +59,7 @@ readonly sh_quote_script="
 
 parse_options=:
 
-unknown_option() {
+gatbps_unknown_opt() {
   case $|%}{%|1 in
 
     --*)
