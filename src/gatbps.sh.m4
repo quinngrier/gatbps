@@ -604,7 +604,7 @@ EOF1
           'set' "${prefix}"'PACKAGE_STRING.df.in' "${@}"
           'set' "${prefix}"'PACKAGEVERSION.texi.in' "${@}"
           'set' "${prefix}"'PACKAGEDATE.texi.in' "${@}"
-          'set' "${prefix}"'LTCURRENT.sh' "${@}"
+          'set' "${prefix}"'gatbps-gen-libtool-c.sh' "${@}"
           'set' "${prefix}"'INPUT_FILTER.sh.in' "${@}"
           'set' "${prefix}"'GATBPS_WGET_SUBST.m4' "${@}"
           'set' "${prefix}"'GATBPS_WGET_RULES.am' "${@}"
@@ -1266,7 +1266,7 @@ EOF1
 
 |%}help_code({%|gatbps-gen-version.sh|%}){%|
 
-|%}help_code({%|LTCURRENT.sh|%}){%|
+|%}help_code({%|gatbps-gen-libtool-c.sh|%}){%|
 
 |%}help_code({%|awk-form.sh|%}){%|
 
@@ -2960,7 +2960,7 @@ EOF1
 
 |%}generation_code({%|gatbps-gen-version.sh|%}){%|
 
-|%}generation_code({%|LTCURRENT.sh|%}){%|
+|%}generation_code({%|gatbps-gen-libtool-c.sh|%}){%|
 
 |%}generation_code({%|awk-form.sh|%}){%|
 
@@ -4020,7 +4020,7 @@ include(`src/recursion/gatbps-gen-version.sh.rc.m4'){%||%}dnl
 
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/LTCURRENT.sh.rc.m4'){%||%}dnl
+include(`src/recursion/gatbps-gen-libtool-c.sh.rc.m4'){%||%}dnl
 {%|
 
 |%}dnl

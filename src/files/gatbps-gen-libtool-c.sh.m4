@@ -1,7 +1,7 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|src/files/LTCURRENT.sh.m4|%}){%||%}dnl
+rules_code({%|src/files/gatbps-gen-libtool-c.sh.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/declare_detect_options.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
@@ -9,7 +9,7 @@ include({%|src/tools/header_comment.m4|%}){%||%}dnl
 include({%|src/tools/sh_prelude.m4|%}){%||%}dnl
 header_comment({%|#|%}, {%|#|%}){%|
 #
-# Special file: LTCURRENT.sh
+# Special file: gatbps-gen-libtool-c.sh
 #
 # For more information, see the GATBPS manual.
 #
@@ -21,13 +21,13 @@ readonly git=" ${GIT:-git}"
 readonly sed=" ${SED:-sed}"
 readonly uniq=" ${UNIQ:-uniq}"
 
-if test -f build-aux/LTCURRENT; then
+if test -f build-aux/gatbps-gen-libtool-c; then
 
-  cat build-aux/LTCURRENT || exit $?
+  cat build-aux/gatbps-gen-libtool-c || exit $?
 
-elif test -f LTCURRENT; then
+elif test -f gatbps-gen-libtool-c; then
 
-  cat LTCURRENT || exit $?
+  cat gatbps-gen-libtool-c || exit $?
 
 elif eval "$git"' ls-files --error-unmatch "$0"' >/dev/null 2>&1; then
 
@@ -50,7 +50,7 @@ EOF2
 else
 
   cat <<EOF2 >&2
-LTCURRENT.sh: no cache file or repository found
+gatbps-gen-libtool-c.sh: no cache file or repository found
 EOF2
   exit 1
 

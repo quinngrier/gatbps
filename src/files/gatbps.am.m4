@@ -476,10 +476,10 @@ maintainer-clean-local: $1/clean
 ]])
 
 x([DATE])
-x([LTCURRENT])
+x([gatbps-gen-libtool-c])
 x([gatbps-gen-version])
 x([build-aux/DATE])
-x([build-aux/LTCURRENT])
+x([build-aux/gatbps-gen-libtool-c])
 x([build-aux/gatbps-gen-version])
 
 popdef([x])

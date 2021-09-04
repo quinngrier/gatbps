@@ -1,11 +1,13 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|doc/help/LTCURRENT.sh.hd.m4|%}){%||%}dnl
+rules_code({%|src/recursion/gatbps-gen-libtool-c.sh.rc.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
-{%|Special file: ${fB1}LTCURRENT.sh${fR1}
-
-Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.|%}dnl
+include({%|src/tools/recursion_code.m4|%}){%||%}dnl
+recursion_code(
+  {%|gatbps-gen-libtool-c.sh|%},
+  {%|CC0-1.0.txt|%},
+  {%||%}){%||%}dnl
 dnl
 dnl The authors of this file have waived all copyright and
 dnl related or neighboring rights to the extent permitted by

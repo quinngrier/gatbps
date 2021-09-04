@@ -296,12 +296,12 @@ m4_define(
     [m4_define(
       [$1$2_LIBTOOL_C_VALUE],
       m4_esyscmd_s([
-        sh build-aux/LTCURRENT.sh
+        sh build-aux/gatbps-gen-libtool-c.sh
       ])m4_if(
         m4_sysval,
         [0],
         [],
-        [m4_fatal([LTCURRENT.sh failed])]))])$1$2_LIBTOOL_C_VALUE])[
+        [m4_fatal([gatbps-gen-libtool-c.sh failed])]))])$1$2_LIBTOOL_C_VALUE])[
 
 ]AC_DEFINE(
   [[$2_LIBTOOL_C]],
