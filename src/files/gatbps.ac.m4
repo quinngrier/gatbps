@@ -90,16 +90,18 @@ dnl---------------------------------------------------------------------
 # that only the root ./configure will observe it to be unset.
 #
 
-if ${GATBPS_TIMESTAMPS_NORMALIZED+:} false; then
-  ]AC_MSG_NOTICE(
-    [[not normalizing timestamps (non-root ./configure)]])[
-  :
+if ${GATBPS_TIMESTAMPS_NORMALIZED:+:} false; then
+  ]GATBPS_NOTICE([
+    Not normalizing timestamps (non-root ./configure).
+  ])[
 elif test -s config.status; then
-  ]AC_MSG_NOTICE(
-    [[not normalizing timestamps (nonempty config.status)]])[
-  :
+  ]GATBPS_NOTICE([
+    Not normalizing timestamps (nonempty config.status).
+  ])[
 else
-  ]AC_MSG_NOTICE([[normalizing timestamps]])[
+  ]GATBPS_NOTICE([
+    Normalizing timestamps.
+  ])[
   t='touch -t '`date '+%Y%m%d%H%M.%S'`' {}' || exit $?
   p='( -name /
     -o -name .bzr
@@ -112,10 +114,12 @@ else
   # -exec ; we need to bubble it up ourselves.
   find . -exec $t + $p || {
     x=`find . '(' -exec $t ';' -o -print ')' $p` || exit $?
-    case $x in ?*) exit 1 ;; esac
+    case $x in ?*)
+      exit 1
+    esac
   }
 fi
-GATBPS_TIMESTAMPS_NORMALIZED=
+GATBPS_TIMESTAMPS_NORMALIZED=1
 readonly GATBPS_TIMESTAMPS_NORMALIZED
 export GATBPS_TIMESTAMPS_NORMALIZED
 
