@@ -21,9 +21,11 @@ readonly git=" ${GIT:-git}"
 readonly sed=" ${SED:-sed}"
 readonly uniq=" ${UNIQ:-uniq}"
 
-if test -f build-aux/gatbps-gen-libtool-c.txt; then
+cache=$0.cache
 
-  cat build-aux/gatbps-gen-libtool-c.txt || exit $?
+if test -f "$cache"; then
+
+  cat <"$cache" || exit $?
 
 elif eval "$git"' ls-files --error-unmatch "$0"' >/dev/null 2>&1; then
 

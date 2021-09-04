@@ -454,30 +454,31 @@ popdef([x])
 ## Version cache files
 ##----------------------------------------------------------------------
 
-]
+GATBPS_VERSION_CACHE_FILES =
 
-pushdef([x], [[
-
-$1.txt:
+GATBPS_VERSION_CACHE_FILES/dummy $(GATBPS_VERSION_CACHE_FILES):
 	$(AM_V_GEN)$(GATBPS_RECIPE_MARKER_TOP)
-	$(AM_V_at)rm -f -r ./$][@ ./$][@$(TSUF)*]dnl
-ifelse(index([$1], [/]), [-1], [], [[
-	$(AM_V_at)$(MKDIR_P) $(@D)]])[
-	$(AM_V_at)sh $(srcdir)/build-aux/]dnl
-patsubst([[$1]], [\(.\).*/], [\1])[.sh >$][@$(TSUF)
+	$(AM_V_at)rm -f -r $][@ $][@$(TSUF)*
+	$(AM_V_at)$(MKDIR_P) $(@D)
+	$(AM_V_at)]GATBPS_SQUISH([
+	  x='$][@';
+	  r='^\(.*\)\..*$$';
+	  x=`expr "$$x" : "$$r"` || exit $$?;
+	  sh - '$(srcdir)'/"$$x" >$][@$(TSUF) || exit $$?;
+	])[
 	$(AM_V_at)mv -f $][@$(TSUF) $][@
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
-$1/clean: FORCE
-	-rm -f -r ./$(@D) ./$(@D)$(TSUF)*
+]
 
-maintainer-clean-local: $1/clean
-
+pushdef([x], [[
+GATBPS_VERSION_CACHE_FILES += $1.cache
+GATBPS_MOSTLYCLEANFILES += $1.cache/clean
 ]])
 
-x([build-aux/gatbps-gen-date])
-x([build-aux/gatbps-gen-libtool-c])
-x([build-aux/gatbps-gen-version])
+x([build-aux/gatbps-gen-date.sh])
+x([build-aux/gatbps-gen-libtool-c.sh])
+x([build-aux/gatbps-gen-version.sh])
 
 popdef([x])
 

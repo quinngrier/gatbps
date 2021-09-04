@@ -39,6 +39,7 @@ for x in "$0".args*; do
   fi
 done
 
+cache=$0.cache
 unset v_prefix
 unset u_prefix
 
@@ -161,16 +162,9 @@ case $u_prefix in '' \
   exit 1
 esac
 
-case $v_prefix in v)
-  v_suffix=
-;; *)
-  v_suffix=.$v_prefix
-esac
-readonly v_suffix
+if test -f "$cache"; then
 
-if test -f build-aux/gatbps-gen-version.txt$v_suffix; then
-
-  cat build-aux/gatbps-gen-version.txt$v_suffix || exit $?
+  cat <"$cache" || exit $?
 
 elif eval "$git"' ls-files --error-unmatch "$0"' >/dev/null 2>&1; then
 

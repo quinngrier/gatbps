@@ -18,9 +18,11 @@ header_comment({%|#|%}, {%|#|%}){%|
 readonly git=" ${GIT:-git}"
 readonly sed=" ${SED:-sed}"
 
-if test -f build-aux/gatbps-gen-date.txt; then
+cache=$0.cache
 
-  date=`cat build-aux/gatbps-gen-date.txt` || exit $?
+if test -f "$cache"; then
+
+  date=`cat <"$cache"` || exit $?
   readonly date
 
 elif eval "$git"' ls-files --error-unmatch "$0"' >/dev/null 2>&1; then
