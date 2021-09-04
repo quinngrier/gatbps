@@ -60,48 +60,20 @@ readonly sh_quote_script="
 parse_options=:
 
 gatbps_unknown_opt() {
-  case $|%}{%|1 in
-
-    --*)
-      x="
-        s/'/'\\\\''/g
-        1 s/^/'/
-        /=/ {
-          s/=.*/'/
-          q
-        }
-        \$ s/\$/'/
-      "
-      x=`sed "$x" <<EOF2
+  case $|%}{%|1 in --*)
+    printf '%s' "$|%}{%|0: Unknown option: " >&2
+    sed '
+      /=/ {
+        s/=.*//
+        q
+      }
+    ' <<EOF2 >&2
 $|%}{%|1
 EOF2
-      ` || exit
-      eval x="$x"
-      cat <<EOF2 >&2
-$|%}{%|0: unknown option: $x
-EOF2
-      exit 1
-    ;;
-
-    -"$nl"*)
-      cat <<EOF2 >&2
-$|%}{%|0: unknown option: -
-
-EOF2
-      exit 1
-    ;;
-
-    -?*)
-      option=`head -c 2 <<EOF2
-$|%}{%|1
-EOF2
-      ` || exit
-      cat <<EOF2 >&2
-$|%}{%|0: unknown option: $option
-EOF2
-      exit 1
-    ;;
-
+    exit 1
+  ;; -?*)
+    printf '%s: Unknown option: %.2s\n' "$|%}{%|0" "$|%}{%|1" >&2
+    exit 1
   esac
 }
 
