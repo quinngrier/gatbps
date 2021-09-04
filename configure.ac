@@ -3,8 +3,8 @@
 ]AC_INIT(
   [[GATBPS]],
   m4_esyscmd_s([
-    sh build-aux/VERSION.sh
-  ])m4_if(m4_sysval, [0], [], [m4_fatal([VERSION.sh failed])]),
+    sh build-aux/gatbps-gen-version.sh
+  ])m4_if(m4_sysval, [0], [], [m4_fatal([gatbps-gen-version.sh failed])]),
   [[quinn@quinngrier.com]],
   [[gatbps]],
   [[https://www.quinngrier.com/gatbps]])[

@@ -38,10 +38,10 @@ EXTRA_DIST += DATE
 EXTRA_DIST += INSTALL
 EXTRA_DIST += NEWS
 EXTRA_DIST += README
-EXTRA_DIST += VERSION
 EXTRA_DIST += build-aux/DATE.sh
-EXTRA_DIST += build-aux/VERSION.sh
 EXTRA_DIST += build-aux/echo.sh
+EXTRA_DIST += build-aux/gatbps-gen-version
+EXTRA_DIST += build-aux/gatbps-gen-version.sh
 
 GATBPS_M4FLAGS =
 GATBPS_M4FLAGS += '-I' $(srcdir)
