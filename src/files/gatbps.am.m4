@@ -458,7 +458,7 @@ popdef([x])
 
 pushdef([x], [[
 
-$1:
+$1.txt:
 	$(AM_V_GEN)$(GATBPS_RECIPE_MARKER_TOP)
 	$(AM_V_at)rm -f -r ./$][@ ./$][@$(TSUF)*]dnl
 ifelse(index([$1], [/]), [-1], [], [[
@@ -475,9 +475,9 @@ maintainer-clean-local: $1/clean
 
 ]])
 
-x([build-aux/gatbps-gen-date.txt])
-x([build-aux/gatbps-gen-libtool-c.txt])
-x([build-aux/gatbps-gen-version.txt])
+x([build-aux/gatbps-gen-date])
+x([build-aux/gatbps-gen-libtool-c])
+x([build-aux/gatbps-gen-version])
 
 popdef([x])
 
