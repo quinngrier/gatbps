@@ -27,6 +27,18 @@ readonly num
 # TODO: Support a mode where we don't do semver and instead just output
 #       the most recent version number.
 
+for x in "$0".args*; do
+  if test -f "$x"; then
+    x=`cat <"$x"` || exit $?
+    case $# in 0)
+      eval "set x $x" || exit $?
+    ;; *)
+      eval "set x \"\$@\" $x" || exit $?
+    esac
+    shift
+  fi
+done
+
 unset v_prefix
 unset u_prefix
 
