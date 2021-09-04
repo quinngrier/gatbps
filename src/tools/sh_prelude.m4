@@ -22,6 +22,9 @@ ifelse({%|$#|%}, {%|1|%}, {%|{%|was|%}|%}, {%|{%|were|%}|%}){%||%}dnl
 m4exit({%|1|%})|%}){%||%}dnl
 {%|
 
+#-----------------------------------------------------------------------
+# Locale
+#-----------------------------------------------------------------------
 #
 # With LC_ALL=C, locale-aware programs use the C locale instead of the
 # current locale. This is generally the best approach for code that is
@@ -32,16 +35,21 @@ m4exit({%|1|%})|%}){%||%}dnl
 #
 
 LC_ALL=C
-readonly LC_ALL
 export LC_ALL
 
+#-----------------------------------------------------------------------
+# Newline characters
+#-----------------------------------------------------------------------
 #
 # The nl variable holds a newline character. It can be used where a
 # literal newline character might be awkward.
 #
 
-readonly nl='
+nl='
 '
+readonly nl
+
+#-----------------------------------------------------------------------
 
 readonly sh_quote_script="
   s/'/'\\\\''/g
