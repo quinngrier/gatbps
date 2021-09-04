@@ -121,14 +121,29 @@ done
 
 readonly parse_options
 
-if ${v_prefix+false} :; then
+if ${v_prefix+:} false; then
+  if ${u_prefix+:} false; then
+    :
+  else
+    printf '%s\n' `
+      `"$0: <u_prefix> must be given if <v_prefix> is given."`
+    ` >&2
+    exit 1
+  fi
+elif test -f "$0.v_prefix"; then
+  if test -f "$0.u_prefix"; then
+    :
+  else
+    printf '%s\n' `
+      `"$0: $0.u_prefix must exist if $0.v_prefix exists."`
+    ` >&2
+    exit 1
+  fi
+  v_prefix=`cat <"$0.v_prefix"` || exit $?
+  u_prefix=`cat <"$0.u_prefix"` || exit $?
+else
   v_prefix=v
   u_prefix=u
-elif ${u_prefix+false} :; then
-  printf '%s\n' `
-    `"$0: <u_prefix> must be given if <v_prefix> is given."`
-  ` >&2
-  exit 1
 fi
 readonly v_prefix
 readonly u_prefix
