@@ -21,8 +21,8 @@
   [AC_],
   [PACKAGE_DATE],
   m4_esyscmd_s([
-    sh build-aux/DATE.sh
-  ])m4_if(m4_sysval, [0], [], [m4_fatal([DATE.sh failed])]))[
+    sh build-aux/gatbps-gen-date.sh
+  ])m4_if(m4_sysval, [0], [], [m4_fatal([gatbps-gen-date.sh failed])]))[
 
 ]m4_include([build-aux/CC0-1.0-AC-COPYRIGHT.ac])[
 
