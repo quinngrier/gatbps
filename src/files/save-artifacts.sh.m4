@@ -563,7 +563,7 @@ ssh_passphrase_file='ssh-passphrase-file';
 ssh_secret_key_file='ssh-secret-key-file';
 sshpass_prompt='assphrase';
 temporary_directory='temporary-directory';
-version_command=''\''sh'\'' '\''build-aux/VERSION.sh'\''';
+version_command=''\''sh'\'' '\''build-aux/gatbps-gen-version.sh'\''';
 
 copy_ssh_secret_key_file_attempted='no';
 copy_ssh_secret_key_file_succeeded='no';

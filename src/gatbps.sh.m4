@@ -597,7 +597,7 @@ EOF1
           'set' "${prefix}"'bdarrow.texi' "${@}"
           'set' "${prefix}"'barrow.texi' "${@}"
           'set' "${prefix}"'awk-form.sh' "${@}"
-          'set' "${prefix}"'VERSION.sh' "${@}"
+          'set' "${prefix}"'gatbps-gen-version.sh' "${@}"
           'set' "${prefix}"'TestExit.java' "${@}"
           'set' "${prefix}"'TEST_EXIT.h' "${@}"
           'set' "${prefix}"'PACKAGE_VERSION.df.in' "${@}"
@@ -1264,7 +1264,7 @@ EOF1
 
 |%}help_code({%|TestExit.java|%}){%|
 
-|%}help_code({%|VERSION.sh|%}){%|
+|%}help_code({%|gatbps-gen-version.sh|%}){%|
 
 |%}help_code({%|LTCURRENT.sh|%}){%|
 
@@ -2958,7 +2958,7 @@ EOF1
 
 |%}generation_code({%|TestExit.java|%}){%|
 
-|%}generation_code({%|VERSION.sh|%}){%|
+|%}generation_code({%|gatbps-gen-version.sh|%}){%|
 
 |%}generation_code({%|LTCURRENT.sh|%}){%|
 
@@ -4015,7 +4015,7 @@ include(`src/recursion/TestExit.java.rc.m4'){%||%}dnl
 
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/VERSION.sh.rc.m4'){%||%}dnl
+include(`src/recursion/gatbps-gen-version.sh.rc.m4'){%||%}dnl
 {%|
 
 |%}dnl
