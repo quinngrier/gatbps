@@ -254,6 +254,7 @@ dnl---------------------------------------------------------------------
 GATBPS_PROG([ASCIIDOCTOR], [asciidoctor])
 GATBPS_PROG([ASCIIDOCTOR_PDF], [asciidoctor-pdf])
 GATBPS_PROG([GIT], [git])
+GATBPS_PROG([GUNZIP], [gunzip])
 GATBPS_PROG([GZIP], [gzip])
 GATBPS_PROG([JAR], [jar])
 GATBPS_PROG([JAVA], [java])
