@@ -39,6 +39,35 @@ for x in "$0".args*; do
   fi
 done
 
+#-----------------------------------------------------------------------
+
+unset mode
+unset mode_implicitly
+
+set_mode() {
+  case $1 in '')
+    case ${mode+x} in '')
+      mode=semver
+      mode_implicitly='implicitly '
+    esac
+  ;; *)
+    case ${mode+x} in '')
+      mode=$1
+    ;; *)
+      case $1 in $mode)
+        :
+      ;; *)
+        gatbps_barf \
+          "--$1 was specified, but the mode was already" \
+          "${mode_implicitly-}set to --$mode." \
+        ;
+      esac
+    esac
+  esac
+}
+
+#-----------------------------------------------------------------------
+
 cache=$0.cache
 unset v_prefix
 unset u_prefix
@@ -76,7 +105,7 @@ until shift && (exit ${1+1}0); do
     ;; --help)
 
       cat <<EOF || exit $?
-Usage: $0 [<v_prefix=v> <u_prefix=u>]
+Usage: $0 [--semver] [<v_prefix=v> <u_prefix=u>]
 EOF
 
       exit 0
@@ -85,6 +114,19 @@ EOF
 
       printf '%s\n' "$0: Option forbids an argument: --help" >&2
       exit 1
+
+    #-------------------------------------------------------------------
+    # --semver
+    #-------------------------------------------------------------------
+
+    ;; --semver)
+
+      set_mode semver
+      continue
+
+    ;; --semver=*)
+
+      gatbps_barf "Option forbids an argument: --semver"
 
     #-------------------------------------------------------------------
     # Unknown options
@@ -115,20 +157,19 @@ EOF
     esac
   fi
 
-  if ${v_prefix+false} :; then
+  set_mode
 
-    v_prefix=$1
-
-  elif ${u_prefix+false} :; then
-
-    u_prefix=$1
-
-  else
-
-    printf '%s\n' "$0: Too many operands: $1" >&2
-    exit 1
-
-  fi
+  case $mode in semver)
+    if ${v_prefix+false} :; then
+      v_prefix=$1
+    elif ${u_prefix+false} :; then
+      u_prefix=$1
+    else
+      gatbps_barf "Too many operands: $1"
+    fi
+  ;; *)
+    gatbps_barf "Unimplemented mode: --$mode"
+  esac
 
 done
 
