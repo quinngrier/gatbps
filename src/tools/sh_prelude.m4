@@ -54,14 +54,14 @@ readonly nl
 #-----------------------------------------------------------------------
 
 gatbps_barf() {
-  case $# in 0)
-    printf '%s\n' "$0: Error: Unknown error." >&2
+  case $|%}{%|# in 0)
+    printf '%s\n' "$|%}{%|0: Error: Unknown error." >&2
   ;; 1)
-    printf '%s\n' "$0: Error: $1" >&2
+    printf '%s\n' "$|%}{%|0: Error: $|%}{%|1" >&2
   ;; *)
-    printf '%s' "$0: Error: $1" >&2
+    printf '%s' "$|%}{%|0: Error: $|%}{%|1" >&2
     shift
-    printf ' %s' "$@" >&2
+    printf ' %s' "$|%}{%|@" >&2
     echo >&2
   esac
   exit 1

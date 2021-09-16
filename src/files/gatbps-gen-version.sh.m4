@@ -21,6 +21,9 @@ readonly awk
 git=" ${GIT:-git}"
 readonly git
 
+sed=" ${SED:-sed}"
+readonly sed
+
 num='(0|[1-9][0-9]*)'
 readonly num
 
@@ -49,20 +52,83 @@ set_mode() {
     case ${mode+x} in '')
       mode=semver
       mode_implicitly='implicitly '
+      readonly mode
+      readonly mode_implicitly
     esac
   ;; *)
     case ${mode+x} in '')
       mode=$1
+      readonly mode
+      readonly mode_implicitly
     ;; *)
-      case $1 in $mode)
+      case $mode in $1)
         :
       ;; *)
         gatbps_barf \
-          "--$1 was specified, but the mode was already" \
+          "--$1 was given, but the mode was already" \
           "${mode_implicitly-}set to --$mode." \
         ;
       esac
     esac
+  esac
+}
+
+#-----------------------------------------------------------------------
+
+unset datum
+unset datum_implicitly
+
+set_datum() {
+  set_mode
+  case $1 in '')
+    case ${datum+x} in '')
+      datum=default
+      datum_implicitly='implicitly '
+      readonly datum
+      readonly datum_implicitly
+    esac
+  ;; *)
+    case ${datum+x} in '')
+      datum=$1
+      readonly datum
+      readonly datum_implicitly
+      case $mode:$datum in : \
+        | semver:default \
+        | semver:docker \
+      )
+        :
+      ;; *)
+        gatbps_barf \
+          "Unsupported mode and datum combination: --$mode --$datum" \
+        ;
+      esac
+    ;; *)
+      case $datum in $1)
+        :
+      ;; *)
+        gatbps_barf \
+          "--$1 was given, but the datum was already" \
+          "${datum_implicitly-}set to --$datum." \
+        ;
+      esac
+    esac
+  esac
+}
+
+#-----------------------------------------------------------------------
+
+print_semver() {
+  case $datum in default)
+    printf '%s\n' "$1" || exit $?
+  ;; docker)
+    print_semver_x='s/[+].*//'
+    eval "$sed"' "$print_semver_x"' <<EOF2 || exit $?
+$1
+EOF2
+  ;; *)
+    gatbps_barf \
+      "print_semver(): Unexpected datum: $datum" \
+    ;
   esac
 }
 
@@ -99,13 +165,26 @@ until shift && (exit ${1+1}0); do
       exit 1
 
     #-------------------------------------------------------------------
+    # --docker
+    #-------------------------------------------------------------------
+
+    ;; --docker)
+
+      set_datum docker
+      continue
+
+    ;; --docker=*)
+
+      gatbps_barf "Option forbids an argument: --docker"
+
+    #-------------------------------------------------------------------
     # --help
     #-------------------------------------------------------------------
 
     ;; --help)
 
       cat <<EOF || exit $?
-Usage: $0 [--semver] [<v_prefix=v> <u_prefix=u>]
+Usage: $0 [--semver] [--docker] [<v_prefix=v> <u_prefix=u>]
 EOF
 
       exit 0
@@ -157,9 +236,12 @@ EOF
     esac
   fi
 
-  set_mode
+  set_datum
 
-  case $mode in semver)
+  case $mode:$datum in : \
+    | semver:default \
+    | semver:docker \
+  )
     if ${v_prefix+false} :; then
       v_prefix=$1
     elif ${u_prefix+false} :; then
@@ -168,10 +250,14 @@ EOF
       gatbps_barf "Too many operands: $1"
     fi
   ;; *)
-    gatbps_barf "Unimplemented mode: --$mode"
+    gatbps_barf \
+      "Unsupported mode and datum combination: --$mode --$datum" \
+    ;
   esac
 
 done
+
+set_datum
 
 readonly parse_options
 
@@ -239,7 +325,7 @@ EOF2
   ;; *-*)
     :
   ;; *)
-    printf '%s\n' "$v_result" || exit $?
+    print_semver "$v_result"
     exit 0
   esac
 
@@ -255,7 +341,7 @@ EOF2
   case $u_tag in *.*)
     :
   ;; *)
-    printf '%s\n' "$v_result" || exit $?
+    print_semver "$v_result"
     exit 0
   esac
 
@@ -272,7 +358,7 @@ EOF2
   case $s in 0)
     :
   ;; 1)
-    printf '%s\n' "$v_result" || exit $?
+    print_semver "$v_result"
     exit 0
   ;; *)
     exit $s
@@ -304,7 +390,7 @@ EOF2
     exit 1
   esac
 
-  printf '%s\n' "$u_result" || exit $?
+  print_semver "$u_result"
 
 else
 
