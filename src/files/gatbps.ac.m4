@@ -1815,18 +1815,10 @@ m4_if([$4], [], [], [[
 	$(GATBPS_at)$(MKDIR_P) $(@D)
 	$(GATBPS_at){ \
 	  x=]source_sh[; \
-	  if test -f "$$x"; then \
-	    d=.; \
-	  else \
-	    d=$(srcdir); \
-	    case "$$d" in \
-	      /*) \
-	      ;; \
-	      *) \
-	        d=./"$$d"; \
-	      ;; \
-	    esac; \
-	  fi; \
+	  $(GATBPS_VPATH_SEARCH_TOP) \
+	    "$$x" \
+	  $(GATBPS_VPATH_SEARCH_BOT); \
+	  d=$(GATBPS_VPATH_SEARCH_RESULT); \
 	  $(XZ) \
 	    <"$$d/$$x" \
 	    >$(@)$(TSUF) \
