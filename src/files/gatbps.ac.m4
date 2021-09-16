@@ -1744,6 +1744,7 @@ m4_if(
     GATBPS_XZ requires 2 to 4 arguments
     ($# ]m4_if([$#], [1], [[was]], [[were]])[ given)
   ])])[]dnl
+
 m4_if(
   m4_bregexp([$1], [[^
 	 ]]),
@@ -1752,6 +1753,7 @@ m4_if(
     GATBPS_XZ requires its first argument to contain at least one
     character that is not a space, tab, or newline character
   ])])[]dnl
+
 m4_if(
   m4_bregexp([$2], [[^
 	 ]]),
@@ -1760,6 +1762,7 @@ m4_if(
     GATBPS_XZ requires its second argument to contain at least one
     character that is not a space, tab, or newline character
   ])])[]dnl
+
 m4_if(
   m4_eval([$# >= 3]),
   [1],
@@ -1773,6 +1776,7 @@ m4_if(
       GATBPS_XZ requires its third argument to be either "clean",
       "distclean", "maintainer-clean", or "mostlyclean"
     ])])])[]dnl
+
 m4_if(
   m4_eval([$# >= 4]),
   [1],
@@ -1784,15 +1788,19 @@ m4_if(
       GATBPS_XZ requires its fourth argument to contain at least one
       character that is not a space, tab, or newline character
     ])])])[]dnl
+
 m4_pushdef(
   [target_sh],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
+
 m4_pushdef(
   [source_sh],
   m4_bpatsubst([[[$2]]], ['], ['\\'']))[]dnl
+
 m4_pushdef(
   [leaf_prerequisites],
   m4_bpatsubst([[[$4]]], ['], ['\\'']))[]dnl
+
 [
 
 GATBPS_XZ_RULES="$][{GATBPS_XZ_RULES}"'
