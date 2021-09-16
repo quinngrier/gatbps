@@ -1828,16 +1828,11 @@ m4_if([$4], [], [], [[
     esac; \
   fi; \
   $(XZ) \
-    0<"$$d"/"$$x" \
-    1>./]target_sh[.tmp \
-  || exit $][$][?; \
-  exit 0; \
+    <"$$d/$$x" \
+    >$(@)$(TSUF) \
+  || exit $$?; \
 :;}
-	$(GATBPS_at)mv \
-  -f \
-  ./]target_sh[.tmp \
-  ./]target_sh[ \
-;
+	$(GATBPS_at)mv -f $(@)$(TSUF) $(@)
 	$(GATBPS_at)$(GATBPS_RECIPE_MARKER_BOT)
 
 ]target_sh[/clean: FORCE
