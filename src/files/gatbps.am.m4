@@ -375,6 +375,12 @@ popdef([F1])
 ##----------------------------------------------------------------------
 ## Asciidoctor rules
 ##----------------------------------------------------------------------
+##
+## Note that we use the target file extension on the temporary output
+## file of the asciidoctor command. This is because using a different
+## file extension can interfere with certain features, such as the
+## :docinfo: attribute.
+##
 
 ]
 
@@ -387,16 +393,19 @@ $(prevent_an_empty_line)
 
 pushdef([x], [[
 $1$2:
-	$(GATBPS_V_ASCIIDOCTOR)$(ASCIIDOCTOR) ]GATBPS_SQUISH([
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(GATBPS_V_ASCIIDOCTOR)$(GATBPS_V_NOP)
+	]GATBPS_SQUISH([$(ASCIIDOCTOR)
 	  -b html
-	  -o $][@$(TSUF)
+	  -o $][@$(TSUF)$2
 	  -r asciidoctor-diagram
 	  $(GATBPS_COMMON_ASCIIDOCTOR_FLAGS)
 	  $(AM_ASCIIDOCTOR_FLAGS)
 	  $(ASCIIDOCTOR_FLAGS)
 	  $<
 	])[
-	$(AM_V_at)mv -f $][@$(TSUF) $][@
+	$(AM_V_at)mv -f $][@$(TSUF)$2 $][@
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 ]])
 
 x([.adoc], [.html])
@@ -407,15 +416,18 @@ popdef([x])
 
 pushdef([x], [[
 $1$2:
-	$(GATBPS_V_ASCIIDOCTOR)$(ASCIIDOCTOR) ]GATBPS_SQUISH([
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(GATBPS_V_ASCIIDOCTOR)$(GATBPS_V_NOP)
+	]GATBPS_SQUISH([$(ASCIIDOCTOR)
 	  -b manpage
-	  -o $][@$(TSUF)
+	  -o $][@$(TSUF)$2
 	  $(GATBPS_COMMON_ASCIIDOCTOR_FLAGS)
 	  $(AM_ASCIIDOCTOR_FLAGS)
 	  $(ASCIIDOCTOR_FLAGS)
 	  $<
 	])[
-	$(AM_V_at)mv -f $][@$(TSUF) $][@
+	$(AM_V_at)mv -f $][@$(TSUF)$2 $][@
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 ]])
 
 x([.adoc], [.1])
