@@ -32,7 +32,7 @@ gatbps_default_IFS=" 	$gatbps_nl"
 ]
 
 dnl---------------------------------------------------------------------
-dnl GATBPS_SQUISH
+dnl GATBPS_SQUISH(<text>)
 dnl---------------------------------------------------------------------
 
 m4_define([GATBPS_SQUISH], [m4_bpatsubst(m4_bpatsubst(
@@ -1812,20 +1812,22 @@ m4_if([$4], [], [], [[
   $(AM@&t@_MAKEFLAGS) \
   ]source_sh[ \
 ;]])[
-	$(GATBPS_at)$(MKDIR_P) $(@D)
-	$(GATBPS_at){ \
-	  x=]source_sh[; \
-	  $(GATBPS_VPATH_SEARCH_TOP) \
-	    "$$x" \
-	  $(GATBPS_VPATH_SEARCH_BOT); \
-	  d=$(GATBPS_VPATH_SEARCH_RESULT); \
-	  $(XZ) \
-	    <"$$d/$$x" \
-	    >$(@)$(TSUF) \
-	  || exit $$?; \
-	}
-	$(GATBPS_at)mv -f $(@)$(TSUF) $(@)
-	$(GATBPS_at)$(GATBPS_RECIPE_MARKER_BOT)
+	$(AM_V_at)$(MKDIR_P) $(@D)
+	$(AM_V_at)]GATBPS_SQUISH([(
+	  x=]source_sh[;
+	  $(GATBPS_VPATH_SEARCH_TOP)
+	    "$$x"
+	  $(GATBPS_VPATH_SEARCH_BOT);
+	  d=$(GATBPS_VPATH_SEARCH_RESULT);
+	  $(XZ)
+	    -9
+	    -T 0
+	    <"$$d/$$x"
+	    >$(@)$(TSUF)
+	  || exit $$?;
+	)])[
+	$(AM_V_at)mv -f $(@)$(TSUF) $(@)
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
 ]target_sh[/clean: FORCE
 	-rm -f -r ./$(@D) ./$(@D)$(TSUF)*

@@ -1,3 +1,4 @@
+ifeval::[0 > 1]
 //
 // The authors of this file have waived all copyright and
 // related or neighboring rights to the extent permitted by
@@ -7,16 +8,5 @@
 // named <CC0-1.0.txt>. If not, it may be available at
 // <https://creativecommons.org/publicdomain/zero/1.0/>.
 //
-
-[#aml_verbosity]
-= Verbosity
-
-GATBPS defines `GATBPS_at = @` and uses `$(GATBPS_at)` instead of plain
-`@` or `$({aml_AM_V_at})` for all recipe lines that should normally be
-silent.
-This way, you can produce various levels of verbosity by passing one or
-more of `V=1`, `AM_V_at=`, and `GATBPS_at=` to `make`.
-For example, running `make V=1 AM_V_at= GATBPS_at=` will produce highly
-verbose output.
-
-//
+endif::[]
+include $(srcdir)/build-aux/gatbps.am

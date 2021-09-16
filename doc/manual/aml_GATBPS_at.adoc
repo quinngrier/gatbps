@@ -8,16 +8,20 @@
 // <https://creativecommons.org/publicdomain/zero/1.0/>.
 //
 
-[[automake_library]]
-= Automake library
-:example-number: 0
+[#aml_GATBPS_at]
+= The `GATBPS_at` macro
 
-:leveloffset: +1
+.Automake
+[source,subs="{subs_source}"]
+----
+include::partials/aml_include_gatbps_am.adoc[]
 
-include::aml_GATBPS_at.adoc[]
-include::aml_recipe_tracing.adoc[]
-include::aml_temporary_files.adoc[]
+{aml_GATBPS_at} = @
+----
 
-:leveloffset: -1
+GATBPS uses `$({aml_GATBPS_at})` instead of plain `@` for all recipe
+lines whose echoing should normally be unconditionally suppressed.
+This way, you can run `make {aml_V}=1 {aml_GATBPS_at}=` to produce
+maximally verbose output for debugging purposes.
 
 //
