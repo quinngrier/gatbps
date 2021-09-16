@@ -1812,8 +1812,8 @@ m4_if([$4], [], [], [[
   $(AM@&t@_MAKEFLAGS) \
   ]source_sh[ \
 ;]])[
-	$(AM_V_at)$(MKDIR_P) $(@D)
-	$(AM_V_at)]GATBPS_SQUISH([(
+	$(AM@&t@_V_at)$(MKDIR_P) $(@D)
+	$(AM@&t@_V_at)]GATBPS_SQUISH([(
 	  x=]source_sh[;
 	  $(GATBPS_VPATH_SEARCH_TOP)
 	    "$$x"
@@ -1826,8 +1826,8 @@ m4_if([$4], [], [], [[
 	    >$(@)$(TSUF)
 	  || exit $$?;
 	)])[
-	$(AM_V_at)mv -f $(@)$(TSUF) $(@)
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+	$(AM@&t@_V_at)mv -f $(@)$(TSUF) $(@)
+	$(AM@&t@_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
 ]target_sh[/clean: FORCE
 	-rm -f -r ./$(@D) ./$(@D)$(TSUF)*
