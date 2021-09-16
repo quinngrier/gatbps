@@ -1817,12 +1817,12 @@ m4_if([$4], [], [], [[
 ;
 	$][(AM@&t@_V_at){ \
   x=]source_sh[; \
-  if '\''test'\'' -f "$][$][{x}"; then \
-    d='\''.'\''; \
+  if test -f "$][$][{x}"; then \
+    d=.; \
   else \
     d=$][(srcdir); \
     case "$][$][{d}" in \
-      '\''/'\''*) \
+      /*) \
       ;; \
       *) \
         d=./"$][$][{d}"; \
@@ -1830,14 +1830,14 @@ m4_if([$4], [], [], [[
     esac; \
   fi; \
   $][(XZ) \
-    0<"$][$][{d}"'\''/'\''"$][$][{x}" \
-    1>./]target_sh['\''.tmp'\'' \
+    0<"$][$][{d}"/"$][$][{x}" \
+    1>./]target_sh[.tmp \
   || exit $][$][?; \
-  exit '\''0'\''; \
+  exit 0; \
 :;}
 	$][(AM@&t@_V_at)mv \
   -f \
-  ./]target_sh['\''.tmp'\'' \
+  ./]target_sh[.tmp \
   ./]target_sh[ \
 ;
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
