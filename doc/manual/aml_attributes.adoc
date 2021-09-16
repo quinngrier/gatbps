@@ -18,6 +18,7 @@
 
 :aml_AM_CONDITIONAL: AM_CONDITIONAL
 :aml_AM_SUBST_NOTMAKE: AM_SUBST_NOTMAKE
+:aml_AM_V_at: AM_V_at
 
 //----------------------------------------------------------------------
 // GATBPS entities

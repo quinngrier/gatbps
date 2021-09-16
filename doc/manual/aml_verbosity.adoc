@@ -8,12 +8,15 @@
 // <https://creativecommons.org/publicdomain/zero/1.0/>.
 //
 
-[[aml_verbosity]]
+[#aml_verbosity]
 = Verbosity
 
 GATBPS defines `GATBPS_at = @` and uses `$(GATBPS_at)` instead of plain
-`@` for all recipe lines that should "`always`" be silent.
-This way, the user can run `make V=1 GATBPS_at=` to produce even more
-verbose output than `make V=1`.
+`@` or `$({aml_AM_V_at})` for all recipe lines that should normally be
+silent.
+This way, you can produce various levels of verbosity by passing one or
+more of `V=1`, `AM_V_at=`, and `GATBPS_at=` to `make`.
+For example, running `make V=1 AM_V_at= GATBPS_at=` will produce highly
+verbose output.
 
 //

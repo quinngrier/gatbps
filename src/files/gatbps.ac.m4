@@ -1808,14 +1808,14 @@ GATBPS_XZ_RULES="$][{GATBPS_XZ_RULES}"'
 ]target_sh[: ]m4_if([$4], [], [source_sh], [leaf_prerequisites])[
 	$(GATBPS_V_XZ)$(GATBPS_RECIPE_MARKER_TOP)]dnl
 m4_if([$4], [], [], [[
-	$(AM@&t@_V_at)$(MAKE) \
+	$(GATBPS_at)$(MAKE) \
   $(AM@&t@_MAKEFLAGS) \
   ]source_sh[ \
 ;]])[
-	$(AM@&t@_V_at)$(MKDIR_P) \
+	$(GATBPS_at)$(MKDIR_P) \
   ./$(@D) \
 ;
-	$(AM@&t@_V_at){ \
+	$(GATBPS_at){ \
   x=]source_sh[; \
   if test -f "$][$][{x}"; then \
     d=.; \
@@ -1835,12 +1835,12 @@ m4_if([$4], [], [], [[
   || exit $][$][?; \
   exit 0; \
 :;}
-	$(AM@&t@_V_at)mv \
+	$(GATBPS_at)mv \
   -f \
   ./]target_sh[.tmp \
   ./]target_sh[ \
 ;
-	$(AM@&t@_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+	$(GATBPS_at)$(GATBPS_RECIPE_MARKER_BOT)
 
 ]target_sh[/clean: FORCE
 	-rm -f -r ./$(@D) ./$(@D)$(TSUF)*
