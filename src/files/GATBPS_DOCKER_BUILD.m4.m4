@@ -289,12 +289,6 @@ m4_if(
 GATBPS_DOCKER_BUILD_word_lines_2(m4_if(,,child_prerequisites))[
 ;]])[
 	$][(GATBPS_V_DOCKER)$][(GATBPS_RECIPE_MARKER_TOP)
-	$][(AM@&t@_V_at)|%}contains_at_least_one_word_sh(
-  {%|MKDIR_P|%}){%||%}dnl
-{%|
-	$][(AM@&t@_V_at)|%}contains_exactly_one_word_sh(
-  {%|srcdir|%}){%||%}dnl
-{%|
 	$][(AM@&t@_V_at)rm -f -r ./$][@ ./$][@$][(TMPEXT).tmp*
 	$][(AM@&t@_V_at)$][(MKDIR_P) ./$][(@D)
 	$][(AM@&t@_V_at){ \
