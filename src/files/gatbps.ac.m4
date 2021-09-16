@@ -1812,25 +1812,23 @@ m4_if([$4], [], [], [[
   $(AM@&t@_MAKEFLAGS) \
   ]source_sh[ \
 ;]])[
-	$(GATBPS_at)$(MKDIR_P) \
-  ./$(@D) \
-;
+	$(GATBPS_at)$(MKDIR_P) $(@D)
 	$(GATBPS_at){ \
   x=]source_sh[; \
-  if test -f "$][$][{x}"; then \
+  if test -f "$$x"; then \
     d=.; \
   else \
     d=$(srcdir); \
-    case "$][$][{d}" in \
+    case "$$d" in \
       /*) \
       ;; \
       *) \
-        d=./"$][$][{d}"; \
+        d=./"$$d"; \
       ;; \
     esac; \
   fi; \
   $(XZ) \
-    0<"$][$][{d}"/"$][$][{x}" \
+    0<"$$d"/"$$x" \
     1>./]target_sh[.tmp \
   || exit $][$][?; \
   exit 0; \
