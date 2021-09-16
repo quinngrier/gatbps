@@ -229,7 +229,7 @@ m4_pushdef(
     [],
     [],
     [[
-]output_file[.image: ]dnl
+]output_file[.iid: ]dnl
 m4_bpatsubst([[$1]], ['], ['\\''])[]dnl
 GATBPS_DOCKER_BUILD_rule_lines(m4_shift($@))])])[dnl
 ]m4_ifdef(
@@ -393,10 +393,10 @@ GATBPS_DOCKER_BUILD_tag_lines(m4_if(,,image_names))[
 :;}
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
-]output_file[: ]output_file[.image
+]output_file[: ]output_file[.iid
 	$][(GATBPS_V_DOCKER)$][(GATBPS_RECIPE_MARKER_TOP)
 	$][(AM@&t@_V_at){ \
-	  image=`cat ./$][@.image` || exit; \
+	  image=`cat ./$][@.iid` || exit; \
 	  $][(DOCKER) save "$][$][image" \]dnl
 GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
 	    >./$][@$][(TMPEXT).tmp \
@@ -408,7 +408,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
 .PHONY: ]output_file[/clean
 
 ]output_file[/clean: FORCE
-	-rm -f -r ./$][(@D).image ./$][(@D).image$][(TMPEXT).tmp*
+	-rm -f -r ./$][(@D).iid ./$][(@D).iid$][(TMPEXT).tmp*
 	-rm -f -r ./$][(@D) ./$][(@D)$][(TMPEXT).tmp*
 
 ]clean_target[-local: ]output_file[/clean
