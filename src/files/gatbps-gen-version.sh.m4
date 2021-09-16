@@ -27,8 +27,8 @@ readonly sed
 num='(0|[1-9][0-9]*)'
 readonly num
 
-# TODO: Support a mode where we don't do semver and instead just output
-#       the most recent version number.
+# TODO: Support a scheme where we don't do semver and instead just
+#       output the most recent version number.
 
 for x in "$0".args*; do
   if test -f "$x"; then
@@ -44,29 +44,29 @@ done
 
 #-----------------------------------------------------------------------
 
-unset mode
-unset mode_implicitly
+unset scheme
+unset scheme_implicitly
 
-set_mode() {
+set_scheme() {
   case $1 in '')
-    case ${mode+x} in '')
-      mode=semver
-      mode_implicitly='implicitly '
-      readonly mode
-      readonly mode_implicitly
+    case ${scheme+x} in '')
+      scheme=semver
+      scheme_implicitly='implicitly '
+      readonly scheme
+      readonly scheme_implicitly
     esac
   ;; *)
-    case ${mode+x} in '')
-      mode=$1
-      readonly mode
-      readonly mode_implicitly
+    case ${scheme+x} in '')
+      scheme=$1
+      readonly scheme
+      readonly scheme_implicitly
     ;; *)
-      case $mode in $1)
+      case $scheme in $1)
         :
       ;; *)
         gatbps_barf \
-          "--$1 was given, but the mode was already" \
-          "${mode_implicitly-}set to --$mode." \
+          "--$1 was given, but the scheme was already" \
+          "${scheme_implicitly-}set to --$scheme." \
         ;
       esac
     esac
@@ -75,11 +75,19 @@ set_mode() {
 
 #-----------------------------------------------------------------------
 
+unsupported_scheme_and_datum() {
+  gatbps_barf \
+    "Unsupported scheme and datum combination: --$scheme --$datum" \
+  ;
+}
+
+#-----------------------------------------------------------------------
+
 unset datum
 unset datum_implicitly
 
 set_datum() {
-  set_mode
+  set_scheme
   case $1 in '')
     case ${datum+x} in '')
       datum=default
@@ -92,15 +100,13 @@ set_datum() {
       datum=$1
       readonly datum
       readonly datum_implicitly
-      case $mode:$datum in : \
+      case $scheme:$datum in : \
         | semver:default \
         | semver:docker \
       )
         :
       ;; *)
-        gatbps_barf \
-          "Unsupported mode and datum combination: --$mode --$datum" \
-        ;
+        unsupported_scheme_and_datum
       esac
     ;; *)
       case $datum in $1)
@@ -200,7 +206,7 @@ EOF
 
     ;; --semver)
 
-      set_mode semver
+      set_scheme semver
       continue
 
     ;; --semver=*)
@@ -238,7 +244,7 @@ EOF
 
   set_datum
 
-  case $mode:$datum in : \
+  case $scheme:$datum in : \
     | semver:default \
     | semver:docker \
   )
@@ -250,9 +256,7 @@ EOF
       gatbps_barf "Too many operands: $1"
     fi
   ;; *)
-    gatbps_barf \
-      "Unsupported mode and datum combination: --$mode --$datum" \
-    ;
+    unsupported_scheme_and_datum
   esac
 
 done
