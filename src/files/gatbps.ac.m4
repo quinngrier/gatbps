@@ -1814,24 +1814,24 @@ m4_if([$4], [], [], [[
 ;]])[
 	$(GATBPS_at)$(MKDIR_P) $(@D)
 	$(GATBPS_at){ \
-  x=]source_sh[; \
-  if test -f "$$x"; then \
-    d=.; \
-  else \
-    d=$(srcdir); \
-    case "$$d" in \
-      /*) \
-      ;; \
-      *) \
-        d=./"$$d"; \
-      ;; \
-    esac; \
-  fi; \
-  $(XZ) \
-    <"$$d/$$x" \
-    >$(@)$(TSUF) \
-  || exit $$?; \
-:;}
+	  x=]source_sh[; \
+	  if test -f "$$x"; then \
+	    d=.; \
+	  else \
+	    d=$(srcdir); \
+	    case "$$d" in \
+	      /*) \
+	      ;; \
+	      *) \
+	        d=./"$$d"; \
+	      ;; \
+	    esac; \
+	  fi; \
+	  $(XZ) \
+	    <"$$d/$$x" \
+	    >$(@)$(TSUF) \
+	  || exit $$?; \
+	}
 	$(GATBPS_at)mv -f $(@)$(TSUF) $(@)
 	$(GATBPS_at)$(GATBPS_RECIPE_MARKER_BOT)
 
