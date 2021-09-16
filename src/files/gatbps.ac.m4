@@ -1806,21 +1806,21 @@ m4_pushdef(
 GATBPS_XZ_RULES="$][{GATBPS_XZ_RULES}"'
 
 ]target_sh[: ]m4_if([$4], [], [source_sh], [leaf_prerequisites])[
-	$][(GATBPS_V_XZ)$][(GATBPS_RECIPE_MARKER_TOP)]dnl
+	$(GATBPS_V_XZ)$(GATBPS_RECIPE_MARKER_TOP)]dnl
 m4_if([$4], [], [], [[
-	$][(AM@&t@_V_at)$][(MAKE) \
-  $][(AM@&t@_MAKEFLAGS) \
+	$(AM@&t@_V_at)$(MAKE) \
+  $(AM@&t@_MAKEFLAGS) \
   ]source_sh[ \
 ;]])[
-	$][(AM@&t@_V_at)$][(MKDIR_P) \
-  ./$][(@D) \
+	$(AM@&t@_V_at)$(MKDIR_P) \
+  ./$(@D) \
 ;
-	$][(AM@&t@_V_at){ \
+	$(AM@&t@_V_at){ \
   x=]source_sh[; \
   if test -f "$][$][{x}"; then \
     d=.; \
   else \
-    d=$][(srcdir); \
+    d=$(srcdir); \
     case "$][$][{d}" in \
       /*) \
       ;; \
@@ -1829,18 +1829,18 @@ m4_if([$4], [], [], [[
       ;; \
     esac; \
   fi; \
-  $][(XZ) \
+  $(XZ) \
     0<"$][$][{d}"/"$][$][{x}" \
     1>./]target_sh[.tmp \
   || exit $][$][?; \
   exit 0; \
 :;}
-	$][(AM@&t@_V_at)mv \
+	$(AM@&t@_V_at)mv \
   -f \
   ./]target_sh[.tmp \
   ./]target_sh[ \
 ;
-	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
+	$(AM@&t@_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
 ]target_sh[/clean: FORCE
 	-rm -f -r ./$(@D) ./$(@D)$(TSUF)*
