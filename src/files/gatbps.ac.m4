@@ -265,6 +265,7 @@ GATBPS_PROG([M4], [m4])
 GATBPS_PROG([SQLITE3], [sqlite3])
 GATBPS_PROG([TAR], [tar])
 GATBPS_PROG([UNZIP], [unzip])
+GATBPS_PROG([WGET], [wget])
 GATBPS_PROG([XZ], [xz])
 GATBPS_PROG([ZIP], [zip])
 

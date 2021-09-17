@@ -611,7 +611,6 @@ EOF1
           'set' "${prefix}"'GATBPS_WGET.m4' "${@}"
           'set' "${prefix}"'GATBPS_V_PAD.am' "${@}"
           'set' "${prefix}"'GATBPS_VPATH_SEARCH.am' "${@}"
-          'set' "${prefix}"'GATBPS_PROG_WGET.m4' "${@}"
           'set' "${prefix}"'GATBPS_PROG_TEXI2DVI_EXE.m4' "${@}"
           'set' "${prefix}"'GATBPS_PROG_TEXI2ANY.m4' "${@}"
           'set' "${prefix}"'GATBPS_PROG_SED.m4' "${@}"
@@ -1237,8 +1236,6 @@ EOF1
 |%}help_code({%|GATBPS_PROG_TEXI2ANY.m4|%}){%|
 
 |%}help_code({%|GATBPS_PROG_TEXI2DVI_EXE.m4|%}){%|
-
-|%}help_code({%|GATBPS_PROG_WGET.m4|%}){%|
 
 |%}help_code({%|GATBPS_VPATH_SEARCH.am|%}){%|
 
@@ -2932,8 +2929,6 @@ EOF1
 
 |%}generation_code({%|GATBPS_PROG_TEXI2DVI_EXE.m4|%}){%|
 
-|%}generation_code({%|GATBPS_PROG_WGET.m4|%}){%|
-
 |%}generation_code({%|GATBPS_VPATH_SEARCH.am|%}){%|
 
 |%}generation_code({%|GATBPS_V_PAD.am|%}){%|
@@ -3946,11 +3941,6 @@ include(`src/recursion/GATBPS_PROG_TEXI2ANY.m4.rc.m4'){%||%}dnl
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
 include(`src/recursion/GATBPS_PROG_TEXI2DVI_EXE.m4.rc.m4'){%||%}dnl
-{%|
-
-|%}dnl
-changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/GATBPS_PROG_WGET.m4.rc.m4'){%||%}dnl
 {%|
 
 |%}dnl

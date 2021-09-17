@@ -8,7 +8,6 @@ recursion_code(
   {%|GATBPS_WGET.m4|%},
   {%|wget.am|%},
   {%|gatbps_fatal.m4|%},
-  {%|GATBPS_PROG_WGET.m4|%},
   {%|GATBPS_PROG_OPENSSL.m4|%},
   {%|GATBPS_PROG_MKDIR_P.m4|%},
   {%|GATBPS_PROG_GREP.m4|%},
