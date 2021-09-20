@@ -395,7 +395,7 @@ pushdef([x], [[
 $1$2:
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
 	$(GATBPS_V_ASCIIDOCTOR)$(GATBPS_V_NOP)
-	]GATBPS_SQUISH([$(ASCIIDOCTOR)
+	$(AM_V_at)]GATBPS_SQUISH([$(ASCIIDOCTOR)
 	  -b html
 	  -o $][@$(TSUF)$2
 	  -r asciidoctor-diagram
@@ -418,7 +418,7 @@ pushdef([x], [[
 $1$2:
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
 	$(GATBPS_V_ASCIIDOCTOR)$(GATBPS_V_NOP)
-	]GATBPS_SQUISH([$(ASCIIDOCTOR)
+	$(AM_V_at)]GATBPS_SQUISH([$(ASCIIDOCTOR)
 	  -b manpage
 	  -o $][@$(TSUF)$2
 	  $(GATBPS_COMMON_ASCIIDOCTOR_FLAGS)
