@@ -871,7 +871,8 @@ m4_if(
   [gatbps_fatal([
     GATBPS_DOCKER_BUILD requires 2 to 6 arguments
     ($# ]m4_if([$#], [1], [[was]], [[were]])[ given)
-  ])])[]dnl
+  ])])
+
 m4_if(
   m4_bregexp([$1], [[^
 	 ]]),
@@ -881,7 +882,8 @@ m4_if(
   [--VERBATIM--] "$1"], [
     the first argument must contain at least one character that is not a
     space, tab, or newline character
-  ])])[]dnl
+  ])])
+
 m4_if(
   m4_bregexp([$2], [[^
 	 ]]),
@@ -891,17 +893,29 @@ m4_if(
   [--VERBATIM--] "$2"], [
     the second argument must contain at least one character that is not
     a space, tab, or newline character
-  ])])[]dnl
+  ])])
+
+m4_pushdef(
+  [target_slug],
+  m4_bpatsubst(
+    m4_bpatsubst([$1], [.], [[[[\&]]]]),
+    [\[\[[^0-9@A-Z_a-z]\]\]],
+    [[[_]]]))
+
 m4_pushdef(
   [list_3],
   m4_bpatsubst([[[$3]]], [^\(..\)[
-	 ]+], [\1]))[]dnl
-]m4_ifdef(
+	 ]+], [\1]))
+
+]
+
+m4_ifdef(
   [GATBPS_DOCKER_BUILD_check_3],
   [gatbps_fatal([
     GATBPS_DOCKER_BUILD_check_3 is already defined
-  ])])[dnl
-]m4_define(
+  ])])
+
+m4_define(
   [GATBPS_DOCKER_BUILD_check_3],
   [m4_if(
     [$#],
@@ -927,18 +941,26 @@ m4_pushdef(
         each non-last subargument must contain at least one character
         that is not a space, tab, or newline character
       ])],
-      [GATBPS_DOCKER_BUILD_check_3(m4_shift($@))])])])[dnl
-GATBPS_DOCKER_BUILD_check_3(m4_if(,,list_3))[]dnl
+      [GATBPS_DOCKER_BUILD_check_3(m4_shift($@))])])])
+
+[
+
+GATBPS_DOCKER_BUILD_check_3(m4_if(,,list_3))
+
 m4_pushdef(
   [list_4],
   m4_bpatsubst([[[$4]]], [^\(..\)[
-	 ]+], [\1]))[]dnl
-]m4_ifdef(
+	 ]+], [\1]))
+
+]
+
+m4_ifdef(
   [GATBPS_DOCKER_BUILD_check_4],
   [gatbps_fatal([
     GATBPS_DOCKER_BUILD_check_4 is already defined
-  ])])[dnl
-]m4_define(
+  ])])
+
+m4_define(
   [GATBPS_DOCKER_BUILD_check_4],
   [m4_if(
     [$#],
@@ -964,8 +986,12 @@ m4_pushdef(
         each non-last subargument must contain at least one character
         that is not a space, tab, or newline character
       ])],
-      [GATBPS_DOCKER_BUILD_check_4(m4_shift($@))])])])[dnl
-GATBPS_DOCKER_BUILD_check_4(m4_if(,,list_4))[]dnl
+      [GATBPS_DOCKER_BUILD_check_4(m4_shift($@))])])])
+
+[
+
+GATBPS_DOCKER_BUILD_check_4(m4_if(,,list_4))
+
 m4_case(
   [$5],
   [], [],
@@ -978,17 +1004,22 @@ m4_case(
   [--VERBATIM--] "$5"], [
     the fifth argument must be either empty, "clean", "distclean",
     "maintainer-clean", or "mostlyclean"
-  ])])[]dnl
+  ])])
+
 m4_pushdef(
   [list_6],
   m4_bpatsubst([[[$6]]], [^\(..\)[
-	 ]+], [\1]))[]dnl
-]m4_ifdef(
+	 ]+], [\1]))
+
+]
+
+m4_ifdef(
   [GATBPS_DOCKER_BUILD_check_6],
   [gatbps_fatal([
     GATBPS_DOCKER_BUILD_check_6 is already defined
-  ])])[dnl
-]m4_define(
+  ])])
+
+m4_define(
   [GATBPS_DOCKER_BUILD_check_6],
   [m4_if(
     [$#],
@@ -1014,17 +1045,24 @@ m4_pushdef(
         each non-last subargument must contain at least one character
         that is not a space, tab, or newline character
       ])],
-      [GATBPS_DOCKER_BUILD_check_6(m4_shift($@))])])])[dnl
-GATBPS_DOCKER_BUILD_check_6(m4_if(,,list_6))[]dnl
+      [GATBPS_DOCKER_BUILD_check_6(m4_shift($@))])])])
+
+[
+
+GATBPS_DOCKER_BUILD_check_6(m4_if(,,list_6))
+
 m4_pushdef(
   [output_file],
   m4_bpatsubst([[[$1]]], ['], ['\\'']))[]dnl
+
 m4_pushdef(
   [input_directory],
   m4_bpatsubst([[[$2]]], ['], ['\\'']))[]dnl
+
 m4_pushdef(
   [image_names],
   m4_dquote(list_3))[]dnl
+
 m4_pushdef(
   [child_prerequisites],
   m4_if(
@@ -1032,6 +1070,7 @@ m4_pushdef(
     [],
     [[[[$2/Dockerfile]]]],
     [m4_dquote(list_4)]))[]dnl
+
 m4_pushdef(
   [clean_target],
   m4_if(
@@ -1039,9 +1078,11 @@ m4_pushdef(
     [],
     [[[mostlyclean]]],
     [[[$5]]]))[]dnl
+
 m4_pushdef(
   [leaf_prerequisites],
   m4_dquote(list_6))[]dnl
+
 m4_pushdef(
   [rule_prerequisites],
   m4_if(
@@ -1049,12 +1090,16 @@ m4_pushdef(
     [],
     [m4_dquote(child_prerequisites)],
     [m4_dquote(leaf_prerequisites)]))[]dnl
-]m4_ifdef(
+
+]
+
+m4_ifdef(
   [GATBPS_DOCKER_BUILD_rule_lines],
   [gatbps_fatal([
     GATBPS_DOCKER_BUILD_rule_lines is already defined
-  ])])[dnl
-]m4_define(
+  ])])
+
+m4_define(
   [GATBPS_DOCKER_BUILD_rule_lines],
   [m4_if(
     [$1],
@@ -1063,13 +1108,15 @@ m4_pushdef(
     [[
 ]output_file[.iid: ]dnl
 m4_bpatsubst([[$1]], ['], ['\\''])[]dnl
-GATBPS_DOCKER_BUILD_rule_lines(m4_shift($@))])])[dnl
-]m4_ifdef(
+GATBPS_DOCKER_BUILD_rule_lines(m4_shift($@))])])
+
+m4_ifdef(
   [GATBPS_DOCKER_BUILD_word_lines_2],
   [gatbps_fatal([
     GATBPS_DOCKER_BUILD_word_lines_2 is already defined
-  ])])[dnl
-]m4_define(
+  ])])
+
+m4_define(
   [GATBPS_DOCKER_BUILD_word_lines_2],
   [m4_if(
     [$1],
@@ -1077,13 +1124,15 @@ GATBPS_DOCKER_BUILD_rule_lines(m4_shift($@))])])[dnl
     [],
     [[
   ]m4_bpatsubst([[$1]], ['], ['\\''])[ \]dnl
-GATBPS_DOCKER_BUILD_word_lines_2(m4_shift($@))])])[dnl
-]m4_ifdef(
+GATBPS_DOCKER_BUILD_word_lines_2(m4_shift($@))])])
+
+m4_ifdef(
   [GATBPS_DOCKER_BUILD_word_lines_6],
   [gatbps_fatal([
     GATBPS_DOCKER_BUILD_word_lines_6 is already defined
-  ])])[dnl
-]m4_define(
+  ])])
+
+m4_define(
   [GATBPS_DOCKER_BUILD_word_lines_6],
   [m4_if(
     [$1],
@@ -1091,13 +1140,15 @@ GATBPS_DOCKER_BUILD_word_lines_2(m4_shift($@))])])[dnl
     [],
     [[
       ]m4_bpatsubst([[$1]], ['], ['\\''])[ \]dnl
-GATBPS_DOCKER_BUILD_word_lines_6(m4_shift($@))])])[dnl
-]m4_ifdef(
+GATBPS_DOCKER_BUILD_word_lines_6(m4_shift($@))])])
+
+m4_ifdef(
   [GATBPS_DOCKER_BUILD_tag_lines],
   [gatbps_fatal([
     GATBPS_DOCKER_BUILD_tag_lines is already defined
-  ])])[dnl
-]m4_define(
+  ])])
+
+m4_define(
   [GATBPS_DOCKER_BUILD_tag_lines],
   [m4_if(
     [$1],
@@ -1105,7 +1156,10 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_shift($@))])])[dnl
     [],
     [[
       '\''--tag='\'']m4_bpatsubst([[$1]], ['], ['\\''])[ \]dnl
-GATBPS_DOCKER_BUILD_tag_lines(m4_shift($@))])])[dnl
+GATBPS_DOCKER_BUILD_tag_lines(m4_shift($@))])])
+
+[
+
 [
 
 GATBPS_DOCKER_BUILD_RULES="$][{GATBPS_DOCKER_BUILD_RULES}"'
@@ -1203,10 +1257,12 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
         readonly '\''context'\''; \
       ;; \
     esac; \
+    $(]target_slug[_GATBPS_DOCKER_BUILD_CODE) \
     $][(DOCKER) \
       build \
       --tag=tmp$$$$ \]dnl
 GATBPS_DOCKER_BUILD_tag_lines(m4_if(,,image_names))[
+      $(]target_slug[_GATBPS_DOCKER_BUILD_FLAGS) \
       $(GATBPS_DOCKER_BUILD_FLAGS) \
       "$$context" \
     || exit $$?; \
@@ -1247,13 +1303,20 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
 
 '
 
-]dnl
-m4_popdef([leaf_prerequisites])[]dnl
-m4_popdef([child_prerequisites])[]dnl
-m4_popdef([image_names])[]dnl
-m4_popdef([input_directory])[]dnl
-m4_popdef([output_file])[]dnl
-[
+]
+
+m4_popdef([rule_prerequisites])
+m4_popdef([leaf_prerequisites])
+m4_popdef([clean_target])
+m4_popdef([child_prerequisites])
+m4_popdef([image_names])
+m4_popdef([input_directory])
+m4_popdef([output_file])
+m4_popdef([list_6])
+m4_popdef([list_4])
+m4_popdef([list_3])
+m4_popdef([target_slug])
+
 ])
 
 AC_SUBST([GATBPS_DOCKER_BUILD_RULES])
