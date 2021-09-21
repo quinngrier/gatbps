@@ -1205,18 +1205,18 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
     esac; \
     $][(DOCKER) \
       build \
-      '\''--tag=tmp'\''"$][$][{$][$][}" \]dnl
+      --tag=tmp$$$$ \]dnl
 GATBPS_DOCKER_BUILD_tag_lines(m4_if(,,image_names))[
-      $][(GATBPS_DOCKER_BUILD_FLAGS) \
-      "$][$][{context}" \
-    || exit $][$][?; \
+      $(GATBPS_DOCKER_BUILD_FLAGS) \
+      "$$context" \
+    || exit $$?; \
     $][(DOCKER) \
       images \
       --quiet \
       --no-trunc \
-      tmp$][$][$][$][ \
-      >./$][@$][(TMPEXT).tmp \
-    || exit; \
+      tmp$$$$ \
+      >./$][@$(TMPEXT).tmp \
+    || exit $$?; \
     $][(DOCKER) rmi tmp$][$][$][$][ || exit; \
     mv -f ./$][@$][(TMPEXT).tmp ./$][@ || exit; \
   :;); \
