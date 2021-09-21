@@ -140,18 +140,15 @@ EOF2
 
 #-----------------------------------------------------------------------
 
-cache=$0.cache
 unset v_prefix
 unset u_prefix
 
 parse_options=:
-
 case $# in 0)
   set x
 ;; *)
   set x "$@"
 esac
-
 until shift && (exit ${1+1}0); do
 
   if $parse_options; then
@@ -260,10 +257,9 @@ EOF
   esac
 
 done
+readonly parse_options
 
 set_datum
-
-readonly parse_options
 
 if ${v_prefix+:} false; then
   if ${u_prefix+:} false; then
@@ -293,9 +289,9 @@ case $u_prefix in '' \
   exit 1
 esac
 
-if test -f "$cache"; then
+if test -f "$0.cache"; then
 
-  cat <"$cache" || exit $?
+  cat <"$0.cache" || exit $?
 
 elif eval " $git"' ls-files --error-unmatch "$0"' >/dev/null 2>&1; then
 
@@ -398,10 +394,7 @@ EOF2
 
 else
 
-  cat <<EOF2 >&2
-$0: no cache file or repository found
-EOF2
-  exit 1
+  gatbps_barf "No cache file or repository found."
 
 fi
 
