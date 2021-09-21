@@ -32,7 +32,15 @@ readonly num
 
 for x in "$0".args; do
   if test -f "$x"; then
-    x=`cat <"$x"` || exit $?
+    s='
+      {
+        if (dump || !/^[ 	]*(#.*)*$/) {
+          print;
+          dump = 1;
+        }
+      }
+    '
+    x=`eval " $sed"' "$s"' <"$x"` || exit $?
     case $# in 0)
       eval "set x $x" || exit $?
     ;; *)
