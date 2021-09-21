@@ -661,7 +661,6 @@ EOF1
           'set' "${prefix}"'GATBPS_DEFINE_EXE_LDFLAGS.m4' "${@}"
           'set' "${prefix}"'GATBPS_DEFINE_EXE_CXXFLAGS.m4' "${@}"
           'set' "${prefix}"'GATBPS_DEFINE_EXE_CFLAGS.m4' "${@}"
-          'set' "${prefix}"'GATBPS_DEFINE_DOCKER_BUILD_FLAGS.m4' "${@}"
           'set' "${prefix}"'GATBPS_DEFINE_DATE.m4' "${@}"
           'set' "${prefix}"'GATBPS_DEFINE_CLASSPATH.m4' "${@}"
           'set' "${prefix}"'GATBPS_DEFINE_AT.m4' "${@}"
@@ -1131,8 +1130,6 @@ EOF1
 |%}help_code({%|GATBPS_DEFINE_CLASSPATH.m4|%}){%|
 
 |%}help_code({%|GATBPS_DEFINE_DATE.m4|%}){%|
-
-|%}help_code({%|GATBPS_DEFINE_DOCKER_BUILD_FLAGS.m4|%}){%|
 
 |%}help_code({%|GATBPS_DEFINE_EXE_CFLAGS.m4|%}){%|
 
@@ -2822,8 +2819,6 @@ EOF1
 
 |%}generation_code({%|GATBPS_DEFINE_DATE.m4|%}){%|
 
-|%}generation_code({%|GATBPS_DEFINE_DOCKER_BUILD_FLAGS.m4|%}){%|
-
 |%}generation_code({%|GATBPS_DEFINE_EXE_CFLAGS.m4|%}){%|
 
 |%}generation_code({%|GATBPS_DEFINE_EXE_CXXFLAGS.m4|%}){%|
@@ -3676,11 +3671,6 @@ include(`src/recursion/GATBPS_DEFINE_CLASSPATH.m4.rc.m4'){%||%}dnl
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
 include(`src/recursion/GATBPS_DEFINE_DATE.m4.rc.m4'){%||%}dnl
-{%|
-
-|%}dnl
-changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/GATBPS_DEFINE_DOCKER_BUILD_FLAGS.m4.rc.m4'){%||%}dnl
 {%|
 
 |%}dnl

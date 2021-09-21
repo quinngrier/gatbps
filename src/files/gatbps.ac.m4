@@ -183,6 +183,27 @@ m4_define([GATBPS_REQUIRE], [
 ])
 
 dnl---------------------------------------------------------------------
+dnl GATBPS_DEFINE_DOCKER_BUILD_FLAGS
+dnl---------------------------------------------------------------------
+
+AC_DEFUN_ONCE([GATBPS_DEFINE_DOCKER_BUILD_FLAGS], [
+
+  [
+    readonly DOCKER_BUILD_FLAGS
+  ]
+
+  AC_ARG_VAR(
+    [DOCKER_BUILD_FLAGS],
+    [
+      Flags to use with docker build commands (default:
+      DOCKER_BUILD_FLAGS='').
+      For example, you might use DOCKER_BUILD_FLAGS='--no-cache' to
+      disable the image cache.
+    ])
+
+])
+
+dnl---------------------------------------------------------------------
 dnl GATBPS_PROG
 dnl---------------------------------------------------------------------
 
@@ -245,6 +266,7 @@ EOF
 
   AC_DEFUN([GATBPS_PROG_][$1], [
     AC_REQUIRE([GATBPS_INNER_PROG_$1])
+    $4
   ])
 
 ])
@@ -252,22 +274,41 @@ EOF
 dnl---------------------------------------------------------------------
 
 GATBPS_PROG([ASCIIDOCTOR], [asciidoctor])
+
 GATBPS_PROG([ASCIIDOCTOR_PDF], [asciidoctor-pdf])
-GATBPS_PROG([DOCKER], [docker])
+
+GATBPS_PROG([DOCKER], [docker], [], [
+  GATBPS_REQUIRE([GATBPS_DEFINE_DOCKER_BUILD_FLAGS])
+])
+
 GATBPS_PROG([GIT], [git])
+
 GATBPS_PROG([GUNZIP], [gunzip])
+
 GATBPS_PROG([GZIP], [gzip])
+
 GATBPS_PROG([JAR], [jar])
+
 GATBPS_PROG([JAVA], [java])
+
 GATBPS_PROG([JAVAC], [javac])
+
 GATBPS_PROG([JAVADOC], [javadoc])
+
 GATBPS_PROG([JDEPS], [jdeps])
+
 GATBPS_PROG([M4], [m4])
+
 GATBPS_PROG([SQLITE3], [sqlite3])
+
 GATBPS_PROG([TAR], [tar])
+
 GATBPS_PROG([UNZIP], [unzip])
+
 GATBPS_PROG([WGET], [wget])
+
 GATBPS_PROG([XZ], [xz])
+
 GATBPS_PROG([ZIP], [zip])
 
 dnl---------------------------------------------------------------------
