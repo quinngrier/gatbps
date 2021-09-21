@@ -30,7 +30,7 @@ readonly num
 # TODO: Support a scheme where we don't do semver and instead just
 #       output the most recent version number.
 
-for x in "$0".args*; do
+for x in "$0".args; do
   if test -f "$x"; then
     x=`cat <"$x"` || exit $?
     case $# in 0)
