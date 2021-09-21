@@ -39,7 +39,7 @@ if test -f "$0.args"; then
       }
     }
   '
-  x=`eval " $sed"' "$s" <"$0.args"'` || exit $?
+  x=`eval " $awk"' "$s" <"$0.args"'` || exit $?
   case $# in 0)
     eval "set x $x" || exit $?
   ;; *)
