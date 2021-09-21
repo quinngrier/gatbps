@@ -863,6 +863,8 @@ dnl---------------------------------------------------------------------
 
 AC_DEFUN([GATBPS_DOCKER_BUILD], [
 
+  GATBPS_REQUIRE([GATBPS_PROG_DOCKER])
+
 m4_if(
   m4_eval([$# < 2 || $# > 6]),
   [1],
