@@ -209,64 +209,65 @@ dnl---------------------------------------------------------------------
 
 m4_define([GATBPS_PROG], [
 
-  AC_DEFUN([GATBPS_INNER_PROG_][$1], [[{ :
+  AC_DEFUN_ONCE([GATBPS_PROG_][$1], [
 
-    ]GATBPS_PROTECT(
+    GATBPS_PROTECT(
       $@,
       [$1_LATER],
-      [HAVE_$1])[
+      [HAVE_$1])
 
-    ]AC_CHECK_PROGS(
+    AC_CHECK_PROGS(
       [$1],
       m4_normalize([$2 $3]),
-      m4_normalize([$2]))[
+      m4_normalize([$2]))
 
-    $1_LATER=`sed 's/@/{@}AT{@}/g' <<EOF
+    [
+      $1_LATER=`sed 's/@/{@}AT{@}/g' <<EOF2
 $$1
-EOF
-` || exit $?
-    readonly $1_LATER
+EOF2
+      ` || exit $?
+      readonly $1_LATER
+    ]
 
-    ]AC_SUBST([$1_LATER])[
-    ]AM_SUBST_NOTMAKE([$1_LATER])[
+    AC_SUBST([$1_LATER])
+    AM_SUBST_NOTMAKE([$1_LATER])
 
-    ]AC_ARG_VAR(
+    AC_ARG_VAR(
       [$1],
-      m4_normalize([$2])[ command])[
+      m4_normalize([$2])[ command])
 
-    ]AC_DEFINE_UNQUOTED(
+    AC_DEFINE_UNQUOTED(
       [$1],
       ["$$1"],
-      m4_normalize([$2])[ command])[
+      m4_normalize([$2])[ command])
 
-    if command -v "$$1" >/dev/null; then
-      HAVE_$1=1
-    else
-      HAVE_$1=0
-    fi
-    readonly HAVE_$1
+    [
+      if command -v "$$1" >/dev/null; then
+        HAVE_$1=1
+      else
+        HAVE_$1=0
+      fi
+      readonly HAVE_$1
+    ]
 
-    ]AC_SUBST([HAVE_$1])[
+    AC_SUBST([HAVE_$1])
 
-    ]AC_DEFINE_UNQUOTED(
+    AC_DEFINE_UNQUOTED(
       [HAVE_$1],
       [$HAVE_$1],
-      m4_normalize([$2])[ command availability])[
+      m4_normalize([$2])[ command availability])
 
-    ]AM_CONDITIONAL(
+    AM_CONDITIONAL(
       [HAVE_$1],
-      [[(if (exit $HAVE_$1); then exit 1; else exit 0; fi)]])[
+      [[(if (exit $HAVE_$1); then exit 1; else exit 0; fi)]])
 
-    ]GATBPS_UNPROTECT(
+    GATBPS_UNPROTECT(
       $@,
       [$1_LATER],
-      [HAVE_$1])[
+      [HAVE_$1])
 
-  }]])
-
-  AC_DEFUN([GATBPS_PROG_][$1], [
-    AC_REQUIRE([GATBPS_INNER_PROG_$1])
     $4
+
   ])
 
 ])
