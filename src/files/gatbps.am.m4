@@ -474,12 +474,12 @@ popdef([x])
 [
 
 ##----------------------------------------------------------------------
-## Version cache files
+## gatbps-gen-version.sh cache files
 ##----------------------------------------------------------------------
 
-GATBPS_VERSION_CACHE_FILES =
+GATBPS_GEN_VERSION_CACHE_FILES =
 
-GATBPS_VERSION_CACHE_FILES/dummy $(GATBPS_VERSION_CACHE_FILES):
+GATBPS_GEN_VERSION_CACHE_FILES/dummy $(GATBPS_GEN_VERSION_CACHE_FILES):
 	$(AM_V_GEN)$(GATBPS_RECIPE_MARKER_TOP)
 	$(AM_V_at)rm -f -r $][@ $][@$(TSUF)*
 	$(AM_V_at)$(MKDIR_P) $(@D)
@@ -495,7 +495,7 @@ GATBPS_VERSION_CACHE_FILES/dummy $(GATBPS_VERSION_CACHE_FILES):
 ]
 
 pushdef([x], [[
-GATBPS_VERSION_CACHE_FILES += $1.cache
+GATBPS_GEN_VERSION_CACHE_FILES += $1.cache
 GATBPS_MOSTLYCLEANFILES += $1.cache/clean
 ]])
 
