@@ -640,9 +640,6 @@ EOF1
           'set' "${prefix}"'GATBPS_GIT_ARCHIVE_SUBST.m4' "${@}"
           'set' "${prefix}"'GATBPS_GIT_ARCHIVE_RULES.am' "${@}"
           'set' "${prefix}"'GATBPS_GIT_ARCHIVE.m4' "${@}"
-          'set' "${prefix}"'GATBPS_DOCKER_BUILD_SUBST.m4' "${@}"
-          'set' "${prefix}"'GATBPS_DOCKER_BUILD_RULES.am' "${@}"
-          'set' "${prefix}"'GATBPS_DOCKER_BUILD.m4' "${@}"
           'set' "${prefix}"'GATBPS_DEFINE_xmldir.m4' "${@}"
           'set' "${prefix}"'GATBPS_DEFINE_plaintextdir.m4' "${@}"
           'set' "${prefix}"'GATBPS_DEFINE_javadocdir.m4' "${@}"
@@ -1166,12 +1163,6 @@ EOF1
 |%}help_code({%|GATBPS_DEFINE_plaintextdir.m4|%}){%|
 
 |%}help_code({%|GATBPS_DEFINE_xmldir.m4|%}){%|
-
-|%}help_code({%|GATBPS_DOCKER_BUILD.m4|%}){%|
-
-|%}help_code({%|GATBPS_DOCKER_BUILD_RULES.am|%}){%|
-
-|%}help_code({%|GATBPS_DOCKER_BUILD_SUBST.m4|%}){%|
 
 |%}help_code({%|GATBPS_GIT_ARCHIVE.m4|%}){%|
 
@@ -2855,12 +2846,6 @@ EOF1
 
 |%}generation_code({%|GATBPS_DEFINE_xmldir.m4|%}){%|
 
-|%}generation_code({%|GATBPS_DOCKER_BUILD.m4|%}){%|
-
-|%}generation_code({%|GATBPS_DOCKER_BUILD_RULES.am|%}){%|
-
-|%}generation_code({%|GATBPS_DOCKER_BUILD_SUBST.m4|%}){%|
-
 |%}generation_code({%|GATBPS_GIT_ARCHIVE.m4|%}){%|
 
 |%}generation_code({%|GATBPS_GIT_ARCHIVE_RULES.am|%}){%|
@@ -3761,21 +3746,6 @@ include(`src/recursion/GATBPS_DEFINE_plaintextdir.m4.rc.m4'){%||%}dnl
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
 include(`src/recursion/GATBPS_DEFINE_xmldir.m4.rc.m4'){%||%}dnl
-{%|
-
-|%}dnl
-changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/GATBPS_DOCKER_BUILD.m4.rc.m4'){%||%}dnl
-{%|
-
-|%}dnl
-changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/GATBPS_DOCKER_BUILD_RULES.am.rc.m4'){%||%}dnl
-{%|
-
-|%}dnl
-changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/GATBPS_DOCKER_BUILD_SUBST.m4.rc.m4'){%||%}dnl
 {%|
 
 |%}dnl

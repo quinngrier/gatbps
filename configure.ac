@@ -526,18 +526,6 @@ AM_SUBST_NOTMAKE([TEXI2ANY_DEFAULT_TROFF])
   [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/GATBPS_DOCKER_BUILD.m4],
-  [mostlyclean])[
-
-]GATBPS_M4(
-  [src/files/GATBPS_DOCKER_BUILD_RULES.am],
-  [mostlyclean])[
-
-]GATBPS_M4(
-  [src/files/GATBPS_DOCKER_BUILD_SUBST.m4],
-  [mostlyclean])[
-
-]GATBPS_M4(
   [src/files/GATBPS_GIT_ARCHIVE.m4],
   [mostlyclean])[
 

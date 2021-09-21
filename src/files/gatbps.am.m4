@@ -1135,8 +1135,9 @@ uninstall-java-main: java.FORCE
 
 ##----------------------------------------------------------------------
 
-@GATBPS_JAVA_RULES@
+@GATBPS_DOCKER_BUILD_RULES@
 @GATBPS_JAVA_CLASS_RULES@
+@GATBPS_JAVA_RULES@
 @GATBPS_M4_RULES@
 @GATBPS_TAR_RULES@
 @GATBPS_XZ_RULES@
