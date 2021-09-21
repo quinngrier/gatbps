@@ -14,6 +14,17 @@ changequote({%|[|%}, {%|]|%})[
 ##
 
 ]
+
+dnl
+dnl Note that Automake always outputs all variables before all rules:
+dnl
+dnl       The variable definitions and rules in the Makefile.am
+dnl       are copied mostly verbatim into the generated file,
+dnl       with all variable definitions preceding all rules.
+dnl
+dnl This is an important detail for certain parts of this code.
+dnl
+
 dnl---------------------------------------------------------------------
 dnl GATBPS_SQUISH(<text>)
 dnl---------------------------------------------------------------------
