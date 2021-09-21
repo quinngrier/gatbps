@@ -23,7 +23,7 @@ m4_if(
 
 AWK_SH=`'sh' \
   '-' \
-  "$][{srcdir}"/build-aux/echo.sh -q \
+  "$][{srcdir}"/build-aux/gatbps-echo.sh -q \
   '--' \
   $][{AWK} \
 ;` || exit

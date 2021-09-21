@@ -23,7 +23,7 @@ m4_if(
 
 SED_SH=`'sh' \
   '-' \
-  "$][{srcdir}"/build-aux/echo.sh -q \
+  "$][{srcdir}"/build-aux/gatbps-echo.sh -q \
   '--' \
   $][{SED} \
 ;` || exit

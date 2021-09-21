@@ -182,19 +182,19 @@ AS_HELP_STRING(
   :;}])
 AC_MSG_RESULT([${texi2any_default}])
 
-AWK_DEFAULT_SH=`sh "$srcdir"/build-aux/echo.sh -q -- \
+AWK_DEFAULT_SH=`sh "$srcdir"/build-aux/gatbps-echo.sh -q -- \
   "${awk_default}"
 ` || exit
 AC_SUBST([AWK_DEFAULT_SH])
 AM_SUBST_NOTMAKE([AWK_DEFAULT_SH])
 
-SED_DEFAULT_SH=`sh "$srcdir"/build-aux/echo.sh -q -- \
+SED_DEFAULT_SH=`sh "$srcdir"/build-aux/gatbps-echo.sh -q -- \
   "${sed_default}"
 ` || exit
 AC_SUBST([SED_DEFAULT_SH])
 AM_SUBST_NOTMAKE([SED_DEFAULT_SH])
 
-TEXI2ANY_DEFAULT_SH=`sh "$srcdir"/build-aux/echo.sh -q -- \
+TEXI2ANY_DEFAULT_SH=`sh "$srcdir"/build-aux/gatbps-echo.sh -q -- \
   "${texi2any_default}"
 ` || exit
 AC_SUBST([TEXI2ANY_DEFAULT_SH])
