@@ -30,25 +30,23 @@ readonly num
 # TODO: Support a scheme where we don't do semver and instead just
 #       output the most recent version number.
 
-for x in "$0".args; do
-  if test -f "$x"; then
-    s='
-      {
-        if (dump || !/^[ 	]*(#.*)*$/) {
-          print;
-          dump = 1;
-        }
+if test -f "$0.args"; then
+  s='
+    {
+      if (dump || !/^[ 	]*(#.*)*$/) {
+        print;
+        dump = 1;
       }
-    '
-    x=`eval " $sed"' "$s"' <"$x"` || exit $?
-    case $# in 0)
-      eval "set x $x" || exit $?
-    ;; *)
-      eval "set x \"\$@\" $x" || exit $?
-    esac
-    shift
-  fi
-done
+    }
+  '
+  x=`eval " $sed"' "$s" <"$0.args"'` || exit $?
+  case $# in 0)
+    eval "set x $x" || exit $?
+  ;; *)
+    eval "set x \"\$@\" $x" || exit $?
+  esac
+  shift
+fi
 
 #-----------------------------------------------------------------------
 
