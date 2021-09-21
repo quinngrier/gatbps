@@ -253,6 +253,7 @@ dnl---------------------------------------------------------------------
 
 GATBPS_PROG([ASCIIDOCTOR], [asciidoctor])
 GATBPS_PROG([ASCIIDOCTOR_PDF], [asciidoctor-pdf])
+GATBPS_PROG([DOCKER], [docker])
 GATBPS_PROG([GIT], [git])
 GATBPS_PROG([GUNZIP], [gunzip])
 GATBPS_PROG([GZIP], [gzip])
