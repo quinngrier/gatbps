@@ -861,18 +861,8 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_DOCKER_BUILD
 dnl---------------------------------------------------------------------
 
-AC_DEFUN([GATBPS_DOCKER_BUILD], [[{
+AC_DEFUN([GATBPS_DOCKER_BUILD], [
 
-#
-]m4_text_wrap(
-  [
-    The block that contains this comment is the expansion of the
-    GATBPS_DOCKER_BUILD macro for the $1 target.
-  ],
-  [# ],
-  [# ],
-  [72])[
-#]dnl
 m4_if(
   m4_eval([$# < 2 || $# > 6]),
   [1],
@@ -1261,7 +1251,8 @@ m4_popdef([child_prerequisites])[]dnl
 m4_popdef([image_names])[]dnl
 m4_popdef([input_directory])[]dnl
 m4_popdef([output_file])[]dnl
-[:;}]])[]dnl
+[
+])
 
 AC_SUBST([GATBPS_DOCKER_BUILD_RULES])
 AM_SUBST_NOTMAKE([GATBPS_DOCKER_BUILD_RULES])
