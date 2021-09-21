@@ -375,7 +375,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,child_prerequisites))[
       build \
       '\''--tag=tmp'\''"$][$][{$][$][}" \]dnl
 GATBPS_DOCKER_BUILD_tag_lines(m4_if(,,image_names))[
-      $][(DOCKER_BUILD_FLAGS) \
+      $][(GATBPS_DOCKER_BUILD_FLAGS) \
       "$][$][{context}" \
     || exit $][$][?; \
     $][(DOCKER) \

@@ -183,22 +183,22 @@ m4_define([GATBPS_REQUIRE], [
 ])
 
 dnl---------------------------------------------------------------------
-dnl GATBPS_DEFINE_DOCKER_BUILD_FLAGS
+dnl GATBPS_DEFINE_GATBPS_DOCKER_BUILD_FLAGS
 dnl---------------------------------------------------------------------
 
-AC_DEFUN_ONCE([GATBPS_DEFINE_DOCKER_BUILD_FLAGS], [
+AC_DEFUN_ONCE([GATBPS_DEFINE_GATBPS_DOCKER_BUILD_FLAGS], [
 
   [
-    readonly DOCKER_BUILD_FLAGS
+    readonly GATBPS_DOCKER_BUILD_FLAGS
   ]
 
   AC_ARG_VAR(
-    [DOCKER_BUILD_FLAGS],
+    [GATBPS_DOCKER_BUILD_FLAGS],
     [
-      Flags to use with docker build commands (default:
-      DOCKER_BUILD_FLAGS='').
-      For example, you might use DOCKER_BUILD_FLAGS='--no-cache' to
-      disable the image cache.
+      Flags to use with "docker build" commands (default:
+      GATBPS_DOCKER_BUILD_FLAGS='').
+      For example, you might use GATBPS_DOCKER_BUILD_FLAGS='--no-cache'
+      to disable the image cache.
     ])
 
 ])
@@ -278,7 +278,7 @@ GATBPS_PROG([ASCIIDOCTOR], [asciidoctor])
 GATBPS_PROG([ASCIIDOCTOR_PDF], [asciidoctor-pdf])
 
 GATBPS_PROG([DOCKER], [docker], [], [
-  GATBPS_REQUIRE([GATBPS_DEFINE_DOCKER_BUILD_FLAGS])
+  GATBPS_REQUIRE([GATBPS_DEFINE_GATBPS_DOCKER_BUILD_FLAGS])
 ])
 
 GATBPS_PROG([GIT], [git])
