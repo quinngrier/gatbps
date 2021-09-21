@@ -69,7 +69,7 @@ m4_if(
 TEXI2DVI_EXE_SH=`
   'sh' \
     '-' \
-    "$][{srcdir}"/build-aux/echo.sh -q \
+    "$][{srcdir}"/build-aux/gatbps-echo.sh -q \
     '--' \
     $][{TEXI2DVI_EXE} \
   ;

@@ -40,7 +40,7 @@ $(javadoc_dst): $(javadoc_src_nodist)
     for y in $(javadoc_JAVADOCFLAGS); do \
       $(SHELL) \
         '-' \
-        $(srcdir)/build-aux/echo.sh -q \
+        $(srcdir)/build-aux/gatbps-echo.sh -q \
         '--' \
         $(JAVADOC) \
         '-d' \
@@ -56,7 +56,7 @@ $(javadoc_dst): $(javadoc_src_nodist)
       ?*) \
         $(SHELL) \
           '-' \
-          $(srcdir)/build-aux/echo.sh -q \
+          $(srcdir)/build-aux/gatbps-echo.sh -q \
           '--' \
           $(JAVADOC) \
           '-d' \
@@ -80,7 +80,7 @@ $(javadoc_dst): $(javadoc_src_nodist)
       fi; \
       $(SHELL) \
         '-' \
-        $(srcdir)/build-aux/echo.sh -q \
+        $(srcdir)/build-aux/gatbps-echo.sh -q \
         '--' \
         "$${d}"'/'"$${x}" \
         1>'javadoc-main.tmp1' \
@@ -168,7 +168,7 @@ install-javadoc-main: javadoc-main
       else \
         $(SHELL) \
           '-' \
-          $(srcdir)/build-aux/echo.sh -q \
+          $(srcdir)/build-aux/gatbps-echo.sh -q \
           '--' \
           $(MKDIR_P) \
           "$${d}" \
@@ -195,7 +195,7 @@ install-javadoc-main: javadoc-main
       else \
         $(SHELL) \
           '-' \
-          $(srcdir)/build-aux/echo.sh -q \
+          $(srcdir)/build-aux/gatbps-echo.sh -q \
           '--' \
           'rm' \
           '-f' \
@@ -213,7 +213,7 @@ install-javadoc-main: javadoc-main
       else \
         $(SHELL) \
           '-' \
-          $(srcdir)/build-aux/echo.sh -q \
+          $(srcdir)/build-aux/gatbps-echo.sh -q \
           '--' \
           'cp' \
           '-R' \
@@ -269,7 +269,7 @@ uninstall-javadoc-main:
         else \
           $(SHELL) \
             '-' \
-            $(srcdir)/build-aux/echo.sh -q \
+            $(srcdir)/build-aux/gatbps-echo.sh -q \
             '--' \
             'rm' \
             '-f' \

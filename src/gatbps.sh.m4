@@ -581,7 +581,7 @@ EOF1
           'set' "${prefix}"'format.c.vim' "${@}"
           'set' "${prefix}"'format.am.vim' "${@}"
           'set' "${prefix}"'format.ac.vim' "${@}"
-          'set' "${prefix}"'echo.sh' "${@}"
+          'set' "${prefix}"'gatbps-echo.sh' "${@}"
           'set' "${prefix}"'dvi-dist.am' "${@}"
           'set' "${prefix}"'dslash.texi' "${@}"
           'set' "${prefix}"'dprm.texi' "${@}"
@@ -1295,7 +1295,7 @@ EOF1
 
 |%}help_code({%|dvi-dist.am|%}){%|
 
-|%}help_code({%|echo.sh|%}){%|
+|%}help_code({%|gatbps-echo.sh|%}){%|
 
 |%}help_code({%|format.ac.vim|%}){%|
 
@@ -2987,7 +2987,7 @@ EOF1
 
 |%}generation_code({%|dvi-dist.am|%}){%|
 
-|%}generation_code({%|echo.sh|%}){%|
+|%}generation_code({%|gatbps-echo.sh|%}){%|
 
 |%}generation_code({%|format.ac.vim|%}){%|
 
@@ -4090,7 +4090,7 @@ include(`src/recursion/dvi-dist.am.rc.m4'){%||%}dnl
 
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/echo.sh.rc.m4'){%||%}dnl
+include(`src/recursion/gatbps-echo.sh.rc.m4'){%||%}dnl
 {%|
 
 |%}dnl

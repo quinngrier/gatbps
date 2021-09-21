@@ -20,7 +20,7 @@ GATBPS_V_GIT_ARCHIVE_ = $(GATBPS_V_GIT_ARCHIVE_@AM_DEFAULT_V@)
 
 GATBPS_V_GIT_ARCHIVE_0 = @$(SHELL) \
   '-' \
-  $(srcdir)'/build-aux/echo.sh' \
+  $(srcdir)'/build-aux/gatbps-echo.sh' \
   '--' \
   $(GATBPS_V_PAD_LEFT)'GIT ARCHIVE'$(GATBPS_V_PAD_RIGHT_11) \
   $@ \
@@ -35,7 +35,7 @@ GATBPS_V_GIT_BUNDLE_ = $(GATBPS_V_GIT_BUNDLE_@AM_DEFAULT_V@)
 
 GATBPS_V_GIT_BUNDLE_0 = @$(SHELL) \
   '-' \
-  $(srcdir)'/build-aux/echo.sh' \
+  $(srcdir)'/build-aux/gatbps-echo.sh' \
   '--' \
   $(GATBPS_V_PAD_LEFT)'GIT BUNDLE'$(GATBPS_V_PAD_RIGHT_10) \
   $@ \
@@ -50,7 +50,7 @@ GATBPS_V_GIT_CLONE_ = $(GATBPS_V_GIT_CLONE_@AM_DEFAULT_V@)
 
 GATBPS_V_GIT_CLONE_0 = @$(SHELL) \
   '-' \
-  $(srcdir)'/build-aux/echo.sh' \
+  $(srcdir)'/build-aux/gatbps-echo.sh' \
   '--' \
   $(GATBPS_V_PAD_LEFT)'GIT CLONE'$(GATBPS_V_PAD_RIGHT_9) \
   $@ \

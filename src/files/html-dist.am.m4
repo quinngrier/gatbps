@@ -65,7 +65,7 @@ $(html_dist_dst): $(html_dist_dep)
     else \
       $(SHELL) \
         '-' \
-        $(srcdir)'/build-aux/echo.sh' \
+        $(srcdir)'/build-aux/gatbps-echo.sh' \
         'error: missing prerequisite:' \
         '"'$(html_dist_src)'"' \
         1>&2 \

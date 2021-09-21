@@ -1,20 +1,20 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|src/files/echo.sh.m4|%}){%||%}dnl
+rules_code({%|src/files/gatbps-echo.sh.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/footer_comment.m4|%}){%||%}dnl
 include({%|src/tools/header_comment.m4|%}){%||%}dnl
 include({%|src/tools/sh_prelude.m4|%}){%||%}dnl
 header_comment({%|#|%}, {%|#|%}){%|
 #
-# Special file: echo.sh
+# Special file: gatbps-echo.sh
 #
 # For more information, see the GATBPS manual.
 #
 
 # TODO: We could support quoting for languages other than sh, like for
-# awk for example, via syntax like sh echo.sh --awk -q. Then we can
+# awk for example, via syntax like sh gatbps-echo.sh --awk -q. Then we can
 # remove awk-form.sh and any other *-form.sh scripts. Make sure to also
 # support --sh for consistency. And maybe something like -Q to reset
 # quoting_level back to 0.
@@ -392,8 +392,8 @@ until (exit ${1+1}0); do
 
       --=*)
         cat <<EOF2 >&2
-${fr2}echo.sh!${fR2} ${fB2}--${fR2} forbids a value
-${fr2}echo.sh!${fR2} try ${fB2}sh echo.sh --help${fR2} for more information
+${fr2}gatbps-echo.sh!${fR2} ${fB2}--${fR2} forbids a value
+${fr2}gatbps-echo.sh!${fR2} try ${fB2}sh gatbps-echo.sh --help${fR2} for more information
 EOF2
         exit 1
       ;;
@@ -413,7 +413,7 @@ EOF2
 
       --stdin=*)
         cat <<EOF2 >&2
-${fr2}echo.sh!${fR2} ${fB2}--stdin${fR2} forbids a value
+${fr2}gatbps-echo.sh!${fR2} ${fB2}--stdin${fR2} forbids a value
 EOF2
         exit 1
       ;;
@@ -438,7 +438,7 @@ EOF2
 
       --quote=*)
         cat <<EOF2 >&2
-${fr2}echo.sh!${fR2} ${fB2}--quote${fR2} forbids a value
+${fr2}gatbps-echo.sh!${fR2} ${fB2}--quote${fR2} forbids a value
 EOF2
         exit 1
       ;;

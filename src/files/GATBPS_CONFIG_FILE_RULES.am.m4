@@ -21,7 +21,7 @@ GATBPS_V_CONFIG_FILE_ = $(GATBPS_V_CONFIG_FILE_@AM_DEFAULT_V@)
 
 GATBPS_V_CONFIG_FILE_0 = @$(SHELL) \
   '-' \
-  $(srcdir)'/build-aux/echo.sh' \
+  $(srcdir)'/build-aux/gatbps-echo.sh' \
   '--' \
   $(GATBPS_V_PAD_LEFT)'SUBST_IN'$(GATBPS_V_PAD_RIGHT_8) \
   $@ \

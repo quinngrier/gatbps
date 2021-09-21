@@ -54,7 +54,7 @@ $(xml_dist_dst): $(xml_dist_dep)
     else \
       $(SHELL) \
         '-' \
-        $(srcdir)'/build-aux/echo.sh' \
+        $(srcdir)'/build-aux/gatbps-echo.sh' \
         'error: missing prerequisite:' \
         '"'$(xml_dist_src)'"' \
         1>&2 \

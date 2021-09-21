@@ -54,7 +54,7 @@ $(dvi_dist_dst): $(dvi_dist_dep)
     else \
       $(SHELL) \
         '-' \
-        $(srcdir)'/build-aux/echo.sh' \
+        $(srcdir)'/build-aux/gatbps-echo.sh' \
         'error: missing prerequisite:' \
         '"'$(dvi_dist_src)'"' \
         1>&2 \

@@ -6,7 +6,7 @@ rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
 include({%|src/tools/recursion_code.m4|%}){%||%}dnl
 recursion_code(
   {%|doxygen.am|%},
-  {%|echo.sh|%},
+  {%|gatbps-echo.sh|%},
   {%|GATBPS_V_PAD.am|%},
   {%|GATBPS_VPATH_SEARCH.am|%},
   {%|GATBPS_PROG_MKDIR_P.m4|%},

@@ -524,7 +524,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
     esac; \
     $(SHELL) \
       '-' \
-      $(srcdir)/build-aux/echo.sh -q \
+      $(srcdir)/build-aux/gatbps-echo.sh -q \
       '--' \
       "$${x}" \
       1>'java-main.tmp' \
@@ -539,7 +539,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
     ; do \
       $(SHELL) \
         '-' \
-        $(srcdir)/build-aux/echo.sh -q \
+        $(srcdir)/build-aux/gatbps-echo.sh -q \
         '--' \
         $(java_JAVACFLAGS) \
         1>'java-main.tmp' \
@@ -551,7 +551,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
       ?*) \
         $(SHELL) \
           '-' \
-          $(srcdir)/build-aux/echo.sh -q \
+          $(srcdir)/build-aux/gatbps-echo.sh -q \
           '--' \
           $(GATBPS_JAVACFLAGS) \
           1>'java-main.tmp' \
@@ -978,7 +978,7 @@ install-java-main: java.FORCE
       else \
         $(SHELL) \
           '-' \
-          $(srcdir)/build-aux/echo.sh -q \
+          $(srcdir)/build-aux/gatbps-echo.sh -q \
           '--' \
           $(MKDIR_P) \
           "$${d}" \
@@ -1005,7 +1005,7 @@ install-java-main: java.FORCE
       else \
         $(SHELL) \
           '-' \
-          $(srcdir)/build-aux/echo.sh -q \
+          $(srcdir)/build-aux/gatbps-echo.sh -q \
           '--' \
           $(INSTALL_DATA) \
           "$${x}" \
@@ -1058,7 +1058,7 @@ uninstall-java-main: java.FORCE
         else \
           $(SHELL) \
             '-' \
-            $(srcdir)/build-aux/echo.sh -q \
+            $(srcdir)/build-aux/gatbps-echo.sh -q \
             '--' \
             'rm' \
             '-f' \

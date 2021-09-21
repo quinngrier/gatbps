@@ -1,9 +1,9 @@
 changecom`'dnl
 changequote(`{%|', `|%}'){%||%}dnl
 include({%|src/tools/rules_code.m4|%}){%||%}dnl
-rules_code({%|doc/help/echo.sh.hd.m4|%}){%||%}dnl
+rules_code({%|doc/help/gatbps-echo.sh.hd.m4|%}){%||%}dnl
 rules_code({%|src/tools/rules_code.m4|%}){%||%}dnl
-{%|Special file: ${fB1}echo.sh${fR1}
+{%|Special file: ${fB1}gatbps-echo.sh${fR1}
 
 Try ${fB1}man gatbps${fR1} or ${fB1}info gatbps${fR1} for more information.|%}dnl
 dnl

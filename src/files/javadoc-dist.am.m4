@@ -59,7 +59,7 @@ $(javadoc_dist_dst): $(javadoc_dist_dep)
     else \
       $(SHELL) \
         '-' \
-        $(srcdir)'/build-aux/echo.sh' \
+        $(srcdir)'/build-aux/gatbps-echo.sh' \
         'error: missing prerequisite:' \
         '"'$(javadoc_dist_src)'"' \
         1>&2 \

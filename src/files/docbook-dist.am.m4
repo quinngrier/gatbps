@@ -54,7 +54,7 @@ $(docbook_dist_dst): $(docbook_dist_dep)
     else \
       $(SHELL) \
         '-' \
-        $(srcdir)'/build-aux/echo.sh' \
+        $(srcdir)'/build-aux/gatbps-echo.sh' \
         'error: missing prerequisite:' \
         '"'$(docbook_dist_src)'"' \
         1>&2 \

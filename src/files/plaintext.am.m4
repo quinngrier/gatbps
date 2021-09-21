@@ -108,7 +108,7 @@ install-plaintext-main: plaintext-main
       else \
         $(SHELL) \
           '-' \
-          $(srcdir)/build-aux/echo.sh -q \
+          $(srcdir)/build-aux/gatbps-echo.sh -q \
           '--' \
           $(MKDIR_P) \
           "$${d}" \
@@ -135,7 +135,7 @@ install-plaintext-main: plaintext-main
       else \
         $(SHELL) \
           '-' \
-          $(srcdir)/build-aux/echo.sh -q \
+          $(srcdir)/build-aux/gatbps-echo.sh -q \
           '--' \
           $(INSTALL_DATA) \
           "$${x}" \
@@ -189,7 +189,7 @@ uninstall-plaintext-main:
         else \
           $(SHELL) \
             '-' \
-            $(srcdir)/build-aux/echo.sh -q \
+            $(srcdir)/build-aux/gatbps-echo.sh -q \
             '--' \
             'rm' \
             '-f' \

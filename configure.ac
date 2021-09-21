@@ -778,7 +778,7 @@ AM_SUBST_NOTMAKE([TEXI2ANY_DEFAULT_TROFF])
   [mostlyclean])[
 
 ]GATBPS_M4(
-  [src/files/echo.sh],
+  [src/files/gatbps-echo.sh],
   [mostlyclean])[
 
 ]GATBPS_M4(

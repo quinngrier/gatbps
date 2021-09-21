@@ -112,7 +112,7 @@ install-docbook-main: docbook-main
       else \
         $(SHELL) \
           '-' \
-          $(srcdir)/build-aux/echo.sh -q \
+          $(srcdir)/build-aux/gatbps-echo.sh -q \
           '--' \
           $(MKDIR_P) \
           "$${d}" \
@@ -139,7 +139,7 @@ install-docbook-main: docbook-main
       else \
         $(SHELL) \
           '-' \
-          $(srcdir)/build-aux/echo.sh -q \
+          $(srcdir)/build-aux/gatbps-echo.sh -q \
           '--' \
           $(INSTALL_DATA) \
           "$${x}" \
@@ -189,7 +189,7 @@ uninstall-docbook-main:
         else \
           $(SHELL) \
             '-' \
-            $(srcdir)/build-aux/echo.sh -q \
+            $(srcdir)/build-aux/gatbps-echo.sh -q \
             '--' \
             'rm' \
             '-f' \

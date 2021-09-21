@@ -104,7 +104,7 @@ GATBPS_V_DOXYGEN_ = $(GATBPS_V_DOXYGEN_@AM_DEFAULT_V@)
 
 GATBPS_V_DOXYGEN_0 = @$(SHELL) \
   '-' \
-  $(srcdir)'/build-aux/echo.sh' \
+  $(srcdir)'/build-aux/gatbps-echo.sh' \
   '--' \
   $(GATBPS_V_PAD_LEFT)'DOXYGEN'$(GATBPS_V_PAD_RIGHT_7) \
   $@ \
@@ -142,7 +142,7 @@ $(doxygen_dst) doxygen.dummy_2.main: $(doxygen_src)
   ( \
     $(SHELL) \
       '-' \
-      $(srcdir)/build-aux/echo.sh -q \
+      $(srcdir)/build-aux/gatbps-echo.sh -q \
       '--' \
       $(SHELL) \
       1>'doxygen-main.tmp' \

@@ -20,7 +20,7 @@ GATBPS_V_WGET_ = $(GATBPS_V_WGET_@AM_DEFAULT_V@)
 
 GATBPS_V_WGET_0 = @$(SHELL) \
   - \
-  $(srcdir)/build-aux/echo.sh \
+  $(srcdir)/build-aux/gatbps-echo.sh \
   -- \
   $(GATBPS_V_PAD_LEFT)WGET$(GATBPS_V_PAD_RIGHT_4) \
   $@ \

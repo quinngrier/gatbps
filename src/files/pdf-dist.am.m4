@@ -54,7 +54,7 @@ $(pdf_dist_dst): $(pdf_dist_dep)
     else \
       $(SHELL) \
         '-' \
-        $(srcdir)'/build-aux/echo.sh' \
+        $(srcdir)'/build-aux/gatbps-echo.sh' \
         'error: missing prerequisite:' \
         '"'$(pdf_dist_src)'"' \
         1>&2 \

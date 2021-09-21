@@ -108,7 +108,7 @@ install-xml-main: xml-main
       else \
         $(SHELL) \
           '-' \
-          $(srcdir)/build-aux/echo.sh -q \
+          $(srcdir)/build-aux/gatbps-echo.sh -q \
           '--' \
           $(MKDIR_P) \
           "$${d}" \
@@ -135,7 +135,7 @@ install-xml-main: xml-main
       else \
         $(SHELL) \
           '-' \
-          $(srcdir)/build-aux/echo.sh -q \
+          $(srcdir)/build-aux/gatbps-echo.sh -q \
           '--' \
           $(INSTALL_DATA) \
           "$${x}" \
@@ -185,7 +185,7 @@ uninstall-xml-main:
         else \
           $(SHELL) \
             '-' \
-            $(srcdir)/build-aux/echo.sh -q \
+            $(srcdir)/build-aux/gatbps-echo.sh -q \
             '--' \
             'rm' \
             '-f' \
