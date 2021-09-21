@@ -15,13 +15,13 @@ header_comment({%|#|%}, {%|#|%}){%|
 
 |%}sh_prelude{%|
 
-awk=" ${AWK:-awk}"
+awk=${AWK:-awk}
 readonly awk
 
-git=" ${GIT:-git}"
+git=${GIT:-git}
 readonly git
 
-sed=" ${SED:-sed}"
+sed=${SED:-sed}
 readonly sed
 
 num='(0|[1-9][0-9]*)'
@@ -128,7 +128,7 @@ print_semver() {
     printf '%s\n' "$1" || exit $?
   ;; docker)
     print_semver_x='s/[+].*//'
-    eval "$sed"' "$print_semver_x"' <<EOF2 || exit $?
+    eval " $sed"' "$print_semver_x"' <<EOF2 || exit $?
 $1
 EOF2
   ;; *)
@@ -297,13 +297,13 @@ if test -f "$cache"; then
 
   cat <"$cache" || exit $?
 
-elif eval "$git"' ls-files --error-unmatch "$0"' >/dev/null 2>&1; then
+elif eval " $git"' ls-files --error-unmatch "$0"' >/dev/null 2>&1; then
 
   x='describe'
   x=$x' --candidates=1'
   x=$x' --match="'$v_prefix'[0-9]*.[0-9]*.[0-9]*"'
   x=$x' --tags'
-  v_description=`eval "$git $x"` || exit $?
+  v_description=`eval " $git $x"` || exit $?
   readonly v_description
 
   x='
@@ -317,7 +317,7 @@ elif eval "$git"' ls-files --error-unmatch "$0"' >/dev/null 2>&1; then
       print
     }
   '
-  v_result=`eval "$awk"' "$x"' <<EOF2
+  v_result=`eval " $awk"' "$x"' <<EOF2
 $v_description
 EOF2
   ` || exit $?
@@ -339,7 +339,7 @@ EOF2
   x=$x' --candidates=1'
   x=$x' --match="'$u_prefix'[0-9]*.[0-9]*.[0-9]*"'
   x=$x' --tags'
-  u_tag=`eval "$git $x"` || exit $?
+  u_tag=`eval " $git $x"` || exit $?
   readonly u_tag
 
   case $u_tag in *.*)
@@ -354,10 +354,10 @@ EOF2
   x=$x' --candidates=1'
   x=$x' --match="'$v_prefix'[0-9]*.[0-9]*.[0-9]*"'
   x=$x' --tags'
-  v_tag=`eval "$git $x"` || exit $?
+  v_tag=`eval " $git $x"` || exit $?
   readonly v_tag
 
-  eval "$git"' merge-base --is-ancestor "$v_tag" "$u_tag"'
+  eval " $git"' merge-base --is-ancestor "$v_tag" "$u_tag"'
   s=$?
   case $s in 0)
     :
@@ -373,7 +373,7 @@ EOF2
   x=$x' --long'
   x=$x' --match="'$u_prefix'[0-9]*.[0-9]*.[0-9]*"'
   x=$x' --tags'
-  u_description=`eval "$git $x"` || exit $?
+  u_description=`eval " $git $x"` || exit $?
   readonly u_description
 
   x='
@@ -383,7 +383,7 @@ EOF2
       print
     }
   '
-  u_result=`eval "$awk"' "$x"' <<EOF2
+  u_result=`eval " $awk"' "$x"' <<EOF2
 $u_description
 EOF2
   ` || exit $?
