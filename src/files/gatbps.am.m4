@@ -41,6 +41,10 @@ define([GATBPS_SQUISH], [patsubst(patsubst(patsubst([[[[$1]]]], [[
 dnl---------------------------------------------------------------------
 dnl GATBPS_DOT_SLASH(<dst>, <src>)
 dnl---------------------------------------------------------------------
+dnl
+dnl Sets the recipe shell variable <dst> to <src> and prepends it with
+dnl ./ if <src> does not already begin with a . or / character.
+dnl
 
 define([GATBPS_DOT_SLASH], [GATBPS_SQUISH([
   $1=$2;
@@ -52,6 +56,9 @@ define([GATBPS_DOT_SLASH], [GATBPS_SQUISH([
 dnl---------------------------------------------------------------------
 dnl GATBPS_SMART_QUOTE(<dst>, <src>)
 dnl---------------------------------------------------------------------
+dnl
+dnl TODO: Why cqDe_ as the prefix? Use gatbps_?
+dnl
 
 define([GATBPS_SMART_QUOTE], [GATBPS_SQUISH([
   $1=;
