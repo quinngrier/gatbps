@@ -133,13 +133,23 @@ TSUF = $(TMPEXT).tmp
 ##----------------------------------------------------------------------
 
 GATBPS_EXPORT = ]GATBPS_SQUISH([
+
+  case $$x in '' | *[!0-9A-Z_a-z]* | [0-9]*)
+    printf '%s\n'
+      "GATBPS_EXPORT: x must be set to a shell variable name." >&2
+    ;
+    exit 1;
+  esac;
+
   shift || exit $$?;
   GATBPS_EXPORT_VALUE=`
     sh - \$(srcdir)/build-aux/gatbps-echo.sh -qq -- "$$@"
   ` || exit $$?;
   eval $$x=\$$GATBPS_EXPORT_VALUE;
   export $$x;
+
   :
+
 ])[
 
 ##----------------------------------------------------------------------
