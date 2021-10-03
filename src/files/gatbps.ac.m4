@@ -216,7 +216,11 @@ m4_define([GATBPS_PROG], [
       [$1_LATER],
       [HAVE_$1])
 
-    m4_ifdef([AC_PROG_$1], [AC_PROG_$1], [
+    m4_ifdef([AC_PROG_$1], [
+
+      GATBPS_REQUIRE([AC_PROG_$1])
+
+    ], [
 
       AC_CHECK_PROGS(
         [$1],
