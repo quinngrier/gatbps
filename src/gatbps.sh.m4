@@ -615,7 +615,6 @@ EOF1
           'set' "${prefix}"'GATBPS_PROG_TEXI2ANY.m4' "${@}"
           'set' "${prefix}"'GATBPS_PROG_RANLIB.m4' "${@}"
           'set' "${prefix}"'GATBPS_PROG_OPENSSL.m4' "${@}"
-          'set' "${prefix}"'GATBPS_PROG_MKDIR_P.m4' "${@}"
           'set' "${prefix}"'GATBPS_PROG_MAKEINFO.m4' "${@}"
           'set' "${prefix}"'GATBPS_PROG_GATBPS.m4' "${@}"
           'set' "${prefix}"'GATBPS_PROG_DOXYGEN.m4' "${@}"
@@ -1199,8 +1198,6 @@ EOF1
 |%}help_code({%|GATBPS_PROG_GATBPS.m4|%}){%|
 
 |%}help_code({%|GATBPS_PROG_MAKEINFO.m4|%}){%|
-
-|%}help_code({%|GATBPS_PROG_MKDIR_P.m4|%}){%|
 
 |%}help_code({%|GATBPS_PROG_OPENSSL.m4|%}){%|
 
@@ -2874,8 +2871,6 @@ EOF1
 
 |%}generation_code({%|GATBPS_PROG_MAKEINFO.m4|%}){%|
 
-|%}generation_code({%|GATBPS_PROG_MKDIR_P.m4|%}){%|
-
 |%}generation_code({%|GATBPS_PROG_OPENSSL.m4|%}){%|
 
 |%}generation_code({%|GATBPS_PROG_RANLIB.m4|%}){%|
@@ -3826,11 +3821,6 @@ include(`src/recursion/GATBPS_PROG_GATBPS.m4.rc.m4'){%||%}dnl
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
 include(`src/recursion/GATBPS_PROG_MAKEINFO.m4.rc.m4'){%||%}dnl
-{%|
-
-|%}dnl
-changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/GATBPS_PROG_MKDIR_P.m4.rc.m4'){%||%}dnl
 {%|
 
 |%}dnl

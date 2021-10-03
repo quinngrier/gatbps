@@ -9,7 +9,6 @@ recursion_code(
   {%|wget.am|%},
   {%|gatbps_fatal.m4|%},
   {%|GATBPS_PROG_OPENSSL.m4|%},
-  {%|GATBPS_PROG_MKDIR_P.m4|%},
   {%|CC0-1.0.txt|%},
   {%||%}){%||%}dnl
 dnl

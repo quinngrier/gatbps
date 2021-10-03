@@ -108,7 +108,6 @@ files = \
   m4/GATBPS_MSG_ERROR.m4 \
   m4/GATBPS_MSG_NOTICE.m4 \
   m4/GATBPS_PROG_MAKEINFO.m4 \
-  m4/GATBPS_PROG_MKDIR_P.m4 \
   m4/GATBPS_PROG_TEXI2ANY.m4 \
   m4/gatbps_fatal.m4 \
   m4/gatbps_notice.m4 \
