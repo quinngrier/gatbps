@@ -1,15 +1,30 @@
-[
+dnl---------------------------------------------------------------------
 
-]AC_INIT(
+AC_INIT(
   [[GATBPS]],
   m4_esyscmd_s([
     sh build-aux/gatbps-gen-version.sh
-  ])m4_if(m4_sysval, [0], [], [m4_fatal([gatbps-gen-version.sh failed])]),
+  ])m4_if(m4_sysval, 0, [], [
+    m4_fatal([gatbps-gen-version.sh failed.])
+  ]),
   [[quinn@quinngrier.com]],
   [[gatbps]],
-  [[https://www.quinngrier.com/gatbps]])[
+  [[https://www.quinngrier.com/gatbps]])
 
-]m4_include([build-aux/gatbps.ac])[
+dnl---------------------------------------------------------------------
+
+AC_CONFIG_AUX_DIR([build-aux])
+AC_CONFIG_MACRO_DIR([m4])
+AC_CONFIG_MACRO_DIRS([m4])
+AC_CONFIG_SRCDIR([doc/gatbps.texi])
+
+dnl---------------------------------------------------------------------
+
+m4_include([build-aux/gatbps.ac])
+
+dnl---------------------------------------------------------------------
+
+[
 
 ]gatbps_check_macros[ || 'exit' "${?}"
 
@@ -25,11 +40,6 @@
   ])m4_if(m4_sysval, [0], [], [m4_fatal([gatbps-gen-date.sh failed])]))[
 
 ]m4_include([build-aux/CC0-1.0-AC-COPYRIGHT.ac])[
-
-]AC_CONFIG_AUX_DIR([build-aux])[
-]AC_CONFIG_MACRO_DIR([m4])[
-]AC_CONFIG_MACRO_DIRS([m4])[
-]AC_CONFIG_SRCDIR([doc/gatbps.texi])[
 
 ]AM_INIT_AUTOMAKE([
   -Wall
