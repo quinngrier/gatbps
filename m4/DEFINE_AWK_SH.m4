@@ -19,7 +19,7 @@ m4_if(
   ])])[]dnl
 [
 
-]AC_REQUIRE([DEFINE_AWK])[
+]AC_REQUIRE([GATBPS_PROG_AWK])[
 
 AWK_SH=`'sh' \
   '-' \

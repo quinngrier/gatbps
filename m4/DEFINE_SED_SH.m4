@@ -19,7 +19,7 @@ m4_if(
   ])])[]dnl
 [
 
-]AC_REQUIRE([DEFINE_SED])[
+]AC_REQUIRE([GATBPS_PROG_SED])[
 
 SED_SH=`'sh' \
   '-' \
