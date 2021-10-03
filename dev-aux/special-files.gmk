@@ -110,7 +110,6 @@ files = \
   m4/GATBPS_PROG_AWK.m4 \
   m4/GATBPS_PROG_MAKEINFO.m4 \
   m4/GATBPS_PROG_MKDIR_P.m4 \
-  m4/GATBPS_PROG_SED.m4 \
   m4/GATBPS_PROG_TEXI2ANY.m4 \
   m4/gatbps_fatal.m4 \
   m4/gatbps_notice.m4 \
