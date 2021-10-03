@@ -216,10 +216,18 @@ m4_define([GATBPS_PROG], [
       [$1_LATER],
       [HAVE_$1])
 
-    AC_CHECK_PROGS(
-      [$1],
-      m4_normalize([$2 $3]),
-      m4_normalize([$2]))
+    m4_ifdef([AC_PROG_$1], [AC_PROG_$1], [
+
+      AC_CHECK_PROGS(
+        [$1],
+        m4_normalize([$2 $3]),
+        m4_normalize([$2]))
+
+      AC_ARG_VAR(
+        [$1],
+        m4_normalize([$2])[ command])
+
+    ])
 
     [
       $1_LATER=`sed 's/@/{@}AT{@}/g' <<EOF2
@@ -231,10 +239,6 @@ EOF2
 
     AC_SUBST([$1_LATER])
     AM_SUBST_NOTMAKE([$1_LATER])
-
-    AC_ARG_VAR(
-      [$1],
-      m4_normalize([$2])[ command])
 
     AC_DEFINE_UNQUOTED(
       [$1],
@@ -278,6 +282,8 @@ GATBPS_PROG([ASCIIDOCTOR], [asciidoctor])
 
 GATBPS_PROG([ASCIIDOCTOR_PDF], [asciidoctor-pdf])
 
+GATBPS_PROG([AWK], [awk])
+
 GATBPS_PROG([CURL], [curl])
 
 GATBPS_PROG([DOCKER], [docker], [], [
@@ -286,9 +292,13 @@ GATBPS_PROG([DOCKER], [docker], [], [
 
 GATBPS_PROG([GIT], [git])
 
+GATBPS_PROG([GREP], [grep])
+
 GATBPS_PROG([GUNZIP], [gunzip])
 
 GATBPS_PROG([GZIP], [gzip])
+
+GATBPS_PROG([INSTALL], [install])
 
 GATBPS_PROG([JAR], [jar])
 
@@ -300,7 +310,13 @@ GATBPS_PROG([JAVADOC], [javadoc])
 
 GATBPS_PROG([JDEPS], [jdeps])
 
+GATBPS_PROG([LN_S], [ln -s])
+
 GATBPS_PROG([M4], [m4])
+
+GATBPS_PROG([MKDIR_P], [mkdir -p])
+
+GATBPS_PROG([SED], [sed])
 
 GATBPS_PROG([SQLITE3], [sqlite3])
 
