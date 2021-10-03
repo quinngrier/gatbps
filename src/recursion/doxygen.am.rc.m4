@@ -11,7 +11,6 @@ recursion_code(
   {%|GATBPS_VPATH_SEARCH.am|%},
   {%|GATBPS_PROG_MKDIR_P.m4|%},
   {%|GATBPS_PROG_DOXYGEN.m4|%},
-  {%|GATBPS_PROG_AWK.m4|%},
   {%|CC0-1.0.txt|%},
   {%||%}){%||%}dnl
 dnl
