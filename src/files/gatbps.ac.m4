@@ -227,11 +227,11 @@ m4_define([GATBPS_PROG], [
         m4_normalize([$2 $3]),
         m4_normalize([$2]))
 
-      AC_ARG_VAR(
-        [$1],
-        m4_normalize([$2])[ command])
-
     ])
+
+    AC_ARG_VAR(
+      [$1],
+      m4_normalize([$2])[ command])
 
     [
       $1_LATER=`sed 's/@/{@}AT{@}/g' <<EOF2
