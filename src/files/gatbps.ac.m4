@@ -320,6 +320,8 @@ GATBPS_PROG([M4], [m4])
 
 GATBPS_PROG([MKDIR_P], [mkdir -p])
 
+GATBPS_PROG([OPENSSL], [openssl])
+
 GATBPS_PROG([SED], [sed])
 
 GATBPS_PROG([SQLITE3], [sqlite3])
