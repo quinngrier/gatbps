@@ -245,6 +245,12 @@ GATBPS_WGET_url_lines(m4_shift($@))])])[dnl
     [],
     [],
     [[
+	      $(AM@&t@_V_P) && sh $(srcdir)/build-aux/gatbps-echo.sh -q -- \
+	        $(OPENSSL) dgst \
+	          -]m4_bregexp([$1], [[^:]*], [[\&]])[ \
+	          $(GATBPS_NON_FIPS_ALLOW) \
+	          "$$tmp" \
+	      ; \
 	      $][(OPENSSL) dgst \
 	        -]m4_bregexp([$1], [[^:]*], [[\&]])[ \
 	        $][(GATBPS_NON_FIPS_ALLOW) \
@@ -334,10 +340,8 @@ GATBPS_WGET_url_lines(m4_if(,,input_urls))[
 	        ) || continue; \
 	      ;; \
 	    esac; \
-	    ( \
-	      $][(AM@&t@_V_P) && set -x; \]dnl
+	\]dnl
 GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
-	    ); \
 	    download_succeeded=yes; \
 	    break; \
 	  done; \
