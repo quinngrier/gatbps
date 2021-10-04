@@ -258,7 +258,12 @@ GATBPS_WGET_url_lines(m4_shift($@))])])[dnl
 	      | $][(GREP) \
 	        ]m4_bregexp([$1], [:\(.*\)], [[\1]])[ \
 	        >/dev/null \
-	      || continue; \]dnl
+	      || { \
+	        printf "%s\\n" ` \
+	          `"$][@: Hash mismatch. Trying next source."` \
+	        ` >&2; \
+	        continue; \
+	      }; \]dnl
 GATBPS_WGET_hash_checks(m4_shift($@))])])[dnl
 [
 
@@ -347,6 +352,9 @@ GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
 	  done; \
 	  case $][$][download_succeeded in \
 	    no) \
+	      printf "%s\\n" ` \
+	        `"$][@: All sources failed."` \
+	      ` >&2; \
 	      exit 1; \
 	    ;; \
 	  esac; \
