@@ -67,6 +67,8 @@ gatbps_barf() {
   exit 1
 }
 
+|%}include({%|src/sh/include/gatbps_parse_opt.sh|%}){%|
+
 #-----------------------------------------------------------------------
 
 readonly sh_quote_script="

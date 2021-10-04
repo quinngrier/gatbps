@@ -1,2 +1,5 @@
 - build-aux/adock needs to be copied from my dotfiles repository via
   dev-aux/special-files.gmk.
+
+- src/tools/*.m4 isn't picking up makefile prerequisites for all
+  include() calls. Need a more robust *.m4 dependency walker.

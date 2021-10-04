@@ -63,90 +63,67 @@ EOF2
 
 }
 
-until (exit ${1+1}0); do
+case $# in 0)
+  set x
+;; *)
+  set x "$@"
+esac
+
+until shift && (exit ${1+1}0); do
 
   if $parse_options; then
-    case $1 in
 
-      #-----------------------------------------------------------------
-      # Options terminator
-      #-----------------------------------------------------------------
+    #-------------------------------------------------------------------
+    # Options terminator
+    #-------------------------------------------------------------------
 
-      --)
-        parse_options=false
-        shift
-        continue
-      ;;
+    gatbps_parse_opt -- forbidden : "$@"
+    eval "$pop"
+    if $got; then
+      parse_options=false
+      continue
+    fi
 
-      --=*)
-        cat <<EOF2 >&2
-${fr2}gatbps-echo.sh!${fR2} ${fB2}--${fR2} forbids a value
-${fr2}gatbps-echo.sh!${fR2} try ${fB2}sh gatbps-echo.sh --help${fR2} for more information
-EOF2
-        exit 1
-      ;;
+    #-------------------------------------------------------------------
+    # -, --stdin
+    #-------------------------------------------------------------------
 
-      #-----------------------------------------------------------------
-      # -, --stdin
-      #-----------------------------------------------------------------
-
-      - | --stdin)
-        x=`cat && echo x` || exit
-        x=${x%x}
-        x=${x%"$nl"}
-        process_operand "$x"
-        shift
-        continue
-      ;;
-
-      --stdin=*)
-        cat <<EOF2 >&2
-${fr2}gatbps-echo.sh!${fR2} ${fB2}--stdin${fR2} forbids a value
-EOF2
-        exit 1
-      ;;
-
-      #-----------------------------------------------------------------
-      # -q, --quote
-      #-----------------------------------------------------------------
-
-      -q | --quote)
-        quoting_level=`expr $quoting_level + 1` || exit
-        shift
-        continue
-      ;;
-
-      -q*)
-        x=-${1#-q}
-        shift
-        set x -q "$x" "$@"
-        shift
-        continue
-      ;;
-
-      --quote=*)
-        cat <<EOF2 >&2
-${fr2}gatbps-echo.sh!${fR2} ${fB2}--quote${fR2} forbids a value
-EOF2
-        exit 1
-      ;;
-
-      #-----------------------------------------------------------------
-      # unknown option
-      #-----------------------------------------------------------------
-
-      *)
-        gatbps_unknown_opt "$1"
-      ;;
-
-      #-----------------------------------------------------------------
-
+    case ${1?} in -)
+      got=:
+    ;; *)
+      gatbps_parse_opt --stdin forbidden : "$@"
+      eval "$pop"
     esac
+    if $got; then
+      x=`cat && echo x` || exit
+      x=${x%x}
+      x=${x%"$nl"}
+      process_operand "$x"
+      continue
+    fi
+
+    #-------------------------------------------------------------------
+    # -q, --quote
+    #-------------------------------------------------------------------
+
+    gatbps_parse_opt -q --quote forbidden : "$@"
+    eval "$pop"
+    if $got; then
+      quoting_level=`expr $quoting_level + 1` || exit
+      continue
+    fi
+
+    #-------------------------------------------------------------------
+    # Unknown options
+    #-------------------------------------------------------------------
+
+    gatbps_unknown_opt "${1-}"
+
+    #-------------------------------------------------------------------
+
   fi
 
   process_operand "$1"
-
-  shift
 
 done
 
