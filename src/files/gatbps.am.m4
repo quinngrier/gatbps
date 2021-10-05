@@ -536,7 +536,7 @@ GATBPS_GEN_VERSION_CACHE_FILES/dummy $(GATBPS_GEN_VERSION_CACHE_FILES):
 
 pushdef([x], [[
 GATBPS_GEN_VERSION_CACHE_FILES += $1.cache
-GATBPS_MOSTLYCLEANFILES += $1.cache/clean
+GATBPS_MAINTAINERCLEANFILES += $1.cache/clean
 ]])
 
 x([build-aux/gatbps-gen-date.sh])
