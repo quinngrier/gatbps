@@ -330,6 +330,8 @@ GATBPS_PROG([TAR], [tar])
 
 GATBPS_PROG([UNZIP], [unzip])
 
+GATBPS_PROG([VCVARS], [vcvars64])
+
 GATBPS_PROG([WGET], [wget])
 
 GATBPS_PROG([XZ], [xz])
