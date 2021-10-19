@@ -13,7 +13,7 @@ LC_ALL=C
 readonly LC_ALL
 export LC_ALL
 
-# :r !src/sh/subset.sh gatbps_barf gatbps_parse_opt gatbps_unknown_opt
+# :r !subset.sh gatbps_barf gatbps_parse_opt gatbps_unknown_opt
 
 #-----------------------------------------------------------------------
 # gatbps_barf
@@ -348,7 +348,14 @@ find_deps='
 '
 readonly find_deps
 
-d=src/sh/include
+# Set d to be a safe path to the include directory.
+case $0 in /* | ./*)
+  d=$0
+;; *)
+  d=./$0
+esac
+r='\(.*/\)'
+d=`expr "x${d?}" : "x${r?}"`include || exit $?
 readonly d
 
 seen_once=
