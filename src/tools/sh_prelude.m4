@@ -79,23 +79,7 @@ readonly sh_quote_script="
 
 parse_options=:
 
-gatbps_unknown_opt() {
-  case $|%}{%|1 in --*)
-    printf '%s' "$|%}{%|0: Unknown option: " >&2
-    sed '
-      /=/ {
-        s/=.*//
-        q
-      }
-    ' <<EOF2 >&2
-$|%}{%|1
-EOF2
-    exit 1
-  ;; -?*)
-    printf '%s: Unknown option: %.2s\n' "$|%}{%|0" "$|%}{%|1" >&2
-    exit 1
-  esac
-}
+|%}include({%|src/sh/include/gatbps_unknown_opt.sh|%}){%|
 
 #-----------------------------------------------------------------------
 
