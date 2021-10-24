@@ -24,7 +24,7 @@ AC_DEFUN([GATBPS_CHECK_CXXFLAG], [[{
 ]GATBPS_CHECK(
   [$1],
   [$2],
-  [{
+  [[
     gatbps_save_CXXFLAGS="$][{CXXFLAGS}"
     CXXFLAGS="$][{CXXFLAGS} "'$3'
     ]AC_LANG_PUSH([C++])[
@@ -34,7 +34,7 @@ AC_DEFUN([GATBPS_CHECK_CXXFLAG], [[{
       [gatbps_cv_$2='no'])[
     ]AC_LANG_POP([C++])[
     CXXFLAGS="$][{gatbps_save_CXXFLAGS}"
-  :;}],
+  ]],
   [$4])[
 
 :;}]])[]dnl

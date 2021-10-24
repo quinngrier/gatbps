@@ -427,7 +427,7 @@ m4_define([GATBPS_CHECK], [[{ :
     [[gatbps_cv_]gatbps_name],
     [[{ :
 
-      ]m4_if([$4], [], [[$3]], [[
+      ]m4_if([$4], [], [$3], [[
 
         ]GATBPS_PUSH_VAR([IFS], [$gatbps_default_IFS])[
 
@@ -492,7 +492,7 @@ gatbps_EOF
         esac
         case $gatbps_x in 0)
           :
-          $3
+          ]$3[
         ;; 1)
           gatbps_cv_]gatbps_name[=]m4_if([$5], [], [[no]], [[$5]])[
         ;; *)
@@ -575,7 +575,7 @@ m4_define([GATBPS_CHECK_EXPR], [{ :
   GATBPS_CHECK(
     [$1],
     [$2],
-    [gatbps_cv_$2=yes],
+    [[gatbps_cv_$2=yes]],
     [$3])
 
 }])
@@ -590,10 +590,10 @@ AC_DEFUN([GATBPS_CHECK_COMPILE], [{ :
     [$1],
     [$2],
     [
-      ]AC_COMPILE_IFELSE(
+      AC_COMPILE_IFELSE(
         [GATBPS_LANG_PROGRAM([$3], [$4])],
         [gatbps_cv_$2='yes'],
-        [gatbps_cv_$2='no'])[
+        [gatbps_cv_$2='no'])
     ],
     [$5])
 
@@ -615,7 +615,7 @@ m4_define([GATBPS_CHECK_JAR], [[{ :
   ]GATBPS_CHECK(
     [$1 (path)],
     [$3:notbool],
-    [
+    [[
       while :; do
 
         for gatbps_x in \
@@ -640,7 +640,7 @@ m4_define([GATBPS_CHECK_JAR], [[{ :
         break
 
       done
-    ],
+    ]],
     [$5],
     [/usr/local/share/java/]m4_car(
       m4_map_args_w(GATBPS_SQUISH([$2]), [], [], [,])))[
@@ -650,13 +650,13 @@ m4_define([GATBPS_CHECK_JAR], [[{ :
   ]GATBPS_CHECK(
     [$1 (have)],
     [$4:bool],
-    [
+    [[
       if test -f $$3; then
         gatbps_cv_$4=yes
       else
         gatbps_cv_$4=no
       fi
-    ],
+    ]],
     [$5])[
 
 }]])
