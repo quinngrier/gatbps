@@ -106,7 +106,7 @@ gatbps_parse_opt() {
       eval ${gatbps_parse_opt_prefix?}opt='${gatbps_parse_opt_opt?}'
       case ${gatbps_parse_opt_style?} in required)
         case $# in 1)
-          sst_barf \
+          gatbps_barf \
             "Option requires an argument: ${gatbps_parse_opt_opt?}" \
           ;
         esac
@@ -123,7 +123,7 @@ gatbps_parse_opt() {
 
       case ${1?} in "${gatbps_parse_opt_opt?}"=*)
         case ${gatbps_parse_opt_style?} in forbidden)
-          sst_barf \
+          gatbps_barf \
             "Option forbids an argument: ${gatbps_parse_opt_opt?}" \
           ;
         esac
