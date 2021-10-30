@@ -1,0 +1,35 @@
+//
+// The authors of this file have waived all copyright and
+// related or neighboring rights to the extent permitted by
+// law as described by the CC0 1.0 Universal Public Domain
+// Dedication. You should have received a copy of the full
+// dedication along with this file, typically as a file
+// named <CC0-1.0.txt>. If not, it may be available at
+// <https://creativecommons.org/publicdomain/zero/1.0/>.
+//
+
+:sh_LC_ALL_url: https://pubs.opengroup.org/onlinepubs/9699919799.2018edition/basedefs/V1_chap08.html#tag_08_02
+:sh_LC_ALL: link:{sh_LC_ALL_url}[LC_ALL]
+
+:sh_echo_url: https://pubs.opengroup.org/onlinepubs/9699919799.2018edition/utilities/echo.html
+:sh_echo: link:{sh_echo_url}[echo]
+
+:sh_es_url: https://pubs.opengroup.org/onlinepubs/9699919799.2018edition/utilities/V3_chap02.html#tag_18_05_02
+:sh_es: link:{sh_es_url}[$?]
+
+:sh_eval_url: https://pubs.opengroup.org/onlinepubs/9699919799.2018edition/utilities/V3_chap02.html#eval
+:sh_eval: link:{sh_eval_url}[eval]
+
+:sh_exit_url: https://pubs.opengroup.org/onlinepubs/9699919799.2018edition/utilities/V3_chap02.html#exit
+:sh_exit: link:{sh_exit_url}[exit]
+
+:sh_gatbps_csf_url: sh_gatbps_csf.adoc#sh-gatbps-csf
+:sh_gatbps_csf: xref:{sh_gatbps_csf_url}[gatbps_csf]
+
+:sh_pwd_url: https://pubs.opengroup.org/onlinepubs/9699919799.2018edition/utilities/pwd.html
+:sh_pwd: link:{sh_pwd_url}[pwd]
+
+:sh_sed_url: https://pubs.opengroup.org/onlinepubs/9699919799.2018edition/utilities/sed.html
+:sh_sed: link:{sh_sed_url}[sed]
+
+//

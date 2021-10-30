@@ -315,7 +315,7 @@ readonly awk
 adjust_notice='
   {
     if (!r1 && /^# The authors of this file have waived all copyright and$/) {
-      sub(/this file/, "this function");
+      sub(/this file/, "this section");
       r1 = 1;
     }
     print;

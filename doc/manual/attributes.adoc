@@ -17,5 +17,6 @@
 
 include::acl_attributes.adoc[]
 include::aml_attributes.adoc[]
+include::attributes/sh.adoc[]
 
 //----------------------------------------------------------------------
