@@ -15,7 +15,7 @@
 [source,subs="{subs_source}"]
 ----
 gatbps_csf=pass:n[...]
-readonly gatbps_csf
+${sh_gatbps_readonly} gatbps_csf
 ----
 
 The `{sh_gatbps_csf}` variable holds a `{sh_sed}` script that can be

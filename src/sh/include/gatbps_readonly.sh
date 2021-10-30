@@ -1,5 +1,5 @@
 #-----------------------------------------------------------------------
-# gatbps_csf
+# gatbps_readonly
 #-----------------------------------------------------------------------
 #
 # The authors of this file have waived all copyright and
@@ -11,14 +11,7 @@
 # <https://creativecommons.org/publicdomain/zero/1.0/>.
 #
 # For documentation, please see
-# <https://gatbps.quinngrier.com/manual/#sh-gatbps-csf>.
+# <https://gatbps.quinngrier.com/manual/#sh-gatbps-readonly>.
 #
 
-gatbps_csf='
-  s/'\''/&\\&&/g
-  1 s/^/'\''/
-  x
-  1 d
-  $ s/$/'\''/
-'
-${gatbps_readonly?} gatbps_csf
+: ${gatbps_readonly=readonly}

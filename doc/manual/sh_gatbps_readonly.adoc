@@ -8,15 +8,16 @@
 // <https://creativecommons.org/publicdomain/zero/1.0/>.
 //
 
-[#shell-library]
-= Shell library
-:example-number: 0
+[#sh-gatbps-readonly]
+= The `gatbps_readonly` variable
 
-:leveloffset: +1
+.Shell
+[source,subs="{subs_source}"]
+----
+: ${{sh_gatbps_readonly}={sh_readonly}}
+----
 
-include::sh_gatbps_readonly.adoc[]
-include::sh_gatbps_csf.adoc[]
-
-:leveloffset: -1
+The `{sh_gatbps_readonly}` variable can be used to make a variable
+`{sh_readonly}` and can be overridden to become a noop instead.
 
 //

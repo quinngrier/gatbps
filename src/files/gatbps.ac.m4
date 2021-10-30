@@ -9,6 +9,8 @@ header_comment({%|dnl|%}, {%|dnl|%}){%|
 
 m4_ignore([
 
+  TODO: Use gatbps_readonly
+
   Some versions of Autoconf temporarily unset all variables containing
   newline characters when outputting the cache, so we avoid making any
   such variables readonly. Doing so could interfere with Autoconf and

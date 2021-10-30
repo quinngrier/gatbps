@@ -26,8 +26,14 @@
 :sh_gatbps_csf_url: sh_gatbps_csf.adoc#sh-gatbps-csf
 :sh_gatbps_csf: xref:{sh_gatbps_csf_url}[gatbps_csf]
 
+:sh_gatbps_readonly_url: sh_gatbps_readonly.adoc#sh-gatbps-readonly
+:sh_gatbps_readonly: xref:{sh_gatbps_readonly_url}[gatbps_readonly]
+
 :sh_pwd_url: https://pubs.opengroup.org/onlinepubs/9699919799.2018edition/utilities/pwd.html
 :sh_pwd: link:{sh_pwd_url}[pwd]
+
+:sh_readonly_url: https://pubs.opengroup.org/onlinepubs/9699919799.2018edition/utilities/V3_chap02.html#readonly
+:sh_readonly: link:{sh_readonly_url}[readonly]
 
 :sh_sed_url: https://pubs.opengroup.org/onlinepubs/9699919799.2018edition/utilities/sed.html
 :sh_sed: link:{sh_sed_url}[sed]
