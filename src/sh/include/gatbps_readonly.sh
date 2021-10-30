@@ -15,3 +15,4 @@
 #
 
 : ${gatbps_readonly=readonly}
+${gatbps_readonly?} gatbps_readonly

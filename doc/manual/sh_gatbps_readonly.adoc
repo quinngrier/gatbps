@@ -15,6 +15,7 @@
 [source,subs="{subs_source}"]
 ----
 : ${{sh_gatbps_readonly}={sh_readonly}}
+${sh_gatbps_readonly} {sh_gatbps_readonly}
 ----
 
 The `{sh_gatbps_readonly}` variable can be used to make a variable
