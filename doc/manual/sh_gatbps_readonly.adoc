@@ -14,7 +14,7 @@
 .Shell
 [source,subs="{subs_source}"]
 ----
-: ${{sh_gatbps_readonly}={sh_readonly}}
+{sh_colon} ${{sh_gatbps_readonly}={sh_readonly}}
 ${sh_gatbps_readonly} {sh_gatbps_readonly}
 ----
 

@@ -11,6 +11,9 @@
 :sh_LC_ALL_url: https://pubs.opengroup.org/onlinepubs/9699919799.2018edition/basedefs/V1_chap08.html#tag_08_02
 :sh_LC_ALL: link:{sh_LC_ALL_url}[LC_ALL]
 
+:sh_colon_url: https://pubs.opengroup.org/onlinepubs/9699919799.2018edition/utilities/V3_chap02.html#colon
+:sh_colon: link:{sh_colon_url}[:]
+
 :sh_echo_url: https://pubs.opengroup.org/onlinepubs/9699919799.2018edition/utilities/echo.html
 :sh_echo: link:{sh_echo_url}[echo]
 
