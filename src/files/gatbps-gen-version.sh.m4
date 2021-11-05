@@ -30,6 +30,9 @@ readonly num
 # TODO: Support a scheme where we don't do semver and instead just
 #       output the most recent version number.
 
+# TODO: Support a scheme that's just a commit count. This is useful for
+#       at least Gradle's versionCode field.
+
 if test -f "$0.args"; then
   s='
     {
