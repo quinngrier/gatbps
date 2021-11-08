@@ -45,28 +45,27 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_INFO
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_INFO], [[
-  :
-  ]AC_MSG_NOTICE(m4_dquote(GATBPS_SQUISH([$1])))[
-]])
+m4_define([GATBPS_INFO], [{ :
+  AC_MSG_NOTICE(m4_dquote(GATBPS_SQUISH([$1])))
+])
 
 dnl---------------------------------------------------------------------
 dnl GATBPS_BARF
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_BARF], [[{ :
-  ]AC_MSG_ERROR(m4_dquote(GATBPS_SQUISH([$1])), 1)[
-}]])
+m4_define([GATBPS_BARF], [{ :
+  AC_MSG_ERROR(m4_dquote(GATBPS_SQUISH([$1])), 1)
+}])
 
 dnl---------------------------------------------------------------------
 dnl GATBPS_BUG
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_BUG], [[{ :
-  ]GATBPS_BARF([
+m4_define([GATBPS_BUG], [{ :
+  GATBPS_BARF([
     $1 (This is a bug. Please report it to <]AC_PACKAGE_BUGREPORT[>.)
-  ])[
-}]])
+  ])
+}])
 
 dnl---------------------------------------------------------------------
 dnl Timestamp normalization
