@@ -21,10 +21,6 @@ PACKAGE_DATE_MONTH_ZPAD{%||%}dnl
 PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 {%|
 AC_DEFUN([GATBPS_CHECK_EXEEXT_check_macros], [dnl|%}dnl
-check_macros_code(
-  {%|GATBPS_BARF|%},
-  {%|gatbps_fatal|%},
-  {%||%}){%||%}dnl
 {%|]m4_define(
   [gatbps_check_macros],
   m4_ifndef(
