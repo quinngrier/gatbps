@@ -44,7 +44,7 @@ case "$][{plaintextdir+is_set}" in
   ?*)
     case "$][{plaintextdir}" in
       *'/')
-        ]GATBPS_ERROR([
+        ]GATBPS_BARF([
           invalid \$][{plaintextdir} value:
         [--VERBATIM--] "$][{plaintextdir}"], [
           \$][{plaintextdir} must not end with "/"
@@ -55,7 +55,7 @@ case "$][{plaintextdir+is_set}" in
       '${'*)
       ;;
       *)
-        ]GATBPS_ERROR([
+        ]GATBPS_BARF([
           invalid \$][{plaintextdir} value:
         [--VERBATIM--] "$][{plaintextdir}"], [
           \$][{plaintextdir} must begin with "/" or "\${"

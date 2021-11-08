@@ -51,10 +51,10 @@ m4_define([GATBPS_NOTICE], [[
 ]])
 
 dnl---------------------------------------------------------------------
-dnl GATBPS_ERROR
+dnl GATBPS_BARF
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_ERROR], [[{ :
+m4_define([GATBPS_BARF], [[{ :
   ]AC_MSG_ERROR(m4_dquote(GATBPS_SQUISH([$1])), 1)[
 }]])
 
@@ -63,7 +63,7 @@ dnl GATBPS_BUG
 dnl---------------------------------------------------------------------
 
 m4_define([GATBPS_BUG], [[{ :
-  ]GATBPS_ERROR([
+  ]GATBPS_BARF([
     $1 (This is a bug. Please report it to <]AC_PACKAGE_BUGREPORT[>.)
   ])[
 }]])
@@ -707,7 +707,7 @@ EOF
           '0')
           ;;
           *)
-            ]GATBPS_ERROR([
+            ]GATBPS_BARF([
               cat failed
             ])[
           ;;
@@ -718,7 +718,7 @@ EOF
           '0')
           ;;
           *)
-            ]GATBPS_ERROR([
+            ]GATBPS_BARF([
               rm failed
             ])[
           ;;
@@ -737,7 +737,7 @@ EOF
               '0')
               ;;
               *)
-                ]GATBPS_ERROR([
+                ]GATBPS_BARF([
                   cat failed
                 ])[
               ;;
@@ -751,7 +751,7 @@ EOF
               '0')
               ;;
               *)
-                ]GATBPS_ERROR([
+                ]GATBPS_BARF([
                   cat failed
                 ])[
               ;;
@@ -782,7 +782,7 @@ EOF
           '0')
           ;;
           *)
-            ]GATBPS_ERROR([
+            ]GATBPS_BARF([
               cat failed
             ])[
           ;;
@@ -793,7 +793,7 @@ EOF
           '0')
           ;;
           *)
-            ]GATBPS_ERROR([
+            ]GATBPS_BARF([
               rm failed
             ])[
           ;;
@@ -812,7 +812,7 @@ EOF
               '0')
               ;;
               *)
-                ]GATBPS_ERROR([
+                ]GATBPS_BARF([
                   cat failed
                 ])[
               ;;
@@ -826,7 +826,7 @@ EOF
               '0')
               ;;
               *)
-                ]GATBPS_ERROR([
+                ]GATBPS_BARF([
                   cat failed
                 ])[
               ;;
@@ -854,7 +854,7 @@ EOF
 
 case "$][{SOFT_INCLUDE+is_set}" in
   ?*)
-    ]GATBPS_ERROR([
+    ]GATBPS_BARF([
       \$][{SOFT_INCLUDE} is already set
     ])[
   ;;
@@ -867,7 +867,7 @@ SOFT_INCLUDE="$][{gatbps_cv_SOFT_INCLUDE}"
 
 case "$][{GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE_have+is_set}" in
   ?*)
-    ]GATBPS_ERROR([
+    ]GATBPS_BARF([
       \$][{GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE_have} is already set
     ])[
   ;;

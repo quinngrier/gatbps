@@ -44,7 +44,7 @@ case "$][{docbookdir+is_set}" in
   ?*)
     case "$][{docbookdir}" in
       *'/')
-        ]GATBPS_ERROR([
+        ]GATBPS_BARF([
           invalid \$][{docbookdir} value:
         [--VERBATIM--] "$][{docbookdir}"], [
           \$][{docbookdir} must not end with "/"
@@ -55,7 +55,7 @@ case "$][{docbookdir+is_set}" in
       '${'*)
       ;;
       *)
-        ]GATBPS_ERROR([
+        ]GATBPS_BARF([
           invalid \$][{docbookdir} value:
         [--VERBATIM--] "$][{docbookdir}"], [
           \$][{docbookdir} must begin with "/" or "\${"

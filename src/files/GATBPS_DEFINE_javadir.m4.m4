@@ -44,7 +44,7 @@ case "$][{javadir+is_set}" in
   ?*)
     case "$][{javadir}" in
       *'/')
-        ]GATBPS_ERROR([
+        ]GATBPS_BARF([
           invalid \$][{javadir} value:
         [--VERBATIM--] "$][{javadir}"], [
           \$][{javadir} must not end with "/"
@@ -55,7 +55,7 @@ case "$][{javadir+is_set}" in
       '${'*)
       ;;
       *)
-        ]GATBPS_ERROR([
+        ]GATBPS_BARF([
           invalid \$][{javadir} value:
         [--VERBATIM--] "$][{javadir}"], [
           \$][{javadir} must begin with "/" or "\${"

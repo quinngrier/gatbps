@@ -22,7 +22,7 @@ PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 {%|
 AC_DEFUN([GATBPS_DEFINE_VERSION_check_macros], [dnl|%}dnl
 check_macros_code(
-  {%|GATBPS_ERROR|%},
+  {%|GATBPS_BARF|%},
   {%|gatbps_fatal|%},
   {%||%}){%||%}dnl
 {%|]m4_define(
@@ -310,7 +310,7 @@ m4_define(
   ])[
 
 if $][{$2_LIBTOOL_C+:} false; then
-  ]GATBPS_ERROR([
+  ]GATBPS_BARF([
     \$][{$2_LIBTOOL_C} is already set
   ])[
 fi
@@ -493,7 +493,7 @@ readonly $2_LIBTOOL_C
 
 case "$][{$2_DEB+is_set}" in
   ?*)
-    ]GATBPS_ERROR([
+    ]GATBPS_BARF([
       \$][{$2_DEB} is already set
     ])[
   ;;
@@ -501,7 +501,7 @@ esac;
 
 case "$][{$2_DEB_TEXI+is_set}" in
   ?*)
-    ]GATBPS_ERROR([
+    ]GATBPS_BARF([
       \$][{$2_DEB_TEXI} is already set
     ])[
   ;;
@@ -509,7 +509,7 @@ esac;
 
 case "$][{$2_DOCKER+is_set}" in
   ?*)
-    ]GATBPS_ERROR([
+    ]GATBPS_BARF([
       \$][{$2_DOCKER} is already set
     ])[
   ;;
@@ -517,7 +517,7 @@ esac;
 
 case "$][{$2_DOCKER_TEXI+is_set}" in
   ?*)
-    ]GATBPS_ERROR([
+    ]GATBPS_BARF([
       \$][{$2_DOCKER_TEXI} is already set
     ])[
   ;;
@@ -525,7 +525,7 @@ esac;
 
 case "$][{$2_GIT+is_set}" in
   ?*)
-    ]GATBPS_ERROR([
+    ]GATBPS_BARF([
       \$][{$2_GIT} is already set
     ])[
   ;;
@@ -533,7 +533,7 @@ esac;
 
 case "$][{$2_GIT_TEXI+is_set}" in
   ?*)
-    ]GATBPS_ERROR([
+    ]GATBPS_BARF([
       \$][{$2_GIT_TEXI} is already set
     ])[
   ;;
@@ -541,7 +541,7 @@ esac;
 
 case "$][{$2_LIBTOOL_A+is_set}" in
   ?*)
-    ]GATBPS_ERROR([
+    ]GATBPS_BARF([
       \$][{$2_LIBTOOL_A} is already set
     ])[
   ;;
@@ -549,7 +549,7 @@ esac;
 
 case "$][{$2_LIBTOOL_R+is_set}" in
   ?*)
-    ]GATBPS_ERROR([
+    ]GATBPS_BARF([
       \$][{$2_LIBTOOL_R} is already set
     ])[
   ;;
@@ -557,7 +557,7 @@ esac;
 
 case "$][{$2_MAJOR+is_set}" in
   ?*)
-    ]GATBPS_ERROR([
+    ]GATBPS_BARF([
       \$][{$2_MAJOR} is already set
     ])[
   ;;
@@ -565,7 +565,7 @@ esac;
 
 case "$][{$2_MINOR+is_set}" in
   ?*)
-    ]GATBPS_ERROR([
+    ]GATBPS_BARF([
       \$][{$2_MINOR} is already set
     ])[
   ;;
@@ -573,7 +573,7 @@ esac;
 
 case "$][{$2_PATCH+is_set}" in
   ?*)
-    ]GATBPS_ERROR([
+    ]GATBPS_BARF([
       \$][{$2_PATCH} is already set
     ])[
   ;;
@@ -581,7 +581,7 @@ esac;
 
 case "$][{$2_RPM_R+is_set}" in
   ?*)
-    ]GATBPS_ERROR([
+    ]GATBPS_BARF([
       \$][{$2_RPM_R} is already set
     ])[
   ;;
@@ -589,7 +589,7 @@ esac;
 
 case "$][{$2_RPM_R_TEXI+is_set}" in
   ?*)
-    ]GATBPS_ERROR([
+    ]GATBPS_BARF([
       \$][{$2_RPM_R_TEXI} is already set
     ])[
   ;;
@@ -597,7 +597,7 @@ esac;
 
 case "$][{$2_RPM_V+is_set}" in
   ?*)
-    ]GATBPS_ERROR([
+    ]GATBPS_BARF([
       \$][{$2_RPM_V} is already set
     ])[
   ;;
@@ -605,7 +605,7 @@ esac;
 
 case "$][{$2_RPM_VR+is_set}" in
   ?*)
-    ]GATBPS_ERROR([
+    ]GATBPS_BARF([
       \$][{$2_RPM_VR} is already set
     ])[
   ;;
@@ -613,7 +613,7 @@ esac;
 
 case "$][{$2_RPM_VR_TEXI+is_set}" in
   ?*)
-    ]GATBPS_ERROR([
+    ]GATBPS_BARF([
       \$][{$2_RPM_VR_TEXI} is already set
     ])[
   ;;
@@ -621,7 +621,7 @@ esac;
 
 case "$][{$2_RPM_V_TEXI+is_set}" in
   ?*)
-    ]GATBPS_ERROR([
+    ]GATBPS_BARF([
       \$][{$2_RPM_V_TEXI} is already set
     ])[
   ;;
@@ -629,7 +629,7 @@ esac;
 
 case "$][{$2_TEXI+is_set}" in
   ?*)
-    ]GATBPS_ERROR([
+    ]GATBPS_BARF([
       \$][{$2_TEXI} is already set
     ])[
   ;;

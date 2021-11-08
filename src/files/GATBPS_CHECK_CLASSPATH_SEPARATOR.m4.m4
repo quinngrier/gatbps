@@ -52,7 +52,7 @@ m4_if(
 
 case "$][{CLASSPATH_SEPARATOR+is_set}" in
   ?*)
-    ]GATBPS_ERROR([
+    ]GATBPS_BARF([
       \$][{CLASSPATH_SEPARATOR} is already set
     ])[
   ;;
@@ -62,7 +62,7 @@ CLASSPATH_SEPARATOR="$][{gatbps_cv_CLASSPATH_SEPARATOR}"
 
 case "$][{CLASSPATH_SEPARATOR_LATER+is_set}" in
   ?*)
-    ]GATBPS_ERROR([
+    ]GATBPS_BARF([
       \$][{CLASSPATH_SEPARATOR_LATER} is already set
     ])[
   ;;
@@ -79,7 +79,7 @@ case "$][{?}" in
   '0')
   ;;
   *)
-    ]GATBPS_ERROR([
+    ]GATBPS_BARF([
       sed failed
     ])[
   ;;
@@ -87,7 +87,7 @@ esac
 'readonly' 'CLASSPATH_SEPARATOR_LATER'
 
 case $][{CLASSPATH_SEPARATOR_RAW+is_set} in ?*)
-  ]GATBPS_ERROR([
+  ]GATBPS_BARF([
     \$][CLASSPATH_SEPARATOR_RAW is already set
   ])[
 ;; esac
@@ -97,14 +97,14 @@ $][CLASSPATH_SEPARATOR
 EOF2
 `
 case $][? in 0) ;; *)
-  ]GATBPS_ERROR([
+  ]GATBPS_BARF([
     sed failed
   ])[
 ;; esac
 readonly CLASSPATH_SEPARATOR_RAW
 
 case $][{CLASSPATH_SEPARATOR_RAW_LATER+is_set} in ?*)
-  ]GATBPS_ERROR([
+  ]GATBPS_BARF([
     \$][CLASSPATH_SEPARATOR_RAW_LATER is already set
   ])[
 ;; esac
@@ -114,7 +114,7 @@ $][CLASSPATH_SEPARATOR_RAW
 EOF2
 `
 case $][? in 0) ;; *)
-  ]GATBPS_ERROR([
+  ]GATBPS_BARF([
     sed failed
   ])[
 ;; esac

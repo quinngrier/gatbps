@@ -44,7 +44,7 @@ case "$][{xmldir+is_set}" in
   ?*)
     case "$][{xmldir}" in
       *'/')
-        ]GATBPS_ERROR([
+        ]GATBPS_BARF([
           invalid \$][{xmldir} value:
         [--VERBATIM--] "$][{xmldir}"], [
           \$][{xmldir} must not end with "/"
@@ -55,7 +55,7 @@ case "$][{xmldir+is_set}" in
       '${'*)
       ;;
       *)
-        ]GATBPS_ERROR([
+        ]GATBPS_BARF([
           invalid \$][{xmldir} value:
         [--VERBATIM--] "$][{xmldir}"], [
           \$][{xmldir} must begin with "/" or "\${"

@@ -8,15 +8,15 @@
 // <https://creativecommons.org/publicdomain/zero/1.0/>.
 //
 
-[[acl_GATBPS_ERROR]]
-= The `GATBPS_ERROR` macro
+[#acl-GATBPS-BARF]]
+= The `GATBPS_BARF` macro
 
 .Autoconf
 [source,subs="{subs_source}"]
 ----
 include::acl_include_gatbps_ac_fragment.adoc[]
 
-{acl_GATBPS_ERROR}(<message>)
+{acl_GATBPS_BARF}(<message>)
 ----
 
 //
