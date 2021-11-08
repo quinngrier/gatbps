@@ -42,10 +42,10 @@ m4_bpatsubst([[[[$1]]]], [[
 	 ]+], [ ]), [^\(..\) ], [\1]), [ \(.\)$], [\1])])
 
 dnl---------------------------------------------------------------------
-dnl GATBPS_NOTICE
+dnl GATBPS_INFO
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_NOTICE], [[
+m4_define([GATBPS_INFO], [[
   :
   ]AC_MSG_NOTICE(m4_dquote(GATBPS_SQUISH([$1])))[
 ]])
@@ -93,15 +93,15 @@ dnl---------------------------------------------------------------------
 #
 
 if ${GATBPS_TIMESTAMPS_NORMALIZED:+:} false; then
-  ]GATBPS_NOTICE([
+  ]GATBPS_INFO([
     Not normalizing timestamps (non-root ./configure).
   ])[
 elif test -s config.status; then
-  ]GATBPS_NOTICE([
+  ]GATBPS_INFO([
     Not normalizing timestamps (nonempty config.status).
   ])[
 else
-  ]GATBPS_NOTICE([
+  ]GATBPS_INFO([
     Normalizing timestamps.
   ])[
   t='touch -t '`date '+%Y%m%d%H%M.%S'`' {}' || exit $?
