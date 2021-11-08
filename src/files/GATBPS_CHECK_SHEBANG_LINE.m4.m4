@@ -52,7 +52,7 @@ m4_if(
 
 case "$][{SHEBANG_LINE+is_set}" in
   ?*)
-    ]GATBPS_MSG_ERROR([
+    ]GATBPS_ERROR([
       \$][{SHEBANG_LINE} is already set
     ], [
       GATBPS_CHECK_SHEBANG_LINE reserves this variable for all use
@@ -71,7 +71,7 @@ case "$][{cross_compiling}" in
             SHEBANG_LINE='# shebang line disabled: '
           ;;
           *)
-            ]GATBPS_MSG_ERROR([
+            ]GATBPS_ERROR([
               invalid \$][{HAVE_SHEBANG_LINE} value:
             [--VERBATIM--] "$][{HAVE_SHEBANG_LINE}"], [
               this probably means that there is a bug in GATBPS
@@ -83,7 +83,7 @@ case "$][{cross_compiling}" in
         SHEBANG_LINE='# shebang line disabled: '
       ;;
       *)
-        ]GATBPS_MSG_ERROR([
+        ]GATBPS_ERROR([
           invalid \$][{enable_SHEBANG_LINES} value:
         [--VERBATIM--] "$][{enable_SHEBANG_LINES}"], [
           this probably means that there is a bug in GATBPS
@@ -100,7 +100,7 @@ case "$][{cross_compiling}" in
         SHEBANG_LINE='# shebang line disabled: '
       ;;
       *)
-        ]GATBPS_MSG_ERROR([
+        ]GATBPS_ERROR([
           invalid \$][{enable_SHEBANG_LINES} value:
         [--VERBATIM--] "$][{enable_SHEBANG_LINES}"], [
           this probably means that there is a bug in GATBPS

@@ -22,7 +22,7 @@ PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 {%|
 AC_DEFUN([GATBPS_DEFINE_DATE_check_macros], [dnl|%}dnl
 check_macros_code(
-  {%|GATBPS_MSG_ERROR|%},
+  {%|GATBPS_ERROR|%},
   {%|gatbps_fatal|%},
   {%||%}){%||%}dnl
 {%|]m4_define(
@@ -336,7 +336,7 @@ m4_define(
 
 case "$][{$2+is_set}" in
   ?*)
-    ]GATBPS_MSG_ERROR([
+    ]GATBPS_ERROR([
       \$][{$2} is already set
     ])[
   ;;
@@ -344,7 +344,7 @@ esac
 
 case "$][{$2_YEAR+is_set}" in
   ?*)
-    ]GATBPS_MSG_ERROR([
+    ]GATBPS_ERROR([
       \$][{$2_YEAR} is already set
     ])[
   ;;
@@ -352,7 +352,7 @@ esac
 
 case "$][{$2_MONTH+is_set}" in
   ?*)
-    ]GATBPS_MSG_ERROR([
+    ]GATBPS_ERROR([
       \$][{$2_MONTH} is already set
     ])[
   ;;
@@ -360,7 +360,7 @@ esac
 
 case "$][{$2_DAY+is_set}" in
   ?*)
-    ]GATBPS_MSG_ERROR([
+    ]GATBPS_ERROR([
       \$][{$2_DAY} is already set
     ])[
   ;;
@@ -368,7 +368,7 @@ esac
 
 case "$][{$2_IS_LEAP_YEAR+is_set}" in
   ?*)
-    ]GATBPS_MSG_ERROR([
+    ]GATBPS_ERROR([
       \$][{$2_IS_LEAP_YEAR} is already set
     ])[
   ;;
@@ -376,7 +376,7 @@ esac
 
 case "$][{$2_TROFF+is_set}" in
   ?*)
-    ]GATBPS_MSG_ERROR([
+    ]GATBPS_ERROR([
       \$][{$2_TROFF} is already set
     ])[
   ;;
@@ -384,7 +384,7 @@ esac
 
 case "$][{$2_MONTH_NAME+is_set}" in
   ?*)
-    ]GATBPS_MSG_ERROR([
+    ]GATBPS_ERROR([
       \$][{$2_MONTH_NAME} is already set
     ])[
   ;;
@@ -392,7 +392,7 @@ esac
 
 case "$][{$2_MONTH_ABBR+is_set}" in
   ?*)
-    ]GATBPS_MSG_ERROR([
+    ]GATBPS_ERROR([
       \$][{$2_MONTH_ABBR} is already set
     ])[
   ;;
@@ -400,7 +400,7 @@ esac
 
 case "$][{$2_YEAR_ZPAD+is_set}" in
   ?*)
-    ]GATBPS_MSG_ERROR([
+    ]GATBPS_ERROR([
       \$][{$2_YEAR_ZPAD} is already set
     ])[
   ;;
@@ -408,7 +408,7 @@ esac
 
 case "$][{$2_MONTH_ZPAD+is_set}" in
   ?*)
-    ]GATBPS_MSG_ERROR([
+    ]GATBPS_ERROR([
       \$][{$2_MONTH_ZPAD} is already set
     ])[
   ;;
@@ -416,7 +416,7 @@ esac
 
 case "$][{$2_DAY_ZPAD+is_set}" in
   ?*)
-    ]GATBPS_MSG_ERROR([
+    ]GATBPS_ERROR([
       \$][{$2_DAY_ZPAD} is already set
     ])[
   ;;

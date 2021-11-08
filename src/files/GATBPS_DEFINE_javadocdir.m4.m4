@@ -44,7 +44,7 @@ case "$][{javadocdir+is_set}" in
   ?*)
     case "$][{javadocdir}" in
       *'/')
-        ]GATBPS_MSG_ERROR([
+        ]GATBPS_ERROR([
           invalid \$][{javadocdir} value:
         [--VERBATIM--] "$][{javadocdir}"], [
           \$][{javadocdir} must not end with "/"
@@ -55,7 +55,7 @@ case "$][{javadocdir+is_set}" in
       '${'*)
       ;;
       *)
-        ]GATBPS_MSG_ERROR([
+        ]GATBPS_ERROR([
           invalid \$][{javadocdir} value:
         [--VERBATIM--] "$][{javadocdir}"], [
           \$][{javadocdir} must begin with "/" or "\${"

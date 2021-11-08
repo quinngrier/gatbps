@@ -624,7 +624,7 @@ EOF1
           'set' "${prefix}"'GATBPS_MSG_WARN.m4' "${@}"
           'set' "${prefix}"'GATBPS_MSG_NOTICE.m4' "${@}"
           'set' "${prefix}"'GATBPS_MSG_FAILURE.m4' "${@}"
-          'set' "${prefix}"'GATBPS_MSG_ERROR.m4' "${@}"
+          'set' "${prefix}"'GATBPS_ERROR.m4' "${@}"
           'set' "${prefix}"'GATBPS_GIT_CLONE_SUBST.m4' "${@}"
           'set' "${prefix}"'GATBPS_GIT_CLONE_RULES.am' "${@}"
           'set' "${prefix}"'GATBPS_GIT_CLONE.m4' "${@}"
@@ -1176,7 +1176,7 @@ EOF1
 
 |%}help_code({%|GATBPS_GIT_CLONE_SUBST.m4|%}){%|
 
-|%}help_code({%|GATBPS_MSG_ERROR.m4|%}){%|
+|%}help_code({%|GATBPS_ERROR.m4|%}){%|
 
 |%}help_code({%|GATBPS_MSG_FAILURE.m4|%}){%|
 
@@ -2846,7 +2846,7 @@ EOF1
 
 |%}generation_code({%|GATBPS_GIT_CLONE_SUBST.m4|%}){%|
 
-|%}generation_code({%|GATBPS_MSG_ERROR.m4|%}){%|
+|%}generation_code({%|GATBPS_ERROR.m4|%}){%|
 
 |%}generation_code({%|GATBPS_MSG_FAILURE.m4|%}){%|
 
@@ -3765,7 +3765,7 @@ include(`src/recursion/GATBPS_GIT_CLONE_SUBST.m4.rc.m4'){%||%}dnl
 
 |%}dnl
 changequote({%|`|%}, {%|'|%})`'dnl
-include(`src/recursion/GATBPS_MSG_ERROR.m4.rc.m4'){%||%}dnl
+include(`src/recursion/GATBPS_ERROR.m4.rc.m4'){%||%}dnl
 {%|
 
 |%}dnl

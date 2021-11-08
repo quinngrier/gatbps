@@ -22,7 +22,7 @@ PACKAGE_DATE_DAY_ZPAD{%||%}dnl
 {%|
 AC_DEFUN([GATBPS_CHECK_EXEEXT_check_macros], [dnl|%}dnl
 check_macros_code(
-  {%|GATBPS_MSG_ERROR|%},
+  {%|GATBPS_ERROR|%},
   {%|gatbps_fatal|%},
   {%||%}){%||%}dnl
 {%|]m4_define(
@@ -69,7 +69,7 @@ m4_if(
 
 case "$][{EXEEXT_LATER+is_set}" in
   ?*)
-    ]GATBPS_MSG_ERROR([
+    ]GATBPS_ERROR([
       \$][{EXEEXT_LATER} is already set
     ])[
   ;;
@@ -86,7 +86,7 @@ case "$][{?}" in
   '0')
   ;;
   *)
-    ]GATBPS_MSG_ERROR([
+    ]GATBPS_ERROR([
       sed failed
     ])[
   ;;

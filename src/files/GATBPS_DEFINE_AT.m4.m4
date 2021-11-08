@@ -42,7 +42,7 @@ m4_if(
 
 case "$][{AT+is_set}" in
   ?*)
-    ]GATBPS_MSG_ERROR([
+    ]GATBPS_ERROR([
       \$][{AT} is already set
     ])[
   ;;
@@ -52,7 +52,7 @@ AT='@'
 
 case "$][{AT_LATER+is_set}" in
   ?*)
-    ]GATBPS_MSG_ERROR([
+    ]GATBPS_ERROR([
       \$][{AT_LATER} is already set
     ])[
   ;;

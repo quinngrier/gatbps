@@ -7,7 +7,6 @@ include({%|src/tools/recursion_code.m4|%}){%||%}dnl
 recursion_code(
   {%|GATBPS_DEFINE_xmldir.m4|%},
   {%|gatbps_fatal.m4|%},
-  {%|GATBPS_MSG_ERROR.m4|%},
   {%|CC0-1.0.txt|%},
   {%||%}){%||%}dnl
 dnl

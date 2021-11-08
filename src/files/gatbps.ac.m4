@@ -707,7 +707,7 @@ EOF
           '0')
           ;;
           *)
-            ]GATBPS_MSG_ERROR([
+            ]GATBPS_ERROR([
               cat failed
             ])[
           ;;
@@ -718,7 +718,7 @@ EOF
           '0')
           ;;
           *)
-            ]GATBPS_MSG_ERROR([
+            ]GATBPS_ERROR([
               rm failed
             ])[
           ;;
@@ -737,7 +737,7 @@ EOF
               '0')
               ;;
               *)
-                ]GATBPS_MSG_ERROR([
+                ]GATBPS_ERROR([
                   cat failed
                 ])[
               ;;
@@ -751,7 +751,7 @@ EOF
               '0')
               ;;
               *)
-                ]GATBPS_MSG_ERROR([
+                ]GATBPS_ERROR([
                   cat failed
                 ])[
               ;;
@@ -782,7 +782,7 @@ EOF
           '0')
           ;;
           *)
-            ]GATBPS_MSG_ERROR([
+            ]GATBPS_ERROR([
               cat failed
             ])[
           ;;
@@ -793,7 +793,7 @@ EOF
           '0')
           ;;
           *)
-            ]GATBPS_MSG_ERROR([
+            ]GATBPS_ERROR([
               rm failed
             ])[
           ;;
@@ -812,7 +812,7 @@ EOF
               '0')
               ;;
               *)
-                ]GATBPS_MSG_ERROR([
+                ]GATBPS_ERROR([
                   cat failed
                 ])[
               ;;
@@ -826,7 +826,7 @@ EOF
               '0')
               ;;
               *)
-                ]GATBPS_MSG_ERROR([
+                ]GATBPS_ERROR([
                   cat failed
                 ])[
               ;;
@@ -854,7 +854,7 @@ EOF
 
 case "$][{SOFT_INCLUDE+is_set}" in
   ?*)
-    ]GATBPS_MSG_ERROR([
+    ]GATBPS_ERROR([
       \$][{SOFT_INCLUDE} is already set
     ])[
   ;;
@@ -867,7 +867,7 @@ SOFT_INCLUDE="$][{gatbps_cv_SOFT_INCLUDE}"
 
 case "$][{GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE_have+is_set}" in
   ?*)
-    ]GATBPS_MSG_ERROR([
+    ]GATBPS_ERROR([
       \$][{GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE_have} is already set
     ])[
   ;;
