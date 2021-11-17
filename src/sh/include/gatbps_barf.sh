@@ -15,19 +15,30 @@ gatbps_barf() {
 
   case $# in 0)
 
-    printf '%s\n' "$0: Error: Unknown error." >&2
+    printf '%s\n' "$0: Error: Unknown error." >&2 || :
 
   ;; 1)
 
-    printf '%s\n' "$0: Error: ${1?}" >&2
+    printf '%s\n' "$0: Error: ${1?}" >&2 || :
 
   ;; *)
 
-    printf '%s' "$0: Error: ${1?}" >&2
+    printf '%s' "$0: Error: ${1?}" >&2 || :
     shift
-    printf ' %s' "$@" >&2
-    echo >&2
+    printf ' %s' "$@" >&2 || :
+    echo >&2 || :
 
+  esac
+
+  case ${GATBPS_BARF_STATUS+x} in ?*)
+    case ${GATBPS_BARF_STATUS?} in [0-9] | [1-9][0-9] | 1[0-9][0-9] | 2[0-4][0-9] | 25[0-5])
+      exit ${GATBPS_BARF_STATUS?}
+    ;; *)
+      gatbps_warn "gatbps_barf():" \
+        "Ignoring invalid GATBPS_BARF_STATUS value:" \
+        "${GATBPS_BARF_STATUS?}" \
+      ;
+    esac
   esac
 
   exit 1
