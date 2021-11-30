@@ -316,7 +316,12 @@ EOF2
 
 dnl---------------------------------------------------------------------
 
-GATBPS_PROG([ASCIIDOCTOR], [asciidoctor])
+GATBPS_PROG(
+  [ASCIIDOCTOR],
+  [asciidoctor],
+  GATBPS_SQUISH([
+    adock
+  ]))
 
 GATBPS_PROG([ASCIIDOCTOR_PDF], [asciidoctor-pdf])
 
