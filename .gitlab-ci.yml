@@ -9,33 +9,67 @@
 #
 
 #-----------------------------------------------------------------------
-
-stages: [stage-1,  stage-2,  stage-3,  stage-4,  stage-5,
-         stage-6,  stage-7,  stage-8,  stage-9,  stage-10,
-         stage-11, stage-12, stage-13, stage-14, stage-15,
-         stage-16, stage-17, stage-18, stage-19, stage-20]
-
-.no-script:
-  image: alpine
-  script: [':']
-  variables: {GIT_STRATEGY: none}
-
+# Stages
 #-----------------------------------------------------------------------
 
-build-pages:
-  artifacts: {paths: [public]}
+stages:
+  - stage_1
+  - stage_2
+  - stage_3
+  - stage_4
+  - stage_5
+  - stage_6
+  - stage_7
+  - stage_8
+  - stage_9
+  - stage_10
+  - stage_11
+  - stage_12
+  - stage_13
+  - stage_14
+  - stage_15
+  - stage_16
+  - stage_17
+  - stage_18
+  - stage_19
+  - stage_20
+
+#-----------------------------------------------------------------------
+# The .no_script job template
+#-----------------------------------------------------------------------
+
+.no_script:
+  image: bash
+  script:
+    - ':'
+  variables:
+    GIT_STRATEGY: none
+
+#-----------------------------------------------------------------------
+# GitLab Pages
+#-----------------------------------------------------------------------
+
+build_pages:
+  artifacts:
+    paths:
+      - public
   image: docker
-  services: ['docker:dind']
   script:
     - build-aux/adock asciidoctor doc/manual/index.adoc
     - cp -R doc/manual public
     - cp -R doc/manual public/manual
-  stage: stage-1
+  services:
+    - docker:dind
+  stage: stage_1
 
 pages:
-  extends: [build-pages, .no-script]
-  needs: [build-pages]
-  rules: [if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH]
-  stage: stage-2
+  extends:
+    - .no_script
+    - build_pages
+  needs:
+    - build_pages
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  stage: stage_2
 
 #-----------------------------------------------------------------------
