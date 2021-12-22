@@ -55,9 +55,10 @@ build_pages:
       - public
   image: docker
   script:
-    - build-aux/adock asciidoctor doc/manual/index.adoc
-    - cp -R doc/manual public
-    - cp -R doc/manual public/manual
+    - rm -f -r public
+    - cp -L -R doc/pages public
+    - build-aux/adock doc/manual/index.adoc
+    - cp -L -R doc/manual public/manual
   services:
     - docker:dind
   stage: stage_1
