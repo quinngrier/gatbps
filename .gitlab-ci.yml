@@ -71,8 +71,8 @@ build_pages:
 
 pages:
   extends:
-    - .no_script
     - build_pages
+    - .no_script
   needs:
     - build_pages
   rules:
