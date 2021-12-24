@@ -505,7 +505,7 @@ GATBPS_CHECK_EXPR([$1], [$2], gatbps_x)
 
 [
 
-case $$2_is_cached in
+case $$2_was_cached in
   yes)
     printf 'note: --with-$3=%s was given but overridden by the cache\n' "$]gatbps_x[" >&]AS_MESSAGE_LOG_FD[
   ;;
@@ -592,7 +592,7 @@ esac
   [$2:notbool],
   [gatbps_cv_$2=$][{]gatbps_x[?}])[
 
-case $$2_is_cached in
+case $$2_was_cached in
   yes)
     printf 'note: --with-$3=%s was given but overridden by the cache\n' "$]gatbps_x[" >&]AS_MESSAGE_LOG_FD[
   ;;
@@ -650,11 +650,11 @@ m4_define([GATBPS_CHECK], [[{ :
 
   unset ]gatbps_name[
   unset ]gatbps_name[_sh
-  unset ]gatbps_name[_is_cached
-  unset ]gatbps_name[_is_cached_sh
+  unset ]gatbps_name[_was_cached
+  unset ]gatbps_name[_was_cached_sh
 
-  ]gatbps_name[_is_cached=1
-  ]gatbps_name[_is_cached_sh=:
+  ]gatbps_name[_was_cached=1
+  ]gatbps_name[_was_cached_sh=:
 
   ]AC_CACHE_CHECK(
     [[$1]],
@@ -737,8 +737,8 @@ gatbps_EOF
 
       ]])[
 
-      ]gatbps_name[_is_cached=0
-      ]gatbps_name[_is_cached_sh=false
+      ]gatbps_name[_was_cached=0
+      ]gatbps_name[_was_cached_sh=false
 
     }]])[
 
@@ -792,8 +792,8 @@ gatbps_EOF
 
   readonly ]gatbps_name[
   readonly ]gatbps_name[_sh
-  readonly ]gatbps_name[_is_cached
-  readonly ]gatbps_name[_is_cached_sh
+  readonly ]gatbps_name[_was_cached
+  readonly ]gatbps_name[_was_cached_sh
 
   ]m4_popdef([gatbps_notmake])[
   ]m4_popdef([gatbps_notbool])[

@@ -29,12 +29,12 @@ as follows:
 completes.
 
 * {empty}
-`<name>_is_cached` is set to `1` or `0` to indicate whether `<name>` is
-cached.
+`<name>_was_cached` is set to `1` or `0` to indicate whether `<name>`
+was cached.
 
 * {empty}
-`<name>_is_cached_sh` is set to `:` or `false` corresponding to
-`<name>_is_cached`.
+`<name>_was_cached_sh` is set to `:` or `false` corresponding to
+`<name>_was_cached`.
 
 * `{acl_AC_SUBST}` is called for `<name>`.
 
