@@ -583,12 +583,10 @@ GATBPS_ARG_WITH_ENUM_foo1($5)[
   ;;
 esac
 
-]GATBPS_CACHE_CHECK(
+]GATBPS_CHECK(
   [$1],
-  [$2],
-  [[{
-    gatbps_cv_$2="$][{]gatbps_x[}"
-  :;}]])[
+  [$2:notbool],
+  [gatbps_cv_$2=$][{]gatbps_x[?}])[
 
 case $$2_is_cached in
   yes)
