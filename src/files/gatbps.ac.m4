@@ -459,6 +459,71 @@ m4_define([GATBPS_ARG_WITH], [[{
 :;}]])
 
 dnl---------------------------------------------------------------------
+dnl GATBPS_ARG_WITH_BOOL
+dnl---------------------------------------------------------------------
+
+m4_define([GATBPS_ARG_WITH_BOOL], [[{
+
+]m4_pushdef(
+  [gatbps_x],
+  [with_]m4_bpatsubst([$3], [[^0-9A-Z_a-z]], [_]))[]dnl
+[
+
+]GATBPS_ARG_WITH(
+  [$3],
+  [
+]AS_HELP_STRING(
+  [--with-$3 omitted],
+  [same as --with-$3=$4])[
+]AS_HELP_STRING(
+  [--with-$3],
+  [same as --with-$3=yes])[
+]AS_HELP_STRING(
+  [--without-$3],
+  [same as --with-$3=no])[
+]AS_HELP_STRING(
+  [--with-$3=yes],
+  [$5])[
+]AS_HELP_STRING(
+  [--with-$3=no],
+  [$6]),
+  [$4])
+
+case "$[]{gatbps_x}" in
+  'yes'|'no')
+  ;;
+  *)
+    AC_MSG_ERROR([invalid --with-$3 value: $[]{]gatbps_x[}], [1])
+  ;;
+esac
+
+GATBPS_CHECK_EXPR([$1], [$2], gatbps_x)
+
+[
+
+case $$2_was_cached in
+  yes)
+    printf 'note: --with-$3=%s was given but overridden by the cache\n' "$]gatbps_x[" >&]AS_MESSAGE_LOG_FD[
+  ;;
+  no)
+    case $]gatbps_x[_was_given in
+      yes)
+        printf 'note: --with-$3=%s was given\n' "$]gatbps_x[" >&]AS_MESSAGE_LOG_FD[
+      ;;
+      no)
+        printf 'note: --with-$3=%s was implied\n' "$]gatbps_x[" >&]AS_MESSAGE_LOG_FD[
+      ;;
+    esac
+  ;;
+esac
+
+]
+
+m4_popdef([gatbps_x])
+
+:;}])
+
+dnl---------------------------------------------------------------------
 dnl GATBPS_CHECK
 dnl---------------------------------------------------------------------
 
