@@ -435,6 +435,10 @@ m4_define([GATBPS_KEEP_VAR], [[
 dnl---------------------------------------------------------------------
 dnl GATBPS_ARG_WITH
 dnl---------------------------------------------------------------------
+dnl
+dnl TODO: This probably shouldn't be user-facing. The user should really
+dnl       only be using GATBPS_ARG_WITH_*.
+dnl
 
 m4_define([GATBPS_ARG_WITH], [[{
 
