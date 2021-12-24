@@ -524,6 +524,100 @@ m4_popdef([gatbps_x])
 :;}])
 
 dnl---------------------------------------------------------------------
+dnl GATBPS_ARG_WITH_ENUM
+dnl---------------------------------------------------------------------
+
+AC_DEFUN([GATBPS_ARG_WITH_ENUM_foo1], [dnl
+m4_if(
+  m4_eval([$# >= 2]),
+  [1],
+  [[
+  '$1')
+  ;;]])[]dnl
+m4_if(
+  m4_eval([$# >= 4]),
+  [1],
+  [GATBPS_ARG_WITH_ENUM_foo1(m4_shift2($@))])[]dnl
+])[]dnl
+
+AC_DEFUN([GATBPS_ARG_WITH_ENUM_foo2], [dnl
+m4_if(
+  m4_eval([$# >= 3]),
+  [1],
+  [[
+]AS_HELP_STRING(
+  [$1=$2],
+  [$3])])[]dnl
+m4_if(
+  m4_eval([$# >= 5]),
+  [1],
+  [GATBPS_ARG_WITH_ENUM_foo2([$1], m4_shift3($@))])[]dnl
+])[]dnl
+
+AC_DEFUN([GATBPS_ARG_WITH_ENUM], [[{
+
+]m4_pushdef(
+  [gatbps_x],
+  [with_]m4_bpatsubst([$3], [[^0-9A-Z_a-z]], [_]))[]dnl
+[
+
+]GATBPS_ARG_WITH(
+  [$3],
+  [
+]AS_HELP_STRING(
+  [--with-$3 omitted],
+  [same as --with-$3=$4])[
+]AS_HELP_STRING(
+  [--with-$3],
+  [same as --with-$3=yes])[
+]AS_HELP_STRING(
+  [--without-$3],
+  [same as --with-$3=no])[]dnl
+GATBPS_ARG_WITH_ENUM_foo2([--with-$3], $5),
+  [$4])[
+
+case "$][{]gatbps_x[}" in]dnl
+GATBPS_ARG_WITH_ENUM_foo1($5)[
+  *)
+    ]AC_MSG_ERROR([invalid --with-$3 value: $[]{]gatbps_x[}], [1])[
+  ;;
+esac
+
+]GATBPS_CACHE_CHECK(
+  [$1],
+  [$2],
+  [[{
+    gatbps_cv_$2="$][{]gatbps_x[}"
+  :;}]])[
+
+case $$2_was_cached in
+  yes)
+    printf 'note: --with-$3=%s was given but overridden by the cache\n' "$]gatbps_x[" >&]AS_MESSAGE_LOG_FD[
+  ;;
+  no)
+    case $]gatbps_x[_was_given in
+      yes)
+        printf 'note: --with-$3=%s was given\n' "$]gatbps_x[" >&]AS_MESSAGE_LOG_FD[
+      ;;
+      no)
+        printf 'note: --with-$3=%s was implied\n' "$]gatbps_x[" >&]AS_MESSAGE_LOG_FD[
+      ;;
+    esac
+  ;;
+esac
+
+case "$][{]gatbps_cv_$2[}" in]dnl
+GATBPS_ARG_WITH_ENUM_foo1($5)[
+  *)
+    ]AC_MSG_ERROR([invalid gatbps_cv_$2 value: $[]{]gatbps_cv_$2[}], [1])[
+  ;;
+esac
+
+]m4_popdef([gatbps_x])[
+
+:;}]])[]dnl
+
+dnl---------------------------------------------------------------------
 dnl GATBPS_CHECK
 dnl---------------------------------------------------------------------
 
