@@ -454,10 +454,16 @@ m4_define([GATBPS_CHECK], [[{ :
     [gatbps_notmake],
     m4_eval(m4_bregexp([$2:], [:notmake:]) >= 0))[
 
+  ]m4_ignore([
+    Do not unset the gatbps_cv_* variable, as that would break caching.
+    The way caching works is that the gatbps_cv_* variable will be set
+    to the cached value early on in ./configure, and we should let it
+    get fed into AC_CACHE_CHECK.
+  ])[
+
   unset ]gatbps_name[
   unset ]gatbps_name[_sh
   unset ]gatbps_name[_was_cached
-  unset gatbps_cv_]gatbps_name[
 
   ]gatbps_name[_was_cached=:
 
