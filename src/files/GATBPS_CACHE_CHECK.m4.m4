@@ -45,7 +45,7 @@ m4_if(
 #       and runs the code to set the cache variable.
 #
 
-$2_was_cached='yes'
+$2_is_cached='yes'
 
 #
 # The rest of the code in this block is the expansion of AC_CACHE_CHECK.
@@ -70,7 +70,7 @@ m4_bregexp([[$1]], [\(\[\)--VERBATIM--\]\(\(.\|
     #]]])[[ (gatbps_cv_)$2.
     #
 
-    $2_was_cached='no'
+    $2_is_cached='no'
 
     case "$][{gatbps_cv_$2+is_set}" in
       ?*)

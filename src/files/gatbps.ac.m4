@@ -501,7 +501,7 @@ GATBPS_CHECK_EXPR([$1], [$2], gatbps_x)
 
 [
 
-case $$2_was_cached in
+case $$2_is_cached in
   yes)
     printf 'note: --with-$3=%s was given but overridden by the cache\n' "$]gatbps_x[" >&]AS_MESSAGE_LOG_FD[
   ;;
@@ -590,7 +590,7 @@ esac
     gatbps_cv_$2="$][{]gatbps_x[}"
   :;}]])[
 
-case $$2_was_cached in
+case $$2_is_cached in
   yes)
     printf 'note: --with-$3=%s was given but overridden by the cache\n' "$]gatbps_x[" >&]AS_MESSAGE_LOG_FD[
   ;;
