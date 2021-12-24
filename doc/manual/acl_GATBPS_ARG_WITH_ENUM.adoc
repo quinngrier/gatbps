@@ -8,15 +8,15 @@
 // <https://creativecommons.org/publicdomain/zero/1.0/>.
 //
 
-[#acl-GATBPS-WITH-ENUM]
-= The `GATBPS_WITH_ENUM` macro
+[#acl-GATBPS-ARG-WITH-ENUM]
+= The `GATBPS_ARG_WITH_ENUM` macro
 
 .Autoconf
 [source,subs="{subs_source}"]
 ----
 include::acl_include_gatbps_ac_fragment.adoc[]
 
-{acl_GATBPS_WITH_ENUM}(
+{acl_GATBPS_ARG_WITH_ENUM}(
   <message>,
   <name>,
   <option>,

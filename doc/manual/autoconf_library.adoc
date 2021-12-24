@@ -15,6 +15,7 @@
 :leveloffset: +1
 
 include::acl_notation.adoc[]
+include::acl_GATBPS_ARG_WITH_ENUM.adoc[]
 include::acl_GATBPS_BUG.adoc[]
 include::acl_GATBPS_PUSH_VAR.adoc[]
 include::acl_GATBPS_POP_VAR.adoc[]
@@ -31,7 +32,6 @@ include::acl_GATBPS_SOFT_VAR.adoc[]
 include::acl_GATBPS_SQUISH.adoc[]
 include::acl_GATBPS_UNPROTECT.adoc[]
 include::acl_GATBPS_REQUIRE.adoc[]
-include::acl_GATBPS_WITH_ENUM.adoc[]
 include::acl_attributes.adoc[]
 
 :leveloffset: -1
