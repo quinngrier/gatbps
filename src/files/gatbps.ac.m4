@@ -704,27 +704,57 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_CHECK_RUN
 dnl---------------------------------------------------------------------
 
-AC_DEFUN([GATBPS_CHECK_RUN], [{ :
+m4_define([GATBPS_CHECK_RUN], [[{ :
 
-  GATBPS_CHECK(
-    [$1],
-    [$2],
-    [
-      AC_RUN_IFELSE(
-        [GATBPS_LANG_PROGRAM([$3], [$4])],
-        [
-          gatbps_cv_$2=yes
-        ],
-        [
-          gatbps_cv_$2=no
-        ],
-        [
-          gatbps_cv_$2="$$5"
-        ])
-    ],
-    [$6])
+  ]GATBPS_CHECK(
+    [$1 (maybe guessing)],
+    [$2_maybe_guessing:notbool],
+    [[
+      ]AC_RUN_IFELSE(
+        [[
+          ]GATBPS_LANG_PROGRAM([[$3]], [[$4]])[
+        ]],
+        [[
+          gatbps_cv_$2_maybe_guessing=yes
+        ]],
+        [[
+          gatbps_cv_$2_maybe_guessing=no
+        ]],
+        [[
+          gatbps_cv_$2_maybe_guessing='guessing '$5
+        ]])[
+    ]],
+    [$6])[
 
-}])
+  case "$][{$2_maybe_guessing?}" in 'guessing '*)
+    $2_is_guess=1
+    $2_is_guess_sh=:
+  ;; *)
+    $2_is_guess=0
+    $2_is_guess_sh=false
+  esac
+  readonly $2_is_guess
+  readonly $2_is_guess_sh
+
+  case "$][{$2_maybe_guessing?}" in yes | 'guessing yes')
+    $2_boolean_answer=yes
+  ;; no | 'guessing no')
+    $2_boolean_answer=no
+  ;; *)
+    gatbps_x=$5
+    ]GATBPS_BUG([
+      GATBPS_CHECK_RUN: $2: <guess> is set to something other than yes
+      or no: '$[]{gatbps_x?}'
+    ])[
+  esac
+  readonly $2_boolean_answer
+
+  ]GATBPS_CHECK(
+    [$1 (boolean answer)],
+    [$2:bool],
+    [gatbps_cv_$2=$[]{$2_boolean_answer?}])[
+
+}]])
 
 dnl---------------------------------------------------------------------
 dnl GATBPS_CHECK_SOFT_MAKEFILE_INCLUDE

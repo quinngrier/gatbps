@@ -1,0 +1,36 @@
+//
+// The authors of this file have waived all copyright and
+// related or neighboring rights to the extent permitted by
+// law as described by the CC0 1.0 Universal Public Domain
+// Dedication. You should have received a copy of the full
+// dedication along with this file, typically as a file
+// named <CC0-1.0.txt>. If not, it may be available at
+// <https://creativecommons.org/publicdomain/zero/1.0/>.
+//
+
+[#acl-GATBPS-CHECK-RUN]
+= The `GATBPS_CHECK_RUN` macro
+
+.Autoconf
+[source,subs="{subs_source}"]
+----
+include::acl_include_gatbps_ac_fragment.adoc[]
+
+{acl_GATBPS_CHECK_RUN}(
+  <message>,
+  <name>,
+  <prologue>,
+  <body>,
+  [<guess>],
+  [<precondition>])
+----
+
+* {empty}
+`<name>_is_guess` is set to `1` or `0` to indicate whether `<name>` was
+set from `<guess>`.
+
+* {empty}
+`<name>_is_guess_sh` is set to `:` or `false` corresponding to
+`<name>_is_guess`.
+
+//

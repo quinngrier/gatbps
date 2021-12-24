@@ -117,4 +117,7 @@ include::attributes/sh.adoc[]
 :sh_sed_url: https://pubs.opengroup.org/onlinepubs/9699919799.2018edition/utilities/sed.html
 :sh_sed: link:{sh_sed_url}[sed]
 
+:acl_GATBPS_CHECK_RUN_url: acl_GATBPS_CHECK_RUN.adoc#acl-GATBPS-CHECK-RUN
+:acl_GATBPS_CHECK_RUN: link:{acl_GATBPS_CHECK_RUN_url}[GATBPS_CHECK_RUN]
+
 //
