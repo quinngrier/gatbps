@@ -28,8 +28,13 @@ as follows:
 * `<name>` is set to `$gatbps_cv_<name>` after `{acl_AC_CACHE_CHECK}`
 completes.
 
-* `<name>_was_cached` is set to `:` or `false` to indicate whether
-`<name>` was cached.
+* {empty}
+`<name>_is_cached` is set to `1` or `0` to indicate whether `<name>` is
+cached.
+
+* {empty}
+`<name>_is_cached_sh` is set to `:` or `false` corresponding to
+`<name>_is_cached`.
 
 * `{acl_AC_SUBST}` is called for `<name>`.
 

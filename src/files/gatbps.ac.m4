@@ -463,9 +463,11 @@ m4_define([GATBPS_CHECK], [[{ :
 
   unset ]gatbps_name[
   unset ]gatbps_name[_sh
-  unset ]gatbps_name[_was_cached
+  unset ]gatbps_name[_is_cached
+  unset ]gatbps_name[_is_cached_sh
 
-  ]gatbps_name[_was_cached=:
+  ]gatbps_name[_is_cached=1
+  ]gatbps_name[_is_cached_sh=:
 
   ]AC_CACHE_CHECK(
     [[$1]],
@@ -548,7 +550,8 @@ gatbps_EOF
 
       ]])[
 
-      ]gatbps_name[_was_cached=false
+      ]gatbps_name[_is_cached=0
+      ]gatbps_name[_is_cached_sh=false
 
     }]])[
 
@@ -602,7 +605,8 @@ gatbps_EOF
 
   readonly ]gatbps_name[
   readonly ]gatbps_name[_sh
-  readonly ]gatbps_name[_was_cached
+  readonly ]gatbps_name[_is_cached
+  readonly ]gatbps_name[_is_cached_sh
 
   ]m4_popdef([gatbps_notmake])[
   ]m4_popdef([gatbps_notbool])[
