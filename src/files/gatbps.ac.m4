@@ -558,6 +558,57 @@ m4_if(
   [GATBPS_ARG_WITH_ENUM_foo2([$1], m4_shift3($@))])[]dnl
 ])[]dnl
 
+m4_define([GATBPS_ARG_WITH_ENUM_foo3], [[
+  ]m4_pushdef(
+    [gatbps_x],
+    m4_bpatsubst([[[$2]]], [[^]0-9A-Z[_a-z]], [_]))[
+  ]m4_if(
+    m4_eval([$# >= 3]),
+    [1],
+    [[
+      $1_is_]gatbps_x[=0
+      $1_is_]gatbps_x[_sh=false
+      ]GATBPS_ARG_WITH_ENUM_foo3([$1], m4_shiftn([3], $@))[
+    ]])[
+  ]m4_popdef([gatbps_x])[
+]])
+
+m4_define([GATBPS_ARG_WITH_ENUM_foo4], [[
+  ]m4_pushdef(
+    [gatbps_x],
+    m4_bpatsubst([[[$2]]], [[^]0-9A-Z[_a-z]], [_]))[
+  ]m4_pushdef(
+    [gatbps_y],
+    m4_bpatsubst([[[$2]]], ['], ['\\'']))[
+  ]m4_if(
+    m4_eval([$# >= 3]),
+    [1],
+    [[
+      ']gatbps_y[')
+        $1_is_]gatbps_x[=1
+        $1_is_]gatbps_x[_sh=:
+      ;;
+      ]GATBPS_ARG_WITH_ENUM_foo4([$1], m4_shiftn([3], $@))[
+    ]])[
+  ]m4_popdef([gatbps_y])[
+  ]m4_popdef([gatbps_x])[
+]])
+
+m4_define([GATBPS_ARG_WITH_ENUM_foo5], [[
+  ]m4_pushdef(
+    [gatbps_x],
+    m4_bpatsubst([[[$2]]], [[^]0-9A-Z[_a-z]], [_]))[
+  ]m4_if(
+    m4_eval([$# >= 3]),
+    [1],
+    [[
+      readonly $1_is_]gatbps_x[
+      readonly $1_is_]gatbps_x[_sh
+      ]GATBPS_ARG_WITH_ENUM_foo5([$1], m4_shiftn([3], $@))[
+    ]])[
+  ]m4_popdef([gatbps_x])[
+]])
+
 m4_define([GATBPS_ARG_WITH_ENUM], [[
 # GATBPS_ARG_WITH_ENUM $2
 { :
@@ -616,6 +667,17 @@ GATBPS_ARG_WITH_ENUM_foo2([--with-$3], $5),
       ]AC_MSG_ERROR([invalid gatbps_cv_$2 value: $[]{]gatbps_cv_$2[}], [1])[
     ;;
   esac
+
+  ]GATBPS_ARG_WITH_ENUM_foo3([$2], $5)[
+  case $][{$2?} in
+    ]GATBPS_ARG_WITH_ENUM_foo4([$2], $5)[
+    *)
+      ]GATBPS_BUG([
+        Unknown $2 value: '$][{$2?}'.
+      ])[
+    ;;
+  esac
+  ]GATBPS_ARG_WITH_ENUM_foo5([$2], $5)[
 
   ]m4_popdef([gatbps_x])[
 
