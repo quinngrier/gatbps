@@ -558,16 +558,18 @@ m4_if(
   [GATBPS_ARG_WITH_ENUM_foo2([$1], m4_shift3($@))])[]dnl
 ])[]dnl
 
-AC_DEFUN([GATBPS_ARG_WITH_ENUM], [[{
+m4_define([GATBPS_ARG_WITH_ENUM], [[
+# GATBPS_ARG_WITH_ENUM $2
+{ :
 
-]m4_pushdef(
-  [gatbps_x],
-  [with_]m4_bpatsubst([$3], [[^0-9A-Z_a-z]], [_]))[]dnl
-[
-
-]GATBPS_ARG_WITH(
-  [$3],
+  ]m4_pushdef(
+    [gatbps_x],
+    [with_]m4_bpatsubst([$3], [[^0-9A-Z_a-z]], [_]))[]dnl
   [
+
+  ]GATBPS_ARG_WITH(
+    [$3],
+    [
 ]AS_HELP_STRING(
   [--with-$3 omitted],
   [same as --with-$3=$4])[
@@ -578,46 +580,46 @@ AC_DEFUN([GATBPS_ARG_WITH_ENUM], [[{
   [--without-$3],
   [same as --with-$3=no])[]dnl
 GATBPS_ARG_WITH_ENUM_foo2([--with-$3], $5),
-  [$4])[
+    [$4])[
 
-case "$][{]gatbps_x[}" in]dnl
-GATBPS_ARG_WITH_ENUM_foo1($5)[
-  *)
-    ]AC_MSG_ERROR([invalid --with-$3 value: $[]{]gatbps_x[}], [1])[
-  ;;
-esac
+  case "$][{]gatbps_x[}" in]dnl
+  GATBPS_ARG_WITH_ENUM_foo1($5)[
+    *)
+      ]AC_MSG_ERROR([invalid --with-$3 value: $[]{]gatbps_x[}], [1])[
+    ;;
+  esac
 
-]GATBPS_CHECK(
-  [$1],
-  [$2:notbool],
-  [gatbps_cv_$2=$][{]gatbps_x[?}])[
+  ]GATBPS_CHECK(
+    [$1],
+    [$2:notbool],
+    [gatbps_cv_$2=$][{]gatbps_x[?}])[
 
-case $$2_was_cached in
-  yes)
-    printf 'note: --with-$3=%s was given but overridden by the cache\n' "$]gatbps_x[" >&]AS_MESSAGE_LOG_FD[
-  ;;
-  no)
-    case $]gatbps_x[_was_given in
-      yes)
-        printf 'note: --with-$3=%s was given\n' "$]gatbps_x[" >&]AS_MESSAGE_LOG_FD[
-      ;;
-      no)
-        printf 'note: --with-$3=%s was implied\n' "$]gatbps_x[" >&]AS_MESSAGE_LOG_FD[
-      ;;
-    esac
-  ;;
-esac
+  case $$2_was_cached in
+    yes)
+      printf 'note: --with-$3=%s was given but overridden by the cache\n' "$]gatbps_x[" >&]AS_MESSAGE_LOG_FD[
+    ;;
+    no)
+      case $]gatbps_x[_was_given in
+        yes)
+          printf 'note: --with-$3=%s was given\n' "$]gatbps_x[" >&]AS_MESSAGE_LOG_FD[
+        ;;
+        no)
+          printf 'note: --with-$3=%s was implied\n' "$]gatbps_x[" >&]AS_MESSAGE_LOG_FD[
+        ;;
+      esac
+    ;;
+  esac
 
-case "$][{]gatbps_cv_$2[}" in]dnl
-GATBPS_ARG_WITH_ENUM_foo1($5)[
-  *)
-    ]AC_MSG_ERROR([invalid gatbps_cv_$2 value: $[]{]gatbps_cv_$2[}], [1])[
-  ;;
-esac
+  case "$][{]gatbps_cv_$2[}" in]dnl
+  GATBPS_ARG_WITH_ENUM_foo1($5)[
+    *)
+      ]AC_MSG_ERROR([invalid gatbps_cv_$2 value: $[]{]gatbps_cv_$2[}], [1])[
+    ;;
+  esac
 
-]m4_popdef([gatbps_x])[
+  ]m4_popdef([gatbps_x])[
 
-:;}]])[]dnl
+}]])
 
 dnl---------------------------------------------------------------------
 dnl GATBPS_CHECK
