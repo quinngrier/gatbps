@@ -901,29 +901,31 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_CHECK_RUN
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_CHECK_RUN], [[{ :
+m4_define([GATBPS_CHECK_RUN], [[
+# GATBPS_CHECK_RUN $2
+{ :
 
   ]GATBPS_CHECK(
-    [$1 (maybe guessing)],
-    [$2_maybe_guessing:notbool],
+    [$1 (probe)],
+    [$2_gatbps_probe:notbool],
     [[
       ]AC_RUN_IFELSE(
         [[
           ]GATBPS_LANG_PROGRAM([[$3]], [[$4]])[
         ]],
         [[
-          gatbps_cv_$2_maybe_guessing=yes
+          gatbps_cv_$2_gatbps_probe=yes
         ]],
         [[
-          gatbps_cv_$2_maybe_guessing=no
+          gatbps_cv_$2_gatbps_probe=no
         ]],
         [[
-          gatbps_cv_$2_maybe_guessing='guessing '$5
+          gatbps_cv_$2_gatbps_probe='guessing '$5
         ]])[
     ]],
     [$6])[
 
-  case "$][{$2_maybe_guessing?}" in 'guessing '*)
+  case $][{$2_gatbps_probe?} in 'guessing '*)
     $2_is_guess=1
     $2_is_guess_sh=:
   ;; *)
@@ -933,23 +935,23 @@ m4_define([GATBPS_CHECK_RUN], [[{ :
   readonly $2_is_guess
   readonly $2_is_guess_sh
 
-  case "$][{$2_maybe_guessing?}" in yes | 'guessing yes')
-    $2_boolean_answer=yes
+  case "$][{$2_gatbps_probe?}" in yes | 'guessing yes')
+    $2_gatbps_final=yes
   ;; no | 'guessing no')
-    $2_boolean_answer=no
+    $2_gatbps_final=no
   ;; *)
     gatbps_x=$5
     ]GATBPS_BUG([
       GATBPS_CHECK_RUN: $2: <guess> is set to something other than yes
-      or no: '$[]{gatbps_x?}'
+      or no: '$][{gatbps_x?}'
     ])[
   esac
-  readonly $2_boolean_answer
+  readonly $2_gatbps_final
 
   ]GATBPS_CHECK(
-    [$1 (boolean answer)],
+    [$1 (final)],
     [$2:bool],
-    [gatbps_cv_$2=$[]{$2_boolean_answer?}])[
+    [gatbps_cv_$2=$][{$2_gatbps_final?}])[
 
 }]])
 
