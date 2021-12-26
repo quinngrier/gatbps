@@ -2281,10 +2281,20 @@ dnl---------------------------------------------------------------------
 
 m4_define([GATBPS_SOFT_VAR],
   [m4_if(
-    m4_bregexp([$1], [^[a-zA-Z_][a-zA-Z_0-9]*$]),
-    -1,
-    [m4_fatal([GATBPS_SOFT_VAR: invalid <name>: $1])],
-    [m4_ifdef([DEFINE_$1], [[$1]], 1)])])
+    m4_bregexp([$1], [^[A-Z_a-z][0-9A-Z_a-z]*$]),
+    [-1],
+    [m4_fatal([GATBPS_SOFT_VAR: Invalid <name>: '$1'.])],
+    m4_bregexp([$2], [^[01]?$]),
+    [-1],
+    [m4_fatal([GATBPS_SOFT_VAR: Invalid <default_value>: '$2'.])],
+    [m4_ifdef(
+      [DEFINE_$1],
+      [[$1]],
+      m4_if(
+        m4_eval([$# == 2]),
+        [1],
+        [[[$2]]],
+        [[[1]]]))])])
 
 dnl---------------------------------------------------------------------
 dnl GATBPS_M4

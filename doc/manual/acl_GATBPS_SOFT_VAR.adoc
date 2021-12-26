@@ -8,7 +8,7 @@
 // <https://creativecommons.org/publicdomain/zero/1.0/>.
 //
 
-[[acl_GATBPS_SOFT_VAR]]
+[#acl-GATBPS-SOFT-VAR]
 = The `GATBPS_SOFT_VAR` macro
 
 .Autoconf
@@ -16,10 +16,13 @@
 ----
 include::acl_include_gatbps_ac_fragment.adoc[]
 
-{acl_GATBPS_SOFT_VAR}(<name>)
+{acl_GATBPS_SOFT_VAR}(
+  <name>,
+  <default_value>?)
 ----
 
 The `{acl_GATBPS_SOFT_VAR}` macro expands to `[<name>]` if
-`DEFINE_<name>` is defined as a macro, or to `1` if not.
+`DEFINE_<name>` is defined as a macro, or to `[<default_value>]` if not.
+If `<default_value>` is omitted, it is taken to be `[1]`.
 
 //
