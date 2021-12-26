@@ -21,8 +21,8 @@ include::acl_include_gatbps_ac_fragment.adoc[]
   <name>,
   <prologue>,
   <body>,
-  [<guess>],
-  [<precondition>])
+  <guess>?,
+  <precondition>?)
 ----
 
 * {empty}

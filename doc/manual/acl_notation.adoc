@@ -81,4 +81,9 @@ x
 ----
 ====
 
+Optional macro parameters are notated with a trailing `?` character and
+are always the trailing parameters of the macro.
+If an optional parameter is given, all optional parameters to its left
+must also be given.
+
 //

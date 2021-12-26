@@ -16,8 +16,12 @@
 ----
 include::acl_include_gatbps_ac_fragment.adoc[]
 
-{acl_GATBPS_CHECK}(<message>, <name>, <<code>>,
-             [<precondition>], [<skip_value=no>])
+{acl_GATBPS_CHECK}(
+  <message>,
+  <name>,
+  <<code>>,
+  <precondition>?,
+  <skip_value=no>?)
 ----
 
 The `{acl_GATBPS_CHECK}` macro extends the `{acl_AC_CACHE_CHECK}` macro

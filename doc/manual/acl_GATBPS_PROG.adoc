@@ -6,7 +6,11 @@
 ----
 m4_include([gatbps.ac])
 
-GATBPS_PROG(<name>, <primary>, [<secondaries>], [<extra_code>])
+GATBPS_PROG(
+  <name>,
+  <primary>,
+  <secondaries>?,
+  <extra_code>?)
 ----
 
 //
