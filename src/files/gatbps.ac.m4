@@ -528,6 +528,237 @@ m4_popdef([gatbps_x])
 :;}])
 
 dnl---------------------------------------------------------------------
+dnl GATBPS_ARG_WYNA
+dnl---------------------------------------------------------------------
+[
+
+GATBPS_WYNA_PAIRS=
+
+]m4_define([GATBPS_ARG_WYNA], [[
+# GATBPS_ARG_WYNA $1
+{ :
+
+  ]m4_if(
+    m4_eval([$# == 4 || $# == 5]),
+    [0],
+    [GATBPS_AC_BARF([
+      GATBPS_ARG_WYNA: Invalid argument count: "$#".
+    ])],
+    m4_bregexp([$1], [^--with-[0-9A-Z_a-z-]+$]),
+    [-1],
+    [GATBPS_AC_BARF([
+      GATBPS_ARG_WYNA: Invalid <option>: "$1".
+    ])],
+    m4_bregexp([$5], [^\([
+	 ]*--with-[0-9A-Z_a-z-]+\([
+	 ]+--with-[0-9A-Z_a-z-]+\)*\)?[
+	 ]*$]),
+    [-1],
+    [GATBPS_AC_BARF([
+      GATBPS_ARG_WYNA: Invalid <prerequisites>: "$5".
+    ])])[
+
+  ]m4_pushdef([gatbps_wo],
+    m4_bpatsubst([[[[$1]]]], [^...--with], [\&out]))[
+
+  ]m4_pushdef([gatbps_x],
+    m4_dquote(m4_bpatsubsts(
+      [[$1]],
+      [[^]0-9A-Z[_a-z]], [_],
+      [^\(..\)__with_], [\1])))[
+
+  ]m4_pushdef([gatbps_X],
+    m4_dquote(m4_translit(m4_dquote(gatbps_x), [a-z], [A-Z])))[
+
+  ]m4_pushdef([gatbps_Ys],
+    m4_dquote(m4_bpatsubsts(
+      m4_translit([[[ $5]]], [a-z], [A-Z]),
+      [[
+	 ]+], [ ],
+      [[^] 0-9A-Z[_a-z]], [_],
+      [ __WITH_], [ ])))[
+
+  case $][{GATBPS_DEDUCE_WYNA_HAS_BEEN_CALLED-} in ?*)
+    ]GATBPS_BUG([
+      GATBPS_ARG_WYNA must not be called after GATBPS_DEDUCE_WYNA.
+    ])[
+  esac
+
+  ]GATBPS_ARG_WITH(
+    m4_bpatsubsts([[$1]], [^\(..\)--with-], [\1]),
+    []
+AS_HELP_STRING([[$1 omitted]], [Same as $1=auto.])
+AS_HELP_STRING([[$1]], [Same as $1=yes.])
+AS_HELP_STRING(gatbps_wo, [Same as $1=no.])
+AS_HELP_STRING([[$1=yes]], [$2])
+AS_HELP_STRING([[$1=no]], [$3])
+AS_HELP_STRING([[$1=auto]], [$4]),
+    [auto])[
+
+  case $][{with_]gatbps_x[?} in yes | no | auto)
+    :
+  ;; *)
+    ]GATBPS_BARF([
+      Invalid $1 value: "$][{with_]gatbps_x[?}".
+    ])[
+  esac
+
+  WYNA_]gatbps_X[=$][{with_]gatbps_x[?}
+
+  for gatbps_Y in : ]gatbps_Ys[; do
+    case $][{gatbps_Y?} in :)
+      continue
+    esac
+    GATBPS_WYNA_PAIRS="$][{GATBPS_WYNA_PAIRS?}
+WYNA_]gatbps_X[ WYNA_$][{gatbps_Y?}"
+  done
+
+  ]m4_popdef([gatbps_Ys])[
+  ]m4_popdef([gatbps_X])[
+  ]m4_popdef([gatbps_x])[
+  ]m4_popdef([gatbps_wo])[
+
+}]])[
+
+]
+dnl---------------------------------------------------------------------
+dnl GATBPS_DEDUCE_WYNA
+dnl---------------------------------------------------------------------
+[
+
+]m4_define([GATBPS_DEDUCE_WYNA], [[
+# GATBPS_DEDUCE_WYNA
+{ :
+
+  ]m4_if(
+    m4_eval([$# == 0]),
+    [0],
+    [GATBPS_AC_BARF([
+      GATBPS_DEDUCE_WYNA: Invalid argument count: "$#".
+    ])])[
+
+  case $][{GATBPS_DEDUCE_WYNA_HAS_BEEN_CALLED-} in ?*)
+    ]GATBPS_BUG([
+      GATBPS_DEDUCE_WYNA must not be called more than once.
+    ])[
+  esac
+
+  ]GATBPS_PUSH_VAR([IFS], [$][{gatbps_default_IFS?}])[
+
+  gatbps_changed=:
+  while $][{gatbps_changed?}; do
+    gatbps_changed=false
+    unset gatbps_x
+    for gatbps_y in $][{GATBPS_WYNA_PAIRS?}; do
+      case $][{gatbps_x+x} in '')
+        gatbps_x=$][{gatbps_y?}
+        continue
+      esac
+      eval gatbps_xv='$][{'$][{gatbps_x?}'-}'
+      eval gatbps_yv='$][{'$][{gatbps_y?}'-}'
+      case $][{gatbps_xv?},$][{gatbps_yv?} in yes,auto)
+        eval $][{gatbps_y?}=yes
+        gatbps_changed=:
+      ;; auto,no)
+        eval $][{gatbps_x?}=no
+        gatbps_changed=:
+      esac
+      unset gatbps_x
+    done
+  done
+
+  ]GATBPS_POP_VAR([IFS])[
+
+  GATBPS_DEDUCE_WYNA_HAS_BEEN_CALLED=x
+  readonly GATBPS_DEDUCE_WYNA_HAS_BEEN_CALLED
+
+}]])[
+
+]
+dnl---------------------------------------------------------------------
+dnl GATBPS_FINISH_WYNA
+dnl---------------------------------------------------------------------
+[
+
+]m4_define([GATBPS_FINISH_WYNA], [[
+# GATBPS_FINISH_WYNA $2
+{ :
+
+  ]m4_if(
+    m4_eval([$# == 3]),
+    [0],
+    [GATBPS_AC_BARF([
+      GATBPS_FINISH_WYNA: Invalid argument count: "$#".
+    ])],
+    m4_bregexp([$2], [^[A-Z_a-z][0-9A-Z_a-z]*$]),
+    [-1],
+    [GATBPS_AC_BARF([
+      GATBPS_FINISH_WYNA: Invalid <name>: "$2".
+    ])],
+    m4_bregexp([$3], [^--with-[0-9A-Z_a-z-]+$]),
+    [-1],
+    [GATBPS_AC_BARF([
+      GATBPS_FINISH_WYNA: Invalid <option>: "$3".
+    ])])[
+
+  ]m4_pushdef([gatbps_x],
+    m4_dquote(m4_bpatsubsts(
+      [[$3]],
+      [[^]0-9A-Z[_a-z]], [_],
+      [^\(..\)__with_], [\1])))[
+
+  ]m4_pushdef([gatbps_X],
+    m4_dquote(m4_translit(m4_dquote(gatbps_x), [a-z], [A-Z])))[
+
+  case $][{GATBPS_DEDUCE_WYNA_HAS_BEEN_CALLED-} in '')
+    ]GATBPS_BUG([
+      GATBPS_DEDUCE_WYNA must be called before GATBPS_FINISH_WYNA.
+    ])[
+  esac
+
+  ]GATBPS_CHECK(
+    [$1],
+    [$2:notbool],
+    [gatbps_cv_$2=$][{WYNA_]gatbps_X[?}])[
+
+  case $][{]gatbps_cv_$2[?} in yes | no | auto)
+    :
+  ;; *)
+    ]GATBPS_BARF([
+      Invalid gatbps_cv_$2 value: "$][{gatbps_cv_$2?}".
+    ])[
+  esac
+
+  $2_is_yes=0
+  $2_is_yes_sh=false
+  $2_is_no=0
+  $2_is_no_sh=false
+  $2_is_auto=0
+  $2_is_auto_sh=false
+  case $][{$2?} in yes)
+    $2_is_yes=1
+    $2_is_yes_sh=:
+  ;; no)
+    $2_is_no=1
+    $2_is_no_sh=:
+  ;; auto)
+    $2_is_auto=1
+    $2_is_auto_sh=:
+  esac
+  readonly $2_is_yes
+  readonly $2_is_yes_sh
+  readonly $2_is_no
+  readonly $2_is_no_sh
+  readonly $2_is_auto
+  readonly $2_is_auto_sh
+
+  ]m4_popdef([gatbps_X])[
+  ]m4_popdef([gatbps_x])[
+
+}]])[
+
+]
+dnl---------------------------------------------------------------------
 dnl GATBPS_ARG_WITH_ENUM
 dnl---------------------------------------------------------------------
 
