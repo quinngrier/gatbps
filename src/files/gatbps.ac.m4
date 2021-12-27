@@ -959,9 +959,11 @@ m4_define([GATBPS_CHECK], [[{ :
     The way caching works is that the gatbps_cv_* variable will be set
     to the cached value early on in ./configure, and we should let it
     get fed into AC_CACHE_CHECK.
+
+    Do not unset <name>, as sometimes a caller may have already set it
+    themselves and will use it in <code> to "finish" it.
   ])[
 
-  unset ]gatbps_name[
   unset ]gatbps_name[_sh
   unset ]gatbps_name[_was_cached
   unset ]gatbps_name[_was_cached_sh
