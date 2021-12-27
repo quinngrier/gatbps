@@ -596,9 +596,9 @@ GATBPS_WYNA_PAIRS=
       [[^] 0-9A-Z[_a-z]], [_],
       [ __WITH_], [ ])))[
 
-  case $][{GATBPS_DEDUCE_WYNA_HAS_BEEN_CALLED-} in ?*)
+  case $][{GATBPS_DEDUCE_WYNAS_HAS_BEEN_CALLED-} in ?*)
     ]GATBPS_BUG([
-      GATBPS_ARG_WYNA must not be called after GATBPS_DEDUCE_WYNA.
+      GATBPS_ARG_WYNA must not be called after GATBPS_DEDUCE_WYNAS.
     ])[
   esac
 
@@ -640,11 +640,11 @@ WYNA_]gatbps_X[ WYNA_$][{gatbps_Y?}"
 
 ]
 dnl---------------------------------------------------------------------
-dnl GATBPS_DEDUCE_WYNA
+dnl GATBPS_DEDUCE_WYNAS
 dnl---------------------------------------------------------------------
 [
 
-]m4_define([GATBPS_DEDUCE_WYNA], [[
+]m4_define([GATBPS_DEDUCE_WYNAS], [[
 ]GATBPS_CALL_COMMENT([$0]m4_if(m4_eval($# > 0), 1, [, $@]))[
 { :
 
@@ -652,12 +652,12 @@ dnl---------------------------------------------------------------------
     m4_eval([$# == 0]),
     [0],
     [GATBPS_AC_BARF([
-      GATBPS_DEDUCE_WYNA: Invalid argument count: "$#".
+      GATBPS_DEDUCE_WYNAS: Invalid argument count: "$#".
     ])])[
 
-  case $][{GATBPS_DEDUCE_WYNA_HAS_BEEN_CALLED-} in ?*)
+  case $][{GATBPS_DEDUCE_WYNAS_HAS_BEEN_CALLED-} in ?*)
     ]GATBPS_BUG([
-      GATBPS_DEDUCE_WYNA must not be called more than once.
+      GATBPS_DEDUCE_WYNAS must not be called more than once.
     ])[
   esac
 
@@ -687,8 +687,8 @@ dnl---------------------------------------------------------------------
 
   ]GATBPS_POP_VAR([IFS])[
 
-  GATBPS_DEDUCE_WYNA_HAS_BEEN_CALLED=x
-  readonly GATBPS_DEDUCE_WYNA_HAS_BEEN_CALLED
+  GATBPS_DEDUCE_WYNAS_HAS_BEEN_CALLED=x
+  readonly GATBPS_DEDUCE_WYNAS_HAS_BEEN_CALLED
 
 }]])[
 
@@ -728,9 +728,9 @@ dnl---------------------------------------------------------------------
   ]m4_pushdef([gatbps_X],
     m4_dquote(m4_translit(m4_dquote(gatbps_x), [a-z], [A-Z])))[
 
-  case $][{GATBPS_DEDUCE_WYNA_HAS_BEEN_CALLED-} in '')
+  case $][{GATBPS_DEDUCE_WYNAS_HAS_BEEN_CALLED-} in '')
     ]GATBPS_BUG([
-      GATBPS_DEDUCE_WYNA must be called before GATBPS_FINISH_WYNA.
+      GATBPS_DEDUCE_WYNAS must be called before GATBPS_FINISH_WYNA.
     ])[
   esac
 

@@ -8,15 +8,15 @@
 // <https://creativecommons.org/publicdomain/zero/1.0/>.
 //
 
-[#acl-GATBPS-DEDUCE-WYNA]
-= The `GATBPS_DEDUCE_WYNA` macro
+[#acl-GATBPS-DEDUCE-WYNAS]
+= The `GATBPS_DEDUCE_WYNAS` macro
 
 .Autoconf
 [source,subs="{subs_source}"]
 ----
 include::acl_include_gatbps_ac_fragment.adoc[]
 
-{acl_GATBPS_DEDUCE_WYNA}()
+{acl_GATBPS_DEDUCE_WYNAS}()
 ----
 
 //
