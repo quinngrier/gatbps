@@ -2519,8 +2519,15 @@ AM_SUBST_NOTMAKE([GATBPS_JAVA_CLASS_RULES])
 dnl---------------------------------------------------------------------
 dnl GATBPS_LANG_PROGRAM
 dnl---------------------------------------------------------------------
+dnl
+dnl Be careful to support single-line comments inside $1 and $2. In
+dnl general, always put $1 and $2 on their own lines so that any
+dnl single-line comments inside them don't interfere with the
+dnl surrounding code.
+dnl
+[
 
-m4_define([GATBPS_LANG_PROGRAM],
+]m4_define([GATBPS_LANG_PROGRAM],
   [AC_LANG_CASE([], [([[
 
     ]])], [C], [AC_LANG_SOURCE([[
@@ -2528,12 +2535,18 @@ m4_define([GATBPS_LANG_PROGRAM],
       #if 0
       #elif __clang__
         __attribute__((__optnone__))
-        static void f() { $2 }
+        static void f() {
+          $2
+        }
       #elif __GNUC__
         __attribute__((__optimize__(0)))
-        static void f() { $2 }
+        static void f() {
+          $2
+        }
       #else
-        static void f() { $2 }
+        static void f() {
+          $2
+        }
       #endif
       int main() { f(); return 0; }
 
@@ -2542,18 +2555,25 @@ m4_define([GATBPS_LANG_PROGRAM],
       #if 0
       #elif __clang__
         __attribute__((__optnone__))
-        static void f() { $2 }
+        static void f() {
+          $2
+        }
       #elif __GNUC__
         __attribute__((__optimize__(0)))
-        static void f() { $2 }
+        static void f() {
+          $2
+        }
       #else
-        static void f() { $2 }
+        static void f() {
+          $2
+        }
       #endif
       int main() { f(); return 0; }
 
     ]])],
-    [m4_fatal([GATBPS_LANG_PROGRAM does not support ]_AC_LANG)])])
+    [m4_fatal([GATBPS_LANG_PROGRAM does not support ]_AC_LANG)])])[
 
+]
 dnl---------------------------------------------------------------------
 dnl GATBPS_SOFT_REQUIRE
 dnl---------------------------------------------------------------------
