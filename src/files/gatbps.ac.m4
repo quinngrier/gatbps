@@ -1120,22 +1120,32 @@ gatbps_EOF
 dnl---------------------------------------------------------------------
 dnl GATBPS_CHECK_COMPILE
 dnl---------------------------------------------------------------------
+[
 
-AC_DEFUN([GATBPS_CHECK_COMPILE], [{ :
+]m4_define([GATBPS_CHECK_COMPILE], [[
+]GATBPS_CALL_COMMENT([$0]m4_if(m4_eval([$# > 0]), [1], [, $@]))[
+{ :
 
-  GATBPS_CHECK(
+  ]GATBPS_CHECK(
     [$1],
-    [$2],
-    [
-      AC_COMPILE_IFELSE(
-        [GATBPS_LANG_PROGRAM([$3], [$4])],
-        [gatbps_cv_$2='yes'],
-        [gatbps_cv_$2='no'])
-    ],
-    [$5])
+    [$2:bool],
+    [[
+      ]AC_COMPILE_IFELSE(
+        [[
+          ]GATBPS_LANG_PROGRAM([[$3]], [[$4]])[
+        ]],
+        [[
+          gatbps_cv_$2=yes
+        ]],
+        [[
+          gatbps_cv_$2=no
+        ]])[
+    ]],
+    [$5])[
 
-}])
+}]])[
 
+]
 dnl---------------------------------------------------------------------
 dnl GATBPS_CHECK_EXPR
 dnl---------------------------------------------------------------------
