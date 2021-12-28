@@ -1132,7 +1132,7 @@ dnl---------------------------------------------------------------------
     [[
       ]AC_COMPILE_IFELSE(
         [[
-          ]GATBPS_LANG_PROGRAM([[$3]], [[$4]])[
+          ]GATBPS_LANG_PROGRAM([$3], [$4])[
         ]],
         [[
           gatbps_cv_$2=yes
@@ -1237,7 +1237,7 @@ dnl---------------------------------------------------------------------
     [[
       ]AC_LINK_IFELSE(
         [[
-          ]GATBPS_LANG_PROGRAM([[$3]], [[$4]])[
+          ]GATBPS_LANG_PROGRAM([$3], [$4])[
         ]],
         [[
           gatbps_cv_$2=yes
@@ -1265,7 +1265,7 @@ m4_define([GATBPS_CHECK_RUN], [[
     [[
       ]AC_RUN_IFELSE(
         [[
-          ]GATBPS_LANG_PROGRAM([[$3]], [[$4]])[
+          ]GATBPS_LANG_PROGRAM([$3], [$4])[
         ]],
         [[
           gatbps_cv_$2_gatbps_probe=yes
@@ -2524,30 +2524,30 @@ m4_define([GATBPS_LANG_PROGRAM],
   [AC_LANG_CASE([], [([[
 
     ]])], [C], [AC_LANG_SOURCE([[
-      ]$1[
+      $1
       #if 0
       #elif __clang__
         __attribute__((__optnone__))
-        static void f() { ]$2[ }
+        static void f() { $2 }
       #elif __GNUC__
         __attribute__((__optimize__(0)))
-        static void f() { ]$2[ }
+        static void f() { $2 }
       #else
-        static void f() { ]$2[ }
+        static void f() { $2 }
       #endif
       int main() { f(); return 0; }
 
     ]])], [C++], [AC_LANG_SOURCE([[
-      ]$1[
+      $1
       #if 0
       #elif __clang__
         __attribute__((__optnone__))
-        static void f() { ]$2[ }
+        static void f() { $2 }
       #elif __GNUC__
         __attribute__((__optimize__(0)))
-        static void f() { ]$2[ }
+        static void f() { $2 }
       #else
-        static void f() { ]$2[ }
+        static void f() { $2 }
       #endif
       int main() { f(); return 0; }
 
