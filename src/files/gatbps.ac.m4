@@ -39,7 +39,7 @@ dnl---------------------------------------------------------------------
 dnl
 dnl You can call this macro from another macro as follows:
 dnl
-dnl      GATBPS_CALL_COMMENT([$0]m4_if(m4_eval($# > 0), 1, [, $@]))
+dnl    GATBPS_CALL_COMMENT([$0]m4_if(m4_eval([$# > 0]), [1], [, $@]))
 dnl
 [
 
@@ -553,7 +553,7 @@ dnl---------------------------------------------------------------------
 GATBPS_WYNA_PAIRS=
 
 ]m4_define([GATBPS_ARG_WYNA], [[
-]GATBPS_CALL_COMMENT([$0]m4_if(m4_eval($# > 0), 1, [, $@]))[
+]GATBPS_CALL_COMMENT([$0]m4_if(m4_eval([$# > 0]), [1], [, $@]))[
 { :
 
   ]m4_if(
@@ -645,7 +645,7 @@ dnl---------------------------------------------------------------------
 [
 
 ]m4_define([GATBPS_DEDUCE_WYNAS], [[
-]GATBPS_CALL_COMMENT([$0]m4_if(m4_eval($# > 0), 1, [, $@]))[
+]GATBPS_CALL_COMMENT([$0]m4_if(m4_eval([$# > 0]), [1], [, $@]))[
 { :
 
   ]m4_if(
@@ -699,7 +699,7 @@ dnl---------------------------------------------------------------------
 [
 
 ]m4_define([GATBPS_FINISH_WYNA], [[
-]GATBPS_CALL_COMMENT([$0]m4_if(m4_eval($# > 0), 1, [, $@]))[
+]GATBPS_CALL_COMMENT([$0]m4_if(m4_eval([$# > 0]), [1], [, $@]))[
 { :
 
   ]m4_if(
