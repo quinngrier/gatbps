@@ -59,8 +59,6 @@ include::attributes/sh.adoc[]
 
 :acl_GATBPS_SOFT_REQUIRE: xref:acl_GATBPS_SOFT_REQUIRE.adoc#acl_GATBPS_SOFT_REQUIRE[GATBPS_SOFT_REQUIRE]
 
-:acl_GATBPS_SQUISH: xref:acl_GATBPS_SQUISH.adoc#acl_GATBPS_SQUISH[GATBPS_SQUISH]
-
 //----------------------------------------------------------------------
 // Automake entities
 //----------------------------------------------------------------------
@@ -141,5 +139,8 @@ include::attributes/sh.adoc[]
 
 :acl_GATBPS_DEFINE_UNIQUE_url: acl_GATBPS_DEFINE_UNIQUE.adoc#acl-GATBPS-DEFINE-UNIQUE
 :acl_GATBPS_DEFINE_UNIQUE: link:{acl_GATBPS_DEFINE_UNIQUE_url}[GATBPS_DEFINE_UNIQUE]
+
+:acl_GATBPS_SQUISH_url: acl_GATBPS_SQUISH.adoc#acl-GATBPS-SQUISH
+:acl_GATBPS_SQUISH: link:{acl_GATBPS_SQUISH_url}[GATBPS_SQUISH]
 
 //

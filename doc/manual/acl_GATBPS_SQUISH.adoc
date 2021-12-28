@@ -16,7 +16,24 @@
 ----
 include::acl_include_gatbps_ac_fragment.adoc[]
 
-{acl_GATBPS_SQUISH}(<text>)
+{acl_GATBPS_SQUISH}(
+  <text>)
 ----
+
+The `{acl_GATBPS_SQUISH}` macro expands to `[<text>]` with the following
+adjustments performed, in order:
+
+. {empty}
+Each maximal sequence of characters in `<text>` that contains only
+newline, tab, or space characters is replaced with a single space
+character.
+
+. {empty}
+If the result of the previous step begins with a space character, that
+character is deleted.
+
+. {empty}
+If the result of the previous step ends with a space character, that
+character is deleted.
 
 //

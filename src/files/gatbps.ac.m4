@@ -85,12 +85,24 @@ GATBPS_DEFINE_UNIQUE([GATBPS_CALL_COMMENT],
 ], [\&# ])[)]])])
 
 dnl---------------------------------------------------------------------
-dnl GATBPS_SQUISH(<text>)
+dnl GATBPS_SQUISH
 dnl---------------------------------------------------------------------
 
-GATBPS_DEFINE_UNIQUE([GATBPS_SQUISH], [m4_bpatsubst(m4_bpatsubst(
-m4_bpatsubst([[[[$1]]]], [[
-	 ]+], [ ]), [^\(..\) ], [\1]), [ \(.\)$], [\1])])
+GATBPS_DEFINE_UNIQUE([GATBPS_SQUISH], [dnl
+m4_if(
+  m4_eval([$# == 1]),
+  [0],
+  [
+    m4_errprintn(m4_location[: Error: $0: Invalid argument count: $#.])
+    m4_exit([1])
+  ])dnl
+m4_bpatsubsts(
+  [[$1]],
+  [[
+	 ]+], [ ],
+  [^\(..\) ], [\1],
+  [ \(..\)$], [\1])dnl
+])
 
 dnl---------------------------------------------------------------------
 dnl GATBPS_AC_BARF
