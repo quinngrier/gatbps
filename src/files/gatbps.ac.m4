@@ -34,6 +34,41 @@ gatbps_default_IFS=" 	$gatbps_nl"
 ]
 
 dnl---------------------------------------------------------------------
+dnl GATBPS_DEFINE_UNIQUE
+dnl---------------------------------------------------------------------
+
+m4_ifdef(
+  [GATBPS_DEFINE_UNIQUE],
+  [
+    m4_errprintn(m4_location[: Error: GATBPS_DEFINE_UNIQUE is already defined as a macro.])
+    m4_exit([1])
+  ])
+
+m4_define([GATBPS_DEFINE_UNIQUE], [dnl
+m4_if(
+  m4_eval([$# == 1 || $# == 2]),
+  [0],
+  [
+    m4_errprintn(m4_location[: Error: $0: Invalid argument count: $#.])
+    m4_exit([1])
+  ])dnl
+m4_if(
+  m4_bregexp([$1], [^[A-Z_a-z][0-9A-Z_a-z]*$]),
+  [-1],
+  [
+    m4_errprintn(m4_location[: Error: $0: Invalid <name>: "$1".])
+    m4_exit([1])
+  ])dnl
+m4_ifdef(
+  [$1],
+  [
+    m4_errprintn(m4_location[: Error: $1 is already defined as a macro.])
+    m4_exit([1])
+  ])dnl
+m4_define([$1], [$2])dnl
+])
+
+dnl---------------------------------------------------------------------
 dnl GATBPS_CALL_COMMENT(<macro>, <arg>...?)
 dnl---------------------------------------------------------------------
 dnl
@@ -42,7 +77,7 @@ dnl
 dnl    GATBPS_CALL_COMMENT([$0]m4_if(m4_eval([$# > 0]), [1], [, $@]))
 dnl
 
-m4_define([GATBPS_CALL_COMMENT],
+GATBPS_DEFINE_UNIQUE([GATBPS_CALL_COMMENT],
   [[# $1]m4_if(
     m4_eval([$# > 1]),
     [1],
@@ -53,7 +88,7 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_SQUISH(<text>)
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_SQUISH], [m4_bpatsubst(m4_bpatsubst(
+GATBPS_DEFINE_UNIQUE([GATBPS_SQUISH], [m4_bpatsubst(m4_bpatsubst(
 m4_bpatsubst([[[[$1]]]], [[
 	 ]+], [ ]), [^\(..\) ], [\1]), [ \(.\)$], [\1])])
 
@@ -61,7 +96,7 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_AC_BARF
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_AC_BARF], [
+GATBPS_DEFINE_UNIQUE([GATBPS_AC_BARF], [
   m4_errprintn(m4_location: GATBPS_SQUISH([Error: $1]))
   m4_exit(1)
 ])
@@ -70,7 +105,7 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_AC_WARN
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_AC_WARN], [
+GATBPS_DEFINE_UNIQUE([GATBPS_AC_WARN], [
   m4_errprintn(m4_location: GATBPS_SQUISH([Warning: $1]))
 ])
 
@@ -78,7 +113,7 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_AC_INFO
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_AC_INFO], [
+GATBPS_DEFINE_UNIQUE([GATBPS_AC_INFO], [
   m4_errprintn(m4_location: GATBPS_SQUISH([$1]))
 ])
 
@@ -86,7 +121,7 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_BARF
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_BARF], [{ :
+GATBPS_DEFINE_UNIQUE([GATBPS_BARF], [{ :
   AC_MSG_ERROR(m4_dquote(GATBPS_SQUISH([$1])), 1)
 }])
 
@@ -94,7 +129,7 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_BUG
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_BUG], [
+GATBPS_DEFINE_UNIQUE([GATBPS_BUG], [
   GATBPS_BARF([
     $1 (This is a bug. Please report it to <]AC_PACKAGE_BUGREPORT[>.)
   ])
@@ -104,7 +139,7 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_WARN
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_WARN], [{ :
+GATBPS_DEFINE_UNIQUE([GATBPS_WARN], [{ :
   AC_MSG_WARN(m4_dquote(GATBPS_SQUISH([$1])))
 }])
 
@@ -112,7 +147,7 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_INFO
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_INFO], [{ :
+GATBPS_DEFINE_UNIQUE([GATBPS_INFO], [{ :
   AC_MSG_NOTICE(m4_dquote(GATBPS_SQUISH([$1])))
 }])
 
@@ -179,7 +214,7 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_PROTECT
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_PROTECT],
+GATBPS_DEFINE_UNIQUE([GATBPS_PROTECT],
   [m4_if(
     m4_bregexp([$*], [[a-zA-Z_]]),
     [-1],
@@ -202,7 +237,7 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_UNPROTECT
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_UNPROTECT],
+GATBPS_DEFINE_UNIQUE([GATBPS_UNPROTECT],
   [m4_if(
     m4_bregexp([$*], [[a-zA-Z_]]),
     [-1],
@@ -224,9 +259,9 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_REQUIRE
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_REQUIRE_N], 0)
+GATBPS_DEFINE_UNIQUE([GATBPS_REQUIRE_N], 0)
 
-m4_define([GATBPS_REQUIRE], [
+GATBPS_DEFINE_UNIQUE([GATBPS_REQUIRE], [
   AC_DEFUN([GATBPS_REQUIRE_]GATBPS_REQUIRE_N, [AC_REQUIRE([$1])])
   m4_if(,, [GATBPS_REQUIRE_]GATBPS_REQUIRE_N)
   m4_define([GATBPS_REQUIRE_N], m4_incr(GATBPS_REQUIRE_N))
@@ -257,7 +292,7 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_PROG
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_PROG], [
+GATBPS_DEFINE_UNIQUE([GATBPS_PROG], [
 
   AC_DEFUN_ONCE([GATBPS_PROG_][$1], [
 
@@ -401,7 +436,7 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_PUSH_VAR
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_PUSH_VAR], [[
+GATBPS_DEFINE_UNIQUE([GATBPS_PUSH_VAR], [[
   gatbps_d=$][{gatbps_var_depth_$1-1}
   case $][{$1+x} in '')
     eval gatbps_var_unset_$][{gatbps_d}_$1=:
@@ -418,7 +453,7 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_POP_VAR
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_POP_VAR], [[
+GATBPS_DEFINE_UNIQUE([GATBPS_POP_VAR], [[
   gatbps_d=$][{gatbps_var_depth_$1-1}
   case $gatbps_d in 1)
     ]GATBPS_BUG([GATBPS_POP_VAR([$1], ...) was called
@@ -438,7 +473,7 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_KEEP_VAR
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_KEEP_VAR], [[
+GATBPS_DEFINE_UNIQUE([GATBPS_KEEP_VAR], [[
   gatbps_d=$][{gatbps_var_depth_$1-1}
   case $gatbps_d in 1)
     ]GATBPS_BUG([GATBPS_KEEP_VAR([$1], ...) was called
@@ -456,7 +491,7 @@ dnl TODO: This probably shouldn't be user-facing. The user should really
 dnl       only be using GATBPS_ARG_WITH_*.
 dnl
 
-m4_define([GATBPS_ARG_WITH], [[{
+GATBPS_DEFINE_UNIQUE([GATBPS_ARG_WITH], [[{
 
 ]m4_pushdef(
   [gatbps_x],
@@ -482,7 +517,7 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_ARG_WITH_BOOL
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_ARG_WITH_BOOL], [[{
+GATBPS_DEFINE_UNIQUE([GATBPS_ARG_WITH_BOOL], [[{
 
 ]m4_pushdef(
   [gatbps_x],
@@ -805,7 +840,7 @@ m4_if(
   [GATBPS_ARG_WITH_ENUM_foo2([$1], m4_shift3($@))])[]dnl
 ])[]dnl
 
-m4_define([GATBPS_ARG_WITH_ENUM_foo3], [[
+GATBPS_DEFINE_UNIQUE([GATBPS_ARG_WITH_ENUM_foo3], [[
   ]m4_pushdef(
     [gatbps_x],
     m4_bpatsubst([[[$2]]], [[^]0-9A-Z[_a-z]], [_]))[
@@ -820,7 +855,7 @@ m4_define([GATBPS_ARG_WITH_ENUM_foo3], [[
   ]m4_popdef([gatbps_x])[
 ]])
 
-m4_define([GATBPS_ARG_WITH_ENUM_foo4], [[
+GATBPS_DEFINE_UNIQUE([GATBPS_ARG_WITH_ENUM_foo4], [[
   ]m4_pushdef(
     [gatbps_x],
     m4_bpatsubst([[[$2]]], [[^]0-9A-Z[_a-z]], [_]))[
@@ -841,7 +876,7 @@ m4_define([GATBPS_ARG_WITH_ENUM_foo4], [[
   ]m4_popdef([gatbps_x])[
 ]])
 
-m4_define([GATBPS_ARG_WITH_ENUM_foo5], [[
+GATBPS_DEFINE_UNIQUE([GATBPS_ARG_WITH_ENUM_foo5], [[
   ]m4_pushdef(
     [gatbps_x],
     m4_bpatsubst([[[$2]]], [[^]0-9A-Z[_a-z]], [_]))[
@@ -856,7 +891,7 @@ m4_define([GATBPS_ARG_WITH_ENUM_foo5], [[
   ]m4_popdef([gatbps_x])[
 ]])
 
-m4_define([GATBPS_ARG_WITH_ENUM], [[
+GATBPS_DEFINE_UNIQUE([GATBPS_ARG_WITH_ENUM], [[
 # GATBPS_ARG_WITH_ENUM $2
 { :
 
@@ -934,7 +969,7 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_CHECK
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_CHECK], [[{ :
+GATBPS_DEFINE_UNIQUE([GATBPS_CHECK], [[{ :
 
   ]m4_pushdef(
     [gatbps_name],
@@ -1119,7 +1154,7 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_CHECK_COMPILE
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_CHECK_COMPILE], [
+GATBPS_DEFINE_UNIQUE([GATBPS_CHECK_COMPILE], [
 GATBPS_CALL_COMMENT([$0]m4_if(m4_eval([$# > 0]), [1], [, $@]))
 { :
 
@@ -1146,7 +1181,7 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_CHECK_EXPR
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_CHECK_EXPR], [{ :
+GATBPS_DEFINE_UNIQUE([GATBPS_CHECK_EXPR], [{ :
 
   GATBPS_CHECK(
     [$1],
@@ -1167,7 +1202,7 @@ dnl The second and later JAR names may be patterns.
 dnl The first should be a specific default name.
 dnl
 
-m4_define([GATBPS_CHECK_JAR], [[{ :
+GATBPS_DEFINE_UNIQUE([GATBPS_CHECK_JAR], [[{ :
 
   ]GATBPS_CHECK(
     [$1 (path)],
@@ -1222,7 +1257,7 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_CHECK_LINK
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_CHECK_LINK], [
+GATBPS_DEFINE_UNIQUE([GATBPS_CHECK_LINK], [
 GATBPS_CALL_COMMENT([$0]m4_if(m4_eval([$# > 0]), [1], [, $@]))
 { :
 
@@ -1249,7 +1284,7 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_CHECK_RUN
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_CHECK_RUN], [[
+GATBPS_DEFINE_UNIQUE([GATBPS_CHECK_RUN], [[
 # GATBPS_CHECK_RUN $2
 { :
 
@@ -1587,7 +1622,7 @@ m4_ifdef(
     GATBPS_DOCKER_BUILD_check_3 is already defined
   ])])
 
-m4_define(
+GATBPS_DEFINE_UNIQUE(
   [GATBPS_DOCKER_BUILD_check_3],
   [m4_if(
     [$#],
@@ -1632,7 +1667,7 @@ m4_ifdef(
     GATBPS_DOCKER_BUILD_check_4 is already defined
   ])])
 
-m4_define(
+GATBPS_DEFINE_UNIQUE(
   [GATBPS_DOCKER_BUILD_check_4],
   [m4_if(
     [$#],
@@ -1691,7 +1726,7 @@ m4_ifdef(
     GATBPS_DOCKER_BUILD_check_6 is already defined
   ])])
 
-m4_define(
+GATBPS_DEFINE_UNIQUE(
   [GATBPS_DOCKER_BUILD_check_6],
   [m4_if(
     [$#],
@@ -1771,7 +1806,7 @@ m4_ifdef(
     GATBPS_DOCKER_BUILD_rule_lines is already defined
   ])])
 
-m4_define(
+GATBPS_DEFINE_UNIQUE(
   [GATBPS_DOCKER_BUILD_rule_lines],
   [m4_if(
     [$1],
@@ -1788,7 +1823,7 @@ m4_ifdef(
     GATBPS_DOCKER_BUILD_word_lines_2 is already defined
   ])])
 
-m4_define(
+GATBPS_DEFINE_UNIQUE(
   [GATBPS_DOCKER_BUILD_word_lines_2],
   [m4_if(
     [$1],
@@ -1804,7 +1839,7 @@ m4_ifdef(
     GATBPS_DOCKER_BUILD_word_lines_6 is already defined
   ])])
 
-m4_define(
+GATBPS_DEFINE_UNIQUE(
   [GATBPS_DOCKER_BUILD_word_lines_6],
   [m4_if(
     [$1],
@@ -1820,7 +1855,7 @@ m4_ifdef(
     GATBPS_DOCKER_BUILD_tag_lines is already defined
   ])])
 
-m4_define(
+GATBPS_DEFINE_UNIQUE(
   [GATBPS_DOCKER_BUILD_tag_lines],
   [m4_if(
     [$1],
@@ -2574,7 +2609,7 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_SOFT_REQUIRE
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_SOFT_REQUIRE],
+GATBPS_DEFINE_UNIQUE([GATBPS_SOFT_REQUIRE],
   [m4_if(
     m4_bregexp([$1], [^[a-zA-Z_][a-zA-Z_0-9]*$]),
     -1,
@@ -2585,7 +2620,7 @@ dnl---------------------------------------------------------------------
 dnl GATBPS_SOFT_VAR
 dnl---------------------------------------------------------------------
 
-m4_define([GATBPS_SOFT_VAR],
+GATBPS_DEFINE_UNIQUE([GATBPS_SOFT_VAR],
   [m4_if(
     m4_bregexp([$1], [^[A-Z_a-z][0-9A-Z_a-z]*$]),
     [-1],
