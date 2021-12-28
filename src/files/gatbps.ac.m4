@@ -41,16 +41,14 @@ dnl You can call this macro from another macro as follows:
 dnl
 dnl    GATBPS_CALL_COMMENT([$0]m4_if(m4_eval([$# > 0]), [1], [, $@]))
 dnl
-[
 
-]m4_define([GATBPS_CALL_COMMENT],
+m4_define([GATBPS_CALL_COMMENT],
   [[# $1]m4_if(
     m4_eval([$# > 1]),
     [1],
     [[(]m4_bpatsubst(m4_dquote(m4_dquote(m4_shift($@))), [
-], [\&# ])[)]])])[
+], [\&# ])[)]])])
 
-]
 dnl---------------------------------------------------------------------
 dnl GATBPS_SQUISH(<text>)
 dnl---------------------------------------------------------------------
