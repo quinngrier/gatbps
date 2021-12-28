@@ -2571,7 +2571,9 @@ dnl
       int main() { f(); return 0; }
 
     ]])],
-    [m4_fatal([GATBPS_LANG_PROGRAM does not support ]_AC_LANG)])])[
+    [GATBPS_AC_BARF([
+      GATBPS_LANG_PROGRAM: Language not supported: ]_AC_LANG[.
+    ])])])[
 
 ]
 dnl---------------------------------------------------------------------
