@@ -17,6 +17,7 @@
 include::acl_notation.adoc[]
 include::acl_GATBPS_ARG_WITH_ENUM.adoc[]
 include::acl_GATBPS_ARG_WYNA.adoc[]
+include::acl_GATBPS_BEFORE.adoc[]
 include::acl_GATBPS_BUG.adoc[]
 include::acl_GATBPS_DEDUCE_WYNAS.adoc[]
 include::acl_GATBPS_DEFINE_UNIQUE.adoc[]

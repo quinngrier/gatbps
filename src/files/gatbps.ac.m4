@@ -268,6 +268,16 @@ GATBPS_DEFINE_UNIQUE([GATBPS_UNPROTECT],
     )])])
 
 dnl---------------------------------------------------------------------
+dnl GATBPS_BEFORE
+dnl---------------------------------------------------------------------
+
+dnl TODO: Violating the order should always be a fatal error.
+
+GATBPS_DEFINE_UNIQUE([GATBPS_BEFORE], [dnl
+AC_BEFORE([$1], [$2])dnl
+])
+
+dnl---------------------------------------------------------------------
 dnl GATBPS_REQUIRE
 dnl---------------------------------------------------------------------
 

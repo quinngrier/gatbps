@@ -143,4 +143,7 @@ include::attributes/sh.adoc[]
 :acl_GATBPS_SQUISH_url: acl_GATBPS_SQUISH.adoc#acl-GATBPS-SQUISH
 :acl_GATBPS_SQUISH: link:{acl_GATBPS_SQUISH_url}[GATBPS_SQUISH]
 
+:acl_GATBPS_BEFORE_url: acl_GATBPS_BEFORE.adoc#acl-GATBPS-BEFORE
+:acl_GATBPS_BEFORE: link:{acl_GATBPS_BEFORE_url}[GATBPS_BEFORE]
+
 //
