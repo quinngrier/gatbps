@@ -1332,7 +1332,7 @@ dnl GATBPS_CHECK_RUN
 dnl---------------------------------------------------------------------
 
 GATBPS_DEFINE_UNIQUE([GATBPS_CHECK_RUN], [[
-# GATBPS_CHECK_RUN $2
+]GATBPS_CALL_COMMENT([$0]m4_if(m4_eval([$# > 0]), [1], [, $@]))[
 { :
 
   ]GATBPS_CHECK(
