@@ -758,17 +758,25 @@ dnl---------------------------------------------------------------------
 { :
 
   ]m4_if(
-    m4_eval([$# == 3]),
-    [0],
+    m4_eval([$# < 2 || $# > 3]),
+    [1],
     [GATBPS_AC_BARF([
       GATBPS_FINISH_WYNA: Invalid argument count: "$#".
-    ])],
+    ])])[
+
+  ]m4_if(
     m4_bregexp([$2], [^[A-Z_a-z][0-9A-Z_a-z]*$]),
     [-1],
     [GATBPS_AC_BARF([
       GATBPS_FINISH_WYNA: Invalid <name>: "$2".
-    ])],
-    m4_bregexp([$3], [^--with-[0-9A-Z_a-z-]+$]),
+    ])])[
+
+  ]m4_pushdef(
+    [gatbps_option],
+    m4_if([$# >= 3], [1], [[[$3]]], [[[$1]]]))[
+
+  ]m4_if(
+    m4_bregexp(gatbps_option, [^--with-[0-9A-Z_a-z-]+$]),
     [-1],
     [GATBPS_AC_BARF([
       GATBPS_FINISH_WYNA: Invalid <option>: "$3".
@@ -827,6 +835,7 @@ dnl---------------------------------------------------------------------
 
   ]m4_popdef([gatbps_X])[
   ]m4_popdef([gatbps_x])[
+  ]m4_popdef([gatbps_option])[
 
 }]])[
 

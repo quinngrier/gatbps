@@ -19,7 +19,10 @@ include::acl_include_gatbps_ac_fragment.adoc[]
 {acl_GATBPS_FINISH_WYNA}(
   <message>,
   <name>,
-  <option>)
+  <option>?)
 ----
+
+If `<option>` is omitted, it is taken to be `<message>`.
+In this case, `<message>` itself must be the option name.
 
 //
