@@ -773,13 +773,13 @@ dnl---------------------------------------------------------------------
 
   ]m4_pushdef(
     [gatbps_option],
-    m4_if([$# >= 3], [1], [[[$3]]], [[[$1]]]))[
+    m4_if(m4_eval([$# >= 3]), [1], [[[$3]]], [[[$1]]]))[
 
   ]m4_if(
     m4_bregexp(gatbps_option, [^--with-[0-9A-Z_a-z-]+$]),
     [-1],
     [GATBPS_AC_BARF([
-      GATBPS_FINISH_WYNA: Invalid <option>: "$3".
+      GATBPS_FINISH_WYNA: Invalid <option>: "]gatbps_option[".
     ])])[
 
   ]m4_pushdef([gatbps_x],
