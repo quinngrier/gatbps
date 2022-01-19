@@ -1010,13 +1010,13 @@ GATBPS_DEFINE_UNIQUE([GATBPS_CHECK], [[{ :
     m4_eval(m4_bregexp([$2:], [:notmake:]) >= 0))[
 
   ]m4_ignore([
-    Do not unset the gatbps_cv_* variable, as that would break caching.
-    The way caching works is that the gatbps_cv_* variable will be set
-    to the cached value early on in ./configure, and we should let it
+    Do not unset the gatbps_cv_<name> variable, as that would break
+    caching. The way caching works is that gatbps_cv_<name> will be set
+    to the cached value early on in ./configure, and we should let that
     get fed into AC_CACHE_CHECK.
 
-    Do not unset <name>, as sometimes a caller may have already set it
-    themselves and will use it in <code> to "finish" it.
+    Do not unset the <name> variable, as sometimes a caller may have
+    already set it themselves and will use it in <code> to "finish" it.
   ])[
 
   unset ]gatbps_name[_sh
