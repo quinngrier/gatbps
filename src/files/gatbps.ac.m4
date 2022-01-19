@@ -1020,6 +1020,8 @@ GATBPS_DEFINE_UNIQUE([GATBPS_CHECK], [[{ :
   ])[
 
   unset ]gatbps_name[_sh
+  unset ]gatbps_name[_is_guess
+  unset ]gatbps_name[_is_guess_sh
   unset ]gatbps_name[_was_cached
   unset ]gatbps_name[_was_cached_sh
 
@@ -1115,7 +1117,8 @@ gatbps_EOF
   if $][{gatbps_cv_]gatbps_name[+:} false; then
     :
     ]m4_if(gatbps_bool, 1, [[
-      case $gatbps_cv_]gatbps_name[ in yes | no)
+      case $][{gatbps_cv_]gatbps_name[?} in \
+          yes | no | 'yes (guess)' | 'no (guess)')
         :
       ;; *)
         ]GATBPS_BUG([
@@ -1149,14 +1152,30 @@ gatbps_EOF
     not detected.
   ])[
 
-  ]m4_if(gatbps_bool[]gatbps_notbool, 01, [], [[
+  ]m4_if(gatbps_bool[]gatbps_notbool, [01], [], [[
     case $]gatbps_name[ in yes)
       ]gatbps_name[=1
       ]gatbps_name[_sh=:
+      ]gatbps_name[_is_guess=0
+      ]gatbps_name[_is_guess_sh=false
+      ]AC_DEFINE([gatbps_name], 1, [Result of checking $1.])[
+    ;; 'yes (guess)')
+      ]gatbps_name[=1
+      ]gatbps_name[_sh=:
+      ]gatbps_name[_is_guess=1
+      ]gatbps_name[_is_guess_sh=:
       ]AC_DEFINE([gatbps_name], 1, [Result of checking $1.])[
     ;; no)
       ]gatbps_name[=0
       ]gatbps_name[_sh=false
+      ]gatbps_name[_is_guess=0
+      ]gatbps_name[_is_guess_sh=false
+      ]AC_DEFINE([gatbps_name], 0, [Result of checking $1.])[
+    ;; 'no (guess)')
+      ]gatbps_name[=0
+      ]gatbps_name[_sh=false
+      ]gatbps_name[_is_guess=1
+      ]gatbps_name[_is_guess_sh=:
       ]AC_DEFINE([gatbps_name], 0, [Result of checking $1.])[
     ;; *)
       ]gatbps_name[_sh=false
@@ -1166,6 +1185,8 @@ gatbps_EOF
 
   readonly ]gatbps_name[
   readonly ]gatbps_name[_sh
+  readonly ]gatbps_name[_is_guess
+  readonly ]gatbps_name[_is_guess_sh
   readonly ]gatbps_name[_was_cached
   readonly ]gatbps_name[_was_cached_sh
 

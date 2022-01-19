@@ -29,7 +29,8 @@ as follows:
 
 * The cache variable is named `gatbps_cv_<name>`.
 
-* `<name>` is set to `$gatbps_cv_<name>` after `{acl_AC_CACHE_CHECK}`
+* {empty}
+`<name>` is set to `$gatbps_cv_<name>` after `{acl_AC_CACHE_CHECK}`
 completes.
 
 * {empty}
@@ -49,22 +50,37 @@ These specifiers are removed from `<name>` when forming variable names.
 * If `:notmake` is specified at the end of `<name>`, then
 `{aml_AM_SUBST_NOTMAKE}` is called for `<name>`.
 
-* If `:notbool` is specified at the end of `<name>`, then boolean
+* {empty}
+If `:notbool` is specified at the end of `<name>`, then boolean
 detection is disabled.
-Otherwise, boolean detection is enabled and all of the following occur:
-
-** If `gatbps_cv_<name>` is set to `yes` or `no`, then all of the
+Otherwise, boolean detection is enabled, in which case all of the
 following occur:
 
-*** `<name>` is set to `1` or `0` instead of `yes` or `no`.
+** {empty}
+If `gatbps_cv_<name>` is set to `yes`, `no`, `yes (guess)`, or
+`no (guess)`, then all of the following occur:
 
-*** `<name>_sh` is set to `:` or `false` to indicate whether `$<name>`
-is `1` or `0`.
+*** {empty}
+`<name>` is adjusted to `1` if it is `yes` or `yes (guess)`, or to `0`
+if it is `no` or `no (guess)`.
+
+*** {empty}
+`<name>_sh` is set to `:` or `false` to indicate whether `$<name>` is
+`1` or `0`.
+
+*** {empty}
+`<name>_is_guess` is set to `1` or `0` to indicate whether `$<name>`
+originally ended in `(guess)`.
+
+*** {empty}
+`<name>_is_guess_sh` is set to `:` or `false` to indicate whether
+`$<name>_is_guess` is `1` or `0`.
 
 *** `{acl_AC_DEFINE}` is called for `<name>`.
 
-** If `gatbps_cv_<name>` is set to something other than `yes` or `no`,
-then `<name>_sh` is set to `false`.
+** {empty}
+If `gatbps_cv_<name>` is not set to `yes`, `no`, `yes (guess)`, or
+`no (guess)`, then `<name>_sh` is set to `false`.
 
 ** `{aml_AM_CONDITIONAL}` is called for `<name>` using `$<name>_sh`.
 
