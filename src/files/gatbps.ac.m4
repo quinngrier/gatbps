@@ -1118,12 +1118,16 @@ gatbps_EOF
       case $gatbps_cv_]gatbps_name[ in yes | no)
         :
       ;; *)
-        ]GATBPS_BUG([gatbps_cv_]gatbps_name[ is set to something
-                     other than yes or no: $gatbps_cv_]gatbps_name)[
+        ]GATBPS_BUG([
+          Invalid gatbps_cv_]gatbps_name[ value:
+          "$gatbps_cv_]gatbps_name[".
+        ])[
       esac
     ]])[
   else
-    ]GATBPS_BUG([gatbps_cv_]gatbps_name[ is unset])[
+    ]GATBPS_BUG([
+      gatbps_cv_]gatbps_name[ must be set.
+    ])[
   fi
 
   ]gatbps_name[=$gatbps_cv_]gatbps_name[
