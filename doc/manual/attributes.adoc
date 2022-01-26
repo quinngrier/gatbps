@@ -146,4 +146,9 @@ include::attributes/sh.adoc[]
 :acl_GATBPS_BEFORE_url: acl_GATBPS_BEFORE.adoc#acl-GATBPS-BEFORE
 :acl_GATBPS_BEFORE: link:{acl_GATBPS_BEFORE_url}[GATBPS_BEFORE]
 
+:csf_form: CSF form
+
+:sh_gatbps_quote_url: sh_gatbps_quote.adoc#sh-gatbps-quote
+:sh_gatbps_quote: xref:{sh_gatbps_quote_url}[gatbps_quote]
+
 //

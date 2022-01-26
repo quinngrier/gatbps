@@ -1,0 +1,36 @@
+//
+// The authors of this file have waived all copyright and
+// related or neighboring rights to the extent permitted by
+// law as described by the CC0 1.0 Universal Public Domain
+// Dedication. You should have received a copy of the full
+// dedication along with this file, typically as a file
+// named <CC0-1.0.txt>. If not, it may be available at
+// <https://creativecommons.org/publicdomain/zero/1.0/>.
+//
+
+[#sh-gatbps-quote]
+= The `gatbps_quote` function
+
+.Shell
+[source,subs="{subs_source}"]
+----
+{sh_gatbps_quote} [<arg>...]
+----
+
+The `{sh_gatbps_quote}` function quotes the input as a portably quoted
+shell word.
+
+The algorithm is as follows:
+
+. {empty}
+Replace every `'` character with `'\''`.
+
+. {empty}
+Prepend a `'` character to the result.
+
+. {empty}
+Append a `'` character to the result.
+
+include::partials/sh_arg_joined_csf_io.adoc[]
+
+//

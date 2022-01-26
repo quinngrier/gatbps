@@ -7,17 +7,7 @@
 // named <CC0-1.0.txt>. If not, it may be available at
 // <https://creativecommons.org/publicdomain/zero/1.0/>.
 //
-
-[#shell-library]
-= Shell library
-:example-number: 0
-
-:leveloffset: +1
-
-include::sh_gatbps_csf.adoc[]
-include::sh_gatbps_quote.adoc[]
-include::sh_gatbps_readonly.adoc[]
-
-:leveloffset: -1
-
-//
+The input is the space-separated concatenation of the arguments.
+If no arguments are given, the input is read from standard input in
+{csf_form} instead.
+The output is always written to standard output in {csf_form}.
