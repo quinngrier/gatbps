@@ -90,7 +90,7 @@ define([GATBPS_SMART_QUOTE], [GATBPS_SQUISH([
 [
 
 ##---------------------------------------------------------------------
-## Variable initialization
+## Empty variable initializers
 ##----------------------------------------------------------------------
 
 EXTRA_DIST =
