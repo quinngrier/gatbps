@@ -95,6 +95,8 @@ define([GATBPS_SMART_QUOTE], [GATBPS_SQUISH([
 
 EXTRA_DIST =
 SUFFIXES =
+include_HEADERS =
+nodist_include_HEADERS =
 
 ##----------------------------------------------------------------------
 ## Force targets
