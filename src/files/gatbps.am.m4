@@ -230,8 +230,9 @@ uninstall-local:
 ## Recipe tracing
 ##----------------------------------------------------------------------
 
-GATBPS_RECIPE_MARKER_TOP = : recipe starting: $@
-GATBPS_RECIPE_MARKER_BOT = : recipe finished: $@
+GATBPS_RECIPE_MARKER_TOP = : Recipe starting: $@
+
+GATBPS_RECIPE_MARKER_BOT = : Recipe finished: $@
 
 ##----------------------------------------------------------------------
 ## Verbosity
