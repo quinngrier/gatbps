@@ -402,6 +402,31 @@ pushdef([F1],
 
 popdef([F1])
 
+#-----------------------------------------------------------------------
+# The list-distfiles target
+#-----------------------------------------------------------------------
+
+pushdef([GATBPS_F1], [GATBPS_SQUISH([@
+  for x in $($1); do
+    printf '%s\n' "$$x" || exit $$?;
+  done;
+])])
+
+pushdef([GATBPS_F2],
+  [ifelse(
+    $1, [], [GATBPS_F1([DISTFILES])GATBPS_F2(0)],
+    $1, GATBPS_DISTFILES_N, [],
+    [
+	GATBPS_F1([GATBPS_DISTFILES_$1])GATBPS_F2(incr($1))])])
+
+[list-distfiles: FORCE]
+	GATBPS_F2
+
+popdef([GATBPS_F2])
+popdef([GATBPS_F1])
+
+#-----------------------------------------------------------------------
+
 [
 ##----------------------------------------------------------------------
 ## Distribution archives
