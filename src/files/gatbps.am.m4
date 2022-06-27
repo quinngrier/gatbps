@@ -402,53 +402,61 @@ pushdef([F1],
 
 popdef([F1])
 
+[
+
 #-----------------------------------------------------------------------
 # The list-distfiles target
 #-----------------------------------------------------------------------
 #
 # The list-distfiles target outputs the list of distributed files and
 # directories, one per line. Each entry will always begin with "./".
-# Additional "." components may also be present. The order of the
-# entries is unspecified. Entries may be repeated, possibly with
-# different mixes of "." components.
+# Additional "." and ".." components may be present. The order of the
+# entries is unspecified. Some entries may be repeated, possibly with
+# different mixes of "." and ".." components.
 #
 
-pushdef([GATBPS_F1], [GATBPS_SQUISH([@
-  srcdir='$(srcdir)';
-  for x in $($1) $${empty+}; do
-    case $$srcdir in .)
-      case $$x in ./*)
-        :;
-      ;; *)
-        x=./$$x;
-      esac;
-    ;; *)
-      x=./$$srcdir/$$x;
-    esac;
-    printf '%s\n' "$$x" || exit $$?;
-  done;
-  for x in $(DIST_SUBDIRS) $${empty+}; do
-    x=./$$x;
-    (cd "$$x" && $(MAKE) $(AM_MAKEFLAGS) list-distfiles) || exit $$?;
-  done;
-])])
+]pushdef([GATBPS_F1], [[
+list-distfiles-$1: FORCE
+	]GATBPS_SQUISH([@
+	  srcdir='$(srcdir)';
+	  for x in $($1) $${empty+}; do
+	    case $$srcdir in .)
+	      case $$x in ./*)
+	        :;
+	      ;; *)
+	        x=./$$x;
+	      esac;
+	    ;; *)
+	      x=./$$srcdir/$$x;
+	    esac;
+	    printf '%s\n' "$$x" || exit $$?;
+	  done;
+	])[
+list-distfiles: list-distfiles-$1
+]])[
 
-pushdef([GATBPS_F2],
+]pushdef([GATBPS_F2],
   [ifelse(
     $1, [], [GATBPS_F1([DISTFILES])GATBPS_F2(0)],
     $1, GATBPS_DISTFILES_N, [],
     [
-	GATBPS_F1([GATBPS_DISTFILES_$1])GATBPS_F2(incr($1))])])
+	GATBPS_F1([GATBPS_DISTFILES_$1])GATBPS_F2(incr($1))])])[
 
-[list-distfiles: FORCE]
-	GATBPS_F2
+]GATBPS_F2[
 
-popdef([GATBPS_F2])
-popdef([GATBPS_F1])
+]popdef([GATBPS_F2])[
+]popdef([GATBPS_F1])[
+
+list-distfiles: FORCE
+	]GATBPS_SQUISH([@
+	  for x in $(DIST_SUBDIRS) $${empty+}; do
+	    x=./$$x;
+	    (cd "$$x" && $(MAKE) $(AM_MAKEFLAGS) $@) || exit $$?;
+	  done;
+	])[
 
 #-----------------------------------------------------------------------
 
-[
 ##----------------------------------------------------------------------
 ## Distribution archives
 ##----------------------------------------------------------------------
