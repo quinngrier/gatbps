@@ -405,10 +405,31 @@ popdef([F1])
 #-----------------------------------------------------------------------
 # The list-distfiles target
 #-----------------------------------------------------------------------
+#
+# The list-distfiles target outputs the list of distributed files and
+# directories, one per line. Each entry will always begin with "./".
+# Additional "." components may also be present. The order of the
+# entries is unspecified. Entries may be repeated, possibly with
+# different mixes of "." components.
+#
 
 pushdef([GATBPS_F1], [GATBPS_SQUISH([@
-  for x in $($1); do
+  srcdir='$(srcdir)';
+  for x in $($1) $${empty+}; do
+    case $$srcdir in .)
+      case $$x in ./*)
+        :;
+      ;; *)
+        x=./$$x;
+      esac;
+    ;; *)
+      x=./$$srcdir/$$x;
+    esac;
     printf '%s\n' "$$x" || exit $$?;
+  done;
+  for x in $(DIST_SUBDIRS) $${empty+}; do
+    x=./$$x;
+    (cd "$$x" && $(MAKE) $(AM_MAKEFLAGS) list-distfiles) || exit $$?;
   done;
 ])])
 
