@@ -455,7 +455,7 @@ list-distfiles: FORCE
 	    v=LIST_DISTFILES_PREFIX='$(LIST_DISTFILES_PREFIX)'$$x/;
 	    (
 	      cd "./$$x" || exit $$?;
-	      $(MAKE) $(AM_MAKEFLAGS) "$$v" $@ || exit $$?;
+	      $(MAKE) $(AM_MAKEFLAGS) -s "$$v" $@ || exit $$?;
 	    ) || exit $$?;
 	  done;
 	])[
