@@ -409,26 +409,28 @@ popdef([F1])
 #-----------------------------------------------------------------------
 #
 # The list-distfiles target outputs the list of distributed files and
-# directories, one per line. Each entry will always begin with "./".
-# Additional "." and ".." components may be present. The order of the
-# entries is unspecified. Some entries may be repeated, possibly with
-# different mixes of "." and ".." components.
+# directories, one per line.
 #
+# Each entry is listed as if it exists in the build directory, even if
+# it only exists in the source directory during a VPATH build. The entry
+# will always begin with "./". Additional "." and ".." components may be
+# present. Each ".." component will not raise the intermediate directory
+# above the root directory of the project.
+#
+# The order of the entries is unspecified, and entries may be repeated.
+# Textually different entries that refer to the same file or directory
+# will become identical after removing all "." components, normalizing
+# all ".." components, and replacing each sequence of two or more "/"
+# characters with a single "/" character.
+#
+
+LIST_DISTFILES_PREFIX = ./
 
 ]pushdef([GATBPS_F1], [[
 list-distfiles-$1: FORCE
 	]GATBPS_SQUISH([@
-	  srcdir='$(srcdir)';
 	  for x in $($1) $${empty+}; do
-	    case $$srcdir in .)
-	      case $$x in ./*)
-	        :;
-	      ;; *)
-	        x=./$$x;
-	      esac;
-	    ;; *)
-	      x=./$$srcdir/$$x;
-	    esac;
+	    x='$(LIST_DISTFILES_PREFIX)'$$x;
 	    printf '%s\n' "$$x" || exit $$?;
 	  done;
 	])[
@@ -450,8 +452,11 @@ list-distfiles: list-distfiles-$1
 list-distfiles: FORCE
 	]GATBPS_SQUISH([@
 	  for x in $(DIST_SUBDIRS) $${empty+}; do
-	    x=./$$x;
-	    (cd "$$x" && $(MAKE) $(AM_MAKEFLAGS) $@) || exit $$?;
+	    v=LIST_DISTFILES_PREFIX='$(LIST_DISTFILES_PREFIX)'$$x/;
+	    (
+	      cd "./$$x" || exit $$?;
+	      $(MAKE) $(AM_MAKEFLAGS) "$$v" $@ || exit $$?;
+	    ) || exit $$?;
 	  done;
 	])[
 
