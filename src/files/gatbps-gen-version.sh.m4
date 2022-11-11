@@ -304,7 +304,17 @@ if test -f "$0.cache"; then
 
 elif eval " $git"' ls-files --error-unmatch "$0"' >/dev/null 2>&1; then
 
+  #
+  # Note that --abbrev=7 is needed to ensure that all versions of Git
+  # produce the same output from git describe. The issue is that, when
+  # --abbrev is not specified, newer versions of Git may be affected by
+  # core.abbrev=auto to choose a default value >7, while older versions
+  # always default to 7. This means newer versions may output extra hex
+  # digits. core.abbrev=auto first appeared around Git v2.11.1.
+  #
+
   x='describe'
+  x=$x' --abbrev=7'
   x=$x' --candidates=1'
   x=$x' --match="'$v_prefix'[0-9]*.[0-9]*.[0-9]*"'
   x=$x' --tags'
@@ -374,6 +384,7 @@ EOF2
   esac
 
   x='describe'
+  x=$x' --abbrev=7'
   x=$x' --candidates=1'
   x=$x' --long'
   x=$x' --match="'$u_prefix'[0-9]*.[0-9]*.[0-9]*"'
