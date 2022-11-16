@@ -25,7 +25,7 @@ stem:[n - 1] times during rescanning.
 AC_INIT([[example]], 1)
 AM_INIT_AUTOMAKE([foreign])
 
-include::acl_include_gatbps_ac_fragment.adoc[]
+include::partials/acl_include_gatbps_ac_fragment.adoc[]
 
 m4_pushdef([f1], [[$1]])          dnl would be notated as f1(<x>)
 m4_pushdef([f2], [$1])            dnl would be notated as f2(<<x>>)

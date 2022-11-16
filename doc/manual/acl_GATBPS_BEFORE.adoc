@@ -14,7 +14,7 @@
 .Autoconf
 [source,subs="{subs_source}"]
 ----
-include::acl_include_gatbps_ac_fragment.adoc[]
+include::partials/acl_include_gatbps_ac_fragment.adoc[]
 
 {acl_GATBPS_BEFORE}(
   <current_macro>,
