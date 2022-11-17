@@ -69,6 +69,12 @@ m4_define([$1], [$2])dnl
 ])
 
 dnl---------------------------------------------------------------------
+
+GATBPS_DEFINE_UNIQUE([GATBPS_1Q], [$@])
+GATBPS_DEFINE_UNIQUE([GATBPS_2Q], [[$@]])
+GATBPS_DEFINE_UNIQUE([GATBPS_3Q], [[[$@]]])
+
+dnl---------------------------------------------------------------------
 dnl GATBPS_CALL_COMMENT(<macro>, <arg>...?)
 dnl---------------------------------------------------------------------
 dnl
@@ -472,7 +478,7 @@ m4_pushdef(
 
 GATBPS_DEFINE_UNIQUE(
   [AC_PACKAGE_NAME_UNDERSCORE_SLUG],
-  GATBPS_F(m4_dquote(m4_dquote(AC_PACKAGE_NAME))))
+  GATBPS_F(GATBPS_3Q(AC_PACKAGE_NAME)))
 
 m4_popdef([GATBPS_F])
 
@@ -497,7 +503,7 @@ dnl---------------------------------------------------------------------
 
 GATBPS_DEFINE_UNIQUE(
   [AC_PACKAGE_NAME_LOWER_UNDERSCORE_SLUG],
-  m4_tolower(m4_dquote(m4_dquote(AC_PACKAGE_NAME_UNDERSCORE_SLUG))))
+  m4_tolower(GATBPS_3Q(AC_PACKAGE_NAME_UNDERSCORE_SLUG)))
 
 [
   PACKAGE_NAME_LOWER_UNDERSCORE_SLUG=']AC_PACKAGE_NAME_LOWER_UNDERSCORE_SLUG['
@@ -521,7 +527,7 @@ dnl---------------------------------------------------------------------
 
 GATBPS_DEFINE_UNIQUE(
   [AC_PACKAGE_NAME_UPPER_UNDERSCORE_SLUG],
-  m4_toupper(m4_dquote(m4_dquote(AC_PACKAGE_NAME_UNDERSCORE_SLUG))))
+  m4_toupper(GATBPS_3Q(AC_PACKAGE_NAME_UNDERSCORE_SLUG)))
 
 [
   PACKAGE_NAME_UPPER_UNDERSCORE_SLUG=']AC_PACKAGE_NAME_UPPER_UNDERSCORE_SLUG['
