@@ -455,6 +455,43 @@ GATBPS_PROG([XZ], [xz])
 GATBPS_PROG([ZIP], [zip])
 
 dnl---------------------------------------------------------------------
+dnl PACKAGE_NAME_UNDERSCORE_SLUG
+dnl---------------------------------------------------------------------
+
+m4_pushdef(
+  [GATBPS_F],
+  [m4_bmatch(
+    [$1],
+    [^...*[][].*[][].*..$],
+    [GATBPS_F(
+      m4_bpatsubst(
+        [[$1]],
+        [^\(....*\)[][]\(.*\)[][]\(.*...\)$],
+        [\1_\2_\3]))],
+    [m4_bpatsubst([$1], [[^][0-9A-Z_a-z]], [_])])])
+
+GATBPS_DEFINE_UNIQUE(
+  [AC_PACKAGE_NAME_UNDERSCORE_SLUG],
+  GATBPS_F(m4_dquote(m4_dquote(AC_PACKAGE_NAME))))
+
+m4_popdef([GATBPS_F])
+
+[
+  PACKAGE_NAME_UNDERSCORE_SLUG=']AC_PACKAGE_NAME_UNDERSCORE_SLUG['
+  readonly PACKAGE_NAME_UNDERSCORE_SLUG
+]
+
+AC_SUBST([PACKAGE_NAME_UNDERSCORE_SLUG])
+
+AC_DEFINE_UNQUOTED(
+  [PACKAGE_NAME_UNDERSCORE_SLUG],
+  ["$][{PACKAGE_NAME_UNDERSCORE_SLUG?}"],
+  GATBPS_SQUISH([
+    The package name with every non-alphanumeric non-underscore
+    character replaced with an underscore character.
+  ]))
+
+dnl---------------------------------------------------------------------
 dnl GATBPS_PUSH_VAR
 dnl---------------------------------------------------------------------
 
