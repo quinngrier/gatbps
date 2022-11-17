@@ -516,6 +516,30 @@ AC_DEFINE_UNQUOTED(
   ]))
 
 dnl---------------------------------------------------------------------
+dnl PACKAGE_NAME_UPPER_UNDERSCORE_SLUG
+dnl---------------------------------------------------------------------
+
+GATBPS_DEFINE_UNIQUE(
+  [AC_PACKAGE_NAME_UPPER_UNDERSCORE_SLUG],
+  m4_toupper(m4_dquote(m4_dquote(AC_PACKAGE_NAME_UNDERSCORE_SLUG))))
+
+[
+  PACKAGE_NAME_UPPER_UNDERSCORE_SLUG=']AC_PACKAGE_NAME_UPPER_UNDERSCORE_SLUG['
+  readonly PACKAGE_NAME_UPPER_UNDERSCORE_SLUG
+]
+
+AC_SUBST([PACKAGE_NAME_UPPER_UNDERSCORE_SLUG])
+
+AC_DEFINE_UNQUOTED(
+  [PACKAGE_NAME_UPPER_UNDERSCORE_SLUG],
+  ["$][{PACKAGE_NAME_UPPER_UNDERSCORE_SLUG?}"],
+  GATBPS_SQUISH([
+    The package name with every non-alphanumeric non-underscore
+    character replaced with an underscore character and every lowercase
+    letter converted to uppercase.
+  ]))
+
+dnl---------------------------------------------------------------------
 dnl GATBPS_PUSH_VAR
 dnl---------------------------------------------------------------------
 
