@@ -571,6 +571,31 @@ AC_DEFINE_UNQUOTED(
   ]))
 
 dnl---------------------------------------------------------------------
+dnl PACKAGE_UPPER_C_PREFIX
+dnl---------------------------------------------------------------------
+
+m4_ifndef(
+  [GATBPS_PACKAGE_UPPER_C_PREFIX],
+  [GATBPS_DEFINE_UNIQUE(
+    [GATBPS_PACKAGE_UPPER_C_PREFIX],
+    AC_PACKAGE_NAME_UPPER_UNDERSCORE_SLUG)])
+
+[
+  PACKAGE_UPPER_C_PREFIX=']GATBPS_PACKAGE_UPPER_C_PREFIX['
+  readonly PACKAGE_UPPER_C_PREFIX
+]
+
+AC_SUBST([PACKAGE_UPPER_C_PREFIX])
+
+AC_DEFINE_UNQUOTED(
+  [PACKAGE_UPPER_C_PREFIX],
+  ["$][{PACKAGE_UPPER_C_PREFIX?}"],
+  GATBPS_SQUISH([
+    The uppercase identifier prefix to use for the package's C API, not
+    including the trailing underscore character.
+  ]))
+
+dnl---------------------------------------------------------------------
 dnl GATBPS_PUSH_VAR
 dnl---------------------------------------------------------------------
 
