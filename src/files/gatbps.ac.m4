@@ -546,6 +546,31 @@ AC_DEFINE_UNQUOTED(
   ]))
 
 dnl---------------------------------------------------------------------
+dnl PACKAGE_LOWER_C_PREFIX
+dnl---------------------------------------------------------------------
+
+m4_ifndef(
+  [GATBPS_PACKAGE_LOWER_C_PREFIX],
+  [GATBPS_DEFINE_UNIQUE(
+    [GATBPS_PACKAGE_LOWER_C_PREFIX],
+    AC_PACKAGE_NAME_LOWER_UNDERSCORE_SLUG)])
+
+[
+  PACKAGE_LOWER_C_PREFIX=']GATBPS_PACKAGE_LOWER_C_PREFIX['
+  readonly PACKAGE_LOWER_C_PREFIX
+]
+
+AC_SUBST([PACKAGE_LOWER_C_PREFIX])
+
+AC_DEFINE_UNQUOTED(
+  [PACKAGE_LOWER_C_PREFIX],
+  ["$][{PACKAGE_LOWER_C_PREFIX?}"],
+  GATBPS_SQUISH([
+    The lowercase identifier prefix to use for the package's C API, not
+    including the trailing underscore character.
+  ]))
+
+dnl---------------------------------------------------------------------
 dnl GATBPS_PUSH_VAR
 dnl---------------------------------------------------------------------
 
