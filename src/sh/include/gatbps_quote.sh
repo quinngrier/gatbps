@@ -11,6 +11,14 @@
 # <https://creativecommons.org/publicdomain/zero/1.0/>.
 #
 
+#
+# We use awk instead of sed because there's no way to print the
+# enclosing quotes with sed when stdin is empty. We can't print the
+# enclosing quotes with separate commands either, as sed will append a
+# newline to the last line of output if a newline is not already there,
+# causing an extraneous newline before the closing quote.
+#
+
 gatbps_quote() {
 
   case ${gatbps_quote_script+x} in '')
