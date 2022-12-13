@@ -1064,6 +1064,10 @@ dnl---------------------------------------------------------------------
   readonly $2_IS_AUTO
   readonly $2_IS_AUTO_SH
 
+  ]AC_SUBST([$2_IS_YES])[
+  ]AC_SUBST([$2_IS_NO])[
+  ]AC_SUBST([$2_IS_AUTO])[
+
   ]m4_popdef([gatbps_X])[
   ]m4_popdef([gatbps_x])[
   ]m4_popdef([gatbps_option])[
