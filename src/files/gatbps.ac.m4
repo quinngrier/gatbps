@@ -1041,28 +1041,28 @@ dnl---------------------------------------------------------------------
     ])[
   esac
 
-  $2_is_yes=0
-  $2_is_yes_sh=false
-  $2_is_no=0
-  $2_is_no_sh=false
-  $2_is_auto=0
-  $2_is_auto_sh=false
+  $2_IS_YES=0
+  $2_IS_YES_SH=false
+  $2_IS_NO=0
+  $2_IS_NO_SH=false
+  $2_IS_AUTO=0
+  $2_IS_AUTO_SH=false
   case $][{$2?} in yes)
-    $2_is_yes=1
-    $2_is_yes_sh=:
+    $2_IS_YES=1
+    $2_IS_YES_SH=:
   ;; no)
-    $2_is_no=1
-    $2_is_no_sh=:
+    $2_IS_NO=1
+    $2_IS_NO_SH=:
   ;; auto)
-    $2_is_auto=1
-    $2_is_auto_sh=:
+    $2_IS_AUTO=1
+    $2_IS_AUTO_SH=:
   esac
-  readonly $2_is_yes
-  readonly $2_is_yes_sh
-  readonly $2_is_no
-  readonly $2_is_no_sh
-  readonly $2_is_auto
-  readonly $2_is_auto_sh
+  readonly $2_IS_YES
+  readonly $2_IS_YES_SH
+  readonly $2_IS_NO
+  readonly $2_IS_NO_SH
+  readonly $2_IS_AUTO
+  readonly $2_IS_AUTO_SH
 
   ]m4_popdef([gatbps_X])[
   ]m4_popdef([gatbps_x])[
