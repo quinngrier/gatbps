@@ -131,6 +131,18 @@ SUFFIXES += .m4out
 TSUF = $(TMPEXT).tmp
 
 ##----------------------------------------------------------------------
+## Parallel builds inside Dockerfiles
+##----------------------------------------------------------------------
+##
+## TODO: In the manual, add a note that this is just a conventional
+##       variable, and that the maximum number of parallel processes is
+##       generally N * DOCKERFILE_THREADS, where N is the value used in
+##       make -j N.
+##
+
+DOCKERFILE_THREADS = 1
+
+##----------------------------------------------------------------------
 ## GATBPS_EXPORT
 ##----------------------------------------------------------------------
 
