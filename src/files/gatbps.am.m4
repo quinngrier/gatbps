@@ -200,13 +200,14 @@ popdef([F])
 [
 
 ##----------------------------------------------------------------------
-## install-local
+## install-both-local
 ##----------------------------------------------------------------------
 ##
-## Override Automake's install-am target to support install-local.
+## Override Automake's install-am target to support install-both-local.
+## We can't name it install-local because Automake rejects that name.
 ##
 
-install-am: all-am install-local
+install-am: all-am install-both-local
 	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
 
 ##----------------------------------------------------------------------
@@ -230,6 +231,7 @@ distclean-local:
 dvi-local:
 html-local:
 info-local:
+install-both-local:
 install-data-hook:
 install-data-local:
 install-dvi-local:
@@ -237,7 +239,6 @@ install-exec-hook:
 install-exec-local:
 install-html-local:
 install-info-local:
-install-local:
 install-pdf-local:
 install-ps-local:
 installcheck-local:
