@@ -200,6 +200,16 @@ popdef([F])
 [
 
 ##----------------------------------------------------------------------
+## install-local
+##----------------------------------------------------------------------
+##
+## Override Automake's install-am target to support install-local.
+##
+
+install-am: all-am install-local
+	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
+
+##----------------------------------------------------------------------
 ## Local and hook target activation
 ##----------------------------------------------------------------------
 ##
@@ -227,6 +237,7 @@ install-exec-hook:
 install-exec-local:
 install-html-local:
 install-info-local:
+install-local:
 install-pdf-local:
 install-ps-local:
 installcheck-local:
