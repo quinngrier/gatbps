@@ -253,6 +253,34 @@ uninstall-hook:
 uninstall-local:
 
 ##----------------------------------------------------------------------
+## Uninstallation
+##----------------------------------------------------------------------
+
+gatbps-uninstall-local: FORCE
+	$(MKDIR_P) \
+	  $(DESTDIR)$(datadir)/$(PACKAGE_TARNAME) \
+	  $(DESTDIR)$(datarootdir)/$(PACKAGE_TARNAME) \
+	  $(DESTDIR)$(includedir)/$(PACKAGE_TARNAME) \
+	  $(DESTDIR)$(libdir) \
+	  $(DESTDIR)$(libexecdir)/$(PACKAGE_TARNAME) \
+	;
+
+uninstall-local: gatbps-uninstall-local
+
+gatbps-uninstall-hook: FORCE
+	rm -f -r \
+	  $(DESTDIR)$(datadir)/$(PACKAGE_TARNAME) \
+	  $(DESTDIR)$(datarootdir)/$(PACKAGE_TARNAME) \
+	  $(DESTDIR)$(includedir)/$(PACKAGE_TARNAME) \
+	  $(DESTDIR)$(libdir)/lib$(PACKAGE_TARNAME).a \
+	  $(DESTDIR)$(libdir)/lib$(PACKAGE_TARNAME).la \
+	  $(DESTDIR)$(libdir)/lib$(PACKAGE_TARNAME).so \
+	  $(DESTDIR)$(libexecdir)/$(PACKAGE_TARNAME) \
+	;
+
+uninstall-hook: gatbps-uninstall-hook
+
+##----------------------------------------------------------------------
 ## Recipe tracing
 ##----------------------------------------------------------------------
 
