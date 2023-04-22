@@ -204,7 +204,9 @@ popdef([F])
 ##----------------------------------------------------------------------
 ##
 ## Override Automake's install-am target to support install-both-local.
-## We can't name it install-local because Automake rejects that name.
+## This target will be executed before "make install", but not before
+## "make install-exec" or "make install-data". We'd like to name it
+## install-local, but Automake rejects that name.
 ##
 
 install-am: all-am install-both-local
