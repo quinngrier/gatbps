@@ -261,7 +261,7 @@ uninstall-local:
 install-prehook: FORCE
 
 install-am: FORCE install-prehook all-am
-	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
+	@$(MAKE) $(AM_MAKEFLAGS) install-data-am install-exec-am
 
 ##----------------------------------------------------------------------
 ## uninstall-prehook
