@@ -273,6 +273,7 @@ install-prehook: uninstall
 
 gatbps-uninstall-prehook: FORCE
 	$(MKDIR_P) \
+	  $(DESTDIR)$(bindir) \
 	  $(DESTDIR)$(datadir)/$(PACKAGE_TARNAME) \
 	  $(DESTDIR)$(datarootdir)/$(PACKAGE_TARNAME) \
 	  $(DESTDIR)$(includedir)/$(PACKAGE_TARNAME) \
