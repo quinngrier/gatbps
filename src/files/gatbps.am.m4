@@ -200,18 +200,6 @@ popdef([F])
 [
 
 ##----------------------------------------------------------------------
-## install-prehook
-##----------------------------------------------------------------------
-##
-## Runs at the very beginning of "make install".
-##
-
-install-prehook: FORCE
-
-install-am: all-am install-prehook
-	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
-
-##----------------------------------------------------------------------
 ## Local and hook target activation
 ##----------------------------------------------------------------------
 ##
@@ -249,6 +237,18 @@ pdf-local:
 ps-local:
 uninstall-hook:
 uninstall-local:
+
+##----------------------------------------------------------------------
+## install-prehook
+##----------------------------------------------------------------------
+##
+## Runs at the very beginning of "make install".
+##
+
+install-prehook: FORCE
+
+install-am: all-am install-prehook
+	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
 
 ##----------------------------------------------------------------------
 ## Installation
