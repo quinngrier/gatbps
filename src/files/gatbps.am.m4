@@ -99,6 +99,19 @@ include_HEADERS =
 nodist_include_HEADERS =
 
 ##----------------------------------------------------------------------
+## Force SUBDIRS mode
+##----------------------------------------------------------------------
+##
+## Automake generates significantly different code in SUBDIRS mode,
+## i.e., when SUBDIRS is set. Implementing some of our workarounds to
+## work in both modes is hard, so we force SUBDIRS mode to be enabled by
+## initializing SUBDIRS to be empty. This still works fine when the user
+## doesn't set SUBDIRS at all.
+##
+
+SUBDIRS =
+
+##----------------------------------------------------------------------
 ## Force targets
 ##----------------------------------------------------------------------
 
@@ -259,7 +272,8 @@ install-am: install-prehook all-am
 
 uninstall-prehook: FORCE
 
-uninstall: uninstall-prehook uninstall-recursive
+uninstall: FORCE uninstall-prehook
+	@$(MAKE) $(AM_MAKEFLAGS) uninstall-recursive
 
 ##----------------------------------------------------------------------
 ## Installation
