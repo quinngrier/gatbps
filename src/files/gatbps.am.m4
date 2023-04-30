@@ -251,6 +251,17 @@ install-am: all-am install-prehook
 	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
 
 ##----------------------------------------------------------------------
+## uninstall-prehook
+##----------------------------------------------------------------------
+##
+## Runs at the very beginning of "make uninstall".
+##
+
+uninstall-prehook: FORCE
+
+uninstall: uninstall-prehook uninstall-recursive
+
+##----------------------------------------------------------------------
 ## Installation
 ##----------------------------------------------------------------------
 
