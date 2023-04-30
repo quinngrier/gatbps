@@ -200,16 +200,15 @@ popdef([F])
 [
 
 ##----------------------------------------------------------------------
-## install-both-local
+## install-prehook
 ##----------------------------------------------------------------------
 ##
-## Override Automake's install-am target to support install-both-local.
-## This target will be executed before "make install", but not before
-## "make install-exec" or "make install-data". We'd like to name it
-## install-local, but Automake rejects that name.
+## Runs at the very beginning of "make install".
 ##
 
-install-am: all-am install-both-local
+install-prehook: FORCE
+
+install-am: all-am install-prehook
 	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
 
 ##----------------------------------------------------------------------
@@ -233,7 +232,6 @@ distclean-local:
 dvi-local:
 html-local:
 info-local:
-install-both-local:
 install-data-hook:
 install-data-local:
 install-dvi-local:
@@ -256,7 +254,7 @@ uninstall-local:
 ## Installation
 ##----------------------------------------------------------------------
 
-install-both-local: uninstall
+install-prehook: uninstall
 
 ##----------------------------------------------------------------------
 ## Uninstallation
