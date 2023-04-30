@@ -271,7 +271,7 @@ install-prehook: uninstall
 ## Uninstallation
 ##----------------------------------------------------------------------
 
-gatbps-uninstall-local: FORCE
+gatbps-uninstall-prehook: FORCE
 	$(MKDIR_P) \
 	  $(DESTDIR)$(datadir)/$(PACKAGE_TARNAME) \
 	  $(DESTDIR)$(datarootdir)/$(PACKAGE_TARNAME) \
@@ -280,7 +280,7 @@ gatbps-uninstall-local: FORCE
 	  $(DESTDIR)$(libexecdir)/$(PACKAGE_TARNAME) \
 	;
 
-uninstall-local: gatbps-uninstall-local
+uninstall-prehook: gatbps-uninstall-prehook
 
 gatbps-uninstall-hook: FORCE
 	rm -f -r \
