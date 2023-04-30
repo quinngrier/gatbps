@@ -106,7 +106,7 @@ nodist_include_HEADERS =
 ## i.e., when SUBDIRS is set. Implementing some of our workarounds to
 ## work in both modes is hard, so we force SUBDIRS mode to be enabled by
 ## initializing SUBDIRS to be empty. This still works fine when the user
-## doesn't set SUBDIRS at all.
+## doesn't further modify SUBDIRS.
 ##
 
 SUBDIRS =
