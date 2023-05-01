@@ -285,30 +285,54 @@ install-prehook: uninstall
 ## Uninstallation
 ##----------------------------------------------------------------------
 
-gatbps-uninstall-prehook: FORCE
-	$(MKDIR_P) \
-	  $(DESTDIR)$(bindir) \
-	  $(DESTDIR)$(datadir)/$(PACKAGE_TARNAME) \
-	  $(DESTDIR)$(datarootdir)/$(PACKAGE_TARNAME) \
-	  $(DESTDIR)$(includedir)/$(PACKAGE_TARNAME) \
-	  $(DESTDIR)$(libdir) \
-	  $(DESTDIR)$(libexecdir)/$(PACKAGE_TARNAME) \
-	;
+GATBPS_UNINSTALL_MKDIRS = \
+  $(bindir)/mkdir \
+  $(datadir)/$(PACKAGE_TARNAME)/mkdir \
+  $(datarootdir)/$(PACKAGE_TARNAME)/mkdir \
+  $(includedir)/$(PACKAGE_TARNAME)/mkdir \
+  $(libdir)/mkdir \
+  $(libexecdir)/$(PACKAGE_TARNAME)/mkdir \
+$(empty)
 
-uninstall-prehook: gatbps-uninstall-prehook
+GATBPS_UNINSTALL_MKDIRS/dummy $(GATBPS_UNINSTALL_MKDIRS): FORCE
+	@]GATBPS_SQUISH([
+	  case '$@' in *[0-9A-Za-z]/mkdir)
+	    :;
+	  ;; *)
+	    m="Makefile: GATBPS_UNINSTALL_MKDIRS ($@): Error:";
+	    m="$${m?} Target name must end with [0-9A-Za-z]/mkdir.";
+	    printf '%s\n' "$${m?}" >&2;
+	    exit 1;
+	  esac;
+	])[
+	$(MKDIR_P) $(DESTDIR)$(@D)
 
-gatbps-uninstall-hook: FORCE
-	rm -f -r \
-	  $(DESTDIR)$(datadir)/$(PACKAGE_TARNAME) \
-	  $(DESTDIR)$(datarootdir)/$(PACKAGE_TARNAME) \
-	  $(DESTDIR)$(includedir)/$(PACKAGE_TARNAME) \
-	  $(DESTDIR)$(libdir)/lib$(PACKAGE_TARNAME).a \
-	  $(DESTDIR)$(libdir)/lib$(PACKAGE_TARNAME).la \
-	  $(DESTDIR)$(libdir)/lib$(PACKAGE_TARNAME).so \
-	  $(DESTDIR)$(libexecdir)/$(PACKAGE_TARNAME) \
-	;
+uninstall-prehook: FORCE $(GATBPS_UNINSTALL_MKDIRS)
 
-uninstall-hook: gatbps-uninstall-hook
+GATBPS_UNINSTALL_RMFRS = \
+  $(datadir)/$(PACKAGE_TARNAME)/rmfr \
+  $(datarootdir)/$(PACKAGE_TARNAME)/rmfr \
+  $(includedir)/$(PACKAGE_TARNAME)/rmfr \
+  $(libdir)/lib$(PACKAGE_TARNAME).a/rmfr \
+  $(libdir)/lib$(PACKAGE_TARNAME).la/rmfr \
+  $(libdir)/lib$(PACKAGE_TARNAME).so/rmfr \
+  $(libexecdir)/$(PACKAGE_TARNAME)/rmfr \
+$(empty)
+
+GATBPS_UNINSTALL_RMFRS/dummy $(GATBPS_UNINSTALL_RMFRS): FORCE
+	@]GATBPS_SQUISH([
+	  case '$@' in *[0-9A-Za-z]/rmfr)
+	    :;
+	  ;; *)
+	    m="Makefile: GATBPS_UNINSTALL_RMFRS ($@): Error:";
+	    m="$${m?} Target name must end with [0-9A-Za-z]/rmfr.";
+	    printf '%s\n' "$${m?}" >&2;
+	    exit 1;
+	  esac;
+	])[
+	rm -f -r $(DESTDIR)$(@D)
+
+uninstall-hook: FORCE $(GATBPS_UNINSTALL_RMFRS)
 
 ##----------------------------------------------------------------------
 ## Recipe tracing
