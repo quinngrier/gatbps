@@ -199,7 +199,7 @@ GATBPS_$1/dummy $(GATBPS_$1): FORCE
 	    exit 1;
 	  esac;
 	])[
-	-rm -f -r $(@D) $(@D)$(TSUF)*
+	rm -f -r $(@D) $(@D)$(TSUF)*
 $2-local: $(GATBPS_$1)
 ]])
 
