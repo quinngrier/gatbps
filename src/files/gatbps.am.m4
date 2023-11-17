@@ -284,23 +284,31 @@ install-prehook: uninstall
 ##----------------------------------------------------------------------
 ## Uninstallation
 ##----------------------------------------------------------------------
+##
+## Sometimes certain installation directories happen to be the same,
+## like $(datadir) and $(datarootdir). This may cause make to complain
+## about repeated targets if we were to use /mkdir as the suffix on all
+## targets. To work around this, we instead use /mkdir00, /mkdir01, etc.
+## The same goes for the /rmfr suffix.
+##
 
 GATBPS_UNINSTALL_MKDIRS = \
-  $(bindir)/mkdir \
-  $(datadir)/$(PACKAGE_TARNAME)/mkdir \
-  $(datarootdir)/$(PACKAGE_TARNAME)/mkdir \
-  $(includedir)/$(PACKAGE_TARNAME)/mkdir \
-  $(libdir)/mkdir \
-  $(libexecdir)/$(PACKAGE_TARNAME)/mkdir \
+  $(bindir)/mkdir00 \
+  $(datadir)/$(PACKAGE_TARNAME)/mkdir01 \
+  $(datarootdir)/$(PACKAGE_TARNAME)/mkdir02 \
+  $(includedir)/$(PACKAGE_TARNAME)/mkdir03 \
+  $(libdir)/mkdir04 \
+  $(libexecdir)/$(PACKAGE_TARNAME)/mkdir05 \
 $(empty)
 
 GATBPS_UNINSTALL_MKDIRS/dummy $(GATBPS_UNINSTALL_MKDIRS): FORCE
 	@]GATBPS_SQUISH([
-	  case '$@' in *[0-9A-Za-z]/mkdir)
+	  case '$@' in *[0-9A-Za-z]/mkdir[0-9][0-9])
 	    :;
 	  ;; *)
 	    m="Makefile: GATBPS_UNINSTALL_MKDIRS ($@): Error:";
-	    m="$${m?} Target name must end with [0-9A-Za-z]/mkdir.";
+	    m="$${m?} Target name must end with";
+	    m="$${m?} [0-9A-Za-z]/mkdir[0-9][0-9].";
 	    printf '%s\n' "$${m?}" >&2;
 	    exit 1;
 	  esac;
@@ -310,22 +318,23 @@ GATBPS_UNINSTALL_MKDIRS/dummy $(GATBPS_UNINSTALL_MKDIRS): FORCE
 uninstall-prehook: FORCE $(GATBPS_UNINSTALL_MKDIRS)
 
 GATBPS_UNINSTALL_RMFRS = \
-  $(datadir)/$(PACKAGE_TARNAME)/rmfr \
-  $(datarootdir)/$(PACKAGE_TARNAME)/rmfr \
-  $(includedir)/$(PACKAGE_TARNAME)/rmfr \
-  $(libdir)/lib$(PACKAGE_TARNAME).a/rmfr \
-  $(libdir)/lib$(PACKAGE_TARNAME).la/rmfr \
-  $(libdir)/lib$(PACKAGE_TARNAME).so/rmfr \
-  $(libexecdir)/$(PACKAGE_TARNAME)/rmfr \
+  $(datadir)/$(PACKAGE_TARNAME)/rmfr00 \
+  $(datarootdir)/$(PACKAGE_TARNAME)/rmfr01 \
+  $(includedir)/$(PACKAGE_TARNAME)/rmfr02 \
+  $(libdir)/lib$(PACKAGE_TARNAME).a/rmfr03 \
+  $(libdir)/lib$(PACKAGE_TARNAME).la/rmfr04 \
+  $(libdir)/lib$(PACKAGE_TARNAME).so/rmfr05 \
+  $(libexecdir)/$(PACKAGE_TARNAME)/rmfr06 \
 $(empty)
 
 GATBPS_UNINSTALL_RMFRS/dummy $(GATBPS_UNINSTALL_RMFRS): FORCE
 	@]GATBPS_SQUISH([
-	  case '$@' in *[0-9A-Za-z]/rmfr)
+	  case '$@' in *[0-9A-Za-z]/rmfr[0-9][0-9])
 	    :;
 	  ;; *)
 	    m="Makefile: GATBPS_UNINSTALL_RMFRS ($@): Error:";
-	    m="$${m?} Target name must end with [0-9A-Za-z]/rmfr.";
+	    m="$${m?} Target name must end with";
+	    m="$${m?} [0-9A-Za-z]/rmfr[0-9][0-9].";
 	    printf '%s\n' "$${m?}" >&2;
 	    exit 1;
 	  esac;
