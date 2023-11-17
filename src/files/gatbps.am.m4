@@ -738,7 +738,7 @@ popdef([x])
 ## Java rules
 ##----------------------------------------------------------------------
 
-GATBPS_INNER_JAR_SUFFIX = /inner
+GATBPS_INNER_JAR_SUFFIX = /GATBPS_INNER_JAR_SUFFIX
 GATBPS_OUTER_JAR_SUFFIX =
 
 ## begin_rules
