@@ -105,8 +105,8 @@ nodist_include_HEADERS =
 ## Automake generates significantly different code in SUBDIRS mode,
 ## i.e., when SUBDIRS is set. Implementing some of our workarounds to
 ## work in both modes is hard, so we force SUBDIRS mode to be enabled by
-## initializing SUBDIRS to be empty. This still works fine when the user
-## doesn't further modify SUBDIRS.
+## initializing SUBDIRS to be empty. Note that this works fine even when
+## the user doesn't add anything to SUBDIRS.
 ##
 
 SUBDIRS =
