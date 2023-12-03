@@ -257,8 +257,8 @@ uninstall-local:
 ##
 ## Runs at the very beginning of "make install".
 ##
-## Note that we override Automake's install-am target, which will
-## generally cause Automake to output a warning.
+## Note that we override Automake's install-am target, which usually
+## causes Automake to output a warning.
 ##
 
 install-prehook: FORCE
@@ -272,8 +272,8 @@ install-am: FORCE install-prehook all-am
 ##
 ## Runs at the very beginning of "make uninstall".
 ##
-## Note that we override Automake's uninstall target, which will
-## generally cause Automake to output a warning.
+## Note that we override Automake's uninstall target, which usually
+## causes Automake to output a warning.
 ##
 
 uninstall-prehook: FORCE
