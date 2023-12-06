@@ -1513,8 +1513,7 @@ GATBPS_DEFINE_UNIQUE([GATBPS_CHECK_JAR], [[{ :
           /usr/local/java \
         ; do
           for gatbps_y in . \
-            ]m4_map_args_sep(['], ['], [ ],
-              m4_map_args_w(GATBPS_SQUISH([$2]), [], [], [,]))[ \
+            ]GATBPS_SQUISH([$2])[ \
           ; do
             for gatbps_z in $gatbps_x/$gatbps_y; do
               if test -f $gatbps_z; then
