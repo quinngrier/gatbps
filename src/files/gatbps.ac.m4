@@ -382,6 +382,11 @@ dnl# because this allows GATBPS_REQUIRE to be called from the top level.
 dnl# If we were to just call AC_REQUIRE directly, GATBPS_REQUIRE could
 dnl# only be called from within an AC_DEFUN body.
 dnl#
+dnl# The reason we use m4_if(,, x) instead of m4_expand(x) is to work
+dnl# around a diversion limitation in M4. See [1].
+dnl#
+dnl# [1] https://manuals.quinngrier.com/autoconf/2.71/autoconf.html?qref=3090-3094
+dnl#
 
 GATBPS_DEFINE_UNIQUE([GATBPS_REQUIRE_N], 0)
 
@@ -403,9 +408,9 @@ GATBPS_DEFINE_UNIQUE([GATBPS_REQUIRE], [
   ])
   AC_DEFUN([GATBPS_REQUIRE_]GATBPS_REQUIRE_N, [AC_REQUIRE([$1])])
   m4_if([$2], [], [
-    m4_expand([GATBPS_REQUIRE_]GATBPS_REQUIRE_N)
+    m4_if(,, [GATBPS_REQUIRE_]GATBPS_REQUIRE_N)
   ], [soft], [
-    m4_ifdef([$1], [m4_expand([GATBPS_REQUIRE_]GATBPS_REQUIRE_N)])
+    m4_ifdef([$1], [m4_if(,, [GATBPS_REQUIRE_]GATBPS_REQUIRE_N)])
   ], [
     GATBPS_AC_BARF([
       $0: <options> must be either "" or "soft"
