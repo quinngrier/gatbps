@@ -373,15 +373,15 @@ GATBPS_DEFINE_UNIQUE([GATBPS_BEFORE], [dnl
 AC_BEFORE([$1], [$2])dnl
 ])
 
-dnl---------------------------------------------------------------------
-dnl GATBPS_REQUIRE
-dnl---------------------------------------------------------------------
-dnl
-dnl The reason we define a macro with AC_DEFUN that calls AC_REQUIRE is
-dnl because this allows GATBPS_REQUIRE to be called from the top level.
-dnl If we were to just call AC_REQUIRE directly, GATBPS_REQUIRE could
-dnl only be called from within an AC_DEFUN body.
-dnl
+dnl#--------------------------------------------------------------------
+dnl# GATBPS_REQUIRE
+dnl#--------------------------------------------------------------------
+dnl#
+dnl# The reason we define a macro with AC_DEFUN that calls AC_REQUIRE is
+dnl# because this allows GATBPS_REQUIRE to be called from the top level.
+dnl# If we were to just call AC_REQUIRE directly, GATBPS_REQUIRE could
+dnl# only be called from within an AC_DEFUN body.
+dnl#
 
 GATBPS_DEFINE_UNIQUE([GATBPS_REQUIRE_N], 0)
 
