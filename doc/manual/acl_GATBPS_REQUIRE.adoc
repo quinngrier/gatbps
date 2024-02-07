@@ -16,10 +16,13 @@
 ----
 include::partials/acl_include_gatbps_ac_fragment.adoc[]
 
-{acl_GATBPS_REQUIRE}(<name>)
+{acl_GATBPS_REQUIRE}(<name>, [<options>])
 ----
 
 The `{acl_GATBPS_REQUIRE}` macro is equivalent to the `{acl_AC_REQUIRE}`
 macro except it can also be called from the top level.
+
+If `<options>` is the literal word `soft`, then the call will have no
+effect if `<name>` is undefined instead of causing an error.
 
 //

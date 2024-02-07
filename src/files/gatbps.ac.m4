@@ -387,7 +387,15 @@ GATBPS_DEFINE_UNIQUE([GATBPS_REQUIRE_N], 0)
 
 GATBPS_DEFINE_UNIQUE([GATBPS_REQUIRE], [
   AC_DEFUN([GATBPS_REQUIRE_]GATBPS_REQUIRE_N, [AC_REQUIRE([$1])])
-  m4_expand([GATBPS_REQUIRE_]GATBPS_REQUIRE_N)
+  m4_if([$2], [], [
+    m4_expand([GATBPS_REQUIRE_]GATBPS_REQUIRE_N)
+  ], [soft], [
+    m4_ifdef([$1], [m4_expand([GATBPS_REQUIRE_]GATBPS_REQUIRE_N)])
+  ], [
+    GATBPS_AC_BARF([
+      $0: <options> must be either "" or "soft"
+    ])
+  ])
   m4_define([GATBPS_REQUIRE_N], m4_incr(GATBPS_REQUIRE_N))
 ])
 
@@ -2881,17 +2889,6 @@ dnl
     ])])])[
 
 ]
-dnl---------------------------------------------------------------------
-dnl GATBPS_SOFT_REQUIRE
-dnl---------------------------------------------------------------------
-
-GATBPS_DEFINE_UNIQUE([GATBPS_SOFT_REQUIRE],
-  [m4_if(
-    m4_bregexp([$1], [^[a-zA-Z_][a-zA-Z_0-9]*$]),
-    -1,
-    [m4_fatal([GATBPS_SOFT_REQUIRE: invalid <name>: $1])],
-    [m4_ifdef([$1], [AC_REQUIRE([$1])])])])
-
 dnl---------------------------------------------------------------------
 dnl GATBPS_SOFT_VAR
 dnl---------------------------------------------------------------------

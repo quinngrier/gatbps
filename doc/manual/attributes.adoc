@@ -57,8 +57,6 @@ include::attributes/sh.adoc[]
 
 :acl_GATBPS_REQUIRE: xref:acl_GATBPS_REQUIRE.adoc#acl_GATBPS_REQUIRE[GATBPS_REQUIRE]
 
-:acl_GATBPS_SOFT_REQUIRE: xref:acl_GATBPS_SOFT_REQUIRE.adoc#acl_GATBPS_SOFT_REQUIRE[GATBPS_SOFT_REQUIRE]
-
 //----------------------------------------------------------------------
 // Automake entities
 //----------------------------------------------------------------------
