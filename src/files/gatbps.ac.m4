@@ -409,7 +409,7 @@ GATBPS_DEFINE_UNIQUE([GATBPS_REQUIRE], [
   AC_DEFUN([GATBPS_REQUIRE_]GATBPS_REQUIRE_N, [AC_REQUIRE([$1])])
   m4_if([$2], [], [
     m4_if(,, [GATBPS_REQUIRE_]GATBPS_REQUIRE_N)
-  ], [soft], [
+  ], [$2], [soft], [
     m4_ifdef([$1], [m4_if(,, [GATBPS_REQUIRE_]GATBPS_REQUIRE_N)])
   ], [
     GATBPS_AC_BARF([
