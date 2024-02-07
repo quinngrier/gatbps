@@ -386,6 +386,21 @@ dnl
 GATBPS_DEFINE_UNIQUE([GATBPS_REQUIRE_N], 0)
 
 GATBPS_DEFINE_UNIQUE([GATBPS_REQUIRE], [
+  m4_if(m4_eval([$# < 1]), 1, [
+    GATBPS_AC_BARF([
+      $0: Too few parameters
+    ])
+  ])
+  m4_if(m4_eval([$# > 2]), 1, [
+    GATBPS_AC_BARF([
+      $0: Too many parameters
+    ])
+  ])
+  m4_if(m4_bregexp([$1], [^[a-zA-Z_][a-zA-Z_0-9]*$]), -1, [
+    GATBPS_AC_BARF([
+      $0: <name> must be a valid macro name
+    ])
+  ])
   AC_DEFUN([GATBPS_REQUIRE_]GATBPS_REQUIRE_N, [AC_REQUIRE([$1])])
   m4_if([$2], [], [
     m4_expand([GATBPS_REQUIRE_]GATBPS_REQUIRE_N)
