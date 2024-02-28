@@ -172,7 +172,8 @@ m4_if(
 [^\(0\|[1-9][0-9]*\)]dnl
 [\.\(0\|[1-9][0-9]*\)]dnl
 [\.\(0\|[1-9][0-9]*\)]dnl
-[\(-\(0\|[1-9][0-9]*\)]dnl [0-9a-f]\{7,\} doesn't work
+[\(-\([a-z]+\.\)?\(0\|[1-9][0-9]*\)]dnl
+dnl Note that [0-9a-f]\{7,\} doesn't work
 [\+g[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]+\)?$]dnl
 ),
   [-1],
@@ -182,16 +183,16 @@ m4_if(
     [gatbps_fatal([
       invalid third argument for GATBPS_DEFINE_VERSION:
     [--VERBATIM--] "$3"], [
-      the third argument must be an X.Y.Z version number or an X.Y.Z-W
-      version number followed by "+g" and 7 or more lowercase
-      hexadecimal digits
+      the third argument must be an X.Y.Z version number, an X.Y.Z-W
+      version number, or an X.Y.Z-alpha.W version number, followed by
+      "+g" and 7 or more lowercase hexadecimal digits
     ])],
     [gatbps_fatal([
       invalid $1$2 value for GATBPS_DEFINE_VERSION:
     [--VERBATIM--] "]$1$2["], [
-      the $1$2 value must be an X.Y.Z version number or an X.Y.Z-W
-      version number followed by "+g" and 7 or more lowercase
-      hexadecimal digits
+      the $1$2 value must be an X.Y.Z version number, an X.Y.Z-W version
+      number, or an X.Y.Z-alpha.W version number, followed by "+g" and 7
+      or more lowercase hexadecimal digits
     ])])])[]dnl
 m4_define(
   [$1$2_DEB],
@@ -212,7 +213,7 @@ m4_define(
       m4_bregexp($1$2, [-]),
       [-1],
       [[v]$1$2],
-      [[u]m4_bpatsubst(m4_dquote($1$2), [\+], [-])])))[]dnl
+      [[u]m4_bpatsubsts(m4_dquote($1$2), [-[a-z]+\.], [-], [\+], [-])])))[]dnl
 m4_define(
   [$1$2_GIT_TEXI],
   m4_dquote(m4_bpatsubst(m4_dquote($1$2_GIT), [\.], [.@:])))[]dnl
@@ -316,7 +317,9 @@ readonly $2_LIBTOOL_C
     this should be $2. Otherwise, this should be $2 with the "-"
     character replaced with a "~" character. For example, if $2 were
     "0.1.0", then this should be "0.1.0", and if $2 were
-    "0.1.0-4927+g88a52bb", then this should be "0.1.0~4927+g88a52bb".
+    "0.1.0-4927+g88a52bb", then this should be "0.1.0~4927+g88a52bb",
+    and if $2 were "0.1.0-alpha.4927+g88a52bb", then this should be
+    "0.1.0~alpha.4927+g88a52bb".
   ])[
 
 ]AC_DEFINE(
@@ -337,7 +340,8 @@ readonly $2_LIBTOOL_C
     this should be $2. Otherwise, this should be the text up to but not
     including the "+" character. For example, if $2 were "0.1.0", then
     this should be "0.1.0", and if $2 were "0.1.0-4927+g88a52bb", then
-    this should be "0.1.0-4927".
+    this should be "0.1.0-4927", and if $2 were
+    "0.1.0-alpha.4927+g88a52bb", then this should be "0.1.0-alpha.4927".
   ])[
 
 ]AC_DEFINE(
@@ -357,10 +361,11 @@ readonly $2_LIBTOOL_C
     Define to a character string literal that contains the Git
     description of $2. If $2 does not contain a "-" character, then this
     should be a "v" character followed by $2. Otherwise, this should be
-    a "u" character followed by $2, and the "+" character should be
-    replaced with a "-" character. For example, if $2 were "0.1.0", then
-    this should be "v0.1.0", and if $2 were "0.1.0-4927+g88a52bb", then
-    this should be "u0.1.0-4927-g88a52bb".
+    a "u" character followed by $2 with any "alpha." part deleted and
+    any "+" character replaced with a "-" character. For example, if $2
+    were "0.1.0", then this should be "v0.1.0", and if $2 were
+    "0.1.0-4927+g88a52bb" or "0.1.0-alpha.4927+g88a52bb", then this
+    should be "u0.1.0-4927-g88a52bb".
   ])[
 
 ]AC_DEFINE(
@@ -414,7 +419,9 @@ readonly $2_LIBTOOL_C
     after the "-" character, and the "+" character should be replaced
     with a "." character. For example, if $2 were "0.1.0", then this
     should be "1", and if $2 were "0.1.0-4927+g88a52bb", then this
-    should be "0.4927.g88a52bb".
+    should be "0.4927.g88a52bb", and if $2 were
+    "0.1.0-alpha.4927+g88a52bb", then this should be
+    "0.alpha.4927.g88a52bb".
   ])[
 
 ]AC_DEFINE(
@@ -435,7 +442,8 @@ readonly $2_LIBTOOL_C
     number of $2. If $2 does not contain a "-" character, then this
     should be $2. Otherwise, this should be the text up to but not
     including the "-" character. For example, if $2 were "0.1.0" or
-    "0.1.0-4927+g88a52bb", then this should be "0.1.0".
+    "0.1.0-4927+g88a52bb" or "0.1.0-alpha.4927+g88a52bb", then this
+    should be "0.1.0".
   ])[
 
 ]AC_DEFINE(

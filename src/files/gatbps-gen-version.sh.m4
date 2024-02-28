@@ -489,6 +489,7 @@ EOF2
 
 #-----------------------------------------------------------------------
 
+alpha=alpha
 unset v_prefix
 unset u_prefix
 
@@ -501,6 +502,8 @@ esac
 until shift && (exit ${1+1}0); do
 
   if $parse_options; then
+
+    # TODO: Add an --alpha option with a required value
 
     #-------------------------------------------------------------------
     # Options terminator
@@ -610,6 +613,14 @@ readonly parse_options
 
 set_datum
 
+case ${alpha?} in *[!a-z]*)
+  gatbps_barf "Invalid --alpha: \"${alpha?}\""
+esac
+case ${alpha?} in ?*)
+  alpha=${alpha?}.
+esac
+readonly alpha
+
 if ${v_prefix+:} false; then
   if ${u_prefix+:} false; then
     :
@@ -666,7 +677,7 @@ elif eval " $git"' ls-files --error-unmatch "$0"' >/dev/null 2>&1; then
       if (/-g/) {
         gsub(/[-.]/, " ")
         $3 = $3 + 1
-        $0 = $1 "." $2 "." $3 "-" $4 "+" $5
+        $0 = $1 "." $2 "." $3 "-'${alpha?}'" $4 "+" $5
       }
       print
     }
@@ -736,7 +747,7 @@ EOF2
       sub(/^'$u_prefix'/, "")
       if (/-g/) {
         gsub(/[-.]/, " ")
-        $0 = $1 "." $2 "." $3 "-" $4 "+" $5
+        $0 = $1 "." $2 "." $3 "-'${alpha?}'" $4 "+" $5
       }
       print
     }
