@@ -36,9 +36,9 @@ gatbps_barf() {
     set "Unknown error"
   esac
 
-  gatbps_barf_buffer="$0: Error: $@."
+  gatbps_barf_message="$0: Error: $@."
 
-  printf '%s\n' "${gatbps_barf_buffer?}" >&2
+  printf '%s\n' "${gatbps_barf_message?}" >&2
 
   exit ${gatbps_barf_status?}
 
