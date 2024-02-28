@@ -49,8 +49,12 @@ nl='
 '
 readonly nl
 
+#-----------------------------------------------------------------------
+
 |%}include({%|src/sh/include/gatbps_barf.sh|%}){%|
 |%}include({%|src/sh/include/gatbps_parse_opt.sh|%}){%|
+|%}include({%|src/sh/include/gatbps_unknown_opt.sh|%}){%|
+|%}include({%|src/sh/include/gatbps_warn.sh|%}){%|
 
 #-----------------------------------------------------------------------
 
@@ -61,8 +65,6 @@ readonly sh_quote_script="
 "
 
 parse_options=:
-
-|%}include({%|src/sh/include/gatbps_unknown_opt.sh|%}){%|
 
 #-----------------------------------------------------------------------
 
