@@ -644,7 +644,6 @@ $1$2:
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
 	$(GATBPS_V_ASCIIDOCTOR)$(GATBPS_V_NOP)
 	$(AM_V_at)]GATBPS_SQUISH([$(ASCIIDOCTOR)
-	  -a stem=latexmath
 	  -b html
 	  -o $][@$(TSUF)$2
 	  -r asciidoctor-diagram
@@ -698,7 +697,6 @@ $1$2:
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
 	$(GATBPS_V_ASCIIDOCTOR)$(GATBPS_V_NOP)
 	$(AM_V_at)]GATBPS_SQUISH([$(ASCIIDOCTOR)
-	  -a stem=latexmath
 	  -b pdf
 	  -o $][@$(TSUF)$2
 	  -r asciidoctor-mathematical
