@@ -632,8 +632,6 @@ popdef([F1])
 ## :docinfo: attribute.
 ##
 
-]
-
 GATBPS_COMMON_ASCIIDOCTOR_FLAGS = \
   --failure-level=WARN \
   -a attribute-missing=warn \
@@ -641,7 +639,7 @@ $(prevent_an_empty_line)
 
 ## html
 
-pushdef([x], [[
+]pushdef([x], [[
 $1$2:
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
 	$(GATBPS_V_ASCIIDOCTOR)$(GATBPS_V_NOP)
@@ -656,15 +654,15 @@ $1$2:
 	])[
 	$(AM_V_at)mv -f $][@$(TSUF)$2 $][@
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
-]])
+]])[
 
-x([.adoc], [.html])
+]x([.adoc], [.html])[
 
-popdef([x])
+]popdef([x])[
 
 ## manpage
 
-pushdef([x], [[
+]pushdef([x], [[
 $1$2:
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
 	$(GATBPS_V_ASCIIDOCTOR)$(GATBPS_V_NOP)
@@ -678,23 +676,23 @@ $1$2:
 	])[
 	$(AM_V_at)mv -f $][@$(TSUF)$2 $][@
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
-]])
+]])[
 
-x([.adoc], [.1])
-x([.adoc], [.2])
-x([.adoc], [.3])
-x([.adoc], [.4])
-x([.adoc], [.5])
-x([.adoc], [.6])
-x([.adoc], [.7])
-x([.adoc], [.8])
-x([.adoc], [.9])
+]x([.adoc], [.1])[
+]x([.adoc], [.2])[
+]x([.adoc], [.3])[
+]x([.adoc], [.4])[
+]x([.adoc], [.5])[
+]x([.adoc], [.6])[
+]x([.adoc], [.7])[
+]x([.adoc], [.8])[
+]x([.adoc], [.9])[
 
-popdef([x])
+]popdef([x])[
 
 ## pdf
 
-pushdef([x], [[
+]pushdef([x], [[
 $1$2:
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
 	$(GATBPS_V_ASCIIDOCTOR)$(GATBPS_V_NOP)
@@ -710,13 +708,11 @@ $1$2:
 	])[
 	$(AM_V_at)mv -f $][@$(TSUF)$2 $][@
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
-]])
+]])[
 
-x([.adoc], [.pdf])
+]x([.adoc], [.pdf])[
 
-popdef([x])
-
-[
+]popdef([x])[
 
 ##----------------------------------------------------------------------
 ## gatbps-gen-version.sh cache files
