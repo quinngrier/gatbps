@@ -533,8 +533,6 @@ GATBPS_PROG(
     adock
   ]))
 
-GATBPS_PROG([ASCIIDOCTOR_PDF], [asciidoctor-pdf])
-
 GATBPS_PROG([AWK], [awk])
 
 GATBPS_PROG([CURL_CLI], [curl])

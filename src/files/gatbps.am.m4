@@ -386,7 +386,6 @@ GATBPS_V_$1_1 =
 ]])
 
 GATBPS_V([ASCIIDOCTOR])
-GATBPS_V([ASCIIDOCTOR_PDF], [ASCIIDOCTOR-PDF])
 GATBPS_V([AWK])
 GATBPS_V([FORCE])
 GATBPS_V([GATBPS])
@@ -697,14 +696,20 @@ popdef([x])
 
 pushdef([x], [[
 $1$2:
-	$(GATBPS_V_ASCIIDOCTOR_PDF)$(ASCIIDOCTOR_PDF) ]GATBPS_SQUISH([
-	  -o $][@$(TSUF)
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(GATBPS_V_ASCIIDOCTOR)$(GATBPS_V_NOP)
+	$(AM_V_at)]GATBPS_SQUISH([$(ASCIIDOCTOR)
+	  -b pdf
+	  -o $][@$(TSUF)$2
+	  -r asciidoctor-mathematical
+	  -r asciidoctor-pdf
 	  $(GATBPS_COMMON_ASCIIDOCTOR_FLAGS)
-	  $(AM_ASCIIDOCTOR_PDF_FLAGS)
-	  $(ASCIIDOCTOR_PDF_FLAGS)
+	  $(AM_ASCIIDOCTOR_FLAGS)
+	  $(ASCIIDOCTOR_FLAGS)
 	  $<
 	])[
-	$(AM_V_at)mv -f $][@$(TSUF) $][@
+	$(AM_V_at)mv -f $][@$(TSUF)$2 $][@
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 ]])
 
 x([.adoc], [.pdf])
