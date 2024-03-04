@@ -699,6 +699,7 @@ $1$2:
 	$(AM_V_at)]GATBPS_SQUISH([$(ASCIIDOCTOR)
 	  -b pdf
 	  -o $][@$(TSUF)$2
+	  -r asciidoctor-diagram
 	  -r asciidoctor-mathematical
 	  -r asciidoctor-pdf
 	  $(GATBPS_COMMON_ASCIIDOCTOR_FLAGS)
