@@ -268,8 +268,9 @@ case ${srcdir?} in .)
   :
 ;; *)
   (cd ${srcdir?} && tar c .) >srcdir.tar || exit $?
-  (umask 222 && tar x) <srcdir.tar || exit $?
+  tar x srcdir.tar || exit $?
   rm srcdir.tar || exit $?
+  chmod -R u+w . || exit $?
 esac
 
 ]
