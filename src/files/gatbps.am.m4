@@ -560,30 +560,22 @@ popdef([F1])
 # TODO: Generally migrate away from my previous "leaf-only" approach if
 #       this new GATBPS_DISTTOUCH approach works out in practice.
 
-GATBPS_DISTTOUCH: FORCE
-GATBPS_DISTTOUCH: GATBPS_DISTFILES
-
 ]pushdef([GATBPS_F1], [[
-
-GATBPS_DISTTOUCH_$1: FORCE
-GATBPS_DISTTOUCH_$1: GATBPS_DISTFILES
-	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
-	$(AM_V_at)sed 's/^Makefile:/GATBPS_DISTTOUCH_&/' Makefile >$(distdir)/Makefile
-	$(AM_V_at)cd $(distdir) && $(MAKE) -t configure $($1)
-	$(AM_V_at)rm $(distdir)/Makefile
-	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
-
-GATBPS_DISTTOUCH: GATBPS_DISTTOUCH_$1
-
-]])[
+	$(AM_V_at)cd $(distdir) && $(MAKE) -t configure $($1)]])[
 
 ]pushdef([GATBPS_F2],
   [ifelse(
-    $1, [], [GATBPS_F1([DISTFILES])GATBPS_F2(0)],
     $1, GATBPS_DISTFILES_N, [],
     [GATBPS_F1([GATBPS_DISTFILES_$1])GATBPS_F2(incr($1))])])[
 
-]GATBPS_F2[
+GATBPS_DISTTOUCH: FORCE
+GATBPS_DISTTOUCH: GATBPS_DISTFILES
+	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
+	$(AM_V_at)sed 's/^Makefile:/GATBPS_DISTTOUCH_&/' Makefile >$(distdir)/Makefile]dnl
+GATBPS_F1([DISTFILES])dnl
+GATBPS_F2(0)[
+	$(AM_V_at)rm $(distdir)/Makefile
+	$(AM_V_at)$(GATBPS_RECIPE_FINISHED)
 
 dist-hook: GATBPS_DISTTOUCH
 
