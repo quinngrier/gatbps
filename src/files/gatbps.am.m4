@@ -476,9 +476,9 @@ GATBPS_DISTFILES_$1: GATBPS_DISTFILES_CHMOD
 
 	    fi;
 
-	    case $$x in *[!/].dir)
+	    case $$x in *[!/].dirstamp)
 
-	      y='^\(.*\)\.dir$$';
+	      y='^\(.*\)\.dirstamp$$';
 	      y=`expr "$$x" : "$$y"` || exit $$?;
 
 	      if test -r "$$distdir/$$y"; then
