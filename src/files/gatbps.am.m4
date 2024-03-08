@@ -360,9 +360,9 @@ uninstall-hook: FORCE $(GATBPS_UNINSTALL_RMFRS)
 ## Recipe tracing
 ##----------------------------------------------------------------------
 
-GATBPS_RECIPE_MARKER_TOP = : Recipe starting: $@
+GATBPS_RECIPE_MARKER_TOP = : PPID=$${PPID-unknown}: Recipe starting: $@
 
-GATBPS_RECIPE_MARKER_BOT = : Recipe finished: $@
+GATBPS_RECIPE_MARKER_BOT = : PPID=$${PPID-unknown}: Recipe finished: $@
 
 ##----------------------------------------------------------------------
 ## Verbosity
