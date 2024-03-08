@@ -17,7 +17,7 @@ header_comment({%|##|%}, {%|##|%}){%|
 ## begin_rules
 
 $(pdf_dist_dst): $(pdf_dist_dep)
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
 	$(AM_V_at)|%}contains_exactly_one_word(
   {%|pdf_dist_dst|%}){%||%}dnl
 {%|

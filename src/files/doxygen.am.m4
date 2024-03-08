@@ -127,7 +127,7 @@ $(doxygen_dfv) doxygen.dummy_1.main: doxygen.FORCE
 $(doxygen_dst) doxygen.dummy_2.main: $(doxygen_dep)
 $(doxygen_dst) doxygen.dummy_2.main: $(doxygen_dfv)
 $(doxygen_dst) doxygen.dummy_2.main: $(doxygen_src)
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
 	$(GATBPS_V_DOXYGEN)$(GATBPS_V_NOP)
 	$(AM_V_at)'rm' \
   '-f' \
@@ -204,7 +204,7 @@ $(doxygen_src) doxygen.dummy_3.main: doxygen.FORCE
 .PHONY: doxygen.FORCE
 
 .am_df_INPUT.df:
-	$(AM_V_GEN)$(GATBPS_RECIPE_MARKER_TOP)
+	$(AM_V_GEN)$(GATBPS_RECIPE_STARTING)
 	$(AM_V_at)'rm' \
   '-f' \
   './'$@ \
@@ -245,7 +245,7 @@ $(doxygen_src) doxygen.dummy_3.main: doxygen.FORCE
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 
 .df.dfv:
-	$(AM_V_GEN)$(GATBPS_RECIPE_MARKER_TOP)
+	$(AM_V_GEN)$(GATBPS_RECIPE_STARTING)
 	$(AM_V_at)'rm' \
   '-f' \
   './'$@ \

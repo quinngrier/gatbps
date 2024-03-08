@@ -2182,7 +2182,7 @@ m4_if(
   $][(AM@&t@_MAKEFLAGS) \]dnl
 GATBPS_DOCKER_BUILD_word_lines_2(m4_if(,,child_prerequisites))[
 ;]])[
-	$][(GATBPS_V_DOCKER)$][(GATBPS_RECIPE_MARKER_TOP)
+	$][(GATBPS_V_DOCKER)$][(GATBPS_RECIPE_STARTING)
 	$][(AM@&t@_V_at)rm -f -r ./$][@ ./$][@$][(TMPEXT).tmp*
 	$][(AM@&t@_V_at)$][(MKDIR_P) ./$][(@D)
 	$][(AM@&t@_V_at){ \
@@ -2291,7 +2291,7 @@ GATBPS_DOCKER_BUILD_tag_lines(m4_if(,,image_names))[
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
 
 ]output_file[: ]output_file[.iid
-	$][(GATBPS_V_DOCKER)$][(GATBPS_RECIPE_MARKER_TOP)
+	$][(GATBPS_V_DOCKER)$][(GATBPS_RECIPE_STARTING)
 	$][(AM@&t@_V_at){ \
 	  image=`cat ./$][@.iid` || exit; \
 	  $][(DOCKER) save "$][$][image" \]dnl
@@ -2350,7 +2350,7 @@ m4_pushdef([gatbps_x], [$1])
 GATBPS_JAVA_RULES="$][{GATBPS_JAVA_RULES}"'
 
 $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: java.FORCE
-	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_TOP)
+	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_STARTING)
 	$][(AM@&t@_V_at){ \
   ( \
     x=$][(java_]gatbps_y[_sourcepath); \
@@ -2429,7 +2429,7 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
 ./$][(java_]gatbps_y[_dst)$][(GATBPS_INNER_JAR_SUFFIX): $][(java_]gatbps_y[_dep)
 ./$][(java_]gatbps_y[_dst)$][(GATBPS_INNER_JAR_SUFFIX): $][(java_]gatbps_y[_extra)
 ./$][(java_]gatbps_y[_dst)$][(GATBPS_INNER_JAR_SUFFIX): $][(javadoc_]gatbps_y[_src)
-	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_TOP)
+	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_STARTING)
 	$][(GATBPS_V_JAR)$][(GATBPS_V_NOP)
 	$][(AM@&t@_V_at){ \
   ( \
@@ -3199,7 +3199,7 @@ m4_if(
   $][(AM@&t@_MAKEFLAGS) \]dnl
 GATBPS_TAR_make_lines(m4_if(,,child_prerequisites))[
 ;]])[
-	$][(GATBPS_V_TAR)$][(GATBPS_RECIPE_MARKER_TOP)
+	$][(GATBPS_V_TAR)$][(GATBPS_RECIPE_STARTING)
 	$(AM@&t@_V_at)$(MKDIR_P) $(@D)]dnl
 m4_case(input_mode,
 [file_or_directory], [[
@@ -3345,7 +3345,7 @@ m4_pushdef(
 GATBPS_XZ_RULES="$][{GATBPS_XZ_RULES}"'
 
 ]target_sh[: ]m4_if([$4], [], [source_sh], [leaf_prerequisites])[
-	$(GATBPS_V_XZ)$(GATBPS_RECIPE_MARKER_TOP)]dnl
+	$(GATBPS_V_XZ)$(GATBPS_RECIPE_STARTING)]dnl
 m4_if([$4], [], [], [[
 	$(GATBPS_at)$(MAKE) \
   $(AM@&t@_MAKEFLAGS) \

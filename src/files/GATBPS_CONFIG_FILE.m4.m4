@@ -108,7 +108,7 @@ clean-gatbps_output:
 ]m4_if([$3], [], [[distclean]], [[$3]])[-local: clean-]gatbps_output[
 
 ]gatbps_output[: ]input_file[
-	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_TOP)
+	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_STARTING)
 	$][(GATBPS_V_CONFIG_FILE)$][(GATBPS_V_NOP)
 	$][(AM@&t@_V_at)rm \
   -f \

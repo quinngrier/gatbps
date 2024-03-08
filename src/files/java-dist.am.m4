@@ -19,7 +19,7 @@ header_comment({%|##|%}, {%|##|%}){%|
 $(java_dist_dst): $(java_dep)
 $(java_dist_dst): $(java_extra)
 $(java_dist_dst): $(javadoc_src)
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
 	$(AM_V_at)|%}contains_exactly_one_word(
   {%|java_dist_dst|%}){%||%}dnl
 {%|

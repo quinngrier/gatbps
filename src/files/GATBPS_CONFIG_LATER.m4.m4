@@ -194,7 +194,7 @@ m4_if(
   [],
   [],
   [[
-	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_TOP)
+	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_STARTING)
 	$][(AM@&t@_V_at)$][(MAKE) \
   $][(AM@&t@_MAKEFLAGS) \]dnl
 GATBPS_CONFIG_LATER_make_lines(m4_if(,,child_prerequisites))[

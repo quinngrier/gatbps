@@ -270,7 +270,7 @@ GATBPS_WGET_hash_checks(m4_shift($@))])])[dnl
 GATBPS_WGET_RULES="$][{GATBPS_WGET_RULES}"'
 
 ]output_file[:
-	$][(GATBPS_V_WGET)$][(GATBPS_RECIPE_MARKER_TOP)
+	$][(GATBPS_V_WGET)$][(GATBPS_RECIPE_STARTING)
 	$][(AM@&t@_V_at)$][(MKDIR_P) $][(@D)
 	$][(AM@&t@_V_at)rm -fr $][@ $][@$][(TMPEXT).tmp*
 	@{ \

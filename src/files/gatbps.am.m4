@@ -360,10 +360,10 @@ uninstall-hook: FORCE $(GATBPS_UNINSTALL_RMFRS)
 ## Recipe tracing
 ##----------------------------------------------------------------------
 
-GATBPS_RECIPE_MARKER_TOP = $(GATBPS_RECIPE_MARKER_TOP_@AM_V@)
-GATBPS_RECIPE_MARKER_TOP_ = $(GATBPS_RECIPE_MARKER_TOP_@AM_DEFAULT_V@)
-GATBPS_RECIPE_MARKER_TOP_0 =
-GATBPS_RECIPE_MARKER_TOP_1 = $(GATBPS_at)-printf "make[pid=%s]: Recipe starting for '%s'\\n" "$${PPID-unknown}" "$@"
+GATBPS_RECIPE_STARTING = $(GATBPS_RECIPE_STARTING_@AM_V@)
+GATBPS_RECIPE_STARTING_ = $(GATBPS_RECIPE_STARTING_@AM_DEFAULT_V@)
+GATBPS_RECIPE_STARTING_0 =
+GATBPS_RECIPE_STARTING_1 = $(GATBPS_at)-printf "make[pid=%s]: Recipe starting for '%s'\\n" "$${PPID-unknown}" "$@"
 
 GATBPS_RECIPE_MARKER_BOT = $(GATBPS_RECIPE_MARKER_BOT_@AM_V@)
 GATBPS_RECIPE_MARKER_BOT_ = $(GATBPS_RECIPE_MARKER_BOT_@AM_DEFAULT_V@)
@@ -428,7 +428,7 @@ define([GATBPS_DISTFILES_N], 100)
 GATBPS_DISTFILES_N = ]GATBPS_DISTFILES_N[
 
 GATBPS_DISTFILES_CHMOD: FORCE
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
 	$(GATBPS_V_FORCE)$(GATBPS_V_NOP)
 	]GATBPS_SQUISH([$(GATBPS_at)(
 	  ]GATBPS_DOT_SLASH([distdir], ['$(distdir)'])[
@@ -453,7 +453,7 @@ GATBPS_DISTFILES_$1 =
 GATBPS_DISTFILES_$1: FORCE
 GATBPS_DISTFILES_$1: $(GATBPS_DISTFILES_$1)
 GATBPS_DISTFILES_$1: GATBPS_DISTFILES_CHMOD
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
 	$(GATBPS_V_FORCE)$(GATBPS_V_NOP)
 	]GATBPS_SQUISH([$(GATBPS_at)(
 
@@ -571,11 +571,11 @@ GATBPS_DISTTOUCH: GATBPS_DISTFILES
 
 GATBPS_DISTTOUCH.$1: FORCE
 GATBPS_DISTTOUCH.$1: GATBPS_DISTFILES
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
 	$(AM_V_at)sed 's/^Makefile:/GATBPS_DISTTOUCH.&/' Makefile >$(distdir)/Makefile
 	$(AM_V_at)cd $(distdir) && $(MAKE) -t configure $($1)
 	$(AM_V_at)rm $(distdir)/Makefile
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
 
 GATBPS_DISTTOUCH: GATBPS_DISTTOUCH.$1
 
@@ -605,7 +605,7 @@ dist-hook: GATBPS_DISTTOUCH
 
 GATBPS_DISTFILL: FORCE
 GATBPS_DISTFILL: GATBPS_DISTTOUCH
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
 	]GATBPS_SQUISH([$(AM_V_at){
 	  xs=`cd $(distdir) && find . -type f -size 0` || exit $$?;
 	  for x in $${xs?}; do
@@ -614,7 +614,7 @@ GATBPS_DISTFILL: GATBPS_DISTTOUCH
 	    fi;
 	  done;
 	}])[
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
 
 dist-hook: GATBPS_DISTFILL
 
@@ -683,7 +683,7 @@ list-distfiles: FORCE
 
 pushdef([F1], [[
 $(distdir)$1: $(GATBPS_DISTFILES)
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
 	$(GATBPS_V_MAKE)$(MAKE) $(AM_MAKEFLAGS) $2
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
 ]])
@@ -718,7 +718,7 @@ $(prevent_an_empty_line)
 
 ]pushdef([x], [[
 $1$2:
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
 	$(GATBPS_V_ASCIIDOCTOR)$(GATBPS_V_NOP)
 	$(AM_V_at)]GATBPS_SQUISH([$(ASCIIDOCTOR)
 	  -b html
@@ -741,7 +741,7 @@ $1$2:
 
 ]pushdef([x], [[
 $1$2:
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
 	$(GATBPS_V_ASCIIDOCTOR)$(GATBPS_V_NOP)
 	$(AM_V_at)]GATBPS_SQUISH([$(ASCIIDOCTOR)
 	  -b manpage
@@ -771,7 +771,7 @@ $1$2:
 
 ]pushdef([x], [[
 $1$2:
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
 	$(GATBPS_V_ASCIIDOCTOR)$(GATBPS_V_NOP)
 	$(AM_V_at)]GATBPS_SQUISH([$(ASCIIDOCTOR)
 	  -b pdf
@@ -799,7 +799,7 @@ $1$2:
 GATBPS_GEN_VERSION_CACHE_FILES =
 
 GATBPS_GEN_VERSION_CACHE_FILES/dummy $(GATBPS_GEN_VERSION_CACHE_FILES):
-	$(AM_V_GEN)$(GATBPS_RECIPE_MARKER_TOP)
+	$(AM_V_GEN)$(GATBPS_RECIPE_STARTING)
 	$(AM_V_at)rm -f -r $][@ $][@$(TSUF)*
 	$(AM_V_at)$(MKDIR_P) $(@D)
 	$(AM_V_at)]GATBPS_SQUISH([
@@ -836,7 +836,7 @@ GATBPS_OUTER_JAR_SUFFIX =
 ## begin_rules
 
 $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
 	$(AM_V_at){ \
   ( \
     x=$(java_sourcepath); \
@@ -915,7 +915,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 ./$(java_dst)$(GATBPS_INNER_JAR_SUFFIX): $(java_dep)
 ./$(java_dst)$(GATBPS_INNER_JAR_SUFFIX): $(java_extra)
 ./$(java_dst)$(GATBPS_INNER_JAR_SUFFIX): $(javadoc_src)
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
 	$(GATBPS_V_JAR)$(GATBPS_V_NOP)
 	$(AM_V_at){ \
   ( \
@@ -1095,7 +1095,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 .PHONY: uninstall-java-main
 
 .java.class:
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
 	]GATBPS_SQUISH([$(GATBPS_at)(
 	  case $(GATBPS_INNER_CLASSPATH) in
 	    '')
@@ -1419,7 +1419,7 @@ uninstall-java-main: java.FORCE
 ##----------------------------------------------------------------------
 
 .m4.m4out:
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
 	$(GATBPS_V_M4)$(GATBPS_V_NOP)
 	$(AM_V_at)rm -f -r $@ $@$(TSUF)*
 	$(AM_V_at)rm -f -r $@.d

@@ -146,7 +146,7 @@ GATBPS_GIT_CLONE_word_lines_8(m4_shift($@))])])[dnl
 GATBPS_GIT_CLONE_RULES="$][{GATBPS_GIT_CLONE_RULES}"'
 
 ]output_directory[:
-	$][(GATBPS_V_GIT_CLONE)$][(GATBPS_RECIPE_MARKER_TOP)
+	$][(GATBPS_V_GIT_CLONE)$][(GATBPS_RECIPE_STARTING)
 	$][(AM@&t@_V_at)$][(MKDIR_P) $][(@D)
 	$][(AM@&t@_V_at)rm \
   -f \

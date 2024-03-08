@@ -107,7 +107,7 @@ GATBPS_GIT_ARCHIVE_RULES="$][{GATBPS_GIT_ARCHIVE_RULES}"'
 	$][(AM@&t@_V_at)|%}contains_at_least_one_word_sh(
   {%|MKDIR_P|%}){%||%}dnl
 {%|
-	$][(GATBPS_V_GIT_ARCHIVE)$][(GATBPS_RECIPE_MARKER_TOP)
+	$][(GATBPS_V_GIT_ARCHIVE)$][(GATBPS_RECIPE_STARTING)
 	$][(AM@&t@_V_at)$][(MKDIR_P) \
   ./$][(@D) \
 ;
