@@ -542,6 +542,40 @@ popdef([F1])
 [
 
 #-----------------------------------------------------------------------
+# GATBPS_DISTTOUCH
+#-----------------------------------------------------------------------
+
+GATBPS_DISTTOUCH: FORCE
+GATBPS_DISTTOUCH: GATBPS_DISTFILES
+
+]pushdef([GATBPS_F1], [[
+
+GATBPS_DISTTOUCH.$1: FORCE
+GATBPS_DISTTOUCH.$1: GATBPS_DISTFILES
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	$(AM_V_at)cp Makefile $(distdir)
+	$(AM_V_at)cd $(distdir) && make -t $($1)
+	$(AM_V_at)rm $(distdir)/Makefile
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+
+GATBPS_DISTTOUCH: GATBPS_DISTTOUCH.$1
+
+]])[
+
+]pushdef([GATBPS_F2],
+  [ifelse(
+    $1, [], [GATBPS_F1([DISTFILES])GATBPS_F2(0)],
+    $1, GATBPS_DISTFILES_N, [],
+    [GATBPS_F1([GATBPS_DISTFILES_$1])GATBPS_F2(incr($1))])])[
+
+]GATBPS_F2[
+
+dist-hook: GATBPS_DISTTOUCH
+
+]popdef([GATBPS_F2])[
+]popdef([GATBPS_F1])[
+
+#-----------------------------------------------------------------------
 # The list-distfiles target
 #-----------------------------------------------------------------------
 #
