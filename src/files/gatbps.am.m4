@@ -551,10 +551,10 @@ popdef([F1])
 # GATBPS_DISTTOUCH
 #-----------------------------------------------------------------------
 #
-# GATBPS_DISTTOUCH is a dist hook that fills in any missing intermediate
-# targets in the distribution archive with empty files. This guarantees
-# that, in a freshly extracted distribution archive, no targets will be
-# attempted to be remade because of missing intermediate targets.
+# GATBPS_DISTTOUCH is a dist hook that creates any missing intermediate
+# targets in the distribution archive as empty files. This guarantees
+# that no targets will be attempted to be remade because of missing
+# intermediate targets in a freshly extracted distribution archive.
 #
 # The reason for using "$(MAKE) -t configure $($1)" instead of just
 # "$(MAKE) -t $($1)" is to prevent the default target from being made
