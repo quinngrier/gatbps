@@ -476,6 +476,44 @@ GATBPS_DISTFILES_$1: GATBPS_DISTFILES_CHMOD
 
 	    fi;
 
+	    case $$x in *.dir)
+
+	      y='^\(.*\)\.dir$$';
+	      y=`expr "$$x" : "$$y"` || exit $$?;
+
+	      if test -r "$$distdir/$$y"; then
+	        m='Makefile: GATBPS_DISTFILES_$1 ($][@): error:';
+	        m=$$m" double walk detected: $$y";
+	        printf '%s\n' "$$m" >&2;
+	        exit 1;
+	      fi;
+
+	      $(MKDIR_P) "$$distdir/$$y" || exit $$?;
+	      rmdir "$$distdir/$$y" || exit $$?;
+
+	      if test -r "$$y"; then
+	        d=.;
+	      else
+	        d=$$srcdir;
+	      fi;
+
+	      if test -f "$$d/$$y" || test -d "$$d/$$y"; then
+	        if $(AM_V_P); then
+	          ]GATBPS_SMART_QUOTE([sq], [
+	            cp -L -R -p "$$d/$$y" "$$distdir/$$y"
+	          ])[
+	          printf '%s\n' "$$sq" || exit $$?;
+	        fi;
+	        cp -L -R -p "$$d/$$y" "$$distdir/$$y" || exit $$?;
+	      else
+	        m='Makefile: GATBPS_DISTFILES_$1 ($][@): error:';
+	        m=$$m" path must exist as a file or directory: $$d/$$y";
+	        printf '%s\n' "$$m" >&2;
+	        exit 1;
+	      fi;
+
+	    esac;
+
 	    if test -r "$$distdir/$$x"; then
 	      m='Makefile: GATBPS_DISTFILES_$1 ($][@): error:';
 	      m=$$m" double walk detected: $$x";
