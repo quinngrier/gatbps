@@ -259,6 +259,20 @@ GATBPS_DEFINE_UNIQUE([GATBPS_INFO], [{ :
   AC_MSG_NOTICE(m4_dquote(GATBPS_SQUISH([$1])))
 }])
 
+dnl#--------------------------------------------------------------------
+dnl# External srcdir copying
+dnl#--------------------------------------------------------------------
+[
+
+case ${srcdir?} in .)
+  :
+;; *)
+  (cd ${srcdir?} && tar c .) >srcdir.tar || exit $?
+  (umask 222 && tar x) <srcdir.tar || exit $?
+  rm srcdir.tar || exit $?
+esac
+
+]
 dnl---------------------------------------------------------------------
 dnl Timestamp normalization
 dnl---------------------------------------------------------------------
