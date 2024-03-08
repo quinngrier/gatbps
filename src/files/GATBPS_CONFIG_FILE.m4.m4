@@ -109,7 +109,7 @@ clean-gatbps_output:
 
 ]gatbps_output[: ]input_file[
 	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_STARTING)
-	$][(GATBPS_V_CONFIG_FILE)$][(GATBPS_V_NOP)
+	$][(GATBPS_V_CONFIG_FILE)$][(GATBPS_RECIPE_NOOP)
 	$][(AM@&t@_V_at)rm \
   -f \
   ./]gatbps_output[ \

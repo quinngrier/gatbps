@@ -32,7 +32,7 @@ $(java_dist_dst): $(javadoc_src)
 	$(AM_V_at)|%}contains_exactly_one_word(
   {%|srcdir|%}){%||%}dnl
 {%|
-	$(GATBPS_V_CP)$(GATBPS_V_NOP)
+	$(GATBPS_V_CP)$(GATBPS_RECIPE_NOOP)
 	$(AM_V_at)$(MKDIR_P) \
   './'$(@D) \
 ;

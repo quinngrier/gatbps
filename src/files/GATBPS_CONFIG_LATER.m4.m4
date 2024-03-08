@@ -199,7 +199,7 @@ m4_if(
   $][(AM@&t@_MAKEFLAGS) \]dnl
 GATBPS_CONFIG_LATER_make_lines(m4_if(,,child_prerequisites))[
 ;]])[
-	$][(GATBPS_V_CONFIG_LATER)$][(GATBPS_V_NOP)
+	$][(GATBPS_V_CONFIG_LATER)$][(GATBPS_RECIPE_NOOP)
 	$][(AM@&t@_V_at)rm \
   -f \
   ./]output_file[ \

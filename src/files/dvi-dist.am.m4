@@ -40,7 +40,7 @@ $(dvi_dist_dst): $(dvi_dist_dep)
   $(AM_MAKEFLAGS) \
   $(dvi_dist_src) \
 ;
-	$(GATBPS_V_CP)$(GATBPS_V_NOP)
+	$(GATBPS_V_CP)$(GATBPS_RECIPE_NOOP)
 	$(AM_V_at)$(MKDIR_P) \
   './'$(@D) \
 ;

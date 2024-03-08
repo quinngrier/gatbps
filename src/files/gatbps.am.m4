@@ -376,10 +376,10 @@ GATBPS_RECIPE_FINISHED_1 = $(GATBPS_at)-printf "make[pid=%s]: Recipe finished fo
 
 GATBPS_at = @
 
-GATBPS_V_NOP = $(GATBPS_V_NOP_@AM_V@)
-GATBPS_V_NOP_ = $(GATBPS_V_NOP_@AM_DEFAULT_V@)
-GATBPS_V_NOP_0 =
-GATBPS_V_NOP_1 = $(GATBPS_at)-:
+GATBPS_RECIPE_NOOP = $(GATBPS_RECIPE_NOOP_@AM_V@)
+GATBPS_RECIPE_NOOP_ = $(GATBPS_RECIPE_NOOP_@AM_DEFAULT_V@)
+GATBPS_RECIPE_NOOP_0 =
+GATBPS_RECIPE_NOOP_1 = $(GATBPS_at)-:
 
 ]
 
@@ -429,7 +429,7 @@ GATBPS_DISTFILES_N = ]GATBPS_DISTFILES_N[
 
 GATBPS_DISTFILES_CHMOD: FORCE
 	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
-	$(GATBPS_V_FORCE)$(GATBPS_V_NOP)
+	$(GATBPS_V_FORCE)$(GATBPS_RECIPE_NOOP)
 	]GATBPS_SQUISH([$(GATBPS_at)(
 	  ]GATBPS_DOT_SLASH([distdir], ['$(distdir)'])[
 	  if $(AM_V_P); then
@@ -454,7 +454,7 @@ GATBPS_DISTFILES_$1: FORCE
 GATBPS_DISTFILES_$1: $(GATBPS_DISTFILES_$1)
 GATBPS_DISTFILES_$1: GATBPS_DISTFILES_CHMOD
 	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
-	$(GATBPS_V_FORCE)$(GATBPS_V_NOP)
+	$(GATBPS_V_FORCE)$(GATBPS_RECIPE_NOOP)
 	]GATBPS_SQUISH([$(GATBPS_at)(
 
 	  first_iteration=:;
@@ -719,7 +719,7 @@ $(prevent_an_empty_line)
 ]pushdef([x], [[
 $1$2:
 	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
-	$(GATBPS_V_ASCIIDOCTOR)$(GATBPS_V_NOP)
+	$(GATBPS_V_ASCIIDOCTOR)$(GATBPS_RECIPE_NOOP)
 	$(AM_V_at)]GATBPS_SQUISH([$(ASCIIDOCTOR)
 	  -b html
 	  -o $][@$(TSUF)$2
@@ -742,7 +742,7 @@ $1$2:
 ]pushdef([x], [[
 $1$2:
 	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
-	$(GATBPS_V_ASCIIDOCTOR)$(GATBPS_V_NOP)
+	$(GATBPS_V_ASCIIDOCTOR)$(GATBPS_RECIPE_NOOP)
 	$(AM_V_at)]GATBPS_SQUISH([$(ASCIIDOCTOR)
 	  -b manpage
 	  -o $][@$(TSUF)$2
@@ -772,7 +772,7 @@ $1$2:
 ]pushdef([x], [[
 $1$2:
 	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
-	$(GATBPS_V_ASCIIDOCTOR)$(GATBPS_V_NOP)
+	$(GATBPS_V_ASCIIDOCTOR)$(GATBPS_RECIPE_NOOP)
 	$(AM_V_at)]GATBPS_SQUISH([$(ASCIIDOCTOR)
 	  -b pdf
 	  -o $][@$(TSUF)$2
@@ -916,7 +916,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 ./$(java_dst)$(GATBPS_INNER_JAR_SUFFIX): $(java_extra)
 ./$(java_dst)$(GATBPS_INNER_JAR_SUFFIX): $(javadoc_src)
 	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
-	$(GATBPS_V_JAR)$(GATBPS_V_NOP)
+	$(GATBPS_V_JAR)$(GATBPS_RECIPE_NOOP)
 	$(AM_V_at){ \
   ( \
 \
@@ -1107,7 +1107,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	    ;;
 	  esac;
 	)])[
-	$(GATBPS_V_JAVAC)$(GATBPS_V_NOP)
+	$(GATBPS_V_JAVAC)$(GATBPS_RECIPE_NOOP)
 	$(GATBPS_at)test -f $@ || rm -f -r $@
 	$(GATBPS_at)test -f $@.d || rm -f -r $@.d
 	$(GATBPS_at)rm -f -r $@$(TSUF)*
@@ -1420,7 +1420,7 @@ uninstall-java-main: java.FORCE
 
 .m4.m4out:
 	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
-	$(GATBPS_V_M4)$(GATBPS_V_NOP)
+	$(GATBPS_V_M4)$(GATBPS_RECIPE_NOOP)
 	$(AM_V_at)rm -f -r $@ $@$(TSUF)*
 	$(AM_V_at)rm -f -r $@.d
 	$(AM_V_at)$(MKDIR_P) $(@D)
