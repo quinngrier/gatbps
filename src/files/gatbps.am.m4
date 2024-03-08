@@ -476,7 +476,7 @@ GATBPS_DISTFILES_$1: GATBPS_DISTFILES_CHMOD
 
 	    fi;
 
-	    case $$x in *.dir)
+	    case $$x in *[!/].dir)
 
 	      y='^\(.*\)\.dir$$';
 	      y=`expr "$$x" : "$$y"` || exit $$?;
