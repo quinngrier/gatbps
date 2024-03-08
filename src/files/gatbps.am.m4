@@ -607,6 +607,18 @@ GATBPS_DISTFILL: GATBPS_DISTTOUCH
 dist-hook: GATBPS_DISTFILL
 
 #-----------------------------------------------------------------------
+# GATBPS_DISTDONE
+#-----------------------------------------------------------------------
+#
+# GATBPS_DISTDONE is a stable target whose completion means all GATBPS
+# dist hooks are done running. It will always work even if GATBPS adds
+# more dist hooks.
+#
+
+GATBPS_DISTDONE: FORCE
+GATBPS_DISTDONE: GATBPS_DISTFILL
+
+#-----------------------------------------------------------------------
 # The list-distfiles target
 #-----------------------------------------------------------------------
 #
