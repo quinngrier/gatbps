@@ -368,7 +368,7 @@ GATBPS_WGET_hash_checks(m4_if(,,file_hashes))[
 	  ) || exit; \
 	  rm -fr $][$][tmp* || :; \
 	}
-	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
+	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_FINISHED)
 
 ]output_file[/clean: FORCE
 	-rm -fr $][(@D) $][(@D)$][(TMPEXT).tmp*

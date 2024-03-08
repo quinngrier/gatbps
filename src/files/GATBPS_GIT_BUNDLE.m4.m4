@@ -192,7 +192,7 @@ GATBPS_GIT_BUNDLE_RULES="$][{GATBPS_GIT_BUNDLE_RULES}"'
   esac; \
   exit "$][$][{x}"; \
 :;}
-	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
+	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_FINISHED)
 
 .PHONY: clean-]output_file[
 

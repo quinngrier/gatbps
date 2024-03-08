@@ -2288,7 +2288,7 @@ GATBPS_DOCKER_BUILD_tag_lines(m4_if(,,image_names))[
   x=$][$][?; \
   exit "$][$][{x}"; \
 :;}
-	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
+	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_FINISHED)
 
 ]output_file[: ]output_file[.iid
 	$][(GATBPS_V_DOCKER)$][(GATBPS_RECIPE_STARTING)
@@ -2300,7 +2300,7 @@ GATBPS_DOCKER_BUILD_word_lines_6(m4_if(,,image_names))[
 	  || exit; \
 	  mv -f ./$][@$][(TMPEXT).tmp ./$][@ || exit; \
 :;}
-	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
+	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_FINISHED)
 
 .PHONY: ]output_file[/clean
 
@@ -2424,7 +2424,7 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
   ; \
   exit "$][$][{x}"; \
 :;}
-	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
+	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_FINISHED)
 
 ./$][(java_]gatbps_y[_dst)$][(GATBPS_INNER_JAR_SUFFIX): $][(java_]gatbps_y[_dep)
 ./$][(java_]gatbps_y[_dst)$][(GATBPS_INNER_JAR_SUFFIX): $][(java_]gatbps_y[_extra)
@@ -2596,7 +2596,7 @@ $][(java_]gatbps_y[_dst)$][(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.]gatbps_x[: ja
   ; \
   exit "$][$][{x}"; \
 :;}
-	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
+	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_FINISHED)
 
 .PHONY: clean-java-]gatbps_x[
 .PHONY: install-java-]gatbps_x[
@@ -3245,7 +3245,7 @@ m4_case(input_mode,
 :;}]],
 [m4_fatal([missing case])])[
 	$(AM@&t@_V_at)mv -f $][@$(TSUF) $][@
-	$(AM@&t@_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+	$(AM@&t@_V_at)$(GATBPS_RECIPE_FINISHED)
 
 ]output_file[/clean: FORCE
 	-rm -f -r ./$(@D) ./$(@D)$(TSUF)*
@@ -3366,7 +3366,7 @@ m4_if([$4], [], [], [[
 	  || exit $$?;
 	)])[
 	$(AM@&t@_V_at)mv -f $(@)$(TSUF) $(@)
-	$(AM@&t@_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+	$(AM@&t@_V_at)$(GATBPS_RECIPE_FINISHED)
 
 ]target_sh[/clean: FORCE
 	-rm -f -r ./$(@D) ./$(@D)$(TSUF)*

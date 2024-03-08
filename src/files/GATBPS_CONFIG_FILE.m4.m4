@@ -122,7 +122,7 @@ clean-gatbps_output:
   '\''./config.status'\'' \
   ]gatbps_output[]gatbps_suffix[ \
 ;
-	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
+	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_FINISHED)
 
 '
 

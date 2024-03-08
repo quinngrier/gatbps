@@ -232,7 +232,7 @@ GATBPS_GIT_CLONE_word_lines_8(m4_if(,,input_urls))[
   esac; \
   exit "$][$][{exit_status}"; \
 :;}
-	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
+	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_FINISHED)
 
 .PHONY: clean-]output_directory[
 

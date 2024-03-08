@@ -192,7 +192,7 @@ $(doxygen_dst) doxygen.dummy_2.main: $(doxygen_src)
   esac; \
   'exit' "$${exit_status}"; \
 :;}
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+	$(AM_V_at)$(GATBPS_RECIPE_FINISHED)
 
 $(doxygen_src) doxygen.dummy_3.main: $(doxygen_dep)
 $(doxygen_src) doxygen.dummy_3.main: doxygen.FORCE
@@ -242,7 +242,7 @@ $(doxygen_src) doxygen.dummy_3.main: doxygen.FORCE
   esac; \
   'exit' "$${exit_status}"; \
 :;}
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+	$(AM_V_at)$(GATBPS_RECIPE_FINISHED)
 
 .df.dfv:
 	$(AM_V_GEN)$(GATBPS_RECIPE_STARTING)
@@ -283,7 +283,7 @@ $(doxygen_src) doxygen.dummy_3.main: doxygen.FORCE
   esac; \
   'exit' "$${exit_status}"; \
 :;}
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+	$(AM_V_at)$(GATBPS_RECIPE_FINISHED)
 
 clean-doxygen: clean-doxygen-main
 clean-doxygen: doxygen.FORCE

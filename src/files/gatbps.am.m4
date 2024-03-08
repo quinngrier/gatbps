@@ -365,10 +365,10 @@ GATBPS_RECIPE_STARTING_ = $(GATBPS_RECIPE_STARTING_@AM_DEFAULT_V@)
 GATBPS_RECIPE_STARTING_0 =
 GATBPS_RECIPE_STARTING_1 = $(GATBPS_at)-printf "make[pid=%s]: Recipe starting for '%s'\\n" "$${PPID-unknown}" "$@"
 
-GATBPS_RECIPE_MARKER_BOT = $(GATBPS_RECIPE_MARKER_BOT_@AM_V@)
-GATBPS_RECIPE_MARKER_BOT_ = $(GATBPS_RECIPE_MARKER_BOT_@AM_DEFAULT_V@)
-GATBPS_RECIPE_MARKER_BOT_0 =
-GATBPS_RECIPE_MARKER_BOT_1 = $(GATBPS_at)-printf "make[pid=%s]: Recipe finished for '%s'\\n" "$${PPID-unknown}" "$@"
+GATBPS_RECIPE_FINISHED = $(GATBPS_RECIPE_FINISHED_@AM_V@)
+GATBPS_RECIPE_FINISHED_ = $(GATBPS_RECIPE_FINISHED_@AM_DEFAULT_V@)
+GATBPS_RECIPE_FINISHED_0 =
+GATBPS_RECIPE_FINISHED_1 = $(GATBPS_at)-printf "make[pid=%s]: Recipe finished for '%s'\\n" "$${PPID-unknown}" "$@"
 
 ##----------------------------------------------------------------------
 ## Verbosity
@@ -440,7 +440,7 @@ GATBPS_DISTFILES_CHMOD: FORCE
 	  fi;
 	  chmod -R u+w "$$distdir" || exit $$?;
 	)])[
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+	$(AM_V_at)$(GATBPS_RECIPE_FINISHED)
 
 GATBPS_DISTFILES: FORCE
 
@@ -514,7 +514,7 @@ GATBPS_DISTFILES_$1: GATBPS_DISTFILES_CHMOD
 	  done;
 
 	)])[
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+	$(AM_V_at)$(GATBPS_RECIPE_FINISHED)
 
 GATBPS_DISTFILES: GATBPS_DISTFILES_$1
 
@@ -685,7 +685,7 @@ pushdef([F1], [[
 $(distdir)$1: $(GATBPS_DISTFILES)
 	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
 	$(GATBPS_V_MAKE)$(MAKE) $(AM_MAKEFLAGS) $2
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+	$(AM_V_at)$(GATBPS_RECIPE_FINISHED)
 ]])
 
 F1([.shar.gz], [dist-shar])
@@ -730,7 +730,7 @@ $1$2:
 	  $<
 	])[
 	$(AM_V_at)mv -f $][@$(TSUF)$2 $][@
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+	$(AM_V_at)$(GATBPS_RECIPE_FINISHED)
 ]])[
 
 ]x([.adoc], [.html])[
@@ -752,7 +752,7 @@ $1$2:
 	  $<
 	])[
 	$(AM_V_at)mv -f $][@$(TSUF)$2 $][@
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+	$(AM_V_at)$(GATBPS_RECIPE_FINISHED)
 ]])[
 
 ]x([.adoc], [.1])[
@@ -785,7 +785,7 @@ $1$2:
 	  $<
 	])[
 	$(AM_V_at)mv -f $][@$(TSUF)$2 $][@
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+	$(AM_V_at)$(GATBPS_RECIPE_FINISHED)
 ]])[
 
 ]x([.adoc], [.pdf])[
@@ -809,7 +809,7 @@ GATBPS_GEN_VERSION_CACHE_FILES/dummy $(GATBPS_GEN_VERSION_CACHE_FILES):
 	  sh - '$(srcdir)'/"$$x" >$][@$(TSUF) || exit $$?;
 	])[
 	$(AM_V_at)mv -f $][@$(TSUF) $][@
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+	$(AM_V_at)$(GATBPS_RECIPE_FINISHED)
 
 ]
 
@@ -910,7 +910,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
   ; \
   'exit' "$${x}"; \
 :;}
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+	$(AM_V_at)$(GATBPS_RECIPE_FINISHED)
 
 ./$(java_dst)$(GATBPS_INNER_JAR_SUFFIX): $(java_dep)
 ./$(java_dst)$(GATBPS_INNER_JAR_SUFFIX): $(java_extra)
@@ -1082,7 +1082,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
   ; \
   'exit' "$${x}"; \
 :;}
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+	$(AM_V_at)$(GATBPS_RECIPE_FINISHED)
 
 .PHONY: clean-java
 .PHONY: clean-java-main
@@ -1259,7 +1259,7 @@ $(java_dst)$(GATBPS_OUTER_JAR_SUFFIX) java.dummy_1.main: java.FORCE
 	  mv -f $@$(TSUF)3 $@.d || exit $$?;
 
 	) || { s=$$?; rm -f -r $@ $@.d; exit $$s; }])[
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+	$(AM_V_at)$(GATBPS_RECIPE_FINISHED)
 
 clean-java: clean-java-main
 clean-java: java.FORCE
@@ -1442,7 +1442,7 @@ uninstall-java-main: java.FORCE
 	])[
 	$(AM_V_at)mv -f $@$(TSUF)1 $@.d
 	$(AM_V_at)mv -f $@$(TSUF)2 $@
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+	$(AM_V_at)$(GATBPS_RECIPE_FINISHED)
 
 ##----------------------------------------------------------------------
 

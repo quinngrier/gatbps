@@ -246,7 +246,7 @@ GATBPS_CONFIG_LATER_make_lines(m4_if(,,child_prerequisites))[
   esac; \
   exit "$][$][{exit_status}"; \
 :;}
-	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
+	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_FINISHED)
 
 .PHONY: clean-]output_file[
 

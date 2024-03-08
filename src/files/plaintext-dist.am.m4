@@ -75,7 +75,7 @@ $(plaintext_dist_dst): $(plaintext_dist_dep)
   || 'exit' "$${?}"; \
   'exit' '0'; \
 :;}
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+	$(AM_V_at)$(GATBPS_RECIPE_FINISHED)
 
 .PHONY: clean-plaintext-dist
 .PHONY: clean-plaintext-dist-main

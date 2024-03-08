@@ -75,7 +75,7 @@ $(pdf_dist_dst): $(pdf_dist_dep)
   || 'exit' "$${?}"; \
   'exit' '0'; \
 :;}
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+	$(AM_V_at)$(GATBPS_RECIPE_FINISHED)
 
 .PHONY: clean-pdf-dist
 .PHONY: clean-pdf-dist-main

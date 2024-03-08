@@ -309,7 +309,7 @@ m4_case(
   esac; \
   exit "$][$][{exit_status}"; \
 :;}
-	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_MARKER_BOT)
+	$][(AM@&t@_V_at)$][(GATBPS_RECIPE_FINISHED)
 
 .PHONY: clean-]output_file_or_directory[
 

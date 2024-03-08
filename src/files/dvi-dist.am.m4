@@ -75,7 +75,7 @@ $(dvi_dist_dst): $(dvi_dist_dep)
   || 'exit' "$${?}"; \
   'exit' '0'; \
 :;}
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+	$(AM_V_at)$(GATBPS_RECIPE_FINISHED)
 
 .PHONY: clean-dvi-dist
 .PHONY: clean-dvi-dist-main

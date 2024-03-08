@@ -81,7 +81,7 @@ $(doxygen_dist_dst): $(doxygen_dist_dep)
   || 'exit' "$${?}"; \
   'exit' '0'; \
 :;}
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+	$(AM_V_at)$(GATBPS_RECIPE_FINISHED)
 
 .PHONY: clean-doxygen-dist
 .PHONY: clean-doxygen-dist-main

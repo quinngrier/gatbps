@@ -68,7 +68,7 @@ $(java_dist_dst): $(javadoc_src)
   || 'exit' "$${?}"; \
   'exit' '0'; \
 :;}
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+	$(AM_V_at)$(GATBPS_RECIPE_FINISHED)
 
 .PHONY: clean-java-dist
 .PHONY: clean-java-dist-main

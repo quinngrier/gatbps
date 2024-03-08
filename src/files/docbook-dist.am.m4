@@ -75,7 +75,7 @@ $(docbook_dist_dst): $(docbook_dist_dep)
   || 'exit' "$${?}"; \
   'exit' '0'; \
 :;}
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+	$(AM_V_at)$(GATBPS_RECIPE_FINISHED)
 
 .PHONY: clean-docbook-dist
 .PHONY: clean-docbook-dist-main

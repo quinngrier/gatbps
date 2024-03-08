@@ -87,7 +87,7 @@ $(html_dist_dst): $(html_dist_dep)
   || 'exit' "$${?}"; \
   'exit' '0'; \
 :;}
-	$(AM_V_at)$(GATBPS_RECIPE_MARKER_BOT)
+	$(AM_V_at)$(GATBPS_RECIPE_FINISHED)
 
 .PHONY: clean-html-dist
 .PHONY: clean-html-dist-main
