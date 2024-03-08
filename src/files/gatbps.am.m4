@@ -595,6 +595,30 @@ dist-hook: GATBPS_DISTTOUCH
 ]popdef([GATBPS_F1])[
 
 #-----------------------------------------------------------------------
+# GATBPS_DISTFILL
+#-----------------------------------------------------------------------
+#
+# GATBPS_DISTFILL is a dist hook that fills in any configure substituted
+# files in the distribution archive were created as empty files by the
+# previous phase (GATBPS_DISTTOUCH) with their correct content.
+#
+
+GATBPS_DISTFILL: FORCE
+GATBPS_DISTFILL: GATBPS_DISTTOUCH
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+	]GATBPS_SQUISH([$(AM_V_at){
+	  xs=`cd $(distdir) && find . -type f -size 0` || exit $$?;
+	  for x in $${xs?}; do
+	    if test -f $(srcdir)/$${x?}.in; then
+	      cat $${x?} >$(distdir)/$${x?} || exit $$?;
+	    fi;
+	  done;
+	}])[
+	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
+
+dist-hook: GATBPS_DISTFILL
+
+#-----------------------------------------------------------------------
 # The list-distfiles target
 #-----------------------------------------------------------------------
 #
