@@ -553,7 +553,7 @@ GATBPS_DISTTOUCH: GATBPS_DISTFILES
 GATBPS_DISTTOUCH.$1: FORCE
 GATBPS_DISTTOUCH.$1: GATBPS_DISTFILES
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
-	$(AM_V_at)cp Makefile $(distdir)
+	$(AM_V_at)sed 's/^Makefile:/GATBPS_SKIP.&/' Makefile >$(distdir)/Makefile
 	$(AM_V_at)cd $(distdir) && make -t $($1)
 	$(AM_V_at)rm $(distdir)/Makefile
 	$(AM_V_at)$(GATBPS_RECIPE_MARKER_TOP)
