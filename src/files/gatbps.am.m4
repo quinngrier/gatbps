@@ -565,15 +565,15 @@ GATBPS_DISTTOUCH: GATBPS_DISTFILES
 
 ]pushdef([GATBPS_F1], [[
 
-GATBPS_DISTTOUCH.$1: FORCE
-GATBPS_DISTTOUCH.$1: GATBPS_DISTFILES
+GATBPS_DISTTOUCH_$1: FORCE
+GATBPS_DISTTOUCH_$1: GATBPS_DISTFILES
 	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
-	$(AM_V_at)sed 's/^Makefile:/GATBPS_DISTTOUCH.&/' Makefile >$(distdir)/Makefile
+	$(AM_V_at)sed 's/^Makefile:/GATBPS_DISTTOUCH_&/' Makefile >$(distdir)/Makefile
 	$(AM_V_at)cd $(distdir) && $(MAKE) -t configure $($1)
 	$(AM_V_at)rm $(distdir)/Makefile
 	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
 
-GATBPS_DISTTOUCH: GATBPS_DISTTOUCH.$1
+GATBPS_DISTTOUCH: GATBPS_DISTTOUCH_$1
 
 ]])[
 
