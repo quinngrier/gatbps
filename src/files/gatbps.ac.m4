@@ -279,7 +279,7 @@ case ${srcdir?} in .)
       Copying source directory.
     ])[
     (cd ${srcdir?} && tar c .) >srcdir.tar || exit $?
-    tar x srcdir.tar || exit $?
+    tar xf srcdir.tar || exit $?
     rm srcdir.tar || exit $?
     chmod -R u+w . || exit $?
   esac
