@@ -268,7 +268,7 @@ case ${srcdir?} in .)
     Not copying source directory (non-VPATH build).
   ])[
 ;; *)
-  case ${GATBPS_DONE_COPYING_SOURCE_DIRECTORY-} in ?*)
+  case ${GATBPS_DONE_COPYING_SOURCE_DIRECTORY+:} in ?*)
     ]GATBPS_INFO([
       Not copying source directory (non-root ./configure).
     ])[
@@ -282,7 +282,7 @@ case ${srcdir?} in .)
     chmod -R u+w . || exit $?
   esac
 esac
-GATBPS_DONE_COPYING_SOURCE_DIRECTORY=x
+GATBPS_DONE_COPYING_SOURCE_DIRECTORY=
 readonly GATBPS_DONE_COPYING_SOURCE_DIRECTORY
 export GATBPS_DONE_COPYING_SOURCE_DIRECTORY
 
@@ -307,7 +307,7 @@ export GATBPS_DONE_COPYING_SOURCE_DIRECTORY
 # that only the root ./configure will observe it to be unset.
 #
 
-if ${GATBPS_TIMESTAMPS_NORMALIZED:+:} false; then
+if ${GATBPS_TIMESTAMPS_NORMALIZED+:} false; then
   ]GATBPS_INFO([
     Not normalizing timestamps (non-root ./configure).
   ])[
@@ -336,7 +336,7 @@ else
     esac
   }
 fi
-GATBPS_TIMESTAMPS_NORMALIZED=1
+GATBPS_TIMESTAMPS_NORMALIZED=
 readonly GATBPS_TIMESTAMPS_NORMALIZED
 export GATBPS_TIMESTAMPS_NORMALIZED
 
