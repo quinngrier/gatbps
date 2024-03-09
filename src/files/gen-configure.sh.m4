@@ -32,7 +32,7 @@ EOF2
       eval 'xs=$xs${'$x'+ '$x'=\"\$'$x'\"}'
     done
 
-    eval 'env -i '"$xs"' sh - "$0"'
+    eval 'env -i '"$xs"' sh - "$0" --prefix="${prefix?}"'
     exit $?
   ;;
 esac
