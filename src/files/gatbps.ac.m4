@@ -260,7 +260,7 @@ GATBPS_DEFINE_UNIQUE([GATBPS_INFO], [{ :
 }])
 
 #-----------------------------------------------------------------------
-# External srcdir copying
+# Source directory copying
 #-----------------------------------------------------------------------
 
 case ${srcdir?} in .)
