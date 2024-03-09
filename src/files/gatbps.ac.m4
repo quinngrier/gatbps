@@ -341,7 +341,6 @@ readonly GATBPS_DONE_NORMALIZING_TIMESTAMPS
 export GATBPS_DONE_NORMALIZING_TIMESTAMPS
 
 ]
-
 dnl---------------------------------------------------------------------
 dnl GATBPS_PROTECT
 dnl---------------------------------------------------------------------
