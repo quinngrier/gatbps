@@ -599,6 +599,32 @@ popdef([F1])
 #       this new GATBPS_DISTTOUCH approach works out in practice.
 
 ]pushdef([GATBPS_F1], [[
+
+GATBPS_DISTTOUCH_$1: FORCE
+	]GATBPS_SQUISH([$(AM_V_at)$(MAKE) -t
+	  abs_builddir='$(abs_builddir)'
+	  abs_srcdir='$(abs_srcdir)'
+	  abs_top_builddir='$(abs_top_builddir)'
+	  abs_top_srcdir='$(abs_top_srcdir)'
+	  srcdir='$(srcdir)'
+	  top_srcdir='$(top_srcdir)'
+	  configure $($1)
+	])[
+
+]])[
+
+]pushdef([GATBPS_F2],
+  [ifelse(
+    $1, GATBPS_DISTFILES_N, [],
+    [GATBPS_F1([GATBPS_DISTFILES_$1])GATBPS_F2(incr($1))])])[
+
+]GATBPS_F1([DISTFILES])[
+]GATBPS_F2(0)[
+
+]popdef([GATBPS_F2])[
+]popdef([GATBPS_F1])[
+
+]pushdef([GATBPS_F1], [[
 	]GATBPS_SQUISH([$(AM_V_at)cd $(distdir) && $(MAKE) -t
 	  abs_builddir="$$][{PWD?}"
 	  abs_srcdir="\$$(abs_builddir)"
@@ -606,7 +632,7 @@ popdef([F1])
 	  abs_top_srcdir="\$$(abs_top_builddir)"
 	  srcdir="\$$(builddir)"
 	  top_srcdir="\$$(top_builddir)"
-	  configure $($1)
+	  GATBPS_DISTTOUCH_$1
 	])])[
 
 ]pushdef([GATBPS_F2],
