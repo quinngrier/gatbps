@@ -15,8 +15,9 @@ m4_ignore([
   newline characters when outputting the cache, so we avoid making any
   such variables readonly. Doing so could interfere with Autoconf and
   possibly break things. These spots are notated with comments of the
-  form "Avoid: readonly foo". Also see
-  <https://lists.gnu.org/archive/html/bug-autoconf/2016-08/msg00000.html>.
+  form "Avoid: readonly foo". Also see [1].
+
+  [1] https://lists.gnu.org/archive/html/bug-autoconf/2016-08/msg00000.html
 
 ])
 
