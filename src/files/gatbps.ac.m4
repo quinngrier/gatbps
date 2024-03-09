@@ -177,6 +177,14 @@ ${gatbps_readonly?} gatbps_stmpdir
 mkdir "${gatbps_stmpdir?}" || exit $?
 
 #-----------------------------------------------------------------------
+# gatbps_aux_dir
+#-----------------------------------------------------------------------
+
+gatbps_aux_dir=${ac_aux_dir?}
+${gatbps_readonly?} gatbps_aux_dir
+]AC_SUBST([gatbps_aux_dir])[
+
+#-----------------------------------------------------------------------
 
 ]
 
