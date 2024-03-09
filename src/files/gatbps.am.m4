@@ -306,12 +306,12 @@ install-prehook: uninstall
 ##
 
 GATBPS_UNINSTALL_MKDIRS = \
-  $(bindir)/mkdir00 \
-  $(datadir)/$(PACKAGE_TARNAME)/mkdir01 \
-  $(datarootdir)/$(PACKAGE_TARNAME)/mkdir02 \
-  $(includedir)/$(PACKAGE_TARNAME)/mkdir03 \
-  $(libdir)/mkdir04 \
-  $(libexecdir)/$(PACKAGE_TARNAME)/mkdir05 \
+  $(DESTDIR)$(bindir)/mkdir00 \
+  $(DESTDIR)$(datadir)/$(DESTDIR)$(PACKAGE_TARNAME)/mkdir01 \
+  $(DESTDIR)$(datarootdir)/$(DESTDIR)$(PACKAGE_TARNAME)/mkdir02 \
+  $(DESTDIR)$(includedir)/$(DESTDIR)$(PACKAGE_TARNAME)/mkdir03 \
+  $(DESTDIR)$(libdir)/mkdir04 \
+  $(DESTDIR)$(libexecdir)/$(DESTDIR)$(PACKAGE_TARNAME)/mkdir05 \
 $(empty)
 
 GATBPS_UNINSTALL_MKDIRS/dummy $(GATBPS_UNINSTALL_MKDIRS): FORCE
@@ -331,13 +331,13 @@ GATBPS_UNINSTALL_MKDIRS/dummy $(GATBPS_UNINSTALL_MKDIRS): FORCE
 uninstall-prehook: FORCE $(GATBPS_UNINSTALL_MKDIRS)
 
 GATBPS_UNINSTALL_RMFRS = \
-  $(datadir)/$(PACKAGE_TARNAME)/rmfr00 \
-  $(datarootdir)/$(PACKAGE_TARNAME)/rmfr01 \
-  $(includedir)/$(PACKAGE_TARNAME)/rmfr02 \
-  $(libdir)/lib$(PACKAGE_TARNAME).a/rmfr03 \
-  $(libdir)/lib$(PACKAGE_TARNAME).la/rmfr04 \
-  $(libdir)/lib$(PACKAGE_TARNAME).so/rmfr05 \
-  $(libexecdir)/$(PACKAGE_TARNAME)/rmfr06 \
+  $(DESTDIR)$(datadir)/$(DESTDIR)$(PACKAGE_TARNAME)/rmfr00 \
+  $(DESTDIR)$(datarootdir)/$(DESTDIR)$(PACKAGE_TARNAME)/rmfr01 \
+  $(DESTDIR)$(includedir)/$(DESTDIR)$(PACKAGE_TARNAME)/rmfr02 \
+  $(DESTDIR)$(libdir)/lib$(DESTDIR)$(PACKAGE_TARNAME).a/rmfr03 \
+  $(DESTDIR)$(libdir)/lib$(DESTDIR)$(PACKAGE_TARNAME).la/rmfr04 \
+  $(DESTDIR)$(libdir)/lib$(DESTDIR)$(PACKAGE_TARNAME).so/rmfr05 \
+  $(DESTDIR)$(libexecdir)/$(DESTDIR)$(PACKAGE_TARNAME)/rmfr06 \
 $(empty)
 
 GATBPS_UNINSTALL_RMFRS/dummy $(GATBPS_UNINSTALL_RMFRS): FORCE
