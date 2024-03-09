@@ -259,10 +259,9 @@ GATBPS_DEFINE_UNIQUE([GATBPS_INFO], [{ :
   AC_MSG_NOTICE(m4_dquote(GATBPS_SQUISH([$1])))
 }])
 
-dnl#--------------------------------------------------------------------
-dnl# External srcdir copying
-dnl#--------------------------------------------------------------------
-[
+#-----------------------------------------------------------------------
+# External srcdir copying
+#-----------------------------------------------------------------------
 
 case ${srcdir?} in .)
   :
@@ -273,13 +272,9 @@ case ${srcdir?} in .)
   chmod -R u+w . || exit $?
 esac
 
-]
-dnl---------------------------------------------------------------------
-dnl Timestamp normalization
-dnl---------------------------------------------------------------------
-
-[
-
+#-----------------------------------------------------------------------
+# Timestamp normalization
+#-----------------------------------------------------------------------
 #
 # Sometimes the file timestamps from a distribution archive will have
 # been modified, which can cause make to mistakenly think that certain
