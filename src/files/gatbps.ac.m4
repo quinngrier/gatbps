@@ -329,7 +329,7 @@ case ${srcdir?} in .)
 ;; *)
   case ${GATBPS_DONE_COPYING_SOURCE_DIRECTORY+:} in ?*)
     ]GATBPS_INFO([
-      Not copying source directory (non-root ./configure).
+      Not copying source directory (non-root configure).
     ])[
   ;; *)
     ]GATBPS_INFO([
@@ -367,7 +367,7 @@ export GATBPS_DONE_COPYING_SOURCE_DIRECTORY
 
 if ${GATBPS_DONE_NORMALIZING_TIMESTAMPS+:} false; then
   ]GATBPS_INFO([
-    Not normalizing timestamps (non-root ./configure).
+    Not normalizing timestamps (non-root configure).
   ])[
 elif test -s config.status; then
   ]GATBPS_INFO([
