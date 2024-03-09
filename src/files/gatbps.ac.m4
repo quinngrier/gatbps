@@ -122,6 +122,62 @@ gatbps_nl='
 gatbps_default_IFS=" 	$gatbps_nl"
 # Avoid: readonly gatbps_default_IFS
 
+#-----------------------------------------------------------------------
+# gatbps_root_tmp
+#-----------------------------------------------------------------------
+
+]AS_TMPDIR([gat])[
+gatbps_root_tmp=${tmp?}
+case ${gatbps_root_tmp?} in [!/]*)
+  case ${PWD?} in */)
+    gatbps_root_tmp=${PWD?}${gatbps_root_tmp?}
+  ;; *)
+    gatbps_root_tmp=${PWD?}/${gatbps_root_tmp?}
+  esac
+esac
+case ${gatbps_root_tmp?} in *[!/])
+  gatbps_root_tmp=${gatbps_root_tmp?}/
+esac
+${gatbps_readonly?} gatbps_root_tmp
+
+#-----------------------------------------------------------------------
+# gatbps_root_tmpdir
+#-----------------------------------------------------------------------
+
+gatbps_root_tmpdir=${gatbps_root_tmp?}gatbps_root_tmpdir
+${gatbps_readonly?} gatbps_root_tmpdir
+mkdir "${gatbps_root_tmpdir?}" || exit $?
+
+# TODO: Cleanup on exit with rm -f -r
+
+#-----------------------------------------------------------------------
+# gatbps_root_stmpdir
+#-----------------------------------------------------------------------
+
+gatbps_root_stmpdir=${gatbps_root_tmp?}gatbps_root_stmpdir
+${gatbps_readonly?} gatbps_root_stmpdir
+mkdir "${gatbps_root_stmpdir?}" || exit $?
+
+# TODO: Cleanup on exit with shred if possible, then rm -f -r
+
+#-----------------------------------------------------------------------
+# gatbps_tmpdir
+#-----------------------------------------------------------------------
+
+gatbps_tmpdir=${gatbps_root_tmpdir?}/gatbps_tmpdir
+${gatbps_readonly?} gatbps_tmpdir
+mkdir "${gatbps_tmpdir?}" || exit $?
+
+#-----------------------------------------------------------------------
+# gatbps_stmpdir
+#-----------------------------------------------------------------------
+
+gatbps_stmpdir=${gatbps_root_stmpdir?}/gatbps_stmpdir
+${gatbps_readonly?} gatbps_stmpdir
+mkdir "${gatbps_stmpdir?}" || exit $?
+
+#-----------------------------------------------------------------------
+
 ]
 
 dnl---------------------------------------------------------------------
