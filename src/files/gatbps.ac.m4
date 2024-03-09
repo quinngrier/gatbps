@@ -307,7 +307,7 @@ export GATBPS_DONE_COPYING_SOURCE_DIRECTORY
 # that only the root ./configure will observe it to be unset.
 #
 
-if ${GATBPS_TIMESTAMPS_NORMALIZED+:} false; then
+if ${GATBPS_DONE_NORMALIZING_TIMESTAMPS+:} false; then
   ]GATBPS_INFO([
     Not normalizing timestamps (non-root ./configure).
   ])[
@@ -336,9 +336,9 @@ else
     esac
   }
 fi
-GATBPS_TIMESTAMPS_NORMALIZED=
-readonly GATBPS_TIMESTAMPS_NORMALIZED
-export GATBPS_TIMESTAMPS_NORMALIZED
+GATBPS_DONE_NORMALIZING_TIMESTAMPS=
+readonly GATBPS_DONE_NORMALIZING_TIMESTAMPS
+export GATBPS_DONE_NORMALIZING_TIMESTAMPS
 
 ]
 
