@@ -335,9 +335,8 @@ case ${srcdir?} in .)
     ]GATBPS_INFO([
       Copying source directory.
     ])[
-    (cd ${srcdir?} && tar c .) >srcdir.tar || exit $?
-    tar xf srcdir.tar || exit $?
-    rm srcdir.tar || exit $?
+    (cd "${srcdir?}" && tar c .) >"${gatbps_root_stmpdir?}/srcdir.tar" || exit $?
+    tar xf "${gatbps_root_stmpdir?}/srcdir.tar" || exit $?
     chmod -R u+w . || exit $?
   esac
 esac
