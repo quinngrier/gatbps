@@ -264,13 +264,27 @@ GATBPS_DEFINE_UNIQUE([GATBPS_INFO], [{ :
 #-----------------------------------------------------------------------
 
 case ${srcdir?} in .)
-  :
+  ]GATBPS_INFO([
+    Not copying source directory (non-VPATH build).
+  ])[
 ;; *)
-  (cd ${srcdir?} && tar c .) >srcdir.tar || exit $?
-  tar x srcdir.tar || exit $?
-  rm srcdir.tar || exit $?
-  chmod -R u+w . || exit $?
+  case ${GATBPS_DONE_COPYING_SOURCE_DIRECTORY-} in ?*)
+    ]GATBPS_INFO([
+      Not copying source directory (non-root ./configure).
+    ])[
+  ;; *)
+    ]GATBPS_INFO([
+      Copying source directory.
+    ])[
+    (cd ${srcdir?} && tar c .) >srcdir.tar || exit $?
+    tar x srcdir.tar || exit $?
+    rm srcdir.tar || exit $?
+    chmod -R u+w . || exit $?
+  esac
 esac
+GATBPS_DONE_COPYING_SOURCE_DIRECTORY=x
+readonly GATBPS_DONE_COPYING_SOURCE_DIRECTORY
+export GATBPS_DONE_COPYING_SOURCE_DIRECTORY
 
 #-----------------------------------------------------------------------
 # Timestamp normalization
