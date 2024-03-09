@@ -346,6 +346,8 @@ case ${srcdir?} in .)
     (cd "${srcdir?}" && tar c .) >"${gatbps_root_stmpdir?}/srcdir.tar" || exit $?
     tar xf "${gatbps_root_stmpdir?}/srcdir.tar" || exit $?
     chmod -R u+w . || exit $?
+    mkdir -p -- "${gatbps_aux_dir?}" || exit $?
+    tar tf "${gatbps_root_stmpdir?}/srcdir.tar" >"${gatbps_aux_dir?}/gatbps_clean_copied_source_directory" || exit $?
   esac
 esac
 GATBPS_DONE_COPYING_SOURCE_DIRECTORY=

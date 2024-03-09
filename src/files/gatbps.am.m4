@@ -691,6 +691,47 @@ GATBPS_DISTDONE: FORCE
 GATBPS_DISTDONE: GATBPS_DISTSUBST
 
 #-----------------------------------------------------------------------
+# gatbps_clean_copied_source_directory
+#-----------------------------------------------------------------------
+
+gatbps_clean_copied_source_directory: FORCE
+	]GATBPS_SQUISH([$(GATBPS_at){ \
+	  f='$(gatbps_aux_dir)/gatbps_clean_copied_source_directory'; \
+	  if test -f "$${f?}"; then \
+	    xs=`cat -- "$${f?}"` || exit $$?; \
+	    set $${xs?}; \
+	    while :; do \
+	      case $$# in 0) \
+	        break; \
+	      esac; \
+	      xs=; \
+	      i=0; \
+	      while :; do \
+	        case $$# in 0) \
+	          break; \
+	        esac; \
+	        case $${i?} in 50) \
+	          break; \
+	        ;; 0) \
+	          :; \
+	        ;; *) \
+	          xs="$${xs?} "; \
+	        esac; \
+	        xs=$${xs?}$${1?}; \
+	        i=`expr $${i?} + 1` || exit $$?; \
+	        shift; \
+	      done; \
+	      if $(AM_V_P); then \
+	        printf '%s\n' "rm -f $${xs?}"; \
+	      fi; \
+	      rm -f $${xs?} || exit $$?; \
+	    done; \
+	  fi; \
+	}])[
+
+distclean: gatbps_clean_copied_source_directory
+
+#-----------------------------------------------------------------------
 # The list-distfiles target
 #-----------------------------------------------------------------------
 #
