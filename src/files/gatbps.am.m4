@@ -713,14 +713,15 @@ gatbps_clean_copied_source_directory: FORCE
 	        esac;
 	        case $${i?} in 50)
 	          break;
-	        ;; 0)
-	          :;
-	        ;; *)
-	          xs="$${xs?} ";
 	        esac;
 	        case $${1?} in . | ./)
 	          :;
 	        ;; *)
+	          case $${i?} in 0)
+	            :;
+	          ;; *)
+	            xs="$${xs?} ";
+	          esac;
 	          xs=$${xs?}$${1?};
 	          i=`expr $${i?} + 1` || exit $$?;
 	        esac;
