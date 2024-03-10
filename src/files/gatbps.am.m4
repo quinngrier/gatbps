@@ -582,101 +582,23 @@ popdef([F1])
 [
 
 #-----------------------------------------------------------------------
-# GATBPS_DISTTOUCH
+# gatbps_enable_distcut
 #-----------------------------------------------------------------------
-#
-# GATBPS_DISTTOUCH is a dist hook that creates any missing intermediate
-# targets in the distribution archive as empty files. This guarantees
-# that no targets will be attempted to be remade because of missing
-# intermediate targets in a freshly extracted distribution archive.
-#
-# The reason for using "$(MAKE) -t configure $($1)" instead of just
-# "$(MAKE) -t $($1)" is to prevent the default target from being made
-# when $($1) is empty.
-#
 
-# TODO: Generally migrate away from my previous "leaf-only" approach if
-#       this new GATBPS_DISTTOUCH approach works out in practice.
-
-]pushdef([GATBPS_F1], [[
-
-GATBPS_DISTTOUCH_$1: FORCE
-	]GATBPS_SQUISH([$(AM_V_at)$(MAKE) -t
-	  abs_builddir='$(abs_builddir)'
-	  abs_srcdir='$(abs_srcdir)'
-	  abs_top_builddir='$(abs_top_builddir)'
-	  abs_top_srcdir='$(abs_top_srcdir)'
-	  srcdir='$(srcdir)'
-	  top_srcdir='$(top_srcdir)'
-	  configure $($1)
+gatbps_enable_distcut: FORCE
+gatbps_enable_distcut: GATBPS_DISTFILES
+	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
+	$(AM_V_at)rm -f $@$(TSUF)
+	]GATBPS_SQUISH([$(AM_V_at)sed
+	  's|{DISTCUT=}|{DISTCUT=/DISTCUT}|'
+	  $(distdir)/configure
+	  >$@$(TSUF)
 	])[
-
-]])[
-
-]pushdef([GATBPS_F2],
-  [ifelse(
-    $1, GATBPS_DISTFILES_N, [],
-    [GATBPS_F1([GATBPS_DISTFILES_$1])GATBPS_F2(incr($1))])])[
-
-]GATBPS_F1([DISTFILES])[
-]GATBPS_F2(0)[
-
-]popdef([GATBPS_F2])[
-]popdef([GATBPS_F1])[
-
-]pushdef([GATBPS_F1], [[
-	]GATBPS_SQUISH([$(AM_V_at)cd $(distdir) && $(MAKE) -t
-	  abs_builddir="$$][{PWD?}"
-	  abs_srcdir="\$$(abs_builddir)"
-	  abs_top_builddir="$$][{PWD?}/\$$(top_builddir)"
-	  abs_top_srcdir="\$$(abs_top_builddir)"
-	  srcdir="\$$(builddir)"
-	  top_srcdir="\$$(top_builddir)"
-	  GATBPS_DISTTOUCH_$1
-	])])[
-
-]pushdef([GATBPS_F2],
-  [ifelse(
-    $1, GATBPS_DISTFILES_N, [],
-    [GATBPS_F1([GATBPS_DISTFILES_$1])GATBPS_F2(incr($1))])])[
-
-GATBPS_DISTTOUCH: FORCE
-GATBPS_DISTTOUCH: GATBPS_DISTFILES
-	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
-	$(AM_V_at)sed 's/^Makefile:/GATBPS_DISTTOUCH_&/' Makefile >$(distdir)/Makefile]dnl
-GATBPS_F1([DISTFILES])dnl
-GATBPS_F2(0)[
-	$(AM_V_at)rm $(distdir)/Makefile
+	$(AM_V_at)cat $@$(TSUF) >$(distdir)/configure
+	$(AM_V_at)rm -f $@$(TSUF)
 	$(AM_V_at)$(GATBPS_RECIPE_FINISHED)
 
-dist-hook: GATBPS_DISTTOUCH
-
-]popdef([GATBPS_F2])[
-]popdef([GATBPS_F1])[
-
-#-----------------------------------------------------------------------
-# GATBPS_DISTSUBST
-#-----------------------------------------------------------------------
-#
-# GATBPS_DISTSUBST is a dist hook that fills in any configure substituted
-# files in the distribution archive were created as empty files by the
-# previous phase (GATBPS_DISTTOUCH) with their correct content.
-#
-
-GATBPS_DISTSUBST: FORCE
-GATBPS_DISTSUBST: GATBPS_DISTTOUCH
-	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
-	]GATBPS_SQUISH([$(AM_V_at){
-	  xs=`cd $(distdir) && find . -type f -size 0` || exit $$?;
-	  for x in $${xs?}; do
-	    if test -f $(srcdir)/$${x?}.in; then
-	      cat $${x?} >$(distdir)/$${x?} || exit $$?;
-	    fi;
-	  done;
-	}])[
-	$(AM_V_at)$(GATBPS_RECIPE_FINISHED)
-
-dist-hook: GATBPS_DISTSUBST
+dist-hook: gatbps_enable_distcut
 
 #-----------------------------------------------------------------------
 # GATBPS_DISTDONE
@@ -688,7 +610,7 @@ dist-hook: GATBPS_DISTSUBST
 #
 
 GATBPS_DISTDONE: FORCE
-GATBPS_DISTDONE: GATBPS_DISTSUBST
+GATBPS_DISTDONE: gatbps_enable_distcut
 
 #-----------------------------------------------------------------------
 # gatbps_clean_copied_source_directory

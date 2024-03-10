@@ -343,6 +343,21 @@ case ${ac_aux_dir-} in build-aux | "${srcdir?}/build-aux")
 esac
 
 #-----------------------------------------------------------------------
+# DISTCUT
+#-----------------------------------------------------------------------
+
+: ${DISTCUT=}
+${gatbps_readonly?} DISTCUT
+
+]AC_ARG_VAR([DISTCUT], GATBPS_SQUISH([
+  By default, any distributed file whose make graph has diameter larger
+  than 1 will have its edges cut so its make graph will become trivial
+  and it will always be considered up to date. Set this variable to
+  empty to uncut these edges. (The default is reversed in a source
+  repository).
+]))[
+
+#-----------------------------------------------------------------------
 # Source directory copying
 #-----------------------------------------------------------------------
 
