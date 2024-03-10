@@ -714,7 +714,7 @@ gatbps_clean_copied_source_directory: FORCE
 	        case $${i?} in 50)
 	          break;
 	        esac;
-	        case $${1?} in . | ./)
+	        case $${1?} in */)
 	          :;
 	        ;; *)
 	          case $${i?} in 0)
@@ -728,9 +728,9 @@ gatbps_clean_copied_source_directory: FORCE
 	        shift;
 	      done;
 	      if $(AM_V_P); then
-	        printf '%s\n' "rm -R -f $${xs?}";
+	        printf '%s\n' "rm -f $${xs?}";
 	      fi;
-	      rm -R -f $${xs?} || exit $$?;
+	      rm -f $${xs?} || exit $$?;
 	    done;
 	  fi;
 	}])[
