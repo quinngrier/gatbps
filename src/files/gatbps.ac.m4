@@ -325,8 +325,8 @@ GATBPS_DEFINE_UNIQUE([GATBPS_INFO], [{ :
 
 case ${ac_aux_dir+x} in ?*)
   ]GATBPS_BARF([
-    You must let GATBPS call AC@&t@_CONFIG_AUX_DIR instead of calling it
-    yourself
+    You must let gatbps.ac call AC@&t@_CONFIG_AUX_DIR instead of calling
+    it yourself
   ])[
 esac
 
