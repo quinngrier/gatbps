@@ -723,9 +723,9 @@ gatbps_clean_copied_source_directory: FORCE
 	        shift; \
 	      done; \
 	      if $(AM_V_P); then \
-	        printf '%s\n' "rm -f $${xs?}"; \
+	        printf '%s\n' "rm -R -f $${xs?}"; \
 	      fi; \
-	      rm -f $${xs?} || exit $$?; \
+	      rm -R -f $${xs?} || exit $$?; \
 	    done; \
 	  fi; \
 	}])[
