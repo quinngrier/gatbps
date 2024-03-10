@@ -328,13 +328,13 @@ case ${ac_aux_dir-} in build-aux | "${srcdir?}/build-aux")
   :
 ;; *)
   case ${ac_aux_dir+x} in ?*)
-    ]GATBPS_BARF([
+    ]GATBPS_BUG([
       You must call AC@&t@_CONFIG_AUX_DIR([build-aux]) before including
       gatbps.ac.
       It looks like you called it with a different parameter
     ])[
   ;; *)
-    ]GATBPS_BARF([
+    ]GATBPS_BUG([
       You must call AC@&t@_CONFIG_AUX_DIR([build-aux]) before including
       gatbps.ac.
       It looks like you forgot to call it
