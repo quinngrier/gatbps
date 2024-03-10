@@ -700,7 +700,7 @@ gatbps_clean_copied_source_directory: FORCE
 	  f=build-aux/gatbps_clean_copied_source_directory;
 	  if test -f "$${f?}"; then
 	    xs=`cat -- "$${f?}"` || exit $$?;
-	    set $${xs?};
+	    set -- "$${f?}" $${xs?};
 	    while :; do
 	      case $$# in 0)
 	        break;
