@@ -324,7 +324,11 @@ GATBPS_DEFINE_UNIQUE([GATBPS_INFO], [{ :
 # build-aux
 #-----------------------------------------------------------------------
 
-case ${ac_aux_dir-} in build-aux | "${srcdir?}/build-aux")
+case ${ac_aux_dir-} in build-aux \
+  | build-aux/ \
+  | "${srcdir?}"/build-aux \
+  | "${srcdir?}"/build-aux/ \
+)
   :
 ;; *)
   case ${ac_aux_dir+x} in ?*)
