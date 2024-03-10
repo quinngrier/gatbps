@@ -697,7 +697,7 @@ GATBPS_DISTDONE: GATBPS_DISTSUBST
 gatbps_clean_copied_source_directory: FORCE
 	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
 	]GATBPS_SQUISH([$(GATBPS_at){ \
-	  f='$(gatbps_build_aux)/gatbps_clean_copied_source_directory'; \
+	  f=build-aux/gatbps_clean_copied_source_directory; \
 	  if test -f "$${f?}"; then \
 	    xs=`cat -- "$${f?}"` || exit $$?; \
 	    set $${xs?}; \

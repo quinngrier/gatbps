@@ -177,19 +177,6 @@ ${gatbps_readonly?} gatbps_stmpdir
 mkdir "${gatbps_stmpdir?}" || exit $?
 
 #-----------------------------------------------------------------------
-# gatbps_build_aux
-#-----------------------------------------------------------------------
-
-gatbps_build_aux=build-aux
-${gatbps_readonly?} gatbps_build_aux
-
-]AC_SUBST([gatbps_build_aux])[
-
-# TODO: Call AC_CONFIG_AUX_DIR([build-aux]). This will require all
-#       downstream projects to remove their own occurrences of that
-#       call.
-
-#-----------------------------------------------------------------------
 
 ]
 
@@ -332,6 +319,19 @@ GATBPS_DEFINE_UNIQUE([GATBPS_INFO], [{ :
 [
 
 #-----------------------------------------------------------------------
+# build-aux
+#-----------------------------------------------------------------------
+
+case ${ac_aux_dir+x} in ?*)
+  ]GATBPS_BARF([
+    You must let GATBPS call AC_CONFIG_AUX_DIR instead of calling it
+    yourself
+  ])[
+esac
+
+]AC_CONFIG_AUX_DIR([build-aux])[
+
+#-----------------------------------------------------------------------
 # Source directory copying
 #-----------------------------------------------------------------------
 
@@ -351,8 +351,8 @@ case ${srcdir?} in .)
     (cd "${srcdir?}" && tar c .) >"${gatbps_root_stmpdir?}/srcdir.tar" || exit $?
     tar xf "${gatbps_root_stmpdir?}/srcdir.tar" || exit $?
     chmod -R u+w . || exit $?
-    mkdir -p -- "${gatbps_build_aux?}" || exit $?
-    tar tf "${gatbps_root_stmpdir?}/srcdir.tar" >"${gatbps_build_aux?}/gatbps_clean_copied_source_directory" || exit $?
+    mkdir -p build-aux || exit $?
+    tar tf "${gatbps_root_stmpdir?}/srcdir.tar" >build-aux/gatbps_clean_copied_source_directory || exit $?
   esac
 esac
 GATBPS_DONE_COPYING_SOURCE_DIRECTORY=
