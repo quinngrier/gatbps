@@ -696,38 +696,38 @@ GATBPS_DISTDONE: GATBPS_DISTSUBST
 
 gatbps_clean_copied_source_directory: FORCE
 	$(AM_V_at)$(GATBPS_RECIPE_STARTING)
-	]GATBPS_SQUISH([$(GATBPS_at){ \
-	  f=build-aux/gatbps_clean_copied_source_directory; \
-	  if test -f "$${f?}"; then \
-	    xs=`cat -- "$${f?}"` || exit $$?; \
-	    set $${xs?}; \
-	    while :; do \
-	      case $$# in 0) \
-	        break; \
-	      esac; \
-	      xs=; \
-	      i=0; \
-	      while :; do \
-	        case $$# in 0) \
-	          break; \
-	        esac; \
-	        case $${i?} in 50) \
-	          break; \
-	        ;; 0) \
-	          :; \
-	        ;; *) \
-	          xs="$${xs?} "; \
-	        esac; \
-	        xs=$${xs?}$${1?}; \
-	        i=`expr $${i?} + 1` || exit $$?; \
-	        shift; \
-	      done; \
-	      if $(AM_V_P); then \
-	        printf '%s\n' "rm -R -f $${xs?}"; \
-	      fi; \
-	      rm -R -f $${xs?} || exit $$?; \
-	    done; \
-	  fi; \
+	]GATBPS_SQUISH([$(GATBPS_at){
+	  f=build-aux/gatbps_clean_copied_source_directory;
+	  if test -f "$${f?}"; then
+	    xs=`cat -- "$${f?}"` || exit $$?;
+	    set $${xs?};
+	    while :; do
+	      case $$# in 0)
+	        break;
+	      esac;
+	      xs=;
+	      i=0;
+	      while :; do
+	        case $$# in 0)
+	          break;
+	        esac;
+	        case $${i?} in 50)
+	          break;
+	        ;; 0)
+	          :;
+	        ;; *)
+	          xs="$${xs?} ";
+	        esac;
+	        xs=$${xs?}$${1?};
+	        i=`expr $${i?} + 1` || exit $$?;
+	        shift;
+	      done;
+	      if $(AM_V_P); then
+	        printf '%s\n' "rm -R -f $${xs?}";
+	      fi;
+	      rm -R -f $${xs?} || exit $$?;
+	    done;
+	  fi;
 	}])[
 	$(AM_V_at)$(GATBPS_RECIPE_FINISHED)
 
