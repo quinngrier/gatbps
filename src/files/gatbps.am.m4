@@ -718,8 +718,12 @@ gatbps_clean_copied_source_directory: FORCE
 	        ;; *)
 	          xs="$${xs?} ";
 	        esac;
-	        xs=$${xs?}$${1?};
-	        i=`expr $${i?} + 1` || exit $$?;
+	        case $${1?} in . | ./)
+	          :;
+	        ;; *)
+	          xs=$${xs?}$${1?};
+	          i=`expr $${i?} + 1` || exit $$?;
+	        esac;
 	        shift;
 	      done;
 	      if $(AM_V_P); then
