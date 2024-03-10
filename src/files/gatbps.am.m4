@@ -736,7 +736,7 @@ gatbps_clean_copied_source_directory: FORCE
 	}])[
 	$(AM_V_at)$(GATBPS_RECIPE_FINISHED)
 
-distclean: gatbps_clean_copied_source_directory
+distclean-local: gatbps_clean_copied_source_directory
 
 #-----------------------------------------------------------------------
 # The list-distfiles target
