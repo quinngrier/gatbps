@@ -262,7 +262,7 @@ dnl GATBPS_AC_BARF
 dnl---------------------------------------------------------------------
 
 GATBPS_DEFINE_UNIQUE([GATBPS_AC_BARF], [
-  m4_errprintn(m4_location: GATBPS_SQUISH([Error: $1.]))
+  m4_errprintn(m4_location: GATBPS_SQUISH([Error: $1]).)
   m4_exit(1)
 ])
 
@@ -271,7 +271,7 @@ dnl GATBPS_AC_WARN
 dnl---------------------------------------------------------------------
 
 GATBPS_DEFINE_UNIQUE([GATBPS_AC_WARN], [
-  m4_errprintn(m4_location: GATBPS_SQUISH([Warning: $1.]))
+  m4_errprintn(m4_location: GATBPS_SQUISH([Warning: $1]).)
 ])
 
 dnl---------------------------------------------------------------------
@@ -279,7 +279,7 @@ dnl GATBPS_AC_INFO
 dnl---------------------------------------------------------------------
 
 GATBPS_DEFINE_UNIQUE([GATBPS_AC_INFO], [
-  m4_errprintn(m4_location: GATBPS_SQUISH([$1.]))
+  m4_errprintn(m4_location: GATBPS_SQUISH([$1]).)
 ])
 
 dnl---------------------------------------------------------------------
@@ -287,7 +287,7 @@ dnl GATBPS_BARF
 dnl---------------------------------------------------------------------
 
 GATBPS_DEFINE_UNIQUE([GATBPS_BARF], [{ :
-  AC_MSG_ERROR(m4_dquote(GATBPS_SQUISH([$1.])), 1)
+  AC_MSG_ERROR(m4_dquote(GATBPS_SQUISH([$1]).), 1)
 }])
 
 dnl---------------------------------------------------------------------
@@ -306,7 +306,7 @@ dnl GATBPS_WARN
 dnl---------------------------------------------------------------------
 
 GATBPS_DEFINE_UNIQUE([GATBPS_WARN], [{ :
-  AC_MSG_WARN(m4_dquote(GATBPS_SQUISH([$1.])))
+  AC_MSG_WARN(m4_dquote(GATBPS_SQUISH([$1]).))
 }])
 
 dnl---------------------------------------------------------------------
@@ -314,7 +314,7 @@ dnl GATBPS_INFO
 dnl---------------------------------------------------------------------
 
 GATBPS_DEFINE_UNIQUE([GATBPS_INFO], [{ :
-  AC_MSG_NOTICE(m4_dquote(GATBPS_SQUISH([$1.])))
+  AC_MSG_NOTICE(m4_dquote(GATBPS_SQUISH([$1]).))
 }])
 
 [
