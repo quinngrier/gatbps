@@ -296,8 +296,9 @@ dnl---------------------------------------------------------------------
 
 GATBPS_DEFINE_UNIQUE([GATBPS_BUG], [
   GATBPS_BARF([
-    $1.
-    Please report this error to <]AC_PACKAGE_BUGREPORT[>, as it is a bug
+    Bug: $1.
+    Please report this error to <]AC_PACKAGE_BUGREPORT[>, as it
+    indicates a bug in the package
   ])
 ])
 
