@@ -19,4 +19,8 @@ include::partials/acl_include_gatbps_ac_fragment.adoc[]
 {acl_GATBPS_BARF}(<message>)
 ----
 
+The `{acl_GATBPS_BARF}` macro generates portable shell code that, when
+run at `configure` time, writes `<message>` to standard error and
+terminates the `configure` script with exit status 1.
+
 //
