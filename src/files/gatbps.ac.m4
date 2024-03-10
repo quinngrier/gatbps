@@ -323,14 +323,23 @@ GATBPS_DEFINE_UNIQUE([GATBPS_INFO], [{ :
 # build-aux
 #-----------------------------------------------------------------------
 
-case ${ac_aux_dir+x} in ?*)
-  ]GATBPS_BARF([
-    You must let gatbps.ac call AC@&t@_CONFIG_AUX_DIR instead of calling
-    it yourself
-  ])[
+case ${ac_aux_dir-} in build-aux | "${srcdir?}/build-aux")
+  :
+;; *)
+  case ${ac_aux_dir+x} in ?*)
+    ]GATBPS_BARF([
+      You must call AC@&t@_CONFIG_AUX_DIR([build-aux]) before including
+      gatbps.ac.
+      It looks like you called it with a different parameter
+    ])[
+  ;; *)
+    ]GATBPS_BARF([
+      You must call AC@&t@_CONFIG_AUX_DIR([build-aux]) before including
+      gatbps.ac.
+      It looks like you forgot to call it
+    ])[
+  esac
 esac
-
-]AC_CONFIG_AUX_DIR([build-aux])[
 
 #-----------------------------------------------------------------------
 # Source directory copying
