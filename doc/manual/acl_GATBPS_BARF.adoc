@@ -23,4 +23,14 @@ The `{acl_GATBPS_BARF}` macro generates portable shell code that, when
 run at `configure` time, writes `<message>` to standard error and
 terminates the `configure` script with exit status 1.
 
+Regarding shell quoting, `<message>` will be adjusted by converting each
+`++"++` to `++\"++`, converting each `++`++` to `++\`++`, and enclosing
+the entire message in `++"++` characters.
+You should ensure that `<message>` does not contain any occurrences of
+`++\"++` or `++\`++` that are not immediately preceded by another
+`++\++`.
+// TODO: Document that this is the general quoting style of Autoconf.
+//       See the Autoconf source code for more information (search for
+//       _AS_QUOTE_MODERN).
+
 //
