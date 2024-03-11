@@ -386,17 +386,30 @@ case ${srcdir?} in .)
 
     case ${gatbps_x+x} in "")
       gatbps_y="tar -c --exclude-vcs"
+      printf '%s\n' \
+        "  Checking if \"${gatbps_y?}\" works." \
+      >&]AS_MESSAGE_LOG_FD[
       (
         cd -- "${srcdir?}" || exit $?
         ${gatbps_y?} configure || exit $?
       ) >/dev/null 2>/dev/null && :
       case $? in 0)
         gatbps_x=${gatbps_y?}
+        printf '%s\n' \
+          "    Yes. Will use it." \
+        >&]AS_MESSAGE_LOG_FD[
+      ;; *)
+        printf '%s\n' \
+          "    No. Will try the next variant." \
+        >&]AS_MESSAGE_LOG_FD[
       esac
     esac
 
     case ${gatbps_x+x} in "")
       gatbps_x="tar c"
+      printf '%s\n' \
+        "  Falling back to \"${gatbps_x?}\"." \
+      >&]AS_MESSAGE_LOG_FD[
     esac
 
     (
