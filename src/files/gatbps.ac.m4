@@ -370,16 +370,16 @@ ${gatbps_readonly?} DISTCUT
 
 case ${srcdir?} in .)
   ]GATBPS_INFO([
-    Not copying source directory (non-VPATH build).
+    Not copying source directory (non-VPATH build)
   ])[
 ;; *)
   case ${GATBPS_DONE_COPYING_SOURCE_DIRECTORY+:} in ?*)
     ]GATBPS_INFO([
-      Not copying source directory (non-root configure).
+      Not copying source directory (non-root configure)
     ])[
   ;; *)
     ]GATBPS_INFO([
-      Copying source directory.
+      Copying source directory
     ])[
 
     unset gatbps_x
@@ -451,15 +451,15 @@ export GATBPS_DONE_COPYING_SOURCE_DIRECTORY
 
 if ${GATBPS_DONE_NORMALIZING_TIMESTAMPS+:} false; then
   ]GATBPS_INFO([
-    Not normalizing timestamps (non-root configure).
+    Not normalizing timestamps (non-root configure)
   ])[
 elif test -s config.status; then
   ]GATBPS_INFO([
-    Not normalizing timestamps (nonempty config.status).
+    Not normalizing timestamps (nonempty config.status)
   ])[
 else
   ]GATBPS_INFO([
-    Normalizing timestamps.
+    Normalizing timestamps
   ])[
   t='touch -t '`date '+%Y%m%d%H%M.%S'`' {}' || exit $?
   p='( -name /
