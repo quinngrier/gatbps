@@ -381,11 +381,34 @@ case ${srcdir?} in .)
     ]GATBPS_INFO([
       Copying source directory.
     ])[
-    (cd "${srcdir?}" && tar c .) >"${gatbps_root_stmpdir?}/srcdir.tar" || exit $?
+
+    unset gatbps_x
+
+    case ${gatbps_x+x} in "")
+      gatbps_y="tar -c --exclude-vcs"
+      (
+        cd -- "${srcdir?}" || exit $?
+        ${gatbps_y?} configure || exit $?
+      ) >/dev/null 2>/dev/null && :
+      case $? in 0)
+        gatbps_x=${gatbps_y?}
+      esac
+    esac
+
+    case ${gatbps_x+x} in "")
+      gatbps_x="tar c"
+    esac
+
+    (
+      cd -- "${srcdir?}" || exit $?
+      ${gatbps_x?} . || exit $?
+    ) >"${gatbps_root_stmpdir?}/srcdir.tar" || exit $?
+
     tar xf "${gatbps_root_stmpdir?}/srcdir.tar" || exit $?
     chmod -R u+w . || exit $?
     mkdir -p build-aux || exit $?
     tar tf "${gatbps_root_stmpdir?}/srcdir.tar" >build-aux/gatbps_clean_copied_source_directory || exit $?
+
   esac
 esac
 GATBPS_DONE_COPYING_SOURCE_DIRECTORY=
