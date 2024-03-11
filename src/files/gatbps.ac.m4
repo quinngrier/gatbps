@@ -336,7 +336,7 @@ case ${ac_aux_dir-} in build-aux \
       You must call AC@&t@_CONFIG_AUX_DIR([build-aux]) before including
       gatbps.ac.
       It looks like you called it with a different parameter
-      (ac_aux_dir=\"${ac_aux_dir?}\")
+      (ac_aux_dir="${ac_aux_dir?}")
     ])[
   ;; *)
     ]GATBPS_BUG([
