@@ -2100,54 +2100,54 @@ m4_pushdef(
     gatbps_output[]gatbps_suffix[:]input_file,
     [[{
 
-      dst=']]gatbps_output[['
-      src=']]gatbps_output[[]]gatbps_suffix[['
-      inp=']]input_file[['
+      gatbps_dst_=']]gatbps_output[['
+      gatbps_src_=']]gatbps_output[[]]gatbps_suffix[['
+      gatbps_inp_=']]input_file[['
 
-      test -f "$][{inp?}"
+      test -f "$][{gatbps_inp_?}"
       gatbps_s_=$?
       case $][{gatbps_s_?} in 0)
         :
       ;; 1)
-        inp=$][{srcdir?}/$][{inp?}
+        gatbps_inp_=$][{srcdir?}/$][{gatbps_inp_?}
       ;; *)
         exit $][{gatbps_s_?}
       esac
 
-      cur=$][{dst?}
+      gatbps_cur_=$][{gatbps_dst_?}
 
-      test -f "$][{cur?}"
+      test -f "$][{gatbps_cur_?}"
       gatbps_s_=$?
       case $][{gatbps_s_?} in 0)
         :
       ;; 1)
-        cur=$][{srcdir?}/$][{cur?}
+        gatbps_cur_=$][{srcdir?}/$][{gatbps_cur_?}
       ;; *)
         exit $][{gatbps_s_?}
       esac
 
-      case $][{src?} in /* | ./*)
+      case $][{gatbps_src_?} in /* | ./*)
         :
       ;; *)
-        src=./$][{src?}
+        gatbps_src_=./$][{gatbps_src_?}
       esac
 
-      case $][{inp?} in /* | ./*)
+      case $][{gatbps_inp_?} in /* | ./*)
         :
       ;; *)
-        inp=./$][{inp?}
+        gatbps_inp_=./$][{gatbps_inp_?}
       esac
 
-      case $][{cur?} in /* | ./*)
+      case $][{gatbps_cur_?} in /* | ./*)
         :
       ;; *)
-        cur=./$][{cur?}
+        gatbps_cur_=./$][{gatbps_cur_?}
       esac
 
       gatbps_skip_=x
 
       case $][{gatbps_skip_?} in ?*)
-        test -f "$][{cur?}"
+        test -f "$][{gatbps_cur_?}"
         gatbps_s_=$?
         case $][{gatbps_s_?} in 0)
           :
@@ -2160,7 +2160,7 @@ m4_pushdef(
 
       case $][{gatbps_skip_?} in ?*)
 
-        test -x "$][{cur?}"
+        test -x "$][{gatbps_cur_?}"
         gatbps_s1_=$?
         case $][{gatbps_s1_?} in 0 | 1)
           :
@@ -2168,7 +2168,7 @@ m4_pushdef(
           exit $][{gatbps_s1_?}
         esac
 
-        test -x "$][{inp?}"
+        test -x "$][{gatbps_inp_?}"
         gatbps_s2_=$?
         case $][{gatbps_s2_?} in 0 | 1)
           :
@@ -2197,7 +2197,12 @@ m4_pushdef(
             ])[
           fi
         esac
-        $][{CMP?} "$][{cur?}" "$][{src?}" >/dev/null 2>/dev/null
+        $][{CMP?} \
+          "$][{gatbps_cur_?}" \
+          "$][{gatbps_src_?}" \
+          1>/dev/null \
+          2>/dev/null \
+        ;
         gatbps_s_=$?
         case $][{gatbps_s_?} in 0)
           :
@@ -2211,44 +2216,44 @@ m4_pushdef(
       case ${gatbps_skip_?} in ?*)
 
         ]GATBPS_INFO([
-          skipping $][{dst?}
+          skipping $][{gatbps_dst_?}
         ])[
 
       ;; *)
 
         ]GATBPS_INFO([
-          updating $][{dst?}
+          updating $][{gatbps_dst_?}
         ])[
 
-        case $][{dst?} in /* | ./*)
+        case $][{gatbps_dst_?} in /* | ./*)
           :
         ;; *)
-          dst=./$][{dst?}
+          gatbps_dst_=./$][{gatbps_dst_?}
         esac
 
-        env test -e "$][{dst?}"
+        env test -e "$][{gatbps_dst_?}"
         gatbps_s_=$?
         case $][{gatbps_s_?} in 0)
-          test -f "$][{dst?}"
+          test -f "$][{gatbps_dst_?}"
           gatbps_s_=$?
           case $][{gatbps_s_?} in 0)
             :
           ;; 1)
             ]GATBPS_BARF([
-              Path "$][{dst?}" exists as a non-file, which is fishy
+              Path "$][{gatbps_dst_?}" unexpectedly exists as a non-file
             ])[
           ;; *)
             exit $][{gatbps_s_?}
           esac
-          rm "$][{dst?}" || exit $?
+          rm "$][{gatbps_dst_?}" || exit $?
         ;; 1)
           :
         ;; *)
           exit $][{gatbps_s_?}
         esac
-        cp "$][{inp?}" "$][{dst?}" || exit $?
-        chmod +w "$][{dst?}" || exit $?
-        cat "$][{src?}" >"$][{dst?}" || exit $?
+        cp "$][{gatbps_inp_?}" "$][{gatbps_dst_?}" || exit $?
+        chmod +w "$][{gatbps_dst_?}" || exit $?
+        cat "$][{gatbps_src_?}" >"$][{gatbps_dst_?}" || exit $?
 
         ]$5[
 
