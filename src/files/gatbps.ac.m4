@@ -2165,7 +2165,7 @@ m4_pushdef(
         case $][{gatbps_s1_?} in 0 | 1)
           :
         ;; *)
-          exit $?
+          exit $][{gatbps_s1_?}
         esac
 
         test -x "$][{inp?}"
@@ -2173,7 +2173,7 @@ m4_pushdef(
         case $][{gatbps_s2_?} in 0 | 1)
           :
         ;; *)
-          exit $?
+          exit $][{gatbps_s2_?}
         esac
 
         case $][{gatbps_s1_?}$][{gatbps_s2_?} in 01 | 10)
