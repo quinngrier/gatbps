@@ -2176,7 +2176,9 @@ m4_pushdef(
           exit $][{gatbps_s2_?}
         esac
 
-        case $][{gatbps_s1_?}$][{gatbps_s2_?} in 01 | 10)
+        case $][{gatbps_s1_?} in $][{gatbps_s2_?})
+          :
+        ;; *)
           gatbps_skip_=
         esac
 
