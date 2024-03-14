@@ -387,8 +387,11 @@ GATBPS_V_$1_0 = @printf '  %s]pad(eval((88888888 - ifelse($#, 1, [len([$1])], [l
 GATBPS_V_$1_1 =
 ]])
 
+dnl# TODO: Rename GATBPS_V_CONFIG_FILE to GATBPS_V_SUBST_IN
+
 GATBPS_V([ASCIIDOCTOR])
 GATBPS_V([AWK])
+GATBPS_V([CONFIG_FILE], [SUBST_IN])
 GATBPS_V([FORCE])
 GATBPS_V([GATBPS])
 GATBPS_V([GUNZIP])
@@ -1488,6 +1491,7 @@ uninstall-java-main: java.FORCE
 
 ##----------------------------------------------------------------------
 
+@GATBPS_CONFIG_FILE_RULES@
 @GATBPS_DOCKER_BUILD_RULES@
 @GATBPS_JAVA_CLASS_RULES@
 @GATBPS_JAVA_RULES@
