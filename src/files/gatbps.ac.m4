@@ -2216,7 +2216,11 @@ m4_pushdef(
         ]GATBPS_INFO([
           updating $][{dst?}
         ])[
-        case $dst in /* | ./*) : ;; *) dst=./$dst ;; esac
+        case $][{dst?} in /* | ./*)
+          :
+        ;; *)
+          dst=./$][{dst?}
+        esac
         rm -f "$dst"       || exit $?
         cp "$inp" "$dst"   || exit $? # inherit the x permission bit
         chmod +w "$dst"    || exit $? # always set the w permission bit
