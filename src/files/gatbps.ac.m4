@@ -2104,7 +2104,7 @@ m4_pushdef(
       src=']]gatbps_output[[]]gatbps_suffix[['
       inp=']]input_file[['
 
-      test -f "$][{inp?}" && :
+      test -f "$][{inp?}"
       gatbps_s_=$?
       case $][{gatbps_s_?} in 0)
         :
@@ -2116,7 +2116,7 @@ m4_pushdef(
 
       cur=$][{dst?}
 
-      test -f "$][{cur?}" && :
+      test -f "$][{cur?}"
       gatbps_s_=$?
       case $][{gatbps_s_?} in 0)
         :
@@ -2147,7 +2147,7 @@ m4_pushdef(
       gatbps_skip_=x
 
       case $][{gatbps_skip_?} in ?*)
-        test -f "$][{cur?}" && :
+        test -f "$][{cur?}"
         case $? in 0)
           :
         ;; 1)
@@ -2158,14 +2158,14 @@ m4_pushdef(
       esac
 
       case $][{gatbps_skip_?} in ?*)
-        test -x "$][{cur?}" && :
+        test -x "$][{cur?}"
         gatbps_s1_=$?
         case $][{gatbps_s1_?} in 0 | 1)
           :
         ;; *)
           exit $?
         esac
-        test -x "$][{inp?}" && :
+        test -x "$][{inp?}"
         gatbps_s2_=$?
         case $][{gatbps_s2_?} in 0 | 1)
           :
@@ -2188,7 +2188,7 @@ m4_pushdef(
             ])[
           fi
         esac
-        $][{CMP?} "$][{cur?}" "$][{src?}" >/dev/null && :
+        $][{CMP?} "$][{cur?}" "$][{src?}" >/dev/null
         case $? in 0)
           :
         ;; 1)
