@@ -2044,6 +2044,8 @@ dnl# TODO: Rename GATBPS_CONFIG_FILE to GATBPS_SUBST_IN
 
 AC_DEFUN([GATBPS_CONFIG_FILE], [[{
 
+  ]GATBPS_REQUIRE([GATBPS_PROG_CMP])[
+
 #
 # The block that contains this comment is an expansion of the
 # GATBPS_CONFIG_FILE macro.
@@ -2082,43 +2084,107 @@ m4_pushdef(
 
   ]AC_CONFIG_FILES(
     gatbps_output[]gatbps_suffix[:]input_file,
-    [[(
-      e1='case $? in 1) (exit 1) ;; *) exit $? ;; esac'
+    [[{
+
       dst=']]gatbps_output[['
       src=']]gatbps_output[[]]gatbps_suffix[['
       inp=']]input_file[['
-      if test ! -f "$inp" || eval "$e1"; then
-        inp=$srcdir/$inp
-      fi
-      cur=$dst
-      if test ! -f "$cur" || eval "$e1"; then
-        cur=$srcdir/$cur
-      fi
-      case $src in /*) ;; *) src=./$src ;; esac
-      case $inp in /*) ;; *) inp=./$inp ;; esac
-      case $cur in /*) ;; *) cur=./$cur ;; esac
-      if {
-        {
-          test -f "$cur" || eval "$e1"
-        } && {
-          { test   -x "$cur" && test   -x "$inp" || eval "$e1"; } ||
-          { test ! -x "$cur" && test ! -x "$inp" || eval "$e1"; }
-        } && {
-          cmp "$cur" "$src" >/dev/null || eval "$e1"
-        }
-      }; then
+
+      test -f "$][{inp?}" && :
+      case $? in 0)
+        :
+      ;; 1)
+        inp=$][{srcdir?}/$][${inp?}
+      ;; *)
+        exit $?
+      esac
+
+      cur=$][{dst?}
+
+      test -f "$][{cur?}" && :
+      case $? in 0)
+        :
+      ;; 1)
+        cur=$][{srcdir?}/$][${cur?}
+      ;; *)
+        exit $?
+      esac
+
+      case $][{src?} in /* | ./*)
+        :
+      ;; *)
+        src=./$][{src?}
+      esac
+
+      case $][{inp?} in /* | ./*)
+        :
+      ;; *)
+        inp=./$][{inp?}
+      esac
+
+      case $][{cur?} in /* | ./*)
+        :
+      ;; *)
+        cur=./$][{cur?}
+      esac
+
+      gatbps_skip_=x
+
+      case $][{gatbps_skip_?} in ?*)
+        test -f "$][{cur?}" && :
+        case $? in 0)
+          :
+        ;; 1)
+          gatbps_skip_=
+        ;; *)
+          exit $?
+        esac
+      esac
+
+      case $][{gatbps_skip_?} in ?*)
+        test -x "$][{cur?}" && :
+        gatbps_s1_=$?
+        case $][{gatbps_s1_?} in 0 | 1)
+          :
+        ;; *)
+          exit $?
+        esac
+        test -x "$][{inp?}" && :
+        gatbps_s2_=$?
+        case $][{gatbps_s2_?} in 0 | 1)
+          :
+        ;; *)
+          exit $?
+        esac
+        case $][{gatbps_s1_?}$][{gatbps_s2_?} in 01 | 10)
+          gatbps_skip_=
+        esac
+      esac
+
+      case $][{gatbps_skip_?} in ?*)
+        $][{CMP?} "$][{cur?}" "$][{src?}" >/dev/null && :
+        case $? in 0)
+          :
+        ;; 1)
+          gatbps_skip_=
+        ;; *)
+          exit $?
+        esac
+      esac
+
+      case ${gatbps_skip_?} in ?*)
         ]AC_MSG_NOTICE([[skipping $dst]])[
-      else
+      ;; *)
         ]AC_MSG_NOTICE([[updating $dst]])[
-        case $dst in /*) ;; *) dst=./$dst ;; esac
+        case $dst in /* | ./*) : ;; *) dst=./$dst ;; esac
         rm -f "$dst"       || exit $?
         cp "$inp" "$dst"   || exit $? # inherit the x permission bit
         chmod +w "$dst"    || exit $? # always set the w permission bit
         cat "$src" >"$dst" || exit $? # overwrite with the right content
         ]$5[
-      fi
-      exit 0
-    ) || exit $?]],
+      esac
+
+    }]],
     [$6])
 
 gatbps_new_rules='.PHONY: clean-gatbps_output
