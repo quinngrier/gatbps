@@ -2105,23 +2105,25 @@ m4_pushdef(
       inp=']]input_file[['
 
       test -f "$][{inp?}" && :
-      case $? in 0)
+      gatbps_s_=$?
+      case $][{gatbps_s_?} in 0)
         :
       ;; 1)
         inp=$][{srcdir?}/$][{inp?}
       ;; *)
-        exit $?
+        exit $][{gatbps_s_?}
       esac
 
       cur=$][{dst?}
 
       test -f "$][{cur?}" && :
-      case $? in 0)
+      gatbps_s_=$?
+      case $][{gatbps_s_?} in 0)
         :
       ;; 1)
         cur=$][{srcdir?}/$][{cur?}
       ;; *)
-        exit $?
+        exit $][{gatbps_s_?}
       esac
 
       case $][{src?} in /* | ./*)
