@@ -2105,26 +2105,6 @@ m4_pushdef(
       gatbps_inp_=']]input_file[['
       gatbps_cur_=$][{gatbps_dst_?}
 
-      test -f "$][{gatbps_inp_?}"
-      gatbps_s_=$?
-      case $][{gatbps_s_?} in 0)
-        :
-      ;; 1)
-        gatbps_inp_=$][{srcdir?}/$][{gatbps_inp_?}
-      ;; *)
-        exit $][{gatbps_s_?}
-      esac
-
-      test -f "$][{gatbps_cur_?}"
-      gatbps_s_=$?
-      case $][{gatbps_s_?} in 0)
-        :
-      ;; 1)
-        gatbps_cur_=$][{srcdir?}/$][{gatbps_cur_?}
-      ;; *)
-        exit $][{gatbps_s_?}
-      esac
-
       case $][{gatbps_src_?} in /* | ./*)
         :
       ;; *)
@@ -2141,6 +2121,88 @@ m4_pushdef(
         :
       ;; *)
         gatbps_cur_=./$][{gatbps_cur_?}
+      esac
+
+      env test -e "$][{gatbps_inp_?}"
+      gatbps_s_=$?
+      case $][{gatbps_s_?} in 0)
+        :
+      ;; 1)
+        case $][{srcdir?} in .)
+          ]GATBPS_BARF([
+            File "$][{gatbps_inp_?}" does not exist
+          ])[
+        ;; *)
+          gatbps_x_=$][{srcdir?}/$][{gatbps_inp_?}
+          env test -e "$][{gatbps_x_?}"
+          gatbps_s_=$?
+          case $][{gatbps_s_?} in 0)
+            :
+          ;; 1)
+            ]GATBPS_BARF([
+              File "$][{gatbps_inp_?}" and file "$][{gatbps_x_?}" both
+              do not exist
+            ])[
+          ;; *)
+            exit $][{gatbps_s_?}
+          esac
+          gatbps_inp_=$][{gatbps_x_?}
+        esac
+      ;; *)
+        exit $][{gatbps_s_?}
+      esac
+
+      test -f "$][{gatbps_inp_?}"
+      gatbps_s_=$?
+      case $][{gatbps_s_?} in 0)
+        :
+      ;; 1)
+        ]GATBPS_BARF([
+          Path "$][{gatbps_inp_?}" exists as a non-file
+        ])[
+      ;; *)
+        exit $][{gatbps_s_?}
+      esac
+
+      env test -e "$][{gatbps_cur_?}"
+      gatbps_s_=$?
+      case $][{gatbps_s_?} in 0)
+        :
+      ;; 1)
+        case $][{srcdir?} in .)
+          ]GATBPS_BARF([
+            File "$][{gatbps_cur_?}" does not exist
+          ])[
+        ;; *)
+          gatbps_x_=$][{srcdir?}/$][{gatbps_cur_?}
+          env test -e "$][{gatbps_x_?}"
+          gatbps_s_=$?
+          case $][{gatbps_s_?} in 0)
+            :
+          ;; 1)
+            ]GATBPS_BARF([
+              File "$][{gatbps_cur_?}" and file "$][{gatbps_x_?}" both
+              do not exist
+            ])[
+          ;; *)
+            exit $][{gatbps_s_?}
+          esac
+          gatbps_cur_=$][{gatbps_x_?}
+        esac
+      ;; *)
+        exit $][{gatbps_s_?}
+      esac
+
+      test -f "$][{gatbps_cur_?}"
+      gatbps_s_=$?
+      case $][{gatbps_s_?} in 0)
+        :
+      ;; 1)
+        ]GATBPS_BARF([
+          Path "$][{gatbps_cur_?}" exists as a non-file
+        ])[
+      ;; *)
+        exit $][{gatbps_s_?}
       esac
 
       gatbps_skip_=x
@@ -2239,7 +2301,7 @@ m4_pushdef(
             :
           ;; 1)
             ]GATBPS_BARF([
-              Path "$][{gatbps_dst_?}" unexpectedly exists as a non-file
+              Path "$][{gatbps_dst_?}" exists as a non-file
             ])[
           ;; *)
             exit $][{gatbps_s_?}
