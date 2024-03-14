@@ -392,6 +392,7 @@ dnl# TODO: Rename GATBPS_V_CONFIG_FILE to GATBPS_V_SUBST_IN
 GATBPS_V([ASCIIDOCTOR])
 GATBPS_V([AWK])
 GATBPS_V([CONFIG_FILE], [SUBST_IN])
+GATBPS_V([CONFIG_LATER], [SUBST_IM])
 GATBPS_V([FORCE])
 GATBPS_V([GATBPS])
 GATBPS_V([GUNZIP])
@@ -1491,7 +1492,38 @@ uninstall-java-main: java.FORCE
 
 ##----------------------------------------------------------------------
 
+GATBPS_CONFIG_LATER_SCRIPT_BOT = ' \
+      } else { \
+        line = line "{@}" line_parts[i + 1]; \
+        replaced_previous_line_part = 0; \
+      } \
+    } \
+    print line; \
+  } \
+'
+
+GATBPS_CONFIG_LATER_SCRIPT_TOP = ' \
+  { \
+    line = $$0; \
+    line_parts_count = split(line, line_parts, /\{@\}/); \
+    for (i = 0; i != line_parts_count; ++i) { \
+      if (i == 0) { \
+        line = line_parts[i + 1]; \
+        replaced_previous_line_part = 0; \
+      } else if (replaced_previous_line_part) { \
+        line = line line_parts[i + 1]; \
+        replaced_previous_line_part = 0; \
+      } else if (i == line_parts_count - 1) { \
+        line = line "{@}" line_parts[i + 1]; \
+        replaced_previous_line_part = 0; \
+'
+
+GATBPS_CONFIG_LATER_SCRIPT = $(GATBPS_CONFIG_LATER_SCRIPT_TOP)$(GATBPS_CONFIG_LATER_SCRIPT_MID)$(GATBPS_CONFIG_LATER_SCRIPT_BOT)
+
+##----------------------------------------------------------------------
+
 @GATBPS_CONFIG_FILE_RULES@
+@GATBPS_CONFIG_LATER_RULES@
 @GATBPS_DOCKER_BUILD_RULES@
 @GATBPS_JAVA_CLASS_RULES@
 @GATBPS_JAVA_RULES@
