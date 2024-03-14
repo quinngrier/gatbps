@@ -2103,6 +2103,7 @@ m4_pushdef(
       gatbps_dst_=']]gatbps_output[['
       gatbps_src_=']]gatbps_output[[]]gatbps_suffix[['
       gatbps_inp_=']]input_file[['
+      gatbps_cur_=$][{gatbps_dst_?}
 
       test -f "$][{gatbps_inp_?}"
       gatbps_s_=$?
@@ -2113,8 +2114,6 @@ m4_pushdef(
       ;; *)
         exit $][{gatbps_s_?}
       esac
-
-      gatbps_cur_=$][{gatbps_dst_?}
 
       test -f "$][{gatbps_cur_?}"
       gatbps_s_=$?
