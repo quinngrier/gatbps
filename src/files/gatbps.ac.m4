@@ -2164,48 +2164,32 @@ m4_pushdef(
         exit $][{gatbps_s_?}
       esac
 
-      env test -e "$][{gatbps_cur_?}"
-      gatbps_s_=$?
-      case $][{gatbps_s_?} in 0)
-        :
-      ;; 1)
-        case $][{srcdir?} in .)
-          ]GATBPS_BARF([
-            File "$][{gatbps_cur_?}" does not exist
-          ])[
-        ;; *)
-          gatbps_x_=$][{srcdir?}/$][{gatbps_cur_?}
-          env test -e "$][{gatbps_x_?}"
-          gatbps_s_=$?
-          case $][{gatbps_s_?} in 0)
-            :
-          ;; 1)
-            ]GATBPS_BARF([
-              File "$][{gatbps_cur_?}" and file "$][{gatbps_x_?}" both
-              do not exist
-            ])[
-          ;; *)
-            exit $][{gatbps_s_?}
-          esac
-          gatbps_cur_=$][{gatbps_x_?}
-        esac
-      ;; *)
-        exit $][{gatbps_s_?}
-      esac
-
-      test -f "$][{gatbps_cur_?}"
-      gatbps_s_=$?
-      case $][{gatbps_s_?} in 0)
-        :
-      ;; 1)
-        ]GATBPS_BARF([
-          Path "$][{gatbps_cur_?}" exists as a non-file
-        ])[
-      ;; *)
-        exit $][{gatbps_s_?}
-      esac
-
       gatbps_skip_=x
+
+      case $][{gatbps_skip_?} in ?*)
+        env test -e "$][{gatbps_cur_?}"
+        gatbps_s_=$?
+        case $][{gatbps_s_?} in 0)
+          :
+        ;; 1)
+          case $][{srcdir?} in .)
+            gatbps_skip_=
+          ;; *)
+            gatbps_cur_=$][{srcdir?}/$][{gatbps_cur_?}
+            env test -e "$][{gatbps_cur_?}"
+            gatbps_s_=$?
+            case $][{gatbps_s_?} in 0)
+              :
+            ;; 1)
+              gatbps_skip_=
+            ;; *)
+              exit $][{gatbps_s_?}
+            esac
+          esac
+        ;; *)
+          exit $][{gatbps_s_?}
+        esac
+      esac
 
       case $][{gatbps_skip_?} in ?*)
         test -f "$][{gatbps_cur_?}"
@@ -2213,7 +2197,9 @@ m4_pushdef(
         case $][{gatbps_s_?} in 0)
           :
         ;; 1)
-          gatbps_skip_=
+          ]GATBPS_BARF([
+            Path "$][{gatbps_cur_?}" exists as a non-file
+          ])[
         ;; *)
           exit $][{gatbps_s_?}
         esac
