@@ -2209,9 +2209,13 @@ m4_pushdef(
       esac
 
       case ${gatbps_skip_?} in ?*)
-        ]AC_MSG_NOTICE([[skipping $dst]])[
+        ]GATBPS_INFO([
+          skipping $][{dst?}
+        ])[
       ;; *)
-        ]AC_MSG_NOTICE([[updating $dst]])[
+        ]GATBPS_INFO([
+          updating $][{dst?}
+        ])[
         case $dst in /* | ./*) : ;; *) dst=./$dst ;; esac
         rm -f "$dst"       || exit $?
         cp "$inp" "$dst"   || exit $? # inherit the x permission bit
