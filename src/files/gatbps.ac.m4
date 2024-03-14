@@ -2209,23 +2209,49 @@ m4_pushdef(
       esac
 
       case ${gatbps_skip_?} in ?*)
+
         ]GATBPS_INFO([
           skipping $][{dst?}
         ])[
+
       ;; *)
+
         ]GATBPS_INFO([
           updating $][{dst?}
         ])[
+
         case $][{dst?} in /* | ./*)
           :
         ;; *)
           dst=./$][{dst?}
         esac
-        rm -f "$dst"       || exit $?
-        cp "$inp" "$dst"   || exit $? # inherit the x permission bit
-        chmod +w "$dst"    || exit $? # always set the w permission bit
-        cat "$src" >"$dst" || exit $? # overwrite with the right content
+
+        env test -e "$][{dst?}"
+        gatbps_s_=$?
+        case $][{gatbps_s_?} in 0)
+          test -f "$][{dst?}"
+          gatbps_s_=$?
+          case $][{gatbps_s_?} in 0)
+            :
+          ;; 1)
+            ]GATBPS_BARF([
+              Path "$][{dst?}" exists as a non-file, which is fishy
+            ])[
+          ;; *)
+            exit $][{gatbps_s_?}
+          esac
+          rm "$][{dst?}" || exit $?
+        ;; 1)
+          :
+        ;; *)
+          exit $][{gatbps_s_?}
+        esac
+        cp "$][{inp?}" "$][{dst?}" || exit $?
+        chmod +w "$][{dst?}" || exit $?
+        cat "$][{src?}" >"$][{dst?}" || exit $?
+
         ]$5[
+
       esac
 
     }]],
