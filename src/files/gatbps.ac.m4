@@ -700,6 +700,12 @@ GATBPS_PROG(
 
 GATBPS_PROG([AWK], [awk])
 
+GATBPS_PROG(
+  [CMP],
+  [cmp],
+  GATBPS_SQUISH([
+  ]))
+
 GATBPS_PROG([CURL_CLI], [curl])
 
 GATBPS_PROG([CYGPATH], [cygpath])
