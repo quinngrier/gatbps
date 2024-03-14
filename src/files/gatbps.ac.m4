@@ -2148,12 +2148,13 @@ m4_pushdef(
 
       case $][{gatbps_skip_?} in ?*)
         test -f "$][{cur?}"
-        case $? in 0)
+        gatbps_s_=$?
+        case $][{gatbps_s_?} in 0)
           :
         ;; 1)
           gatbps_skip_=
         ;; *)
-          exit $?
+          exit $][{gatbps_s_?}
         esac
       esac
 
@@ -2191,12 +2192,13 @@ m4_pushdef(
           fi
         esac
         $][{CMP?} "$][{cur?}" "$][{src?}" >/dev/null
-        case $? in 0)
+        gatbps_s_=$?
+        case $][{gatbps_s_?} in 0)
           :
         ;; 1)
           gatbps_skip_=
         ;; *)
-          exit $?
+          exit $][{gatbps_s_?}
         esac
       esac
 
