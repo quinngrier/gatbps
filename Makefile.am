@@ -84,7 +84,6 @@ include $(srcdir)/doc/gatbps.am
 
 ## begin_includes
 
-include $(srcdir)/build-aux/GATBPS_CONFIG_FILE_RULES.am
 include $(srcdir)/build-aux/GATBPS_CONFIG_LATER_RULES.am
 include $(srcdir)/build-aux/GATBPS_CP_RULES.am
 include $(srcdir)/build-aux/GATBPS_VPATH_SEARCH.am
