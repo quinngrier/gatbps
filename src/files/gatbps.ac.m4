@@ -760,6 +760,21 @@ GATBPS_PROG([XZ], [xz])
 
 GATBPS_PROG([ZIP], [zip])
 
+dnl#--------------------------------------------------------------------
+dnl# Utilities that are always required
+dnl#--------------------------------------------------------------------
+[
+
+]GATBPS_REQUIRE([GATBPS_PROG_CMP])[
+case ${HAVE_CMP?} in 1)
+  :
+;; *)
+  ]GATBPS_BARF([
+    The cmp utility must be installed
+  ])[
+esac
+
+]
 dnl---------------------------------------------------------------------
 dnl PACKAGE_NAME_UNDERSCORE_SLUG
 dnl---------------------------------------------------------------------
