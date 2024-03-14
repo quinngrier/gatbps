@@ -684,11 +684,11 @@ EOF2
 
 dnl#--------------------------------------------------------------------
 dnl#
-dnl# Some uppercase-ified utility names may cause subtle name collision
-dnl# problems, in which case you'll need to adjust the uppercase-ified
-dnl# name by, e.g., appending _CLI to it. For example, CURL cannot be
-dnl# used as the uppercase-ified name for the curl utility because it
-dnl# causes name collision problems with libcurl's CURL type.
+dnl# Some uppercase-ified utility names may cause name collision
+dnl# problems, in which case they should be adjusted, typically by
+dnl# appending _CLI to them. For example, CURL cannot be used as the
+dnl# uppercase-ified name for the curl utility since it collides with
+dnl# libcurl's CURL type.
 dnl#
 
 GATBPS_PROG(
