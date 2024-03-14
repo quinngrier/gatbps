@@ -2261,7 +2261,7 @@ m4_pushdef(
         $][{CMP?} \
           "$][{gatbps_cur_?}" \
           "$][{gatbps_src_?}" \
-          1>/dev/null \
+          >/dev/null \
           2>/dev/null \
         ;
         gatbps_s_=$?
