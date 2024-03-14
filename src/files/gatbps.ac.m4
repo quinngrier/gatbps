@@ -2197,7 +2197,7 @@ m4_pushdef(
             ])[
           fi
         esac
-        $][{CMP?} "$][{cur?}" "$][{src?}" >/dev/null
+        $][{CMP?} "$][{cur?}" "$][{src?}" >/dev/null 2>/dev/null
         gatbps_s_=$?
         case $][{gatbps_s_?} in 0)
           :
