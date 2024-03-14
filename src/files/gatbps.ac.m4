@@ -2178,7 +2178,9 @@ m4_pushdef(
       esac
 
       case $][{gatbps_skip_?} in ?*)
-        # config.status won't necessarily have CMP set.
+        # configure will always have CMP set because gatbps.ac always
+        # calls GATBPS_PROG_CMP, but config.status won't have CMP set
+        # unless it's in the environment, so we set it here if needed.
         case $][{CMP+x} in "")
           if command -v cmp >/dev/null 2>/dev/null; then
             CMP=cmp
