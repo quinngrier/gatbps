@@ -2108,7 +2108,7 @@ m4_pushdef(
       case $? in 0)
         :
       ;; 1)
-        inp=$][{srcdir?}/$][${inp?}
+        inp=$][{srcdir?}/$][{inp?}
       ;; *)
         exit $?
       esac
@@ -2119,7 +2119,7 @@ m4_pushdef(
       case $? in 0)
         :
       ;; 1)
-        cur=$][{srcdir?}/$][${cur?}
+        cur=$][{srcdir?}/$][{cur?}
       ;; *)
         exit $?
       esac
