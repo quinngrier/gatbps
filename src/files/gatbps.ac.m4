@@ -2080,46 +2080,46 @@ m4_pushdef(
   m4_if(m4_eval([$# < 4]), [1], [.out], [$4]))[]dnl
 [
 
-]AC_CONFIG_FILES(
-  gatbps_output[]gatbps_suffix[:]input_file,
-  [[(
-    e1='case $? in 1) (exit 1) ;; *) exit $? ;; esac'
-    dst=']]gatbps_output[['
-    src=']]gatbps_output[[]]gatbps_suffix[['
-    inp=']]input_file[['
-    if test ! -f "$inp" || eval "$e1"; then
-      inp=$srcdir/$inp
-    fi
-    cur=$dst
-    if test ! -f "$cur" || eval "$e1"; then
-      cur=$srcdir/$cur
-    fi
-    case $src in /*) ;; *) src=./$src ;; esac
-    case $inp in /*) ;; *) inp=./$inp ;; esac
-    case $cur in /*) ;; *) cur=./$cur ;; esac
-    if {
-      {
-        test -f "$cur" || eval "$e1"
-      } && {
-        { test   -x "$cur" && test   -x "$inp" || eval "$e1"; } ||
-        { test ! -x "$cur" && test ! -x "$inp" || eval "$e1"; }
-      } && {
-        cmp "$cur" "$src" >/dev/null || eval "$e1"
-      }
-    }; then
-      ]AC_MSG_NOTICE([[skipping $dst]])[
-    else
-      ]AC_MSG_NOTICE([[updating $dst]])[
-      case $dst in /*) ;; *) dst=./$dst ;; esac
-      rm -f "$dst"       || exit $?
-      cp "$inp" "$dst"   || exit $? # inherit the x permission bit
-      chmod +w "$dst"    || exit $? # always set the w permission bit
-      cat "$src" >"$dst" || exit $? # overwrite with the right content
-      ]$5[
-    fi
-    exit 0
-  ) || exit $?]],
-  [$6])
+  ]AC_CONFIG_FILES(
+    gatbps_output[]gatbps_suffix[:]input_file,
+    [[(
+      e1='case $? in 1) (exit 1) ;; *) exit $? ;; esac'
+      dst=']]gatbps_output[['
+      src=']]gatbps_output[[]]gatbps_suffix[['
+      inp=']]input_file[['
+      if test ! -f "$inp" || eval "$e1"; then
+        inp=$srcdir/$inp
+      fi
+      cur=$dst
+      if test ! -f "$cur" || eval "$e1"; then
+        cur=$srcdir/$cur
+      fi
+      case $src in /*) ;; *) src=./$src ;; esac
+      case $inp in /*) ;; *) inp=./$inp ;; esac
+      case $cur in /*) ;; *) cur=./$cur ;; esac
+      if {
+        {
+          test -f "$cur" || eval "$e1"
+        } && {
+          { test   -x "$cur" && test   -x "$inp" || eval "$e1"; } ||
+          { test ! -x "$cur" && test ! -x "$inp" || eval "$e1"; }
+        } && {
+          cmp "$cur" "$src" >/dev/null || eval "$e1"
+        }
+      }; then
+        ]AC_MSG_NOTICE([[skipping $dst]])[
+      else
+        ]AC_MSG_NOTICE([[updating $dst]])[
+        case $dst in /*) ;; *) dst=./$dst ;; esac
+        rm -f "$dst"       || exit $?
+        cp "$inp" "$dst"   || exit $? # inherit the x permission bit
+        chmod +w "$dst"    || exit $? # always set the w permission bit
+        cat "$src" >"$dst" || exit $? # overwrite with the right content
+        ]$5[
+      fi
+      exit 0
+    ) || exit $?]],
+    [$6])
 
 gatbps_new_rules='.PHONY: clean-gatbps_output
 
