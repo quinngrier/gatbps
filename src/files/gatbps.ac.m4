@@ -2177,6 +2177,16 @@ m4_pushdef(
       esac
 
       case $][{gatbps_skip_?} in ?*)
+        # config.status won't necessarily have CMP set.
+        case $][{CMP+x} in "")
+          if command -v cmp >/dev/null 2>/dev/null; then
+            CMP=cmp
+          else
+            ]GATBPS_BARF([
+              The cmp utility must be installed
+            ])[
+          fi
+        esac
         $][{CMP?} "$][{cur?}" "$][{src?}" >/dev/null && :
         case $? in 0)
           :
