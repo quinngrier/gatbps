@@ -2158,7 +2158,7 @@ m4_pushdef(
         :
       ;; 1)
         ]GATBPS_BARF([
-          Path "$][{gatbps_inp_?}" exists as a non-file
+          File "$][{gatbps_inp_?}" is not a file
         ])[
       ;; *)
         exit $][{gatbps_s_?}
@@ -2198,7 +2198,7 @@ m4_pushdef(
           :
         ;; 1)
           ]GATBPS_BARF([
-            Path "$][{gatbps_cur_?}" exists as a non-file
+            File "$][{gatbps_cur_?}" is not a file
           ])[
         ;; *)
           exit $][{gatbps_s_?}
@@ -2287,7 +2287,7 @@ m4_pushdef(
             :
           ;; 1)
             ]GATBPS_BARF([
-              Path "$][{gatbps_dst_?}" exists as a non-file
+              File "$][{gatbps_dst_?}" is not a file
             ])[
           ;; *)
             exit $][{gatbps_s_?}
