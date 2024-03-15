@@ -2262,17 +2262,36 @@ m4_pushdef(
         esac
       esac
 
+      ]m4_ignore([
+      #
+      # Note that we use AC_MSG_NOTICE instead of GATBPS_INFO below.
+      # This is because its formatting works better in this context.
+      #
+      # AC_MSG_NOTICE yields a message stream like this:
+      #
+      #       config.status: creating foo.out
+      #       config.status: skipping foo
+      #       config.status: creating bar.out
+      #       config.status: updating bar
+      #       ...
+      #
+      # GATBPS_INFO would yield a message stream like this:
+      #
+      #       config.status: creating foo.out
+      #       config.status: skipping foo.
+      #       config.status: creating bar.out
+      #       config.status: updating bar.
+      #       ...
+      #
+      ])[
+
       case ${gatbps_skip_?} in ?*)
 
-        ]GATBPS_INFO([
-          skipping $][{gatbps_dst_?}
-        ])[
+        ]AC_MSG_NOTICE([[skipping $][{gatbps_dst_?}]])[
 
       ;; *)
 
-        ]GATBPS_INFO([
-          updating $][{gatbps_dst_?}
-        ])[
+        ]AC_MSG_NOTICE([[updating $][{gatbps_dst_?}]])[
 
         case $][{gatbps_dst_?} in /* | ./*)
           :
