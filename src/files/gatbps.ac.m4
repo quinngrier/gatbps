@@ -356,12 +356,12 @@ esac
 ${gatbps_readonly?} DISTCUT
 
 ]AC_ARG_VAR([DISTCUT], GATBPS_SQUISH([
-  By default, any distributed file whose make graph has diameter 2 or
-  larger will have its edges cut so the graph will become trivial and
-  the file will always be considered up to date.
+  By default, any distributed file whose make graph is nontrivial will
+  have its edges cut so the graph becomes trivial and the file will
+  always be considered up to date as long as it exists.
   Set this variable to empty to leave the edges uncut.
   In the source repository, the default is instead to leave the edges
-  uncut, and you can set DISTCUT to a nonempty value to cut them
+  uncut, and you can set this variable to a nonempty value to cut them
   (typically DISTCUT=/DISTCUT).
 ]))[
 
