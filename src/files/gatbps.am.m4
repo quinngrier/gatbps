@@ -316,12 +316,16 @@ $(empty)
 
 GATBPS_UNINSTALL_MKDIRS/dummy $(GATBPS_UNINSTALL_MKDIRS): FORCE
 	@]GATBPS_SQUISH([
-	  case '$@' in *[0-9A-Za-z]/mkdir[0-9][0-9])
+	  case '$@' in
+	    *[0-9A-Za-z]/mkdir |
+	    *[0-9A-Za-z]/mkdir[0-9] |
+	    *[0-9A-Za-z]/mkdir[0-9][0-9]
+	  )
 	    :;
 	  ;; *)
 	    m="Makefile: GATBPS_UNINSTALL_MKDIRS ($@): Error:";
 	    m="$${m?} Target name must end with";
-	    m="$${m?} [0-9A-Za-z]/mkdir[0-9][0-9].";
+	    m="$${m?} [0-9A-Za-z]/mkdir[0-9]?[0-9]?.";
 	    printf '%s\n' "$${m?}" >&2;
 	    exit 1;
 	  esac;
@@ -342,12 +346,16 @@ $(empty)
 
 GATBPS_UNINSTALL_RMFRS/dummy $(GATBPS_UNINSTALL_RMFRS): FORCE
 	@]GATBPS_SQUISH([
-	  case '$@' in *[0-9A-Za-z]/rmfr[0-9][0-9])
+	  case '$@' in
+	    *[0-9A-Za-z]/rmfr |
+	    *[0-9A-Za-z]/rmfr[0-9] |
+	    *[0-9A-Za-z]/rmfr[0-9][0-9]
+	  )
 	    :;
 	  ;; *)
 	    m="Makefile: GATBPS_UNINSTALL_RMFRS ($@): Error:";
 	    m="$${m?} Target name must end with";
-	    m="$${m?} [0-9A-Za-z]/rmfr[0-9][0-9].";
+	    m="$${m?} [0-9A-Za-z]/rmfr[0-9]?[0-9]?.";
 	    printf '%s\n' "$${m?}" >&2;
 	    exit 1;
 	  esac;
