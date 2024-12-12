@@ -697,6 +697,7 @@ GATBPS_PROG(
   [asciidoctor],
   GATBPS_SQUISH([
     adock
+    build-aux/adock
   ]))
 
 GATBPS_PROG([AWK], [awk])
